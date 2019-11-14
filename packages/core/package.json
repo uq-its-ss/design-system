@@ -1,0 +1,17 @@
+{
+  "name": "@uq-uidf/core",
+  "version": "0.0.0",
+  "description": "global component",
+  "author": "uqmchu <m.chu@uq.edu.au>",
+  "homepage": "https://github.com/uqmchu/uq-uidf-components#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uqmchu/uq-uidf-components.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/uqmchu/uq-uidf-components/issues"
+  }
+}

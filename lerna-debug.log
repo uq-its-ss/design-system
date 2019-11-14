@@ -1,0 +1,21 @@
+0 silly argv {
+0 silly argv   _: [ 'create' ],
+0 silly argv   lernaVersion: '3.17.0',
+0 silly argv   '$0': 'lerna',
+0 silly argv   name: 'form'
+0 silly argv }
+1 notice cli v3.17.0
+2 verbose rootPath /Volumes/Working/Github/uqmchu/uq-uidf-components
+3 error Error: canceled
+3 error     at Interface.<anonymous> (/Users/uqmchu/.nvm/versions/node/v12.4.0/lib/node_modules/lerna/node_modules/read/lib/read.js:66:13)
+3 error     at Interface.emit (events.js:200:13)
+3 error     at Interface._ttyWrite (readline.js:877:16)
+3 error     at ReadStream.onkeypress (readline.js:189:10)
+3 error     at ReadStream.emit (events.js:200:13)
+3 error     at emitKeys (internal/readline.js:424:14)
+3 error     at emitKeys.next (<anonymous>)
+3 error     at ReadStream.onData (readline.js:1145:36)
+3 error     at ReadStream.emit (events.js:200:13)
+3 error     at addChunk (_stream_readable.js:294:12)
+3 error     at readableAddChunk (_stream_readable.js:275:11)
+3 error     at ReadStream.Readable.push (_stream_readable.js:210:10)

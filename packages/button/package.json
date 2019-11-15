@@ -1,7 +1,7 @@
 {
-  "name": "@uq-uidf/core",
+  "name": "@uq-uidf/button",
   "version": "0.0.0",
-  "description": "The core package that all component packages depend on",
+  "description": "The button component package",
   "keywords": [
     "uq-uidf",
     "uq",
@@ -11,14 +11,13 @@
     "scss",
     "sass",
     "css",
-    "core"
+    "button"
   ],
   "author": "uqmchu <45442566+uqmchu@users.noreply.github.com>",
   "homepage": "https://github.com/uqmchu/uq-uidf-components#readme",
   "license": "ISC",
   "directories": {
     "lib": "lib",
-    "src": "src",
     "test": "__tests__"
   },
   "files": [

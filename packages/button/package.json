@@ -13,7 +13,11 @@
     "css",
     "button"
   ],
-  "author": "uqmchu <45442566+uqmchu@users.noreply.github.com>",
+  "author": { 
+    "name": "University of Queensland",
+    "email": "webservices@uq.edu.au",
+    "url": "https://uq.edu.au"
+  },
   "homepage": "https://github.com/uqmchu/uq-uidf-components#readme",
   "license": "ISC",
   "directories": {

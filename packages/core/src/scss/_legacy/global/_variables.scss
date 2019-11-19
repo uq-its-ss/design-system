@@ -124,11 +124,14 @@ $half-gutter: ($gutter / 2);
 $indent-amount: 1rem;
 
 // Font Awesome settings
-$fa-font-path: "../bower_components/fontawesome/fonts";
+$fa-font-path: "../node_modules/@uq-uidf/core/node_modules/font-awesome/fonts" !default;
 $fa-css-prefix: icon;
 $fa-font-size-base: $base-font-size;
 
 // UQ Icon settings
-$uq-font-path: "../fonts/uq-icons/font";
+$uq-font-path: "../node_modules/@uq-uidf/core/src/fonts/uq-icons/font" !default;
 $uq-css-prefix: icon;
 $uq-font-size-base: $base-font-size;
+
+// Background images path
+$uq-bg-image-path: "../node_modules/@uq-uidf/core/src/images" !default;

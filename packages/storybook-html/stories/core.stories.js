@@ -1,5 +1,3 @@
-import '@uq-uidf/core/src/scss/_component.scss';
-
 export default {
   title: 'Core',
 };
@@ -17,3 +15,9 @@ export const typography = () => {
   container.appendChild(h3);
   return container;
 };
+
+export const blockquote = () => {
+  const empty = document.createElement('blockquote');
+  empty.innerText = "This is like a thing";
+  return empty;
+}

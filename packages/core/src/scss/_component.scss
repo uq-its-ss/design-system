@@ -10,4 +10,14 @@
 //
 // These are the base styles applied to HTML elements. A customized normalize
 // is added first, then base partials.
-@import '_legacy/base/*.*';
+@import '_legacy/base/blockquote';
+@import '_legacy/base/forms';
+@import '_legacy/base/frames';
+@import '_legacy/base/horizontal-rule';
+@import '_legacy/base/images';
+@import '_legacy/base/links';
+@import '_legacy/base/lists';
+@import '_legacy/base/logo';
+@import '_legacy/base/tables';
+@import '_legacy/base/text-alignment';
+@import '_legacy/base/typography';

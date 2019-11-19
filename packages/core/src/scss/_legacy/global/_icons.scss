@@ -8,11 +8,11 @@
 
 // Font Awesome settings
 // @see global/variables
-@import "font-awesome";
+@import "../../../../node_modules/font-awesome/scss/font-awesome";
 
 // UQ Icon settings
 // @see global/variables
-@import "uq-icons";
+@import "../../../fonts/uq-icons/scss/uq-icons";
 
 // Create icon font stack to allow multiple sets to use the same prefix class
 // Remove if prefix classes are different.

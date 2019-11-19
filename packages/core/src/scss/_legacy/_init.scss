@@ -31,16 +31,16 @@
 // =============================================================================
 
 // Add Compass
-@import 'compass';
+@import '../../../node_modules/compass-mixins/lib/compass';
 
 // Add Foundation
-@import 'normalize';
-@import 'foundation/components/grid';
-@import 'foundation/components/block-grid';
-@import 'foundation/components/tables';
-@import 'foundation/components/forms';
-@import 'foundation/components/visibility';
-@import 'foundation/components/flex-video';
-@import 'foundation/components/dropdown';
-@import 'foundation/components/dropdown-buttons';
-@import 'foundation/components/alert-boxes';
+@import '../../../node_modules/foundation-sites/scss/normalize.scss';
+@import '../../../node_modules/foundation-sites/scss/foundation/components/grid';
+@import '../../../node_modules/foundation-sites/scss/foundation/components/block-grid';
+@import '../../../node_modules/foundation-sites/scss/foundation/components/tables';
+@import '../../../node_modules/foundation-sites/scss/foundation/components/forms';
+@import '../../../node_modules/foundation-sites/scss/foundation/components/visibility';
+@import '../../../node_modules/foundation-sites/scss/foundation/components/flex-video';
+@import '../../../node_modules/foundation-sites/scss/foundation/components/dropdown';
+@import '../../../node_modules/foundation-sites/scss/foundation/components/dropdown-buttons';
+@import '../../../node_modules/foundation-sites/scss/foundation/components/alert-boxes';

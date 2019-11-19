@@ -1,0 +1,6 @@
+// Configure and import core package component SCSS
+$fa-font-path: "../../node_modules/@uq-uidf/core/node_modules/font-awesome/fonts";
+$uq-font-path: "../../node_modules/@uq-uidf/core/src/fonts/uq-icons/font";
+$uq-bg-image-path: "../../node_modules/@uq-uidf/core/src/images";
+
+@import "@uq-uidf/core/src/scss/_component";

@@ -1,6 +1,6 @@
 {
   "name": "storybook-html",
-  "version": "0.1.0-alpha.0",
+  "version": "0.0.0-build.0",
   "description": "Storybook for HTML instance for uq-uidf component development",
   "private": true,
   "main": "index.js",
@@ -21,6 +21,6 @@
     "sass-loader": "^8.0.0"
   },
   "dependencies": {
-    "@uq-uidf/core": "^0.1.0-alpha.0"
+    "@uq-uidf/core": "^0.0.0-build.0"
   }
 }

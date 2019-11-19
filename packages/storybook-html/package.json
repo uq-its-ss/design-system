@@ -1,6 +1,6 @@
 {
   "name": "storybook-html",
-  "version": "0.0.0-build.0",
+  "version": "0.0.0",
   "description": "Storybook for HTML instance for uq-uidf component development",
   "private": true,
   "main": "index.js",
@@ -10,7 +10,7 @@
     "build-storybook": "build-storybook"
   },
   "keywords": [],
-  "author": { 
+  "author": {
     "name": "University of Queensland",
     "email": "webservices@uq.edu.au",
     "url": "https://uq.edu.au"
@@ -25,6 +25,6 @@
     "sass-loader": "^8.0.0"
   },
   "dependencies": {
-    "@uq-uidf/core": "^0.0.0-build.0"
+    "@uq-uidf/core": "^0.0.0"
   }
 }

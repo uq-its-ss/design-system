@@ -1,6 +1,6 @@
 {
   "name": "@uq-uidf/form",
-  "version": "0.1.0-alpha.0",
+  "version": "0.0.0",
   "description": "The form component package",
   "keywords": [
     "uq-uidf",
@@ -13,7 +13,7 @@
     "css",
     "form"
   ],
-  "author": { 
+  "author": {
     "name": "University of Queensland",
     "email": "webservices@uq.edu.au",
     "url": "https://uq.edu.au"

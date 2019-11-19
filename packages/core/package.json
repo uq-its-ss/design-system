@@ -1,6 +1,6 @@
 {
   "name": "@uq-uidf/core",
-  "version": "0.0.0-build.0",
+  "version": "0.0.0",
   "description": "The core package that all component packages depend on",
   "keywords": [
     "uq-uidf",
@@ -13,7 +13,7 @@
     "css",
     "core"
   ],
-  "author": { 
+  "author": {
     "name": "University of Queensland",
     "email": "webservices@uq.edu.au",
     "url": "https://uq.edu.au"

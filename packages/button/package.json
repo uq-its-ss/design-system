@@ -1,6 +1,6 @@
 {
   "name": "@uq-uidf/button",
-  "version": "0.1.0-alpha.0",
+  "version": "0.0.0",
   "description": "The button component package",
   "keywords": [
     "uq-uidf",
@@ -13,7 +13,7 @@
     "css",
     "button"
   ],
-  "author": { 
+  "author": {
     "name": "University of Queensland",
     "email": "webservices@uq.edu.au",
     "url": "https://uq.edu.au"

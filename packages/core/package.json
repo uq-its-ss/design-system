@@ -1,6 +1,6 @@
 {
   "name": "@uq-uidf/core",
-  "version": "0.0.1-alpha.0",
+  "version": "0.0.0",
   "description": "The core package that all component packages depend on",
   "keywords": [
     "uq-uidf",
@@ -13,7 +13,7 @@
     "css",
     "core"
   ],
-  "author": "uqmchu <45442566+uqmchu@users.noreply.github.com>",
+  "author": "University of Queensland",
   "homepage": "https://github.com/uqmchu/uq-uidf-components#readme",
   "license": "ISC",
   "directories": {
@@ -22,7 +22,8 @@
     "test": "__tests__"
   },
   "files": [
-    "lib/*"
+    "lib/*",
+    "src/*"
   ],
   "publishConfig": {
     "registry": "http://localhost:4873/"
@@ -36,5 +37,10 @@
   },
   "bugs": {
     "url": "https://github.com/uqmchu/uq-uidf-components/issues"
+  },
+  "devDependencies": {
+    "compass-mixins": "^0.12.10",
+    "font-awesome": "^4.7.0",
+    "foundation-sites": "^5.5.3"
   }
 }

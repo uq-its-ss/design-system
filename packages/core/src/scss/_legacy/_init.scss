@@ -1,0 +1,46 @@
+//
+// Initialization partial
+//
+// To make it easier to use all variables and mixins in any Sass file in this
+// theme, each .scss file has a @import 'init' declaration. And this _init.scss
+// file is in charge of importing all the other partials needed for the theme.
+//
+// This initialization partial is organized in this way:
+// - First we set any shared Sass variables.
+// - Next we import Compass plug-ins (Sass mixin libraries).
+// - Last we define our custom mixins for this theme.
+//
+
+
+// Import our variables.
+//
+// Allows us to set variables before a library sets its !default value.
+
+@import 'global/variables';
+@import 'global/colors';
+@import 'global/functions';
+@import 'global/tints';
+@import 'global/palettes';
+@import 'global/background-patterns';
+
+// Add Icon library
+@import 'global/icons';
+
+// =============================================================================
+// Partials to be shared with all .scss files.
+// =============================================================================
+
+// Add Compass
+@import 'compass';
+
+// Add Foundation
+@import 'normalize';
+@import 'foundation/components/grid';
+@import 'foundation/components/block-grid';
+@import 'foundation/components/tables';
+@import 'foundation/components/forms';
+@import 'foundation/components/visibility';
+@import 'foundation/components/flex-video';
+@import 'foundation/components/dropdown';
+@import 'foundation/components/dropdown-buttons';
+@import 'foundation/components/alert-boxes';

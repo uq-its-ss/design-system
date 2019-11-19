@@ -1,0 +1,54 @@
+//
+// Icons
+// Custom and contrib icon sets
+//
+
+// Font Awesome icon set
+// http://fortawesome.github.io/Font-Awesome/
+
+// Font Awesome settings
+// @see global/variables
+@import "font-awesome";
+
+// UQ Icon settings
+// @see global/variables
+@import "uq-icons";
+
+// Create icon font stack to allow multiple sets to use the same prefix class
+// Remove if prefix classes are different.
+// Fallback to Roboto for when the icon class is applied directly to an element containing other text.
+.#{$fa-css-prefix},
+.#{$uq-css-prefix} {
+  font-family: uq-icons, FontAwesome, $roboto !important; // shortening font declaration
+  font-style: normal;
+  font-weight: inherit;
+}
+
+// Allow icons to be applied on buttons etc and not touch the text inside that element.
+.icon {
+  &:hover {
+    text-decoration: none;
+  }
+
+  &--prefix {
+    &::before {
+      margin-right: .7rem;
+    }
+  }
+
+  &--suffix {
+    &::before {
+      float: right;
+      margin-left: .7rem;
+      margin-top: .15rem;
+    }
+  }
+
+  // Allow the icon to be a different colour to parent.
+  &--light-grey,
+  &--light-gray {
+    &::before {
+      color: $icon-light-grey-color;
+    }
+  }
+}

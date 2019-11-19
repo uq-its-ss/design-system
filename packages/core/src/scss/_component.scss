@@ -3,3 +3,11 @@
 @import '_global.scss';
 @import '_print.scss';
 
+// Legacy: Import Sass mixins, variables, Compass modules, etc.
+@import '_legacy/init';
+
+// Legacy: Base (TODO: add to @uq-uidf/body package)
+//
+// These are the base styles applied to HTML elements. A customized normalize
+// is added first, then base partials.
+@import '_legacy/base/*.*';

@@ -1,0 +1,137 @@
+@font-face {
+  font-family: 'uq-icons';
+  src: url('../font/uq-icons.eot?53303109');
+  src: url('../font/uq-icons.eot?53303109#iefix') format('embedded-opentype'),
+       url('../font/uq-icons.woff?53303109') format('woff'),
+       url('../font/uq-icons.ttf?53303109') format('truetype'),
+       url('../font/uq-icons.svg?53303109#uq-icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'uq-icons';
+    src: url('../font/uq-icons.svg?53303109#uq-icons') format('svg');
+  }
+}
+*/
+ 
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "uq-icons";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+ 
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+.icon-uq-add-circle:before { content: '\e800'; } /* '' */
+.icon-uq-minus-circle:before { content: '\e801'; } /* '' */
+.icon-uq-search:before { content: '\e802'; } /* '' */
+.icon-uq-new-window:before { content: '\e803'; } /* '' */
+.icon-uq-external-link:before { content: '\e804'; } /* '' */
+.icon-uq-close-circle:before { content: '\e805'; } /* '' */
+.icon-uq-options-circle:before { content: '\e806'; } /* '' */
+.icon-uq-send:before { content: '\e807'; } /* '' */
+.icon-uq-list:before { content: '\e808'; } /* '' */
+.icon-uq-time:before { content: '\e809'; } /* '' */
+.icon-uq-attach:before { content: '\e80a'; } /* '' */
+.icon-uq-apple:before { content: '\e80b'; } /* '' */
+.icon-uq-android:before { content: '\e80c'; } /* '' */
+.icon-uq-exit:before { content: '\e80d'; } /* '' */
+.icon-uq-pen:before { content: '\e80e'; } /* '' */
+.icon-uq-home:before { content: '\e80f'; } /* '' */
+.icon-uq-communicate:before { content: '\e810'; } /* '' */
+.icon-uq-bookmark:before { content: '\e811'; } /* '' */
+.icon-uq-tag:before { content: '\e812'; } /* '' */
+.icon-uq-location:before { content: '\e813'; } /* '' */
+.icon-uq-correct-circle:before { content: '\e814'; } /* '' */
+.icon-uq-menu:before { content: '\e815'; } /* '' */
+.icon-uq-file:before { content: '\e816'; } /* '' */
+.icon-uq-alert-circle:before { content: '\e817'; } /* '' */
+.icon-uq-calendar:before { content: '\e818'; } /* '' */
+.icon-uq-angle-right:before { content: '\e819'; } /* '' */
+.icon-uq-chevron-right:before { content: '\e81a'; } /* '' */
+.icon-uq-chevron-bold-right:before { content: '\e81b'; } /* '' */
+.icon-uq-sun:before { content: '\e81c'; } /* '' */
+.icon-uq-lock:before { content: '\e81d'; } /* '' */
+.icon-uq-pin:before { content: '\e81e'; } /* '' */
+.icon-uq-australia:before { content: '\e81f'; } /* '' */
+.icon-uq-anz:before { content: '\e820'; } /* '' */
+.icon-uq-world:before { content: '\e821'; } /* '' */
+.icon-uq-question-circle:before { content: '\e822'; } /* '' */
+.icon-uq-bicycle:before { content: '\e823'; } /* '' */
+.icon-uq-disability:before { content: '\e824'; } /* '' */
+.icon-uq-building:before { content: '\e825'; } /* '' */
+.icon-uq-book:before { content: '\e826'; } /* '' */
+.icon-uq-talk:before { content: '\e827'; } /* '' */
+.icon-uq-religion:before { content: '\e828'; } /* '' */
+.icon-uq-ferry:before { content: '\e829'; } /* '' */
+.icon-uq-train:before { content: '\e82a'; } /* '' */
+.icon-uq-bus:before { content: '\e82b'; } /* '' */
+.icon-uq-car:before { content: '\e82c'; } /* '' */
+.icon-uq-angle-down:before { content: '\e82d'; } /* '' */
+.icon-uq-angle-left:before { content: '\e82e'; } /* '' */
+.icon-uq-angle-up:before { content: '\e82f'; } /* '' */
+.icon-uq-chevron-down:before { content: '\e830'; } /* '' */
+.icon-uq-chevron-left:before { content: '\e831'; } /* '' */
+.icon-uq-chevron-up:before { content: '\e832'; } /* '' */
+.icon-uq-chevron-bold-down:before { content: '\e833'; } /* '' */
+.icon-uq-chevron-bold-left:before { content: '\e834'; } /* '' */
+.icon-uq-chevron-bold-up:before { content: '\e835'; } /* '' */
+.icon-uq-correct-circle-solid:before { content: '\e836'; } /* '' */
+.icon-uq-close-solid:before { content: '\e837'; } /* '' */
+.icon-uq-arrow-right:before { content: '\e838'; } /* '' */
+.icon-uq-arrow-left:before { content: '\e839'; } /* '' */
+.icon-uq-arrow-top:before { content: '\e83a'; } /* '' */
+.icon-uq-file-solid:before { content: '\e83b'; } /* '' */
+.icon-uq-pin-solid:before { content: '\e83c'; } /* '' */
+.icon-uq-building-2:before { content: '\e83d'; } /* '' */
+.icon-uq-add-solid:before { content: '\e83e'; } /* '' */
+.icon-uq-calendar-solid:before { content: '\e83f'; } /* '' */
+.icon-uq-options-circle-solid:before { content: '\e840'; } /* '' */
+.icon-uq-award:before { content: '\e841'; } /* '' */
+.icon-uq-research:before { content: '\e842'; } /* '' */
+.icon-uq-building-3:before { content: '\e843'; } /* '' */
+.icon-uq-graduate:before { content: '\e844'; } /* '' */
+.icon-uq-apply:before { content: '\e845'; } /* '' */
+.icon-uq-calculator:before { content: '\e846'; } /* '' */
+.icon-uq-arrow-down:before { content: '\e847'; } /* '' */
+.icon-uq-heart-health:before { content: '\e848'; } /* '' */
+.icon-uq-rubbish:before { content: '\e849'; } /* '' */
+.icon-uq-bars-short:before { content: '\e84a'; } /* '' */
+.icon-uq-bars-long:before { content: '\e84b'; } /* '' */
+.icon-uq-person-female:before { content: '\e84c'; } /* '' */
+.icon-uq-person-male:before { content: '\e84d'; } /* '' */
+.icon-uq-person:before { content: '\e84e'; } /* '' */
+.icon-uq-person-academic-female:before { content: '\e84f'; } /* '' */
+.icon-uq-person-academic-male:before { content: '\e850'; } /* '' */

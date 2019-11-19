@@ -1,0 +1,43 @@
+%links,
+a {
+  color: $link-color;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+
+  &:hover,
+  &:focus {
+    color: $link-hover-color;
+    text-decoration: underline;
+  }
+
+  img {
+    border: 0;
+  }
+}
+
+// External links include an icon after them.
+%external,
+.link--external {
+  &::after {
+    @include fa-icon;
+    color: $external-link-icon-color;
+    content: $fa-var-external-link;
+    font-size: .875rem;
+    margin-left: .5rem;
+  }
+}
+
+// Arrow link - Adds chevron before the link it is applied to.
+.arrow-link {
+  display: block;
+  font-weight: 400;
+  margin-left: 1.5rem;
+
+  &::before {
+    @include uq-icon(chevron-right);
+    color: $icon-light-grey-color;
+    font-size: .875rem;
+    text-indent: -1.5rem;
+  }
+}

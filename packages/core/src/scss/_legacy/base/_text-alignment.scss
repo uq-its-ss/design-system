@@ -1,0 +1,70 @@
+//
+// Text alignment class names
+//
+// Source: foundation/scss/foundation/components/_type.scss
+//
+
+$align-class-names: small-only,
+small,
+medium-only,
+medium,
+large-only,
+large,
+xlarge-only,
+xlarge,
+xxlarge-only,
+xxlarge;
+
+// Text alignment breakpoints
+$align-class-breakpoints: $small-only,
+$small-up,
+$medium-only,
+$medium-up,
+$large-only,
+$large-up,
+$xlarge-only,
+$xlarge-up,
+$xxlarge-only,
+$xxlarge-up;
+
+// Generates text align and justify classes
+@mixin align-classes {
+  .text-left {
+    text-align: left !important;
+  }
+
+  .text-right {
+    text-align: right !important;
+  }
+
+  .text-center {
+    text-align: center !important;
+  }
+
+  .text-justify {
+    text-align: justify !important;
+  }
+
+  @for $i from 1 through length($align-class-names) {
+    @media #{(nth($align-class-breakpoints, $i))} {
+      .#{(nth($align-class-names, $i))}-text-left {
+        text-align: left !important;
+      }
+
+      .#{(nth($align-class-names, $i))}-text-right {
+        text-align: right !important;
+      }
+
+      .#{(nth($align-class-names, $i))}-text-center {
+        text-align: center !important;
+      }
+
+      .#{(nth($align-class-names, $i))}-text-justify {
+        text-align: justify !important;
+      }
+    }
+  }
+}
+
+// Enable Zurb Foundation Responsive Text alignment
+@include align-classes;

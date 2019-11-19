@@ -1,3 +1,5 @@
+import '@uq-uidf/core/src/scss/_component.scss';
+
 export default {
   title: 'Core',
 };

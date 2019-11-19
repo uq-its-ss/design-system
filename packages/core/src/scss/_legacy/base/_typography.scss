@@ -1,0 +1,151 @@
+$h1-font-size: 2.438rem;
+$h2-font-size: 1.938rem;
+$h3-font-size: 1.438rem;
+$h4-font-size: 1.25rem;
+$h5-font-size: 1.138rem;
+$h6-font-size: 1rem;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+  line-height: 1.25;
+  margin-bottom: 1rem;
+  margin-top: 0;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+
+  a {
+    font-weight: inherit !important; // Always make links inside heading inherit font-weight of parent heading.
+  }
+}
+
+h1 {
+  font-size: $h1-font-size;
+}
+
+h2 {
+  font-size: $h2-font-size;
+}
+
+h3 {
+  font-size: $h3-font-size;
+}
+
+h4 {
+  font-size: $h4-font-size;
+}
+
+h5 {
+  font-size: $h5-font-size;
+}
+
+h6 {
+  font-size: $h6-font-size;
+}
+
+p {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+em,
+i {
+  font-style: italic;
+  line-height: inherit;
+}
+
+strong,
+b {
+  font-weight: $font-weight-bold;
+  line-height: inherit;
+}
+
+small {
+  font-size: 79.5%;
+}
+
+blockquote {
+  border-left: 5px solid $blockquote-border-color;
+  clear: both;
+  display: inline-block;
+  font-style: italic;
+  padding-left: $indent-amount;
+
+  @media #{$medium-up} {
+    clear: none;
+    display: table;
+  }
+
+  cite {
+    display: block;
+    font-size: .875rem;
+
+    &::before {
+      content: '- ';
+    }
+  }
+}
+
+pre {
+  overflow-x: auto;
+  white-space: pre;
+  word-wrap: normal;
+}
+
+code {
+  background: $code-bg;
+  border: 1px solid $code-border-color;
+  border-radius: 2px;
+  font-family: $font-monospace;
+  margin: 0 .2rem;
+  padding: 0 .4rem;
+}
+
+abbr {
+  text-decoration: none;
+}
+
+// Language direction
+.ltr {
+  direction: ltr;
+}
+
+.rtl {
+  direction: rtl;
+}
+
+// Add top spacing to headings if the come directly after certain elements.
+.layout-region__main {
+  p,
+  ul,
+  ol,
+  figure,
+  table,
+  hr,
+  .notice,
+  .pane {
+    & + h2,
+    & + h3 {
+      margin-top: 2.5rem;
+    }
+
+    & + h4,
+    & + h5,
+    & + h6 {
+      margin-top: 1.9rem;
+    }
+  }
+}
+
+// Font style utility classes
+// Lead text for paragraph introductions.
+.lead-text {
+  font-size: 1.387rem;
+  font-weight: 100;
+  line-height: 1.5;
+  margin-bottom: 1.8rem;
+}

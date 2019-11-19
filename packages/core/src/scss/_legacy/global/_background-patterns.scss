@@ -1,0 +1,32 @@
+// Background patterns and textures for use on sections to create visual difference.
+
+.pattern {
+  &--noise {
+    background-image: url("../images/pattern-noise.png");
+    background-repeat: repeat;
+  }
+
+  &--black-pinstripe {
+    background: #161616 url("../images/pattern-black-pinstripe.gif") repeat 0 0;
+  }
+
+  &--cardboard {
+    background: #f6f6f6 url("../images/pattern-cardboard.jpg") repeat 0 0;
+  }
+
+  &--mesh {
+    background: #fafafa url("../images/pattern-mesh.gif") repeat 0 0;
+  }
+
+  &--dark-grid {
+    background: #1d1d1d url("../images/pattern-dark-grid.png") repeat 50% 50%;
+  }
+
+  &--thatched {
+    background: #f8f8f8 url("../images/pattern-thatched.png") repeat 0 0;
+  }
+
+  &--light-grid {
+    background: #e2e2e2 url("../images/pattern-light-grid.png") repeat 50% 50%;
+  }
+}

@@ -1,0 +1,47 @@
+//
+// Custom functions
+//
+
+@mixin hide-text {
+  // http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement/
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+// Background images used for full-width cover.
+@mixin background-cover($image-path: false, $background-top: center, $background-left: center) {
+  // https://css-tricks.com/perfect-full-page-background-image
+  @if ($image-path) {
+    background-image: url($image-path);
+  }
+
+  background-position: $background-top $background-left;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+// Box shadow
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow: inset $top $left $blur $color;
+    -moz-box-shadow: inset $top $left $blur $color;
+    box-shadow: inset $top $left $blur $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $color;
+    -moz-box-shadow: $top $left $blur $color;
+    box-shadow: $top $left $blur $color;
+  }
+}
+
+// Auto-detect external links based on path and add external icon.
+@mixin external-auto-detect {
+  &[href^="http://"],
+  &[href^="https://"],
+  &[rel^="external"] {
+    @extend %external;
+  }
+}

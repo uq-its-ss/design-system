@@ -15,25 +15,24 @@
 // Import our variables.
 //
 // Allows us to set variables before a library sets its !default value.
-
-@import 'global/variables';
-@import 'global/colors';
-@import 'global/functions';
-@import 'global/tints';
-@import 'global/palettes';
-@import 'global/background-patterns';
+@import 'global/variables'; // TODO: move to package's _global.scss
+@import 'global/colors'; // TODO: move to package's _global.scss
+@import 'global/functions'; // TODO: move to package's _global.scss
+@import 'global/tints'; // TODO: move to package's _component.scss
+@import 'global/palettes'; // TODO: move to package's _component.scss
+@import 'global/background-patterns'; // TODO: move to package's _component.scss
 
 // Add Icon library
-@import 'global/icons';
+@import 'global/icons'; // TODO: move to package's _component.scss
 
 // =============================================================================
 // Partials to be shared with all .scss files.
 // =============================================================================
 
-// Add Compass
+// Add Compass (TODO: move to package's _global.scss)
 @import '../../../node_modules/compass-mixins/lib/compass';
 
-// Add Foundation
+// Add Foundation (TODO: move to package's _component.scss)
 @import '../../../node_modules/foundation-sites/scss/normalize.scss';
 @import '../../../node_modules/foundation-sites/scss/foundation/components/grid';
 @import '../../../node_modules/foundation-sites/scss/foundation/components/block-grid';

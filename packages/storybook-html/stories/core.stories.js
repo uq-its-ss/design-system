@@ -1,23 +1,27 @@
+// import component styles
+import '../src/components/core/style.scss';
+
+// import HTML template strings
+import coloursHTML from '../src/components/core/colours.html';
+import typoHTML from '../src/components/core/typography.html';
+import blockquoteHTML from '../src/components/core/blockquote.html';
+
 export default {
-  title: 'Core',
+  title: 'Core'
+};
+
+export const colors = () => {
+  return document.createElement('div').innerHTML = coloursHTML;
 };
 
 export const typography = () => {
-  const container = document.createElement('div');
-  const h1 = document.createElement('h1');
-  h1.innerText = 'Heading 1';
-  const h2 = document.createElement('h2');
-  h2.innerText = 'Heading 2';
-  const h3 = document.createElement('h3');
-  h3.innerText = 'Heading 3';
-  container.appendChild(h1);
-  container.appendChild(h2);
-  container.appendChild(h3);
-  return container;
+  return document.createElement('div').innerHTML = typoHTML;
 };
 
 export const blockquote = () => {
-  const empty = document.createElement('blockquote');
-  empty.innerText = "This is like a thing";
-  return empty;
-}
+  return document.createElement('div').innerHTML = blockquoteHTML;
+};
+
+export const icons = () => {
+  return document.createElement('div');
+};

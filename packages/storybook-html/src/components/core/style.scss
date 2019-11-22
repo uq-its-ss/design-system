@@ -1,0 +1,30 @@
+// Configure and import core package component SCSS
+$fa-font-path: "~@uq-uidf/core/node_modules/font-awesome/fonts";
+$uq-font-path: "~@uq-uidf/core/src/fonts/uq-icons/font";
+$uq-bg-image-path: "~@uq-uidf/core/src/images";
+
+@import "~@uq-uidf/core/src/scss/_component";
+
+.color-swatch {
+  padding: 50%; // square ratio
+  width: 100%;
+  border-radius: 50%;
+  margin: $column-gutter / 2;
+  position: relative;
+  &:after {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: white;
+  }
+  &--uq-purple {
+    background-color: $uq-purple;
+    &:after {
+      content: '$uq-purple';
+    }
+  }
+}

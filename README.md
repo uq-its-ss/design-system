@@ -7,12 +7,29 @@ The `storybook-html` package is used to develop components.
   - Lerna.js: management tool for Javascript monorepositories (for the components library).
   - Storybook.js: UI component explorer for front-end developers (consumes and documents the components library for development of the latest versions).
 
-## Setup instructions
+## Setup instructions for package development
 
-### Set up Verdaccio
+### Install monorepo dependencies
 
-Set up Verdaccio globally.
+`$ npm i`
 
-### Set up the directories and Lerna
+### Set up packages w/ Lerna
 
-### Set up Storybook.js for HTML
+`$ npx lerna bootstrap`
+
+### Using Storybook for component development
+
+1. Change to the `storybook-html` package directory
+2. `$ npm run storybook`
+
+## Running Verdaccio to simulated publishing of packages
+
+Verdaccio is a local npm registry proxy that we can use to simulation publishing packages.
+
+### Set up Verdaccio for local package publication
+
+Set up Verdaccio globally:  
+`$ npm i -g verdaccio`
+
+Publish using Lerna:  
+`$ npx lerna publish`

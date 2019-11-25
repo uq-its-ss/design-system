@@ -5,6 +5,7 @@ import '../src/components/core/style.scss';
 import coloursHTML from '../src/components/core/colours.html';
 import typoHTML from '../src/components/core/typography.html';
 import blockquoteHTML from '../src/components/core/blockquote.html';
+import iconsHTML from '../src/components/core/icons.html';
 
 export default {
   title: 'Core'
@@ -23,7 +24,7 @@ export const blockquote = () => {
 };
 
 export const icons = () => {
-  return document.createElement('div');
+  return document.createElement('div').innerHTML = iconsHTML;
 };
 
 export const forms = () => {

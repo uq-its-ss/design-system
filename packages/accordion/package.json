@@ -1,8 +1,23 @@
 {
-  "name": "accordion",
+  "name": "@uq-uidf/accordion",
   "version": "0.0.0",
   "description": "Package for accordion component",
-  "author": "uqmchu <45442566+uqmchu@users.noreply.github.com>",
+  "keywords": [
+    "uq-uidf",
+    "uq",
+    "University of Queensland",
+    "user interface development framework",
+    "design system",
+    "scss",
+    "sass",
+    "css",
+    "accordion"
+  ],
+  "author": {
+    "name": "University of Queensland",
+    "email": "webservices@uq.edu.au",
+    "url": "https://uq.edu.au"
+  },
   "homepage": "https://github.com/uqmchu/uq-uidf-components#readme",
   "license": "ISC",
   "main": "lib/accordion.js",
@@ -13,6 +28,9 @@
   "files": [
     "lib"
   ],
+  "publishConfig": {
+    "registry": "http://localhost:4873/"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/uqmchu/uq-uidf-components.git"

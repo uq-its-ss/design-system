@@ -1,0 +1,36 @@
+.story-icons-list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  list-style: none;
+  margin: 30px;
+  padding: 0;
+  &__item {
+    flex-basis: #{(100 / 2) + "%"};
+    @media #{$medium-up} {
+      flex-basis: #{(100 / 6) + "%"};
+    }
+    @media #{$large-up} {
+      flex-basis: #{(100 / 8) + "%"};
+    }
+  }
+}
+.story-icon {
+  padding: 50%; // square ratio
+  width: 100%;
+  position: relative;
+  /*
+  &:after {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    display: block;
+    padding: 20px;
+    line-height: 1.3;
+    width: 100%;
+    text-align: center;
+    font-size: 0.75rem;
+  }
+  */
+}

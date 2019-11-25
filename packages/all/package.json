@@ -1,5 +1,5 @@
 {
-  "name": "all",
+  "name": "@uq-uidf/all",
   "version": "0.0.0",
   "description": "package to import all components (including core)",
   "keywords": [
@@ -28,6 +28,9 @@
     "lib/*",
     "src/*"
   ],
+  "publishConfig": {
+    "registry": "http://localhost:4873/"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/uqmchu/uq-uidf-components.git"

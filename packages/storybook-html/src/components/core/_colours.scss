@@ -1,0 +1,260 @@
+.color-swatch-list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  list-style: none;
+  margin: 30px;
+  padding: 0;
+  &__item {
+    flex-basis: #{(100 / 2) + "%"};
+    @media #{$medium-up} {
+      flex-basis: #{(100 / 6) + "%"};
+    }
+    @media #{$large-up} {
+      flex-basis: #{(100 / 8) + "%"};
+    }
+  }
+}
+.color-swatch {
+  padding: 50%; // square ratio
+  width: 100%;
+  position: relative;
+  &:after {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    display: block;
+    padding: 20px;
+    line-height: 1.3;
+    width: 100%;
+    text-align: center;
+    font-size: 0.75rem;
+    color: white;
+  }
+  &--uq-purple {
+    background-color: $uq-purple;
+    &:after {
+      content: '$uq-purple';
+    }
+  }
+  &--uq-dark-purple {
+    background-color: $uq-dark-purple;
+    &:after {
+      content: '$uq-dark-purple';
+    }
+  }
+  &--uq-green {
+    background-color: $uq-green;
+    &:after {
+      content: '$uq-green';
+    }
+  }
+  &--uq-gold {
+    background-color: $uq-gold;
+    &:after {
+      content: '$uq-gold';
+    }
+  }
+  &--link-color {
+    background-color: $link-color;
+    &:after {
+      content: '$link-color';
+    }
+  }
+  &--link-active-color {
+    background-color: $link-active-color;
+    &:after {
+      content: '$link-active-color';
+    }
+  }
+  &--external-link-icon-color {
+    background-color: $external-link-icon-color;
+    &:after {
+      content: '$external-link-icon-color';
+    }
+  }
+  &--linked-list-desc {
+    background-color: $linked-list-desc;
+    &:after {
+      content: '$linked-list-desc';
+    }
+  }
+  &--vertical-list-border {
+    background-color: $vertical-list-border;
+    &:after {
+      color: black;
+      content: '$vertical-list-border';
+    }
+  }
+  &--button-bg-color {
+    background-color: $button-bg-color;
+    &:after {
+      content: '$button-bg-color';
+    }
+  }
+  &--button-bg-hover {
+    background-color: $button-bg-hover;
+    &:after {
+      content: '$button-bg-hover';
+    }
+  }
+  &--secondary-button-color {
+    background-color: $secondary-button-color;
+    &:after {
+      color: black;
+      content: '$secondary-button-color';
+    }
+  }
+  &--secondary-button-bg-color {
+    background-color: $secondary-button-bg-color;
+    &:after {
+      content: '$secondary-button-bg-color';
+    }
+  }
+  &--secondary-button-bg-hover {
+    background-color: $secondary-button-bg-hover;
+    &:after {
+      content: '$secondary-button-bg-hover';
+    }
+  }
+  &--messages-status-bg {
+    background-color: $messages-status-bg;
+    &:after {
+      color: black;
+      content: '$messages-status-bg';
+    }
+  }
+  &--messages-status-border-color {
+    background-color: $messages-status-border-color;
+    &:after {
+      content: '$messages-status-border-color';
+    }
+  }
+  &--messages-status-color {
+    background-color: $messages-status-color;
+    &:after {
+      content: '$messages-status-color';
+    }
+  }
+  &--messages-warning-bg {
+    background-color: $messages-warning-bg;
+    &:after {
+      color: black;
+      content: '$messages-warning-bg';
+    }
+  }
+  &--messages-warning-border-color {
+    background-color: $messages-warning-border-color;
+    &:after {
+      color: black;
+      content: '$messages-warning-border-color';
+    }
+  }
+  &--messages-warning-color {
+    background-color: $messages-warning-color;
+    &:after {
+      content: '$messages-warning-color';
+    }
+  }
+  &--messages-error-bg {
+    background-color: $messages-error-bg;
+    &:after {
+      content: '$messages-error-bg';
+    }
+  }
+  &--messages-error-border-color {
+    background-color: $messages-error-border-color;
+    &:after {
+      content: '$messages-error-border-color';
+    }
+  }
+  &--messages-error-color {
+    background-color: $messages-error-color;
+    &:after {
+      color: black;
+      content: '$messages-error-color';
+    }
+  }
+  &--messages-error-link-color {
+    background-color: $messages-error-link-color;
+    &:after {
+      color: black;
+      content: '$messages-error-link-color';
+    }
+  }
+  &--progression-text {
+    background-color: $progression-text;
+    &:after {
+      color: black;
+      content: '$progression-text';
+    }
+  }
+  &--progression-border {
+    background-color: $progression-border;
+    &:after {
+      color: black;
+      content: '$progression-border';
+    }
+  }
+  &--progression-label {
+    background-color: $progression-label;
+    &:after {
+      content: '$progression-label';
+    }
+  }
+  &--progression-step-bg {
+    background-color: $progression-step-bg;
+    &:after {
+      content: '$progression-step-bg';
+    }
+  }
+  &--progression-bar-bg {
+    background-color: $progression-bar-bg;
+    &:after {
+      content: '$progression-bar-bg';
+    }
+  }
+  &--progression-completed {
+    background-color: $progression-completed;
+    &:after {
+      content: '$progression-completed';
+    }
+  }
+  &--form-required-color {
+    background-color: $form-required-color;
+    &:after {
+      content: '$form-required-color';
+    }
+  }
+  &--form-description-color {
+    background-color: $form-description-color;
+    &:after {
+      content: '$form-description-color';
+    }
+  }
+  &--form-input-border-color {
+    background-color: $form-input-border-color;
+    &:after {
+      content: '$form-input-border-color';
+    }
+  }
+  &--accordion-editor-outline {
+    background-color: $accordion-editor-outline;
+    &:after {
+      content: '$accordion-editor-outline';
+    }
+  }
+  &--content-column-block-pane-bg {
+    background-color: $content-column-block-pane-bg;
+    &:after {
+      content: '$content-column-block-pane-bg';
+    }
+  }
+  &--content-column-block-pane-odd-bg {
+    background-color: $content-column-block-pane-odd-bg;
+    &:after {
+      content: '$content-column-block-pane-odd-bg';
+    }
+  }
+}

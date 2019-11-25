@@ -1,0 +1,48 @@
+{
+  "name": "all",
+  "version": "0.0.0",
+  "description": "package to import all components (including core)",
+  "keywords": [
+    "uq-uidf",
+    "uq",
+    "University of Queensland",
+    "user interface development framework",
+    "design system",
+    "scss",
+    "sass",
+    "css"
+  ],
+  "author": {
+    "name": "University of Queensland",
+    "email": "webservices@uq.edu.au",
+    "url": "https://uq.edu.au"
+  },
+  "homepage": "https://github.com/uqmchu/uq-uidf-components#readme",
+  "license": "ISC",
+  "directories": {
+    "lib": "lib",
+    "src": "src",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib/*",
+    "src/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uqmchu/uq-uidf-components.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/uqmchu/uq-uidf-components/issues"
+  },
+  "dependencies": {
+    "@uq-uidf/accordion": "^0.0.0",
+    "@uq-uidf/body": "^0.0.0",
+    "@uq-uidf/button": "^0.0.0",
+    "@uq-uidf/core": "^0.0.0",
+    "@uq-uidf/form": "^0.0.0"
+  }
+}

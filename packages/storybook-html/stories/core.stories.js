@@ -25,3 +25,7 @@ export const blockquote = () => {
 export const icons = () => {
   return document.createElement('div');
 };
+
+export const forms = () => {
+  return document.createElement('div');
+};

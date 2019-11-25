@@ -94,6 +94,18 @@ $uq-bg-image-path: "~@uq-uidf/core/src/images";
       content: '$vertical-list-border';
     }
   }
+  &--button-bg-color {
+    background-color: $button-bg-color;
+    &:after {
+      content: '$button-bg-color';
+    }
+  }
+  &--button-bg-hover {
+    background-color: $button-bg-hover;
+    &:after {
+      content: '$button-bg-hover';
+    }
+  }
   &--secondary-button-color {
     background-color: $secondary-button-color;
     &:after {
@@ -113,10 +125,30 @@ $uq-bg-image-path: "~@uq-uidf/core/src/images";
       content: '$secondary-button-bg-hover';
     }
   }
+  &--messages-status-bg {
+    background-color: $messages-status-bg;
+    &:after {
+      color: black;
+      content: '$messages-status-bg';
+    }
+  }
   &--messages-status-border-color {
     background-color: $messages-status-border-color;
     &:after {
       content: '$messages-status-border-color';
+    }
+  }
+  &--messages-status-color {
+    background-color: $messages-status-color;
+    &:after {
+      content: '$messages-status-color';
+    }
+  }
+  &--messages-warning-bg {
+    background-color: $messages-warning-bg;
+    &:after {
+      color: black;
+      content: '$messages-warning-bg';
     }
   }
   &--messages-warning-border-color {
@@ -126,10 +158,68 @@ $uq-bg-image-path: "~@uq-uidf/core/src/images";
       content: '$messages-warning-border-color';
     }
   }
+  &--messages-warning-color {
+    background-color: $messages-warning-color;
+    &:after {
+      content: '$messages-warning-color';
+    }
+  }
+  &--messages-error-bg {
+    background-color: $messages-error-bg;
+    &:after {
+      content: '$messages-error-bg';
+    }
+  }
   &--messages-error-border-color {
     background-color: $messages-error-border-color;
     &:after {
       content: '$messages-error-border-color';
+    }
+  }
+  &--messages-error-color {
+    background-color: $messages-error-color;
+    &:after {
+      color: black;
+      content: '$messages-error-color';
+    }
+  }
+  &--messages-error-link-color {
+    background-color: $messages-error-link-color;
+    &:after {
+      color: black;
+      content: '$messages-error-link-color';
+    }
+  }
+  &--progression-text {
+    background-color: $progression-text;
+    &:after {
+      color: black;
+      content: '$progression-text';
+    }
+  }
+  &--progression-border {
+    background-color: $progression-border;
+    &:after {
+      color: black;
+      content: '$progression-border';
+    }
+  }
+  &--progression-label {
+    background-color: $progression-label;
+    &:after {
+      content: '$progression-label';
+    }
+  }
+  &--progression-step-bg {
+    background-color: $progression-step-bg;
+    &:after {
+      content: '$progression-step-bg';
+    }
+  }
+  &--progression-bar-bg {
+    background-color: $progression-bar-bg;
+    &:after {
+      content: '$progression-bar-bg';
     }
   }
   &--progression-completed {
@@ -142,6 +232,18 @@ $uq-bg-image-path: "~@uq-uidf/core/src/images";
     background-color: $form-required-color;
     &:after {
       content: '$form-required-color';
+    }
+  }
+  &--form-description-color {
+    background-color: $form-description-color;
+    &:after {
+      content: '$form-description-color';
+    }
+  }
+  &--form-input-border-color {
+    background-color: $form-input-border-color;
+    &:after {
+      content: '$form-input-border-color';
     }
   }
   &--accordion-editor-outline {

@@ -41,9 +41,9 @@
     "url": "https://github.com/uqmchu/uq-uidf-components/issues"
   },
   "devDependencies": {
-    "@uq-uidf/core": "^1.0.0"
+    "@uq-uidf/core": "^0.0.0"
   },
   "peerDependencies": {
-    "@uq-uidf/core": "^1.0.0"
+    "@uq-uidf/core": "^0.0.0"
   }
 }

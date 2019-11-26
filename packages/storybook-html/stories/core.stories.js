@@ -1,4 +1,4 @@
-// import component styles
+// import styles
 import '../src/components/core/style.scss';
 
 // import HTML template strings

@@ -60,3 +60,9 @@ Follow the instructions to bump you package versions.
 You may need to create a user account during this step.
 
 Voila!
+
+## Proposal: src/ vs. lib/ vs. dist/
+
+- src: for developers of the UIDF
+- lib: for consumers of the UIDF (generated, advanced, bring your own build system)
+- dist: for consumers of the UIDF (generated, no build system required, minified)

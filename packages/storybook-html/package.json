@@ -1,6 +1,6 @@
 {
   "name": "storybook-html",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "Storybook for HTML instance for uq-uidf component development",
   "private": true,
   "main": "index.js",

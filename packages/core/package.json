@@ -21,11 +21,13 @@
   "homepage": "https://github.com/uqmchu/uq-uidf-components#readme",
   "license": "ISC",
   "directories": {
+    "dist": "dist",
     "lib": "lib",
     "src": "src",
     "test": "__tests__"
   },
   "files": [
+    "dist/*",
     "lib/*",
     "src/*"
   ],

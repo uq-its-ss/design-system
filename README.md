@@ -22,8 +22,6 @@ The `storybook-html` package is used to develop components.
 1. Change to the `storybook-html` package directory
 2. `$ npm run storybook`
 
-Note: you may need to manually install `font-awesome 4.7.0`, which is a peer dependency of `@uq-uidf/core`, as Lerna does not bootstrap peer dependencies. It is expected that when clients use the UIDF, they will be warned by the package manager to install peer dependencies.
-
 ## Running Verdaccio to simulate publication of packages
 
 Verdaccio is a local npm registry proxy that we can use to simulation publishing packages.  

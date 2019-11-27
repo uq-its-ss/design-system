@@ -2,11 +2,16 @@
 import '../src/components/form/style.scss';
 
 // import HTML template strings
+import allHTML from '../src/components/form/all.html';
 import textInputHTML from '../src/components/form/text-input.html';
 import textAreaHTML from '../src/components/form/text-area.html';
 
 export default {
   title: 'Form'
+};
+
+export const all = () => {
+  return document.createElement('div').innerHTML = allHTML;
 };
 
 export const textInput = () => {
@@ -15,4 +20,12 @@ export const textInput = () => {
 
 export const textArea = () => {
   return document.createElement('div').innerHTML = textAreaHTML;
+};
+
+export const inputValidation = () => {
+  return document.createElement('div');
+};
+
+export const inputValidationErrors = () => {
+  return document.createElement('div');
 };

@@ -24,20 +24,23 @@ The `storybook-html` package is used to develop components.
 
 ## Creating a new package
 
-Create a package file
+Create a package file:
 `packages/my-component-name`
-Create subfiles and directories
+
+Create subfiles and directories:
 ```packages/my-component-name/src
 packages/my-component-name/src/scss
 packages/my-component-name/src/scss/_component.scss
 packages/my-component-name/src/scss/_global.scss
 ```
-Create the storybook files
-`packages/storybook-html/src/components/my-component-name`
-`packages/storybook-html/stories/components/my-component-name.stories.js`
+Create the storybook files:
+```
+packages/storybook-html/src/components/my-component-name
+packages/storybook-html/stories/components/my-component-name.stories.js
+```
 
-Add component to Storybook dependencies 
-`packages/storybook-html/packages.json`
+Add component to Storybook dependencies:
+ `packages/storybook-html/packages.json`
 ```
   "dependencies": {
     "@uq-uidf/my-component-name": "^0.0.0",

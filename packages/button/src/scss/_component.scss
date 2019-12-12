@@ -1,0 +1,79 @@
+.button {
+  &--secondary {
+    background-color: $secondary-button-bg-color;
+    color: $secondary-button-color;
+
+    &:focus,
+    &:hover {
+      background-color: $secondary-button-bg-hover;
+    }
+  }
+
+  &--tertiary {
+    background-color: $tertiary-button-bg-color;
+    color: $tertiary-button-color !important; // Must counter palette styling in order to avoid white text on grey.
+
+    &:focus,
+    &:hover {
+      background-color: $tertiary-button-bg-hover;
+      color: $tertiary-button-color;
+    }
+  }
+
+  &--white {
+    background-color: $white-button-bg-color;
+    color: $link-color !important; // Must counter palette styling in order to avoid white text on white.
+
+    &:focus,
+    &:hover {
+      background-color: $white-button-bg-hover;
+    }
+  }
+
+  &--outline {
+    background-color: transparent;
+    border: 2px solid $button-bg-color;
+    color: $link-color;
+    padding: .85rem 1.9rem .9625rem; // Slightly decreased to counter the added border.
+
+    &.button--secondary {
+      border-color: $secondary-button-border-color;
+      color: #222;
+
+      &:focus,
+      &:hover {
+        color: #fff;
+      }
+    }
+
+    &.button--tertiary {
+      border-color: $tertiary-button-border-color;
+      color: #222;
+    }
+
+    &.button--white {
+      border-color: $white-button-border-color;
+      color: #fff !important;
+
+      &:focus,
+      &:hover {
+        color: $link-color !important;
+      }
+    }
+  }
+
+  &--no-margin {
+    margin-bottom: 0;
+  }
+}
+
+// Overrides for when displayed within wysiwyg fields.
+.cke_editable {
+  .button--white {
+    box-shadow: 0 0 5px #000;
+
+    &.button--outline {
+      text-shadow: 0 0 2px #000;
+    }
+  }
+}

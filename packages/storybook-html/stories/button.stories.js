@@ -1,10 +1,13 @@
+// import styles
+import '../src/components/button/button.scss';
+
 // import HTML template strings
-import buttonsHTML from '../src/components/button/buttons.html';
+import buttonHTML from '../src/components/button/button.html';
 
 export default {
   title: 'Button'
 };
 
-export const buttons = () => {
-  return document.createElement('div').innerHTML = buttonsHTML;
+export const button = () => {
+  return document.createElement('div').innerHTML = buttonHTML;
 };

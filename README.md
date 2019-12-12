@@ -22,6 +22,29 @@ The `storybook-html` package is used to develop components.
 1. Change to the `storybook-html` package directory
 2. `$ npm run storybook`
 
+## Creating a new package
+
+Create a package file
+`packages/my-component-name`
+Create subfiles and directories
+```packages/my-component-name/src
+packages/my-component-name/src/scss
+packages/my-component-name/src/scss/_component.scss
+packages/my-component-name/src/scss/_global.scss
+```
+Create the storybook files
+`packages/storybook-html/src/components/my-component-name`
+`packages/storybook-html/stories/components/my-component-name.stories.js`
+
+Add component to Storybook dependencies 
+`packages/storybook-html/packages.json`
+```
+  "dependencies": {
+    "@uq-uidf/my-component-name": "^0.0.0",
+  }
+```
+
+
 ## Running Verdaccio to simulate publication of packages
 
 Verdaccio is a local npm registry proxy that we can use to simulation publishing packages.  

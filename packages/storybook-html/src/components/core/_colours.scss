@@ -1,4 +1,4 @@
-.color-swatch-list {
+.story-color-swatch-list {
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
@@ -15,7 +15,7 @@
     }
   }
 }
-.color-swatch {
+.story-color-swatch {
   padding: 50%; // square ratio
   width: 100%;
   position: relative;
@@ -38,10 +38,17 @@
       content: '$uq-purple';
     }
   }
-  &--uq-dark-purple {
-    background-color: $uq-dark-purple;
+  &--uq-black {
+    background-color: $uq-black;
     &:after {
-      content: '$uq-dark-purple';
+      content: '$uq-black';
+    }
+  }
+  &--uq-white {
+    background-color: $uq-white;
+    &:after {
+      color: black;
+      content: '$uq-white';
     }
   }
   &--uq-green {
@@ -87,6 +94,8 @@
       content: '$vertical-list-border';
     }
   }
+  /*
+  TODO: Give these colours names or make them more generic:
   &--button-bg-color {
     background-color: $button-bg-color;
     &:after {
@@ -118,6 +127,7 @@
       content: '$secondary-button-bg-hover';
     }
   }
+  */
   &--messages-status-bg {
     background-color: $messages-status-bg;
     &:after {

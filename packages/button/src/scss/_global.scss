@@ -1,1 +1,20 @@
-// Documentation (re: dependencies, version), variables, and mixins go here... for each component
+// Variables, functions, and mixins
+
+$button-bg-color: $link-color;
+$button-bg-hover: $link-active-color;
+$button-border-color: transparent;
+$secondary-button-color: #fff;
+$secondary-button-bg-color: #444;
+$secondary-button-bg-hover: #333;
+$secondary-button-border-color: #444;
+$tertiary-button-color: #222;
+$tertiary-button-bg-color: #eee;
+$tertiary-button-bg-hover: #ddd;
+$tertiary-button-border-color: #ddd;
+$white-button-bg-color: #fff;
+$white-button-bg-hover: #eee;
+$white-button-border-color: #fff;
+
+@import '../../node_modules/foundation-sites/scss/foundation/components/buttons';
+@import '../../node_modules/foundation-sites/scss/foundation/components/dropdown';
+@import '../../node_modules/foundation-sites/scss/foundation/components/dropdown-buttons';

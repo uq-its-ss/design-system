@@ -26,7 +26,3 @@ export const blockquote = () => {
 export const icons = () => {
   return document.createElement('div').innerHTML = iconsHTML;
 };
-
-export const forms = () => {
-  return document.createElement('div');
-};

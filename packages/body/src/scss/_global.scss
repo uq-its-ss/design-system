@@ -1,0 +1,35 @@
+// Variables, functions, and mixins
+
+// Headings
+$h1-font-size: 2.438rem;
+$h2-font-size: 1.938rem;
+$h3-font-size: 1.438rem;
+$h4-font-size: 1.25rem;
+$h5-font-size: 1.138rem;
+$h6-font-size: 1rem;
+
+// Blockquotes
+$blockquote-indent-amount: 1rem;
+$blockquote-border-color: #eee;
+
+// Horizontal rule
+$hr-border-color: #ddd;
+
+// Images
+$img-border-color: #ddd;
+$figure-caption-bg: #eee;
+
+// Tables
+$table-border-color: #ddd;
+$table-header-bg: #fcfcfc;
+
+// Table striping
+$table-header-striped-bg: #eee;
+$table-row-striped-bg: #fcfcfc;
+
+// Code
+$code-border-color: #eee;
+$code-bg: #f5f5f5;
+
+@import '../../node_modules/foundation-sites/scss/foundation/components/tables';
+@import '../../node_modules/foundation-sites/scss/foundation/components/flex-video';

@@ -1,0 +1,177 @@
+@import '_global.scss';
+
+// Foundation Button partial is included via Foundation Forms partial
+//
+// Variants:
+// .form--transparent-fieldsets - Removes the default styling applied to fieldsets.
+//
+
+.form {
+  &--transparent-fieldsets {
+    fieldset {
+      border: 0;
+      padding: 0;
+      margin: 0;
+    }
+  }
+}
+
+label {
+  font-weight: 500;
+}
+
+// Labels for checkbox and radio buttons.
+input[type='checkbox'] + label,
+input[type='radio'] + label {
+  font-weight: 300;
+  margin-bottom: 1rem;
+  // So long labels on multiple lines don't break around the radio/checkbox.
+  max-width: 80%;
+  vertical-align: top;
+
+  @media #{$medium-up} {
+    max-width: 85%;
+  }
+}
+
+input[type='submit'] {
+  @include button;
+}
+
+input[type='submit'][disabled] {
+  @include button(
+    $disabled: true
+  );
+  cursor: not-allowed;
+}
+
+// Override Foundation which removes bottom margin from fields which have
+// errors.
+input.error,
+textarea.error {
+  margin-bottom: 1rem;
+}
+
+input.field-add-more-submit {
+  clear: both;
+  float: right;
+}
+
+input[type='reset'] {
+  @include button-base;
+  @include button-size;
+  // Included from Foundation .button.alert{} style.
+  @include button-style($bg:$alert-button-bg-color, $bg-hover:$alert-button-bg-hover, $border-color:$alert-button-border-color);
+}
+
+.form-required {
+  color: $form-required-color;
+}
+
+// Visually connect file uploads to the upload button.
+.form-managed-file .form-file {
+  background: transparent;
+  border: 1px dashed #ddd;
+  border-right: 0;
+  padding: 0.8rem;
+}
+
+.form-radios,
+.form-checkboxes {
+  margin-bottom: 1rem;
+}
+
+.captcha {
+  margin: 1rem 0;
+
+  img {
+    margin-bottom: .5rem;
+  }
+}
+
+// Override Foundation default full width for input fields.
+input[type='text'],
+input[type='password'],
+input[type='date'],
+input[type='datetime'],
+input[type='datetime-local'],
+input[type='month'],
+input[type='week'],
+input[type='email'],
+input[type='number'],
+input[type='search'],
+input[type='tel'],
+input[type='time'],
+input[type='url'],
+input[type='color'],
+input[type='file'] {
+  @media #{$medium-up}{
+    max-width: 100%;
+    width: auto;
+  }
+}
+
+// Full-width form field variant for situations where fields should fit the
+// full container.
+.form--full-width {
+  input[type='text'],
+  input[type='password'],
+  input[type='date'],
+  input[type='datetime'],
+  input[type='datetime-local'],
+  input[type='month'],
+  input[type='week'],
+  input[type='email'],
+  input[type='number'],
+  input[type='search'],
+  input[type='tel'],
+  input[type='time'],
+  input[type='url'],
+  input[type='color'],
+  input[type='file'] {
+    @media #{$medium-up}{
+      width: 100%;
+    }
+  }
+}
+
+.description {
+  color: $form-description-color;
+  font-size: .875rem;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+// Move description closer to input fields.
+input,
+textarea,
+.resizable-textarea,
+.date-date {
+  & + .description {
+    margin-top: -0.8rem;
+  }
+}
+
+.field-multiple-drag {
+  background: repeating-linear-gradient(
+    -55deg,
+    #fff,
+    #fff 2px,
+    #f2f2f2 2px,
+    #f2f2f2 4px
+  );
+
+  .handle {
+    width: 0;
+    &::before {
+      @include fa-icon;
+      content: $fa-var-arrows;
+      color: #777;
+    }
+  }
+}
+
+select[multiple='multiple'] {
+  height: auto;
+  max-height: 4rem;
+}

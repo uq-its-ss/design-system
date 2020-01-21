@@ -1,11 +1,55 @@
-# `body`
+# @uq-uidf/body
 
-> TODO: description
+> Basic styles for HTML elements (excluding form elements).
 
 ## Usage
 
-```
-const body = require('body');
+### Installation
 
-// TODO: DEMONSTRATE API
+With Yarn:
+```shell
+yarn add @uq-uidf/body
 ```
+
+With NPM:
+```shell
+npm i @uq-uidf/body
+```
+
+### Stylesheets
+
+```scss
+// SCSS
+
+@import '~@uq-uidf/body/src/scss/_component';
+```
+
+```css
+/* CSS (PostCSS) */
+/* Watch this space... */
+```
+
+### Javascript
+
+This package has no Javascript component.
+
+---
+
+## Dependencies
+
+```
+@uq-uidf/body ← you are here
+↳ @uq-uidf/core
+```
+
+---
+
+## Tests
+
+---
+
+## Release notes
+
+---
+
+## License

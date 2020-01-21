@@ -1,7 +1,7 @@
 {
-  "name": "@uq-uidf/button",
+  "name": "@uq-uidf/alert",
   "version": "0.0.0",
-  "description": "The button component package",
+  "description": "The styles for page alerts",
   "keywords": [
     "uq-uidf",
     "uq",
@@ -11,7 +11,7 @@
     "scss",
     "sass",
     "css",
-    "button"
+    "alert"
   ],
   "author": {
     "name": "University of Queensland",
@@ -44,6 +44,7 @@
     "foundation-sites": "^5.5.3"
   },
   "peerDependencies": {
-    "@uq-uidf/core": "^0.0.0"
+    "@uq-uidf/core": "^0.0.0",
+    "@uq-uidf/button": "^0.0.0"
   }
 }

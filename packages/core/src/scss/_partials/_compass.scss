@@ -1,7 +1,7 @@
-//
-// Variables
-//
-
+/** 
+ * Compass variables
+ * =================
+ */
 //
 // Browser support
 //
@@ -54,7 +54,7 @@ $browser-minimum-versions: (
 //
 
 // Set this to true to force normalize.scss output to exactly match normalize.css.
-$strict-normalize: false;
+// $strict-normalize: false;
 
 // Compass' vertical_rhythm extension is a powerful tool to set up a vertical
 // rhythm for your entire page. You can see some of its mixins and functions in
@@ -73,65 +73,8 @@ $base-line-height:  $base-font-size * $base-line-height-ratio;
 // Supported values: px, em, rem.
 $rhythm-unit:       'rem';
 
-// The following font family declarations use widely available fonts.
-// A user's web browser will look at the comma-separated list and will
-// attempt to use each font in turn until it finds one that is available
-// on the user's computer. The final "generic" font (sans-serif, serif or
-// monospace) hints at what type of font to use if the web browser doesn't
-// find any of the fonts in the list.
-
-$roboto:  'Roboto', "Helvetica Neue", Helvetica, Arial, sans-serif;
-
-// Monospace font stacks.
-// For an explanation of why "sans-serif" is at the end of this list, see
-// http://meyerweb.com/eric/thoughts/2010/02/12/fixed-monospace-sizing/
-$courier:         "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
-
-// Now create some variables using the font stacks we want on this site.
-$font-body:       $roboto;
-$font-monospace:  $courier;
-$font-weight-bold: 500;
-
-// Foundation default settings
-$alert-close-color: #fff;
-$alert-close-font-size: 2rem;
-$alert-close-opacity: 1;
-$alert-close-position: .5rem;
-$alert-font-size: 1rem;
-$alert-font-weight: 300;
-$alert-padding-top: 1rem;
-$alert-padding-opposite-direction: $alert-padding-top + 2rem;
-$body-font-color: #2b2b2b;
-$body-font-family: $roboto;
-$body-font-weight: 300;
-$row-width: 1140px;
-$include-xl-html-grid-classes: true;
-$include-xl-html-block-grid-classes: true;
-$select-bg-color: #fff;
-$site-footer-font-size: 0.875rem;
-
-//removes column gutter so edges of block grid align with grid
-$align-block-grid-to-grid: true;
-
-$gutter:      20px;
-$half-gutter: ($gutter / 2);
-
-//
-// Misc
-//
-
-// The amount lists, blockquotes and comments are indented.
-$indent-amount: 1rem;
-
-// Font Awesome settings
-$fa-font-path: "~font-awesome/fonts";
-$fa-css-prefix: icon;
-$fa-font-size-base: $base-font-size;
-
-// UQ Icon settings
-$uq-font-path: "~@uq-uidf/core/src/fonts/uq-icons/font";
-$uq-css-prefix: icon;
-$uq-font-size-base: $base-font-size;
-
-// Background images path
-$uq-bg-image-path: "~@uq-uidf/core/src/images";
+/** 
+ * Compass mixins
+ * =================
+ */
+@import '../../../node_modules/compass-mixins/lib/compass';

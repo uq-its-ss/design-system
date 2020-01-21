@@ -3,21 +3,116 @@
 @import '_global.scss';
 @import '_print.scss';
 
-// Legacy: Import Sass mixins, variables, Compass modules, etc. (TODO: see file contents)
-@import '_legacy/init';
+.uq-logo {
+  @include hide-text;
+  background: url('https://static.uq.net.au/v5/logos/corporate/uq-logo-white.png') no-repeat 0 0; // sass-lint:disable-line no-url-domains, no-url-protocols
+  background: url('https://static.uq.net.au/v5/logos/corporate/uq-logo-white.svg') no-repeat 0 0; // sass-lint:disable-line no-url-domains, no-url-protocols, no-duplicate-properties
+  background-size: 100%;
+  color: $logo-color;
+  display: block;
+  height: 36px;
+  margin: 0;
+  padding: 0;
+  width: 126px;
 
-// Legacy: Base (TODO: add to @uq-uidf/body package)
+  @media #{$medium-up} {
+    height: 43px;
+    width: 150px;
+  }
+
+  @media #{$large-up} {
+    height: 51px;
+    width: 178px;
+  }
+}
+
+// Enable Zurb Foundation Responsive Text alignment
+@include align-classes;
+
+// Background patterns and textures for use on sections to create visual difference.
+
+.pattern {
+  &--noise {
+    background-image: url("#{$uq-bg-image-path}/pattern-noise.png");
+    background-repeat: repeat;
+  }
+
+  &--black-pinstripe {
+    background: #161616 url("#{$uq-bg-image-path}/pattern-black-pinstripe.gif") repeat 0 0;
+  }
+
+  &--cardboard {
+    background: #f6f6f6 url("#{$uq-bg-image-path}/pattern-cardboard.jpg") repeat 0 0;
+  }
+
+  &--mesh {
+    background: #fafafa url("#{$uq-bg-image-path}/pattern-mesh.gif") repeat 0 0;
+  }
+
+  &--dark-grid {
+    background: #1d1d1d url("#{$uq-bg-image-path}/pattern-dark-grid.png") repeat 50% 50%;
+  }
+
+  &--thatched {
+    background: #f8f8f8 url("#{$uq-bg-image-path}/pattern-thatched.png") repeat 0 0;
+  }
+
+  &--light-grid {
+    background: #e2e2e2 url("#{$uq-bg-image-path}/pattern-light-grid.png") repeat 50% 50%;
+  }
+}
+
 //
-// These are the base styles applied to HTML elements. A customized normalize
-// is added first, then base partials.
-@import '_legacy/base/blockquote';
-@import '_legacy/base/forms';
-@import '_legacy/base/frames';
-@import '_legacy/base/horizontal-rule';
-@import '_legacy/base/images';
-@import '_legacy/base/links';
-@import '_legacy/base/lists';
-@import '_legacy/base/logo';
-@import '_legacy/base/tables';
-@import '_legacy/base/text-alignment';
-@import '_legacy/base/typography';
+// Icons
+// Custom and contrib icon sets
+//
+
+// Font Awesome icon set
+// http://fortawesome.github.io/Font-Awesome/
+
+// Font Awesome settings
+// @see global/variables
+@import "../../node_modules/font-awesome/scss/font-awesome";
+
+// UQ Icon settings
+// @see global/variables
+@import "../fonts/uq-icons/scss/uq-icons";
+
+// Create icon font stack to allow multiple sets to use the same prefix class
+// Remove if prefix classes are different.
+// Fallback to Roboto for when the icon class is applied directly to an element containing other text.
+.#{$fa-css-prefix},
+.#{$uq-css-prefix} {
+  font-family: uq-icons, FontAwesome, $roboto !important; // shortening font declaration
+  font-style: normal;
+  font-weight: inherit;
+}
+
+// Allow icons to be applied on buttons etc and not touch the text inside that element.
+.icon {
+  &:hover {
+    text-decoration: none;
+  }
+
+  &--prefix {
+    &::before {
+      margin-right: .7rem;
+    }
+  }
+
+  &--suffix {
+    &::before {
+      float: right;
+      margin-left: .7rem;
+      margin-top: .15rem;
+    }
+  }
+
+  // Allow the icon to be a different colour to parent.
+  &--light-grey,
+  &--light-gray {
+    &::before {
+      color: $icon-light-grey-color;
+    }
+  }
+}

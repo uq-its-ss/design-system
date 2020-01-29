@@ -1,0 +1,114 @@
+  /* Blocks */
+  .blockquote {
+    position: relative;
+    width: calc(100% - 30px);
+    height: auto;
+    margin-left: 30px;
+    padding: 15px 20px;
+    border: none;
+    color: #522475;
+    font-style: italic;
+  }
+  
+  .blockquote.blockquote--bg-lite {
+    color: #522475;
+  }
+  
+  .blockquote.blockquote--bg-dark {
+    color: #FFF;
+    background-color: #522475;
+  }
+  
+  .blockquote.blockquote--boxed {
+    width: 100%;
+    margin-left: 0px;
+    padding: 30px 50px;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#51247a+0,51247a+50,962a8b+100 */
+    background: #51247a; /* Old browsers */
+    background: -moz-linear-gradient(left,  #51247a 0%, #51247a 50%, #962a8b 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left,  #51247a 0%,#51247a 50%,#962a8b 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right,  #51247a 0%,#51247a 50%,#962a8b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#51247a', endColorstr='#962a8b',GradientType=1 ); /* IE6-9 */
+  }
+  
+  .blockquote::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content:'';
+    width: 5px;
+    height: 100%;
+    background-color: #522475;
+  }
+  
+  .blockquote.blockquote--bg-lite::before {
+    background-color: #522475;
+  }
+  
+  .blockquote.blockquote--bg-dark::before {
+    background-color: #FFF;
+  }
+  
+  .blockquote.blockquote--boxed::before {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    content:'';
+    width: 5px;
+    height: calc(100% - 60px);
+  }
+  
+  .blockquote.blockquote--quotemark::before {
+    position: absolute;
+    top: 20px;
+    left: -20px;
+    width: auto;
+    height: auto;
+    content: open-quote;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 6rem;
+    font-style: normal;
+    line-height: 100%;
+    color: rgba(0,0,0,0.1);
+    background-color: transparent;
+  }
+  
+  .blockquote.blockquote--bg-lite.blockquote--quotemark::before {
+    color: rgba(0,0,0,0.1);
+  }
+  
+  .blockquote.blockquote--bg-dark.blockquote--quotemark::before {
+    color: rgba(255,255,255,0.1);
+  }
+  
+  .blockquote.blockquote--boxed.blockquote--quotemark::before {
+    position: absolute;
+    top: 40px;
+    left: 10px;
+  }
+  
+  /* Elements */
+  .blockquote__body {
+    font-family: 'Merriweather', serif;
+    font-size: 1.2rem; /* 1.387remv */
+    font-weight: 300;
+    line-height: 1.5;
+  }
+  
+  .blockquote__footer {
+    font-size: 0.875rem;
+    max-width: 300px;
+  }
+  
+  .blockquote.blockquote--bg-dark .blockquote__link,
+  .blockquote.blockquote--bg-dark .blockquote__link:link,
+  .blockquote.blockquote--bg-dark .blockquote__link:visited,
+  .blockquote.blockquote--bg-dark .blockquote__link:active {
+    color: #FFF;
+    text-decoration: underline;
+  }
+  
+  .blockquote.blockquote--bg-dark .blockquote__link:hover {
+    text-decoration: none;
+  }
+  

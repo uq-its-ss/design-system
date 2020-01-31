@@ -1,35 +1,36 @@
 {
-  "name": "storybook-html",
-  "version": "0.0.0",
-  "description": "Storybook for HTML instance for uq-uidf component development",
-  "private": true,
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
-  },
-  "keywords": [],
-  "author": {
-    "name": "University of Queensland",
-    "email": "webservices@uq.edu.au",
-    "url": "https://uq.edu.au"
-  },
-  "license": "ISC",
-  "devDependencies": {
-    "@babel/core": "^7.7.2",
-    "@storybook/html": "^5.2.6",
-    "babel-loader": "^8.0.6",
-    "fibers": "^4.0.2",
-    "sass": "^1.23.6",
-    "sass-loader": "^8.0.0"
-  },
-  "dependencies": {
-    "@uq-uidf/alert": "^0.0.0",
-    "@uq-uidf/body": "^0.0.0",
-    "@uq-uidf/button": "^0.0.0",
-    "@uq-uidf/core": "^0.0.0",
-    "@uq-uidf/form": "^0.0.0",
-    "font-awesome": "^4.7.0"
-  }
+    "name": "storybook-html",
+    "version": "0.0.0",
+    "description": "Storybook for HTML instance for uq-uidf component development",
+    "private": true,
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "storybook": "start-storybook -p 6006",
+        "build-storybook": "build-storybook"
+    },
+    "keywords": [],
+    "author": {
+        "name": "University of Queensland",
+        "email": "webservices@uq.edu.au",
+        "url": "https://uq.edu.au"
+    },
+    "license": "ISC",
+    "devDependencies": {
+        "@babel/core": "^7.7.2",
+        "@storybook/html": "^5.2.6",
+        "babel-loader": "^8.0.6",
+        "fibers": "^4.0.2",
+        "sass": "^1.23.6",
+        "sass-loader": "^8.0.0"
+    },
+    "dependencies": {
+        "@uq-uidf/alert": "^0.0.0",
+        "@uq-uidf/body": "^0.0.0",
+        "@uq-uidf/button": "^0.0.0",
+        "@uq-uidf/core": "^0.0.0",
+        "@uq-uidf/form": "^0.0.0",
+        "@uq-uidf/footer": "^0.0.0",
+        "font-awesome": "^4.7.0"
+    }
 }

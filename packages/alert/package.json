@@ -44,7 +44,7 @@
     "foundation-sites": "^5.5.3"
   },
   "peerDependencies": {
-    "@uq-uidf/core": "^0.0.0",
-    "@uq-uidf/button": "^0.0.0"
+    "@uq-uidf/button": "^0.0.0",
+    "@uq-uidf/core": "^0.0.0"
   }
 }

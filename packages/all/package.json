@@ -1,6 +1,6 @@
 {
   "name": "@uq-uidf/all",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "package to import all components (including core)",
   "keywords": [
     "uq-uidf",
@@ -42,10 +42,10 @@
     "url": "https://github.com/uq-its-ss/user-interface-development-framework/issues"
   },
   "dependencies": {
-    "@uq-uidf/accordion": "^0.0.1",
-    "@uq-uidf/body": "^0.0.1",
-    "@uq-uidf/button": "^0.0.1",
-    "@uq-uidf/core": "^0.0.1",
-    "@uq-uidf/form": "^0.0.1"
+    "@uq-uidf/accordion": "^0.0.2",
+    "@uq-uidf/body": "^0.0.2",
+    "@uq-uidf/button": "^0.0.2",
+    "@uq-uidf/core": "^0.0.2",
+    "@uq-uidf/form": "^0.0.2"
   }
 }

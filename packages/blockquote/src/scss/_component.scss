@@ -1,3 +1,5 @@
+  @use 'global';
+  
   /* Blocks */
   .blockquote {
     position: relative;
@@ -6,29 +8,24 @@
     margin-left: 30px;
     padding: 15px 20px;
     border: none;
-    color: #522475;
+    color: $uq-purple;
     font-style: italic;
   }
   
-  .blockquote.blockquote--bg-lite {
-    color: #522475;
+  .blockquote.blockquote--light {
+    color: $uq-purple;
   }
   
-  .blockquote.blockquote--bg-dark {
-    color: #FFF;
-    background-color: #522475;
+  .blockquote.blockquote--dark {
+    color: $uq-white;
+    background-color: $uq-purple;
   }
   
   .blockquote.blockquote--boxed {
     width: 100%;
-    margin-left: 0px;
+    margin-left: 0;
     padding: 30px 50px;
-    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#51247a+0,51247a+50,962a8b+100 */
-    background: #51247a; /* Old browsers */
-    background: -moz-linear-gradient(left,  #51247a 0%, #51247a 50%, #962a8b 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(left,  #51247a 0%,#51247a 50%,#962a8b 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to right,  #51247a 0%,#51247a 50%,#962a8b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#51247a', endColorstr='#962a8b',GradientType=1 ); /* IE6-9 */
+    background: $uq-purple-gradient /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   }
   
   .blockquote::before {
@@ -38,15 +35,15 @@
     content:'';
     width: 5px;
     height: 100%;
-    background-color: #522475;
+    background-color: $uq-purple;
   }
   
-  .blockquote.blockquote--bg-lite::before {
-    background-color: #522475;
+  .blockquote.blockquote--light::before {
+    background-color: $uq-purple;
   }
   
-  .blockquote.blockquote--bg-dark::before {
-    background-color: #FFF;
+  .blockquote.blockquote--dark::before {
+    background-color: $uq-white;
   }
   
   .blockquote.blockquote--boxed::before {
@@ -69,16 +66,16 @@
     font-size: 6rem;
     font-style: normal;
     line-height: 100%;
-    color: rgba(0,0,0,0.1);
+    color: #edeaf1;
     background-color: transparent;
   }
   
-  .blockquote.blockquote--bg-lite.blockquote--quotemark::before {
-    color: rgba(0,0,0,0.1);
+  .blockquote.blockquote--light.blockquote--quotemark::before {
+    color: #edeaf1;
   }
   
-  .blockquote.blockquote--bg-dark.blockquote--quotemark::before {
-    color: rgba(255,255,255,0.1);
+  .blockquote.blockquote--dark.blockquote--quotemark::before {
+    color: #522475;
   }
   
   .blockquote.blockquote--boxed.blockquote--quotemark::before {
@@ -100,15 +97,15 @@
     max-width: 300px;
   }
   
-  .blockquote.blockquote--bg-dark .blockquote__link,
-  .blockquote.blockquote--bg-dark .blockquote__link:link,
-  .blockquote.blockquote--bg-dark .blockquote__link:visited,
-  .blockquote.blockquote--bg-dark .blockquote__link:active {
-    color: #FFF;
+  .blockquote.blockquote--dark .blockquote__link,
+  .blockquote.blockquote--dark .blockquote__link:link,
+  .blockquote.blockquote--dark .blockquote__link:visited,
+  .blockquote.blockquote--dark .blockquote__link:active {
+    color: $uq-white;
     text-decoration: underline;
   }
   
-  .blockquote.blockquote--bg-dark .blockquote__link:hover {
+  .blockquote.blockquote--dark .blockquote__link:hover {
     text-decoration: none;
   }
   

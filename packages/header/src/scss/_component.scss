@@ -1,0 +1,148 @@
+@import '_global.scss';
+
+// Global UQ site header
+//
+// Variants:
+// .site-header--full-width - Allows the header to span full width of the browser.
+//
+// States:
+// .site-header.has-no-global-menu - Adds top spacing when the global menu element is not included in the site header.
+//
+
+uq-header .site-header,
+.site-header {
+  background-color: $site-header-bg;
+  color: #ccc;
+  width: 100%;
+
+  %links {
+    color: $site-header-link-color;
+  }
+
+  &__content {
+    @include grid-row();
+    padding: 1.5rem 0 1.5rem 0;
+    text-align: center;
+
+    @media #{$small-only} {
+      padding: 1rem 0;
+    }
+  }
+
+  &__global-menu {
+    @include grid-row();
+  }
+
+  .uq-logo {
+    float: left;
+
+    @media #{$small-only} {
+      float: none;
+      margin: 0 auto;
+    }
+  }
+
+  .site-title {
+    border-left: 1px solid rgba(255, 255, 255, .5);
+    color: #ffffff;
+    float: left;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.2;
+    margin: 0 0 0 1rem;
+    padding: .8rem 0 .8rem 1rem;
+
+    @media #{$small-only} {
+      border: 0;
+      clear: both;
+      float: none;
+      margin: 1rem 0 0 0;
+      padding: 0;
+    }
+
+    @media #{$medium-up} {
+      font-size: 1.275rem;
+      text-align: left;
+    }
+
+    @media #{$xlarge-up} {
+      font-size: 1.475rem;
+    }
+
+    &__link {
+      color: $site-header-link-color;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    // Modify site title if it has a prefix
+    &.has-prefix {
+      font-size: 1rem;
+
+      @media #{$medium-up} {
+        letter-spacing: -.3px;
+        padding-bottom: .3rem;
+        padding-top: .3rem;
+      }
+
+      @media #{$large-up} {
+        font-size: 1.175rem;
+      }
+
+      @media #{$xlarge-up} {
+        font-size: 1.275rem;
+      }
+    }
+
+    // Modify site title if it is 2 lines
+    &.has-2-lines {
+      font-size: 1rem;
+
+      @media #{$medium-up} {
+        padding-bottom: .3rem;
+        padding-top: .3rem;
+      }
+
+      @media #{$large-up} {
+        font-size: 1.275rem;
+      }
+
+      br {
+        @media #{$small-only} {
+          display: none;
+        }
+      }
+    }
+
+    // Site title prefix
+    &__prefix {
+      @media #{$medium-up} {
+        display: block;
+        font-size: 1rem;
+        font-weight: 300;
+      }
+    }
+  }
+
+  // Full-width header variant.
+  &--full-width {
+    .site-header {
+      &__content {
+        max-width: 100%;
+      }
+      &__global-menu {
+        max-width: 100%;
+        padding-right: .8rem;
+      }
+    }
+  }
+
+  // Applications with no global menu.
+  &.has-no-global-menu {
+    .site-header__content {
+      padding-top: 1.5rem;
+    }
+  }
+}

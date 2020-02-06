@@ -101,15 +101,6 @@ $alert: #B80017;
 $uq-dark-purple: #51247A;
 // $uq-green: #8cb800; Deprecated because of duplicate naming.
 
-// Header and Footer
-$site-header-bg: $uq-dark-purple;
-$site-header-color: #fff;
-$site-header-link-color: #fff;
-
-$site-footer-bg: $uq-dark-purple;
-$site-footer-color: mix(white, $uq-dark-purple, 75%);
-$site-footer-link-color: #fff;
-
 $site-global-menu-link-color: mix(white, $uq-dark-purple, 75%);
 
 // Grid of links
@@ -326,63 +317,12 @@ $compact-content-color: #767676;
   }
 }
 
-// Palettes are colour groups to change all the colours within that wrapper to a specific set.
-//
-// Components that set their own element colours may need palette @extend added to them to override specificity. e.g.
-// &.light-palette {
-//   a {
-//     @extend %light-palette;
-//   }
-// }
-//
-
-// Light
-%light-palette,
-.light-palette {
-  border-color: $light-palette-border-color;
-  color: $light-palette-color;
-
-  a {
-    color: $light-palette-link-color;
-    font-weight: 400;
-
-    &:hover {
-      color: darken($light-palette-link-color,10%);
-    }
-  }
-}
-
-%light-palette-bg,
-.light-palette-bg {
-  background-color: $light-palette-bg;
-}
-
-// Dark
-%dark-palette,
-.dark-palette {
-  border-color: $dark-palette-border-color;
-  color: $dark-palette-color;
-
-  a {
-    color: $dark-palette-link-color;
-
-    &:hover {
-      color: darken($dark-palette-link-color,10%);
-    }
-  }
-}
-
-%dark-palette-bg,
-.dark-palette-bg {
-  background-color: $dark-palette-bg;
-}
-
 // Foundation stylesheets
 
-@import '../../node_modules/foundation-sites/scss/normalize.scss';
-@import '../../node_modules/foundation-sites/scss/foundation/components/grid';
-@import '../../node_modules/foundation-sites/scss/foundation/components/block-grid';
-@import '../../node_modules/foundation-sites/scss/foundation/components/visibility';
+@import '~foundation-sites/scss/normalize.scss';
+@import '~foundation-sites/scss/foundation/components/grid';
+@import '~foundation-sites/scss/foundation/components/block-grid';
+@import '~foundation-sites/scss/foundation/components/visibility';
 
 //
 // Mixins

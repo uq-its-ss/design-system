@@ -28,9 +28,6 @@
   "files": [
     "lib"
   ],
-  "publishConfig": {
-    "registry": "http://localhost:4873/"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/uq-its-ss/user-interface-development-framework.git"

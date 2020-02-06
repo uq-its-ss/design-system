@@ -15,6 +15,6 @@ $white-button-bg-color: #fff;
 $white-button-bg-hover: #eee;
 $white-button-border-color: #fff;
 
-@import '../../node_modules/foundation-sites/scss/foundation/components/buttons';
-@import '../../node_modules/foundation-sites/scss/foundation/components/dropdown';
-@import '../../node_modules/foundation-sites/scss/foundation/components/dropdown-buttons';
+@import '~foundation-sites/scss/foundation/components/buttons';
+@import '~foundation-sites/scss/foundation/components/dropdown';
+@import '~foundation-sites/scss/foundation/components/dropdown-buttons';

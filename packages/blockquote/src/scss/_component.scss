@@ -92,13 +92,13 @@
   .blockquote.blockquote--dark.blockquote--quotemark::before,
   .blockquote.blockquote--dark.blockquote--quotemark::after {
     color: #643b85;
-  }
+  }*/
   
   .blockquote.blockquote--boxed.blockquote--quotemark::before {
     position: absolute;
     top: 40px;
     left: 10px;
-  }*/
+  }
 
   .blockquote.blockquote--quotemark::before {
     position: absolute;
@@ -153,4 +153,7 @@
 
   p:first-child {
     margin-top: 0;
+  }
+  .blockquote__footer p:last-child {
+    margin-bottom: 0;
   }

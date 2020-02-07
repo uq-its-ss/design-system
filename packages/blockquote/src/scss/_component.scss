@@ -72,13 +72,13 @@
     position: absolute;
     top: 0px;
     left: -20px;
-    width: 20px;
-    height: 20px;
-    color: #edeaf1;
+    width: 34px;
+    height: 27px;
     stroke-width: 0;
-    stroke: currentColor;
-    fill: currentColor;
-    background: url(/images/icon-open-doublequote.svg);
+    stroke: #000;
+    fill: #000;
+    background-image: url(/images/icon-open-doublequote.svg);
+    background-size: cover;
     display: inline-block;
   }
 

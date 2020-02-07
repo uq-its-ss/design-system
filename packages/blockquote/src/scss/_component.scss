@@ -151,7 +151,7 @@
     display: inline-block !important;
   }
 
-  p:first-child {
+  .blockquote__body p:first-child {
     margin-top: 0;
   }
   .blockquote__footer p:last-child {

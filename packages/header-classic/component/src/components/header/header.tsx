@@ -1,13 +1,19 @@
-import { Component, Host, h, Prop } from '@stencil/core';
+import { Component, Host, h, Prop, Watch } from '@stencil/core';
 
 @Component({
-  tag: 'uq-header',
+  tag: 'uq-header-classic',
   styleUrl: 'header.css',
   shadow: false
 })
 export class Header {
   @Prop() name: string;
   @Prop() sticky: boolean;
+
+  @Watch('name')
+  validateName(newValue: string) {
+    const isBlank = typeof newValue == null;
+    if (isBlank) { throw new Error("name: required") };
+  }
 
   render() {
     return (

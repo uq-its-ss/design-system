@@ -10,7 +10,7 @@ import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 
 
 export namespace Components {
-  interface UqHeader {
+  interface UqHeaderClassic {
     'name': string;
     'sticky': boolean;
   }
@@ -19,24 +19,24 @@ export namespace Components {
 declare global {
 
 
-  interface HTMLUqHeaderElement extends Components.UqHeader, HTMLStencilElement {}
-  var HTMLUqHeaderElement: {
-    prototype: HTMLUqHeaderElement;
-    new (): HTMLUqHeaderElement;
+  interface HTMLUqHeaderClassicElement extends Components.UqHeaderClassic, HTMLStencilElement {}
+  var HTMLUqHeaderClassicElement: {
+    prototype: HTMLUqHeaderClassicElement;
+    new (): HTMLUqHeaderClassicElement;
   };
   interface HTMLElementTagNameMap {
-    'uq-header': HTMLUqHeaderElement;
+    'uq-header-classic': HTMLUqHeaderClassicElement;
   }
 }
 
 declare namespace LocalJSX {
-  interface UqHeader {
+  interface UqHeaderClassic {
     'name'?: string;
     'sticky'?: boolean;
   }
 
   interface IntrinsicElements {
-    'uq-header': UqHeader;
+    'uq-header-classic': UqHeaderClassic;
   }
 }
 
@@ -46,7 +46,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
   export namespace JSX {
     interface IntrinsicElements {
-      'uq-header': LocalJSX.UqHeader & JSXBase.HTMLAttributes<HTMLUqHeaderElement>;
+      'uq-header-classic': LocalJSX.UqHeaderClassic & JSXBase.HTMLAttributes<HTMLUqHeaderClassicElement>;
     }
   }
 }

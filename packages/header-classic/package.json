@@ -1,7 +1,7 @@
 {
-  "name": "@uq-uidf/header",
+  "name": "@uq-uidf/header-classic",
   "version": "0.0.0",
-  "description": "Header component",
+  "description": "Header (classic) component",
   "keywords": [
     "uq-uidf",
     "uq",
@@ -25,8 +25,7 @@
     "test": "__tests__"
   },
   "files": [
-    "component/dist/*",
-    "component/loader/*",
+    "component/*",
     "lib/*",
     "src/*"
   ],

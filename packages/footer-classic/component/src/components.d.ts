@@ -10,27 +10,27 @@ import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 
 
 export namespace Components {
-  interface UqFooter {}
+  interface UqFooterClassic {}
 }
 
 declare global {
 
 
-  interface HTMLUqFooterElement extends Components.UqFooter, HTMLStencilElement {}
-  var HTMLUqFooterElement: {
-    prototype: HTMLUqFooterElement;
-    new (): HTMLUqFooterElement;
+  interface HTMLUqFooterClassicElement extends Components.UqFooterClassic, HTMLStencilElement {}
+  var HTMLUqFooterClassicElement: {
+    prototype: HTMLUqFooterClassicElement;
+    new (): HTMLUqFooterClassicElement;
   };
   interface HTMLElementTagNameMap {
-    'uq-footer': HTMLUqFooterElement;
+    'uq-footer-classic': HTMLUqFooterClassicElement;
   }
 }
 
 declare namespace LocalJSX {
-  interface UqFooter {}
+  interface UqFooterClassic {}
 
   interface IntrinsicElements {
-    'uq-footer': UqFooter;
+    'uq-footer-classic': UqFooterClassic;
   }
 }
 
@@ -40,7 +40,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
   export namespace JSX {
     interface IntrinsicElements {
-      'uq-footer': LocalJSX.UqFooter & JSXBase.HTMLAttributes<HTMLUqFooterElement>;
+      'uq-footer-classic': LocalJSX.UqFooterClassic & JSXBase.HTMLAttributes<HTMLUqFooterClassicElement>;
     }
   }
 }

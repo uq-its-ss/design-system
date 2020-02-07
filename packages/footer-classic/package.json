@@ -1,7 +1,7 @@
 {
-  "name": "@uq-uidf/footer",
+  "name": "@uq-uidf/footer-classic",
   "version": "0.0.0",
-  "description": "Footer component",
+  "description": "Footer (classic) component",
   "keywords": [
     "uq-uidf",
     "uq",
@@ -26,10 +26,9 @@
     "test": "__tests__"
   },
   "files": [
-    "component/dist/*",
-    "component/loader/*",
-    "lib",
-    "src"
+    "component/*",
+    "lib/*",
+    "src/*"
   ],
   "repository": {
     "type": "git",

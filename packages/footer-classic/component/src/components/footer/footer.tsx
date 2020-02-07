@@ -1,7 +1,7 @@
 import { Component, Host, h } from '@stencil/core';
 
 @Component({
-  tag: 'uq-footer',
+  tag: 'uq-footer-classic',
   styleUrl: 'footer.css',
   shadow: false
 })

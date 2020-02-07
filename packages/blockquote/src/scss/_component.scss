@@ -1,6 +1,4 @@
-  @use 'global';
-  
-  /* Blocks */
+/* Blocks */
   .blockquote {
     position: relative;
     width: calc(100% - 30px);
@@ -24,7 +22,7 @@
   .blockquote.blockquote--boxed {
     width: 100%;
     margin-left: 0;
-    padding: 30px 50px;
+    padding: 50px 50px;
     background: $uq-purple-gradient /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   }
   
@@ -55,9 +53,9 @@
     height: calc(100% - 60px);
   }
   
-  .blockquote.blockquote--quotemark::before {
+  /*.blockquote.blockquote--quotemark::before {
     position: absolute;
-    top: 20px;
+    top: 0px;
     left: -20px;
     width: auto;
     height: auto;
@@ -68,14 +66,46 @@
     line-height: 100%;
     color: #edeaf1;
     background-color: transparent;
+  }*/
+
+  .blockquote.blockquote--quotemark::before {
+    position: absolute;
+    top: 0px;
+    left: -20px;
+    width: 20px;
+    height: 20px;
+    color: #edeaf1;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: currentColor;
+    background: url(../images/icon-open-doublequote.svg);
+    display: inline-block;
+  }
+
+  .blockquote.blockquote--quotemark::after {
+    position: absolute;
+    bottom: 0px;
+    right: -20px;
+    width: 0;
+    height: 0;
+    content: close-quote;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 6rem;
+    font-style: normal;
+    line-height: 100%;
+    color: #edeaf1;
+    background-color: transparent;
+    overflow: hidden;
   }
   
-  .blockquote.blockquote--light.blockquote--quotemark::before {
+  .blockquote.blockquote--light.blockquote--quotemark::before,
+  .blockquote.blockquote--dark.blockquote--quotemark::after {
     color: #edeaf1;
   }
   
-  .blockquote.blockquote--dark.blockquote--quotemark::before {
-    color: #522475;
+  .blockquote.blockquote--dark.blockquote--quotemark::before,
+  .blockquote.blockquote--dark.blockquote--quotemark::after {
+    color: #643b85;
   }
   
   .blockquote.blockquote--boxed.blockquote--quotemark::before {
@@ -87,14 +117,13 @@
   /* Elements */
   .blockquote__body {
     font-family: 'Merriweather', serif;
-    font-size: 1.2rem; /* 1.387remv */
+    font-size: 1.2rem;
     font-weight: 300;
     line-height: 1.5;
   }
   
   .blockquote__footer {
     font-size: 0.875rem;
-    max-width: 300px;
   }
   
   .blockquote.blockquote--dark .blockquote__link,
@@ -109,3 +138,10 @@
     text-decoration: none;
   }
   
+  blockquote cite {
+    display: inline-block !important;
+  }
+
+  p:first-child {
+    margin-top: 0;
+  }

@@ -30,10 +30,10 @@
     position: absolute;
     top: 0;
     left: 0;
-    content:'';
     width: 5px;
     height: 100%;
     background-color: $uq-purple;
+    content:'';
   }
   
   .blockquote.blockquote--light::before {
@@ -48,70 +48,38 @@
     position: absolute;
     top: 30px;
     left: 30px;
-    content:'';
     width: 5px;
     height: calc(100% - 60px);
-  }
-  
-  /*.blockquote.blockquote--quotemark::before {
-    position: absolute;
-    top: 0px;
-    left: -20px;
-    width: auto;
-    height: auto;
-    content: open-quote;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 6rem;
-    font-style: normal;
-    line-height: 100%;
-    color: #edeaf1;
-    background-color: transparent;
-  }*/
-
-  .blockquote.blockquote--quotemark::before {
-    position: absolute;
-    top: 0px;
-    left: -20px;
-    width: 20px;
-    height: 20px;
-    color: #edeaf1;
-    stroke-width: 0;
-    stroke: currentColor;
-    fill: currentColor;
-    background: url(/images/icon-open-doublequote.svg);
-    display: inline-block;
-  }
-
-  .blockquote.blockquote--quotemark::after {
-    position: absolute;
-    bottom: 0px;
-    right: -20px;
-    width: 0;
-    height: 0;
-    content: close-quote;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 6rem;
-    font-style: normal;
-    line-height: 100%;
-    color: #edeaf1;
-    background-color: transparent;
-    overflow: hidden;
-  }
-  
-  .blockquote.blockquote--light.blockquote--quotemark::before,
-  .blockquote.blockquote--dark.blockquote--quotemark::after {
-    color: #edeaf1;
-  }
-  
-  .blockquote.blockquote--dark.blockquote--quotemark::before,
-  .blockquote.blockquote--dark.blockquote--quotemark::after {
-    color: #643b85;
+    content: '';
   }
   
   .blockquote.blockquote--boxed.blockquote--quotemark::before {
     position: absolute;
     top: 40px;
     left: 10px;
+  }
+
+  .blockquote.blockquote--quotemark::before {
+    position: absolute;
+    top: 0px;
+    left: -20px;
+    width: 34px;
+    height: 28px;
+    stroke-width: 0;
+    stroke: #000;
+    fill: #000;
+    background-image: url('~@uq-uidf/blockquote/src/images/icon-open-doublequote-light.svg');
+    background-size: cover;
+    background-color: transparent;
+    display: inline-block;
+  }
+
+  .blockquote.blockquote--light.blockquote--quotemark::before {
+    background-image: url('~@uq-uidf/blockquote/src/images/icon-open-doublequote-light.svg');
+  }
+
+  .blockquote.blockquote--dark.blockquote--quotemark::before {
+    background-image: url('~@uq-uidf/blockquote/src/images/icon-open-doublequote-dark.svg');
   }
   
   /* Elements */
@@ -142,6 +110,9 @@
     display: inline-block !important;
   }
 
-  p:first-child {
+  .blockquote__body p:first-child {
     margin-top: 0;
+  }
+  .blockquote__footer p:last-child {
+    margin-bottom: 0;
   }

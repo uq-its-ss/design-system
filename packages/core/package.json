@@ -1,55 +1,55 @@
 {
-  "name": "@uq-uidf/core",
-  "version": "0.0.2",
-  "description": "The core package that all component packages depend on",
-  "keywords": [
-    "uq-uidf",
-    "uq",
-    "University of Queensland",
-    "user interface development framework",
-    "design system",
-    "scss",
-    "sass",
-    "css",
-    "core"
-  ],
-  "author": {
-    "name": "University of Queensland",
-    "email": "webservices@uq.edu.au",
-    "url": "https://uq.edu.au"
-  },
-  "homepage": "https://github.com/uq-its-ss/user-interface-development-framework#readme",
-  "license": "ISC",
-  "directories": {
-    "dist": "dist",
-    "lib": "lib",
-    "src": "src",
-    "test": "__tests__"
-  },
-  "files": [
-    "dist/*",
-    "lib/*",
-    "src/*"
-  ],
-  "publishConfig": {
-    "registry": "http://localhost:4873/"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/uq-its-ss/user-interface-development-framework.git"
-  },
-  "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
-  },
-  "bugs": {
-    "url": "https://github.com/uq-its-ss/user-interface-development-framework/issues"
-  },
-  "peerDependencies": {
-    "font-awesome": "^4.7.0"
-  },
-  "dependencies": {
-    "compass-mixins": "^0.12.10",
-    "font-awesome": "^4.7.0",
-    "foundation-sites": "^5.5.3"
-  }
+    "name": "@uq-uidf/core",
+    "version": "0.0.0",
+    "description": "The core package that all component packages depend on",
+    "keywords": [
+        "uq-uidf",
+        "uq",
+        "University of Queensland",
+        "user interface development framework",
+        "design system",
+        "scss",
+        "sass",
+        "css",
+        "core"
+    ],
+    "author": {
+        "name": "University of Queensland",
+        "email": "webservices@uq.edu.au",
+        "url": "https://uq.edu.au"
+    },
+    "homepage": "https://github.com/uq-its-ss/user-interface-development-framework#readme",
+    "license": "ISC",
+    "directories": {
+        "dist": "dist",
+        "lib": "lib",
+        "src": "src",
+        "test": "__tests__"
+    },
+    "files": [
+        "dist/*",
+        "lib/*",
+        "src/*"
+    ],
+    "publishConfig": {
+        "registry": "http://localhost:4873/"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/uq-its-ss/user-interface-development-framework.git"
+    },
+    "scripts": {
+        "test": "echo \"Error: run tests from root\" && exit 1"
+    },
+    "bugs": {
+        "url": "https://github.com/uq-its-ss/user-interface-development-framework/issues"
+    },
+    "peerDependencies": {
+        "font-awesome": "^4.7.0"
+    },
+    "dependencies": {
+        "compass-mixins": "^0.12.10",
+        "font-awesome": "^4.7.0",
+        "foundation-sites": "^5.5.3"
+    }
 }

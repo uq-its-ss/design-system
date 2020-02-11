@@ -1,6 +1,6 @@
 {
     "name": "@uq-uidf/footer",
-    "version": "0.0.2",
+    "version": "0.0.0",
     "description": "The UQ footer component package",
     "keywords": [
         "uq-uidf",
@@ -41,9 +41,7 @@
         "url": "https://github.com/uq-its-ss/user-interface-development-framework/issues"
     },
     "dependencies": {
-        "foundation-sites": "^5.5.3"
-    },
-    "peerDependencies": {
+        "foundation-sites": "^5.5.3",
         "@uq-uidf/core": "^0.0.0"
     }
 }

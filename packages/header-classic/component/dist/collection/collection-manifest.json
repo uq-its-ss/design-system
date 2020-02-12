@@ -1,0 +1,12 @@
+{
+  "entries": [
+    "components/header/header.js"
+  ],
+  "compiler": {
+    "name": "@stencil/core",
+    "version": "1.8.4",
+    "typescriptVersion": "3.7.2"
+  },
+  "collections": [],
+  "bundles": []
+}

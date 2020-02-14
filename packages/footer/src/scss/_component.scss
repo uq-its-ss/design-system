@@ -57,7 +57,11 @@
                 margin: 0;
                 padding: 0;
                 li {
-                    padding-left: 2em;
+                    padding-left: var(--space--md);
+                    &+:before {
+                        content: " | ";
+                        padding-right: var(--space--md);
+                    }
                     &:first-of-type {
                         padding-left: 0;
                     }

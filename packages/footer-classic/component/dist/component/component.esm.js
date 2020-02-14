@@ -1,1 +1,1 @@
-import{p as s,b as a}from"./p-54a3bf1c.js";s().then(s=>a([["p-6lillg37",[[0,"uq-footer-classic"]]]],s));
+import{p as a,b as p}from"./p-4acd2ef5.js";a().then(a=>p([["p-o2148fbi",[[0,"uq-footer-classic",{pageUrl:[1,"page-url"],pageLastUpdated:[1,"page-last-updated"]}]]]],a));

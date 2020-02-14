@@ -1,0 +1,1 @@
+System.register(["./p-ccca12b4.system.js"],(function(){"use strict";var e,t;return{setters:[function(s){e=s.p;t=s.b}],execute:function(){e().then((function(e){return t([["p-enlc45fc.system",[[0,"uq-footer-classic",{pageUrl:[1,"page-url"],pageLastUpdated:[1,"page-last-updated"]}]]]],e)}))}}}));

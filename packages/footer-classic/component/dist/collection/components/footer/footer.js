@@ -1,5 +1,15 @@
 import { Host, h } from "@stencil/core";
 export class Footer {
+    validateName(newValue) {
+        const isBlank = typeof newValue == null;
+        if (isBlank) {
+            throw new Error("pageUrl: required");
+        }
+        ;
+    }
+    hasLastUpdated() {
+        return (typeof this.pageLastUpdated !== "undefined" && this.pageLastUpdated !== null && /\S/.test(this.pageLastUpdated));
+    }
     render() {
         return (h(Host, null,
             h("div", { class: "site-footer" },
@@ -10,13 +20,13 @@ export class Footer {
                             h("div", { class: "footer__contact" },
                                 "Enquiries: ",
                                 h("a", { href: "tel:+61733651111", class: "footer__link footer__enquiries-phone" }, "+61 7 3365 1111"),
-                                "\u00A0 | \u00A0 ",
+                                " \u00A0 | \u00A0 ",
                                 h("a", { href: "https://uq.edu.au/contacts", class: "footer__link footer__contacts-link" }, "Contact directory")),
                             h("div", { class: "footer__meta" },
                                 h("abbr", { title: "Australian Business Number" }, "ABN"),
-                                ": 63 942 912 684 \u00A0 | \u00A0",
+                                ": 63 942 912 684 \u00A0 | \u00A0 ",
                                 h("abbr", { title: "Commonwealth Register of Institutions and Courses for Overseas Students" }, "CRICOS"),
-                                "Provider No: ",
+                                " Provider No: ",
                                 h("a", { class: "footer__link cricos__link", href: "https://www.uq.edu.au/about/cricos-link", rel: "external" }, "00025B"))),
                         h("div", { class: "columns large-3 medium-4" },
                             h("div", { class: "site-footer__emergency-contact" },
@@ -28,8 +38,14 @@ export class Footer {
                         h("div", { class: "site-footer__footer" },
                             h("div", { class: "columns large-9 medium-8 end" },
                                 h("a", { href: "https://www.uq.edu.au/terms-of-use/", rel: "external", class: "footer__link footer__terms-link" }, "Privacy & Terms of use"),
-                                " \u00A0 | \u00A0",
-                                h("a", { href: "http://www.uq.edu.au/feedback?r=uq.edu.au/password/reset", rel: "external", class: "footer__link footer__feedback-link" }, "Feedback"))))))));
+                                " \u00A0 | \u00A0 ",
+                                h("a", { href: `http://www.uq.edu.au/feedback?r=${this.pageUrl}`, rel: "nofollow", class: "footer__link footer__feedback-link" }, "Feedback"),
+                                " ",
+                                this.hasLastUpdated() ? (h("span", null,
+                                    "\u00A0 | \u00A0 ",
+                                    h("span", { class: "footer__last-updated" },
+                                        "Updated: ",
+                                        this.pageLastUpdated))) : "")))))));
     }
     static get is() { return "uq-footer-classic"; }
     static get originalStyleUrls() { return {
@@ -38,4 +54,44 @@ export class Footer {
     static get styleUrls() { return {
         "$": ["footer.css"]
     }; }
+    static get properties() { return {
+        "pageUrl": {
+            "type": "string",
+            "mutable": false,
+            "complexType": {
+                "original": "string",
+                "resolved": "string",
+                "references": {}
+            },
+            "required": false,
+            "optional": false,
+            "docs": {
+                "tags": [],
+                "text": ""
+            },
+            "attribute": "page-url",
+            "reflect": false
+        },
+        "pageLastUpdated": {
+            "type": "string",
+            "mutable": false,
+            "complexType": {
+                "original": "string",
+                "resolved": "string",
+                "references": {}
+            },
+            "required": false,
+            "optional": false,
+            "docs": {
+                "tags": [],
+                "text": ""
+            },
+            "attribute": "page-last-updated",
+            "reflect": false
+        }
+    }; }
+    static get watchers() { return [{
+            "propName": "pageUrl",
+            "methodName": "validateName"
+        }]; }
 }

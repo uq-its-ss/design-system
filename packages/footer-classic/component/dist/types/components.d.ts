@@ -10,7 +10,10 @@ import { HTMLStencilElement, JSXBase } from './stencil.core';
 
 
 export namespace Components {
-  interface UqFooterClassic {}
+  interface UqFooterClassic {
+    'pageLastUpdated': string;
+    'pageUrl': string;
+  }
 }
 
 declare global {
@@ -27,7 +30,10 @@ declare global {
 }
 
 declare namespace LocalJSX {
-  interface UqFooterClassic {}
+  interface UqFooterClassic {
+    'pageLastUpdated'?: string;
+    'pageUrl'?: string;
+  }
 
   interface IntrinsicElements {
     'uq-footer-classic': UqFooterClassic;

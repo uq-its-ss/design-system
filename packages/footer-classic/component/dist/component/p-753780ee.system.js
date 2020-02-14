@@ -1,1 +1,0 @@
-System.register(["./p-11946f9e.system.js"],(function(){"use strict";var t,e;return{setters:[function(s){t=s.p;e=s.b}],execute:function(){t().then((function(t){return e([["p-bo1mhuii.system",[[0,"uq-footer-classic"]]]],t)}))}}}));

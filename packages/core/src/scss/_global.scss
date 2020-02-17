@@ -1,21 +1,22 @@
 // Variables, functions, and mixins
-
 @import "_partials/compass";
-
+@import "_partials/spacing";
 // Primary font stack
+
 $roboto:  'Roboto', "Helvetica Neue", Helvetica, Arial, sans-serif;
-$merriweather:  'Merriweather', serif;
+$merriweather:  'Merriweather', Georgia, serif;
 
 // Monospace font stacks
 // For an explanation of why "sans-serif" is at the end of this list, see
 // http://meyerweb.com/eric/thoughts/2010/02/12/fixed-monospace-sizing/
-$courier:         "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
-
+$courier: "Courier New",
+"DejaVu Sans Mono",
+monospace,
+sans-serif;
 // Now create some variables using the font stacks we want on this site.
-$font-body:       $roboto;
-$font-monospace:  $courier;
+$font-body: $roboto;
+$font-monospace: $courier;
 $font-weight-bold: 500;
-
 // Foundation default settings
 $body-font-color: #2b2b2b;
 $body-font-family: $roboto;
@@ -25,49 +26,35 @@ $include-xl-html-grid-classes: true;
 $include-xl-html-block-grid-classes: true;
 $select-bg-color: #fff;
 $site-footer-font-size: 0.875rem;
-
 //removes column gutter so edges of block grid align with grid
 $align-block-grid-to-grid: true;
-
-$gutter:      20px;
+$gutter: 20px;
 $half-gutter: ($gutter / 2);
-
 //
 // Misc
 //
-
 // The amount lists, blockquotes and comments are indented.
 // $indent-amount: 1rem; Deprecated.
-
 // Font Awesome settings
 $fa-font-path: "~font-awesome/fonts";
 $fa-css-prefix: icon;
 $fa-font-size-base: $base-font-size;
-
 // UQ Icon settings
 $uq-font-path: "~@uq-uidf/core/src/fonts/uq-icons/font";
 $uq-css-prefix: icon;
 $uq-font-size-base: $base-font-size;
-
 // Background images path
 $uq-bg-image-path: "~@uq-uidf/core/src/images";
-
 // Only base colours should be listed in this file. Mixed and modified colour should be done at the associated component or supporting file. 
 // UQ brand colours
-    
 // UQ Primary palette
-
 $uq-purple: #51247A;
 $uq-black: #000000;
 $uq-white: #ffffff;
-
 // UQ Secondary palette
-
 $uq-purple-light: #962A8B;
-
 $uq-neutral1: #D7D1CC;
 $uq-neutral2: #999490;
-
 $uq-gold: #BDA14E;
 $uq-red: #E62645;
 $uq-orange: #EB602B;
@@ -75,90 +62,68 @@ $uq-yellow: #FBB800;
 $uq-blue: #4085C6;
 $uq-aqua: #00ABCD;
 $uq-green: #2EA836;
-
 // UQ Purple gradient
-
-$uq-purple-gradient: linear-gradient(90deg, rgba(81,36,122,1) 0%, 87%, rgba(150,42,139,1) 100%); 
-
+$uq-purple-gradient: linear-gradient(90deg, rgba(81, 36, 122, 1) 0%, 87%, rgba(150, 42, 139, 1) 100%);
 // Link Blue
 $link: #2377cb;
 $link-hover: #005ea5;
-
 // Links
 $link-color: #2377cb;
 $link-active-color: #005ea5;
 $link-hover-color: #005ea5;
-
 // External link icon
 $external-link-icon-color: #bbb;
-
 // Default text, Content
 $text: #2b2b2b;
-
 // Alerts
 $alert: #B80017;
-
 // UQ brand colours
 $uq-dark-purple: #51247A;
 // $uq-green: #8cb800; Deprecated because of duplicate naming.
-
 // Header and Footer
 $site-header-bg: $uq-dark-purple;
 $site-header-color: #fff;
 $site-header-link-color: #fff;
-
 $site-footer-bg: $uq-dark-purple;
 $site-footer-color: mix(white, $uq-dark-purple, 75%);
 $site-footer-link-color: #fff;
-
 $site-global-menu-link-color: mix(white, $uq-dark-purple, 75%);
-
 // Grid of links
 $linked-list-color: $link-color;
 $linked-list-color-hover: #fff;
 $linked-list-desc: #222;
 $linked-list-desc-hover: #fff;
-
 // Vertical lists
 $vertical-list-border: #EDEDED;
-
 // Main menu
 $main-menu-color: #000;
 $main-menu-bg-color: #fff;
-
 // Secondary menu color
 $main-menu-secondary-bg-color: #f2f2f2;
 $main-menu-bg-hover: darken(#f2f2f2, 4.5%);
 $main-menu-border: darken(#f2f2f2, 10%);
-
 // Vertical Menu
 $vertical-menu-link-border: #f5f5f5;
 $vertical-menu-link-active: #000;
 $vertical-menu-shaded-bg-color: #f6f6f6;
-
 // Administration
 $primary-tabs-bg: #eee;
-
 // Messages
 $messages-status-bg: #eef5fb;
 $messages-status-border-color: #8ebae7;
 $messages-status-color: #000;
-
 $messages-warning-bg: #fff9ee;
 $messages-warning-border-color: #ffd179;
 $messages-warning-color: #000;
-
 $messages-error-bg: #d8481f;
 $messages-error-border-color: #d8481f;
 $messages-error-color: #fff;
 $messages-error-link-color: #fff;
-
 // Progress Bar
 $progress-bar-bg: #ddd;
 $progress-bar-fill-bg: #444;
 $progress-bar-border-color: #949494;
 $progress-bar-color: #fff;
-
 // Progression
 $progression-text: #fff;
 $progression-border: $progression-text;
@@ -166,56 +131,44 @@ $progression-label: #222;
 $progression-step-bg: #999490;
 $progression-bar-bg: #D7D1CC;
 $progression-completed: #2EA836;
-
 // Sections
 $section-shaded-bg: #f5f5f5;
 $section-summary-color: #767676;
 $section-footer-color: #767676;
-
 // Palettes
 $light-palette-color: #f0f0f0;
-$light-palette-border-color: rgba(255,255,255,.4);
+$light-palette-border-color: rgba(255, 255, 255, .4);
 $light-palette-link-color: #fff;
 $light-palette-bg: #fff;
-
 $dark-palette-color: #222;
-$dark-palette-border-color: rgba(0,0,0,.1);
-$dark-palette-link-color: lighten($uq-purple,10%);
+$dark-palette-border-color: rgba(0, 0, 0, .1);
+$dark-palette-link-color: lighten($uq-purple, 10%);
 $dark-palette-bg: #333;
-
 // Tints
 $dark-tint-bg: #494949;
-
 // Hero banner
 $hero-banner-bg: #494949;
-
 // Menu Block two column
 $menu-block-two-column-link-color: $link-color;
 $menu-block-two-column-inactive-link-color: #222;
 $menu-block-two-column-border-color: #eee;
-
 // Page
 $page-header-bg: #f2f2f2;
 $page-header-white-bg: #fff;
 $page-header-white-border-color: #eee;
-
 // Breadcrumbs
 $breadcrumb-link: #676767;
-
 // Forms
 $form-required-color: #d6492a;
 $form-description-color: #666;
 $form-input-border-color: #ccc;
-
 // Panes
 $pane-border: #eee;
 $pane-shaded-bg: #f5f5f5;
 $pane-title-color: $uq-purple;
-
 // Tabs
 $tabs-shaded-bg: #f5f5f5;
 $tabs-underlined-border-color: #e3dbe8;
-
 // Accordion
 $accordion-border-color: #e9e9e9;
 $accordion-title-bg: #f9f9f9;
@@ -223,108 +176,89 @@ $accordion-title-bg-hover: #eee;
 $accordion-icon-color: #bbb;
 $accordion-content-bg: #fff;
 $accordion-editor-outline: #f00;
-
 // Article
 $article-title-color: #555;
 $article-border-color: #eee;
 $article-tag-bg: #f3f3f3;
 $article-tag-color: #666;
-
 // Icons
 $icon-light-grey-color: #ddd;
-
 // Catalogue
 $catalogue-index-bg: #f5f5f5;
 $catalogue-index-color: #555;
 $catalogue-meta-color: #eee;
-
 // Citation (eSpace)
 $citation-color: #868686;
-
 // Tags
 $tags-link-bg: #f5f5f5;
-
 // Action items
 $action-item-bg: #f5f5f5;
 $action-item-icon-bg: #dbdbdb;
-
 // Team
 $team-teaser-action-links: #666;
-
 // Asset
 $asset-border-color: #ccc;
-
 // Cards
 $card-shaded-bg: #f5f5f5;
-
 // Overview brand device connector
 $brand-device-connector: #E1E1E1;
-
 // Compendium
 $compendium-border-color: #ccc;
 $compendium-title-border-color: #ddd;
-
 // Logo
 $logo-color: #fff;
-
 // Content column block
 $content-column-block-pane-bg: #2468c6;
 $content-column-block-pane-odd-bg: #22487e;
-
 // Divider
 $divider-border-color: #ededed;
-
 // Compact
 $compact-content-color: #767676;
-
 //
 // Tints
 // Provide an overlay over backgrounds to darken, lighten an image to provide
 // better visual contrast for content.
 // Can be used as extensions on components that accommodate overlaid content.
-
 %tint {
-  position: relative;
-  overflow: hidden;
+    position: relative;
+    overflow: hidden;
 }
 
 %tint-overlay {
-  content: '';
-  height: 100%;
-  left: 0;
-  opacity: .5;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: 1;
+    content: '';
+    height: 100%;
+    left: 0;
+    opacity: .5;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
 }
 
 %tint-content {
-  position: relative;
-  z-index: 2;
+    position: relative;
+    z-index: 2;
 }
 
 // Light tint layer provides a white tint.
 %light-tint,
 .light-tint {
-  @extend %tint;
-
-  &::before {
-    @extend %tint-overlay;
-    background: #fff;
-  }
+    @extend %tint;
+    &::before {
+        @extend %tint-overlay;
+        background: #fff;
+    }
 }
 
 // Dark tint layer provides a black tint.
 %dark-tint,
 .dark-tint {
-  @extend %tint;
-  background-color: $dark-tint-bg;
-
-  &::before {
-    @extend %tint-overlay;
-    background: #000;
-  }
+    @extend %tint;
+    background-color: $dark-tint-bg;
+    &::before {
+        @extend %tint-overlay;
+        background: #000;
+    }
 }
 
 // Palettes are colour groups to change all the colours within that wrapper to a specific set.
@@ -336,101 +270,94 @@ $compact-content-color: #767676;
 //   }
 // }
 //
-
 // Light
 %light-palette,
 .light-palette {
-  border-color: $light-palette-border-color;
-  color: $light-palette-color;
-
-  a {
-    color: $light-palette-link-color;
-    font-weight: 400;
-
-    &:hover {
-      color: darken($light-palette-link-color,10%);
+    border-color: $light-palette-border-color;
+    color: $light-palette-color;
+    a {
+        color: $light-palette-link-color;
+        font-weight: 400;
+        &:hover {
+            color: darken($light-palette-link-color, 10%);
+        }
     }
-  }
 }
 
 %light-palette-bg,
 .light-palette-bg {
-  background-color: $light-palette-bg;
+    background-color: $light-palette-bg;
 }
 
 // Dark
 %dark-palette,
 .dark-palette {
-  border-color: $dark-palette-border-color;
-  color: $dark-palette-color;
-
-  a {
-    color: $dark-palette-link-color;
-
-    &:hover {
-      color: darken($dark-palette-link-color,10%);
+    border-color: $dark-palette-border-color;
+    color: $dark-palette-color;
+    a {
+        color: $dark-palette-link-color;
+        &:hover {
+            color: darken($dark-palette-link-color, 10%);
+        }
     }
-  }
 }
 
 %dark-palette-bg,
 .dark-palette-bg {
-  background-color: $dark-palette-bg;
+    background-color: $dark-palette-bg;
 }
 
 // Foundation stylesheets
-
 @import '../../node_modules/foundation-sites/scss/normalize.scss';
 @import '../../node_modules/foundation-sites/scss/foundation/components/grid';
 @import '../../node_modules/foundation-sites/scss/foundation/components/block-grid';
 @import '../../node_modules/foundation-sites/scss/foundation/components/visibility';
-
+@import '../../node_modules/foundation-sites/scss/foundation/components/inline-lists';
 //
 // Mixins
 //
-
 @mixin hide-text {
-  // http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement/
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
+    // http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement/
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 // Background images used for full-width cover.
 @mixin background-cover($image-path: false, $background-top: center, $background-left: center) {
-  // https://css-tricks.com/perfect-full-page-background-image
-  @if ($image-path) {
-    background-image: url($image-path);
-  }
-
-  background-position: $background-top $background-left;
-  background-repeat: no-repeat;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+    // https://css-tricks.com/perfect-full-page-background-image
+    @if ($image-path) {
+        background-image: url($image-path);
+    }
+    background-position: $background-top $background-left;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 // Box shadow
 @mixin box-shadow($top, $left, $blur, $color, $inset: false) {
-  @if $inset {
-    -webkit-box-shadow: inset $top $left $blur $color;
-    -moz-box-shadow: inset $top $left $blur $color;
-    box-shadow: inset $top $left $blur $color;
-  } @else {
-    -webkit-box-shadow: $top $left $blur $color;
-    -moz-box-shadow: $top $left $blur $color;
-    box-shadow: $top $left $blur $color;
-  }
+    @if $inset {
+        -webkit-box-shadow: inset $top $left $blur $color;
+        -moz-box-shadow: inset $top $left $blur $color;
+        box-shadow: inset $top $left $blur $color;
+    }
+    @else {
+        -webkit-box-shadow: $top $left $blur $color;
+        -moz-box-shadow: $top $left $blur $color;
+        box-shadow: $top $left $blur $color;
+    }
 }
 
 // Auto-detect external links based on path and add external icon.
 @mixin external-auto-detect {
-  &[href^="http://"],
-  &[href^="https://"],
-  &[rel^="external"] {
-    @extend %external;
-  }
+    &[href^="http://"],
+    &[href^="https://"],
+    &[rel^="external"] {
+        @extend %external;
+    }
 }
 
 //
@@ -438,7 +365,6 @@ $compact-content-color: #767676;
 //
 // Source: foundation/scss/foundation/components/_type.scss
 //
-
 $align-class-names: small-only,
 small,
 medium-only,
@@ -449,7 +375,6 @@ xlarge-only,
 xlarge,
 xxlarge-only,
 xxlarge;
-
 // Text alignment breakpoints
 $align-class-breakpoints: $small-only,
 $small-up,
@@ -461,42 +386,34 @@ $xlarge-only,
 $xlarge-up,
 $xxlarge-only,
 $xxlarge-up;
-
 // Generates text align and justify classes
 @mixin align-classes {
-  .text-left {
-    text-align: left !important;
-  }
-
-  .text-right {
-    text-align: right !important;
-  }
-
-  .text-center {
-    text-align: center !important;
-  }
-
-  .text-justify {
-    text-align: justify !important;
-  }
-
-  @for $i from 1 through length($align-class-names) {
-    @media #{(nth($align-class-breakpoints, $i))} {
-      .#{(nth($align-class-names, $i))}-text-left {
+    .text-left {
         text-align: left !important;
-      }
-
-      .#{(nth($align-class-names, $i))}-text-right {
-        text-align: right !important;
-      }
-
-      .#{(nth($align-class-names, $i))}-text-center {
-        text-align: center !important;
-      }
-
-      .#{(nth($align-class-names, $i))}-text-justify {
-        text-align: justify !important;
-      }
     }
-  }
+    .text-right {
+        text-align: right !important;
+    }
+    .text-center {
+        text-align: center !important;
+    }
+    .text-justify {
+        text-align: justify !important;
+    }
+    @for $i from 1 through length($align-class-names) {
+        @media #{(nth($align-class-breakpoints, $i))} {
+            .#{(nth($align-class-names, $i))}-text-left {
+                text-align: left !important;
+            }
+            .#{(nth($align-class-names, $i))}-text-right {
+                text-align: right !important;
+            }
+            .#{(nth($align-class-names, $i))}-text-center {
+                text-align: center !important;
+            }
+            .#{(nth($align-class-names, $i))}-text-justify {
+                text-align: justify !important;
+            }
+        }
+    }
 }

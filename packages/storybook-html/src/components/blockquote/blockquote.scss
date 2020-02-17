@@ -1,0 +1,13 @@
+@import '~@uq-uidf/core/src/scss/_component';
+@import '~@uq-uidf/blockquote/src/scss/_component';
+
+section {
+    padding: 30px 0px;
+}
+  
+.background-light {
+    background-color: $uq-white;
+}
+.background-dark {
+    background-color: $uq-purple;
+}

@@ -1,24 +1,3 @@
-'use strict';
-
-function _interopNamespace(e) {
-  if (e && e.__esModule) { return e; } else {
-    var n = {};
-    if (e) {
-      Object.keys(e).forEach(function (k) {
-        var d = Object.getOwnPropertyDescriptor(e, k);
-        Object.defineProperty(n, k, d.get ? d : {
-          enumerable: true,
-          get: function () {
-            return e[k];
-          }
-        });
-      });
-    }
-    n['default'] = e;
-    return n;
-  }
-}
-
 const NAMESPACE = 'component';
 
 let queueCongestion = 0;
@@ -69,11 +48,11 @@ const loadModule = (cmpMeta, hostRef, hmrVersionId) => {
     if (module) {
         return module[exportName];
     }
-    return new Promise(function (resolve) { resolve(_interopNamespace(require(
+    return import(
     /* webpackInclude: /\.entry\.js$/ */
     /* webpackExclude: /\.system\.entry\.js$/ */
     /* webpackMode: "lazy" */
-    `./${bundleId}.entry.js${ ''}`))); }).then(importedModule => {
+    `./${bundleId}.entry.js${ ''}`).then(importedModule => {
         {
             moduleCache.set(bundleId, importedModule);
         }
@@ -172,7 +151,7 @@ const patchEsm = () => {
     // @ts-ignore
     if ( !(win.CSS && win.CSS.supports && win.CSS.supports('color', 'var(--c)'))) {
         // @ts-ignore
-        return new Promise(function (resolve) { resolve(require('./css-shim-6aaf713d-bfe06088.js')); }).then(() => {
+        return import('./css-shim-6aaf713d-9b13816a.js').then(() => {
             plt.$cssShim$ = win.__stencil_cssshim;
             if (plt.$cssShim$) {
                 return plt.$cssShim$.initShim();
@@ -190,7 +169,7 @@ const patchBrowser = () => {
     const scriptElm = Array.from(doc.querySelectorAll('script')).find(s => (new RegExp(`\/${NAMESPACE}(\\.esm)?\\.js($|\\?|#)`).test(s.src) ||
         s.getAttribute('data-stencil-namespace') === NAMESPACE));
     const opts = scriptElm['data-opts'] || {};
-    const importMeta = (typeof document === 'undefined' ? new (require('u' + 'rl').URL)('file:' + __filename).href : (document.currentScript && document.currentScript.src || new URL('core-8bde1c55.js', document.baseURI).href));
+    const importMeta = "";
     if ('onbeforeload' in scriptElm && !history.scrollRestoration /* IS_ESM_BUILD */) {
         // Safari < v11 support: This IF is true if it's Safari below v11.
         // This fn cannot use async/await since Safari didn't support it until v11,
@@ -210,7 +189,7 @@ const patchBrowser = () => {
         if (!window.customElements) {
             // module support, but no custom elements support (Old Edge)
             // @ts-ignore
-            return new Promise(function (resolve) { resolve(require('./dom-76cc7c7d-769a0dda.js')); }).then(() => opts);
+            return import('./dom-76cc7c7d-0a082895.js').then(() => opts);
         }
     }
     return Promise.resolve(opts);
@@ -253,6 +232,11 @@ const patchDynamicImport = (base, orgScriptElm) => {
 const parsePropertyValue = (propValue, propType) => {
     // ensure this value is of the correct prop type
     if (propValue != null && !isComplexType(propValue)) {
+        if ( propType & 4 /* Boolean */) {
+            // per the HTML spec, any string value means it is a boolean true value
+            // but we'll cheat here and say that the string "false" is the boolean false
+            return (propValue === 'false' ? false : propValue === '' || !!propValue);
+        }
         if ( propType & 1 /* String */) {
             // could have been passed as a number or boolean
             // but we still want it as a string
@@ -266,6 +250,7 @@ const parsePropertyValue = (propValue, propType) => {
     return propValue;
 };
 const HYDRATED_CLASS = 'hydrated';
+const HYDRATED_STYLE_ID = 'sty-id';
 const createTime = (fnName, tagName = '') => {
     {
         return () => { return; };
@@ -327,10 +312,7 @@ const addStyle = (styleContainerNode, cmpMeta, mode, hostElm) => {
             }
         }
         else if ( !styleContainerNode.adoptedStyleSheets.includes(style)) {
-            styleContainerNode.adoptedStyleSheets = [
-                ...styleContainerNode.adoptedStyleSheets,
-                style
-            ];
+            styleContainerNode.adoptedStyleSheets = [...styleContainerNode.adoptedStyleSheets, style];
         }
     }
     return scopeId;
@@ -623,7 +605,8 @@ const patch = (oldVNode, newVNode) => {
     const elm = newVNode.$elm$ = oldVNode.$elm$;
     const oldChildren = oldVNode.$children$;
     const newChildren = newVNode.$children$;
-    if ( newVNode.$text$ === null) {
+    const text = newVNode.$text$;
+    if ( text === null) {
         // element node
         {
             {
@@ -651,10 +634,10 @@ const patch = (oldVNode, newVNode) => {
             removeVnodes(oldChildren, 0, oldChildren.length - 1);
         }
     }
-    else if ( oldVNode.$text$ !== newVNode.$text$) {
+    else if ( oldVNode.$text$ !== text) {
         // update the text content for the text only vnode
         // and also only if the text is different than before
-        elm.data = newVNode.$text$;
+        elm.data = text;
     }
 };
 const renderVdom = (hostElm, hostRef, cmpMeta, renderFnResults) => {
@@ -1043,6 +1026,7 @@ const bootstrapLazy = (lazyBundles, options = {}) => {
     const y = /*@__PURE__*/ head.querySelector('meta[charset]');
     const visibilityStyle = /*@__PURE__*/ doc.createElement('style');
     const deferredConnectedCallbacks = [];
+    const styles = doc.querySelectorAll(`[${HYDRATED_STYLE_ID}]`);
     let appLoadFallback;
     let isBootstrapping = true;
     Object.assign(plt, options);
@@ -1117,9 +1101,4 @@ const bootstrapLazy = (lazyBundles, options = {}) => {
     endBootstrap();
 };
 
-exports.Host = Host;
-exports.bootstrapLazy = bootstrapLazy;
-exports.h = h;
-exports.patchBrowser = patchBrowser;
-exports.patchEsm = patchEsm;
-exports.registerInstance = registerInstance;
+export { Host as H, patchEsm as a, bootstrapLazy as b, h, patchBrowser as p, registerInstance as r };

@@ -10,14 +10,21 @@ import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 
 
 export namespace Components {
+  interface UqGlobalMenuClassic {}
   interface UqHeaderClassic {
-    'name': string;
-    'sticky': boolean;
+    'showGlobalMenu': boolean;
+    'showSearch': boolean;
   }
 }
 
 declare global {
 
+
+  interface HTMLUqGlobalMenuClassicElement extends Components.UqGlobalMenuClassic, HTMLStencilElement {}
+  var HTMLUqGlobalMenuClassicElement: {
+    prototype: HTMLUqGlobalMenuClassicElement;
+    new (): HTMLUqGlobalMenuClassicElement;
+  };
 
   interface HTMLUqHeaderClassicElement extends Components.UqHeaderClassic, HTMLStencilElement {}
   var HTMLUqHeaderClassicElement: {
@@ -25,17 +32,20 @@ declare global {
     new (): HTMLUqHeaderClassicElement;
   };
   interface HTMLElementTagNameMap {
+    'uq-global-menu-classic': HTMLUqGlobalMenuClassicElement;
     'uq-header-classic': HTMLUqHeaderClassicElement;
   }
 }
 
 declare namespace LocalJSX {
+  interface UqGlobalMenuClassic {}
   interface UqHeaderClassic {
-    'name'?: string;
-    'sticky'?: boolean;
+    'showGlobalMenu'?: boolean;
+    'showSearch'?: boolean;
   }
 
   interface IntrinsicElements {
+    'uq-global-menu-classic': UqGlobalMenuClassic;
     'uq-header-classic': UqHeaderClassic;
   }
 }
@@ -46,6 +56,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
   export namespace JSX {
     interface IntrinsicElements {
+      'uq-global-menu-classic': LocalJSX.UqGlobalMenuClassic & JSXBase.HTMLAttributes<HTMLUqGlobalMenuClassicElement>;
       'uq-header-classic': LocalJSX.UqHeaderClassic & JSXBase.HTMLAttributes<HTMLUqHeaderClassicElement>;
     }
   }

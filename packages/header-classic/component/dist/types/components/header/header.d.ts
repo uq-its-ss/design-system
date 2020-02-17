@@ -1,6 +1,10 @@
 export declare class Header {
-    name: string;
-    sticky: boolean;
-    validateName(newValue: string): void;
+    showGlobalMenu: boolean;
+    showSearch: boolean;
+    value: string;
+    searchPlaceholder: string;
+    constructor();
+    handleSearchOnBlur(e: any): void;
+    handleSearchOnFocus(e: any): void;
     render(): any;
 }

@@ -9,7 +9,6 @@
 // .site-header.has-no-global-menu - Adds top spacing when the global menu element is not included in the site header.
 //
 
-uq-header .site-header,
 .site-header {
   background-color: $site-header-bg;
   color: #ccc;
@@ -21,7 +20,7 @@ uq-header .site-header,
 
   &__content {
     @include grid-row();
-    padding: 1.5rem 0 1.5rem 0;
+    padding: 0 0 1.5rem 0;
     text-align: center;
 
     @media #{$small-only} {
@@ -44,7 +43,6 @@ uq-header .site-header,
 
   .site-title {
     border-left: 1px solid rgba(255, 255, 255, .5);
-    color: #ffffff;
     float: left;
     font-size: 1rem;
     font-weight: 400;
@@ -144,5 +142,131 @@ uq-header .site-header,
     .site-header__content {
       padding-top: 1.5rem;
     }
+  }
+}
+
+// Global Menu
+
+.global-menu {
+  float: right;
+
+  &__list {
+    @include inline-list();
+  }
+
+  //&__item {}
+
+  &__link,
+  &__link:focus,
+  &__link:visited {
+    color: $site-global-menu-link-color;
+    font-size: .65rem;
+    font-weight: 500;
+    margin-right: .25rem;
+    text-transform: uppercase;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+}
+
+//
+// Site Search
+//
+// Variants
+// .site-search__form--mobile - Styles to display search form on tablet/mobile (This is an interim solution to display the search on tablet/mobile until the header design is revised).
+
+.site-header__site-search {
+  @media #{$small-only} {
+    @include element-invisible();
+  }
+
+  @media #{$medium-only} {
+    @include element-invisible();
+  }
+
+  @media #{$large-up} {
+    @include grid-column(
+      $columns:4,
+      $last-column:true,
+      $collapse:true,
+      $float:right
+    );
+    padding-top: 1rem;
+  }
+}
+
+.site-search__title {
+  @include element-invisible();
+}
+
+.site-search__form {
+  float: right;
+  margin: 0;
+  padding: 0;
+
+  .site-search__query {
+    font-size: .85rem;
+    padding: 0 0 0 .3rem;
+    width: 14rem;
+  }
+
+  &--mobile {
+    border-bottom: 1px solid $form-input-border-color;
+    float: left;
+    margin: .75rem 1rem;
+
+    .site-search__query {
+      // Reduce width of search input on mobile to fit on same row as hamburger
+      // menu.
+      @media #{$small-only} {
+        width: 8rem;
+      }
+    }
+  }
+
+  .site-search__fieldset {
+    margin: 0;
+    padding: 0;
+    border: none;
+    width: 100%;
+  }
+
+  .site-search__legend {
+    @include element-invisible();
+  }
+
+  .site-search__input {
+    border-width: 0;
+    float: left;
+    height: 1.65rem;
+    line-height: 1.65rem;
+    margin: 0;
+
+    &,
+    &:focus {
+      background: white;
+      border-width: 0;
+      box-shadow: none;
+      color: #333;
+      transition: none;
+    }
+
+    &:hover {
+      background: white;
+      color: #333;
+    }
+  }
+
+  .site-search__submit {
+    width: 1.65rem;
+    padding: 0;
+    cursor: pointer;
+    font-family: 'FontAwesome';
+  }
+
+  .site-search__query:focus + .site-search__submit {
+    color: #333;
   }
 }

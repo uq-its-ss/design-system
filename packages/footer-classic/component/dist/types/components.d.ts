@@ -11,8 +11,12 @@ import { HTMLStencilElement, JSXBase } from './stencil.core';
 
 export namespace Components {
   interface UqFooterClassic {
+    'loginUrl': string;
+    'logoutUrl': string;
     'pageLastUpdated': string;
     'pageUrl': string;
+    'showLogin': boolean;
+    'showLogout': boolean;
   }
 }
 
@@ -31,8 +35,12 @@ declare global {
 
 declare namespace LocalJSX {
   interface UqFooterClassic {
+    'loginUrl'?: string;
+    'logoutUrl'?: string;
     'pageLastUpdated'?: string;
     'pageUrl'?: string;
+    'showLogin'?: boolean;
+    'showLogout'?: boolean;
   }
 
   interface IntrinsicElements {

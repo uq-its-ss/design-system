@@ -1,1 +1,0 @@
-System.register(["./p-c743e094.system.js"],(function(){"use strict";var e,t;return{setters:[function(s){e=s.p;t=s.b}],execute:function(){e().then((function(e){return t([["p-zgakh9vx.system",[[0,"uq-header-classic",{name:[1],sticky:[4]}]]]],e)}))}}}));

@@ -287,6 +287,11 @@ var patchDynamicImport = function (base, orgScriptElm) {
 var parsePropertyValue = function (propValue, propType) {
     // ensure this value is of the correct prop type
     if (propValue != null && !isComplexType(propValue)) {
+        if (propType & 4 /* Boolean */) {
+            // per the HTML spec, any string value means it is a boolean true value
+            // but we'll cheat here and say that the string "false" is the boolean false
+            return (propValue === 'false' ? false : propValue === '' || !!propValue);
+        }
         if (propType & 1 /* String */) {
             // could have been passed as a number or boolean
             // but we still want it as a string
@@ -300,6 +305,7 @@ var parsePropertyValue = function (propValue, propType) {
     return propValue;
 };
 var HYDRATED_CLASS = 'hydrated';
+var HYDRATED_STYLE_ID = 'sty-id';
 var createTime = function (fnName, tagName) {
     if (tagName === void 0) { tagName = ''; }
     {
@@ -362,9 +368,7 @@ var addStyle = function (styleContainerNode, cmpMeta, mode, hostElm) {
             }
         }
         else if (!styleContainerNode.adoptedStyleSheets.includes(style)) {
-            styleContainerNode.adoptedStyleSheets = __spreadArrays(styleContainerNode.adoptedStyleSheets, [
-                style
-            ]);
+            styleContainerNode.adoptedStyleSheets = __spreadArrays(styleContainerNode.adoptedStyleSheets, [style]);
         }
     }
     return scopeId;
@@ -661,7 +665,8 @@ var patch = function (oldVNode, newVNode) {
     var elm = newVNode.$elm$ = oldVNode.$elm$;
     var oldChildren = oldVNode.$children$;
     var newChildren = newVNode.$children$;
-    if (newVNode.$text$ === null) {
+    var text = newVNode.$text$;
+    if (text === null) {
         // element node
         {
             {
@@ -689,10 +694,10 @@ var patch = function (oldVNode, newVNode) {
             removeVnodes(oldChildren, 0, oldChildren.length - 1);
         }
     }
-    else if (oldVNode.$text$ !== newVNode.$text$) {
+    else if (oldVNode.$text$ !== text) {
         // update the text content for the text only vnode
         // and also only if the text is different than before
-        elm.data = newVNode.$text$;
+        elm.data = text;
     }
 };
 var renderVdom = function (hostElm, hostRef, cmpMeta, renderFnResults) {
@@ -1092,6 +1097,7 @@ var bootstrapLazy = function (lazyBundles, options) {
     var y = /*@__PURE__*/ head.querySelector('meta[charset]');
     var visibilityStyle = /*@__PURE__*/ doc.createElement('style');
     var deferredConnectedCallbacks = [];
+    var styles = doc.querySelectorAll("[" + HYDRATED_STYLE_ID + "]");
     var appLoadFallback;
     var isBootstrapping = true;
     Object.assign(plt, options);

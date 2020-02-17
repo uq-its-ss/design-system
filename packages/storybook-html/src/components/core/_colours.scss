@@ -231,24 +231,6 @@
       content: '$progression-completed';
     }
   }
-  &--form-required-color {
-    background-color: $form-required-color;
-    &:after {
-      content: '$form-required-color';
-    }
-  }
-  &--form-description-color {
-    background-color: $form-description-color;
-    &:after {
-      content: '$form-description-color';
-    }
-  }
-  &--form-input-border-color {
-    background-color: $form-input-border-color;
-    &:after {
-      content: '$form-input-border-color';
-    }
-  }
   &--accordion-editor-outline {
     background-color: $accordion-editor-outline;
     &:after {

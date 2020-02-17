@@ -101,8 +101,6 @@ $alert: #B80017;
 $uq-dark-purple: #51247A;
 // $uq-green: #8cb800; Deprecated because of duplicate naming.
 
-$site-global-menu-link-color: mix(white, $uq-dark-purple, 75%);
-
 // Grid of links
 $linked-list-color: $link-color;
 $linked-list-color-hover: #fff;
@@ -191,11 +189,6 @@ $page-header-white-border-color: #eee;
 
 // Breadcrumbs
 $breadcrumb-link: #676767;
-
-// Forms
-$form-required-color: #d6492a;
-$form-description-color: #666;
-$form-input-border-color: #ccc;
 
 // Panes
 $pane-border: #eee;

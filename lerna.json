@@ -1,11 +1,11 @@
 {
-  "packages": [
-    "packages/*"
-  ],
-  "command": {
-    "publish": {
-      "registry": "http://localhost:4873/"
-    }
-  },
-  "version": "0.0.0"
+    "packages": [
+        "packages/*"
+    ],
+    "command": {
+        "publish": {
+            "registry": "http://localhost:4873/"
+        }
+    },
+    "version": "0.0.0"
 }

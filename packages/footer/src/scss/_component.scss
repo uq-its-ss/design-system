@@ -1,0 +1,129 @@
+    @import '_global.scss';
+    .footer {
+        background: $uq-purple-gradient;
+        color: $site-footer-color;
+        font-size: $site-footer-font-size;
+        &--full-width {
+            padding: 0 1rem;
+        }
+        a {
+            color: $site-footer-link-color;
+            font-weight: 500;
+        }
+        abbr[title] {
+            text-decoration: none;
+        }
+        .acknowledgement-statement {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            color: $site-footer-color;
+            font-family: $merriweather;
+            font-size: 1rem;
+            font-style: italic;
+            font-weight: 300;
+            line-height: 1.5;
+            margin: 0 0 2rem;
+            padding: 0 0 2rem;
+            @media #{$medium-up} {
+                font-size: 1.125rem;
+            }
+            &__link {
+                font-family: Roboto;
+                font-style: normal;
+            }
+        }
+        &__content {
+            padding: 3rem 0;
+        }
+        &__aside {
+            display: inline-block;
+            margin: 1.5rem 0 0 0;
+            @media #{$large-up} {
+                margin: 0;
+            }
+        }
+        &__sub-title {
+            color: $site-footer-link-color;
+            font-size: 1.125em;
+        }
+        &__footer {
+            margin: 2rem 0 0 0;
+            overflow: hidden;
+        }
+        .menu-footer {
+            &__list {
+                display: flex;
+                flex-wrap: wrap;
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                li {
+                    padding-left: var(--space--md);
+                    &+:before {
+                        content: " | ";
+                        padding-right: var(--space--md);
+                    }
+                    &:first-of-type {
+                        padding-left: 0;
+                    }
+                }
+            }
+        }
+        .social-media {
+            font-size: 1.5rem;
+            &__list {
+                @include inline-list();
+            }
+            &__item+.social-media__item::before {
+                content: " ";
+                display: inline-block;
+                margin: 0 .5rem 0 0;
+            }
+            &__link {
+                &:hover {
+                    color: $site-footer-color;
+                    transition: all ease .5s;
+                }
+            }
+        }
+    }
+    
+    // OLA local footer for minimal footer full-width demo --- DELETE LATER
+    #footer {
+        font-size: 14px;
+        border-top: 1px solid #ddd;
+        overflow: hidden;
+        padding: 20px 0;
+    }
+    
+    #footer ul {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 0;
+        margin-right: 25px;
+    }
+    
+    #footer ul li {
+        border-left: 1px solid #ddd;
+        float: right;
+        line-height: 150%;
+        margin-left: 25px;
+        padding-left: 25px;
+    }
+    
+    #footer ul li.footer-support {
+        border-left-width: 0;
+        float: left;
+        padding-left: 0;
+    }
+    
+    @media screen and (max-width: 992px) {
+        #footer ul li.footer-support {
+            float: none;
+        }
+        #footer ul li {
+            border: 0;
+            float: none;
+            margin: 0 0 0 15px;
+            padding: 0;
+        }
+    }

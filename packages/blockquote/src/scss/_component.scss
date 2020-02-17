@@ -1,0 +1,119 @@
+/* Blocks */
+.blockquote {
+	border: none;
+	color: $uq-purple;
+	font-style: italic;
+	height: auto;
+	margin-left: 30px;
+	padding: 15px 20px;
+	position: relative;
+	width: calc(100% - 30px);
+}
+
+.blockquote.blockquote--light {
+	color: $uq-purple;
+}
+
+.blockquote.blockquote--dark {
+	background-color: $uq-purple;
+	color: $uq-white;
+}
+
+.blockquote.blockquote--boxed {
+	background: $uq-purple-gradient;
+	margin-left: 0;
+	padding: 50px 50px;
+	width: 100%;
+}
+
+.blockquote::before {
+	background-color: $uq-purple;
+	content: '';
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 5px;
+}
+
+.blockquote.blockquote--light::before {
+	background-color: $uq-purple;
+}
+
+.blockquote.blockquote--dark::before {
+	background-color: $uq-white;
+}
+
+.blockquote.blockquote--boxed::before {
+	content: '';
+	height: calc(100% - 60px);
+	left: 30px;
+	position: absolute;
+	top: 30px;
+	width: 5px;
+}
+
+.blockquote.blockquote--quotemark::before {
+	background-color: transparent;
+	background-image: url('~@uq-uidf/blockquote/src/images/icon-open-doublequote-light.svg');
+	background-size: cover;
+	display: inline-block;
+	fill: #000;
+	height: 28px;
+	left: -20px;
+	position: absolute;
+	stroke: #000;
+	stroke-width: 0;
+	top: 0px;
+	width: 34px;
+}
+
+.blockquote.blockquote--light.blockquote--quotemark::before {
+	background-image: url('~@uq-uidf/blockquote/src/images/icon-open-doublequote-light.svg');
+}
+
+.blockquote.blockquote--dark.blockquote--quotemark::before {
+	background-image: url('~@uq-uidf/blockquote/src/images/icon-open-doublequote-dark.svg');
+}
+
+.blockquote.blockquote--boxed.blockquote--quotemark::before {
+	left: 10px;
+	position: absolute;
+	top: 40px;
+}
+
+/* Elements */
+.blockquote__body {
+	font-family: 'Merriweather', serif;
+	font-size: 1.2rem;
+	font-weight: 300;
+	line-height: 1.5;
+}
+
+.blockquote__footer {
+	font-size: 0.875rem;
+}
+
+.blockquote.blockquote--dark .blockquote__link,
+.blockquote.blockquote--dark .blockquote__link:link,
+.blockquote.blockquote--dark .blockquote__link:visited,
+.blockquote.blockquote--dark .blockquote__link:active {
+	color: $uq-white;
+	text-decoration: underline;
+}
+
+.blockquote.blockquote--dark .blockquote__link:hover {
+	text-decoration: none;
+}
+
+blockquote cite {
+	display: inline-block !important;
+}
+
+.blockquote__body p:first-child {
+	margin-top: 0;
+}
+
+.blockquote__footer p:last-child {
+	margin-bottom: 0;
+}

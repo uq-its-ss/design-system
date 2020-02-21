@@ -3,6 +3,57 @@
 @import '_global.scss';
 @import '_print.scss';
 
+// Palettes are colour groups to change all the colours within that wrapper to a specific set.
+//
+// Components that set their own element colours may need palette @extend added to them to override specificity. e.g.
+// &.light-palette {
+//   a {
+//     @extend %light-palette;
+//   }
+// }
+//
+
+// Light
+%light-palette,
+.light-palette {
+  border-color: $light-palette-border-color;
+  color: $light-palette-color;
+
+  a {
+    color: $light-palette-link-color;
+    font-weight: 400;
+
+    &:hover {
+      color: darken($light-palette-link-color,10%);
+    }
+  }
+}
+
+%light-palette-bg,
+.light-palette-bg {
+  background-color: $light-palette-bg;
+}
+
+// Dark
+%dark-palette,
+.dark-palette {
+  border-color: $dark-palette-border-color;
+  color: $dark-palette-color;
+
+  a {
+    color: $dark-palette-link-color;
+
+    &:hover {
+      color: darken($dark-palette-link-color,10%);
+    }
+  }
+}
+
+%dark-palette-bg,
+.dark-palette-bg {
+  background-color: $dark-palette-bg;
+}
+
 .uq-logo {
   @include hide-text;
   background: url('https://static.uq.net.au/v5/logos/corporate/uq-logo-white.png') no-repeat 0 0; // sass-lint:disable-line no-url-domains, no-url-protocols
@@ -72,7 +123,7 @@
 
 // Font Awesome settings
 // @see global/variables
-@import "../../node_modules/font-awesome/scss/font-awesome";
+@import "~font-awesome/scss/font-awesome";
 
 // UQ Icon settings
 // @see global/variables

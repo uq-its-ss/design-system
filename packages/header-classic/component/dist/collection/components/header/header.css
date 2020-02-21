@@ -1,0 +1,11 @@
+/* Functional CSS */
+
+/* 
+  What is functional CSS?
+  -----------------------
+  CSS that is manipulated by JS and is important to component design and usage.
+*/
+
+:host {
+  display: block;
+}

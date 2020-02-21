@@ -1,0 +1,13 @@
+{
+  "entries": [
+    "components/header/header.js",
+    "components/global-menu-classic/global-menu-classic.js"
+  ],
+  "compiler": {
+    "name": "@stencil/core",
+    "version": "1.8.8",
+    "typescriptVersion": "3.7.5"
+  },
+  "collections": [],
+  "bundles": []
+}

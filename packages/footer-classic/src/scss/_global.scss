@@ -1,0 +1,7 @@
+// Variables, functions, and mixins
+
+@import "~@uq-uidf/core/src/scss/_global.scss";
+
+$site-footer-bg: $uq-dark-purple;
+$site-footer-color: mix(white, $uq-dark-purple, 75%);
+$site-footer-link-color: #fff;

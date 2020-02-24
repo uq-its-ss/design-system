@@ -1,14 +1,203 @@
+<p><code>&#60;button&#62;</code> <button type="button">Button</button></p>
+
+<p>
+  <code>&#60;datalist&#62;</code>
+  <label for="uq-datalist">Choose a campus:</label>
+  <input list="uq-dataoptions" id="uq-datalist" name="uq-datalist" />
+
+  <datalist id="uq-dataoptions">
+    <option value="St Lucia"> </option>
+    <option value="Gatton"> </option>
+    <option value="Herston"> </option>
+    <option value="Other locations"> </option>
+  </datalist>
+</p>
+
+<code>&#60;fieldset&#62;</code>, <code>&#60;legend&#62;</code>
 <form>
-  <label>Input Label
+  <fieldset>
+    <legend>Choose a campus:</legend>
+
+    <input type="radio" id="stlucia" name="Campus" />
+    <label for="stlucia">St Lucia</label><br />
+
+    <input type="radio" id="gatton" name="Campus" />
+    <label for="gatton">Gatton</label><br />
+
+    <input type="radio" id="herston" name="Campus" />
+    <label for="herston">Herston</label>
+  </fieldset>
+</form>
+
+<code>&#60;form&#62;</code>
+<form action="" method="get" class="form-example">
+  <div class="form-example">
+    <label for="name">Enter your name: </label>
+    <input type="text" name="name" id="name" required />
+  </div>
+  <div class="form-example">
+    <label for="email">Enter your email: </label>
+    <input type="email" name="email" id="email" required />
+  </div>
+  <div class="form-example">
+    <input type="submit" value="Subscribe!" />
+  </div>
+</form>
+
+<code>&#60;input&#62;</code>
+<label for="name">Name (4 to 8 characters):</label>
+<input
+  type="text"
+  id="name"
+  name="name"
+  required
+  minlength="4"
+  maxlength="8"
+  size="10"
+/>
+
+<code>&#60;input type="button"&#62;</code><label>button</label>
+<input type="button" value="Click Me" /> <br />
+<code>&#60;input type="checkbox"&#62;</code> <label>checkbox</label>
+<input type="checkbox" /> <br />
+<code>&#60;input type="color"&#62;</code><label>color</label>
+<input type="color" value="#51247A" /> <br />
+<code>&#60;input type="date"&#62;</code><label>date</label>
+<input type="date" /> <br />
+<code style="text-decoration: line-through;"
+  >&#60;input type="datetime"&#62;</code
+><label style="text-decoration: line-through;">datetime</label>
+<input type="datetime" /> <br />
+<code>&#60;input type="datetime-local"&#62;</code><label>datetime-local</label>
+<input
+  id="party"
+  type="datetime-local"
+  name="partydate"
+  value="2017-06-01T08:30"
+/>
+<br />
+<code>&#60;input type="email"&#62;</code><label>email</label>
+<input type="email" /> <br />
+<code>&#60;input type="file"&#62;</code><label>file</label>
+<input type="file" /> <br />
+<code>&#60;input type="hidden"&#62;</code
+><input id="prodId" name="prodId" type="hidden" value="xm234jq" /> You should
+see nothing<br />
+<code>&#60;input type="image"&#62;</code><label>image</label>
+<input
+  id="image"
+  type="image"
+  width="100"
+  height="30"
+  alt="Login"
+  src="https://raw.githubusercontent.com/mdn/learning-area/master/html/forms/image-type-example/login.png"
+/>
+<br />
+<code>&#60;input type="month"&#62;</code><label>month</label>
+<input type="month" /> <br />
+<code>&#60;input type="number"&#62;</code><label>number</label>
+<input id="number" type="number" value="42" /> <br />
+<code>&#60;input type="password"&#62;</code><label>password</label>
+<input type="password" /> <br />
+<code>&#60;input type="radio"&#62;</code><label>radio</label>
+<input type="radio" /> <br />
+<code>&#60;input type="range"&#62;</code><label>range</label>
+<input type="range" min="5" max="10" step="0.01" /> <br />
+<code>&#60;input type="reset"&#62;</code><label>reset</label>
+<input type="reset" /> <br />
+<code>&#60;input type="Search"&#62;</code><label>search</label>
+<input type="search" /> <br />
+<code>&#60;input type="Submit"&#62;</code><label>submit</label>
+<input type="submit" /> <br />
+<code>&#60;input type="tel"&#62;</code><label>tel</label> <input type="tel" />
+<br />
+<code>&#60;input type="text"&#62;</code><label>text</label>
+<input type="text" /> <br />
+<code>&#60;input type="time"&#62;</code><label>time</label>
+<input type="time" /> <br />
+<code>&#60;input type="url"&#62;</code><label>url</label> <input type="url" />
+<br />
+
+<code>&#60;label&#62;</code>
+<div class="preference">
+  <label for="stlucia-label">Do you like St Lucia?</label>
+  <input type="checkbox" name="stlucia-label" id="stlucia-label" />
+</div>
+
+<div class="preference">
+  <label for="gatton-label">Do you like Gatton?</label>
+  <input type="checkbox" name="gatton-label" id="gatton-label" />
+</div>
+
+<p>
+  <code>&#60;meter&#62;</code>
+  <label for="course-capacity">Course Capacity:</label>
+  <meter
+    id="course-capacity"
+    min="0"
+    max="100"
+    low="33"
+    high="66"
+    optimum="80"
+    value="50"
+  >
+    at 50/100
+  </meter>
+</p>
+
+<code>&#60;option&#62;</code>, <code>&#60;select&#62;</code>
+<select name="choice">
+  <option value="first">First Value</option>
+  <option value="second" selected>Second Value</option>
+  <option value="third">Third Value</option>
+</select>
+
+<code>&#60;optgroup&#62;</code>
+<select>
+  <optgroup label="Group 1">
+    <option>Option 1.1</option>
+  </optgroup>
+  <optgroup label="Group 2">
+    <option>Option 2.1</option>
+    <option>Option 2.2</option>
+  </optgroup>
+  <optgroup label="Group 3" disabled>
+    <option>Option 3.1</option>
+    <option>Option 3.2</option>
+    <option>Option 3.3</option>
+  </optgroup>
+</select>
+
+<code>&#60;output&#62;</code>
+<form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+  <input type="range" id="b" name="b" value="50" /> +
+  <input type="number" id="a" name="a" value="10" /> =
+  <output name="result" for="a b">60</output>
+</form>
+
+<code>&#60;progress&#62;</code>
+<progress value="70" max="100">70 %</progress>
+
+<code>&#60;textarea&#62;</code>
+<textarea name="textarea" rows="10" cols="50">Write something here</textarea>
+
+<hr />
+
+<form>
+  <label
+    >Input Label
     <input type="text" placeholder="Input placeholder text..." />
   </label>
-  <label>Input Label
+  <label
+    >Input Label
     <input type="text" placeholder="large-4.columns" />
   </label>
-  <label>Input Label
+  <label
+    >Input Label
     <input type="text" placeholder="large-4.columns" />
   </label>
-  <label>Select Box
+  <label
+    >Select Box
     <select>
       <option value="husker">Husker</option>
       <option value="starbuck">Starbuck</option>
@@ -17,12 +206,23 @@
     </select>
   </label>
   <label>Choose Your Favorite</label>
-  <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Red</label>
-  <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Blue</label>
+  <input type="radio" name="pokemon" value="Red" id="pokemonRed" /><label
+    for="pokemonRed"
+    >Red</label
+  >
+  <input type="radio" name="pokemon" value="Blue" id="pokemonBlue" /><label
+    for="pokemonBlue"
+    >Blue</label
+  >
   <label>Check these out</label>
-  <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
-  <input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
-  <label>Textarea Label
+  <input id="checkbox1" type="checkbox" /><label for="checkbox1"
+    >Checkbox 1</label
+  >
+  <input id="checkbox2" type="checkbox" /><label for="checkbox2"
+    >Checkbox 2</label
+  >
+  <label
+    >Textarea Label
     <textarea placeholder="small-12.columns"></textarea>
   </label>
 </form>

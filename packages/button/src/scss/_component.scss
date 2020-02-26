@@ -1,81 +1,112 @@
 @import '_global.scss';
 
-.button {
-  &--secondary {
-    background-color: $secondary-button-bg-color;
-    color: $secondary-button-color;
-
-    &:focus,
-    &:hover {
-      background-color: $secondary-button-bg-hover;
-    }
-  }
-
-  &--tertiary {
-    background-color: $tertiary-button-bg-color;
-    color: $tertiary-button-color !important; // Must counter palette styling in order to avoid white text on grey.
-
-    &:focus,
-    &:hover {
-      background-color: $tertiary-button-bg-hover;
-      color: $tertiary-button-color;
-    }
-  }
-
-  &--white {
-    background-color: $white-button-bg-color;
-    color: $link-color !important; // Must counter palette styling in order to avoid white text on white.
-
-    &:focus,
-    &:hover {
-      background-color: $white-button-bg-hover;
-    }
-  }
-
-  &--outline {
-    background-color: transparent;
-    border: 2px solid $button-bg-color;
-    color: $link-color;
-    padding: .85rem 1.9rem .9625rem; // Slightly decreased to counter the added border.
-
-    &.button--secondary {
-      border-color: $secondary-button-border-color;
-      color: #222;
-
-      &:focus,
-      &:hover {
-        color: #fff;
-      }
-    }
-
-    &.button--tertiary {
-      border-color: $tertiary-button-border-color;
-      color: #222;
-    }
-
-    &.button--white {
-      border-color: $white-button-border-color;
-      color: #fff !important;
-
-      &:focus,
-      &:hover {
-        color: $link-color !important;
-      }
-    }
-  }
-
-  &--no-margin {
-    margin-bottom: 0;
-  }
+/* button Default */
+button,
+.uq-button {
+  background-color: #2377cb;
+  border-color: transparent;
+  border: 1px solid #2377cb;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: normal;
+  padding: 12px 24px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 300ms ease-out;
+  /* display an element using platform-native styling based on the operating system's theme. */
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
-// Overrides for when displayed within wysiwyg fields.
-.cke_editable {
-  .button--white {
-    box-shadow: 0 0 5px #000;
+button:hover,
+button:focus,
+.uq-button:hover,
+.uq-button:focus {
+  background-color: #005ea5;
+  color: #fff;
+}
 
-    &.button--outline {
-      text-shadow: 0 0 2px #000;
-    }
-  }
+/* button Secondary */
+.uq-button--secondary {
+  background-color: #d7d1cc;
+  border-color: #d7d1cc;
+  color: #2b2b2b;
+}
+
+/* button outline */
+.uq-button--outline {
+  background-color: #fff;
+  border-color: #2377cb;
+  color: #005ea5;
+}
+
+/* button outline secondary */
+.uq-button--outline.uq-button--secondary {
+  background-color: #fff;
+  border-color: #d7d1cc;
+  color: #2b2b2b;
+}
+
+.uq-button--secondary:hover,
+.uq-button--secondary:focus {
+  background-color: #bdb0a5;
+  color: #2b2b2b;
+}
+
+/* button text */
+.uq-button–-text {
+  background-color: transparent;
+  border-color: transparent;
+  color: #2377cb;
+}
+
+.uq-button–-text:hover,
+.uq-button–-text:focus {
+  background-color: transparent;
+  border-color: transparent;
+  color: #005ea5;
+  text-decoration: underline;
+}
+
+/* button text secondary */
+.uq-button–-text.uq-button--secondary {
+  color: #2b2b2b;
+}
+
+.uq-button–-text:hover,
+.uq-button–-text:focus {
+  color: #000;
+  text-decoration: underline;
+}
+
+/* button sizes */
+.uq-button–-tiny {
+  font-size: 12px;
+  padding: 4px 8px;
+}
+
+.uq-button–-small {
+  font-size: 14px;
+  padding: 8px 16px;
+}
+
+/*.button {
+  padding: 12px 24px;
+}*/
+
+.uq-button–-large {
+  padding: 20px 40px;
+}
+
+.uq-button–-expand {
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
 }

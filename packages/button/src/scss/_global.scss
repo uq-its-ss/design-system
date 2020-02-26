@@ -1,7 +1,7 @@
 // Variables, functions, and mixins
 
-$button-bg-color: $link-color;
-$button-bg-hover: $link-active-color;
+$button-bg-color: #fff;
+$button-bg-hover: #005ea5;
 $button-border-color: transparent;
 $secondary-button-color: #fff;
 $secondary-button-bg-color: #444;
@@ -15,6 +15,6 @@ $white-button-bg-color: #fff;
 $white-button-bg-hover: #eee;
 $white-button-border-color: #fff;
 
-@import '~foundation-sites/scss/foundation/components/buttons';
-@import '~foundation-sites/scss/foundation/components/dropdown';
-@import '~foundation-sites/scss/foundation/components/dropdown-buttons';
+//@import '~foundation-sites/scss/foundation/components/buttons';
+//@import '~foundation-sites/scss/foundation/components/dropdown';
+//@import '~foundation-sites/scss/foundation/components/dropdown-buttons';

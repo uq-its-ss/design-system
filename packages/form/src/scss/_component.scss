@@ -39,9 +39,7 @@ input[type='submit'] {
 }
 
 input[type='submit'][disabled] {
-  @include button(
-    $disabled: true
-  );
+  @include button($disabled: true);
   cursor: not-allowed;
 }
 
@@ -60,8 +58,12 @@ input.field-add-more-submit {
 input[type='reset'] {
   @include button-base;
   @include button-size;
-  // Included from Foundation .button.alert{} style.
-  @include button-style($bg:$alert-button-bg-color, $bg-hover:$alert-button-bg-hover, $border-color:$alert-button-border-color);
+  // Included from Foundation \.uq-button.alert{} style.
+  @include button-style(
+    $bg: $alert-button-bg-color,
+    $bg-hover: $alert-button-bg-hover,
+    $border-color: $alert-button-border-color
+  );
 }
 
 .form-required {
@@ -85,7 +87,7 @@ input[type='reset'] {
   margin: 1rem 0;
 
   img {
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
   }
 }
 
@@ -105,7 +107,7 @@ input[type='time'],
 input[type='url'],
 input[type='color'],
 input[type='file'] {
-  @media #{$medium-up}{
+  @media #{$medium-up} {
     max-width: 100%;
     width: auto;
   }
@@ -129,7 +131,7 @@ input[type='file'] {
   input[type='url'],
   input[type='color'],
   input[type='file'] {
-    @media #{$medium-up}{
+    @media #{$medium-up} {
       width: 100%;
     }
   }
@@ -137,7 +139,7 @@ input[type='file'] {
 
 .description {
   color: $form-description-color;
-  font-size: .875rem;
+  font-size: 0.875rem;
   font-style: italic;
   margin-bottom: 1rem;
 }

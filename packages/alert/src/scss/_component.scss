@@ -19,7 +19,7 @@
   padding: 0;
   text-align: left;
   text-indent: -100%;
-  transition: max-height .4s ease-in-out;
+  transition: max-height 0.4s ease-in-out;
 
   @media #{$medium-up} {
     font-size: $alert-font-size;
@@ -31,7 +31,8 @@
     border-width: $alert-border-width;
     max-height: 500px;
     overflow-y: visible;
-    padding: $alert-padding-top $alert-padding-opposite-direction $alert-padding-bottom $alert-padding-default-float;
+    padding: $alert-padding-top $alert-padding-opposite-direction
+      $alert-padding-bottom $alert-padding-default-float;
     text-indent: 0;
   }
 
@@ -73,7 +74,6 @@
   }
 
   &--no-x-padding {
-
     &.is-active {
       padding-left: 0;
       padding-right: 0;
@@ -83,12 +83,12 @@
   // Close (×) button
   .close {
     font-weight: 300;
-    line-height: .575;
+    line-height: 0.575;
     margin-top: 0;
     top: $alert-padding-top;
 
     @media #{$large-up} {
-      line-height: .9;
+      line-height: 0.9;
       margin-top: -1rem;
       top: 50%;
     }
@@ -99,26 +99,24 @@
   }
 
   &.round {
-
     .close {
-      line-height: .9;
+      line-height: 0.9;
       margin-top: -1rem;
       top: 50%;
     }
   }
 
-  &.secondary, 
+  &.secondary,
   &.info {
-
     .close {
       color: $alert-font-color-alt;
     }
   }
 
   // Buttons
-  .button {
+  \.uq-button {
     margin-bottom: 0;
-    margin-top: .857rem;
+    margin-top: 0.857rem;
 
     @media #{$medium-up} {
       margin-top: 0;
@@ -152,7 +150,10 @@
       }
 
       &__message {
-        width: grid-calc(floor($total-columns - ($total-columns / 4)), $total-columns);
+        width: grid-calc(
+          floor($total-columns - ($total-columns / 4)),
+          $total-columns
+        );
       }
 
       &__action {
@@ -162,7 +163,10 @@
 
     @media #{$large-up} {
       &__action {
-        margin-left: grid-calc(ceil(($total-columns / 4) - ($total-columns / 6)), $total-columns);
+        margin-left: grid-calc(
+          ceil(($total-columns / 4) - ($total-columns / 6)),
+          $total-columns
+        );
         width: grid-calc(ceil($total-columns / 6), $total-columns);
       }
     }

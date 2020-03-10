@@ -1,7 +1,6 @@
 @import '_global.scss';
 
 /* button Default */
-button,
 .uq-button {
   background-color: #2377cb;
   border-color: transparent;
@@ -25,8 +24,6 @@ button,
   -moz-appearance: none;
 }
 
-button:hover,
-button:focus,
 .uq-button:hover,
 .uq-button:focus {
   background-color: #005ea5;
@@ -97,7 +94,7 @@ button:focus,
   padding: 8px 16px;
 }
 
-/*\.uq-button {
+/*.uq-button {
   padding: 12px 24px;
 }*/
 

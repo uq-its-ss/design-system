@@ -1,3 +1,6 @@
+// Please create a decorator class i.e. .story-icon-wrapper
+// Your styles affect all other stories
+/*
 html,
 body {
   background-color: #fff;
@@ -9,6 +12,12 @@ table {
 table th {
   background-color: #eee;
 }
+*/
+
+// Why are component styles in the Storybook package?
+// Component styles should be in the core package and consumed by Storybook.
+// Imagine you are a developer consuming the core package...
+
 /* Icon - SVG */
 .icon {
   width: 1em;

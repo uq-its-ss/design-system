@@ -40,8 +40,7 @@
     "url": "https://github.com/uq-its-ss/user-interface-development-framework/issues"
   },
   "dependencies": {
-    "@uq-uidf/core": "^0.0.0",
-    "@uq-uidf/form": "^0.0.0"
+    "@uq-uidf/core": "^0.0.0"
   },
   "peerDependencies": {
     "@uq-uidf/core": "^0.0.0"

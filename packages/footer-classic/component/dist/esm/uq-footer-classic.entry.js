@@ -1,4 +1,4 @@
-import { r as registerInstance, h, H as Host } from './core-ef6014e8.js';
+import { r as registerInstance, h, H as Host } from './core-ca671b55.js';
 
 const Footer = class {
     constructor(hostRef) {

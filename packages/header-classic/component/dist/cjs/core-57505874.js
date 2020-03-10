@@ -1,8 +1,30 @@
+'use strict';
+
+function _interopNamespace(e) {
+  if (e && e.__esModule) { return e; } else {
+    var n = {};
+    if (e) {
+      Object.keys(e).forEach(function (k) {
+        var d = Object.getOwnPropertyDescriptor(e, k);
+        Object.defineProperty(n, k, d.get ? d : {
+          enumerable: true,
+          get: function () {
+            return e[k];
+          }
+        });
+      });
+    }
+    n['default'] = e;
+    return n;
+  }
+}
+
 const BUILD = {"allRenderFn":true,"cmpDidLoad":false,"cmpShouldUpdate":false,"cmpDidUnload":false,"cmpDidUpdate":false,"cmpDidRender":false,"cmpWillLoad":false,"cmpWillUpdate":false,"cmpWillRender":false,"connectedCallback":false,"disconnectedCallback":false,"element":false,"event":false,"hasRenderFn":true,"lifecycle":false,"asyncLoading":true,"hostListener":false,"hostListenerTargetWindow":false,"hostListenerTargetDocument":false,"hostListenerTargetBody":false,"hostListenerTargetParent":false,"hostListenerTarget":false,"member":true,"method":false,"mode":false,"noVdomRender":false,"observeAttribute":true,"prop":true,"propBoolean":true,"propNumber":false,"propString":false,"propMutable":false,"reflect":false,"scoped":false,"shadowDom":false,"shadowDelegatesFocus":false,"slot":true,"slotRelocation":true,"state":true,"style":true,"svg":false,"updatable":true,"vdomAttribute":true,"vdomXlink":false,"vdomClass":true,"vdomFunctional":true,"vdomKey":false,"vdomListener":true,"vdomRef":false,"vdomRender":true,"vdomStyle":false,"vdomText":true,"watchCallback":false,"taskQueue":true,"cloneNodeFix":false,"appendChildSlotFix":false,"lazyLoad":true,"hydrateServerSide":false,"cssVarShim":true,"initializeNextTick":true,"hydrateClientSide":false,"isDebug":false,"isDev":false,"devTools":false,"lifecycleDOMEvents":false,"profile":false,"hotModuleReplacement":false,"constructableCSS":true,"cssAnnotations":true};
 const NAMESPACE = 'component';
 
 let queueCongestion = 0;
 let queuePending = false;
+let scopeId;
 let contentRef;
 let hostTagName;
 let useNativeShadowDom = false;
@@ -55,11 +77,11 @@ const loadModule = (cmpMeta, hostRef, hmrVersionId) => {
     if (module) {
         return module[exportName];
     }
-    return import(
+    return new Promise(function (resolve) { resolve(_interopNamespace(require(
     /* webpackInclude: /\.entry\.js$/ */
     /* webpackExclude: /\.system\.entry\.js$/ */
     /* webpackMode: "lazy" */
-    `./${bundleId}.entry.js${ ''}`).then(importedModule => {
+    `./${bundleId}.entry.js${ ''}`))); }).then(importedModule => {
         {
             moduleCache.set(bundleId, importedModule);
         }
@@ -158,7 +180,7 @@ const patchEsm = () => {
     // @ts-ignore
     if ( !(win.CSS && win.CSS.supports && win.CSS.supports('color', 'var(--c)'))) {
         // @ts-ignore
-        return import('./css-shim-6aaf713d-9b13816a.js').then(() => {
+        return new Promise(function (resolve) { resolve(require('./css-shim-6aaf713d-bfe06088.js')); }).then(() => {
             plt.$cssShim$ = win.__stencil_cssshim;
             if (plt.$cssShim$) {
                 return plt.$cssShim$.initShim();
@@ -176,7 +198,7 @@ const patchBrowser = () => {
     const scriptElm = Array.from(doc.querySelectorAll('script')).find(s => (new RegExp(`\/${NAMESPACE}(\\.esm)?\\.js($|\\?|#)`).test(s.src) ||
         s.getAttribute('data-stencil-namespace') === NAMESPACE));
     const opts = scriptElm['data-opts'] || {};
-    const importMeta = "";
+    const importMeta = (typeof document === 'undefined' ? new (require('u' + 'rl').URL)('file:' + __filename).href : (document.currentScript && document.currentScript.src || new URL('core-57505874.js', document.baseURI).href));
     if ('onbeforeload' in scriptElm && !history.scrollRestoration /* IS_ESM_BUILD */) {
         // Safari < v11 support: This IF is true if it's Safari below v11.
         // This fn cannot use async/await since Safari didn't support it until v11,
@@ -196,7 +218,7 @@ const patchBrowser = () => {
         if (!window.customElements) {
             // module support, but no custom elements support (Old Edge)
             // @ts-ignore
-            return import('./dom-76cc7c7d-0a082895.js').then(() => opts);
+            return new Promise(function (resolve) { resolve(require('./dom-76cc7c7d-769a0dda.js')); }).then(() => opts);
         }
     }
     return Promise.resolve(opts);
@@ -252,7 +274,6 @@ const parsePropertyValue = (propValue, propType) => {
     return propValue;
 };
 const HYDRATED_CLASS = 'hydrated';
-const HYDRATED_STYLE_ID = 'sty-id';
 const createTime = (fnName, tagName = '') => {
     {
         return () => { return; };
@@ -314,7 +335,10 @@ const addStyle = (styleContainerNode, cmpMeta, mode, hostElm) => {
             }
         }
         else if ( !styleContainerNode.adoptedStyleSheets.includes(style)) {
-            styleContainerNode.adoptedStyleSheets = [...styleContainerNode.adoptedStyleSheets, style];
+            styleContainerNode.adoptedStyleSheets = [
+                ...styleContainerNode.adoptedStyleSheets,
+                style
+            ];
         }
     }
     return scopeId;
@@ -560,6 +584,10 @@ const createElm = (oldParentVNode, newParentVNode, childIndex, parentElm) => {
         // remember for later we need to check to relocate nodes
         checkSlotRelocate = true;
         if (newVNode.$tag$ === 'slot') {
+            if (scopeId) {
+                // scoped css needs to add its scoped id to the parent element
+                parentElm.classList.add(scopeId + '-s');
+            }
             newVNode.$flags$ |= (newVNode.$children$)
                 // slot element has fallback content
                 // still create an element that "mocks" the slot element
@@ -588,7 +616,7 @@ const createElm = (oldParentVNode, newParentVNode, childIndex, parentElm) => {
         if (newVNode.$children$) {
             for (i = 0; i < newVNode.$children$.length; ++i) {
                 // create the node
-                childNode = createElm(oldParentVNode, newVNode, i);
+                childNode = createElm(oldParentVNode, newVNode, i, elm);
                 // return node could have been null
                 if (childNode) {
                     // append our new node
@@ -646,7 +674,7 @@ const addVnodes = (parentElm, before, parentVNode, vnodes, startIdx, endIdx) => 
     let childNode;
     for (; startIdx <= endIdx; ++startIdx) {
         if (vnodes[startIdx]) {
-            childNode = createElm(null, parentVNode, startIdx);
+            childNode = createElm(null, parentVNode, startIdx, parentElm);
             if (childNode) {
                 vnodes[startIdx].$elm$ = childNode;
                 containerElm.insertBefore(childNode,  referenceNode(before) );
@@ -734,7 +762,7 @@ const updateChildren = (parentElm, oldCh, newVNode, newCh) => {
         else {
             {
                 // new element
-                node = createElm(oldCh && oldCh[newStartIdx], newVNode, newStartIdx);
+                node = createElm(oldCh && oldCh[newStartIdx], newVNode, newStartIdx, parentElm);
                 newStartVnode = newCh[++newStartIdx];
             }
             if (node) {
@@ -774,13 +802,11 @@ const patch = (oldVNode, newVNode) => {
     const elm = newVNode.$elm$ = oldVNode.$elm$;
     const oldChildren = oldVNode.$children$;
     const newChildren = newVNode.$children$;
-    const tag = newVNode.$tag$;
-    const text = newVNode.$text$;
     let defaultHolder;
-    if ( text === null) {
+    if ( newVNode.$text$ === null) {
         // element node
         {
-            if ( tag === 'slot')
+            if ( newVNode.$tag$ === 'slot')
                 ;
             else {
                 // either this is the first render of an element OR it's an update
@@ -809,12 +835,12 @@ const patch = (oldVNode, newVNode) => {
     }
     else if ( (defaultHolder = elm['s-cr'])) {
         // this element has slotted content
-        defaultHolder.parentNode.textContent = text;
+        defaultHolder.parentNode.textContent = newVNode.$text$;
     }
-    else if ( oldVNode.$text$ !== text) {
+    else if ( oldVNode.$text$ !== newVNode.$text$) {
         // update the text content for the text only vnode
         // and also only if the text is different than before
-        elm.data = text;
+        elm.data = newVNode.$text$;
     }
 };
 const updateFallbackSlotVisibility = (elm) => {
@@ -867,16 +893,16 @@ const updateFallbackSlotVisibility = (elm) => {
 const relocateNodes = [];
 const relocateSlotContent = (elm) => {
     // tslint:disable-next-line: prefer-const
+    let childNodes = elm.childNodes;
+    let ilen = childNodes.length;
+    let i = 0;
+    let j = 0;
+    let nodeType = 0;
     let childNode;
     let node;
     let hostContentNodes;
     let slotNameAttr;
-    let relocateNodeData;
-    let j;
-    let i = 0;
-    let childNodes = elm.childNodes;
-    let ilen = childNodes.length;
-    for (; i < ilen; i++) {
+    for (ilen = childNodes.length; i < ilen; i++) {
         childNode = childNodes[i];
         if (childNode['s-sr'] && (node = childNode['s-cr'])) {
             // first got the content reference comment node
@@ -889,43 +915,23 @@ const relocateSlotContent = (elm) => {
                     // let's do some relocating to its new home
                     // but never relocate a content reference node
                     // that is suppose to always represent the original content location
-                    if (isNodeLocatedInSlot(node, slotNameAttr)) {
+                    nodeType = node.nodeType;
+                    if (((nodeType === 3 /* TextNode */ || nodeType === 8 /* CommentNode */) && slotNameAttr === '') ||
+                        (nodeType === 1 /* ElementNode */ && node.getAttribute('slot') === null && slotNameAttr === '') ||
+                        (nodeType === 1 /* ElementNode */ && node.getAttribute('slot') === slotNameAttr)) {
                         // it's possible we've already decided to relocate this node
-                        relocateNodeData = relocateNodes.find(r => r.$nodeToRelocate$ === node);
-                        // made some changes to slots
-                        // let's make sure we also double check
-                        // fallbacks are correctly hidden or shown
-                        checkSlotFallbackVisibility = true;
-                        node['s-sn'] = node['s-sn'] || slotNameAttr;
-                        if (relocateNodeData) {
-                            // previously we never found a slot home for this node
-                            // but turns out we did, so let's remember it now
-                            relocateNodeData.$slotRefNode$ = childNode;
-                        }
-                        else {
+                        if (!relocateNodes.some(r => r.$nodeToRelocate$ === node)) {
+                            // made some changes to slots
+                            // let's make sure we also double check
+                            // fallbacks are correctly hidden or shown
+                            checkSlotFallbackVisibility = true;
+                            node['s-sn'] = slotNameAttr;
                             // add to our list of nodes to relocate
                             relocateNodes.push({
                                 $slotRefNode$: childNode,
-                                $nodeToRelocate$: node,
+                                $nodeToRelocate$: node
                             });
                         }
-                        if (node['s-sr']) {
-                            relocateNodes.forEach(relocateNode => {
-                                if (isNodeLocatedInSlot(relocateNode.$nodeToRelocate$, node['s-sn'])) {
-                                    relocateNodeData = relocateNodes.find(r => r.$nodeToRelocate$ === node);
-                                    if (relocateNodeData) {
-                                        relocateNode.$slotRefNode$ = relocateNodeData.$slotRefNode$;
-                                    }
-                                }
-                            });
-                        }
-                    }
-                    else if (!relocateNodes.some(r => r.$nodeToRelocate$ === node)) {
-                        // so far this element does not have a slot home, not setting slotRefNode on purpose
-                        // if we never find a home for this element then we'll need to hide it
-                        relocateNodes.push({
-                            $nodeToRelocate$: node,
-                        });
                     }
                 }
             }
@@ -934,21 +940,6 @@ const relocateSlotContent = (elm) => {
             relocateSlotContent(childNode);
         }
     }
-};
-const isNodeLocatedInSlot = (nodeToRelocate, slotNameAttr) => {
-    if (nodeToRelocate.nodeType === 1 /* ElementNode */) {
-        if (nodeToRelocate.getAttribute('slot') === null && slotNameAttr === '') {
-            return true;
-        }
-        if (nodeToRelocate.getAttribute('slot') === slotNameAttr) {
-            return true;
-        }
-        return false;
-    }
-    if (nodeToRelocate['s-sn'] === slotNameAttr) {
-        return true;
-    }
-    return slotNameAttr === '';
 };
 const renderVdom = (hostElm, hostRef, cmpMeta, renderFnResults) => {
     hostTagName = hostElm.tagName;
@@ -971,67 +962,46 @@ const renderVdom = (hostElm, hostRef, cmpMeta, renderFnResults) => {
     {
         if (checkSlotRelocate) {
             relocateSlotContent(rootVnode.$elm$);
-            let relocateData;
-            let nodeToRelocate;
-            let orgLocationNode;
-            let parentNodeRef;
-            let insertBeforeNode;
-            let refNode;
-            let i = 0;
-            for (; i < relocateNodes.length; i++) {
-                relocateData = relocateNodes[i];
-                nodeToRelocate = relocateData.$nodeToRelocate$;
-                if (!nodeToRelocate['s-ol']) {
+            for (let i = 0; i < relocateNodes.length; i++) {
+                const relocateNode = relocateNodes[i];
+                if (!relocateNode.$nodeToRelocate$['s-ol']) {
                     // add a reference node marking this node's original location
                     // keep a reference to this node for later lookups
-                    orgLocationNode =  doc.createTextNode('');
-                    orgLocationNode['s-nr'] = nodeToRelocate;
-                    nodeToRelocate.parentNode.insertBefore((nodeToRelocate['s-ol'] = orgLocationNode), nodeToRelocate);
+                    const orgLocationNode =  doc.createTextNode('');
+                    orgLocationNode['s-nr'] = relocateNode.$nodeToRelocate$;
+                    relocateNode.$nodeToRelocate$.parentNode.insertBefore((relocateNode.$nodeToRelocate$['s-ol'] = orgLocationNode), relocateNode.$nodeToRelocate$);
                 }
             }
             // while we're moving nodes around existing nodes, temporarily disable
             // the disconnectCallback from working
             plt.$flags$ |= 1 /* isTmpDisconnected */;
-            for (i = 0; i < relocateNodes.length; i++) {
-                relocateData = relocateNodes[i];
-                nodeToRelocate = relocateData.$nodeToRelocate$;
-                if (relocateData.$slotRefNode$) {
-                    // by default we're just going to insert it directly
-                    // after the slot reference node
-                    parentNodeRef = relocateData.$slotRefNode$.parentNode;
-                    insertBeforeNode = relocateData.$slotRefNode$.nextSibling;
-                    orgLocationNode = nodeToRelocate['s-ol'];
-                    while (orgLocationNode = orgLocationNode.previousSibling) {
-                        refNode = orgLocationNode['s-nr'];
-                        if (refNode &&
-                            refNode['s-sn'] === nodeToRelocate['s-sn'] &&
-                            parentNodeRef === refNode.parentNode) {
-                            refNode = refNode.nextSibling;
-                            if (!refNode || !refNode['s-nr']) {
-                                insertBeforeNode = refNode;
-                                break;
-                            }
-                        }
-                    }
-                    if ((!insertBeforeNode && parentNodeRef !== nodeToRelocate.parentNode) ||
-                        (nodeToRelocate.nextSibling !== insertBeforeNode)) {
-                        // we've checked that it's worth while to relocate
-                        // since that the node to relocate
-                        // has a different next sibling or parent relocated
-                        if (nodeToRelocate !== insertBeforeNode) {
-                            if (!nodeToRelocate['s-hn'] && nodeToRelocate['s-ol']) {
-                                // probably a component in the index.html that doesn't have it's hostname set
-                                nodeToRelocate['s-hn'] = nodeToRelocate['s-ol'].parentNode.nodeName;
-                            }
-                            // add it back to the dom but in its new home
-                            parentNodeRef.insertBefore(nodeToRelocate, insertBeforeNode);
+            for (let i = 0; i < relocateNodes.length; i++) {
+                const relocateNode = relocateNodes[i];
+                // by default we're just going to insert it directly
+                // after the slot reference node
+                const parentNodeRef = relocateNode.$slotRefNode$.parentNode;
+                let insertBeforeNode = relocateNode.$slotRefNode$.nextSibling;
+                let orgLocationNode = relocateNode.$nodeToRelocate$['s-ol'];
+                while (orgLocationNode = orgLocationNode.previousSibling) {
+                    let refNode = orgLocationNode['s-nr'];
+                    if (refNode &&
+                        refNode['s-sn'] === relocateNode.$nodeToRelocate$['s-sn'] &&
+                        parentNodeRef === refNode.parentNode) {
+                        refNode = refNode.nextSibling;
+                        if (!refNode || !refNode['s-nr']) {
+                            insertBeforeNode = refNode;
+                            break;
                         }
                     }
                 }
-                else {
-                    // this node doesn't have a slot home to go to, so let's hide it
-                    if (nodeToRelocate.nodeType === 1 /* ElementNode */) {
-                        nodeToRelocate.hidden = true;
+                if ((!insertBeforeNode && parentNodeRef !== relocateNode.$nodeToRelocate$.parentNode) ||
+                    (relocateNode.$nodeToRelocate$.nextSibling !== insertBeforeNode)) {
+                    // we've checked that it's worth while to relocate
+                    // since that the node to relocate
+                    // has a different next sibling or parent relocated
+                    if (relocateNode.$nodeToRelocate$ !== insertBeforeNode) {
+                        // add it back to the dom but in its new home
+                        parentNodeRef.insertBefore(relocateNode.$nodeToRelocate$, insertBeforeNode);
                     }
                 }
             }
@@ -1336,7 +1306,8 @@ const connectedCallback = (elm, cmpMeta) => {
         if (!(hostRef.$flags$ & 1 /* hasConnected */)) {
             // first time this component has connected
             hostRef.$flags$ |= 1 /* hasConnected */;
-            {
+            let hostId;
+            if ( !hostId) {
                 // initUpdate
                 // if the slot polyfill is required we'll need to put some nodes
                 // in here to act as original content anchors as we move nodes around
@@ -1392,7 +1363,8 @@ const setContentReference = (elm) => {
     // let's pick out the inner content for slot projection
     // create a node to represent where the original
     // content was first placed, which is useful later on
-    const contentRefElm = elm['s-cr'] = doc.createComment( '');
+    const crName =  '';
+    const contentRefElm = elm['s-cr'] = doc.createComment(crName);
     contentRefElm['s-cn'] = true;
     elm.insertBefore(contentRefElm, elm.firstChild);
 };
@@ -1414,7 +1386,6 @@ const bootstrapLazy = (lazyBundles, options = {}) => {
     const y = /*@__PURE__*/ head.querySelector('meta[charset]');
     const visibilityStyle = /*@__PURE__*/ doc.createElement('style');
     const deferredConnectedCallbacks = [];
-    const styles = doc.querySelectorAll(`[${HYDRATED_STYLE_ID}]`);
     let appLoadFallback;
     let isBootstrapping = true;
     Object.assign(plt, options);
@@ -1486,4 +1457,9 @@ const bootstrapLazy = (lazyBundles, options = {}) => {
     endBootstrap();
 };
 
-export { Host as H, patchEsm as a, bootstrapLazy as b, h, patchBrowser as p, registerInstance as r };
+exports.Host = Host;
+exports.bootstrapLazy = bootstrapLazy;
+exports.h = h;
+exports.patchBrowser = patchBrowser;
+exports.patchEsm = patchEsm;
+exports.registerInstance = registerInstance;

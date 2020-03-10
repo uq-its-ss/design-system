@@ -250,7 +250,6 @@ const parsePropertyValue = (propValue, propType) => {
     return propValue;
 };
 const HYDRATED_CLASS = 'hydrated';
-const HYDRATED_STYLE_ID = 'sty-id';
 const createTime = (fnName, tagName = '') => {
     {
         return () => { return; };
@@ -312,7 +311,10 @@ const addStyle = (styleContainerNode, cmpMeta, mode, hostElm) => {
             }
         }
         else if ( !styleContainerNode.adoptedStyleSheets.includes(style)) {
-            styleContainerNode.adoptedStyleSheets = [...styleContainerNode.adoptedStyleSheets, style];
+            styleContainerNode.adoptedStyleSheets = [
+                ...styleContainerNode.adoptedStyleSheets,
+                style
+            ];
         }
     }
     return scopeId;
@@ -605,8 +607,7 @@ const patch = (oldVNode, newVNode) => {
     const elm = newVNode.$elm$ = oldVNode.$elm$;
     const oldChildren = oldVNode.$children$;
     const newChildren = newVNode.$children$;
-    const text = newVNode.$text$;
-    if ( text === null) {
+    if ( newVNode.$text$ === null) {
         // element node
         {
             {
@@ -634,10 +635,10 @@ const patch = (oldVNode, newVNode) => {
             removeVnodes(oldChildren, 0, oldChildren.length - 1);
         }
     }
-    else if ( oldVNode.$text$ !== text) {
+    else if ( oldVNode.$text$ !== newVNode.$text$) {
         // update the text content for the text only vnode
         // and also only if the text is different than before
-        elm.data = text;
+        elm.data = newVNode.$text$;
     }
 };
 const renderVdom = (hostElm, hostRef, cmpMeta, renderFnResults) => {
@@ -1026,7 +1027,6 @@ const bootstrapLazy = (lazyBundles, options = {}) => {
     const y = /*@__PURE__*/ head.querySelector('meta[charset]');
     const visibilityStyle = /*@__PURE__*/ doc.createElement('style');
     const deferredConnectedCallbacks = [];
-    const styles = doc.querySelectorAll(`[${HYDRATED_STYLE_ID}]`);
     let appLoadFallback;
     let isBootstrapping = true;
     Object.assign(plt, options);

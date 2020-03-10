@@ -1,13 +1,16 @@
+// import decorators
+import namedSection from '../src/decorators/section.js';
+
 // import styles
 import '../src/components/alert/style.scss';
 
 // import HTML template strings
-import allHTML from '../src/components/alert/all.html';
+import defaultHTML from '../src/components/alert/default.html';
 
 export default {
   title: 'Alert'
 };
 
 export const all = () => {
-  return document.createElement('div').innerHTML = allHTML;
+  return namedSection("Alerts", defaultHTML);
 };

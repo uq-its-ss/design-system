@@ -27,6 +27,7 @@
     "typescript": "^3.8.2"
   },
   "dependencies": {
+    "@uq-uidf/alert-classic": "^0.0.0",
     "@uq-uidf/alert": "^0.0.0",
     "@uq-uidf/body": "^0.0.0",
     "@uq-uidf/blockquote": "^0.0.0",

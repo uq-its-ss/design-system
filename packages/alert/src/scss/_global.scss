@@ -1,13 +1,15 @@
-// Variables, functions, and mixins
+@import "~@uq-uidf/core/src/scss/_global.scss";
 
-// Foundation alert settings
-$alert-close-color: #fff;
-$alert-close-font-size: 2rem;
-$alert-close-opacity: 1;
-$alert-close-position: .5rem;
-$alert-font-size: 1rem;
-$alert-font-weight: 300;
-$alert-padding-top: 1rem;
-$alert-padding-opposite-direction: $alert-padding-top + 2rem;
+$alert-default-bg-color: #EFEFEF !default;
+$alert-info-bg-color: #D4F0FF !default;
+$alert-success-bg-color: #D5EECA !default;
+$alert-warning-bg-color: #FFE0AD !default;
+$alert-danger-bg-color: #F4ACAC !default;
 
-@import '~foundation-sites/scss/foundation/components/alert-boxes';
+$alert-font-size-sm: .875rem !default;
+$alert-font-size-md: 1rem !default;
+$alert-font-size-lg: 1rem !default;
+
+$alert-font-weight: 300 !default;
+$alert-text-color: #222 !default;
+$alert-close-color: #747474 !default;

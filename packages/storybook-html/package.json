@@ -22,12 +22,14 @@
     "babel-loader": "^8.0.6",
     "fibers": "^4.0.2",
     "sass": "^1.23.6",
-    "sass-loader": "^8.0.0"
+    "sass-loader": "^8.0.0",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.8.2"
   },
   "dependencies": {
     "@uq-uidf/alert": "^0.0.0",
     "@uq-uidf/body": "^0.0.0",
-    "@uq-uidf/blockquote": "^0.0.0",  
+    "@uq-uidf/blockquote": "^0.0.0",
     "@uq-uidf/button": "^0.0.0",
     "@uq-uidf/core": "^0.0.0",
     "@uq-uidf/footer-classic": "^0.0.0",

@@ -59,7 +59,3 @@ Got the hang of packages? Now move on to publishing private packages to Github.
 - src: for developers of the UIDF
 - lib: for consumers of the UIDF (generated, advanced, bring your own build system)
 - dist: for consumers of the UIDF (generated, no build system required, minified)
-
-## WIP: Web Components notes
-
-https://developer.mozilla.org/en-US/docs/Web/Web_Components

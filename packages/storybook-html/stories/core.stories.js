@@ -1,5 +1,8 @@
+// import decorators
+import namedSection from '../src/decorators/section.js';
+
 // import styles
-import '../src/components/core/style.scss';
+import '../src/components/core/core.scss';
 
 // import HTML template strings
 import coloursHTML from '../src/components/core/colours.html';
@@ -12,17 +15,17 @@ export default {
 };
 
 export const colors = () => {
-  return document.createElement('div').innerHTML = coloursHTML;
+  return namedSection("Colours", coloursHTML);
 };
 
 export const typography = () => {
-  return document.createElement('div').innerHTML = typoHTML;
+  return namedSection("Base typography", typoHTML);
 };
 
 export const blockquote = () => {
-  return document.createElement('div').innerHTML = blockquoteHTML;
+  return namedSection("Base blockquote", blockquoteHTML);
 };
 
 export const icons = () => {
-  return document.createElement('div').innerHTML = iconsHTML;
+  return namedSection("Icons", iconsHTML);
 };

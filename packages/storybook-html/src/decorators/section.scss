@@ -3,20 +3,7 @@
 .story-section {
   padding: 0;
   margin: 30px;
-  //background-color: magenta;
   &__heading {
     margin-bottom: 30px;
-  }
-}
-
-@media #{$medium-up} {
-  .story-section {
-    //background-color: greenyellow;
-  }
-}
-
-@media #{$large-up} {
-  .story-section {
-    //background-color: orange;
   }
 }

@@ -1,7 +1,8 @@
 @import '_global.scss';
 
-// Foundation Button partial is included via Foundation Forms partial
-//
+// !!!!! Foundation Button partial is included via Foundation Forms partial !!!!!
+@import '~foundation-sites/scss/foundation/components/forms';
+
 // Variants:
 // .form--transparent-fieldsets - Removes the default styling applied to fieldsets.
 //

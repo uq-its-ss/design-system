@@ -1,6 +1,27 @@
 // Variables, functions, and mixins
 @import "_partials/compass";
 @import "_partials/spacing";
+
+// Font Awesome settings
+$fa-font-path: "~font-awesome/fonts";
+$fa-css-prefix: icon;
+$fa-font-size-base: $base-font-size;
+// UQ Icon settings
+$uq-font-path: "~@uq-uidf/core/src/fonts/uq-icons/font";
+$uq-css-prefix: icon;
+$uq-font-size-base: $base-font-size;
+
+// Font Awesome icon set
+// http://fortawesome.github.io/Font-Awesome/
+
+// Font Awesome settings
+// @see global/variables
+@import "~font-awesome/scss/font-awesome";
+
+// UQ Icon settings
+// @see global/variables
+@import "../fonts/uq-icons/scss/uq-icons";
+
 // Primary font stack
 
 $roboto:  'Roboto', "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -35,14 +56,6 @@ $half-gutter: ($gutter / 2);
 //
 // The amount lists, blockquotes and comments are indented.
 // $indent-amount: 1rem; Deprecated.
-// Font Awesome settings
-$fa-font-path: "~font-awesome/fonts";
-$fa-css-prefix: icon;
-$fa-font-size-base: $base-font-size;
-// UQ Icon settings
-$uq-font-path: "~@uq-uidf/core/src/fonts/uq-icons/font";
-$uq-css-prefix: icon;
-$uq-font-size-base: $base-font-size;
 // Background images path
 $uq-bg-image-path: "~@uq-uidf/core/src/images";
 // Only base colours should be listed in this file. Mixed and modified colour should be done at the associated component or supporting file. 
@@ -202,52 +215,6 @@ $content-column-block-pane-odd-bg: #22487e;
 $divider-border-color: #ededed;
 // Compact
 $compact-content-color: #767676;
-//
-// Tints
-// Provide an overlay over backgrounds to darken, lighten an image to provide
-// better visual contrast for content.
-// Can be used as extensions on components that accommodate overlaid content.
-%tint {
-    position: relative;
-    overflow: hidden;
-}
-
-%tint-overlay {
-    content: '';
-    height: 100%;
-    left: 0;
-    opacity: .5;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: 1;
-}
-
-%tint-content {
-    position: relative;
-    z-index: 2;
-}
-
-// Light tint layer provides a white tint.
-%light-tint,
-.light-tint {
-    @extend %tint;
-    &::before {
-        @extend %tint-overlay;
-        background: #fff;
-    }
-}
-
-// Dark tint layer provides a black tint.
-%dark-tint,
-.dark-tint {
-    @extend %tint;
-    background-color: $dark-tint-bg;
-    &::before {
-        @extend %tint-overlay;
-        background: #000;
-    }
-}
 
 // Foundation stylesheets
 

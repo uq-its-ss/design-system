@@ -30,6 +30,7 @@
     "@uq-uidf/alert": "^0.0.0",
     "@uq-uidf/body": "^0.0.0",
     "@uq-uidf/blockquote": "^0.0.0",
+    "@uq-uidf/button-classic": "^0.0.0",
     "@uq-uidf/button": "^0.0.0",
     "@uq-uidf/core": "^0.0.0",
     "@uq-uidf/footer-classic": "^0.0.0",

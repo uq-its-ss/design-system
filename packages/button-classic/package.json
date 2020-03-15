@@ -1,7 +1,7 @@
 {
-  "name": "@uq-uidf/form",
+  "name": "@uq-uidf/button-classic",
   "version": "0.0.0",
-  "description": "Form elements",
+  "description": "Classic button element/component",
   "keywords": [
     "uq-uidf",
     "uq",
@@ -11,7 +11,7 @@
     "scss",
     "sass",
     "css",
-    "form"
+    "button"
   ],
   "author": {
     "name": "University of Queensland",
@@ -40,7 +40,6 @@
   },
   "dependencies": {
     "@uq-uidf/core": "^0.0.0",
-    "@uq-uidf/button-classic": "^0.0.0",
     "foundation-sites": "^5.5.3"
   },
   "peerDependencies": {

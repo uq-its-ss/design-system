@@ -1,0 +1,170 @@
+@import '_global.scss';
+
+// Extends Foundation 5 .alert-box styles.
+// See also Foundation variables set in global/_variables.scss
+//
+// Variants:
+// .alert-box--fixed-bottom - Sticks the alert-box to the bottom of the window and stays there as the user scrolls.
+// .alert-box--centered - Centres the alert-box to the grid-row width.
+// .alert-box--no-x-padding - Removes x-padding to accommodate a custom or Foundation 5 grid layout within.
+
+.alert-box {
+  // Hidden by default
+  // Overriding Foundation defaults.
+  border-width: 0;
+  font-size: rem-calc(14px);
+  margin: 0;
+  max-height: 0;
+  overflow-y: hidden;
+  padding: 0;
+  text-align: left;
+  text-indent: -100%;
+  transition: max-height .4s ease-in-out;
+
+  @media #{$medium-up} {
+    font-size: $alert-font-size;
+  }
+
+  &.is-active {
+    // Restore the spacing.
+    // Restore the visibility.
+    border-width: $alert-border-width;
+    max-height: 500px;
+    overflow-y: visible;
+    padding: $alert-padding-top $alert-padding-opposite-direction $alert-padding-bottom $alert-padding-default-float;
+    text-indent: 0;
+  }
+
+  &--fixed-top {
+    left: 0;
+    margin: 0 auto;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+  }
+
+  &--fixed-bottom {
+    bottom: 0;
+    left: 0;
+    margin: 0 auto;
+    position: fixed;
+    width: 100%;
+    z-index: 10000;
+  }
+
+  &--centered {
+    @include grid-row;
+    left: 0;
+    right: 0;
+
+    // Filler to run full width of the screen while content is kept centered.
+    &::after {
+      background-color: inherit;
+      border: inherit;
+      display: block;
+      height: 105%;
+      left: -50%;
+      position: absolute;
+      top: -1px;
+      width: 200%;
+      z-index: -1;
+    }
+  }
+
+  &--no-x-padding {
+
+    &.is-active {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  // Close (×) button
+  .close {
+    font-weight: 300;
+    line-height: .575;
+    margin-top: 0;
+    top: $alert-padding-top;
+
+    @media #{$large-up} {
+      line-height: .9;
+      margin-top: -1rem;
+      top: 50%;
+    }
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &.round {
+
+    .close {
+      line-height: .9;
+      margin-top: -1rem;
+      top: 50%;
+    }
+  }
+
+  &.secondary, 
+  &.info {
+
+    .close {
+      color: $alert-font-color-alt;
+    }
+  }
+
+  // Buttons
+  .button {
+    margin-bottom: 0;
+    margin-top: .857rem;
+
+    @media #{$medium-up} {
+      margin-top: 0;
+    }
+  }
+
+  // Message-action layout
+  &__message-action {
+    @include grid-row;
+    font-size: 0;
+
+    &__message,
+    &__action {
+      display: inline-block;
+      font-size: rem-calc(14px);
+      vertical-align: middle;
+    }
+
+    &__message {
+      @include grid-column($columns: $total-columns, $float: false);
+    }
+
+    &__action {
+      @include grid-column($columns: ceil($total-columns / 2), $float: false);
+    }
+
+    @media #{$medium-up} {
+      &__message,
+      &__action {
+        font-size: $alert-font-size;
+      }
+
+      &__message {
+        width: grid-calc(floor($total-columns - ($total-columns / 4)), $total-columns);
+      }
+
+      &__action {
+        width: grid-calc(ceil($total-columns / 4), $total-columns);
+      }
+    }
+
+    @media #{$large-up} {
+      &__action {
+        margin-left: grid-calc(ceil(($total-columns / 4) - ($total-columns / 6)), $total-columns);
+        width: grid-calc(ceil($total-columns / 6), $total-columns);
+      }
+    }
+  }
+}

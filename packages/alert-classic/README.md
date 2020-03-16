@@ -1,6 +1,6 @@
-# `@uq-uidf/alert`
+# `@uq-uidf/alert-classic`
 
-> Alert component
+> Classic alert component
 
 ## Usage
 
@@ -8,12 +8,12 @@
 
 With Yarn:
 ```shell
-yarn add @uq-uidf/alert
+yarn add @uq-uidf/alert-classic
 ```
 
 With NPM:
 ```shell
-npm i @uq-uidf/alert
+npm i @uq-uidf/alert-classic
 ```
 
 ### Stylesheets
@@ -23,7 +23,7 @@ npm i @uq-uidf/alert
 
 @import '~@uq-uidf/core/src/scss/_component';
 @import '~@uq-uidf/button/src/scss/_component';
-@import '~@uq-uidf/alert/src/scss/_component';
+@import '~@uq-uidf/alert-classic/src/scss/_component';
 ```
 
 ```css

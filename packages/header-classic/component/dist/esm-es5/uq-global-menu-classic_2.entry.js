@@ -1,4 +1,18 @@
-import { h, r as registerInstance, H as Host } from './core-6472e3d3.js';
+import { r as registerInstance, h, H as Host } from './core-1f2da31f.js';
+var GlobalMenuClassic = /** @class */ (function () {
+    function GlobalMenuClassic(hostRef) {
+        registerInstance(this, hostRef);
+    }
+    GlobalMenuClassic.prototype.render = function () {
+        return (h(Host, null, h("div", { class: "site-header__global-menu" }, h("div", { class: "site-header__global-menu" }, h("div", { class: "global-menu hide-for-small-only" }, h("ul", { class: "global-menu__list" }, h("slot", null)))))));
+    };
+    Object.defineProperty(GlobalMenuClassic, "style", {
+        get: function () { return ":host{display:block}"; },
+        enumerable: true,
+        configurable: true
+    });
+    return GlobalMenuClassic;
+}());
 var GlobalMenuLinkClassic = function (_a) {
     var name = _a.name, keyboardAccess = _a.keyboardAccess, href = _a.href;
     return (h("li", { class: "global-menu__item" }, h("a", { class: "global-menu__link", accessKey: keyboardAccess, href: href }, name)));
@@ -36,4 +50,4 @@ var Header = /** @class */ (function () {
     });
     return Header;
 }());
-export { Header as uq_header_classic };
+export { GlobalMenuClassic as uq_global_menu_classic, Header as uq_header_classic };

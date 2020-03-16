@@ -1,4 +1,14 @@
-import { h, r as registerInstance, H as Host } from './core-6472e3d3.js';
+import { r as registerInstance, h, H as Host } from './core-1f2da31f.js';
+
+const GlobalMenuClassic = class {
+    constructor(hostRef) {
+        registerInstance(this, hostRef);
+    }
+    render() {
+        return (h(Host, null, h("div", { class: "site-header__global-menu" }, h("div", { class: "site-header__global-menu" }, h("div", { class: "global-menu hide-for-small-only" }, h("ul", { class: "global-menu__list" }, h("slot", null)))))));
+    }
+    static get style() { return ":host{display:block}"; }
+};
 
 const GlobalMenuLinkClassic = ({ name, keyboardAccess, href }) => (h("li", { class: "global-menu__item" },
     h("a", { class: "global-menu__link", accessKey: keyboardAccess, href: href }, name)));
@@ -31,4 +41,4 @@ const Header = class {
     static get style() { return ":host{display:block}"; }
 };
 
-export { Header as uq_header_classic };
+export { GlobalMenuClassic as uq_global_menu_classic, Header as uq_header_classic };

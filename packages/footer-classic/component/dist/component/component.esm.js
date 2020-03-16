@@ -1,1 +1,1 @@
-import{p as o,b as l}from"./p-161bbd2e.js";o().then(o=>l([["p-pkv0ktlv",[[0,"uq-footer-classic",{pageUrl:[1,"page-url"],pageLastUpdated:[1,"page-last-updated"],showLogin:[4,"show-login"],loginUrl:[1,"login-url"],showLogout:[4,"show-logout"],logoutUrl:[1,"logout-url"]}]]]],o));
+import{p as o,b as l}from"./p-09a9c90b.js";o().then(o=>l([["p-lgwlynli",[[0,"uq-footer-classic",{pageUrl:[1,"page-url"],pageLastUpdated:[1,"page-last-updated"],showLogin:[4,"show-login"],loginUrl:[1,"login-url"],showLogout:[4,"show-logout"],logoutUrl:[1,"logout-url"]}]]]],o));

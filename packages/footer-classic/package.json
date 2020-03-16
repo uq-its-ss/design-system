@@ -20,7 +20,6 @@
   },
   "homepage": "https://github.com/uq-its-ss/user-interface-development-framework#readme",
   "license": "ISC",
-  "main": "lib/footer.js",
   "directories": {
     "lib": "lib",
     "test": "__tests__"

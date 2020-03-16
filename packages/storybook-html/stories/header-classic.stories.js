@@ -1,3 +1,6 @@
+// import decorators
+import namedSection from '../src/decorators/section.js';
+
 // define the uq-header custom component
 import {defineCustomElements as defineUQHeader} from '@uq-uidf/header-classic/component/dist/cjs/loader.cjs';
 defineUQHeader();
@@ -13,5 +16,5 @@ export default {
 };
 
 export const header = () => {
-  return document.createElement('div').innerHTML = headerHTML;
+  return namedSection('Header (classic)', headerHTML);
 };

@@ -3,7 +3,7 @@ import '../decorators/section.scss';
 /**
  * Storybook decorator for wrapping whole stories.
  * @param {string} heading - The title of the story.
- * @param {(string|Object)} domNode - Contents of the story. Can be an HTML string or DOM node.
+ * @param {(string|HTMLElement)} domNode - Contents of the story. Can be an HTML string or DOM node.
  * @param {string[]} classNames - Additional class names.
  */
 function namedSectionWrapper(heading, domNode, classNames) {

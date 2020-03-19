@@ -39,6 +39,7 @@
     "@uq-uidf/form": "^0.0.0",
     "@uq-uidf/header-classic": "^0.0.0",
     "@uq-uidf/pane": "^0.0.0",
+    "@uq-uidf/main-menu": "^0.0.0",
     "font-awesome": "^4.7.0"
   }
 }

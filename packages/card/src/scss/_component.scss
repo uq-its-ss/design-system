@@ -1,0 +1,417 @@
+@import "global";
+
+// Cards
+// Used in the Card Grid component.
+//
+// Variants:
+// .card--background-image - Overlays the content on the image when it is used as an inline background image style.
+// .card--square - Forces the card to equal height and width dimensions. For use with .card--background-image.
+// .card--portrait - Forces the card to portrait dimensions. For use with .card--background-image.
+// .card--landscape - Forces the card to landscape dimensions. For use with .card--background-image.
+// .card--full-width - Forces the card to full-width landscape dimensions. For use with .card--background-image.
+// .card--shaded - Applies a shaded gray background color to the whole card.
+// .card--compact - A tighter layout with a landscape image and no summary.
+// .card--horizontal - A full width horizontal layout with a landscape image.
+//
+
+%card,
+.card {
+  background-color: #fff;
+  margin-bottom: 1.5rem;
+  position: relative;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+
+  &__wrapper {
+    margin-bottom: 1.5rem;
+  }
+
+  &__header {
+    transition: all ease .35s;
+  }
+
+  &__footer {
+    .card__link-column {
+      border-top: 1px solid #eee;
+
+      & + .card__link-column {
+        border-left: 1px solid #eee;
+      }
+    }
+    .card__link {
+      display: block;
+      padding: 1rem 1.8rem 1rem 1rem;
+      position: relative;
+
+      &::after {
+        @include fa-icon;
+        content: $fa-var-angle-right;
+        margin-top: -.5rem;
+        opacity: .5;
+        position: absolute;
+        right: 1rem;
+        top: 50%;
+      }
+
+      &:hover {
+        &::after {
+          opacity: 1;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  &__body {
+    transition: all ease .35s;
+  }
+
+  &__content {
+    padding: 1rem;
+  }
+
+  // Force image heights to be the same for cards sitting next to each other.
+  &__image-container {
+    @include background-cover();
+    background-color: #eee;
+    height: 18rem;
+    overflow: hidden;
+    position: relative;
+  }
+
+  &__image-bg_link {
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+  }
+
+  &__image {
+    width: 100%;
+  }
+
+  &__title {
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: .5rem;
+    transition: all ease .35s;
+
+    // Stop system generated divs forcing link to behave as a block element.
+    .card__link div {
+      display: inline;
+    }
+  }
+
+  &__date {
+    font-weight: 400;
+  }
+
+  &__location {
+    &::before {
+      @include fa-icon;
+      content: $fa-var-map-marker;
+      margin-right: .5rem;
+    }
+  }
+
+  &__link {
+    border-color: inherit;
+  }
+
+  // Background image with content overlaid.
+  &--background-image {
+    @extend %light-palette;
+    background-position: 50% 50%;
+    background-size: cover;
+    display: table-cell;
+    overflow: hidden;
+    text-align: center;
+    vertical-align: middle;
+
+    &::before {
+      background: #000;
+      content: '';
+      display: block;
+      height: 100%;
+      left: 0;
+      opacity: .2;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 1;
+
+      @media #{$large-up} {
+        transition: all ease .35s;
+      }
+    }
+
+    &:hover {
+      &::before {
+        opacity: .5;
+      }
+    }
+
+    .card__header,
+    .card__body,
+    .card__footer {
+      position: relative;
+      z-index: 2;
+    }
+
+    .card__footer {
+      background: rgba(0, 0, 0, .4);
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      text-align: left;
+      width: 100%;
+
+      .card__link-column {
+        border-color: rgba(255, 255, 255, .4);
+
+        & + .card__link-column {
+          border-color: rgba(255, 255, 255, .4);
+        }
+      }
+
+      .card__link {
+        @extend %light-palette;
+      }
+    }
+
+    .card__title {
+      margin-bottom: 0;
+
+      @media #{$large-up} {
+        text-shadow: 0 1px 1px rgba(0, 0, 0, .4);
+        transform: translate3d(0, 2rem, 0);
+
+        &::after {
+          background-color: rgba(0, 0, 0, .3);
+          border: 2px solid $uq-gold;
+          clear: both;
+          content: 'View';
+          color: $uq-gold;
+          display: table;
+          font-size: 1rem;
+          font-weight: 500;
+          margin: .7rem auto 0;
+          opacity: 0;
+          padding: .3rem 1.2rem;
+          text-transform: uppercase;
+          transition: all ease .35s;
+          visibility: hidden;
+        }
+      }
+    }
+    .card__summary {
+      display: block; // Fallback for non-webkit.
+      display: -webkit-box;
+      font-size: $base-font-size;
+      line-height: $base-line-height;
+      max-height: $base-font-size * $base-line-height-ratio * $card-summary-lines-to-show; // Fallback for non-webkit.
+      -webkit-line-clamp: $card-summary-lines-to-show;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  // Primary link.
+  &__primary-link {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+
+      // Background image variant with primary link.
+      .card--background-image {
+        .card__title {
+          @media #{$large-up} {
+            transform: translate3d(0, 0, 0);
+          }
+        }
+
+        .card__title {
+          @media #{$large-up} {
+            &::after {
+              opacity: 1;
+              visibility: visible;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Force square format.
+  &--square {
+    height: $card-square-height;
+    max-width: 100%;
+    width: $card-square-width;
+
+    @media #{$small-only} {
+      width: $card-full-width;
+    }
+
+    &::before {
+      // Because IE thinks 100% height is 100% of the table-cell content not
+      // the parent it is applied to.
+      height: $card-square-height;
+    }
+  }
+
+  // Force portrait format
+  &--portrait {
+    height: $card-portrait-height;
+    max-width: 100%;
+    width: $card-portrait-width;
+
+    @media #{$small-only} {
+      width: $card-full-width;
+    }
+
+    &::before {
+      // Because IE thinks 100% height is 100% of the table-cell content not
+      // the parent it is applied to.
+      height: $card-portrait-height;
+    }
+  }
+
+  // Force landscape format.
+  &--landscape {
+    height: $card-landscape-height;
+    max-width: 100%;
+    width: $card-landscape-width;
+
+    @media #{$small-only} {
+      width: $card-full-width;
+    }
+
+    &::before {
+      // Because IE thinks 100% height is 100% of the table-cell content not
+      // the parent it is applied to.
+      height: $card-landscape-height;
+    }
+  }
+
+  // Force full width format.
+  &--full-width {
+    height: $card-full-height;
+    max-width: 100%;
+    width: $card-full-width;
+
+    &::before {
+      // Because IE thinks 100% height is 100% of the table-cell content not
+      // the parent it is applied to.
+      height: $card-full-height;
+    }
+  }
+
+  // Shaded.
+  &--shaded {
+    background-color: $card-shaded-bg;
+  }
+
+  // Compact.
+  &--compact {
+
+    .card__image-container {
+      height: 12rem;
+    }
+
+    .card__title {
+      font-size: 1.425rem;
+    }
+  }
+
+  // Horizontal layout.
+  &--horizontal {
+    margin-bottom: 1.5rem;
+    overflow-y: auto;
+
+    @media #{$medium-up} {
+      height: 18rem;
+    }
+
+    .card__content {
+      @media #{$medium-up} {
+        display: table-cell;
+        height: 18rem;
+        padding-left: 2rem;
+        vertical-align: middle;
+        width: 50%;
+      }
+    }
+
+    .card__image-container {
+      @media #{$medium-up} {
+        @include grid-column(
+          $columns: 6,
+          $float: left
+        );
+      }
+    }
+
+    &.card--media-right,
+    %card--media-right {
+      @media #{$medium-up} {
+        .card__image-container {
+          float: right;
+        }
+      }
+    }
+    .card__title {
+      font-size: 1.875rem;
+    }
+  }
+}
+
+// Fix for 3 column layout with more than 3 cards at medium breakpoint going
+// out of alignment due to .row's.
+// Class generated from paragraphs bundle name in uq_field_formatter module.
+//
+// Variants:
+// .cardgrid-wrapper--media-right - Apply media-right variant behaviour to nested cards.
+// .cardgrid-wrapper--shaded - Apply shaded variant behaviour to nested cards.
+// .card-grid-wrapper--collapsed - Remove spacing between nested cards so they sit flush together.
+
+.cardgrid-wrapper {
+  .row {
+    &::before,
+    &::after {
+      @media #{$medium-only}{
+        clear: left;
+      }
+    }
+  }
+
+  &--media-right {
+    .card {
+      @extend %card--media-right;
+    }
+  }
+
+  &--shaded {
+    .card {
+      @extend %card--shaded;
+    }
+  }
+
+  &--collapsed {
+    .row {
+      & > .column,
+      & > .columns {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+
+    .card {
+      margin-bottom: 0;
+    }
+  }
+}

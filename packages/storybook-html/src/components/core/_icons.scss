@@ -19,6 +19,8 @@ table th {
 // Imagine you are a developer consuming the core package...
 
 /* Icon - SVG */
+/* This class is clashing with other components that use icons. Removing for now */
+/*
 .icon {
   width: 1em;
   height: 1em;
@@ -29,6 +31,7 @@ table th {
   display: inline-block;
   box-sizing: border-box;
 }
+*/
 .icon--calendar {
   background: url("data:image/svg+xml;charset=utf-8,%3C!-- Placeholder SVG --%3E %3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' width='16' height='16' fill='%23FFF'%3E%3Cpath d='M13.6 14.4H2.4V5.6h11.2M11.2 0v1.6H4.8V0H3.2v1.6h-.8A1.59 1.59 0 0 0 .8 3.2v11.2A1.6 1.6 0 0 0 2.4 16h11.2a1.6 1.6 0 0 0 1.6-1.6V3.2a1.6 1.6 0 0 0-1.6-1.6h-.8V0M12 8.8H8v4h4z'/%3E%3C/svg%3E")
     no-repeat;

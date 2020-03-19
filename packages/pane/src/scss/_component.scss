@@ -1,0 +1,197 @@
+@import "global";
+
+//
+// Panes: Blocks of colour with padding around content.
+//
+// Variants:
+// .pane--shaded - Adds grey background.
+// .pane--white - Adds white background.
+// .pane--outline - Adds thin border on all sides.
+// .pane--ruled - Adds thin top and bottom border.
+// .pane--vertical-spacing - Adds top and bottom margin to offset panes inline with other content.
+// .pane--dark-tint - Adds semi-transparent black background.
+// .pane--has-footer - Minor adjustments to markup allow a shaded footer to be added within pane.
+//
+// .pane-grid--shaded - Adds grey background to all child panes.
+// .pane-grid--white - Adds white background to all child panes.
+// .pane-grid--outline - Adds thin border on all sides to all child panes.
+// .pane-grid--ruled - Adds thin top and bottom border to all child panes.
+// .pane-grid--vertical-spacing - Adds top and bottom margin to all child panes to offset panes inline with other content.
+// .pane-grid--dark-tint - Adds semi-transparent black background  to all child panes.
+
+@mixin pane-shaded {
+  background: $pane-shaded-bg;
+}
+
+@mixin pane-white {
+  background: #fff;
+}
+
+@mixin pane-outline {
+  border: 2px solid $pane-border;
+}
+
+@mixin pane-ruled {
+  border-bottom: 2px solid $pane-border;
+  border-top: 2px solid $pane-border;
+}
+
+@mixin pane-vertical-spacing {
+  margin: 2rem 0;
+}
+
+@mixin pane-dark-tint {
+  @extend %light-palette;
+  background-color: #000;
+  background-color: rgba(0, 0, 0, .65);
+
+  .pane__title {
+    @extend %light-palette;
+  }
+}
+
+@mixin pane-has-footer {
+  padding: 0;
+
+  .pane {
+    &__content {
+      padding: 1.8rem 1.8rem 1rem 1.8rem;
+    }
+
+    &__footer {
+      background-color: $pane-shaded-bg;
+      padding: 1.8rem;
+    }
+  }
+}
+
+%pane,
+.pane {
+  padding: 1.8rem;
+  margin-bottom: 1.5rem;
+
+  &--shaded {
+    @include pane-shaded;
+  }
+
+  &--white {
+    @include pane-white;
+  }
+
+  &--outline {
+    @include pane-outline;
+  }
+
+  &--ruled {
+    @include pane-ruled;
+  }
+
+  &--vertical-spacing {
+    @include pane-vertical-spacing;
+  }
+
+  &--dark-tint {
+    @include pane-dark-tint;
+  }
+
+  &--has-footer {
+    @include pane-has-footer;
+    &.pane--shaded {
+      .pane__footer {
+        background-color: darken($pane-shaded-bg, 5%);
+      }
+    }
+
+    &.pane--dark-tint {
+      .pane__footer {
+        background-color: #000;
+        background-color: rgba(0, 0, 0, 0.3);
+      }
+    }
+  }
+
+  &__title {
+    color: $pane-title-color;
+    font-size: 1.275rem;
+    font-weight: 400;
+
+    // Used for no title pane style
+    &--hidden {
+      display: none;
+    }
+  }
+
+  // if sub-title exists reduce margin to pull it close to title
+  &__title + &__sub-title {
+    margin-top: -1rem;
+  }
+}
+
+// Pane grid
+.pane-grid {
+  .pane {
+    // TODO: Remove this once we've upgraded to Foundation 5.52 which introduces media queries for data-equalizer
+    // http://foundation.zurb.com/sites/docs/v/5.5.3/components/equalizer.html
+    @media #{$small-only} {
+      height: auto !important; // Override equal height when on mobile and panes are stacked in a single column
+    }
+  }
+
+  &--shaded {
+    .pane {
+      @include pane-shaded;
+    }
+
+    .pane__footer {
+      background-color: darken($pane-shaded-bg, 5%);
+    }
+  }
+
+  &--white {
+    .pane {
+      @include pane-white;
+    }
+  }
+
+  &--outline {
+    .pane {
+      @include pane-outline;
+    }
+  }
+
+  &--ruled {
+    .pane {
+      @include pane-ruled;
+    }
+  }
+
+  &--vertical-spacing {
+    .pane {
+      @include pane-vertical-spacing;
+    }
+  }
+
+  &--dark-tint {
+    .pane {
+      @include pane-dark-tint;
+    }
+
+    .pane__footer {
+      background-color: #000;
+      background-color: rgba(0, 0, 0, .3);
+    }
+  }
+}
+
+// Fix for 3 column layout with more than 3 panes at medium breakpoint going
+// out of alignment due to .row's
+.pane-grid-wrapper {
+  .row {
+    &::before,
+    &::after {
+      @media #{$medium-only}{
+        clear: left;
+      }
+    }
+  }
+}

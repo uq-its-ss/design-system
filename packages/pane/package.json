@@ -1,7 +1,7 @@
 {
-  "name": "@uq-uidf/core",
+  "name": "@uq-uidf/pane",
   "version": "0.0.0",
-  "description": "The core package that all component packages depend on",
+  "description": "Pane component",
   "keywords": [
     "uq-uidf",
     "uq",
@@ -11,7 +11,7 @@
     "scss",
     "sass",
     "css",
-    "core"
+    "pane"
   ],
   "author": {
     "name": "University of Queensland",
@@ -25,8 +25,6 @@
     "test": "__tests__"
   },
   "files": [
-    "dist/*",
-    "lib/*",
     "src/*"
   ],
   "repository": {
@@ -39,12 +37,10 @@
   "bugs": {
     "url": "https://github.com/uq-its-ss/user-interface-development-framework/issues"
   },
-  "peerDependencies": {
-    "font-awesome": "^4.7.0"
-  },
   "dependencies": {
-    "compass-mixins": "^0.12.10",
-    "font-awesome": "^4.7.0",
-    "foundation-sites": "^5.5.3"
+    "@uq-uidf/core": "^0.0.0"
+  },
+  "peerDependencies": {
+    "@uq-uidf/core": "^0.0.0"
   }
 }

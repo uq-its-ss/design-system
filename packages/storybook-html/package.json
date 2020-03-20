@@ -31,6 +31,7 @@
     "@uq-uidf/alert": "^0.0.0",
     "@uq-uidf/body": "^0.0.0",
     "@uq-uidf/blockquote": "^0.0.0",
+    "@uq-uidf/breadcrumb": "^0.0.0",
     "@uq-uidf/button-classic": "^0.0.0",
     "@uq-uidf/button": "^0.0.0",
     "@uq-uidf/card": "^0.0.0",

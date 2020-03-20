@@ -1,0 +1,65 @@
+@import "global";
+
+// Breadcrumb trail.
+.breadcrumb-trail,
+.pane-term-breadcrumb {
+  color: $breadcrumb-link;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+// Breadcrumb item.
+.breadcrumb {
+  display: inline;
+
+  // Decommissioned element Aug 2017.
+  &__divider {
+    display: none;
+  }
+
+  &::before {
+    content: ' / ';
+    padding: 0 .3rem;
+  }
+
+  &:first-child {
+    &::before {
+      content: '';
+      display: none;
+    }
+  }
+
+  &__link {
+    color: $breadcrumb-link;
+
+    &--home {
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+// Single hyphen version kept for legacy support.
+.breadcrumb-home,
+.breadcrumb--home {
+  font-size: 1.2rem;
+}
+
+// Term breadcrumbs.
+.pane-term-breadcrumb {
+  ul {
+    margin-top: 0;
+    padding: 0;
+  }
+
+  li {
+    display: inline;
+    list-style: none;
+  }
+
+  a {
+    color: $breadcrumb-link;
+  }
+}

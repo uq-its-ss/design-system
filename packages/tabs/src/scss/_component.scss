@@ -1,0 +1,284 @@
+@import '_global.scss';
+
+// Tabs
+// Using Quicktabs module.
+// https://www.drupal.org/project/quicktabs
+//
+// Variants
+// .tabs--full-width - Extends tabs list background to full width regardless of container.
+// .tabs--shaded - Shaded background style for tabs.
+// .tabs--boxed - Rectangle box style for each tab.
+// .tabs--centered - Centers tab list, but not tab content.
+// .tabs--space-content - Adds vertical spacing to the tabs content for when the content doesn't have its own vertical spacing.
+// .tabs--content-row - Makes the tabs__content behave as a .row when its's content doesn't contain a .row
+
+// Deprecated
+// .tabs--underlined - White style with underline separating tabs from content. REASON: It became the base style.
+
+.tabs,
+.quicktabs-style-uq-basic,
+.quicktabs-wrapper {
+  clear: both;
+    
+  // List of tabs
+  .tabs__list,
+  .quicktabs-tabs {
+    background: #fff;
+    border-bottom: 1px solid $tabs-underlined-border-color;
+    margin: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 0;
+
+    // Force horizontal scrollbar to have an appearance on mobile devices.
+    &::-WebKit-scrollbar {
+      -WebKit-appearance: none;
+    }
+
+    &::-WebKit-scrollbar-thumb {
+      background-color: rgba(0, 0, 0, .4);
+      border-radius: 4px;
+      -WebKit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+    }
+
+    &::-webkit-scrollbar:horizontal {
+      height: 8px;
+    }
+
+    // For full width.
+    &::before,
+    &::after {
+      background: #fff;
+      border-bottom: 1px solid $tabs-underlined-border-color;
+    }
+
+    li,
+    .tabs-list__tab {
+      display: table-cell;
+      padding: 0;
+      text-align: left;
+      vertical-align: bottom;
+      white-space: normal;
+
+      // Support for standard quicktabs used on FS.
+      &.active {
+        a {
+          border-bottom-color: $uq-purple;
+          color: $uq-purple;
+        }
+      }
+    }
+
+    a,
+    .tabs__link {
+      border: 1px solid transparent;
+      border-bottom-width: 4px;
+      color: tint($uq-purple, 40%);
+      display: block;
+      padding: 1rem;
+      font-weight: 400;
+
+      @media #{$small-only}{
+        line-height: 1;
+      }
+
+      @media #{$medium-up}{
+        font-size: 1.1rem;
+      }
+
+      @media #{$large-up}{
+        font-size: 1.2rem;
+        padding: 1.5rem;
+      }
+
+      &:hover,
+      &:focus {
+        color: $uq-purple;
+        text-decoration: none;
+      }
+
+      &--active {
+        border-bottom-color: $uq-purple;
+        color: $uq-purple;
+      }
+    }
+  }
+
+  // Wraps content of all tabs
+  //.tabs__content,
+  //.quicktabs_main {}
+
+  // Individual tab pages
+  .tabs-content__tab-page {
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    visibility: hidden;
+
+    &--active {
+      display: block;
+      height: auto;
+      overflow: visible;
+      position: relative;
+      visibility: visible;
+    }
+  }
+
+  // Full width tab list
+  &--full-width {
+    overflow-x: hidden;
+
+    .quicktabs-tabs,
+    .tabs__list {
+      @media #{$large-up} {
+        overflow: visible;
+        position: relative;
+
+        &::before,
+        &::after {
+          bottom: -1px;
+          content: '';
+          display: block;
+          height: 100%;
+          left: -100%;
+          overflow: hidden;
+          position: absolute;
+          width: 100%;
+          z-index: 0;
+        }
+
+        &::after {
+          left: 100%;
+        }
+      }
+    }
+  }
+
+  // Boxed tabs list
+  &--boxed {
+    .quicktabs-tabs,
+    .tabs__list {
+      display: table;
+      table-layout: fixed;
+      width: 100%;
+
+      &::before,
+      &::after {
+        background: #fff;
+        border-bottom: 1px solid $tabs-underlined-border-color;
+      }
+
+      .tabs-list__tab {
+        margin-right: 3px;
+      }
+
+      a,
+      .tabs__link {
+        background: #fdfdfd;
+        border: 1px solid $tabs-underlined-border-color;
+        border-bottom: 4px solid transparent;
+        font-size: 1rem;
+        margin-left: 3px;
+        overflow: hidden;
+        padding: 1rem;
+        position: relative;
+        text-overflow: ellipsis;
+        top: 1px;
+        white-space: nowrap;
+
+        &:first-child {
+          margin: 0;
+        }
+
+        .active &,
+        &--active {
+          background: #fff;
+          border-bottom-color: #fff;
+          color: $uq-purple;
+        }
+      }
+    }
+  }
+
+  // Shaded background tabs list
+  &--shaded {
+    .quicktabs-tabs,
+    .tabs__list {
+      background: $tabs-shaded-bg;
+      border: 0;
+
+      &::before,
+      &::after {
+        background: $tabs-shaded-bg;
+        border: 0;
+      }
+    }
+  }
+
+  // Centered tabs list
+  &--centered {
+    .quicktabs-tabs,
+    .tabs__list {
+      text-align: center;
+
+      li,
+      .tabs-list__tab {
+        @media #{$medium-up}{
+          display: inline-block;
+        }
+      }
+    }
+  }
+
+  // Apply internal padding to tabs content area.
+  &--space-content {
+    .tabs__content,
+    .quicktabs_main {
+      padding: 1.5rem 0;
+    }
+  }
+
+  // Force tab content to behave as a row in full-width containers.
+  &--content-row {
+    .tabs__content,
+    .quicktabs_main {
+      @include grid-row();
+    }
+
+    .tab__content {
+      @include grid-column(12);
+    }
+  }
+
+  // Contextual link region cog position fix.
+  .contextual-links-wrapper {
+    top: 0 !important;
+  }
+}
+
+// Foundation 5 tab classes.
+.tabs--foundation {
+  // Foundation 5 .active content.
+  .tab__content {
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    visibility: hidden;
+
+    &.active {
+      display: block;
+      height: auto;
+      overflow: visible;
+      position: relative;
+      visibility: visible;
+    }
+  }
+
+  // Foundation 5 .active tab.
+  .tabs-list__tab.active {
+    .tabs__link {
+      border-bottom-color: $uq-purple;
+      color: $uq-purple;
+    }
+  }
+}

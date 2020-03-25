@@ -6,9 +6,9 @@ import listsHTML from '../src/components/lists/lists.html';
 
 
 export default {
-  title: 'lists'
+  title: 'Lists'
 };
 
 export const lists = () => {
-  return document.createElement('div').innerHTML = buttonHTML;
+  return document.createElement('div').innerHTML = listsHTML;
 };

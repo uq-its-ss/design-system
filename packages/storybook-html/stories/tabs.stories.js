@@ -5,7 +5,7 @@ import '../src/components/tabs/tabs.scss';
 import tabsHTML from '../src/components/tabs/tabs.html';
 
 export default {
-  title: 'tabs'
+  title: 'Tabs'
 };
 
 export const tabs = () => {

@@ -94,40 +94,6 @@
       content: '$vertical-list-border';
     }
   }
-  /*
-  TODO: Give these colours names or make them more generic:
-  &--button-bg-color {
-    background-color: $button-bg-color;
-    &:after {
-      content: '$button-bg-color';
-    }
-  }
-  &--button-bg-hover {
-    background-color: $button-bg-hover;
-    &:after {
-      content: '$button-bg-hover';
-    }
-  }
-  &--secondary-button-color {
-    background-color: $secondary-button-color;
-    &:after {
-      color: black;
-      content: '$secondary-button-color';
-    }
-  }
-  &--secondary-button-bg-color {
-    background-color: $secondary-button-bg-color;
-    &:after {
-      content: '$secondary-button-bg-color';
-    }
-  }
-  &--secondary-button-bg-hover {
-    background-color: $secondary-button-bg-hover;
-    &:after {
-      content: '$secondary-button-bg-hover';
-    }
-  }
-  */
   &--messages-status-bg {
     background-color: $messages-status-bg;
     &:after {
@@ -229,12 +195,6 @@
     background-color: $progression-completed;
     &:after {
       content: '$progression-completed';
-    }
-  }
-  &--accordion-editor-outline {
-    background-color: $accordion-editor-outline;
-    &:after {
-      content: '$accordion-editor-outline';
     }
   }
   &--content-column-block-pane-bg {

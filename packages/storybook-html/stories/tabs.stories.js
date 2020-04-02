@@ -1,10 +1,10 @@
-//import { useEffect } from '@storybook/client-api';
+import { useEffect } from '@storybook/client-api';
 
 // import styles
 import '../src/components/tabs/tabs.scss';
 
 // import scripts
-import tabsUqCreate from '@uq-uidf/tabs/src/js/tabs.js';
+//import tabsUqCreate from '@uq-uidf/tabs/src/js/tabs.js';
 
 // import HTML template strings
 import tabsHTML from '../src/components/tabs/tabs.html';

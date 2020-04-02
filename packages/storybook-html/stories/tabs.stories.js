@@ -1,4 +1,4 @@
-import { useEffect } from '@storybook/client-api';
+//import { useEffect } from '@storybook/client-api';
 
 // import styles
 import '../src/components/tabs/tabs.scss';
@@ -9,7 +9,7 @@ import '../src/components/tabs/tabs.scss';
 
 // import HTML template strings
 import tabsHTML from '../src/components/tabs/tabs.html';
-import tabsQuickHTML from '../src/components/tabs/tabsquick.html';
+//import tabsQuickHTML from '../src/components/tabs/tabsquick.html';
 
 export default {
   title: 'Tabs'
@@ -18,7 +18,8 @@ export default {
 export const tabs = () => {
   return document.createElement('div').innerHTML = tabsHTML;
 };
-
+/*
 export const tabsQuick = () => {
   return document.createElement('div').innerHTML = tabsQuickHTML;
 };
+*/

@@ -81,12 +81,6 @@
       content: '$external-link-icon-color';
     }
   }
-  &--linked-list-desc {
-    background-color: $linked-list-desc;
-    &:after {
-      content: '$linked-list-desc';
-    }
-  }
   &--vertical-list-border {
     background-color: $vertical-list-border;
     &:after {

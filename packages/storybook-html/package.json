@@ -18,7 +18,7 @@
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.7.2",
-    "@storybook/html": "^5.2.6",
+    "@storybook/html": "^5.3.17",
     "babel-loader": "^8.0.6",
     "fibers": "^4.0.2",
     "sass": "^1.23.6",
@@ -27,6 +27,7 @@
     "typescript": "^3.8.2"
   },
   "dependencies": {
+    "@uq-uidf/accordion": "^0.0.0",
     "@uq-uidf/alert-classic": "^0.0.0",
     "@uq-uidf/alert": "^0.0.0",
     "@uq-uidf/body": "^0.0.0",

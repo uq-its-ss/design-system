@@ -31,7 +31,7 @@ module.exports = async ({ config, mode }) => {
         {
           loader: 'sass-loader',
           options: {
-            // Prefer 'dart-sass'
+            // Prefer 'dart-sass' as it supports Sass Modules
             implementation: require('sass')
           }
         }

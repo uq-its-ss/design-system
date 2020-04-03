@@ -14,7 +14,7 @@ import allHTML from '../src/components/grid-menu/grid-menu.html';
 import equalisedHTML from '../src/components/grid-menu/grid-menu-equalised.html';
 
 export default {
-  title: 'Grid menu'
+  title: 'Components|Grid menu'
 };
 
 export const all = () => {

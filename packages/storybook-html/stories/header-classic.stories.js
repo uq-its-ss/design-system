@@ -12,7 +12,7 @@ import '../src/components/header-classic/style.scss';
 import headerHTML from '../src/components/header-classic/header.html';
 
 export default {
-  title: 'Header (classic)'
+  title: 'Components|Header/Classic'
 };
 
 export const header = () => {

@@ -13,7 +13,7 @@ import accordion from '@uq-uidf/accordion/src/js/accordion.es6';
 import defaultHTML from '../src/components/accordion/accordion.html';
 
 export default {
-  title: 'Accordion'
+  title: 'Components|Accordion'
 };
 
 export const all = () => {

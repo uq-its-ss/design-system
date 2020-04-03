@@ -8,7 +8,7 @@ import textAreaHTML from '../src/components/form/text-area.html';
 import selectHTML from '../src/components/form/select.html';
 
 export default {
-  title: 'Form'
+  title: 'Forms|Form'
 };
 
 export const all = () => {

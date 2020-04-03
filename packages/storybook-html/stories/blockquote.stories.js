@@ -5,7 +5,7 @@ import '../src/components/blockquote/blockquote.scss';
 import blockquoteHTML from '../src/components/blockquote/blockquote.html';
 
 export default {
-  title: 'Blockquote'
+  title: 'Components|Blockquote'
 };
 
 export const blockquote = () => {

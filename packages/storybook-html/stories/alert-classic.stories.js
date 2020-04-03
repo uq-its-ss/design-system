@@ -9,7 +9,7 @@ import '../src/components/alert-classic/style.scss';
 import allHTML from '../src/components/alert-classic/all.html';
 
 export default {
-  title: 'Alert (deprecated)'
+  title: 'Components|Alert/Classic'
 };
 
 export const all = () => {

@@ -11,7 +11,7 @@ import blockquoteHTML from '../src/components/core/blockquote.html';
 import iconsHTML from '../src/components/core/icons.html';
 
 export default {
-  title: 'Core'
+  title: 'Core|Core'
 };
 
 export const colors = () => {

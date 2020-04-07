@@ -1,142 +1,215 @@
-.tabs-section .tabs {
-  padding: 0;
-  margin: 0;
-}
-.tabs-section .tabs:before,
-.tabs-section .tabs:after {
-  content: ' ';
-  display: table;
-}
-.tabs-section .tabs:after {
-  clear: both;
-}
-.tabs-section .tabs .tab-title {
-  text-align: center;
-  float: left;
-  list-style: none;
-  margin-bottom: 0;
-  position: relative;
-  border-bottom: 1px solid #e1e1e1;
-}
-.tabs-section .tabs .tab-title.active {
-  border-bottom: 1px solid #51247a;
-  color: #51247a;
-}
-.tabs-section .tabs .tab-title a {
-  color: #51247a;
-  background: #fff;
-  display: block;
-  padding: 16px;
-  padding: 1rem;
-}
-.tabs-section .tabs .tab-title a:hover,
-.tabs-section .tabs .tab-title a:focus {
-  text-decoration: none;
-}
-.tabs-section .tabs .tab-title .tabs__sub-title {
-  display: block;
-  font-weight: 400;
-  font-size: 14px;
-  font-size: 0.875rem;
-}
-@media only screen and (max-width: 40em) {
-  .tabs-section .tabs .tab-title .tabs__sub-title {
-    font-size: 11px;
-    font-size: 0.6875rem;
+@import '_global.scss';
+
+// Tabs
+//
+// Variants for tabs
+// .tabs--outline - Rectangle outline style for tab group
+// .tabs--boxed - Rectangle box style for each tab
+// .tabs--square - Square box style for each tab
+// .tabs--two - Style for two tabs
+// .tabs--three - Style for three tabs
+// .tabs--four - Style for four tabs
+// .tabs--five - Style for five tabs
+//
+// Variants for tabs content
+// .tabs-content--container - Rectangle box style for tab content
+
+// Tabs
+.tabs-section {
+  // Tabs - default
+  .tabs {
+    padding: 0;
+    margin: 0;
+    @include clearfix;
+
+    // Foundaton classname for li wrapping tab title
+    .tab-title {
+      text-align: center;
+      float: left;
+      list-style: none;
+      margin-bottom: 0;
+      position: relative;
+      border-bottom: 1px solid $panel-border;
+
+      // active tab
+      &.active {
+        border-bottom: 1px solid $tabs-color;
+        color: $tabs-color;
+      }
+
+      // tab title
+      a {
+        color: $tabs-color;
+        background: #fff;
+        display: block;
+        padding: 1rem;
+
+        &:hover,
+        &:focus {
+          text-decoration: none;
+        }
+      }
+
+      // tab sub-title
+      .tabs__sub-title {
+        display: block;
+        font-weight: 400;
+        font-size: 0.875rem;
+
+        @media #{$small-only} {
+          font-size: 0.6875rem;
+        }
+      }
+    }
+
+    // ***********************************
+    // Tabs - fixed
+    &--fixed {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 99;
+    }
+
+    // ***********************************
+    // Tabs - two
+    &--two {
+      .tab-title {
+        width: 50%;
+      }
+    }
+
+    // ***********************************
+    // Tabs - three
+    &--three {
+      .tab-title {
+        width: 33.33%;
+      }
+    }
+
+    // ***********************************
+    // Tabs - four
+    &--four {
+      .tab-title {
+        width: 25%;
+      }
+    }
+
+    // ***********************************
+    // Tabs - five
+    &--five {
+      .tab-title {
+        width: 20%;
+      }
+    }
+
+    // ***********************************
+    // Tabs - Outline
+    &--outline {
+      background: #fff;
+      border: 1px solid $panel-border;
+      border-bottom: 0;
+
+      // Foundaton classname for li wrapping tab title
+      .tab-title {
+        font-weight: 500;
+
+        // active tab
+        &.active {
+          border-bottom-color: $active-color;
+        }
+
+        // tab title
+        a {
+          padding: 1rem;
+        }
+      }
+    }
+
+    // ***********************************
+    // Tabs - Boxed
+    &--boxed {
+      border-left: 1px solid $panel-border;
+      border-top: 0;
+      border-bottom: 0;
+      border-right: 0;
+      margin-bottom: -1px;
+
+      // Foundaton classname for li wrapping tab title
+      .tab-title {
+        font-weight: 500;
+        border: 1px solid $panel-border;
+        border-left: 0;
+        background: $app-wrapper;
+
+        // active tab
+        &.active {
+          border-bottom-color: #fff;
+          background: #fff;
+        }
+
+        // tab title
+        a {
+          padding: 1rem 2rem;
+        }
+      }
+    }
+
+    // ***********************************
+    // Tabs - Square
+    &--square {
+      background: #fff;
+      border: 1px solid $panel-border;
+      border-right: 0;
+      border-bottom: 0;
+
+      // Foundaton classname for li wrapping tab title
+      .tab-title {
+        font-weight: 300;
+        border-right: 1px solid $panel-border;
+
+        // active tab
+        &.active {
+          border-bottom-color: $active-color;
+        }
+
+        // tab title
+        a {
+          padding: 2.5rem 0.5rem 1rem;
+          text-align: center;
+          font-size: 1.4rem;
+          background: #fff;
+        }
+      }
+    }
+  }
+
+  // ***********************************
+  // Tabs content
+  // Foundaton classname for section wrapping tab content
+  .tabs-content {
+    width: 100%;
+
+    // Foundaton classname for tab content
+    .content {
+      display: none;
+
+      &.active {
+        display: block;
+      }
+    }
+
+    // Content tabs container
+    &--container {
+      border: 1px solid $panel-border;
+      border-top: 0;
+      background: #fff;
+
+      // Foundaton classname for tab content
+      .content {
+        border-top: 1px solid $panel-border;
+      }
+    }
   }
 }
-.tabs-section .tabs--fixed {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 99;
-}
-.tabs-section .tabs--two .tab-title {
-  width: 50%;
-}
-.tabs-section .tabs--three .tab-title {
-  width: 33.33%;
-}
-.tabs-section .tabs--four .tab-title {
-  width: 25%;
-}
-.tabs-section .tabs--five .tab-title {
-  width: 20%;
-}
-.tabs-section .tabs--outline {
-  background: #fff;
-  border: 1px solid #e1e1e1;
-  border-bottom: 0;
-}
-.tabs-section .tabs--outline .tab-title {
-  font-weight: 500;
-}
-.tabs-section .tabs--outline .tab-title.active {
-  border-bottom-color: #ffa200;
-}
-.tabs-section .tabs--outline .tab-title a {
-  padding: 16px;
-  padding: 1rem;
-}
-.tabs-section .tabs--boxed {
-  border-left: 1px solid #e1e1e1;
-  border-top: 0;
-  border-bottom: 0;
-  border-right: 0;
-  margin-bottom: -1px;
-}
-.tabs-section .tabs--boxed .tab-title {
-  font-weight: 500;
-  border: 1px solid #e1e1e1;
-  border-left: 0;
-  background: #f8f8f9;
-}
-.tabs-section .tabs--boxed .tab-title.active {
-  border-bottom-color: #fff;
-  background: #fff;
-}
-.tabs-section .tabs--boxed .tab-title a {
-  padding: 16px 32px;
-  padding: 1rem 2rem;
-}
-.tabs-section .tabs--square {
-  background: #fff;
-  border: 1px solid #e1e1e1;
-  border-right: 0;
-  border-bottom: 0;
-}
-.tabs-section .tabs--square .tab-title {
-  font-weight: 300;
-  border-right: 1px solid #e1e1e1;
-}
-.tabs-section .tabs--square .tab-title.active {
-  border-bottom-color: #ffa200;
-}
-.tabs-section .tabs--square .tab-title a {
-  padding: 40px 8px 16px;
-  padding: 2.5rem 0.5rem 1rem;
-  text-align: center;
-  font-size: 22px;
-  font-size: 1.4rem;
-  background: #fff;
-}
-.tabs-section .tabs-content {
-  width: 100%;
-}
-.tabs-section .tabs-content .content {
-  display: none;
-}
-.tabs-section .tabs-content .content.active {
-  display: block;
-}
-.tabs-section .tabs-content--container {
-  border: 1px solid #e1e1e1;
-  border-top: 0;
-  background: #fff;
-}
-.tabs-section .tabs-content--container .content {
-  border-top: 1px solid #e1e1e1;
-}
-
-/* <!-- break --> */

@@ -8,7 +8,7 @@ import '../src/components/breadcrumb/breadcrumb.scss';
 import breadcrumbHTML from '../src/components/breadcrumb/breadcrumb.html';
 
 export default {
-  title: 'Breadcrumb'
+  title: 'Components|Breadcrumb'
 };
 
 export const breadcrumb = () => {

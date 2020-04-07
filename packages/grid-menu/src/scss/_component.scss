@@ -1,0 +1,135 @@
+@import "global";
+
+.grid-menu {
+  @include block-grid(
+    $per-row: 1,
+    $spacing: 0
+  );
+
+  // Behave as 3 column layout by default.
+  @include grid-menu-3-column;
+
+  &--2-column {
+    @include grid-menu-2-column;
+  }
+
+  &--3-column {
+    @include grid-menu-3-column;
+  }
+
+  &--4-column {
+    @include grid-menu-4-column;
+  }
+
+  &__link,
+  a {
+    border-bottom: 1px solid #eee;
+    color: $linked-list-color;
+    display: block;
+    font-size: 1.375rem;
+    font-weight: 400;
+    line-height: normal;
+    padding: 1rem 1.25rem;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: 1.5rem;
+      top: 1.25rem;
+      transition: .3s;
+    }
+
+    &:hover {
+      background-color: $link-color;
+      color: $linked-list-color-hover;
+      text-decoration: none;
+
+      &::after {
+        @include fa-icon;
+        content: $fa-var-angle-right;
+        right: 1rem;
+      }
+
+      a,
+      .grid-menu__description {
+        color: $linked-list-color-hover;
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 1.375rem;
+    font-weight: 400;
+  }
+
+  &__description {
+    color: $linked-list-desc;
+    display: block;
+    font-size: .8rem;
+    font-weight: 300;
+    line-height: normal;
+    margin-top: .25rem;
+  }
+
+  &__icon {
+    margin-right: .5rem;
+  }
+
+  // Dark text variant.
+  &--dark-text {
+    .grid-menu__link,
+    a {
+      color: $dark-palette-color;
+    }
+  }
+}
+
+// Palettes applied to section wrapping grid-menu.
+.light-palette {
+  .grid-menu {
+    a,
+    .grid-menu__description {
+      @extend %light-palette;
+
+      &:hover {
+        background-color: $light-palette-link-color;
+        color: $link-color;
+
+        .grid-menu__description {
+          background-color: $light-palette-link-color;
+          color: $link-color;
+        }
+      }
+    }
+  }
+}
+
+.dark-palette {
+  .grid-menu {
+    a,
+    .grid-menu__description {
+      @extend %dark-palette;
+
+      &:hover {
+        background-color: $link-color;
+        color: #fff;
+
+        .grid-menu__description {
+          background-color: $link-color;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+// Grid menu inside a section with background image.
+.section--background-image {
+  .grid-menu {
+    a {
+      border-color: rgba(255, 255, 255, .4);
+    }
+  }
+}

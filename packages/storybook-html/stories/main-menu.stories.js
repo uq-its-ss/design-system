@@ -13,7 +13,7 @@ import mainMenuCreate from '@uq-uidf/main-menu/src/js/main-menu.es6';
 import mainMenuHTML from '../src/components/main-menu/main-menu.html';
 
 export default {
-  title: 'Main menu'
+  title: 'Components|Main menu'
 };
 
 export const mainMenu = () => {

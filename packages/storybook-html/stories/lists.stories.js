@@ -6,7 +6,7 @@ import listsHTML from '../src/components/lists/lists.html';
 
 
 export default {
-  title: 'Lists'
+  title: 'Components|Lists'
 };
 
 export const lists = () => {

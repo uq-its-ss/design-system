@@ -5,7 +5,7 @@ import '../src/components/footer/footer.scss';
 import footerHTML from '../src/components/footer/footer.html';
 
 export default {
-    title: 'Footer'
+    title: 'Components|Footer'
 };
 
 export const footer = () => {

@@ -1,0 +1,51 @@
+// Variables, functions, and mixins
+@import "~@uq-uidf/core/src/scss/_global.scss";
+
+$linked-list-color: $link-color;
+$linked-list-color-hover: #fff;
+$linked-list-desc: #222;
+$linked-list-desc-hover: #fff;
+
+// Two column layout.
+@mixin grid-menu-2-column {
+  @media #{$medium-up}{
+    @include block-grid(
+      $per-row: 2,
+      $spacing: 1rem
+    );
+  }
+}
+
+// Three column layout.
+@mixin grid-menu-3-column {
+  @media #{$medium-up}{
+    @include block-grid(
+      $per-row: 2,
+      $spacing: 1rem
+    );
+  }
+
+  @media #{$large-up}{
+    @include block-grid(
+    $per-row: 3,
+    $spacing: 1rem
+    );
+  }
+}
+
+// Four column layout.
+@mixin grid-menu-4-column {
+  @media #{$medium-up}{
+    @include block-grid(
+      $per-row: 2,
+      $spacing: 1rem
+    );
+  }
+
+  @media #{$large-up}{
+    @include block-grid(
+    $per-row: 4,
+    $spacing: 1rem
+    );
+  }
+}

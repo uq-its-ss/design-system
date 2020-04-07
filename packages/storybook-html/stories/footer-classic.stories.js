@@ -12,7 +12,7 @@ import '../src/components/footer-classic/style.scss';
 import footerHTML from '../src/components/footer-classic/footer.html';
 
 export default {
-  title: 'Footer (classic)'
+  title: 'Components|Footer/Classic'
 };
 
 export const footer = () => {

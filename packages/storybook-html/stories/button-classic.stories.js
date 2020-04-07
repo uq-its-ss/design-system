@@ -8,7 +8,7 @@ import '../src/components/button-classic/button-classic.scss';
 import buttonHTML from '../src/components/button-classic/button-classic.html';
 
 export default {
-  title: 'Button (deprecated)'
+  title: 'Components|Button/Classic'
 };
 
 export const button = () => {

@@ -6,7 +6,7 @@ import allHTML from '../src/components/body/all.html';
 import tableHTML from '../src/components/body/table.html';
 
 export default {
-  title: 'Body'
+  title: 'Typography|Body'
 };
 
 export const all = () => {

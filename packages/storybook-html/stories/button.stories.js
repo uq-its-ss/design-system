@@ -6,7 +6,7 @@ import buttonHTML from '../src/components/button/button.html';
 import iconButtonHTML from '../src/components/button/icon-button.html';
 
 export default {
-  title: 'Button'
+  title: 'Components|Button'
 };
 
 export const button = () => {

@@ -8,7 +8,7 @@ import '../src/components/pane/pane.scss';
 import paneHTML from '../src/components/pane/pane.html';
 
 export default {
-  title: 'Pane'
+  title: 'Components|Pane'
 };
 
 export const pane = () => {

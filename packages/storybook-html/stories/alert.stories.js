@@ -8,7 +8,7 @@ import '../src/components/alert/style.scss';
 import defaultHTML from '../src/components/alert/default.html';
 
 export default {
-  title: 'Alert'
+  title: 'Components|Alert'
 };
 
 export const all = () => {

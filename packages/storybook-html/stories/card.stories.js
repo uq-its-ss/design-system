@@ -8,7 +8,7 @@ import '../src/components/card/card.scss';
 import cardsHTML from '../src/components/card/card.html';
 
 export default {
-  title: 'Cards'
+  title: 'Components|Cards'
 };
 
 export const all = () => {

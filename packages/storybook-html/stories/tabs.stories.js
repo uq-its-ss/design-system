@@ -8,7 +8,7 @@ import '../src/components/tabs/tabs.scss';
 import tabsHTML from '../src/components/tabs/tabs.html';
 
 export default {
-  title: 'Tabs'
+  title: 'Components|Tabs'
 };
 
 export const all = () => {

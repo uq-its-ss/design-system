@@ -25,7 +25,8 @@
     "test": "__tests__"
   },
   "files": [
-    "lib/*"
+    "lib/*",
+    "src/*"
   ],
   "repository": {
     "type": "git",
@@ -38,6 +39,7 @@
     "url": "https://github.com/uq-its-ss/user-interface-development-framework/issues"
   },
   "dependencies": {
+    "@uq-uidf/core": "^0.0.0",
     "foundation-sites": "^5.5.3"
   },
   "peerDependencies": {

@@ -40,7 +40,6 @@
   },
   "dependencies": {
     "@uq-uidf/core": "^0.0.0",
-    "@uq-uidf/button-classic": "^0.0.0",
     "foundation-sites": "^5.5.3"
   },
   "peerDependencies": {

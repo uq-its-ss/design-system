@@ -6,7 +6,7 @@ import passwordResetInit from './password-reset.es6';
 import passwordResetHTML from './password-reset.html';
 
 // import styles
-import '../style.scss';
+import './password-reset.scss';
 
 export default {
   title: 'Forms/Examples/Input Validation',
@@ -21,5 +21,5 @@ export const passwordReset = () => {
   useEffect(() => {
     var init = new passwordResetInit();
   });
-  return passwordResetHTML;
+  return namedSection('', passwordResetHTML);
 };

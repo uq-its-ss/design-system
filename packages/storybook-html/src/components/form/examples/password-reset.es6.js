@@ -163,12 +163,12 @@ var passwordResetValidation = (function() {
     for (var i = 0; i < 5; i++) {
       this.indicators[i].removeAttribute("class");
     }
-    this.passwordStrengthMeter.setAttribute("class", "password-strength-meter-indicator");
+    this.passwordStrengthMeter.setAttribute("class", "story-password-strength-meter-indicator");
 
     // check for criteria issues and password strength
     if (e.target.value.length > 0) {
       var clonedNode = this.passwordStrengthMeterTextTemplate.cloneNode(true);
-      var clonedNodeScoreElem = clonedNode.querySelector(".password-strength-meter-text-rating");
+      var clonedNodeScoreElem = clonedNode.querySelector(".story-password-strength-meter-text-rating");
       
       // display basic password criteria issues
       var match = e.target.value.match(this.passwordRegex);
@@ -192,13 +192,13 @@ var passwordResetValidation = (function() {
             if (result.feedback.warning && result.feedback.warning !== "") {
               clonedNode.appendChild(document.createElement("br"));
               var warning = document.createElement("div");
-              warning.setAttribute("class", "password-strength-meter-warning");
+              warning.setAttribute("class", "story-password-strength-meter-warning");
               warning.appendChild(document.createTextNode(result.feedback.warning));
               clonedNode.appendChild(warning);
             }
             if (result.feedback.suggestions && result.feedback.suggestions.length > 0) {
               var suggestions = document.createElement("ul");
-              suggestions.setAttribute("class", "password-strength-meter-suggestions");
+              suggestions.setAttribute("class", "story-password-strength-meter-suggestions");
               for (var k = 0; k < result.feedback.suggestions.length; k++) {
                 var suggestion = document.createTextNode(result.feedback.suggestions[k]),
                     suggestionElem = document.createElement("li");
@@ -210,7 +210,7 @@ var passwordResetValidation = (function() {
             if (result.sequence && result.sequence.length > 0) {
               var sequences = document.createElement("ul");
               var count = 0;
-              sequences.setAttribute("class", "password-strength-meter-sequences");
+              sequences.setAttribute("class", "story-password-strength-meter-sequences");
               for (var l = 0; l < result.sequence.length; l++) {
                 var sequence,
                     sequenceElem = document.createElement("li"),
@@ -253,12 +253,12 @@ var passwordResetValidation = (function() {
               }
             }
             if (result.score <= 1) {
-              clonedNode.setAttribute("class", "password-strength-meter-text password-strength-meter-text--fail");
-              this.passwordStrengthMeter.setAttribute("class", "password-strength-meter-indicator password-strength-meter-indicator--fail"); 
+              clonedNode.setAttribute("class", "story-password-strength-meter-text story-password-strength-meter-text--fail");
+              this.passwordStrengthMeter.setAttribute("class", "story-password-strength-meter-indicator story-password-strength-meter-indicator--fail"); 
             }
           } else {
-            clonedNode.setAttribute("class", "password-strength-meter-text password-strength-meter-text--strong");
-            this.passwordStrengthMeter.setAttribute("class", "password-strength-meter-indicator password-strength-meter-indicator--strong");
+            clonedNode.setAttribute("class", "story-password-strength-meter-text story-password-strength-meter-text--strong");
+            this.passwordStrengthMeter.setAttribute("class", "story-password-strength-meter-indicator story-password-strength-meter-indicator--strong");
           }
           clonedNode.removeAttribute("id");
           clonedNode.style.display = "block";

@@ -1,11 +1,11 @@
 // import styles
-import '../src/components/footer/footer.scss';
+import './footer.scss';
 
 // import HTML template strings
-import footerHTML from '../src/components/footer/footer.html';
+import footerHTML from './footer.html';
 
 export default {
-    title: 'Components|Footer'
+    title: 'Components/Footer'
 };
 
 export const footer = () => {

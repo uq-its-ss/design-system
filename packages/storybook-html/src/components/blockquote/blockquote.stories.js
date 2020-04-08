@@ -1,11 +1,11 @@
 // import styles
-import '../src/components/blockquote/blockquote.scss';
+import './blockquote.scss';
 
 // import HTML template strings
-import blockquoteHTML from '../src/components/blockquote/blockquote.html';
+import blockquoteHTML from './blockquote.html';
 
 export default {
-  title: 'Components|Blockquote'
+  title: 'Components/Blockquote'
 };
 
 export const blockquote = () => {

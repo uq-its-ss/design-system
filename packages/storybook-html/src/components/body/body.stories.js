@@ -1,12 +1,12 @@
 // import styles
-import '../src/components/body/style.scss';
+import './style.scss';
 
 // import HTML template strings
-import allHTML from '../src/components/body/all.html';
-import tableHTML from '../src/components/body/table.html';
+import allHTML from './all.html';
+import tableHTML from './table.html';
 
 export default {
-  title: 'Typography|Body'
+  title: 'Typography/Body'
 };
 
 export const all = () => {

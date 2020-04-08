@@ -7,7 +7,7 @@ defineUQHeader();
 defineUQFooter();
 
 // import styles
-import '../src/components/intro/kitchen-sink.scss';
+import './kitchen-sink.scss';
 
 // import scripts
 import mainMenu from '@uq-uidf/main-menu/src/js/main-menu.es6';
@@ -15,10 +15,10 @@ import accordion from '@uq-uidf/accordion/src/js/accordion.es6';
 import gridMenuEqualiser from '@uq-uidf/grid-menu/src/js/grid-menu';
 
 // import HTML template strings
-import kitchenSinkHTML from '../src/components/intro/kitchen-sink.html';
+import kitchenSinkHTML from './kitchen-sink.html';
 
 export default {
-  title: 'Introduction|Showcase'
+  title: 'Introduction/Showcase'
 };
 
 export const kitchenSink = () => {

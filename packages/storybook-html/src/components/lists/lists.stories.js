@@ -1,12 +1,12 @@
 // import styles
-import '../src/components/lists/lists.scss';
+import './lists.scss';
 
 // import HTML template strings
-import listsHTML from '../src/components/lists/lists.html';
+import listsHTML from './lists.html';
 
 
 export default {
-  title: 'Components|Lists'
+  title: 'Components/Lists'
 };
 
 export const lists = () => {

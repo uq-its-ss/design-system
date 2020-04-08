@@ -1,14 +1,14 @@
 // import styles
-import '../src/components/form/style.scss';
+import './style.scss';
 
 // import HTML template strings
-import allHTML from '../src/components/form/all.html';
-import inputHTML from '../src/components/form/input.html';
-import textAreaHTML from '../src/components/form/text-area.html';
-import selectHTML from '../src/components/form/select.html';
+import allHTML from './all.html';
+import inputHTML from './input.html';
+import textAreaHTML from './text-area.html';
+import selectHTML from './select.html';
 
 export default {
-  title: 'Forms|Form'
+  title: 'Forms/Form'
 };
 
 export const all = () => {

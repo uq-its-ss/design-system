@@ -1,17 +1,17 @@
 // import decorators
-import namedSection from '../src/decorators/section.js';
+import namedSection from '../../decorators/section.js';
 
 // import styles
-import '../src/components/core/core.scss';
+import './core.scss';
 
 // import HTML template strings
-import coloursHTML from '../src/components/core/colours.html';
-import typoHTML from '../src/components/core/typography.html';
-import blockquoteHTML from '../src/components/core/blockquote.html';
-import iconsHTML from '../src/components/core/icons.html';
+import coloursHTML from './colours.html';
+import typoHTML from './typography.html';
+import blockquoteHTML from './blockquote.html';
+import iconsHTML from './icons.html';
 
 export default {
-  title: 'Core|Core'
+  title: 'Core/Core'
 };
 
 export const colors = () => {

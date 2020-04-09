@@ -18,6 +18,7 @@
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.7.2",
+    "@storybook/addon-viewport": "^5.3.18",
     "@storybook/html": "^5.3.17",
     "babel-loader": "^8.0.6",
     "fibers": "^4.0.2",
@@ -27,24 +28,25 @@
     "typescript": "^3.8.2"
   },
   "dependencies": {
+    "@storybook/addon-docs": "^5.3.18",
     "@uq-uidf/accordion": "^0.0.0",
-    "@uq-uidf/alert-classic": "^0.0.0",
     "@uq-uidf/alert": "^0.0.0",
-    "@uq-uidf/body": "^0.0.0",
+    "@uq-uidf/alert-classic": "^0.0.0",
     "@uq-uidf/blockquote": "^0.0.0",
+    "@uq-uidf/body": "^0.0.0",
     "@uq-uidf/breadcrumb": "^0.0.0",
-    "@uq-uidf/button-classic": "^0.0.0",
     "@uq-uidf/button": "^0.0.0",
+    "@uq-uidf/button-classic": "^0.0.0",
     "@uq-uidf/card": "^0.0.0",
     "@uq-uidf/core": "^0.0.0",
-    "@uq-uidf/footer-classic": "^0.0.0",
     "@uq-uidf/footer": "^0.0.0",
+    "@uq-uidf/footer-classic": "^0.0.0",
     "@uq-uidf/form": "^0.0.0",
     "@uq-uidf/grid-menu": "^0.0.0",
     "@uq-uidf/header-classic": "^0.0.0",
     "@uq-uidf/lists": "^0.0.0",
-    "@uq-uidf/pane": "^0.0.0",
     "@uq-uidf/main-menu": "^0.0.0",
+    "@uq-uidf/pane": "^0.0.0",
     "@uq-uidf/tabs": "^0.0.0",
     "font-awesome": "^4.7.0"
   }

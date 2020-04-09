@@ -1,14 +1,14 @@
 // import decorators
-import namedSection from '../src/decorators/section.js';
+import namedSection from '../../decorators/section.js';
 
 // import styles
-import '../src/components/card/card.scss';
+import './card.scss';
 
 // import HTML template strings
-import cardsHTML from '../src/components/card/card.html';
+import cardsHTML from './card.html';
 
 export default {
-  title: 'Components|Cards'
+  title: 'Components/Cards'
 };
 
 export const all = () => {

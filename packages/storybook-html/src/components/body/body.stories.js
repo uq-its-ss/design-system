@@ -1,6 +1,3 @@
-// import styles
-import './style.scss';
-
 // import HTML template strings
 import allHTML from './all.html';
 import tableHTML from './table.html';

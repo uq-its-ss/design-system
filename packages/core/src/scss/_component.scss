@@ -1,36 +1,9 @@
 // Main component stylesheet
-
+@import '~foundation-sites/scss/normalize.scss';
 @import '_global.scss';
 @import '_print.scss';
 
-//
-// Tints
-// Provide an overlay over backgrounds to darken, lighten an image to provide
-// better visual contrast for content.
-// Can be used as extensions on components that accommodate overlaid content.
-%tint {
-  position: relative;
-  overflow: hidden;
-}
-
-%tint-overlay {
-  content: '';
-  height: 100%;
-  left: 0;
-  opacity: .5;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: 1;
-}
-
-%tint-content {
-  position: relative;
-  z-index: 2;
-}
-
 // Light tint layer provides a white tint.
-%light-tint,
 .light-tint {
   @extend %tint;
   &::before {
@@ -40,7 +13,6 @@
 }
 
 // Dark tint layer provides a black tint.
-%dark-tint,
 .dark-tint {
   @extend %tint;
   background-color: $dark-tint-bg;
@@ -50,55 +22,21 @@
   }
 }
 
-// Palettes are colour groups to change all the colours within that wrapper to a specific set.
-//
-// Components that set their own element colours may need palette @extend added to them to override specificity. e.g.
-// &.light-palette {
-//   a {
-//     @extend %light-palette;
-//   }
-// }
-//
-
-// Light
-%light-palette,
 .light-palette {
-  border-color: $light-palette-border-color;
-  color: $light-palette-color;
-
-  a {
-    color: $light-palette-link-color;
-    font-weight: 400;
-
-    &:hover {
-      color: darken($light-palette-link-color,10%);
-    }
-  }
+  @extend %light-palette;
 }
 
-%light-palette-bg,
 .light-palette-bg {
-  background-color: $light-palette-bg;
+  @extend %light-palette-bg;
 }
 
 // Dark
-%dark-palette,
 .dark-palette {
-  border-color: $dark-palette-border-color;
-  color: $dark-palette-color;
-
-  a {
-    color: $dark-palette-link-color;
-
-    &:hover {
-      color: darken($dark-palette-link-color,10%);
-    }
-  }
+  @extend %dark-palette;
 }
 
-%dark-palette-bg,
 .dark-palette-bg {
-  background-color: $dark-palette-bg;
+  @extend %dark-palette-bg;
 }
 
 .uq-logo {

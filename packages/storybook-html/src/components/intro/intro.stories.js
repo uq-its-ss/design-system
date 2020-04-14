@@ -6,9 +6,6 @@ import {defineCustomElements as defineUQFooter} from '@uq-uidf/footer-classic/co
 defineUQHeader();
 defineUQFooter();
 
-// import styles
-import './kitchen-sink.scss';
-
 // import scripts
 import mainMenu from '@uq-uidf/main-menu/src/js/main-menu.es6';
 import accordion from '@uq-uidf/accordion/src/js/accordion.es6';

@@ -1,13 +1,41 @@
 @import '_global.scss';
-
-// !!!!! Foundation Button partial is included via Foundation Forms partial !!!!!
-@import '~foundation-sites/scss/foundation/components/forms';
+@import '_legacy.scss';
 
 // Variants:
 // .form--transparent-fieldsets - Removes the default styling applied to fieldsets.
 //
 
 .form {
+  &__required {
+    color: $alert;
+  }
+
+  &__description {
+    color: $form-description-color;
+    font-size: .875rem;
+    font-style: italic;
+    margin-bottom: 1rem;
+  }
+
+  &__help-text {
+    color: $form-description-color;
+    font-size: .875rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+
+  &__inline-error-message {
+    background-color: $alert;
+    color: white;
+    display: block;
+    font-size: rem-calc(14px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.357;
+    margin-bottom: 1rem;
+    padding: 7px 8px 8px 8px;
+  }
+
   &--transparent-fieldsets {
     fieldset {
       border: 0;
@@ -17,30 +45,316 @@
   }
 }
 
-label {
-  font-weight: 500;
+legend {
+  &.form__legend {
+    &.form__legend--error {
+      color: $alert;
+    }
+  }
 }
 
-// Labels for checkbox and radio buttons.
-input[type='checkbox'] + label,
-input[type='radio'] + label {
-  font-weight: 300;
-  margin-bottom: 1rem;
-  // So long labels on multiple lines don't break around the radio/checkbox.
-  max-width: 80%;
-  vertical-align: top;
+fieldset {
+  legend {
+    font-size: .875rem;
+    font-weight: 500;
+    line-height: 1.5;
+    padding: 0;
+    margin: 0 0 1rem 0;
+  }
+}
 
-  @media #{$medium-up} {
-    max-width: 85%;
+label {
+  font-weight: 500;
+  margin-bottom: 1rem;
+  white-space: normal;
+
+  + input[type="text"], 
+  + input[type="password"], 
+  + input[type="date"],
+  + input[type="datetime"], 
+  + input[type="datetime-local"], 
+  + input[type="month"], 
+  + input[type="week"], 
+  + input[type="email"], 
+  + input[type="number"], 
+  + input[type="search"], 
+  + input[type="tel"],
+  + input[type="time"],
+  + input[type="url"], 
+  + input[type="color"], 
+  + textarea,
+  + select {
+    margin-top: -(rem-calc(12px));
+  }
+
+  > input[type="text"], 
+  > input[type="password"], 
+  > input[type="date"],
+  > input[type="datetime"], 
+  > input[type="datetime-local"], 
+  > input[type="month"], 
+  > input[type="week"], 
+  > input[type="email"], 
+  > input[type="number"], 
+  > input[type="search"], 
+  > input[type="tel"],
+  > input[type="time"],
+  > input[type="url"], 
+  > input[type="color"], 
+  > textarea,
+  > select {
+    margin-bottom: 0;
+    margin-top: rem-calc(4px);
+  }
+
+  &.form__label {
+    &.form__label--disabled {
+      color: #ccc;
+      cursor: not-allowed;
+    }
+    &.form__label--error {
+      color: $alert;
+      position: relative;
+
+      > input[type="text"], 
+      > input[type="password"], 
+      > input[type="date"],
+      > input[type="datetime"], 
+      > input[type="datetime-local"], 
+      > input[type="month"], 
+      > input[type="week"], 
+      > input[type="email"], 
+      > input[type="number"], 
+      > input[type="search"], 
+      > input[type="tel"],
+      > input[type="time"],
+      > input[type="url"], 
+      > input[type="color"], 
+      > textarea,
+      > select {
+        &.form__input {
+          &.form__input--error {
+            + .form__inline-error-message {
+              margin-top: 0;
+            }
+          }
+        }
+      }
+
+      > input[type="checkbox"],
+      > input[type="radio"] {
+        &.form__input {
+          &.form__input--error {
+            &:before {
+              background-color: $alert;
+              bottom: -4px;
+              content: "";
+              display: inline-block;
+              left: 0;
+              position: absolute;
+              top: -4px;
+              width: 3px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+input[type="text"], 
+input[type="password"], 
+input[type="date"],
+input[type="datetime"], 
+input[type="datetime-local"], 
+input[type="month"], 
+input[type="week"], 
+input[type="email"], 
+input[type="number"], 
+input[type="search"], 
+input[type="tel"],
+input[type="time"],
+input[type="url"], 
+input[type="color"], 
+textarea, 
+select {
+  &.form__input {
+    &.form__input--error {
+      border-color: $alert;
+
+      &:focus {
+        border-color: $alert;
+      }
+    }
+
+    + .form__inline-error-message {
+      margin-top: -1rem;
+    }
+  }
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  float: left;
+  clear: left;
+  margin-bottom: 0;
+  margin-right: rem-calc(6px);
+  margin-top: rem-calc(3px);
+  
+  + label {
+    font-weight: 300;
+    display: block;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 1rem;
+    // So long labels on multiple lines don't break around the radio/checkbox.
+    max-width: 80%;
+    vertical-align: top;
+
+    @media #{$medium-up} {
+      max-width: 85%;
+    }
+  }
+
+  &.form__input {
+    &.form__input--error {
+      margin-left: 10px;
+    }
+  }
+
+  + label {
+    &.form__label {
+      &.form__label--error {
+        &:before {
+          background-color: $alert;
+          bottom: -4px;
+          content: "";
+          display: inline-block;
+          left: 0;
+          position: absolute;
+          top: -4px;
+          width: 3px;
+        }
+      }
+    }
   }
 }
 
 input[type='submit'] {
-  @include button;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 0;
+  border-style: solid;
+  border-width: 0;
+  cursor: pointer;
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  line-height: normal;
+  margin: 0 0 1.25rem;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  padding: 1rem 2rem 1.0625rem 2rem;
+  font-size: 1rem;
+  background-color: #008CBA;
+  border-color: #007095;
+  color: #FFFFFF;
+  transition: background-color 300ms ease-out;
+
+  &:hover, &:focus {
+    background-color: #007095;
+    color: #FFFFFF;
+  }
+
+  &[disabled] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border-radius: 0;
+    border-style: solid;
+    border-width: 0;
+    cursor: pointer;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    line-height: normal;
+    margin: 0 0 1.25rem;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    padding: 1rem 2rem 1.0625rem 2rem;
+    font-size: 1rem;
+    background-color: #008CBA;
+    border-color: #007095;
+    color: #FFFFFF;
+    box-shadow: none;
+    cursor: default;
+    opacity: 0.7;
+    transition: background-color 300ms ease-out;
+    cursor: not-allowed;
+
+    &:hover, &:focus {
+      background-color: #008CBA;
+      color: #FFFFFF;
+    }
+  }
 }
 
-input[type='submit'][disabled] {
-  @include button($disabled: true);
+input:not([type])[disabled], 
+input:not([type])[readonly], 
+fieldset[disabled] input:not([type]), 
+input[type="text"][disabled], 
+input[type="text"][readonly], 
+fieldset[disabled] input[type="text"], 
+input[type="password"][disabled], 
+input[type="password"][readonly], 
+fieldset[disabled] input[type="password"], 
+input[type="date"][disabled], 
+input[type="date"][readonly], 
+fieldset[disabled] input[type="date"], 
+input[type="datetime"][disabled], 
+input[type="datetime"][readonly], 
+fieldset[disabled] input[type="datetime"], 
+input[type="datetime-local"][disabled], 
+input[type="datetime-local"][readonly], 
+fieldset[disabled] input[type="datetime-local"], 
+input[type="month"][disabled], 
+input[type="month"][readonly], 
+fieldset[disabled] input[type="month"], 
+input[type="week"][disabled], 
+input[type="week"][readonly], 
+fieldset[disabled] input[type="week"], 
+input[type="email"][disabled], 
+input[type="email"][readonly], 
+fieldset[disabled] input[type="email"], 
+input[type="number"][disabled], 
+input[type="number"][readonly], 
+fieldset[disabled] input[type="number"], 
+input[type="search"][disabled], 
+input[type="search"][readonly], 
+fieldset[disabled] input[type="search"], 
+input[type="tel"][disabled], 
+input[type="tel"][readonly], 
+fieldset[disabled] input[type="tel"], 
+input[type="time"][disabled], 
+input[type="time"][readonly], 
+fieldset[disabled] input[type="time"], 
+input[type="url"][disabled], 
+input[type="url"][readonly], 
+fieldset[disabled] input[type="url"], 
+input[type="color"][disabled], 
+input[type="color"][readonly], 
+fieldset[disabled] input[type="color"], 
+textarea[disabled], textarea[readonly], 
+fieldset[disabled] textarea,
+input[type="submit"][disabled],
+input[type="submit"][readonly],
+input[type="button"][disabled],
+input[type="button"][readonly],
+button[disabled],
+button[readonly],
+input[type="reset"][disabled],
+input[type="reset"][readonly] {
   cursor: not-allowed;
 }
 
@@ -57,14 +371,30 @@ input.field-add-more-submit {
 }
 
 input[type='reset'] {
-  @include button-base;
-  @include button-size;
-  // Included from Foundation \.uq-button.alert{} style.
-  @include button-style(
-    $bg: $alert-button-bg-color,
-    $bg-hover: $alert-button-bg-hover,
-    $border-color: $alert-button-border-color
-  );
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 0;
+  border-style: solid;
+  border-width: 0;
+  cursor: pointer;
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  line-height: normal;
+  margin: 0 0 1.25rem;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  padding: 1rem 2rem 1.0625rem 2rem;
+  font-size: 1rem;
+  background-color: #f04124;
+  border-color: #cf2a0e;
+  color: #FFFFFF;
+
+  &:hover, &:focus {
+    background-color: #cf2a0e;
+    color: #FFFFFF;
+  }
 }
 
 .form-required {
@@ -89,6 +419,37 @@ input[type='reset'] {
 
   img {
     margin-bottom: 0.5rem;
+  }
+}
+
+input[type="text"], 
+input[type="password"], 
+input[type="date"],
+input[type="datetime"], 
+input[type="datetime-local"], 
+input[type="month"], 
+input[type="week"], 
+input[type="email"], 
+input[type="number"], 
+input[type="search"], 
+input[type="tel"],
+input[type="time"],
+input[type="url"], 
+input[type="color"], 
+textarea, 
+select {
+  &.form__input {
+    &.form__input--error {
+      border-color: $alert;
+
+      &:focus {
+        border-color: $alert;
+      }
+    }
+
+    + .form__inline-error-message {
+      margin-top: -1rem;
+    }
   }
 }
 
@@ -177,4 +538,38 @@ textarea,
 select[multiple='multiple'] {
   height: auto;
   max-height: 4rem;
+}
+
+.error-summary {
+  background-color: desaturate(lighten($alert, 62.5%), 25%);
+  border: 1px solid $alert;
+  border-left-width: 3px;
+  padding: $column-gutter / 2;
+  margin-bottom: 1.5rem;
+  &__title {
+    color: $body-font-color;
+    font-size: 1.125rem;
+    font-weight: 500;
+    margin-bottom: .875rem;
+  }
+  &_body {
+    color: $body-font-color;
+    font-size: .875rem;
+  }
+  &__list {
+    color: $body-font-color;
+    font-size: .875rem;
+    margin: 0;
+    &-item {
+      margin-bottom: .4rem;
+    }
+    a {
+      color: $alert;
+      text-decoration: underline;
+      font-weight: 400;
+      &:hover, &:focus {
+        color: darken($alert, 5%);
+      }
+    }
+  }
 }

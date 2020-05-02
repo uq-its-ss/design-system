@@ -23,17 +23,25 @@
     border-top: 1px solid $accordion-border-color;
   }
 
-  // Accordion title / toggle.
+  // Accordion title / toggle button.
   &__toggle {
+    -moz-appearance: none;
+    -webkit-appearance: none;
     background: $accordion-content-bg;
+    border-radius: 0;
+    border-style: solid;
+    border-width: 0;
     color: $body-font-color;
     cursor: pointer;
+    display: inline-block;
     font-size: 1.2rem;
     font-weight: 400;
+    line-height: normal;
     margin: 0;
     padding: 1.1rem 2rem 1.2rem 0;
     position: relative;
     text-align: left;
+    text-decoration: none;
     transition: all ease .2s;
     width: 100%;
 
@@ -60,7 +68,6 @@
     &:focus,
     &:hover {
       color: $body-font-color;
-      cursor: pointer;
       background-color: $accordion-title-bg;
     }
 

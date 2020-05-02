@@ -6,23 +6,6 @@
   font-size: 0;
   position: relative;
 
-  a {
-    color: $alert-text-color;
-    text-decoration: underline;
-    
-    &:hover, &:focus {
-      opacity: 0.5;
-    }
-
-    &.button {
-      text-decoration: none;
-
-      &:hover, &:focus {
-        opacity: 1;
-      }
-    }
-  }
-
   &__container {
     @include grid-row;
   }
@@ -32,6 +15,15 @@
     font-weight: $alert-font-weight;
     line-height: 1.4;
     padding: 1rem 5rem 1rem $column-gutter / 2;
+
+    a {
+      color: $alert-text-color;
+      text-decoration: underline;
+      
+      &:hover, &:focus {
+        opacity: 0.5;
+      }
+    }
   }
 
   &__action {

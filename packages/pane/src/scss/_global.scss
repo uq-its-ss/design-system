@@ -1,4 +1,4 @@
-@import '~@uq-uidf/core/src/scss/_global';
+@use '../../node_modules/@uq-uidf/core/src/scss/_global' as *;
 
 $pane-border: #eee;
 $pane-shaded-bg: #f5f5f5;

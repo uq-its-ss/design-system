@@ -1,4 +1,14 @@
-@import '_global.scss';
+@use '../../node_modules/@uq-uidf/core/src/scss/_foundation-global' as *;
+@use "../../node_modules/@uq-uidf/core/src/scss/global" as *;
+@use 'global' as *;
+
+@use '../../node_modules/foundation-sites/scss/foundation/components/tables' with (
+  $table-border-color: $table-border-color
+);
+@use '../../node_modules/foundation-sites/scss/foundation/components/flex-video';
+
+@import '../../node_modules/font-awesome/scss/mixins';
+@import "../../node_modules/@uq-uidf/core/src/fonts/uq-icons/scss/mixins";
 
 h1,
 h2,
@@ -150,7 +160,8 @@ pre {
   word-wrap: normal;
 }
 
-code {
+// Added prefixed class to code element selector for now
+code.uq-code {
   background: $code-bg;
   border: 1px solid $code-border-color;
   border-radius: 2px;

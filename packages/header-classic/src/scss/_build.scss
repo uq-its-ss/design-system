@@ -1,8 +1,0 @@
-// This file is required when compiling to CSS for distribution.
-// It should not be imported into your own build system for normal usage.
-
-// Build dependencies
-@import '../../../core/src/scss/_component';
-
-// This component
-@import '_component';

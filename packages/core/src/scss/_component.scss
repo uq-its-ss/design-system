@@ -1,7 +1,77 @@
 // Main component stylesheet
-@import '~foundation-sites/scss/normalize.scss';
-@import '_global.scss';
-@import '_print.scss';
+@use '../../node_modules/foundation-sites/scss/normalize';
+@use 'foundation-global' as *;
+@use 'global' as *;
+@use '_partials/spacing';
+@use '_partials/typography';
+@use 'print';
+
+// Marked for removal
+@use '../../node_modules/foundation-sites/scss/foundation/components/grid' with (
+  $row-width: $row-width,
+  $include-xl-html-grid-classes: $include-xl-html-grid-classes,
+  $total-columns: $total-columns,
+  $column-gutter: $column-gutter
+);
+
+@use '../../node_modules/foundation-sites/scss/foundation/components/block-grid' with (
+  $include-xl-html-block-grid-classes: $include-xl-html-block-grid-classes,
+  $align-block-grid-to-grid :$align-block-grid-to-grid,
+  $block-grid-elements: $block-grid-elements
+);
+
+@import '../../node_modules/foundation-sites/scss/foundation/components/visibility';
+
+// Font Awesome icon set
+// http://fortawesome.github.io/Font-Awesome/
+@import "../../node_modules/font-awesome/scss/font-awesome";
+
+// UQ Icon set
+@import "../fonts/uq-icons/scss/uq-icons";
+
+//
+// Icons
+// Custom and contrib icon sets
+//
+
+// Create icon font stack to allow multiple sets to use the same prefix class
+// Remove if prefix classes are different.
+// Fallback to Roboto for when the icon class is applied directly to an element containing other text.
+.#{$fa-css-prefix},
+.#{$uq-css-prefix} {
+  font-family: uq-icons, FontAwesome, $roboto !important; // shortening font declaration
+  font-style: normal;
+  font-weight: inherit;
+}
+
+// Allow icons to be applied on buttons etc and not touch the text inside that element.
+.icon {
+  &:hover {
+    text-decoration: none;
+  }
+
+  &--prefix {
+    &::before {
+      margin-right: .7rem;
+    }
+  }
+
+  &--suffix {
+    &::before {
+      float: right;
+      margin-left: .7rem;
+      margin-top: .15rem;
+    }
+  }
+
+  // Allow the icon to be a different colour to parent.
+  &--light-grey,
+  &--light-gray {
+    &::before {
+      color: $icon-light-grey-color;
+    }
+  }
+}
 
 // Light tint layer provides a white tint.
 .light-tint {
@@ -67,6 +137,8 @@
 
 // Background patterns and textures for use on sections to create visual difference.
 
+$uq-bg-image-path: "../images" !default;
+
 .pattern {
   &--noise {
     background-image: url("#{$uq-bg-image-path}/pattern-noise.png");
@@ -95,49 +167,5 @@
 
   &--light-grid {
     background: #e2e2e2 url("#{$uq-bg-image-path}/pattern-light-grid.png") repeat 50% 50%;
-  }
-}
-
-//
-// Icons
-// Custom and contrib icon sets
-//
-
-// Create icon font stack to allow multiple sets to use the same prefix class
-// Remove if prefix classes are different.
-// Fallback to Roboto for when the icon class is applied directly to an element containing other text.
-.#{$fa-css-prefix},
-.#{$uq-css-prefix} {
-  font-family: uq-icons, FontAwesome, $roboto !important; // shortening font declaration
-  font-style: normal;
-  font-weight: inherit;
-}
-
-// Allow icons to be applied on buttons etc and not touch the text inside that element.
-.icon {
-  &:hover {
-    text-decoration: none;
-  }
-
-  &--prefix {
-    &::before {
-      margin-right: .7rem;
-    }
-  }
-
-  &--suffix {
-    &::before {
-      float: right;
-      margin-left: .7rem;
-      margin-top: .15rem;
-    }
-  }
-
-  // Allow the icon to be a different colour to parent.
-  &--light-grey,
-  &--light-gray {
-    &::before {
-      color: $icon-light-grey-color;
-    }
   }
 }

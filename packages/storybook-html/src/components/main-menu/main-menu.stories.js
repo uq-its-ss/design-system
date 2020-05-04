@@ -20,7 +20,5 @@ export const mainMenu = () => {
   useEffect(() => {
     var menu = new mainMenuCreate();  
   });
-  const content = namedSection('Main menu', mainMenuHTML);
-  content.classList.add('story-section--main-menu');
-  return content;
+  return mainMenuHTML;
 };

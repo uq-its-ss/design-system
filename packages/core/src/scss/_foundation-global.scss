@@ -1,0 +1,29 @@
+$roboto:  'Roboto', "Helvetica Neue", Helvetica, Arial, sans-serif;
+$merriweather:  'Merriweather', Georgia, serif;
+$courier: "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
+
+// Now create some variables using the font stacks we want on this site.
+$font-body: $roboto;
+$font-monospace: $courier;
+
+// Default text, Content
+$text: #2b2b2b;
+
+// Foundation grid settings
+$row-width: 1140px;
+$include-xl-html-grid-classes: true;
+$total-columns: 12;
+$column-gutter: 1.875rem;
+
+// Foundation block-grid settings
+$include-xl-html-block-grid-classes: true;
+$align-block-grid-to-grid: true;
+$block-grid-elements: 12;
+$block-grid-default-spacing: 1.25rem;
+
+@forward '../../node_modules/foundation-sites/scss/foundation/components/global' with (
+  $body-font-color: $text,
+  $body-font-family: $font-body,
+  $body-font-weight: 300,
+  $font-weight-bold: 500
+);

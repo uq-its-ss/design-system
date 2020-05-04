@@ -32,7 +32,11 @@ module.exports = async ({ config, mode }) => {
           loader: 'sass-loader',
           options: {
             // Prefer 'dart-sass' as it supports Sass Modules
-            implementation: require('sass')
+            implementation: require('sass'),
+            sourceMap: true,
+            sassOptions: {
+              outputStyle: mode == 'PRODUCTION' ? "compressed" : "expanded",
+            }
           }
         }
       ]

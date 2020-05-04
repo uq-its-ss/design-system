@@ -9,15 +9,15 @@
 
 }
 
-.text-1 {calc(var(--text-size) * 0.579rem);}
-.text-2 {calc(var(--text-size) * 0.694rem);}
-.text-3 {calc(var(--text-size) * 0.833rem);}
-.text-4 {var(--text-size)};
-.text-5 {calc(var(--text-size) * 1.2rem);}
-.text-6 {calc(var(--text-size) * 1.44rem);}
-.text-7 {calc(var(--text-size) * 1.728rem);}
-.text-8 {calc(var(--text-size) * 2.074rem);}
-.text-9 {calc(var(--text-size) * 2.488rem);}
-.text-10 {calc(var(--text-size) * 2.986rem);}
-.text-11 {calc(var(--text-size) * 3.583rem);}
-.text-12 {calc(var(--text-size) * 4.3rem);}
+.text-1 {font-size: calc(var(--text-size) * 0.579rem);}
+.text-2 {font-size: calc(var(--text-size) * 0.694rem);}
+.text-3 {font-size: calc(var(--text-size) * 0.833rem);}
+.text-4 {font-size: var(--text-size)};
+.text-5 {font-size: calc(var(--text-size) * 1.2rem);}
+.text-6 {font-size: calc(var(--text-size) * 1.44rem);}
+.text-7 {font-size: calc(var(--text-size) * 1.728rem);}
+.text-8 {font-size: calc(var(--text-size) * 2.074rem);}
+.text-9 {font-size: calc(var(--text-size) * 2.488rem);}
+.text-10 {font-size: calc(var(--text-size) * 2.986rem);}
+.text-11 {font-size: calc(var(--text-size) * 3.583rem);}
+.text-12 {font-size: calc(var(--text-size) * 4.3rem);}

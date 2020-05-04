@@ -39,12 +39,12 @@
   "bugs": {
     "url": "https://github.com/uq-its-ss/user-interface-development-framework/issues"
   },
-  "peerDependencies": {
-    "font-awesome": "^4.7.0"
-  },
   "dependencies": {
     "compass-mixins": "^0.12.10",
     "font-awesome": "^4.7.0",
     "foundation-sites": "^5.5.3"
+  },
+  "peerDependency": {
+    "font-awesome": "^4.7.0"
   }
 }

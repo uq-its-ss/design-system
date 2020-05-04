@@ -1,3 +1,5 @@
+@use "_partials/compass" as compass;
+
 $roboto:  'Roboto', "Helvetica Neue", Helvetica, Arial, sans-serif;
 $merriweather:  'Merriweather', Georgia, serif;
 $courier: "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
@@ -25,5 +27,7 @@ $block-grid-default-spacing: 1.25rem;
   $body-font-color: $text,
   $body-font-family: $font-body,
   $body-font-weight: 300,
-  $font-weight-bold: 500
+  $font-weight-bold: 500,
+  $base-font-size: compass.$base-font-size,
+  $base-line-height: compass.$base-line-height
 );

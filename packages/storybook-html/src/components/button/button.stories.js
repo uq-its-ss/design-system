@@ -42,6 +42,10 @@ export const primary = () => {
   `;
 };
 
+primary.story = {
+  name: 'Primary (base)'
+}
+
 export const secondary = () => {
   return `
     <button class="uq-button uq-button--secondary">Button</button>

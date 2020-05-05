@@ -1,6 +1,3 @@
-// import decorators
-import namedSection from '../../decorators/section.js';
-
 // import styles
 import './breadcrumb.scss';
 
@@ -12,5 +9,5 @@ export default {
 };
 
 export const breadcrumb = () => {
-  return namedSection('Breadcrumb', breadcrumbHTML);
+  return breadcrumbHTML;
 };

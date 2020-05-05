@@ -1,6 +1,3 @@
-// import decorators
-import namedSection from '../../decorators/section.js';
-
 // import styles
 import './card.scss';
 
@@ -12,5 +9,5 @@ export default {
 };
 
 export const all = () => {
-  return namedSection("Cards", cardsHTML, ["story-section--cards"]);
+  return cardsHTML;
 };

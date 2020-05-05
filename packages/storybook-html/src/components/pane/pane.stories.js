@@ -1,6 +1,3 @@
-// import decorators
-import namedSection from '../../decorators/section.js';
-
 // import styles
 import './pane.scss';
 
@@ -11,6 +8,6 @@ export default {
   title: 'Components/Pane'
 };
 
-export const pane = () => {
-  return namedSection('Pane', paneHTML);
+export const all = () => {
+  return paneHTML;
 };

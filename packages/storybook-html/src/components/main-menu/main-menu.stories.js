@@ -1,8 +1,5 @@
 import { useEffect } from '@storybook/client-api';
 
-// import decorators
-import namedSection from '../../decorators/section.js';
-
 // import styles
 import './main-menu.scss';
 
@@ -18,7 +15,11 @@ export default {
 
 export const mainMenu = () => {
   useEffect(() => {
-    var menu = new mainMenuCreate();  
+    new mainMenuCreate();  
   });
   return mainMenuHTML;
 };
+
+mainMenu.story = {
+  name: "Default (JS)"
+}

@@ -1,6 +1,3 @@
-// import decorators
-import namedSection from '../../decorators/section.js';
-
 // import styles
 import './tabs.scss';
 
@@ -12,5 +9,5 @@ export default {
 };
 
 export const all = () => {
-  return namedSection("tabs", tabsHTML);
+  return tabsHTML;
 };

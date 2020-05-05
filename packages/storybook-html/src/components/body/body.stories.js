@@ -7,9 +7,9 @@ export default {
 };
 
 export const all = () => {
-  return document.createElement('div').innerHTML = allHTML;
+  return allHTML;
 };
 
 export const table = () => {
-  return document.createElement('div').innerHTML = tableHTML;
+  return tableHTML;
 };

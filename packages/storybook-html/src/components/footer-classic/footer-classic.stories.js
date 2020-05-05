@@ -1,6 +1,3 @@
-// import decorators
-import namedSection from '../../decorators/section.js';
-
 // define the uq-header custom component
 import {defineCustomElements as defineUQFooter} from '@uq-uidf/footer-classic/component/dist/cjs/loader.cjs';
 defineUQFooter();
@@ -16,5 +13,5 @@ export default {
 };
 
 export const footer = () => {
-  return namedSection('Footer (classic)', footerHTML);
+  return footerHTML;
 };

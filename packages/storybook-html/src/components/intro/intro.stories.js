@@ -20,8 +20,8 @@ export default {
 
 export const kitchenSink = () => {
   useEffect(() => {
-    var workingMainMenu = new mainMenu();
-    var workingAccordions = new accordion();
+    new mainMenu();
+    new accordion();
     var equaliseGridMenu = new gridMenuEqualiser('.grid-menu--equalised>a');
     equaliseGridMenu.align(); 
   });

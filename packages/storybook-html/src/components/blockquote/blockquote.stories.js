@@ -9,5 +9,5 @@ export default {
 };
 
 export const blockquote = () => {
-  return document.createElement('div').innerHTML = blockquoteHTML;
+  return blockquoteHTML;
 };

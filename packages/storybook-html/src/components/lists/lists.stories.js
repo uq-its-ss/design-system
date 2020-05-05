@@ -9,6 +9,6 @@ export default {
   title: 'Components/Lists'
 };
 
-export const lists = () => {
-  return document.createElement('div').innerHTML = listsHTML;
+export const all = () => {
+  return listsHTML;
 };

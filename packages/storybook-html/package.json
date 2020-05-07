@@ -31,7 +31,6 @@
   "dependencies": {
     "@uq-uidf/accordion": "^0.0.0",
     "@uq-uidf/alert": "^0.0.0",
-    "@uq-uidf/alert-classic": "^0.0.0",
     "@uq-uidf/blockquote": "^0.0.0",
     "@uq-uidf/body": "^0.0.0",
     "@uq-uidf/breadcrumb": "^0.0.0",

@@ -1,0 +1,49 @@
+{
+  "name": "@uq-uidf/icon",
+  "version": "0.0.0",
+  "description": "Icon component",
+  "keywords": [
+    "uq-uidf",
+    "uq",
+    "University of Queensland",
+    "user interface development framework",
+    "design system",
+    "scss",
+    "sass",
+    "css",
+    "icon"
+  ],
+  "author": {
+    "name": "University of Queensland",
+    "email": "webservices@uq.edu.au",
+    "url": "https://uq.edu.au"
+  },
+  "homepage": "https://github.com/uq-its-ss/user-interface-development-framework#readme",
+  "license": "ISC",
+  "main": "lib/icon.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib/*",
+    "src/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uq-its-ss/user-interface-development-framework.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/uq-its-ss/user-interface-development-framework/issues"
+  },
+  "dependencies": {
+    "@uq-uidf/core": "^0.0.0",
+    "domready": "^1.0.8"
+  },
+  "peerDependencies": {
+    "@uq-uidf/core": "^0.0.0"
+  }
+}

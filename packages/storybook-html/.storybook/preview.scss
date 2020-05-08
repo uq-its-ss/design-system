@@ -1,2 +1,8 @@
 @import "~@uq-uidf/core/src/scss/_component";
 @import "~@uq-uidf/body/src/scss/_component";
+
+// Prevent the @uq-uidf/core from imposing a background colour. Overrides the
+// Foundation 5.5.3 default styling of the body tag.
+body {
+  background-color: transparent !important;
+}

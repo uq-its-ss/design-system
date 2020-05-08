@@ -253,12 +253,6 @@ form .row .postfix-round.row.collapse .postfix {
   border-top-right-radius: 1000px;
 }
 
-input[type=submit] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  border-radius: 0;
-}
-
 /* Respect enforced amount of rows for textarea */
 textarea[rows] {
   height: auto;

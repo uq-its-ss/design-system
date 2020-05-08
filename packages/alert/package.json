@@ -42,7 +42,6 @@
     "@uq-uidf/core": "^0.0.0"
   },
   "peerDependencies": {
-    "@uq-uidf/button-classic": "^0.0.0",
     "@uq-uidf/core": "^0.0.0"
   }
 }

@@ -1,16 +1,13 @@
-@import '_global.scss';
+@use 'global' as *;
 
 /* button Default */
 .uq-button {
-  background-color: #2377cb;
-  border-color: transparent;
-  border: 1px solid #2377cb;
-  border-radius: 8px;
-  color: #fff;
+  background-color: $button-bg-color;
+  border: 2px solid $button-border-color;
+  border-radius: 5px;
+  color: $button-color;
   cursor: pointer;
   display: inline-block;
-  font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 16px;
   font-size: 1rem;
   font-weight: normal;
   line-height: normal;
@@ -18,92 +15,111 @@
   position: relative;
   text-align: center;
   text-decoration: none;
-  transition: background-color 300ms ease-out;
-  /* display an element using platform-native styling based on the operating system's theme. */
-  -webkit-appearance: none;
-  -moz-appearance: none;
-}
+  transition: all 300ms ease-out;
 
-.uq-button:hover,
-.uq-button:focus {
-  background-color: #005ea5;
-  color: #fff;
-}
+  &:hover, &:focus {
+    background-color: $button-bg-hover-color;
+    border-color: $button-border-hover-color;
+    color: $button-hover-color;
+    text-decoration: underline;
+  }
 
-/* button Secondary */
-.uq-button--secondary {
-  background-color: #d7d1cc;
-  border-color: #d7d1cc;
-  color: #2b2b2b;
-}
+  &.uq-button--outline {
+    background-color: transparent;
+    border-color: $button-bg-color;
+    color: $button-bg-color;
 
-/* button outline */
-.uq-button--outline {
-  background-color: #fff;
-  border-color: #2377cb;
-  color: #005ea5;
-}
+    &:hover, &:focus {
+      background-color: $button-bg-hover-color;
+      border-color: $button-bg-hover-color;
+      color: $button-color;
+    }
+  }
 
-/* button outline secondary */
-.uq-button--outline.uq-button--secondary {
-  background-color: #fff;
-  border-color: #d7d1cc;
-  color: #2b2b2b;
-}
+  &.uq-button--text {
+    background-color: transparent;
+    border-color: transparent;
+    color: $button-bg-color;
 
-.uq-button--secondary:hover,
-.uq-button--secondary:focus {
-  background-color: #bdb0a5;
-  color: #2b2b2b;
-}
+    &:hover, &:focus {
+      background-color: transparent;
+      border-color: transparent;
+      color: $button-bg-hover-color;
+    }
+  }
 
-/* button text */
-.uq-button–-text {
-  background-color: transparent;
-  border-color: transparent;
-  color: #2377cb;
-}
+  /* button secondary */
+  &--secondary {
+    background-color: $button-secondary-bg-color;
+    border-color: $button-secondary-border-color;
+    color: $button-secondary-color;
 
-.uq-button–-text:hover,
-.uq-button–-text:focus {
-  background-color: transparent;
-  border-color: transparent;
-  color: #005ea5;
-  text-decoration: underline;
-}
+    &:hover, &:focus {
+      background-color: $button-secondary-bg-hover-color;
+      border-color: $button-secondary-border-hover-color;
+      color: $button-secondary-hover-color;
+    }
 
-/* button text secondary */
-.uq-button–-text.uq-button--secondary {
-  color: #2b2b2b;
-}
+    &.uq-button--outline {
+      background-color: transparent;
+      border-color: $button-secondary-bg-color;
+      color: $button-secondary-color;
 
-.uq-button–-text:hover,
-.uq-button–-text:focus {
-  color: #000;
-  text-decoration: underline;
-}
+      &:hover, &:focus {
+        background-color: $button-secondary-bg-hover-color;
+        border-color: $button-secondary-bg-hover-color;
+        color: $button-secondary-color;
+      }
 
-/* button sizes */
-.uq-button–-tiny {
-  font-size: 12px;
-  padding: 4px 8px;
-}
+      &.uq-button--light {
+        color: $button-secondary-bg-color;
 
-.uq-button–-small {
-  font-size: 14px;
-  padding: 8px 16px;
-}
+        &:hover, &:focus {
+          color: $button-secondary-color;
+        }
+      }
+    }
 
-/*.uq-button {
-  padding: 12px 24px;
-}*/
+    &.uq-button--text {
+      background-color: transparent;
+      border-color: transparent;
+      color: $button-secondary-color;
+  
+      &:hover, &:focus {
+        background-color: transparent;
+        border-color: transparent;
+        color: $button-secondary-hover-color;
+      }
 
-.uq-button–-large {
-  padding: 20px 40px;
-}
+      &.uq-button--light {
+        color: $button-secondary-bg-color;
 
-.uq-button–-expand {
-  padding-left: 0;
-  padding-right: 0;
-  width: 100%;
+        &:hover, &:focus {
+          color: $button-secondary-bg-hover-color;
+        }
+      }
+    }
+  }
+
+  /* button sizes */
+  &--tiny {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+
+  &--small {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  &--large {
+    font-size: 18px;
+    padding: 20px 40px;
+  }
+
+  &--expand {
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+  }
 }

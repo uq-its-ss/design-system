@@ -1,0 +1,48 @@
+@use './_global.scss' as *;
+
+/* Icon - SVG */
+:root {
+  --icon-white: #FFF;
+  --icon-purple: #51247A;
+  --icon-black: #222;
+  --icon-blue: #2377cb;
+  --icon-blue-dark: #005ea5;
+}
+
+@define-mixin icon $name {
+  .icon--$(name) {
+    background: svg-load("images/$(name).svg", fill=var(--icon-black)) no-repeat;
+  }
+  .icon--$(name).icon--light {
+    background: svg-load("images/$(name).svg", fill=var(--icon-white)) no-repeat;
+  }
+  .icon--$(name).icon--dark {
+    background: svg-load("images/$(name).svg", fill=var(--icon-black)) no-repeat;
+  }
+  .icon--$(name).icon--blue {
+    background: svg-load("images/$(name).svg", fill=var(--icon-blue)) no-repeat;
+  }
+}
+
+.icon {
+  width: 1em;
+  height: 1em;
+  stroke: currentColor;
+  fill: currentColor;
+  vertical-align: text-top;
+  background-position: center;
+  display: inline-block;
+  box-sizing: border-box;
+  line-height: 100%;
+}
+
+@mixin icon calendar;
+@mixin icon chevron-down;
+@mixin icon chevron-left;
+@mixin icon chevron-right;
+@mixin icon chevron-up;
+@mixin icon clock;
+@mixin icon close;
+@mixin icon menu;
+@mixin icon pin;
+@mixin icon search;

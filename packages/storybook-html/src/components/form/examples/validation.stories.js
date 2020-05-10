@@ -8,7 +8,7 @@ import passwordResetHTML from './password-reset.html';
 import './password-reset.scss';
 
 export default {
-  title: 'Forms/Examples/Form Validation',
+  title: 'Forms/Form errors/Working examples',
   parameters: {
     docs: {
       page: docs
@@ -16,7 +16,7 @@ export default {
   }
 };
 
-export const passwordReset = () => {
+export const passwordForm = () => {
   useEffect(() => {
     var init = new passwordResetInit();
   });

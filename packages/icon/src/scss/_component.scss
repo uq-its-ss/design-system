@@ -13,16 +13,16 @@
 }
 
 @mixin icon($category, $name) {
-  .uq-icon--#{$category}--#{$name} {
+  .uq-icon--#{$name} {
     background: url("~@uq-uidf/icon/src/images/" + $category + "/" + $name + ".svg") no-repeat;
   }
-  .uq-icon--#{$category}--#{$name}.uq-icon--light {
+  .uq-icon--#{$name}.uq-icon--light {
     background: url("~@uq-uidf/icon/src/images/" + $category + "/" + $name + ".svg?fill=$icon-white") no-repeat;
   }
-  .uq-icon--#{$category}--#{$name}.uq-icon--dark {
+  .uq-icon--#{$name}.uq-icon--dark {
     background: url("~@uq-uidf/icon/src/images/" + $category + "/" + $name + ".svg?fill=$icon-black") no-repeat;
   }
-  .uq-icon--#{$category}--#{$name}.uq-icon--blue {
+  .uq-icon--#{$name}.uq-icon--blue {
     background: url("~@uq-uidf/icon/src/images/" + $category + "/" + $name + ".svg?fill=$icon-blue") no-repeat;
   }
 }

@@ -1,5 +1,5 @@
 // import decorators
-import namedSection from '../../decorators/section.js';
+import namedSection from '../../../.storybook/decorators/section.js';
 
 // import styles
 import './core.scss';

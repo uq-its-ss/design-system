@@ -1,3 +1,5 @@
+import expandedStory from '../../../.storybook/decorators/expanded.js';
+
 // import styles
 import './style.scss';
 
@@ -5,7 +7,8 @@ import './style.scss';
 import defaultHTML from './default.html';
 
 export default {
-  title: 'Components/Alert'
+  title: 'Components/Alert',
+  decorators: [expandedStory]
 };
 
 export const all = () => {

@@ -1,3 +1,5 @@
+import expandedStory from '../../../.storybook/decorators/expanded.js';
+
 // define the uq-header custom component
 import {defineCustomElements as defineUQHeader} from '@uq-uidf/header-classic/component/dist/cjs/loader.cjs';
 defineUQHeader();
@@ -6,7 +8,8 @@ defineUQHeader();
 import '@uq-uidf/header-classic/src/scss/_component.scss';
 
 export default {
-  title: 'Components/Header/Classic'
+  title: 'Components/Header/Classic',
+  decorators: [expandedStory]
 };
 
 export const header = () => {

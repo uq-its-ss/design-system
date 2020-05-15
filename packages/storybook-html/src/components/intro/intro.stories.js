@@ -1,4 +1,5 @@
 import { useEffect } from '@storybook/client-api';
+import expandedStory from '../../../.storybook/decorators/expanded.js';
 
 // define the uq-header and uq-footer custom web component
 import {defineCustomElements as defineUQHeader} from '@uq-uidf/header-classic/component/dist/cjs/loader.cjs';
@@ -15,7 +16,8 @@ import gridMenuEqualiser from '@uq-uidf/grid-menu/src/js/grid-menu';
 import kitchenSinkHTML from './kitchen-sink.html';
 
 export default {
-  title: 'Introduction/Showcase'
+  title: 'Introduction/Showcase',
+  decorators: [expandedStory]
 };
 
 export const kitchenSink = () => {

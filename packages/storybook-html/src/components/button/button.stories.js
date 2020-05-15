@@ -1,3 +1,5 @@
+import expandedStory from '../../../.storybook/decorators/expanded.js';
+
 // import styles
 import './button.scss';
 
@@ -107,3 +109,7 @@ export const expanded = () => {
     <button class="uq-button uq-button--secondary uq-button--expand uq-button--text">Button</button>
   `;
 };
+
+expanded.story = {
+  decorators: [expandedStory]
+}

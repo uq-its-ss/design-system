@@ -1,4 +1,5 @@
 import { useEffect } from '@storybook/client-api';
+import expandedStory from '../../../.storybook/decorators/expanded.js';
 
 // import styles
 import '@uq-uidf/accordion/src/scss/_component.scss';
@@ -7,15 +8,16 @@ import '@uq-uidf/accordion/src/scss/_component.scss';
 import accordion from '@uq-uidf/accordion/src/js/accordion.es6';
 
 // documentation
-// import docs from './accordion.docs.mdx';
+import docs from './accordion.docs.mdx';
 
 export default {
   title: 'Components/Accordion',
-  // parameters: {
-  //   docs: {
-  //     page: docs
-  //   }
-  // }
+  decorators: [expandedStory],
+  parameters: {
+    docs: {
+      page: docs
+    }
+  }
 };
 
 export const base = () => {

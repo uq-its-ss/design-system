@@ -1,16 +1,14 @@
-// import styles
 import './style.scss';
-
-// import kitchen sink markup
-import kitchenSinkHTML from './form-error-kitchen-sink.html';
+import kitchenSinkHTML from './form-errors-kitchen-sink.html';
+import docs from './form-errors.docs.mdx';
 
 export default {
-  title: 'Forms/Form errors'
-};
-
-export const kitchenSink = () => {
-  // See other stories for markup examples
-  return kitchenSinkHTML;
+  title: 'Forms/Form errors',
+  parameters: {
+    docs: {
+      page: docs
+    }
+  }
 };
 
 export const errorSummary = () => {
@@ -178,3 +176,16 @@ export const textarea = () => {
     </form>
   `;
 };
+
+export const kitchenSink = () => {
+  // See other stories for markup examples
+  return kitchenSinkHTML;
+};
+
+kitchenSink.story = {
+  parameters: {
+    docs: {
+      page: null
+    }
+  }
+}

@@ -1,0 +1,293 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+
+# Implementing accessible form validation messages
+
+> Please read <a href="?path=/docs/forms-form-validation--page">Form
+> validation</a> for some background information.
+
+## Error summaries
+
+Using `role="alert"` on an element implies `aria-live="assertive"` as well as
+`aria-atomic="true"` (W3C, "[Alert Example](https://www.w3.org/TR/wai-aria-practices-1.1/examples/alert/alert.html.)",
+2019). So if we want screen readers to read aloud error summaries in full, they
+should be injected into an element with this specialised role active.
+
+<Preview withToolbar>
+  <Story height="180px" id="forms-form-errors--error-summary" />
+</Preview>
+
+### Basic
+
+```html
+<div class="error-summary">
+    <h2 class="error-summary__title">There is a problem</h2>
+    <div class="error-summary__body">
+        <ul class="error-summary__list">
+            <li class="error-summary__list-item">
+                <!-- links should go to input element -->
+                <a href="#">Enter a valid mobile number</a>
+            </li>
+            <li class="error-summary__list-item">
+                <a href="#">You need to select a favourite</a>
+            </li>
+            <li class="error-summary__list-item">
+                <a href="#">You need to agree to the terms of service</a>
+            </li>
+        </ul>
+    </div>
+</div>
+```
+
+### Accessible error insertion
+
+```html
+<!-- Before error insertion -->
+<div id="errorSummary" role="alert"></div>
+ 
+<!-- After error insertion -->
+<div id="errorSummary" role="alert" class="error-summary">
+    <h2 class="error-summary__title">There is a problem</h2>
+    <div class="error-summary__body">
+        <ul class="error-summary__list">
+            <li class="error-summary__list-item">
+                <!-- links should go to input element -->
+                <a href="#mobile">Enter a valid mobile number</a>
+            </li>
+            <li class="error-summary__list-item">
+                <a href="#favouriteRed">You need to select a favourite</a>
+            </li>
+            <li class="error-summary__list-item">
+                <a href="#terms">You need to agree to the terms of service</a>
+            </li>
+        </ul>
+    </div>
+</div>
+```
+
+## Inline messages
+
+Error messages that are added to the page via Javascript should be contained in
+pre-existing `aria-live` regions if screen readers should be made "aware" of
+changes on the page (MDN contributors, "[ARIA live regions](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)", 2019). 
+
+Use the `aria-live="polite"`, `aria-invalid`, and `aria-describedby` attributes.
+
+### Text input
+
+<Preview withToolbar>
+  <Story height="480px" id="forms-form-errors--text-input" />
+</Preview>
+
+#### Basic
+
+We should support two common methods of markup.
+
+```html
+<!-- Input element sits INSIDE the label -->
+<label class="form__label form__label--error">Mobile number
+  <input type="text" class="form__input form__input--error" />
+  <span id="mobileError" class="form__inline-error-message">Enter a valid mobile number</span>
+</label>
+<!-- Input element sits OUTSIDE, BELOW the label -->
+<label for="mobile" class="form__label form__label--error">Mobile number</label>
+<input type="text" id="mobile" class="form__input form__input--error" />
+<label for="mobile" id="mobileError" class="form__inline-error-message">Enter a valid mobile number</label>
+```
+
+#### Accessible error insertion
+
+```html
+<!-- Before error insertion -->
+<label class="form__label">Mobile number
+  <input type="text" class="form__input" aria-describedby="mobileError" />
+  <span id="mobileError" aria-live="polite"></span>
+</label>
+ 
+<!-- After error insertion -->
+<label class="form__label form__label--error">Mobile number
+  <input type="text" class="form__input form__input--error" aria-describedby="mobileError" aria-invalid="true" />
+  <span id="mobileError" class="form__inline-error-message" aria-live="polite">Enter a valid mobile number</span>
+</label>
+```
+
+### Checkbox
+
+<Preview withToolbar>
+  <Story height="400px" id="forms-form-errors--checkbox" />
+</Preview>
+
+#### Basic
+
+We should support two common methods of markup.
+
+```html
+<!-- Input element sits INSIDE the label -->
+<label class="form__label form__label--error">
+  <input id="terms" name="terms" type="checkbox" class="form__input form__input--error" />
+  I agree to the <a href="#">terms of service</a>
+</label>
+<label for="terms" class="form__inline-error-message">You need to agree to the terms of service</label>
+ 
+<!-- Input element sits OUTSIDE, TO THE LEFT of the label -->
+<input id="terms" name="terms" type="checkbox" class="form__input form__input--error" />
+<label for="terms" class="form__label form__label--error">I agree to the <a href="#">terms of service</a></label>
+<span class="form__inline-error-message">You need to agree to the terms of service</span>
+```
+
+#### Accessible error insertion
+
+```html
+<!-- Before error insertion -->
+<label class="form__label">
+  <input id="terms" name="terms" type="checkbox" class="form__input" aria-describedby="termsError" />
+  I agree to the <a href="#">terms of service</a>
+</label>
+<label for="terms" id="termsError" aria-live="polite"></label>
+ 
+<!-- After error insertion -->
+<label class="form__label form__label--error">
+  <input id="terms" name="terms" type="checkbox" class="form__input form__input--error" aria-describedby="termsError" aria-invalid="true" />
+  I agree to the <a href="#">terms of service</a>
+</label>
+<label for="terms" id="termsError" class="form__inline-error-message" aria-live="polite">You need to agree to the terms of service</label>
+```
+
+### Radio buttons
+
+<Preview withToolbar>
+  <Story height="660px" id="forms-form-errors--radio-button" />
+</Preview>
+
+#### Basic
+
+We should support two common methods of markup.
+
+```html
+<!-- Input element sits INSIDE the label -->
+<label class="form__label form__label--error">Choose your favourite:</label>
+<label class="form__label form__label--error"><input type="radio" name="pokemon" value="red" class="form__input form__input--error" /> Red</label>
+<label class="form__label form__label--error"><input type="radio" name="pokemon" value="blue" class="form__input form__input--error" /> Blue</label>
+<span class="form__inline-error-message">Select a favourite</span>
+ 
+<!-- Input element sits OUTSIDE, TO THE LEFT of the label -->
+<label class="form__label form__label--error">Choose your favourite:</label>
+<input id="pokemonRed" type="radio" name="pokemon" value="red" class="form__input form__input--error" />
+<label for="pokemonRed" class="form__label form__label--error">Red</label>
+<input id="pokemonBlue" type="radio" name="pokemon" value="blue" class="form__input form__input--error" />
+<label for="pokemonBlue" class="form__label form__label--error">Blue</label>
+<span class="form__inline-error-message">Select a favourite</span>
+```
+
+#### Accessible error insertion
+
+```html
+<!-- Before error insertion -->
+<label class="form__label">Choose your favourite:</label>
+<label class="form__label"><input type="radio" name="pokemon" value="red" class="form__input" aria-describedby="pokemonError" /> Red</label>
+<label class="form__label"><input type="radio" name="pokemon" value="blue" class="form__input" aria-describedby="pokemonError" /> Blue</label>
+<span id="pokemonError" aria-live="polite"></span>
+ 
+<!-- After error insertion -->
+<label class="form__label form__label--error">Choose your favourite:</label>
+<label class="form__label form__label--error"><input type="radio" name="pokemon" value="red" class="form__input form__input--error" aria-describedby="pokemonError" aria-invalid="true" /> Red</label>
+<label class="form__label form__label--error"><input type="radio" name="pokemon" value="blue" class="form__input form__input--error" aria-describedby="pokemonError" aria-invalid="true" /> Blue</label>
+<span id="pokemonError" class="form__inline-error-message" aria-live="polite">Select a favourite</span>
+```
+
+### Select
+
+<Preview withToolbar>
+  <Story height="500px" id="forms-form-errors--select" />
+</Preview>
+
+#### Basic
+
+We should support two common methods of markup.
+
+```html
+<!-- Input element sits INSIDE the label -->
+<label class="form__label form__label--error">Choose a thing
+  <select class="form__input form__input--error" name="thing">
+    <option value="husker">Husker</option>
+    <option value="starbuck">Starbuck</option>
+    <option value="hotdog">Hot Dog</option>
+    <option value="apollo">Apollo</option>
+  </select>
+  <span class="form__inline-error-message">Choose a thing</span>
+</label>
+ 
+<!-- Input element sits OUTSIDE, TO THE LEFT of the label -->
+<label for="thing" class="form__label form__label--error">Choose a thing</label>
+<select id="thing" class="form__input form__input--error" name="thing">
+  <option value="husker">Husker</option>
+  <option value="starbuck">Starbuck</option>
+  <option value="hotdog">Hot Dog</option>
+  <option value="apollo">Apollo</option>
+</select>
+<label for="thing" class="form__inline-error-message">Choose a thing</label>
+```
+
+#### Accessible error insertion
+
+```html
+<!-- Before error insertion -->
+<label class="form__label">Choose a thing
+  <select class="form__input" name="thing" aria-describedby="thingError">
+    <option value="husker">Husker</option>
+    <option value="starbuck">Starbuck</option>
+    <option value="hotdog">Hot Dog</option>
+    <option value="apollo">Apollo</option>
+  </select>
+  <span id="thingError" aria-live="polite">Choose a thing</span>
+</label>
+ 
+<!-- After error insertion -->
+<label class="form__label form__label--error">Choose a thing
+  <select class="form__input form__input--error" name="thing" aria-describedby="thingError" aria-invalid="true">
+    <option value="husker">Husker</option>
+    <option value="starbuck">Starbuck</option>
+    <option value="hotdog">Hot Dog</option>
+    <option value="apollo">Apollo</option>
+  </select>
+  <span id="thingError" class="form__inline-error-message" aria-live="polite">Choose a thing</span>
+</label>
+```
+
+### Textarea
+
+<Preview withToolbar>
+  <Story height="600px" id="forms-form-errors--textarea" />
+</Preview>
+
+#### Basic
+
+We should support two common methods of markup.
+
+```html
+<!-- Input element sits INSIDE the label -->
+<label class="form__label form__label--error">Biography
+  <textarea class="form__input form__input--error"></textarea>
+  <span class="form__inline-error-message">Enter a brief biography</span>
+</label>
+ 
+<!-- Input element sits OUTSIDE, TO THE LEFT of the label -->
+<label for="bio" class="form__label form__label--error">Biography</label>
+<textarea id="bio" class="form__input form__input--error"></textarea>
+<span class="form__inline-error-message">Enter a brief biography</span>
+```
+
+#### Accessible error insertion
+
+```html
+<!-- Before error insertion -->
+<label class="form__label">Biography
+  <textarea class="form__input" name="bio" aria-describedby="bioError"></textarea>
+  <span id="bioError" aria-live="polite">Enter a brief biography</span>
+</label>
+ 
+<!-- After error insertion -->
+<label class="form__label form__label--error">Biography
+  <textarea class="form__input form__input--error" name="bio" aria-describedby="bioError" aria-invalid="true"></textarea>
+  <span id="bioError" class="form__inline-error-message" aria-live="polite">Enter a brief biography</span>
+</label>
+```

@@ -323,11 +323,13 @@ var passwordResetValidation = (function() {
         if (_.isArray(value)) {
           value.forEach((line) => {
             var link = document.createElement("li");
+            link.classList.add("error-summary__list__item");
             link.innerHTML = "<a href=\"#" +item[1]+ "\">" + line + "</a>";
             errorSummaryList.appendChild(link);
           });
         } else {
           var link = document.createElement("li");
+          link.classList.add("error-summary__list__item");
           link.innerHTML = "<a href=\"#" +item[1]+ "\">" + value + "</a>";
           errorSummaryList.appendChild(link);
         }

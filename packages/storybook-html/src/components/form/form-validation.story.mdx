@@ -1,0 +1,149 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+
+<Meta title="Forms/Form validation" />
+
+# Form validation
+
+## Glossary
+
+<dl>
+  <dt>Form validation messages</dt>
+  <dd>Intersection of <i>error summary</i> and <i>inline validation messages</i>.</dd>
+  <dt>Inline validation messages</dt>
+  <dd>Error messages, success messages, or feedback messages displayed within a form context.</dd>
+</dl>
+
+<details>
+  <summary>Read more</summary>
+
+  Throughout this document, references will be made to certain [HTML DOM events](https://www.w3schools.com/jsref/dom_obj_event.asp) that should be used to trigger validation functions.
+
+  | Event  | Description |
+  |--------|-------------|
+  | Input  | Triggered every time a user modifies a value. |
+  | Change | Triggered when the element is finished changing i.e. for text inputs, it's when the element loses focus. for other elements (select, checkbox, radio), it triggers right after the selection changes. |
+  | Blur   | When a form element loses focus. The value doesn’t have to be changed to trigger this event. |
+  | Submit | Triggers on form submit. |
+</details>
+
+## Recommendations
+
+### Include both an error summary _and_ inline validation messages
+
+Display an error summary _above/before_ the form when the user submits the form
+(_on submit_). This will mean that the user will be warned of any missing
+form-filling requirements.
+
+<Preview withToolbar>
+  <Story height="180px" id="forms-form-errors--error-summary" />
+</Preview>
+
+#### What should go into an error summary?
+
+| Component element | Purpose |
+|-------------------|---------|
+| Title | Quickly informs the user of the action that has failed and the state of the form, e.g. "Your form could not be submitted, some form fields need correction". |
+| List of inline validation errors present | Read by the user and screen readers for an overview of form errors. Enables the user to skip directly to the fields that need correction. |
+
+The following example shows insertion of errors when the user tries to submit
+the form without data.
+
+<Preview withToolbar>
+  <Story height="800px" id="forms-form-errors--kitchen-sink" />
+</Preview>
+
+---
+
+### Validation messages must be highly visible
+
+According to [Neilsen](https://www.nngroup.com/articles/error-message-guidelines/)
+(2001), error messages should be visible and highly noticeable. He says that
+solely turning the field label red "...violates one of the oldest and simplest
+rules for making technology accessible to users with disabilities."
+
+Error messages should be attributable to the corresponding input element(s)
+using a combination of proximity, colour, content, and visual decorators. Error
+messages should be boldly distinguishable by ensuring enough contrast with
+surrounding elements.
+
+---
+
+### Validation messages must be accessible in a range of contexts
+
+Expected screen reader behaviour:
+
+<dl>
+  <dt>Error summaries</dt>
+  <dd>Error summaries are read out loud, urgently, and disruptively, after the
+    user tries to submit an invalid form.</dd>
+  <dt>Inline error messages</dt>
+  <dd>
+    Individual errors messages are read out loud <i>on blur</i> but non-disruptively.<br/>
+    Individual error messages are read out loud <i>on focus</i> on the corresponding
+    input.
+  </dd>
+</dl>
+
+---
+
+### Validation messages must be easily understood and actioned
+
+Error (and feedback) messages should provide clear instructions on how to remedy
+the specific issue.
+
+| ✅Use clear actionable messages | ⛔️Avoid generic or vague messages  |
+|--------------------------------|-----------------------------------|
+| Enter your first name | This field is required |
+| Enter a valid Australian mobile number.<br/>For example, +61 4 XXXX XXXX or 04XX XXX XXX | Enter a valid mobile number |
+
+---
+
+### Validate forms on the client-side wherever possible
+
+[Research](https://alistapart.com/article/inline-validation-in-web-forms/) had
+found that "participants were faster, more successful, less error-prone, and
+more satisfied when they used the forms with inline validation" (Wroblewski, 
+2009).
+
+Fallback to server-side validation where the validation method requires complex 
+calculations or business logic not available, practical, or secure in the
+front-end.
+
+---
+
+### By default, show inline validation messages _after_ the user completes a field
+
+By default, the validation message should be shown _after_ the user finishes
+with the input, i.e. _on blur_. Sometimes the user experience will be improved
+by showing validation feedback _while_ the user is completing the field. Use the
+following table as a guide.
+
+| Timing | What it means | When to use it |
+|--------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| After | We display an inline validation message _after_ the user has indicated that they are done answering a question (by moving on to the next one; on _blur_ or _change_). | By default. For open-ended questions/fields. |
+| While | In this variation, we display an (updated) inline validation message _while_ the user answers a question (_on input_). | When a valid answer may not be immediately clear to the user. When there are complex requirements the user needs to meet in the field, e.g. password complexity requirements, selecting exactly three options etc. |
+
+#### Advice on scaled or binary feedback messages while the user is typing
+
+When validating on _input_ (while the user is typing), we are generally doing so
+to give guidance during field completion. For brevity, we will identify two
+different types of instantaneously feedback types and usage examples. 
+
+| Feedback type | Description | Example usage |
+|---------------|-----------------------------------------------------------------------------------------------------------------------------------------------|--------------------------|
+| Scaled | Communicates validation result on a scaled classification or rating system. <a href="/?path=/docs/forms-working-examples--password-form">See password form working example</a>. | Password strength meter. |
+| Binary | Communicates true or false validation result. | Username availability. |
+
+## Implementation for web sites/apps
+  
+> <a href="/?path=/docs/forms-form-errors--error-summary">See Form errors</a>.
+
+## Other form feedback
+
+### Form submission failure due to server-side or policy errors
+
+> <a href="/?path=/docs/components-alert--error">See Alerts</a> for more information
+
+### Successful form submission feedback
+
+> <a href="/?path=/docs/components-alert--success">See Alerts</a> for more information

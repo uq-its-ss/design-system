@@ -1,4 +1,5 @@
-@import '~@uq-uidf/core/src/scss/global';
+@use '~@uq-uidf/core/src/scss/foundation-global' as *;
+@use '~@uq-uidf/core/src/scss/global' as *;
 
 .story-color-swatch-list {
   display: flex;

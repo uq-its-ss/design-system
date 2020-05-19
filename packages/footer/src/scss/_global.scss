@@ -1,7 +1,6 @@
-@import '~@uq-uidf/core/src/scss/_global';
+@use '../../node_modules/@uq-uidf/core/src/scss/_global' as *;
 
 // Variables, functions, and mixins
 $site-footer-color: mix(white, $uq-purple, 75%);
 $site-footer-link-color: #fff;
 $site-footer-font-size: 0.875rem;
-@import '../../node_modules/foundation-sites/scss/foundation/components/inline-lists';

@@ -12,19 +12,19 @@ export default {
 };
 
 export const all = () => {
-  return document.createElement('div').innerHTML = allHTML;
+  return allHTML;
 };
 
 export const input = () => {
-  return document.createElement('div').innerHTML = inputHTML;
+  return inputHTML;
 };
 
 export const textArea = () => {
-  return document.createElement('div').innerHTML = textAreaHTML;
+  return textAreaHTML;
 };
 
 export const select = () => {
-  return document.createElement('div').innerHTML = selectHTML;
+  return selectHTML;
 };
 
 export const inlineValidationError = () => {

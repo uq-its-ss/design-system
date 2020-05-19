@@ -1,4 +1,4 @@
-import '../decorators/section.scss';
+import './section.scss';
 
 /**
  * Storybook decorator for wrapping whole stories.

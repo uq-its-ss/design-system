@@ -24,7 +24,7 @@
     "@storybook/html": "^5.3.17",
     "babel-loader": "^8.0.6",
     "fibers": "^4.0.2",
-    "sass": "^1.23.6",
+    "sass": "^1.26.5",
     "sass-loader": "^8.0.0",
     "ts-loader": "^6.2.1",
     "typescript": "^3.8.2"

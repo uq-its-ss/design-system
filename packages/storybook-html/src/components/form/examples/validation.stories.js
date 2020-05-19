@@ -1,5 +1,5 @@
 import { useEffect } from '@storybook/client-api';
-import namedSection from '../../../decorators/section.js';
+import namedSection from '../../../../.storybook/decorators/section.js';
 import docs from './validation.docs.mdx';
 
 import passwordResetInit from './password-reset.es6';

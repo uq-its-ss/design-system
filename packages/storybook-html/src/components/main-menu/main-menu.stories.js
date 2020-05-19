@@ -1,7 +1,5 @@
 import { useEffect } from '@storybook/client-api';
-
-// import decorators
-import namedSection from '../../decorators/section.js';
+import expandedStory from '../../../.storybook/decorators/expanded.js';
 
 // import styles
 import './main-menu.scss';
@@ -13,14 +11,17 @@ import mainMenuCreate from '@uq-uidf/main-menu/src/js/main-menu.es6';
 import mainMenuHTML from './main-menu.html';
 
 export default {
-  title: 'Components/Main menu'
+  title: 'Components/Main menu',
+  decorators: [expandedStory]
 };
 
 export const mainMenu = () => {
   useEffect(() => {
-    var menu = new mainMenuCreate();  
+    new mainMenuCreate();
   });
-  const content = namedSection('Main menu', mainMenuHTML);
-  content.classList.add('story-section--main-menu');
-  return content;
+  return mainMenuHTML;
 };
+
+mainMenu.story = {
+  name: "Default (JS)"
+}

@@ -1,3 +1,5 @@
+import expandedStory from '../../../.storybook/decorators/expanded.js';
+
 // import styles
 import './footer.scss';
 
@@ -5,7 +7,8 @@ import './footer.scss';
 import footerHTML from './footer.html';
 
 export default {
-    title: 'Components/Footer'
+    title: 'Components/Footer',
+    decorators: [expandedStory]
 };
 
 export const footer = () => {

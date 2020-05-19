@@ -1,5 +1,4 @@
-// import decorators
-import namedSection from '../../decorators/section.js';
+import expandedStory from '../../../.storybook/decorators/expanded.js';
 
 // define the uq-header custom component
 import {defineCustomElements as defineUQFooter} from '@uq-uidf/footer-classic/component/dist/cjs/loader.cjs';
@@ -12,9 +11,10 @@ import './style.scss';
 import footerHTML from './footer.html';
 
 export default {
-  title: 'Components/Footer/Classic'
+  title: 'Components/Footer/Classic',
+  decorators: [expandedStory]
 };
 
 export const footer = () => {
-  return namedSection('Footer (classic)', footerHTML);
+  return footerHTML;
 };

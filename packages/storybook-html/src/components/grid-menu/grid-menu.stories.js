@@ -1,8 +1,5 @@
 import { useEffect } from '@storybook/client-api';
 
-// import decorators
-import namedSection from '../../decorators/section';
-
 // import styles
 import './grid-menu.scss';
 
@@ -18,7 +15,7 @@ export default {
 };
 
 export const all = () => {
-  return namedSection('Grid menu', allHTML);
+  return allHTML;
 };
 
 all.story = {
@@ -30,5 +27,9 @@ export const equalised = () => {
     var equaliseGridMenu = new gridMenuEqualiser('.grid-menu--equalised>a');
     equaliseGridMenu.align();
   });
-  return namedSection('Using the equaliser script', equalisedHTML);
+  return equalisedHTML;
+};
+
+equalised.story = {
+  name: "Equalised (JS)"
 };

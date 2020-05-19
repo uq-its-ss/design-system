@@ -1,5 +1,6 @@
 // import decorators
-import namedSection from '../../decorators/section.js';
+import expandedStory from '../../../.storybook/decorators/expanded.js';
+import namedSection from '../../../.storybook/decorators/section.js';
 
 // import styles
 import './core.scss';
@@ -16,6 +17,10 @@ export default {
 
 export const colors = () => {
   return namedSection("Colours", coloursHTML);
+};
+
+colors.story = {
+  decorators: [expandedStory]
 };
 
 export const typography = () => {

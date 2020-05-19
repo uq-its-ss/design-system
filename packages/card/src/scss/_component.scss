@@ -1,4 +1,7 @@
-@import "global";
+@use '../../node_modules/@uq-uidf/core/src/scss/_foundation-global' as *;
+@use "../../node_modules/@uq-uidf/core/src/scss/global" as *;
+@use "global" as *;
+@import "../../node_modules/font-awesome/scss/mixins";
 
 // Cards
 // Used in the Card Grid component.
@@ -210,7 +213,7 @@
       display: -webkit-box;
       font-size: $base-font-size;
       line-height: $base-line-height;
-      max-height: $base-font-size * $base-line-height-ratio * $card-summary-lines-to-show; // Fallback for non-webkit.
+      max-height: $base-font-size * $compass-base-line-height-ratio * $card-summary-lines-to-show; // Fallback for non-webkit.
       -webkit-line-clamp: $card-summary-lines-to-show;
       -webkit-box-orient: vertical;
       overflow: hidden;

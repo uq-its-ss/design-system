@@ -1,5 +1,6 @@
 // Variables, functions, and mixins
-@import "~@uq-uidf/core/src/scss/_global.scss";
+@use '../../node_modules/@uq-uidf/core/src/scss/_foundation-global' as *;
+@use '../../node_modules/@uq-uidf/core/src/scss/_global' as *;
 
 $linked-list-color: $link-color;
 $linked-list-color-hover: #fff;

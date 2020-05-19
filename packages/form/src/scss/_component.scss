@@ -1,5 +1,8 @@
-@import '_global.scss';
-@import '_legacy.scss';
+@use '../../node_modules/@uq-uidf/core/src/scss/_foundation-global' as *;
+@use '../../node_modules/@uq-uidf/core/src/scss/_global' as *; 
+@use 'global' as *;
+@import "../../node_modules/font-awesome/scss/mixins";
+@import 'legacy';
 
 // Variants:
 // .form--transparent-fieldsets - Removes the default styling applied to fieldsets.

@@ -57,10 +57,10 @@ $data-svg-prefix:'data:image/svg+xml;utf-8,';
     &.uq-icon--light {
       background: url( $data-svg-prefix + get-icon( #{$name}, $icon-white ) ) no-repeat;
     }
-    &.uq-icon--#{$name}.uq-icon--dark {
+    &.uq-icon--dark {
       background: url( $data-svg-prefix + get-icon( #{$name}, $icon-black ) ) no-repeat;
     }
-    &.uq-icon--#{$name}.uq-icon--blue {
+    &.uq-icon--blue {
       background: url( $data-svg-prefix + get-icon( #{$name}, $icon-blue ) ) no-repeat;
 
       &:hover {

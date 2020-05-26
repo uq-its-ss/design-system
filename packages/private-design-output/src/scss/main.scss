@@ -12,7 +12,8 @@
 @use 'form/src/scss/component' as form;
 @use 'grid-menu/src/scss/component' as grid-menu;
 @use 'header-classic/src/scss/component' as header-classic;
-@use 'icon/src/scss/component' as icon;
+// Icons make the file too big!!
+// @use 'icon/src/scss/component' as icon;
 @use 'lists/src/scss/component' as lists;
 @use 'main-menu/src/scss/component' as main-menu;
 @use 'pane/src/scss/component' as pane;

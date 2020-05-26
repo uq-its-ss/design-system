@@ -1,0 +1,19 @@
+@use 'core/src/scss/component' as core with (
+  $uq-font-path: "../fonts"
+);
+@use 'body/src/scss/component' as body;
+@use 'accordion/src/scss/component' as accordion;
+@use 'alert/src/scss/component' as alert;
+@use 'blockquote/src/scss/component' as blockquote;
+@use 'breadcrumb/src/scss/component' as breadcrumb;
+@use 'button/src/scss/component' as button;
+@use 'card/src/scss/component' as card;
+@use 'footer/src/scss/component' as footer;
+@use 'form/src/scss/component' as form;
+@use 'grid-menu/src/scss/component' as grid-menu;
+@use 'header-classic/src/scss/component' as header-classic;
+@use 'icon/src/scss/component' as icon;
+@use 'lists/src/scss/component' as lists;
+@use 'main-menu/src/scss/component' as main-menu;
+@use 'pane/src/scss/component' as pane;
+@use 'tabs/src/scss/component' as tabs;

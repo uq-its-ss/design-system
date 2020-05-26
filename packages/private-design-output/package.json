@@ -10,14 +10,6 @@
   },
   "homepage": "https://github.com/uq-its-ss/user-interface-development-framework#readme",
   "license": "ISC",
-  "main": "lib/private-design-output.js",
-  "directories": {
-    "lib": "lib",
-    "test": "__tests__"
-  },
-  "files": [
-    "lib"
-  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/uq-its-ss/user-interface-development-framework.git"
@@ -29,7 +21,33 @@
     "url": "https://github.com/uq-its-ss/user-interface-development-framework/issues"
   },
   "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "fibers": "^5.0.0",
     "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-uglify": "^3.0.2",
     "sass": "^1.26.5"
+  },
+  "dependencies": {
+    "@uq-uidf/accordion": "^0.0.0",
+    "@uq-uidf/alert": "^0.0.0",
+    "@uq-uidf/blockquote": "^0.0.0",
+    "@uq-uidf/body": "^0.0.0",
+    "@uq-uidf/breadcrumb": "^0.0.0",
+    "@uq-uidf/button": "^0.0.0",
+    "@uq-uidf/card": "^0.0.0",
+    "@uq-uidf/core": "^0.0.0",
+    "@uq-uidf/footer": "^0.0.0",
+    "@uq-uidf/footer-classic": "^0.0.0",
+    "@uq-uidf/form": "^0.0.0",
+    "@uq-uidf/grid-menu": "^0.0.0",
+    "@uq-uidf/header-classic": "^0.0.0",
+    "@uq-uidf/icon": "^0.0.0",
+    "@uq-uidf/lists": "^0.0.0",
+    "@uq-uidf/main-menu": "^0.0.0",
+    "@uq-uidf/pane": "^0.0.0",
+    "@uq-uidf/tabs": "^0.0.0",
+    "font-awesome": "^4.7.0"
   }
 }

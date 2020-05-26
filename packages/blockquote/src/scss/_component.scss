@@ -1,5 +1,7 @@
 @use 'global' as *;
 
+$image-path: '../images' !default;
+
 /* Blocks */
 .blockquote {
 	border: none;
@@ -57,7 +59,7 @@
 
 .blockquote.blockquote--quotemark::before {
 	background-color: transparent;
-	background-image: url('~@uq-uidf/blockquote/src/images/icon-open-doublequote-light.svg');
+	background-image: url('#{$image-path}/icon-open-doublequote-light.svg');
 	background-size: cover;
 	display: inline-block;
 	fill: #000;
@@ -71,11 +73,11 @@
 }
 
 .blockquote.blockquote--light.blockquote--quotemark::before {
-	background-image: url('~@uq-uidf/blockquote/src/images/icon-open-doublequote-light.svg');
+	background-image: url('#{$image-path}/icon-open-doublequote-light.svg');
 }
 
 .blockquote.blockquote--dark.blockquote--quotemark::before {
-	background-image: url('~@uq-uidf/blockquote/src/images/icon-open-doublequote-dark.svg');
+	background-image: url('#{$image-path}/icon-open-doublequote-dark.svg');
 }
 
 .blockquote.blockquote--boxed.blockquote--quotemark::before {

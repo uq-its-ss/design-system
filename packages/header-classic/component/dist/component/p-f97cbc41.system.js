@@ -1,1 +1,0 @@
-System.register(["./p-b14cec94.system.js"],(function(){"use strict";var e,s;return{setters:[function(t){e=t.p;s=t.b}],execute:function(){e().then((function(e){return s([["p-blbxp9im.system",[[4,"uq-header-classic",{showGlobalMenu:[4,"show-global-menu"],showSearch:[4,"show-search"],value:[32]}],[4,"uq-global-menu-classic"]]]],e)}))}}}));

@@ -1,1 +1,0 @@
-import{p as a,b as s}from"./p-61215a86.js";a().then(a=>s([["p-mtgfjn70",[[4,"uq-header-classic",{showGlobalMenu:[4,"show-global-menu"],showSearch:[4,"show-search"],value:[32]}],[4,"uq-global-menu-classic"]]]],a));

@@ -1,11 +1,11 @@
 {
-  "name": "@uq-uidf/blockquote",
+  "name": "@uq-uidf/pagination",
   "version": "0.0.0",
   "description": "> TODO: description",
   "author": "Timmy George <timmy.george@uq.edu.au>",
   "homepage": "https://github.com/uq-its-ss/user-interface-development-framework#readme",
   "license": "ISC",
-  "main": "lib/blockquote.js",
+  "main": "lib/pagination.js",
   "directories": {
     "dist": "dist",
     "lib": "lib",

@@ -7,13 +7,11 @@
   "license": "ISC",
   "main": "lib/pagination.js",
   "directories": {
-    "dist": "dist",
     "lib": "lib",
     "src": "src",
     "test": "__tests__"
   },
   "files": [
-    "dist/*",
     "lib/*",
     "src/*"
   ],

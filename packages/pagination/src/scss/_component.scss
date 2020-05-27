@@ -1,0 +1,44 @@
+@import '_global.scss';
+
+/* Pagination */
+.pagination {
+	display: block;
+
+	&__item {
+		display: inline-block;
+		list-style: none;
+
+		a {
+			font-size: 1rem;
+			font-weight: normal;
+			padding: 0px 8px;
+			color: $color-blue;
+			text-decoration: none;
+
+			&:hover {
+				color: $color-blue-dark;
+				text-decoration: underline;
+			}
+		}
+
+		&--current {
+
+			a {
+				font-weight: bold;
+				color: $color-black;
+
+				&:hover {
+					color: $color-black;
+					text-decoration: none;
+					cursor: none;
+				}
+			}
+		}
+	}
+
+	&__ellipsis {
+		display: inline-block;
+		list-style: none;
+		color: $color-black;
+	}
+}

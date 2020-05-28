@@ -10,13 +10,13 @@
 
 		a {
 			font-size: 1rem;
-			font-weight: normal;
+			font-weight: 300;
 			padding: 0px 8px;
-			color: $color-blue;
+			color: $link-color;
 			text-decoration: none;
 
 			&:hover {
-				color: $color-blue-dark;
+				color: $link-hover-color;
 				text-decoration: underline;
 			}
 		}
@@ -24,11 +24,11 @@
 		&--current {
 
 			a {
-				font-weight: bold;
-				color: $color-black;
+				font-weight: 500;
+				color: $uq-black;
 
 				&:hover {
-					color: $color-black;
+					color: $uq-black;
 					text-decoration: none;
 					cursor: none;
 				}
@@ -39,6 +39,6 @@
 	&__ellipsis {
 		display: inline-block;
 		list-style: none;
-		color: $color-black;
+		color: $uq-black;
 	}
 }

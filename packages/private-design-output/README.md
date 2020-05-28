@@ -1,11 +1,24 @@
 # `private-design-output`
 
-> TODO: description
+> Generate a flat distribution of the UIDF
 
-## Usage
+## Modify to achieve desired output
 
+Modify the `src/js/main.js` and `src/scss/main.scss` files to customise your
+output. Please consider that other users of this package may require resources
+that you do not — so be careful when deleting contents if you intend to commit
+changes.
+
+## Run tasks
+
+From this package directory, run:
+
+```bash
+gulp
 ```
-const privateDesignOutput = require('private-design-output');
 
-// TODO: DEMONSTRATE API
-```
+## The kitchen sink
+
+The intention is that the `dist/kitchen-sink.html` file gets better with time.
+Please contribute any additional examples you might require to the file if they
+do not yet exist.

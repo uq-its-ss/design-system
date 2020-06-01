@@ -1,4 +1,5 @@
-@import '_global.scss';
+@use "../../node_modules/@uq-uidf/core/src/scss/global" as *;
+@use 'global' as *;
 
 // Lists
 // For listing of content such as node teasers. It can be applied to <ul> and <div> elements alike.

@@ -1,7 +1,7 @@
 import expandedStory from '../../../.storybook/decorators/expanded.js';
 
 // define the uq-header custom component
-import {defineCustomElements as defineUQHeader} from '@uq-uidf/header-classic/component/dist/cjs/loader.cjs';
+import {defineCustomElements as defineUQHeader} from '@uq-uidf/header-classic/component/dist/custom-elements-bundle';
 defineUQHeader();
 
 // import styles

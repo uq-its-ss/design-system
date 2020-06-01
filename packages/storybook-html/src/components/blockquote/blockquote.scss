@@ -1,4 +1,6 @@
-@import '~@uq-uidf/blockquote/src/scss/_component';
+@use '~@uq-uidf/blockquote/src/scss/_component' as * with (
+    $image-path: '~@uq-uidf/blockquote/src/images'
+);
 
 // Please don't apply random global styles here. You will affect other stories.
 // If you must style a story, please consider scoping to ensure no style 

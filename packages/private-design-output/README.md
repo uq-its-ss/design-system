@@ -11,7 +11,13 @@ changes.
 
 ## Run tasks
 
-From this package directory, run:
+Firstly, make sure you are in the correct working directory i.e.,
+
+```bash
+cd [path to repo...]/user-interface-development-framework/packages/private-design-output
+```
+
+From this directory, run:
 
 ```bash
 gulp

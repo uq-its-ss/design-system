@@ -27,7 +27,7 @@ function compileSCSS() {
       fiber: Fiber,
       includePaths: scssPaths,
       outputStyle: 'compressed'}).on('error', sass.logError))
-    .pipe(dest('./dist/css'))
+    .pipe(dest('./dist/css'));
 }
 
 // Export resources
@@ -36,7 +36,7 @@ function exportFontFiles() {
     './node_modules/font-awesome/fonts/**',
     './node_modules/@uq-uidf/core/src/fonts/uq-icons/font/**'
   ])
-  .pipe(dest('./dist/fonts'))
+  .pipe(dest('./dist/fonts'));
 }
 
 function exportImages() {
@@ -44,7 +44,12 @@ function exportImages() {
     './node_modules/@uq-uidf/core/src/images/**',
     './node_modules/@uq-uidf/blockquote/src/images/**'
   ])
-  .pipe(dest('./dist/images'))
+  .pipe(dest('./dist/images'));
+}
+
+function exportKitchenSink() {
+  return src('./src/kitchen-sink.html')
+  .pipe(dest('./dist'));
 }
 
 // Bundle Javascript modules
@@ -69,11 +74,12 @@ function bundleJS() {
   .pipe(dest('./dist/js'))
   .pipe(rename('uq-uidf.min.js'))
   .pipe(uglify())
-  .pipe(dest('./dist/js'))
+  .pipe(dest('./dist/js'));
 }
 
 exports.compileSCSS = compileSCSS;
 exports.exportFontFiles = exportFontFiles;
 exports.exportImages = exportImages;
+exports.exportKitchenSink = exportKitchenSink;
 exports.bundleJS = bundleJS;
-exports.default = parallel(compileSCSS, exportFontFiles, exportImages, bundleJS);
+exports.default = parallel(compileSCSS, exportFontFiles, exportImages, exportKitchenSink, bundleJS);

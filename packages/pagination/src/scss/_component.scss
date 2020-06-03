@@ -8,11 +8,11 @@
 		display: inline-block;
 		list-style: none;
 
-		a {
+		.pagination__link {
+			color: $link-color;
 			font-size: 1rem;
 			font-weight: 300;
 			padding: 0px 8px;
-			color: $link-color;
 			text-decoration: none;
 
 			&:hover {
@@ -23,22 +23,21 @@
 
 		&--current {
 
-			a {
-				font-weight: 500;
+			.pagination__link {
 				color: $uq-black;
+				font-weight: 500;
 
 				&:hover {
 					color: $uq-black;
 					text-decoration: none;
-					cursor: none;
 				}
 			}
 		}
 	}
 
 	&__ellipsis {
+		color: $uq-black;
 		display: inline-block;
 		list-style: none;
-		color: $uq-black;
 	}
 }

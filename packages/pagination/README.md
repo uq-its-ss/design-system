@@ -1,26 +1,64 @@
-# `blockquote`
+# `@uq-uidf/pagination`
 
-> TODO: description
+> Pagination component
 
 ## Usage
 
 ```
-const blockquote = require('blockquote');
+const pagination = require('pagination');
 
 // TODO: DEMONSTRATE API
 ```
 
-# Quote mark in Blockquote
-As there were nesting issues when using font icons for open quote marks (as per the brand design there is only open quotes) in blockquotes, we have now resolved to use SVG icons instead.
+### Installation
 
-As SVG are sourced in as a background-image in the CSS, we cannot change its colour property. As a work around we are using individual SVGs with different colours.
-
-At present SVG sprite hasn't been used for the different colour states of the quotes as some browsers like Safari doesn't support fragment identifiers within CSS.
-
-Example of a fragment identifier in CSS
-
-.title:after {
-    background-image: url(directory/path-to-svg-sprite.svg#arrow-right);
-}
-
+With Yarn:
+```shell
+yarn add @uq-uidf/pagination
 ```
+
+With NPM:
+```shell
+npm i @uq-uidf/pagination
+```
+
+### Stylesheets
+
+```scss
+// SCSS
+
+@import '~@uq-uidf/core/src/scss/_component';
+@import '~@uq-uidf/pagination/src/scss/_component';
+```
+
+```css
+/* CSS (PostCSS) */
+/* Watch this space... */
+```
+
+### Javascript
+
+This package has no Javascript component.
+
+---
+
+## Dependency graph
+
+Keep this graph up-to-date for development purposes.
+
+```shell
+@uq-uidf/pagination
+├─ @uq-uidf/core
+```
+
+---
+
+## Tests
+
+---
+
+## Release notes
+
+---
+
+## License

@@ -1,4 +1,20 @@
-<section class="text-center">
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+
+<Meta title="Components/Pagination/Pagination states" />
+
+### Pagination All
+
+<Preview withToolbar>
+  <Story height="180px" id="components-pagination--pagination" />
+</Preview>
+
+### Pagination First
+
+<Preview withToolbar>
+  <Story height="180px" id="components-pagination--pagination-first" />
+</Preview>
+
+```html
 <ul class="pagination">
     <li class="pagination__item pagination__item--first pagination__item--current"><a class="pagination__link" title="Go to page 1" href="#">1</a></li>
     <li class="pagination__item"><a class="pagination__link" title="Go to page 2" href="#">2</a></li>
@@ -11,7 +27,15 @@
     <li class="pagination__item pagination__item--go-next"><a class="pagination__link" title="Go to next page" href="#">next &rsaquo;</a></li>
     <li class="pagination__item pagination__item--go-last"><a class="pagination__link" title="Go to last page" href="#">last &raquo;</a></li>
 </ul>
+```
 
+### Pagination Middle
+
+<Preview withToolbar>
+  <Story height="180px" id="components-pagination--pagination-middle" />
+</Preview>
+
+```html
 <ul class="pagination">
     <li class="pagination__item pagination__item--go-first"><a class="pagination__link" title="Go to first page" href="#">&laquo; first</a></li>
     <li class="pagination__item pagination__item--go-previous"><a class="pagination__link" title="Go to previous page" href="#">&lsaquo; prev</a></li>
@@ -27,7 +51,15 @@
     <li class="pagination__item pagination__item--go-next"><a class="pagination__link" title="Go to next page" href="#">next &rsaquo;</a></li>
     <li class="pagination__item pagination__item--go-last"><a class="pagination__link" title="Go to last page" href="#">last &raquo;</a></li>
 </ul>
+```
 
+### Pagination Last
+
+<Preview withToolbar>
+  <Story height="180px" id="components-pagination--pagination-last" />
+</Preview>
+
+```html
 <ul class="pagination">
     <li class="pagination__item pagination__item--go-first"><a class="pagination__link" title="Go to first page" href="#">&laquo; first</a></li>
     <li class="pagination__item pagination__item--go-previous"><a class="pagination__link" title="Go to previous page" href="#">&lsaquo; prev</a></li>
@@ -40,4 +72,4 @@
     <li class="pagination__item"><a class="pagination__link" title="Go to page 20" href="#">20</a></li>
     <li class="pagination__item pagination__item--last pagination__item--current"><a class="pagination__link" title="Go to page 21" href="#">21</a></li>
 </ul>
-</section>
+```

@@ -6,10 +6,31 @@ import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
 
 Pagination, also known as paging, is the process of dividing a document into discrete pages, either electronic pages or printed pages.
 
-The Pagination component used here has various states and has display variants based on which page it displays. For instance, if the component is displaying the first page of a series of pages, the links 'first' and 'prev' are removed. 
-If the component is displaying the last page, the links 'last' and 'next' are removed. 
+## Pagination States
 
-The table below list's the classname's of the pagination component and what it does.
+The Pagination component used here has various states and has display variants based on which page it displays. For instance, if the component is displaying the first page of a series of pages, the links 'first' and 'prev' are removed. 
+If the component is displaying the last page, the links 'last' and 'next' are removed. See the instances below and its html code.
+
+### Pagination First
+
+<Preview withToolbar>
+  <Story height="180px" id="components-pagination--pagination-first" />
+</Preview>
+
+### Pagination Middle
+
+<Preview withToolbar>
+  <Story height="180px" id="components-pagination--pagination-middle" />
+</Preview>
+
+### Pagination Last
+
+<Preview withToolbar>
+  <Story height="180px" id="components-pagination--pagination-last" />
+</Preview>
+
+
+#### The table below list's the classname's of the pagination component and what it does.
 
 | Classname | Description | Result |
 |-----------|-------------|--------|
@@ -27,3 +48,4 @@ The table below list's the classname's of the pagination component and what it d
 | pagination__item--current | Applied to the child element that denotes the current page | - |
 | pagination&#95;&#95;item--first, pagination__item--current | Applied together to the child element that denotes the first page as the current page | Child elements with class 'pagination&#95;&#95;item--go-first', 'pagination&#95;&#95;item--go-previous', 'pagination&#95;&#95;ellipsis--left' are removed |
 | pagination&#95;&#95;item--last, pagination__item--current | Applied together to the child element that denotes the last page as the current page | Child elements with class 'pagination&#95;&#95;item--go-last', 'pagination&#95;&#95;item--go-next', 'pagination&#95;&#95;ellipsis--right' are removed |
+| pagination&#95;&#95;link | Applied to the child element of the child element pagination__item  | - |

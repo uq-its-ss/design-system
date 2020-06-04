@@ -1,0 +1,34 @@
+{
+  "name": "@uq-uidf/pagination",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "Timmy George <timmy.george@uq.edu.au>",
+  "homepage": "https://github.com/uq-its-ss/user-interface-development-framework#readme",
+  "license": "ISC",
+  "main": "lib/pagination.js",
+  "directories": {
+    "lib": "lib",
+    "src": "src",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib/*",
+    "src/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uq-its-ss/user-interface-development-framework.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/uq-its-ss/user-interface-development-framework/issues"
+  },
+  "dependencies": {
+    "@uq-uidf/core": "^0.0.0"
+  },
+  "peerDependencies": {
+    "@uq-uidf/core": "^0.0.0"
+  }
+}

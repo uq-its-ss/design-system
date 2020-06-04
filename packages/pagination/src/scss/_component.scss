@@ -1,0 +1,43 @@
+/* Pagination */
+@import "global";
+
+.pagination {
+	display: block;
+
+	&__item {
+		display: inline-block;
+		list-style: none;
+
+		.pagination__link {
+			color: $link-color;
+			font-size: 1rem;
+			font-weight: 300;
+			padding: 0 8px;
+			text-decoration: none;
+
+			&:hover {
+				color: $link-hover-color;
+				text-decoration: underline;
+			}
+		}
+
+		&--current {
+
+			.pagination__link {
+				color: $uq-black;
+				font-weight: 500;
+
+				&:hover {
+					color: $uq-black;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+
+	&__ellipsis {
+		color: $uq-black;
+		display: inline-block;
+		list-style: none;
+	}
+}

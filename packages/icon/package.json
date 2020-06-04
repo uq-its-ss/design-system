@@ -34,7 +34,8 @@
     "url": "git+https://github.com/uq-its-ss/user-interface-development-framework.git"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "generate": "postcss src/css/*.css --base src --dir temp"
   },
   "bugs": {
     "url": "https://github.com/uq-its-ss/user-interface-development-framework/issues"
@@ -44,5 +45,10 @@
   },
   "peerDependencies": {
     "@uq-uidf/core": "^0.0.0"
+  },
+  "devDependencies": {
+    "postcss-cli": "^7.1.1",
+    "postcss-inline-svg": "^4.1.0",
+    "postcss-mixins": "^6.2.3"
   }
 }

@@ -11,14 +11,26 @@ you intend to commit and propose changes.
 
 ## Run tasks
 
-Firstly, make sure you are in the correct working directory i.e.,
+Firstly, [install the Gulp CLI](https://gulpjs.com/docs/en/getting-started/quick-start/), if you haven't already.
+
+Then, make sure you are in the correct working directory i.e.
 
 ```bash
 cd [path to repo...]/user-interface-development-framework/packages/private-design-output
 ```
 
-From this directory, run:
+From this directory, you can run all the tasks:
 
 ```bash
 gulp
+```
+
+Or, you can run individual tasks:
+
+```bash
+gulp compileSCSS
+gulp exportFontFiles
+gulp exportImages
+gulp exportKitchenSink
+gulp bundleJS
 ```

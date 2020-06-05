@@ -4,10 +4,10 @@
 
 ## Modify to achieve desired output
 
-Modify the `src/js/main.js` and `src/scss/main.scss` files to customise your
-output. Please consider that other users of this package may require resources
-that you do not — so be careful when deleting contents if you intend to commit
-changes.
+Modify the `src/js/main.js`, `src/scss/main.scss`, and `src/kitchen-sink.html`
+files to customise your output. Please consider that other users of this package
+may require resources that you do not — so be careful when deleting contents if
+you intend to commit and propose changes.
 
 ## Run tasks
 
@@ -22,9 +22,3 @@ From this directory, run:
 ```bash
 gulp
 ```
-
-## The kitchen sink
-
-The intention is that the `dist/kitchen-sink.html` file gets better with time.
-Please contribute any additional examples you might require to the file if they
-do not yet exist.

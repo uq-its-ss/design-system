@@ -12,7 +12,7 @@
   line-height: 100%;
 }
 
-/* Mixer Includes ('folder_name', 'icon_name') */
+/* Mixer Includes - @include icon('folder_name', 'icon_name') */
 // Change below as required when svg icons are added, deleted or changed 
 
 @include icon('agriculture-and-environment', 'agriculture-machine-harvester-1');

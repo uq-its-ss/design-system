@@ -1,0 +1,42 @@
+@use '../../node_modules/@uq-uidf/core/src/scss/_foundation-global' as *;
+@use '../../node_modules/@uq-uidf/core/src/scss/_global' as *;
+@use "global" as *;
+
+//
+// Panel Panes: Block of colour with padding around content ususally the Page Title along with the breadcrumb.
+//
+// Variants:
+// .panel-pane - Adds grey background by default.
+// .panel-pane--white - Adds white background.
+
+@mixin panel-pane-white {
+  background: #fff;
+}
+
+%panel-pane,
+.panel-pane {
+  width: 100vw;
+  padding: 1.8rem;
+  margin-bottom: 1.5rem;
+  background: $panel-pane-shaded-bg;
+
+  &--white {
+    @include panel-pane-white;
+  }
+
+  &__title {
+    color: $panel-pane-title-color;
+    font-size: 2.438rem;
+    font-weight: 400;
+
+    // Used for no title pane style
+    &--hidden {
+      display: none;
+    }
+  }
+
+  // if sub-title exists reduce margin to pull it close to title
+  &__title + &__sub-title {
+    margin-top: -1rem;
+  }
+}

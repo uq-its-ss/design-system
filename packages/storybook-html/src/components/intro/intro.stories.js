@@ -1,12 +1,6 @@
 import { useEffect } from '@storybook/client-api';
 import expandedStory from '../../../.storybook/decorators/expanded.js';
 
-// define the uq-header and uq-footer custom web component
-// import {defineCustomElements as defineUQHeader} from '@uq-uidf/header-classic/component/dist/custom-elements-bundle';
-import {defineCustomElements as defineUQFooter} from '@uq-uidf/footer-classic/component/dist/cjs/loader.cjs';
-// defineUQHeader();
-defineUQFooter();
-
 // import scripts
 import mainMenu from '@uq-uidf/main-menu/src/js/main-menu.es6';
 import accordion from '@uq-uidf/accordion/src/js/accordion.es6';

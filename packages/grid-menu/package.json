@@ -22,10 +22,10 @@
   "license": "ISC",
   "main": "lib/grid-menu.js",
   "directories": {
-    "lib": "lib",
-    "test": "__tests__"
+    "lib": "lib"
   },
   "files": [
+    "lib/*",
     "src/*"
   ],
   "repository": {

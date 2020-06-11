@@ -8,15 +8,15 @@ ADS-Design team members.
 
 ## Key documents
 
-* Setup of development environment
+* Setup of development environment [in root README]
 * Styleguide-driven development (or CDD) with Storybook
+* Bundling
 * Example workflow?
-* Code standards (CSS, JS)
-* Additional training requirements
-  * JS ES6 & packages
+* Code standards (CSS, JS/ES6)
+* Training resources for ADS-Design
   * Storybook
   * FE Dev primer (video)
-  * ...
+  * JS packages & registries
 * Accessibility standards
 * [Future] Accessibility testing (tech stack)
 * [Future] Visual unit/regression testing

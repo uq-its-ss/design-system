@@ -16,23 +16,6 @@ With NPM:
 npm i @uq-uidf/breadcrumb
 ```
 
-### Stylesheets
-
-```scss
-// SCSS
-
-@import '~@uq-uidf/breadcrumb/src/scss/_component';
-```
-
-```css
-/* CSS (PostCSS) */
-/* Watch this space... */
-```
-
-### Javascript
-
-This package has no Javascript component.
-
 ---
 
 ## Dependency graph
@@ -41,15 +24,3 @@ This package has no Javascript component.
 @uq-uidf/breadcrumb
 └─ @uq-uidf/core
 ```
-
----
-
-## Tests
-
----
-
-## Release notes
-
----
-
-## License

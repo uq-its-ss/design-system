@@ -1,11 +1,26 @@
-# `button`
+# `@uq-uidf/button`
 
-> button component
+> Button component
 
 ## Usage
 
-```
-const button = require('button');
+### Installation
 
-// TODO: DEMONSTRATE API
+With Yarn:
+```shell
+yarn add @uq-uidf/button
+```
+
+With NPM:
+```shell
+npm i @uq-uidf/button
+```
+
+---
+
+## Dependency graph
+
+```shell
+@uq-uidf/button
+└─ @uq-uidf/core
 ```

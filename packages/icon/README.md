@@ -16,22 +16,6 @@ With NPM:
 npm i @uq-uidf/icon
 ```
 
-### Stylesheets
-
-```scss
-// SCSS (dart-sass)
-
-@import '~@uq-uidf/icon/src/scss/_component';
-```
-
-```css
-/* CSS (PostCSS) */
-/* Watch this space... */
-```
-
-### Javascript
-
-
 ---
 
 ## Dependency graph
@@ -40,15 +24,3 @@ npm i @uq-uidf/icon
 @uq-uidf/icon
 └─ @uq-uidf/core
 ```
-
----
-
-## Tests
-
----
-
-## Release notes
-
----
-
-## License

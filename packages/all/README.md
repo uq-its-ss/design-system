@@ -1,11 +1,17 @@
-# `all`
+# `@uq-uidf/all`
 
-> TODO: description
+> The UIDF, with pre-written imports. 
 
 ## Usage
 
-```
-const all = require('all');
+### Installation
 
-// TODO: DEMONSTRATE API
+With Yarn:
+```shell
+yarn add @uq-uidf/all
+```
+
+With NPM:
+```shell
+npm i @uq-uidf/all
 ```

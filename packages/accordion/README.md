@@ -16,32 +16,6 @@ With NPM:
 npm i @uq-uidf/accordion
 ```
 
-### Stylesheets
-
-```scss
-// SCSS (dart-sass)
-
-@import '~@uq-uidf/accordion/src/scss/_component';
-```
-
-```css
-/* CSS (PostCSS) */
-/* Watch this space... */
-```
-
-### Javascript
-
-Import the class:
-```js
-import accordions from '@uq-uidf/accordion/src/js/accordion.es6';
-```
-
-Instantiate a accordion object using the imported class:
-```js
-// default usage
-var workingAccordions = new accordion();
-```
-
 ---
 
 ## Dependency graph
@@ -50,15 +24,3 @@ var workingAccordions = new accordion();
 @uq-uidf/accordion
 └─ @uq-uidf/core
 ```
-
----
-
-## Tests
-
----
-
-## Release notes
-
----
-
-## License

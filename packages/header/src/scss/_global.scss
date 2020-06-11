@@ -2,14 +2,3 @@
 
 @use "../../node_modules/@uq-uidf/core/src/scss/global" as *;
 
-$site-header-bg: $uq-dark-purple;
-$site-header-color: #fff;
-$site-header-link-color: #fff;
-$site-footer-color: mix(white, $uq-purple, 75%);
-$site-global-menu-link-color: mix(white, $uq-dark-purple, 75%);
-
-$search-input-border-color: #ccc;
-
-$uq-gradient: linear-gradient(90deg, #51247a 0%, #56247a 60%, #61257d 80%, #962a8b 100%);
-$uq-dark-grey: #999490;
-$uq-dark-grey-20: tint($uq-dark-grey, 80%);

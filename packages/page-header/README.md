@@ -1,6 +1,6 @@
-# `@uq-uidf/panel-pane`
+# `@uq-uidf/page-header`
 
-> Panel Pane component
+> Page Header component
 
 ## Usage
 
@@ -8,12 +8,12 @@
 
 With Yarn:
 ```shell
-yarn add @uq-uidf/panel-pane
+yarn add @uq-uidf/page-header
 ```
 
 With NPM:
 ```shell
-npm i @uq-uidf/panel-pane
+npm i @uq-uidf/page-header
 ```
 
 ### Stylesheets
@@ -21,7 +21,7 @@ npm i @uq-uidf/panel-pane
 ```scss
 // SCSS
 
-@import '~@uq-uidf/panel-pane/src/scss/_component';
+@import '~@uq-uidf/page-header/src/scss/_component';
 ```
 
 ```css
@@ -37,7 +37,7 @@ This package has no Javascript component.
 ## Dependency graph
 
 ```shell
-@uq-uidf/panel-pane
+@uq-uidf/page-header
 └─ @uq-uidf/core
 ```
 

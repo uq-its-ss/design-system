@@ -1,7 +1,7 @@
 {
-  "name": "@uq-uidf/panel-pane",
+  "name": "@uq-uidf/page-header",
   "version": "0.0.0",
-  "description": "Panel Pane component",
+  "description": "Page Header component",
   "keywords": [
     "uq-uidf",
     "uq",
@@ -11,7 +11,7 @@
     "scss",
     "sass",
     "css",
-    "panel-pane"
+    "page-header"
   ],
   "author": {
     "name": "University of Queensland",

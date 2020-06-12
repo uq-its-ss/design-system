@@ -10,7 +10,7 @@
     background: $uq-purple-gradient;
     &__container {
         position: relative;
-        max-width: calc(1140px + 3rem);
+        max-width: 1140px;
         margin: 0 auto;
         padding: 0 1.5rem;
 
@@ -78,6 +78,76 @@
                         }
                     }
                 }
+            }
+        }
+
+        .nav-search {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height .25s,padding-top .25s,padding-bottom .25s;
+
+            &--open {
+                height: auto;
+                max-height: 50vh;
+                padding-top: .5rem;
+                padding-bottom: .5rem;
+            }
+
+            &__wrapper {
+                border: none;
+                margin: 0;
+                padding: 0;
+                margin-bottom: .5rem;
+            }
+
+            &__title {
+                font-family: $merriweather;
+                font-weight: 400;
+                font-style: italic;
+                color: white;
+                font-size: 1.25rem;
+            }
+
+            &__scope {
+
+                display: inline;
+
+                & .nav-search__radio-wrapper {
+                    display: inline-block;
+                }
+
+                & .form-item {
+                    display: inline-block;
+                    padding-top: .25rem;
+                    margin-top: .5rem;
+                                
+                    @media #{$large-up} {
+                        margin-top: 0;
+                        padding-top: 0;
+                        padding-left: 1rem;
+                    }
+                    & label {
+                        color: white;
+                        display: inline;
+                        font-size: .875rem;
+                    }
+                }
+            }
+
+
+            .hidden {
+                display: none;
+            }
+
+            .visually-hidden {
+                position: absolute!important;
+                overflow: hidden;
+                clip: rect(1px,1px,1px,1px);
+                width: 1px;
+                height: 1px;
+                word-wrap: normal;
+                margin: 0;
+                padding: 0;
             }
         }
     }

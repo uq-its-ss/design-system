@@ -16,45 +16,46 @@
                     <li><a href="https://www.library.uq.edu.au/" class="gtm-processed">Library</a></li>
                     <li><a href="https://giving.uq.edu.au/" class="gtm-processed">Give now</a></li>
                     <li><a href="https://my.uq.edu.au/" class="gtm-processed">my.UQ</a></li>
-                    <li class="menu-global__search-toggle"><button class="js-global-search-toggle button button--icon-only icon--white processed icon--standard--search">Search</button></li>
+                    <li class="menu-global__search-toggle"><button class="search-toggle__button">Search</button></li>
                 </ul>
             </nav>
         </div>
-        <!-- <div class="js-global-search header__search">
-            <form data-gtm-category="Header search bar" data-gtm-action="Text search" data-gtm-form-action="" class="header__search__form" data-drupal-selector="uq-global-search" action="https://www.uq.edu.au/search/" method="get" id="uq-global-search" accept-charset="UTF-8">
-                <fieldset data-drupal-selector="edit-as-sitesearch" id="edit-as-sitesearch--wrapper" class="fieldgroup form-composite js-form-item form__item js-form-wrapper form__wrapper">
+        <div class="nav-search nav-search--open">
+            <form class="nav-search__form" action="https://www.uq.edu.au/search/" method="get" id="uq-search" accept-charset="UTF-8">
+                <fieldset id="edit-as-sitesearch--wrapper" class="nav-search__wrapper">
                     <legend class="hidden">
-                        <span class="fieldset__legend">What are you looking for?</span>
+                        <span class="nav-search__title">What are you looking for?</span>
                     </legend>
-                    <span class="text--emphasis text--xl text--white fieldset__legend">What are you looking for?</span>
-                    <div class="fieldset__wrapper">
-                        <div id="edit-as-sitesearch" class="header__search__radios">
-                            <div class="js-form-item form-item js-form-type-radio form-item-as-sitesearch js-form-item-as-sitesearch">
-                                <input data-drupal-selector="edit-as-sitesearch-" type="radio" id="edit-as-sitesearch-" name="as_sitesearch" value="" class="form-radio">
-                                <label for="edit-as-sitesearch-" class="option">
+                    <span class="nav-search__title">What are you looking for?</span>
+                    <div class="nav-search__scope">
+                        <div class="nav-search__radio-wrapper">
+                            <div class="form-item">
+                                <input type="radio" id="global-site-search" name="site-search-scope" value="" class="form-radio">
+                                <label for="global-site-search" class="option">
                                   Search all UQ websites
                                 </label>
                             </div>
-                            <div class="js-form-item form-item js-form-type-radio form-item-as-sitesearch js-form-item-as-sitesearch">
-                                <input data-drupal-selector="edit-as-sitesearch-httpsfuture-studentsuqeduau" type="radio" id="edit-as-sitesearch-httpsfuture-studentsuqeduau" name="as_sitesearch" value="https://future-students.uq.edu.au/" checked="checked" class="form-radio">
-                                <label for="edit-as-sitesearch-httpsfuture-studentsuqeduau" class="option">
+                            <div class="form-item">
+                                <input type="radio" id="local-site-search" name="site-search-scope" value="https://xyz.uq.edu.au/" checked="checked" class="form-radio">
+                                <label for="local-site-search" class="option">
                                   Search this website (xyz.uq.edu.au)
                                 </label>
                             </div>
                         </div>
-
                     </div>
+                   
                 </fieldset>
-                <div class="form__item">
+                <div class="nav-search__query">
                     <span class="input__text--inline-button select--wide">
-                      <label for="edit-q" class="visually-hidden">
-                        Search term
-                      </label>
-                      <input data-gtm-trigger="change" data-gtm-form-search="" data-drupal-selector="edit-q" type="text" id="edit-q" name="q" value="" size="60" maxlength="128" class="form-text gtm-processed">
-                      <span class="button button--submit-icon button--tertiary button--icon-only icon--standard--search">
+                        <label for="edit-q" class="visually-hidden">
+                            Search term
+                        </label>
+                        <input data-gtm-trigger="change" data-gtm-form-search="" data-drupal-selector="edit-q" type="text" id="edit-q" name="q" value="" size="60" maxlength="128" class="form-text gtm-processed">
+                        <span class="button button--submit-icon button--tertiary button--icon-only icon--standard--search">
                         <input data-gtm-trigger="click" data-drupal-selector="edit-submit" type="submit" id="edit-submit--2" name="op" value="Search" class="button js-form-submit form-submit gtm-processed">    </span>
-                      </span>
+                    </span>
                 </div>
+                
             </form>
 
             <nav class="header__secondary-nav nav nav--inline">
@@ -69,6 +70,6 @@
                     <li><a href="https://my.uq.edu.au/" class="gtm-processed">my.UQ</a></li>
                 </ul>
             </nav>
-        </div> -->
+        </div>
     </div>
 </header>

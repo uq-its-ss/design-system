@@ -8,7 +8,7 @@ import pageHeaderHTML from './page-header.html';
 import docs from './page-header.docs.mdx';
 
 export default {
-  title: 'Components/Page Header',
+  title: 'Components/Page header',
   parameters: {
     docs: {
       page: docs

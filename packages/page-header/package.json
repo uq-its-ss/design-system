@@ -1,6 +1,7 @@
 {
-  "name": "@uq-uidf/main-menu",
+  "name": "@uq-uidf/page-header",
   "version": "0.0.0",
+  "description": "Page Header component",
   "keywords": [
     "uq-uidf",
     "uq",
@@ -10,7 +11,6 @@
     "scss",
     "sass",
     "css",
-    "navigation",
     "page-header"
   ],
   "author": {
@@ -38,10 +38,7 @@
     "url": "https://github.com/uq-its-ss/user-interface-development-framework/issues"
   },
   "dependencies": {
-    "@uq-uidf/core": "^0.0.0",
-    "domready": "^1.0.8",
-    "font-awesome": "^4.7.0",
-    "foundation-sites": "^5.5.3"
+    "@uq-uidf/core": "^0.0.0"
   },
   "peerDependencies": {
     "@uq-uidf/core": "^0.0.0"

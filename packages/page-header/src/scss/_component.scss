@@ -1,0 +1,17 @@
+@use '../../node_modules/@uq-uidf/core/src/scss/_foundation-global' as *;
+@use '../../node_modules/@uq-uidf/core/src/scss/_global' as *;
+@use 'global' as *;
+
+// Page Header: Block of background colour with padding around content ususally the page title along with the breadcrumb.
+
+.page {
+  &__header {
+    width: 100vw;
+    padding: 1.8rem;
+    margin-bottom: 1.5rem;
+    background: $page-header-shaded-bg;
+  }
+  &__title {
+    font-size: 2.438rem;
+  }
+}

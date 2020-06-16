@@ -4,6 +4,14 @@ import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
 
 # Form validation
 
+UQ has an assortment of form UI on third-party systems as well as in-house
+applications. Regardless of what UQ system a person is using, a consistent
+approach to the UX of form-filling—wherever possible—should be applied.
+[Client-side form validation](https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation),
+when paired with accessible form design, is an essential part of providing ease
+of use when completing forms. So here are some basic recommendations for form
+validation.
+
 ## Glossary
 
 <dl>
@@ -16,7 +24,9 @@ import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
 <details>
   <summary>Read more</summary>
 
-  Throughout this document, references will be made to certain [HTML DOM events](https://www.w3schools.com/jsref/dom_obj_event.asp) that should be used to trigger validation functions.
+  Throughout this document, references will be made to certain
+  [HTML DOM events](https://www.w3schools.com/jsref/dom_obj_event.asp) that
+  should be used to trigger validation functions.
 
   | Event  | Description |
   |--------|-------------|
@@ -31,8 +41,7 @@ import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
 ### Include both an error summary _and_ inline validation messages
 
 Display an error summary _above/before_ the form when the user submits the form
-(_on submit_). This will mean that the user will be warned of any missing
-form-filling requirements.
+(_on submit_).
 
 <Preview withToolbar>
   <Story height="180px" id="forms-form-errors--error-summary" />

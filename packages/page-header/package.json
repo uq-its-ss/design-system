@@ -11,7 +11,7 @@
     "scss",
     "sass",
     "css",
-    "page-header"
+    "page header"
   ],
   "author": {
     "name": "University of Queensland",
@@ -21,10 +21,10 @@
   "homepage": "https://github.com/uq-its-ss/user-interface-development-framework#readme",
   "license": "ISC",
   "directories": {
-    "lib": "lib",
-    "test": "__tests__"
+    "lib": "lib"
   },
   "files": [
+    "lib/*",
     "src/*"
   ],
   "repository": {

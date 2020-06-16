@@ -1,4 +1,4 @@
-# `@uq-uidf/accordion`
+# `@uq-uidf/icon`
 
 > Icon component
 

@@ -1,6 +1,11 @@
-# UQ User Interface Development Framework
+# UQ User Interface Development Framework (UIDF)
 
-## Table of contents
+> Documentation for contributors. If you want to *use* the UIDF in your project,
+> please visit our docs at: [ui.uq.edu.au](#) **(TODO: confirm domain)**.
+
+--------------------------------------------------------------------------------
+
+## Contents
 
 - [About](#about)
 - [Setup instructions](#setup-instructions)
@@ -50,6 +55,8 @@ $ npm i
 $ npx lerna bootstrap
 ```
 
+**[⬆ back to top](#contents)**
+
 ## Using Storybook as a styleguide for component development
 
 1. Change to the `storybook-html` package directory
@@ -60,3 +67,5 @@ $ cd packages/storybook-html
 ```shell
 $ npm run storybook
 ```
+
+**[⬆ back to top](#contents)**

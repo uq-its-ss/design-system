@@ -23,12 +23,15 @@
 - Package docs
   - [`icons`](./packages/icon/MAINTENANCE.md)
   - [`private-design-output`](./packages/private-design-output#readme)
+  - [`storybook-html`](./packages/storybook-html#readme)
 - [FUTURE] Accessibility testing
 - [FUTURE] Visual unit/regression testing
 - [FUTURE] Release management
   - Publishing Storybook
   - Publishing packages
 - [FUTURE] CI/CD
+
+--------------------------------------------------------------------------------
 
 ## About
 

@@ -26,6 +26,8 @@ class header {
     this.toggle.classList.toggle('icon--standard--close');
     this.search.classList.toggle('nav-search--open');
     console.log(this.search);
+
+    
   }
 };
 

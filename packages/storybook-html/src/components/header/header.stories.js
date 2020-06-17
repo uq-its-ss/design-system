@@ -23,6 +23,6 @@ export const header = () => {
 };
 
 header.story = {
-    name: "Default (JS)"
+    name: "Header"
   }
   

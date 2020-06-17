@@ -15,32 +15,3 @@ With NPM:
 ```shell
 npm i @uq-uidf/core
 ```
-
-### Stylesheets
-
-```scss
-// SCSS
-
-@import '~@uq-uidf/core/src/scss/_component';
-```
-
-```css
-/* CSS (PostCSS) */
-/* Watch this space... */
-```
-
-### Javascript
-
-This package has no Javascript component.
-
----
-
-## Tests
-
----
-
-## Release notes
-
----
-
-## License

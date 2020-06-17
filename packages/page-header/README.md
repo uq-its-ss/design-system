@@ -16,22 +16,6 @@ With NPM:
 npm i @uq-uidf/page-header
 ```
 
-### Stylesheets
-
-```scss
-// SCSS
-
-@import '~@uq-uidf/page-header/src/scss/_component';
-```
-
-```css
-
-```
-
-### Javascript
-
-This package has no Javascript component.
-
 ---
 
 ## Dependency graph
@@ -40,15 +24,3 @@ This package has no Javascript component.
 @uq-uidf/page-header
 └─ @uq-uidf/core
 ```
-
----
-
-## Tests
-
----
-
-## Release notes
-
----
-
-## License

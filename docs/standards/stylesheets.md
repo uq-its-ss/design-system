@@ -7,7 +7,7 @@
 TODO: create a working build system.
 The SASS development files are used to generate resources for the package user.
 
-| @uq-uidf/[package]/src/scss |                                                              |
+| @uq-uidf/[package folder name]/src/scss |                                                              |
 | --------------------------- | ------------------------------------------------------------ |
 | ⤵️ _component.scss           | main stylesheet for the component                            |
 | ⤵️ _globals.scss             | variables, mixins, documentation template, documentation of dependencies |
@@ -28,6 +28,3 @@ For the most basic use case, we have CSS files:
 | --------------------------- | --------------------------------- |
 | ⤵️ uq-uidf-[package].css     | main stylesheet for the component |
 | ⤵️ uq-uidf-[package].min.css | minified                          |
-
-## PostCSS
-> Watch this space.

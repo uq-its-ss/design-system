@@ -1,13 +1,17 @@
 # UQ User Interface Development Framework (UIDF)
 
-> Documentation for contributors. If you want to *use* the UIDF in your project,
-> please visit our docs at: [ui.uq.edu.au](#) **(TODO: confirm domain)**.
+Developing the UIDF. This project is managed using
+[Lerna](https://github.com/lerna/lerna). The target audience of this
+documentation is currently limited to ADS-Design members at this stage.
+
+> This documentation for contributors. If you want to *use* the UIDF in your
+> project, please visit our docs at:
+> [design-system.uq.edu.au](https://design-system.uq.edu.au) to get started.
 
 --------------------------------------------------------------------------------
 
 ## Contents
 
-- [About](#about)
 - [Setup instructions](#setup-instructions)
 - [Using Storybook as a styleguide for component development](#using-storybook-as-a-styleguide-for-component-development)
 - [Creating a new package](./docs/create-a-package.md)
@@ -32,12 +36,6 @@
 - [FUTURE] CI/CD
 
 --------------------------------------------------------------------------------
-
-## About
-
-Developing the UIDF. This project is managed using
-[Lerna](https://github.com/lerna/lerna). The target audience of this
-documentation is currently limited to ADS-Design members at this stage.
 
 ## Setup instructions
 

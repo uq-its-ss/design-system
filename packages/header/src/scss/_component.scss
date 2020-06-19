@@ -121,17 +121,16 @@
                 display: inline;
 
                 & .nav-search__radio-wrapper {
-                    display: inline-block;
+                    @media #{$medium-up} {
+                        display: inline-block;
+                    }
                 }
 
                 & .form-item {
-                    display: inline-block;
-                    padding-top: .25rem;
                     margin-top: .5rem;
                                 
-                    @media #{$large-up} {
-                        margin-top: 0;
-                        padding-top: 0;
+                    @media #{$medium-up} {
+                        display: inline-block;
                         padding-left: 1rem;
                     }
                     & label {

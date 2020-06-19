@@ -11,7 +11,7 @@ import headerCreate from '@uq-uidf/header/src/js/header.es6';
 import headerHTML from './header.html';
 
 export default {
-    title: 'Components/Header',
+    title: 'Components/Header/Header',
     decorators: [expandedStory]
 };
 
@@ -23,6 +23,7 @@ export const header = () => {
 };
 
 header.story = {
-    name: "Header"
+    name: "Header" 
   }
   
+

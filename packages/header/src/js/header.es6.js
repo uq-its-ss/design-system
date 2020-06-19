@@ -22,8 +22,7 @@ class header {
   }
 
   handleToggle() {
-    this.toggle.classList.toggle('icon--standard--search');
-    this.toggle.classList.toggle('icon--standard--close');
+    this.toggle.classList.toggle('search-toggle__button--icon-close');
     this.search.classList.toggle('nav-search--open');
     console.log(this.search);
 

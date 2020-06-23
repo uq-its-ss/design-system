@@ -1,3 +1,5 @@
+**[⬅ Back to root](/../../#readme) / [Staff training](training.md)**
+
 # Javascript packages
 
 > If you haven't created and published Javascript packages before (e.g. NPM, 
@@ -5,11 +7,11 @@
 
 ## Javascript packages introductory reading
 
-TODO
+[TODO]
 
 ## Javascript package registries
 
-TODO
+[TODO]
 
 - registry.npm.org
 - Github packages

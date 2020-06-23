@@ -1,23 +1,28 @@
-# UQ User Interface Development Framework
+# UQ User Interface Development Framework (UIDF)
 
-## Table of contents
+Developing the UIDF. This project is managed using
+[Lerna](https://github.com/lerna/lerna). The target audience of this
+documentation is currently limited to ADS-Design members at this stage.
 
-- [About](#about)
+> This documentation for contributors. If you want to *use* the UIDF in your
+> project, please visit our docs at:
+> [design-system.uq.edu.au](https://design-system.uq.edu.au) to get started.
+
+---
+
+## Contents
+
 - [Setup instructions](#setup-instructions)
 - [Using Storybook as a styleguide for component development](#using-storybook-as-a-styleguide-for-component-development)
 - [Creating a new package](./docs/create-a-package.md)
 - [Bundling](./docs/bundling.md)
-- [Code standards](./docs/standards/standards.md)
-  - [CSS standards](./docs/standards/stylesheets.md)
-  - [JS standards](./docs/standards/javascript.md)
-- [Staff onboarding](./docs/training/onboarding.md)
-  - [Storybook for HTML](./docs/training/storybook.md)
-  - [Task automation](./docs/training/task-automation.md)
-  - [JS packages and registries](./docs/training/javascript-packages.md)
-- [Accessibility requirements](./docs/accessibility.md)
+- [Code standards and style [TODO]](./docs/standards/standards.md)
+- [Staff training [TODO]](./docs/training/training.md)
+- [Accessibility requirements [TODO]](./docs/accessibility.md)
 - Package docs
   - [`icons`](./packages/icon/MAINTENANCE.md)
   - [`private-design-output`](./packages/private-design-output#readme)
+  - [`storybook-html`](./packages/storybook-html#readme)
 - [FUTURE] Accessibility testing
 - [FUTURE] Visual unit/regression testing
 - [FUTURE] Release management
@@ -25,11 +30,7 @@
   - Publishing packages
 - [FUTURE] CI/CD
 
-## About
-
-Developing the UIDF. This project is managed using
-[Lerna](https://github.com/lerna/lerna). The target audience of this
-documentation is currently limited to ADS-Design members at this stage.
+---
 
 ## Setup instructions
 
@@ -50,6 +51,8 @@ $ npm i
 $ npx lerna bootstrap
 ```
 
+**[⬆ back to top](#contents)**
+
 ## Using Storybook as a styleguide for component development
 
 1. Change to the `storybook-html` package directory
@@ -60,3 +63,5 @@ $ cd packages/storybook-html
 ```shell
 $ npm run storybook
 ```
+
+**[⬆ back to top](#contents)**

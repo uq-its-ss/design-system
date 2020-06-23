@@ -8,7 +8,7 @@ documentation is currently limited to ADS-Design members at this stage.
 > project, please visit our docs at:
 > [design-system.uq.edu.au](https://design-system.uq.edu.au) to get started.
 
---------------------------------------------------------------------------------
+---
 
 ## Contents
 
@@ -16,13 +16,8 @@ documentation is currently limited to ADS-Design members at this stage.
 - [Using Storybook as a styleguide for component development](#using-storybook-as-a-styleguide-for-component-development)
 - [Creating a new package](./docs/create-a-package.md)
 - [Bundling](./docs/bundling.md)
-- [Code standards](./docs/standards/standards.md)
-  - [CSS standards](./docs/standards/stylesheets.md)
-  - [JS standards](./docs/standards/javascript.md)
-- [Staff onboarding](./docs/training/onboarding.md)
-  - [Storybook for HTML](./docs/training/storybook.md)
-  - [Task automation](./docs/training/task-automation.md)
-  - [JS packages and registries](./docs/training/javascript-packages.md)
+- [Code standards and style](./docs/standards/standards.md)
+- [Staff training](./docs/training/training.md)
 - [Accessibility requirements](./docs/accessibility.md)
 - Package docs
   - [`icons`](./packages/icon/MAINTENANCE.md)
@@ -35,7 +30,7 @@ documentation is currently limited to ADS-Design members at this stage.
   - Publishing packages
 - [FUTURE] CI/CD
 
---------------------------------------------------------------------------------
+---
 
 ## Setup instructions
 

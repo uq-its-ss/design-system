@@ -16,9 +16,9 @@ documentation is currently limited to ADS-Design members at this stage.
 - [Using Storybook as a styleguide for component development](#using-storybook-as-a-styleguide-for-component-development)
 - [Creating a new package](./docs/create-a-package.md)
 - [Bundling](./docs/bundling.md)
-- [Code standards and style](./docs/standards/standards.md)
-- [Staff training](./docs/training/training.md)
-- [Accessibility requirements](./docs/accessibility.md)
+- [Code standards and style [TODO]](./docs/standards/standards.md)
+- [Staff training [TODO]](./docs/training/training.md)
+- [Accessibility requirements [TODO]](./docs/accessibility.md)
 - Package docs
   - [`icons`](./packages/icon/MAINTENANCE.md)
   - [`private-design-output`](./packages/private-design-output#readme)

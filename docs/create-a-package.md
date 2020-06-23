@@ -1,30 +1,53 @@
+**[⬅ Back to root](/../#readme)**
+
 # Create a new package
 
-## SASS (SCSS)
+## 1. Package scaffolding
 
-### Development files
+### SASS (SCSS)
 
-TODO: create a working build system.
-The SASS development files are used to generate resources for the package user.
+#### Development files
 
-| @uq-uidf/[package folder name]/src/scss |                                                              |
-| --------------------------- | ------------------------------------------------------------ |
-| ⤵️ _component.scss           | main stylesheet for the component                            |
-| ⤵️ _globals.scss             | variables, mixins, documentation template, documentation of dependencies |
-| ⤵️ _print.scss               | optional, print styles                                                             |
-| ⤵️ _build.scss               | used to transpile from SCSS to CSS                           |
+The SASS development files are also the SASS modules for package users.
 
-### Generated files
+| @uq-uidf/[package folder name]/src/scss |   |
+| --------------------------------------- | - |
+| ⤵️ `_component.scss` | main stylesheet for the component (imports the `_globals` file) |
+| ⤵️ `_globals.scss` | variables, mixins (no CSS is emitted from these files!) |
+| ⤵️ `_print.scss` | (optional) print styles |
 
-For build systems with SCSS support:  
-| @uq-uidf/[package]/lib/scss |                                                              |
-| --------------------------- | ------------------------------------------------------------ |
-| ⤵️ _component.scss           | main stylesheet for the component                            |
-| ⤵️ _globals.scss             | variables, mixins, versioned documentation, documentation of dependencies |
-| ⤵️ _print.scss               |                                                              |
+##### Resulting generated files
 
-For the most basic use case, we have CSS files:  
-| @uq-uidf/all/dist           |                                   |
-| --------------------------- | --------------------------------- |
-| ⤵️ uq-uidf-[package].css     | main stylesheet for the component |
-| ⤵️ uq-uidf-[package].min.css | minified                          |
+| @uq-uidf/[package folder name]/dist/css |   |
+| ----------------- | - |
+| ⤵️ `uq-uidf-[package].css` | Compiled stylesheet for the component |
+| ⤵️ `uq-uidf-[package].min.css` | Minified |
+
+---
+
+## JS (ES6)
+
+#### Development files
+
+The JS development files are also the ES6 modules for package users.
+
+| @uq-uidf/[package folder name]/src/js |   |
+| --------------------------------------- | - |
+| ⤵️ `[package].es6.js` | ES6 module export file |
+
+##### Resulting generated files
+
+| @uq-uidf/[package folder name]/dist/js |   |
+| ----------------- | - |
+| ⤵️ `uq-uidf-[package].js` | Compiled output JS |
+| ⤵️ `uq-uidf-[package].min.js` | Uglified |
+
+---
+
+Please ensure you read the [standards docs](standards/standards.md).
+
+---
+
+## 2. Add your example to Storybook
+
+Refer to [*Using Storybook as a styleguide for component development*](/../../#using-storybook-as-a-styleguide-for-component-development).

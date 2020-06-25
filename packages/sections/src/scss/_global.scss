@@ -1,1 +1,68 @@
 // Variables, functions, and mixins
+
+// Sections
+// $section-shaded-bg: #f5f5f5;
+// $section-summary-color: #777;
+// $section-footer-color: #777;
+
+// $messages-warning-bg: #fff9ee;
+// $messages-warning-border-color: #ffd179;
+
+
+// $large-up
+// $columns
+// $offset
+// $medium-up
+// $small-only
+
+
+//
+// Tints
+// Provide an overlay over backgrounds to darken, lighten an image to provide better visual contrast for content.
+// Can be used as extensions on components that accommodate overlaid content.
+//
+
+// Tints
+$dark-tint-bg: #494949;
+
+%tint {
+  position: relative;
+  overflow: hidden;
+}
+
+%tint-overlay {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 0.5;
+}
+
+%tint-content {
+  position: relative;
+  z-index: 2;
+}
+
+// Light tint layer provides a white tint
+%light-tint,
+.light-tint {
+  @extend %tint;
+  &:before {
+    @extend %tint-overlay;
+    background: #fff;
+  }
+}
+
+// Dark tint layer provides a black tint
+%dark-tint,
+.dark-tint {
+  @extend %tint;
+  background-color: $dark-tint-bg;
+  &:before {
+    @extend %tint-overlay;
+    background: #000;
+  }
+}

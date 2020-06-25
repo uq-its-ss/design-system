@@ -1,3 +1,8 @@
+// Main component stylesheet
+@use '../../node_modules/@uq-uidf/core/src/scss/_foundation-global' as *;
+@use '../../node_modules/@uq-uidf/core/src/scss/_global' as *;
+@use 'global' as *;
+
 //
 // Section
 // Used to contain content and provide vertical spacing and backgrounds.

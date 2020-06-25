@@ -8,17 +8,17 @@
     "email": "webservices@uq.edu.au",
     "url": "https://uq.edu.au"
   },
-  "homepage": "https://github.com/uq-its-ss/user-interface-development-framework#readme",
+  "homepage": "https://github.com/uqmchu/user-interface-development-framework#readme",
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/uq-its-ss/user-interface-development-framework.git"
+    "url": "git+https://github.com/uqmchu/user-interface-development-framework.git"
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "bugs": {
-    "url": "https://github.com/uq-its-ss/user-interface-development-framework/issues"
+    "url": "https://github.com/uqmchu/user-interface-development-framework/issues"
   },
   "engines": {
     "node": ">=13.2.0"
@@ -43,22 +43,22 @@
     "vinyl-source-stream": "^2.0.0"
   },
   "dependencies": {
-    "@uq-uidf/accordion": "^0.0.0",
-    "@uq-uidf/alert": "^0.0.0",
-    "@uq-uidf/blockquote": "^0.0.0",
-    "@uq-uidf/body": "^0.0.0",
-    "@uq-uidf/breadcrumb": "^0.0.0",
-    "@uq-uidf/button": "^0.0.0",
-    "@uq-uidf/card": "^0.0.0",
-    "@uq-uidf/core": "^0.0.0",
-    "@uq-uidf/footer": "^0.0.0",
-    "@uq-uidf/form": "^0.0.0",
-    "@uq-uidf/grid-menu": "^0.0.0",
-    "@uq-uidf/icon": "^0.0.0",
-    "@uq-uidf/lists": "^0.0.0",
-    "@uq-uidf/main-menu": "^0.0.0",
-    "@uq-uidf/pane": "^0.0.0",
-    "@uq-uidf/tabs": "^0.0.0",
+    "@uqmchu/accordion": "^0.0.0",
+    "@uqmchu/alert": "^0.0.0",
+    "@uqmchu/blockquote": "^0.0.0",
+    "@uqmchu/body": "^0.0.0",
+    "@uqmchu/breadcrumb": "^0.0.0",
+    "@uqmchu/button": "^0.0.0",
+    "@uqmchu/card": "^0.0.0",
+    "@uqmchu/core": "^0.0.0",
+    "@uqmchu/footer": "^0.0.0",
+    "@uqmchu/form": "^0.0.0",
+    "@uqmchu/grid-menu": "^0.0.0",
+    "@uqmchu/icon": "^0.0.0",
+    "@uqmchu/lists": "^0.0.0",
+    "@uqmchu/main-menu": "^0.0.0",
+    "@uqmchu/pane": "^0.0.0",
+    "@uqmchu/tabs": "^0.0.0",
     "font-awesome": "^4.7.0"
   }
 }

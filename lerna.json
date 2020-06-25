@@ -4,7 +4,7 @@
     ],
     "command": {
         "publish": {
-            "registry": "http://localhost:4873/"
+            "registry": "https://npm.pkg.github.com/uqmchu"
         }
     },
     "version": "0.0.0"

@@ -1,11 +1,11 @@
-@use "~@uq-uidf/core/src/scss/_component" as core with (
-  $uq-font-path: "~@uq-uidf/core/src/fonts/uq-icons/font",
+@use "~@uqmchu/core/src/scss/_component" as core with (
+  $uq-font-path: "~@uqmchu/core/src/fonts/uq-icons/font",
   $fa-font-path: "~font-awesome/fonts",
-  $uq-bg-image-path: '~@uq-uidf/core/src/images'
+  $uq-bg-image-path: '~@uqmchu/core/src/images'
 );
-@use "~@uq-uidf/body/src/scss/_component" as body;
+@use "~@uqmchu/body/src/scss/_component" as body;
 
-// Prevent the @uq-uidf/core from imposing a background colour. Overrides the
+// Prevent the @uqmchu/core from imposing a background colour. Overrides the
 // Foundation 5.5.3 default styling of the body tag.
 body {
   background-color: transparent !important;

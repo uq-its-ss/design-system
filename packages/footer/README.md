@@ -1,4 +1,4 @@
-# `@uq-uidf/footer`
+# `@uqmchu/footer`
 
 > Footer component
 
@@ -8,12 +8,12 @@
 
 With Yarn:
 ```shell
-yarn add @uq-uidf/footer
+yarn add @uqmchu/footer
 ```
 
 With NPM:
 ```shell
-npm i @uq-uidf/footer
+npm i @uqmchu/footer
 ```
 
 ---
@@ -21,6 +21,6 @@ npm i @uq-uidf/footer
 ## Dependency graph
 
 ```shell
-@uq-uidf/footer
-└─ @uq-uidf/core
+@uqmchu/footer
+└─ @uqmchu/core
 ```

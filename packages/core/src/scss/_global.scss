@@ -483,6 +483,27 @@ $compact-content-color: #767676;
   z-index: 2;
 }
 
+// Light tint layer provides a white tint
+%light-tint,
+.light-tint {
+  @extend %tint;
+  &:before {
+    @extend %tint-overlay;
+    background: #fff;
+  }
+}
+
+// Dark tint layer provides a black tint
+%dark-tint,
+.dark-tint {
+  @extend %tint;
+  background-color: $dark-tint-bg;
+  &:before {
+    @extend %tint-overlay;
+    background: #000;
+  }
+}
+
 
 // Palettes are colour groups to change all the colours within that wrapper to a specific set.
 //

@@ -1,5 +1,5 @@
-@use '../../node_modules/@uqmchu/core/src/scss/_foundation-global' as *;
-@use '../../node_modules/@uqmchu/core/src/scss/_global' as *; 
+@use '../../../core/src/scss/_foundation-global' as *;
+@use '../../../core/src/scss/_global' as *; 
 @use "global" as *;
 @import "../../node_modules/font-awesome/scss/mixins";
 

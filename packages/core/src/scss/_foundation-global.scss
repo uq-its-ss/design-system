@@ -23,7 +23,7 @@ $align-block-grid-to-grid: true;
 $block-grid-elements: 12;
 $block-grid-default-spacing: 1.25rem;
 
-@forward '../../node_modules/foundation-sites/scss/foundation/components/global' with (
+@forward '../../../../foundation-sites/scss/foundation/components/global' with (
   $body-font-color: $text,
   $body-font-family: $font-body,
   $body-font-weight: 300,

@@ -457,32 +457,55 @@ $compact-content-color: #767676;
 }
 
 //
+//
 // Tints
+// Tints
+// Provide an overlay over backgrounds to darken, lighten an image to provide
 // Provide an overlay over backgrounds to darken, lighten an image to provide better visual contrast for content.
+// better visual contrast for content.
+// Can be used as extensions on components that accommodate overlaid content.
 // Can be used as extensions on components that accommodate overlaid content.
 //
 
 %tint {
-  position: relative;
-  overflow: hidden;
-}
-
-%tint-overlay {
-  content: "";
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  opacity: 0.5;
-}
-
-%tint-content {
-  position: relative;
-  z-index: 2;
-}
-
+  %tint {
+    position: relative;
+    position: relative;
+    overflow: hidden;
+    overflow: hidden;
+  }
+  }
+  
+  
+  %tint-overlay {
+  %tint-overlay {
+    content: '';
+    content: "";
+    width: 100%;
+    height: 100%;
+    height: 100%;
+    left: 0;
+    opacity: .5;
+    position: absolute;
+    position: absolute;
+    top: 0;
+    top: 0;
+    width: 100%;
+    left: 0;
+    z-index: 1;
+    z-index: 1;
+    opacity: 0.5;
+  }
+  }
+  
+  
+  %tint-content {
+  %tint-content {
+    position: relative;
+    position: relative;
+    z-index: 2;
+    z-index: 2;
+  }
 
 // Palettes are colour groups to change all the colours within that wrapper to a specific set.
 //

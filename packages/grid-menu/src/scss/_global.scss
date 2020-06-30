@@ -1,6 +1,6 @@
 // Variables, functions, and mixins
-@use '../../../core/src/scss/_foundation-global' as *;
-@use '../../../core/src/scss/_global' as *;
+@use '@uqmchu/core/src/scss/_foundation-global' as *;
+@use '@uqmchu/core/src/scss/_global' as *;
 
 $linked-list-color: $link-color;
 $linked-list-color-hover: #fff;

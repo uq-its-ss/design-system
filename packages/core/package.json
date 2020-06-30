@@ -41,8 +41,5 @@
     "compass-mixins": "^0.12.10",
     "font-awesome": "^4.7.0",
     "foundation-sites": "^5.5.3"
-  },
-  "peerDependency": {
-    "font-awesome": "^4.7.0"
   }
 }

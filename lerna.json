@@ -1,11 +1,10 @@
 {
-    "packages": [
-        "packages/*"
-    ],
+    "version": "0.0.0",
+    "npmClient": "npm",
+    "packages": ["packages/*"],
     "command": {
         "publish": {
             "registry": "https://npm.pkg.github.com/uqmchu"
         }
-    },
-    "version": "0.0.0"
+    }
 }

@@ -1,9 +1,9 @@
-@use "~@uqmchu/core/src/scss/_component" as core with (
-  $uq-font-path: "~@uqmchu/core/src/fonts/uq-icons/font",
-  $fa-font-path: "~font-awesome/fonts",
-  $uq-bg-image-path: '~@uqmchu/core/src/images'
+@use "@uqmchu/core/src/scss/_component" as core with (
+  $uq-font-path: "../node_modules/@uqmchu/core/src/fonts/uq-icons/font",
+  $fa-font-path: "../node_modules/font-awesome/fonts",
+  $uq-bg-image-path: '../node_modules/@uqmchu/core/src/images'
 );
-@use "~@uqmchu/body/src/scss/_component" as body;
+@use "@uqmchu/body/src/scss/_component" as body;
 
 // Prevent the @uqmchu/core from imposing a background colour. Overrides the
 // Foundation 5.5.3 default styling of the body tag.

@@ -1,7 +1,7 @@
-@use '../../../core/src/scss/_foundation-global' as *;
-@use '../../../core/src/scss/_global' as *; 
+@use '@uqmchu/core/src/scss/_foundation-global' as *;
+@use '@uqmchu/core/src/scss/_global' as *; 
 @use "global" as *;
-@import "../../node_modules/font-awesome/scss/mixins";
+@import "font-awesome/scss/mixins";
 
 // Top_menu (Blackmenu) : primary navigation
 

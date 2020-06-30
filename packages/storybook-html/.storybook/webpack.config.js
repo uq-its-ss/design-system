@@ -34,8 +34,10 @@ module.exports = async ({ config, mode }) => {
             // Prefer 'dart-sass' as it supports Sass Modules
             implementation: require('sass'),
             sourceMap: true,
+            webpackImporter: false, // Required on 30/06/2020 to fix some dart-sass features
             sassOptions: {
               outputStyle: mode == 'PRODUCTION' ? "compressed" : "expanded",
+              includePaths: ['node_modules/@uqmchu/core/node_modules', 'node_modules']
             }
           }
         }

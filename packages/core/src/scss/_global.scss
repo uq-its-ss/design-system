@@ -7,7 +7,7 @@
 // @import "_partials/spacing";
 
 // Font Awesome settings
-@forward "../../../../font-awesome/scss/variables" with (
+@forward "font-awesome/scss/variables" with (
   $fa-font-size-base: compass.$base-font-size,
   $fa-css-prefix: icon
 );

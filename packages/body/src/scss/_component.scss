@@ -1,14 +1,14 @@
-@use '../../../core/src/scss/_foundation-global' as *;
-@use "../../../core/src/scss/global" as *;
+@use '@uqmchu/core/src/scss/_foundation-global' as *;
+@use "@uqmchu/core/src/scss/global" as *;
 @use 'global' as *;
 
-@use '../../node_modules/foundation-sites/scss/foundation/components/tables' with (
+@use 'foundation-sites/scss/foundation/components/tables' with (
   $table-border-color: $table-border-color
 );
-@use '../../node_modules/foundation-sites/scss/foundation/components/flex-video';
+@use 'foundation-sites/scss/foundation/components/flex-video';
 
-@import '../../node_modules/font-awesome/scss/mixins';
-@import "../../../core/src/fonts/uq-icons/scss/mixins";
+@import 'font-awesome/scss/mixins';
+@import "@uqmchu/core/src/fonts/uq-icons/scss/mixins";
 
 h1,
 h2,

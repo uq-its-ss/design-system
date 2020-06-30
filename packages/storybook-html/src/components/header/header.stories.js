@@ -10,8 +10,15 @@ import headerCreate from '@uq-uidf/header/src/js/header.es6';
 // import HTML template strings
 import headerHTML from './header.html';
 
+import docs from './header.docs.mdx';
+
 export default {
     title: 'Components/Header/Header',
+    parameters: {
+      docs: {
+        page: docs
+      }
+    },
     decorators: [expandedStory]
 };
 
@@ -23,7 +30,7 @@ export const header = () => {
 };
 
 header.story = {
-    name: "Header" 
-  }
+  name: "Header" 
+}
   
 

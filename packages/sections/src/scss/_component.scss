@@ -1,6 +1,6 @@
 // Main component stylesheet
 @use '../../node_modules/@uq-uidf/core/src/scss/_foundation-global' as *;
-@use '../../node_modules/@uq-uidf/core/src/scss/_component' as *;
+@use '../../node_modules/@uq-uidf/core/src/scss/_global' as *;
 @use 'global' as *;
 
 //
@@ -135,22 +135,7 @@
   &--allow-overflow {
     overflow: visible;
   }
-  // Applies a light overlay background image to work better with dark-palette.
-  &--light-tint {
-    @extend %light-tint;
-    .section__container {
-      position: relative;
-      z-index: 2;
-    }
-  }
-  // Applies a dark tint to allow provide higher content contrast.
-  &--dark-tint {
-    @extend %dark-tint;
-    .section__container {
-      position: relative;
-      z-index: 2;
-    }
-  }
+
   // section with palettes
   &--light-text {
     .section__header, .section__summary, .section__footer {
@@ -241,3 +226,27 @@
     display: none;
   }
 }
+
+
+  // Replaced UQ Stamdard @extend tint with local style. 
+  // Applies a light overlay background image to work better with dark-palette.
+  // Applies a dark tint to allow provide higher content contrast.
+  .section--light-tint, .section--dark-tint {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .section--light-tint:before, .section--dark-tint:before {
+    content: '';
+    height: 100%;
+    left: 0;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .section--light-tint:before {background: #fff;} //$uq-white
+  .section--dark-tint {background-color: $dark-tint-bg;}
+  .section--dark-tint:before {background: #000;} //$uq-black

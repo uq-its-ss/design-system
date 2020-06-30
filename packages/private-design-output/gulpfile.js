@@ -16,8 +16,9 @@ sass.compiler = require('sass');
 
 // SCSS include paths
 const scssPaths = [
-  './node_modules/@uqmchu',
-  './node_modules'
+  'node_modules/@uqmchu/core/node_modules',
+  'node_modules/@uqmchu',
+  'node_modules'
 ];
 
 // Build and export SCSS

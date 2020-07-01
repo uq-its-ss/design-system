@@ -37,8 +37,6 @@ These settings allow a range of styling to be applied to the section. These incl
     * **Single column, left-aligned** - Section header and footer are stacked above and below the section content, and are left aligned. The section content alignment is not affected by this setting.
     * **Two column, left-aligned** - Section header is shifted to the left of the section content and displayed in a 4/8 column arrangement.
 
-[Sample markup](section.html)
-
 ## When to use Sections ##
 
 

@@ -16,25 +16,6 @@ With NPM:
 npm i @uq-uidf/alert
 ```
 
-### Stylesheets
-
-```scss
-// SCSS
-
-@import '~@uq-uidf/core/src/scss/_component';
-@import '~@uq-uidf/button/src/scss/_component';
-@import '~@uq-uidf/alert/src/scss/_component';
-```
-
-```css
-/* CSS (PostCSS) */
-/* Watch this space... */
-```
-
-### Javascript
-
-This package has no Javascript component.
-
 ---
 
 ## Dependency graph
@@ -45,15 +26,3 @@ This package has no Javascript component.
 └─ @uq-uidf/button-classic
    └─ @uq-uidf/core
 ```
-
----
-
-## Tests
-
----
-
-## Release notes
-
----
-
-## License

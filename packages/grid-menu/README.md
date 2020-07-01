@@ -16,35 +16,11 @@ With NPM:
 npm i @uq-uidf/grid-menu
 ```
 
-### Stylesheets
+---
 
-```scss
-// SCSS
+## Dependency graph
 
-@import '~@uq-uidf/grid-menu/src/scss/_component';
+```shell
+@uq-uidf/grid-menu
+└─ @uq-uidf/core
 ```
-
-```css
-/* CSS (PostCSS) */
-/* Watch this space... */
-```
-
-### Javascript
-
-This package has no Javascript component.
-
----
-
-## Dependencies
-
----
-
-## Tests
-
----
-
-## Release notes
-
----
-
-## License

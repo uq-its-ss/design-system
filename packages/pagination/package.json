@@ -1,15 +1,28 @@
 {
   "name": "@uq-uidf/pagination",
   "version": "0.0.0",
-  "description": "> TODO: description",
-  "author": "Timmy George <timmy.george@uq.edu.au>",
+  "description": "Pagination component",
+  "keywords": [
+    "uq-uidf",
+    "uq",
+    "University of Queensland",
+    "user interface development framework",
+    "design system",
+    "scss",
+    "sass",
+    "css",
+    "navigation",
+    "pagination"
+  ],
+  "author": {
+    "name": "University of Queensland",
+    "email": "webservices@uq.edu.au",
+    "url": "https://uq.edu.au"
+  },
   "homepage": "https://github.com/uq-its-ss/user-interface-development-framework#readme",
   "license": "ISC",
-  "main": "lib/pagination.js",
   "directories": {
-    "lib": "lib",
-    "src": "src",
-    "test": "__tests__"
+    "lib": "lib"
   },
   "files": [
     "lib/*",

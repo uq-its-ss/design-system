@@ -1,4 +1,4 @@
-# `private-design-output`
+# 🔒 `private-design-output`
 
 > Generate a flat distribution of the UIDF
 

@@ -7,7 +7,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook -c .storybook -o .out"
   },
   "keywords": [],
   "author": {
@@ -18,10 +18,10 @@
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.7.2",
-    "@storybook/addon-backgrounds": "^5.3.18",
-    "@storybook/addon-docs": "^5.3.18",
-    "@storybook/addon-viewport": "^5.3.18",
-    "@storybook/html": "^5.3.17",
+    "@storybook/addon-backgrounds": "^5.3.19",
+    "@storybook/addon-docs": "^5.3.19",
+    "@storybook/addon-viewport": "^5.3.19",
+    "@storybook/html": "^5.3.19",
     "babel-loader": "^8.0.6",
     "fibers": "^4.0.2",
     "sass": "^1.26.5",
@@ -39,14 +39,13 @@
     "@uq-uidf/card": "^0.0.0",
     "@uq-uidf/core": "^0.0.0",
     "@uq-uidf/footer": "^0.0.0",
-    "@uq-uidf/footer-classic": "^0.0.0",
     "@uq-uidf/form": "^0.0.0",
     "@uq-uidf/grid-menu": "^0.0.0",
     "@uq-uidf/header": "^0.0.0",
-    "@uq-uidf/header-classic": "^0.0.0",
     "@uq-uidf/icon": "^0.0.0",
     "@uq-uidf/lists": "^0.0.0",
     "@uq-uidf/main-menu": "^0.0.0",
+    "@uq-uidf/page-header": "^0.0.0",
     "@uq-uidf/pagination": "^0.0.0",
     "@uq-uidf/pane": "^0.0.0",
     "@uq-uidf/tabs": "^0.0.0",

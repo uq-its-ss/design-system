@@ -13,7 +13,7 @@ import headerHTML from './header.html';
 import docs from './header.docs.mdx';
 
 export default {
-    title: 'Components/Header/Header',
+    title: 'Components/Header',
     parameters: {
       docs: {
         page: docs

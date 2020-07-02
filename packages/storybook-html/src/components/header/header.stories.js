@@ -17,7 +17,10 @@ export default {
     parameters: {
       docs: {
         page: docs
-      }
+      },
+      backgrounds: [
+        { name: 'UQ Neutral 1', value: '#D7D1CC', default: true }
+      ]
     },
     decorators: [expandedStory]
 };

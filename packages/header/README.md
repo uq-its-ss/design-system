@@ -16,40 +16,11 @@ With NPM:
 npm i @uq-uidf/header
 ```
 
-### Stylesheets
-
-```scss
-// SCSS
-
-@import '~@uq-uidf/header/src/scss/_component';
-```
-
-```css
-/* CSS (PostCSS) */
-/* Watch this space... */
-```
-
-### Javascript
-
-This package has no Javascript component.
-
 ---
 
-## Dependencies
+## Dependency graph
 
-```
+```shell
 @uq-uidf/header
-↳ @uq-uidf/core
+└─ @uq-uidf/core
 ```
-
----
-
-## Tests
-
----
-
-## Release notes
-
----
-
-## License

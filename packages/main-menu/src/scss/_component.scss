@@ -1,5 +1,5 @@
-@use '@uqmchu/core/src/scss/_foundation-global' as *;
-@use '@uqmchu/core/src/scss/_global' as *; 
+@use '@uq-uidf/core/src/scss/_foundation-global' as *;
+@use '@uq-uidf/core/src/scss/_global' as *; 
 @use "global" as *;
 @import "font-awesome/scss/mixins";
 
@@ -325,7 +325,7 @@
 }
 
 //
-// Site Search (TODO: remove duplication in @uqmchu/header-classic)
+// Site Search (TODO: remove duplication in @uq-uidf/header-classic)
 //
 // Variants
 // .site-search__form--mobile - Styles to display search form on tablet/mobile (This is an interim solution to display the search on tablet/mobile until the header design is revised).

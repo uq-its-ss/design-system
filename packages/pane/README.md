@@ -1,4 +1,4 @@
-# `@uqmchu/pane`
+# `@uq-uidf/pane`
 
 > Pane component
 
@@ -8,12 +8,12 @@
 
 With Yarn:
 ```shell
-yarn add @uqmchu/pane
+yarn add @uq-uidf/pane
 ```
 
 With NPM:
 ```shell
-npm i @uqmchu/pane
+npm i @uq-uidf/pane
 ```
 
 ---
@@ -21,6 +21,6 @@ npm i @uqmchu/pane
 ## Dependency graph
 
 ```shell
-@uqmchu/pane
-└─ @uqmchu/core
+@uq-uidf/pane
+└─ @uq-uidf/core
 ```

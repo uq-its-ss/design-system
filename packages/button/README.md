@@ -1,4 +1,4 @@
-# `@uqmchu/button`
+# `@uq-uidf/button`
 
 > Button component
 
@@ -8,12 +8,12 @@
 
 With Yarn:
 ```shell
-yarn add @uqmchu/button
+yarn add @uq-uidf/button
 ```
 
 With NPM:
 ```shell
-npm i @uqmchu/button
+npm i @uq-uidf/button
 ```
 
 ---
@@ -21,6 +21,6 @@ npm i @uqmchu/button
 ## Dependency graph
 
 ```shell
-@uqmchu/button
-└─ @uqmchu/core
+@uq-uidf/button
+└─ @uq-uidf/core
 ```

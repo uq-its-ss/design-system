@@ -2,10 +2,10 @@ import { useEffect } from '@storybook/client-api';
 import expandedStory from '../../../.storybook/decorators/expanded.js';
 
 // import styles
-import '@uqmchu/accordion/src/scss/_component.scss';
+import '@uq-uidf/accordion/src/scss/_component.scss';
 
 // import scripts
-import accordion from '@uqmchu/accordion/src/js/accordion.es6';
+import accordion from '@uq-uidf/accordion/src/js/accordion.es6';
 
 // documentation
 import docs from './accordion.docs.mdx';

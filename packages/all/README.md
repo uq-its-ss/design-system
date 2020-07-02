@@ -1,4 +1,4 @@
-# `@uqmchu/all`
+# `@uq-uidf/all`
 
 > The UIDF, with pre-written imports. 
 
@@ -8,10 +8,10 @@
 
 With Yarn:
 ```shell
-yarn add @uqmchu/all
+yarn add @uq-uidf/all
 ```
 
 With NPM:
 ```shell
-npm i @uqmchu/all
+npm i @uq-uidf/all
 ```

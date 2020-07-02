@@ -1,4 +1,4 @@
-# @uqmchu/body
+# @uq-uidf/body
 
 > Styles for HTML form elements and form validation.
 
@@ -8,12 +8,12 @@
 
 With Yarn:
 ```shell
-yarn add @uqmchu/form
+yarn add @uq-uidf/form
 ```
 
 With NPM:
 ```shell
-npm i @uqmchu/form
+npm i @uq-uidf/form
 ```
 
 ---
@@ -21,6 +21,6 @@ npm i @uqmchu/form
 ## Dependencies
 
 ```shell
-@uqmchu/form
-└─ @uqmchu/core
+@uq-uidf/form
+└─ @uq-uidf/core
 ```

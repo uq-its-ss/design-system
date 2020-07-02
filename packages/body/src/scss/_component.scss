@@ -1,5 +1,5 @@
-@use '@uqmchu/core/src/scss/_foundation-global' as *;
-@use "@uqmchu/core/src/scss/global" as *;
+@use '@uq-uidf/core/src/scss/_foundation-global' as *;
+@use "@uq-uidf/core/src/scss/global" as *;
 @use 'global' as *;
 
 @use 'foundation-sites/scss/foundation/components/tables' with (
@@ -8,7 +8,7 @@
 @use 'foundation-sites/scss/foundation/components/flex-video';
 
 @import 'font-awesome/scss/mixins';
-@import "@uqmchu/core/src/fonts/uq-icons/scss/mixins";
+@import "@uq-uidf/core/src/fonts/uq-icons/scss/mixins";
 
 h1,
 h2,

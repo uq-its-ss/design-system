@@ -4,7 +4,7 @@
     "packages": ["packages/*"],
     "command": {
         "publish": {
-            "registry": "https://npm.pkg.github.com/uqmchu"
+            "registry": "http://localhost:4873"
         }
     }
 }

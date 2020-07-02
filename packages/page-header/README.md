@@ -1,4 +1,4 @@
-# `@uqmchu/page-header`
+# `@uq-uidf/page-header`
 
 > Page Header component
 
@@ -8,12 +8,12 @@
 
 With Yarn:
 ```shell
-yarn add @uqmchu/page-header
+yarn add @uq-uidf/page-header
 ```
 
 With NPM:
 ```shell
-npm i @uqmchu/page-header
+npm i @uq-uidf/page-header
 ```
 
 ---
@@ -21,6 +21,6 @@ npm i @uqmchu/page-header
 ## Dependency graph
 
 ```shell
-@uqmchu/page-header
-└─ @uqmchu/core
+@uq-uidf/page-header
+└─ @uq-uidf/core
 ```

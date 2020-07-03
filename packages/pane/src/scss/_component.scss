@@ -26,7 +26,7 @@
 }
 
 @mixin pane-white {
-  background: #fff;
+  background: $uq-white;
 }
 
 @mixin pane-outline {
@@ -44,7 +44,7 @@
 
 @mixin pane-dark-tint {
   @extend %light-palette;
-  background-color: #000;
+  background-color: $uq-black;
   background-color: rgba(0, 0, 0, .65);
 
   .pane__title {
@@ -106,7 +106,7 @@
 
     &.pane--dark-tint {
       .pane__footer {
-        background-color: #000;
+        background-color: $uq-black;
         background-color: rgba(0, 0, 0, 0.3);
       }
     }
@@ -179,7 +179,7 @@
     }
 
     .pane__footer {
-      background-color: #000;
+      background-color: $uq-black;
       background-color: rgba(0, 0, 0, .3);
     }
   }

@@ -1,8 +1,18 @@
-// Variables, functions, and mixins
-
-// Some compass features may still be required for Foundation 5 (TODO: remove this dependency when Foundation has been stripped out).
+// Some compass features may still be required for Foundation 5 (TODO: remove this forward when Foundation has been stripped out).
 @forward "_partials/compass" as compass-*;
+// Variables, functions, and mixins
 @use "_partials/compass" as compass;
+
+$roboto:  'Roboto', "Helvetica Neue", Helvetica, Arial, sans-serif;
+$merriweather:  'Merriweather', Georgia, serif;
+$courier: "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
+
+// Now create some variables using the font stacks we want on this site.
+$font-body: $roboto;
+$font-monospace: $courier;
+
+// Default text, Content
+$text: #2b2b2b;
 
 // @import "_partials/spacing";
 
@@ -18,170 +28,7 @@
   $uq-font-size-base: compass.$base-font-size
 );
 
-// Foundation global variables & type
-@use 'foundation-global' as *;
-
 // Foundation mixins & functions
-
-// Source: foundation-sites/scss/foundation/components/_grid.scss
-@function grid-calc($colNumber, $totalColumns) {
-  $result: percentage(($colNumber / $totalColumns));
-  @if $result == 0% { $result: 0; }
-  @return $result;
-}
-
-@mixin grid-row($behavior: false) {
-
-  // use @include grid-row(nest); to include a nested row
-  @if $behavior == nest {
-    margin: 0 (-($column-gutter/2));
-    max-width: none;
-    width: auto;
-  }
-
-  // use @include grid-row(collapse); to collapsed a container row margins
-  @else if $behavior == collapse {
-    margin: 0;
-    max-width: $row-width;
-    width: 100%;
-  }
-
-  // use @include grid-row(nest-collapse); to collapse outer margins on a nested row
-  @else if $behavior == nest-collapse {
-    margin: 0;
-    max-width: none;
-    width: auto;
-  }
-
-  // use @include grid-row; to use a container row
-  @else {
-    margin: 0 auto;
-    max-width: $row-width;
-    width: 100%;
-  }
-
-  // Clearfix for all rows
-  @include clearfix();
-}
-
-@mixin grid-column(
-  $columns:false,
-  $last-column:false,
-  $center:false,
-  $offset:false,
-  $push:false,
-  $pull:false,
-  $collapse:false,
-  $float:true,
-  $position:false) {
-
-  // If positioned for default .column, include relative position
-  // push and pull require position set
-  @if $position or $push or $pull {
-    position: relative;
-  }
-
-  // If collapsed, get rid of gutter padding
-  @if $collapse {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  // Gutter padding whenever a column isn't set to collapse
-  // (use $collapse:null to do nothing)
-  @else if $collapse == false {
-    padding-left: ($column-gutter / 2);
-    padding-right: ($column-gutter / 2);
-  }
-
-  // If a column number is given, calculate width
-  @if $columns {
-    width: grid-calc($columns, $total-columns);
-
-    // If last column, float naturally instead of to the right
-    @if $last-column { float: $opposite-direction; }
-  }
-
-  // Source Ordering, adds left/right depending on which you use.
-  @if $push { #{$default-float}: grid-calc($push, $total-columns); #{$opposite-direction}: auto; }
-  @if $pull { #{$opposite-direction}: grid-calc($pull, $total-columns); #{$default-float}: auto; }
-
-  @if $float and $last-column == false {
-    @if $float == left or $float == true { float: $default-float; }
-    @else if $float == right { float: $opposite-direction; }
-    @else { float: none; }
-  }
-
-  // If centered, get rid of float and add appropriate margins
-  @if $center {
-    margin-#{$default-float}: auto;
-    margin-#{$opposite-direction}: auto;
-    float: none;
-  }
-
-  // If offset, calculate appropriate margins
-  @if $offset { margin-#{$default-float}: grid-calc($offset, $total-columns) !important; }
-
-}
-
-// Source: foundation-sites/scss/foundation/components/_block-grid.scss
-@mixin block-grid(
-  $per-row:false,
-  $spacing:$block-grid-default-spacing,
-  $include-spacing:true,
-  $base-style:true) {
-
-  @if $base-style {
-    display: block;
-    padding: 0;
-    @if $align-block-grid-to-grid {
-      margin: 0;
-    } @else {
-      margin: 0 (-$spacing/2);
-    }
-    @include clearfix;
-
-    > li {
-      display: block;
-      float: $default-float;
-      height: auto;
-      @if $include-spacing {
-        padding: 0 ($spacing/2) $spacing;
-      }
-    }
-  }
-
-  @if $per-row {
-    > li {
-      list-style: none;
-      @if $include-spacing {
-        padding: 0 ($spacing/2) $spacing;
-      }
-      width: 100%/$per-row;
-
-      &:nth-of-type(1n) { clear: none; }
-      &:nth-of-type(#{$per-row}n+1) { clear: both; }
-      @if $align-block-grid-to-grid {
-        @include block-grid-aligned($per-row, $spacing);
-      }
-    }
-  }
-}
-
-@mixin block-grid-aligned($per-row, $spacing) {
-  @for $i from 1 through $block-grid-elements {
-    @if $per-row >= $i {
-      $grid-column: '+' + $i;
-      @if $per-row == $i {
-        $grid-column: '';
-      }
-      &:nth-of-type(#{$per-row}n#{unquote($grid-column)}) {
-        padding-left: ($spacing - (($spacing / $per-row) * ($per-row - ($i - 1))));
-        padding-right: ($spacing - (($spacing / $per-row) * $i));
-      }
-    }
-  }
-}
 
 // Source: foundation-sites/scss/foundation/components/_type.scss
 // Text alignment class names
@@ -272,11 +119,6 @@ $inline-list-children-display: block !default;
     > * { display: $inline-list-children-display; }
   }
 }
-
-// Mystery variables
-$gutter: 20px;
-$half-gutter: 10px;
-$select-bg-color: #fff;
 
 // Only base colours should be listed in this file. Mixed and modified colour should be done at the associated component or supporting file. 
 // UQ brand colours

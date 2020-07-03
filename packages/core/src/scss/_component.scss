@@ -1,24 +1,9 @@
 // Main component stylesheet
 @use 'foundation-sites/scss/normalize';
-@use 'foundation-global' as *;
 @use 'global' as *;
 @use '_partials/spacing';
 @use '_partials/typography';
 @use 'print';
-
-// Marked for removal
-@use 'foundation-sites/scss/foundation/components/grid' with (
-  $row-width: $row-width,
-  $include-xl-html-grid-classes: $include-xl-html-grid-classes,
-  $total-columns: $total-columns,
-  $column-gutter: $column-gutter
-);
-
-@use 'foundation-sites/scss/foundation/components/block-grid' with (
-  $include-xl-html-block-grid-classes: $include-xl-html-block-grid-classes,
-  $align-block-grid-to-grid :$align-block-grid-to-grid,
-  $block-grid-elements: $block-grid-elements
-);
 
 @import 'foundation-sites/scss/foundation/components/visibility';
 

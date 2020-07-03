@@ -22,5 +22,6 @@ npm i @uq-uidf/foundation-grid
 
 ```shell
 @uq-uidf/foundation-grid
-└─ @uq-uidf/core
+└─ @uq-uidf/foundation-global
+   └─ @uq-uidf/core
 ```

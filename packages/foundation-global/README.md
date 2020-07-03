@@ -22,4 +22,5 @@ npm i @uq-uidf/foundation-global
 
 ```shell
 @uq-uidf/foundation-global
+└─ @uq-uidf/core
 ```

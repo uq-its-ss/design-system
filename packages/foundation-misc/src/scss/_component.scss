@@ -1,0 +1,153 @@
+@use 'global';
+
+// Enable Zurb Foundation Responsive Text alignment
+@include align-classes;
+
+// Include visibility classes
+@include exports("visibility"){
+  @if $include-html-visibility-classes != false {
+
+  @include visibility-loop;
+
+  /* Orientation targeting */
+  .show-for-landscape,
+  .hide-for-portrait { display: inherit !important; }
+  .hide-for-landscape,
+  .show-for-portrait { display: none !important; }
+
+  /* Specific visibility for tables */
+  table {
+    &.hide-for-landscape,
+    &.show-for-portrait { display: table !important; }
+  }
+  thead {
+    &.hide-for-landscape,
+    &.show-for-portrait { display: table-header-group !important; }
+  }
+  tbody {
+    &.hide-for-landscape,
+    &.show-for-portrait { display: table-row-group !important; }
+  }
+  tr {
+    &.hide-for-landscape,
+    &.show-for-portrait { display: table-row !important; }
+  }
+  td,
+  th {
+    &.hide-for-landscape,
+    &.show-for-portrait { display: table-cell !important; }
+  }
+
+  @media #{$landscape} {
+    .show-for-landscape,
+    .hide-for-portrait { display: inherit !important; }
+    .hide-for-landscape,
+    .show-for-portrait { display: none !important; }
+
+    /* Specific visibility for tables */
+    table {
+      &.show-for-landscape,
+      &.hide-for-portrait { display: table !important; }
+    }
+    thead {
+      &.show-for-landscape,
+      &.hide-for-portrait { display: table-header-group !important; }
+    }
+    tbody {
+      &.show-for-landscape,
+      &.hide-for-portrait { display: table-row-group !important; }
+    }
+    tr {
+      &.show-for-landscape,
+      &.hide-for-portrait { display: table-row !important; }
+    }
+    td,
+    th {
+      &.show-for-landscape,
+      &.hide-for-portrait { display: table-cell !important; }
+    }
+  }
+
+  @media #{$portrait} {
+    .show-for-portrait,
+    .hide-for-landscape { display: inherit !important; }
+    .hide-for-portrait,
+    .show-for-landscape { display: none !important; }
+
+    /* Specific visibility for tables */
+    table {
+      &.show-for-portrait,
+      &.hide-for-landscape { display: table !important; }
+    }
+    thead {
+      &.show-for-portrait,
+      &.hide-for-landscape { display: table-header-group !important; }
+    }
+    tbody {
+      &.show-for-portrait,
+      &.hide-for-landscape { display: table-row-group !important; }
+    }
+    tr {
+      &.show-for-portrait,
+      &.hide-for-landscape { display: table-row !important; }
+    }
+    td,
+    th {
+      &.show-for-portrait,
+      &.hide-for-landscape { display: table-cell !important; }
+    }
+  }
+
+  /* Touch-enabled device targeting */
+  .show-for-touch { display: none !important; }
+  .hide-for-touch { display: inherit !important; }
+  .touch .show-for-touch { display: inherit !important; }
+  .touch .hide-for-touch { display: none !important; }
+
+  /* Specific visibility for tables */
+  table.hide-for-touch { display: table !important; }
+  .touch table.show-for-touch { display: table !important; }
+  thead.hide-for-touch { display: table-header-group !important; }
+  .touch thead.show-for-touch { display: table-header-group !important; }
+  tbody.hide-for-touch { display: table-row-group !important; }
+  .touch tbody.show-for-touch { display: table-row-group !important; }
+  tr.hide-for-touch { display: table-row !important; }
+  .touch tr.show-for-touch { display: table-row !important; }
+  td.hide-for-touch { display: table-cell !important; }
+  .touch td.show-for-touch { display: table-cell !important; }
+  th.hide-for-touch { display: table-cell !important; }
+  .touch th.show-for-touch { display: table-cell !important; }
+
+  /* Screen reader-specific classes */
+  .show-for-sr {
+    @include element-invisible;
+  }
+  .show-on-focus {
+    @include element-invisible;
+
+    &:focus,
+    &:active {
+      @include element-invisible-off;
+    }
+  }
+
+  /* Print visibility */
+  @if $include-print-styles {
+    .print-only,
+    .show-for-print { display: none !important; }
+    @media print {
+      .print-only,
+      .show-for-print { display: block !important; }
+      .hide-on-print,
+      .hide-for-print { display: none !important; }
+
+      table.show-for-print { display: table !important; }
+      thead.show-for-print { display: table-header-group !important; }
+      tbody.show-for-print { display: table-row-group !important; }
+      tr.show-for-print { display: table-row !important; }
+      td.show-for-print { display: table-cell !important; }
+      th.show-for-print { display: table-cell !important; }
+    }
+  }
+  }
+}

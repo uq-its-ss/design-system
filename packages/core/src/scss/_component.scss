@@ -5,8 +5,6 @@
 @use '_partials/typography';
 @use 'print';
 
-@import 'foundation-sites/scss/foundation/components/visibility';
-
 // Font Awesome icon set
 // http://fortawesome.github.io/Font-Awesome/
 @import "font-awesome/scss/font-awesome";
@@ -118,9 +116,6 @@
     width: 178px;
   }
 }
-
-// Enable Zurb Foundation Responsive Text alignment
-@include align-classes;
 
 // Background patterns and textures for use on sections to create visual difference.
 

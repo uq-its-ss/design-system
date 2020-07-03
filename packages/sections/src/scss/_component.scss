@@ -247,6 +247,15 @@
     z-index: 1;
   }
 
+  .section--light-tint .section__container {
+    position:relative;
+    z-index:2
+   }
+   .section--dark-tint .section__container {
+    position:relative;
+    z-index:2
+   }
+
   .section--light-tint:before {background: #fff;} //$uq-white
   .section--dark-tint {background-color: $dark-tint-bg;}
   .section--dark-tint:before {background: #000;} //$uq-black

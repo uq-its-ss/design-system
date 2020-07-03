@@ -1,6 +1,6 @@
 @use '../../node_modules/@uq-uidf/core/src/scss/_global' as *;
 
 // Variables, functions, and mixins
-$site-footer-color: mix(white, $uq-purple, 75%);
-$site-footer-link-color: #fff;
+$site-footer-color: mix($uq-white, $uq-purple, 75%);
+$site-footer-link-color: $uq-white;
 $site-footer-font-size: .875rem;

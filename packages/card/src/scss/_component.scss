@@ -19,7 +19,7 @@
 
 %card,
 .card {
-  background-color: #fff;
+  background-color: $uq-white;
   margin-bottom: 1.5rem;
   position: relative;
   overflow-wrap: break-word;
@@ -133,7 +133,7 @@
     vertical-align: middle;
 
     &::before {
-      background: #000;
+      background: $uq-black;
       content: '';
       display: block;
       height: 100%;

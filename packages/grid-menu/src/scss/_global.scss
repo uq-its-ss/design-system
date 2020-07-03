@@ -3,9 +3,9 @@
 @use '../../node_modules/@uq-uidf/core/src/scss/_global' as *;
 
 $linked-list-color: $link-color;
-$linked-list-color-hover: #fff;
+$linked-list-color-hover: $uq-white;
 $linked-list-desc: #222;
-$linked-list-desc-hover: #fff;
+$linked-list-desc-hover: $uq-white;
 
 // Two column layout.
 @mixin grid-menu-2-column {

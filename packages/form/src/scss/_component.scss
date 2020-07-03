@@ -332,11 +332,11 @@ input[type='reset'] {
   font-size: 1rem;
   background-color: #f04124;
   border-color: #cf2a0e;
-  color: #FFFFFF;
+  color: $uq-white;
 
   &:hover, &:focus {
     background-color: #cf2a0e;
-    color: #FFFFFF;
+    color: $uq-white;
   }
 }
 
@@ -462,8 +462,8 @@ textarea,
 .field-multiple-drag {
   background: repeating-linear-gradient(
     -55deg,
-    #fff,
-    #fff 2px,
+    $uq-white,
+    $uq-white 2px,
     #f2f2f2 2px,
     #f2f2f2 4px
   );

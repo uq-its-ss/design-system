@@ -42,7 +42,7 @@
       // tab title
       a {
         color: $tabs-color;
-        background: #fff;
+        background: $uq-white;
         display: block;
         padding: 1rem;
 
@@ -109,7 +109,7 @@
     // ***********************************
     // Tabs - Outline
     &--outline {
-      background: #fff;
+      background: $uq-white;
       border: 1px solid $panel-border;
       border-bottom: 0;
 
@@ -147,8 +147,8 @@
 
         // active tab
         &.active {
-          border-bottom-color: #fff;
-          background: #fff;
+          border-bottom-color: $uq-white;
+          background: $uq-white;
         }
 
         // tab title
@@ -161,7 +161,7 @@
     // ***********************************
     // Tabs - Square
     &--square {
-      background: #fff;
+      background: $uq-white;
       border: 1px solid $panel-border;
       border-right: 0;
       border-bottom: 0;
@@ -181,7 +181,7 @@
           padding: 2.5rem 0.5rem 1rem;
           text-align: center;
           font-size: 1.4rem;
-          background: #fff;
+          background: $uq-white;
         }
       }
     }
@@ -206,7 +206,7 @@
     &--container {
       border: 1px solid $panel-border;
       border-top: 0;
-      background: #fff;
+      background: $uq-white;
 
       // Foundaton classname for tab content
       .content {

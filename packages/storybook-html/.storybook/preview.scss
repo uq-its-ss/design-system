@@ -1,3 +1,4 @@
+@use "@uq-uidf/foundation-normalise/src/scss/_component" as normalise;
 @use "@uq-uidf/core/src/scss/_component" as core with (
   $uq-font-path: "../node_modules/@uq-uidf/core/src/fonts/uq-icons/font",
   $fa-font-path: "../node_modules/font-awesome/fonts",

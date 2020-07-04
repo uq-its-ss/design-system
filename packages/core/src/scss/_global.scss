@@ -1,4 +1,8 @@
-// Some compass features may still be required for Foundation 5 (TODO: remove this forward when Foundation has been stripped out).
+/**
+ *
+ * Some compass features may still be required for Foundation 5 (TODO: remove
+ * this forward when Foundation and other dependencies have been stripped out).
+ */
 @forward "_partials/compass" as compass-*;
 // Variables, functions, and mixins
 @use "_partials/compass" as compass;

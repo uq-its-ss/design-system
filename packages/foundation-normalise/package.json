@@ -1,7 +1,7 @@
 {
-  "name": "@uq-uidf/core",
+  "name": "@uq-uidf/foundation-normalise",
   "version": "0.0.0",
-  "description": "The core package that all component packages depend on",
+  "description": "Foundation normalize.scss",
   "keywords": [
     "uq-uidf",
     "uq",
@@ -11,7 +11,10 @@
     "scss",
     "sass",
     "css",
-    "core"
+    "foundation 5",
+    "reset",
+    "normalise",
+    "normalize"
   ],
   "author": {
     "name": "University of Queensland",
@@ -21,7 +24,8 @@
   "homepage": "https://github.com/uq-uidf/user-interface-development-framework#readme",
   "license": "ISC",
   "directories": {
-    "lib": "lib"
+    "lib": "lib",
+    "test": "__tests__"
   },
   "files": [
     "lib/*",
@@ -36,12 +40,5 @@
   },
   "bugs": {
     "url": "https://github.com/uq-uidf/user-interface-development-framework/issues"
-  },
-  "dependencies": {
-    "compass-mixins": "^0.12.10",
-    "font-awesome": "^4.7.0"
-  },
-  "peerDependencies": {
-    "@uq-uidf/foundation-global": "^0.0.0"
   }
 }

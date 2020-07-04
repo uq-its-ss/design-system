@@ -12,6 +12,25 @@
 // foundation.zurb.com
 // Licensed under MIT Open Source
 
+//
+// Foundation Variables
+//
+
+// Data attribute namespace
+// styles get applied to [data-mysite-plugin], etc
+$namespace: false !default;
+
+// The default font-size is set to 100% of the browser style sheet (usually 16px)
+// for compatibility with browser-based text zoom or user-set defaults.
+
+// Since the typical default browser font-size is 16px, that makes the calculation for grid size.
+// If you want your base font-size to be different and not have it affect the grid breakpoints,
+// set $rem-base to $base-font-size and make sure $base-font-size is a px value.
+$base-font-size: $compass-base-font-size !default;
+
+// $base-line-height is 24px while $base-font-size is 16px
+$base-line-height: $compass-base-line-height !default;
+
 // This is the default html and body font-size for the base rem value.
 $rem-base: $base-font-size !default;
 
@@ -20,7 +39,10 @@ $rem-base: $base-font-size !default;
 // We use this to prevent styles from being loaded multiple times for components that rely on other components.
 // Using the @use syntax of dart-sass will allow a similar result.
 
-// Create an empty List
+/**
+ * Create an empty List (!default flag means existing assignments won't
+ * be overriden on subsequents loads)
+ */
 $modules: () !default;
 
 @mixin exports($name) {
@@ -37,7 +59,6 @@ $modules: () !default;
 //
 // @functions
 //
-
 
 // RANGES
 // We use these functions to define ranges for various things, like media queries.
@@ -168,25 +189,6 @@ $modules: () !default;
 @function emCalc($values) {
   @return em-calc($values);
 }
-
-//
-// Foundation Variables
-//
-
-// Data attribute namespace
-// styles get applied to [data-mysite-plugin], etc
-$namespace: false !default;
-
-// The default font-size is set to 100% of the browser style sheet (usually 16px)
-// for compatibility with browser-based text zoom or user-set defaults.
-
-// Since the typical default browser font-size is 16px, that makes the calculation for grid size.
-// If you want your base font-size to be different and not have it affect the grid breakpoints,
-// set $rem-base to $base-font-size and make sure $base-font-size is a px value.
-$base-font-size: $compass-base-font-size !default;
-
-// $base-line-height is 24px while $base-font-size is 16px
-$base-line-height: $compass-base-line-height !default;
 
 //
 // Global Foundation Mixins

@@ -3,6 +3,9 @@
   $fa-font-path: "../node_modules/font-awesome/fonts",
   $uq-bg-image-path: '../node_modules/@uq-uidf/core/src/images'
 );
+@use "@uq-uidf/foundation-grid/src/scss/_component" as grid;
+@use "@uq-uidf/foundation-block-grid/src/scss/_component" as block-grid;
+@use "@uq-uidf/foundation-misc/src/scss/_component" as misc;
 @use "@uq-uidf/body/src/scss/_component" as body;
 
 // Prevent the @uq-uidf/core from imposing a background colour. Overrides the

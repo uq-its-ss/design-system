@@ -22,5 +22,7 @@ npm i @uq-uidf/pane
 
 ```shell
 @uq-uidf/pane
-└─ @uq-uidf/core
+├─ @uq-uidf/core
+└─ @uq-uidf/foundation-global
+   └─ @uq-uidf/core
 ```

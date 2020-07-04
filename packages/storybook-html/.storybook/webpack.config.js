@@ -37,7 +37,11 @@ module.exports = async ({ config, mode }) => {
             webpackImporter: false, // Required on 30/06/2020 to fix some dart-sass features
             sassOptions: {
               outputStyle: mode == 'PRODUCTION' ? "compressed" : "expanded",
-              includePaths: ['node_modules/@uq-uidf/core/node_modules', 'node_modules']
+              includePaths: [
+                'node_modules/@uq-uidf/core/node_modules',
+                'node_modules/@uq-uidf/foundation-misc/node_modules',
+                'node_modules'
+              ]
             }
           }
         }

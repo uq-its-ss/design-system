@@ -40,9 +40,11 @@
   },
   "dependencies": {
     "@uq-uidf/core": "^0.0.0",
+    "@uq-uidf/foundation-global": "^0.0.0",
     "domready": "^1.0.8"
   },
   "peerDependencies": {
-    "@uq-uidf/core": "^0.0.0"
+    "@uq-uidf/core": "^0.0.0",
+    "@uq-uidf/foundation-global": "^0.0.0"
   }
 }

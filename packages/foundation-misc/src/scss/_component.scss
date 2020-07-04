@@ -1,4 +1,5 @@
-@use 'global';
+@use '@uq-uidf/foundation-global/src/scss/global' as *;
+@use 'global' as *;
 
 // Enable Zurb Foundation Responsive Text alignment
 @include align-classes;

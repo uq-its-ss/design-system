@@ -38,9 +38,11 @@
     "url": "https://github.com/uq-uidf/user-interface-development-framework/issues"
   },
   "dependencies": {
-    "@uq-uidf/core": "^0.0.0"
+    "@uq-uidf/core": "^0.0.0",
+    "@uq-uidf/foundation-global": "^0.0.0"
   },
   "peerDependencies": {
-    "@uq-uidf/core": "^0.0.0"
+    "@uq-uidf/core": "^0.0.0",
+    "@uq-uidf/foundation-global": "^0.0.0"
   }
 }

@@ -1,4 +1,5 @@
-@use 'global';
+@use '@uq-uidf/foundation-global/src/scss/global' as *;
+@use 'global' as *;
 
 @include exports("block-grid") {
   @if $include-html-block-grid-classes {

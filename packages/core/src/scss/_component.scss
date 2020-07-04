@@ -1,5 +1,6 @@
 // Main component stylesheet
 @use 'foundation-sites/scss/normalize';
+@use "@uq-uidf/foundation-global/src/scss/global" as *;
 @use 'global' as *;
 @use '_partials/spacing';
 @use '_partials/typography';

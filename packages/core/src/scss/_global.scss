@@ -21,16 +21,14 @@ $text: #2b2b2b;
 // @import "_partials/spacing";
 
 // Font Awesome settings
-@forward "font-awesome/scss/variables" with (
-  $fa-font-size-base: compass.$base-font-size,
-  $fa-css-prefix: icon
-);
+@forward "font-awesome/scss/variables";
+$fa-font-size-base: compass.$base-font-size;
+$fa-css-prefix: icon;
 
 // UQ icons settings
-@forward "../fonts/uq-icons/scss/variables" with (
-  $uq-css-prefix: icon,
-  $uq-font-size-base: compass.$base-font-size
-);
+@forward "../fonts/uq-icons/scss/variables";
+$uq-font-size-base: compass.$base-font-size;
+$uq-css-prefix: icon;
 
 // Only base colours should be listed in this file. Mixed and modified colour should be done at the associated component or supporting file. 
 // UQ brand colours

@@ -42,8 +42,7 @@
     "@uq-uidf/foundation-global": "^0.0.0",
     "@uq-uidf/foundation-grid": "^0.0.0",
     "domready": "^1.0.8",
-    "font-awesome": "^4.7.0",
-    "foundation-sites": "^5.5.3"
+    "font-awesome": "^4.7.0"
   },
   "peerDependencies": {
     "@uq-uidf/core": "^0.0.0",

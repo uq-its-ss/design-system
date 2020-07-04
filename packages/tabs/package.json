@@ -39,8 +39,7 @@
   },
   "dependencies": {
     "@uq-uidf/core": "^0.0.0",
-    "@uq-uidf/foundation-global": "^0.0.0",
-    "foundation-sites": "^5.5.3"
+    "@uq-uidf/foundation-global": "^0.0.0"
   },
   "peerDependencies": {
     "@uq-uidf/core": "^0.0.0",

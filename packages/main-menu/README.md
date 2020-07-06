@@ -22,5 +22,10 @@ npm i @uq-uidf/main-menu
 
 ```
 @uq-uidf/main-menu
-└─ @uq-uidf/core
+├─ @uq-uidf/core
+├─ @uq-uidf/foundation-global
+│  └─ @uq-uidf/core
+└─ @uq-uidf/foundation-grid
+   └─ @uq-uidf/foundation-global
+      └─ @uq-uidf/core
 ```

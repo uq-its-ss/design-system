@@ -1,7 +1,5 @@
-
-@use "@uq-uidf/core/src/scss/foundation-global" as *;
 @use "@uq-uidf/core/src/scss/global" as *;
-@use './_icons.scss' as *;
+@use 'icons' as *;
 
 $icon-white: $uq-white;
 $icon-purple: $uq-purple;

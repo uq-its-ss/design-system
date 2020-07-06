@@ -22,5 +22,7 @@ npm i @uq-uidf/page-header
 
 ```shell
 @uq-uidf/page-header
-└─ @uq-uidf/core
+├─ @uq-uidf/core
+└─ @uq-uidf/foundation-global
+   └─ @uq-uidf/core
 ```

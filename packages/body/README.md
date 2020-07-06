@@ -22,5 +22,7 @@ npm i @uq-uidf/body
 
 ```
 @uq-uidf/body
-└─ @uq-uidf/core
+├─ @uq-uidf/core
+└─ @uq-uidf/foundation-global
+   └─ @uq-uidf/core
 ```

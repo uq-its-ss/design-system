@@ -22,5 +22,7 @@ npm i @uq-uidf/accordion
 
 ```shell
 @uq-uidf/accordion
-└─ @uq-uidf/core
+├─ @uq-uidf/core
+└─ @uq-uidf/foundation-global
+   └─ @uq-uidf/core
 ```

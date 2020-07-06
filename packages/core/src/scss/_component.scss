@@ -1,5 +1,5 @@
 // Main component stylesheet
-@use '../../node_modules/foundation-sites/scss/normalize';
+@use 'foundation-sites/scss/normalize';
 @use 'foundation-global' as *;
 @use 'global' as *;
 @use '_partials/spacing';
@@ -7,24 +7,24 @@
 @use 'print';
 
 // Marked for removal
-@use '../../node_modules/foundation-sites/scss/foundation/components/grid' with (
+@use 'foundation-sites/scss/foundation/components/grid' with (
   $row-width: $row-width,
   $include-xl-html-grid-classes: $include-xl-html-grid-classes,
   $total-columns: $total-columns,
   $column-gutter: $column-gutter
 );
 
-@use '../../node_modules/foundation-sites/scss/foundation/components/block-grid' with (
+@use 'foundation-sites/scss/foundation/components/block-grid' with (
   $include-xl-html-block-grid-classes: $include-xl-html-block-grid-classes,
   $align-block-grid-to-grid :$align-block-grid-to-grid,
   $block-grid-elements: $block-grid-elements
 );
 
-@import '../../node_modules/foundation-sites/scss/foundation/components/visibility';
+@import 'foundation-sites/scss/foundation/components/visibility';
 
 // Font Awesome icon set
 // http://fortawesome.github.io/Font-Awesome/
-@import "../../node_modules/font-awesome/scss/font-awesome";
+@import "font-awesome/scss/font-awesome";
 
 // UQ Icon set
 @import "../fonts/uq-icons/scss/uq-icons";

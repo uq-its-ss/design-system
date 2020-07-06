@@ -1,5 +1,6 @@
-// Variables, functions, and mixins
+@use "../../node_modules/@uq-uidf/core/src/scss/_global" as *;
 
+// Variables, functions, and mixins
 $accordion-border-color: #e9e9e9;
 $accordion-title-bg: #f9f9f9;
 $accordion-title-bg-hover: #eee;

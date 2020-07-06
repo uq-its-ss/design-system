@@ -1,0 +1,261 @@
+// Main component stylesheet
+@use '../../node_modules/@uq-uidf/core/src/scss/_foundation-global' as *;
+@use '../../node_modules/@uq-uidf/core/src/scss/_global' as *;
+@use 'global' as *;
+
+//
+// Section
+// Used to contain content and provide vertical spacing and backgrounds.
+//
+// Variants:
+// .section--double-spacing - alias of .section--large-spacing
+// .section--large-top-spacing - adds large spacing above to show more background image.
+// .section--large-bottom-spacing - adds large spacing below to show more background image.
+// .section--large-spacing - adds large spacing top and bottom.
+// .section--extra-large-top-spacing - adds extra large spacing above.
+// .section--extra-large-bottom-spacing - adds extra large spacing below.
+// .section--extra-large-spacing - adds extra large spacing top and bottom.
+// .section--no-spacing - removes vertical padding.
+// .section--no-top-spacing - removes top padding only.
+// .section--no-bottom-spacing - removes bottom padding only.
+// .section--centered - centers header and footer text.
+// .section--shaded - adds light grey background.
+// .section--horizontal - Change header and content to horizontal 2 column layout.
+// .section--image-behind - Markup image in the section__background is used as a background for the section.
+// .section--background-image - Scales background images on the section to always cover.
+// .section--light-tint - Adds a light tint between the background image and the content to knockback the image for dark text.
+// .section--dark-tint - Adds a dark tint between the background image and the content to knockback the image for light text.
+// .section--light-text - Extends .light-palette on the section header and footer.
+// .section--dark-text - Extends .dark-palette on the section header and footer.
+//
+
+.section {
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+  overflow: hidden;
+  // Large spacing above to show more background image.
+  %large-top-spacing, &--large-top-spacing {
+    padding-top: 7rem;
+  }
+  // Large spacing below to show more background image.
+  %large-bottom-spacing, &--large-bottom-spacing {
+    padding-bottom: 7rem;
+  }
+  // Doubles default vertical spacing. Double is an alias of large.
+  &--large-spacing, &--double-spacing {
+    @extend %large-top-spacing;
+    @extend %large-bottom-spacing;
+  }
+  // Extra large spacing above to show more background image.
+  %extra-large-top-spacing, &--extra-large-top-spacing {
+    padding-top: 12rem;
+  }
+  // Extra large spacing below to show more background image.
+  %extra-large-bottom-spacing, &--extra-large-bottom-spacing {
+    padding-bottom: 12rem;
+  }
+  &--extra-large-spacing {
+    @extend %extra-large-top-spacing;
+    @extend %extra-large-bottom-spacing;
+  }
+  // Removes vertical spacing.
+  &--no-spacing {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  // Removes top spacing only.
+  &--no-top-spacing {
+    padding-top: 0;
+  }
+  // Removes bottom spacing only.
+  &--no-bottom-spacing {
+    padding-bottom: 0;
+  }
+  // Shaded background variant
+  &--shaded {
+    background-color: $section-shaded-bg;
+  }
+  // Centers section header and footer
+  &--centered {
+    .section__header, .section__footer {
+      text-align: center;
+      @media #{$large-up} {
+        @include grid-column(
+        $columns: 8,
+        $offset: 2
+        );
+      }
+    }
+  }
+  // Changes alignment so header sits to the side of the body.
+  &--horizontal {
+    @media #{$medium-up} {
+      .section__header {
+        @include grid-column(
+        $columns: 4,
+        $offset: 0
+        );
+      }
+      .section__content {
+        @include grid-column(8);
+        clear: none;
+        // Align first element with section__header column
+        p, h2, h3, h4, h5, h6, ul {
+          &:first-child {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+  }
+  // For when there is an image field in dom that is displayed behind the section content
+  &--image-behind {
+    position: relative;
+    height: auto;
+    overflow: hidden;
+    .section__container {
+      position: relative;
+      z-index: 2;
+    }
+    // section--image-background with palettes
+    &.light-text {
+      // Use opposite palette bg for contrast
+      @extend %dark-palette-bg;
+    }
+    &.dark-text {
+      // Use opposite palette bg for contrast
+      @extend %light-palette-bg;
+    }
+  }
+  // For when the section has an inline style background image
+  &--background-image {
+    @include background-cover();
+  }
+  // Allows content to overflow the section if needed, such as drop downs.
+  &--allow-overflow {
+    overflow: visible;
+  }
+
+  // section with palettes
+  &--light-text {
+    .section__header, .section__summary, .section__footer {
+      @extend %light-palette;
+    }
+  }
+  &--dark-text {
+    .section__header, .section__summary, .section__footer {
+      @extend %dark-palette;
+    }
+  }
+
+  &__container {
+    @include grid-row();
+  }
+
+  &__header {
+    @include grid-column(
+    $columns: 12
+    );
+  }
+
+  &__content {
+    @include grid-column(
+    $columns: 12
+    );
+  }
+
+  &__footer {
+    @include grid-column(
+    $columns: 12
+    );
+    color: $section-footer-color;
+    margin-top: 2rem;
+  }
+
+  &__title {
+    font-weight: 400;
+  }
+
+  &__summary {
+    color: $section-summary-color;
+    margin-top: 0;
+    margin-bottom: 2.5rem;
+  }
+
+  // For section--image-behind where the background image is output using <img> rather than an inline style.
+  &__background {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    // Hide background image on small devices to ensure content doesn't overflow its length and can still be seen.
+    @media #{$small-only} {
+      display: none;
+    }
+    // Ensure image behind fills full width on larger screens.
+    @media #{$large-up} {
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  // Message indicating section requires saving, when user saves panel modal
+  &__update {
+    &-message {
+      @extend %dark-palette;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 999;
+      width: 100%;
+      padding: 0.25rem 0;
+      text-align: center;
+      background-color: $messages-warning-bg;
+      border: 1px solid $messages-warning-border-color;
+    }
+    &-link {
+      font-weight: 500;
+    }
+  }
+
+  // Sections override pane/fieldable panel pane titles
+  .pane-title, .panel-pane__title {
+    display: none;
+  }
+}
+
+
+  // Replaced UQ Stamdard @extend tint with local style. 
+  // Applies a light overlay background image to work better with dark-palette.
+  // Applies a dark tint to allow provide higher content contrast.
+  .section--light-tint, .section--dark-tint {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .section--light-tint:before, .section--dark-tint:before {
+    content: '';
+    height: 100%;
+    left: 0;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .section--light-tint .section__container {
+    position:relative;
+    z-index:2
+   }
+   .section--dark-tint .section__container {
+    position:relative;
+    z-index:2
+   }
+
+  .section--light-tint:before {background: #fff;} //$uq-white
+  .section--dark-tint {background-color: $dark-tint-bg;}
+  .section--dark-tint:before {background: #000;} //$uq-black

@@ -119,16 +119,18 @@
             }
 
             &__title {
-                font-family: $merriweather;
-                font-weight: 400;
-                font-style: italic;
                 color: white;
+                font-family: $merriweather;
                 font-size: 1.25rem;
+                font-style: italic;
+                font-weight: 400;
+                vertical-align: middle;
             }
 
             &__scope {
 
                 display: inline;
+                vertical-align: middle;
 
                 & .nav-search__radio-wrapper {
                     @media #{$medium-up} {
@@ -142,6 +144,8 @@
                     @media #{$medium-up} {
                         display: inline-block;
                         padding-left: 1rem;
+                        margin-top: 0;
+                        vertical-align: middle;
                     }
                     & label {
                         color: white;

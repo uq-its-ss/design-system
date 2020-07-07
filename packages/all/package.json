@@ -28,7 +28,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/uq-uidf/user-interface-development-framework.git"
+    "url": "git+https://github.com/uq-its-ss/user-interface-development-framework.git"
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"

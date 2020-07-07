@@ -1,3 +1,5 @@
+import expandedStory from '../../../.storybook/decorators/expanded.js';
+
 // import styles
 import './sections.scss';
 
@@ -16,7 +18,8 @@ export default {
     docs: {
       page: docs
     }
-  }
+  },
+  decorators: [expandedStory]
 };
 
 

@@ -23,6 +23,9 @@ npm i @uq-uidf/alert
 ```shell
 @uq-uidf/alert-classic
 ├─ @uq-uidf/core
-└─ @uq-uidf/button-classic
-   └─ @uq-uidf/core
+├─ @uq-uidf/foundation-global
+│  └─ @uq-uidf/core
+└─ @uq-uidf/foundation-grid
+   └─ @uq-uidf/foundation-global
+      └─ @uq-uidf/core
 ```

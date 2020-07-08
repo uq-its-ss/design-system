@@ -1,6 +1,7 @@
 
 // Required base styles
 @use "foundation-normalise/src/scss/_component" as normalise;
+@use "foundation-global/src/scss/_component" as fnd-global;
 @use 'core/src/scss/component' as core with (
   $uq-font-path: "../fonts"
 );
@@ -19,6 +20,7 @@
 @use 'footer/src/scss/component' as footer;
 @use 'form/src/scss/component' as form;
 @use 'grid-menu/src/scss/component' as grid-menu;
+@use 'header/src/scss/component' as header;
 @use 'lists/src/scss/component' as lists;
 @use 'main-menu/src/scss/component' as main-menu;
 @use 'pane/src/scss/component' as pane;

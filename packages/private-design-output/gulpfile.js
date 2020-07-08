@@ -49,8 +49,8 @@ function exportImages() {
   .pipe(dest('./dist/images'));
 }
 
-function exportKitchenSink() {
-  return src('./src/kitchen-sink.html')
+function exportExample() {
+  return src('./src/example.html')
   .pipe(dest('./dist'));
 }
 
@@ -82,6 +82,6 @@ function bundleJS() {
 exports.compileSCSS = compileSCSS;
 exports.exportFontFiles = exportFontFiles;
 exports.exportImages = exportImages;
-exports.exportKitchenSink = exportKitchenSink;
+exports.exportExample = exportExample;
 exports.bundleJS = bundleJS;
-exports.default = parallel(compileSCSS, exportFontFiles, exportImages, exportKitchenSink, bundleJS);
+exports.default = parallel(compileSCSS, exportFontFiles, exportImages, exportExample, bundleJS);

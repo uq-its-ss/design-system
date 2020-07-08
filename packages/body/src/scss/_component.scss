@@ -2,10 +2,8 @@
 @use '@uq-uidf/foundation-global/src/scss/global' as *;
 @use 'global' as *;
 
-@use 'foundation-sites/scss/foundation/components/tables' with (
-  $table-border-color: $table-border-color
-);
-@use 'foundation-sites/scss/foundation/components/flex-video';
+@import 'foundation-sites/scss/foundation/components/tables';
+@import 'foundation-sites/scss/foundation/components/flex-video';
 
 @import 'font-awesome/scss/mixins';
 @import "@uq-uidf/core/src/fonts/uq-icons/scss/mixins";

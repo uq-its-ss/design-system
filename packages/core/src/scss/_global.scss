@@ -57,20 +57,20 @@ $link-color: #2377cb;
 $link-active-color: #005ea5;
 $link-hover-color: #005ea5;
 // External link icon
-$external-link-icon-color: #bbb;
+$external-link-icon-color: #aca7a3; //bbb;
 // Alerts
-$alert: #B80017;
+$alert: #be1b38; //B80017;
 // UQ brand colours
 $uq-dark-purple: #51247A;
 // $uq-green: #8cb800; Deprecated because of duplicate naming.
 // Vertical lists
-$vertical-list-border: #EDEDED;
+$vertical-list-border: #efedeb; //EDEDED;
 // Vertical Menu
-$vertical-menu-link-border: #f5f5f5;
+$vertical-menu-link-border: #f7f6f5; //f5f5f5;
 $vertical-menu-link-active: #000;
-$vertical-menu-shaded-bg-color: #f6f6f6;
+$vertical-menu-shaded-bg-color: #f7f6f5; //f6f6f6;
 // Administration
-$primary-tabs-bg: #eee;
+$primary-tabs-bg: #efedeb; //eee;
 // Messages
 $messages-status-bg: #eef5fb;
 $messages-status-border-color: #8ebae7;
@@ -83,83 +83,83 @@ $messages-error-border-color: #d8481f;
 $messages-error-color: #fff;
 $messages-error-link-color: #fff;
 // Progress Bar
-$progress-bar-bg: #ddd;
-$progress-bar-fill-bg: #444;
-$progress-bar-border-color: #949494;
+$progress-bar-bg: #D7D1CC; //ddd;
+$progress-bar-fill-bg: #565452; //444;
+$progress-bar-border-color: #817d7a; //949494;
 $progress-bar-color: #fff;
 // Progression
 $progression-text: #fff;
 $progression-border: $progression-text;
-$progression-label: #222;
+$progression-label: #2b2a29; //222;
 $progression-step-bg: #999490;
 $progression-bar-bg: #D7D1CC;
 $progression-completed: #2EA836;
 // Sections
-$section-shaded-bg: #f5f5f5;
-$section-summary-color: #767676;
-$section-footer-color: #767676;
+$section-shaded-bg: #f7f6f5; //f5f5f5;
+$section-summary-color: #817d7a; //767676;
+$section-footer-color: #817d7a; //767676;
 // Palettes
-$light-palette-color: #f0f0f0;
+$light-palette-color: #f7f6f5; //f0f0f0;
 $light-palette-border-color: rgba(255, 255, 255, .4);
 $light-palette-link-color: #fff;
 $light-palette-bg: #fff;
-$dark-palette-color: #222;
+$dark-palette-color: #2b2a29; //222;
 $dark-palette-border-color: rgba(0, 0, 0, .1);
 $dark-palette-link-color: lighten($uq-purple, 10%);
-$dark-palette-bg: #333;
+$dark-palette-bg: #565452; //333;
 // Tints
-$dark-tint-bg: #494949;
+$dark-tint-bg: #565452; //494949;
 // Hero banner
-$hero-banner-bg: #494949;
+$hero-banner-bg: #565452; //494949;
 // Menu Block two column
 $menu-block-two-column-link-color: $link-color;
-$menu-block-two-column-inactive-link-color: #222;
-$menu-block-two-column-border-color: #eee;
+$menu-block-two-column-inactive-link-color: #2b2a29; //222;
+$menu-block-two-column-border-color: #efedeb; //eee;
 // Page
-$page-header-bg: #f2f2f2;
+$page-header-bg: #f7f6f5; //f2f2f2;
 $page-header-white-bg: #fff;
-$page-header-white-border-color: #eee;
+$page-header-white-border-color: #efedeb; //eee;
 // Tabs
-$tabs-shaded-bg: #f5f5f5;
-$tabs-underlined-border-color: #e3dbe8;
+$tabs-shaded-bg: #f7f6f5; //f5f5f5;
+$tabs-underlined-border-color: #e7e3e0; //e3dbe8;
 // Article
-$article-title-color: #555;
-$article-border-color: #eee;
-$article-tag-bg: #f3f3f3;
-$article-tag-color: #666;
+$article-title-color: #565452; //555;
+$article-border-color: #efedeb; //eee;
+$article-tag-bg: #f7f6f5; //f3f3f3;
+$article-tag-color: #565452; //666;
 // Icons
-$icon-light-grey-color: #ddd;
+$icon-light-grey-color: #D7D1CC; //ddd;
 // Catalogue
-$catalogue-index-bg: #f5f5f5;
-$catalogue-index-color: #555;
-$catalogue-meta-color: #eee;
+$catalogue-index-bg: #f5f5f5; //f7f6f5;
+$catalogue-index-color: #565452; //555;
+$catalogue-meta-color: #efedeb; //eee;
 // Citation (eSpace)
-$citation-color: #868686;
+$citation-color: #817d7a; //868686;
 // Tags
-$tags-link-bg: #f5f5f5;
+$tags-link-bg: #f7f6f5; //f5f5f5;
 // Action items
 $action-item-bg: #f5f5f5;
-$action-item-icon-bg: #dbdbdb;
+$action-item-icon-bg: #D7D1CC; //dbdbdb;
 // Team
-$team-teaser-action-links: #666;
+$team-teaser-action-links: #565452; //666;
 // Asset
-$asset-border-color: #ccc;
+$asset-border-color: #aca7a3; //ccc;
 // Cards
-$card-shaded-bg: #f5f5f5;
+$card-shaded-bg: #f7f6f5; //f5f5f5;
 // Overview brand device connector
-$brand-device-connector: #E1E1E1;
+$brand-device-connector: #e7e3e0; //E1E1E1;
 // Compendium
-$compendium-border-color: #ccc;
-$compendium-title-border-color: #ddd;
+$compendium-border-color: #aca7a3; //ccc;
+$compendium-title-border-color: #D7D1CC; //ddd;
 // Logo
 $logo-color: #fff;
 // Content column block
 $content-column-block-pane-bg: #2468c6;
 $content-column-block-pane-odd-bg: #22487e;
 // Divider
-$divider-border-color: #ededed;
+$divider-border-color: #efedeb; //ededed;
 // Compact
-$compact-content-color: #767676;
+$compact-content-color: #817d7a; //767676;
 
 //
 // Mixins

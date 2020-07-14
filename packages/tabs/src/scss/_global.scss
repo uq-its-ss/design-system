@@ -1,6 +1,7 @@
 // Variables, functions, and mixins
+@use '../../node_modules/@uq-uidf/core/src/scss/_global' as *; 
 
-$panel-border: #e7e3e0; //e1e1e1;
-$active-color: #FBB800; //ffa200;
-$app-wrapper: #f7f6f5; //f8f8f9;
-$tabs-color: #565452; //51247a;
+$panel-border: $uq-neutral-light60; //e1e1e1;
+$active-color: $uq-yellow; //ffa200;
+$app-wrapper: $uq-neutral-light20; //f8f8f9;
+$tabs-color: $uq-neutral-dark60; //51247a;

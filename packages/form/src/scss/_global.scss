@@ -1,6 +1,7 @@
 // Variables, functions, and mixins
+@use '../../node_modules/@uq-uidf/core/src/scss/_global' as *; 
 
 // Forms
-$form-required-color: #be1b38; //d6492a;
-$form-description-color: #565452; //666;
-$form-input-border-color: #aca7a3; //ccc;
+$form-required-color: $uq-red-dark20; //d6492a;
+$form-description-color: $uq-neutral-dark60; //666;
+$form-input-border-color: $uq-neutral-dark20; //ccc;

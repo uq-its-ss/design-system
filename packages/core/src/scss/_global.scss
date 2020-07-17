@@ -32,40 +32,42 @@ $uq-css-prefix: icon;
 
 // Only base colours should be listed in this file. Mixed and modified colour should be done at the associated component or supporting file. 
 // UQ brand colours
+
 // UQ Primary palette
-$uq-purple: #51247A;
-$uq-black: #000000;
-$uq-white: #ffffff;
+$uq-purple: #51247A; // rgb(81, 36, 122)
+$uq-black: #000; // rgb(0, 0, 0)
+$uq-white: #fff; // rgb(255, 255, 255)
 // UQ Secondary palette
-$uq-purple-light: #962A8B;
-$uq-neutral: #D7D1CC;
-$uq-darkgrey: #999490;
-$uq-gold: #BDA14E;
-$uq-red: #E62645;
-$uq-orange: #EB602B;
-$uq-yellow: #FBB800;
-$uq-blue: #4085C6;
-$uq-aqua: #00ABCD;
-$uq-green: #2EA836;
+$uq-purple-light: #962A8B; // rgb(150, 42, 139)
+$uq-neutral: #D7D1CC; // rgb(215, 209, 204), Consolidated - DDD, D7D1CC, DBDBDB
+$uq-darkgrey: #999490; // rgb(153, 148, 144)
+$uq-gold: #BB9D65; // rgb(187, 157, 101)
+$uq-red: #E62645; // rgb(230, 38, 69)
+$uq-orange: #EB602B; // rgb(235, 96, 43)
+$uq-yellow: #FBB800; // rgb(251, 184, 0)
+$uq-blue: #4085C6; // rgb(64, 133, 198)
+$uq-aqua: #00A2C7; // rgb(0, 162, 199)
+$uq-green: #2EA836; // rgb(46, 168, 54)
 // UQ Purple gradient
-$uq-purple-gradient: linear-gradient(90deg, rgba(81, 36, 122, 1) 0%, 87%, rgba(150, 42, 139, 1) 100%);
-// Additional
-$uq-neutral-light20: #f7f6f5;
-$uq-neutral-light40: #efedeb;
-$uq-neutral-light60: #e7e3e0;
-$uq-neutral-light80: #dfdad6;
-$uq-neutral-dark20: #aca7a3;
-$uq-neutral-dark40: #817d7a;
-$uq-neutral-dark60: #565452;
-$uq-neutral-dark80: #2b2a29;
-
-$uq-darkgrey-light20: #ebeae9;
-$uq-darkgrey-light40: #d6d4d3;
-$uq-darkgrey-light60: #c2bfbc;
-$uq-darkgrey-light80: #ada9a6;
-
-$uq-red-dark20: #be1b38;
-$uq-red-dark40: #9b1129;
+$uq-purple-gradient: linear-gradient(90deg, $uq-purple 0%, 87%, $uq-purple-light 100%);
+// UQ Secondary - Neutral Tints
+$uq-neutral-light20: #f7f6f5; // rgb(247, 246, 245), rgba(215, 209, 204, 0.2), Consolidated - F9F9F9, FCFCFC, F5F5F5, F2F2F2, F3F3F3, F7F6F5, F8F8F9, F1F1F1, F0F0F0
+$uq-neutral-light40: #efedeb; // rgb(239, 237, 235), rgba(215, 209, 204, 0.4), Consolidated - EEE, EFEFEF, EDEDED
+$uq-neutral-light60: #e7e3e0; // rgb(231, 227, 224), rgba(215, 209, 204, 0.6), Consolidated - E9E9E9, E1E1E1, E3DBE8
+$uq-neutral-light80: #dfdad6; // rgb(223, 218, 214), rgba(215, 209, 204, 0.8)
+// UQ Secondary - Neutral Shades
+$uq-neutral-dark20: #aca7a3; // Consolidated - BBB, BDB0A5, CCC
+$uq-neutral-dark40: #817d7a; // Consolidated - 747474, 767676, 808080, 868686, 949494
+$uq-neutral-dark60: #565452; // Consolidated - 555, 676767, 666, 6F6F6F, 444, 494949, 333
+$uq-neutral-dark80: #2b2a29; // Consolidated - 181818, 2B2A29, 222, 2B2B2B
+// UQ Secondary - Darkgrey Tints
+$uq-darkgrey-light20: #ebeae9; // rgb(235, 234, 233), rgba(153, 148, 144, 0.2)
+$uq-darkgrey-light40: #d6d4d3; // rgb(214, 212, 211), rgba(153, 148, 144, 0.4)
+$uq-darkgrey-light60: #c2bfbc; // rgb(194, 191, 188), rgba(153, 148, 144, 0.6)
+$uq-darkgrey-light80: #ada9a6; // rgb(173, 169, 166), rgba(153, 148, 144, 0.8)
+// UQ Secondary - Red Shades
+$uq-red-dark20: #be1b38; // Consolidated - B80017, D6492A, F04124, F00000, D8481F
+$uq-red-dark40: #9b1129; // Consolidated - CF2A0E
 
 // Link Blue
 $link: #2377cb;
@@ -74,13 +76,12 @@ $link-hover: #005ea5;
 $link-color: #2377cb;
 $link-active-color: #005ea5;
 $link-hover-color: #005ea5;
+
 // External link icon
-$external-link-icon-color: $uq-neutral-dark20; //bbb;
+$external-link-iconeutral-color: $uq-neutral-dark20; //bbb;
 // Alerts
 $alert: $uq-red-dark20; //B80017;
-// UQ brand colours
-$uq-dark-purple: #51247A;
-// $uq-green: #8cb800; Deprecated because of duplicate naming.
+
 // Vertical lists
 $vertical-list-border: $uq-neutral-light40; //EDEDED;
 // Vertical Menu
@@ -106,16 +107,16 @@ $progress-bar-fill-bg: $uq-neutral-dark60; //444;
 $progress-bar-border-color: $uq-neutral-dark40; //949494;
 $progress-bar-color: $uq-white;
 // Progression
-$progression-text: $uq-white;
-$progression-border: $progression-text;
-$progression-label: $uq-neutral-dark80; //222;
-$progression-step-bg: $uq-darkgrey;
-$progression-bar-bg: $uq-neutral;
-$progression-completed: $uq-green;
+$progressioneutral-text: $uq-white;
+$progressioneutral-border: $progressioneutral-text;
+$progressioneutral-label: $uq-neutral-dark80; //222;
+$progressioneutral-step-bg: $uq-darkgrey;
+$progressioneutral-bar-bg: $uq-neutral;
+$progressioneutral-completed: $uq-green;
 // Sections
-$section-shaded-bg: $uq-neutral-light20; //f5f5f5;
-$section-summary-color: $uq-neutral-dark40; //767676;
-$section-footer-color: $uq-neutral-dark40; //767676;
+$sectioneutral-shaded-bg: $uq-neutral-light20; //f5f5f5;
+$sectioneutral-summary-color: $uq-neutral-dark40; //767676;
+$sectioneutral-footer-color: $uq-neutral-dark40; //767676;
 // Palettes
 $light-palette-color: $uq-neutral-light20; //f0f0f0;
 $light-palette-border-color: rgba(255, 255, 255, .4);
@@ -130,9 +131,9 @@ $dark-tint-bg: $uq-neutral-dark60; //494949;
 // Hero banner
 $hero-banner-bg: $uq-neutral-dark60; //494949;
 // Menu Block two column
-$menu-block-two-column-link-color: $link-color;
-$menu-block-two-column-inactive-link-color: $uq-neutral-dark80; //222;
-$menu-block-two-column-border-color: $uq-neutral-light40; //eee;
+$menu-block-two-columneutral-link-color: $link-color;
+$menu-block-two-columneutral-inactive-link-color: $uq-neutral-dark80; //222;
+$menu-block-two-columneutral-border-color: $uq-neutral-light40; //eee;
 // Page
 $page-header-bg: $uq-neutral-light20; //f2f2f2;
 $page-header-white-bg: $uq-white;
@@ -146,20 +147,20 @@ $article-border-color: $uq-neutral-light40; //eee;
 $article-tag-bg: $uq-neutral-light20; //f3f3f3;
 $article-tag-color: $uq-neutral-dark60; //666;
 // Icons
-$icon-light-grey-color: $uq-neutral; //ddd;
+$iconeutral-light-grey-color: $uq-neutral; //ddd;
 // Catalogue
 $catalogue-index-bg: $uq-neutral-light20; //f7f6f5;
 $catalogue-index-color: $uq-neutral-dark60; //555;
 $catalogue-meta-color: $uq-neutral-light40; //eee;
 // Citation (eSpace)
-$citation-color: $uq-neutral-dark40; //868686;
+$citationeutral-color: $uq-neutral-dark40; //868686;
 // Tags
 $tags-link-bg: $uq-neutral-light20; //f5f5f5;
 // Action items
-$action-item-bg: $uq-neutral-light20;
-$action-item-icon-bg: $uq-neutral; //dbdbdb;
+$actioneutral-item-bg: $uq-neutral-light20;
+$actioneutral-item-iconeutral-bg: $uq-neutral; //dbdbdb;
 // Team
-$team-teaser-action-links: $uq-neutral-dark60; //666;
+$team-teaser-actioneutral-links: $uq-neutral-dark60; //666;
 // Asset
 $asset-border-color: $uq-neutral-dark20; //ccc;
 // Cards
@@ -172,8 +173,8 @@ $compendium-title-border-color: $uq-neutral; //ddd;
 // Logo
 $logo-color: $uq-white;
 // Content column block
-$content-column-block-pane-bg: #2468c6;
-$content-column-block-pane-odd-bg: #22487e;
+$content-columneutral-block-pane-bg: #2468c6;
+$content-columneutral-block-pane-odd-bg: #22487e;
 // Divider
 $divider-border-color: $uq-neutral-light40; //ededed;
 // Compact

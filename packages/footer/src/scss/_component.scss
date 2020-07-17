@@ -3,7 +3,7 @@
 @use '@uq-uidf/foundation-misc/src/scss/global' as *;
 @use 'global' as *;
 
-.footer {
+.uq-footer {
     background: $uq-purple-gradient;
     color: $site-footer-color;
     font-size: $site-footer-font-size;
@@ -18,7 +18,7 @@
     abbr[title] {
         text-decoration: none;
     }
-    .acknowledgement-statement {
+    .uq-acknowledgement-statement {
         border-bottom: 1px solid rgba(255, 255, 255, 0.3);
         color: $site-footer-color;
         font-family: $merriweather;
@@ -41,12 +41,12 @@
         max-width: calc(1140px + 3rem);
         margin: 0 auto;
     }
-    .flex-container {
+    .uq-flex-container {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
     }
-    .flex-item {
+    .uq-flex-item {
         flex: 1 1 auto;
         width: 100%;
         padding: 0 15px;
@@ -55,7 +55,7 @@
             width: 75%;
         }
     }
-    .flex-item + .flex-item {
+    .uq-flex-item + .uq-flex-item {
         flex: 1 1 auto;
         width: 100%;
         @media #{$medium-up} {
@@ -78,7 +78,7 @@
         margin: 2rem 0 0 0;
         overflow: hidden;
 
-        .flex-item + .flex-item {
+        .uq-flex-item + .uq-flex-item {
             flex: 1 1 auto;
             width: 100%;
             @media #{$large-up} {
@@ -87,7 +87,7 @@
             }
         }
     }
-    .menu-footer {
+    .uq-menu-footer {
         &__list {
             display: flex;
             flex-wrap: wrap;
@@ -106,12 +106,12 @@
             }
         }
     }
-    .social-media {
+    .uq-social-media {
         font-size: 1.5rem;
         &__list {
             @include inline-list();
         }
-        &__item+.social-media__item::before {
+        &__item+.uq-social-media__item::before {
             content: " ";
             display: inline-block;
             margin: 0 .5rem 0 0;
@@ -148,14 +148,14 @@
     padding-left: 25px;
 }
 
-#footer ul li.footer-support {
+#footer ul li.uq-footer-support {
     border-left-width: 0;
     float: left;
     padding-left: 0;
 }
 
 @media screen and (max-width: 992px) {
-    #footer ul li.footer-support {
+    #footer ul li.uq-footer-support {
         float: none;
     }
     #footer ul li {

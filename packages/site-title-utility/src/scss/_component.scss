@@ -11,7 +11,7 @@
     position: relative;
     max-width: $row-width;
     margin: 0 auto;
-    padding: 1rem 1.5rem;
+    padding: 1rem $column-gutter / 2;
 
     @media #{$large-up} {
       padding-top: 1.5rem;

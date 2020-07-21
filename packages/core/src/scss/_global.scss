@@ -78,7 +78,7 @@ $link-active-color: #005ea5;
 $link-hover-color: #005ea5;
 
 // External link icon
-$external-link-iconeutral-color: $uq-neutral-dark20; //bbb;
+$external-link-icon-color: $uq-neutral-dark20; //bbb;
 // Alerts
 $alert: $uq-red-dark20; //B80017;
 
@@ -107,16 +107,16 @@ $progress-bar-fill-bg: $uq-neutral-dark60; //444;
 $progress-bar-border-color: $uq-neutral-dark40; //949494;
 $progress-bar-color: $uq-white;
 // Progression
-$progressioneutral-text: $uq-white;
-$progressioneutral-border: $progressioneutral-text;
-$progressioneutral-label: $uq-neutral-dark80; //222;
-$progressioneutral-step-bg: $uq-darkgrey;
-$progressioneutral-bar-bg: $uq-neutral;
-$progressioneutral-completed: $uq-green;
+$progression-text: $uq-white;
+$progression-border: $progression-text;
+$progression-label: $uq-neutral-dark80; //222;
+$progression-step-bg: $uq-darkgrey;
+$progression-bar-bg: $uq-neutral;
+$progression-completed: $uq-green;
 // Sections
-$sectioneutral-shaded-bg: $uq-neutral-light20; //f5f5f5;
-$sectioneutral-summary-color: $uq-neutral-dark40; //767676;
-$sectioneutral-footer-color: $uq-neutral-dark40; //767676;
+$section-shaded-bg: $uq-neutral-light20; //f5f5f5;
+$section-summary-color: $uq-neutral-dark40; //767676;
+$section-footer-color: $uq-neutral-dark40; //767676;
 // Palettes
 $light-palette-color: $uq-neutral-light20; //f0f0f0;
 $light-palette-border-color: rgba(255, 255, 255, .4);
@@ -131,9 +131,9 @@ $dark-tint-bg: $uq-neutral-dark60; //494949;
 // Hero banner
 $hero-banner-bg: $uq-neutral-dark60; //494949;
 // Menu Block two column
-$menu-block-two-columneutral-link-color: $link-color;
-$menu-block-two-columneutral-inactive-link-color: $uq-neutral-dark80; //222;
-$menu-block-two-columneutral-border-color: $uq-neutral-light40; //eee;
+$menu-block-two-column-link-color: $link-color;
+$menu-block-two-column-inactive-link-color: $uq-neutral-dark80; //222;
+$menu-block-two-column-border-color: $uq-neutral-light40; //eee;
 // Page
 $page-header-bg: $uq-neutral-light20; //f2f2f2;
 $page-header-white-bg: $uq-white;
@@ -147,20 +147,20 @@ $article-border-color: $uq-neutral-light40; //eee;
 $article-tag-bg: $uq-neutral-light20; //f3f3f3;
 $article-tag-color: $uq-neutral-dark60; //666;
 // Icons
-$iconeutral-light-grey-color: $uq-neutral; //ddd;
+$icon-light-grey-color: $uq-neutral; //ddd;
 // Catalogue
 $catalogue-index-bg: $uq-neutral-light20; //f7f6f5;
 $catalogue-index-color: $uq-neutral-dark60; //555;
 $catalogue-meta-color: $uq-neutral-light40; //eee;
 // Citation (eSpace)
-$citationeutral-color: $uq-neutral-dark40; //868686;
+$citation-color: $uq-neutral-dark40; //868686;
 // Tags
 $tags-link-bg: $uq-neutral-light20; //f5f5f5;
 // Action items
-$actioneutral-item-bg: $uq-neutral-light20;
-$actioneutral-item-iconeutral-bg: $uq-neutral; //dbdbdb;
+$action-item-bg: $uq-neutral-light20;
+$action-item-icon-bg: $uq-neutral; //dbdbdb;
 // Team
-$team-teaser-actioneutral-links: $uq-neutral-dark60; //666;
+$team-teaser-action-links: $uq-neutral-dark60; //666;
 // Asset
 $asset-border-color: $uq-neutral-dark20; //ccc;
 // Cards
@@ -173,8 +173,8 @@ $compendium-title-border-color: $uq-neutral; //ddd;
 // Logo
 $logo-color: $uq-white;
 // Content column block
-$content-columneutral-block-pane-bg: #2468c6;
-$content-columneutral-block-pane-odd-bg: #22487e;
+$content-column-block-pane-bg: #2468c6;
+$content-column-block-pane-odd-bg: #22487e;
 // Divider
 $divider-border-color: $uq-neutral-light40; //ededed;
 // Compact

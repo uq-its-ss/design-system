@@ -3,7 +3,7 @@
 @use '@uq-uidf/foundation-misc/src/scss/global' as *;
 @use 'global' as *;
 
-.footer {
+.uq-footer {
     background: $uq-purple-gradient;
     color: $site-footer-color;
     font-size: $site-footer-font-size;
@@ -13,11 +13,12 @@
     a {
         color: $site-footer-link-color;
         font-weight: 500;
+        text-decoration: none;
     }
     abbr[title] {
         text-decoration: none;
     }
-    .acknowledgement-statement {
+    .uq-acknowledgement-statement {
         border-bottom: 1px solid rgba(255, 255, 255, 0.3);
         color: $site-footer-color;
         font-family: $merriweather;
@@ -36,7 +37,31 @@
         }
     }
     &__content {
-        padding: 3rem 0;
+        padding: 3rem 1.5rem;
+        max-width: calc(1140px + 3rem);
+        margin: 0 auto;
+    }
+    .uq-flex-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .uq-flex-item {
+        flex: 1 1 auto;
+        width: 100%;
+        padding: 0 15px;
+        @media #{$medium-up} {
+            flex: 3 1 auto;
+            width: 75%;
+        }
+    }
+    .uq-flex-item + .uq-flex-item {
+        flex: 1 1 auto;
+        width: 100%;
+        @media #{$medium-up} {
+            flex: 1 1 auto;
+            width: 25%;
+        }
     }
     &__aside {
         display: inline-block;
@@ -52,8 +77,17 @@
     &__footer {
         margin: 2rem 0 0 0;
         overflow: hidden;
+
+        .uq-flex-item + .uq-flex-item {
+            flex: 1 1 auto;
+            width: 100%;
+            @media #{$large-up} {
+                flex: 1 1 auto;
+                width: 25%;
+            }
+        }
     }
-    .menu-footer {
+    .uq-menu-footer {
         &__list {
             display: flex;
             flex-wrap: wrap;
@@ -72,12 +106,12 @@
             }
         }
     }
-    .social-media {
+    .uq-social-media {
         font-size: 1.5rem;
         &__list {
             @include inline-list();
         }
-        &__item+.social-media__item::before {
+        &__item+.uq-social-media__item::before {
             content: " ";
             display: inline-block;
             margin: 0 .5rem 0 0;
@@ -114,14 +148,14 @@
     padding-left: 25px;
 }
 
-#footer ul li.footer-support {
+#footer ul li.uq-footer-support {
     border-left-width: 0;
     float: left;
     padding-left: 0;
 }
 
 @media screen and (max-width: 992px) {
-    #footer ul li.footer-support {
+    #footer ul li.uq-footer-support {
         float: none;
     }
     #footer ul li {

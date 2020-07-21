@@ -2,7 +2,7 @@ import expandedStory from '../../../.storybook/decorators/expanded.js';
 
 // import supporting component markup
 import headerHTML from '../header/header.html';
-import navHTML from '../main-menu/main-menu.html';
+import navHTML from '../main-menu/main-menu2.html';
 
 // import styles
 import '@uq-uidf/site-title-utility/src/scss/_component.scss';

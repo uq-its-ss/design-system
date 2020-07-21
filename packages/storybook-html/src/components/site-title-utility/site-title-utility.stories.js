@@ -5,7 +5,7 @@ import headerHTML from '../header/header.html';
 import navHTML from '../main-menu/main-menu2.html';
 
 // import styles
-import '@uq-uidf/site-title-utility/src/scss/_component.scss';
+import '@uqmchu/site-title-utility/src/scss/_component.scss';
 
 export default {
   title: 'Components/Site title',

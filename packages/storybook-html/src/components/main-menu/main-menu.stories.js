@@ -5,7 +5,7 @@ import expandedStory from '../../../.storybook/decorators/expanded.js';
 import './main-menu.scss';
 
 // import scripts
-import mainMenuCreate from '@uq-uidf/main-menu/src/js/main-menu.es6';
+import mainMenuCreate from '@uqmchu/main-menu/src/js/main-menu.es6';
 
 // import HTML template strings
 import mainMenuHTML1 from './main-menu1.html';

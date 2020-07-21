@@ -1,4 +1,4 @@
-# `@uq-uidf/pagination`
+# `@uqmchu/pagination`
 
 > Pagination component
 
@@ -8,12 +8,12 @@
 
 With Yarn:
 ```shell
-yarn add @uq-uidf/pagination
+yarn add @uqmchu/pagination
 ```
 
 With NPM:
 ```shell
-npm i @uq-uidf/pagination
+npm i @uqmchu/pagination
 ```
 
 ---
@@ -21,6 +21,6 @@ npm i @uq-uidf/pagination
 ## Dependency graph
 
 ```shell
-@uq-uidf/pagination
-└─ @uq-uidf/core
+@uqmchu/pagination
+└─ @uqmchu/core
 ```

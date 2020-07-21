@@ -1,4 +1,4 @@
-# `@uq-uidf/grid-menu`
+# `@uqmchu/grid-menu`
 
 > Grid menu component
 
@@ -8,12 +8,12 @@
 
 With Yarn:
 ```shell
-yarn add @uq-uidf/grid-menu
+yarn add @uqmchu/grid-menu
 ```
 
 With NPM:
 ```shell
-npm i @uq-uidf/grid-menu
+npm i @uqmchu/grid-menu
 ```
 
 ---
@@ -21,11 +21,11 @@ npm i @uq-uidf/grid-menu
 ## Dependency graph
 
 ```shell
-@uq-uidf/grid-menu
-├─ @uq-uidf/core
-├─ @uq-uidf/foundation-global
-│  └─ @uq-uidf/core
-└─ @uq-uidf/foundation-block-grid
-   └─ @uq-uidf/foundation-global
-      └─ @uq-uidf/core
+@uqmchu/grid-menu
+├─ @uqmchu/core
+├─ @uqmchu/foundation-global
+│  └─ @uqmchu/core
+└─ @uqmchu/foundation-block-grid
+   └─ @uqmchu/foundation-global
+      └─ @uqmchu/core
 ```

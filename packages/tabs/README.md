@@ -1,4 +1,4 @@
-# `@uq-uidf/tabs`
+# `@uqmchu/tabs`
 
 > Tabs component
 
@@ -8,12 +8,12 @@
 
 With Yarn:
 ```shell
-yarn add @uq-uidf/tabs
+yarn add @uqmchu/tabs
 ```
 
 With NPM:
 ```shell
-npm i @uq-uidf/tabs
+npm i @uqmchu/tabs
 ```
 
 ---
@@ -21,8 +21,8 @@ npm i @uq-uidf/tabs
 ## Dependency graph
 
 ```shell
-@uq-uidf/tabs
-├─ @uq-uidf/core
-└─ @uq-uidf/foundation-global
-   └─ @uq-uidf/core
+@uqmchu/tabs
+├─ @uqmchu/core
+└─ @uqmchu/foundation-global
+   └─ @uqmchu/core
 ```

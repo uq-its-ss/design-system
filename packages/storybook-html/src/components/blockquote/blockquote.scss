@@ -1,5 +1,5 @@
-@use '@uq-uidf/blockquote/src/scss/_component' as * with (
-    $image-path: '../../../node_modules/@uq-uidf/blockquote/src/images'
+@use '@uqmchu/blockquote/src/scss/_component' as * with (
+    $image-path: '../../../node_modules/@uqmchu/blockquote/src/images'
 );
 
 // Please don't apply random global styles here. You will affect other stories.

@@ -1,4 +1,4 @@
-# `@uq-uidf/icon`
+# `@uqmchu/icon`
 
 > Icon component
 
@@ -8,12 +8,12 @@
 
 With Yarn:
 ```shell
-yarn add @uq-uidf/icon
+yarn add @uqmchu/icon
 ```
 
 With NPM:
 ```shell
-npm i @uq-uidf/icon
+npm i @uqmchu/icon
 ```
 
 ---
@@ -21,6 +21,6 @@ npm i @uq-uidf/icon
 ## Dependency graph
 
 ```shell
-@uq-uidf/icon
-└─ @uq-uidf/core
+@uqmchu/icon
+└─ @uqmchu/core
 ```

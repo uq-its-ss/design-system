@@ -5,7 +5,7 @@ import expandedStory from '../../../.storybook/decorators/expanded.js';
 import './header.scss';
 
 // import scripts
-import headerCreate from '@uq-uidf/header/src/js/header.es6';
+import headerCreate from '@uqmchu/header/src/js/header.es6';
 
 // import HTML template strings
 import headerHTML from './header.html';

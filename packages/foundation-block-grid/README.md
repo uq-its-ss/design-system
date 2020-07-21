@@ -1,4 +1,4 @@
-# `@uq-uidf/foundation-block-grid`
+# `@uqmchu/foundation-block-grid`
 
 > Foundation (5) block grid
 
@@ -8,12 +8,12 @@
 
 With Yarn:
 ```shell
-yarn add @uq-uidf/foundation-block-grid
+yarn add @uqmchu/foundation-block-grid
 ```
 
 With NPM:
 ```shell
-npm i @uq-uidf/foundation-block-grid
+npm i @uqmchu/foundation-block-grid
 ```
 
 ---
@@ -21,7 +21,7 @@ npm i @uq-uidf/foundation-block-grid
 ## Dependency graph
 
 ```shell
-@uq-uidf/foundation-block-grid
-└─ @uq-uidf/foundation-global
-   └─ @uq-uidf/core
+@uqmchu/foundation-block-grid
+└─ @uqmchu/foundation-global
+   └─ @uqmchu/core
 ```

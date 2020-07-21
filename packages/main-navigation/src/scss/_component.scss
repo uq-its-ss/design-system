@@ -1,3 +1,174 @@
+// FS section code
+.section--no-spacing {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.section--no-spacing .section__content {
+  padding: 0;
+}
+
+// Secondary Header (site title)
+.header__secondary.section {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.header__secondary .section__content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+@media (max-width: 640px) {
+  .header__secondary .section__content {
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+  }
+}
+@media (min-width: 1024px) {
+  .header__secondary .section__content {
+    padding-top: 1.5rem;
+    padding-bottom: 0.5rem;
+  }
+  @media (max-width: 640px) {
+    .header__secondary .section__content {
+      padding-bottom: 0.5rem;
+      padding-top: 1.5rem;
+    }
+  }
+}
+.header__secondary .header__secondary__nav-toggle {
+  border: 0;
+  margin-left: 1rem;
+  margin-right: 0;
+  margin-bottom: 0;
+  padding: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+@media (max-width: 640px) {
+  .header__secondary .header__secondary__nav-toggle {
+    height: 1.5rem;
+    width: 1.5rem;
+    margin-left: 1rem;
+  }
+}
+.header__secondary .header__secondary__nav-toggle:before {
+  top: 0;
+  left: 0;
+}
+@media (min-width: 1024px) {
+  .header__secondary .header__secondary__nav-toggle {
+    display: none;
+  }
+}
+.header__secondary__actions {
+  display: flex;
+  align-items: center;
+}
+.header__site-name {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #51247a;
+}
+@media (max-width: 640px) {
+  .header__site-name {
+    font-size: 1.25rem;
+  }
+}
+.header__site-name:hover {
+  color: #51247a;
+  text-decoration: none;
+}
+.header__site-name:focus {
+  color: #51247a;
+  text-decoration: none;
+}
+
+// Button Close icon 
+.button {
+  color: #2377cb;
+  display: inline-block;
+  border: 2px solid transparent;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+  padding: .5rem 1.5rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-decoration: none;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  transition: color .2s,background-color .2s,border-color .2s;
+}
+.button {
+  font-size: 1rem;
+  padding: .5rem 1.5rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+.button--tertiary {
+  border-color: #51247a;
+  background-color: #fff;
+  color: #51247a;
+}
+.button--icon-only, .button--left, .button--right {
+  position: relative;
+}
+.button--icon-only {
+  padding: .5rem;
+  width: 2.75rem;
+  height: 2.75rem;
+  text-indent: -100vw;
+  overflow: hidden;
+}
+.button:hover {
+  text-decoration: none;
+}
+.button--tertiary:hover {
+  border-color: #49206c;
+  color: #49206c;
+  background-color: #fff;
+}
+// Button open icon extended
+.icon--standard--navigation-menu::before {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16'%3E%3Cpath d='M1.715 11.742h12.57M1.715 7.855h12.57M1.715 4h12.57' stroke='%23000' stroke-width='.75' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+// Button Close icon extended
+.button--icon-only::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-size: 100%;
+}
+.button--icon-only::before {
+  width: 1.5rem;
+}
+.button--icon-only::before {
+  height: 1.5rem;
+}
+
+.button--tertiary::before {
+  -webkit-filter: invert(20%) sepia(34%) saturate(1979%) hue-rotate(239deg) brightness(97%) contrast(107%);
+  filter: invert(20%) sepia(34%) saturate(1979%) hue-rotate(239deg) brightness(97%) contrast(107%);
+}
+
+.icon--standard--close::before {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16'%3E%3Cpath d='M1.715 14.285l12.57-12.57m0 12.57L1.715 1.715' stroke='%23000' stroke-width='.75' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+.header__secondary .header__secondary__nav-toggle::before {
+
+    top: 0;
+    left: 0;
+
+}
+// Navigation Menu
 .nav ul {
   list-style-type: none;
   padding-left: 0;
@@ -5,6 +176,7 @@
 .nav ul,
 .nav ul li {
   margin-bottom: 0;
+  margin-top:0;
 }
 .nav a {
   text-decoration: none;
@@ -168,8 +340,7 @@
   .nav--dropdown .nav__level-2 {
     position: absolute;
     width: 320px;
-    transition: opacity 0.2s ease, transform 0.2s ease,
-      visibility 0.2s ease;
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
   }
 }
 .nav--dropdown .nav__level-2.nav--open {

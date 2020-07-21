@@ -176,26 +176,4 @@ class MainNavigation {
   }
 }
 
-(({ behaviors }) => {
-  /**
-   * Attaches the navigation behaviour.
-   *
-   * @type {Drupal~behavior}
-   *
-   * @prop {Drupal~behaviorAttach} attach
-   *   Attaches past event behaviour.
-   */
-  behaviors.mainNavigation = {
-    attach(context) {
-      context
-        .querySelectorAll('.nav--dropdown:not(.processed)')
-        .forEach((obj) => {
-          const mainNavigation = new MainNavigation(obj, 'nav');
-          mainNavigation.init();
-          obj.classList.add('processed');
-        });
-    },
-  };
-})(Drupal);
-
-export default MainNavigation;
+export {MainNavigation as default};

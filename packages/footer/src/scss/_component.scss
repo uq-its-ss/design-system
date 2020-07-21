@@ -1,5 +1,6 @@
 @use '@uqmchu/core/src/scss/global' as *;
 @use '@uqmchu/foundation-global/src/scss/global' as *;
+@use '@uqmchu/foundation-grid/src/scss/global' as *;
 @use '@uqmchu/foundation-misc/src/scss/global' as *;
 @use 'global' as *;
 
@@ -37,8 +38,8 @@
         }
     }
     &__content {
-        padding: 3rem 1.5rem;
-        max-width: calc(1140px + 3rem);
+        padding: 3rem 0;
+        max-width: $row-width;
         margin: 0 auto;
     }
     .uq-flex-container {
@@ -49,7 +50,7 @@
     .uq-flex-item {
         flex: 1 1 auto;
         width: 100%;
-        padding: 0 15px;
+        padding: 0 $column-gutter / 2;
         @media #{$medium-up} {
             flex: 3 1 auto;
             width: 75%;

@@ -1,5 +1,5 @@
 @use '@uq-uidf/core/src/scss/_global' as *;
 
-$pane-border: #eee;
-$pane-shaded-bg: #f5f5f5;
+$pane-border: $uq-neutral-light40; //eee;
+$pane-shaded-bg: $uq-neutral-light20; //f5f5f5;
 $pane-title-color: $uq-purple;

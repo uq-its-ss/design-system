@@ -118,11 +118,11 @@
 
       &:hover {
         background-color: $link-color;
-        color: #fff;
+        color: $uq-white;
 
         .grid-menu__description {
           background-color: $link-color;
-          color: #fff;
+          color: $uq-white;
         }
       }
     }

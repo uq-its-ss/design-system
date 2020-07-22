@@ -20,7 +20,7 @@
 
 %card,
 .card {
-  background-color: #fff;
+  background-color: $uq-white;
   margin-bottom: 1.5rem;
   position: relative;
   overflow-wrap: break-word;
@@ -36,10 +36,10 @@
 
   &__footer {
     .card__link-column {
-      border-top: 1px solid #eee;
+      border-top: 1px solid $uq-neutral-light40; //eee;
 
       & + .card__link-column {
-        border-left: 1px solid #eee;
+        border-left: 1px solid $uq-neutral-light40; //eee;
       }
     }
     .card__link {
@@ -77,7 +77,7 @@
   // Force image heights to be the same for cards sitting next to each other.
   &__image-container {
     @include background-cover();
-    background-color: #eee;
+    background-color: $uq-neutral-light40; //eee;
     height: 18rem;
     overflow: hidden;
     position: relative;
@@ -134,7 +134,7 @@
     vertical-align: middle;
 
     &::before {
-      background: #000;
+      background: $uq-black;
       content: '';
       display: block;
       height: 100%;

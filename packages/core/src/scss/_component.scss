@@ -60,9 +60,9 @@
 %light-tint,
 .light-tint {
   @extend %tint;
-  &:before {
-    @extend %tint-overlay;
-    background: #fff;
+  &::before {
+      @extend %tint-overlay;
+      background: $uq-white;
   }
 }
 
@@ -71,9 +71,9 @@
 .dark-tint {
   @extend %tint;
   background-color: $dark-tint-bg;
-  &:before {
-    @extend %tint-overlay;
-    background: #000;
+  &::before {
+      @extend %tint-overlay;
+      background: $uq-black;
   }
 }
 

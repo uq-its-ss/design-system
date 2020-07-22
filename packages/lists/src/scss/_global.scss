@@ -1,2 +1,4 @@
+@use '../../node_modules/@uq-uidf/core/src/scss/_global' as *;
+
 $h3-font-size: 1.438rem;
-$pane-shaded-bg: #f5f5f5;
+$pane-shaded-bg: $uq-neutral-light20; //f5f5f5;

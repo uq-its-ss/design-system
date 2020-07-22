@@ -44,6 +44,7 @@ export const navigationBasic = () => {
     </div>
   </div>
 
+  <div class="main-navigation section section--no-spacing">
   <div
     id="block-mainnavigation"
     class="block block-system block-system-menu-blockmain"
@@ -108,6 +109,7 @@ export const navigationBasic = () => {
         </nav>
       </div>
     </div>
+  </div>
   </div>
 `;
 };

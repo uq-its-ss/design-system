@@ -6,7 +6,7 @@
 //
 // Global UQ site header
 //
-.header {
+.uq-header {
     background: core.$uq-purple;
     background: core.$uq-purple-gradient;
     font-family: core.$font-body;
@@ -274,51 +274,52 @@
             text-decoration: none;
         }
     }
-}
 
-//
-// Logo
-// 
-.logo img {
-    display: block;
-}
+    //
+    // Logo
+    //
 
-.logo--large {
-    display: none;
-    @media #{fnd-global.$large-up} {
+    .logo img {
         display: block;
     }
-    & img {
-        height: 2.625rem;
-        width: 17.875rem;
-    }
-}
 
-.logo--small {
-    @media #{fnd-global.$large-up} {
+    .logo--large {
+        display: none;
+        @media #{fnd-global.$large-up} {
+            display: block;
+        }
+        & img {
+            height: 2.625rem;
+            width: 17.875rem;
+        }
+    }
+
+    .logo--small {
+        @media #{fnd-global.$large-up} {
+            display: none;
+        }
+        & img {
+            height: 2.625rem;
+            width: 10rem;
+        }
+    }
+
+
+
+
+    // Visibility utility classes
+    .hidden {
         display: none;
     }
-    & img {
-        height: 2.625rem;
-        width: 10rem;
+
+    .visually-hidden {
+        position: absolute!important;
+        overflow: hidden;
+        clip: rect(1px,1px,1px,1px);
+        width: 1px;
+        height: 1px;
+        word-wrap: normal;
+        margin: 0;
+        padding: 0;
     }
-}
-
-
-
-
-// Visibility utility classes
-.hidden {
-    display: none;
-}
-
-.visually-hidden {
-    position: absolute!important;
-    overflow: hidden;
-    clip: rect(1px,1px,1px,1px);
-    width: 1px;
-    height: 1px;
-    word-wrap: normal;
-    margin: 0;
-    padding: 0;
 }

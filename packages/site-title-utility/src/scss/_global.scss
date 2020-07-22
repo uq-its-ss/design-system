@@ -1,4 +1,5 @@
 @use '@uqmchu/core/src/scss/global' as *;
 
-$site-title-color: $uq-purple;
-$site-title-border-color: #F3F3F3;
+$site-title-font: $font-body !default;
+$site-title-color: $uq-purple !default;
+$site-title-border-color: #F3F3F3 !default;

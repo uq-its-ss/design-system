@@ -1,19 +1,31 @@
-@use '@uqmchu/foundation-global/src/scss/global' as *;
-@use '@uqmchu/foundation-grid/src/scss/global' as *;
+@use '@uqmchu/core/src/scss/global' as core;
+@use '@uqmchu/foundation-global/src/scss/global' as fnd-global;
+@use '@uqmchu/foundation-grid/src/scss/global' as fnd-grid;
 @use 'global' as *;
 
 .uq-site-title {
+  color: core.$text;
+  font-family: core.$font-body;
+  font-size: core.$compass-base-font-size;
+  font-weight: fnd-global.$body-font-weight;
+  line-height: core.$compass-base-line-height;
+  
+  *, *:before, *:after {
+    box-sizing: border-box;
+  }
+
   &__content {
+    font-size: inherit;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     position: relative;
-    max-width: $row-width;
+    max-width: fnd-grid.$row-width;
     margin: 0 auto;
-    padding: 1rem $column-gutter / 2;
+    padding: 1rem fnd-global.$column-gutter / 2;
 
-    @media #{$large-up} {
+    @media #{fnd-global.$large-up} {
       padding-top: 1.5rem;
       padding-bottom: .5rem;
     }
@@ -22,9 +34,11 @@
   &__title {
     &__link {
       margin: 0;
+      font-family: $site-title-font;
       font-size: 1.25rem;
       font-weight: 500;
       color: $site-title-color;
+      text-decoration: none;
 
       &:hover, &:focus {
         color: $site-title-color;
@@ -40,7 +54,7 @@
 
   &--no-nav {
     border-bottom: 1px solid $site-title-border-color;
-    @media #{$large-up} {
+    @media #{fnd-global.$large-up} {
       padding-bottom: .857rem;
     }
   }

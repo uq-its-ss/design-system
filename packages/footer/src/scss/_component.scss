@@ -1,16 +1,19 @@
-@use '@uqmchu/core/src/scss/global' as *;
-@use '@uqmchu/foundation-global/src/scss/global' as *;
-@use '@uqmchu/foundation-grid/src/scss/global' as *;
-@use '@uqmchu/foundation-misc/src/scss/global' as *;
+@use '@uqmchu/core/src/scss/global' as core;
+@use '@uqmchu/foundation-global/src/scss/global' as fnd-global;
+@use '@uqmchu/foundation-grid/src/scss/global' as fnd-grid;
+@use '@uqmchu/foundation-misc/src/scss/global' as fnd-misc;
 @use 'global' as *;
 
 .uq-footer {
-    background: $uq-purple-gradient;
+    background: core.$uq-purple-gradient;
     color: $site-footer-color;
+    font-family: core.$font-body;
     font-size: $site-footer-font-size;
+    font-weight: fnd-global.$body-font-weight;
+    line-height: core.$compass-base-line-height;
     
-    &--full-width {
-        padding: 0 1rem;
+    *, *:before, *:after {
+        box-sizing: border-box;
     }
 
     a {
@@ -21,30 +24,31 @@
 
     abbr[title] {
         text-decoration: none;
+        border-bottom: 1px dotted;
     }
 
     &__acknowledgement-statement {
         border-bottom: 1px solid rgba(255, 255, 255, 0.3);
         color: $site-footer-color;
-        font-family: $merriweather;
+        font-family: core.$merriweather;
         font-size: 1rem;
         font-style: italic;
-        font-weight: 300;
+        font-weight: fnd-global.$body-font-weight;
         line-height: 1.5;
         margin: 0 0 2rem;
         padding: 0 0 2rem;
-        @media #{$medium-up} {
+        @media #{fnd-global.$medium-up} {
             font-size: 1.125rem;
         }
         &__link {
-            font-family: Roboto;
+            font-family: core.$font-body;
             font-style: normal;
         }
     }
 
     &__content {
         padding: 3rem 0;
-        max-width: $row-width;
+        max-width: fnd-grid.$row-width;
         margin: 0 auto;
     }
 
@@ -52,14 +56,15 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+
     }
 
     &__flex-item {
         flex: 1 1 auto;
         width: 100%;
-        padding: 0 $column-gutter / 2;
+        padding: 0 fnd-global.$column-gutter / 2;
 
-        @media #{$medium-up} {
+        @media #{fnd-global.$medium-up} {
             flex: 3 1 auto;
             width: 75%;
         }
@@ -67,7 +72,8 @@
         & + .uq-footer__flex-item {
             flex: 1 1 auto;
             width: 100%;
-            @media #{$medium-up} {
+
+            @media #{fnd-global.$medium-up} {
                 flex: 1 1 auto;
                 width: 25%;
             }
@@ -77,7 +83,7 @@
     &__aside {
         display: inline-block;
         margin: 1.5rem 0 0 0;
-        @media #{$large-up} {
+        @media #{fnd-global.$large-up} {
             margin: 0;
         }
     }
@@ -94,7 +100,7 @@
         .uq-footer__flex-item + .uq-footer__flex-item {
             flex: 1 1 auto;
             width: 100%;
-            @media #{$large-up} {
+            @media #{fnd-global.$large-up} {
                 flex: 1 1 auto;
                 width: 25%;
             }
@@ -109,11 +115,11 @@
             margin: 0;
             padding: 0;
             li {
-                padding-left: var(--space--md);
+                padding-left: var(--space--md, 16px); // first arg needs to be supplied via emitting core
 
                 & + :before {
                     content: " | ";
-                    padding-right: var(--space--md);
+                    padding-right: var(--space--md, 16px); // first arg needs to be supplied via emitting core
                 }
                 
                 &:first-of-type {
@@ -126,7 +132,7 @@
     &__social-media {
         font-size: 1.5rem;
         &__list {
-            @include inline-list();
+            @include fnd-misc.inline-list();
         }
         &__item + .uq-footer__social-media__item::before {
             content: " ";
@@ -139,5 +145,9 @@
                 transition: all ease .5s;
             }
         }
+    }
+
+    &--full-width {
+        padding: 0 1rem;
     }
 }

@@ -39,10 +39,12 @@
   },
   "dependencies": {
     "@uqmchu/core": "^0.0.0",
-    "@uqmchu/foundation-global": "^0.0.0"
+    "@uqmchu/foundation-global": "^0.0.0",
+    "@uqmchu/foundation-grid": "^0.0.0"
   },
   "peerDependencies": {
     "@uqmchu/core": "^0.0.0",
-    "@uqmchu/foundation-global": "^0.0.0"
+    "@uqmchu/foundation-global": "^0.0.0",
+    "@uqmchu/foundation-grid": "^0.0.0"
   }
 }

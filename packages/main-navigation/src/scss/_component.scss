@@ -11,6 +11,18 @@
   padding: 0;
 }
 
+// Main Navigation Section overrides
+.main-navigation.section {
+  overflow: visible;
+}
+.main-navigation .section__content, .header__secondary .section__content {
+  position: relative;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  float: none;
+}
+
 // Secondary Header (site title)
 .header__secondary.section {
   padding-top: 0;

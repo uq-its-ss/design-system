@@ -3,9 +3,9 @@
  * Some compass features may still be required for Foundation 5 (TODO: remove
  * this forward when Foundation and other dependencies have been stripped out).
  */
-@forward "_partials/compass" as compass-*;
+@forward '_partials/compass' as compass-*;
 // Variables, functions, and mixins
-@use "_partials/compass" as compass;
+@use '_partials/compass' as compass;
 
 $roboto:  'Roboto', "Helvetica Neue", Helvetica, Arial, sans-serif;
 $merriweather:  'Merriweather', Georgia, serif;
@@ -57,7 +57,7 @@ $uq-neutral-light60: #e7e3e0; // rgb(231, 227, 224), rgba(215, 209, 204, 0.6), C
 $uq-neutral-light80: #dfdad6; // rgb(223, 218, 214), rgba(215, 209, 204, 0.8)
 // UQ Secondary - Neutral Shades
 $uq-neutral-dark20: #aca7a3; // Consolidated - BBB, BDB0A5, CCC
-$uq-neutral-dark40: #817d7a; // Consolidated - 747474, 767676, 808080, 868686, 949494
+$uq-neutral-dark40: #817d7a; // Consolidated - 747474, 767676, 777, 808080, 868686, 949494
 $uq-neutral-dark60: #565452; // Consolidated - 555, 676767, 666, 6F6F6F, 444, 494949, 333
 $uq-neutral-dark80: #2b2a29; // Consolidated - 181818, 2B2A29, 222, 2B2B2B
 // UQ Secondary - Darkgrey Tints

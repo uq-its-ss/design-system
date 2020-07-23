@@ -1,4 +1,4 @@
-@use '@uq-uidf/core/src/scss/_global' as *;
+@use '@uq-uidf/core/src/scss/global' as *;
 @use '@uq-uidf/foundation-global/src/scss/global' as *;
 @use '@uq-uidf/foundation-block-grid/src/scss/global' as *;
 @use "global" as *;
@@ -27,7 +27,7 @@
 
   &__link,
   a {
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid $linked-list-border; //#eee
     color: $linked-list-color;
     display: block;
     font-size: 1.375rem;

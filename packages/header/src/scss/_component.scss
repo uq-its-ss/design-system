@@ -11,7 +11,7 @@
     background: core.$uq-purple-gradient;
     font-family: core.$font-body;
     font-weight: fnd-global.$body-font-weight;
-    line-height: core.$compass-base-line-height;
+    line-height: core.$compass-base-line-height-ratio;
 
     *, *:before, *:after {
         box-sizing: border-box;

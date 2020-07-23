@@ -212,7 +212,7 @@ input[type="radio"] {
     margin-bottom: 1rem;
     // So long labels on multiple lines don't break around the radio/checkbox.
     max-width: 80%;
-    vertical-align: top;
+    //vertical-align: top;
 
     @media #{$medium-up} {
       max-width: 85%;

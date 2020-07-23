@@ -6,6 +6,7 @@
 
 .uq-footer {
     background: core.$uq-purple-gradient;
+    box-sizing: border-box;
     color: $site-footer-color;
     font-family: core.$font-body;
     font-size: $site-footer-font-size;

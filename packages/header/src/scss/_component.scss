@@ -9,6 +9,7 @@
 .uq-header {
     background: core.$uq-purple;
     background: core.$uq-purple-gradient;
+    box-sizing: border-box;
     font-family: core.$font-body;
     font-weight: fnd-global.$body-font-weight;
     line-height: core.$compass-base-line-height-ratio;

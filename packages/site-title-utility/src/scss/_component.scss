@@ -5,6 +5,7 @@
 
 .uq-site-title {
   color: core.$text;
+  box-sizing: border-box;
   font-family: core.$font-body;
   font-size: core.$compass-base-font-size;
   font-weight: fnd-global.$body-font-weight;

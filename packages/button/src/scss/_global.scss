@@ -2,18 +2,18 @@
 
 @use '@uqmchu/core/src/scss/global' as *;
 
-$button-font: $roboto;
+$button-font: $roboto !default;
 
-$button-color: #fff;
-$button-hover-color: #fff;
-$button-bg-color: $link-color;
-$button-bg-hover-color: $link-active-color;
-$button-border-color: $link-color;
-$button-border-hover-color: $link-active-color;
+$button-color: #fff !default;
+$button-hover-color: #fff !default;
+$button-bg-color: $link-color !default;
+$button-bg-hover-color: $link-active-color !default;
+$button-border-color: $link-color !default;
+$button-border-hover-color: $link-active-color !default;
 
-$button-secondary-color: #2b2b2b;
-$button-secondary-hover-color: #000000;
-$button-secondary-bg-color: #d7d1cc;
-$button-secondary-bg-hover-color: #bdb0a5;
-$button-secondary-border-color: #d7d1cc;
-$button-secondary-border-hover-color: #bdb0a5;
+$button-secondary-color: #2b2b2b !default;
+$button-secondary-hover-color: #000000 !default;
+$button-secondary-bg-color: #d7d1cc !default;
+$button-secondary-bg-hover-color: #bdb0a5 !default;
+$button-secondary-border-color: #d7d1cc !default;
+$button-secondary-border-hover-color: #bdb0a5 !default;

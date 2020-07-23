@@ -28,8 +28,13 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding-top: 1.5rem;
-            padding-bottom: 1.5rem;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+
+            @media #{fnd-global.$large-up} {
+                padding-top: 1.5rem;
+                padding-bottom: 1.5rem;
+            }
         }
 
         .menu-global {

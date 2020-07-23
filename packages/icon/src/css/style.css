@@ -248,6 +248,7 @@
 @mixin icon standard, expand-3;
 @mixin icon standard, information-circle;
 @mixin icon standard, navigation-menu;
+@mixin icon standard, navigation-next;
 @mixin icon standard, network-information;
 @mixin icon standard, network-user;
 @mixin icon standard, phone;

@@ -22,7 +22,67 @@ export default {
   decorators: [expandedStory]
 };
 
-export const navigationBasic = () => {
+export const basicNavigation = () => {
+  useEffect(() => {
+    var navelement = document.getElementById("primary-nav");
+    var nav = new mainNavigationCreate (navelement, "nav");
+  });
+  return `
+  <div class="header__secondary section">
+    <div class="section__content">
+      <div class="header__secondary__title"></div>
+      <div class="header__secondary__actions">
+        <button
+          class="js-nav-toggle header__secondary__nav-toggle button button--tertiary button--icon-only icon--standard--close"
+          aria-expanded="true"
+        >
+          Menu
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="main-navigation section section--no-spacing">
+  <div
+    id="block-mainnavigation"
+    class="block block-system block-system-menu-blockmain"
+  >
+      <div class="section__content">
+        <nav class="nav nav--dropdown processed" id="primary-nav">
+          <ul class="nav__level-1 nav--open" aria-expanded="true">
+              <li>
+              <a
+                href="/"
+                title="Home"
+                aria-expanded="false"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="/study"
+                title="study"
+                aria-expanded="false"
+                >Study</a
+              >
+            </li>
+            <li>
+              <a
+                href="/contact-us"
+                title="Contact"
+                aria-expanded="false"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+  </div>
+  </div>
+`;
+};
+
+export const dropdownNavigation = () => {
   useEffect(() => {
     var navelement = document.getElementById("primary-nav");
     var nav = new mainNavigationCreate (navelement, "nav");
@@ -49,9 +109,6 @@ export const navigationBasic = () => {
     id="block-mainnavigation"
     class="block block-system block-system-menu-blockmain"
   >
-    <div
-      data-gtm-category="Main navigation"
-    >
       <div class="section__content">
         <nav class="nav nav--dropdown processed" id="primary-nav">
           <ul class="nav__level-1 nav--open" aria-expanded="true">
@@ -99,16 +156,12 @@ export const navigationBasic = () => {
                 href="/contact-us"
                 title="Contact"
                 aria-expanded="false"
-                data-gtm-label="Contact"
-                data-drupal-link-system-path="node/3269"
-                class="gtm-processed"
                 >Contact</a
               >
             </li>
           </ul>
         </nav>
       </div>
-    </div>
   </div>
   </div>
 `;

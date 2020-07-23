@@ -19,8 +19,11 @@
   position: relative;
   max-width: 1140px;
   margin: 0 auto;
-  padding: 0 1.5rem;
   float: none;
+}
+
+.header__secondary .section__content {
+  padding: 0 1.5rem;
 }
 
 // Secondary Header (site title)

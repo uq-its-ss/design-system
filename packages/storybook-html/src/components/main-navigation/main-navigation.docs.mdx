@@ -6,8 +6,58 @@ import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
 
 The main navigation component is designed to work closely with the header, site title component and collapses down to a conventional open/close menu button on smaller devices. 
 
+## Basic Example
+
+A simple one level menu list
+
 <Preview withToolbar>
-  <Story height="350px" id="components-main-navigation--navigation-basic" />
+  <Story height="350px" id="components-main-navigation--basic-navigation" />
+</Preview>
+
+```html
+<!-- site title and mobile container -->  
+<div class="header__secondary section">
+  <div class="section__content">
+    <!-- site title -->  
+    <div class="header__secondary__title"></div>
+    <!-- Utilities --> 
+    <div class="header__secondary__actions">
+      <!-- navigation open / close button --> 
+      <button
+        class="js-nav-toggle header__secondary__nav-toggle button button--tertiary button--icon-only icon--standard--close"
+        aria-expanded="true"
+      >
+        Menu
+      </button>
+    </div>
+  </div>
+</div>
+<!-- Main navigation container -->
+<div class="main-navigation section section--no-spacing">
+  <div id="block-mainnavigation" class="block block-system block-system-menu-blockmain">
+      <div class="section__content">
+        <nav class="nav nav--dropdown processed" id="primary-nav">
+          <ul class="nav__level-1 nav--open" aria-expanded="true">
+              <li>
+              <a href="/" title="Home">Home</a>
+            </li>
+            <li>
+              <a href="/study" title="Study">Study</a>
+            </li>
+            <li>
+              <a href="/contact-us" title="Contact">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+  </div>
+</div>
+```
+
+## with Dropdown
+
+<Preview withToolbar>
+  <Story height="350px" id="components-main-navigation--dropdown-navigation" />
 </Preview>
 
 ### Site title
@@ -68,3 +118,12 @@ Requires the Site Title component for the Responsive menu botton.
   </div>
 </div>
 ```
+
+## Break points
+
+* Desktop above 1140px
+* Mobile and tablet below 1140px 
+
+## Known issues
+
+These is a bug with the close and open button, does not trigger if tabbing past the last menu item, which closes the menu and leaves the button in the incorrect state. 

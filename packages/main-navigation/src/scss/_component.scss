@@ -232,35 +232,6 @@
   }
 }
 
-.nav--breadcrumb {
-  position: relative;
-  padding: 0.1875rem 0;
-  z-index: 1;
-  overflow: auto;
-  white-space: nowrap;
-
-  & > ul > li {
-    margin-left: 0;
-    padding-right: var(--nav-breadcrumb-spacing);
-    color: var(---grey-50);
-    font-size: var(--nav-breadcrumb-size);
-    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' stroke='gray'%3E%3Cpath d='M5.145 14.285l6.167-6a.41.41 0 000-.598L5.145 1.715' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 0.375rem center;
-    background-size: 0.75rem;
-
-    &:last-child {
-      padding-right: 0;
-      background-image: none;
-    }
-
-    & a {
-      color: inherit;
-      text-decoration: underline;
-    }
-  }
-}
-
 /**
  * Dropdown Navigation
  *

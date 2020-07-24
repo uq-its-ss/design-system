@@ -24,16 +24,12 @@
 
 /* main Navigation globals */
   --nav-primary: var($uq-black);
-  --nav-primary-active-bg: rgb(241, 241, 241);
+  --nav-primary-active-bg: rgb(241, 241, 241); /* #F1F1F1  */ 
   --nav-dropdown-width: 320px;
-  --nav-dropdown-bg: rgb(241, 241, 241);
-  --nav-dropdown-active-bg: rgb(226, 226, 226);
-  --nav-dropdown-divider: rgb(226, 226, 226);
+  --nav-dropdown-bg: rgb(241, 241, 241); /* #F1F1F1  */ 
+  --nav-dropdown-active-bg: rgb(226, 226, 226); /* #E2E2E2  */ /*  */
+  --nav-dropdown-divider: rgb(226, 226, 226); /* #E2E2E2  */ /* border colour for navigation items */
   --nav-dropdown-animation-distance: var(--spacing-xs);
   --nav-chevron: $uq-purple;
   --nav-active: $uq-purple;
-  --nav-breadcrumb-size: var(--font-size-s);
-  --nav-breadcrumb-color: rgb(128, 128, 128);
-  --nav-breadcrumb-spacing: var(--spacing-m);
-
 }

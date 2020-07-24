@@ -1,25 +1,40 @@
-@use '@uq-uidf/core/src/scss/_global' as *;
-@use '@uq-uidf/foundation-global/src/scss/global' as *;
+@use '@uqmchu/core/src/scss/global' as core;
+@use '@uqmchu/foundation-global/src/scss/global' as fnd-global;
+@use '@uqmchu/foundation-grid/src/scss/global' as fnd-grid;
 @use 'global' as *;
 
 //
 // Global UQ site header
 //
-.header {
-    background: $uq-purple;
-    background: $uq-purple-gradient;
+.uq-header {
+    background: core.$uq-purple;
+    background: core.$uq-purple-gradient;
+    box-sizing: border-box;
+    font-family: core.$font-body;
+    font-weight: fnd-global.$body-font-weight;
+    line-height: core.$compass-base-line-height-ratio;
+
+    *, *:before, *:after {
+        box-sizing: border-box;
+    }
+
     &__container {
         position: relative;
-        max-width: 1140px;
+        max-width: fnd-grid.$row-width;
         margin: 0 auto;
-        padding: 0 1.5rem;
+        padding: 0 fnd-global.$column-gutter / 2;
 
         .nav-global {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding-top: 1.5rem;
-            padding-bottom: 1.5rem;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+
+            @media #{fnd-global.$large-up} {
+                padding-top: 1.5rem;
+                padding-bottom: 1.5rem;
+            }
         }
 
         .menu-global {
@@ -31,7 +46,7 @@
 
                 li {
                     display: none;
-                    @media #{$large-up} {
+                    @media #{fnd-global.$large-up} {
                         display: inline;
                         margin-left: 1.5rem;
                         word-wrap: break-word;
@@ -120,7 +135,7 @@
 
             &__title {
                 color: white;
-                font-family: $merriweather;
+                font-family: core.$merriweather;
                 font-size: 1.25rem;
                 font-style: italic;
                 font-weight: 400;
@@ -133,7 +148,7 @@
                 vertical-align: middle;
 
                 & .nav-search__radio-wrapper {
-                    @media #{$medium-up} {
+                    @media #{fnd-global.$medium-up} {
                         display: inline-block;
                     }
                 }
@@ -141,7 +156,7 @@
                 & .form-item {
                     margin-top: .5rem;
                                 
-                    @media #{$medium-up} {
+                    @media #{fnd-global.$medium-up} {
                         display: inline-block;
                         padding-left: 1rem;
                         margin-top: 0;
@@ -171,11 +186,18 @@
                     margin: 0;
                     width: 100%;
                     padding: .75rem 1rem;
+                    border: 1px solid #e2e2e2;
                     border-radius: 2px;
                     font-size: 1rem;
                     line-height: 1;
                     color: #181818;
                     height: auto;
+                    outline: none;
+
+                    &:focus {
+                        border-color: core.$link;
+                        outline: none;
+                    }
                 }
 
                 &__button {
@@ -227,7 +249,7 @@
                 -moz-column-count: 3;
                 column-count: 3;
                 padding-top: 1.5rem;
-                @media #{$large-up} {
+                @media #{fnd-global.$large-up} {
                     display: none;
                 }
                 ul {
@@ -258,58 +280,59 @@
         margin: 0;
         font-size: 1.25rem;
         font-weight: 500;
-        color: $uq-purple;
+        color: core.$uq-purple;
         
         &:hover {
-            color: $uq-purple;
+            color: core.$uq-purple;
             text-decoration: none;
         }
     }
-}
 
-//
-// Logo
-// 
-.logo img {
-    display: block;
-}
+    //
+    // Logo
+    //
 
-.logo--large {
-    display: none;
-    @media #{$large-up} {
+    .logo img {
         display: block;
     }
-    & img {
-        height: 2.625rem;
-        width: 17.875rem;
-    }
-}
 
-.logo--small {
-    @media #{$large-up} {
+    .logo--large {
+        display: none;
+        @media #{fnd-global.$large-up} {
+            display: block;
+        }
+        & img {
+            height: 2.625rem;
+            width: 17.875rem;
+        }
+    }
+
+    .logo--small {
+        @media #{fnd-global.$large-up} {
+            display: none;
+        }
+        & img {
+            height: 2.625rem;
+            width: 10rem;
+        }
+    }
+
+
+
+
+    // Visibility utility classes
+    .hidden {
         display: none;
     }
-    & img {
-        height: 2.625rem;
-        width: 10rem;
+
+    .visually-hidden {
+        position: absolute!important;
+        overflow: hidden;
+        clip: rect(1px,1px,1px,1px);
+        width: 1px;
+        height: 1px;
+        word-wrap: normal;
+        margin: 0;
+        padding: 0;
     }
-}
-
-
-
-
-// Visibility utility classes
-.hidden {
-    display: none;
-}
-
-.visually-hidden {
-    position: absolute!important;
-    overflow: hidden;
-    clip: rect(1px,1px,1px,1px);
-    width: 1px;
-    height: 1px;
-    word-wrap: normal;
-    margin: 0;
-    padding: 0;
 }

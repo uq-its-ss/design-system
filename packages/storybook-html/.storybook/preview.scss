@@ -1,19 +1,20 @@
-@use "@uq-uidf/foundation-normalise/src/scss/_component" as normalise;
-@use "@uq-uidf/foundation-global/src/scss/_component" as fnd-global;
-@use "@uq-uidf/core/src/scss/_component" as core with (
-  $uq-font-path: "../node_modules/@uq-uidf/core/src/fonts/uq-icons/font",
+@use "@uqmchu/foundation-normalise/src/scss/_component" as normalise;
+@use "@uqmchu/foundation-global/src/scss/_component" as fnd-global;
+@use "@uqmchu/core/src/scss/_component" as core with (
+  $uq-font-path: "../node_modules/@uqmchu/core/src/fonts/uq-icons/font",
   $fa-font-path: "../node_modules/font-awesome/fonts",
-  $uq-bg-image-path: '../node_modules/@uq-uidf/core/src/images'
+  $uq-bg-image-path: '../node_modules/@uqmchu/core/src/images'
 );
-@use "@uq-uidf/foundation-grid/src/scss/_component" as grid;
-@use "@uq-uidf/foundation-block-grid/src/scss/_component" as block-grid;
-@use "@uq-uidf/foundation-misc/src/scss/_component" as misc;
-@use "@uq-uidf/body/src/scss/_component" as body;
+@use "@uqmchu/foundation-grid/src/scss/_component" as grid;
+@use "@uqmchu/foundation-block-grid/src/scss/_component" as block-grid;
+@use "@uqmchu/foundation-misc/src/scss/_component" as misc;
+@use "@uqmchu/body/src/scss/_component" as body;
 
-// Prevent the @uq-uidf/core from imposing a background colour. Overrides the
+// Prevent the @uqmchu/core from imposing a background colour. Overrides the
 // Foundation 5.5.3 default styling of the body tag.
 body {
   background-color: transparent !important;
+  margin: 0;
 }
 
 // For centerStory decorator

@@ -1,59 +1,118 @@
-@use '@uq-uidf/core/src/scss/global' as *;
-@use '@uq-uidf/foundation-global/src/scss/global' as *;
-@use '@uq-uidf/foundation-misc/src/scss/global' as *;
+@use '@uqmchu/core/src/scss/global' as core;
+@use '@uqmchu/foundation-global/src/scss/global' as fnd-global;
+@use '@uqmchu/foundation-grid/src/scss/global' as fnd-grid;
+@use '@uqmchu/foundation-misc/src/scss/global' as fnd-misc;
 @use 'global' as *;
 
-.footer {
-    background: $uq-purple-gradient;
+.uq-footer {
+    background: core.$uq-purple-gradient;
+    box-sizing: border-box;
     color: $site-footer-color;
+    font-family: core.$font-body;
     font-size: $site-footer-font-size;
-    &--full-width {
-        padding: 0 1rem;
+    font-weight: fnd-global.$body-font-weight;
+    line-height: core.$compass-base-line-height-ratio;
+    
+    *, *:before, *:after {
+        box-sizing: border-box;
     }
+
     a {
         color: $site-footer-link-color;
         font-weight: 500;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
     }
+
     abbr[title] {
         text-decoration: none;
+        border-bottom: 1px dotted;
     }
-    .acknowledgement-statement {
+
+    &__acknowledgement-statement {
         border-bottom: 1px solid rgba(255, 255, 255, 0.3);
         color: $site-footer-color;
-        font-family: $merriweather;
+        font-family: core.$merriweather;
         font-size: 1rem;
         font-style: italic;
-        font-weight: 300;
+        font-weight: fnd-global.$body-font-weight;
         line-height: 1.5;
         margin: 0 0 2rem;
         padding: 0 0 2rem;
-        @media #{$medium-up} {
+        @media #{fnd-global.$medium-up} {
             font-size: 1.125rem;
         }
         &__link {
-            font-family: Roboto;
+            font-family: core.$font-body;
             font-style: normal;
         }
     }
+
     &__content {
         padding: 3rem 0;
+        max-width: fnd-grid.$row-width;
+        margin: 0 auto;
     }
+
+    &__flex-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+    }
+
+    &__flex-item {
+        flex: 1 1 auto;
+        width: 100%;
+        padding: 0 fnd-global.$column-gutter / 2;
+
+        @media #{fnd-global.$medium-up} {
+            flex: 3 1 auto;
+            width: 75%;
+        }
+
+        & + .uq-footer__flex-item {
+            flex: 1 1 auto;
+            width: 100%;
+
+            @media #{fnd-global.$medium-up} {
+                flex: 1 1 auto;
+                width: 25%;
+            }
+        }
+    }
+
     &__aside {
         display: inline-block;
         margin: 1.5rem 0 0 0;
-        @media #{$large-up} {
+        @media #{fnd-global.$large-up} {
             margin: 0;
         }
     }
+
     &__sub-title {
         color: $site-footer-link-color;
         font-size: 1.125em;
     }
+
     &__footer {
         margin: 2rem 0 0 0;
         overflow: hidden;
+
+        .uq-footer__flex-item + .uq-footer__flex-item {
+            flex: 1 1 auto;
+            width: 100%;
+            @media #{fnd-global.$large-up} {
+                flex: 1 1 auto;
+                width: 25%;
+            }
+        }
     }
-    .menu-footer {
+
+    &__footer-menu {
         &__list {
             display: flex;
             flex-wrap: wrap;
@@ -61,23 +120,26 @@
             margin: 0;
             padding: 0;
             li {
-                padding-left: var(--space--md);
-                &+:before {
+                padding-left: var(--space--md, 16px); // first arg needs to be supplied via emitting core
+
+                & + :before {
                     content: " | ";
-                    padding-right: var(--space--md);
+                    padding-right: var(--space--md, 16px); // first arg needs to be supplied via emitting core
                 }
+                
                 &:first-of-type {
                     padding-left: 0;
                 }
             }
         }
     }
-    .social-media {
+    
+    &__social-media {
         font-size: 1.5rem;
         &__list {
-            @include inline-list();
+            @include fnd-misc.inline-list();
         }
-        &__item+.social-media__item::before {
+        &__item + .uq-footer__social-media__item::before {
             content: " ";
             display: inline-block;
             margin: 0 .5rem 0 0;
@@ -89,45 +151,8 @@
             }
         }
     }
-}
 
-// OLA local footer for minimal footer full-width demo --- DELETE LATER
-#footer {
-    font-size: 14px;
-    border-top: 1px solid #ddd;
-    overflow: hidden;
-    padding: 20px 0;
-}
-
-#footer ul {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 0;
-    margin-right: 25px;
-}
-
-#footer ul li {
-    border-left: 1px solid #ddd;
-    float: right;
-    line-height: 150%;
-    margin-left: 25px;
-    padding-left: 25px;
-}
-
-#footer ul li.footer-support {
-    border-left-width: 0;
-    float: left;
-    padding-left: 0;
-}
-
-@media screen and (max-width: 992px) {
-    #footer ul li.footer-support {
-        float: none;
-    }
-    #footer ul li {
-        border: 0;
-        float: none;
-        margin: 0 0 0 15px;
-        padding: 0;
+    &--full-width {
+        padding: 0 1rem;
     }
 }

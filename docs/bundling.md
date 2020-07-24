@@ -13,13 +13,13 @@
 These packages allow developers & designers to consume versioned bundles from
 the UIDF package registry as single imports (Sass (SCSS) & Javascript modules).
 
-### `@uq-uidf/all`
+### `@uqmchu/all`
 
 > Everything.
 
 [Read the docs](/packages/all/README.md)
 
-### `@uq-uidf/basic`
+### `@uqmchu/basic`
 
 > Only the essentials.
 

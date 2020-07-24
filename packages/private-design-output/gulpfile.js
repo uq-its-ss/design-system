@@ -16,8 +16,8 @@ sass.compiler = require('sass');
 
 // SCSS include paths
 const scssPaths = [
-  'node_modules/@uq-uidf/core/node_modules',
-  'node_modules/@uq-uidf/body/node_modules',
+  'node_modules/@uqmchu/core/node_modules',
+  'node_modules/@uqmchu/body/node_modules',
   'node_modules/@uq-uidf',
   'node_modules'
 ];
@@ -36,15 +36,15 @@ function compileSCSS() {
 function exportFontFiles() {
   return src([
     './node_modules/font-awesome/fonts/**',
-    './node_modules/@uq-uidf/core/src/fonts/uq-icons/font/**'
+    './node_modules/@uqmchu/core/src/fonts/uq-icons/font/**'
   ])
   .pipe(dest('./dist/fonts'));
 }
 
 function exportImages() {
   return src([
-    './node_modules/@uq-uidf/core/src/images/**',
-    './node_modules/@uq-uidf/blockquote/src/images/**'
+    './node_modules/@uqmchu/core/src/images/**',
+    './node_modules/@uqmchu/blockquote/src/images/**'
   ])
   .pipe(dest('./dist/images'));
 }

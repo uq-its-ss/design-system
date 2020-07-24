@@ -1,4 +1,4 @@
-# `@uq-uidf/main-menu`
+# `@uqmchu/main-menu`
 
 > Main menu component
 
@@ -8,12 +8,12 @@
 
 With Yarn:
 ```shell
-yarn add @uq-uidf/main-menu
+yarn add @uqmchu/main-menu
 ```
 
 With NPM:
 ```shell
-npm i @uq-uidf/main-menu
+npm i @uqmchu/main-menu
 ```
 
 ---
@@ -21,11 +21,11 @@ npm i @uq-uidf/main-menu
 ## Dependencies
 
 ```
-@uq-uidf/main-menu
-├─ @uq-uidf/core
-├─ @uq-uidf/foundation-global
-│  └─ @uq-uidf/core
-└─ @uq-uidf/foundation-grid
-   └─ @uq-uidf/foundation-global
-      └─ @uq-uidf/core
+@uqmchu/main-menu
+├─ @uqmchu/core
+├─ @uqmchu/foundation-global
+│  └─ @uqmchu/core
+└─ @uqmchu/foundation-grid
+   └─ @uqmchu/foundation-global
+      └─ @uqmchu/core
 ```

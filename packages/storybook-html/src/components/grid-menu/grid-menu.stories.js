@@ -4,7 +4,7 @@ import { useEffect } from '@storybook/client-api';
 import './grid-menu.scss';
 
 // import scripts
-import gridMenuEqualiser from '@uq-uidf/grid-menu/src/js/grid-menu';
+import gridMenuEqualiser from '@uqmchu/grid-menu/src/js/grid-menu';
 
 // import HTML template strings
 import allHTML from './grid-menu.html';

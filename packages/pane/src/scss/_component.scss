@@ -45,7 +45,7 @@
 @mixin pane-dark-tint {
   @extend %light-palette;
   background-color: $uq-black;
-  background-color: rgba(0, 0, 0, .65);
+  background-color: rgba($uq-black, .65);
 
   .pane__title {
     @extend %light-palette;
@@ -107,7 +107,7 @@
     &.pane--dark-tint {
       .pane__footer {
         background-color: $uq-black;
-        background-color: rgba(0, 0, 0, 0.3);
+        background-color: rgba($uq-black, 0.3);
       }
     }
   }
@@ -180,7 +180,7 @@
 
     .pane__footer {
       background-color: $uq-black;
-      background-color: rgba(0, 0, 0, .3);
+      background-color: rgba($uq-black, .3);
     }
   }
 }

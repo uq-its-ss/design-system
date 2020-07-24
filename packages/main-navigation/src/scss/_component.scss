@@ -246,11 +246,11 @@
     position: relative;
 
     &.active > a {
-      border-left: 2px solid var($uq-purple);
+      border-left: 2px solid $uq-purple;
 
       @media #{$large-up} {
         border-left: 0 none;
-        border-bottom: 2px solid var($uq-purple);
+        border-bottom: 2px solid $uq-purple;
       }
     }
   }
@@ -441,7 +441,7 @@
   }
 
   & a {
-    color: var($uq-purple);
+    color: $uq-purple;
   }
 }
 

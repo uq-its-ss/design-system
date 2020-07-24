@@ -50,7 +50,7 @@ export const basicNavigation = () => {
       <div class="section__content">
         <nav class="nav nav--dropdown processed" id="primary-nav">
           <ul class="nav__level-1 nav--open" aria-expanded="true">
-              <li>
+            <li class="active">
               <a
                 href="/"
                 title="Home"
@@ -112,7 +112,7 @@ export const dropdownNavigation = () => {
       <div class="section__content">
         <nav class="nav nav--dropdown processed" id="primary-nav">
           <ul class="nav__level-1 nav--open" aria-expanded="true">
-              <li>
+            <li class="active">
               <a
                 href="/"
                 title="Home"

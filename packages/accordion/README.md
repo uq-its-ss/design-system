@@ -1,4 +1,4 @@
-# `@uqmchu/accordion`
+# `@uq-uidf/accordion`
 
 > Accordion component
 
@@ -8,12 +8,12 @@
 
 With Yarn:
 ```shell
-yarn add @uqmchu/accordion
+yarn add @uq-uidf/accordion
 ```
 
 With NPM:
 ```shell
-npm i @uqmchu/accordion
+npm i @uq-uidf/accordion
 ```
 
 ---
@@ -21,8 +21,8 @@ npm i @uqmchu/accordion
 ## Dependency graph
 
 ```shell
-@uqmchu/accordion
-├─ @uqmchu/core
-└─ @uqmchu/foundation-global
-   └─ @uqmchu/core
+@uq-uidf/accordion
+├─ @uq-uidf/core
+└─ @uq-uidf/foundation-global
+   └─ @uq-uidf/core
 ```

@@ -38,8 +38,8 @@ module.exports = async ({ config, mode }) => {
               outputStyle: mode == 'PRODUCTION' ? "compressed" : "expanded",
               // TODO: we should implement `glob` here:
               includePaths: [
-                'node_modules/@uqmchu/core/node_modules',
-                'node_modules/@uqmchu/body/node_modules',
+                'node_modules/@uq-uidf/core/node_modules',
+                'node_modules/@uq-uidf/body/node_modules',
                 'node_modules'
               ]
             }

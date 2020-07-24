@@ -1,5 +1,5 @@
 {
-  "name": "@uqmchu/icon",
+  "name": "@uq-uidf/icon",
   "version": "0.0.0",
   "description": "Icon component",
   "keywords": [
@@ -29,7 +29,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/uqmchu/user-interface-development-framework.git"
+    "url": "git+https://github.com/uq-its-ss/user-interface-development-framework.git"
   },
   "scripts": {
     "generate": "postcss src/css/*.css --base src --dir temp"
@@ -38,10 +38,10 @@
     "url": "https://github.com/uq-uidf/user-interface-development-framework/issues"
   },
   "dependencies": {
-    "@uqmchu/core": "^0.0.0"
+    "@uq-uidf/core": "^0.0.0"
   },
   "peerDependencies": {
-    "@uqmchu/core": "^0.0.0"
+    "@uq-uidf/core": "^0.0.0"
   },
   "devDependencies": {
     "postcss-cli": "^7.1.1",

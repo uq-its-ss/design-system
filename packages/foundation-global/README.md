@@ -1,4 +1,4 @@
-# `@uqmchu/foundation-global`
+# `@uq-uidf/foundation-global`
 
 > Foundation (5) global
 
@@ -8,12 +8,12 @@
 
 With Yarn:
 ```shell
-yarn add @uqmchu/foundation-global
+yarn add @uq-uidf/foundation-global
 ```
 
 With NPM:
 ```shell
-npm i @uqmchu/foundation-global
+npm i @uq-uidf/foundation-global
 ```
 
 ---
@@ -21,6 +21,6 @@ npm i @uqmchu/foundation-global
 ## Dependency graph
 
 ```shell
-@uqmchu/foundation-global
-└─ @uqmchu/core
+@uq-uidf/foundation-global
+└─ @uq-uidf/core
 ```

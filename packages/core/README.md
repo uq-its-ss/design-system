@@ -1,4 +1,4 @@
-# @uqmchu/core
+# @uq-uidf/core
 
 > Core package that all other @uq-uidf packages depend on.
 
@@ -8,10 +8,10 @@
 
 With Yarn:  
 ```shell
-yarn add @uqmchu/core
+yarn add @uq-uidf/core
 ```
 
 With NPM:  
 ```shell
-npm i @uqmchu/core
+npm i @uq-uidf/core
 ```

@@ -1,5 +1,5 @@
 {
-  "name": "@uqmchu/sections",
+  "name": "@uq-uidf/sections",
   "version": "0.0.0",
   "description": "page sections",
   "keywords": [
@@ -18,7 +18,7 @@
     "email": "webservices@uq.edu.au",
     "url": "https://uq.edu.au"
   },
-  "homepage": "https://github.com/uqmchu/user-interface-development-framework#readme",
+  "homepage": "https://github.com/uq-its-ss/user-interface-development-framework#readme",
   "license": "ISC",
   "directories": {
     "lib": "lib"
@@ -29,22 +29,22 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/uqmchu/user-interface-development-framework.git"
+    "url": "git+https://github.com/uq-its-ss/user-interface-development-framework.git"
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "bugs": {
-    "url": "https://github.com/uqmchu/user-interface-development-framework/issues"
+    "url": "https://github.com/uq-its-ss/user-interface-development-framework/issues"
   },
   "dependencies": {
-    "@uqmchu/core": "^0.0.0",
-    "@uqmchu/foundation-global": "^0.0.0",
-    "@uqmchu/foundation-grid": "^0.0.0"
+    "@uq-uidf/core": "^0.0.0",
+    "@uq-uidf/foundation-global": "^0.0.0",
+    "@uq-uidf/foundation-grid": "^0.0.0"
   },
   "peerDependencies": {
-    "@uqmchu/core": "^0.0.0",
-    "@uqmchu/foundation-global": "^0.0.0",
-    "@uqmchu/foundation-grid": "^0.0.0"
+    "@uq-uidf/core": "^0.0.0",
+    "@uq-uidf/foundation-global": "^0.0.0",
+    "@uq-uidf/foundation-grid": "^0.0.0"
   }
 }

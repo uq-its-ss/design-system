@@ -1,4 +1,4 @@
-# `@uqmchu/foundation-misc`
+# `@uq-uidf/foundation-misc`
 
 > Foundation (5) misc. parts still in use by some other UIDF packages
 
@@ -8,12 +8,12 @@
 
 With Yarn:
 ```shell
-yarn add @uqmchu/foundation-misc
+yarn add @uq-uidf/foundation-misc
 ```
 
 With NPM:
 ```shell
-npm i @uqmchu/foundation-misc
+npm i @uq-uidf/foundation-misc
 ```
 
 ---
@@ -21,7 +21,7 @@ npm i @uqmchu/foundation-misc
 ## Dependency graph
 
 ```shell
-@uqmchu/foundation-misc
-└─ @uqmchu/foundation-global
-   └─ @uqmchu/core
+@uq-uidf/foundation-misc
+└─ @uq-uidf/foundation-global
+   └─ @uq-uidf/core
 ```

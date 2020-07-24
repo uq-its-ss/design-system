@@ -1,4 +1,4 @@
-# `@uqmchu/header`
+# `@uq-uidf/header`
 
 > Header component
 
@@ -8,12 +8,12 @@
 
 With Yarn:
 ```shell
-yarn add @uqmchu/header
+yarn add @uq-uidf/header
 ```
 
 With NPM:
 ```shell
-npm i @uqmchu/header
+npm i @uq-uidf/header
 ```
 
 ---
@@ -21,8 +21,8 @@ npm i @uqmchu/header
 ## Dependency graph
 
 ```shell
-@uqmchu/header
-├─ @uqmchu/core
-└─ @uqmchu/foundation-global
-   └─ @uqmchu/core
+@uq-uidf/header
+├─ @uq-uidf/core
+└─ @uq-uidf/foundation-global
+   └─ @uq-uidf/core
 ```

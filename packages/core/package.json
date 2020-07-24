@@ -1,5 +1,5 @@
 {
-  "name": "@uqmchu/core",
+  "name": "@uq-uidf/core",
   "version": "0.0.0",
   "description": "The core package that all component packages depend on",
   "keywords": [
@@ -29,7 +29,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/uqmchu/user-interface-development-framework.git"
+    "url": "git+https://github.com/uq-its-ss/user-interface-development-framework.git"
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
@@ -43,6 +43,6 @@
     "font-awesome": "^4.7.0"
   },
   "peerDependencies": {
-    "@uqmchu/foundation-global": "^0.0.0"
+    "@uq-uidf/foundation-global": "^0.0.0"
   }
 }

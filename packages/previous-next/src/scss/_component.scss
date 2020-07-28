@@ -1,0 +1,89 @@
+/* Pagination */
+@use '@uq-uidf/core/src/scss/_global' as *;
+@use '@uq-uidf/foundation-global/src/scss/global' as *;
+@use 'global' as *;
+
+.previous-next {
+	display: block;
+
+	&__item {
+		display: inline-block;
+		width: 50%;
+		float: left;
+	}
+
+	&__item + &__item {
+		float: right;
+	}
+
+	&:after {
+		content: "";
+    	display: block;
+    	clear: both;
+	}
+
+	a {
+		color: $link-color;
+		font-size: 1.7rem;
+		font-weight: 400;
+		line-height: 1.2;
+		text-decoration: none;
+
+		&:hover {
+			color: $link-hover-color;
+			text-decoration: none;
+
+			&:before {
+				transform: translate(-10px, 0);
+			}
+			&:after {
+				transform: translate(10px, 0);
+			}
+		}
+	}
+
+	&__link-previous {
+		position: relative;
+		padding-left: 3rem;
+		float: left;
+
+		&:before {
+			content: url(../images/arrow-left-1.svg);
+			display: inline-block;
+			transform: translate(0, 0);
+			color: $uq-neutral;
+			width: 3rem;
+			position: absolute;
+			left: 0;
+			top: 0;
+			transition: all ease .2s;
+		}
+	}
+
+	&__link-next {
+		position: relative;
+		padding-right: 3rem;
+		text-align: right;
+		float: right;
+
+		&:after {
+			content: url(../images/arrow-right-1.svg);
+			display: inline-block;
+			transform: translate(0, 0);
+			color: $uq-neutral;
+			font-size: 3rem;
+			position: absolute;
+			right: 0;
+			top: 0;
+			transition: all ease .2s;
+		}
+	}
+	
+	&__description {
+		display: block;
+		font-size: 1rem;
+		font-style: italic;
+		font-weight: 300;
+	}
+
+}

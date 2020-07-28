@@ -3,9 +3,9 @@
  * Some compass features may still be required for Foundation 5 (TODO: remove
  * this forward when Foundation and other dependencies have been stripped out).
  */
-@forward "_partials/compass" as compass-*;
+@forward '_partials/compass' as compass-*;
 // Variables, functions, and mixins
-@use "_partials/compass" as compass;
+@use '_partials/compass' as compass;
 
 $roboto:  'Roboto', "Helvetica Neue", Helvetica, Arial, sans-serif;
 $merriweather:  'Merriweather', Georgia, serif;
@@ -14,9 +14,6 @@ $courier: "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
 // Now create some variables using the font stacks we want on this site.
 $font-body: $roboto;
 $font-monospace: $courier;
-
-// Default text, Content
-$text: #2b2b2b;
 
 // @import "_partials/spacing";
 
@@ -56,8 +53,8 @@ $uq-neutral-light40: #efedeb; // rgb(239, 237, 235), rgba(215, 209, 204, 0.4), C
 $uq-neutral-light60: #e7e3e0; // rgb(231, 227, 224), rgba(215, 209, 204, 0.6), Consolidated - E9E9E9, E1E1E1, E3DBE8
 $uq-neutral-light80: #dfdad6; // rgb(223, 218, 214), rgba(215, 209, 204, 0.8)
 // UQ Secondary - Neutral Shades
-$uq-neutral-dark20: #aca7a3; // Consolidated - BBB, BDB0A5, CCC
-$uq-neutral-dark40: #817d7a; // Consolidated - 747474, 767676, 808080, 868686, 949494
+$uq-neutral-dark20: #aca7a3; // Consolidated - BBB, BDB0A5, CCC, C3C3C5
+$uq-neutral-dark40: #817d7a; // Consolidated - 7F7F7F, 747474, 767676, 777, 808080, 868686, 949494
 $uq-neutral-dark60: #565452; // Consolidated - 555, 676767, 666, 6F6F6F, 444, 494949, 333
 $uq-neutral-dark80: #2b2a29; // Consolidated - 181818, 2B2A29, 222, 2B2B2B
 // UQ Secondary - Darkgrey Tints
@@ -76,6 +73,9 @@ $link-hover: #005ea5;
 $link-color: #2377cb;
 $link-active-color: #005ea5;
 $link-hover-color: #005ea5;
+
+// Default text, Content
+$text: $uq-neutral-dark80; //#2b2b2b;
 
 // External link icon
 $external-link-icon-color: $uq-neutral-dark20; //bbb;
@@ -119,11 +119,11 @@ $section-summary-color: $uq-neutral-dark40; //767676;
 $section-footer-color: $uq-neutral-dark40; //767676;
 // Palettes
 $light-palette-color: $uq-neutral-light20; //f0f0f0;
-$light-palette-border-color: rgba(255, 255, 255, .4);
+$light-palette-border-color: rgba($uq-white, .4);
 $light-palette-link-color: $uq-white;
 $light-palette-bg: $uq-white;
 $dark-palette-color: $uq-neutral-dark80; //222;
-$dark-palette-border-color: rgba(0, 0, 0, .1);
+$dark-palette-border-color: rgba($uq-black, .1);
 $dark-palette-link-color: lighten($uq-purple, 10%);
 $dark-palette-bg: $uq-neutral-dark60; //333;
 // Tints

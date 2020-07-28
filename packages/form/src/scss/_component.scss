@@ -1,7 +1,7 @@
 @use '@uq-uidf/core/src/scss/global' as *;
 @use '@uq-uidf/foundation-global/src/scss/global' as *;
 @use 'global' as *;
-@import "font-awesome/scss/mixins";
+@import 'font-awesome/scss/mixins';
 @import 'legacy';
 
 // Variants:
@@ -29,7 +29,7 @@
 
   &__inline-error-message {
     background-color: $alert;
-    color: white;
+    color: $uq-white;
     display: block;
     font-size: rem-calc(14px);
     font-style: normal;
@@ -112,7 +112,7 @@ label {
 
   &.form__label {
     &.form__label--disabled {
-      color: #ccc;
+      color: $uq-neutral-dark20;
       cursor: not-allowed;
     }
     &.form__label--error {
@@ -212,7 +212,7 @@ input[type="radio"] {
     margin-bottom: 1rem;
     // So long labels on multiple lines don't break around the radio/checkbox.
     max-width: 80%;
-    vertical-align: top;
+    //vertical-align: top;
 
     @media #{$medium-up} {
       max-width: 85%;
@@ -330,12 +330,12 @@ input[type='reset'] {
   display: inline-block;
   padding: 1rem 2rem 1.0625rem 2rem;
   font-size: 1rem;
-  background-color: #f04124;
-  border-color: #cf2a0e;
+  background-color: $uq-red-dark20; //#f04124
+  border-color: $uq-red-dark40; //#cf2a0e
   color: $uq-white;
 
   &:hover, &:focus {
-    background-color: #cf2a0e;
+    background-color: $uq-red-dark40; //#cf2a0e
     color: $uq-white;
   }
 }
@@ -347,7 +347,7 @@ input[type='reset'] {
 // Visually connect file uploads to the upload button.
 .form-managed-file .form-file {
   background: transparent;
-  border: 1px dashed #ddd;
+  border: 1px dashed $uq-neutral; //#ddd
   border-right: 0;
   padding: 0.8rem;
 }
@@ -464,16 +464,16 @@ textarea,
     -55deg,
     $uq-white,
     $uq-white 2px,
-    #f2f2f2 2px,
-    #f2f2f2 4px
-  );
+    $uq-neutral-light20 2px,
+    $uq-neutral-light20 4px
+  ); //#f2f2f2
 
   .handle {
     width: 0;
     &::before {
       @include fa-icon;
       content: $fa-var-arrows;
-      color: #777;
+      color: $uq-neutral-dark40; //#777
     }
   }
 }

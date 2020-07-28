@@ -1,4 +1,4 @@
-@use '@uq-uidf/core/src/scss/_global' as *;
+@use '@uq-uidf/core/src/scss/global' as *;
 @use '@uq-uidf/foundation-global/src/scss/global' as *;
 @use 'global' as *;
 
@@ -79,7 +79,7 @@
                 }
 
                 a {
-                    color: #fff;
+                    color: $uq-white;
                     font-size: .875rem;
                     font-weight: 300;
                     text-decoration: none;
@@ -119,7 +119,7 @@
             }
 
             &__title {
-                color: white;
+                color: $uq-white;
                 font-family: $merriweather;
                 font-size: 1.25rem;
                 font-style: italic;
@@ -148,7 +148,7 @@
                         vertical-align: middle;
                     }
                     & label {
-                        color: white;
+                        color: $uq-white;
                         display: inline;
                         font-size: .875rem;
                     }
@@ -162,7 +162,7 @@
                     max-width: 100%;
                     min-width: 100%;
                     border-radius: 2px;
-                    background-color: #fff;
+                    background-color: $uq-white;
                     background-position: 1rem;
                 }
 
@@ -174,7 +174,7 @@
                     border-radius: 2px;
                     font-size: 1rem;
                     line-height: 1;
-                    color: #181818;
+                    color: $uq-neutral-dark80; //#181818
                     height: auto;
                 }
 
@@ -245,7 +245,7 @@
     }
 
     &__secondary {
-        background-color: white;
+        background-color: $uq-white;
         padding-top: 1.5rem;
         padding-bottom: .5rem;
 

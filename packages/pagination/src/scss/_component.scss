@@ -1,5 +1,6 @@
 /* Pagination */
-@import "global";
+@use '@uq-uidf/core/src/scss/global' as *;
+@use 'global' as *;
 
 .pagination {
 	display: block;

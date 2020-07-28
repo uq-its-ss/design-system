@@ -56,25 +56,12 @@
   }
 }
 
-// Light tint layer provides a white tint
-%light-tint,
 .light-tint {
-  @extend %tint;
-  &::before {
-      @extend %tint-overlay;
-      background: $uq-white;
-  }
+  @extend %light-tint;
 }
 
-// Dark tint layer provides a black tint
-%dark-tint,
 .dark-tint {
-  @extend %tint;
-  background-color: $dark-tint-bg;
-  &::before {
-      @extend %tint-overlay;
-      background: $uq-black;
-  }
+  @extend %dark-tint;
 }
 
 .light-palette {

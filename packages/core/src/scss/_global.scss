@@ -253,6 +253,25 @@ $compact-content-color: $uq-neutral-dark40; //767676;
   z-index: 2;
 }
 
+// Dark tint layer provides a black tint
+%dark-tint {
+  @extend %tint;
+  background-color: $dark-tint-bg;
+  &::before {
+      @extend %tint-overlay;
+      background: $uq-black;
+  }
+}
+
+// Light tint layer provides a white tint
+%light-tint {
+  @extend %tint;
+  &::before {
+      @extend %tint-overlay;
+      background: $uq-white;
+  }
+}
+
 // Palettes are colour groups to change all the colours within that wrapper to a specific set.
 //
 // Components that set their own element colours may need palette @extend added to them to override specificity. e.g.

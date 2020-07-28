@@ -32,8 +32,8 @@
         border-bottom: 1px dotted;
     }
 
-    &__acknowledgement-statement {
-        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    .acknowledgement-statement {
+        border-bottom: 1px solid rgba($uq-white, 0.3);
         color: $site-footer-color;
         font-family: core.$merriweather;
         font-size: 1rem;

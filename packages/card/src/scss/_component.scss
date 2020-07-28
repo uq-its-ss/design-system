@@ -1,8 +1,8 @@
-@use "@uq-uidf/core/src/scss/global" as *;
-@use "@uq-uidf/foundation-global/src/scss/global" as *;
-@use "@uq-uidf/foundation-grid/src/scss/global" as *;
-@use "global" as *;
-@import "font-awesome/scss/mixins";
+@use '@uq-uidf/core/src/scss/global' as *;
+@use '@uq-uidf/foundation-global/src/scss/global' as *;
+@use '@uq-uidf/foundation-grid/src/scss/global' as *;
+@use 'global' as *;
+@import 'font-awesome/scss/mixins';
 
 // Cards
 // Used in the Card Grid component.
@@ -164,7 +164,7 @@
     }
 
     .card__footer {
-      background: rgba(0, 0, 0, .4);
+      background: rgba($uq-black, .4);
       bottom: 0;
       left: 0;
       position: absolute;
@@ -172,10 +172,10 @@
       width: 100%;
 
       .card__link-column {
-        border-color: rgba(255, 255, 255, .4);
+        border-color: rgba($uq-white, .4);
 
         & + .card__link-column {
-          border-color: rgba(255, 255, 255, .4);
+          border-color: rgba($uq-white, .4);
         }
       }
 
@@ -188,11 +188,11 @@
       margin-bottom: 0;
 
       @media #{$large-up} {
-        text-shadow: 0 1px 1px rgba(0, 0, 0, .4);
+        text-shadow: 0 1px 1px rgba($uq-black, .4);
         transform: translate3d(0, 2rem, 0);
 
         &::after {
-          background-color: rgba(0, 0, 0, .3);
+          background-color: rgba($uq-black, .3);
           border: 2px solid $uq-gold;
           clear: both;
           content: 'View';

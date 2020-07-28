@@ -1,4 +1,4 @@
-@use "@uq-uidf/core/src/scss/global" as *;
+@use '@uq-uidf/core/src/scss/global' as *;
 @use '@uq-uidf/foundation-global/src/scss/global' as *;
 @use 'global' as *;
 
@@ -6,7 +6,7 @@
 @import 'foundation-sites/scss/foundation/components/flex-video';
 
 @import 'font-awesome/scss/mixins';
-@import "@uq-uidf/core/src/fonts/uq-icons/scss/mixins";
+@import '@uq-uidf/core/src/fonts/uq-icons/scss/mixins';
 
 h1,
 h2,
@@ -367,11 +367,11 @@ table {
     // Credit: http://www.the-haystack.com/2013/09/24/responsive-scrollable-tables/
     background-attachment: local, local, scroll, scroll;
     background-color: $uq-white;
-    background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, $uq-white), color-stop(100%, rgba(255, 255, 255, 0))), -webkit-gradient(linear, 100% 50%, 0% 50%, color-stop(0%, $uq-white), color-stop(100%, rgba(255, 255, 255, 0))), -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #c3c3c5), color-stop(100%, rgba(195, 195, 197, 0))), -webkit-gradient(linear, 100% 50%, 0% 50%, color-stop(0%, #c3c3c5), color-stop(100%, rgba(195, 195, 197, 0)));
-    background-image: -webkit-linear-gradient(left, $uq-white, rgba(255, 255, 255, 0)), -webkit-linear-gradient(right, $uq-white, rgba(255, 255, 255, 0)), -webkit-linear-gradient(left, #c3c3c5, rgba(195, 195, 197, 0)), -webkit-linear-gradient(right, #c3c3c5, rgba(195, 195, 197, 0));
-    background-image: -moz-linear-gradient(left, $uq-white, rgba(255, 255, 255, 0)), -moz-linear-gradient(right, $uq-white, rgba(255, 255, 255, 0)), -moz-linear-gradient(left, #c3c3c5, rgba(195, 195, 197, 0)), -moz-linear-gradient(right, #c3c3c5, rgba(195, 195, 197, 0));
-    background-image: -o-linear-gradient(left, $uq-white, rgba(255, 255, 255, 0)), -o-linear-gradient(right, $uq-white, rgba(255, 255, 255, 0)), -o-linear-gradient(left, #c3c3c5, rgba(195, 195, 197, 0)), -o-linear-gradient(right, #c3c3c5, rgba(195, 195, 197, 0));
-    background-image: linear-gradient(left, $uq-white, rgba(255, 255, 255, 0)), linear-gradient(right, $uq-white, rgba(255, 255, 255, 0)), linear-gradient(left, #c3c3c5, rgba(195, 195, 197, 0)), linear-gradient(right, #c3c3c5, rgba(195, 195, 197, 0));
+    background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, $uq-white), color-stop(100%, rgba($uq-white, 0))), -webkit-gradient(linear, 100% 50%, 0% 50%, color-stop(0%, $uq-white), color-stop(100%, rgba($uq-white, 0))), -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, $uq-neutral-dark20), color-stop(100%, rgba($uq-neutral-dark20, 0))), -webkit-gradient(linear, 100% 50%, 0% 50%, color-stop(0%, $uq-neutral-dark20), color-stop(100%, rgba($uq-neutral-dark20, 0)));
+    background-image: -webkit-linear-gradient(left, $uq-white, rgba($uq-white, 0)), -webkit-linear-gradient(right, $uq-white, rgba($uq-white, 0)), -webkit-linear-gradient(left, $uq-neutral-dark20, rgba($uq-neutral-dark20, 0)), -webkit-linear-gradient(right, $uq-neutral-dark20, rgba($uq-neutral-dark20, 0));
+    background-image: -moz-linear-gradient(left, $uq-white, rgba($uq-white, 0)), -moz-linear-gradient(right, $uq-white, rgba($uq-white, 0)), -moz-linear-gradient(left, $uq-neutral-dark20, rgba($uq-neutral-dark20, 0)), -moz-linear-gradient(right, $uq-neutral-dark20, rgba($uq-neutral-dark20, 0));
+    background-image: -o-linear-gradient(left, $uq-white, rgba($uq-white, 0)), -o-linear-gradient(right, $uq-white, rgba($uq-white, 0)), -o-linear-gradient(left, $uq-neutral-dark20, rgba($uq-neutral-dark20, 0)), -o-linear-gradient(right, $uq-neutral-dark20, rgba($uq-neutral-dark20, 0));
+    background-image: linear-gradient(left, $uq-white, rgba($uq-white, 0)), linear-gradient(right, $uq-white, rgba($uq-white, 0)), linear-gradient(left, $uq-neutral-dark20, rgba($uq-neutral-dark20, 0)), linear-gradient(right, $uq-neutral-dark20, rgba($uq-neutral-dark20, 0)); //c3c3c5
     background-position: 0 0, 100% 0, 0 0, 100% 0;
     background-repeat: no-repeat;
     background-size: 4em 100%, 4em 100%, 1em 100%, 1em 100%;

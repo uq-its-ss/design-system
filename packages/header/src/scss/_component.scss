@@ -94,7 +94,7 @@
                 }
 
                 a {
-                    color: #fff;
+                    color: $uq-white;
                     font-size: .875rem;
                     font-weight: 300;
                     text-decoration: none;
@@ -134,7 +134,7 @@
             }
 
             &__title {
-                color: white;
+                color: $uq-white;
                 font-family: core.$merriweather;
                 font-size: 1.25rem;
                 font-style: italic;
@@ -163,7 +163,7 @@
                         vertical-align: middle;
                     }
                     & label {
-                        color: white;
+                        color: $uq-white;
                         display: inline;
                         font-size: .875rem;
                     }
@@ -177,7 +177,7 @@
                     max-width: 100%;
                     min-width: 100%;
                     border-radius: 2px;
-                    background-color: #fff;
+                    background-color: $uq-white;
                     background-position: 1rem;
                 }
 
@@ -190,7 +190,7 @@
                     border-radius: 2px;
                     font-size: 1rem;
                     line-height: 1;
-                    color: #181818;
+                    color: $uq-neutral-dark80; //#181818
                     height: auto;
                     outline: none;
 
@@ -267,7 +267,7 @@
     }
 
     &__secondary {
-        background-color: white;
+        background-color: $uq-white;
         padding-top: 1.5rem;
         padding-bottom: .5rem;
 

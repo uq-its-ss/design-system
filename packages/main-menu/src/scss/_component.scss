@@ -1,8 +1,8 @@
 @use '@uq-uidf/core/src/scss/_global' as *; 
 @use '@uq-uidf/foundation-global/src/scss/global' as *;
 @use '@uq-uidf/foundation-grid/src/scss/global' as *;
-@use "global" as *;
-@import "font-awesome/scss/mixins";
+@use 'global' as *;
+@import 'font-awesome/scss/mixins';
 
 // Top_menu (Blackmenu) : primary navigation
 
@@ -164,7 +164,7 @@
 
             &::after {
               @include fa-icon;
-              color: #ccc;
+              color: $uq-neutral-dark20; //#ccc
               content: $fa-var-angle-down;
               font-size: .875rem;
               margin-top: -.4375rem;
@@ -400,16 +400,16 @@
 
     &,
     &:focus {
-      background: white;
+      background: $uq-white;
       border-width: 0;
       box-shadow: none;
-      color: #333;
+      color: $uq-neutral-dark60; //#333
       transition: none;
     }
 
     &:hover {
-      background: white;
-      color: #333;
+      background: $uq-white;
+      color: $uq-neutral-dark60; //#333
     }
   }
 
@@ -421,6 +421,6 @@
   }
 
   .site-search__query:focus + .site-search__submit {
-    color: #333;
+    color: $uq-neutral-dark60; //#333
   }
 }

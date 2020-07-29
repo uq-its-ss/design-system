@@ -156,7 +156,7 @@ class MainNavigation {
     } else if (parent === nav.lastElementChild) {
       // If we tab past the last child, toggle this level.
       if (event.key === 'Tab' && event.shiftKey === false) {
-        this.closeLevel(nav, nav.parentNode);
+        //this.closeLevel(nav, nav.parentNode);
       }
     }
 

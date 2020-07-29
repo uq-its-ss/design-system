@@ -1,11 +1,10 @@
 /* Pagination */
-@use '@uq-uidf/core/src/scss/_global' as *;
-@use '@uq-uidf/foundation-global/src/scss/global' as *;
+@use '@uq-uidf/core/src/scss/global' as *;
 @use 'global' as *;
 
 .previous-next {
 	display: block;
-	width: 100vw; // Added as the storybook container that wraps the component is of less width. Will need to delete later
+	width: 100vw; // Added as the storybook parent container that wraps the component is of less width. Will need to delete later
 
 	&__item {
 		width: 50%;
@@ -55,13 +54,12 @@
 
 		&:before {
 			content: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 64.82 132.25'%3E%3Cpath d='M32.08,4.38,94.62,66.91a4.37,4.37,0,0,1,0,6.18h0L32.08,135.63' transform='translate(-31.58 -3.88)' fill='none' stroke='%23D7D1CC' stroke-linecap='round' stroke-width='3' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
-			display: inline-block;
-			transform: translate(0, 0) rotateY(180deg);
-			color: $uq-neutral;
 			width: 3rem;
+			display: inline-block;
 			position: absolute;
 			left: 0;
 			top: 0;
+			transform: translate(0, 0) rotateY(180deg);
 			transition: all ease .2s;
 		} 
 	}
@@ -74,13 +72,12 @@
 
 		&:after {
 			content: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 64.82 132.25'%3E%3Cpath d='M32.08,4.38,94.62,66.91a4.37,4.37,0,0,1,0,6.18h0L32.08,135.63' transform='translate(-31.58 -3.88)' height='100%' fill='none' stroke='%23D7D1CC' stroke-linecap='round' stroke-width='3' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
-			display: inline-block;
-			transform: translate(0, 0) rotateY(0deg);
-			color: $uq-neutral;
 			width: 3rem;
+			display: inline-block;
 			position: absolute;
 			right: 0;
 			top: 0;
+			transform: translate(0, 0) rotateY(0deg);
 			transition: all ease .2s;
 		}
 	}

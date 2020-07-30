@@ -11,4 +11,3 @@ export {
   mainMenu,
   gridMenuEqualiser
 };
-f

@@ -1,7 +1,7 @@
 {
-  "name": "@uq-uidf/header",
+  "name": "@uq-uidf/site-title-utility",
   "version": "0.0.0",
-  "description": "Header component",
+  "description": "The site title component package",
   "keywords": [
     "uq-uidf",
     "uq",
@@ -11,14 +11,14 @@
     "scss",
     "sass",
     "css",
-    "header"
+    "site title"
   ],
   "author": {
     "name": "University of Queensland",
     "email": "webservices@uq.edu.au",
     "url": "https://uq.edu.au"
   },
-  "homepage": "https://github.com/uq-its-ss/user-interface-development-framework#readme",
+  "homepage": "https://github.com/uq-uidf/user-interface-development-framework#readme",
   "license": "ISC",
   "directories": {
     "lib": "lib"
@@ -35,7 +35,7 @@
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "bugs": {
-    "url": "https://github.com/uq-its-ss/user-interface-development-framework/issues"
+    "url": "https://github.com/uq-uidf/user-interface-development-framework/issues"
   },
   "dependencies": {
     "@uq-uidf/core": "^0.0.0",

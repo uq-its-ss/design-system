@@ -54,6 +54,7 @@
     "@uq-uidf/pagination": "^0.0.0",
     "@uq-uidf/pane": "^0.0.0",
     "@uq-uidf/sections": "^0.0.0",
+    "@uq-uidf/site-title-utility": "^0.0.0",
     "@uq-uidf/tabs": "^0.0.0",
     "font-awesome": "^4.7.0",
     "joi-browser": "^13.4.0",

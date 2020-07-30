@@ -85,222 +85,354 @@
         </div>
     </header>
 
-    <!-- main-menu -->
-    <div id="main-menu" class="main-menu">
-      <div class="main-menu__mobile-menu hide-for-large-up">
-          <form action="//www.uq.edu.au/search" method="get" class="search__form site-search__form site-search__form--mobile">
-              <fieldset class="site-search__fieldset">
-                  <legend class="site-search__legend">Site search</legend>
-                  <label class="search__title site-search__title" for="site-search__query">Search</label>
-                  <input type="text" tabindex="1" onblur="if (this.value === '')
-      {this.value = this.placeholder;}" onfocus="if (this.value ===
-      this.placeholder) {this.value = '';}" placeholder="Search all of UQ" name="q" value="Search all of UQ" class="site-search__input site-search__query" id="site-search__query">
-                  <input type="submit" title="Search all of UQ" class="site-search__input site-search__submit" value="" name="submit">
-                  <input type="hidden" value="xml_no_dtd" name="output">
-                  <input type="hidden" value="ws" name="client">
-                  <input type="hidden" value="ws" name="proxystylesheet">
-              </fieldset>
-          </form>
-          <a href="#" class="main-menu__mobile-menu-link" title="Menu"><span class="icon icon-bars icon--prefix"></span>Menu</a>
-      </div>
-      <ul class="menu">
-          <li class="menu__item first leaf expanded">
-              <a class="menu__link" title="" href="http://www.uq.edu.au/about/" onclick="gtag('event', 'click',
-          {'event_category': 'Main menu', 'event_label': 'About'});">About</a>
-              <a class="menu__dropdown-link" title="" href="#"></a>
-              <ul class="menu__dropdown">
-                  <li class="menu__item first leaf"><a class="menu__link" href="http://www.uq.edu.au/about/university-profile" onclick="gtag('event', 'click',
-          {'event_category': 'Main menu',
-          'event_label': 'University profile'});">Profile</a></li>
-                  <li class="menu__item leaf"><a class="menu__link" href="https://campuses.uq.edu.au" onclick="gtag('event', 'click',
-          {'event_category': 'Main menu', 'event_label': 'Campuses'});">
-        Campuses</a></li>
-                  <li class="menu__item leaf"><a class="menu__link" href="http://www.uq.edu.au/about/organisation" onclick="gtag('event', 'click',
-          {'event_category': 'Main menu', 'event_label': 'Organisation'});">
-        Organisation</a></li>
-                  <li class="menu__item leaf"><a class="menu__link" href="https://about.uq.edu.au/strategic-plan" onclick="gtag('event', 'click',
-          {'event_category': 'Main menu', 'event_label': 'Strategic Plan'});">Strategic Plan</a></li>
-                  <li class="menu__item last leaf collapsed"><a class="menu__link" href="https://governance-risk.uq.edu.au/functions-and-services/governance/policies-and-procedures" onclick="gtag('event', 'click',
-          {'event_category': 'Main menu',
-          'event_label': 'Polcies and Procedures'});">Policies &amp;
-        Procedures</a></li>
-              </ul>
-          </li>
-          <li class="menu__item leaf expanded">
-              <a class="menu__link" title="" href="https://future-students.uq.edu.au" onclick="gtag('event', 'click',
-          {'event_category': 'Main menu', 'event_label': 'Future Students'});">Future Students</a>
-              <a class="menu__dropdown-link" title="" href="#"></a>
-              <ul class="menu__dropdown">
-                  <li class="menu__item first leaf"><a class="menu__link" href="https://future-students.uq.edu.au/study" onclick="gtag('event', 'click',
-          {'event_category': 'Main menu',
-          'event_label': 'Future Students > Study'});">
-        Study</a></li>
-                  <li class="menu__item leaf"><a class="menu__link" href="https://future-students.uq.edu.au/life" onclick="gtag('event', 'click',
-          {'event_category': 'Main menu',
-          'event_label': 'Future Students > Life'});">Life
-      </a></li>
-                  <li class="menu__item leaf"><a class="menu__link" href="https://future-students.uq.edu.au/events" onclick="gtag('event', 'click',
-          {'event_category': 'Main menu',
-          'event_label': 'Future Students > Events'});">
-        Events</a></li>
-                  <li class="menu__item last leaf collapsed"><a class="menu__link" href="https://future-students.uq.edu.au/apply" onclick="gtag('event', 'click',
-          {'event_category': 'Main menu',
-          'event_label': 'Future Students > About'});">
-        Applying</a></li>
-              </ul>
-          </li>
-          <li class="menu__item leaf expanded">
-              <a class="menu__link" title="" href="https://my.uq.edu.au/" onclick="gtag('event', 'click',
-          {'event_category': 'Main menu',
-          'event_label': 'Current Students'});">Current Students</a>
-              <a class="menu__dropdown-link" title="" href="#"></a>
-              <ul class="menu__dropdown">
-                  <li class="menu__item first leaf"><a class="menu__link" href="https://my.uq.edu.au/" onclick="gtag('event', 'click',
-          {'event_category': 'Main menu', 'event_label': 'myUQ'});">my
-        .UQ</a></li>
-                  <li class="menu__item leaf"><a class="menu__link" href="https://my.uq.edu.au/programs-courses/" onclick="gtag('event', 'click',
-          {'event_category': 'Main menu',
-          'event_label': 'Programs and Courses'});">Programs and
-        Courses</a></li>
-                  <li class="menu__item leaf"><a class="menu__link" href="https://www.sinet.uq.edu.au" onclick="gtag('event', 'click',
-          {'event_category': 'Main menu', 'event_label': 'mySI-net'});">mySI
-        -net</a></li>
-                  <li class="menu__item leaf"><a class="menu__link" href="https://library.uq.edu.au/" onclick="gtag('event', 'click',
-          {'event_category': 'Main menu',
-          'event_label': 'Library'});">Library</a></li>
-                  <li class="menu__item leaf"><a class="menu__link" href="https://scholarships.uq.edu.au/" onclick="gtag('event', 'click',
-          {'event_category': 'Main menu', 'event_label': 'Scholarships'});">
-        Scholarships</a></li>
-                  <li class="menu__item last leaf collapsed"><a class="menu__link" href="https://campuses.uq.edu.au" onclick="gtag('event', 'click',
-          {'event_category': 'Main menu',
-          'event_label': 'Current Students > Campuses'});">Campuses</a></li>
-              </ul>
-          </li>
-          <li class="menu__item leaf expanded">
-              <a class="menu__link" title="" href="https://www.uq.edu.au/international/" onclick="gtag('event', 'click',
-          {'event_category': 'Main menu', 'event_label': 'International'});">
-      International</a>
-              <a class="menu__dropdown-link" title="" href="#"></a>
-              <ul class="menu__dropdown">
-                  <li class="menu__item first leaf"><a class="menu__link" href="https://future-students.uq.edu.au/set-location/international?destination=home" onclick="gtag('event', 'click',
-          {'event_category': 'Main menu',
-          'event_label': 'International Students'});">International
-        Students</a></li>
-                  <li class="menu__item leaf"><a class="menu__link" href="https://employability.uq.edu.au/global-experiences" onclick="gtag('event', 'click',
-          {'event_category': 'Main menu', 'event_label': 'UQ Abroad'});">UQ
-        Abroad</a></li>
-                  <li class="menu__item leaf"><a class="menu__link" href="https://global-strategy.uq.edu.au/" onclick="gtag('event', 'click',
-          {'event_category': 'Main menu', 'event_label': 'Global Strategy'});">Global Strategy</a></li>
-                  <li class="menu__item leaf"><a class="menu__link" href="https://global-engagement.uq.edu.au/" onclick="gtag('event', 'click',
-          {'event_category': 'Main menu',
-          'event_label': 'Global Engagement'});">Global Engagement</a></li>
-                  <li class="menu__item last leaf collapsed"><a class="menu__link" href="https://icte.uq.edu.au/international-development" onclick="gtag('event', 'click',
-          {'event_category': 'Main menu',
-          'event_label': 'International Development'});">International
-        Development</a></li>
-              </ul>
-          </li>
-          <li class="menu__item leaf expanded">
-              <a class="menu__link" title="" href="https://research.uq.edu.au/" onclick="gtag('event', 'click',
-          {'event_category': 'Main menu', 'event_label': 'Research'});">
-      Research</a>
-              <a class="menu__dropdown-link" title="" href="#"></a>
-              <ul class="menu__dropdown">
-                  <li class="menu__item first leaf"><a class="menu__link" href="http://researchers.uq.edu.au/" onclick="gtag('event', 'click',
-          {'event_category': 'Main menu',
-          'event_label': 'Find a researcher'});">Find a
-        researcher</a></li>
-                  <li class="menu__item leaf"><a class="menu__link" href="https://www.uq.edu.au/industry/" onclick="gtag('event', 'click',
-          {'event_category': 'Main menu',
-          'event_label': 'Business and Industry'});">Business and
-        Industry</a></li>
-                  <li class="menu__item leaf"><a class="menu__link" href="http://uniquest.com.au/" onclick="gtag('event', 'click',
-          {'event_category': 'Main menu',
-          'event_label': 'Commercialisation'});">Commercialisation</a></li>
-                  <li class="menu__item leaf"><a class="menu__link" href="https://research.uq.edu.au/partner-with-us" onclick="gtag('event', 'click',
-          {'event_category': 'Main menu',
-          'event_label': 'Research Partnerships'});">Research
-        Partnerships</a></li>
-                  <li class="menu__item last leaf collapsed"><a class="menu__link" href="https://www.uq.edu.au/research/impact" onclick="gtag('event', 'click',
-          {'event_category': 'Main menu', 'event_label': 'Research Impact'});">Research Impact</a></li>
-              </ul>
-          </li>
-          <li class="menu__item leaf expanded">
-              <a class="menu__link" title="" href="https://staff.uq.edu.au/" onclick="gtag('event', 'click',
-          {'event_category': 'Main menu', 'event_label': 'Staff'});">Staff</a>
-              <a class="menu__dropdown-link" title="" href="#"></a>
-              <ul class="menu__dropdown">
-                  <li class="menu__item first leaf"><a class="menu__link" href="https://staff.uq.edu.au/" onclick="gtag('event', 'click',
-          {'event_category': 'Main menu', 'event_label': 'Current staff'});">Current staff</a></li>
-                  <li class="menu__item leaf"><a class="menu__link" href="https://portal.my.uq.edu.au" onclick="gtag('event', 'click',
-          {'event_category': 'Main menu', 'event_label': 'my.UQ for staff'});">my.UQ
-        for staff</a></li>
-                  <li class="menu__item leaf"><a class="menu__link" href="https://www.sinet.uq.edu.au" onclick="gtag('event', 'click',
-          {'event_category': 'Main menu',
-          'event_label': 'Staff > mySI-net'});">mySI-net</a></li>
-                  <li class="menu__item leaf"><a class="menu__link" href="https://myaurion.hr.uq.edu.au" onclick="gtag('event', 'click',
-          {'event_category': 'Main menu', 'event_label': 'My Aurion'});">My
-        Aurion</a></li>
-                  <li class="menu__item leaf"><a class="menu__link" href="http://ppl.app.uq.edu.au/" onclick="gtag('event', 'click',
-          {'event_category': 'Main menu',
-          'event_label': 'Staff > Policies and Procedures'});">Policies &amp;
-        Procedures</a></li>
-                  <li class="menu__item leaf"><a class="menu__link" href="https://www.uq.edu.au/departments/" onclick="gtag('event', 'click',
-          {'event_category': 'Main menu',
-          'event_label': 'Faculties and Divisions'});">Faculties &amp;
-        Divisions</a></li>
-                  <li class="menu__item leaf"><a class="menu__link" href="https://www.uq.edu.au/contacts/" onclick="gtag('event', 'click',
-          {'event_category': 'Main menu',
-          'event_label': 'Staff > Contacts'});">Contacts</a></li>
-                  <li class="menu__item last leaf collapsed"><a class="menu__link" href="http://jobs.uq.edu.au/" onclick="gtag('event', 'click',
-          {'event_category': 'Main menu', 'event_label': 'Jobs'});">Jobs
-      </a></li>
-              </ul>
-          </li>
-          <li class="menu__item leaf expanded">
-              <a class="menu__link" title="" href="https://alumni.uq.edu.au/" onclick="gtag('event', 'click',
-          {'event_category': 'Main menu', 'event_label': 'Alumni'});">Alumni
-    </a>
-              <a class="menu__dropdown-link" title="" href="#"></a>
-              <ul class="menu__dropdown">
-                  <li class="menu__item first leaf"><a class="menu__link" href="https://alumni.uq.edu.au/" onclick="gtag('event', 'click',
-          {'event_category': 'Main menu',
-          'event_label': 'Alumni and Community'});">Alumni &amp;
-        Community</a></li>
-                  <li class="menu__item leaf"><a class="menu__link" href="https://alumni.uq.edu.au/update-your-details/" onclick="gtag('event', 'click',
-          {'event_category': 'Main menu',
-          'event_label': 'Update your details'});">Update your details</a></li>
-                  <li class="menu__item leaf"><a class="menu__link" href="https://alumni.uq.edu.au/networks" onclick="gtag('event', 'click',
-          {'event_category': 'Main menu', 'event_label': 'Global network'});">Global
-        network</a></li>
-                  <li class="menu__item leaf"><a class="menu__link" href="https://giving.uq.edu.au/" onclick="gtag('event', 'click',
-          {'event_category': 'Main menu', 'event_label': 'Giving to UQ'});">Giving to UQ</a></li>
-                  <li class="menu__item leaf"><a class="menu__link" href="https://alumni.uq.edu.au/alumni-events" onclick="gtag('event', 'click',
-          {'event_category': 'Main menu', 'event_label': 'Alumni events'});">Alumni events</a></li>
-                  <li class="menu__item last leaf collapsed"><a class="menu__link" href="https://my.uq.edu.au/information-and-services/graduation-and-leaving-uq/graduation-records-and-documents/degree-certificates-transcripts-and-documents" onclick="gtag('event', 'click',
-          {'event_category': 'Main menu',
-          'event_label': 'Transcript request'});">Transcript request</a></li>
-              </ul>
-          </li>
-          <li class="menu__item last leaf expanded">
-              <a class="menu__link" title="" href="https://www.uq.edu.au/news/" onclick="gtag('event', 'click',
-          {'event_category': 'Main menu', 'event_label': 'Media'});">Media</a>
-              <a class="menu__dropdown-link" title="" href="#"></a>
-              <ul class="menu__dropdown">
-                  <li class="menu__item first leaf"><a class="menu__link" href="http://researchers.uq.edu.au/uqexperts" onclick="gtag('event', 'click',
-          {'event_category': 'Main menu',
-          'event_label': 'UQ Experts/Meduia Contacts'});">UQ Experts/Media
-        Contacts</a></li>
-                  <li class="menu__item leaf"><a class="menu__link" href="http://researchers.uq.edu.au/" onclick="gtag('event', 'click',
-          {'event_category': 'Main menu', 'event_label': 'UQ Researchers'});">UQ Researchers</a></li>
-                  <li class="menu__item last leaf collapsed"><a class="menu__link" href="https://research.uq.edu.au/" onclick="gtag('event', 'click',
-          {'event_category': 'Main menu',
-          'event_label': 'UQ Research Expertise'});">UQ Research
-        Expertise</a></li>
-              </ul>
-          </li>
-      </ul>
+<!-- Site title and Mobile Header -->
+<div class="header__secondary section">
+  <div class="section__content">
+    <div class="header__secondary__title">
+      <a href="/" class="header__site-name">Future Students</a>
     </div>
+    <div class="header__secondary__actions">
+      <div>Hello world</div>
+
+      <button
+        class="js-nav-toggle header__secondary__nav-toggle button button--tertiary button--icon-only icon--standard--close"
+        aria-expanded="true"
+      >
+        Menu
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Navigation Menu  -->
+<div class="main-navigation section section--no-spacing">
+
+    <div
+      id="block-mainnavigation"
+      class="block block-system block-system-menu-blockmain"
+    >
+      <div
+        data-gtm-category="Main navigation"
+      >
+        <div class="section__content">
+          <nav class="nav nav--dropdown processed" id="primary-nav">
+            <ul class="nav__level-1 nav--open" aria-expanded="true">
+              <li class="nav__has-subnav">
+                <a
+                  href="/study"
+                  aria-expanded="false"
+                  data-gtm-label="Study"
+                  data-drupal-link-system-path="node/3164"
+                  class="gtm-processed"
+                  >Study</a
+                >
+                <span class="nav__sub-toggle">Open</span>
+                <ul class="nav__level-2">
+                  <li>
+                    <a
+                      href="/study/programs"
+                      aria-expanded="false"
+                      data-gtm-label="Study > Find a program"
+                      data-drupal-link-system-path="node/3027"
+                      class="gtm-processed"
+                      >Find a program</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/study/agriculture-environment"
+                      aria-expanded="false"
+                      data-gtm-label="Study > Agriculture and Environment"
+                      data-drupal-link-system-path="node/3181"
+                      class="gtm-processed"
+                      >Agriculture and Environment</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/study/architecture-planning"
+                      aria-expanded="false"
+                      data-gtm-label="Study > Architecture and Planning"
+                      data-drupal-link-system-path="node/3182"
+                      class="gtm-processed"
+                      >Architecture and Planning</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/study/arts-humanities-social-sciences"
+                      aria-expanded="false"
+                      data-gtm-label="Study > Arts, Humanities and Social Sciences"
+                      data-drupal-link-system-path="node/3183"
+                      class="gtm-processed"
+                      >Arts, Humanities and Social Sciences</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/study/business-economics"
+                      aria-expanded="false"
+                      data-gtm-label="Study > Business and Economics"
+                      data-drupal-link-system-path="node/3184"
+                      class="gtm-processed"
+                      >Business and Economics</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/study/education"
+                      aria-expanded="false"
+                      data-gtm-label="Study > Education"
+                      data-drupal-link-system-path="node/3185"
+                      class="gtm-processed"
+                      >Education</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/study/engineering-computing"
+                      aria-expanded="false"
+                      data-gtm-label="Study > Engineering and Computing"
+                      data-drupal-link-system-path="node/3186"
+                      class="gtm-processed"
+                      >Engineering and Computing</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/study/health-behavioural-sciences"
+                      aria-expanded="false"
+                      data-gtm-label="Study > Health and Behavioural Sciences"
+                      data-drupal-link-system-path="node/3187"
+                      class="gtm-processed"
+                      >Health and Behavioural Sciences</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/study/law"
+                      aria-expanded="false"
+                      data-gtm-label="Study > Law"
+                      data-drupal-link-system-path="node/3188"
+                      class="gtm-processed"
+                      >Law</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/study/medicine"
+                      aria-expanded="false"
+                      data-gtm-label="Study > Medicine"
+                      data-drupal-link-system-path="node/3189"
+                      class="gtm-processed"
+                      >Medicine</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/study/science-mathematics"
+                      aria-expanded="false"
+                      data-gtm-label="Study > Science and Mathematics"
+                      data-drupal-link-system-path="node/3267"
+                      class="gtm-processed"
+                      >Science and Mathematics</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/study/micromasters-uqx"
+                      aria-expanded="false"
+                      data-gtm-label="Study > MicroMasters and UQx"
+                      data-drupal-link-system-path="node/3277"
+                      class="gtm-processed"
+                      >MicroMasters and UQx</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav__has-subnav">
+                <a
+                  href="/admissions"
+                  aria-expanded="false"
+                  data-gtm-label="Admissions"
+                  data-drupal-link-system-path="node/3201"
+                  class="gtm-processed"
+                  >Admissions</a
+                >
+                <span class="nav__sub-toggle">Open</span>
+                <ul class="nav__level-2">
+                  <li>
+                    <a
+                      href="/admissions/undergraduate"
+                      aria-expanded="false"
+                      data-gtm-label="Admissions > Undergraduate"
+                      data-drupal-link-system-path="node/3202"
+                      class="gtm-processed"
+                      >Undergraduate</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/admissions/honours"
+                      aria-expanded="false"
+                      data-gtm-label="Admissions > Honours"
+                      data-drupal-link-system-path="node/3203"
+                      class="gtm-processed"
+                      >Honours</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/admissions/postgraduate-coursework"
+                      aria-expanded="false"
+                      data-gtm-label="Admissions > Postgraduate coursework"
+                      data-drupal-link-system-path="node/3204"
+                      class="gtm-processed"
+                      >Postgraduate coursework</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/admissions/higher-degree-research"
+                      aria-expanded="false"
+                      data-gtm-label="Admissions > Higher degree by research"
+                      data-drupal-link-system-path="node/3335"
+                      class="gtm-processed"
+                      >Higher degree by research</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/admissions/cross-institutional-study"
+                      aria-expanded="false"
+                      data-gtm-label="Admissions > Cross-institutional study"
+                      data-drupal-link-system-path="node/3208"
+                      class="gtm-processed"
+                      >Cross-institutional study</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/admissions/non-award-study"
+                      aria-expanded="false"
+                      data-gtm-label="Admissions > Non-award study"
+                      data-drupal-link-system-path="node/3207"
+                      class="gtm-processed"
+                      >Non-award study</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/admissions/doctor-medicine"
+                      aria-expanded="false"
+                      data-gtm-label="Admissions > Doctor of Medicine"
+                      data-drupal-link-system-path="node/3206"
+                      class="gtm-processed"
+                      >Doctor of Medicine</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.uq.edu.au/studyabroad/how-to-apply"
+                      aria-expanded="false"
+                      data-gtm-label="Admissions > Study abroad and incoming exchange"
+                      class="gtm-processed"
+                      >Study abroad and incoming exchange</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav__has-subnav">
+                <a
+                  href="/university-life"
+                  aria-expanded="false"
+                  data-gtm-label="University life"
+                  data-drupal-link-system-path="node/3029"
+                  class="gtm-processed"
+                  >University life</a
+                >
+                <span class="nav__sub-toggle">Open</span>
+                <ul class="nav__level-2">
+                  <li>
+                    <a
+                      href="/university-life/living-in-brisbane"
+                      aria-expanded="false"
+                      data-gtm-label="University life > Living in Brisbane"
+                      data-drupal-link-system-path="node/3031"
+                      class="gtm-processed"
+                      >Living in Brisbane</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/university-life/getting-prepared-to-come-to-australia"
+                      aria-expanded="false"
+                      data-gtm-label="University life > Getting prepared to come to Australia"
+                      data-drupal-link-system-path="node/3167"
+                      class="gtm-processed"
+                      >Getting prepared to come to Australia</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/university-life/campuses-research-sites"
+                      aria-expanded="false"
+                      data-gtm-label="University life > Campuses and research sites"
+                      data-drupal-link-system-path="node/3165"
+                      class="gtm-processed"
+                      >Campuses and research sites</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/university-life/campus-tours"
+                      aria-expanded="false"
+                      data-gtm-label="University life > Campus tours"
+                      data-drupal-link-system-path="node/3169"
+                      class="gtm-processed"
+                      >Campus tours</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a
+                  href="/events"
+                  aria-expanded="false"
+                  data-gtm-label="Events"
+                  data-drupal-link-system-path="node/3026"
+                  class="gtm-processed"
+                  >Events</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/stories"
+                  aria-expanded="false"
+                  data-gtm-label="Stories"
+                  data-drupal-link-system-path="node/3303"
+                  class="gtm-processed"
+                  >Stories</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/contact-us"
+                  title="Contact"
+                  aria-expanded="false"
+                  data-gtm-label="Contact"
+                  data-drupal-link-system-path="node/3269"
+                  class="gtm-processed"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+</div>
 
     <!-- alert -->
     <div class="alert alert--default" role="alert">
@@ -827,6 +959,9 @@
     <script type="text/javascript">
       // Initialise header
       new uq.header();
+      // Initialise Main Navigation
+      var navelement = document.getElementById("primary-nav");
+      var nav = new uq.mainNavigation (navelement, "nav");
       // Initialise accordions
       new uq.accordion();
       // Initialise main menu

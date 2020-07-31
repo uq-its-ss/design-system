@@ -29,13 +29,13 @@ previousNext.story = {
 
 export const previousNextFirst = () => {
   return `
-    <div class="previous-next">
-      <div class="previous-next__item previous-next__item--hidden">
-        <a href="#" class="previous-next__link-previous">Enrolment basics <span class="previous-next__description">Previous</span></a>
+    <div class="uq-previous-next">
+      <div class="uq-previous-next__item uq-previous-next__item--hidden">
+        <a href="#" class="uq-previous-next__link-previous">Enrolment basics <span class="uq-previous-next__description">Previous</span></a>
       </div>
 
-      <div class="previous-next__item">
-        <a href="#" class="previous-next__link-next">How to enrol <span class="previous-next__description">Next</span></a>
+      <div class="uq-previous-next__item">
+        <a href="#" class="uq-previous-next__link-next">How to enrol <span class="uq-previous-next__description">Next</span></a>
       </div>
     </div>
   `;
@@ -47,13 +47,13 @@ previousNextFirst.story = {
 
 export const previousNextLast = () => {
   return `
-    <div class="previous-next">
-      <div class="previous-next__item">
-        <a href="#" class="previous-next__link-previous">Enrolment basics <span class="previous-next__description">Previous</span></a>
+    <div class="uq-previous-next">
+      <div class="uq-previous-next__item">
+        <a href="#" class="uq-previous-next__link-previous">Enrolment basics <span class="uq-previous-next__description">Previous</span></a>
       </div>
 
-      <div class="previous-next__item previous-next__item--hidden">
-        <a href="#" class="previous-next__link-next">How to enrol <span class="previous-next__description">Next</span></a>
+      <div class="uq-previous-next__item uq-previous-next__item--hidden">
+        <a href="#" class="uq-previous-next__link-next">How to enrol <span class="uq-previous-next__description">Next</span></a>
       </div>
     </div>
   `;

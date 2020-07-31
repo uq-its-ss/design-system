@@ -1,0 +1,76 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+
+# Previous Next
+
+## Overview
+
+The Previous-Next component is is also a form of pagination. 
+It provides previous and next buttons (links) to navigate between pages or between tab contents on the same page. 
+They are aligned to the sides of the page or in some instances to the sides of the tab contents.
+
+## Instances
+
+### First instance, Default instance
+
+An instance when only the next button is visible
+
+<Preview withToolbar>
+  <Story height="350px" id="components-previous-next--previous-next-first" />
+</Preview>
+
+```html
+  <div class="previous-next">
+    <div class="previous-next__item previous-next__item--hidden">
+      <a href="#" class="previous-next__link-previous">Enrolment basics <span class="previous-next__description">Previous</span></a>
+    </div>
+
+    <div class="previous-next__item">
+      <a href="#" class="previous-next__link-next">How to enrol <span class="previous-next__description">Next</span></a>
+    </div>
+  </div>
+```
+
+### Middle instance
+
+An instance when both the previous and next buttons are visible
+
+<Preview withToolbar>
+  <Story height="350px" id="components-previous-next--previous-next" />
+</Preview>
+
+```html
+<!-- Previous and Next buttons are visible -->  
+<div class="previous-next">
+    <div class="previous-next__item">
+        <a href="#" class="previous-next__link-previous">Enrolment basics <span class="previous-next__description">Previous</span></a>
+    </div>
+
+    <div class="previous-next__item">
+        <a href="#" class="previous-next__link-next">How to enrol <span class="previous-next__description">Next</span></a>
+    </div>
+</div>
+```
+
+### Last instance
+
+An instance when only the previous button is visible
+
+<Preview withToolbar>
+  <Story height="350px" id="components-previous-next--previous-next-last" />
+</Preview>
+
+```html
+  <div class="previous-next">
+    <div class="previous-next__item">
+      <a href="#" class="previous-next__link-previous">Enrolment basics <span class="previous-next__description">Previous</span></a>
+    </div>
+
+    <div class="previous-next__item previous-next__item--hidden">
+      <a href="#" class="previous-next__link-next">How to enrol <span class="previous-next__description">Next</span></a>
+    </div>
+  </div>
+```
+
+## Breakpoints
+
+The previous and next buttons collapses at 640px

@@ -1,11 +1,22 @@
+import expandedStory from '../../../.storybook/decorators/expanded.js';
+
 // import styles
 import './previous-next.scss';
 
 // import HTML template strings
 import previousNextHTML from './previous-next.html';
 
+// documentation
+import docs from './previous-next.docs.mdx';
+
 export default {
-  title: 'Components/Previous Next'
+  title: 'Components/Previous Next',
+  parameters: {
+    docs: {
+      page: docs
+    }
+  },
+  decorators: [expandedStory]
 };
 
 export const previousNext = () => {

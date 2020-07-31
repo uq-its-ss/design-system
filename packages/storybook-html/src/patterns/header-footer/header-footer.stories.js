@@ -3,9 +3,11 @@ import expandedStory from '../../../.storybook/decorators/expanded.js';
 
 // import scripts
 import headerCreate from '@uq-uidf/header/src/js/header.es6';
+import mainNavigationCreate from '@uq-uidf/main-navigation/src/js/main-navigation.es6';
 
 // import HTML template strings
 import headerHTML from '../../components/header/header.html';
+import navigationHTML from '../../components/main-navigation/main-navigation.html';
 import footerHTML from '../../components/footer/footer.html';
 
 export default {
@@ -16,19 +18,12 @@ export default {
 export const example = () => {
     useEffect(() => {
         new headerCreate();
+        var navelement = document.getElementById("primary-nav");
+        var nav = new mainNavigationCreate (navelement, "nav");
       });
     return `
       ${headerHTML}
-      <div class="uq-site-title uq-site-title--no-nav">
-        <div class="uq-site-title__content">
-          <div class="uq-site-title__title">
-            <a class="uq-site-title__title__link" href="https://uq.edu.au">Site title</a>
-          </div>
-          <div class="uq-site-title__actions">
-            <div>[Site utilities go here]</div>
-          </div>
-        </div>
-      </div>
+      ${navigationHTML}
       <br/><br/>
       <div class="row">
         <div class="column">

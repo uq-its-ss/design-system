@@ -3,7 +3,7 @@ import expandedStory from '../../../.storybook/decorators/expanded.js';
 
 // import scripts
 import header from '@uq-uidf/header/src/js/header.es6';
-import mainMenu from '@uq-uidf/main-menu/src/js/main-menu.es6';
+import mainNavigationCreate from '@uq-uidf/main-navigation/src/js/main-navigation.es6';
 import accordion from '@uq-uidf/accordion/src/js/accordion.es6';
 import gridMenuEqualiser from '@uq-uidf/grid-menu/src/js/grid-menu';
 
@@ -18,7 +18,8 @@ export default {
 export const kitchenSink = () => {
   useEffect(() => {
     new header();
-    new mainMenu();
+    var navelement = document.getElementById("primary-nav");
+    var nav = new mainNavigationCreate (navelement, "nav");
     new accordion();
     var equaliseGridMenu = new gridMenuEqualiser('.grid-menu--equalised>a');
     equaliseGridMenu.align(); 

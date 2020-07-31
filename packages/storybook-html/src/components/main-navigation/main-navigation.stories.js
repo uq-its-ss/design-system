@@ -91,7 +91,7 @@ export const dropdownNavigation = () => {
   <div class="header__secondary section">
     <div class="section__content">
       <div class="header__secondary__title">
-        <a href="/" class="header__site-name">Site Title</a>
+        <a href="/" class="header__site-name">Site title</a>
       </div>
       <div class="header__secondary__actions">
         <button

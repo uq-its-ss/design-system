@@ -1,9 +1,0 @@
-@use '@uq-uidf/core/src/scss/global' as *;
-
-$main-menu-color: $uq-black;
-$main-menu-bg-color: $uq-white;
-$main-menu-secondary-bg-color: $uq-neutral-light20; //f2f2f2;
-$main-menu-bg-hover: darken($uq-neutral-light20, 4.5%); //f2f2f2;
-$main-menu-border: darken($uq-neutral-light20, 10%); //f2f2f2;
-
-$search-input-border-color: $uq-neutral-dark20; //ccc;

@@ -27,7 +27,7 @@ To prevent the accidental overriding of third-party system code, the UIDF should
 
 | Resource | Rule |
 | -------- | ---- |
-| CSS modules | Prefix all class names with `uq-`. E.g. `.uq-main-menu` |
+| CSS modules | Prefix all class names with `uq-`. E.g. `.uq-header` |
 | JS modules | **Module scope should (naturally) be handled by consuming JS project.** Pre-compiled code should be scoped within a `uq` namespace. E.g. `uq.mainMenu` |
 
 ---

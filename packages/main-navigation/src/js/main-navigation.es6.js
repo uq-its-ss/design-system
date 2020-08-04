@@ -76,8 +76,7 @@ class MainNavigation {
     const target = this.nav.querySelectorAll(`.${this.level1Class}`);
     const ariaExpanded = toggle.getAttribute('aria-expanded') === 'true';
 
-    toggle.classList.toggle('icon--standard--navigation-menu');
-    toggle.classList.toggle('icon--standard--close');
+    toggle.classList.toggle('main-navigation-header__nav-toggle--close');
     toggle.setAttribute('aria-expanded', !ariaExpanded);
 
     target.forEach((el) => {

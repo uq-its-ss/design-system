@@ -1,8 +1,6 @@
-
-
 :root {
- /* Font sizes. */
---font-size-xl: 1.25rem; /* 20px - H4 */
+  /* Font sizes. */
+  --font-size-xl: 1.25rem; /* 20px - H4 */
 
   /* Font weights. */
   --font-weight-bold: 500;
@@ -22,7 +20,7 @@
   --spacing-uuul: 5.5rem; /* 88px */
   
 
-/* main Navigation globals */
+  /* main Navigation globals */
   --nav-primary: var($uq-black);
   --nav-primary-active-bg: rgb(241, 241, 241); /* #F1F1F1  */ 
   --nav-dropdown-width: 320px;

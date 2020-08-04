@@ -5,8 +5,8 @@
 
 // Contains the styles for the site title and secondary header
 
-.main-navigation-header,
-.main-navigation {
+.uq-main-navigation-header,
+.uq-main-navigation {
   color: core.$text;
   box-sizing: border-box;
   font-family: core.$font-body;
@@ -15,7 +15,7 @@
   line-height: core.$compass-base-line-height-ratio;
 }
 
-.main-navigation-header {
+.uq-main-navigation-header {
   .section__content {
     position: relative;
     max-width: fnd-grid.$row-width;
@@ -97,7 +97,7 @@
   }
 }
 
-.main-navigation {
+.uq-main-navigation {
   overflow: visible;
   position: relative;
 

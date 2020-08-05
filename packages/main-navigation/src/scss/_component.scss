@@ -115,9 +115,6 @@
   }
 
   .nav {
-    // TEMP fix: adjusting the margins to match up with the current UIDF grid
-    margin: 0 calc(#{fnd-global.$column-gutter / 2} - var(--spacing-m));
-
     & ul {
       list-style-type: none;
       margin-bottom: 0;
@@ -137,6 +134,11 @@
       &:focus {
         text-decoration: underline;
       }
+    }
+
+    @media #{fnd-global.$large-up} {
+      // TEMP fix: adjusting the margins to match up with the current UIDF grid
+      margin: 0 calc(#{fnd-global.$column-gutter / 2} - var(--spacing-m));
     }
   }
   

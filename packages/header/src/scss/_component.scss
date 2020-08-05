@@ -146,9 +146,12 @@
             }
 
             &__scope {
-                display: inline;
+                color: core.$uq-white;
+                font-size: .875rem;
 
-                .nav-search__radio-wrapper {
+                &__radio-wrapper {
+                    font-size: 1rem;
+
                     @media #{fnd-global.$large-up} {
                         display: inline-block;
                     }
@@ -174,8 +177,6 @@
                         margin: 0;
                         padding: 0;
                         max-width: none;
-                        margin-bottom: .5rem;
-                        vertical-align: auto;
                     }
                                 
                     @media #{fnd-global.$large-up} {
@@ -184,6 +185,11 @@
                         padding-left: 1rem;
                         padding-top: 0;
                     } 
+                }
+
+                @media #{fnd-global.$large-up} {
+                    display: inline;
+                    margin-left: 1em;
                 }
             }
 

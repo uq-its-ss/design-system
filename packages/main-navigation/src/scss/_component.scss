@@ -13,19 +13,23 @@
   font-size: core.$compass-base-font-size;
   font-weight: fnd-global.$font-weight-normal;
   line-height: core.$compass-base-line-height-ratio;
+
+  *, *:before, *:after {
+    box-sizing: border-box;
+  }
 }
 
 .uq-main-navigation-header {
   .section__content {
-    position: relative;
-    max-width: fnd-grid.$row-width;
-    margin: 0 auto;
-    float: none;
-    padding: var(--spacing-s) 1.5rem;
+    align-items: center;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    float: none;
     justify-content: space-between;
+    margin: 0 auto;
+    max-width: fnd-grid.$row-width;
+    padding: var(--spacing-s) fnd-global.$column-gutter / 2;
+    position: relative;
 
     @media #{fnd-global.$large-up} {
       padding-top: var(--spacing-m);
@@ -34,10 +38,11 @@
   }
 
   &__title {
-    margin: 0;
+    color: core.$uq-purple;
     font-size: var(--font-size-xl);
     font-weight: var(--font-weight-bold);
-    color: core.$uq-purple;
+    margin: 0;
+    text-decoration: none;
   
     &:hover,
     &:focus {
@@ -101,10 +106,6 @@
   overflow: visible;
   position: relative;
 
-  *, *:before, *:after {
-    box-sizing: border-box;
-  }
-
   .section__content {
     position: relative;
     max-width: fnd-grid.$row-width;
@@ -114,6 +115,9 @@
   }
 
   .nav {
+    // TEMP fix: adjusting the margins to match up with the current UIDF grid
+    margin: 0 calc(#{fnd-global.$column-gutter / 2} - var(--spacing-m));
+
     & ul {
       list-style-type: none;
       margin-bottom: 0;

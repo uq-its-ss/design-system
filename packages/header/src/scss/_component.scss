@@ -146,8 +146,8 @@
             }
 
             &__scope {
-                color: core.$uq-white;
-                font-size: .875rem;
+                color: rgba(core.$uq-white, .6);
+                font-size: .75rem;
 
                 &__radio-wrapper {
                     font-size: 1rem;
@@ -189,6 +189,7 @@
 
                 @media #{fnd-global.$large-up} {
                     display: inline;
+                    font-size: .875rem;
                     margin-left: 1em;
                 }
             }

@@ -125,12 +125,8 @@
 
             &__wrapper {
                 border: none;
-                margin: 0 0 1rem 0;
+                margin: 0 0 0.5rem 0;
                 padding: 0;
-
-                @media #{fnd-global.$large-up} {
-                    margin-bottom: .5rem;
-                }
             }
 
             &__title {
@@ -151,9 +147,11 @@
 
                 &__radio-wrapper {
                     font-size: 1rem;
+                    margin: 0 0 0.5rem 0;
 
                     @media #{fnd-global.$large-up} {
                         display: inline-block;
+                        margin: 0;
                     }
                 }
 

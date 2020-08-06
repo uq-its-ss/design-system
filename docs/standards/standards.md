@@ -6,10 +6,15 @@ Helps with code reviews. Helps with coding. Helps with maintainability.
 
 ## Basic style recommendations
 
-- Line length should be limited to 120 characters. Use your ruler settings.
+- Line length should be limited to 120 characters. Use your editor's ruler
+  settings.
 - Tabs are 2 characters, and thus indentations are also 2 characters.
 
 ---
+
+## HTML
+
+See: [HTML standards](markup.md)
 
 ## CSS
 
@@ -18,17 +23,6 @@ See: [CSS standards](stylesheets.md)
 ## JS
 
 See: [JS standards](javascript.md)
-
----
-
-## Namespacing/prefixing
-
-To prevent the accidental overriding of third-party system code, the UIDF should provide `uq` namespaced/prefixed resources.
-
-| Resource | Rule |
-| -------- | ---- |
-| CSS modules | Prefix all class names with `uq-`. E.g. `.uq-header` |
-| JS modules | **Module scope should (naturally) be handled by consuming JS project.** Pre-compiled code should be scoped within a `uq` namespace. E.g. `uq.mainMenu` |
 
 ---
 

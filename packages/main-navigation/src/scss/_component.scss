@@ -11,7 +11,7 @@
   box-sizing: border-box;
   font-family: core.$font-body;
   font-size: core.$compass-base-font-size;
-  font-weight: fnd-global.$font-weight-normal;
+  font-weight: core.$font-weight-normal;
   line-height: core.$compass-base-line-height-ratio;
 
   *, *:before, *:after {
@@ -28,19 +28,19 @@
     justify-content: space-between;
     margin: 0 auto;
     max-width: fnd-grid.$row-width;
-    padding: var(--spacing-s) fnd-global.$column-gutter / 2;
+    padding: core.$spacing-s fnd-global.$column-gutter / 2;
     position: relative;
 
     @media #{fnd-global.$large-up} {
-      padding-top: var(--spacing-m);
-      padding-bottom: var(--spacing-xs);
+      padding-top: core.$spacing-m;
+      padding-bottom: core.$spacing-xs;
     }
   }
 
   &__title {
     color: core.$uq-purple;
-    font-size: var(--font-size-xl);
-    font-weight: var(--font-weight-bold);
+    font-size: $title-font-size;
+    font-weight: $title-font-weight;
     margin: 0;
     text-decoration: none;
   
@@ -56,15 +56,15 @@
     border: 0 none;
     color: core.$uq-purple;
     cursor: pointer;
-    height: var(--spacing-m);
+    height: core.$spacing-m;
     margin-bottom: 0;
-    margin-left: var(--spacing-s);
+    margin-left: core.$spacing-s;
     margin-right: 0;
     overflow: hidden;
     padding: 0;
     position: relative;
     text-indent: -100vw;
-    width: var(--spacing-m);
+    width: core.$spacing-m;
 
     &:focus {
       outline: 2px solid core.$link;
@@ -78,11 +78,11 @@
       display: block;
       -webkit-filter: invert(20%) sepia(34%) saturate(1979%) hue-rotate(239deg) brightness(97%) contrast(107%);
       filter: invert(20%) sepia(34%) saturate(1979%) hue-rotate(239deg) brightness(97%) contrast(107%);
-      height: var(--spacing-m);
+      height: core.$spacing-m;
       left: 0;
       position: absolute;
       top: 0;
-      width: var(--spacing-m);
+      width: core.$spacing-m;
     }
 
     &--close {
@@ -138,7 +138,7 @@
 
     @media #{fnd-global.$large-up} {
       // TEMP fix: adjusting the margins to match up with the current UIDF grid
-      margin: 0 calc(#{fnd-global.$column-gutter / 2} - var(--spacing-m));
+      margin: 0 calc(#{fnd-global.$column-gutter / 2} - core.$spacing-m);
     }
   }
   
@@ -158,15 +158,15 @@
   
     & a {
       display: block;
-      border-bottom: 1px solid var(--nav-dropdown-divider);
-      color: var(--nav-primary);
+      border-bottom: 1px solid $nav-dropdown-divider;
+      color: $nav-primary;
       text-decoration: none;
-      padding: var(--spacing-s) var(--spacing-m);
+      padding: core.$spacing-s core.$spacing-m;
       transition: 0.25s background-color, 0.25s border-color;
   
       &:hover,
       &:focus {
-        background-color: var(--nav-primary-active-bg);
+        background-color: $nav-primary-active-bg;
       }
   
       @media #{fnd-global.$large-up} {
@@ -179,7 +179,7 @@
           color: inherit;
           outline: 0 none;
           text-decoration: none;
-          border-color: var(--nav-primary-active-bg);
+          border-color: $nav-primary-active-bg;
         }
       }
     }
@@ -197,7 +197,7 @@
   
       &.nav--open {
         display: block;
-        border-top: 1px solid var(--nav-dropdown-divider);
+        border-top: 1px solid $nav-dropdown-divider;
   
         @media #{fnd-global.$large-up} {
           border-top: 0 none;
@@ -213,12 +213,12 @@
       left: 0;
       width: 100%;
       opacity: 0;
-      background-color: var(--nav-dropdown-bg);
-      transform: translateY(-var(--nav-dropdown-animation-distance));
+      background-color: $nav-dropdown-bg;
+      transform: translateY(-($nav-dropdown-animation-distance));
   
       @media #{fnd-global.$large-up} {
         position: absolute;
-        width: var(--nav-dropdown-width);
+        width: $nav-dropdown-width;
         transition: 0.2s opacity ease, 0.2s transform ease, 0.2s visibility ease;
       }
   
@@ -236,23 +236,23 @@
       }
   
       & a {
-        border-bottom: 1px solid var(--nav-dropdown-divider);
-        padding-left: var(--spacing-xxl);
+        border-bottom: 1px solid $nav-dropdown-divider;
+        padding-left: core.$spacing-xxl;
   
         &:hover,
         &:focus {
-          background-color: var(--nav-dropdown-active-bg);
+          background-color: $nav-dropdown-active-bg;
         }
   
         @media #{fnd-global.$large-up} {
-          padding-left: var(--spacing-m);
+          padding-left: core.$spacing-m;
         }
       }
     }
   
     & .nav__has-subnav > a {
       @media #{fnd-global.$large-up} {
-        padding-right: var(--spacing-xl);
+        padding-right: core.$spacing-xl;
         background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' stroke='%2351247A'%3E%3Cpath d='M14.285 5.145l-6 6.167a.41.41 0 01-.598 0L1.715 5.145' fill='none' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
         background-position: right 1.3rem center;
         background-size: 0.6rem;
@@ -265,9 +265,9 @@
       top: 0;
       right: 0;
       display: block;
-      width: var(--spacing-xxxl);
-      padding: var(--spacing-s) var(--spacing-m);
-      border-left: 1px solid var(--nav-dropdown-divider);
+      width: core.$spacing-xxxl;
+      padding: core.$spacing-s core.$spacing-m;
+      border-left: 1px solid $nav-dropdown-divider;
       text-indent: -100vw;
       background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' stroke='%2351247A'%3E%3Cpath d='M14.285 5.145l-6 6.167a.41.41 0 01-.598 0L1.715 5.145' fill='none' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
       background-position: center center;
@@ -281,7 +281,7 @@
   
     & .nav__level--open {
       & > a {
-        background-color: var(--nav-primary-active-bg);
+        background-color: $nav-primary-active-bg;
       }
   
       & .nav__sub-toggle {

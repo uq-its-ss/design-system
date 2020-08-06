@@ -1,35 +1,14 @@
 @use "@uq-uidf/core/src/scss/global" as *;
 
-:root {
-  /* Font sizes. */
-  --font-size-xl: 1.25rem; /* 20px - H4 */
+$title-font-size: $font-size-xl;
+$title-font-weight: $font-weight-bold;
 
-  /* Font weights. */
-  --font-weight-bold: 500;
-
-  /* Spacing. */
-  --spacing-xxs: 0.25rem; /* 4px */
-  --spacing-xs: 0.5rem; /* 8px */
-  --spacing-s: 1rem; /* 16px */
-  --spacing-m: 1.5rem; /* 24px */
-  --spacing-l: 2rem; /* 32px */
-  --spacing-xl: 2.5rem; /* 40px */
-  --spacing-xxl: 3rem; /* 48px */
-  --spacing-xxxl: 3.5rem; /* 56px */
-  --spacing-xxxxl: 4rem; /* 64px */
-  --spacing-ul: 4.5rem; /* 72px */
-  --spacing-uul: 5rem; /* 80px */
-  --spacing-uuul: 5.5rem; /* 88px */
-  
-
-  /* Main Navigation globals */
-  --nav-primary: #{$uq-black};
-  --nav-primary-active-bg: rgb(241, 241, 241); /* #F1F1F1  */ 
-  --nav-dropdown-width: 320px;
-  --nav-dropdown-bg: rgb(241, 241, 241); /* #F1F1F1  */ 
-  --nav-dropdown-active-bg: rgb(226, 226, 226); /* #E2E2E2  */ /*  */
-  --nav-dropdown-divider: rgb(226, 226, 226); /* #E2E2E2  */ /* border colour for navigation items */
-  --nav-dropdown-animation-distance: var(--spacing-xs);
-  --nav-chevron: #{$uq-purple};
-  --nav-active: #{$uq-purple};
-}
+$nav-primary: $uq-black;
+$nav-primary-active-bg: $grey-05; /* #F1F1F1 */
+$nav-dropdown-width: 320px;
+$nav-dropdown-bg: $grey-05; /* #F1F1F1 */
+$nav-dropdown-active-bg: $grey-05; /* #E2E2E2 */
+$nav-dropdown-divider: $grey-05; /* #E2E2E2 */
+$nav-dropdown-animation-distance: $spacing-xs;
+$nav-chevron: $uq-purple;
+$nav-active: $uq-purple;

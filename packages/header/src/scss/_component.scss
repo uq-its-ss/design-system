@@ -134,7 +134,7 @@
                 font-family: core.$merriweather;
                 font-size: 1rem;
                 font-style: italic;
-                font-weight: fnd-global.$font-weight-normal;
+                font-weight: core.$font-weight-normal;
 
                 @media #{fnd-global.$large-up} {
                     font-size: 1.25rem;
@@ -171,7 +171,7 @@
                         color: core.$uq-white;
                         display: inline;
                         font-size: .875rem;
-                        font-weight: fnd-global.$font-weight-normal;
+                        font-weight: core.$font-weight-normal;
                         margin: 0;
                         padding: 0;
                         max-width: none;

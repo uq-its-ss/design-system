@@ -3,11 +3,11 @@ import expandedStory from '../../../.storybook/decorators/expanded.js';
 
 // import scripts
 import headerCreate from '@uq-uidf/header/src/js/header.es6';
-import mainNavigationCreate from '@uq-uidf/main-navigation/src/js/main-navigation.es6';
+import siteHeaderNav from '@uq-uidf/site-header/src/js/site-header-navigation.es6';
 
 // import HTML template strings
 import headerHTML from '../../components/header/header.html';
-import navigationHTML from '../../components/main-navigation/main-navigation.html';
+import siteHeaderHTML from '../../components/site-header/site-header.html';
 import footerHTML from '../../components/footer/footer.html';
 
 export default {
@@ -19,11 +19,11 @@ export const example = () => {
     useEffect(() => {
         new headerCreate();
         var navelement = document.getElementById("primary-nav");
-        var nav = new mainNavigationCreate (navelement, "nav");
+        var nav = new siteHeaderNav(navelement, "nav");
       });
     return `
       ${headerHTML}
-      ${navigationHTML}
+      ${siteHeaderHTML}
       <br/><br/>
       <div class="row">
         <div class="column">

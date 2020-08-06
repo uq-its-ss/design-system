@@ -5,8 +5,8 @@
 
 // Contains the styles for the site title and secondary header
 
-.uq-main-navigation-header,
-.uq-main-navigation {
+.uq-site-header__navigation-header,
+.uq-site-header__navigation {
   color: core.$text;
   box-sizing: border-box;
   font-family: core.$font-body;
@@ -19,7 +19,7 @@
   }
 }
 
-.uq-main-navigation-header {
+.uq-site-header__navigation-header {
   .section__content {
     align-items: center;
     display: flex;
@@ -102,7 +102,7 @@
   }
 }
 
-.uq-main-navigation {
+.uq-site-header__navigation {
   overflow: visible;
   position: relative;
 

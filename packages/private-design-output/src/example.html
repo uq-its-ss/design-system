@@ -86,20 +86,20 @@
     </header>
 
     <!-- Site title and mobile nav toggler -->
-    <div class="uq-main-navigation-header">
+    <div class="uq-site-header__navigation-header">
       <div class="section__content">
-        <div class="uq-main-navigation-header__title-container">
-          <a href="/" class="uq-main-navigation-header__title">Site title</a>
+        <div class="uq-site-header__navigation-header__title-container">
+          <a href="/" class="uq-site-header__navigation-header__title">Site title</a>
         </div>
-        <div class="uq-main-navigation-header__actions">
+        <div class="uq-site-header__navigation-header__actions">
           <div>[Site utilities go here]</div>
-          <button class="uq-main-navigation-header__nav-toggle js-nav-toggle">Menu</button>
+          <button class="uq-site-header__navigation-header__nav-toggle js-nav-toggle">Menu</button>
         </div>
       </div>
     </div>
 
     <!-- Navigation Menu  -->
-    <div class="uq-main-navigation">
+    <div class="uq-site-header__navigation">
       <div id="block-mainnavigation" class="block block-system block-system-menu-blockmain">
         <div>
           <div class="section__content">
@@ -948,7 +948,7 @@
       new uq.header();
       // Initialise Main Navigation
       var navelement = document.getElementById("primary-nav");
-      var nav = new uq.mainNavigation (navelement, "nav");
+      var nav = new uq.siteHeaderNavigation(navelement, "nav");
       // Initialise accordions
       new uq.accordion();
       // Initialise main menu

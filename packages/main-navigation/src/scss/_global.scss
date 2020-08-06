@@ -1,8 +1,8 @@
-
+@use "@uq-uidf/core/src/scss/global" as *;
 
 :root {
- /* Font sizes. */
---font-size-xl: 1.25rem; /* 20px - H4 */
+  /* Font sizes. */
+  --font-size-xl: 1.25rem; /* 20px - H4 */
 
   /* Font weights. */
   --font-weight-bold: 500;
@@ -22,14 +22,14 @@
   --spacing-uuul: 5.5rem; /* 88px */
   
 
-/* main Navigation globals */
-  --nav-primary: var($uq-black);
+  /* Main Navigation globals */
+  --nav-primary: #{$uq-black};
   --nav-primary-active-bg: rgb(241, 241, 241); /* #F1F1F1  */ 
   --nav-dropdown-width: 320px;
   --nav-dropdown-bg: rgb(241, 241, 241); /* #F1F1F1  */ 
   --nav-dropdown-active-bg: rgb(226, 226, 226); /* #E2E2E2  */ /*  */
   --nav-dropdown-divider: rgb(226, 226, 226); /* #E2E2E2  */ /* border colour for navigation items */
   --nav-dropdown-animation-distance: var(--spacing-xs);
-  --nav-chevron: $uq-purple;
-  --nav-active: $uq-purple;
+  --nav-chevron: #{$uq-purple};
+  --nav-active: #{$uq-purple};
 }

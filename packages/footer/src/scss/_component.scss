@@ -32,7 +32,7 @@
         border-bottom: 1px dotted;
     }
 
-    .acknowledgement-statement {
+    &__acknowledgement {
         border-bottom: 1px solid rgba(core.$uq-white, 0.3);
         color: $site-footer-color;
         font-family: core.$merriweather;
@@ -42,52 +42,56 @@
         line-height: 1.5;
         margin: 0 0 2rem;
         padding: 0 0 2rem;
+
         @media #{fnd-global.$medium-up} {
             font-size: 1.125rem;
         }
+
         &__link {
             font-family: core.$font-body;
             font-style: normal;
         }
     }
 
-    &__content {
-        padding: 3rem 0;
+    &__container {
         max-width: fnd-grid.$row-width;
         margin: 0 auto;
+        padding: 3rem 1.5rem;
     }
 
     &__flex-container {
         display: flex;
-        flex-wrap: wrap;
+        flex-flow: row wrap;
         justify-content: space-between;
-
+        align-items: stretch;
+	    align-content: stretch;
     }
 
     &__flex-item {
-        flex: 1 1 auto;
-        width: 100%;
-        padding: 0 fnd-global.$column-gutter / 2;
+        flex: 1 1 100%;
+        padding: 0 fnd-global.$column-gutter/2 0 0;
 
         @media #{fnd-global.$medium-up} {
-            flex: 3 1 auto;
-            width: 75%;
+            flex: 3 1 75%;
         }
 
         & + .uq-footer__flex-item {
-            flex: 1 1 auto;
-            width: 100%;
+            flex: 1 1 100%;
 
             @media #{fnd-global.$medium-up} {
-                flex: 1 1 auto;
-                width: 25%;
+                flex: 1 1 25%;
             }
+        }
+
+        &:last-child {
+            padding: 0;
         }
     }
 
     &__aside {
         display: inline-block;
         margin: 1.5rem 0 0 0;
+
         @media #{fnd-global.$large-up} {
             margin: 0;
         }
@@ -103,11 +107,10 @@
         overflow: hidden;
 
         .uq-footer__flex-item + .uq-footer__flex-item {
-            flex: 1 1 auto;
-            width: 100%;
+            flex: 1 1 100%;
+
             @media #{fnd-global.$large-up} {
-                flex: 1 1 auto;
-                width: 25%;
+                flex: 1 1 25%;
             }
         }
     }

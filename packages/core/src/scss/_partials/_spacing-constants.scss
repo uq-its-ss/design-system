@@ -1,0 +1,25 @@
+// FS: spacing
+
+$spacing-xxs: 0.25rem; /* 4px */
+$spacing-xs: 0.5rem; /* 8px */
+$spacing-s: 1rem; /* 16px */
+$spacing-m: 1.5rem; /* 24px */
+$spacing-l: 2rem; /* 32px */
+$spacing-xl: 2.5rem; /* 40px */
+$spacing-xxl: 3rem; /* 48px */
+$spacing-xxxl: 3.5rem; /* 56px */
+$spacing-xxxxl: 4rem; /* 64px */
+$spacing-ul: 4.5rem; /* 72px */
+$spacing-uul: 5rem; /* 80px */
+$spacing-uuul: 5.5rem; /* 88px */
+
+// FS: spacing no scaling. Some spacing should not scale small on mobile
+
+$spacing-ns-l: 2rem; /* 32px */
+$spacing-ns-xl: 2.5rem; /* 40px */
+$spacing-ns-xxl: 3rem; /* 48px */
+$spacing-ns-xxxl: 3.5rem; /* 56px */
+$spacing-ns-xxxxl: 4rem; /* 64px */
+$spacing-ns-ul: 4.5rem; /* 72px */
+$spacing-ns-uul: 5rem; /* 80px */
+$spacing-ns-uuul: 5.5rem; /* 88px */

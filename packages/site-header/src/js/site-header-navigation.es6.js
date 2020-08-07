@@ -7,13 +7,13 @@ class MainNavigation {
   constructor(nav, navClass) {
     this.nav = nav;
     this.navClass = navClass;
-    this.toggleClass = `js-nav-toggle`;
-    this.openModifier = `${this.navClass}--open`;
-    this.levelOpenModifier = `${this.navClass}__level--open`;
-    this.level1Class = `${this.navClass}__level-1`;
-    this.level2Class = `${this.navClass}__level-2`;
-    this.reverseClass = `${this.navClass}--reverse`;
-    this.subNavClass = `${this.navClass}__has-subnav`;
+    this.toggleClass = `jsNavToggle`;
+    this.openModifier = `${this.navClass}__list--open`;
+    this.levelOpenModifier = `${this.navClass}__list-item--open`;
+    this.level1Class = `${this.navClass}__list--level-1`;
+    this.level2Class = `${this.navClass}__list--level-2`;
+    this.reverseClass = `${this.navClass}__list--reverse`;
+    this.subNavClass = `${this.navClass}__list-item--has-subnav`;
     this.subToggleClass = `${this.navClass}__sub-toggle`;
 
     this.init = this.init.bind(this);
@@ -76,7 +76,7 @@ class MainNavigation {
     const target = this.nav.querySelectorAll(`.${this.level1Class}`);
     const ariaExpanded = toggle.getAttribute('aria-expanded') === 'true';
 
-    toggle.classList.toggle('uq-site-header__navigation-header__nav-toggle--close');
+    toggle.classList.toggle('uq-site-header__navigation-toggle--close');
     toggle.setAttribute('aria-expanded', !ariaExpanded);
 
     target.forEach((el) => {

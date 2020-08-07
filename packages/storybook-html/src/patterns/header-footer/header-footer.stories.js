@@ -18,8 +18,8 @@ export default {
 export const example = () => {
     useEffect(() => {
         new headerCreate();
-        var navelement = document.getElementById("primary-nav");
-        var nav = new siteHeaderNav(navelement, "nav");
+        var navelement = document.getElementById("jsNav");
+        var nav = new siteHeaderNav(navelement, "uq-site-header__navigation");
       });
     return `
       ${headerHTML}

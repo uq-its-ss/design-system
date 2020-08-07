@@ -18,8 +18,8 @@ export default {
 export const kitchenSink = () => {
   useEffect(() => {
     new header();
-    var navelement = document.getElementById("primary-nav");
-    var nav = new siteHeaderNav(navelement, "nav");
+    var navelement = document.getElementById("jsNav");
+    var nav = new siteHeaderNav(navelement, "uq-site-header__navigation");
     new accordion();
     var equaliseGridMenu = new gridMenuEqualiser('.grid-menu--equalised>a');
     equaliseGridMenu.align(); 

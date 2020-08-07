@@ -77,339 +77,133 @@
   </div>
 </header>
 
-<!-- Site title and mobile nav toggler -->
-<div class="uq-site-header__navigation-header">
-  <div class="section__content">
-    <div class="uq-site-header__navigation-header__title-container">
-      <a href="/" class="uq-site-header__navigation-header__title">Site title</a>
+<div class="uq-site-header">
+
+  <!-- Site title and utility area with mobile nav toggler (JS) -->
+  <div class="uq-site-header__title-container">
+    <div class="uq-site-header__title-container__left">
+      <a href="/" class="uq-site-header__title">Site title</a>
     </div>
-    <div class="uq-site-header__navigation-header__actions">
+    <div class="uq-site-header__title-container__right">
       <div>[Site utilities go here]</div>
-      <button class="uq-site-header__navigation-header__nav-toggle js-nav-toggle">Menu</button>
+      <button class="uq-site-header__navigation-toggle jsNavToggle">Menu</button>
     </div>
   </div>
-</div>
 
-<!-- Navigation Menu  -->
-<div class="uq-site-header__navigation">
-  <div id="block-mainnavigation" class="block block-system block-system-menu-blockmain">
-    <div>
-      <div class="section__content">
-        <nav class="nav nav--dropdown" id="primary-nav">
-          <ul class="nav__level-1">
-            <li class="nav__has-subnav active">
-              <a
-                href="/study"
-                aria-expanded="false"
-                data-gtm-label="Study"
-                data-drupal-link-system-path="node/3164"
-                class="gtm-processed"
-                >Study</a
-              >
-              <span class="nav__sub-toggle">Open</span>
-              <ul class="nav__level-2">
-                <li>
-                  <a
-                    href="/study/programs"
-                    aria-expanded="false"
-                    data-gtm-label="Study > Find a program"
-                    data-drupal-link-system-path="node/3027"
-                    class="gtm-processed"
-                    >Find a program</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="/study/agriculture-environment"
-                    aria-expanded="false"
-                    data-gtm-label="Study > Agriculture and Environment"
-                    data-drupal-link-system-path="node/3181"
-                    class="gtm-processed"
-                    >Agriculture and Environment</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="/study/architecture-planning"
-                    aria-expanded="false"
-                    data-gtm-label="Study > Architecture and Planning"
-                    data-drupal-link-system-path="node/3182"
-                    class="gtm-processed"
-                    >Architecture and Planning</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="/study/arts-humanities-social-sciences"
-                    aria-expanded="false"
-                    data-gtm-label="Study > Arts, Humanities and Social Sciences"
-                    data-drupal-link-system-path="node/3183"
-                    class="gtm-processed"
-                    >Arts, Humanities and Social Sciences</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="/study/business-economics"
-                    aria-expanded="false"
-                    data-gtm-label="Study > Business and Economics"
-                    data-drupal-link-system-path="node/3184"
-                    class="gtm-processed"
-                    >Business and Economics</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="/study/education"
-                    aria-expanded="false"
-                    data-gtm-label="Study > Education"
-                    data-drupal-link-system-path="node/3185"
-                    class="gtm-processed"
-                    >Education</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="/study/engineering-computing"
-                    aria-expanded="false"
-                    data-gtm-label="Study > Engineering and Computing"
-                    data-drupal-link-system-path="node/3186"
-                    class="gtm-processed"
-                    >Engineering and Computing</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="/study/health-behavioural-sciences"
-                    aria-expanded="false"
-                    data-gtm-label="Study > Health and Behavioural Sciences"
-                    data-drupal-link-system-path="node/3187"
-                    class="gtm-processed"
-                    >Health and Behavioural Sciences</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="/study/law"
-                    aria-expanded="false"
-                    data-gtm-label="Study > Law"
-                    data-drupal-link-system-path="node/3188"
-                    class="gtm-processed"
-                    >Law</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="/study/medicine"
-                    aria-expanded="false"
-                    data-gtm-label="Study > Medicine"
-                    data-drupal-link-system-path="node/3189"
-                    class="gtm-processed"
-                    >Medicine</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="/study/science-mathematics"
-                    aria-expanded="false"
-                    data-gtm-label="Study > Science and Mathematics"
-                    data-drupal-link-system-path="node/3267"
-                    class="gtm-processed"
-                    >Science and Mathematics</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="/study/micromasters-uqx"
-                    aria-expanded="false"
-                    data-gtm-label="Study > MicroMasters and UQx"
-                    data-drupal-link-system-path="node/3277"
-                    class="gtm-processed"
-                    >MicroMasters and UQx</a
-                  >
-                </li>
-              </ul>
+  <!-- Navigation Menu  -->
+  <div class="uq-site-header__navigation-container">
+    <nav class="uq-site-header__navigation" id="jsNav">
+      <ul class="uq-site-header__navigation__list
+                 uq-site-header__navigation__list--level-1">
+        <li class="uq-site-header__navigation__list-item
+                   uq-site-header__navigation__list-item--has-subnav
+                   uq-site-header__navigation__list-item--active">
+          <a href="/study" aria-expanded="false">Study</a>
+          <span class="uq-site-header__navigation__sub-toggle">Open</span>
+          <ul class="uq-site-header__navigation__list
+                     uq-site-header__navigation__list--level-2">
+            <li class="uq-site-header__navigation__list-item">
+              <a href="/study/programs" aria-expanded="false">Find a program</a>
             </li>
-            <li class="nav__has-subnav">
-              <a
-                href="/admissions"
-                aria-expanded="false"
-                data-gtm-label="Admissions"
-                data-drupal-link-system-path="node/3201"
-                class="gtm-processed"
-                >Admissions</a
-              >
-              <span class="nav__sub-toggle">Open</span>
-              <ul class="nav__level-2">
-                <li>
-                  <a
-                    href="/admissions/undergraduate"
-                    aria-expanded="false"
-                    data-gtm-label="Admissions > Undergraduate"
-                    data-drupal-link-system-path="node/3202"
-                    class="gtm-processed"
-                    >Undergraduate</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="/admissions/honours"
-                    aria-expanded="false"
-                    data-gtm-label="Admissions > Honours"
-                    data-drupal-link-system-path="node/3203"
-                    class="gtm-processed"
-                    >Honours</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="/admissions/postgraduate-coursework"
-                    aria-expanded="false"
-                    data-gtm-label="Admissions > Postgraduate coursework"
-                    data-drupal-link-system-path="node/3204"
-                    class="gtm-processed"
-                    >Postgraduate coursework</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="/admissions/higher-degree-research"
-                    aria-expanded="false"
-                    data-gtm-label="Admissions > Higher degree by research"
-                    data-drupal-link-system-path="node/3335"
-                    class="gtm-processed"
-                    >Higher degree by research</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="/admissions/cross-institutional-study"
-                    aria-expanded="false"
-                    data-gtm-label="Admissions > Cross-institutional study"
-                    data-drupal-link-system-path="node/3208"
-                    class="gtm-processed"
-                    >Cross-institutional study</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="/admissions/non-award-study"
-                    aria-expanded="false"
-                    data-gtm-label="Admissions > Non-award study"
-                    data-drupal-link-system-path="node/3207"
-                    class="gtm-processed"
-                    >Non-award study</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="/admissions/doctor-medicine"
-                    aria-expanded="false"
-                    data-gtm-label="Admissions > Doctor of Medicine"
-                    data-drupal-link-system-path="node/3206"
-                    class="gtm-processed"
-                    >Doctor of Medicine</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="https://www.uq.edu.au/studyabroad/how-to-apply"
-                    aria-expanded="false"
-                    data-gtm-label="Admissions > Study abroad and incoming exchange"
-                    class="gtm-processed"
-                    >Study abroad and incoming exchange</a
-                  >
-                </li>
-              </ul>
+            <li class="uq-site-header__navigation__list-item">
+              <a href="/study/agriculture-environment" aria-expanded="false">Agriculture and Environment</a>
             </li>
-            <li class="nav__has-subnav">
-              <a
-                href="/university-life"
-                aria-expanded="false"
-                data-gtm-label="University life"
-                data-drupal-link-system-path="node/3029"
-                class="gtm-processed"
-                >University life</a
-              >
-              <span class="nav__sub-toggle">Open</span>
-              <ul class="nav__level-2">
-                <li>
-                  <a
-                    href="/university-life/living-in-brisbane"
-                    aria-expanded="false"
-                    data-gtm-label="University life > Living in Brisbane"
-                    data-drupal-link-system-path="node/3031"
-                    class="gtm-processed"
-                    >Living in Brisbane</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="/university-life/getting-prepared-to-come-to-australia"
-                    aria-expanded="false"
-                    data-gtm-label="University life > Getting prepared to come to Australia"
-                    data-drupal-link-system-path="node/3167"
-                    class="gtm-processed"
-                    >Getting prepared to come to Australia</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="/university-life/campuses-research-sites"
-                    aria-expanded="false"
-                    data-gtm-label="University life > Campuses and research sites"
-                    data-drupal-link-system-path="node/3165"
-                    class="gtm-processed"
-                    >Campuses and research sites</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="/university-life/campus-tours"
-                    aria-expanded="false"
-                    data-gtm-label="University life > Campus tours"
-                    data-drupal-link-system-path="node/3169"
-                    class="gtm-processed"
-                    >Campus tours</a
-                  >
-                </li>
-              </ul>
+            <li class="uq-site-header__navigation__list-item">
+              <a href="/study/architecture-planning" aria-expanded="false">Architecture and Planning</a>
             </li>
-            <li>
-              <a
-                href="/events"
-                aria-expanded="false"
-                data-gtm-label="Events"
-                data-drupal-link-system-path="node/3026"
-                class="gtm-processed"
-                >Events</a
-              >
+            <li class="uq-site-header__navigation__list-item">
+              <a href="/study/arts-humanities-social-sciences" aria-expanded="false">Arts, Humanities and Social Sciences</a>
             </li>
-            <li>
-              <a
-                href="/stories"
-                aria-expanded="false"
-                data-gtm-label="Stories"
-                data-drupal-link-system-path="node/3303"
-                class="gtm-processed"
-                >Stories</a
-              >
+            <li class="uq-site-header__navigation__list-item">
+              <a href="/study/business-economics" aria-expanded="false">Business and Economics</a>
             </li>
-            <li>
-              <a
-                href="/contact-us"
-                title="Contact"
-                aria-expanded="false"
-                data-gtm-label="Contact"
-                data-drupal-link-system-path="node/3269"
-                class="gtm-processed"
-                >Contact</a
-              >
+            <li class="uq-site-header__navigation__list-item">
+              <a href="/study/education" aria-expanded="false">Education</a>
+            </li>
+            <li class="uq-site-header__navigation__list-item">
+              <a href="/study/engineering-computing" aria-expanded="false">Engineering and Computing</a>
+            </li>
+            <li class="uq-site-header__navigation__list-item">
+              <a href="/study/health-behavioural-sciences" aria-expanded="false">Health and Behavioural Sciences</a>
+            </li>
+            <li class="uq-site-header__navigation__list-item">
+              <a href="/study/law" aria-expanded="false">Law</a>
+            </li>
+            <li class="uq-site-header__navigation__list-item">
+              <a href="/study/medicine" aria-expanded="false">Medicine</a>
+            </li>
+            <li class="uq-site-header__navigation__list-item">
+              <a href="/study/science-mathematics" aria-expanded="false"
+                >Science and Mathematics</a>
+            </li>
+            <li class="uq-site-header__navigation__list-item">
+              <a href="/study/micromasters-uqx" aria-expanded="false">MicroMasters and UQx</a>
             </li>
           </ul>
-        </nav>
-      </div>
-    </div>
+        </li>
+        <li class="uq-site-header__navigation__list-item
+                   uq-site-header__navigation__list-item--has-subnav">
+          <a href="/admissions" aria-expanded="false">Admissions</a>
+          <span class="uq-site-header__navigation__sub-toggle">Open</span>
+          <ul class="uq-site-header__navigation__list 
+                     uq-site-header__navigation__list--level-2">
+            <li class="uq-site-header__navigation__list-item">
+              <a href="/admissions/undergraduate" aria-expanded="false">Undergraduate</a>
+            </li>
+            <li class="uq-site-header__navigation__list-item">
+              <a href="/admissions/honours" aria-expanded="false">Honours</a>
+            </li>
+            <li class="uq-site-header__navigation__list-item">
+              <a href="/admissions/postgraduate-coursework" aria-expanded="false">Postgraduate coursework</a>
+            </li>
+            <li class="uq-site-header__navigation__list-item">
+              <a href="/admissions/higher-degree-research" aria-expanded="false">Higher degree by research</a>
+            </li>
+            <li class="uq-site-header__navigation__list-item">
+              <a href="/admissions/cross-institutional-study" aria-expanded="false">Cross-institutional study</a>
+            </li>
+            <li class="uq-site-header__navigation__list-item">
+              <a href="/admissions/non-award-study" aria-expanded="false">Non-award study</a>
+            </li>
+            <li class="uq-site-header__navigation__list-item">
+              <a href="/admissions/doctor-medicine" aria-expanded="false">Doctor of Medicine</a>
+            </li>
+            <li class="uq-site-header__navigation__list-item">
+              <a href="https://www.uq.edu.au/studyabroad/how-to-apply" aria-expanded="false">Study abroad and incoming exchange</a>
+            </li>
+          </ul>
+        </li>
+        <li class="uq-site-header__navigation__list-item
+                   uq-site-header__navigation__list-item--has-subnav">
+          <a href="/university-life" aria-expanded="false">University life</a>
+          <span class="uq-site-header__navigation__sub-toggle">Open</span>
+          <ul class="uq-site-header__navigation__list 
+                     uq-site-header__navigation__list--level-2">
+            <li class="uq-site-header__navigation__list-item">
+              <a href="/university-life/living-in-brisbane" aria-expanded="false">Living in Brisbane</a>
+            </li>
+            <li class="uq-site-header__navigation__list-item">
+              <a href="/university-life/getting-prepared-to-come-to-australia" aria-expanded="false">Getting prepared to come to Australia</a>
+            </li>
+            <li class="uq-site-header__navigation__list-item">
+              <a href="/university-life/campuses-research-sites" aria-expanded="false">Campuses and research sites</a>
+            </li>
+            <li class="uq-site-header__navigation__list-item">
+              <a href="/university-life/campus-tours" aria-expanded="false">Campus tours</a>
+            </li>
+          </ul>
+        </li>
+        <li class="uq-site-header__navigation__list-item">
+          <a href="/events" aria-expanded="false">Events</a>
+        </li>
+        <li class="uq-site-header__navigation__list-item">
+          <a href="/stories" aria-expanded="false">Stories</a>
+        </li>
+        <li class="uq-site-header__navigation__list-item">
+          <a href="/contact-us" aria-expanded="false">Contact</a>
+        </li>
+      </ul>
+    </nav>
   </div>
 </div>
 

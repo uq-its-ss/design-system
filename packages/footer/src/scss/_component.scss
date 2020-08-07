@@ -59,7 +59,7 @@
         padding: 3rem 1rem;
     }
 
-    &__flex-container {
+    &__row {
         display: flex;
         flex-flow: row wrap;
         justify-content: space-between;
@@ -67,7 +67,7 @@
 	    align-content: stretch;
     }
 
-    &__flex-item {
+    &__column {
         flex: 1 1 100%;
         padding: 0 fnd-global.$column-gutter/2 0 0;
 
@@ -75,7 +75,7 @@
             flex: 3 1 75%;
         }
 
-        & + .uq-footer__flex-item {
+        & + .uq-footer__column {
             flex: 1 1 100%;
 
             @media #{fnd-global.$medium-up} {
@@ -106,7 +106,7 @@
         margin: 2rem 0 0 0;
         overflow: hidden;
 
-        .uq-footer__flex-item + .uq-footer__flex-item {
+        .uq-footer__column + .uq-footer__column {
             flex: 1 1 100%;
 
             @media #{fnd-global.$large-up} {

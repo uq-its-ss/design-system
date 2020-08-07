@@ -138,7 +138,7 @@
 
     @media #{fnd-global.$large-up} {
       // TEMP fix: adjusting the margins to match up with the current UIDF grid
-      margin: 0 calc(#{fnd-global.$column-gutter / 2} - core.$spacing-m);
+      margin: 0 calc(#{fnd-global.$column-gutter / 2} - #{core.$spacing-m});
     }
   }
   

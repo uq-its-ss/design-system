@@ -11,6 +11,11 @@ with `uq-`. E.g. `.uq-header`.
 > RULE OF THUMB: the user of a UIDF package may also use other frameworks and
 > libraries.
 
+### Prefixing for the design system
+
+Similar to the uq prefix, we should prefix any classes that relate to the visual display system.
+Prefix all system styles with `uidf-` E.g. `.uidf-container`. 
+
 ## Class naming convention
 
 In short, we use [BEM](http://getbem.com/) methodology to to create reusable

@@ -1,0 +1,46 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+
+# Site header
+
+## Overview
+
+The main navigation component is designed to work closely with the header, site title component and collapses down to a conventional open/close menu button on smaller devices. 
+
+## Basic Example
+
+A simple one level menu list
+
+<Preview withToolbar>
+  <Story height="350px" id="components-site-header--site-header" />
+</Preview>
+
+## with Dropdown
+
+### Site title
+
+The site title component includes the repsonsive open/close menu button on smaller devices
+
+### Site navigation
+
+Requires the Site Title component for the Responsive menu botton.
+
+## Site utility
+
+The Site title section includes a small space for secondary actions. `uq-site-header__navigation-header__actions`
+
+This is not an advertising or spam section, but intended for discrete, site wide functionality.
+
+**Examples include:** 
+
+* Future Students dropdown for domestic and international.
+* UQ Maps, expand to fill whole screen
+* UQ researchers shortlist
+
+## Break points
+
+* Desktop above 1140px
+* Mobile and tablet below 1140px 
+
+## Known issues
+
+These is a bug with the close and open button, does not trigger if tabbing past the last menu item, which closes the menu and leaves the button in the incorrect state. 

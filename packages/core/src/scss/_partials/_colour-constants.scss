@@ -1,0 +1,50 @@
+// FS: colours
+
+$white: rgb(255, 255, 255);
+$grey-02: rgb(252, 252, 252);
+$grey-05: rgb(241, 241, 241);
+$grey-10: rgb(226, 226, 226);
+$grey-25: rgb(194, 194, 194);
+$grey-50: rgb(128, 128, 128);
+$grey-60: rgb(111, 111, 111);
+$grey-80: rgb(57, 57, 57);
+$grey-90: rgb(24, 24, 24);
+$black: rgb(0, 0, 0);
+$blue-05: rgb(244, 248, 252);
+$blue: rgb(35, 119, 203);
+$blue-dark: rgb(0, 94, 165);
+$purple-10: rgb(212, 200, 222);
+$purple-20: rgb(118, 30, 109);
+$purple-40: rgb(96, 58, 130);
+$purple-50: rgb(150, 42, 139);
+$purple: rgb(81, 36, 122);
+$purple-dark: rgb(73, 32, 108);
+$gold: rgb(187, 157, 101);
+$yellow-05: rgb(255, 244, 228);
+$yellow: rgb(251, 184, 0);
+$green: rgb(68, 162, 72);
+$red: rgb(199, 41, 41);
+$transparent-black-75: rgba(0, 0, 0, 0.75);
+$transparent-black-40: rgba(0, 0, 0, 0.4);
+$transparent-black-20: rgba(0, 0, 0, 0.2);
+$transparent-black-10: rgba(0, 0, 0, 0.1);
+$transparent-white-30: rgba(255, 255, 255, 0.3);
+$transparent-white-85: rgba(255, 255, 255, 0.85);
+$transparent-grey-05: rgba(24, 24, 24, 0.05);
+$transparent-grey-10: rgba(24, 24, 24, 0.1);
+$transparent-purple-05: rgba(80, 36, 122, 0.05);
+
+/* FS: brand colors */
+$brand-primary: var($purple);
+$brand-primary-10: var($purple-10);
+$brand-secondary: var($blue);
+$brand-reverse: var($white);
+$brand-text: var($grey-90);
+$brand-heading: var($brand-primary);
+$brand-gradient: linear-gradient(90deg, var($brand-primary) 0%, 87%, var($purple-50) 100%);
+
+/* FS: filter colors */
+$filter-text: invert(0%) sepia(72%) saturate(588%) hue-rotate(348deg) brightness(115%) contrast(81%);
+$filter-primary: invert(20%) sepia(34%) saturate(1979%) hue-rotate(239deg) brightness(97%) contrast(107%);
+$filter-secondary: invert(35%) sepia(80%) saturate(952%) hue-rotate(181deg) brightness(94%) contrast(90%);
+$filter-white: invert(100%) sepia(0%) saturate(1%) hue-rotate(122deg) brightness(111%) contrast(102%);

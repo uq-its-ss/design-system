@@ -1,12 +1,24 @@
 import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
 
-<Meta title="Components/Header/Header doc" />
-
 # Header
 
 The global UQ header provides a consistent branding and navigational element across all UQ pages. Reinforced by the UQ logo, the header enables users to quickly identify and trust UQ websites.
 
+## With global search only
+
+Provides broad UQ site search using the general UQ search service
+(located: https://www.uq.edu.au/search).
 
 <Preview withToolbar>
-  <Story height="250px" id="components-header--header" />
+  <Story height="450px" id="components-header--header-no-local-search" />
+</Preview>
+
+## With global and site search
+
+Allows the user to choose between global search and your local site/app search
+functionality. You must configure the form properties to use your service
+endpoints.
+
+<Preview withToolbar>
+  <Story height="450px" id="components-header--header" />
 </Preview>

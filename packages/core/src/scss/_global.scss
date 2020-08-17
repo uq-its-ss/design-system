@@ -1,3 +1,7 @@
+@forward '_partials/spacing-constants';
+@forward '_partials/text-constants';
+@forward '_partials/colour-constants';
+
 /**
  *
  * Some compass features may still be required for Foundation 5 (TODO: remove
@@ -14,8 +18,6 @@ $courier: "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
 // Now create some variables using the font stacks we want on this site.
 $font-body: $roboto;
 $font-monospace: $courier;
-
-// @import "_partials/spacing";
 
 // Font Awesome settings
 @forward "font-awesome/scss/variables";

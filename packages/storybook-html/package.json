@@ -23,6 +23,7 @@
     "@storybook/addon-viewport": "^6.0.10",
     "@storybook/html": "^6.0.10",
     "babel-loader": "^8.0.6",
+    "core-js": "^3.0.1",
     "fibers": "^4.0.2",
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",

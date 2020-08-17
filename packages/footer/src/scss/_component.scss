@@ -56,7 +56,7 @@
     &__container {
         max-width: fnd-grid.$row-width;
         margin: 0 auto;
-        padding: 3rem 1rem;
+        padding: 3rem fnd-global.$column-gutter / 2;
     }
 
     &__row {
@@ -123,11 +123,11 @@
             margin: 0;
             padding: 0;
             li {
-                padding-left: var(--space--md, 16px); // first arg needs to be supplied via emitting core
-
+                padding-left: core.$spacing-xs; // first arg needs to be supplied via emitting core
+                
                 & + :before {
                     content: " | ";
-                    padding-right: var(--space--md, 16px); // first arg needs to be supplied via emitting core
+                    padding-right: core.$spacing-xs; // first arg needs to be supplied via emitting core
                 }
                 
                 &:first-of-type {

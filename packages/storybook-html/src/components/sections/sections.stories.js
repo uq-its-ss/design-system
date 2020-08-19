@@ -13,7 +13,7 @@ export const sections = () => {
 import docs from './sections.docs.mdx';
 
 export default {
-  title: 'Components/Sections',
+  title: 'Layout/Sections',
   parameters: {
     docs: {
       page: docs

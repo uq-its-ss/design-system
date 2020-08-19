@@ -45,6 +45,7 @@
     "@uq-uidf/foundation-grid": "^0.0.0",
     "@uq-uidf/foundation-misc": "^0.0.0",
     "@uq-uidf/foundation-normalise": "^0.0.0",
+    "@uq-uidf/grid": "^0.0.0",
     "@uq-uidf/grid-menu": "^0.0.0",
     "@uq-uidf/header": "^0.0.0",
     "@uq-uidf/icon": "^0.0.0",

@@ -1,0 +1,93 @@
+/* Pagination */
+@use '@uq-uidf/core/src/scss/global' as *;
+@use 'global' as *;
+
+.progression {
+    display: flex;
+    list-style: none;
+    margin: 0 1.5rem;
+    padding: 0;
+
+	&__step {
+		display: flex;
+		flex: auto;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	.is-complete {
+		.progression__step-number, 
+		.progression__link .progression__step-number, 
+		.progression__bar {
+			background-color: $uq-green;
+			color: $uq-white;
+		}
+	}
+
+	&__step-marker {
+		display: block;
+		position: relative;
+		text-align: center;
+		width: 1.875rem;
+		@media (min-width: 1140px) {
+			width: 2.5rem;
+		}
+	}
+	&__link {
+		text-decoration: none;
+	}
+	&__step-number {
+		background-color: $uq-neutral-dark40;
+		border-radius: 50%;
+		color: $uq-white;
+		display: block;
+		height: 1.875rem;
+		line-height: 1.875rem;
+		position: relative;
+		text-align: center;
+		width: 1.875rem;
+		@media (min-width: 1140px) {
+			height: 2.5rem;
+			line-height: 2.5rem;
+			width: 2.5rem;
+		}
+	}
+	&__step-label {
+		display: none;
+		@media (min-width: 1140px) {
+			color: $uq-neutral-dark80;
+			display: block;
+			line-height: 1.2;
+			position: relative;
+			margin: 2px -25px 0;
+			margin: .125rem -1.5625rem 0;
+			text-align: center;
+		}
+	}
+
+	&__bar {
+		background-color: $uq-neutral;
+		border-right: 1px solid $uq-white;
+		border-left: 1px solid $uq-white;
+		display: flex;
+		flex: 1;
+		height: 10px;
+		height: .625rem;
+		margin: 10px 0;
+		margin: .625rem 0;
+		@media (min-width: 1140px) {
+			margin: 15px 0;
+    		margin: .9375rem 0;
+		}
+	}
+	&__sub-step {
+		display: none;
+		@media (min-width: 1140px) {
+			display: flex;
+			flex: auto;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+	}
+}

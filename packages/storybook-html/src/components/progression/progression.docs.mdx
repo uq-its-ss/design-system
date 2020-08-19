@@ -4,73 +4,81 @@ import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
 
 ## Overview
 
-The Progression component is also a form of pagination.
-It provides previous and next buttons (links) to navigate between pages or between tab contents on the same page. 
-They are aligned to the sides of the page or in some instances to the sides of the tab contents.
+The Progression component is a progress indicator helping the user to complete the step by step process.
 
 ## Instances
 
-### First instance, Default instance
+### Step 0, Default instance
 
-An instance when only the next button is visible
+An instance when no progress is made
 
 <Preview withToolbar>
-  <Story height="350px" id="components-previous-next--previous-next-first" />
+  <Story height="350px" id="components-progression--progression" />
 </Preview>
 
 ```html
-  <div class="uq-previous-next">
-    <div class="uq-previous-next__item uq-previous-next__item--hidden">
-      <a href="#" class="uq-previous-next__link-previous">Enrolment basics <span class="uq-previous-next__description">Previous</span></a>
-    </div>
-
-    <div class="uq-previous-next__item">
-      <a href="#" class="uq-previous-next__link-next">How to enrol <span class="uq-previous-next__description">Next</span></a>
-    </div>
-  </div>
+  <ul class="progression">
+    <li class="progression__step">
+        <div class="progression__step-marker">
+            <a class="progression__link" href="#"><span class="progression__step-number">1</span> <span class="progression__step-label">Section 1</span></a>
+        </div>
+        <div class="progression__bar">&nbsp;</div>
+    </li>
+    ....
+  </ul>
 ```
 
-### Middle instance
+### Step 1
 
-An instance when both the previous and next buttons are visible
+An instance when the first section is done and completed.
 
 <Preview withToolbar>
-  <Story height="350px" id="components-previous-next--previous-next" />
+  <Story height="350px" id="components-progression--progression-step-1" />
 </Preview>
 
 ```html
 <!-- Previous and Next buttons are visible -->  
-<div class="uq-previous-next">
-    <div class="uq-previous-next__item">
-        <a href="#" class="uq-previous-next__link-previous">Enrolment basics <span class="uq-previous-next__description">Previous</span></a>
-    </div>
-
-    <div class="uq-previous-next__item">
-        <a href="#" class="uq-previous-next__link-next">How to enrol <span class="uq-previous-next__description">Next</span></a>
-    </div>
-</div>
+  <ul class="progression">
+    <li class="progression__step is-complete">
+        <div class="progression__step-marker">
+            <a class="progression__link" href="#"><span class="progression__step-number">1</span> <span class="progression__step-label">Section 1</span></a>
+        </div>
+        <div class="progression__bar progression__bar--complete">&nbsp;</div>
+    </li>
+  </ul>
 ```
 
-### Last instance
+### Step 2
 
-An instance when only the previous button is visible
+An instance when parts of a section is done, but not complete.
 
 <Preview withToolbar>
-  <Story height="350px" id="components-previous-next--previous-next-last" />
+  <Story height="350px" id="components-progression--progression-step-2" />
 </Preview>
 
 ```html
-  <div class="uq-previous-next">
-    <div class="uq-previous-next__item">
-      <a href="#" class="uq-previous-next__link-previous">Enrolment basics <span class="uq-previous-next__description">Previous</span></a>
-    </div>
-
-    <div class="uq-previous-next__item uq-previous-next__item--hidden">
-      <a href="#" class="uq-previous-next__link-next">How to enrol <span class="uq-previous-next__description">Next</span></a>
-    </div>
-  </div>
+  <ul class="progression">
+    <li class="progression__step is-complete">
+        <div class="progression__step-marker">
+            <a class="progression__link" href="#"><span class="progression__step-number">1</span> <span class="progression__step-label">Section 1</span></a>
+        </div>
+        <div class="progression__bar progression__bar--complete">&nbsp;</div>
+    </li>
+    <li class="progression__step">
+        <div class="progression__step-marker">
+            <a class="progression__link" href="#"><span class="progression__step-number">2</span> <span class="progression__step-label">Section 2</span></a>
+        </div>
+        <div class="progression__bar">
+            <ul class="progression__sub-step">
+                <li class="progression__bar progression__bar--complete">&nbsp;</li>
+                <li class="progression__bar progression__bar--complete">&nbsp;</li>
+                <li class="progression__bar">&nbsp;</li>
+            </ul>
+        </div>
+    </li>
+  </ul>
 ```
 
 ## Breakpoints
 
-The previous and next buttons collapses at 640px
+The progression hides step number and label at less than 640px vieports.

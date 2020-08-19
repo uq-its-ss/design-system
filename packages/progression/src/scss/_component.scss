@@ -14,13 +14,16 @@
 		list-style: none;
 		margin: 0;
 		padding: 0;
-	}
-	.is-complete {
-		.progression__step-number, 
-		.progression__link .progression__step-number, 
-		.progression__bar {
-			background-color: $uq-green;
-			color: $uq-white;
+
+		&:last-of-type {
+			flex: none;
+		}
+
+		.progression__link {
+			&:hover {
+				background-color: $uq-neutral-dark40;
+				text-decoration: none;
+			}
 		}
 	}
 
@@ -29,15 +32,21 @@
 		position: relative;
 		text-align: center;
 		width: 1.875rem;
-		@media (min-width: 1140px) {
+		@media (min-width: 640px) {
 			width: 2.5rem;
 		}
 	}
 	&__link {
 		text-decoration: none;
+		&:hover {
+			.progression__step-number { 
+				background-color: $uq-neutral-dark40;
+				text-decoration: none;
+			}
+		}
 	}
 	&__step-number {
-		background-color: $uq-neutral-dark40;
+		background-color: $uq-neutral-dark20;
 		border-radius: 50%;
 		color: $uq-white;
 		display: block;
@@ -46,7 +55,7 @@
 		position: relative;
 		text-align: center;
 		width: 1.875rem;
-		@media (min-width: 1140px) {
+		@media (min-width: 640px) {
 			height: 2.5rem;
 			line-height: 2.5rem;
 			width: 2.5rem;
@@ -54,7 +63,7 @@
 	}
 	&__step-label {
 		display: none;
-		@media (min-width: 1140px) {
+		@media (min-width: 640px) {
 			color: $uq-neutral-dark80;
 			display: block;
 			line-height: 1.2;
@@ -75,19 +84,38 @@
 		height: .625rem;
 		margin: 10px 0;
 		margin: .625rem 0;
-		@media (min-width: 1140px) {
+		@media (min-width: 640px) {
 			margin: 15px 0;
     		margin: .9375rem 0;
 		}
+		
+		& .progression__bar {
+			background-color: $uq-neutral-light80;
+    		margin: 0;
+		}
 	}
+	
+	.progression__bar--complete {
+		background-color: $uq-green;
+	}
+
 	&__sub-step {
 		display: none;
-		@media (min-width: 1140px) {
+		@media (min-width: 640px) {
 			display: flex;
 			flex: auto;
 			list-style: none;
 			margin: 0;
 			padding: 0;
 		}
+	}
+}
+
+.is-complete {
+	.progression__step-number, 
+	.progression__link .progression__step-number, 
+	.progression__bar {
+		background-color: $uq-green;
+		color: $uq-white;
 	}
 }

@@ -16,7 +16,7 @@ export default {
       page: docs
     }
   },
-  decorators: [expandedStory]
+  //decorators: [expandedStory]
 };
 
 export const progression = () => {
@@ -27,38 +27,104 @@ progression.story = {
   name: 'Progression'
 }
 
-export const progressionText = () => {
+export const progressionStep1 = () => {
   return `
-    <div class="uq-previous-next">
-      <div class="uq-previous-next__item">
-        <a href="#" class="uq-previous-next__link-previous">Enrolment basics <span class="uq-previous-next__description">Previous</span></a>
-      </div>
-
-      <div class="uq-previous-next__item uq-previous-next__item--hidden">
-        <a href="#" class="uq-previous-next__link-next">How to enrol <span class="uq-previous-next__description">Next</span></a>
-      </div>
-    </div>
+  <div class="uidf-progression-wrapper">
+    <ul class="progression">
+      <li class="progression__step is-complete">
+          <div class="progression__step-marker">
+              <a class="progression__link" href="#"><span class="progression__step-number">1</span> <span class="progression__step-label">Section 1</span></a>
+          </div>
+          <div class="progression__bar">&nbsp;</div>
+      </li>
+      <li class="progression__step">
+          <div class="progression__step-marker">
+              <a class="progression__link" href="#"><span class="progression__step-number">2</span> <span class="progression__step-label">Section 2</span></a>
+          </div>
+          <div class="progression__bar">
+              <ul class="progression__sub-step">
+                  <li class="progression__bar">&nbsp;</li>
+                  <li class="progression__bar">&nbsp;</li>
+                  <li class="progression__bar">&nbsp;</li>
+              </ul>
+          </div>
+      </li>
+      <li class="progression__step">
+          <div class="progression__step-marker">
+              <a class="progression__link" href="#"><span class="progression__step-number">3</span> <span class="progression__step-label">Section 3</span></a>
+          </div>
+          <div class="progression__bar">
+              <ul class="progression__sub-step">
+                  <li class="progression__bar">&nbsp;</li>
+                  <li class="progression__bar">&nbsp;</li>
+                  <li class="progression__bar">&nbsp;</li>
+                  <li class="progression__bar">&nbsp;</li>
+                  <li class="progression__bar">&nbsp;</li>
+                  <li class="progression__bar">&nbsp;</li>
+              </ul>
+          </div>
+      </li>
+      <li class="progression__step">
+          <div class="progression__step-marker">
+              <a class="progression__link" href="#"><span class="progression__step-number">4</span> <span class="progression__step-label">Section 4</span></a>
+          </div>
+      </li>
+    </ul>
+  </div>
   `;
 };
 
-progressionText.story = {
-  name: 'progressionText'
+progressionStep1.story = {
+  name: 'Progression Step1'
 }
 
-export const progressionStep = () => {
+export const progressionStep2 = () => {
   return `
-    <div class="uq-previous-next">
-      <div class="uq-previous-next__item uq-previous-next__item--hidden">
-        <a href="#" class="uq-previous-next__link-previous">Enrolment basics <span class="uq-previous-next__description">Previous</span></a>
-      </div>
-
-      <div class="uq-previous-next__item">
-        <a href="#" class="uq-previous-next__link-next">How to enrol <span class="uq-previous-next__description">Next</span></a>
-      </div>
-    </div>
+  <div class="uidf-progression-wrapper">
+    <ul class="progression">
+      <li class="progression__step is-complete">
+          <div class="progression__step-marker">
+              <a class="progression__link" href="#"><span class="progression__step-number">1</span> <span class="progression__step-label">Section 1</span></a>
+          </div>
+          <div class="progression__bar progression__bar--complete">&nbsp;</div>
+      </li>
+      <li class="progression__step">
+          <div class="progression__step-marker">
+              <a class="progression__link" href="#"><span class="progression__step-number">2</span> <span class="progression__step-label">Section 2</span></a>
+          </div>
+          <div class="progression__bar">
+              <ul class="progression__sub-step">
+                  <li class="progression__bar progression__bar--complete">&nbsp;</li>
+                  <li class="progression__bar progression__bar--complete">&nbsp;</li>
+                  <li class="progression__bar">&nbsp;</li>
+              </ul>
+          </div>
+      </li>
+      <li class="progression__step">
+          <div class="progression__step-marker">
+              <a class="progression__link" href="#"><span class="progression__step-number">3</span> <span class="progression__step-label">Section 3</span></a>
+          </div>
+          <div class="progression__bar">
+              <ul class="progression__sub-step">
+                  <li class="progression__bar">&nbsp;</li>
+                  <li class="progression__bar">&nbsp;</li>
+                  <li class="progression__bar">&nbsp;</li>
+                  <li class="progression__bar">&nbsp;</li>
+                  <li class="progression__bar">&nbsp;</li>
+                  <li class="progression__bar">&nbsp;</li>
+              </ul>
+          </div>
+      </li>
+      <li class="progression__step">
+          <div class="progression__step-marker">
+              <a class="progression__link" href="#"><span class="progression__step-number">4</span> <span class="progression__step-label">Section 4</span></a>
+          </div>
+      </li>
+    </ul>
+  </div>  
   `;
 };
 
-progressionStep.story = {
-  name: 'ProgressionStep'
+progressionStep2.story = {
+  name: 'Progression Step2'
 }

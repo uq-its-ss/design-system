@@ -8,74 +8,130 @@ The Progression component is a progress indicator helping the user to complete a
 
 ## Instances
 
-### Step 0, Default instance
+### Initial instance
 
-An instance when no progress is made
+In the initial instance the component is in it's starting default stage.
 
 <Preview withToolbar>
-  <Story height="350px" id="components-progression--progression" />
+  <Story height="350px" id="components-progression--progression-initial" />
 </Preview>
 
 ```html
   <ul class="progression">
-    <li class="progression__step">
+    <li class="progression__step is-complete">
         <div class="progression__step-marker">
-            <a class="progression__link" href="#"><span class="progression__step-number">1</span> <span class="progression__step-label">Step 1</span></a>
+            <a class="progression__link" href="#">
+                <span class="progression__step-number">1</span>
+                <span class="progression__step-label">Step 1</span>
+            </a>
         </div>
         <div class="progression__bar">&nbsp;</div>
     </li>
     ....
+    ....
   </ul>
 ```
 
-### Step 1
+### Middle instance
 
-An instance when the first section is done and completed.
+An instance when a step is done partly but not completed.
 
 <Preview withToolbar>
-  <Story height="350px" id="components-progression--progression-step-1" />
+  <Story height="350px" id="components-progression--progression-middle" />
 </Preview>
 
 ```html
   <ul class="progression">
     <li class="progression__step is-complete">
-        <div class="progression__step-marker">
-            <a class="progression__link" href="#"><span class="progression__step-number">1</span> <span class="progression__step-label">Step 1</span></a>
-        </div>
-        <div class="progression__bar progression__bar--complete">&nbsp;</div>
+      <div class="progression__step-marker">
+          <a class="progression__link" href="#">
+              <span class="progression__step-number">1</span>
+              <span class="progression__step-label">Step 1</span>
+          </a>
+      </div>
+      <div class="progression__bar">&nbsp;</div>
     </li>
+    <li class="progression__step is-complete">
+      <div class="progression__step-marker">
+          <a class="progression__link" href="#">
+              <span class="progression__step-number">2</span>
+              <span class="progression__step-label">Step 2</span>
+          </a>
+      </div>
+      <div class="progression__bar">
+          <ul class="progression__sub-step">
+              <li class="progression__bar is-complete">&nbsp;</li>
+              <li class="progression__bar is-complete">&nbsp;</li>
+              <li class="progression__bar">&nbsp;</li>
+          </ul>
+      </div>
+    </li>
+    ....
+    ....
   </ul>
 ```
 
-### Step 2
+### Final instance
 
-An instance when parts of a section is done, but not complete.
+The instance when all steps are done and completed.
 
 <Preview withToolbar>
-  <Story height="350px" id="components-progression--progression-step-2" />
+  <Story height="350px" id="components-progression--progression-final" />
 </Preview>
 
 ```html
   <ul class="progression">
-    <li class="progression__step is-complete">
-        <div class="progression__step-marker">
-            <a class="progression__link" href="#"><span class="progression__step-number">1</span> <span class="progression__step-label">Step 1</span></a>
-        </div>
-        <div class="progression__bar progression__bar--complete">&nbsp;</div>
-    </li>
-    <li class="progression__step">
-        <div class="progression__step-marker">
-            <a class="progression__link" href="#"><span class="progression__step-number">2</span> <span class="progression__step-label">Step 2</span></a>
-        </div>
-        <div class="progression__bar">
-            <ul class="progression__sub-step">
-                <li class="progression__bar progression__bar--complete">&nbsp;</li>
-                <li class="progression__bar progression__bar--complete">&nbsp;</li>
-                <li class="progression__bar">&nbsp;</li>
-            </ul>
-        </div>
-    </li>
-  </ul>
+        <li class="progression__step is-complete">
+            <div class="progression__step-marker">
+                <a class="progression__link" href="#">
+                    <span class="progression__step-number">1</span>
+                    <span class="progression__step-label">Step 1</span>
+                </a>
+            </div>
+            <div class="progression__bar">&nbsp;</div>
+        </li>
+        <li class="progression__step is-complete">
+            <div class="progression__step-marker">
+                <a class="progression__link" href="#">
+                    <span class="progression__step-number">2</span>
+                    <span class="progression__step-label">Step 2</span>
+                </a>
+            </div>
+            <div class="progression__bar">
+                <ul class="progression__sub-step">
+                    <li class="progression__bar is-complete">&nbsp;</li>
+                    <li class="progression__bar is-complete">&nbsp;</li>
+                    <li class="progression__bar is-complete">&nbsp;</li>
+                </ul>
+            </div>
+        </li>
+        <li class="progression__step is-complete">
+            <div class="progression__step-marker">
+                <a class="progression__link" href="#">
+                    <span class="progression__step-number">3</span>
+                    <span class="progression__step-label">Step 3</span>
+                </a>
+            </div>
+            <div class="progression__bar">
+                <ul class="progression__sub-step">
+                    <li class="progression__bar is-complete">&nbsp;</li>
+                    <li class="progression__bar is-complete">&nbsp;</li>
+                    <li class="progression__bar is-complete">&nbsp;</li>
+                    <li class="progression__bar is-complete">&nbsp;</li>
+                    <li class="progression__bar is-complete">&nbsp;</li>
+                    <li class="progression__bar is-complete">&nbsp;</li>
+                </ul>
+            </div>
+        </li>
+        <li class="progression__step is-complete">
+            <div class="progression__step-marker">
+                <a class="progression__link" href="#">
+                    <span class="progression__step-number">4</span>
+                    <span class="progression__step-label">Step 4</span>
+                </a>
+            </div>
+        </li>
+    </ul>
 ```
 
 ## Breakpoints

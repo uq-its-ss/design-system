@@ -38,6 +38,11 @@
 	}
 	&__link {
 		text-decoration: none;
+		&:link,
+		&:visited,
+		&:active {
+			text-decoration: none;
+		}
 		&:hover {
 			.progression__step-number { 
 				background-color: $uq-neutral-dark40;
@@ -91,12 +96,8 @@
 		
 		& .progression__bar {
 			background-color: $uq-neutral-light80;
-    		margin: 0;
+			margin: 0;
 		}
-	}
-	
-	.progression__bar--complete {
-		background-color: $uq-green;
 	}
 
 	&__sub-step {
@@ -118,4 +119,20 @@
 		background-color: $uq-green;
 		color: $uq-white;
 	}
+
+	.progression__step .progression__link:hover, 
+	.progression__link:hover .progression__step-number {
+		background-color: darken($uq-green, 10%);
+		text-decoration: none;
+	}
+}
+
+.progression__bar .progression__bar {
+	background-color: $uq-neutral-light80;
+	color: $uq-white;
+}
+
+.progression__bar .is-complete {
+	background-color: $uq-green !important;
+	color: $uq-white;
 }

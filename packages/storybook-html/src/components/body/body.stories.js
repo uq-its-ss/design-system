@@ -3,7 +3,7 @@ import allHTML from './all.html';
 import tableHTML from './table.html';
 
 export default {
-  title: 'Typography/Body'
+  title: 'Base/Body'
 };
 
 export const all = () => {

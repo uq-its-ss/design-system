@@ -4,7 +4,7 @@ import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
 
 ## Overview
 
-The Progression component is a progress indicator helping the user to complete the step by step process.
+The Progression component is a progress indicator helping the user to complete a step by step process.
 
 ## Instances
 
@@ -20,7 +20,7 @@ An instance when no progress is made
   <ul class="progression">
     <li class="progression__step">
         <div class="progression__step-marker">
-            <a class="progression__link" href="#"><span class="progression__step-number">1</span> <span class="progression__step-label">Section 1</span></a>
+            <a class="progression__link" href="#"><span class="progression__step-number">1</span> <span class="progression__step-label">Step 1</span></a>
         </div>
         <div class="progression__bar">&nbsp;</div>
     </li>
@@ -40,7 +40,7 @@ An instance when the first section is done and completed.
   <ul class="progression">
     <li class="progression__step is-complete">
         <div class="progression__step-marker">
-            <a class="progression__link" href="#"><span class="progression__step-number">1</span> <span class="progression__step-label">Section 1</span></a>
+            <a class="progression__link" href="#"><span class="progression__step-number">1</span> <span class="progression__step-label">Step 1</span></a>
         </div>
         <div class="progression__bar progression__bar--complete">&nbsp;</div>
     </li>
@@ -59,13 +59,13 @@ An instance when parts of a section is done, but not complete.
   <ul class="progression">
     <li class="progression__step is-complete">
         <div class="progression__step-marker">
-            <a class="progression__link" href="#"><span class="progression__step-number">1</span> <span class="progression__step-label">Section 1</span></a>
+            <a class="progression__link" href="#"><span class="progression__step-number">1</span> <span class="progression__step-label">Step 1</span></a>
         </div>
         <div class="progression__bar progression__bar--complete">&nbsp;</div>
     </li>
     <li class="progression__step">
         <div class="progression__step-marker">
-            <a class="progression__link" href="#"><span class="progression__step-number">2</span> <span class="progression__step-label">Section 2</span></a>
+            <a class="progression__link" href="#"><span class="progression__step-number">2</span> <span class="progression__step-label">Step 2</span></a>
         </div>
         <div class="progression__bar">
             <ul class="progression__sub-step">
@@ -80,4 +80,4 @@ An instance when parts of a section is done, but not complete.
 
 ## Breakpoints
 
-The progression hides step number and label at less than 640px vieports.
+The progression hides step markers like the number and label at viewports less than 640px.

@@ -2,6 +2,7 @@
   "name": "@uq-uidf/foundation-normalise",
   "version": "0.0.0",
   "description": "Foundation normalize.scss",
+  "private": true,
   "keywords": [
     "uq-uidf",
     "uq",

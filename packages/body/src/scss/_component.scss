@@ -1,395 +1,313 @@
-@use '@uq-uidf/core/src/scss/global' as *;
-@use '@uq-uidf/foundation-global/src/scss/global' as *;
+@use "@uq-uidf/core/src/scss/global" as core;
 @use 'global' as *;
 
-@import 'foundation-sites/scss/foundation/components/tables';
-@import 'foundation-sites/scss/foundation/components/flex-video';
+$use-encapsulation: false !default;
 
-@import 'font-awesome/scss/mixins';
-@import '@uq-uidf/core/src/fonts/uq-icons/scss/mixins';
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: 400;
-  line-height: 1.25;
-  margin-bottom: 1rem;
-  margin-top: 0;
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-
-  a {
-    font-weight: inherit !important; // Always make links inside heading inherit font-weight of parent heading.
-  }
+@mixin body-styles {
+  color: core.$text;
+  font-size: 100%; // 16px in most browsers
+  // TODO: regression test needed as was originally with the "html" selector
+  font-family: core.$font-family;
+  line-height: core.$line-height-h;
+  margin: 0;
 }
 
-h1 {
-  font-size: $h1-font-size;
-}
-
-h2 {
-  font-size: $h2-font-size;
-}
-
-h3 {
-  font-size: $h3-font-size;
-}
-
-h4 {
-  font-size: $h4-font-size;
-}
-
-h5 {
-  font-size: $h5-font-size;
-}
-
-h6 {
-  font-size: $h6-font-size;
-}
-
-p {
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-}
-
-dt {
-  font-weight: 700;
-}
-
-%links,
-a {
-  color: $link-color;
-  text-decoration: none;
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-
-  &:hover,
-  &:focus {
-    color: $link-hover-color;
-    text-decoration: underline;
+@mixin base-styles {
+  * {
+    box-sizing: border-box;
   }
 
-  img {
-    border: 0;
-  }
-}
-
-// External links include an icon after them.
-%external,
-.link--external {
-  &::after {
-    @include fa-icon;
-    color: $external-link-icon-color;
-    content: $fa-var-external-link;
-    font-size: .875rem;
-    margin-left: .5rem;
-  }
-}
-
-// Arrow link - Adds chevron before the link it is applied to.
-.arrow-link {
-  display: block;
-  font-weight: 400;
-  margin-left: 1.5rem;
-
-  &::before {
-    @include uq-icon(chevron-right);
-    color: $icon-light-grey-color;
-    font-size: .875rem;
-    text-indent: -1.5rem;
-  }
-}
-
-em,
-i {
-  font-style: italic;
-  line-height: inherit;
-}
-
-strong,
-b {
-  font-weight: $font-weight-bold;
-  line-height: inherit;
-}
-
-small {
-  font-size: 79.5%;
-}
-
-iframe {
-  max-width: 100%;
-}
-
-blockquote {
-  border-left: 5px solid $blockquote-border-color;
-  clear: both;
-  display: inline-block;
-  font-style: italic;
-  padding-left: $blockquote-indent-amount;
-
-  @media #{$medium-up} {
-    clear: none;
-    display: table;
+  // Margin adjustment
+  .margin--reset {
+    margin: 0;
   }
 
-  cite {
-    display: block;
-    font-size: .875rem;
-
-    &::before {
-      content: '- ';
-    }
+  // Background colour utilities
+  .white {
+    background-color: core.$white;
   }
-}
-
-hr {
-  border: 0;
-  border-top: 1px solid $hr-border-color;
-  clear: both;
-  height: 0;
-}
-
-pre {
-  overflow-x: auto;
-  white-space: pre;
-  word-wrap: normal;
-}
-
-// Added prefixed class to code element selector for now
-code.uq-code {
-  background: $code-bg;
-  border: 1px solid $code-border-color;
-  border-radius: 2px;
-  font-family: $font-monospace;
-  margin: 0 .2rem;
-  padding: 0 .4rem;
-}
-
-abbr {
-  text-decoration: none;
-}
-
-// Language direction
-.ltr {
-  direction: ltr;
-}
-
-.rtl {
-  direction: rtl;
-}
-
-// Add top spacing to headings if the come directly after certain elements.
-.layout-region__main {
-  p,
-  ul,
+  
+  .grey-05 {
+    background-color: core.$grey-05;
+  }
+  
+  .grey-10 {
+    background-color: core.$grey-10;
+  }
+  
+  .grey-25 {
+    background-color: core.$grey-25;
+  }
+  
+  .grey-50 {
+    background-color: core.$grey-50;
+  }
+  
+  .grey-80 {
+    background-color: core.$grey-80;
+  }
+  
+  .black {
+    background-color: core.$black;
+  }
+  
+  .blue {
+    background-color: core.$blue;
+  }
+  
+  .purple {
+    background-color: core.$purple;
+  }
+  
+  // Typography
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: core.$font-weight-bold;
+    line-height: core.$line-height-h;
+    color: core.$uq-purple;
+  }
+  
+  h1 {
+    margin-top: core.$spacing-m;
+    margin-bottom: core.$spacing-xl;
+    font-size: core.$font-size-xxxxl;
+    font-family: core.$font-family-title;
+  }
+  
+  h2 {
+    margin-top: core.$spacing-xl;
+    margin-bottom: core.$spacing-m;
+    font-size: core.$font-size-xxxl;
+  }
+  
+  h3 {
+    margin-top: core.$spacing-l;
+    margin-bottom: core.$spacing-s;
+    font-size: core.$font-size-xxl;
+  }
+  
+  h4 {
+    margin-top: core.$spacing-l;
+    margin-bottom: core.$spacing-m;
+    font-size: core.$font-size-xl;
+  }
+  
+  h5 {
+    margin-top: core.$spacing-m;
+    margin-bottom: core.$spacing-s;
+    font-size: core.$font-size-l;
+  }
+  
+  h6 {
+    margin-top: core.$spacing-m;
+    margin-bottom: core.$spacing-xs;
+    font-size: core.$font-size-m;
+  }
+  
+  p {
+    margin-top: 0;
+    margin-bottom: core.$spacing-m;
+  }
+  
+  b,
+  strong {
+    font-weight: core.$font-weight-bold;
+  }
+  
+  em {
+    font-style: italic;
+  }
+  
+  blockquote {
+    margin: 0 0 core.$spacing-m;
+    padding-left: core.$spacing-m;
+    border-left: 6px solid core.$brand-text;
+    font-family: core.$font-family-emphasis;
+    font-style: italic;
+  }
+  
   ol,
-  figure,
-  table,
-  hr,
-  .notice,
-  .pane {
-    & + h2,
-    & + h3 {
-      margin-top: 2.5rem;
-    }
-
-    & + h4,
-    & + h5,
-    & + h6 {
-      margin-top: 1.9rem;
+  ul {
+    margin-top: 0;
+    margin-bottom: core.$spacing-m;
+    padding-left: core.$spacing-m;
+  
+    li {
+      margin-bottom: core.$spacing-s;
+  
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
-}
 
-// Font style utility classes
-// Lead text for paragraph introductions.
-.lead-text {
-  font-size: 1.387rem;
-  font-weight: 100;
-  line-height: 1.5;
-  margin-bottom: 1.8rem;
-}
-
-.page__content {
-  figure {
-    background: $figure-caption-bg;
-    display: table;
-    margin: 0 0 1.5rem;
-
-    // Catch when inline style is used instead of align class.
-    &.align-left,
-    &[style*='left'] {
-      margin-right: 1.5rem;
-      max-width: 50%;
-
-      @media #{$small-only} {
-        float: none !important;
-        margin: 0 auto;
-        max-width: 100%;
-      }
+  dl {
+    margin-top: 0;
+    margin-bottom: 0;
+  
+    dt {
+      color: core.$brand-primary;
+      font-size: core.$font-size-s;
+      text-transform: uppercase;
+      font-weight: core.$font-weight-bold;
     }
-
-    &.align-center {
-      margin: 0 auto;
-    }
-
-    // Catch when inline style is used instead of align class.
-    &.align-right,
-    &[style*='right'] {
-      margin-left: 1.5rem;
-      max-width: 50%;
-
-      @media #{$small-only} {
-        float: none !important;
-        margin: 0 auto;
-        max-width: 100%;
-      }
-    }
-
-    @media #{$small-only} {
-      margin: 0 auto;
-    }
-
-    figcaption {
-      background-color: $figure-caption-bg;
-      caption-side: bottom;
-      display: table-caption;
-      font-size: .875rem;
+  
+    dd {
+      margin-left: 0;
+      margin-bottom: core.$spacing-m;
+      font-size: core.$font-size-l;
     }
   }
   
-  // CKEditor WYSIWYG doesn't apply the align-center class.
-  // Allow figures to be centered by the wrapping text-aligned element even 
-  // when they don't have an alignment class applied.
-  [style*="text-align:center"] > figure {
-      margin: 0 auto;
-  }
-
-  img {
-    &.align-left,
-    &[style*='left'] {
-      margin-right: 1.5rem;
-      max-width: 50%;
-
-      @media #{$small-only} {
-        display: block;
-        float: none !important;
-        margin: 0 auto 1rem;
-        max-width: 100%;
-      }
-    }
-
-    &.align-center {
-      margin: 0 auto 1rem;
-    }
-
-    &.align-right,
-    &[style*='right'] {
-      margin-left: 1.5rem;
-      max-width: 50%;
-
-      @media #{$small-only} {
-        display: block;
-        float: none !important;
-        margin: 0 auto 1rem;
-        max-width: 100%;
-      }
-    }
-
-    &.border {
-      border: 1px solid $img-border-color;
+  a {
+    color: core.$blue;
+    text-decoration: none;
+    transition: 0.2s color;
+  
+    &:hover {
+      color: core.$blue;
+      text-decoration: underline;
     }
   }
-}
 
-// Round images within wrapper.
-.round-images {
-  img {
-    border-radius: 50%;
-  }
-}
-
-// Tables
-//
-// Variants:
-// .table--stripe, .table--striped - Adds alternating tr backgrounds.
-// .table--responsive - Used for tables with many columns that cannot scale down and have to scroll horizontally on smaller screens.
-// .table--caption-heading - Displays table caption like a heading. Used for tables that group items.
-
-table {
-  max-width: 100%;
-  width: 100%;
-
-  th,
-  td {
-    border: 1px solid $table-border-color;
-  }
-
-  th {
-    background: $table-header-bg;
-    font-weight: 500;
-  }
-
-  thead tr th {
-    font-weight: 700;
-  }
-
-  tr {
-    &:nth-of-type(even) {
-      background: inherit;
+  // Typography > text colour
+  .text--reverse {
+    color: core.$brand-reverse;
+  
+    h1, h2, h3, h4, h5, h6 {
+      color: inherit;
     }
   }
-}
-
-.table--stripe,
-.table--striped {
-  tr:nth-of-type(even) {
-    background: $table-row-striped-bg;
+  
+  .text--primary {
+    color: core.$brand-primary;
+  }
+  
+  .text--grey-25 {
+    color: core.$grey-25;
+  }
+  
+  .text--grey-60 {
+    color: core.$grey-60;
+  }
+  
+  .text--grey-80 {
+    color: core.$grey-80;
+  }
+  
+  .text--grey-90 {
+    color: core.$grey-90;
+  }
+  
+  .text--primary-light {
+    color: core.$brand-primary-10;
+  }
+  
+  .text--black {
+    color: core.$black;
+  }
+  
+  .text--white {
+    color: core.$white;
+  }
+  
+  .text--red {
+    color: core.$red;
+  }
+  
+  .text--purple-50 {
+    color: core.$purple-50;
   }
 
-  thead {
-    // Give stronger definition to the header when striped rows are used.
-    th {
-      background: $table-header-striped-bg;
-    }
+  // Typography > text size
+  .text--xxxxl {
+    font-size: core.$font-size-xxxxl;
   }
-}
-
-// Applied to div wrapping table to allow horizontal scrolling on small screens.
-.table--responsive {
-  margin-bottom: 1.25rem;
-  overflow-x: auto;
-
-  @media #{$small-only} {
-    // Credit: http://www.the-haystack.com/2013/09/24/responsive-scrollable-tables/
-    background-attachment: local, local, scroll, scroll;
-    background-color: $uq-white;
-    background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, $uq-white), color-stop(100%, rgba($uq-white, 0))), -webkit-gradient(linear, 100% 50%, 0% 50%, color-stop(0%, $uq-white), color-stop(100%, rgba($uq-white, 0))), -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, $uq-neutral-dark20), color-stop(100%, rgba($uq-neutral-dark20, 0))), -webkit-gradient(linear, 100% 50%, 0% 50%, color-stop(0%, $uq-neutral-dark20), color-stop(100%, rgba($uq-neutral-dark20, 0)));
-    background-image: -webkit-linear-gradient(left, $uq-white, rgba($uq-white, 0)), -webkit-linear-gradient(right, $uq-white, rgba($uq-white, 0)), -webkit-linear-gradient(left, $uq-neutral-dark20, rgba($uq-neutral-dark20, 0)), -webkit-linear-gradient(right, $uq-neutral-dark20, rgba($uq-neutral-dark20, 0));
-    background-image: -moz-linear-gradient(left, $uq-white, rgba($uq-white, 0)), -moz-linear-gradient(right, $uq-white, rgba($uq-white, 0)), -moz-linear-gradient(left, $uq-neutral-dark20, rgba($uq-neutral-dark20, 0)), -moz-linear-gradient(right, $uq-neutral-dark20, rgba($uq-neutral-dark20, 0));
-    background-image: -o-linear-gradient(left, $uq-white, rgba($uq-white, 0)), -o-linear-gradient(right, $uq-white, rgba($uq-white, 0)), -o-linear-gradient(left, $uq-neutral-dark20, rgba($uq-neutral-dark20, 0)), -o-linear-gradient(right, $uq-neutral-dark20, rgba($uq-neutral-dark20, 0));
-    background-image: linear-gradient(left, $uq-white, rgba($uq-white, 0)), linear-gradient(right, $uq-white, rgba($uq-white, 0)), linear-gradient(left, $uq-neutral-dark20, rgba($uq-neutral-dark20, 0)), linear-gradient(right, $uq-neutral-dark20, rgba($uq-neutral-dark20, 0)); //c3c3c5
-    background-position: 0 0, 100% 0, 0 0, 100% 0;
-    background-repeat: no-repeat;
-    background-size: 4em 100%, 4em 100%, 1em 100%, 1em 100%;
+  
+  .text--xxxl {
+    font-size: core.$font-size-xxxl;
+  }
+  
+  .text--xxl {
+    font-size: core.$font-size-xxl;
+  }
+  
+  .text--xl {
+    font-size: core.$font-size-xl;
+  }
+  
+  .text--l {
+    font-size: core.$font-size-l;
+  }
+  
+  .text--m {
+    font-size: core.$font-size-m;
+  }
+  
+  .text--s {
+    font-size: core.$font-size-s;
+  }
+  
+  .text--xs {
+    font-size: core.$font-size-xs;
   }
 
-  table {
-    background: transparent;
-    margin-bottom: 0;
+  // Typography > text (font) weight
+  .text--weight-normal {
+    font-weight: core.$font-weight-normal;
   }
-}
 
-// Displays the caption as a heading.
-.table--caption-heading {
-  caption {
-    font-size: 1.438rem;
-    font-weight: 400;
-    line-height: normal;
-    margin: .5rem 0;
+  .text--weight-bold {
+    font-weight: core.$font-weight-bold;
+  }
+
+  .text--weight-medium {
+    font-weight: core.$font-weight-medium;
+  }
+
+  // Typography > text alignment
+  .text--left {
     text-align: left;
   }
+  
+  .text--right {
+    text-align: right;
+  }
+  
+  .text--center {
+    text-align: center;
+  }
+  
+  // Typography > text prettiers
+  .text--upper {
+    text-transform: uppercase;
+  }
+  
+  .text--emphasis {
+    font-family: core.$font-family-emphasis;
+    font-weight: core.$font-weight-normal;
+    font-style: italic;
+  }
+
+  .text--shadow {
+    text-shadow: 0 core.$spacing-xxs core.$spacing-xxs core.$transparent-black-40;
+  }
+}
+
+@if $use-encapsulation {
+  body.uq {
+    @include body-styles;
+  }
+  .uq {
+    @include base-styles;
+  }
+} @else {
+  body {
+    @include body-styles;
+  }
+  @include base-styles;
 }

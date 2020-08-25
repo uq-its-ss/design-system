@@ -1,6 +1,6 @@
-# @uq-uidf/body
+# `@uq-uidf/body`
 
-> Basic styles for HTML elements (excluding form elements).
+> Basic styles for HTML elements (excluding form elements and buttons).
 
 ## Usage
 
@@ -18,11 +18,9 @@ npm i @uq-uidf/body
 
 ---
 
-## Dependencies
+## Dependency graph
 
-```
+```shell
 @uq-uidf/body
-├─ @uq-uidf/core
-└─ @uq-uidf/foundation-global
-   └─ @uq-uidf/core
+└─ @uq-uidf/core
 ```

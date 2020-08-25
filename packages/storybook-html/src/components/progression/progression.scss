@@ -1,0 +1,8 @@
+@import '@uq-uidf/progression/src/scss/_component';
+
+.uidf-progression-wrapper {
+    width: 100vw;
+    @media (min-width: 1140px) {
+        width: 1140px;
+    }
+}

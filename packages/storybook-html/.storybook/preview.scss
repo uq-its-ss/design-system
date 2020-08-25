@@ -1,4 +1,3 @@
-@use "@uq-uidf/foundation-global/src/scss/_component" as fnd-global;
 @use "@uq-uidf/core/src/scss/_component" as core with (
   $uq-font-path: "../node_modules/@uq-uidf/core/src/fonts/uq-icons/font",
   $fa-font-path: "../node_modules/font-awesome/fonts",
@@ -9,11 +8,9 @@
 @use "@uq-uidf/foundation-misc/src/scss/_component" as misc;
 @use "@uq-uidf/body/src/scss/_component" as body;
 
-// Prevent the @uq-uidf/core from imposing a background colour. Overrides the
-// Foundation 5.5.3 default styling of the body tag.
 body {
+  // Prevent the @uq-uidf/body from imposing a background colour.
   background-color: transparent !important;
-  margin: 0;
 }
 
 // For centerStory decorator

@@ -4,16 +4,19 @@
 $use-encapsulation: false !default;
 
 @mixin body-styles {
+  background: core.$white;
   color: core.$text;
   font-size: 100%; // 16px in most browsers
   // TODO: regression test needed as was originally with the "html" selector
   font-family: core.$font-family;
+  font-weight: 400;
   line-height: core.$line-height-h;
   margin: 0;
+  padding: 0;
 }
 
 @mixin base-styles {
-  * {
+  *, *::before, *::after {
     box-sizing: border-box;
   }
 

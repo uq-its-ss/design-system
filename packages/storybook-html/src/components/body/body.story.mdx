@@ -1,0 +1,32 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+
+<Meta title="Base/Body/Body" />
+
+# Body
+
+```bash
+npm i @uq-uidf/body
+```
+
+```bash
+yarn add @uq-uidf/body
+```
+
+## ⚠️ Encapsulating stylesheet (SCSS) for established projects
+
+This stylesheet affects HTML element selectors and provides non-prefixed utility
+CSS classes. If you are modifying an existing project with base styles already
+in place, we recommended importing the stylesheet with encapsulation enabled.
+
+```scss
+@use '@uq-uidf/body/src/scss/_component' as body with (
+  $use-encapsulation: true
+);
+```
+
+Then, you will need to add the `uq` class to the `<body>` tag.
+
+```HTML
+<body class="uq">
+  ...
+```

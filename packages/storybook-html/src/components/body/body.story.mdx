@@ -14,9 +14,10 @@ yarn add @uq-uidf/body
 
 ## ⚠️ Encapsulating stylesheet (SCSS) for established projects
 
-This stylesheet affects HTML element selectors and provides non-prefixed utility
-CSS classes. If you are modifying an existing project with base styles already
-in place, we recommended importing the stylesheet with encapsulation enabled.
+This stylesheet can affect HTML elements globally and provides non-prefixed
+utility CSS classes. If you are modifying an existing project with base styles
+already in place, we recommended importing the stylesheet with encapsulation
+enabled (to avoid selector clashes).
 
 ```scss
 @use '@uq-uidf/body/src/scss/_component' as body with (
@@ -24,9 +25,24 @@ in place, we recommended importing the stylesheet with encapsulation enabled.
 );
 ```
 
-Then, you will need to add the `uq` class to the `<body>` tag.
+You can now wrap any amount of HTML content with the `uq` class to apply the
+package stylesheet to a subset of elements. For example:
 
-```HTML
+```html
+  ...
+  <div class="uq">
+    <h2>I will be styled with <span class="text--weight-medium">this</span> stylesheet.</h2>
+    <p>As will I.</p>
+  </div>
+  ...
+```
+
+You can also apply the `uq` class to the `<body>` tag (if your objective is to
+add more [specificity](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity)
+to the package styles) to apply the stylesheet globally. Otherwise, by default,
+this stylesheet will effect the `body` tag and its descendants globally anyway.
+
+```html
 <body class="uq">
   ...
 ```

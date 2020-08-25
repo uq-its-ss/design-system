@@ -3,14 +3,17 @@
 
 $use-encapsulation: false !default;
 
-@mixin body-styles {
-  background: core.$white;
+@mixin text-primer {
   color: core.$text;
-  font-size: 100%; // 16px in most browsers
-  // TODO: regression test needed as was originally with the "html" selector
+  font-size: 1rem;
   font-family: core.$font-family;
   font-weight: 400;
   line-height: core.$line-height-h;
+}
+
+@mixin body-styles {
+  font-size: 100%;
+  background: core.$white;
   margin: 0;
   padding: 0;
 }
@@ -302,15 +305,19 @@ $use-encapsulation: false !default;
 }
 
 @if $use-encapsulation {
+  .uq {
+    @include text-primer;
+    @include base-styles;
+  }
+
   body.uq {
     @include body-styles;
   }
-  .uq {
-    @include base-styles;
-  }
 } @else {
   body {
+    @include text-primer;
     @include body-styles;
   }
+
   @include base-styles;
 }

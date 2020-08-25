@@ -137,3 +137,25 @@ The instance when all steps are done and completed.
 ## Breakpoints
 
 The progression hides the step marker label at viewports less than 640px.
+
+## Adding sub steps between steps
+
+If there are sub steps between the main steps, add the html code below where the div class "progression&#95;&#95;step-marker" ends.
+
+```html
+<ul class="progression">
+    <li class="progression__step is-complete">
+        <div class="progression__step-marker">
+            <a class="progression__link" href="#">
+                <span class="progression__step-number">1</span>
+                <span class="progression__step-label">Step 1</span>
+            </a>
+        </div>
+        <div class="progression__bar">&nbsp;</div>
+        <div class="progression__bar">&nbsp;</div>
+        ....
+    </li>
+</ul>
+```
+
+The html code above will display 2 sub steps as 2 li elements with class progression&#95;&#95;bar is present. The number of sub steps is determined by the number of li class progression&#95;&#95;bar elements.

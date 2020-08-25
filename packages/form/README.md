@@ -1,4 +1,4 @@
-# @uq-uidf/body
+# @uq-uidf/form
 
 > Styles for HTML form elements and form validation.
 

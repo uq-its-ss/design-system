@@ -8,7 +8,7 @@ import './icon.scss';
 import iconHTML from './icon.html';
 
 export default {
-  title: 'Components/Icon'
+  title: 'Base/Icon'
 };
 
 export const icon = () => {

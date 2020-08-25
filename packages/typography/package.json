@@ -1,0 +1,46 @@
+{
+  "name": "@uq-uidf/typography",
+  "version": "0.0.0",
+  "description": "Typography CSS",
+  "keywords": [
+    "uq-uidf",
+    "uq",
+    "University of Queensland",
+    "user interface development framework",
+    "design system",
+    "scss",
+    "sass",
+    "css",
+    "typography"
+  ],
+  "author": {
+    "name": "University of Queensland",
+    "email": "webservices@uq.edu.au",
+    "url": "https://uq.edu.au"
+  },
+  "homepage": "https://github.com/uq-its-ss/user-interface-development-framework#readme",
+  "license": "ISC",
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "lib/*",
+    "src/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uq-its-ss/user-interface-development-framework.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/uq-its-ss/user-interface-development-framework/issues"
+  },
+  "dependencies": {
+    "@uq-uidf/core": "^0.0.0"
+  },
+  "peerDependencies": {
+    "@uq-uidf/core": "^0.0.0"
+  }
+}

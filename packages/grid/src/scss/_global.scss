@@ -1,0 +1,13 @@
+// FS: layout containers
+
+// Original CSS custom props syntax
+// ================================
+
+// --container-max-width-narrow: 760px;
+// --container-max-width: 1140px;
+
+// Converted (Sass) variables
+// ==========================
+
+$container-max-width-narrow: 760px !default;
+$container-max-width: 1140px !default;

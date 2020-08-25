@@ -134,13 +134,9 @@ The instance when all steps are done and completed.
     </ul>
 ```
 
-## Breakpoints
-
-The progression hides the step marker label at viewports less than 640px.
-
 ## Adding sub steps between steps
 
-If there are sub steps between the main steps, add the html code below where the div class "progression&#95;&#95;step-marker" ends.
+If there are sub steps between the main steps, follow the example html code below where the ul element class progression__sub-step and li child(s) with class progression&#95;&#95;bar is added.
 
 ```html
 <ul class="progression">
@@ -151,11 +147,21 @@ If there are sub steps between the main steps, add the html code below where the
                 <span class="progression__step-label">Step 1</span>
             </a>
         </div>
-        <div class="progression__bar">&nbsp;</div>
-        <div class="progression__bar">&nbsp;</div>
-        ....
+        <div class="progression__bar">
+            <ul class="progression__sub-step">
+                <li class="progression__bar is-complete">&nbsp;</li>
+                <li class="progression__bar">&nbsp;</li>
+                ....
+            </ul>
+        </div>
     </li>
 </ul>
 ```
 
-The html code above will display 2 sub steps as 2 li elements with class progression&#95;&#95;bar is present. The number of sub steps is determined by the number of li class progression&#95;&#95;bar elements.
+The html code above will display 2 sub steps as 2 li elements with class progression&#95;&#95;bar is present. The number of sub steps is determined by the number of li class progression&#95;&#95;bar elements within the parent class progression&#95;&#95;bar element.
+
+Note that adding the class is-complete to the child li element denotes that the sub step is done.
+
+## Breakpoints
+
+The progression hides the step marker label at viewports less than 640px.

@@ -81,8 +81,8 @@ textAlignUtils.story = {
 export const textPrettyUtils = () => {
   return `
     <div class="uidf-body__text-utility__container text--xl">
-      <div class="uidf-body__text-utility"><span class="text--upper">Uppercase</span> &nbsp;(.text--upper)</div>
-      <div class="uidf-body__text-utility text--emphasis">.text--emphasis</div>
+      <div class="uidf-body__text-utility"><span class="text--uppercase">Uppercase</span> &nbsp;(.text--uppercase)</div>
+      <div class="uidf-body__text-utility text--accent">.text--accent</div>
       <div class="uidf-body__text-utility text--shadow">.text--shadow</div>
     </div>
   `;

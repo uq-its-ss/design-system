@@ -132,7 +132,7 @@ $use-encapsulation: false !default;
     margin: 0 0 core.$spacing-m;
     padding-left: core.$spacing-m;
     border-left: 6px solid core.$brand-text;
-    font-family: core.$font-family-emphasis;
+    font-family: core.$font-family-accent;
     font-style: italic;
   }
   
@@ -289,12 +289,12 @@ $use-encapsulation: false !default;
   }
   
   // Typography > text prettiers
-  .text--upper {
+  .text--uppercase {
     text-transform: uppercase;
   }
   
-  .text--emphasis {
-    font-family: core.$font-family-emphasis;
+  .text--accent {
+    font-family: core.$font-family-accent;
     font-weight: core.$font-weight-normal;
     font-style: italic;
   }

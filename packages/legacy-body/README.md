@@ -1,6 +1,6 @@
-# @uq-uidf/form
+# @uq-uidf/legacy-body
 
-> Styles for HTML form elements and form validation.
+> Basic styles for HTML elements (excluding form elements).
 
 ## Usage
 
@@ -8,20 +8,20 @@
 
 With Yarn:
 ```shell
-yarn add @uq-uidf/form
+yarn add @uq-uidf/legacy-body
 ```
 
 With NPM:
 ```shell
-npm i @uq-uidf/form
+npm i @uq-uidf/legacy-body
 ```
 
 ---
 
 ## Dependencies
 
-```shell
-@uq-uidf/form
+```
+@uq-uidf/legacy-body
 ├─ @uq-uidf/core
 └─ @uq-uidf/foundation-global
    └─ @uq-uidf/core

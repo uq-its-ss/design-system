@@ -1,7 +1,8 @@
 {
-  "name": "@uq-uidf/utility",
+  "name": "@uq-uidf/legacy-body",
   "version": "0.0.0",
-  "description": "Utility CSS",
+  "description": "Basic styles for HTML elements",
+  "private": true,
   "keywords": [
     "uq-uidf",
     "uq",
@@ -11,7 +12,7 @@
     "scss",
     "sass",
     "css",
-    "utility"
+    "body"
   ],
   "author": {
     "name": "University of Queensland",
@@ -21,7 +22,8 @@
   "homepage": "https://github.com/uq-its-ss/user-interface-development-framework#readme",
   "license": "ISC",
   "directories": {
-    "lib": "lib"
+    "lib": "lib",
+    "test": "__tests__"
   },
   "files": [
     "lib/*",
@@ -38,9 +40,13 @@
     "url": "https://github.com/uq-its-ss/user-interface-development-framework/issues"
   },
   "dependencies": {
-    "@uq-uidf/core": "^0.0.0"
+    "@uq-uidf/core": "^0.0.0",
+    "@uq-uidf/foundation-global": "^0.0.0",
+    "font-awesome": "^4.7.0",
+    "foundation-sites": "^5.5.3"
   },
   "peerDependencies": {
-    "@uq-uidf/core": "^0.0.0"
+    "@uq-uidf/core": "^0.0.0",
+    "@uq-uidf/foundation-global": "^0.0.0"
   }
 }

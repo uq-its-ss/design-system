@@ -18,11 +18,10 @@
     "email": "webservices@uq.edu.au",
     "url": "https://uq.edu.au"
   },
-  "homepage": "https://github.com/uq-uidf/user-interface-development-framework#readme",
+  "homepage": "https://github.com/uq-its-ss/user-interface-development-framework#readme",
   "license": "ISC",
   "directories": {
-    "lib": "lib",
-    "test": "__tests__"
+    "lib": "lib"
   },
   "files": [
     "lib/*",
@@ -36,16 +35,12 @@
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "bugs": {
-    "url": "https://github.com/uq-uidf/user-interface-development-framework/issues"
+    "url": "https://github.com/uq-its-ss/user-interface-development-framework/issues"
   },
   "dependencies": {
-    "@uq-uidf/core": "^0.0.0",
-    "@uq-uidf/foundation-global": "^0.0.0",
-    "font-awesome": "^4.7.0",
-    "foundation-sites": "^5.5.3"
+    "@uq-uidf/core": "^0.0.0"
   },
   "peerDependencies": {
-    "@uq-uidf/core": "^0.0.0",
-    "@uq-uidf/foundation-global": "^0.0.0"
+    "@uq-uidf/core": "^0.0.0"
   }
 }

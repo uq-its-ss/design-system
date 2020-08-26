@@ -39,7 +39,6 @@ module.exports = async ({ config, mode }) => {
               // TODO: we should implement `glob` here:
               includePaths: [
                 'node_modules/@uq-uidf/core/node_modules',
-                'node_modules/@uq-uidf/body/node_modules',
                 'node_modules'
               ]
             }

@@ -35,13 +35,13 @@ $transparent-grey-10: rgba(24, 24, 24, 0.1);
 $transparent-purple-05: rgba(80, 36, 122, 0.05);
 
 /* FS: brand colors */
-$brand-primary: var($purple);
-$brand-primary-10: var($purple-10);
-$brand-secondary: var($blue);
-$brand-reverse: var($white);
-$brand-text: var($grey-90);
-$brand-heading: var($brand-primary);
-$brand-gradient: linear-gradient(90deg, var($brand-primary) 0%, 87%, var($purple-50) 100%);
+$brand-primary: $purple;
+$brand-primary-10: $purple-10;
+$brand-secondary: $blue;
+$brand-reverse: $white;
+$brand-text: $grey-90;
+$brand-heading: $brand-primary;
+$brand-gradient: linear-gradient(90deg, $brand-primary 0%, 87%, $purple-50 100%);
 
 /* FS: filter colors */
 $filter-text: invert(0%) sepia(72%) saturate(588%) hue-rotate(348deg) brightness(115%) contrast(81%);

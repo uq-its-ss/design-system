@@ -3,6 +3,7 @@
 
 .uidf-fonts {
   font-size: 2rem;
+  font-weight: 400;
   line-height: 1.5;
 }
 
@@ -14,12 +15,17 @@
   &--merriweather {
     font-family: core.$merriweather;
   }
+  
   &--montserrat {
     font-family: core.$montserrat;
   }
 
   &--italic {
     font-style: italic;
+  }
+
+  &--300 {
+    font-weight: 300;
   }
 
   &--500 {

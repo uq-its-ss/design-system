@@ -1,0 +1,65 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+
+# Breadcrumb
+
+Breadcrumbs are horizontally arranged text links separated by the “greater than” symbol (>). They are typically described using at least their URL and their name, and typically ending with the current page.
+
+The “greater than” symbol (>) seperating the breadcrumb text links you see is an SVG rendered via Data URI. It indicates the level of that page relative to the page links beside it.
+
+<Preview withToolbar>
+  <Story height="150px" id="components-breadcrumb--breadcrumb" />
+</Preview>
+
+## Breadcrumb - Basic structure
+
+```html
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb__item breadcrumb__item--home">
+      <a class="breadcrumb__link breadcrumb__link--home" href="/">Home</a>
+    </li>
+    <li class="breadcrumb__item">
+      <a class="breadcrumb__link" href="/information-and-services">Information and services</a>
+    </li>
+    <li class="breadcrumb__item">
+      <a class="breadcrumb__link" href="/information-and-services/human-resources">Human resources</a>
+    </li>
+    <li class="breadcrumb__item" aria-current="page">
+      <a class="breadcrumb__link" href="/information-and-services/human-resources/hr-systems">Personal details and HR systems</a>
+    </li>
+  </ol>
+</nav>
+```
+
+## Breadcrumb - Schema structure
+
+Why add schema? Your web pages have an underlying meaning that people understand when they read the web pages. But search engines have a limited understanding of what is being discussed on those pages. By adding additional tags to the HTML of your web pages—tags that say, "Hey search engine, this information describes this specific movie, or place, or person, or video"—you can help search engines and other applications better understand your content and display it in a useful, relevant way. Microdata (itemscope, itemtype, itemprop) is a set of tags, introduced with HTML5, that allows you to do this.
+
+The position property is used to reconstruct the order of the items in a Breadcrumb list. The convention is that a breadcrumb list has an itemListOrder of ItemListOrderAscending (lower values listed first), and that the first items in this list correspond to the "top" or beginning of the breadcrumb trail, e.g. with a site or section homepage. The specific values of 'position' are not assigned meaning for a BreadcrumbList, but they should be integers, e.g. beginning with '1' for the first item in the list.
+
+This technique should be used sparingly. Only use meta with content for information that cannot otherwise be marked up. 
+
+For a more thorough read on schema, go to https://schema.org/
+
+```html
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+    <li class="breadcrumb__item breadcrumb__item--home" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+      <a class="breadcrumb__link breadcrumb__link--home" href="/">Home</a>
+      <meta itemprop="position" content="1">
+    </li>
+    <li class="breadcrumb__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+      <a class="breadcrumb__link" itemprop="item" href="/information-and-services">Information and services</a>
+      <meta itemprop="position" content="2">
+    </li>
+    <li class="breadcrumb__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+      <a class="breadcrumb__link" itemprop="item" href="/information-and-services/human-resources">Human resources</a>
+      <meta itemprop="position" content="3">
+    </li>
+    <li class="breadcrumb__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem" aria-current="page">
+      <a class="breadcrumb__link" itemprop="item" href="/information-and-services/human-resources/hr-systems">Personal details and HR systems</a>
+      <meta itemprop="position" content="4">
+    </li>
+  </ol>
+</nav>
+```

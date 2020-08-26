@@ -4,6 +4,8 @@ import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
 
 # Body
 
+## Install as a dependency
+
 ```bash
 npm i @uq-uidf/body
 ```
@@ -12,7 +14,17 @@ npm i @uq-uidf/body
 yarn add @uq-uidf/body
 ```
 
-## ⚠️ Encapsulating stylesheet (SCSS) for established projects
+## Basic usage with Sass
+
+```scss
+// With a namespace (recommended)
+@use '@uq-uidf/body/src/scss/_component' as body;
+
+// Without a namespace
+@use '@uq-uidf/body/src/scss/_component' as *;
+```
+
+## ⚠️ Encapsulating the styles (in Sass) for established projects
 
 This stylesheet can affect HTML elements globally and provides non-prefixed
 utility CSS classes. If you are modifying an existing project with base styles

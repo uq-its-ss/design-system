@@ -9,7 +9,8 @@ import './preview.scss';
 // Sort order of navigation
 const SORT_ORDER = {
   Introduction: [
-    'Welcome'
+    'Welcome',
+    'Getting started'
   ],
   Core: [],
   Base: [

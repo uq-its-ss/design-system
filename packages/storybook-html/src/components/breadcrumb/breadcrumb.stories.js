@@ -16,7 +16,7 @@ export default {
   }
 };
 
-export const breadcrumbUniLevel = () => {
+export const breadcrumbOneLevel = () => {
   return `
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb" itemscope="" itemtype="http://schema.org/BreadcrumbList">
@@ -29,8 +29,8 @@ export const breadcrumbUniLevel = () => {
   `;
 };
 
-breadcrumbUniLevel.story = {
-  name: 'Breadcrumb Uni Level'
+breadcrumbOneLevel.story = {
+  name: 'Breadcrumb One Level'
 }
 
 export const breadcrumbMultiLevel = () => {

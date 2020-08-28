@@ -15,8 +15,7 @@ export default {
     docs: {
       page: docs
     }
-  },
-  //decorators: [expandedStory]
+  }
 };
 
 export const progressionInitial = () => {

@@ -1,16 +1,36 @@
 import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
 
-# Breadcrumb
+# Breadcrumb 
 
-Breadcrumbs are horizontally arranged text links separated by the “arrow-right.svg” icon. They are typically described using at least their URL and their name, and typically ending with the current page.
+Breadcrumbs are horizontally arranged text links separated by an arrow icon (arrow-right.svg). They are typically described using at least their URL and their name, and typically ending with the current page.
 
-The “arrow-right.svg” icon seperating the breadcrumb text links you see is rendered via background-image Data URIs in CSS. It indicates the level of that page relative to the page links beside it.
+The arrow icon indicates the level of that page relative to the page links beside it. It is displayed via background-image data URIs in CSS.
+
+
+
+## Breadcrumb Levels
+
+### Uni Level
+
+In most cases this would be the home page.
 
 <Preview withToolbar>
-  <Story height="150px" id="components-breadcrumb--breadcrumb" />
+  <Story height="100px" id="components-breadcrumb--breadcrumb-uni-level" />
 </Preview>
 
-## Breadcrumb - Basic structure
+### Multi Level
+
+In a multi level breadcrumb, there will be more than one text link.
+
+<Preview withToolbar>
+  <Story height="100px" id="components-breadcrumb--breadcrumb-multi-level" />
+</Preview>
+
+
+
+## Breadcrumb Structures
+
+### Basic structure
 
 ```html
 <nav aria-label="breadcrumb">
@@ -31,11 +51,11 @@ The “arrow-right.svg” icon seperating the breadcrumb text links you see is r
 </nav>
 ```
 
-## Breadcrumb - Schema structure
+### Schema added structure
 
-Why add schema? Web pages have an underlying meaning that people understand when they read the web pages. But search engines have a limited understanding of what is being discussed on those pages. By adding additional tags to the HTML of your web pages—tags that say, "Hey, this information describes this specific movie, or place, or person, or video"—you can help search engines and other applications better understand your content and display it in a useful, relevant way. Microdata (itemscope, itemtype, itemprop) is a set of tags, introduced with HTML5, that allows you to do this.
+#### Why add schema ? 
 
-The position property is used to reconstruct the order of the items in a Breadcrumb list. This technique should be used sparingly. Only use meta with content for information that cannot otherwise be marked up. 
+Web pages have an underlying meaning that people understand when they read the web pages. But search engines have a limited understanding of what is being discussed on those pages. By adding additional tags to the HTML of your web pages—tags that say, "Hey, this information describes this specific movie, or place, or person, or video"—you can help search engines and other applications better understand your content and display it in a useful, relevant way. Microdata (itemscope, itemtype, itemprop) is a set of tags, introduced with HTML5, that allows you to do this.
 
 For a more thorough read on schema, go to https://schema.org/
 
@@ -65,3 +85,11 @@ For a more thorough read on schema, go to https://schema.org/
 ## Accessibility
 
 For accessibility add aria-label="breadcrumb" to the nav element that overlaps the breadcrumb component. And for the li element representing the current page, add aria-current="page".
+
+## Truncation in breadcrumb text links
+
+The breadcrumb link text is truncated and ellipsed (...) when the text is too long. 
+
+<Preview withToolbar>
+  <Story height="100px" id="components-breadcrumb--breadcrumb-trucation" />
+</Preview>

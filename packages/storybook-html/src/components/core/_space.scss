@@ -1,0 +1,104 @@
+@use '@uq-uidf/core/src/scss/global' as *;
+
+.story-space {
+  background-color:$transparent-black-75;
+  width:$space;
+  height:$space;
+}
+
+.story-space-xs{
+  width:$space-xs;
+  height:$space-xs;
+} 
+
+.story-space-sm {
+  width:$space-sm;
+  height:$space-sm;
+} 
+
+.story-space-md {
+  width:$space-md;
+  height:$space-md;
+} 
+
+.story-space-lg {
+  width:$space-lg;
+  height:$space-lg;
+}
+
+.story-space-xl {
+  width:$space-xl;
+  height:$space-xl;
+}
+
+.story-space-xxl {
+  width:$space-xxl;
+  height:$space-xxl;
+}
+
+.story-space-xxxl {
+  width:$space-xxxl;
+  height:$space-xxxl;
+}
+
+.story-space-xxxxl {
+  width:$space-xxxxl;
+  height:$space-xxxxl;
+}
+
+.story-space-ul {
+  width:$space-ul;
+  height:$space-ul;
+}
+
+.story-space-uul {
+  width:$space-uul;
+  height:$space-uul;
+}
+
+.story-space-uuul {
+  width:$space-uuul;
+  height:$space-uuul;
+}
+
+.story-space-uuuul {
+  width:$space-uuuul;
+  height:$space-uuuul;
+}
+
+/* Container example */ 
+.story-container {
+  background-color:$transparent-black-75;
+  display: inline-block;
+}
+
+.story-container-space {
+  padding:$space;
+}
+
+.story-container-space-lg {
+  padding:$space-lg;
+}
+
+/* compressed container */ 
+.story-compressed-space-lg {
+  padding:$space-compressed-lg $space-lg;
+}
+
+/* Stretched container */ 
+.story-stretched-space {
+  padding:$space-stretched $space;
+}
+
+/* Stacked container */ 
+.story-container .story-stacked-space {
+  margin-top:$space;
+}
+
+.story-container .story-stacked-space-xs {
+  margin-top:$space-xs;
+}
+
+.story-container .story-stacked-space-lg {
+  margin-top:$space-lg;
+}

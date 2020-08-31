@@ -36,18 +36,15 @@ In a multi level breadcrumb, there will be more than one text link.
 
 ```html
 <nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb__item breadcrumb__item--home">
-      <a class="breadcrumb__link breadcrumb__link--home" href="/">Home</a>
+  <ol class="uq-breadcrumb">
+    <li class="uq-breadcrumb__item uq-breadcrumb__item--home">
+      <a class="uq-breadcrumb__link uq-breadcrumb__link--home" href="/">Home</a>
     </li>
-    <li class="breadcrumb__item">
-      <a class="breadcrumb__link" href="/information-and-services">Information and services</a>
+    <li class="uq-breadcrumb__item">
+      <a class="uq-breadcrumb__link" href="/information-and-services">Information and services</a>
     </li>
-    <li class="breadcrumb__item">
-      <a class="breadcrumb__link" href="/information-and-services/human-resources">Human resources</a>
-    </li>
-    <li class="breadcrumb__item" aria-current="page">
-      <a class="breadcrumb__link" href="/information-and-services/human-resources/hr-systems">Personal details and HR systems</a>
+    <li class="uq-breadcrumb__item">
+      <a class="uq-breadcrumb__link" href="/information-and-services/human-resources">Human resources</a>
     </li>
   </ol>
 </nav>
@@ -62,23 +59,19 @@ Web pages have an underlying meaning that people understand when they read the w
 For a more thorough read on schema, go to https://schema.org/
 
 ```html
-<nav aria-label="breadcrumb">
-  <ol class="breadcrumb" itemscope="" itemtype="http://schema.org/BreadcrumbList">
-    <li class="breadcrumb__item breadcrumb__item--home" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
-      <a class="breadcrumb__link breadcrumb__link--home" href="/">Home</a>
+<nav aria-label="uq-breadcrumb">
+  <ol class="uq-breadcrumb" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+    <li class="uq-breadcrumb__item uq-breadcrumb__item--home" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+      <a class="uq-breadcrumb__link uq-breadcrumb__link--home" href="/">Home</a>
       <meta itemprop="position" content="1">
     </li>
-    <li class="breadcrumb__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
-      <a class="breadcrumb__link" itemprop="item" href="/information-and-services">Information and services</a>
+    <li class="uq-breadcrumb__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+      <a class="uq-breadcrumb__link" itemprop="item" href="/information-and-services">Information and services</a>
       <meta itemprop="position" content="2">
     </li>
-    <li class="breadcrumb__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
-      <a class="breadcrumb__link" itemprop="item" href="/information-and-services/human-resources">Human resources</a>
+    <li class="uq-breadcrumb__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+      <a class="uq-breadcrumb__link" itemprop="item" href="/information-and-services/human-resources">Human resources</a>
       <meta itemprop="position" content="3">
-    </li>
-    <li class="breadcrumb__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem" aria-current="page">
-      <a class="breadcrumb__link" itemprop="item" href="/information-and-services/human-resources/hr-systems">Personal details and HR systems</a>
-      <meta itemprop="position" content="4">
     </li>
   </ol>
 </nav>
@@ -86,7 +79,7 @@ For a more thorough read on schema, go to https://schema.org/
 
 ## Accessibility
 
-For accessibility add aria-label="breadcrumb" to the nav element that overlaps the breadcrumb component. And for the li element representing the current page, add aria-current="page".
+For accessibility add aria-label="breadcrumb" to the nav element that overlaps the breadcrumb component.
 
 ## Truncation in breadcrumb text links
 

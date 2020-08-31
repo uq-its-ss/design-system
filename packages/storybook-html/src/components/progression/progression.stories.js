@@ -29,54 +29,54 @@ progressionInitial.story = {
 export const progressionMiddle = () => {
   return `
   <div class="uidf-progression-wrapper">
-    <ul class="progression">
-        <li class="progression__step is-complete">
-            <div class="progression__step-marker">
-                <a class="progression__link" href="#">
-                    <span class="progression__step-number">1</span>
-                    <span class="progression__step-label">Step 1</span>
+    <ul class="uq-progression">
+        <li class="uq-progression__step is-complete">
+            <div class="uq-progression__step-marker">
+                <a class="uq-progression__link" href="#">
+                    <span class="uq-progression__step-number">1</span>
+                    <span class="uq-progression__step-label">Step 1</span>
                 </a>
             </div>
-            <div class="progression__bar">&nbsp;</div>
+            <div class="uq-progression__bar">&nbsp;</div>
         </li>
-        <li class="progression__step is-complete">
-            <div class="progression__step-marker">
-                <a class="progression__link" href="#">
-                    <span class="progression__step-number">2</span>
-                    <span class="progression__step-label">Step 2</span>
+        <li class="uq-progression__step is-complete">
+            <div class="uq-progression__step-marker">
+                <a class="uq-progression__link" href="#">
+                    <span class="uq-progression__step-number">2</span>
+                    <span class="uq-progression__step-label">Step 2</span>
                 </a>
             </div>
-            <div class="progression__bar">
-                <ul class="progression__sub-step">
-                    <li class="progression__bar is-complete">&nbsp;</li>
-                    <li class="progression__bar is-complete">&nbsp;</li>
-                    <li class="progression__bar">&nbsp;</li>
+            <div class="uq-progression__bar">
+                <ul class="uq-progression__sub-step">
+                    <li class="uq-progression__bar is-complete">&nbsp;</li>
+                    <li class="uq-progression__bar is-complete">&nbsp;</li>
+                    <li class="uq-progression__bar">&nbsp;</li>
                 </ul>
             </div>
         </li>
-        <li class="progression__step">
-            <div class="progression__step-marker">
-                <a class="progression__link" href="#">
-                    <span class="progression__step-number">3</span>
-                    <span class="progression__step-label">Step 3</span>
+        <li class="uq-progression__step">
+            <div class="uq-progression__step-marker">
+                <a class="uq-progression__link" href="#">
+                    <span class="uq-progression__step-number">3</span>
+                    <span class="uq-progression__step-label">Step 3</span>
                 </a>
             </div>
-            <div class="progression__bar">
-                <ul class="progression__sub-step">
-                    <li class="progression__bar">&nbsp;</li>
-                    <li class="progression__bar">&nbsp;</li>
-                    <li class="progression__bar">&nbsp;</li>
-                    <li class="progression__bar">&nbsp;</li>
-                    <li class="progression__bar">&nbsp;</li>
-                    <li class="progression__bar">&nbsp;</li>
+            <div class="uq-progression__bar">
+                <ul class="uq-progression__sub-step">
+                    <li class="uq-progression__bar">&nbsp;</li>
+                    <li class="uq-progression__bar">&nbsp;</li>
+                    <li class="uq-progression__bar">&nbsp;</li>
+                    <li class="uq-progression__bar">&nbsp;</li>
+                    <li class="uq-progression__bar">&nbsp;</li>
+                    <li class="uq-progression__bar">&nbsp;</li>
                 </ul>
             </div>
         </li>
-        <li class="progression__step">
-            <div class="progression__step-marker">
-                <a class="progression__link" href="#">
-                    <span class="progression__step-number">4</span>
-                    <span class="progression__step-label">Step 4</span>
+        <li class="uq-progression__step">
+            <div class="uq-progression__step-marker">
+                <a class="uq-progression__link" href="#">
+                    <span class="uq-progression__step-number">4</span>
+                    <span class="uq-progression__step-label">Step 4</span>
                 </a>
             </div>
         </li>
@@ -92,54 +92,54 @@ progressionMiddle.story = {
 export const progressionFinal = () => {
   return `
   <div class="uidf-progression-wrapper">
-    <ul class="progression">
-        <li class="progression__step is-complete">
-            <div class="progression__step-marker">
-                <a class="progression__link" href="#">
-                    <span class="progression__step-number">1</span>
-                    <span class="progression__step-label">Step 1</span>
+    <ul class="uq-progression">
+        <li class="uq-progression__step is-complete">
+            <div class="uq-progression__step-marker">
+                <a class="uq-progression__link" href="#">
+                    <span class="uq-progression__step-number">1</span>
+                    <span class="uq-progression__step-label">Step 1</span>
                 </a>
             </div>
-            <div class="progression__bar">&nbsp;</div>
+            <div class="uq-progression__bar">&nbsp;</div>
         </li>
-        <li class="progression__step is-complete">
-            <div class="progression__step-marker">
-                <a class="progression__link" href="#">
-                    <span class="progression__step-number">2</span>
-                    <span class="progression__step-label">Step 2</span>
+        <li class="uq-progression__step is-complete">
+            <div class="uq-progression__step-marker">
+                <a class="uq-progression__link" href="#">
+                    <span class="uq-progression__step-number">2</span>
+                    <span class="uq-progression__step-label">Step 2</span>
                 </a>
             </div>
-            <div class="progression__bar">
-                <ul class="progression__sub-step">
-                    <li class="progression__bar is-complete">&nbsp;</li>
-                    <li class="progression__bar is-complete">&nbsp;</li>
-                    <li class="progression__bar is-complete">&nbsp;</li>
+            <div class="uq-progression__bar">
+                <ul class="uq-progression__sub-step">
+                    <li class="uq-progression__bar is-complete">&nbsp;</li>
+                    <li class="uq-progression__bar is-complete">&nbsp;</li>
+                    <li class="uq-progression__bar is-complete">&nbsp;</li>
                 </ul>
             </div>
         </li>
-        <li class="progression__step is-complete">
-            <div class="progression__step-marker">
-                <a class="progression__link" href="#">
-                    <span class="progression__step-number">3</span>
-                    <span class="progression__step-label">Step 3</span>
+        <li class="uq-progression__step is-complete">
+            <div class="uq-progression__step-marker">
+                <a class="uq-progression__link" href="#">
+                    <span class="uq-progression__step-number">3</span>
+                    <span class="uq-progression__step-label">Step 3</span>
                 </a>
             </div>
-            <div class="progression__bar">
-                <ul class="progression__sub-step">
-                    <li class="progression__bar is-complete">&nbsp;</li>
-                    <li class="progression__bar is-complete">&nbsp;</li>
-                    <li class="progression__bar is-complete">&nbsp;</li>
-                    <li class="progression__bar is-complete">&nbsp;</li>
-                    <li class="progression__bar is-complete">&nbsp;</li>
-                    <li class="progression__bar is-complete">&nbsp;</li>
+            <div class="uq-progression__bar">
+                <ul class="uq-progression__sub-step">
+                    <li class="uq-progression__bar is-complete">&nbsp;</li>
+                    <li class="uq-progression__bar is-complete">&nbsp;</li>
+                    <li class="uq-progression__bar is-complete">&nbsp;</li>
+                    <li class="uq-progression__bar is-complete">&nbsp;</li>
+                    <li class="uq-progression__bar is-complete">&nbsp;</li>
+                    <li class="uq-progression__bar is-complete">&nbsp;</li>
                 </ul>
             </div>
         </li>
-        <li class="progression__step is-complete">
-            <div class="progression__step-marker">
-                <a class="progression__link" href="#">
-                    <span class="progression__step-number">4</span>
-                    <span class="progression__step-label">Step 4</span>
+        <li class="uq-progression__step is-complete">
+            <div class="uq-progression__step-marker">
+                <a class="uq-progression__link" href="#">
+                    <span class="uq-progression__step-number">4</span>
+                    <span class="uq-progression__step-label">Step 4</span>
                 </a>
             </div>
         </li>

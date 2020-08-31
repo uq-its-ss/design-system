@@ -1,8 +1,8 @@
 /* Pagination */
-@use '@uq-uidf/core/src/scss/global' as *;
+@use '@uq-uidf/core/src/scss/global' as core;
 @use 'global' as *;
 
-.progression {
+.uq-progression {
     display: flex;
     list-style: none;
     margin: 0 1.5rem;
@@ -19,9 +19,9 @@
 			flex: none;
 		}
 
-		.progression__link {
+		.uq-progression__link {
 			&:hover {
-				background-color: $uq-neutral-dark40;
+				background-color: core.$uq-neutral-dark40;
 				text-decoration: none;
 			}
 		}
@@ -44,16 +44,16 @@
 			text-decoration: none;
 		}
 		&:hover {
-			.progression__step-number { 
-				background-color: $uq-neutral-dark40;
+			.uq-progression__step-number { 
+				background-color: core.$uq-neutral-dark40;
 				text-decoration: none;
 			}
 		}
 	}
 	&__step-number {
-		background-color: $uq-neutral-dark20;
+		background-color: core.$uq-neutral-dark20;
 		border-radius: 50%;
-		color: $uq-white;
+		color: core.$uq-white;
 		display: block;
 		height: 1.875rem;
 		line-height: 1.875rem;
@@ -69,7 +69,7 @@
 	&__step-label {
 		display: none;
 		@media (min-width: 640px) {
-			color: $uq-neutral-dark80;
+			color: core.$uq-neutral-dark80;
 			display: block;
 			line-height: 1.2;
 			position: absolute;
@@ -83,9 +83,9 @@
 	}
 
 	&__bar {
-		background-color: $uq-neutral;
-		border-right: 1px solid $uq-white;
-		border-left: 1px solid $uq-white;
+		background-color: core.$uq-neutral;
+		border-right: 1px solid core.$uq-white;
+		border-left: 1px solid core.$uq-white;
 		display: flex;
 		flex: 1;
 		height: 10px;
@@ -97,8 +97,8 @@
     		margin: .9375rem 0;
 		}
 		
-		& .progression__bar {
-			background-color: $uq-neutral-light80;
+		& .uq-progression__bar {
+			background-color: core.$uq-neutral-light80;
 			margin: 0;
 		}
 	}
@@ -116,26 +116,28 @@
 }
 
 .is-complete {
-	.progression__step-number, 
-	.progression__link .progression__step-number, 
-	.progression__bar {
-		background-color: $uq-green;
-		color: $uq-white;
+	.uq-progression__step-number, 
+	.uq-progression__link .uq-progression__step-number, 
+	.uq-progression__bar {
+		background-color: core.$uq-green;
+		color: core.$uq-white;
 	}
 
-	.progression__step .progression__link:hover, 
-	.progression__link:hover .progression__step-number {
-		background-color: darken($uq-green, 10%);
+	.uq-progression__step .uq-progression__link:hover, 
+	.uq-progression__link:hover .uq-progression__step-number {
+		background-color: darken(core.$uq-green, 10%);
 		text-decoration: none;
 	}
 }
 
-.progression__bar .progression__bar {
-	background-color: $uq-neutral-light80;
-	color: $uq-white;
-}
+.uq-progression__bar {
 
-.progression__bar .is-complete {
-	background-color: $uq-green !important;
-	color: $uq-white;
+	.uq-progression__bar {
+		background-color: core.$uq-neutral-light80;
+		color: core.$uq-white;
+	}
+	.is-complete {
+		background-color: core.$uq-green !important;
+		color: core.$uq-white;
+	}
 }

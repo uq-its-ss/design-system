@@ -26,3 +26,11 @@ export const kitchenSink = () => {
   });
   return kitchenSinkHTML;
 };
+
+kitchenSink.story = {
+  parameters: {
+    docs: {
+      page: null
+    }
+  }
+}

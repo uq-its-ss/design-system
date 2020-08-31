@@ -1,12 +1,36 @@
 import { addParameters, addDecorator } from '@storybook/html';
 import { themes } from '@storybook/theming';
 
+import { sortStories } from './utils/helpers';
+
 // Load core & body styles
 import './preview.scss';
+
+// Sort order of navigation
+const SORT_ORDER = {
+  Introduction: [
+    'Welcome',
+    'Getting started'
+  ],
+  Core: [],
+  Base: [
+    'Body'
+  ],
+  Layout: [],
+  Components: [],
+  Forms: [
+    'Form',
+    'Form errors',
+    'Form validation',
+    'Working examples'
+  ],
+  Patterns: []
+};
 
 addParameters({
   options: {
     theme: themes.normal,
+    storySort: sortStories(SORT_ORDER),
     showRoots: true
   }
 });
@@ -29,4 +53,5 @@ const centerStory = storyFn => {
   }
 };
 
+// Centre all stories by default
 addDecorator(centerStory);

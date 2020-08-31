@@ -19,9 +19,9 @@ export default {
 export const breadcrumbOneLevel = () => {
   return `
   <nav aria-label="breadcrumb">
-    <ol class="breadcrumb" itemscope="" itemtype="http://schema.org/BreadcrumbList">
-      <li class="breadcrumb__item breadcrumb__item--home" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
-        <a class="breadcrumb__link breadcrumb__link--home" href="/">Home</a>
+    <ol class="uq-breadcrumb" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+      <li class="uq-breadcrumb__item uq-breadcrumb__item--home" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+        <a class="uq-breadcrumb__link uq-breadcrumb__link--home" href="/">Home</a>
         <meta itemprop="position" content="1">
       </li>
     </ol>
@@ -44,22 +44,18 @@ breadcrumbMultiLevel.story = {
 export const breadcrumbTrucation = () => {
   return `
   <nav aria-label="breadcrumb">
-    <ol class="breadcrumb" itemscope="" itemtype="http://schema.org/BreadcrumbList">
-      <li class="breadcrumb__item breadcrumb__item--home" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
-        <a class="breadcrumb__link breadcrumb__link--home" href="/">Home</a>
+    <ol class="uq-breadcrumb" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+      <li class="uq-breadcrumb__item uq-breadcrumb__item--home" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+        <a class="uq-breadcrumb__link uq-breadcrumb__link--home" href="/">Home</a>
         <meta itemprop="position" content="1">
       </li>
-      <li class="breadcrumb__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
-        <a class="breadcrumb__link" itemprop="item" href="/information-and-services">Information and services</a>
+      <li class="uq-breadcrumb__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+        <a class="uq-breadcrumb__link" itemprop="item" href="/information-and-services">Information and services</a>
         <meta itemprop="position" content="2">
       </li>
-      <li class="breadcrumb__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
-        <a class="breadcrumb__link" itemprop="item" href="/information-and-services/human-resources">Human resources</a>
+      <li class="uq-breadcrumb__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+        <a class="uq-breadcrumb__link" itemprop="item" href="/information-and-services/human-resources">Human resources for University of Queensland</a>
         <meta itemprop="position" content="3">
-      </li>
-      <li class="breadcrumb__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem" aria-current="page">
-        <a class="breadcrumb__link" itemprop="item" href="/information-and-services/human-resources/hr-systems">Personal details and HR systems at University of Queensland</a>
-        <meta itemprop="position" content="4">
       </li>
     </ol>
   </nav>

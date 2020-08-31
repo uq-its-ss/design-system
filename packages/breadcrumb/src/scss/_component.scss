@@ -2,7 +2,7 @@
 @import 'global';
 
 // Breadcrumb
-.breadcrumb {
+.uq-breadcrumb {
   box-sizing: border-box;
   font-family: core.$font-body;
   font-size: core.$compass-base-font-size;
@@ -19,7 +19,7 @@
   
   // Breadcrumb item
   &__item {
-    display: inline-block;
+    display: inline;
 
     &:before {
       content: '';
@@ -41,7 +41,7 @@
     display: inline-block;
     color: $breadcrumb-link;
     text-decoration: none;
-    max-width: 250px;
+    max-width: 260px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;

@@ -11,6 +11,6 @@ export default {
   parameters: {
     docs: {
       page: docs
-    },
+    }
   }
 };

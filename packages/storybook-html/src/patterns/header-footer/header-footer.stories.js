@@ -1,5 +1,4 @@
 import { useEffect } from '@storybook/client-api';
-import expandedStory from '../../../.storybook/decorators/expanded.js';
 
 // import scripts
 import headerCreate from '@uq-uidf/header/src/js/header.es6';
@@ -12,7 +11,9 @@ import footerHTML from '../../components/footer/footer.html';
 
 export default {
     title: 'Patterns/Header - site title - content - footer',
-    decorators: [expandedStory]
+    parameters: {
+      layout: "fullscreen"
+    }
 };
 
 export const example = () => {

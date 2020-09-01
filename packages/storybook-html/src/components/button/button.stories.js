@@ -1,28 +1,15 @@
-import expandedStory from '../../../.storybook/decorators/expanded.js';
-
 // import styles
 import './button.scss';
-
-// documentation
-// import docs from './button.docs.mdx';
 
 export default {
   title: 'Components/Button',
   parameters: {
-    // docs: {
-    //   page: docs
-    // },
     backgrounds: [
       { name: 'Dark', value: '#000' },
       { name: 'UQ purple', value: '#51247a' }
     ]
   }
 };
-
-/**
- * Stories constructed using 'template literals'.
- * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
- */
 
 export const primary = () => {
   return `
@@ -106,4 +93,4 @@ export const expanded = () => {
   `;
 };
 
-expanded.decorators = [expandedStory];
+expanded.parameters = { layout: "padded" };

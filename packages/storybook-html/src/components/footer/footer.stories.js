@@ -1,5 +1,3 @@
-import expandedStory from '../../../.storybook/decorators/expanded.js';
-
 // import styles
 import './footer.scss';
 
@@ -8,9 +6,11 @@ import footerHTML from './footer.html';
 
 export default {
     title: 'Components/Footer',
-    decorators: [expandedStory]
+    parameters: {
+        layout: "fullscreen"
+    }
 };
 
 export const footer = () => {
-    return document.createElement('div').innerHTML = footerHTML;
+    return footerHTML;
 };

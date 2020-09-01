@@ -1,5 +1,4 @@
 import { useEffect } from '@storybook/client-api';
-import expandedStory from '../../../.storybook/decorators/expanded.js';
 
 // import scripts
 import header from '@uq-uidf/header/src/js/header.es6';
@@ -12,7 +11,9 @@ import kitchenSinkHTML from './kitchen-sink.html';
 
 export default {
   title: 'Introduction/Showcase',
-  decorators: [expandedStory]
+  parameters: {
+    layout: "fullscreen"
+  }
 };
 
 export const kitchenSink = () => {

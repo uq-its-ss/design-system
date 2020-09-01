@@ -1,5 +1,3 @@
-import expandedStory from '../../../.storybook/decorators/expanded.js';
-
 // import stylesheet
 import '@uq-uidf/grid/src/scss/_component.scss';
 
@@ -10,9 +8,9 @@ export default {
   parameters: {
     docs: {
       page: docs
-    }
-  },
-  decorators: [expandedStory]
+    },
+    layout: "padded"
+  }
 };
 
 export const grid = () => {

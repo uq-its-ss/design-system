@@ -1,5 +1,3 @@
-import expandedStory from '../../../.storybook/decorators/expanded.js';
-
 // import supporting component markup
 import headerHTML from '../header/header.html';
 
@@ -8,7 +6,9 @@ import '@uq-uidf/site-title-utility/src/scss/_component.scss';
 
 export default {
   title: 'Components/Site title',
-  decorators: [expandedStory]
+  parameters: {
+    layout: "fullscreen"
+  }
 };
 
 export const siteTitleDefault = () => {

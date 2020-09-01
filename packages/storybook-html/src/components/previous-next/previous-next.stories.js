@@ -1,5 +1,3 @@
-import expandedStory from '../../../.storybook/decorators/expanded.js';
-
 // import styles
 import './previous-next.scss';
 
@@ -14,9 +12,9 @@ export default {
   parameters: {
     docs: {
       page: docs
-    }
-  },
-  decorators: [expandedStory]
+    },
+    layout: "padded"
+  }
 };
 
 export const previousNext = () => {

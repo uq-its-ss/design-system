@@ -1,0 +1,68 @@
+@use '@uq-uidf/core/src/scss/global' as core;
+@import 'global';
+
+// Table
+.uq-table {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+  box-sizing: border-box;
+  font-family: core.$font-body;
+  font-size: core.$compass-base-font-size;
+  font-weight: core.$font-weight-normal;
+  line-height: core.$compass-base-line-height-ratio;
+  color: core.$uq-neutral-dark80;
+  list-style: none;
+  
+  *, *:before, *:after {
+    box-sizing: border-box;
+  }
+
+  &__wrapper {
+    min-width: 100%;
+    overflow-x: auto;
+  }
+
+  &__caption {
+    font-size: 1.25rem;
+    line-height: core.$compass-base-line-height-ratio;
+    font-weight: bold;
+    text-align: left;
+    display: table-caption;
+    padding-bottom: .5rem;
+  }
+
+  &__head {
+    display: table-header-group;
+    background-color: core.$uq-neutral-light20;
+  }
+  &__body {
+    display: table-row-group;
+  }
+
+  &__row {
+    display: table-row;
+  }
+  &__cell {
+    padding: .75rem;
+    text-align: left;
+    border: 1px solid core.$uq-neutral;
+    background-color: core.$uq-white;
+
+    &--numeric {
+      text-align: right;
+    }
+  }
+
+  &__header {
+    padding: .75rem;
+    text-align: left;
+
+    &--numeric {
+      text-align: right;
+    }
+  }
+
+}

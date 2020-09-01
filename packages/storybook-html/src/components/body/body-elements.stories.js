@@ -94,3 +94,51 @@ export const horizontalRule = () => {
     </div>
   `;
 };
+
+export const table = () => {
+  return `
+    <!--
+    Row header:  <th class="uq-table__header" scope="row">
+    Column header:  <th class="uq-table__header" scope="col">
+    -->
+
+    <!--
+    Width 10%:  <th class="uq-table__header uq-table__header--width-10">
+    Width 20%:  <th class="uq-table__header uq-table__header--width-20">
+    Width 25%:  <th class="uq-table__header uq-table__header--width-25">
+    Width 33%:  <th class="uq-table__header uq-table__header--width-33">
+    Width 50%:  <th class="uq-table__header uq-table__header--width-50">
+    Width 75%:  <th class="uq-table__header uq-table__header--width-75">
+    -->
+
+    <div class="uq-table__wrapper">
+      <table class="uq-table uq-table--striped">
+          <caption class="uq-table__caption">Population of Australian states and territories, September 2020</caption>
+          <thead class="uq-table__head">
+              <tr class="uq-table__row">
+                  <th scope="col" class="uq-table__header uq-table__header--width-50">Location</th>
+                  <th scope="col" class="uq-table__header uq-table__header--width-25 uq-table__header--numeric">Population</th>
+                  <th scope="col" class="uq-table__header uq-table__header--width-25 uq-table__header--numeric">Change over previous year %</th>
+              </tr>
+          </thead>
+          <tbody class="uq-table__body">
+              <tr class="uq-table__row">
+                  <td class="uq-table__cell">New South Wales</td>
+                  <td class="uq-table__cell uq-table__cell--numeric">7,670,700</td>
+                  <td class="uq-table__cell uq-table__cell--numeric">3.1%</td>
+              </tr>
+              <tr class="uq-table__row">
+                  <td class="uq-table__cell">Victoria</td>
+                  <td class="uq-table__cell uq-table__cell--numeric">5,996,400</td>
+                  <td class="uq-table__cell uq-table__cell--numeric">2.5%</td>
+              </tr>
+              <tr class="uq-table__row">
+                  <td class="uq-table__cell">Queensland</td>
+                  <td class="uq-table__cell uq-table__cell--numeric">517,400</td>
+                  <td class="uq-table__cell uq-table__cell--numeric">4.0%</td>
+              </tr>
+          </tbody>
+      </table>
+    </div>
+  `;
+};

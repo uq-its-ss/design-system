@@ -12,7 +12,8 @@ export default {
   parameters: {
     docs: {
       page: docs
-    }
+    },
+    layout: "fullscreen"
   }
 };
 

@@ -11,7 +11,8 @@ export default {
   title: 'Components/Progression',
   parameters: {
     docs: {
-      page: docs
+      page: docs,
+      inlineStories: false
     }
   }
 };

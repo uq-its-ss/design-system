@@ -7,7 +7,10 @@ import '@uq-uidf/accordion/src/scss/_component.scss';
 import accordion from '@uq-uidf/accordion/src/js/accordion.es6';
 
 export default {
-  title: 'Components/Accordion'
+  title: 'Components/Accordion',
+  parameters: {
+    layout: "padded"
+  }
 };
 
 export const base = () => {

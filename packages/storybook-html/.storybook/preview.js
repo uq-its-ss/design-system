@@ -27,6 +27,7 @@ const SORT_ORDER = {
 export const parameters = {
   layout: 'centered',
   options: {
+    // TODO: migrate to config-based sorting
     storySort: sortStories(SORT_ORDER)
   }
 };

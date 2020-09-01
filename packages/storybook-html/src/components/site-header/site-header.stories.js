@@ -15,7 +15,8 @@ export default {
   title: 'Components/Site header',
   parameters: {
     docs: {
-      page: docs
+      page: docs,
+      inlineStories: false
     },
     layout: "fullscreen"
   }

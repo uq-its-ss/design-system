@@ -1,4 +1,4 @@
-import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
 
 # Progression
 
@@ -12,9 +12,9 @@ The Progression component is a progress indicator helping the user to complete a
 
 In the initial instance the component is in it's starting default stage.
 
-<Preview withToolbar>
-  <Story height="350px" id="components-progression--progression-initial" />
-</Preview>
+<Canvas withSource="none">
+  <Story id="components-progression--progression-initial" />
+</Canvas>
 
 ```html
   <ul class="progression">
@@ -36,9 +36,9 @@ In the initial instance the component is in it's starting default stage.
 
 An instance when a step is done partly but not completed.
 
-<Preview withToolbar>
-  <Story height="350px" id="components-progression--progression-middle" />
-</Preview>
+<Canvas withSource="none">
+  <Story id="components-progression--progression-middle" />
+</Canvas>
 
 ```html
   <ul class="progression">
@@ -75,9 +75,9 @@ An instance when a step is done partly but not completed.
 
 The instance when all steps are done and completed.
 
-<Preview withToolbar>
-  <Story height="350px" id="components-progression--progression-final" />
-</Preview>
+<Canvas withSource="none">
+  <Story id="components-progression--progression-final" />
+</Canvas>
 
 ```html
   <ul class="progression">

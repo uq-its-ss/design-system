@@ -23,9 +23,7 @@ export const previousNext = () => {
   return previousNextHTML;
 };
 
-previousNext.story = {
-  name: 'Previous Next'
-}
+previousNext.storyName = 'Previous Next';
 
 export const previousNextFirst = () => {
   return `
@@ -41,9 +39,7 @@ export const previousNextFirst = () => {
   `;
 };
 
-previousNextFirst.story = {
-  name: 'Previous Next First'
-}
+previousNextFirst.storyName = 'Previous Next First';
 
 export const previousNextLast = () => {
   return `
@@ -59,6 +55,4 @@ export const previousNextLast = () => {
   `;
 };
 
-previousNextLast.story = {
-  name: 'Previous Next Last'
-}
+previousNextLast.storyName = 'Previous Next Last';

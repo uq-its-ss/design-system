@@ -56,9 +56,7 @@ export const base = () => {
   `;
 };
 
-base.story = {
-  name: "Default"
-}
+base.storyName = 'Default';
 
 export const baseUsingLists = () => {
   useEffect(() => {
@@ -96,9 +94,7 @@ export const baseUsingLists = () => {
   `;
 };
 
-baseUsingLists.story = {
-  name: 'Default using <ul> and <li>'
-};
+baseUsingLists.storyName = 'Default using <ul> and <li>';
 
 export const shaded = () => {
   useEffect(() => {

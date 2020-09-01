@@ -26,9 +26,7 @@ export const siteTitleDefault = () => {
   `;
 };
 
-siteTitleDefault.story = {
-  name: "Default (use with site navigation)"
-}
+siteTitleDefault.storyName = "Default (use with site navigation)";
 
 export const siteTitleUseWithoutNav = () => {
   return `
@@ -45,9 +43,7 @@ export const siteTitleUseWithoutNav = () => {
   `;
 };
 
-siteTitleUseWithoutNav.story = {
-  name: "Variant for use without site navigation"
-}
+siteTitleUseWithoutNav.storyName = "Variant for use without site navigation";
 
 export const siteTitleUsageExample2 = () => {
   return `
@@ -65,6 +61,4 @@ export const siteTitleUsageExample2 = () => {
   `;
 };
 
-siteTitleUsageExample2.story = {
-  name: "Example 2: with site header"
-};
+siteTitleUsageExample2.storyName = "Example 2: with site header";

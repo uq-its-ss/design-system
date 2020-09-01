@@ -23,9 +23,7 @@ export const colours = () => {
   return coloursHTML;
 };
 
-colours.story = {
-  decorators: [expandedStory]
-};
+colours.decorators = [expandedStory];
 
 export const fonts = () => {
   return `

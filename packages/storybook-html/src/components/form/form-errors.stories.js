@@ -182,10 +182,8 @@ export const kitchenSink = () => {
   return kitchenSinkHTML;
 };
 
-kitchenSink.story = {
-  parameters: {
-    docs: {
-      page: null
-    }
+kitchenSink.parameters = {
+  docs: {
+    page: null
   }
-}
+};

@@ -18,9 +18,7 @@ export const pagination = () => {
   return paginationHTML;
 };
 
-pagination.story = {
-  name: 'Pagination All'
-}
+pagination.storyName = 'Pagination All';
 
 export const paginationFirst = () => {
   return `
@@ -39,9 +37,7 @@ export const paginationFirst = () => {
   `;
 };
 
-paginationFirst.story = {
-  name: 'Pagination First'
-}
+paginationFirst.storyName = 'Pagination First';
 
 export const paginationMiddle = () => {
   return `
@@ -63,9 +59,7 @@ export const paginationMiddle = () => {
   `;
 };
 
-paginationMiddle.story = {
-  name: 'Pagination Middle'
-}
+paginationMiddle.storyName = 'Pagination Middle';
 
 export const paginationLast = () => {
   return `
@@ -84,6 +78,4 @@ export const paginationLast = () => {
   `;
 };
 
-paginationLast.story = {
-  name: 'Pagination Last'
-}
+paginationLast.storyName = 'Pagination Last';

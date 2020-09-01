@@ -40,6 +40,4 @@ export const headerNoLocalSearch = () => {
   return headerNoLocalSearchHTML;
 };
 
-headerNoLocalSearch.story = {
-  name: "Header with global search only"
-}
+headerNoLocalSearch.storyName = "Header with global search only";

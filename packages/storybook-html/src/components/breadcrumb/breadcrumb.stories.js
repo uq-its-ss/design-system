@@ -29,17 +29,13 @@ export const breadcrumbOneLevel = () => {
   `;
 };
 
-breadcrumbOneLevel.story = {
-  name: 'Breadcrumb One Level'
-}
+breadcrumbOneLevel.storyName = 'Breadcrumb One Level';
 
 export const breadcrumbMultiLevel = () => {
   return breadcrumbHTML;
 };
 
-breadcrumbMultiLevel.story = {
-  name: 'Breadcrumb Multi Level'
-}
+breadcrumbMultiLevel.storyName = 'Breadcrumb Multi Level';
 
 export const breadcrumbTrucation = () => {
   return `
@@ -62,6 +58,4 @@ export const breadcrumbTrucation = () => {
   `;
 };
 
-breadcrumbTrucation.story = {
-  name: 'Breadcrumb Truncation'
-}
+breadcrumbTrucation.storyName = 'Breadcrumb Truncation';

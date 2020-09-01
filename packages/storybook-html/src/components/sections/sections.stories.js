@@ -22,8 +22,6 @@ export default {
   decorators: [expandedStory]
 };
 
-
-
 export const sectionsBasic = () => {
   return `
   <div class="section">

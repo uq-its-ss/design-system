@@ -44,9 +44,7 @@ export const primary = () => {
   `;
 };
 
-primary.story = {
-  name: 'Primary (base)'
-}
+primary.storyName = 'Primary (base)';
 
 export const secondary = () => {
   return `
@@ -84,14 +82,12 @@ export const secondaryLight = () => {
   `;
 };
 
-secondaryLight.story = {
-  name: "Secondary --light",
-  parameters: {
-    backgrounds: [
-      { name: 'Dark', value: '#000', default: true },
-      { name: 'UQ purple', value: '#51247a' }
-    ] 
-  }
+secondaryLight.storyName = "Secondary --light";
+secondaryLight.parameters = {
+  backgrounds: [
+    { name: 'Dark', value: '#000', default: true },
+    { name: 'UQ purple', value: '#51247a' }
+  ] 
 };
 
 export const expanded = () => {
@@ -110,6 +106,4 @@ export const expanded = () => {
   `;
 };
 
-expanded.story = {
-  decorators: [expandedStory]
-}
+expanded.decorators = [expandedStory];

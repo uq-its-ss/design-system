@@ -14,9 +14,7 @@ export const all = () => {
   return defaultHTML;
 };
 
-all.story = {
-  decorators: [expandedStory]
-}
+all.decorators = [expandedStory];
 
 export const error = () => {
   return `

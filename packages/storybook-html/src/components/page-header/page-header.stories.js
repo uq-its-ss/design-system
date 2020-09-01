@@ -20,6 +20,4 @@ export const pageHeader = () => {
   return pageHeaderHTML;
 };
 
-pageHeader.story = {
-  name: 'All'
-}
+pageHeader.storyName = 'All';

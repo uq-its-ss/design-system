@@ -18,9 +18,9 @@ export const all = () => {
   return allHTML;
 };
 
-all.story = {
-  parameters: { notes: 'links'}
-};
+// add more keywords
+all.parameters = { notes: 'links'};
+
 
 export const equalised = () => {
   useEffect(() => {
@@ -30,6 +30,4 @@ export const equalised = () => {
   return equalisedHTML;
 };
 
-equalised.story = {
-  name: "Equalised (JS)"
-};
+equalised.storyName = "Equalised (JS)";

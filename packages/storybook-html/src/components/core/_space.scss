@@ -90,7 +90,7 @@
   padding:$space-stretched $space;
 }
 
-/* Stacked container */ 
+/* Stacked */ 
 .uqds-container .uqds-stacked-space {
   margin-top:$space;
 }
@@ -101,4 +101,20 @@
 
 .uqds-container .uqds-stacked-space-lg {
   margin-top:$space-lg;
+}
+
+/* inlinec */ 
+.uqds-container .uqds-inline-space {
+  margin-right:$space;
+  display: inline;
+}
+
+.uqds-container .uqds-inline-space-xs {
+  margin-right:$space-xs;
+  display: inline;
+}
+
+.uqds-container .uqds-inline-space-lg {
+  margin-right:$space-lg;
+  display: inline;
 }

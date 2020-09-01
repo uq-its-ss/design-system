@@ -20,9 +20,12 @@ export default {
       inlineStories: false
     },
     layout: "fullscreen",
-    backgrounds: [
-      { name: 'UQ Neutral 1', value: '#D7D1CC', default: true }
-    ]
+    backgrounds: {
+      default: 'UQ Neutral 1',
+      values: [
+        { name: 'UQ Neutral 1', value: '#D7D1CC' }
+      ]
+    }
   }
 };
 

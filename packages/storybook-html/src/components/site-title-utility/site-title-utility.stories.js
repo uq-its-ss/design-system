@@ -7,7 +7,12 @@ import '@uq-uidf/site-title-utility/src/scss/_component.scss';
 export default {
   title: 'Components/Site title',
   parameters: {
-    layout: "fullscreen"
+    layout: "fullscreen",
+    backgrounds: {
+      values: [
+        { name: 'UQ Neutral 1', value: '#D7D1CC' }
+      ]
+    }
   }
 };
 

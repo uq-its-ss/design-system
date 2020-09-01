@@ -9,7 +9,10 @@ import accordion from '@uq-uidf/accordion/src/js/accordion.es6';
 export default {
   title: 'Components/Accordion',
   parameters: {
-    layout: "padded"
+    layout: "padded",
+    docs: {
+      inlineStories: false
+    }
   }
 };
 

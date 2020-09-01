@@ -4,10 +4,12 @@ import './button.scss';
 export default {
   title: 'Components/Button',
   parameters: {
-    backgrounds: [
-      { name: 'Dark', value: '#000' },
-      { name: 'UQ purple', value: '#51247a' }
-    ]
+    backgrounds: {
+      values: [
+        { name: 'Dark', value: '#000000' },
+        { name: 'UQ purple', value: '#51247a' }
+      ]
+    }
   }
 };
 
@@ -71,10 +73,13 @@ export const secondaryLight = () => {
 
 secondaryLight.storyName = "Secondary --light";
 secondaryLight.parameters = {
-  backgrounds: [
-    { name: 'Dark', value: '#000', default: true },
-    { name: 'UQ purple', value: '#51247a' }
-  ] 
+  backgrounds: {
+    default: 'Dark',
+    values: [
+      { name: 'Dark', value: '#000000' },
+      { name: 'UQ purple', value: '#51247a' }
+    ]
+  } 
 };
 
 export const expanded = () => {

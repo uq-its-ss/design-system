@@ -1,6 +1,3 @@
-// import decorators
-import expandedStory from '../../../.storybook/decorators/expanded.js';
-
 // import styles
 import './core.scss';
 
@@ -15,16 +12,13 @@ export default {
   parameters: {
     docs: {
       page: docs
-    }
-  },
+    },
+    layout: "padded"
+  }
 };
 
 export const colours = () => {
   return coloursHTML;
-};
-
-colours.story = {
-  decorators: [expandedStory]
 };
 
 export const fonts = () => {

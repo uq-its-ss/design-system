@@ -1,5 +1,4 @@
 import { useEffect } from '@storybook/client-api';
-import expandedStory from '../../../.storybook/decorators/expanded.js';
 
 // import styles
 import '@uq-uidf/accordion/src/scss/_component.scss';
@@ -7,15 +6,12 @@ import '@uq-uidf/accordion/src/scss/_component.scss';
 // import scripts
 import accordion from '@uq-uidf/accordion/src/js/accordion.es6';
 
-// documentation
-import docs from './accordion.docs.mdx';
-
 export default {
   title: 'Components/Accordion',
-  decorators: [expandedStory],
   parameters: {
+    layout: "padded",
     docs: {
-      page: docs
+      inlineStories: false
     }
   }
 };
@@ -56,9 +52,7 @@ export const base = () => {
   `;
 };
 
-base.story = {
-  name: "Default"
-}
+base.storyName = 'Default';
 
 export const baseUsingLists = () => {
   useEffect(() => {
@@ -96,9 +90,7 @@ export const baseUsingLists = () => {
   `;
 };
 
-baseUsingLists.story = {
-  name: 'Default using <ul> and <li>'
-};
+baseUsingLists.storyName = 'Default using <ul> and <li>';
 
 export const shaded = () => {
   useEffect(() => {

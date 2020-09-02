@@ -1,5 +1,4 @@
 import { useEffect } from '@storybook/client-api';
-import expandedStory from '../../../.storybook/decorators/expanded.js';
 
 // import styles
 import './site-header.scss';
@@ -16,10 +15,16 @@ export default {
   title: 'Components/Site header',
   parameters: {
     docs: {
-      page: docs
+      page: docs,
+      inlineStories: false
+    },
+    layout: "fullscreen",
+    backgrounds: {
+      values: [
+        { name: 'UQ Neutral 1', value: '#D7D1CC' }
+      ]
     }
-  },
-  decorators: [expandedStory]
+  }
 };
 
 export const siteHeader = () => {

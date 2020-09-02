@@ -1,28 +1,17 @@
-import expandedStory from '../../../.storybook/decorators/expanded.js';
-
 // import styles
 import './button.scss';
-
-// documentation
-// import docs from './button.docs.mdx';
 
 export default {
   title: 'Components/Button',
   parameters: {
-    // docs: {
-    //   page: docs
-    // },
-    backgrounds: [
-      { name: 'Dark', value: '#000' },
-      { name: 'UQ purple', value: '#51247a' }
-    ]
+    backgrounds: {
+      values: [
+        { name: 'Dark', value: '#000000' },
+        { name: 'UQ purple', value: '#51247a' }
+      ]
+    }
   }
 };
-
-/**
- * Stories constructed using 'template literals'.
- * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
- */
 
 export const primary = () => {
   return `
@@ -44,9 +33,7 @@ export const primary = () => {
   `;
 };
 
-primary.story = {
-  name: 'Primary (base)'
-}
+primary.storyName = 'Primary (base)';
 
 export const secondary = () => {
   return `
@@ -84,14 +71,15 @@ export const secondaryLight = () => {
   `;
 };
 
-secondaryLight.story = {
-  name: "Secondary --light",
-  parameters: {
-    backgrounds: [
-      { name: 'Dark', value: '#000', default: true },
+secondaryLight.storyName = "Secondary --light";
+secondaryLight.parameters = {
+  backgrounds: {
+    default: 'Dark',
+    values: [
+      { name: 'Dark', value: '#000000' },
       { name: 'UQ purple', value: '#51247a' }
-    ] 
-  }
+    ]
+  } 
 };
 
 export const expanded = () => {
@@ -110,6 +98,4 @@ export const expanded = () => {
   `;
 };
 
-expanded.story = {
-  decorators: [expandedStory]
-}
+expanded.parameters = { layout: "padded" };

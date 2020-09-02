@@ -1,5 +1,4 @@
 import { useEffect } from '@storybook/client-api';
-import expandedStory from '../../../.storybook/decorators/expanded.js';
 
 // import styles
 import './header.scss';
@@ -17,13 +16,17 @@ export default {
   title: 'Components/Header',
   parameters: {
     docs: {
-      page: docs
+      page: docs,
+      inlineStories: false
     },
-    backgrounds: [
-      { name: 'UQ Neutral 1', value: '#D7D1CC', default: true }
-    ]
-  },
-  decorators: [expandedStory]
+    layout: "fullscreen",
+    backgrounds: {
+      default: 'UQ Neutral 1',
+      values: [
+        { name: 'UQ Neutral 1', value: '#D7D1CC' }
+      ]
+    }
+  }
 };
 
 export const header = () => {
@@ -32,7 +35,7 @@ export const header = () => {
   });
   return headerHTML;
 };
-  
+
 export const headerNoLocalSearch = () => {
   useEffect(() => {
     new headerCreate();
@@ -40,6 +43,4 @@ export const headerNoLocalSearch = () => {
   return headerNoLocalSearchHTML;
 };
 
-headerNoLocalSearch.story = {
-  name: "Header with global search only"
-}
+headerNoLocalSearch.storyName = "Header with global search only";

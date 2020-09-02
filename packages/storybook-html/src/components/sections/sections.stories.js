@@ -1,5 +1,3 @@
-import expandedStory from '../../../.storybook/decorators/expanded.js';
-
 // import styles
 import './sections.scss';
 
@@ -17,12 +15,10 @@ export default {
   parameters: {
     docs: {
       page: docs
-    }
-  },
-  decorators: [expandedStory]
+    },
+    layout: "fullscreen"
+  }
 };
-
-
 
 export const sectionsBasic = () => {
   return `

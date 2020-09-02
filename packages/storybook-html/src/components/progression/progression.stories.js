@@ -1,5 +1,3 @@
-import expandedStory from '../../../.storybook/decorators/expanded.js';
-
 // import styles
 import './progression.scss';
 
@@ -13,19 +11,17 @@ export default {
   title: 'Components/Progression',
   parameters: {
     docs: {
-      page: docs
+      page: docs,
+      inlineStories: false
     }
-  },
-  //decorators: [expandedStory]
+  }
 };
 
 export const progressionInitial = () => {
   return progressionHTML;
 };
 
-progressionInitial.story = {
-  name: 'Progression Initial'
-}
+progressionInitial.storyName = 'Progression Initial';
 
 export const progressionMiddle = () => {
   return `
@@ -86,9 +82,7 @@ export const progressionMiddle = () => {
   `;
 };
 
-progressionMiddle.story = {
-  name: 'Progression Middle'
-}
+progressionMiddle.storyName = 'Progression Middle';
 
 export const progressionFinal = () => {
   return `
@@ -149,6 +143,4 @@ export const progressionFinal = () => {
   `;
 };
 
-progressionFinal.story = {
-  name: 'Progression Final'
-}
+progressionFinal.storyName = 'Progression Final';

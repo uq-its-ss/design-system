@@ -5,7 +5,10 @@ import './tabs.scss';
 import tabsHTML from './tabs.html';
 
 export default {
-  title: 'Components/Tabs'
+  title: 'Components/Tabs',
+  parameters: {
+    layout: "padded"
+  }
 };
 
 export const all = () => {

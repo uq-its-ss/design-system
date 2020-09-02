@@ -1,0 +1,67 @@
+// FS: custom media & breakpoints (from a mobile first perspective)
+
+// Note that the width values are written as ranges (https://www.w3.org/TR/mediaqueries-5/#mq-range-context).
+// Evaluating media features in range context is new to Level 4 of media queries.
+
+// Original post-css-custom-media syntax
+// =====================================
+
+// @custom-media --x-small-up (width >= 420px);
+// @custom-media --x-small-down (width < 420px);
+// @custom-media --x-small-to-small (420px <= width < 540px);
+// /* Small */
+// @custom-media --small-up (width >= 540px);
+// @custom-media --small-down (width < 540px);
+// @custom-media --small-to-medium (540px <= width < 720px);
+// /* Medium */
+// @custom-media --medium-up (width >= 641px);
+// @custom-media --medium-down (width < 641px);
+// @custom-media --medium-to-large (641px <= width < 1024px);
+// /* Large */
+// @custom-media --large-up (width >= 1024px);
+// @custom-media --large-down (width < 1024px);
+// @custom-media --large-to-x-large (1024px <= width < 1140px);
+// /* Extra large */
+// @custom-media --x-large-up (width >= 1140px);
+// @custom-media --x-large-down (width < 1140px);
+
+// Converted (Sass) variables
+// ==========================
+
+// Breakpoints
+// -----------
+
+$screen-xs: 420px !default;
+$screen-s: 540px !default;
+$screen-m: 641px !default;
+$screen-l: 1024px !default;
+$screen-xl: 1140px !default;
+
+// Media query strings
+// -------------------
+
+// x-small 
+$screen-xs-up: "(width >= #{$screen-xs})" !default;
+$screen-xs-down: "(width < #{$screen-xs})" !default;
+$screen-xs-s: "(#{$screen-xs} <= width < #{$screen-s})" !default;
+
+// small
+$screen-s-up: "(width >= #{$screen-s})" !default;
+$screen-s-down: "(width < #{$screen-s})" !default;
+$screen-s-m: "(#{$screen-s} <= width < #{$screen-m})" !default;
+
+// medium
+$screen-m-up: "(width >= #{$screen-m})" !default;
+$screen-m-down: "(width < #{$screen-m})" !default;
+$screen-m-l: "(#{$screen-m} <= width < #{$screen-l})" !default;
+
+// large
+$screen-l-up: "(width >= #{$screen-l})" !default;
+$screen-l-down: "(width < #{$screen-l})" !default;
+$screen-l-l: "(#{$screen-l} <= width < #{$screen-xl})" !default;
+
+// x-large
+$screen-xl-up: "(width >= #{$screen-xl})" !default;
+$screen-xl-down: "(width < #{$screen-xl})" !default;
+
+// TODO: add screen density mq's

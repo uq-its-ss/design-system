@@ -12,7 +12,8 @@ export default {
   parameters: {
     docs: {
       page: docs
-    }
+    },
+    layout: "fullscreen"
   }
 };
 
@@ -20,6 +21,4 @@ export const pageHeader = () => {
   return pageHeaderHTML;
 };
 
-pageHeader.story = {
-  name: 'All'
-}
+pageHeader.storyName = 'All';

@@ -1,4 +1,4 @@
-import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
 
 # Implementing accessible form validation messages
 
@@ -12,9 +12,7 @@ Using `role="alert"` on an element implies `aria-live="assertive"` as well as
 2019). So if we want screen readers to read aloud error summaries in full, they
 should be injected into an element with this specialised role active.
 
-<Preview withToolbar>
-  <Story height="180px" id="forms-form-errors--error-summary" />
-</Preview>
+<Story id="forms-form-errors--error-summary" />
 
 ### Basic
 
@@ -74,9 +72,7 @@ Use the `aria-live="polite"`, `aria-invalid`, and `aria-describedby` attributes.
 
 ### Text input
 
-<Preview withToolbar>
-  <Story height="480px" id="forms-form-errors--text-input" />
-</Preview>
+<Story id="forms-form-errors--text-input" />
 
 #### Basic
 
@@ -112,9 +108,7 @@ We should support two common methods of markup.
 
 ### Checkbox
 
-<Preview withToolbar>
-  <Story height="400px" id="forms-form-errors--checkbox" />
-</Preview>
+<Story id="forms-form-errors--checkbox" />
 
 #### Basic
 
@@ -154,9 +148,7 @@ We should support two common methods of markup.
 
 ### Radio buttons
 
-<Preview withToolbar>
-  <Story height="660px" id="forms-form-errors--radio-button" />
-</Preview>
+<Story id="forms-form-errors--radio-button" />
 
 #### Basic
 
@@ -196,9 +188,7 @@ We should support two common methods of markup.
 
 ### Select
 
-<Preview withToolbar>
-  <Story height="500px" id="forms-form-errors--select" />
-</Preview>
+<Story id="forms-form-errors--select" />
 
 #### Basic
 
@@ -255,9 +245,7 @@ We should support two common methods of markup.
 
 ### Textarea
 
-<Preview withToolbar>
-  <Story height="600px" id="forms-form-errors--textarea" />
-</Preview>
+<Story id="forms-form-errors--textarea" />
 
 #### Basic
 

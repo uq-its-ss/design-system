@@ -3,9 +3,6 @@ import './pagination.scss';
 
 // import HTML template strings
 import paginationHTML from './pagination.html';
-//import paginationFirstHTML from './pagination-first.html';
-//import paginationMiddleHTML from './pagination-middle.html';
-//import paginationLastHTML from './pagination-last.html';
 import docs from './pagination.docs.mdx';
 
 export default {
@@ -18,12 +15,10 @@ export default {
 };
 
 export const pagination = () => {
-  return document.createElement('div').innerHTML = paginationHTML;
+  return paginationHTML;
 };
 
-pagination.story = {
-  name: 'Pagination All'
-}
+pagination.storyName = 'Pagination All';
 
 export const paginationFirst = () => {
   return `
@@ -42,9 +37,7 @@ export const paginationFirst = () => {
   `;
 };
 
-paginationFirst.story = {
-  name: 'Pagination First'
-}
+paginationFirst.storyName = 'Pagination First';
 
 export const paginationMiddle = () => {
   return `
@@ -66,9 +59,7 @@ export const paginationMiddle = () => {
   `;
 };
 
-paginationMiddle.story = {
-  name: 'Pagination Middle'
-}
+paginationMiddle.storyName = 'Pagination Middle';
 
 export const paginationLast = () => {
   return `
@@ -87,6 +78,4 @@ export const paginationLast = () => {
   `;
 };
 
-paginationLast.story = {
-  name: 'Pagination Last'
-}
+paginationLast.storyName = 'Pagination Last';

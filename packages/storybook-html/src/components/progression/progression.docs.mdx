@@ -1,0 +1,161 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+
+# Progression
+
+## Overview
+
+The Progression component is a progress indicator helping the user to complete a step by step process.
+
+## Instances
+
+### Initial instance
+
+In the initial instance the component is in it's starting default stage.
+
+<Canvas withSource="none">
+  <Story id="components-progression--progression-initial" />
+</Canvas>
+
+```html
+  <ul class="progression">
+    <li class="progression__step is-complete">
+        <div class="progression__step-marker">
+            <a class="progression__link" href="#">
+                <span class="progression__step-number">1</span>
+                <span class="progression__step-label">Step 1</span>
+            </a>
+        </div>
+        <div class="progression__bar">&nbsp;</div>
+    </li>
+    ....
+    ....
+  </ul>
+```
+
+### Middle instance
+
+An instance when a step is done partly but not completed.
+
+<Canvas withSource="none">
+  <Story id="components-progression--progression-middle" />
+</Canvas>
+
+```html
+  <ul class="progression">
+    <li class="progression__step is-complete">
+      <div class="progression__step-marker">
+          <a class="progression__link" href="#">
+              <span class="progression__step-number">1</span>
+              <span class="progression__step-label">Step 1</span>
+          </a>
+      </div>
+      <div class="progression__bar">&nbsp;</div>
+    </li>
+    <li class="progression__step is-complete">
+      <div class="progression__step-marker">
+          <a class="progression__link" href="#">
+              <span class="progression__step-number">2</span>
+              <span class="progression__step-label">Step 2</span>
+          </a>
+      </div>
+      <div class="progression__bar">
+          <ul class="progression__sub-step">
+              <li class="progression__bar is-complete">&nbsp;</li>
+              <li class="progression__bar is-complete">&nbsp;</li>
+              <li class="progression__bar">&nbsp;</li>
+          </ul>
+      </div>
+    </li>
+    ....
+    ....
+  </ul>
+```
+
+### Final instance
+
+The instance when all steps are done and completed.
+
+<Canvas withSource="none">
+  <Story id="components-progression--progression-final" />
+</Canvas>
+
+```html
+  <ul class="progression">
+        <li class="progression__step is-complete">
+            <div class="progression__step-marker">
+                <a class="progression__link" href="#">
+                    <span class="progression__step-number">1</span>
+                    <span class="progression__step-label">Step 1</span>
+                </a>
+            </div>
+            <div class="progression__bar">&nbsp;</div>
+        </li>
+        <li class="progression__step is-complete">
+            <div class="progression__step-marker">
+                <a class="progression__link" href="#">
+                    <span class="progression__step-number">2</span>
+                    <span class="progression__step-label">Step 2</span>
+                </a>
+            </div>
+            <div class="progression__bar">
+                <ul class="progression__sub-step">
+                    <li class="progression__bar is-complete">&nbsp;</li>
+                    <li class="progression__bar is-complete">&nbsp;</li>
+                    <li class="progression__bar is-complete">&nbsp;</li>
+                </ul>
+            </div>
+        </li>
+        <li class="progression__step is-complete">
+            <div class="progression__step-marker">
+                <a class="progression__link" href="#">
+                    <span class="progression__step-number">3</span>
+                    <span class="progression__step-label">Step 3</span>
+                </a>
+            </div>
+            <div class="progression__bar">
+                <ul class="progression__sub-step">
+                    <li class="progression__bar is-complete">&nbsp;</li>
+                    <li class="progression__bar is-complete">&nbsp;</li>
+                    <li class="progression__bar is-complete">&nbsp;</li>
+                    <li class="progression__bar is-complete">&nbsp;</li>
+                    <li class="progression__bar is-complete">&nbsp;</li>
+                    <li class="progression__bar is-complete">&nbsp;</li>
+                </ul>
+            </div>
+        </li>
+        <li class="progression__step is-complete">
+            <div class="progression__step-marker">
+                <a class="progression__link" href="#">
+                    <span class="progression__step-number">4</span>
+                    <span class="progression__step-label">Step 4</span>
+                </a>
+            </div>
+        </li>
+    </ul>
+```
+
+## Breakpoints
+
+The progression hides the step marker label at viewports less than 640px.
+
+## Adding sub steps between steps
+
+If there are sub steps between the main steps, add the html code below where the div class "progression&#95;&#95;step-marker" ends.
+
+```html
+<ul class="progression">
+    <li class="progression__step is-complete">
+        <div class="progression__step-marker">
+            <a class="progression__link" href="#">
+                <span class="progression__step-number">1</span>
+                <span class="progression__step-label">Step 1</span>
+            </a>
+        </div>
+        <div class="progression__bar">&nbsp;</div>
+        <div class="progression__bar">&nbsp;</div>
+        ....
+    </li>
+</ul>
+```
+
+The html code above will display 2 sub steps as 2 li elements with class progression&#95;&#95;bar is present. The number of sub steps is determined by the number of li class progression&#95;&#95;bar elements.

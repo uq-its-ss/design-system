@@ -1,0 +1,90 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+
+# Breadcrumb 
+
+## Overview
+
+Breadcrumbs are horizontally arranged text links separated by an arrow icon (arrow-right.svg). They are typically described using at least their URL and their name, and typically ending with the current page.
+
+The arrow icon indicates the level of that page relative to the page links beside it. It is displayed via background-image data URIs in CSS.
+
+
+
+## Breadcrumb Levels
+
+### One Level
+
+This would be one level deeper than the home page.
+
+<Canvas withSource="none">
+  <Story id="components-breadcrumb--breadcrumb-one-level" />
+</Canvas>
+
+### Multi Level
+
+In a multi level breadcrumb, there will be more than one text link.
+
+<Canvas withSource="none">
+  <Story id="components-breadcrumb--breadcrumb-multi-level" />
+</Canvas>
+
+
+
+## Breadcrumb Structures
+
+### Basic structure
+
+```html
+<nav aria-label="breadcrumb">
+  <ol class="uq-breadcrumb">
+    <li class="uq-breadcrumb__item uq-breadcrumb__item--home">
+      <a class="uq-breadcrumb__link uq-breadcrumb__link--home" href="/">Home</a>
+    </li>
+    <li class="uq-breadcrumb__item">
+      <a class="uq-breadcrumb__link" href="/information-and-services">Information and services</a>
+    </li>
+    <li class="uq-breadcrumb__item">
+      <a class="uq-breadcrumb__link" href="/information-and-services/human-resources">Human resources</a>
+    </li>
+  </ol>
+</nav>
+```
+
+### Schema added structure
+
+#### Why add schema ? 
+
+Web pages have an underlying meaning that people understand when they read the web pages. But search engines have a limited understanding of what is being discussed on those pages. By adding additional tags to the HTML of your web pages—tags that say, "Hey, this information describes this specific movie, or place, or person, or video"—you can help search engines and other applications better understand your content and display it in a useful, relevant way. Microdata (itemscope, itemtype, itemprop) is a set of tags, introduced with HTML5, that allows you to do this.
+
+For a more thorough read on schema, go to https://schema.org/
+
+```html
+<nav aria-label="uq-breadcrumb">
+  <ol class="uq-breadcrumb" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+    <li class="uq-breadcrumb__item uq-breadcrumb__item--home" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+      <a class="uq-breadcrumb__link uq-breadcrumb__link--home" href="/">Home</a>
+      <meta itemprop="position" content="1">
+    </li>
+    <li class="uq-breadcrumb__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+      <a class="uq-breadcrumb__link" itemprop="item" href="/information-and-services">Information and services</a>
+      <meta itemprop="position" content="2">
+    </li>
+    <li class="uq-breadcrumb__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+      <a class="uq-breadcrumb__link" itemprop="item" href="/information-and-services/human-resources">Human resources</a>
+      <meta itemprop="position" content="3">
+    </li>
+  </ol>
+</nav>
+```
+
+## Accessibility
+
+For accessibility add aria-label="breadcrumb" to the nav element that overlaps the breadcrumb component.
+
+## Truncation in breadcrumb text links
+
+The breadcrumb link text is truncated and ellipsed (...) when the text is too long. 
+
+<Canvas withSource="none">
+  <Story height="100px" id="components-breadcrumb--breadcrumb-trucation" />
+</Canvas>

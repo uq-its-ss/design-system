@@ -16,6 +16,9 @@ $linked-list-border: $uq-neutral-light40; //EEE;
       $per-row: 2,
       $spacing: 1rem
     );
+    > li {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -26,13 +29,19 @@ $linked-list-border: $uq-neutral-light40; //EEE;
       $per-row: 2,
       $spacing: 1rem
     );
+    > li {
+      margin-bottom: 0;
+    }
   }
 
   @media #{$large-up}{
     @include block-grid(
-    $per-row: 3,
-    $spacing: 1rem
+      $per-row: 3,
+      $spacing: 1rem
     );
+    > li {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -43,12 +52,18 @@ $linked-list-border: $uq-neutral-light40; //EEE;
       $per-row: 2,
       $spacing: 1rem
     );
+    > li {
+      margin-bottom: 0;
+    }
   }
 
   @media #{$large-up}{
     @include block-grid(
-    $per-row: 4,
-    $spacing: 1rem
+      $per-row: 4,
+      $spacing: 1rem
     );
+    > li {
+      margin-bottom: 0;
+    }
   }
 }

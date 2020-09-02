@@ -1,0 +1,395 @@
+@use '@uq-uidf/core/src/scss/global' as *;
+@use '@uq-uidf/foundation-global/src/scss/global' as *;
+@use 'global' as *;
+
+@import 'foundation-sites/scss/foundation/components/tables';
+@import 'foundation-sites/scss/foundation/components/flex-video';
+
+@import 'font-awesome/scss/mixins';
+@import '@uq-uidf/core/src/fonts/uq-icons/scss/mixins';
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+  line-height: 1.25;
+  margin-bottom: 1rem;
+  margin-top: 0;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+
+  a {
+    font-weight: inherit !important; // Always make links inside heading inherit font-weight of parent heading.
+  }
+}
+
+h1 {
+  font-size: $h1-font-size;
+}
+
+h2 {
+  font-size: $h2-font-size;
+}
+
+h3 {
+  font-size: $h3-font-size;
+}
+
+h4 {
+  font-size: $h4-font-size;
+}
+
+h5 {
+  font-size: $h5-font-size;
+}
+
+h6 {
+  font-size: $h6-font-size;
+}
+
+p {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+dt {
+  font-weight: 700;
+}
+
+%links,
+a {
+  color: $link-color;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+
+  &:hover,
+  &:focus {
+    color: $link-hover-color;
+    text-decoration: underline;
+  }
+
+  img {
+    border: 0;
+  }
+}
+
+// External links include an icon after them.
+%external,
+.link--external {
+  &::after {
+    @include fa-icon;
+    color: $external-link-icon-color;
+    content: $fa-var-external-link;
+    font-size: .875rem;
+    margin-left: .5rem;
+  }
+}
+
+// Arrow link - Adds chevron before the link it is applied to.
+.arrow-link {
+  display: block;
+  font-weight: 400;
+  margin-left: 1.5rem;
+
+  &::before {
+    @include uq-icon(chevron-right);
+    color: $icon-light-grey-color;
+    font-size: .875rem;
+    text-indent: -1.5rem;
+  }
+}
+
+em,
+i {
+  font-style: italic;
+  line-height: inherit;
+}
+
+strong,
+b {
+  font-weight: $font-weight-bold;
+  line-height: inherit;
+}
+
+small {
+  font-size: 79.5%;
+}
+
+iframe {
+  max-width: 100%;
+}
+
+blockquote {
+  border-left: 5px solid $blockquote-border-color;
+  clear: both;
+  display: inline-block;
+  font-style: italic;
+  padding-left: $blockquote-indent-amount;
+
+  @media #{$medium-up} {
+    clear: none;
+    display: table;
+  }
+
+  cite {
+    display: block;
+    font-size: .875rem;
+
+    &::before {
+      content: '- ';
+    }
+  }
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid $hr-border-color;
+  clear: both;
+  height: 0;
+}
+
+pre {
+  overflow-x: auto;
+  white-space: pre;
+  word-wrap: normal;
+}
+
+// Added prefixed class to code element selector for now
+code.uq-code {
+  background: $code-bg;
+  border: 1px solid $code-border-color;
+  border-radius: 2px;
+  font-family: $font-monospace;
+  margin: 0 .2rem;
+  padding: 0 .4rem;
+}
+
+abbr {
+  text-decoration: none;
+}
+
+// Language direction
+.ltr {
+  direction: ltr;
+}
+
+.rtl {
+  direction: rtl;
+}
+
+// Add top spacing to headings if the come directly after certain elements.
+.layout-region__main {
+  p,
+  ul,
+  ol,
+  figure,
+  table,
+  hr,
+  .notice,
+  .pane {
+    & + h2,
+    & + h3 {
+      margin-top: 2.5rem;
+    }
+
+    & + h4,
+    & + h5,
+    & + h6 {
+      margin-top: 1.9rem;
+    }
+  }
+}
+
+// Font style utility classes
+// Lead text for paragraph introductions.
+.lead-text {
+  font-size: 1.387rem;
+  font-weight: 100;
+  line-height: 1.5;
+  margin-bottom: 1.8rem;
+}
+
+.page__content {
+  figure {
+    background: $figure-caption-bg;
+    display: table;
+    margin: 0 0 1.5rem;
+
+    // Catch when inline style is used instead of align class.
+    &.align-left,
+    &[style*='left'] {
+      margin-right: 1.5rem;
+      max-width: 50%;
+
+      @media #{$small-only} {
+        float: none !important;
+        margin: 0 auto;
+        max-width: 100%;
+      }
+    }
+
+    &.align-center {
+      margin: 0 auto;
+    }
+
+    // Catch when inline style is used instead of align class.
+    &.align-right,
+    &[style*='right'] {
+      margin-left: 1.5rem;
+      max-width: 50%;
+
+      @media #{$small-only} {
+        float: none !important;
+        margin: 0 auto;
+        max-width: 100%;
+      }
+    }
+
+    @media #{$small-only} {
+      margin: 0 auto;
+    }
+
+    figcaption {
+      background-color: $figure-caption-bg;
+      caption-side: bottom;
+      display: table-caption;
+      font-size: .875rem;
+    }
+  }
+  
+  // CKEditor WYSIWYG doesn't apply the align-center class.
+  // Allow figures to be centered by the wrapping text-aligned element even 
+  // when they don't have an alignment class applied.
+  [style*="text-align:center"] > figure {
+      margin: 0 auto;
+  }
+
+  img {
+    &.align-left,
+    &[style*='left'] {
+      margin-right: 1.5rem;
+      max-width: 50%;
+
+      @media #{$small-only} {
+        display: block;
+        float: none !important;
+        margin: 0 auto 1rem;
+        max-width: 100%;
+      }
+    }
+
+    &.align-center {
+      margin: 0 auto 1rem;
+    }
+
+    &.align-right,
+    &[style*='right'] {
+      margin-left: 1.5rem;
+      max-width: 50%;
+
+      @media #{$small-only} {
+        display: block;
+        float: none !important;
+        margin: 0 auto 1rem;
+        max-width: 100%;
+      }
+    }
+
+    &.border {
+      border: 1px solid $img-border-color;
+    }
+  }
+}
+
+// Round images within wrapper.
+.round-images {
+  img {
+    border-radius: 50%;
+  }
+}
+
+// Tables
+//
+// Variants:
+// .table--stripe, .table--striped - Adds alternating tr backgrounds.
+// .table--responsive - Used for tables with many columns that cannot scale down and have to scroll horizontally on smaller screens.
+// .table--caption-heading - Displays table caption like a heading. Used for tables that group items.
+
+table {
+  max-width: 100%;
+  width: 100%;
+
+  th,
+  td {
+    border: 1px solid $table-border-color;
+  }
+
+  th {
+    background: $table-header-bg;
+    font-weight: 500;
+  }
+
+  thead tr th {
+    font-weight: 700;
+  }
+
+  tr {
+    &:nth-of-type(even) {
+      background: inherit;
+    }
+  }
+}
+
+.table--stripe,
+.table--striped {
+  tr:nth-of-type(even) {
+    background: $table-row-striped-bg;
+  }
+
+  thead {
+    // Give stronger definition to the header when striped rows are used.
+    th {
+      background: $table-header-striped-bg;
+    }
+  }
+}
+
+// Applied to div wrapping table to allow horizontal scrolling on small screens.
+.table--responsive {
+  margin-bottom: 1.25rem;
+  overflow-x: auto;
+
+  @media #{$small-only} {
+    // Credit: http://www.the-haystack.com/2013/09/24/responsive-scrollable-tables/
+    background-attachment: local, local, scroll, scroll;
+    background-color: $uq-white;
+    background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, $uq-white), color-stop(100%, rgba($uq-white, 0))), -webkit-gradient(linear, 100% 50%, 0% 50%, color-stop(0%, $uq-white), color-stop(100%, rgba($uq-white, 0))), -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, $uq-neutral-dark20), color-stop(100%, rgba($uq-neutral-dark20, 0))), -webkit-gradient(linear, 100% 50%, 0% 50%, color-stop(0%, $uq-neutral-dark20), color-stop(100%, rgba($uq-neutral-dark20, 0)));
+    background-image: -webkit-linear-gradient(left, $uq-white, rgba($uq-white, 0)), -webkit-linear-gradient(right, $uq-white, rgba($uq-white, 0)), -webkit-linear-gradient(left, $uq-neutral-dark20, rgba($uq-neutral-dark20, 0)), -webkit-linear-gradient(right, $uq-neutral-dark20, rgba($uq-neutral-dark20, 0));
+    background-image: -moz-linear-gradient(left, $uq-white, rgba($uq-white, 0)), -moz-linear-gradient(right, $uq-white, rgba($uq-white, 0)), -moz-linear-gradient(left, $uq-neutral-dark20, rgba($uq-neutral-dark20, 0)), -moz-linear-gradient(right, $uq-neutral-dark20, rgba($uq-neutral-dark20, 0));
+    background-image: -o-linear-gradient(left, $uq-white, rgba($uq-white, 0)), -o-linear-gradient(right, $uq-white, rgba($uq-white, 0)), -o-linear-gradient(left, $uq-neutral-dark20, rgba($uq-neutral-dark20, 0)), -o-linear-gradient(right, $uq-neutral-dark20, rgba($uq-neutral-dark20, 0));
+    background-image: linear-gradient(left, $uq-white, rgba($uq-white, 0)), linear-gradient(right, $uq-white, rgba($uq-white, 0)), linear-gradient(left, $uq-neutral-dark20, rgba($uq-neutral-dark20, 0)), linear-gradient(right, $uq-neutral-dark20, rgba($uq-neutral-dark20, 0)); //c3c3c5
+    background-position: 0 0, 100% 0, 0 0, 100% 0;
+    background-repeat: no-repeat;
+    background-size: 4em 100%, 4em 100%, 1em 100%, 1em 100%;
+  }
+
+  table {
+    background: transparent;
+    margin-bottom: 0;
+  }
+}
+
+// Displays the caption as a heading.
+.table--caption-heading {
+  caption {
+    font-size: 1.438rem;
+    font-weight: 400;
+    line-height: normal;
+    margin: .5rem 0;
+    text-align: left;
+  }
+}

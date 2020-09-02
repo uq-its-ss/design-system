@@ -18,7 +18,7 @@
     "email": "webservices@uq.edu.au",
     "url": "https://uq.edu.au"
   },
-  "homepage": "https://github.com/uq-uidf/user-interface-development-framework#readme",
+  "homepage": "https://github.com/uq-its-ss/user-interface-development-framework#readme",
   "license": "ISC",
   "directories": {
     "lib": "lib"
@@ -35,7 +35,7 @@
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "bugs": {
-    "url": "https://github.com/uq-uidf/user-interface-development-framework/issues"
+    "url": "https://github.com/uq-its-ss/user-interface-development-framework/issues"
   },
   "dependencies": {
     "compass-mixins": "^0.12.10",

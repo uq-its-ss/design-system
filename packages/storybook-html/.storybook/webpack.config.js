@@ -39,7 +39,6 @@ module.exports = async ({ config, mode }) => {
               // TODO: we should implement `glob` here:
               includePaths: [
                 'node_modules/@uq-uidf/core/node_modules',
-                'node_modules/@uq-uidf/body/node_modules',
                 'node_modules'
               ]
             }
@@ -48,6 +47,10 @@ module.exports = async ({ config, mode }) => {
       ]
     }
   );
+  
+  // Temporary workaround: https://github.com/storybookjs/storybook/issues/11255#issuecomment-673899817
+  // Due to breaking change during Storybook v5.3 to v6.0 migration
+  config.resolve.alias['core-js/modules'] = path.resolve(__dirname, '..', 'node_modules/core-js/modules');
 
   // Return the altered config
   return config;

@@ -1,6 +1,3 @@
-// import decorators
-import namedSection from '../../../.storybook/decorators/section.js';
-
 // import styles
 import './icon.scss';
 
@@ -8,9 +5,9 @@ import './icon.scss';
 import iconHTML from './icon.html';
 
 export default {
-  title: 'Components/Icon'
+  title: 'Base/Icon'
 };
 
 export const icon = () => {
-  return namedSection('Icon', iconHTML);
+  return iconHTML;
 };

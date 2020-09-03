@@ -3,7 +3,8 @@
 
 // Table
 .uq-table {
-  width: 100%;
+  //position: relative;
+  width: 500px;
   margin: 0;
   padding: 0;
   border-collapse: collapse;
@@ -15,41 +16,70 @@
   line-height: core.$compass-base-line-height-ratio;
   color: core.$uq-neutral-dark80;
   list-style: none;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1rem;
+    height: 100%;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.2+100 */
+    background: -moz-linear-gradient(left, rgba(0,0,0,0) 0%, rgba(0,0,0,0.2) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, rgba(0,0,0,0) 0%,rgba(0,0,0,0.2) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(0,0,0,0.2) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#33000000',GradientType=0 ); /* IE6-9 */
+    display: none;
+  }
   
   *, *:before, *:after {
     box-sizing: border-box;
   }
 
   &__wrapper {
-    min-width: 100%;
+    width: 450px;
     overflow-x: auto;
+    background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, core.$uq-white), color-stop(100%, rgba(255, 255, 255, 0))), -webkit-gradient(linear, 100% 50%, 0% 50%, color-stop(0%, core.$uq-white), color-stop(100%, rgba(255, 255, 255, 0))), -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, core.$uq-neutral), color-stop(100%, rgba(195, 195, 197, 0))), -webkit-gradient(linear, 100% 50%, 0% 50%, color-stop(0%, core.$uq-neutral), color-stop(100%, rgba(195, 195, 197, 0)));
+    background-image: -webkit-linear-gradient(left, core.$uq-white, rgba(255, 255, 255, 0)), -webkit-linear-gradient(right, core.$uq-white, rgba(255, 255, 255, 0)), -webkit-linear-gradient(left, core.$uq-neutral, rgba(195, 195, 197, 0)), -webkit-linear-gradient(right, core.$uq-neutral, rgba(195, 195, 197, 0));
+    background-image: -moz-linear-gradient(left, core.$uq-white, rgba(255, 255, 255, 0)), -moz-linear-gradient(right, core.$uq-white, rgba(255, 255, 255, 0)), -moz-linear-gradient(left, core.$uq-neutral, rgba(195, 195, 197, 0)), -moz-linear-gradient(right, core.$uq-neutral, rgba(195, 195, 197, 0));
+    background-image: -o-linear-gradient(left, core.$uq-white, rgba(255, 255, 255, 0)), -o-linear-gradient(right, core.$uq-white, rgba(255, 255, 255, 0)), -o-linear-gradient(left, core.$uq-neutral, rgba(195, 195, 197, 0)), -o-linear-gradient(right, core.$uq-neutral, rgba(195, 195, 197, 0));
+    background-image: linear-gradient(left, core.$uq-white, rgba(255, 255, 255, 0)), linear-gradient(right, core.$uq-white, rgba(255, 255, 255, 0)), linear-gradient(left, core.$uq-neutral, rgba(195, 195, 197, 0)), linear-gradient(right, core.$uq-neutral, rgba(195, 195, 197, 0));
+    background-position: 0 0, 100% 0, 0 0, 100% 0;
+    background-repeat: no-repeat;
+    background-color: white;
+    background-size: 4em 100%, 4em 100%, 1em 100%, 1em 100%;
+    background-attachment: local, local, scroll, scroll;
   }
 
   &__caption {
+    position: relative;
     font-size: 1.25rem;
     line-height: core.$compass-base-line-height-ratio;
-    font-weight: bold;
+    font-weight: core.$font-weight-bold;
     text-align: left;
     display: table-caption;
     padding-bottom: .75rem;
+    background-color: core.$uq-white;
   }
 
   &__head {
     display: table-header-group;
-    background-color: core.$uq-neutral-light20;
+    vertical-align: middle;
+    //background-color: core.$uq-neutral-light20;
+    
   }
   &__body {
     display: table-row-group;
+    vertical-align: top;
   }
 
   &__row {
     display: table-row;
   }
   &__cell {
-    padding: .75rem;
+    padding: .75rem 1rem;
     text-align: left;
     border: 1px solid core.$uq-neutral;
-    background-color: core.$uq-white;
 
     &--numeric {
       text-align: right;
@@ -57,9 +87,11 @@
   }
 
   &__header {
-    padding: .75rem;
+    padding: .75rem 1rem;
+    color: core.$uq-purple;
     text-align: left;
     border: 1px solid core.$uq-neutral;
+    font-weight: core.$font-weight-bold;
 
     &--numeric {
       text-align: right;
@@ -83,10 +115,16 @@
       width: 50%;
     }
     &--width-60 {
-      width: 50%;
+      width: 60%;
     }
     &--width-75 {
       width: 75%;
+    }
+    &--width-80 {
+      width: 80%;
+    }
+    &--width-90 {
+      width: 90%;
     }
   }
 }

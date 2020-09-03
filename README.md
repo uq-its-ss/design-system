@@ -1,5 +1,7 @@
 # UQ User Interface Development Framework (UIDF)
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/bf36e9d5-9887-4be6-bb76-705d8e27453d/deploy-status)](https://app.netlify.com/sites/eager-engelbart-6dcb4a/deploys)
+
 Developing the UIDF. This project is managed using
 [Lerna](https://github.com/lerna/lerna). The target audience of this
 documentation is currently limited to ADS-Design members at this stage.

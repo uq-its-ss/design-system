@@ -111,34 +111,39 @@ export const table = () => {
     Width 75%:  <th class="uq-table__header uq-table__header--width-75">
     -->
 
-    <div class="uq-table__wrapper">
-      <table class="uq-table uq-table--striped">
-          <caption class="uq-table__caption">Population of Australian states and territories, September 2020</caption>
-          <thead class="uq-table__head">
-              <tr class="uq-table__row">
-                  <th scope="col" class="uq-table__header uq-table__header--width-50">Location</th>
-                  <th scope="col" class="uq-table__header uq-table__header--width-25 uq-table__header--numeric">Population</th>
-                  <th scope="col" class="uq-table__header uq-table__header--width-25 uq-table__header--numeric">Change over previous year %</th>
-              </tr>
-          </thead>
-          <tbody class="uq-table__body">
-              <tr class="uq-table__row">
-                  <td class="uq-table__cell">New South Wales</td>
-                  <td class="uq-table__cell uq-table__cell--numeric">7,670,700</td>
-                  <td class="uq-table__cell uq-table__cell--numeric">3.1%</td>
-              </tr>
-              <tr class="uq-table__row">
-                  <td class="uq-table__cell">Victoria</td>
-                  <td class="uq-table__cell uq-table__cell--numeric">5,996,400</td>
-                  <td class="uq-table__cell uq-table__cell--numeric">2.5%</td>
-              </tr>
-              <tr class="uq-table__row">
-                  <td class="uq-table__cell">Queensland</td>
-                  <td class="uq-table__cell uq-table__cell--numeric">517,400</td>
-                  <td class="uq-table__cell uq-table__cell--numeric">4.0%</td>
-              </tr>
-          </tbody>
-      </table>
-    </div>
+    <h2>Table - Basic tags & classes(minimal)</h2>
+<div class="uq-table__wrapper">
+    <table class="uq-table">
+        <caption>Types of food and ratings</caption>
+        <thead>
+            <tr>
+                <th scope="col">Type of Food</th>
+                <th scope="col">Calories</th>
+                <th scope="col">Tasty Factor</th>
+                <th scope="col">Average Price</th>
+                <th scope="col">Rarity</th>
+                <th scope="col">Average Rating</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">Slice of Pizza</th>
+                <td>450</td>
+                <td>95%</td>
+                <td>$5.00</td>
+                <td>Common</td>
+                <td>8/10</td>
+            </tr>
+            <tr>
+                <th scope="row">Hamburger</th>
+                <td>350</td>
+                <td>87%</td>
+                <td>$3.50</td>
+                <td>Common</td>
+                <td>7.5/10</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
   `;
 };

@@ -8,22 +8,22 @@ The Table component helps in displaying tabular data. The data should be respons
 
 ## Responsiveness
 
-Shown below are 3 approaches in acheiving responsive behaviour in table components.
+Shown below are 3 different approaches in acheiving responsive behaviour in table components.
 
 ### a) Table Scroll
 
-This is the default approach and needs to be implimented when there is lots of data. In this approach the component table is scrolled horizontally as required when the table width is greater than the viewport width helping the user to view the data even on smaller viewport devices. 
+This is the default approach and needs to be implimented when there is lots of data. In this approach the component tables horizontal scroll is triggered when the table width is greater than the container width helping the user to view data even on smaller viewport devices. 
 
 To enable scroll feature, the table is wrapped by a div with class `uq-table__wrapper`.
 
 A shadow feature is added on either side of the table when it overflows the container depending on the scroll position. It serves to indicate the user that there is more data to the left or right to be scrolled.
 
 <Preview withToolbar>
-  <Story height="800px" id="components-table--table" />
+    <Story height="800px" id="components-table--table" />
 </Preview>
 
 ```html
-<h2>Table - Basic tags with minimal classes</h2>
+<h3>Table - Basic tags with minimal classes</h3>
 <div class="uq-table__wrapper">
     <table class="uq-table">
         <caption>Types of food and ratings</caption>
@@ -61,7 +61,7 @@ A shadow feature is added on either side of the table when it overflows the cont
 
 
 
-<h2>Table - Basic tags with classes</h2>
+<h3>Table - Basic tags with classes</h3>
 <div class="uq-table__wrapper">
   <table class="uq-table">
       <caption class="uq-table__caption">Types of food and ratings</caption>
@@ -103,42 +103,42 @@ In this responsive approach the table is displayed as flex below a certain break
 The technique used here to responsively display data is via data attributes.
 
 <Preview withToolbar>
-  <Story height="350px" id="components-table--tableflex" />
+    <Story height="350px" id="components-table--tableflex" />
 </Preview>
 
 ```html
-  <h2>Table - Flex</h2>
-    <table class="uq-table uq-table--flex">
-        <caption>Types of food and ratings</caption>
-        <thead>
-            <tr>
-                <th scope="col">Type of Food</th>
-                <th scope="col">Calories</th>
-                <th scope="col">Tasty Factor</th>
-                <th scope="col">Average Price</th>
-                <th scope="col">Rarity</th>
-                <th scope="col">Average Rating</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td data-title="Type of Food">Slice of Pizza</td>
-                <td data-title="Calories">450</td>
-                <td data-title="Tasty Factor">95%</td>
-                <td data-title="Average Price">$5.00</td>
-                <td data-title="Rarity">Common</td>
-                <td data-title="Average Rating">8/10</td>
-            </tr>
-            <tr>
-                <td data-title="Type of Food">Hamburger</td>
-                <td data-title="Calories">350</td>
-                <td data-title="Tasty Factor">87%</td>
-                <td data-title="Average Price">$3.50</td>
-                <td data-title="Rarity">Common</td>
-                <td data-title="Average Rating">7.5/10</td>
-            </tr>
-        </tbody>
-    </table>
+<h3>Table - Flex</h3>
+<table class="uq-table uq-table--flex">
+    <caption>Types of food and ratings</caption>
+    <thead>
+        <tr>
+            <th scope="col">Type of Food</th>
+            <th scope="col">Calories</th>
+            <th scope="col">Tasty Factor</th>
+            <th scope="col">Average Price</th>
+            <th scope="col">Rarity</th>
+            <th scope="col">Average Rating</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td data-title="Type of Food">Slice of Pizza</td>
+            <td data-title="Calories">450</td>
+            <td data-title="Tasty Factor">95%</td>
+            <td data-title="Average Price">$5.00</td>
+            <td data-title="Rarity">Common</td>
+            <td data-title="Average Rating">8/10</td>
+        </tr>
+        <tr>
+            <td data-title="Type of Food">Hamburger</td>
+            <td data-title="Calories">350</td>
+            <td data-title="Tasty Factor">87%</td>
+            <td data-title="Average Price">$3.50</td>
+            <td data-title="Rarity">Common</td>
+            <td data-title="Average Rating">7.5/10</td>
+        </tr>
+    </tbody>
+</table>
 ```
 
 ### c) Table Grid
@@ -146,95 +146,125 @@ The technique used here to responsively display data is via data attributes.
 In this responsive approach, the component table is displayed as a grid to display data on smaller viewports. 
 
 <Preview withToolbar>
-  <Story height="350px" id="components-table--tablegrid" />
+    <Story height="350px" id="components-table--tablegrid" />
 </Preview>
 
 ```html
-  <h2>Table - Grid</h2>
-    <table class="uq-table uq-table--grid">
-        <caption>Types of food and ratings</caption>
-        <thead>
-            <tr>
-                <th scope="col">Type of Food</th>
-                <th scope="col">Calories</th>
-                <th scope="col">Tasty Factor</th>
-                <th scope="col">Average Price</th>
-                <th scope="col">Rarity</th>
-                <th scope="col">Average Rating</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Slice of Pizza</td>
-                <td>450</td>
-                <td>95%</td>
-                <td>$5.00</td>
-                <td>Common</td>
-                <td>8/10</td>
-            </tr>
-            <tr>
-                <td>Hamburger</td>
-                <td>350</td>
-                <td>87%</td>
-                <td>$3.50</td>
-                <td>Common</td>
-                <td>7.5/10</td>
-            </tr>
-        </tbody>
-    </table>
-```
-
-## Accessibility
-
-Accessibility in tables can be acheived to an extend by following some or part of the steps below depending on the table data structure.
-
-1. Keep the table structure simple. If needed, split the data to keep it simple or else the user using assistive technologies like screen readers will find it hard to interpret data relationships.
-2. Use right semantical html markups for tables wherever possible. (Example, `<table>`, `<thead>`, `<tfoot>`, `<tbody>`, `<th>`, `<td>`)
-3. Use `<caption>` tag which defines a table caption. The `<caption>` tag must be inserted immediately after the `<table>` tag. Tip: By default, a table caption will be center-aligned above a table.
-4. Use `<th>` instead of `<td>` for header cells in tables. Usually they are the first row or first column or both in a table.
-5. For complex tables, associations may be needed using scope attribute with value as `col`,`row`,`colgroup`,`rowgroup`. See example below.
-```html
-<table>
-  <tr>
-    <th scope="col">Name</th>
-    <th scope="col">Email</th>
-    <th scope="col">Phone</th>
-    <th scope="col">Address</th>
-  </tr>
-  <tr>
-    <td>John Doe</td>
-    <td>someone@example.com</td>
-    <td>+45342323</td>
-    <td>Rosevn 56,4300 Sandnes,Norway</td>
-  </tr>
+<h3>Table - Grid</h3>
+<table class="uq-table uq-table--grid">
+    <caption>Types of food and ratings</caption>
+    <thead>
+        <tr>
+            <th scope="col">Type of Food</th>
+            <th scope="col">Calories</th>
+            <th scope="col">Tasty Factor</th>
+            <th scope="col">Average Price</th>
+            <th scope="col">Rarity</th>
+            <th scope="col">Average Rating</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Slice of Pizza</td>
+            <td>450</td>
+            <td>95%</td>
+            <td>$5.00</td>
+            <td>Common</td>
+            <td>8/10</td>
+        </tr>
+        <tr>
+            <td>Hamburger</td>
+            <td>350</td>
+            <td>87%</td>
+            <td>$3.50</td>
+            <td>Common</td>
+            <td>7.5/10</td>
+        </tr>
+    </tbody>
 </table>
 ```
-
-`col` - specifies that the cell is a header for a column.  
-`row` - specifies that the cell is a header for a row.  
-`colgroup` - specifies that the cell is a header for a group of columns.  
-`rowgroup` - specifies that the cell is a header for a group of rows.  
-
-6. In some other cases, associations may be needed using id and headers attributes.
-```html
-<table>
-  <tr>
-    <th scope="col" id="name">Name</th>
-    <th scope="col" id="email">Email</th>
-    <th scope="col" id="phone">Phone</th>
-    <th scope="col" id="addr">Address</th>
-  </tr>
-  <tr>
-    <td headers="name">John Doe</td>
-    <td headers="email">someone@example.com</td>
-    <td headers="phone">+45342323</td>
-    <td headers="addr">Rosevn 56,4300 Sandnes,Norway</td>
-  </tr>
-</table>
-```
-7. Though `<thead>`, `<tfoot>`, `<tbody>` makes no difference with assistive technologies like screen readers, they are useful when printing long tables that run over the next page. In such instances, the `<thead>`, `<tfoot>` gets repeated on the next printed page that gives the data context.
-
 
 ## Breakpoints
 
 The breakpoint for flex and grid tables are less than 640px.
+
+## Accessibility
+
+Data tables are used to organize data with a logical relationship in grids. Accessible tables need HTML markup that indicates header cells and data cells and defines their relationship. Assistive technologies use this information to provide context to users.
+
+Accessibility in tables can be acheived to an extend by following some or part of the steps below depending on the table data structure.
+
+1. Keep the table structure simple. Split data if needed to keep it simple or else user's using assistive technologies like screen readers will find it difficult to interpret data relationships.
+2. Use right semantical html markups for tables wherever possible. (Example, `<table>`, `<thead>`, `<tfoot>`, `<tbody>`, `<th>`, `<td>`)
+3. Though `<thead>`, `<tfoot>`, `<tbody>` makes no difference with assistive technologies like screen readers, they are useful when printing long tables that run over the next page. In such instances, the `<thead>`, `<tfoot>` gets repeated on the next printed page that gives the data context.
+4. Use `<caption>` tag which defines a table caption. The `<caption>` tag must be inserted immediately after the `<table>` tag.  
+Tip: By default, a table caption will be center-aligned above a table.
+5. Header cells must be marked up with `<th>`, and data cells with `<td>` to make tables accessible. Commonly header cells are the first row or first column or both in a table.
+6. Tables with two headers have a simple row header and a simple column header: For tables with unclear header directions, define the direction of each header by setting the scope attribute to `col` or `row`.
+
+```html
+<!-- 
+`col` - specifies that the cell is a header for a column.  
+`row` - specifies that the cell is a header for a row. 
+-->
+<table>
+    <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Address</th>
+    </tr>
+    <tr>
+        <th scope="row">John Doe</th>
+        <td>someone@example.com</td>
+        <td>+45342323</td>
+        <td>Rosevn 56,4300 Sandnes,Norway</td>
+    </tr>
+</table>
+```
+
+7. Tables with irregular headers have header cells that span multiple columns and/or rows: For these tables, define column and row groups and set the range of the header cells using the `colgroup` and `rowgroup` values of the scope attribute.
+
+```html
+<!-- 
+`colgroup` - specifies that the cell is a header for a group of columns.  
+`rowgroup` - specifies that the cell is a header for a group of rows.
+-->
+<table>
+  <col>
+  <colgroup span="2"></colgroup>
+  <colgroup span="2"></colgroup>
+  <tr>
+    <td rowspan="2"></td>
+    <th colspan="2" scope="colgroup">Mars</th>
+    <th colspan="2" scope="colgroup">Venus</th>
+  </tr>
+  ...
+  
+</table>
+``` 
+
+8. Tables with multi-level headers have multiple header cells associated per data cell: For tables that are so complex that header cells can’t be associated in a strictly horizontal or vertical way, use `id` and `headers` attributes to associate header and data cells explicitly.
+
+```html
+<!-- 
+Assigning id attributes to <th> cells
+-->
+...
+	<th id="par" colspan="5" scope="colgroup">Paris</th>
+</tr>
+<tr>
+	<th id="pbed1">1 bedroom</th>
+...
+
+<!-- 
+Assigning header attributes to <td> cells
+-->
+...
+<td headers="par pbed1 stud">11</td>
+<td headers="par pbed1 apt"> 20</td>
+...
+
+```
+
+For further reference on accessibility in tables, visit https://www.w3.org/WAI/tutorials/tables/multi-level/

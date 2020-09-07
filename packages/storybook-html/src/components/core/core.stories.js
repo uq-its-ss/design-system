@@ -1,5 +1,6 @@
 // import styles
 import './core.scss';
+import './_space.scss';
 
 // import HTML template strings
 import coloursHTML from './colours.html';

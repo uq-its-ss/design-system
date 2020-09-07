@@ -97,53 +97,38 @@ export const horizontalRule = () => {
 
 export const table = () => {
   return `
-    <!--
-    Row header:  <th class="uq-table__header" scope="row">
-    Column header:  <th class="uq-table__header" scope="col">
-    -->
-
-    <!--
-    Width 10%:  <th class="uq-table__header uq-table__header--width-10">
-    Width 20%:  <th class="uq-table__header uq-table__header--width-20">
-    Width 25%:  <th class="uq-table__header uq-table__header--width-25">
-    Width 33%:  <th class="uq-table__header uq-table__header--width-33">
-    Width 50%:  <th class="uq-table__header uq-table__header--width-50">
-    Width 75%:  <th class="uq-table__header uq-table__header--width-75">
-    -->
-
-    <h2>Table - Basic tags & classes(minimal)</h2>
-<div class="uq-table__wrapper">
-    <table class="uq-table">
-        <caption>Types of food and ratings</caption>
-        <thead>
-            <tr>
-                <th scope="col">Type of Food</th>
-                <th scope="col">Calories</th>
-                <th scope="col">Tasty Factor</th>
-                <th scope="col">Average Price</th>
-                <th scope="col">Rarity</th>
-                <th scope="col">Average Rating</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th scope="row">Slice of Pizza</th>
-                <td>450</td>
-                <td>95%</td>
-                <td>$5.00</td>
-                <td>Common</td>
-                <td>8/10</td>
-            </tr>
-            <tr>
-                <th scope="row">Hamburger</th>
-                <td>350</td>
-                <td>87%</td>
-                <td>$3.50</td>
-                <td>Common</td>
-                <td>7.5/10</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
+    <div class="uq-table__wrapper">
+        <table class="uq-table">
+            <caption>Types of food and ratings</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Type of Food</th>
+                    <th scope="col">Calories</th>
+                    <th scope="col">Tasty Factor</th>
+                    <th scope="col">Average Price</th>
+                    <th scope="col">Rarity</th>
+                    <th scope="col">Average Rating</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">Slice of Pizza</th>
+                    <td>450</td>
+                    <td>95%</td>
+                    <td>$5.00</td>
+                    <td>Common</td>
+                    <td>8/10</td>
+                </tr>
+                <tr>
+                    <th scope="row">Hamburger</th>
+                    <td>350</td>
+                    <td>87%</td>
+                    <td>$3.50</td>
+                    <td>Common</td>
+                    <td>7.5/10</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
   `;
 };

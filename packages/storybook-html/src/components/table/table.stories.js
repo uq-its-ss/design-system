@@ -5,16 +5,18 @@ import './table.scss';
 
 // import HTML template strings
 import tableHTML from './table.html';
+import tableFlexHTML from './table-flex.html';
+import tableGridHTML from './table-grid.html';
 
 // documentation
-//import docs from './table.docs.mdx';
+import docs from './table.docs.mdx';
 
 export default {
   title: 'Components/Table',
   parameters: {
-    /*docs: {
+    docs: {
       page: docs
-    }*/
+    }
   },
   //decorators: [expandedStory]
 };
@@ -22,7 +24,20 @@ export default {
 export const table = () => {
   return tableHTML;
 };
-
 table.story = {
-  name: 'Table Simple'
+  name: 'Table Scroll'
+}
+
+export const tableflex = () => {
+  return tableFlexHTML;
+};
+tableflex.story = {
+  name: 'Table Flex'
+}
+
+export const tablegrid = () => {
+  return tableGridHTML;
+};
+tablegrid.story = {
+  name: 'Table Grid'
 }

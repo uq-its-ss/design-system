@@ -8,15 +8,10 @@
 | [Task Automation](task-automation.md) | Primer into automating tasks with Javascript tools. |
 | [JS packages and registries](javascript-packages.md) | Round-trip hands-on experimentation with JS packages. |
 
-# Granting User accesss
+# Granting User accesss to repo
 
-Requests for access are sent to its.softwareservices@uq.edu.au and please put 'Github access' somewhere in the subject line. that will be so it can go to Tod or Adam.
-
-There are three types of access available. 
-
-- Viewer access (user-interface-development-framework-viewer)
-- Member Access (user-interface-development-framework-member)
-- Owner Access 
+These are the current access levels for the repo. 
+In general all requests will typically be for the **Viewer access**
 
 <table>
 <tr>
@@ -27,21 +22,36 @@ There are three types of access available.
 </tr>
 <tr>
 <td>Viewer access</td>
-<td>user-interface-development-framework-viewer</td>
-<td>Access is for all UQ Staff who wish to contribute to the design system.</td>
+<td>`user-interface-development-framework-viewer`</td>
+<td>All UQ Staff</td>
 <td>Can read and clone this repository. Can also open and comment on issues and pull requests.</td>
+</tr>
+<tr>
+<td>Member Access</td>
+<td>`user-interface-development-framework-member`</td>
+<td>Design system team members (ADS UI).</td>
+<td>Can read, clone, and push to this repository. Can also manage issues and pull requests.</td>
+</tr>
+<tr>
+<td>Owner Access</td>
+<td>`user-interface-development-framework-owner`</td>
+<td>Restricted admin access</td>
+<td>Can read, clone, and push to this repository. Can also manage issues, pull requests, and repository settings, including adding collaborators.</td>
 </tr>
 </table>
 
-## Viewer Access
-*Access is for all UQ Staff who wish to contribute to the design system.*
+## Requests for access
 
-## Member Access
-*Access is for design system team members.*
+Requests for access are sent to its.softwareservices@uq.edu.au
+(Currently to team Aqua (Tod or Adam))
 
-Can read, clone, and push to this repository. Can also manage issues and pull requests.
+```md
+Subject: Github access
 
-## Owner Access
-*This access is restricted to key team members responsible for the overall management of the repo.*
+Can we please add the following people to the github team
+<<add team name>>
 
-Can read, clone, and push to this repository. Can also manage issues, pull requests, and repository settings, including adding collaborators.
+Users: 
+<<Github ID or username>> to 
+
+```

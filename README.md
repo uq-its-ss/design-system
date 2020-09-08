@@ -17,6 +17,7 @@ documentation is currently limited to ADS-Design members at this stage.
 - [Creating a new package](./docs/create-a-package.md)
 - [Bundling](./docs/bundling.md)
 - [Code standards and style [TODO]](./docs/standards/standards.md)
+- [Access requests](./docs/access-requests.md)
 - [Staff training [TODO]](./docs/training/training.md)
 - [Accessibility requirements [TODO]](./docs/accessibility.md)
 - Package docs

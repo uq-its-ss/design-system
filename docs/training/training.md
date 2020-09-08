@@ -8,10 +8,16 @@
 | [Task Automation](task-automation.md) | Primer into automating tasks with Javascript tools. |
 | [JS packages and registries](javascript-packages.md) | Round-trip hands-on experimentation with JS packages. |
 
-# Granting User accesss to repo
+# Granting user accesss to repo
 
-These are the current access levels for the repo. 
+These are the current access levels for the Design System repo. 
 In general all requests will typically be for the **Viewer access**
+
+Access is managed through teams linked to the repo. 
+
+- `user-interface-development-framework-viewer`
+- `user-interface-development-framework-member`
+- `user-interface-development-framework-owner`
 
 <table>
 <tr>
@@ -22,19 +28,19 @@ In general all requests will typically be for the **Viewer access**
 </tr>
 <tr>
 <td>Viewer access</td>
-<td>`user-interface-development-framework-viewer`</td>
+<td>user-interface-development-framework-viewer</td>
 <td>All UQ Staff</td>
 <td>Can read and clone this repository. Can also open and comment on issues and pull requests.</td>
 </tr>
 <tr>
 <td>Member Access</td>
-<td>`user-interface-development-framework-member`</td>
+<td>user-interface-development-framework-member</td>
 <td>Design system team members (ADS UI).</td>
 <td>Can read, clone, and push to this repository. Can also manage issues and pull requests.</td>
 </tr>
 <tr>
 <td>Owner Access</td>
-<td>`user-interface-development-framework-owner`</td>
+<td>user-interface-development-framework-owner</td>
 <td>Restricted admin access</td>
 <td>Can read, clone, and push to this repository. Can also manage issues, pull requests, and repository settings, including adding collaborators.</td>
 </tr>
@@ -43,15 +49,20 @@ In general all requests will typically be for the **Viewer access**
 ## Requests for access
 
 Requests for access are sent to its.softwareservices@uq.edu.au
-(Currently to team Aqua (Tod or Adam))
+(Email currently goes to **team Aqua** (Tod or Adam))
+
+**Email Template**
+
+`Subject: Github access - UQ Design System repo`
 
 ```md
-Subject: Github access
+Hi, 
 
-Can we please add the following people to the github team
+Can you plese add new users to the UQ Design System repo. 
+
+Please add to this team: 
 <<add team name>>
 
 Users: 
-<<Github ID or username>> to 
-
+<<Github ID or username>>
 ```

@@ -1,4 +1,4 @@
-# Granting user accesss to repo
+# Access requests - Granting user accesss to repo
 
 These are the current access levels for the Design System repo. 
 In general all requests will typically be for the **Viewer access**
@@ -39,6 +39,7 @@ Access is managed through teams linked to the repo.
 ## Requests for access
 
 Requests for access are sent to its.softwareservices@uq.edu.au
+
 (Email currently goes to **team Aqua** (Tod or Adam))
 
 **Email Template**

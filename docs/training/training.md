@@ -14,13 +14,27 @@ Requests for access are sent to its.softwareservices@uq.edu.au and please put 'G
 
 There are three types of access available. 
 
-- Viewer access
-- Member Access
+- Viewer access (user-interface-development-framework-viewer)
+- Member Access (user-interface-development-framework-member)
 - Owner Access 
+
+<table>
+<tr>
+<th>Access type</th>
+<th>Team name</th>
+<th>Role</th>
+<th>Permission</th>
+</tr>
+<tr>
+<td>Viewer access</td>
+<td>user-interface-development-framework-viewer</td>
+<td>Access is for all UQ Staff who wish to contribute to the design system.</td>
+<td>Can read and clone this repository. Can also open and comment on issues and pull requests.</td>
+</tr>
+</table>
 
 ## Viewer Access
 *Access is for all UQ Staff who wish to contribute to the design system.*
-Can read and clone this repository. Can also open and comment on issues and pull requests.
 
 ## Member Access
 *Access is for design system team members.*

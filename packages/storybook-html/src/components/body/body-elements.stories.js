@@ -112,7 +112,7 @@ export const table = () => {
             </thead>
             <tbody>
                 <tr>
-                    <th scope="row">Slice of Pizza</th>
+                    <td>Slice of Pizza</th>
                     <td>450</td>
                     <td>95%</td>
                     <td>$5.00</td>
@@ -120,7 +120,7 @@ export const table = () => {
                     <td>8/10</td>
                 </tr>
                 <tr>
-                    <th scope="row">Hamburger</th>
+                    <td>Hamburger</th>
                     <td>350</td>
                     <td>87%</td>
                     <td>$3.50</td>

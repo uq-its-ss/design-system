@@ -1,5 +1,3 @@
-import expandedStory from '../../../.storybook/decorators/expanded.js';
-
 // import styles
 import './table.scss';
 
@@ -16,7 +14,8 @@ export default {
   parameters: {
     docs: {
       page: docs
-    }
+    },
+    layout: 'padded'
   },
   //decorators: [expandedStory]
 };

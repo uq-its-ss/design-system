@@ -2,6 +2,7 @@
 @import 'global';
 
 // Table
+table,
 .uq-table {
   width: 100%;
   margin: 0;
@@ -47,8 +48,8 @@
     }
   }
 
-  &__caption, 
-  caption {
+  caption,
+  &__caption {
     font-size: 1.25rem;
     line-height: core.$compass-base-line-height-ratio;
     font-weight: core.$font-weight-bold;
@@ -58,25 +59,25 @@
     background-color: core.$uq-white;
   }
 
-  &__head,
-  thead {
+  thead,
+  &__head {
     display: table-header-group;
     vertical-align: middle;
   }
 
-  &__body,
-  tbody {
+  tbody,
+  &__body {
     display: table-row-group;
     vertical-align: top;
   }
 
-  &__row,
-  tr {
+  tr,
+  &__row {
     display: table-row;
   }
 
-  &__cell,
-  td {
+  td,
+  &__cell {
     padding: .75rem 1rem;
     border: 1px solid core.$uq-neutral;
     text-align: left;
@@ -89,8 +90,8 @@
     }
   }
 
-  &__header,
-  th {
+  th,
+  &__header {
     padding: .75rem 1rem;
     color: core.$uq-purple;
     text-align: left;
@@ -165,8 +166,9 @@
         margin-bottom: 1rem;
       }
       th, td {
-        width: 50%;
+        width: 100%;
         margin: 0 -1px -1px 0;
+        padding: .5rem .75rem;
       }
       td:before {
         content: attr(data-title);
@@ -189,13 +191,27 @@
       word-break: break-word;
     }
     @media (max-width: 640px) {
+      thead {
+        left: -9999px;
+        position: absolute;
+        visibility: hidden;
+      }
       tr {
-        grid: auto-flow / repeat(2, 1fr);
-        border-bottom: 2px solid core.$uq-neutral;
+        grid: auto-flow / 1fr;
+        align-items: stretch;
+        margin-bottom: 1rem;
+      }
+      th,td {
+        padding: .5rem .75rem;
+      }
+      td:before {
+        content: attr(data-title);
+        color: core.$uq-purple;
+        font-weight: core.$font-weight-bold;
+        display: block;
       }
     }
   }
-
 }
 
 

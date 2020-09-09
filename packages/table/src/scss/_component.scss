@@ -5,6 +5,7 @@
 table,
 .uq-table {
   width: 100%;
+  min-width: 100%;
   margin: 0;
   padding: 0;
   border-collapse: collapse;
@@ -22,7 +23,7 @@ table,
   }
 
   &__wrapper {
-    width: 520px;
+    width: 100%;
     overflow-x: auto;
     background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, core.$uq-white), color-stop(100%, rgba(255, 255, 255, 0))), -webkit-gradient(linear, 100% 50%, 0% 50%, color-stop(0%, core.$uq-white), color-stop(100%, rgba(255, 255, 255, 0))), -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, core.$uq-neutral-dark20), color-stop(100%, rgba(195, 195, 197, 0))), -webkit-gradient(linear, 100% 50%, 0% 50%, color-stop(0%, core.$uq-neutral-dark20), color-stop(100%, rgba(195, 195, 197, 0)));
     background-image: -webkit-linear-gradient(left, core.$uq-white, rgba(255, 255, 255, 0)), -webkit-linear-gradient(right, core.$uq-white, rgba(255, 255, 255, 0)), -webkit-linear-gradient(left, core.$uq-neutral, rgba(195, 195, 197, 0)), -webkit-linear-gradient(right, core.$uq-neutral, rgba(195, 195, 197, 0));
@@ -153,6 +154,9 @@ table,
 
   // Table - Flex
   &--flex {
+    th, td {
+      width: calc(100% / 6);
+    }
     @media (max-width: 640px) {
       thead {
         left: -9999px;

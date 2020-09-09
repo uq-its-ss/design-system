@@ -1,4 +1,4 @@
-import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
 
 # Sections
 
@@ -6,9 +6,9 @@ import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
 
 Sections are a layout style that wraps content. They provide a header with title and summary, and a footer field along with a range of themeing options. They are primarily used on landing pages to create strips of content stacked vertically down the page, while containing the content to the same page column width.
 
-<Preview withToolbar>
-  <Story height="400px" id="layout-sections--sections-basic" />
-</Preview>
+<Canvas withSource="none">
+  <Story id="layout-sections--sections-basic" />
+</Canvas>
 
 ## Default Section
 
@@ -52,9 +52,9 @@ Sections are a layout style that wraps content. They provide a header with title
 
 Centered layout `section--centered`
 
-<Preview withToolbar>
-  <Story height="500px" id="layout-sections--sections-centered" />
-</Preview>
+<Canvas withSource="none">
+  <Story id="layout-sections--sections-centered" />
+</Canvas>
 
 ### Horizontal
 
@@ -62,9 +62,9 @@ Centered layout `section--centered`
 
 horizontal layout `section--horizontal` 
 
-<Preview withToolbar>
-  <Story height="500px" id="layout-sections--sections-horizontal" />
-</Preview>
+<Canvas withSource="none">
+  <Story id="layout-sections--sections-horizontal" />
+</Canvas>
 
 ## Alternative Styles
 These settings allow a range of styling to be applied to the section. These include
@@ -77,9 +77,9 @@ These settings allow a range of styling to be applied to the section. These incl
 
 Shaded Style `section--shaded` 
 
-<Preview withToolbar>
-  <Story height="500px" id="layout-sections--sections-shaded" />
-</Preview>
+<Canvas withSource="none">
+  <Story id="layout-sections--sections-shaded" />
+</Canvas>
 
 ### Background image
 
@@ -88,9 +88,9 @@ Shaded Style `section--shaded`
 Background image `section--image-behind`
 Scale background images on the section to always cover `section--background-image`
 
-<Preview withToolbar>
-  <Story height="500px" id="layout-sections--sections-background" />
-</Preview>
+<Canvas withSource="none">
+  <Story id="layout-sections--sections-background" />
+</Canvas>
 
 ```html
 <div class="sectionn section--image-behind">
@@ -109,9 +109,9 @@ Light tint `section--light-tint`
 
 Dark text `section--dark-text`
 
-<Preview withToolbar>
-  <Story height="500px" id="layout-sections--sections-light-tint" />
-</Preview>
+<Canvas withSource="none">
+  <Story id="layout-sections--sections-light-tint" />
+</Canvas>
 
 ### Dark tint and light text
 
@@ -123,9 +123,9 @@ Dark tint `section--dark-tint`
 
 light text `section--light-text`
 
-<Preview withToolbar>
-  <Story height="500px" id="layout-sections--sections-dark-tint" />
-</Preview>
+<Canvas withSource="none">
+  <Story id="layout-sections--sections-dark-tint" />
+</Canvas>
 
 ### Spacing
 
@@ -144,4 +144,3 @@ light text `section--light-text`
 - **No spacing bottom** `section--no-bottom-spacing` - removes bottom padding only.
 - **large spacing bottom** `section--large-bottom-spacing` - adds large spacing below to show more background image.
 - **Extra large spacing bottom** `section--extra-large-bottom-spacing` - adds extra large spacing below.
-

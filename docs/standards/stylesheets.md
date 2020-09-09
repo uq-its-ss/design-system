@@ -19,11 +19,13 @@ class names with `uq-`. E.g. `.uq-header`, `.uq-button .uq-button--secondary`.
 > RULE OF THUMB: allow UIDF components to work well with other front-end
 > frameworks and libraries.
 
-### In Storybook and other HTML/CSS mockups
+### Documentation styling and design system support classes.
 
-Similar to the `uq` prefix above, we should prefix any style classes that exist
-**solely** to exhibit or demonstrate usage of the UIDF. Prefix such classes with
-`uidf` E.g. `.uidf-button-example`, `.uidf-example-container`.
+Additional styling maybe required to showcase components or enhance documentation.
+These are styles that would not be expected in the production code, **solely** to exhibit or demonstrate usage of components or core styles.
+
+Prefix such classes with
+`uqds` E.g. `.uqds-button-example`, `.uqds-example-container`.
 
 #### Repo packages that this rule applies to:
 * `storybook-html`

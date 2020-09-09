@@ -25,11 +25,9 @@ export const textColorUtils = () => {
       <div class="uidf-body__text-utility text--red">.text--red</div>
     </div>
   `;
-}
-
-textColorUtils.story = {
-  name: 'Text colour'
 };
+
+textColorUtils.storyName = 'Text colours';
 
 export const textSizeUtils = () => {
   return `
@@ -46,9 +44,7 @@ export const textSizeUtils = () => {
   `;
 };
 
-textSizeUtils.story = {
-  name: 'Text size'
-};
+textSizeUtils.storyName = 'Text size';
 
 export const textWeightUtils = () => {
   return `
@@ -60,9 +56,7 @@ export const textWeightUtils = () => {
   `;
 };
 
-textWeightUtils.story = {
-  name: 'Text (font) weight'
-};
+textWeightUtils.storyName = 'Text (font) weight';
 
 export const textAlignUtils = () => {
   return `
@@ -74,9 +68,7 @@ export const textAlignUtils = () => {
   `;
 };
 
-textAlignUtils.story = {
-  name: 'Text alignment'
-};
+textAlignUtils.storyName = 'Text alignment';
 
 export const textPrettyUtils = () => {
   return `
@@ -88,9 +80,7 @@ export const textPrettyUtils = () => {
   `;
 };
 
-textPrettyUtils.story = {
-  name: 'Text prettiers'
-};
+textPrettyUtils.storyName = 'Text prettiers';
 
 export const backgroundColourUtils = () => {
   return `
@@ -108,6 +98,4 @@ export const backgroundColourUtils = () => {
   `;
 };
 
-backgroundColourUtils.story = {
-  name: 'Background colour'
-};
+backgroundColourUtils.storyName = 'Background colour';

@@ -1,4 +1,4 @@
-import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
 
 # Breadcrumb 
 
@@ -16,17 +16,17 @@ The arrow icon indicates the level of that page relative to the page links besid
 
 This would be one level deeper than the home page.
 
-<Preview withToolbar>
-  <Story height="100px" id="components-breadcrumb--breadcrumb-one-level" />
-</Preview>
+<Canvas withSource="none">
+  <Story id="components-breadcrumb--breadcrumb-one-level" />
+</Canvas>
 
 ### Multi Level
 
 In a multi level breadcrumb, there will be more than one text link.
 
-<Preview withToolbar>
-  <Story height="100px" id="components-breadcrumb--breadcrumb-multi-level" />
-</Preview>
+<Canvas withSource="none">
+  <Story id="components-breadcrumb--breadcrumb-multi-level" />
+</Canvas>
 
 
 
@@ -85,6 +85,6 @@ For accessibility add aria-label="breadcrumb" to the nav element that overlaps t
 
 The breadcrumb link text is truncated and ellipsed (...) when the text is too long. 
 
-<Preview withToolbar>
+<Canvas withSource="none">
   <Story height="100px" id="components-breadcrumb--breadcrumb-trucation" />
-</Preview>
+</Canvas>

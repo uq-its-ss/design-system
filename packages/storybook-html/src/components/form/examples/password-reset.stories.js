@@ -1,5 +1,4 @@
 import { useEffect } from '@storybook/client-api';
-import expandedStory from '../../../../.storybook/decorators/expanded.js';
 import docs from './password-reset.docs.mdx';
 
 import passwordResetInit from './password-reset.es6';
@@ -9,11 +8,11 @@ import './password-reset.scss';
 
 export default {
   title: 'Forms/Working examples',
-  decorators: [expandedStory],
   parameters: {
     docs: {
       page: docs
-    }
+    },
+    layout: "padded"
   }
 };
 

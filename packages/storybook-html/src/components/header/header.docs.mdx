@@ -1,4 +1,4 @@
-import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
 
 # Header
 
@@ -9,9 +9,9 @@ The global UQ header provides a consistent branding and navigational element acr
 Provides broad UQ site search using the general UQ search service
 (located: https://www.uq.edu.au/search).
 
-<Preview withToolbar>
-  <Story height="450px" id="components-header--header-no-local-search" />
-</Preview>
+<Canvas withSource="none" withToolbar>
+  <Story height={500} id="components-header--header-no-local-search" />
+</Canvas>
 
 ## With global and site search
 
@@ -19,6 +19,6 @@ Allows the user to choose between global search and your local site/app search
 functionality. You must configure the form properties to use your service
 endpoints.
 
-<Preview withToolbar>
-  <Story height="450px" id="components-header--header" />
-</Preview>
+<Canvas withSource="none" withToolbar>
+  <Story height={500} id="components-header--header" />
+</Canvas>

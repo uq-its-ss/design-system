@@ -12,12 +12,3 @@ body {
   // Prevent the @uq-uidf/body from imposing a background colour.
   background-color: transparent !important;
 }
-
-// For centerStory decorator
-.story--centered {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}

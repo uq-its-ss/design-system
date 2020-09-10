@@ -1,4 +1,5 @@
 @use "@uq-uidf/core/src/scss/global" as core;
+@use "@uq-uidf/table/src/scss/global" as table;
 @use 'global' as *;
 
 $use-encapsulation: false !default;
@@ -320,4 +321,31 @@ $use-encapsulation: false !default;
   }
 
   @include base-styles;
+}
+
+// Table
+.uq-table__wrapper {
+  @include table-wrapper;
+}
+.uq-table {
+  @include table;
+
+  caption {
+    @include table-caption;
+  }
+  thead {
+    @include table-head;
+  }
+  tbody {
+    @include table-body;
+  }
+  tr {
+    @include table-row;
+  }
+  td {
+    @include table-cell;
+  }
+  th {
+    @include table-header;
+  }
 }

@@ -4,22 +4,25 @@ import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
 
 ## Overview
 
-The Table component helps in displaying tabular data. The data should be responsive on different viewport devices and accessible to assistive technologies like screen readers.
+Table components are used to display data in grids. 
+Accessible tables need HTML markup that indicates the difference between header cells and data cells, and indicate the relationship between them. 
+The table should be responsive on different viewport devices and accessible to assistive technologies like screen readers.
 
-## Responsiveness
+## Responsive
 
-Shown below are 3 different approaches in acheiving responsive behaviour in table components.
+When it comes to responsive behaviour in tables, there is no one solution. The solution depends on the amount of table data and how complex the table structure is. Shown below are 2 different approaches in acheiving responsive behaviour in tables.
 
 ### a) Table Scroll
 
-This is the default approach and needs to be implimented when there is lots of data. In this approach the component tables horizontal scroll is triggered when the table width is greater than the container width helping the user to view data even on smaller viewport devices. 
+This is the default approach and should be implemented when there is lots of data. In this approach the component table horizontal scroll is triggered when the table width is greater than the table container width helping the user to view data even on smaller viewport devices. 
 
-To enable scroll feature, the table is wrapped by a div with class `uq-table__wrapper`.
+To enable scroll feature, the table is wrapped by a container div with class `uq-table__wrapper`.
 
-A shadow feature is added on either side of the table when it overflows the container depending on the scroll position. It serves to indicate the user that there is more data to the left or right to be scrolled.
+A shadow feature is added to the sides of the table when it overflows the container. It serves as a visual indication to the user that there is more data to be scrolled to the left or right. 
+For instance when there is more content to the left, a transparent shadow appears to the left side of the table and when there is more content to the right, the shadow appears to the right side of the table.
 
 <Preview withToolbar>
-    <Story height="800px" id="components-table--table" />
+    <Story id="components-table--table" />
 </Preview>
 
 ```html
@@ -29,12 +32,12 @@ A shadow feature is added on either side of the table when it overflows the cont
         <caption>Types of food and ratings</caption>
         <thead>
             <tr>
-                <th scope="col">Type of Food</th>
-                <th scope="col">Calories</th>
-                <th scope="col">Tasty Factor</th>
-                <th scope="col">Average Price</th>
-                <th scope="col">Rarity</th>
-                <th scope="col">Average Rating</th>
+                <th>Type of Food</th>
+                <th>Calories</th>
+                <th>Tasty Factor</th>
+                <th>Average Price</th>
+                <th>Rarity</th>
+                <th>Average Rating</th>
             </tr>
         </thead>
         <tbody>
@@ -67,12 +70,12 @@ A shadow feature is added on either side of the table when it overflows the cont
       <caption class="uq-table__caption">Types of food and ratings</caption>
       <thead class="uq-table__head">
           <tr class="uq-table__row">
-              <th scope="col" class="uq-table__header uq-table__header--width-16">Type of Food</th>
-              <th scope="col" class="uq-table__header uq-table__header--width-16">Calories</th>
-              <th scope="col" class="uq-table__header uq-table__header--width-16">Tasty Factor</th>
-              <th scope="col" class="uq-table__header uq-table__header--width-16">Average Price</th>
-              <th scope="col" class="uq-table__header uq-table__header--width-16">Rarity</th>
-              <th scope="col" class="uq-table__header uq-table__header--width-16">Average Rating</th>
+              <th class="uq-table__header uq-table__header--width-16">Type of Food</th>
+              <th class="uq-table__header uq-table__header--width-16">Calories</th>
+              <th class="uq-table__header uq-table__header--width-16">Tasty Factor</th>
+              <th class="uq-table__header uq-table__header--width-16">Average Price</th>
+              <th class="uq-table__header uq-table__header--width-16">Rarity</th>
+              <th class="uq-table__header uq-table__header--width-16">Average Rating</th>
           </tr>
       </thead>
       <tbody class="uq-table__body">
@@ -97,27 +100,27 @@ A shadow feature is added on either side of the table when it overflows the cont
 </div>
 ```
 
-### b) Table Flex
 
-In this responsive approach the table is displayed as flex below a certain breakpoint so the data is stacked on smaller viewports. 
-The technique used here to responsively display data is via data attributes.
+
+### c) Table Card
+
+In this responsive approach, the component table `tr` is displayed as a grid. Data attributes are used to display the table responsively on smaller viewports. 
 
 <Preview withToolbar>
-    <Story height="350px" id="components-table--tableflex" />
+    <Story id="components-table--tablecard" />
 </Preview>
 
 ```html
-<h3>Table - Flex</h3>
-<table class="uq-table uq-table--flex">
+<table class="uq-table uq-table--card">
     <caption>Types of food and ratings</caption>
     <thead>
         <tr>
-            <th scope="col">Type of Food</th>
-            <th scope="col">Calories</th>
-            <th scope="col">Tasty Factor</th>
-            <th scope="col">Average Price</th>
-            <th scope="col">Rarity</th>
-            <th scope="col">Average Rating</th>
+            <th>Type of Food</th>
+            <th>Calories</th>
+            <th>Tasty Factor</th>
+            <th>Average Price</th>
+            <th>Rarity</th>
+            <th>Average Rating</th>
         </tr>
     </thead>
     <tbody>
@@ -141,52 +144,9 @@ The technique used here to responsively display data is via data attributes.
 </table>
 ```
 
-### c) Table Grid
+#### Breakpoints
 
-In this responsive approach, the component table is displayed as a grid to display data on smaller viewports. 
-
-<Preview withToolbar>
-    <Story height="350px" id="components-table--tablegrid" />
-</Preview>
-
-```html
-<h3>Table - Grid</h3>
-<table class="uq-table uq-table--grid">
-    <caption>Types of food and ratings</caption>
-    <thead>
-        <tr>
-            <th scope="col">Type of Food</th>
-            <th scope="col">Calories</th>
-            <th scope="col">Tasty Factor</th>
-            <th scope="col">Average Price</th>
-            <th scope="col">Rarity</th>
-            <th scope="col">Average Rating</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Slice of Pizza</td>
-            <td>450</td>
-            <td>95%</td>
-            <td>$5.00</td>
-            <td>Common</td>
-            <td>8/10</td>
-        </tr>
-        <tr>
-            <td>Hamburger</td>
-            <td>350</td>
-            <td>87%</td>
-            <td>$3.50</td>
-            <td>Common</td>
-            <td>7.5/10</td>
-        </tr>
-    </tbody>
-</table>
-```
-
-## Breakpoints
-
-The breakpoint for flex and grid tables are less than 640px.
+The breakpoint for table cards are less than 640px.
 
 ## Accessibility
 
@@ -209,10 +169,10 @@ Tip: By default, a table caption will be center-aligned above a table.
 -->
 <table>
     <tr>
-        <th scope="col">Name</th>
-        <th scope="col">Email</th>
-        <th scope="col">Phone</th>
-        <th scope="col">Address</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Address</th>
     </tr>
     <tr>
         <th scope="row">John Doe</th>

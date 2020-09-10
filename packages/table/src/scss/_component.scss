@@ -1,9 +1,33 @@
 @use '@uq-uidf/core/src/scss/global' as core;
-@import 'global';
 
-// Table
-table,
-.uq-table {
+@mixin table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, core.$uq-white), color-stop(100%, rgba(255, 255, 255, 0))), -webkit-gradient(linear, 100% 50%, 0% 50%, color-stop(0%, core.$uq-white), color-stop(100%, rgba(255, 255, 255, 0))), -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, core.$uq-neutral-dark20), color-stop(100%, rgba(195, 195, 197, 0))), -webkit-gradient(linear, 100% 50%, 0% 50%, color-stop(0%, core.$uq-neutral-dark20), color-stop(100%, rgba(195, 195, 197, 0)));
+  background-image: -webkit-linear-gradient(left, core.$uq-white, rgba(255, 255, 255, 0)), -webkit-linear-gradient(right, core.$uq-white, rgba(255, 255, 255, 0)), -webkit-linear-gradient(left, core.$uq-neutral, rgba(195, 195, 197, 0)), -webkit-linear-gradient(right, core.$uq-neutral, rgba(195, 195, 197, 0));
+  background-image: -moz-linear-gradient(left, core.$uq-white, rgba(255, 255, 255, 0)), -moz-linear-gradient(right, core.$uq-white, rgba(255, 255, 255, 0)), -moz-linear-gradient(left, core.$uq-neutral, rgba(195, 195, 197, 0)), -moz-linear-gradient(right, core.$uq-neutral, rgba(195, 195, 197, 0));
+  background-image: -o-linear-gradient(left, core.$uq-white, rgba(255, 255, 255, 0)), -o-linear-gradient(right, core.$uq-white, rgba(255, 255, 255, 0)), -o-linear-gradient(left, core.$uq-neutral, rgba(195, 195, 197, 0)), -o-linear-gradient(right, core.$uq-neutral, rgba(195, 195, 197, 0));
+  background-image: linear-gradient(left, core.$uq-white, rgba(255, 255, 255, 0)), linear-gradient(right, core.$uq-white, rgba(255, 255, 255, 0)), linear-gradient(left, core.$uq-neutral, rgba(195, 195, 197, 0)), linear-gradient(right, core.$uq-neutral, rgba(195, 195, 197, 0));
+  background-position: 0 0, 100% 0, 0 0, 100% 0;
+  background-repeat: no-repeat;
+  background-color: core.$uq-white;
+  background-size: 4em 100%, 4em 100%, 1em 100%, 1em 100%;
+  background-attachment: local, local, scroll, scroll;
+
+  &::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 0.75rem;
+    height: 0.75rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 0.5rem;
+    border: 1px solid core.$uq-white;
+    background-color: rgba(core.$uq-black, .3);
+  }
+}
+
+@mixin table {
   width: 100%;
   min-width: 100%;
   margin: 0;
@@ -17,175 +41,82 @@ table,
   line-height: core.$compass-base-line-height-ratio;
   color: core.$uq-neutral-dark80;
   list-style: none;
-  
+
   *, *:before, *:after {
     box-sizing: border-box;
   }
+}
+
+@mixin table-caption {
+  font-size: 1.25rem;
+  line-height: core.$compass-base-line-height-ratio;
+  font-weight: core.$font-weight-bold;
+  text-align: left;
+  display: table-caption;
+  padding-bottom: .75rem;
+  background-color: core.$uq-white;
+}
+@mixin table-head {
+  display: table-header-group;
+  vertical-align: middle;
+}
+@mixin table-body {
+  display: table-row-group;
+  vertical-align: top;
+}
+@mixin table-row {
+  display: table-row;
+}
+@mixin table-cell {
+  padding: .75rem 1rem;
+  border: 1px solid core.$uq-neutral;
+  text-align: left;
+}
+@mixin table-header {
+  padding: .75rem 1rem;
+  color: core.$uq-purple;
+  text-align: left;
+  border: 1px solid core.$uq-neutral;
+  font-weight: core.$font-weight-bold;
+  background-color: rgba(core.$uq-neutral, 0.2);
+}
+
+// Table
+.uq-table {
+  @include table;
 
   &__wrapper {
-    width: 100%;
-    overflow-x: auto;
-    background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, core.$uq-white), color-stop(100%, rgba(255, 255, 255, 0))), -webkit-gradient(linear, 100% 50%, 0% 50%, color-stop(0%, core.$uq-white), color-stop(100%, rgba(255, 255, 255, 0))), -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, core.$uq-neutral-dark20), color-stop(100%, rgba(195, 195, 197, 0))), -webkit-gradient(linear, 100% 50%, 0% 50%, color-stop(0%, core.$uq-neutral-dark20), color-stop(100%, rgba(195, 195, 197, 0)));
-    background-image: -webkit-linear-gradient(left, core.$uq-white, rgba(255, 255, 255, 0)), -webkit-linear-gradient(right, core.$uq-white, rgba(255, 255, 255, 0)), -webkit-linear-gradient(left, core.$uq-neutral, rgba(195, 195, 197, 0)), -webkit-linear-gradient(right, core.$uq-neutral, rgba(195, 195, 197, 0));
-    background-image: -moz-linear-gradient(left, core.$uq-white, rgba(255, 255, 255, 0)), -moz-linear-gradient(right, core.$uq-white, rgba(255, 255, 255, 0)), -moz-linear-gradient(left, core.$uq-neutral, rgba(195, 195, 197, 0)), -moz-linear-gradient(right, core.$uq-neutral, rgba(195, 195, 197, 0));
-    background-image: -o-linear-gradient(left, core.$uq-white, rgba(255, 255, 255, 0)), -o-linear-gradient(right, core.$uq-white, rgba(255, 255, 255, 0)), -o-linear-gradient(left, core.$uq-neutral, rgba(195, 195, 197, 0)), -o-linear-gradient(right, core.$uq-neutral, rgba(195, 195, 197, 0));
-    background-image: linear-gradient(left, core.$uq-white, rgba(255, 255, 255, 0)), linear-gradient(right, core.$uq-white, rgba(255, 255, 255, 0)), linear-gradient(left, core.$uq-neutral, rgba(195, 195, 197, 0)), linear-gradient(right, core.$uq-neutral, rgba(195, 195, 197, 0));
-    background-position: 0 0, 100% 0, 0 0, 100% 0;
-    background-repeat: no-repeat;
-    background-color: core.$uq-white;
-    background-size: 4em 100%, 4em 100%, 1em 100%, 1em 100%;
-    background-attachment: local, local, scroll, scroll;
-
-    &::-webkit-scrollbar {
-      -webkit-appearance: none;
-      width: 0.75rem;
-      height: 0.75rem;
-    }
-
-    &::-webkit-scrollbar-thumb {
-      border-radius: 0.5rem;
-      border: 1px solid core.$uq-white;
-      background-color: rgba(core.$uq-black, .3);
-    }
+    @include table-wrapper;
   }
-
-  caption,
   &__caption {
-    font-size: 1.25rem;
-    line-height: core.$compass-base-line-height-ratio;
-    font-weight: core.$font-weight-bold;
-    text-align: left;
-    display: table-caption;
-    padding-bottom: .75rem;
-    background-color: core.$uq-white;
+    @include table-caption;
   }
-
-  thead,
   &__head {
-    display: table-header-group;
-    vertical-align: middle;
+    @include table-head;
   }
-
-  tbody,
   &__body {
-    display: table-row-group;
-    vertical-align: top;
+    @include table-body;
   }
-
-  tr,
   &__row {
-    display: table-row;
+    @include table-row;
   }
-
-  td,
   &__cell {
-    padding: .75rem 1rem;
-    border: 1px solid core.$uq-neutral;
-    text-align: left;
+    @include table-cell;
   }
-
-  &__cell {
-    
-    &--align-right {
-      text-align: right !important;
-    }
-  }
-
-  th,
   &__header {
-    padding: .75rem 1rem;
-    color: core.$uq-purple;
-    text-align: left;
-    border: 1px solid core.$uq-neutral;
-    font-weight: core.$font-weight-bold;
-    background-color: rgba(core.$uq-neutral, 0.2);
+    @include table-header;
   }
 
-  &__header {
-
-    &--align-right {
-      text-align: right !important;
-    }
-    &--width-10 {
-      width: 10%;
-    }
-    &--width-16 {
-      width: 16.66%;
-    }
-    &--width-20 {
-      width: 20%;
-    }
-    &--width-25 {
-      width: 25%;
-    }
-    &--width-30 {
-      width: 30%;
-    }
-    &--width-33 {
-      width: 33.33%;
-    }
-    &--width-50 {
-      width: 50%;
-    }
-    &--width-60 {
-      width: 60%;
-    }
-    &--width-75 {
-      width: 75%;
-    }
-    &--width-80 {
-      width: 80%;
-    }
-    &--width-90 {
-      width: 90%;
-    }
-  }
-
-  &.uq-table--striped {
-
-    .uq-table__row {
-
+  &--striped {
+    tr {
       &:nth-child(even) {
         background: rgba(core.$uq-neutral, 0.2);
       }
     }
-  } 
-
-
-  // Table - Flex
-  &--flex {
-    th, td {
-      width: calc(100% / 6);
-    }
-    @media (max-width: 640px) {
-      thead {
-        left: -9999px;
-        position: absolute;
-        visibility: hidden;
-      }
-      tr {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        margin-bottom: 1rem;
-      }
-      th, td {
-        width: 100%;
-        margin: 0 -1px -1px 0;
-        padding: .5rem .75rem;
-      }
-      td:before {
-        content: attr(data-title);
-        color: core.$uq-purple;
-        font-weight: core.$font-weight-bold;
-        display: block;
-      }
-    }
   }
 
-
-  // Table - Grid
-  &--grid {
+  /* Table - Card */
+  &--card {
     tr {
       display: grid;
       grid: auto-flow / repeat(6, 1fr);
@@ -205,9 +136,6 @@ table,
         align-items: stretch;
         margin-bottom: 1rem;
       }
-      th,td {
-        padding: .5rem .75rem;
-      }
       td:before {
         content: attr(data-title);
         color: core.$uq-purple;
@@ -218,40 +146,30 @@ table,
   }
 }
 
-
-.align-right {
-  text-align: right !important;
-}
-.width-10 {
-  width: 10%;
-}
-.width-16 {
-  width: 16.66%;
-}
-.width-20 {
-  width: 20%;
-}
-.width-25 {
-  width: 25%;
-}
-.width-30 {
-  width: 30%;
-}
-.width-33 {
-  width: 33.33%;
-}
-.width-50 {
-  width: 50%;
-}
-.width-60 {
-  width: 60%;
-}
-.width-75 {
-  width: 75%;
-}
-.width-80 {
-  width: 80%;
-}
-.width-90 {
-  width: 90%;
-}
+// Table - Flex
+/*&--flex {
+  @media (max-width: 640px) {
+    thead {
+      left: -9999px;
+      position: absolute;
+      visibility: hidden;
+    }
+    tr {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin-bottom: 1rem;
+    }
+    th, td {
+      width: 100%;
+      margin: 0 -1px -1px 0;
+      padding: .5rem .75rem;
+    }
+    td:before {
+      content: attr(data-title);
+      color: core.$uq-purple;
+      font-weight: core.$font-weight-bold;
+      display: block;
+    }
+  }
+}*/

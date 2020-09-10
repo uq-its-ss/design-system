@@ -3,8 +3,7 @@ import './table.scss';
 
 // import HTML template strings
 import tableHTML from './table.html';
-import tableFlexHTML from './table-flex.html';
-import tableGridHTML from './table-grid.html';
+import tableCardHTML from './table-card.html';
 
 // documentation
 import docs from './table.docs.mdx';
@@ -27,16 +26,9 @@ table.story = {
   name: 'Table Scroll'
 }
 
-export const tableflex = () => {
-  return tableFlexHTML;
+export const tablecard = () => {
+  return tableCardHTML;
 };
-tableflex.story = {
-  name: 'Table Flex'
-}
-
-export const tablegrid = () => {
-  return tableGridHTML;
-};
-tablegrid.story = {
-  name: 'Table Grid'
+tablecard.story = {
+  name: 'Table Card'
 }

@@ -8,7 +8,8 @@ export default {
   parameters: {
     docs: {
       page: docs
-    }
+    },
+    layout: 'padded'
   }
 };
 
@@ -97,17 +98,17 @@ export const horizontalRule = () => {
 
 export const table = () => {
   return `
-    <div class="uq-table__wrapper">
-        <table class="uq-table">
+    <div class="scroll-container">
+        <table>
             <caption>Types of food and ratings</caption>
             <thead>
                 <tr>
-                    <th scope="col">Type of Food</th>
-                    <th scope="col">Calories</th>
-                    <th scope="col">Tasty Factor</th>
-                    <th scope="col">Average Price</th>
-                    <th scope="col">Rarity</th>
-                    <th scope="col">Average Rating</th>
+                    <th>Type of Food</th>
+                    <th>Calories</th>
+                    <th>Tasty Factor</th>
+                    <th>Average Price</th>
+                    <th>Rarity</th>
+                    <th>Average Rating</th>
                 </tr>
             </thead>
             <tbody>

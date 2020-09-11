@@ -303,6 +303,33 @@ $use-encapsulation: false !default;
   .text--shadow {
     text-shadow: 0 core.$spacing-xxs core.$spacing-xxs core.$transparent-black-40;
   }
+
+  // Table
+  .scroll-container {
+    @include table.table-wrapper;
+  }
+  table {
+    @include table.table;
+
+    caption {
+      @include table.table-caption;
+    }
+    thead {
+      @include table.table-head;
+    }
+    tbody {
+      @include table.table-body;
+    }
+    tr {
+      @include table.table-row;
+    }
+    td {
+      @include table.table-cell;
+    }
+    th {
+      @include table.table-header;
+    }
+  }
 }
 
 @if $use-encapsulation {
@@ -321,31 +348,4 @@ $use-encapsulation: false !default;
   }
 
   @include base-styles;
-}
-
-// Table
-.uq-table__wrapper {
-  @include table-wrapper;
-}
-.uq-table {
-  @include table;
-
-  caption {
-    @include table-caption;
-  }
-  thead {
-    @include table-head;
-  }
-  tbody {
-    @include table-body;
-  }
-  tr {
-    @include table-row;
-  }
-  td {
-    @include table-cell;
-  }
-  th {
-    @include table-header;
-  }
 }

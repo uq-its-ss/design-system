@@ -308,7 +308,7 @@ $use-encapsulation: false !default;
   .scroll-container {
     @include table.table-wrapper;
   }
-  table {
+.uq-table {
     @include table.table;
 
     caption {

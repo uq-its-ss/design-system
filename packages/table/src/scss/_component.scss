@@ -60,7 +60,10 @@
       tr {
         grid: auto-flow / 1fr;
         align-items: stretch;
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem;
+      }
+      td {
+        padding: .5rem .75rem;
       }
       td:before {
         content: attr(data-title);
@@ -72,30 +75,3 @@
   }
   
 }
-
-// Table - Flex
-/*&--flex {
-  @media (max-width: 640px) {
-    thead {
-      left: -9999px;
-      position: absolute;
-      visibility: hidden;
-    }
-    tr {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      margin-bottom: 1rem;
-    }
-    th, td {
-      width: 100%;
-      margin: 0 -1px -1px 0;
-    }
-    td:before {
-      content: attr(data-title);
-      color: core.$uq-purple;
-      font-weight: core.$font-weight-bold;
-      display: block;
-    }
-  }
-}*/

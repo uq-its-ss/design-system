@@ -99,7 +99,7 @@ export const horizontalRule = () => {
 export const table = () => {
   return `
     <div class="scroll-container">
-        <table>
+        <table class="uq-table">
             <caption>Types of food and ratings</caption>
             <thead>
                 <tr>

@@ -1,5 +1,5 @@
 /* Pagination */
-@use '@uq-uidf/core/src/scss/global' as *;
+@use '@uq-uidf/core/src/scss/global' as core;
 @use 'global' as *;
 
 .pagination {
@@ -10,14 +10,14 @@
 		list-style: none;
 
 		.pagination__link {
-			color: $link-color;
+			color: core.$link-color;
 			font-size: 1rem;
 			font-weight: 300;
-			padding: 0 8px;
+			padding: core.$space-none core.$space-sm;
 			text-decoration: none;
 
 			&:hover {
-				color: $link-hover-color;
+				color: core.$link-hover-color;
 				text-decoration: underline;
 			}
 		}
@@ -25,11 +25,11 @@
 		&--current {
 
 			.pagination__link {
-				color: $uq-black;
+				color: core.$uq-black;
 				font-weight: 500;
 
 				&:hover {
-					color: $uq-black;
+					color: core.$uq-black;
 					text-decoration: none;
 				}
 			}
@@ -37,7 +37,7 @@
 	}
 
 	&__ellipsis {
-		color: $uq-black;
+		color: core.$uq-black;
 		display: inline-block;
 		list-style: none;
 	}

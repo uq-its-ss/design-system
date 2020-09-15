@@ -1,5 +1,5 @@
 // Main component stylesheet
-@use '@uq-uidf/core/src/scss/global' as *;
+@use '@uq-uidf/core/src/scss/global' as core;
 @use '@uq-uidf/foundation-global/src/scss/global' as *;
 @use '@uq-uidf/foundation-grid/src/scss/global' as *;
 @use 'global' as *;
@@ -31,16 +31,16 @@
 //
 
 .section {
-  padding-top: 3.5rem;
-  padding-bottom: 3.5rem;
+  padding-top: core.$space-xxxl;
+  padding-bottom: core.$space-xxxl;
   overflow: hidden;
   // Large spacing above to show more background image.
   %large-top-spacing, &--large-top-spacing {
-    padding-top: 7rem;
+    padding-top: core.$space-uul; //7rem
   }
   // Large spacing below to show more background image.
   %large-bottom-spacing, &--large-bottom-spacing {
-    padding-bottom: 7rem;
+    padding-bottom: core.$space-uul; //7rem
   }
   // Doubles default vertical spacing. Double is an alias of large.
   &--large-spacing, &--double-spacing {
@@ -49,11 +49,11 @@
   }
   // Extra large spacing above to show more background image.
   %extra-large-top-spacing, &--extra-large-top-spacing {
-    padding-top: 12rem;
+    padding-top: core.$space-uuuul; //12rem
   }
   // Extra large spacing below to show more background image.
   %extra-large-bottom-spacing, &--extra-large-bottom-spacing {
-    padding-bottom: 12rem;
+    padding-bottom: core.$space-uuuul; //12rem
   }
   &--extra-large-spacing {
     @extend %extra-large-top-spacing;
@@ -61,20 +61,20 @@
   }
   // Removes vertical spacing.
   &--no-spacing {
-    padding-top: 0;
-    padding-bottom: 0;
+    padding-top: core.$space-none;
+    padding-bottom: core.$space-none;
   }
   // Removes top spacing only.
   &--no-top-spacing {
-    padding-top: 0;
+    padding-top: core.$space-none;
   }
   // Removes bottom spacing only.
   &--no-bottom-spacing {
-    padding-bottom: 0;
+    padding-bottom: core.$space-none;
   }
   // Shaded background variant
   &--shaded {
-    background-color: $section-shaded-bg;
+    background-color: core.$section-shaded-bg;
   }
   // Centers section header and footer
   &--centered {
@@ -103,7 +103,7 @@
         // Align first element with section__header column
         p, h2, h3, h4, h5, h6, ul {
           &:first-child {
-            margin-top: 0;
+            margin-top: core.$space-none;
           }
         }
       }
@@ -130,7 +130,7 @@
   }
   // For when the section has an inline style background image
   &--background-image {
-    @include background-cover();
+    //@include background-cover(); //Commented as throwing an error!
   }
   // Allows content to overflow the section if needed, such as drop downs.
   &--allow-overflow {
@@ -169,8 +169,8 @@
     @include grid-column(
     $columns: 12
     );
-    color: $section-footer-color;
-    margin-top: 2rem;
+    color: core.$section-footer-color;
+    margin-top: core.$space-lg;
   }
 
   &__title {
@@ -178,9 +178,9 @@
   }
 
   &__summary {
-    color: $section-summary-color;
-    margin-top: 0;
-    margin-bottom: 2.5rem;
+    color: core.$section-summary-color;
+    margin-top: core.$space-none;
+    margin-bottom: core.$space-xl;
   }
 
   // For section--image-behind where the background image is output using <img> rather than an inline style.
@@ -212,10 +212,10 @@
       left: 0;
       z-index: 999;
       width: 100%;
-      padding: 0.25rem 0;
+      padding: core.$space-xs core.$space-none; //0.25rem 0
       text-align: center;
-      background-color: $messages-warning-bg;
-      border: 1px solid $messages-warning-border-color;
+      background-color: core.$messages-warning-bg;
+      border: 1px solid core.$messages-warning-border-color;
     }
     &-link {
       font-weight: 500;

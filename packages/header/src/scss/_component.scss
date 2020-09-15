@@ -21,38 +21,38 @@
     &__container {
         position: relative;
         max-width: fnd-grid.$row-width;
-        margin: 0 auto;
-        padding: 0 fnd-global.$column-gutter / 2;
+        margin: core.$space-none core.$space-auto;
+        padding: core.$space-none fnd-global.$column-gutter / 2;
 
         .nav-global {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding-top: 1rem;
-            padding-bottom: 1rem;
+            padding-top: core.$space;
+            padding-bottom: core.$space;
 
             @media #{fnd-global.$large-up} {
-                padding-top: 1.5rem;
-                padding-bottom: 1.5rem;
+                padding-top: core.$space-md;
+                padding-bottom: core.$space-md;
             }
         }
 
         .menu-global {
             ul {
                 list-style-type: none;
-                margin-bottom: 0;
-                margin-top: 0;
-                padding-left: 0;
+                margin-bottom: core.$space-none;
+                margin-top: core.$space-none;
+                padding-left: core.$space-none;
 
                 li {
                     display: none;
 
                     @media #{fnd-global.$large-up} {
                         display: inline;
-                        margin-left: 1.5rem;
+                        margin-left: core.$space-md;
                         word-wrap: break-word;
                         &:first-of-type {
-                            margin-left: 0;
+                            margin-left: core.$space-none;
                         }
                     }
                 }
@@ -60,8 +60,8 @@
                 li.menu-global__search-toggle {
                     display: inline;
                     .search-toggle__button {
-                        margin: 0;
-                        padding: 0 .25rem;
+                        margin: core.$space-none;
+                        padding: core.$space-none core.$space-xs;
                         border: 0;
                         width: 1.5rem;
                         height: 1.5rem;
@@ -110,23 +110,23 @@
         .nav-search {
             max-height: 0;
             overflow: hidden;
-            transition: max-height .25s,padding-top .25s,padding-bottom .25s;
+            transition: max-height .25s, padding-top .25s, padding-bottom .25s;
 
             &--open {
                 height: auto;
                 max-height: 50vh;
-                padding-top: .5rem;
-                padding-bottom: .5rem;
+                padding-top: core.$space-sm;
+                padding-bottom: core.$space-sm;
             }
 
             &__form {
-                margin: 0;
+                margin: core.$space-none;
             }
 
             &__wrapper {
                 border: none;
-                margin: 0 0 0.5rem 0;
-                padding: 0;
+                margin: core.$space-none core.$space-none core.$space-sm core.$space-none;
+                padding: core.$space-none;
             }
 
             &__title {
@@ -147,24 +147,24 @@
 
                 &__radio-wrapper {
                     font-size: 1rem;
-                    margin: 0 0 0.5rem 0;
+                    margin: core.$space-none core.$space-none core.$space-sm core.$space-none;
 
                     @media #{fnd-global.$large-up} {
                         display: inline-block;
-                        margin: 0;
+                        margin: core.$space-none;
                     }
                 }
 
                 .form-item {
-                    margin-top: .5rem;
-                    padding-top: .25rem;
+                    margin-top: core.$space-sm;
+                    padding-top: core.$space-xs;
 
                     input {
                         display: inline-block;
                         float: none;
                         clear: none;
-                        margin: 3px 3px 0 5px;
-                        padding: 0;
+                        margin: core.$space-xs core.$space-xs core.$space-none core.$space-xs;
+                        padding: core.$space-none;
                     }
 
                     label {
@@ -172,23 +172,23 @@
                         display: inline;
                         font-size: .875rem;
                         font-weight: core.$font-weight-normal;
-                        margin: 0;
-                        padding: 0;
+                        margin: core.$space-none;
+                        padding: core.$space-none;
                         max-width: none;
                     }
                                 
                     @media #{fnd-global.$large-up} {
                         display: inline-block;
-                        margin-top: 0;
-                        padding-left: 1rem;
-                        padding-top: 0;
+                        margin-top: core.$space-none;
+                        padding-left: core.$space;
+                        padding-top: core.$space-none;
                     } 
                 }
 
                 @media #{fnd-global.$large-up} {
                     display: inline;
                     font-size: .875rem;
-                    margin-left: 1em;
+                    margin-left: core.$space;
                 }
             }
 
@@ -201,14 +201,14 @@
                     border-radius: 2px;
                     background-color: core.$uq-white;
                     background-position: 1rem;
-                    margin-bottom: 1.5rem;
+                    margin-bottom: core.$space-md;
                 }
 
                 &__input {
                     background: transparent;
-                    margin: 0;
+                    margin: core.$space-none;
                     width: 100%;
-                    padding: .75rem 1rem;
+                    padding: core.$space-sm core.$space;
                     border: 1px solid #e2e2e2;
                     border-radius: 2px;
                     box-shadow: none;
@@ -233,16 +233,16 @@
                     color: core.$uq-purple;
                     display: inline-block;
                     font-size: 1rem;
-                    height: 2.75rem;
+                    height: 2.5rem;
                     line-height: 1.5;
-                    margin-bottom: 0;
-                    margin-right: 0;
+                    margin-bottom: core.$space-none;
+                    margin-right: core.$space-none;
                     overflow: hidden;
                     position: absolute;
                     right: 0;
                     text-decoration: none;
                     text-indent: 0;
-                    top: calc(50% - 1.375rem);
+                    top: calc(50% - 1.25rem);
                     transition: color .2s, background-color .2s, border-color .2s;
                     width: 2.75rem;
 
@@ -273,13 +273,13 @@
                     display: block;
                     width: 100%;
                     height: 100%;
-                    margin: 0;
+                    margin: core.$space-none;
                     border: 0;
                     background-color: transparent;
                     z-index: 3;
                     cursor: pointer;
                     outline-offset: -2px;
-                    padding: .5rem 1.5rem;
+                    padding: core.$space-sm core.$space-md;
                     font-size: 1rem;
                 }
     
@@ -289,7 +289,7 @@
                 -webkit-column-count: 3;
                 -moz-column-count: 3;
                 column-count: 3;
-                margin-bottom: 1rem;
+                margin-bottom: core.$space;
 
                 @media #{fnd-global.$large-up} {
                     display: none;
@@ -298,10 +298,10 @@
                 ul {
                     li {
                         display: block;
-                        margin-left: 0;
+                        margin-left: core.$space-none;
                         a {
                             display: block;
-                            padding: .5rem;
+                            padding: core.$space-sm;
                         }
                     }
                 }
@@ -311,16 +311,16 @@
 
     &__secondary {
         background-color: core.$uq-white;
-        padding-top: 1.5rem;
-        padding-bottom: .5rem;
+        padding-top: core.$space-md;
+        padding-bottom: core.$space-sm;
 
         &--no-menu {
-            padding-bottom: 1.5rem;
+            padding-bottom: core.$space-md;
         }
     }
 
     &__site-title {
-        margin: 0;
+        margin: core.$space-none;
         font-size: 1.25rem;
         font-weight: 500;
         color: core.$uq-purple;
@@ -375,7 +375,7 @@
         width: 1px;
         height: 1px;
         word-wrap: normal;
-        margin: 0;
-        padding: 0;
+        margin: core.$space-none;
+        padding: core.$space-none;
     }
 }

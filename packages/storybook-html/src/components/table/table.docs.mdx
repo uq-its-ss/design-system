@@ -1,0 +1,348 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+
+# Table
+
+## Overview
+
+Table components are used to display data in grids. 
+Accessible tables need HTML markup that indicates the difference between header cells and data cells, and indicate the relationship between them. 
+The table should be responsive on different viewport devices and accessible to assistive technologies like screen readers.
+
+## Responsive
+
+When it comes to responsive behaviour in tables, there is no one solution. The solution depends on the amount of table data and how complex the table structure is. Shown below are 2 different approaches in acheiving responsive behaviour in tables.
+
+### a) Table Scroll
+
+This is the default approach and should be implemented when there is lots of data. In this approach the component table horizontal scroll is triggered when the table width is greater than the table container width helping the user to view data even on smaller viewport devices. 
+
+To enable scroll feature, the table is wrapped by a container div with class `uq-table__wrapper`.
+
+A shadow feature is added to the sides of the table when it overflows the container. It serves as a visual indication to the user that there is more data to be scrolled to the left or right. 
+For instance when there is more content to the left, a transparent shadow appears to the left side of the table and when there is more content to the right, the shadow appears to the right side of the table.
+
+<Preview withToolbar>
+    <Story id="components-table--table" />
+</Preview>
+
+```html
+<h3>Table - Basic tags with minimal classes</h3>
+<div class="uq-table__wrapper">
+    <table class="uq-table">
+        <caption>Types of food and ratings</caption>
+        <thead>
+            <tr>
+                <th>Type of Food</th>
+                <th>Calories</th>
+                <th>Tasty Factor</th>
+                <th>Average Price</th>
+                <th>Rarity</th>
+                <th>Average Rating</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Slice of Pizza</td>
+                <td>450</td>
+                <td>95%</td>
+                <td>$5.00</td>
+                <td>Common</td>
+                <td>8/10</td>
+            </tr>
+            <tr>
+                <td>Hamburger</td>
+                <td>350</td>
+                <td>87%</td>
+                <td>$3.50</td>
+                <td>Common</td>
+                <td>7.5/10</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+
+<h3>Table - Basic tags with classes</h3>
+<div class="uq-table__wrapper">
+  <table class="uq-table">
+      <caption class="uq-table__caption">Types of food and ratings</caption>
+      <thead class="uq-table__head">
+          <tr class="uq-table__row">
+              <th class="uq-table__header">Type of Food</th>
+              <th class="uq-table__header">Calories</th>
+              <th class="uq-table__header">Tasty Factor</th>
+              <th class="uq-table__header">Average Price</th>
+              <th class="uq-table__header">Rarity</th>
+              <th class="uq-table__header">Average Rating</th>
+          </tr>
+      </thead>
+      <tbody class="uq-table__body">
+          <tr class="uq-table__row">
+              <td class="uq-table__cell">Slice of Pizza</td>
+              <td class="uq-table__cell">450</td>
+              <td class="uq-table__cell">95%</td>
+              <td class="uq-table__cell">$5.00</td>
+              <td class="uq-table__cell">Common</td>
+              <td class="uq-table__cell">8/10</td>
+          </tr>
+          <tr class="uq-table__row">
+            <td class="uq-table__cell">Hamburger</td>
+            <td class="uq-table__cell">350</td>
+            <td class="uq-table__cell">87%</td>
+            <td class="uq-table__cell">$3.50</td>
+            <td class="uq-table__cell">Common</td>
+            <td class="uq-table__cell">7.5/10</td>
+          </tr>
+      </tbody>
+  </table>
+</div>
+```
+
+
+
+### b) Table Card
+
+In this responsive approach, the component table `tr` is displayed as a grid. At a certain responsive breakpoint, it behaves as folded cards and hides the header `thead`. 
+The data attributes assigned to each `tbody` cell helps in understanding the connection between the call value and its associated header when the header `thead` is hidden. 
+
+<Preview withToolbar>
+    <Story id="components-table--table-card" />
+</Preview>
+
+```html
+<table class="uq-table uq-table--card">
+    <caption>Types of food and ratings</caption>
+    <thead>
+        <tr>
+            <th>Type of Food</th>
+            <th>Calories</th>
+            <th>Tasty Factor</th>
+            <th>Average Price</th>
+            <th>Rarity</th>
+            <th>Average Rating</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td data-title="Type of Food">Slice of Pizza</td>
+            <td data-title="Calories">450</td>
+            <td data-title="Tasty Factor">95%</td>
+            <td data-title="Average Price">$5.00</td>
+            <td data-title="Rarity">Common</td>
+            <td data-title="Average Rating">8/10</td>
+        </tr>
+        <tr>
+            <td data-title="Type of Food">Hamburger</td>
+            <td data-title="Calories">350</td>
+            <td data-title="Tasty Factor">87%</td>
+            <td data-title="Average Price">$3.50</td>
+            <td data-title="Rarity">Common</td>
+            <td data-title="Average Rating">7.5/10</td>
+        </tr>
+    </tbody>
+</table>
+```
+
+#### Breakpoints
+
+The breakpoint for table cards are less than 640px.
+
+## Accessibility
+
+Data tables are used to organize data with a logical relationship in grids. Accessible tables need HTML markup that indicates header cells and data cells and defines their relationship. Assistive technologies use this information to provide context to users.
+
+Accessibility in tables can be acheived to an extend by following some or part of the steps below depending on the table data structure.
+
+1. Keep the table structure simple. Split data if needed to keep it simple or else user's using assistive technologies like screen readers will find it difficult to interpret data relationships.
+2. Use right semantical html markups for tables wherever possible. (Example, `<table>`, `<thead>`, `<tfoot>`, `<tbody>`, `<th>`, `<td>`)
+3. Though `<thead>`, `<tfoot>`, `<tbody>` makes no difference with assistive technologies like screen readers, they are useful when printing long tables that run over the next page. In such instances, the `<thead>`, `<tfoot>` gets repeated on the next printed page that gives the data context.
+4. Use `<caption>` tag which defines a table caption. The `<caption>` tag must be inserted immediately after the `<table>` tag. Tip: By default, a table caption will be center-aligned above a table.
+5. Basic tables will have one header row and/or one header column. Header cells must be marked up with `<th>` and data cells with `<td>` to make tables accessible. Commonly header cells are the first row or first column or both in a table.
+6. Tables with two headers with unclear header directions needs to define the direction of each header by setting the scope attribute to `col` or `row`.
+
+<Preview withToolbar>
+    <Story id="components-table--table-multiple-headers" />
+</Preview>
+
+```html
+<!-- 
+`col` - specifies that the cell is a header for a column.  
+`row` - specifies that the cell is a header for a row. 
+-->
+<div class="uq-table__wrapper">
+    <table class="uq-table">
+        <caption>Types of food and ratings</caption>
+        <thead>
+            <tr>
+                <td></td>
+                <th scope="col">Type of Food</th>
+                <th scope="col">Calories</th>
+                <th scope="col">Tasty Factor</th>
+                <th scope="col">Average Price</th>
+                <th scope="col">Rarity</th>
+                <th scope="col">Average Rating</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">001</th>
+                <td>Slice of Pizza</td>
+                <td>450</td>
+                <td>95%</td>
+                <td>$5.00</td>
+                <td>Common</td>
+                <td>8/10</td>
+            </tr>
+            <tr>
+                <th scope="row">002</th>
+                <td>Hamburger</td>
+                <td>350</td>
+                <td>87%</td>
+                <td>$3.50</td>
+                <td>Common</td>
+                <td>7.5/10</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+```
+
+7. Tables with irregular headers have header cells that span multiple columns and/or rows: For these tables, define column and row groups and set the range of the header cells using the `colgroup` and `rowgroup` values of the scope attribute.
+
+<Preview withToolbar>
+    <Story id="components-table--table-irregular-headers" />
+</Preview>
+
+```html
+<!-- 
+`colgroup` - specifies that the cell is a header for a group of columns.  
+`rowgroup` - specifies that the cell is a header for a group of rows.
+-->
+<div class="uq-table__wrapper">
+    <table class="uq-table">
+        <caption>Types of food and ratings</caption>
+        <col>
+        <colgroup span="2"></colgroup>
+        <colgroup span="2"></colgroup>
+        <thead>
+            <tr>
+                <td rowspan="2"></td>
+                <th colspan="3" scope="colgroup">McDonalds</th>
+                <th colspan="3" scope="colgroup">Hungry Jacks</th>
+            </tr>
+            <tr>
+                <th scope="col">Type of Food</th>
+                <th scope="col">Average Price</th>
+                <th scope="col">Average Rating</th>
+                <th scope="col">Type of Food</th>
+                <th scope="col">Average Price</th>
+                <th scope="col">Average Rating</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">001</th>
+                <td>Slice of Pizza</td>
+                <td>$3.00</td>
+                <td>7/10</td>
+                <td>Slice of Pizza</td>
+                <td>$5.00</td>
+                <td>8/10</td>
+            </tr>
+            <tr>
+                <th scope="row">002</th>
+                <td>Hamburger</td>
+                <td>$2.50</td>
+                <td>6.5/10</td>
+                <td>Hamburger</td>
+                <td>$3.50</td>
+                <td>7.5/10</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+``` 
+
+8. Tables with multi-level headers have multiple header cells associated per data cell: For tables that are so complex that header cells can’t be associated in a strictly horizontal or vertical way, use `id` and `headers` attributes to associate header and data cells explicitly.
+
+<Preview withToolbar>
+    <Story id="components-table--table-multi-level-headers" />
+</Preview>
+
+```html
+<!-- 
+`id` - specifies the unique id of a `<th>` header cell.  
+`headers` - specifies the `<td>` cell with a headers attribute that lists the id values of the associated header cells.
+-->
+<div class="uq-table__wrapper">
+    <table class="uq-table">
+        <caption>Types of food and ratings</caption>
+        <col>
+        <colgroup span="2"></colgroup>
+        <colgroup span="2"></colgroup>
+        <thead>
+            <tr>
+                <td rowspan="2"></td>
+                <th id="Mc"colspan="3" scope="colgroup" class="text--center">McDonalds</th>
+                <th id="Hj" colspan="3" scope="colgroup" class="text--center">Hungry Jacks</th>
+            </tr>
+            <tr>
+                <th scope="col">Type of Food</th>
+                <th scope="col">Average Price</th>
+                <th scope="col">Average Rating</th>
+                <th scope="col">Type of Food</th>
+                <th scope="col">Average Price</th>
+                <th scope="col">Average Rating</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th id="au" colspan="7" scope="colgroup">Australia</th>
+            </tr>
+            <tr>
+                <th scope="row" id="001">001</th>
+                <td headers="au Mc 001">Slice of Pizza</td>
+                <td headers="au Mc 001">$3.00</td>
+                <td headers="au Mc 001">7/10</td>
+                <td headers="au Hj 001">Slice of Pizza</td>
+                <td headers="au Hj 001">$4.00</td>
+                <td headers="au Hj 001">8/10</td>
+            </tr>
+            <tr>
+                <th scope="row" id="002">002</th>
+                <td headers="au Mc 002">Hamburger</td>
+                <td headers="au Mc 002">$2.00</td>
+                <td headers="au Mc 002">6.5/10</td>
+                <td headers="au Hj 002">Hamburger</td>
+                <td headers="au Hj 002">$3.00</td>
+                <td headers="au Hj 002">7.5/10</td>
+            </tr>
+            <tr>
+                <th id="nz" colspan="7" scope="colgroup">New Zealand</th>
+            </tr>
+            <tr>
+                <th scope="row" id="003">003</th>
+                <td headers="nz Mc 003">Slice of Pizza</td>
+                <td headers="nz Mc 003">$3.50</td>
+                <td headers="nz Mc 003">7/10</td>
+                <td headers="nz Hj 003">Slice of Pizza</td>
+                <td headers="nz Hj 003">$4.50</td>
+                <td headers="nz Hj 003">9/10</td>
+            </tr>
+            <tr>
+                <th scope="row" id="004">004</th>
+                <td headers="nz Mc 004">Hamburger</td>
+                <td headers="nz Mc 004">$4.50</td>
+                <td headers="nz Mc 004">8/10</td>
+                <td headers="nz Hj 004">Hamburger</td>
+                <td headers="nz Hj 004">$5.50</td>
+                <td headers="nz Hj 004">8/10</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+``` 
+
+For complex tables, it's recommended to split the table for better user experience on screen readers.

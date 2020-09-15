@@ -1,0 +1,77 @@
+@use '@uq-uidf/core/src/scss/global' as core;
+@use 'global' as *;
+
+// Table
+.uq-table {
+  @include table;
+
+  &__wrapper {
+    @include table-wrapper;
+  }
+  caption,
+  &__caption {
+    @include table-caption;
+  }
+  head,
+  &__head {
+    @include table-head;
+  }
+  body,
+  &__body {
+    @include table-body;
+  }
+  tr,
+  &__row {
+    @include table-row;
+  }
+  td,
+  &__cell {
+    @include table-cell;
+  }
+  th,
+  &__header {
+    @include table-header;
+  }
+
+  &--striped {
+    tr {
+      &:nth-child(even) {
+        background: rgba(core.$uq-neutral, 0.1);
+      }
+    }
+  }
+
+  /* Table - Card */
+  &--card {
+    tr {
+      display: grid;
+      grid: auto-flow / repeat(6, 1fr);
+    }
+    th,td {
+      margin: 0 -1px -1px 0;
+      word-break: break-word;
+    }
+    @media (max-width: 640px) {
+      thead {
+        left: -9999px;
+        position: absolute;
+        visibility: hidden;
+      }
+      tr {
+        grid: auto-flow / 1fr;
+        align-items: stretch;
+        margin-bottom: 1.5rem;
+      }
+      td {
+        padding: .5rem .75rem;
+      }
+      td:before {
+        content: attr(data-title);
+        color: core.$uq-purple;
+        font-weight: core.$font-weight-bold;
+        display: block;
+      }
+    }
+  }
+  
+}

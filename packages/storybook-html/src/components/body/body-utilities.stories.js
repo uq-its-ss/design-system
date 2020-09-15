@@ -5,7 +5,8 @@ export default {
   parameters: {
     docs: {
       page: docs
-    }
+    },
+    layout: 'padded'
   }
 };
 
@@ -99,3 +100,43 @@ export const backgroundColourUtils = () => {
 };
 
 backgroundColourUtils.storyName = 'Background colour';
+
+export const scrollContainerUtils = () => {
+  return `
+      <div class="scroll-container">
+        <table class="uq-table">
+          <caption>Types of food and ratings</caption>
+            <thead>
+              <tr>
+                <th>Type of Food</th>
+                <th>Calories</th>
+                <th>Tasty Factor</th>
+                <th>Average Price</th>
+                <th>Rarity</th>
+                <th>Average Rating</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Slice of Pizza</th>
+                <td>450</td>
+                <td>95%</td>
+                <td>$5.00</td>
+                <td>Common</td>
+                <td>8/10</td>
+              </tr>
+              <tr>
+                <td>Hamburger</th>
+                <td>350</td>
+                <td>87%</td>
+                <td>$3.50</td>
+                <td>Common</td>
+                <td>7.5/10</td>
+              </tr>
+            </tbody>
+        </table>
+      </div>
+  `;
+};
+
+scrollContainerUtils.storyName = 'Scroll container';

@@ -1,4 +1,5 @@
 @use "@uq-uidf/core/src/scss/global" as core;
+@use "@uq-uidf/table/src/scss/global" as table;
 @use 'global' as *;
 
 $use-encapsulation: false !default;
@@ -301,6 +302,33 @@ $use-encapsulation: false !default;
 
   .text--shadow {
     text-shadow: 0 core.$spacing-xxs core.$spacing-xxs core.$transparent-black-40;
+  }
+
+  // Table
+  .scroll-container {
+    @include table.table-wrapper;
+  }
+.uq-table {
+    @include table.table;
+
+    caption {
+      @include table.table-caption;
+    }
+    thead {
+      @include table.table-head;
+    }
+    tbody {
+      @include table.table-body;
+    }
+    tr {
+      @include table.table-row;
+    }
+    td {
+      @include table.table-cell;
+    }
+    th {
+      @include table.table-header;
+    }
   }
 }
 

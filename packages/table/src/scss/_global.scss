@@ -29,8 +29,8 @@
 @mixin table {
     width: 100%;
     min-width: 100%;
-    margin: 0;
-    padding: 0;
+    margin: core.$space-none;
+    padding: core.$space-none;
     border-collapse: collapse;
     border-spacing: 0;
     box-sizing: border-box;
@@ -51,7 +51,7 @@
     font-weight: core.$font-weight-bold;
     text-align: left;
     display: table-caption;
-    padding-bottom: .75rem;
+    padding-bottom: core.$space;
     background-color: core.$uq-white;
 }
 @mixin table-head {
@@ -66,12 +66,12 @@
     display: table-row;
 }
 @mixin table-cell {
-    padding: .75rem 1rem;
+    padding: core.$space-sm core.$space;
     border: 1px solid core.$uq-neutral;
     text-align: left;
 }
 @mixin table-header {
-    padding: .75rem 1rem;
+    padding: core.$space-sm core.$space;
     color: core.$uq-purple;
     text-align: left;
     border: 1px solid core.$uq-neutral;

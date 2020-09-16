@@ -1,4 +1,4 @@
-@use '@uq-uidf/core/src/scss/global' as *;
+@use '@uq-uidf/core/src/scss/global' as core;
 @use '@uq-uidf/foundation-global/src/scss/global' as *;
 @use 'global' as *;
 
@@ -12,7 +12,7 @@
 // .tabs--three - Style for three tabs
 // .tabs--four - Style for four tabs
 // .tabs--five - Style for five tabs
-//
+//s
 // Variants for tabs content
 // .tabs-content--container - Rectangle box style for tab content
 
@@ -20,8 +20,8 @@
 .tabs-section {
   // Tabs - default
   .tabs {
-    padding: 0;
-    margin: 0;
+    padding: core.$space-none;
+    margin: core.$space-none;
     @include clearfix;
 
     // Foundaton classname for li wrapping tab title
@@ -29,7 +29,7 @@
       text-align: center;
       float: left;
       list-style: none;
-      margin-bottom: 0;
+      margin-bottom: core.$space-none;
       position: relative;
       border-bottom: 1px solid $panel-border;
 
@@ -42,9 +42,9 @@
       // tab title
       a {
         color: $tabs-color;
-        background: $uq-white;
+        background: core.$uq-white;
         display: block;
-        padding: 1rem;
+        padding: core.$space;
 
         &:hover,
         &:focus {
@@ -109,9 +109,9 @@
     // ***********************************
     // Tabs - Outline
     &--outline {
-      background: $uq-white;
+      background: core.$uq-white;
       border: 1px solid $panel-border;
-      border-bottom: 0;
+      border-bottom: core.$space-none;
 
       // Foundaton classname for li wrapping tab title
       .tab-title {
@@ -124,7 +124,7 @@
 
         // tab title
         a {
-          padding: 1rem;
+          padding: core.$space;
         }
       }
     }
@@ -147,13 +147,13 @@
 
         // active tab
         &.active {
-          border-bottom-color: $uq-white;
-          background: $uq-white;
+          border-bottom-color: core.$uq-white;
+          background: core.$uq-white;
         }
 
         // tab title
         a {
-          padding: 1rem 2rem;
+          padding: core.$space core.$space-lg;
         }
       }
     }
@@ -161,7 +161,7 @@
     // ***********************************
     // Tabs - Square
     &--square {
-      background: $uq-white;
+      background: core.$uq-white;
       border: 1px solid $panel-border;
       border-right: 0;
       border-bottom: 0;
@@ -178,10 +178,10 @@
 
         // tab title
         a {
-          padding: 2.5rem 0.5rem 1rem;
+          padding: core.$space-xl core.$space-sm core.$space;
           text-align: center;
           font-size: 1.4rem;
-          background: $uq-white;
+          background: core.$uq-white;
         }
       }
     }
@@ -206,7 +206,7 @@
     &--container {
       border: 1px solid $panel-border;
       border-top: 0;
-      background: $uq-white;
+      background: core.$uq-white;
 
       // Foundaton classname for tab content
       .content {

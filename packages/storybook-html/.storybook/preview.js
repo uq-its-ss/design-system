@@ -16,6 +16,10 @@ export const parameters = {
           'Body'
         ],
         'Layout',
+        [
+          'Layout',
+          'Grid'
+        ],
         'Components',
         'Forms',
         [

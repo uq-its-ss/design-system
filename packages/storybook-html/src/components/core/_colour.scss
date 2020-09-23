@@ -9,11 +9,11 @@
 .uqds-colour {}
 .uqds-colour__palette {
   width: 100%;
-      border-radius: 0.25rem;
-      height: $space-md;
+  border-radius: 0.25rem;
+  padding: $space;
 }
 .uqds-colour__palette--large {
-      height: $space-xxl;
+  padding: $space-xl;
 }
 
 
@@ -100,12 +100,18 @@
   .uqds-colour--purple {
     background-color: $uq-purple;
   }
+  .uqds-text-color--purple {
+    color: $uq-purple;
+  }
   .uqds-colour--black {
     background-color: $uq-black;
   }
   .uqds-colour--white {
     background-color: $uq-white;
     border: 1px solid #EEEEEE;
+  }
+  .uqds-text-color--white {
+    color: $uq-white;
   }
   /* UQ Secondary palette */
   .uqds-colour--purple-light {
@@ -163,6 +169,9 @@
   .uqds-neutral-dark40 {
     background-color: $uq-neutral-dark40;
   }
+  .uqds-text-color--grey {
+    color: $uq-neutral-dark40;
+  }
   .uqds-neutral-dark60 {
     background-color: $uq-neutral-dark60;
   }
@@ -203,6 +212,9 @@
   }
 
   /* Text */
-  .uqds-text-color{
+  .uqds-text-bgcolor{
     background-color: $text;
+  }
+  .uqds-text-color{
+    color: $text;
   }

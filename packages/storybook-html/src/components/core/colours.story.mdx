@@ -1,64 +1,89 @@
 import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
 
-<Meta title="Core/Colour/Colour Usage" />
+<Meta title="Core/Colour/Colour usage" />
 
 # Colour Usage
 
 - Purple is UQ’s identifying colour and should always lead.
 - Ensure the UQ colours are applied and reproduced consistently 
 
-<div class="colour-purple">test colour</div>
+## Text colours
 
-$uq-purple: #51247A; 
+These are the most common text examples and usages. 
 
-## text colours
+- We avoid solid black for text, it is too harsh on screens for reading. 
+- Our current default text colour is created from a darkened Neutral <code>$uq-neutral-dark80</code>
 
-We avoid solid black for text, it is too harsh on screens for reading. 
-Our current default text colour is created from a darkened Neutral <code>$uq-neutral-dark80</code>
+<table class="uqds-table">
+<tbody class="uqds-table__body">
+  <tr class="uqds-table__mobile-heading">
+    <th class="uqds-table__heading">Example</th>
+    <th class="uqds-table__heading">Name</th>
+    <th class="uqds-table__heading">Variable</th>
+    <th class="uqds-table__heading">Usage</th>
+  </tr>
+  <tr  class="uqds-table__row">
+    <td class="uqds-table__item"><strong class="uqds-text-color">Default Text</strong> <div class="uqds-colour__palette uqds-text-bgcolor"></div></td>
+    <td class="uqds-table__item" data-title="Name:">Default text</td>
+    <td class="uqds-table__item" data-title="Variable:"><code>$text</code></td>
+    <td class="uqds-table__item" data-title="Usage:">Default text, Content</td>
+  </tr>
+  <tr class="uqds-table__row">
+    <td class="uqds-table__item"><strong class="uqds-text-color--grey">Secondary Text</strong> <div class="uqds-colour__palette uqds-neutral-dark40"></div></td>
+    <td class="uqds-table__item" data-title="Name:">Secondary text</td>
+    <td class="uqds-table__item" data-title="Variable:"><code>$uqds-neutral-dark40</code></td>
+    <td class="uqds-table__item" data-title="Usage:">
+    <ul>
+    <li>Used to reduce the emphasis of text</li>
+    <li>should not be used in isolation but in a supporting role</li>
+    </ul>
+    </td>
+  </tr>
+  <tr  class="uqds-table__row">
+    <td class="uqds-table__item"><strong class="uqds-text-color--purple">Purple Text</strong> <div class="uqds-colour__palette uqds-colour--purple"></div></td>
+    <td class="uqds-table__item" data-title="Name:">Purple text</td>
+    <td class="uqds-table__item" data-title="Variable:"><code>$uq-purple</code></td>
+    <td class="uqds-table__item" data-title="Usage:">Headings, Call out text and titles</td>
+  </tr>
+  <tr class="uqds-table__row">
+    <td class="uqds-table__item"><strong class="uqds-text-color--white">White Text</strong> <div class="uqds-colour__palette uqds-colour--white"></div></td>
+    <td class="uqds-table__item" data-title="Name:">white text</td>
+    <td class="uqds-table__item" data-title="Variable:"><code>$uq-white</code></td>
+    <td class="uqds-table__item" data-title="Usage:">Used as default on darker backgrounds</td>
+  </tr>
+</tbody>
+</table>
 
-  <table class="uqds-table">
-  <tbody class="uqds-table__body">
-    <tr class="uqds-table__mobile-heading">
-      <th class="uqds-table__heading">Example</th>
-      <th class="uqds-table__heading">Name</th>
-      <th class="uqds-table__heading">Variable</th>
-      <th class="uqds-table__heading">Usage</th>
-    </tr>
-    <tr  class="uqds-table__row">
-      <td class="uqds-table__item"><div class="uqds-colour__palette uqds-text-color"></div></td>
-      <td class="uqds-table__item" data-title="Name:">Default text</td>
-      <td class="uqds-table__item" data-title="Variable:"><code>$text</code></td>
-      <td class="uqds-table__item" data-title="Usage:">Default text, Content</td>
-    </tr>
-  </tbody>
-  </table>
+### Text Combinations
 
-## Background Gradient
-
-<div class="uqds-colour__palette uqds-colour__palette--large uqds-purple-gradient "></div>
-
-  <table class="uqds-table">
-  <tbody class="uqds-table__body">
-    <tr class="uqds-table__mobile-heading">
-      <th class="uqds-table__heading">Example</th>
-      <th class="uqds-table__heading">Name</th>
-      <th class="uqds-table__heading">Variable</th>
-      <th class="uqds-table__heading">Usage</th>
-    </tr>
-    <tr  class="uqds-table__row">
-      <td class="uqds-table__item"><div class="uqds-colour__palette uqds-purple-gradient"></div></td>
-      <td class="uqds-table__item" data-title="Name:">UQ Purple Gradient</td>
-      <td class="uqds-table__item" data-title="Variable:"><code>$uq-purple-gradient</code></td>
-      <td class="uqds-table__item" data-title="Usage:">
-        <ul>
-          <li>87% Transition of UQ Purple to UQ purple light</li>
-          <li>used mainly for backgrounds</li>
-          <li>Typically reserved for offical header and footer</li>
-        </ul>
-      </td>
-    </tr>
-  </tbody>
-  </table>
+<table class="uqds-table">
+<tbody class="uqds-table__body">
+  <tr class="uqds-table__mobile-heading">
+    <th class="uqds-table__heading">Example</th>
+    <th class="uqds-table__heading">Name</th>
+    <th class="uqds-table__heading">Variable</th>
+    <th class="uqds-table__heading">Usage</th>
+  </tr>
+  <tr  class="uqds-table__row">
+    <td class="uqds-table__item"><div class="uqds-colour__palette uqds-neutral-light20 uqds-colour__palette--text"><strong class="uqds-text-color">Default Text</strong></div></td>
+    <td class="uqds-table__item" data-title="Name:">Default text on background colour</td>
+    <td class="uqds-table__item" data-title="Variable:"><code>$text</code> <code>$uq-neutral-light20</code></td>
+    <td class="uqds-table__item" data-title="Usage:">Default text on a grey background colour</td>
+  </tr>
+  <tr  class="uqds-table__row">
+    <td class="uqds-table__item"><div class="uqds-colour__palette uqds-neutral-light20 uqds-colour__palette--text"><strong class="uqds-text-color--purple">Purple Text</strong></div></td>
+    <td class="uqds-table__item" data-title="Name:">Purple text on background colour</td>
+    <td class="uqds-table__item" data-title="Variable:"><code>$uq-purple</code> <code>$uq-neutral-light20</code></td>
+    <td class="uqds-table__item" data-title="Usage:">Default text on a grey background colour</td>
+  </tr>
+  <tr  class="uqds-table__row">
+    <td class="uqds-table__item"><div class="uqds-colour__palette uqds-colour--purple uqds-colour__palette--text"><strong class="uqds-text-color--white">White Text</strong></div></td>
+    <td class="uqds-table__item" data-title="Name:">White text on purple background</td>
+    <td class="uqds-table__item" data-title="Variable:"><code>$uq-white</code> <code>$uq-purple</code></td>
+    <td class="uqds-table__item" data-title="Usage:">Dark background</td>
+  </tr>
+</tbody>
+</table>
 
 ## Links 
 
@@ -132,8 +157,9 @@ Our current default text colour is created from a darkened Neutral <code>$uq-neu
 
   ## Neutrals and Darks
   Tints of our neutral tones can be used as a background colour.
-  
+
   Recommended tints of the neutral tones are:
+
   ### Neutral Tints and shades
   The Neutrals are created from a base of <code>$uq-neutral</code>
   <table class="uqds-table">
@@ -222,6 +248,9 @@ Our current default text colour is created from a darkened Neutral <code>$uq-neu
   </table>
 
 ### Dark Grey Tints and Shades
+
+The Dark Grey's are created from a base of <code>$uq-darkgrey</code>
+
   <table class="uqds-table">
   <tbody class="uqds-table__body">
     <tr class="uqds-table__mobile-heading">
@@ -270,7 +299,7 @@ Our current default text colour is created from a darkened Neutral <code>$uq-neu
       <td class="uqds-table__item" data-title="Variable:"><code>$uq-darkgrey</code></td>
       <td class="uqds-table__item" data-title="HEX:">#999490</td>
       <td class="uqds-table__item" data-title="RGB:">rgb(153, 148, 144)</td>
-      <td class="uqds-table__item" data-title="Usage:">Neutral tones</td>
+      <td class="uqds-table__item" data-title="Usage:">Dark Grey tones</td>
     </tr>
   </tbody>
   </table>

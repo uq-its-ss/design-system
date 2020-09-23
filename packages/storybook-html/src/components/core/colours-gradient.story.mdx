@@ -1,0 +1,40 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+
+<Meta title="Core/Colour/Purple Gradient" />
+
+# Purple Gradient
+
+The purple gradient is Typically reserved for the offical header and footer
+
+Other examples of usage include, section and banner background, but these are typically a solid colour eg. <code>$uq-purple</code>
+
+<div class="uqds-colour__palette uqds-colour__palette--large uqds-purple-gradient "></div>
+
+It is recommended to always reference the provide variable and avoid creating custom gradient versions. 
+
+  <table class="uqds-table">
+  <tbody class="uqds-table__body">
+    <tr class="uqds-table__mobile-heading">
+      <th class="uqds-table__heading">Example</th>
+      <th class="uqds-table__heading">Name</th>
+      <th class="uqds-table__heading">Variable</th>
+      <th class="uqds-table__heading">Usage</th>
+    </tr>
+    <tr  class="uqds-table__row">
+      <td class="uqds-table__item"><div class="uqds-colour__palette uqds-purple-gradient"></div></td>
+      <td class="uqds-table__item" data-title="Name:">UQ Purple Gradient</td>
+      <td class="uqds-table__item" data-title="Variable:"><code>$uq-purple-gradient</code></td>
+      <td class="uqds-table__item" data-title="Usage:">
+      <ul>
+        <li><code>$uq-purple</code> to <code>$uq-light-purple</code></li>
+        <li>Gradient Centre point set to 87%</li>
+      </ul>
+      </td>
+    </tr>
+  </tbody>
+  </table>
+
+## Gradient Direction
+
+The purple gradient is used horizontally, <code>$uq-purple</code> left to <code>$uq-light-purple</code> right. 
+This is the preferred usage for most senarios, and helps maintain consistency across pages. 

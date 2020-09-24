@@ -2,7 +2,7 @@
 @use '@uq-uidf/core/src/scss/global' as core;
 @use '@uq-uidf/foundation-global/src/scss/global' as *;
 @use '@uq-uidf/foundation-grid/src/scss/global' as *;
-@use 'global' as *;
+// @use 'global' as *;
 
 //
 // Section
@@ -130,7 +130,7 @@
   }
   // For when the section has an inline style background image
   &--background-image {
-    //@include background-cover(); //Commented as throwing an error!
+    @include core.background-cover();
   }
   // Allows content to overflow the section if needed, such as drop downs.
   &--allow-overflow {

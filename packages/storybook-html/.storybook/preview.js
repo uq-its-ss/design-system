@@ -11,9 +11,19 @@ export const parameters = {
           'Getting started'
         ],
         'Core',
+        [
+          'Core',
+          'Space',
+          'Breakpoints'
+        ],
         'Base',
         [
-          'Body'
+          'Body',
+          [
+            'Body',
+            'Elements',
+            'Utilities'
+          ]
         ],
         'Layout',
         [

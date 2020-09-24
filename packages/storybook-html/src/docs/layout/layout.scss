@@ -1,0 +1,71 @@
+@use '@uq-uidf/core/src/scss/_global' as core;
+
+.uqds-base-layout-grid {
+  background: repeating-linear-gradient(
+    45deg,
+    core.$uq-neutral-light40,
+    core.$uq-neutral-light40 10px,
+    core.$uq-neutral-light20 10px,
+    core.$uq-neutral-light20 20px
+  );
+
+  .uq-grid {
+    background: repeating-linear-gradient(
+      45deg,
+      lighten(core.$uq-red, 30%),
+      lighten(core.$uq-red, 30%) 10px,
+      lighten(core.$uq-red, 35%) 10px,
+      lighten(core.$uq-red, 35%) 20px
+    );
+
+    &__col {
+      justify-content: center;
+      background-color: lighten(core.$uq-aqua, 45%);
+      border: 1px solid core.$uq-aqua;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      overflow: hidden;
+      padding: core.$space-sm;
+      text-align: center;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+
+      &:nth-child(n+7) {
+        display: none;
+      }
+
+      @media #{core.$screen-sm-up} {
+        background-color: lighten(core.$uq-orange, 35%);
+        border-color: core.$uq-orange;
+      }
+
+      @media #{core.$screen-md-up} {
+        background-color: lighten(core.$uq-purple, 50%);
+        border-color: core.$uq-purple;
+
+        &:nth-child(n+7) {
+          display: flex;
+        }
+
+        &:nth-child(n+9) {
+          display: none;
+        }
+      }
+
+      @media #{core.$screen-lg-up} {
+        background-color: lighten(core.$uq-green, 45%);
+        border-color: core.$uq-green;
+      }
+
+      @media #{core.$screen-xl-up} {
+        background-color: lighten(core.$uq-blue, 40%);
+        border-color: core.$uq-blue;
+
+        &:nth-child(n+9) {
+          display: flex;
+        }
+      }
+    }
+  }
+}

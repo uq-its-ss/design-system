@@ -1,3 +1,4 @@
+@use "@uq-uidf/core/src/scss/_global" as core-global;
 @use "@uq-uidf/core/src/scss/_component" as core with (
   $uq-font-path: "../node_modules/@uq-uidf/core/src/fonts/uq-icons/font",
   $fa-font-path: "../node_modules/font-awesome/fonts",
@@ -11,4 +12,8 @@
 body {
   // Prevent the @uq-uidf/body from imposing a background colour.
   background-color: transparent !important;
+}
+
+.sbdocs.sbdocs-content {
+  max-width: core-global.$screen-xl;
 }

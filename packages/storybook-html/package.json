@@ -6,9 +6,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "start-storybook -s ./public -p 6006",
     "storybook-docs": "start-storybook --docs -p 6007",
-    "build-storybook": "build-storybook -c .storybook -o .out"
+    "build-storybook": "build-storybook -c .storybook -s ./public -o .out"
   },
   "keywords": [],
   "author": {

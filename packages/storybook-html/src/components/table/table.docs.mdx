@@ -1,4 +1,4 @@
-import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
 
 # Table
 
@@ -21,9 +21,9 @@ To enable scroll feature, the table is wrapped by a container div with class `uq
 A shadow feature is added to the sides of the table when it overflows the container. It serves as a visual indication to the user that there is more data to be scrolled to the left or right. 
 For instance when there is more content to the left, a transparent shadow appears to the left side of the table and when there is more content to the right, the shadow appears to the right side of the table.
 
-<Preview withToolbar>
+<Canvas withToolbar>
     <Story id="components-table--table" />
-</Preview>
+</Canvas>
 
 ```html
 <h3>Table - Basic tags with minimal classes</h3>
@@ -107,9 +107,9 @@ For instance when there is more content to the left, a transparent shadow appear
 In this responsive approach, the component table `tr` is displayed as a grid. At a certain responsive breakpoint, it behaves as folded cards and hides the header `thead`. 
 The data attributes assigned to each `tbody` cell helps in understanding the connection between the call value and its associated header when the header `thead` is hidden. 
 
-<Preview withToolbar>
+<Canvas withToolbar>
     <Story id="components-table--table-card" />
-</Preview>
+</Canvas>
 
 ```html
 <table class="uq-table uq-table--card">
@@ -162,9 +162,9 @@ Accessibility in tables can be acheived to an extend by following some or part o
 5. Basic tables will have one header row and/or one header column. Header cells must be marked up with `<th>` and data cells with `<td>` to make tables accessible. Commonly header cells are the first row or first column or both in a table.
 6. Tables with two headers with unclear header directions needs to define the direction of each header by setting the scope attribute to `col` or `row`.
 
-<Preview withToolbar>
+<Canvas withToolbar>
     <Story id="components-table--table-multiple-headers" />
-</Preview>
+</Canvas>
 
 ```html
 <!-- 
@@ -211,9 +211,9 @@ Accessibility in tables can be acheived to an extend by following some or part o
 
 7. Tables with irregular headers have header cells that span multiple columns and/or rows: For these tables, define column and row groups and set the range of the header cells using the `colgroup` and `rowgroup` values of the scope attribute.
 
-<Preview withToolbar>
+<Canvas withToolbar>
     <Story id="components-table--table-irregular-headers" />
-</Preview>
+</Canvas>
 
 ```html
 <!-- 
@@ -267,9 +267,9 @@ Accessibility in tables can be acheived to an extend by following some or part o
 
 8. Tables with multi-level headers have multiple header cells associated per data cell: For tables that are so complex that header cells can’t be associated in a strictly horizontal or vertical way, use `id` and `headers` attributes to associate header and data cells explicitly.
 
-<Preview withToolbar>
+<Canvas withToolbar>
     <Story id="components-table--table-multi-level-headers" />
-</Preview>
+</Canvas>
 
 ```html
 <!-- 

@@ -1,8 +1,8 @@
-@use '@uq-uidf/core/src/scss/global' as core;
+@use '@uq-uidf/core/src/scss/global' as *;
 @use '@uq-uidf/foundation-global/src/scss/global' as *;
+@use 'legacy';
 @use 'global' as *;
 @import 'font-awesome/scss/mixins';
-@import 'legacy';
 
 // Variants:
 // .form--transparent-fieldsets - Removes the default styling applied to fieldsets.
@@ -10,40 +10,40 @@
 
 .form {
   &__required {
-    color: core.$alert;
+    color: $alert;
   }
 
   &__description {
     color: $form-description-color;
     font-size: .875rem;
     font-style: italic;
-    margin-bottom: core.$space;
+    margin-bottom: $space;
   }
 
   &__help-text {
     color: $form-description-color;
     font-size: .875rem;
-    margin-top: core.$space-none;
-    margin-bottom: core.$space;
+    margin-top: $space-none;
+    margin-bottom: $space;
   }
 
   &__inline-error-message {
-    background-color: core.$alert;
-    color: core.$uq-white;
+    background-color: $alert;
+    color: $uq-white;
     display: block;
     font-size: rem-calc(14px);
     font-style: normal;
     font-weight: 400;
     line-height: 1.357;
-    margin-bottom: core.$space;
-    padding: core.$space-sm;
+    margin-bottom: $space;
+    padding: $space-sm;
   }
 
   &--transparent-fieldsets {
     fieldset {
       border: 0;
-      padding: core.$space-none;
-      margin: core.$space-none;
+      padding: $space-none;
+      margin: $space-none;
     }
   }
 }
@@ -51,7 +51,7 @@
 legend {
   &.form__legend {
     &.form__legend--error {
-      color: core.$alert;
+      color: $alert;
     }
   }
 }
@@ -61,14 +61,14 @@ fieldset {
     font-size: .875rem;
     font-weight: 500;
     line-height: 1.5;
-    padding: core.$space-none;
-    margin-bottom: core.$space;
+    padding: $space-none;
+    margin-bottom: $space;
   }
 }
 
 label {
   font-weight: 500;
-  margin-bottom: core.$space;
+  margin-bottom: $space;
   white-space: normal;
 
   + input[type="text"], 
@@ -106,17 +106,17 @@ label {
   > input[type="color"], 
   > textarea,
   > select {
-    margin-bottom: core.$space-none;
-    margin-top: rem-calc(core.$space-xs);
+    margin-bottom: $space-none;
+    margin-top: rem-calc($space-xs);
   }
 
   &.form__label {
     &.form__label--disabled {
-      color: core.$uq-neutral-dark20;
+      color: $uq-neutral-dark20;
       cursor: not-allowed;
     }
     &.form__label--error {
-      color: core.$alert;
+      color: $alert;
       position: relative;
 
       > input[type="text"], 
@@ -138,7 +138,7 @@ label {
         &.form__input {
           &.form__input--error {
             + .form__inline-error-message {
-              margin-top: core.$space-none;
+              margin-top: $space-none;
             }
           }
         }
@@ -183,15 +183,15 @@ textarea,
 select {
   &.form__input {
     &.form__input--error {
-      border-color: core.$alert;
+      border-color: $alert;
 
       &:focus {
-        border-color: core.$alert;
+        border-color: $alert;
       }
     }
 
     + .form__inline-error-message {
-      margin-top: -core.$space;
+      margin-top: -($space);
     }
   }
 }
@@ -200,16 +200,16 @@ input[type="checkbox"],
 input[type="radio"] {
   float: left;
   clear: left;
-  margin-bottom: core.$space-none;
-  margin-right: rem-calc(core.$space-sm);
-  margin-top: rem-calc(core.$space-xs);
+  margin-bottom: $space-none;
+  margin-right: rem-calc($space-sm);
+  margin-top: rem-calc($space-xs);
   
   + label {
     font-weight: 300;
     display: block;
-    margin-left: core.$space-none;
-    margin-right: core.$space-none;
-    margin-bottom: core.$space;
+    margin-left: $space-none;
+    margin-right: $space-none;
+    margin-bottom: $space;
     // So long labels on multiple lines don't break around the radio/checkbox.
     max-width: 80%;
     //vertical-align: top;
@@ -221,7 +221,7 @@ input[type="radio"] {
 
   &.form__input {
     &.form__input--error {
-      margin-left: core.$space-sm;
+      margin-left: $space-sm;
     }
   }
 
@@ -230,7 +230,7 @@ input[type="radio"] {
       &.form__label--error {
         &:before {
           background-color: $alert;
-          bottom: -core.$space-xs;
+          bottom: -($space-xs);
           content: "";
           display: inline-block;
           left: 0;
@@ -305,7 +305,7 @@ input[type="reset"][readonly] {
 // errors.
 input.error,
 textarea.error {
-  margin-bottom: core.$space;
+  margin-bottom: $space;
 }
 
 input.field-add-more-submit {
@@ -323,20 +323,20 @@ input[type='reset'] {
   font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
   line-height: normal;
-  margin: core.$space-none core.$space-none core.$space-md;
+  margin: $space-none $space-none $space-md;
   position: relative;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  padding: core.$space core.$space-lg;
+  padding: $space $space-lg;
   font-size: 1rem;
-  background-color: core.$uq-red-dark20; //#f04124
-  border-color: core.$uq-red-dark40; //#cf2a0e
-  color: core.$uq-white;
+  background-color: $uq-red-dark20; //#f04124
+  border-color: $uq-red-dark40; //#cf2a0e
+  color: $uq-white;
 
   &:hover, &:focus {
-    background-color: core.$uq-red-dark40; //#cf2a0e
-    color: core.$uq-white;
+    background-color: $uq-red-dark40; //#cf2a0e
+    color: $uq-white;
   }
 }
 
@@ -347,21 +347,21 @@ input[type='reset'] {
 // Visually connect file uploads to the upload button.
 .form-managed-file .form-file {
   background: transparent;
-  border: 1px dashed core.$uq-neutral; //#ddd
-  border-right: core.$space-none;
-  padding: core.$space; //0.8rem
+  border: 1px dashed $uq-neutral; //#ddd
+  border-right: $space-none;
+  padding: $space; //0.8rem
 }
 
 .form-radios,
 .form-checkboxes {
-  margin-bottom: core.$space;
+  margin-bottom: $space;
 }
 
 .captcha {
-  margin: core.$space core.$space-none;
+  margin: $space $space-none;
 
   img {
-    margin-bottom: core.$space-sm;
+    margin-bottom: $space-sm;
   }
 }
 
@@ -391,7 +391,7 @@ select {
     }
 
     + .form__inline-error-message {
-      margin-top: -core.$space;
+      margin-top: -($space);
     }
   }
 }
@@ -446,7 +446,7 @@ input[type='file'] {
   color: $form-description-color;
   font-size: 0.875rem;
   font-style: italic;
-  margin-bottom: core.$space;
+  margin-bottom: $space;
 }
 
 // Move description closer to input fields.
@@ -455,7 +455,7 @@ textarea,
 .resizable-textarea,
 .date-date {
   & + .description {
-    margin-top: -core.$space;
+    margin-top: -($space);
   }
 }
 
@@ -473,7 +473,7 @@ textarea,
     &::before {
       @include fa-icon;
       content: $fa-var-arrows;
-      color: core.$uq-neutral-dark40; //#777
+      color: $uq-neutral-dark40; //#777
     }
   }
 }
@@ -484,35 +484,35 @@ select[multiple='multiple'] {
 }
 
 .error-summary {
-  background-color: desaturate(lighten(core.$alert, 62.5%), 25%);
-  border: 1px solid core.$alert;
+  background-color: desaturate(lighten($alert, 62.5%), 25%);
+  border: 1px solid $alert;
   border-left-width: 3px;
   padding: $column-gutter / 2;
-  margin-bottom: core.$space-md;
+  margin-bottom: $space-md;
   &__title {
-    color: core.$body-font-color;
+    color: $body-font-color;
     font-size: 1.125rem;
     font-weight: 500;
-    margin: core.$space-none core.$space-none core.$space core.$space-none;
+    margin: $space-none $space-none $space $space-none;
   }
   &_body {
     color: $body-font-color;
-    font-size: core.$space; //.875rem
+    font-size: $space; //.875rem
   }
   &__list {
     color: $body-font-color;
-    font-size: core.$space; //.875rem
+    font-size: $space; //.875rem
     margin: 0;
     &__item {
-      margin-bottom: core.$space-xs;
+      margin-bottom: $space-xs;
       line-height: 1.5;
     }
     a {
-      color: core.$alert;
+      color: $alert;
       text-decoration: underline;
       font-weight: 400;
       &:hover, &:focus {
-        color: darken(core.$alert, 5%);
+        color: darken($alert, 5%);
       }
     }
   }

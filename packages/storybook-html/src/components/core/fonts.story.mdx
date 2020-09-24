@@ -1,0 +1,40 @@
+import { Meta, Story } from '@storybook/addon-docs/blocks';
+import './_fonts.scss';
+
+<Meta title="Core/Fonts" parameters={{ layout: 'fullscreen' }} />
+
+# Fonts
+
+> **Required for all design system components.**
+
+export const FontExample = () => `
+  <div class="uqds-fonts">
+    <div class="uqds-font uqds-font--roboto uqds-font--300">Roboto Light 300 (deprecated)</div>
+    <div class="uqds-font uqds-font--roboto">Roboto Regular 400</div>
+    <div class="uqds-font uqds-font--roboto uqds-font--500">Roboto Medium 500</div>
+    <div class="uqds-font uqds-font--merriweather uqds-font--italic">Merriweather Regular 400 italic</div>
+    <div class="uqds-font--montserrat uqds-font--500">Montserrat Medium 500</div>
+  </div>
+`;
+
+<Story name="Font list">{FontExample.bind({})}</Story>
+
+<><br /><br /></>
+
+## Loading fonts
+
+Copy the HTML or CSS lines below and paste into your project to load design system fonts.
+
+### HTML
+```html
+<link rel="stylesheet" type="text/css" href="https://static.uq.net.au/v6/fonts/Roboto/roboto.css" />
+<link rel="stylesheet" type="text/css" href="https://static.uq.net.au/v9/fonts/Merriweather/merriweather.css" />
+<link rel="stylesheet" type="text/css" href="https://static.uq.net.au/v13/fonts/Montserrat/montserrat.css" />
+```
+
+### CSS/Sass
+```css
+@import url('https://static.uq.net.au/v6/fonts/Roboto/roboto.css');
+@import url('https://static.uq.net.au/v9/fonts/Merriweather/merriweather.css');
+@import url('https://static.uq.net.au/v13/fonts/Montserrat/montserrat.css');
+```

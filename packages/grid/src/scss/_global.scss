@@ -1,13 +1,81 @@
-// FS: layout containers
+@use "@uq-uidf/core/src/scss/global" as core;
 
-// Original CSS custom props syntax
-// ================================
+/**
+ * Layout containment (breakpoint driven)
+ */
+@mixin layout-containment {
+  margin-left: core.$space-md;
+  margin-right: core.$space-md;
 
-// --container-max-width-narrow: 760px;
-// --container-max-width: 1140px;
+  // TODO: if we can perform the following checks on the parent element width
+  // instead of the viewport width, we can achieve a more friendlier to use
+  // implementation of the layout system (albeit less strict). Also, it means
+  // that the columns get enumerated based on available space when rows are
+  // nested.
 
-// Converted (Sass) variables
-// ==========================
+  // Ease into larger margin
+  @media (min-width: #{core.$screen-md + (2 * core.$space-md) - (2 * core.$space-xxxxl)}) {
+    margin-left: core.$space-auto;
+    margin-right: core.$space-auto;
+    max-width: core.$screen-md - (2 * core.$space-xxxxl) - 0.0625rem;
+  }
 
-$container-max-width-narrow: 760px !default;
-$container-max-width: 1140px !default;
+  @media #{core.$screen-md-up} {
+    margin-left: core.$space-xxxxl;
+    margin-right: core.$space-xxxxl;
+    max-width: none;
+  }
+  
+  @media (min-width: #{core.$screen-xl + (2 * core.$space-xxxxl) - 18.75rem}) {
+    margin-left: core.$space-auto;
+    margin-right: core.$space-auto;
+    max-width: core.$screen-xl - 18.75rem;
+  }
+}
+
+/**
+ * Full-width container
+ */
+@mixin layout-full-width {
+  margin-left: core.$space-auto;
+  margin-right: core.$space-auto;
+  max-width: none;
+}
+
+@function calc-true-colspan($span, $column-count, $phantom-column-count) {
+  @return round(($phantom-column-count / $column-count) * $span); 
+}
+
+/**
+ * Generate grid classes
+ */
+@mixin grid-row--css-native(
+   $column-count: 6,
+   $gutter-width: core.$space,
+   $breakpoint-name: null,
+   $phantom-column-count: $column-count
+  ) {
+  
+  $col-span-mod-prefix: "";
+
+  @if ($breakpoint-name) {
+    $col-span-mod-prefix: "#{$breakpoint-name}-"
+  }
+
+  .uq-grid {
+    display: grid;
+    grid-gap: $gutter-width;
+    grid-template-columns: repeat($phantom-column-count, 1fr);
+
+    @content;
+
+    &__col--#{$col-span-mod-prefix} {
+      @for $span from 1 through $column-count {
+        &#{$span} {
+          grid-column: auto / span calc-true-colspan($span, $column-count, $phantom-column-count);
+          width: auto; // required to enable a flexbox fallback implementation
+        }
+      }
+    }
+  }
+}

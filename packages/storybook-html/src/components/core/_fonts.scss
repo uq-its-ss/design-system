@@ -1,0 +1,34 @@
+@use '@uq-uidf/core/src/scss/global' as core;
+@use '@uq-uidf/foundation-global/src/scss/global' as fnd-global;
+
+.uqds-fonts {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.uqds-font {
+  &--roboto {
+    font-family: core.$roboto;
+  }
+
+  &--merriweather {
+    font-family: core.$merriweather;
+  }
+  
+  &--montserrat {
+    font-family: core.$montserrat;
+  }
+
+  &--italic {
+    font-style: italic;
+  }
+
+  &--300 {
+    font-weight: 300;
+  }
+
+  &--500 {
+    font-weight: 500;
+  }
+}

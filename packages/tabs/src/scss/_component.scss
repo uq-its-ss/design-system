@@ -111,7 +111,7 @@
     &--outline {
       background: core.$uq-white;
       border: 1px solid $panel-border;
-      border-bottom: core.$space-none;
+      border-bottom: 0;
 
       // Foundaton classname for li wrapping tab title
       .tab-title {

@@ -1,12 +1,5 @@
 @use '@uq-uidf/core/src/scss/global' as *;
 
-.colour-purple {
-  background-color: $uq-purple;
-}
-.colour-purple::before { content: "#{$uq-purple}";}
-
-
-.uqds-colour {}
 .uqds-colour__palette {
   width: 100%;
   border-radius: 0.25rem;
@@ -17,7 +10,7 @@
 }
 
 
-/* Table Version */ 
+/* Table version */ 
 .uqds-table {
   width:100%;
   border: none;
@@ -113,7 +106,7 @@
   .uqds-text-color--white {
     color: $uq-white;
   }
-  /* UQ Secondary palette */
+  /* UQ secondary palette */
   .uqds-colour--purple-light {
     background-color: $uq-purple-light;
   }
@@ -144,12 +137,12 @@
   .uqds-colour--green {
     background-color: $uq-green;
   }
- /* UQ Purple gradient */
+ /* UQ purple gradient */
   .uqds-purple-gradient {
     background: $uq-purple-gradient;
   }
 
- /* Neutral Tints */
+ /* Neutral tints */
  .uqds-neutral-light20 {
     background-color: $uq-neutral-light20;
   }
@@ -162,7 +155,7 @@
   .uqds-neutral-light80 {
     background-color: $uq-neutral-light80;
   }
- /* Neutral Shades */
+ /* Neutral shades */
  .uqds-neutral-dark20 {
   background-color: $uq-neutral-dark20;
   }
@@ -178,7 +171,7 @@
   .uqds-neutral-dark80 {
     background-color: $uq-neutral-dark80;
   }
-  /* Darkgrey Tints */
+  /* Darkgrey tints */
   .uqds-darkgrey-light20 {
     background-color: $uq-darkgrey-light20;
   }
@@ -192,7 +185,7 @@
     background-color: $uq-darkgrey-light80;
   }
 
-  /* Red Shades */
+  /* Red shades */
   .uqds-red-dark20 {
     background-color: $uq-red-dark20;
   }

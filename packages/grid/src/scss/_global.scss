@@ -43,7 +43,7 @@
 }
 
 @function calc-true-colspan($span, $column-count, $phantom-column-count) {
-  @return round(($phantom-column-count / $column-count) * $span); 
+  @return floor(($phantom-column-count / $column-count) * $span); 
 }
 
 /**
@@ -64,8 +64,9 @@
 
   .uq-grid {
     display: grid;
-    grid-gap: $gutter-width;
     grid-template-columns: repeat($phantom-column-count, 1fr);
+    column-gap: $gutter-width;
+    row-gap: 0;
 
     @content;
 

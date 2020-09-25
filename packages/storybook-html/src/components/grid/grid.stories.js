@@ -14,6 +14,17 @@ export default {
   }
 };
 
+export const twelveEightSix = () => `
+  <div class="uqds-example-grid">
+    <div class="uq-grid">
+      <div class="uq-grid__col uq-grid__col--4 uq-grid__col--md-5 uq-grid__col--xl-8"><span>Content</span></div>
+      <div class="uq-grid__col uq-grid__col--2 uq-grid__col--md-3 uq-grid__col--xl-4"><span>Content</span></div>
+    </div>
+  </div>
+`;
+
+twelveEightSix.storyName = "6-8-12";
+
 export const twelveEightSixMobile = () => `
   <div class="uqds-example-grid">
     <div class="uq-grid">
@@ -136,16 +147,16 @@ twelveEightSixDesktop.storyName = "6-8-12 (desktop)";
 export const twelveEightSixNested = () => `
   <div class="uqds-example-grid">
     <div class="uq-grid">
-      <div class="uq-grid__col uq-grid__col--5">
+      <div class="uq-grid__col uq-grid__col--4 uq-grid__col--md-6">
         <span>Content</span>
         <div class="uqds-example-grid--highlight">
           <div class="uq-grid">
-            <div class="uq-grid__col uq-grid__col--3"><span>Nested</span></div>
-            <div class="uq-grid__col uq-grid__col--3"><span>Nested</span></div>
+            <div class="uq-grid__col uq-grid__col--3 uq-grid__col--xl-7"><span>Nested</span></div>
+            <div class="uq-grid__col uq-grid__col--3 uq-grid__col--xl-5"><span>Nested</span></div>
           </div>
         </div>
       </div>
-      <div class="uq-grid__col uq-grid__col--1"><span>Content</span></div>
+      <div class="uq-grid__col uq-grid__col--2 uq-grid__col--md-2"><span>Content</span></div>
     </div>
   </div>
 `;
@@ -155,8 +166,8 @@ twelveEightSixNested.storyName = "6-8-12 nested";
 export const twelveEightSixFullWidth = () => `
   <div class="uqds-example-grid">
     <div class="uq-grid uq-grid--full-width">
-      <div class="uq-grid__col uq-grid__col--7"><span>7 columns</span></div>
-      <div class="uq-grid__col uq-grid__col--5"><span>5 columns</span></div>
+      <div class="uq-grid__col uq-grid__col--3"><span>Content</span></div>
+      <div class="uq-grid__col uq-grid__col--3"><span>Content</span></div>
     </div>
   </div>
 `;

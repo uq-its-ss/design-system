@@ -17,7 +17,7 @@ export const parameters = {
             'Colour usage',
             'Purple gradient',
             'Base colour palette'
-          ]
+          ],
         ],
         'Base',
         [

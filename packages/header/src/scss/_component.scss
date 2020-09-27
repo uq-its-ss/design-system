@@ -201,14 +201,14 @@
                     border-radius: 2px;
                     background-color: core.$uq-white;
                     background-position: 1rem;
-                    margin-bottom: core.$space-md;
+                    margin-bottom: 1.5rem;
                 }
 
                 &__input {
                     background: transparent;
                     margin: core.$space-none;
                     width: 100%;
-                    padding: core.$space-sm core.$space;
+                    padding: .75rem 1rem;
                     border: 1px solid #e2e2e2;
                     border-radius: 2px;
                     box-shadow: none;
@@ -233,7 +233,7 @@
                     color: core.$uq-purple;
                     display: inline-block;
                     font-size: 1rem;
-                    height: 2.5rem;
+                    height: 2.75rem;
                     line-height: 1.5;
                     margin-bottom: core.$space-none;
                     margin-right: core.$space-none;
@@ -242,7 +242,7 @@
                     right: 0;
                     text-decoration: none;
                     text-indent: 0;
-                    top: calc(50% - 1.25rem);
+                    top: calc(50% - 1.375rem);
                     transition: color .2s, background-color .2s, border-color .2s;
                     width: 2.75rem;
 
@@ -279,7 +279,6 @@
                     z-index: 3;
                     cursor: pointer;
                     outline-offset: -2px;
-                    padding: core.$space-sm core.$space-md;
                     font-size: 1rem;
                 }
     

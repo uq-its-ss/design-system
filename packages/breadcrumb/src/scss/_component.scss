@@ -23,7 +23,7 @@
 
     &:before {
       content: '';
-      padding: core.$space-none core.$space-sm;
+      padding: core.$space-none 0.6rem;
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-5 0 24 24' width='16' height='16' %3E%3Cpath d='M5.145 14.285l6.167-6a.41.41 0 000-.598L5.145 1.715' fill='none' stroke='%23565452' stroke-width='.75' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
       background-repeat: no-repeat;
     }

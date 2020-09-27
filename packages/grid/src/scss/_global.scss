@@ -1,11 +1,17 @@
 @use "@uq-uidf/core/src/scss/global" as core;
 
+$gutter-width: (
+  "base": core.$space,
+  "md": core.$space-md,
+  "xl": core.$space-lg
+);
+
 /**
  * Layout containment (breakpoint driven)
  */
 @mixin layout-containment {
-  margin-left: core.$space-md;
-  margin-right: core.$space-md;
+  margin-left: core.$space-md - map-get($map: $gutter-width, $key: "base") / 2;
+  margin-right: core.$space-md - map-get($map: $gutter-width, $key: "base") / 2;
 
   // TODO: if we can perform the following checks on the parent element width
   // instead of the viewport width, we can achieve a more friendlier to use
@@ -17,19 +23,19 @@
   @media (min-width: #{core.$screen-md + (2 * core.$space-md) - (2 * core.$space-xxxxl)}) {
     margin-left: core.$space-auto;
     margin-right: core.$space-auto;
-    max-width: core.$screen-md - (2 * core.$space-xxxxl) - 0.0625rem;
+    max-width: (core.$screen-md - 0.0625rem) - (2 * core.$space-xxxxl) + map-get($map: $gutter-width, $key: "base");
   }
 
   @media #{core.$screen-md-up} {
-    margin-left: core.$space-xxxxl;
-    margin-right: core.$space-xxxxl;
+    margin-left: core.$space-xxxxl - map-get($map: $gutter-width, $key: "md") / 2;
+    margin-right: core.$space-xxxxl - map-get($map: $gutter-width, $key: "md") / 2;
     max-width: none;
   }
   
   @media (min-width: #{core.$screen-xl + (2 * core.$space-xxxxl) - 18.75rem}) {
     margin-left: core.$space-auto;
     margin-right: core.$space-auto;
-    max-width: core.$screen-xl - 18.75rem;
+    max-width: core.$screen-xl - 18.75rem + map-get($map: $gutter-width, $key: "xl");
   }
 }
 
@@ -37,13 +43,23 @@
  * Full-width container
  */
 @mixin layout-full-width {
-  margin-left: core.$space-auto;
-  margin-right: core.$space-auto;
+  margin-left: -(map-get($map: $gutter-width, $key: "base") / 2);
+  margin-right: -(map-get($map: $gutter-width, $key: "base") / 2);
   max-width: none;
+
+  @media #{core.$screen-md-up} {
+    margin-left: -(map-get($map: $gutter-width, $key: "md") / 2);
+    margin-right: -(map-get($map: $gutter-width, $key: "md") / 2);
+  }
+
+  @media #{core.$screen-xl-up} {
+    margin-left: -(map-get($map: $gutter-width, $key: "xl") / 2);
+    margin-right: -(map-get($map: $gutter-width, $key: "xl") / 2);
+  }
 }
 
-@function calc-true-colspan($span, $column-count, $phantom-column-count) {
-  @return floor(($phantom-column-count / $column-count) * $span); 
+@function calc-true-colspan($span, $column-count, $shadow-column-count) {
+  @return round(($shadow-column-count / $column-count) * $span); 
 }
 
 /**
@@ -53,7 +69,7 @@
    $column-count: 6,
    $gutter-width: core.$space,
    $breakpoint-name: null,
-   $phantom-column-count: $column-count
+   $shadow-column-count: $column-count
   ) {
   
   $col-span-mod-prefix: "";
@@ -64,16 +80,28 @@
 
   .uq-grid {
     display: grid;
-    grid-template-columns: repeat($phantom-column-count, 1fr);
-    column-gap: $gutter-width;
-    row-gap: 0;
+    grid-template-columns: repeat($shadow-column-count, 1fr);
+    // Using the CSS Grid gap feature is causing min-width problems with small
+    // screens and nested grids. We are using padding to implementing gutters
+    // instead. This is an indication that CSS Grid is meant to be used for
+    // layout and is not designed for implementing abstract grids on top of it.
+    //
+    // column-gap: $gutter-width;
+    // row-gap: 0;
+    gap: 0;
 
     @content;
+
+    &__col {
+      $padding: $gutter-width / 2;
+      padding-left: $padding;
+      padding-right: $padding;
+    }
 
     &__col--#{$col-span-mod-prefix} {
       @for $span from 1 through $column-count {
         &#{$span} {
-          grid-column: auto / span calc-true-colspan($span, $column-count, $phantom-column-count);
+          grid-column: auto / span calc-true-colspan($span, $column-count, $shadow-column-count);
           width: auto; // required to enable a flexbox fallback implementation
         }
       }

@@ -15,10 +15,14 @@ export default {
 };
 
 export const twelveEightSix = () => `
-  <div class="uqds-example-grid">
+  <div class="uqds-example-grid uqds-example-grid--wrap-content">
     <div class="uq-grid">
-      <div class="uq-grid__col uq-grid__col--4 uq-grid__col--md-5 uq-grid__col--xl-8"><span>Content</span></div>
-      <div class="uq-grid__col uq-grid__col--2 uq-grid__col--md-3 uq-grid__col--xl-4"><span>Content</span></div>
+      <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-5 uq-grid__col--xl-8">
+        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
+      </div>
+      <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-3 uq-grid__col--xl-4">
+        <span>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
+      </div>
     </div>
   </div>
 `;
@@ -46,32 +50,6 @@ export const twelveEightSixMobile = () => `
       <div class="uq-grid__col uq-grid__col--2"><span>uq-grid__col--2</span></div>
       <div class="uq-grid__col uq-grid__col--2"><span>uq-grid__col--2</span></div>
       <div class="uq-grid__col uq-grid__col--2"><span>uq-grid__col--2</span></div>
-    </div>
-    <div class="uq-grid">
-      <div class="uq-grid__col uq-grid__col--1"><span>uq-grid__col--1</span></div>
-      <div class="uq-grid__col uq-grid__col--2"><span>uq-grid__col--2</span></div>
-      <div class="uq-grid__col uq-grid__col--3"><span>uq-grid__col--3</span></div>
-    </div>
-    <div class="uq-grid">
-      <div class="uq-grid__col uq-grid__col--1"><span>uq-grid__col--1</span></div>
-      <div class="uq-grid__col uq-grid__col--1"><span>uq-grid__col--1</span></div>
-      <div class="uq-grid__col uq-grid__col--2"><span>uq-grid__col--2</span></div>
-      <div class="uq-grid__col uq-grid__col--2"><span>uq-grid__col--2</span></div>
-    </div>
-    <div class="uq-grid">
-      <div class="uq-grid__col uq-grid__col--1"><span>uq-grid__col--1</span></div>
-      <div class="uq-grid__col uq-grid__col--1"><span>uq-grid__col--1</span></div>
-      <div class="uq-grid__col uq-grid__col--1"><span>uq-grid__col--1</span></div>
-      <div class="uq-grid__col uq-grid__col--1"><span>uq-grid__col--1</span></div>
-      <div class="uq-grid__col uq-grid__col--2"><span>uq-grid__col--2</span></div>
-    </div>
-    <div class="uq-grid">
-      <div class="uq-grid__col uq-grid__col--1"><span>uq-grid__col--1</span></div>
-      <div class="uq-grid__col uq-grid__col--1"><span>uq-grid__col--1</span></div>
-      <div class="uq-grid__col uq-grid__col--1"><span>uq-grid__col--1</span></div>
-      <div class="uq-grid__col uq-grid__col--1"><span>uq-grid__col--1</span></div>
-      <div class="uq-grid__col uq-grid__col--1"><span>uq-grid__col--1</span></div>
-      <div class="uq-grid__col uq-grid__col--1"><span>uq-grid__col--1</span></div>
     </div>
   </div>
 `;
@@ -139,6 +117,17 @@ export const twelveEightSixDesktop = () => `
       <div class="uq-grid__col uq-grid__col--xl-6"><span>uq-grid__col--xl-6</span></div>
       <div class="uq-grid__col uq-grid__col--xl-6"><span>uq-grid__col--xl-6</span></div>
     </div>
+    <div class="uq-grid">
+      <div class="uq-grid__col uq-grid__col--xl-4"><span>uq-grid__col--xl-4</span></div>
+      <div class="uq-grid__col uq-grid__col--xl-4"><span>uq-grid__col--xl-4</span></div>
+      <div class="uq-grid__col uq-grid__col--xl-4"><span>uq-grid__col--xl-4</span></div>
+    </div>
+    <div class="uq-grid">
+      <div class="uq-grid__col uq-grid__col--xl-3"><span>uq-grid__col--xl-3</span></div>
+      <div class="uq-grid__col uq-grid__col--xl-3"><span>uq-grid__col--xl-3</span></div>
+      <div class="uq-grid__col uq-grid__col--xl-3"><span>uq-grid__col--xl-3</span></div>
+      <div class="uq-grid__col uq-grid__col--xl-3"><span>uq-grid__col--xl-3</span></div>
+    </div>
   </div>
 `;
 
@@ -166,7 +155,15 @@ twelveEightSixNested.storyName = "6-8-12 nested";
 export const twelveEightSixFullWidth = () => `
   <div class="uqds-example-grid">
     <div class="uq-grid uq-grid--full-width">
-      <div class="uq-grid__col uq-grid__col--3"><span>Content</span></div>
+      <div class="uq-grid__col uq-grid__col--3">
+        <span>Content</span>
+        <div class="uqds-example-grid--highlight">
+          <div class="uq-grid">
+            <div class="uq-grid__col uq-grid__col--3 uq-grid__col--xl-7"><span>Nested</span></div>
+            <div class="uq-grid__col uq-grid__col--3 uq-grid__col--xl-5"><span>Nested</span></div>
+          </div>
+        </div>
+      </div>
       <div class="uq-grid__col uq-grid__col--3"><span>Content</span></div>
     </div>
   </div>

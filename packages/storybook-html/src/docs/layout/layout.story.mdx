@@ -18,18 +18,17 @@ for you to choose from.
 
 | Name         | Description | Thumbnail |
 | ------------ | ----------- | ------------------ |
-| 6-8-12 | Advanced. The most consistent, flexible implementation of our layout system. | Coming soon |
-| Golden left  | [TODO] Inspired by [*The Golden Ratio*](https://www.canva.com/learn/what-is-the-golden-ratio/). Compose simple layouts that are pleasing to the eye. | Coming soon |
-| Golden right | [TODO] Inspired by The Golden Ratio. Compose simple layouts that are pleasing to the eye. | Coming soon |
+| Golden | [TODO] Inspired by [*The Golden Ratio*](https://www.canva.com/learn/what-is-the-golden-ratio/). Compose simple layouts that are pleasing to the eye. | Coming soon |
 | Flexible grid | [TODO] Auto-sizing grid. | Coming soon |
 | Halves | [TODO] A two-column grid. | Coming soon |
 | Thirds | [TODO] A three-column grid. | Coming soon |
 | Quarters | [TODO] A four-column grid. | Coming soon |
 | Scrolling grid | [TODO] A grid that scrolls horizontally on mobile. Useful for holding cards. | Coming soon |
+| [6-8-12](/?path=/docs/layout-grid--twelve-eight-six) | Advanced. The most consistent, flexible implementation of our layout system. It is what our other layouts are built upon. | Coming soon |
 
 > Currently, all our layout options can be used by installing or downloading the
 > [`@uq-uidf/grid`](?path=/docs/layout-grid--basic-usage) package into your
-> project. [Read the docs here](?path=/docs/layout-grid--twelve-eight-six).
+> project.
 
 ## Further reading: our base grid
 
@@ -53,18 +52,18 @@ Our layout system is built upon a 6-8-12 column strategy — our base grid.
 export const BaseLayoutGrid = () => `
   <div class="uqds-base-layout-grid">
     <div class="uq-grid">
-      <div class="uq-grid__col uq-grid__col--1 uq-grid__col--md-1 uq-grid__col--xl-1">Col<br/>&larr;&rarr;</div>
-      <div class="uq-grid__col uq-grid__col--1 uq-grid__col--md-1 uq-grid__col--xl-1">Col<br/>&larr;&rarr;</div>
-      <div class="uq-grid__col uq-grid__col--1 uq-grid__col--md-1 uq-grid__col--xl-1">Col<br/>&larr;&rarr;</div>
-      <div class="uq-grid__col uq-grid__col--1 uq-grid__col--md-1 uq-grid__col--xl-1">Col<br/>&larr;&rarr;</div>
-      <div class="uq-grid__col uq-grid__col--1 uq-grid__col--md-1 uq-grid__col--xl-1">Col<br/>&larr;&rarr;</div>
-      <div class="uq-grid__col uq-grid__col--1 uq-grid__col--md-1 uq-grid__col--xl-1">Col<br/>&larr;&rarr;</div>
-      <div class="uq-grid__col uq-grid__col--md-1 uq-grid__col--xl-1">Col<br/>&larr;&rarr;</div>
-      <div class="uq-grid__col uq-grid__col--md-1 uq-grid__col--xl-1">Col<br/>&larr;&rarr;</div>
-      <div class="uq-grid__col uq-grid__col--xl-1">Col<br/>&larr;&rarr;</div>
-      <div class="uq-grid__col uq-grid__col--xl-1">Col<br/>&larr;&rarr;</div>
-      <div class="uq-grid__col uq-grid__col--xl-1">Col<br/>&larr;&rarr;</div>
-      <div class="uq-grid__col uq-grid__col--xl-1">Col<br/>&larr;&rarr;</div>
+      <div class="uq-grid__col uq-grid__col--1 uq-grid__col--md-1 uq-grid__col--xl-1"><span>Col<br/>&larr;&rarr;</span></div>
+      <div class="uq-grid__col uq-grid__col--1 uq-grid__col--md-1 uq-grid__col--xl-1"><span>Col<br/>&larr;&rarr;</span></div>
+      <div class="uq-grid__col uq-grid__col--1 uq-grid__col--md-1 uq-grid__col--xl-1"><span>Col<br/>&larr;&rarr;</span></div>
+      <div class="uq-grid__col uq-grid__col--1 uq-grid__col--md-1 uq-grid__col--xl-1"><span>Col<br/>&larr;&rarr;</span></div>
+      <div class="uq-grid__col uq-grid__col--1 uq-grid__col--md-1 uq-grid__col--xl-1"><span>Col<br/>&larr;&rarr;</span></div>
+      <div class="uq-grid__col uq-grid__col--1 uq-grid__col--md-1 uq-grid__col--xl-1"><span>Col<br/>&larr;&rarr;</span></div>
+      <div class="uq-grid__col uq-grid__col--md-1 uq-grid__col--xl-1"><span>Col<br/>&larr;&rarr;</span></div>
+      <div class="uq-grid__col uq-grid__col--md-1 uq-grid__col--xl-1"><span>Col<br/>&larr;&rarr;</span></div>
+      <div class="uq-grid__col uq-grid__col--xl-1"><span>Col<br/>&larr;&rarr;</span></div>
+      <div class="uq-grid__col uq-grid__col--xl-1"><span>Col<br/>&larr;&rarr;</span></div>
+      <div class="uq-grid__col uq-grid__col--xl-1"><span>Col<br/>&larr;&rarr;</span></div>
+      <div class="uq-grid__col uq-grid__col--xl-1"><span>Col<br/>&larr;&rarr;</span></div>
     </div>
   </div>
 `;

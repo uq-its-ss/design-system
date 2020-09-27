@@ -6,40 +6,55 @@ import { Meta, Story } from '@storybook/addon-docs/blocks';
 
 We've built a grid that adapts the number of available columns to different
 screen sizes. It's a 6-, 8-, and 12-column grid built into one CSS class system!
-Starting with mobile, the grid column classes, 
+Starting from _mobile_, the _column-span_ classes give you the freedom to craft
+layouts to suit different screen sizes.
 
 > By default, we add the [specified margins](?path=/docs/layout-layout--base-layout-grid-visualised#specifications-per-breakpoint)
 > to both sides of the column row *and* apply a max-width on XL screens on the
 > root `.uq-grid` node.
 
-<Story height={80} id="layout-grid--twelve-eight-six" />
+### Basic usage
 
 ```html
 <div class="uq-grid">
-  <div class="uq-grid__col uq-grid__col--4 uq-grid__col--md-5 uq-grid__col--xl-8">Content</div>
-  <div class="uq-grid__col uq-grid__col--2 uq-grid__col--md-3 uq-grid__col--xl-4">Content</div>
+  <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-5 uq-grid__col--xl-8">Content</div>
+  <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-3 uq-grid__col--xl-4">Content</div>
 </div>
 ```
 
-### The 6-column grid span classes (designed for _mobile_ displays)
+<Story height={200} id="layout-grid--twelve-eight-six" />
 
-<Story height={480} id="layout-grid--twelve-eight-six-mobile" />
+### The 6-column grid column-span classes (designed for _mobile_ displays)
 
-### The 8-column grid span classes (designed for _tablet_ displays)
+Create layouts for the smallest screens.
 
-<Story height={330} id="layout-grid--twelve-eight-six-tablet" />
+`uq-grid__col--[1—6]`, e.g. `<div class="uq-grid__col uq-grid__col--4">...</div>`
 
-### The 12-column grid span classes (designed for _desktop/laptop_ displays)
+<Story height={250} id="layout-grid--twelve-eight-six-mobile" />
 
-<Story height={380} id="layout-grid--twelve-eight-six-desktop" />
+### The 8-column grid column-span classes (designed for _tablet_ displays)
+
+Shift the layout for larger screens.
+
+`uq-grid__col--md-[1—8]`, e.g. `<div class="uq-grid__col uq-grid__col--4 uq-grid__col--md-6">...</div>` 
+
+<Story height={290} id="layout-grid--twelve-eight-six-tablet" />
+
+### The 12-column grid column-span classes (designed for _desktop/laptop_ displays)
+
+Shift the layout for the largest screens.
+
+`uq-grid__col--xl-[1—12]`, e.g. `<div class="uq-grid__col uq-grid__col--4 uq-grid__col--md-6 uq-grid__col--xl-8">...</div>`
+
+<Story height={420} id="layout-grid--twelve-eight-six-desktop" />
 
 ### Nesting
 
 Nested `.uq-grid` elements don't have any margins or max. width applied.
 
-<Story height={140} id="layout-grid--twelve-eight-six-nested" />
+<Story height={110} id="layout-grid--twelve-eight-six-nested" />
 
-### Full-width 6-8-12 grid
+### Full-width
 
 If you want to manage the margins yourself i.e. nest the grid in your own custom
 container, you can apply the `uq-grid--full-width` class as well.

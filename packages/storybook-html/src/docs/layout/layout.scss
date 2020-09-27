@@ -10,39 +10,55 @@
   );
 
   .uq-grid {
-    background: repeating-linear-gradient(
-      45deg,
-      lighten(core.$uq-red, 30%),
-      lighten(core.$uq-red, 30%) 10px,
-      lighten(core.$uq-red, 35%) 10px,
-      lighten(core.$uq-red, 35%) 20px
-    );
+    position: relative;
+
+    &:before {
+      background: repeating-linear-gradient(
+        45deg,
+        lighten(core.$uq-red, 30%),
+        lighten(core.$uq-red, 30%) 10px,
+        lighten(core.$uq-red, 35%) 10px,
+        lighten(core.$uq-red, 35%) 20px
+      );
+      content: '';
+      position: absolute;
+      height: 100%;
+      left: core.$space / 2;
+      right: core.$space / 2;
+      z-index: 0;
+    }
 
     &__col {
-      justify-content: center;
-      background-color: lighten(core.$uq-aqua, 45%);
-      border: 1px solid core.$uq-aqua;
-      display: flex;
-      flex-direction: column;
       height: 100vh;
-      overflow: hidden;
-      text-align: center;
-      text-overflow: ellipsis;
-      white-space: nowrap;
+      position: relative;
+      z-index: 1;
 
       &:nth-child(n+7) {
         display: none;
       }
 
+      > span {
+        background-color: lighten(core.$uq-aqua, 45%);
+        border: 1px solid core.$uq-aqua;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: center;
+        overflow: hidden;
+        text-align: center;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 100%;
+      }
+
       @media #{core.$screen-sm-up} {
-        background-color: lighten(core.$uq-orange, 35%);
-        border-color: core.$uq-orange;
+        > span {
+          background-color: lighten(core.$uq-orange, 35%);
+          border-color: core.$uq-orange;
+        }
       }
 
       @media #{core.$screen-md-up} {
-        background-color: lighten(core.$uq-purple, 50%);
-        border-color: core.$uq-purple;
-
         &:nth-child(n+7) {
           display: flex;
         }
@@ -50,20 +66,43 @@
         &:nth-child(n+9) {
           display: none;
         }
+
+        > span {
+          background-color: lighten(core.$uq-purple, 50%);
+          border-color: core.$uq-purple;
+        }
       }
 
       @media #{core.$screen-lg-up} {
-        background-color: lighten(core.$uq-green, 45%);
-        border-color: core.$uq-green;
+        > span {
+          background-color: lighten(core.$uq-green, 45%);
+          border-color: core.$uq-green;
+        }
       }
 
       @media #{core.$screen-xl-up} {
-        background-color: lighten(core.$uq-blue, 40%);
-        border-color: core.$uq-blue;
-
         &:nth-child(n+9) {
           display: flex;
         }
+
+        > span {
+          background-color: lighten(core.$uq-blue, 40%);
+          border-color: core.$uq-blue;
+        }
+      }
+    }
+
+    @media #{core.$screen-md-up} {
+      &:before {
+        left: core.$space-md / 2;
+        right: core.$space-md / 2;
+      }
+    }
+
+    @media #{core.$screen-xl-up} {
+      &:before {
+        left: core.$space-lg / 2;
+        right: core.$space-lg / 2;
       }
     }
   }

@@ -21,11 +21,8 @@ npm i @uq-uidf/alert
 ## Dependency graph
 
 ```shell
-@uq-uidf/alert-classic
+@uq-uidf/alert
 ├─ @uq-uidf/core
-├─ @uq-uidf/foundation-global
-│  └─ @uq-uidf/core
-└─ @uq-uidf/foundation-grid
-   └─ @uq-uidf/foundation-global
-      └─ @uq-uidf/core
+└─ @uq-uidf/foundation-global
+   └─ @uq-uidf/core
 ```

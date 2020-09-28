@@ -1,6 +1,5 @@
-@use '@uq-uidf/core/src/scss/global' as *;
+@use '@uq-uidf/core/src/scss/global' as core;
 @use '@uq-uidf/foundation-global/src/scss/global' as *;
-@use '@uq-uidf/foundation-grid/src/scss/global' as *;
 @use 'global' as *;
 
 .alert {
@@ -10,14 +9,26 @@
   position: relative;
 
   &__container {
-    @include grid-row;
+    margin-left: core.$space-md - 1rem;
+    margin-right: core.$space-md - 1rem;
+
+    @media #{core.$screen-md-up} {
+      margin-left: core.$space-xxxxl - 1rem;
+      margin-right: core.$space-xxxxl - 1rem;
+    }
+
+    @media #{core.$screen-xl-up} {
+      margin-left: core.$space-auto;
+      margin-right: core.$space-auto;
+      max-width: core.$screen-xl - 20.75rem;
+    }
   }
 
   &__message {
     font-size: $alert-font-size-sm;
     font-weight: $alert-font-weight;
     line-height: 1.4;
-    padding: 1rem 5rem 1rem $column-gutter / 2;
+    padding: core.$space core.$space-uul core.$space core.$space;
 
     a {
       color: $alert-text-color;
@@ -30,9 +41,7 @@
   }
 
   &__action {
-    @include grid-column($columns: ceil($total-columns / 2), $float: false);
-    padding-bottom: 1.1rem;
-    padding-top: .625rem;
+    padding: core.$space-sm core.$space core.$space; 
   }
 
   &__close {
@@ -42,11 +51,11 @@
     font-weight: 300;
     line-height: 0.9;
     opacity: 1;
-    padding: 0 6px 4px;
+    padding: core.$space-none core.$space-sm core.$space-xs;
     position: absolute;
     text-decoration: none !important;
     top: .55rem;
-    right: 1rem;
+    right: core.$space;
 
     &:hover {
       text-decoration: none;
@@ -63,18 +72,17 @@
 
   &--has-action {
     .alert__message {
-      // @include grid-column($columns: floor($total-columns / 2), $float: false);
-      padding-bottom: 0;
+      padding-bottom: core.$space-none;
     }
   }
 
   &--no-close {
     .alert__message {
-      padding-right: $column-gutter / 2;
+      padding-right: core.$space;
     }
     &.alert--has-action {
       .alert__action {
-        padding-right: $column-gutter / 2;
+        padding-right: core.$space;
       }
     }
   }
@@ -106,13 +114,13 @@
 
     &__message {
       font-size: $alert-font-size-md;
-      padding: 1.2rem 8rem 1.25rem $column-gutter / 2;
+      padding: core.$space core.$space-uuuul core.$space core.$space;
     }
 
     &__action {
-      padding-bottom: .625rem;
-      padding-right: 5rem;
-      width: grid-calc(ceil($total-columns / 3), $total-columns);
+      padding-bottom: core.$space-sm;
+      padding-right: core.$space-uul;
+      width: 33.33%;
     }
 
     &__close {
@@ -121,15 +129,15 @@
 
     &--has-action {
       .alert__message {
-        padding-bottom: 1.25rem;
-        padding-right: $column-gutter / 2;
-        width: grid-calc(floor($total-columns - ($total-columns / 3)), $total-columns);
+        padding-bottom: core.$space;
+        padding-right: core.$space;
+        width: 66.67%
       }
     }
     &--slim {
       .alert__message {
-        padding-bottom: 1.0625rem;
-        padding-top: 1rem;
+        padding-bottom: core.$space;
+        padding-top: core.$space;
       }
       .alert__close {
         top: .7rem;
@@ -141,12 +149,12 @@
 @media #{$large-up} {
   .alert {
     &__message {
-      padding: 1.4rem 10.6875rem 1.5rem $column-gutter / 2;
+      padding: core.$space-md core.$space-uuuul core.$space-md core.$space;
     }
 
     &__action {
-      margin-left: grid-calc(floor($total-columns / 12), $total-columns);
-      width: grid-calc(ceil(($total-columns / 12 * 5) - ($total-columns / 12)), $total-columns);
+      margin-left: 8.33%;
+      width: 33.33%
     }
 
     &__close {
@@ -155,8 +163,8 @@
 
     &--has-action {
       .alert__message {
-        padding-bottom: 1.5rem;
-        width: grid-calc(floor($total-columns - ($total-columns / 12 * 5)), $total-columns);
+        padding-bottom: core.$space-md;
+        width: 58.34%;
       }
     }
   }

@@ -48,7 +48,7 @@
       grid: auto-flow / repeat(6, 1fr);
     }
     th,td {
-      margin: 0 -1px -1px 0;
+      margin: core.$space-none -1px -1px core.$space-none;
       word-break: break-word;
     }
     @media (max-width: 640px) {
@@ -60,10 +60,10 @@
       tr {
         grid: auto-flow / 1fr;
         align-items: stretch;
-        margin-bottom: 1.5rem;
+        margin-bottom: core.$space-md;
       }
       td {
-        padding: .5rem .75rem;
+        padding: core.$space-sm core.$space;
       }
       td:before {
         content: attr(data-title);

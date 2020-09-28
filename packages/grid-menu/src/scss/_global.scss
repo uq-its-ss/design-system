@@ -1,23 +1,23 @@
 // Variables, functions, and mixins
-@use '@uq-uidf/core/src/scss/global' as *;
+@use '@uq-uidf/core/src/scss/global' as core;
 @use '@uq-uidf/foundation-global/src/scss/global' as *;
 @use '@uq-uidf/foundation-block-grid/src/scss/global' as *;
 
-$linked-list-color: $link-color;
-$linked-list-color-hover: $uq-white;
-$linked-list-desc: $uq-neutral-dark80; //222;
-$linked-list-desc-hover: $uq-white;
-$linked-list-border: $uq-neutral-light40; //EEE;
+$linked-list-color: core.$link-color;
+$linked-list-color-hover: core.$uq-white;
+$linked-list-desc: core.$uq-neutral-dark80; //222;
+$linked-list-desc-hover: core.$uq-white;
+$linked-list-border: core.$uq-neutral-light40; //EEE;
 
 // Two column layout.
 @mixin grid-menu-2-column {
   @media #{$medium-up}{
     @include block-grid(
       $per-row: 2,
-      $spacing: 1rem
+      $spacing: core.$space
     );
     > li {
-      margin-bottom: 0;
+      margin-bottom: core.$space-none;
     }
   }
 }
@@ -27,20 +27,20 @@ $linked-list-border: $uq-neutral-light40; //EEE;
   @media #{$medium-up}{
     @include block-grid(
       $per-row: 2,
-      $spacing: 1rem
+      $spacing: core.$space
     );
     > li {
-      margin-bottom: 0;
+      margin-bottom: core.$space-none;
     }
   }
 
   @media #{$large-up}{
     @include block-grid(
       $per-row: 3,
-      $spacing: 1rem
+      $spacing: core.$space
     );
     > li {
-      margin-bottom: 0;
+      margin-bottom: core.$space-none;
     }
   }
 }
@@ -50,20 +50,20 @@ $linked-list-border: $uq-neutral-light40; //EEE;
   @media #{$medium-up}{
     @include block-grid(
       $per-row: 2,
-      $spacing: 1rem
+      $spacing: core.$space
     );
     > li {
-      margin-bottom: 0;
+      margin-bottom: core.$space-none;
     }
   }
 
   @media #{$large-up}{
     @include block-grid(
       $per-row: 4,
-      $spacing: 1rem
+      $spacing: core.$space
     );
     > li {
-      margin-bottom: 0;
+      margin-bottom: core.$space-none;
     }
   }
 }

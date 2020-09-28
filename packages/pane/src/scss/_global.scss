@@ -1,5 +1,5 @@
-@use '@uq-uidf/core/src/scss/_global' as *;
+@use '@uq-uidf/core/src/scss/_global' as core;
 
-$pane-border: $uq-neutral-light40; //eee;
-$pane-shaded-bg: $uq-neutral-light20; //f5f5f5;
-$pane-title-color: $uq-purple;
+$pane-border: core.$uq-neutral-light40; //eee;
+$pane-shaded-bg: core.$uq-neutral-light20; //f5f5f5;
+$pane-title-color: core.$uq-purple;

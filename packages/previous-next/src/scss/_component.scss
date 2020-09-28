@@ -1,5 +1,5 @@
 /* Pagination */
-@use '@uq-uidf/core/src/scss/global' as *;
+@use '@uq-uidf/core/src/scss/global' as core;
 @use 'global' as *;
 
 .uq-previous-next {
@@ -26,14 +26,14 @@
 	}
 
 	a {
-		color: $link-color;
+		color: core.$link-color;
 		font-size: 1.7rem;
 		font-weight: 400;
 		line-height: 1.2;
 		text-decoration: none;
 
 		&:hover {
-			color: $link-hover-color;
+			color: core.$link-hover-color;
 			text-decoration: none;
 
 			&:before {
@@ -47,7 +47,7 @@
 
 	&__link-previous {
 		position: relative;
-		padding-left: 3rem;
+		padding-left: core.$space-xxl;
 		float: left;
 
 		&:before {
@@ -65,7 +65,7 @@
 
 	&__link-next {
 		position: relative;
-		padding-right: 3rem;
+		padding-right: core.$space-xxl;
 		text-align: right;
 		float: right;
 

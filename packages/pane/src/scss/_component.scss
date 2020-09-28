@@ -1,4 +1,4 @@
-@use '@uq-uidf/core/src/scss/global' as *;
+@use '@uq-uidf/core/src/scss/global' as core;
 @use '@uq-uidf/foundation-global/src/scss/global' as *;
 @use 'global' as *;
 
@@ -26,7 +26,7 @@
 }
 
 @mixin pane-white {
-  background: $uq-white;
+  background: core.$uq-white;
 }
 
 @mixin pane-outline {
@@ -39,13 +39,13 @@
 }
 
 @mixin pane-vertical-spacing {
-  margin: 2rem 0;
+  margin: core.$space-lg core.$space-none;
 }
 
 @mixin pane-dark-tint {
   @extend %light-palette;
-  background-color: $uq-black;
-  background-color: rgba($uq-black, .65);
+  background-color: core.$uq-black;
+  background-color: rgba(core.$uq-black, .65);
 
   .pane__title {
     @extend %light-palette;
@@ -53,24 +53,24 @@
 }
 
 @mixin pane-has-footer {
-  padding: 0;
+  padding: core.$space-none;
 
   .pane {
     &__content {
-      padding: 1.8rem 1.8rem 1rem 1.8rem;
+      padding: core.$space-md core.$space-md core.$space core.$space-md; //1.8rem 1.8rem 1rem 1.8rem
     }
 
     &__footer {
       background-color: $pane-shaded-bg;
-      padding: 1.8rem;
+      padding: core.$space-md; //1.8rem;
     }
   }
 }
 
 %pane,
 .pane {
-  padding: 1.8rem;
-  margin-bottom: 1.5rem;
+  padding: core.$space-md; //1.8rem;
+  margin-bottom: core.$space-md; //1.5rem;
 
   &--shaded {
     @include pane-shaded;
@@ -106,8 +106,8 @@
 
     &.pane--dark-tint {
       .pane__footer {
-        background-color: $uq-black;
-        background-color: rgba($uq-black, 0.3);
+        background-color: core.$uq-black;
+        background-color: rgba(core.$uq-black, 0.3);
       }
     }
   }
@@ -125,7 +125,7 @@
 
   // if sub-title exists reduce margin to pull it close to title
   &__title + &__sub-title {
-    margin-top: -1rem;
+    margin-top: -(core.$space);
   }
 }
 
@@ -179,8 +179,8 @@
     }
 
     .pane__footer {
-      background-color: $uq-black;
-      background-color: rgba($uq-black, .3);
+      background-color: core.$uq-black;
+      background-color: rgba(core.$uq-black, .3);
     }
   }
 }

@@ -23,18 +23,18 @@
     justify-content: space-between;
     position: relative;
     max-width: fnd-grid.$row-width;
-    margin: 0 auto;
-    padding: 1rem fnd-global.$column-gutter / 2;
+    margin: core.$space-none core.$space-auto;
+    padding: core.$space-none fnd-global.$column-gutter / 2;
 
     @media #{fnd-global.$large-up} {
-      padding-top: 1.5rem;
-      padding-bottom: .5rem;
+      padding-top: core.$space-md;
+      padding-bottom: core.$space-sm;
     }
   }
 
   &__title {
     &__link {
-      margin: 0;
+      margin: core.$space-none;
       font-family: $site-title-font;
       font-size: 1.25rem;
       font-weight: 500;
@@ -56,7 +56,7 @@
   &--no-nav {
     border-bottom: 1px solid $site-title-border-color;
     @media #{fnd-global.$large-up} {
-      padding-bottom: .857rem;
+      padding-bottom: core.$space;
     }
   }
 }

@@ -1,8 +1,8 @@
 @use '@uq-uidf/core/src/scss/global' as *;
 @use '@uq-uidf/foundation-global/src/scss/global' as *;
+@use 'legacy';
 @use 'global' as *;
 @import 'font-awesome/scss/mixins';
-@import 'legacy';
 
 // Variants:
 // .form--transparent-fieldsets - Removes the default styling applied to fieldsets.
@@ -17,14 +17,14 @@
     color: $form-description-color;
     font-size: .875rem;
     font-style: italic;
-    margin-bottom: 1rem;
+    margin-bottom: $space;
   }
 
   &__help-text {
     color: $form-description-color;
     font-size: .875rem;
-    margin-top: 0;
-    margin-bottom: 1rem;
+    margin-top: $space-none;
+    margin-bottom: $space;
   }
 
   &__inline-error-message {
@@ -35,15 +35,15 @@
     font-style: normal;
     font-weight: 400;
     line-height: 1.357;
-    margin-bottom: 1rem;
-    padding: 7px 8px 8px 8px;
+    margin-bottom: $space;
+    padding: $space-sm;
   }
 
   &--transparent-fieldsets {
     fieldset {
       border: 0;
-      padding: 0;
-      margin: 0;
+      padding: $space-none;
+      margin: $space-none;
     }
   }
 }
@@ -61,14 +61,14 @@ fieldset {
     font-size: .875rem;
     font-weight: 500;
     line-height: 1.5;
-    padding: 0;
-    margin: 0 0 1rem 0;
+    padding: $space-none;
+    margin-bottom: $space;
   }
 }
 
 label {
   font-weight: 500;
-  margin-bottom: 1rem;
+  margin-bottom: $space;
   white-space: normal;
 
   + input[type="text"], 
@@ -106,8 +106,8 @@ label {
   > input[type="color"], 
   > textarea,
   > select {
-    margin-bottom: 0;
-    margin-top: rem-calc(4px);
+    margin-bottom: $space-none;
+    margin-top: rem-calc($space-xs);
   }
 
   &.form__label {
@@ -138,7 +138,7 @@ label {
         &.form__input {
           &.form__input--error {
             + .form__inline-error-message {
-              margin-top: 0;
+              margin-top: $space-none;
             }
           }
         }
@@ -191,7 +191,7 @@ select {
     }
 
     + .form__inline-error-message {
-      margin-top: -1rem;
+      margin-top: -($space);
     }
   }
 }
@@ -200,16 +200,16 @@ input[type="checkbox"],
 input[type="radio"] {
   float: left;
   clear: left;
-  margin-bottom: 0;
-  margin-right: rem-calc(6px);
-  margin-top: rem-calc(3px);
+  margin-bottom: $space-none;
+  margin-right: rem-calc($space-sm);
+  margin-top: rem-calc($space-xs);
   
   + label {
     font-weight: 300;
     display: block;
-    margin-left: 0;
-    margin-right: 0;
-    margin-bottom: 1rem;
+    margin-left: $space-none;
+    margin-right: $space-none;
+    margin-bottom: $space;
     // So long labels on multiple lines don't break around the radio/checkbox.
     max-width: 80%;
     //vertical-align: top;
@@ -221,7 +221,7 @@ input[type="radio"] {
 
   &.form__input {
     &.form__input--error {
-      margin-left: 10px;
+      margin-left: $space-sm;
     }
   }
 
@@ -230,7 +230,7 @@ input[type="radio"] {
       &.form__label--error {
         &:before {
           background-color: $alert;
-          bottom: -4px;
+          bottom: -($space-xs);
           content: "";
           display: inline-block;
           left: 0;
@@ -305,7 +305,7 @@ input[type="reset"][readonly] {
 // errors.
 input.error,
 textarea.error {
-  margin-bottom: 1rem;
+  margin-bottom: $space;
 }
 
 input.field-add-more-submit {
@@ -323,12 +323,12 @@ input[type='reset'] {
   font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
   line-height: normal;
-  margin: 0 0 1.25rem;
+  margin: $space-none $space-none $space-md;
   position: relative;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  padding: 1rem 2rem 1.0625rem 2rem;
+  padding: $space $space-lg;
   font-size: 1rem;
   background-color: $uq-red-dark20; //#f04124
   border-color: $uq-red-dark40; //#cf2a0e
@@ -348,20 +348,20 @@ input[type='reset'] {
 .form-managed-file .form-file {
   background: transparent;
   border: 1px dashed $uq-neutral; //#ddd
-  border-right: 0;
-  padding: 0.8rem;
+  border-right: $space-none;
+  padding: $space; //0.8rem
 }
 
 .form-radios,
 .form-checkboxes {
-  margin-bottom: 1rem;
+  margin-bottom: $space;
 }
 
 .captcha {
-  margin: 1rem 0;
+  margin: $space $space-none;
 
   img {
-    margin-bottom: 0.5rem;
+    margin-bottom: $space-sm;
   }
 }
 
@@ -391,7 +391,7 @@ select {
     }
 
     + .form__inline-error-message {
-      margin-top: -1rem;
+      margin-top: -($space);
     }
   }
 }
@@ -446,7 +446,7 @@ input[type='file'] {
   color: $form-description-color;
   font-size: 0.875rem;
   font-style: italic;
-  margin-bottom: 1rem;
+  margin-bottom: $space;
 }
 
 // Move description closer to input fields.
@@ -455,7 +455,7 @@ textarea,
 .resizable-textarea,
 .date-date {
   & + .description {
-    margin-top: -0.8rem;
+    margin-top: -($space);
   }
 }
 
@@ -488,23 +488,23 @@ select[multiple='multiple'] {
   border: 1px solid $alert;
   border-left-width: 3px;
   padding: $column-gutter / 2;
-  margin-bottom: 1.5rem;
+  margin-bottom: $space-md;
   &__title {
     color: $body-font-color;
     font-size: 1.125rem;
     font-weight: 500;
-    margin: 0 0 .875rem 0;
+    margin: $space-none $space-none $space $space-none;
   }
   &_body {
     color: $body-font-color;
-    font-size: .875rem;
+    font-size: $space; //.875rem
   }
   &__list {
     color: $body-font-color;
-    font-size: .875rem;
+    font-size: $space; //.875rem
     margin: 0;
     &__item {
-      margin-bottom: .4rem;
+      margin-bottom: $space-xs;
       line-height: 1.5;
     }
     a {

@@ -1,4 +1,4 @@
-@use '@uq-uidf/core/src/scss/_global' as *;
+@use '@uq-uidf/core/src/scss/_global' as core;
 @use '@uq-uidf/foundation-global/src/scss/global' as *;
 @use 'global' as *;
 
@@ -6,8 +6,8 @@
 
 .page {
   &__header {
-    padding: 1.8rem;
-    margin-bottom: 1.5rem;
+    padding: core.$space-md; //1.8rem;
+    margin-bottom: core.$space-md;
     background: $page-header-shaded-bg;
   }
   &__title {

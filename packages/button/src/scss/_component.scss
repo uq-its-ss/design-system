@@ -1,3 +1,4 @@
+@use '@uq-uidf/core/src/scss/global' as *;
 @use 'global' as *;
 
 /* button Default */
@@ -13,7 +14,7 @@
   font-size: 1rem;
   font-weight: normal;
   line-height: normal;
-  padding: 12px 24px;
+  padding: $space-sm $space-md;
   position: relative;
   text-align: center;
   text-decoration: none;
@@ -110,22 +111,22 @@
   /* button sizes */
   &--tiny {
     font-size: 12px;
-    padding: 4px 8px;
+    padding: $space-xs $space-sm;
   }
 
   &--small {
     font-size: 14px;
-    padding: 8px 16px;
+    padding: $space-sm $space;
   }
 
   &--large {
     font-size: 18px;
-    padding: 20px 40px;
+    padding: $space $space-xl;
   }
 
   &--expand {
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: $space-none;
+    padding-right: $space-none;
     width: 100%;
   }
 }

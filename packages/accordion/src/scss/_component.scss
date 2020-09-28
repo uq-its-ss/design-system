@@ -17,14 +17,14 @@
 .accordion {
   border-bottom: 1px solid $accordion-border-color;
   list-style: none;
-  margin-bottom: 1.5em;
+  margin-bottom: $space-md;
   overflow: hidden;
-  padding: 0;
+  padding: $space-none;
 
   // Accordion item.
   &__item {
     border-top: 1px solid $accordion-border-color;
-    margin-bottom: 0;
+    margin-bottom: $space-none;
   }
 
   // Accordion title / toggle button.
@@ -42,8 +42,8 @@
     font-size: 1.2rem;
     font-weight: 400;
     line-height: normal;
-    margin: 0;
-    padding: 1.1rem 2rem 1.2rem 0;
+    margin: $space-none;
+    padding: $space $space-lg $space $space-none;
     position: relative;
     text-align: left;
     text-decoration: none;
@@ -52,7 +52,7 @@
 
     @media #{$medium-up} {
       font-size: 1.5rem;
-      padding: 1.1rem 3rem 1.2rem 1rem;
+      padding: $space $space-xxl $space $space;
     }
 
     // Closed state.
@@ -62,11 +62,11 @@
       float: right;
       font-size: 1.2rem;
       font-weight: 100;
-      margin-right: -2rem;
-      margin-top: .1rem;
+      margin-right: -($space-lg);
+      margin-top: $space-xs; //.1rem
 
       @media #{$medium-up} {
-        margin-top: .3rem;
+        margin-top: $space-xs; //.3rem
       }
     }
 
@@ -107,12 +107,12 @@
   // Accordion content
   &__content {
     overflow: hidden;
-    padding: 0;
+    padding: $space-none;
     word-wrap: break-word;
     transition: height 200ms ease;  
 
     @media #{$medium-up} {
-      padding: 0 1rem;
+      padding: $space-none $space;
     }
 
     &:not(.accordion__content--active) {
@@ -120,7 +120,7 @@
     }
 
     p:first-of-type {
-      margin-top: 0
+      margin-top: $space-none;
     }
   }
 
@@ -148,7 +148,7 @@
 
   // No bottom spacing variant.
   &--no-bottom-spacing {
-    margin-bottom: 0;
+    margin-bottom: $space-none;
   }
 
   // Small toggle variant.

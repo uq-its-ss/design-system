@@ -11,6 +11,14 @@ export const parameters = {
           'Getting started'
         ],
         'Core',
+        [
+          'Colour',
+          [
+            'Colour usage',
+            'Purple gradient',
+            'Base colour palette'
+          ],
+        ],
         'Base',
         [
           'Body'

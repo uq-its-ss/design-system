@@ -1,37 +1,38 @@
-@use 'global' as *;
+@use "@uq-uidf/core/src/scss/global" as core;
+//@use 'global' as *;
 
 $image-path: '../images' !default;
 
 /* Blocks */
 .blockquote {
 	border: none;
-	color: $uq-purple;
+	color: core.$uq-purple;
 	font-style: italic;
 	height: auto;
-	margin-left: 30px;
-	padding: 15px 20px;
+	margin-left: core.$space-lg;
+	padding: core.$space core.$space-md;
 	position: relative;
-	width: calc(100% - 30px);
+	width: calc(100% - core.$space-lg);
 }
 
 .blockquote.blockquote--light {
-	color: $uq-purple;
+	color: core.$uq-purple;
 }
 
 .blockquote.blockquote--dark {
-	background-color: $uq-purple;
-	color: $uq-white;
+	background-color: core.$uq-purple;
+	color: core.$uq-white;
 }
 
 .blockquote.blockquote--boxed {
-	background: $uq-purple-gradient;
-	margin-left: 0;
-	padding: 50px 50px;
+	background: core.$uq-purple-gradient;
+	margin-left: core.$space-none;
+	padding: core.$space-xxl core.$space-xxl;
 	width: 100%;
 }
 
 .blockquote::before {
-	background-color: $uq-purple;
+	background-color: core.$uq-purple;
 	content: '';
 	height: 100%;
 	left: 0;
@@ -41,11 +42,11 @@ $image-path: '../images' !default;
 }
 
 .blockquote.blockquote--light::before {
-	background-color: $uq-purple;
+	background-color: core.$uq-purple;
 }
 
 .blockquote.blockquote--dark::before {
-	background-color: $uq-white;
+	background-color: core.$uq-white;
 }
 
 .blockquote.blockquote--boxed::before {
@@ -62,11 +63,11 @@ $image-path: '../images' !default;
 	background-image: url('#{$image-path}/icon-open-doublequote-light.svg');
 	background-size: cover;
 	display: inline-block;
-	fill: $uq-black;
+	fill: core.$uq-black;
 	height: 28px;
 	left: -20px;
 	position: absolute;
-	stroke: $uq-black;
+	stroke: core.$uq-black;
 	stroke-width: 0;
 	top: 0px;
 	width: 34px;
@@ -102,7 +103,7 @@ $image-path: '../images' !default;
 .blockquote.blockquote--dark .blockquote__link:link,
 .blockquote.blockquote--dark .blockquote__link:visited,
 .blockquote.blockquote--dark .blockquote__link:active {
-	color: $uq-white;
+	color: core.$uq-white;
 	text-decoration: underline;
 }
 

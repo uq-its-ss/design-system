@@ -9,12 +9,12 @@
   position: relative;
 
   &__container {
-    margin-left: core.$space-md - 1rem;
-    margin-right: core.$space-md - 1rem;
+    margin-left: core.$space-md - core.$space;
+    margin-right: core.$space-md - core.$space;
 
     @media #{core.$screen-md-up} {
-      margin-left: core.$space-xxxxl - 1rem;
-      margin-right: core.$space-xxxxl - 1rem;
+      margin-left: core.$space-xxxxl - core.$space;
+      margin-right: core.$space-xxxxl - core.$space;
     }
 
     @media #{core.$screen-xl-up} {

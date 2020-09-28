@@ -20,13 +20,13 @@
 %card,
 .card {
   background-color: $uq-white;
-  margin-bottom: 1.5rem;
+  margin-bottom: $space-md;
   position: relative;
   overflow-wrap: break-word;
   word-wrap: break-word;
 
   &__wrapper {
-    margin-bottom: 1.5rem;
+    margin-bottom: $space-md;
   }
 
   &__header {
@@ -43,13 +43,13 @@
     }
     .card__link {
       display: block;
-      padding: 1rem 1.8rem 1rem 1rem;
+      padding: $space $space-lg $space $space; //1rem 1.8rem 1rem 1rem
       position: relative;
 
       &::after {
         @include fa-icon;
         content: $fa-var-angle-right;
-        margin-top: -.5rem;
+        margin-top: -$space-sm;
         opacity: .5;
         position: absolute;
         right: 1rem;
@@ -70,7 +70,7 @@
   }
 
   &__content {
-    padding: 1rem;
+    padding: $space;
   }
 
   // Force image heights to be the same for cards sitting next to each other.
@@ -97,7 +97,7 @@
     font-size: 1.6rem;
     font-weight: 400;
     line-height: 1.2;
-    margin-bottom: .5rem;
+    margin-bottom: $space-sm;
     transition: all ease .35s;
 
     // Stop system generated divs forcing link to behave as a block element.
@@ -114,7 +114,7 @@
     &::before {
       @include fa-icon;
       content: $fa-var-map-marker;
-      margin-right: .5rem;
+      margin-right: $space-sm;
     }
   }
 
@@ -164,8 +164,8 @@
 
     .card__footer {
       background: rgba($uq-black, .4);
-      bottom: 0;
-      left: 0;
+      bottom: $space-none;
+      left: $space-none;
       position: absolute;
       text-align: left;
       width: 100%;
@@ -184,7 +184,7 @@
     }
 
     .card__title {
-      margin-bottom: 0;
+      margin-bottom: $space-none;
 
       @media #{$screen-xl-up} {
         text-shadow: 0 1px 1px rgba($uq-black, .4);
@@ -199,9 +199,9 @@
           display: table;
           font-size: 1rem;
           font-weight: 500;
-          margin: .7rem auto 0;
+          margin: $space $space-auto $space-none; //.7rem auto 0
           opacity: 0;
-          padding: .3rem 1.2rem;
+          padding: $space-sm $space; //.3rem 1.2rem;
           text-transform: uppercase;
           transition: all ease .35s;
           visibility: hidden;
@@ -224,7 +224,7 @@
   // Primary link.
   &__primary-link {
     display: inline-block;
-    margin-bottom: 1.5rem;
+    margin-bottom: $space-md;
 
     &:hover,
     &:focus {
@@ -333,7 +333,7 @@
 
   // Horizontal layout.
   &--horizontal {
-    margin-bottom: 1.5rem;
+    margin-bottom: $space-md;
     overflow-y: auto;
 
     @media #{$medium-up} {
@@ -344,7 +344,7 @@
       @media #{$medium-up} {
         display: table-cell;
         height: 18rem;
-        padding-left: 2rem;
+        padding-left: $space-lg;
         vertical-align: middle;
         width: 50%;
       }
@@ -397,13 +397,13 @@
   &--collapsed {
     .uq-grid {
       &__col {
-        padding-left: 0;
-        padding-right: 0;
+        padding-left: $space-none;
+        padding-right: $space-none;
       }
     }
 
     .card {
-      margin-bottom: 0;
+      margin-bottom: $space-none;
     }
   }
 }

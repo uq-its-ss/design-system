@@ -1,4 +1,4 @@
-@use '@uq-uidf/core/src/scss/global' as *;
+@use '@uq-uidf/core/src/scss/global' as core;
 @use 'global' as *;
 
 // Lists
@@ -14,8 +14,8 @@
 %vertical-list,
 .vertical-list {
   list-style-type: none;
-  margin-bottom: 1rem;
-  padding: 0;
+  margin-bottom: core.$space;
+  padding: core.$space-none;
 
   &__title {
     font-size: $h3-font-size;
@@ -23,12 +23,12 @@
 
   &__item {
     list-style: none;
-    padding: .75rem 0;
+    padding: core.$space-sm core.$space-none; //.75rem 0rem
   }
 
   &--large-spacing {
     .vertical-list__item {
-      padding: 2rem 0;
+      padding: core.$space-lg core.$space-none;
 
       &__date {
         font-size: 90%;
@@ -38,21 +38,21 @@
 
   &--ruled {
     .vertical-list__title {
-      border-top: 2px solid $vertical-list-border;
-      padding-top: 2rem;
+      border-top: 2px solid core.$vertical-list-border;
+      padding-top: core.$space-lg;
     }
 
     .vertical-list__item {
-      border-bottom: 1px solid $vertical-list-border;
-      padding-top: .75rem;
+      border-bottom: 1px solid core.$vertical-list-border;
+      padding-top: core.$space; //.75rem
 
       &:first-child {
-        padding-top: 0;
+        padding-top: core.$space-none;
       }
 
       &--first {
-        border-top: 1px solid $vertical-list-border;
-        padding-top: .75rem;
+        border-top: 1px solid core.$vertical-list-border;
+        padding-top: core.$space; //.75rem
       }
 
       &__date {
@@ -63,8 +63,8 @@
   &--shaded {
     .vertical-list__item {
       background: $pane-shaded-bg;
-      margin-bottom: .5rem;
-      padding: 1.5rem;
+      margin-bottom: core.$space-sm;
+      padding: core.$space-md;
 
       &__date {
         font-size: 90%;
@@ -76,8 +76,8 @@
 .horizontal-list {
   display: inline-block;
   list-style-type: none;
-  padding: 0;
-  margin-bottom: 1rem;
+  padding: core.$space-none;
+  margin-bottom: core.$space;
 
   &__title {
     font-size: $h3-font-size;
@@ -86,19 +86,19 @@
   &__item {
     float: left;
     list-style: none;
-    padding: 0 .75rem;
-    margin: 0 0 .75rem 0;
+    padding: core.$space-none core.$space;//0 .75rem;
+    margin: core.$space-none core.$space-none core.$space core.$space-none; //0 0 .75rem 0
   }
 
   &--ruled {
     .horizontal-list__title {
-      border-top: 2px solid $vertical-list-border;
-      padding-top: 2rem;
+      border-top: 2px solid core.$vertical-list-border;
+      padding-top: core.$space-lg;
     }
 
     .horizontal-list__item {
-      border-right: 1px solid $vertical-list-border;
-      padding-right: .75rem;
+      border-right: 1px solid core.$vertical-list-border;
+      padding-right: core.$space; //.75rem;
 
       &:last-child {
         border: 0;

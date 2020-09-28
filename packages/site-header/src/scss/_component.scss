@@ -21,9 +21,9 @@
     flex-wrap: wrap;
     float: none;
     justify-content: space-between;
-    margin: 0 auto;
+    margin: core.$space-none core.$space-auto;
     max-width: fnd-grid.$row-width;
-    padding: core.$spacing-s fnd-global.$column-gutter / 2;
+    padding: core.$space fnd-global.$column-gutter / 2;
     position: relative;
 
     &__right {
@@ -32,8 +32,8 @@
     }
 
     @media #{fnd-global.$large-up} {
-      padding-top: core.$spacing-m;
-      padding-bottom: core.$spacing-xs;
+      padding-top: core.$space-md;
+      padding-bottom: core.$space-sm;
     }
   }
 
@@ -41,7 +41,7 @@
     color: core.$uq-purple;
     font-size: $title-font-size;
     font-weight: $title-font-weight;
-    margin: 0;
+    margin: core.$space-none;
     text-decoration: none;
   
     &:hover,
@@ -56,15 +56,15 @@
     border: 0 none;
     color: core.$uq-purple;
     cursor: pointer;
-    height: core.$spacing-m;
-    margin-bottom: 0;
-    margin-left: core.$spacing-s;
-    margin-right: 0;
+    height: 1.5rem;
+    margin-bottom: core.$space-none;
+    margin-left: core.$space;
+    margin-right: core.$space-none;
     overflow: hidden;
-    padding: 0;
+    padding: core.$space-none;
     position: relative;
     text-indent: -100vw;
-    width: core.$spacing-m;
+    width: 1.5rem;
 
     &:focus {
       outline: 2px solid core.$link;
@@ -78,11 +78,11 @@
       display: block;
       -webkit-filter: invert(20%) sepia(34%) saturate(1979%) hue-rotate(239deg) brightness(97%) contrast(107%);
       filter: invert(20%) sepia(34%) saturate(1979%) hue-rotate(239deg) brightness(97%) contrast(107%);
-      height: core.$spacing-m;
+      height: 1.5rem;
       left: 0;
       position: absolute;
       top: 0;
-      width: core.$spacing-m;
+      width: 1.5rem;
     }
 
     &--close {
@@ -98,10 +98,10 @@
 
   &__navigation-container {
     float: none;
-    margin: 0 auto;
+    margin: core.$space-none core.$space-auto;
     max-width: fnd-grid.$row-width;
     overflow: visible;
-    padding: 0;
+    padding: core.$space-none;
     position: relative;
   }
 
@@ -110,7 +110,7 @@
       border-bottom: 1px solid $nav-dropdown-divider;
       color: $nav-primary;
       display: block;
-      padding: core.$spacing-s core.$spacing-m;
+      padding: core.$space core.$space-md;
       text-decoration: none;
       transition: background-color .25s, border-color .25s;
 
@@ -134,9 +134,9 @@
 
     &__list {
       list-style-type: none;
-      margin-bottom: 0;
-      margin-top: 0;
-      padding-left: 0;
+      margin-bottom: core.$space-none;
+      margin-top: core.$space-none;
+      padding-left: core.$space-none;
 
       &--level-1 {
         display: none;
@@ -191,7 +191,7 @@
 
         a {
           border-bottom: 1px solid $nav-dropdown-divider;
-          padding-left: core.$spacing-xxl;
+          padding-left: core.$space-xxl;
     
           &:hover,
           &:focus {
@@ -199,13 +199,13 @@
           }
     
           @media #{fnd-global.$large-up} {
-            padding-left: core.$spacing-m;
+            padding-left: core.$space-md;
           }
         }
       }
 
       &-item {
-        margin-bottom: 0;
+        margin-bottom: core.$space-none;
         position: relative;
 
         &--open {
@@ -221,7 +221,7 @@
         &--has-subnav {
           > a {
             @media #{fnd-global.$large-up} {
-              padding-right: core.$spacing-xl;
+              padding-right: core.$space-xl;
               background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' stroke='%2351247A'%3E%3Cpath d='M14.285 5.145l-6 6.167a.41.41 0 01-.598 0L1.715 5.145' fill='none' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
               background-position: right 1.3rem center;
               background-size: 0.6rem;
@@ -248,8 +248,8 @@
       top: 0;
       right: 0;
       display: block;
-      width: core.$spacing-xxl;
-      padding: core.$spacing-s core.$spacing-m;
+      width: 3rem;
+      padding: core.$space core.$space-md;
       border-left: 1px solid $nav-dropdown-divider;
       text-indent: -100vw;
       background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' stroke='%2351247A'%3E%3Cpath d='M14.285 5.145l-6 6.167a.41.41 0 01-.598 0L1.715 5.145' fill='none' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
@@ -258,7 +258,7 @@
       overflow: hidden;
 
       @media #{fnd-global.$medium-up} {
-        width: core.$spacing-xxxl;
+        width: 3.5rem;
       }
   
       @media #{fnd-global.$large-up} {
@@ -268,7 +268,7 @@
 
     @media #{fnd-global.$large-up} {
       // TEMP fix: adjusting the margins to match up with the current UIDF grid
-      margin: 0 calc(#{fnd-global.$column-gutter / 2} - #{core.$spacing-m});
+      margin: core.$space-none calc(#{fnd-global.$column-gutter / 2} - #{core.$space-md});
     }
   }
 }

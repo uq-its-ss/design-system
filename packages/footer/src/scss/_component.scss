@@ -40,8 +40,8 @@
         font-style: italic;
         font-weight: fnd-global.$body-font-weight;
         line-height: 1.5;
-        margin: 0 0 2rem;
-        padding: 0 0 2rem;
+        margin: core.$space-none core.$space-none core.$space-lg;
+        padding: core.$space-none core.$space-none core.$space-lg;
 
         @media #{fnd-global.$medium-up} {
             font-size: 1.125rem;
@@ -55,8 +55,8 @@
 
     &__container {
         max-width: fnd-grid.$row-width;
-        margin: 0 auto;
-        padding: 3rem fnd-global.$column-gutter / 2;
+        margin: core.$space-none core.$space-auto;
+        padding: core.$space-xxl fnd-global.$column-gutter / 2;
     }
 
     &__row {
@@ -69,7 +69,7 @@
 
     &__column {
         flex: 1 1 100%;
-        padding: 0 fnd-global.$column-gutter/2 0 0;
+        padding: core.$space-none fnd-global.$column-gutter/2 core.$space-none core.$space-none;
 
         @media #{fnd-global.$medium-up} {
             flex: 3 1 75%;
@@ -84,16 +84,16 @@
         }
 
         &:last-child {
-            padding: 0;
+            padding: core.$space-none;
         }
     }
 
     &__aside {
         display: inline-block;
-        margin: 1.5rem 0 0 0;
+        margin: core.$space-md core.$space-none core.$space-none core.$space-none;
 
         @media #{fnd-global.$large-up} {
-            margin: 0;
+            margin: core.$space-none;
         }
     }
 
@@ -103,7 +103,7 @@
     }
 
     &__footer {
-        margin: 2rem 0 0 0;
+        margin: core.$space-lg core.$space-none core.$space-none core.$space-none;
         overflow: hidden;
 
         .uq-footer__column + .uq-footer__column {
@@ -120,8 +120,8 @@
             display: flex;
             flex-wrap: wrap;
             list-style-type: none;
-            margin: 0;
-            padding: 0;
+            margin: core.$space-none;
+            padding: core.$space-none;
             li {
                 padding-left: core.$spacing-xs; // first arg needs to be supplied via emitting core
                 
@@ -131,7 +131,7 @@
                 }
                 
                 &:first-of-type {
-                    padding-left: 0;
+                    padding-left: core.$space-none;
                 }
             }
         }
@@ -145,7 +145,7 @@
         &__item + .uq-footer__social-media__item::before {
             content: " ";
             display: inline-block;
-            margin: 0 .5rem 0 0;
+            margin: core.$space-none core.$space-sm core.$space-none core.$space-none;
         }
         &__link {
             &:hover {
@@ -156,6 +156,6 @@
     }
 
     &--full-width {
-        padding: 0 1rem;
+        padding: core.$space-none core.$space;
     }
 }

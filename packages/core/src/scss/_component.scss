@@ -1,4 +1,5 @@
 // Main component stylesheet
+@use "@uq-uidf/core/src/scss/global" as core;
 @use '@uq-uidf/foundation-global/src/scss/global' as *;
 @use 'global' as *;
 @use 'print';
@@ -33,15 +34,15 @@
 
   &--prefix {
     &::before {
-      margin-right: .7rem;
+      margin-right: core.$space-sm; //.7rem
     }
   }
 
   &--suffix {
     &::before {
       float: right;
-      margin-left: .7rem;
-      margin-top: .15rem;
+      margin-left: core.$space-sm; //.7rem
+      margin-top: core.$space-xs; //.15rem;
     }
   }
 
@@ -87,8 +88,8 @@
   color: $logo-color;
   display: block;
   height: 36px;
-  margin: 0;
-  padding: 0;
+  margin: core.$space-none;
+  padding: core.$space-none;
   width: 126px;
 
   @media #{$medium-up} {

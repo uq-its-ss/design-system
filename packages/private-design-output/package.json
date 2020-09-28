@@ -64,6 +64,7 @@
     "@uq-uidf/pane": "^0.0.0",
     "@uq-uidf/sections": "^0.0.0",
     "@uq-uidf/site-header": "^0.0.0",
+    "@uq-uidf/table": "^0.0.0",
     "@uq-uidf/tabs": "^0.0.0",
     "font-awesome": "^4.7.0"
   }

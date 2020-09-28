@@ -15,8 +15,8 @@ $use-encapsulation: false !default;
 @mixin body-styles {
   font-size: 100%;
   background: core.$white;
-  margin: 0;
-  padding: 0;
+  margin: core.$space-none;
+  padding: core.$space-none;
 }
 
 @mixin base-styles {
@@ -26,7 +26,7 @@ $use-encapsulation: false !default;
 
   // Margin adjustment
   .margin--reset {
-    margin: 0;
+    margin: core.$space-none;
   }
 
   // Background colour utilities
@@ -79,45 +79,45 @@ $use-encapsulation: false !default;
   }
   
   h1 {
-    margin-top: core.$spacing-m;
-    margin-bottom: core.$spacing-xl;
+    margin-top: core.$space-md;
+    margin-bottom: core.$space-xl;
     font-size: core.$font-size-xxxxl;
     font-family: core.$font-family-title;
   }
   
   h2 {
-    margin-top: core.$spacing-xl;
-    margin-bottom: core.$spacing-m;
+    margin-top: core.$space-xl;
+    margin-bottom: core.$space-md;
     font-size: core.$font-size-xxxl;
   }
   
   h3 {
-    margin-top: core.$spacing-l;
-    margin-bottom: core.$spacing-s;
+    margin-top: core.$space-lg;
+    margin-bottom: core.$space;
     font-size: core.$font-size-xxl;
   }
   
   h4 {
-    margin-top: core.$spacing-l;
-    margin-bottom: core.$spacing-m;
+    margin-top: core.$space-lg;
+    margin-bottom: core.$space-md;
     font-size: core.$font-size-xl;
   }
   
   h5 {
-    margin-top: core.$spacing-m;
-    margin-bottom: core.$spacing-s;
+    margin-top: core.$space-md;
+    margin-bottom: core.$space;
     font-size: core.$font-size-l;
   }
   
   h6 {
-    margin-top: core.$spacing-m;
-    margin-bottom: core.$spacing-xs;
+    margin-top: core.$space-md;
+    margin-bottom: core.$space-sm;
     font-size: core.$font-size-m;
   }
   
   p {
-    margin-top: 0;
-    margin-bottom: core.$spacing-m;
+    margin-top: core.$space-none;
+    margin-bottom: core.$space-md;
   }
   
   b,
@@ -130,8 +130,8 @@ $use-encapsulation: false !default;
   }
   
   blockquote {
-    margin: 0 0 core.$spacing-m;
-    padding-left: core.$spacing-m;
+    margin: core.$space-none core.$space-none core.$space-md;
+    padding-left: core.$space-md;
     border-left: 6px solid core.$brand-text;
     font-family: core.$font-family-accent;
     font-style: italic;
@@ -139,22 +139,22 @@ $use-encapsulation: false !default;
   
   ol,
   ul {
-    margin-top: 0;
-    margin-bottom: core.$spacing-m;
-    padding-left: core.$spacing-m;
+    margin-top: core.$space-none;
+    margin-bottom: core.$space-md;
+    padding-left: core.$space-md;
   
     li {
-      margin-bottom: core.$spacing-s;
+      margin-bottom: core.$space;
   
       &:last-child {
-        margin-bottom: 0;
+        margin-bottom: core.$space-none;
       }
     }
   }
 
   dl {
-    margin-top: 0;
-    margin-bottom: 0;
+    margin-top: core.$space-none;
+    margin-bottom: core.$space-none;
   
     dt {
       color: core.$brand-primary;
@@ -164,8 +164,8 @@ $use-encapsulation: false !default;
     }
   
     dd {
-      margin-left: 0;
-      margin-bottom: core.$spacing-m;
+      margin-left: core.$space-none;
+      margin-bottom: core.$space-md;
       font-size: core.$font-size-l;
     }
   }
@@ -301,7 +301,7 @@ $use-encapsulation: false !default;
   }
 
   .text--shadow {
-    text-shadow: 0 core.$spacing-xxs core.$spacing-xxs core.$transparent-black-40;
+    text-shadow: 0 4px 4px core.$transparent-black-40;
   }
 
   // Table

@@ -25,7 +25,4 @@ npm i @uq-uidf/card
 ├─ @uq-uidf/core
 └─ @uq-uidf/foundation-global
    └─ @uq-uidf/core
-└─ @uq-uidf/foundation-grid
-   └─ @uq-uidf/foundation-global
-      └─ @uq-uidf/core
 ```

@@ -1,6 +1,5 @@
 @use '@uq-uidf/core/src/scss/global' as *;
 @use '@uq-uidf/foundation-global/src/scss/global' as *;
-@use '@uq-uidf/foundation-grid/src/scss/global' as *;
 @use 'global' as *;
 @import 'font-awesome/scss/mixins';
 
@@ -145,7 +144,7 @@
       width: 100%;
       z-index: 1;
 
-      @media #{$large-up} {
+      @media #{$screen-xl-up} {
         transition: all ease .35s;
       }
     }
@@ -187,7 +186,7 @@
     .card__title {
       margin-bottom: 0;
 
-      @media #{$large-up} {
+      @media #{$screen-xl-up} {
         text-shadow: 0 1px 1px rgba($uq-black, .4);
         transform: translate3d(0, 2rem, 0);
 
@@ -234,13 +233,13 @@
       // Background image variant with primary link.
       .card--background-image {
         .card__title {
-          @media #{$large-up} {
+          @media #{$screen-xl-up} {
             transform: translate3d(0, 0, 0);
           }
         }
 
         .card__title {
-          @media #{$large-up} {
+          @media #{$screen-xl-up} {
             &::after {
               opacity: 1;
               visibility: visible;
@@ -353,10 +352,8 @@
 
     .card__image-container {
       @media #{$medium-up} {
-        @include grid-column(
-          $columns: 6,
-          $float: left
-        );
+        padding: 0 $space;
+        width: 50%;
       }
     }
 
@@ -384,14 +381,6 @@
 // .card-grid-wrapper--collapsed - Remove spacing between nested cards so they sit flush together.
 
 .cardgrid-wrapper {
-  .row {
-    &::before,
-    &::after {
-      @media #{$medium-only}{
-        clear: left;
-      }
-    }
-  }
 
   &--media-right {
     .card {
@@ -406,9 +395,8 @@
   }
 
   &--collapsed {
-    .row {
-      & > .column,
-      & > .columns {
+    .uq-grid {
+      &__col {
         padding-left: 0;
         padding-right: 0;
       }

@@ -377,4 +377,9 @@
         margin: core.$space-none;
         padding: core.$space-none;
     }
+
+    // JS helpers: 
+    &__mq--desktop {
+        font-family: "#{fnd-global.$large-up}";
+    }
 }

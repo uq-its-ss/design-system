@@ -35,6 +35,10 @@ $gutter-width: (
   @media (min-width: #{core.$screen-xl + (2 * core.$space-xxxxl) - 18.75rem}) {
     margin-left: core.$space-auto;
     margin-right: core.$space-auto;
+    max-width: core.$screen-xl - 18.75rem + map-get($map: $gutter-width, $key: "md");
+  }
+
+  @media (min-width: #{core.$screen-xl}) {
     max-width: core.$screen-xl - 18.75rem + map-get($map: $gutter-width, $key: "xl");
   }
 }

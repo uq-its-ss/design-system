@@ -110,10 +110,10 @@
         .nav-search {
             height: 0;
             overflow: hidden;
-            transition: max-height .25s, padding-top .25s, padding-bottom .25s;
+            transition: height .25s, padding-top .25s, padding-bottom .25s;
 
             &--open {
-                height: max-content;
+                height: auto;
                 padding-top: core.$space-sm;
                 padding-bottom: core.$space-sm;
             }

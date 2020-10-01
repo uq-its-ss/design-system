@@ -108,13 +108,12 @@
         }
 
         .nav-search {
-            max-height: 0;
+            height: 0;
             overflow: hidden;
-            transition: max-height .25s, padding-top .25s, padding-bottom .25s;
+            transition: height .25s, padding-top .25s, padding-bottom .25s;
 
             &--open {
                 height: auto;
-                max-height: 50vh;
                 padding-top: core.$space-sm;
                 padding-bottom: core.$space-sm;
             }
@@ -376,5 +375,10 @@
         word-wrap: normal;
         margin: core.$space-none;
         padding: core.$space-none;
+    }
+
+    // JS helpers: 
+    &__mq--desktop {
+        font-family: "#{fnd-global.$large-up}";
     }
 }

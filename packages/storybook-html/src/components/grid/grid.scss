@@ -26,6 +26,11 @@
         text-overflow: ellipsis;
         white-space: nowrap;
 
+        @media #{core.$screen-xs-up} {
+          background-color: lighten(core.$uq-yellow, 35%);
+          border-color: core.$uq-yellow;
+        }
+
         @media #{core.$screen-sm-up} {
           background-color: lighten(core.$uq-orange, 35%);
           border-color: core.$uq-orange;

@@ -67,7 +67,7 @@ $gutter-width: (
 }
 
 /**
- * Generate grid classes
+ * Generate grid classes (CSS Grid)
  */
 @mixin grid-row--css-native(
    $column-count: 6,
@@ -82,7 +82,7 @@ $gutter-width: (
     $col-span-mod-prefix: "#{$breakpoint-name}-"
   }
 
-  .uq-grid {
+  .uq-grid-ref {
     display: grid;
     grid-template-columns: repeat($shadow-column-count, 1fr);
     // Using the CSS Grid gap feature is causing min-width problems with small
@@ -107,6 +107,49 @@ $gutter-width: (
         &#{$span} {
           grid-column: auto / span calc-true-colspan($span, $column-count, $shadow-column-count);
           width: auto; // required to enable a flexbox fallback implementation
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Generate grid classes (Flexbox)
+ */
+@mixin grid-row--flex(
+    $column-count: 6,
+    $gutter-width: core.$space,
+    $breakpoint-name: null
+  ) {
+  
+  $col-span-mod-prefix: "";
+
+  @if ($breakpoint-name) {
+    $col-span-mod-prefix: "#{$breakpoint-name}-"
+  }
+
+  .uq-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: flex-start;
+
+    @content;
+
+    &__col {
+      $padding: $gutter-width / 2;
+      
+      flex: none;
+      padding-left: $padding;
+      padding-right: $padding;
+
+      &--#{$col-span-mod-prefix} {
+        @for $span from 1 through $column-count {
+          &#{$span} {
+            width: (100% / $column-count) * $span;
+          }
         }
       }
     }

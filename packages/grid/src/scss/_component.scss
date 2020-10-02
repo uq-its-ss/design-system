@@ -6,9 +6,9 @@
  */
 
 @supports (display: grid) {
-  @include grid-row--css-native(12, core.$space, 'xl', 24);
-  @include grid-row--css-native(8, core.$space, 'md', 24);
-  @include grid-row--css-native(6, core.$space, null, 24) {
+  @include grid-row--flex(12, core.$space, 'xl');
+  @include grid-row--flex(8, core.$space, 'md');
+  @include grid-row--flex(6, core.$space, null) {
     &:not(.uq-grid--full-width) {
       @include layout-containment; // contain the first grid wrapper by default
     }
@@ -22,14 +22,14 @@
 
 @media #{core.$screen-md-up} {
   @supports (display: grid) {
-    @include grid-row--css-native(12, core.$space-md, 'xl', 24);
-    @include grid-row--css-native(8, core.$space-md, 'md', 24);
+    @include grid-row--flex(12, core.$space-md, 'xl');
+    @include grid-row--flex(8, core.$space-md, 'md');
   }
 }
 
 @media #{core.$screen-xl-up} {
   @supports (display: grid) {
-    @include grid-row--css-native(12, core.$space-lg, 'xl', 24);
+    @include grid-row--flex(12, core.$space-lg, 'xl');
   }
 }
 

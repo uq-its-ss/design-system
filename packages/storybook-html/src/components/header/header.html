@@ -23,8 +23,8 @@
             </nav>
         </div>
         <div class="nav-search">
-            <form class="nav-search__form" action="https://www.uq.edu.au/search/" method="get" id="uq-search" accept-charset="UTF-8">
-                <fieldset id="edit-as-sitesearch--wrapper" class="nav-search__wrapper">
+            <form class="nav-search__form" action="https://www.uq.edu.au/search/" method="get" accept-charset="UTF-8">
+                <fieldset class="nav-search__wrapper">
                     <legend class="hidden">
                         <span class="nav-search__title">What are you looking for?</span>
                     </legend>
@@ -32,28 +32,22 @@
                     <div class="nav-search__scope">
                         <div class="nav-search__scope__radio-wrapper">
                             <div class="form-item">
-                                <input type="radio" id="global-site-search" name="site-search-scope" value="" class="form-radio">
-                                <label for="global-site-search" class="option">
-                                    Search all UQ websites
-                                </label>
+                                <input type="radio" id="edit-as_sitesearch-off" name="as_sitesearch" value="" class="form-radio">
+                                <label for="edit-as_sitesearch-off" class="option">Search all UQ websites</label>
                             </div>
                             <div class="form-item">
-                                <input type="radio" id="local-site-search" name="site-search-scope" value="https://xyz.uq.edu.au/" checked="checked" class="form-radio">
-                                <label for="local-site-search" class="option">
-                                    Search this website (xyz.uq.edu.au)
-                                </label>
+                                <input type="radio" id="edit-as_sitesearch-on" name="as_sitesearch" value="https://future-students.uq.edu.au/" checked="checked" class="form-radio">
+                                <label for="edit-as_sitesearch-on" class="option">Search this website (future-students.uq.edu.au)</label>
                             </div>
                         </div>
                     </div>
                 </fieldset>
                 <div class="nav-search__query">
                     <span class="search-query__wrapper">
-                        <label for="edit-q" class="visually-hidden">
-                            Search term
-                        </label>
+                        <label for="edit-q" class="visually-hidden">Search term</label>
                         <input type="text" id="edit-q" name="q" value="" size="60" maxlength="128" class="search-query__input">
                         <span class="search-query__button">
-                            <input type="submit" id="edit-submit--2" name="op" value="Search" class="search-query__submit">
+                            <input type="submit" name="op" value="Search" class="search-query__submit">
                         </span>
                     </span>
                 </div>

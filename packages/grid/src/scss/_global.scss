@@ -63,11 +63,37 @@ $gutter-width: (
 }
 
 /**
+ * Row container styles for Flexbox grid implemenations
+ */
+@mixin grid-row-basis {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+}
+
+@mixin grid-col-padding {
+  padding-left: (map-get($map: $gutter-width, $key: "base") / 2);
+  padding-right: (map-get($map: $gutter-width, $key: "base") / 2);
+
+  @media #{core.$screen-md-up} {
+    padding-left: (map-get($map: $gutter-width, $key: "md") / 2);
+    padding-right: (map-get($map: $gutter-width, $key: "md") / 2);
+  }
+
+  @media #{core.$screen-xl-up} {
+    padding-left: (map-get($map: $gutter-width, $key: "xl") / 2);
+    padding-right: (map-get($map: $gutter-width, $key: "xl") / 2);
+  }
+}
+
+/**
  * Generate grid classes (Flexbox)
  */
 @mixin grid-row--flex(
     $column-count: 6,
-    $gutter-width: core.$space,
     $breakpoint-name: null
   ) {
   
@@ -78,21 +104,13 @@ $gutter-width: (
   }
 
   .uq-grid {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: stretch;
-    align-content: flex-start;
+    @include grid-row-basis;
 
     @content;
 
     &__col {
-      $padding: $gutter-width / 2;
-      
+      @include grid-col-padding;
       flex: none;
-      padding-left: $padding;
-      padding-right: $padding;
 
       &--#{$col-span-mod-prefix} {
         @for $span from 1 through $column-count {

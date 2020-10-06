@@ -2,11 +2,11 @@
 @use 'global' as *;
 
 /**
- * Grid container
+ * Grid container (incl. full width modifier class)
  */
-@include grid-row--flex(12, core.$space, 'xl');
-@include grid-row--flex(8, core.$space, 'md');
-@include grid-row--flex(6, core.$space, null) {
+@include grid-row--flex(12, 'xl');
+@include grid-row--flex(8, 'md');
+@include grid-row--flex(6, null) {
   &:not(.uq-grid--full-width) {
     @include layout-containment; // contain the first grid wrapper by default
   }
@@ -18,38 +18,47 @@
 };
 
 @media #{core.$screen-md-up} {
-  @include grid-row--flex(12, core.$space-md, 'xl');
-  @include grid-row--flex(8, core.$space-md, 'md');
+  @include grid-row--flex(12, 'xl');
+  @include grid-row--flex(8, 'md');
 }
 
 @media #{core.$screen-xl-up} {
-  @include grid-row--flex(12, core.$space-lg, 'xl');
+  @include grid-row--flex(12, 'xl');
 }
 
 /**
- * Flexible Grid
+ * Flexible Grid (modifier class)
+ * 
  */
 .uq-grid--flexible {
-  display: flex;
-  flex: 1;
-  flex-wrap: wrap;
-
-  @supports (display: grid) {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
-    grid-gap: core.$space-md;
+  > .uq-grid__col {
+    flex: 1 0 12.5rem;
+    width: auto !important;
   }
 
-  > .uq-grid__col {
-    flex: 1;
-    min-width: 18%;
-    margin-right: 1%;
-    margin-left: 1%;
+  .uq-grid--flexible {
+    > .uq-grid__col {
+      flex-basis: 0; // remove flex-basis for nested flexible grids to prevent overflow.
+    }
+  }
 
-    @supports (display: grid) {
-      min-width: none;
-      margin-right: 0;
-      margin-bottom: 0;
+  @supports (display: grid) {
+    @include grid-col-padding;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
+    gap: 0 map-get($map: $gutter-width, $key: "base");
+    
+    > .uq-grid__col {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    @media #{core.$screen-md-up} {
+      gap: 0 map-get($map: $gutter-width, $key: "md");
+    }
+
+    @media #{core.$screen-xl-up} {
+      gap: 0 map-get($map: $gutter-width, $key: "xl");
     }
   }
 }

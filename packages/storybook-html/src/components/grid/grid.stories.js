@@ -169,11 +169,62 @@ export const twelveEightSixFullWidth = () => `
 
 twelveEightSixFullWidth.storyName = "6-8-12 full width";
 
-export const flexible = () => `
-  <div>Placeholder</div>
+export const flexible1 = () => `
+  <div class="uqds-example-grid">
+    <div class="uq-grid uq-grid--flexible">
+      <div class="uq-grid__col"><span>Content</span></div>
+      <div class="uq-grid__col"><span>Content</span></div>
+    </div>
+    <div class="uq-grid uq-grid--flexible">
+      <div class="uq-grid__col"><span>Content</span></div>
+      <div class="uq-grid__col"><span>Content</span></div>
+      <div class="uq-grid__col"><span>Content</span></div>
+    </div>
+    <div class="uq-grid uq-grid--flexible">
+      <div class="uq-grid__col"><span>Content</span></div>
+      <div class="uq-grid__col"><span>Content</span></div>
+      <div class="uq-grid__col"><span>Content</span></div>
+      <div class="uq-grid__col"><span>Content</span></div>
+    </div>
+    <div class="uq-grid uq-grid--flexible">
+      <div class="uq-grid__col"><span>Content</span></div>
+      <div class="uq-grid__col"><span>Content</span></div>
+      <div class="uq-grid__col"><span>Content</span></div>
+      <div class="uq-grid__col"><span>Content</span></div>
+      <div class="uq-grid__col"><span>Content</span></div>
+    </div>
+  </div>
 `;
 
-flexible.storyName = "Flexible grid";
+flexible1.storyName = "Flexible grid example 1";
+
+export const flexible2 = () => `
+  <div class="uqds-example-grid">
+    <div class="uqds-example-grid__highlight">
+      <div class="uq-grid uq-grid--flexible">
+        <div class="uq-grid__col"><span>Content</span></div>
+        <div class="uq-grid__col"><span>Content</span></div>
+        <div class="uq-grid__col"><span>Content</span></div>
+      </div>
+    </div>
+  </div>
+`;
+
+flexible2.storyName = "Flexible grid example 2";
+
+export const flexibleFullWidth = () => `
+  <div class="uqds-example-grid">
+    <div class="uqds-example-grid__highlight">
+      <div class="uq-grid uq-grid--flexible uq-grid--full-width">
+        <div class="uq-grid__col"><span>Content</span></div>
+        <div class="uq-grid__col"><span>Content</span></div>
+        <div class="uq-grid__col"><span>Content</span></div>
+      </div>
+    </div>
+  </div>
+`;
+
+flexibleFullWidth.storyName = "Flexible grid full width";
 
 export const halves = () => `
   <div>Placeholder</div>

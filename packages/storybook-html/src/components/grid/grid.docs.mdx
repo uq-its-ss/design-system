@@ -84,17 +84,25 @@ Shift the layout for the largest screens.
 If you want to manage the margins yourself i.e. nest the grid in your own custom
 container, you can apply the `uq-grid--full-width` modifier class.
 
-#### For example
+#### Example: 6-8-12 grid
 
 ```html
 <div class="uq-grid uq-grid--full-width">
-  <div class="uq-grid__col uq-grid__col--7">
-    <div>Your content</div>
-  </div>
-  <div class="uq-grid__col uq-grid__col--5">
-    <div>Your content</div>
-  </div>
+  <div class="uq-grid__col uq-grid__col--7">Your content</div>
+  <div class="uq-grid__col uq-grid__col--5">Your content</div>
 </div>
 ```
 
 <Story height={85} id="layout-grid--twelve-eight-six-full-width" />
+
+#### Example: flexible grid
+
+```html
+<div class="uq-grid uq-grid--flexible uq-grid--full-width">
+  <div class="uq-grid__col">Content</div>
+  <div class="uq-grid__col">Content</div>
+  <div class="uq-grid__col">Content</div>
+</div>
+```
+
+<Story height={85} id="layout-grid--flexible-full-width" />

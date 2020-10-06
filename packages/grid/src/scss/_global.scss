@@ -62,18 +62,13 @@ $gutter-width: (
   }
 }
 
-@function calc-true-colspan($span, $column-count, $shadow-column-count) {
-  @return round(($shadow-column-count / $column-count) * $span); 
-}
-
 /**
- * Generate grid classes
+ * Generate grid classes (Flexbox)
  */
-@mixin grid-row--css-native(
-   $column-count: 6,
-   $gutter-width: core.$space,
-   $breakpoint-name: null,
-   $shadow-column-count: $column-count
+@mixin grid-row--flex(
+    $column-count: 6,
+    $gutter-width: core.$space,
+    $breakpoint-name: null
   ) {
   
   $col-span-mod-prefix: "";
@@ -83,30 +78,27 @@ $gutter-width: (
   }
 
   .uq-grid {
-    display: grid;
-    grid-template-columns: repeat($shadow-column-count, 1fr);
-    // Using the CSS Grid gap feature is causing min-width problems with small
-    // screens and nested grids. We are using padding to implementing gutters
-    // instead. This is an indication that CSS Grid is meant to be used for
-    // layout and is not designed for implementing abstract grids on top of it.
-    //
-    // column-gap: $gutter-width;
-    // row-gap: 0;
-    gap: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: flex-start;
 
     @content;
 
     &__col {
       $padding: $gutter-width / 2;
+      
+      flex: none;
       padding-left: $padding;
       padding-right: $padding;
-    }
 
-    &__col--#{$col-span-mod-prefix} {
-      @for $span from 1 through $column-count {
-        &#{$span} {
-          grid-column: auto / span calc-true-colspan($span, $column-count, $shadow-column-count);
-          width: auto; // required to enable a flexbox fallback implementation
+      &--#{$col-span-mod-prefix} {
+        @for $span from 1 through $column-count {
+          &#{$span} {
+            width: (100% / $column-count) * $span;
+          }
         }
       }
     }

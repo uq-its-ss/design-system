@@ -1,6 +1,6 @@
 @use '@uq-uidf/core/src/scss/global' as core;
+@use '@uq-uidf/grid/src/scss/global' as grid;
 @use '@uq-uidf/foundation-global/src/scss/global' as fnd-global;
-@use '@uq-uidf/foundation-grid/src/scss/global' as fnd-grid;
 @use '@uq-uidf/foundation-misc/src/scss/global' as fnd-misc;
 @use 'global' as *;
 
@@ -54,9 +54,10 @@
     }
 
     &__container {
-        max-width: fnd-grid.$row-width;
-        margin: core.$space-none core.$space-auto;
-        padding: core.$space-xxl fnd-global.$column-gutter / 2;
+        @include grid.layout-containment;
+        @include grid.grid-col-padding;
+        padding-top: core.$space-xxl;
+        padding-bottom: core.$space-xxl;
     }
 
     &__row {

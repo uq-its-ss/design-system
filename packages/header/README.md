@@ -23,6 +23,6 @@ npm i @uq-uidf/header
 ```shell
 @uq-uidf/header
 ├─ @uq-uidf/core
-└─ @uq-uidf/foundation-global
+└─ @uq-uidf/grid
    └─ @uq-uidf/core
 ```

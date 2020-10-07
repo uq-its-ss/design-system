@@ -1,6 +1,5 @@
 @use '@uq-uidf/core/src/scss/global' as core;
-@use '@uq-uidf/foundation-global/src/scss/global' as fnd-global;
-@use '@uq-uidf/foundation-grid/src/scss/global' as fnd-grid;
+@use '@uq-uidf/grid/src/scss/global' as grid;
 @use 'global' as *;
 
 //
@@ -11,7 +10,7 @@
     background: core.$uq-purple-gradient;
     box-sizing: border-box;
     font-family: core.$font-body;
-    font-weight: fnd-global.$body-font-weight;
+    font-weight: core.$font-weight-thin;
     line-height: core.$compass-base-line-height-ratio;
 
     *, *:before, *:after {
@@ -19,10 +18,9 @@
     }
 
     &__container {
+        @include grid.layout-containment;
+        @include grid.grid-col-padding;
         position: relative;
-        max-width: fnd-grid.$row-width;
-        margin: core.$space-none core.$space-auto;
-        padding: core.$space-none fnd-global.$column-gutter / 2;
 
         .nav-global {
             display: flex;
@@ -31,7 +29,7 @@
             padding-top: core.$space;
             padding-bottom: core.$space;
 
-            @media #{fnd-global.$large-up} {
+            @media #{core.$screen-lg-up} {
                 padding-top: core.$space-md;
                 padding-bottom: core.$space-md;
             }
@@ -47,7 +45,7 @@
                 li {
                     display: none;
 
-                    @media #{fnd-global.$large-up} {
+                    @media #{core.$screen-lg-up} {
                         display: inline;
                         margin-left: core.$space-md;
                         word-wrap: break-word;
@@ -96,8 +94,8 @@
 
                 a {
                     color: core.$uq-white;
-                    font-size: .875rem;
-                    font-weight: 300;
+                    font-size: core.$font-size-s;
+                    font-weight: core.$font-weight-thin;
                     text-decoration: none;
                     &:hover,
                     &:focus {
@@ -131,24 +129,24 @@
             &__title {
                 color: core.$uq-white;
                 font-family: core.$merriweather;
-                font-size: 1rem;
+                font-size: core.$font-size-m;
                 font-style: italic;
                 font-weight: core.$font-weight-normal;
 
-                @media #{fnd-global.$large-up} {
-                    font-size: 1.25rem;
+                @media #{core.$screen-lg-up} {
+                    font-size: core.$font-size-xl;
                 }
             }
 
             &__scope {
                 color: core.$uq-white;
-                font-size: .75rem;
+                font-size: core.$font-size-xs;
 
                 &__radio-wrapper {
-                    font-size: 1rem;
+                    font-size: core.$font-size-m;
                     margin: core.$space-none core.$space-none core.$space-sm core.$space-none;
 
-                    @media #{fnd-global.$large-up} {
+                    @media #{core.$screen-lg-up} {
                         display: inline-block;
                         margin: core.$space-none;
                     }
@@ -169,14 +167,14 @@
                     label {
                         color: core.$uq-white;
                         display: inline;
-                        font-size: .875rem;
+                        font-size: core.$font-size-s;
                         font-weight: core.$font-weight-normal;
                         margin: core.$space-none;
                         padding: core.$space-none;
                         max-width: none;
                     }
                                 
-                    @media #{fnd-global.$large-up} {
+                    @media #{core.$screen-lg-up} {
                         display: inline-block;
                         margin-top: core.$space-none;
                         padding-left: core.$space;
@@ -184,9 +182,9 @@
                     } 
                 }
 
-                @media #{fnd-global.$large-up} {
+                @media #{core.$screen-lg-up} {
                     display: inline;
-                    font-size: .875rem;
+                    font-size: core.$font-size-s;
                     margin-left: core.$space;
                 }
             }
@@ -212,7 +210,7 @@
                     border-radius: 2px;
                     box-shadow: none;
                     font-family: sans-serif;
-                    font-size: 1rem;
+                    font-size: core.$font-size-m;
                     line-height: 1;
                     color: core.$uq-neutral-dark80; //#181818
                     height: auto;
@@ -231,9 +229,9 @@
                     border: 2px solid transparent;
                     color: core.$uq-purple;
                     display: inline-block;
-                    font-size: 1rem;
+                    font-size: core.$font-size-m;
                     height: 2.75rem;
-                    line-height: 1.5;
+                    line-height: core.$line-height;
                     margin-bottom: core.$space-none;
                     margin-right: core.$space-none;
                     overflow: hidden;
@@ -278,7 +276,7 @@
                     z-index: 3;
                     cursor: pointer;
                     outline-offset: -2px;
-                    font-size: 1rem;
+                    font-size: core.$font-size-m;
                 }
     
             }
@@ -289,7 +287,7 @@
                 column-count: 3;
                 margin-bottom: core.$space;
 
-                @media #{fnd-global.$large-up} {
+                @media #{core.$screen-lg-up} {
                     display: none;
                 }
 
@@ -319,7 +317,7 @@
 
     &__site-title {
         margin: core.$space-none;
-        font-size: 1.25rem;
+        font-size: core.$font-size-xl;
         font-weight: 500;
         color: core.$uq-purple;
         
@@ -339,7 +337,7 @@
 
     .logo--large {
         display: none;
-        @media #{fnd-global.$large-up} {
+        @media #{core.$screen-lg-up} {
             display: block;
         }
         & img {
@@ -349,7 +347,7 @@
     }
 
     .logo--small {
-        @media #{fnd-global.$large-up} {
+        @media #{core.$screen-lg-up} {
             display: none;
         }
         & img {
@@ -379,6 +377,6 @@
 
     // JS helpers: 
     &__mq--desktop {
-        font-family: "#{fnd-global.$large-up}";
+        font-family: "#{core.$screen-lg-up}";
     }
 }

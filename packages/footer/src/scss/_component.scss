@@ -1,6 +1,5 @@
 @use '@uq-uidf/core/src/scss/global' as core;
 @use '@uq-uidf/grid/src/scss/global' as grid;
-@use '@uq-uidf/foundation-global/src/scss/global' as fnd-global;
 @use '@uq-uidf/foundation-misc/src/scss/global' as fnd-misc;
 @use 'global' as *;
 
@@ -10,7 +9,7 @@
     color: $site-footer-color;
     font-family: core.$font-body;
     font-size: $site-footer-font-size;
-    font-weight: fnd-global.$body-font-weight;
+    font-weight: core.$font-weight-thin;
     line-height: core.$compass-base-line-height-ratio;
     
     *, *:before, *:after {
@@ -36,15 +35,15 @@
         border-bottom: 1px solid rgba(core.$uq-white, 0.3);
         color: $site-footer-color;
         font-family: core.$merriweather;
-        font-size: 1rem;
+        font-size: core.$font-size-m;
         font-style: italic;
-        font-weight: fnd-global.$body-font-weight;
-        line-height: 1.5;
+        font-weight: core.$font-weight-normal;
+        line-height: core.$line-height;
         margin: core.$space-none core.$space-none core.$space-lg;
         padding: core.$space-none core.$space-none core.$space-lg;
 
-        @media #{fnd-global.$medium-up} {
-            font-size: 1.125rem;
+        @media #{core.$screen-md-up} {
+            font-size: core.$font-size-l;
         }
 
         &__link {
@@ -70,16 +69,12 @@
 
     &__column {
         flex: 1 1 100%;
-        padding: core.$space-none fnd-global.$column-gutter/2 core.$space-none core.$space-none;
+        padding: core.$space-none (map-get($map: grid.$gutter-width, $key: "base") / 2) core.$space-none core.$space-none;
 
-        @media #{fnd-global.$medium-up} {
-            flex: 3 1 75%;
-        }
-
-        & + .uq-footer__column {
+        + .uq-footer__column {
             flex: 1 1 100%;
 
-            @media #{fnd-global.$medium-up} {
+            @media #{core.$screen-md-up} {
                 flex: 1 1 25%;
             }
         }
@@ -87,13 +82,22 @@
         &:last-child {
             padding: core.$space-none;
         }
+
+        @media #{core.$screen-md-up} {
+            flex: 3 1 75%;
+            padding-right: map-get($map: grid.$gutter-width, $key: "md") / 2;
+        }
+
+        @media #{core.$screen-xl-up} {
+            padding-right: map-get($map: grid.$gutter-width, $key: "xl") / 2;
+        }
     }
 
     &__aside {
         display: inline-block;
         margin: core.$space-md core.$space-none core.$space-none core.$space-none;
 
-        @media #{fnd-global.$large-up} {
+        @media #{core.$screen-xl-up} {
             margin: core.$space-none;
         }
     }
@@ -110,7 +114,7 @@
         .uq-footer__column + .uq-footer__column {
             flex: 1 1 100%;
 
-            @media #{fnd-global.$large-up} {
+            @media #{core.$screen-xl-up} {
                 flex: 1 1 25%;
             }
         }

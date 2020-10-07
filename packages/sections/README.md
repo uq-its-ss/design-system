@@ -23,9 +23,6 @@ npm i @uq-uidf/sections
 ```shell
 @uq-uidf/sections
 ├─ @uq-uidf/core
-├─ @uq-uidf/foundation-global
-│  └─ @uq-uidf/core
-└─ @uq-uidf/foundation-grid
-   └─ @uq-uidf/foundation-global
-      └─ @uq-uidf/core
+└─ @uq-uidf/foundation-global
+   └─ @uq-uidf/core
 ```

@@ -88,7 +88,7 @@
             padding-right: map-get($map: grid.$gutter-width, $key: "md") / 2;
         }
 
-        @media #{core.$screen-xl-up} {
+        @media #{core.$screen-lg-up} {
             padding-right: map-get($map: grid.$gutter-width, $key: "xl") / 2;
         }
     }
@@ -97,7 +97,7 @@
         display: inline-block;
         margin: core.$space-md core.$space-none core.$space-none core.$space-none;
 
-        @media #{core.$screen-xl-up} {
+        @media #{core.$screen-lg-up} {
             margin: core.$space-none;
         }
     }
@@ -114,7 +114,7 @@
         .uq-footer__column + .uq-footer__column {
             flex: 1 1 100%;
 
-            @media #{core.$screen-xl-up} {
+            @media #{core.$screen-lg-up} {
                 flex: 1 1 25%;
             }
         }

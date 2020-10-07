@@ -4,9 +4,9 @@
 /**
  * Grid container (incl. full width modifier class)
  */
-@include grid-row--flex(12, 'xl');
-@include grid-row--flex(8, 'md');
-@include grid-row--flex(6, null) {
+@include grid-row(12, 'xl');
+@include grid-row(8, 'md');
+@include grid-row(6, null) {
   &:not(.uq-grid--full-width) {
     @include layout-containment; // contain the first grid wrapper by default
   }
@@ -18,17 +18,16 @@
 };
 
 @media #{core.$screen-md-up} {
-  @include grid-row--flex(12, 'xl');
-  @include grid-row--flex(8, 'md');
+  @include grid-row(12, 'xl');
+  @include grid-row(8, 'md');
 }
 
 @media #{core.$screen-xl-up} {
-  @include grid-row--flex(12, 'xl');
+  @include grid-row(12, 'xl');
 }
 
 /**
  * Flexible Grid (modifier class)
- * 
  */
 .uq-grid--flexible {
   > .uq-grid__col {
@@ -64,10 +63,10 @@
 }
 
 /**
- * What are these?
+ * Set column grids
  */
-
 .uq-grid--halves {
+  
   > .uq-grid__col {
     @media #{core.$screen-md-up} {
       grid-column: auto / span 6;

@@ -62,6 +62,16 @@ $gutter-width: (
   }
 }
 
+/*
+ * Convert fraction to percentage
+ */
+ @function _grid-fraction-to-percent(
+  $columns,
+  $column-count: 6) {
+
+  @return percentage($columns / $column-count);
+}
+
 /**
  * Row container styles for Flexbox grid implemenations
  */
@@ -89,13 +99,26 @@ $gutter-width: (
   }
 }
 
+@mixin grid-col-width(
+  $columns,
+  $column-count: 6
+) {
+  width: _grid-fraction-to-percent($columns, $column-count)
+}
+
+@mixin grid-col-offset(
+  $columns,
+  $column-count: 6
+) {
+  margin-left: _grid-fraction-to-percent($columns, $column-count);
+}
+
 /**
  * Generate grid classes (Flexbox)
  */
-@mixin grid-row--flex(
+@mixin grid-row(
     $column-count: 6,
-    $breakpoint-name: null
-  ) {
+    $breakpoint-name: null) {
   
   $col-span-mod-prefix: "";
 
@@ -115,7 +138,7 @@ $gutter-width: (
       &--#{$col-span-mod-prefix} {
         @for $span from 1 through $column-count {
           &#{$span} {
-            width: (100% / $column-count) * $span;
+            @include grid-col-width($span, $column-count);
           }
         }
       }

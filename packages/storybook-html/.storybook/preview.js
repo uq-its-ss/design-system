@@ -12,9 +12,10 @@ export const parameters = {
         ],
         'Core',
         [
+          'Introduction',
+          'Fonts',
           'Space',
           'Breakpoints',
-          'Fonts', 
           'Colour',
           [
             'Colour usage',

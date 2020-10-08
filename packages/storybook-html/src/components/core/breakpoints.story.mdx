@@ -4,13 +4,43 @@ import { Meta } from '@storybook/addon-docs/blocks';
 
 # Breakpoints
 
-| Name(s)                 | Breakpoint range                 |
-|-------------------------|----------------------------------|
-| **\* (mobile)**         | 0—25.9375rem **(~0—415px )**     |
-| XS                      | 26—33.9375rem **(~416—543px)**   |
-| SM                      | 34—47.9375rem **(~544—767px)**   |
-| **MD (tablet)**         | 48—63.9375rem **(~768—1023px)**  |
-| LG                      | 64—89.9375rem **(~1024—1439px)** |
-| **XL (desktop/laptop)** | 90rem—∞ **(~1440px—∞)**          |
+| Name(s)                 | Constant variable | Default constant | Media query string variables | Default viewport width ranges |
+|-------------------------|-------------------|------------------|------------------------------|-------------------------------|
+| **\* (mobile)**         | N/A | N/A | N/A | 0—∞ |
+| XS                      | $screen-xs | 26rem **(~416px)** | $screen-xs-up,<br/>$screen-xs-down,<br/>$screen-xs-sm | 26rem—∞ **(~416px—∞)**,<br/>0—25.9375rem **(~0—415px)**,<br/>26—33.9375rem **(~416—543px)** |
+| SM                      | $screen-sm | 34rem **(~544px)** | $screen-sm-up,<br/>$screen-sm-down,<br/>$screen-sm-md | 34rem—∞ **(~544px—∞)**,<br/>0—33.9375rem **(~0—543px)**,<br/>34—47.9375rem **(~544—767px)** |
+| **MD (tablet)**         | $screen-md | 48rem **(~768px)** | $screen-md-up,<br/>$screen-md-down,<br/>$screen-md-lg | 48rem—∞ **(~768px—∞)**,<br/>0—47.9375rem **(~0—767px)**,<br/>48—63.9375rem **(~768—1023px)** |
+| LG                      | $screen-lg | 64rem **(~1024px)** | $screen-lg-up,<br/>$screen-lg-down,<br/>$screen-lg-xl | 64rem—∞ **(~1024px—∞)**,<br/>0—63.9375rem **(~0—1023px)**,<br/>64—89.9375rem **(~1024—1439px)** |
+| **XL (desktop/laptop)** | $screen-xl | 90rem **(~1440px)** | $screen-xl-up,<br/>$screen-xl-down | 90rem—∞ **(~1440px—∞)**,<br/>0—89.9375rem **(~0—1439px)** |
 
 *Pixel units (px) provided are based on the default rem unit analogue of 16px.*
+
+## Usage
+
+We recommend using the breakpoints in a *mobile-first* pattern. This involves,
+setting styles for the smallest screens first as per the following example.
+
+```scss
+/* custom.scss */
+
+@use '@uq-uidf/core/src/scss/_global' as core;
+
+.example-class {
+  // Target the zero (mobile) breakpoint up
+  font-size: core.$font-size-s;
+}
+
+@media #{$screen-md-up} {
+  .example-class {
+    // Target the MD (tablet) breakpoint up
+    font-size: core.$font-size-m;
+  }
+}
+
+@media #{$screen-xl-up} {
+  .example-class {
+    // Target the XL (desktop) breakpoint up
+    font-size: core.$font-size-l;
+  }
+}
+```

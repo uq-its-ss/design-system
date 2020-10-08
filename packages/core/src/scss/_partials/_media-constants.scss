@@ -33,20 +33,22 @@
 // Converted (Sass) variables
 // ==========================
 
-// Breakpoints (should these to converted to use spacing variables?)
-// -----------------------------------------------------------------
+// Breakpoints
+// -----------
+
+// !! Please try to keep these to multiples of 8px (0.5rem)
 
 // Considered to be the "mobile" sizes in discussion
 // Firstly the trivial 0 size (of course), then:
-$screen-xs: 52 * space.$space-sm !default; // ~416px
-$screen-sm: 68 * space.$space-sm !default; // ~544px
+$screen-xs: 26rem !default; // ~416px
+$screen-sm: 34rem !default; // ~544px
 
 // Considered to be the "tablet" sizes in discussion
-$screen-md: 96 * space.$space-sm !default; // ~768px
-$screen-lg: 128 * space.$space-sm !default; // ~1024px
+$screen-md: 48rem !default; // ~768px
+$screen-lg: 64rem !default; // ~1024px
 
 // Considered to be the "desktop" size in discussion
-$screen-xl: 180 * space.$space-sm !default; // ~1440px
+$screen-xl: 90rem !default; // ~1440px
 
 // Media query strings
 // -------------------

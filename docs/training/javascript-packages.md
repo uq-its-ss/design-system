@@ -26,7 +26,7 @@ Verdaccio is a local npm registry proxy that we can use to simulate publishing
 packages. By default, this monorepo is set to publish to the default Verdaccio
 local server address (http://localhost:4873/).
 
-> **🚨 Before continuing, please fork or branch the UIDF monorepo — as 
+> **🚨 Before continuing, please fork or branch the UQDS monorepo — as 
 > `npx lerna publish` will create tags on the repo.**
 
 ### Set up Verdaccio for local package publication

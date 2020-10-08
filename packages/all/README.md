@@ -1,6 +1,6 @@
 # `@uqds/all`
 
-> The UIDF, with pre-written imports. 
+> The UQDS, with pre-written imports. 
 
 ## Usage
 

@@ -267,7 +267,7 @@
     }
 
     @media #{fnd-global.$large-up} {
-      // TEMP fix: adjusting the margins to match up with the current UIDF grid
+      // TEMP fix: adjusting the margins to match up with the current UQDS grid
       margin: core.$space-none calc(#{fnd-global.$column-gutter / 2} - #{core.$space-md});
     }
   }

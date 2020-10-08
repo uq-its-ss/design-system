@@ -1,6 +1,6 @@
 # `@uqds/foundation-misc`
 
-> Foundation (5) misc. parts still in use by some other UIDF packages
+> Foundation (5) misc. parts still in use by some other UQDS packages
 
 ## Usage
 

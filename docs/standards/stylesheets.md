@@ -13,10 +13,10 @@ clashes.
 ### In component packages
 
 To prevent the accidental overriding of third-party stylesheet properties, the
-UIDF should provide `uq` prefixed CSS components. In other words, prefix all
+UQDS should provide `uq` prefixed CSS components. In other words, prefix all
 class names with `uq-`. E.g. `.uq-header`, `.uq-button .uq-button--secondary`.
 
-> RULE OF THUMB: allow UIDF components to work well with other front-end
+> RULE OF THUMB: allow UQDS components to work well with other front-end
 > frameworks and libraries.
 
 ### Documentation styling and design system support classes.

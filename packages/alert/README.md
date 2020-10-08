@@ -23,6 +23,8 @@ npm i @uq-uidf/alert
 ```shell
 @uq-uidf/alert
 ├─ @uq-uidf/core
+├─ @uq-uidf/grid
+│  └─ @uq-uidf/core
 └─ @uq-uidf/foundation-global
    └─ @uq-uidf/core
 ```

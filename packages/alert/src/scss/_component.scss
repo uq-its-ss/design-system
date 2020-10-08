@@ -1,4 +1,5 @@
 @use '@uq-uidf/core/src/scss/global' as core;
+@use '@uq-uidf/grid/src/scss/global' as grid;
 @use '@uq-uidf/foundation-global/src/scss/global' as *;
 @use 'global' as *;
 
@@ -9,26 +10,22 @@
   position: relative;
 
   &__container {
-    margin-left: core.$space-md - core.$space;
-    margin-right: core.$space-md - core.$space;
+    @include grid.layout-containment;
 
-    @media #{core.$screen-md-up} {
-      margin-left: core.$space-xxxxl - core.$space;
-      margin-right: core.$space-xxxxl - core.$space;
-    }
-
-    @media #{core.$screen-xl-up} {
-      margin-left: core.$space-auto;
-      margin-right: core.$space-auto;
-      max-width: core.$screen-xl - 20.75rem;
+    > .alert__message,
+    > .alert__action {
+      @include grid.grid-col-padding;
     }
   }
 
   &__message {
     font-size: $alert-font-size-sm;
     font-weight: $alert-font-weight;
-    line-height: 1.4;
-    padding: core.$space core.$space-uul core.$space core.$space;
+    line-height: core.$line-height-h;
+    padding-top: core.$space;
+    padding-bottom: core.$space;
+    padding-left: core.$space-md;
+    padding-right: core.$space-uul !important;
 
     a {
       color: $alert-text-color;
@@ -41,7 +38,10 @@
   }
 
   &__action {
-    padding: core.$space-sm core.$space core.$space; 
+    padding-top: core.$space-sm;
+    padding-bottom: core.$space;
+    padding-left: core.$space-md;
+    padding-right: core.$space-md;
   }
 
   &__close {
@@ -80,11 +80,6 @@
     .alert__message {
       padding-right: core.$space;
     }
-    &.alert--has-action {
-      .alert__action {
-        padding-right: core.$space;
-      }
-    }
   }
 
   &--info {
@@ -104,7 +99,7 @@
   }
 }
 
-@media #{$medium-up} {
+@media #{core.$screen-md-up} {
   .alert {
     &__message,
     &__action {
@@ -114,13 +109,13 @@
 
     &__message {
       font-size: $alert-font-size-md;
-      padding: core.$space core.$space-uuuul core.$space core.$space;
+      padding-right: core.$space-uuuul !important;
     }
 
     &__action {
+      @include grid.grid-col-width(2);
       padding-bottom: core.$space-sm;
       padding-right: core.$space-uul;
-      width: 33.33%;
     }
 
     &__close {
@@ -129,9 +124,9 @@
 
     &--has-action {
       .alert__message {
+        @include grid.grid-col-width(4);
         padding-bottom: core.$space;
         padding-right: core.$space;
-        width: 66.67%
       }
     }
     &--slim {
@@ -146,15 +141,16 @@
   }
 }
 
-@media #{$large-up} {
+@media #{core.$screen-lg-up} {
   .alert {
     &__message {
-      padding: core.$space-md core.$space-uuuul core.$space-md core.$space;
+      padding-top: core.$space-md;
+      padding-bottom: core.$space-md;
     }
 
     &__action {
-      margin-left: 8.33%;
-      width: 33.33%
+      @include grid.grid-col-offset(1, 12);
+      @include grid.grid-col-width(4, 12);
     }
 
     &__close {
@@ -163,8 +159,8 @@
 
     &--has-action {
       .alert__message {
+        @include grid.grid-col-width(7, 12);
         padding-bottom: core.$space-md;
-        width: 58.34%;
       }
     }
   }

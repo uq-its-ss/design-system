@@ -38,7 +38,7 @@ module.exports = async ({ config, mode }) => {
               outputStyle: mode == 'PRODUCTION' ? "compressed" : "expanded",
               // TODO: we should implement `glob` here:
               includePaths: [
-                'node_modules/@uq-uidf/core/node_modules',
+                'node_modules/@uqds/core/node_modules',
                 'node_modules'
               ]
             }

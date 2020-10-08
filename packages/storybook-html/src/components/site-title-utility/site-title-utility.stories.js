@@ -2,7 +2,7 @@
 import headerHTML from '../header/header.html';
 
 // import styles
-import '@uq-uidf/site-title-utility/src/scss/_component.scss';
+import '@uqds/site-title-utility/src/scss/_component.scss';
 
 export default {
   title: 'Components/Site title',

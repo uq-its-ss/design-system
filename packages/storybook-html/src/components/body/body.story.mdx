@@ -7,21 +7,21 @@ import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
 ## Install as a dependency
 
 ```bash
-npm i @uq-uidf/body
+npm i @uqds/body
 ```
 
 ```bash
-yarn add @uq-uidf/body
+yarn add @uqds/body
 ```
 
 ## Basic usage with Sass
 
 ```scss
 // With a namespace (recommended)
-@use '@uq-uidf/body/src/scss/_component' as body;
+@use '@uqds/body/src/scss/_component' as body;
 
 // Without a namespace
-@use '@uq-uidf/body/src/scss/_component' as *;
+@use '@uqds/body/src/scss/_component' as *;
 ```
 
 ## ⚠️ Encapsulating the styles (in Sass) for established projects
@@ -32,7 +32,7 @@ already in place, we recommended importing the stylesheet with encapsulation
 enabled (to avoid selector clashes).
 
 ```scss
-@use '@uq-uidf/body/src/scss/_component' as body with (
+@use '@uqds/body/src/scss/_component' as body with (
   $use-encapsulation: true
 );
 ```

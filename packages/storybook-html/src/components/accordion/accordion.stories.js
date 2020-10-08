@@ -1,10 +1,10 @@
 import { useEffect } from '@storybook/client-api';
 
 // import styles
-import '@uq-uidf/accordion/src/scss/_component.scss';
+import '@uqds/accordion/src/scss/_component.scss';
 
 // import scripts
-import accordion from '@uq-uidf/accordion/src/js/accordion.es6';
+import accordion from '@uqds/accordion/src/js/accordion.es6';
 
 export default {
   title: 'Components/Accordion',

@@ -1,5 +1,5 @@
 // import stylesheet
-import '@uq-uidf/grid/src/scss/_component.scss';
+import '@uqds/grid/src/scss/_component.scss';
 
 import docs from './grid.docs.mdx';
 

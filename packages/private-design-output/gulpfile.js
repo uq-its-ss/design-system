@@ -16,8 +16,8 @@ sass.compiler = require('sass');
 
 // SCSS include paths
 const scssPaths = [
-  'node_modules/@uq-uidf/core/node_modules',
-  'node_modules/@uq-uidf',
+  'node_modules/@uqds/core/node_modules',
+  'node_modules/@uqds',
   'node_modules'
 ];
 
@@ -35,15 +35,15 @@ function compileSCSS() {
 function exportFontFiles() {
   return src([
     './node_modules/font-awesome/fonts/**',
-    './node_modules/@uq-uidf/core/src/fonts/uq-icons/font/**'
+    './node_modules/@uqds/core/src/fonts/uq-icons/font/**'
   ])
   .pipe(dest('./dist/fonts'));
 }
 
 function exportImages() {
   return src([
-    './node_modules/@uq-uidf/core/src/images/**',
-    './node_modules/@uq-uidf/blockquote/src/images/**'
+    './node_modules/@uqds/core/src/images/**',
+    './node_modules/@uqds/blockquote/src/images/**'
   ])
   .pipe(dest('./dist/images'));
 }
@@ -67,13 +67,13 @@ function bundleJS() {
     },
     plugins: [ nodeResolve(), cjs() ]
   })
-  .pipe(source('uq-uidf.js'))
+  .pipe(source('uqds.js'))
   .pipe(buffer())
   .pipe(babel({
     presets: ['@babel/preset-env']
   }))
   .pipe(dest('./dist/js'))
-  .pipe(rename('uq-uidf.min.js'))
+  .pipe(rename('uqds.min.js'))
   .pipe(uglify())
   .pipe(dest('./dist/js'));
 }

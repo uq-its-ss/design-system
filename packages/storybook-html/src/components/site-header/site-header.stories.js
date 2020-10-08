@@ -4,7 +4,7 @@ import { useEffect } from '@storybook/client-api';
 import './site-header.scss';
 
 // import scripts
-import siteHeaderNav from '@uq-uidf/site-header/src/js/site-header-navigation.es6';
+import siteHeaderNav from '@uqds/site-header/src/js/site-header-navigation.es6';
 
 // import HTML template strings
 import siteHeaderHTML from './site-header.html';

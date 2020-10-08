@@ -1,4 +1,4 @@
-# UQ User Interface Development Framework (UIDF)
+# UQ Design System (UQDS)
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/bf36e9d5-9887-4be6-bb76-705d8e27453d/deploy-status)](https://app.netlify.com/sites/eager-engelbart-6dcb4a/deploys)
 

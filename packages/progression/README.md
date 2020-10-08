@@ -1,4 +1,4 @@
-# `@uq-uidf/previous-next`
+# `@uqds/previous-next`
 
 > previous-next component
 
@@ -8,12 +8,12 @@
 
 With Yarn:
 ```shell
-yarn add @uq-uidf/previous-next
+yarn add @uqds/previous-next
 ```
 
 With NPM:
 ```shell
-npm i @uq-uidf/previous-next
+npm i @uqds/previous-next
 ```
 
 ---
@@ -21,6 +21,6 @@ npm i @uq-uidf/previous-next
 ## Dependency graph
 
 ```shell
-@uq-uidf/previous-next
-└─ @uq-uidf/core
+@uqds/previous-next
+└─ @uqds/core
 ```

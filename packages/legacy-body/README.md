@@ -1,4 +1,4 @@
-# @uq-uidf/legacy-body
+# @uqds/legacy-body
 
 > Basic styles for HTML elements (excluding form elements).
 
@@ -8,12 +8,12 @@
 
 With Yarn:
 ```shell
-yarn add @uq-uidf/legacy-body
+yarn add @uqds/legacy-body
 ```
 
 With NPM:
 ```shell
-npm i @uq-uidf/legacy-body
+npm i @uqds/legacy-body
 ```
 
 ---
@@ -21,8 +21,8 @@ npm i @uq-uidf/legacy-body
 ## Dependencies
 
 ```
-@uq-uidf/legacy-body
-├─ @uq-uidf/core
-└─ @uq-uidf/foundation-global
-   └─ @uq-uidf/core
+@uqds/legacy-body
+├─ @uqds/core
+└─ @uqds/foundation-global
+   └─ @uqds/core
 ```

@@ -1,12 +1,11 @@
 {
-  "name": "@uq-uidf/core",
+  "name": "@uqds/core",
   "version": "0.0.0",
   "description": "The core package that all component packages depend on",
   "keywords": [
-    "uq-uidf",
+    "uqds",
     "uq",
     "University of Queensland",
-    "user interface development framework",
     "design system",
     "scss",
     "sass",
@@ -42,6 +41,6 @@
     "font-awesome": "^4.7.0"
   },
   "peerDependencies": {
-    "@uq-uidf/foundation-global": "^0.0.0"
+    "@uqds/foundation-global": "^0.0.0"
   }
 }

@@ -10,7 +10,7 @@
 
 The SASS development files are also the SASS modules for package users.
 
-| @uq-uidf/[package folder name]/src/scss |   |
+| @uqds/[package folder name]/src/scss |   |
 | --------------------------------------- | - |
 | ⤵️ `_component.scss` | main stylesheet for the component (imports the `_globals` file) |
 | ⤵️ `_globals.scss` | variables, mixins (no CSS is emitted from these files!) |
@@ -18,10 +18,10 @@ The SASS development files are also the SASS modules for package users.
 
 ##### Resulting generated files
 
-| @uq-uidf/[package folder name]/dist/css |   |
+| @uqds/[package folder name]/dist/css |   |
 | ----------------- | - |
-| ⤵️ `uq-uidf-[package].css` | Compiled stylesheet for the component |
-| ⤵️ `uq-uidf-[package].min.css` | Minified |
+| ⤵️ `uqds-[package].css` | Compiled stylesheet for the component |
+| ⤵️ `uqds-[package].min.css` | Minified |
 
 ---
 
@@ -31,16 +31,16 @@ The SASS development files are also the SASS modules for package users.
 
 The JS development files are also the ES6 modules for package users.
 
-| @uq-uidf/[package folder name]/src/js |   |
+| @uqds/[package folder name]/src/js |   |
 | --------------------------------------- | - |
 | ⤵️ `[package].es6.js` | ES6 module export file |
 
 ##### Resulting generated files
 
-| @uq-uidf/[package folder name]/dist/js |   |
+| @uqds/[package folder name]/dist/js |   |
 | ----------------- | - |
-| ⤵️ `uq-uidf-[package].js` | Compiled output JS |
-| ⤵️ `uq-uidf-[package].min.js` | Uglified |
+| ⤵️ `uqds-[package].js` | Compiled output JS |
+| ⤵️ `uqds-[package].min.js` | Uglified |
 
 ---
 

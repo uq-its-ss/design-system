@@ -45,7 +45,7 @@
     @include grid-col-padding;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
-    gap: 0 map-get($map: $gutter-width, $key: "base");
+    grid-gap: map-get($map: $gutter-width, $key: "base");
     
     > .uq-grid__col {
       padding-left: 0;
@@ -53,11 +53,11 @@
     }
 
     @media #{core.$screen-md-up} {
-      gap: 0 map-get($map: $gutter-width, $key: "md");
+      grid-gap: map-get($map: $gutter-width, $key: "md");
     }
 
     @media #{core.$screen-xl-up} {
-      gap: 0 map-get($map: $gutter-width, $key: "xl");
+      grid-gap: map-get($map: $gutter-width, $key: "xl");
     }
   }
 }

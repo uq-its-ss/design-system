@@ -1,6 +1,8 @@
 @use "@uq-uidf/core/src/scss/global" as core;
 @use 'global' as *;
 
+$shadow-column-count: 24;
+
 /**
  * Grid container (incl. full width modifier class)
  */
@@ -14,25 +16,26 @@
     @include layout-full-width;
   }
 };
-@include grid-col-span-classes(8, 'md', 24);
-@include grid-col-span-classes(6, null, 24);
+@include grid-col-span-classes(8, 'md', $shadow-column-count);
+@include grid-col-span-classes(6, null, $shadow-column-count);
 
 @media #{core.$screen-md-up} {
-  @include grid-col-span-classes(12, 'xl', 24);
-  @include grid-col-span-classes(8, 'md', 24);
+  @include grid-col-span-classes(12, 'xl', $shadow-column-count);
+  @include grid-col-span-classes(8, 'md', $shadow-column-count);
 }
 
 @media #{core.$screen-xl-up} {
-  @include grid-col-span-classes(12, 'xl', 24);
+  @include grid-col-span-classes(12, 'xl', $shadow-column-count);
 }
 
 /**
  * Flexible Grid (modifier class)
  */
 .uq-grid--flexible {
+  // Flex fallback
   > .uq-grid__col {
     flex: 1 0 12.5rem;
-    width: auto !important;
+    width: auto;
   }
 
   .uq-grid--flexible {
@@ -41,9 +44,9 @@
     }
   }
 
+  // CSS Grid implementation
   @supports (display: grid) {
     @include grid-col-padding;
-    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
     grid-gap: map-get($map: $gutter-width, $key: "base");
     
@@ -58,6 +61,35 @@
 
     @media #{core.$screen-xl-up} {
       grid-gap: map-get($map: $gutter-width, $key: "xl");
+    }
+  }
+}
+
+/**
+ * Golden layout
+ */
+.uq-grid--golden {
+  > .uq-grid__col {
+    &:nth-child(odd) {
+      @extend .uq-grid__col--6, .uq-grid__col--md-5, .uq-grid__col--xl-7;
+    }
+
+    &:nth-child(even) {
+      @extend .uq-grid__col--6, .uq-grid__col--md-2, .uq-grid__col--xl-4;
+      @media #{core.$screen-md-up} {
+        @include grid-col-offset(1, 8);
+        @supports (display: grid) {
+          margin-left: 0;
+          grid-column-start: calc-true-colspan(6, 8, $shadow-column-count);
+        }
+      }
+      @media #{core.$screen-xl-up} {
+        @include grid-col-offset(1, 12);
+        @supports (display: grid) {
+          margin-left: 0;
+          grid-column-start: calc-true-colspan(9, 12, $shadow-column-count);
+        }
+      }
     }
   }
 }

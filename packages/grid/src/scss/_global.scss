@@ -93,7 +93,7 @@ $gutter-width: (
 /**
  * Map columns to another base
  */
-@function _calc-true-colspan($span, $column-count, $shadow-column-count) {
+@function calc-true-colspan($span, $column-count, $shadow-column-count) {
   @return round(($shadow-column-count / $column-count) * $span); 
 }
 
@@ -123,7 +123,7 @@ $gutter-width: (
     .uq-grid__col--#{$col-span-mod-prefix} {
       @for $span from 1 through $column-count {
         &#{$span} {
-          grid-column: auto / span _calc-true-colspan($span, $column-count, $shadow-column-count);
+          grid-column: auto / span calc-true-colspan($span, $column-count, $shadow-column-count);
           width: auto; // required to enable a flexbox fallback
         }
       }

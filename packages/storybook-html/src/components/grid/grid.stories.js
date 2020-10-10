@@ -14,6 +14,15 @@ export default {
   }
 };
 
+export const golden = () => `
+  <div class="uqds-example-grid uqds-example-grid--wrap-content">
+    <div class="uq-grid uq-grid--golden">
+      <div class="uq-grid__col"><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span></div>
+      <div class="uq-grid__col"><span>I'm a sidebar!</span></div>
+    </div>
+  </div>
+`;
+
 export const twelveEightSixExample1 = () => `
   <div class="uqds-example-grid uqds-example-grid--wrap-content">
     <div class="uq-grid">

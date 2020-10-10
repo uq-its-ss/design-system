@@ -14,7 +14,7 @@ export default {
   }
 };
 
-export const twelveEightSix = () => `
+export const twelveEightSixExample1 = () => `
   <div class="uqds-example-grid uqds-example-grid--wrap-content">
     <div class="uq-grid">
       <div class="uq-grid__col uq-grid__col--4 uq-grid__col--md-5 uq-grid__col--xl-8">
@@ -27,7 +27,22 @@ export const twelveEightSix = () => `
   </div>
 `;
 
-twelveEightSix.storyName = "6-8-12";
+twelveEightSixExample1.storyName = "6-8-12 usage example 1";
+
+export const twelveEightSixExample2 = () => `
+  <div class="uqds-example-grid uqds-example-grid--wrap-content">
+    <div class="uq-grid">
+      <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-5 uq-grid__col--xl-8">
+        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
+      </div>
+      <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-3 uq-grid__col--xl-4">
+        <span>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
+      </div>
+    </div>
+  </div>
+`;
+
+twelveEightSixExample2.storyName = "6-8-12 usage example 2";
 
 export const twelveEightSixMobile = () => `
   <div class="uqds-example-grid">

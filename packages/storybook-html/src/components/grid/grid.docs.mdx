@@ -8,7 +8,8 @@ The flexible grid leverages the power of [*CSS Grid Layout*](https://developer.m
 to give you a quick & flexible layout solution. You can use this grid to
 organise your content into columns that stack when browser sizes are smaller.
 Therefore, it makes it an ideal solution for arranging linear material. You will
-get up to five columns with this layout option.
+get up to five columns with this layout option (and more for full-width
+layouts).
 
 <Story height={220} id="layout-grid--flexible-1" />
 
@@ -47,7 +48,24 @@ layouts to suit different screen sizes.
 </div>
 ```
 
-<Story height={200} id="layout-grid--twelve-eight-six" />
+<Story height={200} id="layout-grid--twelve-eight-six-example-1" />
+
+### Stacking columns for smaller screens
+
+To prevent your columns from getting too small, you can stack columns by
+"overflowing" the row. For example:
+
+```html
+<div class="uq-grid">
+  <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-5 uq-grid__col--xl-8">Content</div>
+  <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-3 uq-grid__col--xl-4">Content</div>
+</div>
+```
+
+The difference between this example and the one before is that the two columns
+take up the whole available width for the smallest screens.
+
+<Story height={200} id="layout-grid--twelve-eight-six-example-2" />
 
 ### The 6-column grid column-span classes (designed for _mobile_ displays)
 

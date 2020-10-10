@@ -92,7 +92,7 @@
   // Changes alignment so header sits to the side of the body.
   &--horizontal {
     > .section__container {
-      @include grid.grid-row-basis;
+      @include grid.grid-row-flex-base;
       align-items: center;
     }
 

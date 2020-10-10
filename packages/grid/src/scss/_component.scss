@@ -4,9 +4,7 @@
 /**
  * Grid container (incl. full width modifier class)
  */
-@include grid-row(12, 'xl');
-@include grid-row(8, 'md');
-@include grid-row(6, null) {
+@include grid-row(12, 'xl', 24) {
   &:not(.uq-grid--full-width) {
     @include layout-containment; // contain the first grid wrapper by default
   }
@@ -16,14 +14,16 @@
     @include layout-full-width;
   }
 };
+@include grid-col-span-classes(8, 'md', 24);
+@include grid-col-span-classes(6, null, 24);
 
 @media #{core.$screen-md-up} {
-  @include grid-row(12, 'xl');
-  @include grid-row(8, 'md');
+  @include grid-col-span-classes(12, 'xl', 24);
+  @include grid-col-span-classes(8, 'md', 24);
 }
 
 @media #{core.$screen-xl-up} {
-  @include grid-row(12, 'xl');
+  @include grid-col-span-classes(12, 'xl', 24);
 }
 
 /**

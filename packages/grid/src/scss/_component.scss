@@ -34,34 +34,14 @@ $shadow-column-count: 24;
 .uq-grid--flexible {
   // Flex fallback
   > .uq-grid__col {
-    flex: 1 0 12.5rem;
+    flex: 1 0 15.625rem;
+    max-width: 100%;
     width: auto;
-  }
-
-  .uq-grid--flexible {
-    > .uq-grid__col {
-      flex-basis: 0; // remove flex-basis for nested flexible grids to prevent overflow.
-    }
   }
 
   // CSS Grid implementation
   @supports (display: grid) {
-    @include grid-col-padding;
-    grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
-    grid-gap: map-get($map: $gutter-width, $key: "base");
-    
-    > .uq-grid__col {
-      padding-left: 0;
-      padding-right: 0;
-    }
-
-    @media #{core.$screen-md-up} {
-      grid-gap: map-get($map: $gutter-width, $key: "md");
-    }
-
-    @media #{core.$screen-xl-up} {
-      grid-gap: map-get($map: $gutter-width, $key: "xl");
-    }
+    grid-template-columns: repeat(auto-fit, minmax(15.625rem, 1fr));
   }
 }
 

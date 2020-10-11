@@ -78,40 +78,20 @@ $shadow-column-count: 24;
  * Set column grids
  */
 .uq-grid--halves {
-  
   > .uq-grid__col {
-    @media #{core.$screen-md-up} {
-      grid-column: auto / span 6;
-      width: auto;
-    }
+    @extend .uq-grid__col--6, .uq-grid__col--md-4;
   }
 }
 
 .uq-grid--thirds {
   > .uq-grid__col {
-    @media #{core.$screen-md-up} {
-      grid-column: auto / span 6;
-      width: auto;
-    }
-
-    @media #{core.$screen-lg-up} {
-      grid-column: auto / span 4;
-      width: auto;
-    }
+    @extend .uq-grid__col--6, .uq-grid__col--md-4, .uq-grid__col--xl-4;
   }
 }
 
 .uq-grid--quarters {
   > .uq-grid__col {
-    @media #{core.$screen-md-up} {
-      grid-column: auto / span 6;
-      width: auto;
-    }
-
-    @media #{core.$screen-lg-up} {
-      grid-column: auto / span 3;
-      width: auto;
-    }
+    @extend .uq-grid__col--6, .uq-grid__col--md-4, .uq-grid__col--xl-3;
   }
 }
 

@@ -23,6 +23,36 @@ export const golden = () => `
   </div>
 `;
 
+export const halves = () => `
+  <div class="uqds-example-grid">
+    <div class="uq-grid uq-grid--halves">
+      <div class="uq-grid__col"><span>Content</span></div>
+      <div class="uq-grid__col"><span>Content</span></div>
+    </div>
+  </div>
+`;
+
+export const thirds = () => `
+  <div class="uqds-example-grid">
+    <div class="uq-grid uq-grid--thirds">
+      <div class="uq-grid__col"><span>Content</span></div>
+      <div class="uq-grid__col"><span>Content</span></div>
+      <div class="uq-grid__col"><span>Content</span></div>
+    </div>
+  </div>
+`;
+
+export const quarters = () => `
+  <div class="uqds-example-grid">
+    <div class="uq-grid uq-grid--quarters">
+      <div class="uq-grid__col"><span>Content</span></div>
+      <div class="uq-grid__col"><span>Content</span></div>
+      <div class="uq-grid__col"><span>Content</span></div>
+      <div class="uq-grid__col"><span>Content</span></div>
+    </div>
+  </div>
+`;
+
 export const twelveEightSixExample1 = () => `
   <div class="uqds-example-grid uqds-example-grid--wrap-content">
     <div class="uq-grid">
@@ -249,15 +279,3 @@ export const flexibleFullWidth = () => `
 `;
 
 flexibleFullWidth.storyName = "Flexible grid full width";
-
-export const halves = () => `
-  <div>Placeholder</div>
-`;
-
-halves.storyName = "Halves";
-
-export const thirds = () => `
-  <div>Placeholder</div>
-`;
-
-thirds.storyName = "Thirds";

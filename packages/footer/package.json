@@ -17,7 +17,7 @@
         "email": "webservices@uq.edu.au",
         "url": "https://uq.edu.au"
     },
-    "homepage": "https://github.com/uq-its-ss/user-interface-development-framework#readme",
+    "homepage": "https://github.com/uq-its-ss/design-system#readme",
     "license": "ISC",
     "directories": {
         "lib": "lib"
@@ -28,13 +28,13 @@
     ],
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/uq-its-ss/user-interface-development-framework.git"
+        "url": "git+https://github.com/uq-its-ss/design-system.git"
     },
     "scripts": {
         "test": "echo \"Error: run tests from root\" && exit 1"
     },
     "bugs": {
-        "url": "https://github.com/uq-its-ss/user-interface-development-framework/issues"
+        "url": "https://github.com/uq-its-ss/design-system/issues"
     },
     "dependencies": {
         "@uqds/core": "^0.0.0",

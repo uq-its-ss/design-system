@@ -21,8 +21,8 @@ npm i @uqds/sections
 ## Dependency graph
 
 ```shell
-@uq-uidf/sections
-├─ @uq-uidf/core
-└─ @uq-uidf/foundation-global
-   └─ @uq-uidf/core
+@uqds/sections
+├─ @uqds/core
+└─ @uqds/foundation-global
+   └─ @uqds/core
 ```

@@ -21,8 +21,8 @@ npm i @uqds/site-header
 ## Dependency graph
 
 ```shell
-@uq-uidf/site-header
-├─ @uq-uidf/core
-└─ @uq-uidf/grid
-   └─ @uq-uidf/core
+@uqds/site-header
+├─ @uqds/core
+└─ @uqds/grid
+   └─ @uqds/core
 ```

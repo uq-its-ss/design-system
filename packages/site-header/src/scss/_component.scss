@@ -66,6 +66,11 @@
     text-indent: -100vw;
     width: 1.5rem;
 
+    &:hover {
+      background-color: core.$uq-white;
+      color: core.$uq-purple;
+    }
+
     &:focus {
       outline: 2px solid core.$link;
       outline-offset: 0;

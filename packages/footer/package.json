@@ -39,14 +39,12 @@
     },
     "dependencies": {
         "@uq-uidf/core": "^0.0.0",
-        "@uq-uidf/foundation-global": "^0.0.0",
-        "@uq-uidf/foundation-grid": "^0.0.0",
+        "@uq-uidf/grid": "^0.0.0",
         "@uq-uidf/foundation-misc": "^0.0.0"
     },
     "peerDependencies": {
         "@uq-uidf/core": "^0.0.0",
-        "@uq-uidf/foundation-global": "^0.0.0",
-        "@uq-uidf/foundation-grid": "^0.0.0",
+        "@uq-uidf/grid": "^0.0.0",
         "@uq-uidf/foundation-misc": "^0.0.0"
     }
 }

@@ -1,230 +1,97 @@
 @use "@uq-uidf/core/src/scss/global" as core;
 @use 'global' as *;
 
-@supports (display: grid) {
-  .grid {
-    display: grid;    
-  }
-}
+$shadow-column-count: 24;
 
-@media #{core.$screen-m-up} {
-  .grid {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: -0.75rem;
-    margin-right: -0.75rem;
+/**
+ * Grid container (incl. full width modifier class)
+ */
+@include grid-row(12, 'xl', 24) {
+  &:not(.uq-grid--full-width) {
+    @include layout-containment; // contain the first grid wrapper by default
   }
 
-  .grid__col {
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
-    position: relative;
+  &--full-width,
+  .uq-grid {
+    @include layout-full-width;
   }
+};
+@include grid-col-span-classes(8, 'md', $shadow-column-count);
+@include grid-col-span-classes(6, null, $shadow-column-count);
 
-  .grid--12-col {
-    width: 100%;
-  }
-
-  .grid--11-col {
-    width: 91.6667%;
-  }
-
-  .grid--10-col {
-    width: 83.3333%;
-  }
-
-  .grid--9-col {
-    width: 75%;
-  }
-
-  .grid--8-col {
-    width: 66.6667%;
-  }
-
-  .grid--7-col {
-    width: 58.3333%;
-  }
-
-  .grid--6-col {
-    width: 50%;
-  }
-
-  .grid--5-col {
-    width: 41.6667%;
-  }
-
-  .grid--4-col {
-    width: 33.3333%;
-  }
-
-  .grid--3-col {
-    width: 25%;
-  }
-
-  .grid--2-col {
-    width: 16.6667%;
-  }
-
-  .grid--1-col {
-    width: 8.3333%;
-  }
-
-  @supports (display: grid) {
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(12, 1fr);
-      grid-gap: core.$spacing-m;
-      grid-template-rows: 1fr;
-      margin-left: 0;
-      margin-right: 0;
-    }
-
-    .grid__col {
-      padding-left: 0;
-      padding-right: 0;
-    }
-
-    .grid--12-col {
-      grid-column: auto / span 12;
-      width: auto;
-    }
-
-    .grid--11-col {
-      grid-column: auto / span 11;
-      width: auto;
-    }
-
-    .grid--10-col {
-      grid-column: auto / span 10;
-      width: auto;
-    }
-
-    .grid--9-col {
-      grid-column: auto / span 9;
-      width: auto;
-    }
-
-    .grid--8-col {
-      grid-column: auto / span 8;
-      width: auto;
-    }
-
-    .grid--7-col {
-      grid-column: auto / span 7;
-      width: auto;
-    }
-
-    .grid--6-col {
-      grid-column: auto / span 6;
-      width: auto;
-    }
-
-    .grid--5-col {
-      grid-column: auto / span 5;
-      width: auto;
-    }
-
-    .grid--4-col {
-      grid-column: auto / span 4;
-      width: auto;
-    }
-
-    .grid--3-col {
-      grid-column: auto / span 3;
-      width: auto;
-    }
-
-    .grid--2-col {
-      grid-column: auto / span 2;
-      width: auto;
-    }
-
-    .grid--1-col {
-      grid-column: auto / span 1;
-      width: auto;
-    }
-  }
-}
-
-@media #{core.$screen-m-l} {
-  .grid--3-col,
-  .grid--4-col {
-    grid-column: auto / span 6;
-    width: auto;
-  }
+@media #{core.$screen-md-up} {
+  @include grid-col-span-classes(12, 'xl', $shadow-column-count);
+  @include grid-col-span-classes(8, 'md', $shadow-column-count);
 }
 
 @media #{core.$screen-xl-up} {
+  @include grid-col-span-classes(12, 'xl', $shadow-column-count);
+}
+
+/**
+ * Flexible Grid (modifier class)
+ */
+.uq-grid--flexible {
+  // Flex fallback
+  > .uq-grid__col {
+    flex: 1 0 15.625rem;
+    max-width: 100%;
+    width: auto;
+  }
+
+  // CSS Grid implementation
   @supports (display: grid) {
-    .grid {
-      grid-gap: core.$spacing-l;
+    grid-template-columns: repeat(auto-fit, minmax(15.625rem, 1fr));
+  }
+}
+
+/**
+ * Golden layout
+ */
+.uq-grid--golden {
+  > .uq-grid__col {
+    &:nth-child(odd) {
+      @extend .uq-grid__col--6, .uq-grid__col--md-5, .uq-grid__col--xl-7;
+    }
+
+    &:nth-child(even) {
+      @extend .uq-grid__col--6, .uq-grid__col--md-2, .uq-grid__col--xl-4;
+      @media #{core.$screen-md-up} {
+        @include grid-col-offset(1, 8);
+        @supports (display: grid) {
+          margin-left: 0;
+          grid-column-start: calc-true-colspan(6, 8, $shadow-column-count);
+        }
+      }
+      @media #{core.$screen-xl-up} {
+        @include grid-col-offset(1, 12);
+        @supports (display: grid) {
+          margin-left: 0;
+          grid-column-start: calc-true-colspan(9, 12, $shadow-column-count);
+        }
+      }
     }
   }
 }
 
 /**
- * Flexible Grid
+ * Set column grids
  */
-
-.grid--flexible {
-  display: flex;
-  flex: 1;
-  flex-wrap: wrap;
-
-  @supports (display: grid) {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
-    grid-gap: core.$spacing-m;
-  }
-
-  & > .grid__col {
-    flex: 1;
-    min-width: 18%;
-    margin-right: 1%;
-    margin-left: 1%;
-
-    @supports (display: grid) {
-      min-width: none;
-      margin-right: 0;
-      margin-bottom: 0;
-    }
+.uq-grid--halves {
+  > .uq-grid__col {
+    @extend .uq-grid__col--6, .uq-grid__col--md-4;
   }
 }
 
-.grid--halves {
-  & > .grid__col {
-    @media #{core.$screen-m-up} {
-      grid-column: auto / span 6;
-      width: auto;
-    }
+.uq-grid--thirds {
+  > .uq-grid__col {
+    @extend .uq-grid__col--6, .uq-grid__col--md-4, .uq-grid__col--xl-4;
   }
 }
 
-.grid--thirds {
-  & > .grid__col {
-    @media #{core.$screen-m-up} {
-      grid-column: auto / span 6;
-      width: auto;
-    }
-
-    @media #{core.$screen-l-up} {
-      grid-column: auto / span 4;
-      width: auto;
-    }
-  }
-}
-
-.grid--quarters {
-  & > .grid__col {
-    @media #{core.$screen-m-up} {
-      grid-column: auto / span 6;
-      width: auto;
-    }
-
-    @media #{core.$screen-l-up} {
-      grid-column: auto / span 3;
-      width: auto;
-    }
+.uq-grid--quarters {
+  > .uq-grid__col {
+    @extend .uq-grid__col--6, .uq-grid__col--md-4, .uq-grid__col--xl-3;
   }
 }
 
@@ -233,15 +100,15 @@
  * A grid the scrolls horizontally on mobile. Useful for holding cards.
  */
 
-@media #{core.$screen-l-down} {
-  .grid--scroll-small {
+@media #{core.$screen-lg-down} {
+  .uq-grid--scroll-small {
     display: flex;
     flex-wrap: nowrap;
     overflow: auto;
 
-    & .grid__col {
+    .uq-grid__col {
       flex: 1 0 18.75rem;
-      margin-right: core.$spacing-m;
+      margin-right: core.$space-md;
     }
   }
 }

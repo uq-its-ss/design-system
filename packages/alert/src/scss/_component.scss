@@ -1,6 +1,6 @@
 @use '@uq-uidf/core/src/scss/global' as core;
+@use '@uq-uidf/grid/src/scss/global' as grid;
 @use '@uq-uidf/foundation-global/src/scss/global' as *;
-@use '@uq-uidf/foundation-grid/src/scss/global' as *;
 @use 'global' as *;
 
 .alert {
@@ -10,14 +10,22 @@
   position: relative;
 
   &__container {
-    @include grid-row;
+    @include grid.layout-containment;
+
+    > .alert__message,
+    > .alert__action {
+      @include grid.grid-col-padding;
+    }
   }
 
   &__message {
     font-size: $alert-font-size-sm;
     font-weight: $alert-font-weight;
-    line-height: 1.4;
-    padding: core.$space core.$space-uul core.$space $column-gutter / 2;
+    line-height: core.$line-height-h;
+    padding-top: core.$space;
+    padding-bottom: core.$space;
+    padding-left: core.$space-md;
+    padding-right: core.$space-uul !important;
 
     a {
       color: $alert-text-color;
@@ -30,9 +38,10 @@
   }
 
   &__action {
-    @include grid-column($columns: ceil($total-columns / 2), $float: false);
-    padding-bottom: core.$space;
     padding-top: core.$space-sm;
+    padding-bottom: core.$space;
+    padding-left: core.$space-md;
+    padding-right: core.$space-md;
   }
 
   &__close {
@@ -46,7 +55,7 @@
     position: absolute;
     text-decoration: none !important;
     top: .55rem;
-    right: 1rem;
+    right: core.$space;
 
     &:hover {
       text-decoration: none;
@@ -63,19 +72,13 @@
 
   &--has-action {
     .alert__message {
-      // @include grid-column($columns: floor($total-columns / 2), $float: false);
       padding-bottom: core.$space-none;
     }
   }
 
   &--no-close {
     .alert__message {
-      padding-right: $column-gutter / 2;
-    }
-    &.alert--has-action {
-      .alert__action {
-        padding-right: $column-gutter / 2;
-      }
+      padding-right: core.$space;
     }
   }
 
@@ -96,7 +99,7 @@
   }
 }
 
-@media #{$medium-up} {
+@media #{core.$screen-md-up} {
   .alert {
     &__message,
     &__action {
@@ -106,13 +109,13 @@
 
     &__message {
       font-size: $alert-font-size-md;
-      padding: core.$space core.$space-uuuul core.$space $column-gutter / 2;
+      padding-right: core.$space-uuuul !important;
     }
 
     &__action {
+      @include grid.grid-col-width(2);
       padding-bottom: core.$space-sm;
       padding-right: core.$space-uul;
-      width: grid-calc(ceil($total-columns / 3), $total-columns);
     }
 
     &__close {
@@ -121,9 +124,9 @@
 
     &--has-action {
       .alert__message {
+        @include grid.grid-col-width(4);
         padding-bottom: core.$space;
-        padding-right: $column-gutter / 2;
-        width: grid-calc(floor($total-columns - ($total-columns / 3)), $total-columns);
+        padding-right: core.$space;
       }
     }
     &--slim {
@@ -138,15 +141,16 @@
   }
 }
 
-@media #{$large-up} {
+@media #{core.$screen-lg-up} {
   .alert {
     &__message {
-      padding: core.$space-md core.$space-uuuul core.$space-md $column-gutter / 2;
+      padding-top: core.$space-md;
+      padding-bottom: core.$space-md;
     }
 
     &__action {
-      margin-left: grid-calc(floor($total-columns / 12), $total-columns);
-      width: grid-calc(ceil(($total-columns / 12 * 5) - ($total-columns / 12)), $total-columns);
+      @include grid.grid-col-offset(1, 12);
+      @include grid.grid-col-width(4, 12);
     }
 
     &__close {
@@ -155,8 +159,8 @@
 
     &--has-action {
       .alert__message {
+        @include grid.grid-col-width(7, 12);
         padding-bottom: core.$space-md;
-        width: grid-calc(floor($total-columns - ($total-columns / 12 * 5)), $total-columns);
       }
     }
   }

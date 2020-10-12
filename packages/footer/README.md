@@ -23,7 +23,7 @@ npm i @uq-uidf/footer
 ```shell
 @uq-uidf/footer
 ├─ @uq-uidf/core
-├─ @uq-uidf/foundation-global
+├─ @uq-uidf/grid
 │  └─ @uq-uidf/core
 └─ @uq-uidf/foundation-misc
    └─ @uq-uidf/foundation-global

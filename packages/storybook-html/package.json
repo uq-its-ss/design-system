@@ -6,9 +6,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "start-storybook -s ./public -p 6006",
     "storybook-docs": "start-storybook --docs -p 6007",
-    "build-storybook": "build-storybook -c .storybook -o .out"
+    "build-storybook": "build-storybook -c .storybook -s ./public -o .out"
   },
   "keywords": [],
   "author": {
@@ -44,7 +44,6 @@
     "@uq-uidf/form": "^0.0.0",
     "@uq-uidf/foundation-block-grid": "^0.0.0",
     "@uq-uidf/foundation-global": "^0.0.0",
-    "@uq-uidf/foundation-grid": "^0.0.0",
     "@uq-uidf/foundation-misc": "^0.0.0",
     "@uq-uidf/grid": "^0.0.0",
     "@uq-uidf/grid-menu": "^0.0.0",
@@ -58,7 +57,6 @@
     "@uq-uidf/progression": "^0.0.0",
     "@uq-uidf/sections": "^0.0.0",
     "@uq-uidf/site-header": "^0.0.0",
-    "@uq-uidf/site-title-utility": "^0.0.0",
     "@uq-uidf/table": "^0.0.0",
     "@uq-uidf/tabs": "^0.0.0",
     "font-awesome": "^4.7.0",

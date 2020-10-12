@@ -1,16 +1,16 @@
 // import styles
-import './style.scss';
+import './alert.scss';
 
 // import HTML template strings
-import defaultHTML from './default.html';
+import alertHTML from './alert.html';
 
 export default {
   title: 'Components/Alert',
-  parameters: { layout: "padded" }
+  parameters: { layout: "fullscreen" }
 };
 
 export const all = () => {
-  return defaultHTML;
+  return alertHTML;
 };
 
 export const error = () => {

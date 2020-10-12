@@ -22,8 +22,8 @@ export const passwordForm = () => {
   });
 
   return `
-    <div class="row">
-      <div class="column medium-6">
+    <div class="uq-grid">
+      <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4">
         <h1>Try me!</h1>
         <div id="errorSummary" role="alert">
           <!-- error summary contents will be populated here -->

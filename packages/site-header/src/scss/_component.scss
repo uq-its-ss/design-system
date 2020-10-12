@@ -1,6 +1,5 @@
 @use "@uq-uidf/core/src/scss/global" as core;
-@use '@uq-uidf/foundation-global/src/scss/global' as fnd-global;
-@use '@uq-uidf/foundation-grid/src/scss/global' as fnd-grid;
+@use "@uq-uidf/grid/src/scss/global" as grid;
 @use 'global' as *;
 
 .uq-site-header {
@@ -16,14 +15,15 @@
   }
 
   &__title-container {
+    @include grid.layout-containment;
+    @include grid.grid-col-padding;
     align-items: center;
     display: flex;
     flex-wrap: wrap;
     float: none;
     justify-content: space-between;
-    margin: core.$space-none core.$space-auto;
-    max-width: fnd-grid.$row-width;
-    padding: core.$space fnd-global.$column-gutter / 2;
+    padding-top: core.$space;
+    padding-bottom: core.$space;
     position: relative;
 
     &__right {
@@ -31,7 +31,7 @@
       align-items: center;
     }
 
-    @media #{fnd-global.$large-up} {
+    @media #{core.$screen-lg-up} {
       padding-top: core.$space-md;
       padding-bottom: core.$space-sm;
     }
@@ -91,18 +91,20 @@
       }
     }
 
-    @media #{fnd-global.$large-up} {
+    @media #{core.$screen-lg-up} {
       display: none;
     }
   }
 
   &__navigation-container {
     float: none;
-    margin: core.$space-none core.$space-auto;
-    max-width: fnd-grid.$row-width;
     overflow: visible;
     padding: core.$space-none;
     position: relative;
+
+    @media #{core.$screen-lg-up} {
+      @include grid.layout-containment;
+    }
   }
 
   &__navigation {
@@ -119,7 +121,7 @@
         background-color: $nav-primary-active-bg;
         text-decoration: underline;
 
-        @media #{fnd-global.$large-up} {
+        @media #{core.$screen-lg-up} {
           color: inherit;
           outline: 0 none;
           text-decoration: none;
@@ -127,7 +129,7 @@
         }
       }
 
-      @media #{fnd-global.$large-up} {
+      @media #{core.$screen-lg-up} {
         border-bottom: 2px solid transparent;
       }
     }
@@ -141,7 +143,7 @@
       &--level-1 {
         display: none;
 
-        @media #{fnd-global.$large-up} {
+        @media #{core.$screen-lg-up} {
           display: flex;
     
           > li {
@@ -153,7 +155,7 @@
           display: block;
           border-top: 1px solid $nav-dropdown-divider;
     
-          @media #{fnd-global.$large-up} {
+          @media #{core.$screen-lg-up} {
             border-top: 0 none;
           }
         }
@@ -170,7 +172,7 @@
         background-color: $nav-dropdown-bg;
         transform: translateY(-($nav-dropdown-animation-distance));
     
-        @media #{fnd-global.$large-up} {
+        @media #{core.$screen-lg-up} {
           position: absolute;
           width: $nav-dropdown-width;
           transition: opacity .2s ease, transform .2s ease, visibility 0.2s ease;
@@ -198,7 +200,7 @@
             background-color: $nav-dropdown-active-bg;
           }
     
-          @media #{fnd-global.$large-up} {
+          @media #{core.$screen-lg-up} {
             padding-left: core.$space-md;
           }
         }
@@ -220,7 +222,7 @@
 
         &--has-subnav {
           > a {
-            @media #{fnd-global.$large-up} {
+            @media #{core.$screen-lg-up} {
               padding-right: core.$space-xl;
               background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' stroke='%2351247A'%3E%3Cpath d='M14.285 5.145l-6 6.167a.41.41 0 01-.598 0L1.715 5.145' fill='none' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
               background-position: right 1.3rem center;
@@ -234,7 +236,7 @@
           > a {
             border-left: 2px solid core.$uq-purple;
 
-            @media #{fnd-global.$large-up} {
+            @media #{core.$screen-lg-up} {
               border-left: 0 none;
               border-bottom: 2px solid core.$uq-purple;
             }
@@ -257,18 +259,21 @@
       background-repeat: no-repeat;
       overflow: hidden;
 
-      @media #{fnd-global.$medium-up} {
+      @media #{core.$screen-md-up} {
         width: 3.5rem;
       }
   
-      @media #{fnd-global.$large-up} {
+      @media #{core.$screen-lg-up} {
         display: none;
       }
     }
 
-    @media #{fnd-global.$large-up} {
-      // TEMP fix: adjusting the margins to match up with the current UIDF grid
-      margin: core.$space-none calc(#{fnd-global.$column-gutter / 2} - #{core.$space-md});
+    @media #{core.$screen-lg-up} {
+      margin: core.$space-none calc(#{map-get($map: grid.$gutter-width, $key: "md") / 2} - #{core.$space-md});
+    }
+
+    @media #{core.$screen-xl-up} {
+      margin: core.$space-none calc(#{map-get($map: grid.$gutter-width, $key: "xl") / 2} - #{core.$space-md});
     }
   }
 }

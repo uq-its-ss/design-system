@@ -1,15 +1,14 @@
 @use '@uq-uidf/core/src/scss/global' as core;
+@use '@uq-uidf/grid/src/scss/global' as grid;
 @use "@uq-uidf/foundation-global/src/scss/_global" as fnd-global;
-@use "@uq-uidf/foundation-grid/src/scss/_global" as fnd-grid;
 // @use '@uq-uidf/body/src/scss/_component' as body with (
 //   $use-encapsulation: true
 // );
 
 .uidf-body {
   &__container {
-    max-width: fnd-grid.$row-width;
-    padding: 0 fnd-global.$column-gutter / 2;
-    margin: 0 auto;
+    @include grid.layout-containment;
+    @include grid.grid-col-padding;
   }
 
   &__bg-color-utility__container,

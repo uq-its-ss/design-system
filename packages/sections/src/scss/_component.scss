@@ -1,7 +1,7 @@
 // Main component stylesheet
 @use '@uq-uidf/core/src/scss/global' as core;
+@use '@uq-uidf/grid/src/scss/global' as grid;
 @use '@uq-uidf/foundation-global/src/scss/global' as *;
-@use '@uq-uidf/foundation-grid/src/scss/global' as *;
 // @use 'global' as *;
 
 //
@@ -80,26 +80,32 @@
   &--centered {
     .section__header, .section__footer {
       text-align: center;
+
       @media #{$large-up} {
-        @include grid-column(
-        $columns: 8,
-        $offset: 2
-        );
+        @include grid.grid-col-padding;
+        @include grid.grid-col-offset(2, 12);
+        @include grid.grid-col-width(8, 12);
+        float: left;
       }
     }
   }
   // Changes alignment so header sits to the side of the body.
   &--horizontal {
+    > .section__container {
+      @include grid.grid-row-flex-base;
+      align-items: center;
+    }
+
     @media #{$medium-up} {
       .section__header {
-        @include grid-column(
-        $columns: 4,
-        $offset: 0
-        );
+        @include grid.grid-col-padding;
+        @include grid.grid-col-width(4, 12);
+        flex: none;
       }
       .section__content {
-        @include grid-column(8);
-        clear: none;
+        @include grid.grid-col-padding;
+        @include grid.grid-col-width(8, 12);
+        flex: none;
         // Align first element with section__header column
         p, h2, h3, h4, h5, h6, ul {
           &:first-child {
@@ -150,25 +156,22 @@
   }
 
   &__container {
-    @include grid-row();
+    @include grid.layout-containment;
+
+    // clearfix from Foundation 5
+    &:before, &:after { content: " "; display: table; }
+    &:after { clear: both; }
   }
 
-  &__header {
-    @include grid-column(
-    $columns: 12
-    );
-  }
-
-  &__content {
-    @include grid-column(
-    $columns: 12
-    );
+  &__header,
+  &__content,
+  &__footer {
+    @include grid.grid-col-padding;
+    @include grid.grid-col-width(6);
+    float: left;
   }
 
   &__footer {
-    @include grid-column(
-    $columns: 12
-    );
     color: core.$section-footer-color;
     margin-top: core.$space-lg;
   }

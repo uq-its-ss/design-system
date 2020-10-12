@@ -16,7 +16,7 @@ Firstly, [install the Gulp CLI](https://gulpjs.com/docs/en/getting-started/quick
 Then, make sure you are in the correct working directory i.e.
 
 ```bash
-cd [path to repo...]/user-interface-development-framework/packages/private-design-output
+cd [path to repo...]/design-system/packages/private-design-output
 ```
 
 From this directory, you can run all the tasks:

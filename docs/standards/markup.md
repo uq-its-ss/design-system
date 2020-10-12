@@ -2,7 +2,7 @@
 
 # HTML markup standard
 
-For design of your markup examples should also adhere to UIDF CSS class naming
+For design of your markup examples should also adhere to UQDS CSS class naming
 conventions (see [here](stylesheets.md)).
 
 ## Function classes (tied to JS functions)

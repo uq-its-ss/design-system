@@ -1,4 +1,4 @@
-# `@uq-uidf/body`
+# `@uqds/body`
 
 > Basic styles for HTML elements (excluding form elements and buttons).
 
@@ -8,12 +8,12 @@
 
 With Yarn:
 ```shell
-yarn add @uq-uidf/body
+yarn add @uqds/body
 ```
 
 With NPM:
 ```shell
-npm i @uq-uidf/body
+npm i @uqds/body
 ```
 
 ---
@@ -21,6 +21,6 @@ npm i @uq-uidf/body
 ## Dependency graph
 
 ```shell
-@uq-uidf/body
-└─ @uq-uidf/core
+@uqds/body
+└─ @uqds/core
 ```

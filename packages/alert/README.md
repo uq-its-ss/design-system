@@ -1,4 +1,4 @@
-# `@uq-uidf/alert`
+# `@uqds/alert`
 
 > Alert component
 
@@ -8,12 +8,12 @@
 
 With Yarn:
 ```shell
-yarn add @uq-uidf/alert
+yarn add @uqds/alert
 ```
 
 With NPM:
 ```shell
-npm i @uq-uidf/alert
+npm i @uqds/alert
 ```
 
 ---
@@ -21,10 +21,10 @@ npm i @uq-uidf/alert
 ## Dependency graph
 
 ```shell
-@uq-uidf/alert
-├─ @uq-uidf/core
-├─ @uq-uidf/grid
-│  └─ @uq-uidf/core
-└─ @uq-uidf/foundation-global
-   └─ @uq-uidf/core
+@uqds/alert
+├─ @uqds/core
+├─ @uqds/grid
+│  └─ @uqds/core
+└─ @uqds/foundation-global
+   └─ @uqds/core
 ```

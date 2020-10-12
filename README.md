@@ -1,12 +1,12 @@
-# UQ User Interface Development Framework (UIDF)
+# UQ Design System (UQDS)
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/bf36e9d5-9887-4be6-bb76-705d8e27453d/deploy-status)](https://app.netlify.com/sites/eager-engelbart-6dcb4a/deploys)
 
-Developing the UIDF. This project is managed using
+Developing the UQDS. This project is managed using
 [Lerna](https://github.com/lerna/lerna). The target audience of this
 documentation is currently limited to ADS-Design members at this stage.
 
-> This documentation for contributors. If you want to *use* the UIDF in your
+> This documentation for contributors. If you want to *use* the UQDS in your
 > project, please visit our docs at:
 > [design-system.uq.edu.au](https://design-system.uq.edu.au) to get started.
 

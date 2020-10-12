@@ -1,4 +1,4 @@
-# `@uq-uidf/breadcrumb`
+# `@uqds/breadcrumb`
 
 > Breadcrumb component
 
@@ -8,12 +8,12 @@
 
 With Yarn:
 ```shell
-yarn add @uq-uidf/breadcrumb
+yarn add @uqds/breadcrumb
 ```
 
 With NPM:
 ```shell
-npm i @uq-uidf/breadcrumb
+npm i @uqds/breadcrumb
 ```
 
 ---
@@ -21,6 +21,6 @@ npm i @uq-uidf/breadcrumb
 ## Dependency graph
 
 ```shell
-@uq-uidf/breadcrumb
-└─ @uq-uidf/core
+@uqds/breadcrumb
+└─ @uqds/core
 ```

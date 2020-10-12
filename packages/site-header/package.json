@@ -1,12 +1,11 @@
 {
-  "name": "@uq-uidf/site-header",
+  "name": "@uqds/site-header",
   "version": "0.0.0",
   "description": "Site header (title, utility area, and navigation)",
   "keywords": [
-    "uq-uidf",
+    "uqds",
     "uq",
     "University of Queensland",
-    "user interface development framework",
     "design system",
     "scss",
     "sass",
@@ -38,11 +37,11 @@
     "url": "https://github.com/uq-its-ss/user-interface-development-framework/issues"
   },
   "dependencies": {
-    "@uq-uidf/core": "^0.0.0",
-    "@uq-uidf/grid": "^0.0.0"
+    "@uqds/core": "^0.0.0",
+    "@uqds/grid": "^0.0.0"
   },
   "peerDependencies": {
-    "@uq-uidf/core": "^0.0.0",
-    "@uq-uidf/grid": "^0.0.0"
+    "@uqds/core": "^0.0.0",
+    "@uqds/grid": "^0.0.0"
   }
 }

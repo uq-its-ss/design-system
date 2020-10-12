@@ -1,4 +1,4 @@
-# @uq-uidf/foundation-normalise
+# @uqds/foundation-normalise
 
 > Foundation normalize.scss
 
@@ -8,10 +8,10 @@
 
 With Yarn:
 ```shell
-yarn add @uq-uidf/foundation-normalise
+yarn add @uqds/foundation-normalise
 ```
 
 With NPM:
 ```shell
-npm i @uq-uidf/foundation-normalise
+npm i @uqds/foundation-normalise
 ```

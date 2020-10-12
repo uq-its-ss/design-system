@@ -1,4 +1,4 @@
-# `@uq-uidf/blockquote`
+# `@uqds/blockquote`
 
 > Blockquote component
 
@@ -8,12 +8,12 @@
 
 With Yarn:
 ```shell
-yarn add @uq-uidf/blockquote
+yarn add @uqds/blockquote
 ```
 
 With NPM:
 ```shell
-npm i @uq-uidf/blockquote
+npm i @uqds/blockquote
 ```
 
 ---
@@ -21,6 +21,6 @@ npm i @uq-uidf/blockquote
 ## Dependency graph
 
 ```shell
-@uq-uidf/blockquote
-└─ @uq-uidf/core
+@uqds/blockquote
+└─ @uqds/core
 ```

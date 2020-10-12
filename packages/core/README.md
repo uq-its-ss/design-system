@@ -1,6 +1,6 @@
-# @uq-uidf/core
+# @uqds/core
 
-> Core package that all other @uq-uidf packages depend on.
+> Core package that all other @uqds packages depend on.
 
 ## Usage
 
@@ -8,10 +8,10 @@
 
 With Yarn:  
 ```shell
-yarn add @uq-uidf/core
+yarn add @uqds/core
 ```
 
 With NPM:  
 ```shell
-npm i @uq-uidf/core
+npm i @uqds/core
 ```

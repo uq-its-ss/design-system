@@ -1,4 +1,4 @@
-# `@uq-uidf/grid`
+# `@uqds/grid`
 
 > Grid component
 
@@ -8,12 +8,12 @@
 
 With Yarn:
 ```shell
-yarn add @uq-uidf/grid
+yarn add @uqds/grid
 ```
 
 With NPM:
 ```shell
-npm i @uq-uidf/grid
+npm i @uqds/grid
 ```
 
 ---
@@ -21,6 +21,6 @@ npm i @uq-uidf/grid
 ## Dependency graph
 
 ```shell
-@uq-uidf/grid
-└─ @uq-uidf/core
+@uqds/grid
+└─ @uqds/core
 ```

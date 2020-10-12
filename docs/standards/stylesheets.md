@@ -13,10 +13,10 @@ clashes.
 ### In component packages
 
 To prevent the accidental overriding of third-party stylesheet properties, the
-UIDF should provide `uq` prefixed CSS components. In other words, prefix all
+UQDS should provide `uq` prefixed CSS components. In other words, prefix all
 class names with `uq-`. E.g. `.uq-header`, `.uq-button .uq-button--secondary`.
 
-> RULE OF THUMB: allow UIDF components to work well with other front-end
+> RULE OF THUMB: allow UQDS components to work well with other front-end
 > frameworks and libraries.
 
 ### Documentation styling and design system support classes.
@@ -46,7 +46,7 @@ of a stylesheet outside the immediate package, we should always
 
 For example in `button/src/scss/_component.scss`, I may have:
 ```scss
-@use '@uq-uidf/core/src/scss/_global' as core;
+@use '@uqds/core/src/scss/_global' as core;
 
 .uq-button {
   // loading a variable
@@ -59,7 +59,7 @@ For example in `button/src/scss/_component.scss`, I may have:
 If I'm loading a stylesheet within the `button` package as well, it might be
 more like this:
 ```scss
-@use '@uq-uidf/core/src/scss/_global' as core;
+@use '@uqds/core/src/scss/_global' as core;
 @use '_global' as *;
 
 .uq-button {

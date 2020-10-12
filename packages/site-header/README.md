@@ -1,4 +1,4 @@
-# `@uq-uidf/site-header`
+# `@uqds/site-header`
 
 > site header component
 
@@ -8,12 +8,12 @@
 
 With Yarn:
 ```shell
-yarn add @uq-uidf/site-header
+yarn add @uqds/site-header
 ```
 
 With NPM:
 ```shell
-npm i @uq-uidf/site-header
+npm i @uqds/site-header
 ```
 
 ---
@@ -21,8 +21,8 @@ npm i @uq-uidf/site-header
 ## Dependency graph
 
 ```shell
-@uq-uidf/site-header
-├─ @uq-uidf/core
-└─ @uq-uidf/grid
-   └─ @uq-uidf/core
+@uqds/site-header
+├─ @uqds/core
+└─ @uqds/grid
+   └─ @uqds/core
 ```

@@ -1,6 +1,6 @@
 # 🔒 `private-design-output`
 
-> Generate a flat distribution of the UIDF
+> Generate a flat distribution of the UQDS
 
 ## Modify to achieve desired output
 

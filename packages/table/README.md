@@ -1,4 +1,4 @@
-# `@uq-uidf/table`
+# `@uqds/table`
 
 > Button component
 
@@ -8,12 +8,12 @@
 
 With Yarn:
 ```shell
-yarn add @uq-uidf/table
+yarn add @uqds/table
 ```
 
 With NPM:
 ```shell
-npm i @uq-uidf/table
+npm i @uqds/table
 ```
 
 ---
@@ -21,6 +21,6 @@ npm i @uq-uidf/table
 ## Dependency graph
 
 ```shell
-@uq-uidf/table
-└─ @uq-uidf/core
+@uqds/table
+└─ @uqds/core
 ```

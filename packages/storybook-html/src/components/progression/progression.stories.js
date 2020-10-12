@@ -25,7 +25,7 @@ progressionInitial.storyName = 'Progression Initial';
 
 export const progressionMiddle = () => {
   return `
-  <div class="uidf-progression-wrapper">
+  <div class="uqds-progression-wrapper">
     <ul class="uq-progression">
         <li class="uq-progression__step is-complete">
             <div class="uq-progression__step-marker">
@@ -86,7 +86,7 @@ progressionMiddle.storyName = 'Progression Middle';
 
 export const progressionFinal = () => {
   return `
-  <div class="uidf-progression-wrapper">
+  <div class="uqds-progression-wrapper">
     <ul class="uq-progression">
         <li class="uq-progression__step is-complete">
             <div class="uq-progression__step-marker">

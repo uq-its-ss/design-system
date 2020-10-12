@@ -1,4 +1,4 @@
-# @uq-uidf/card
+# @uqds/card
 
 > Card components
 
@@ -8,12 +8,12 @@
 
 With Yarn:
 ```shell
-yarn add @uq-uidf/card
+yarn add @uqds/card
 ```
 
 With NPM:
 ```shell
-npm i @uq-uidf/card
+npm i @uqds/card
 ```
 
 ---
@@ -21,8 +21,8 @@ npm i @uq-uidf/card
 ## Dependency graph
 
 ```shell
-@uq-uidf/card
-├─ @uq-uidf/core
-└─ @uq-uidf/foundation-global
-   └─ @uq-uidf/core
+@uqds/card
+├─ @uqds/core
+└─ @uqds/foundation-global
+   └─ @uqds/core
 ```

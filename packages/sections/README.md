@@ -1,4 +1,4 @@
-# `@uq-uidf/sections`
+# `@uqds/sections`
 
 > Sections component
 
@@ -8,12 +8,12 @@
 
 With Yarn:
 ```shell
-yarn add @uq-uidf/sections
+yarn add @uqds/sections
 ```
 
 With NPM:
 ```shell
-npm i @uq-uidf/sections
+npm i @uqds/sections
 ```
 
 ---
@@ -21,8 +21,8 @@ npm i @uq-uidf/sections
 ## Dependency graph
 
 ```shell
-@uq-uidf/sections
-├─ @uq-uidf/core
-└─ @uq-uidf/foundation-global
-   └─ @uq-uidf/core
+@uqds/sections
+├─ @uqds/core
+└─ @uqds/foundation-global
+   └─ @uqds/core
 ```

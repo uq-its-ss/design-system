@@ -15,7 +15,7 @@ export default {
 
 export const textBlock = () => {
   return `
-    <div class="uidf-body__container">
+    <div class="uqds-body__container">
       <h1>Heading level 1 (h1)</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse interdum nulla vitae consectetur interdum. Quisque sed nibh in lorem malesuada egestas. Integer varius orci in ligula mollis sodales. Sed dapibus rutrum finibus. Vestibulum tellus velit, dictum eu cursus at, luctus condimentum leo. Vestibulum malesuada consectetur sem, nec fermentum nibh molestie at. Pellentesque posuere enim leo, in blandit sem interdum ut. Duis lobortis lectus vitae mi pellentesque sagittis. Fusce eget eros sit amet enim placerat commodo quis id nisl.</p>
       <h2>Heading level 2 (h2)</h2>
@@ -37,7 +37,7 @@ export const textBlock = () => {
 
 export const unorderedList = () => {
   return `
-    <div class="uidf-body__container">
+    <div class="uqds-body__container">
       <ul>
         <li>Shoes</li>
         <li>Hair tie</li>
@@ -52,7 +52,7 @@ export const unorderedList = () => {
 
 export const orderedList = () => {
   return `
-    <div class="uidf-body__container">
+    <div class="uqds-body__container">
       <ol>
         <li>Shoes</li>
         <li>Hair tie</li>
@@ -67,7 +67,7 @@ export const orderedList = () => {
 
 export const definitionList = () => {
   return `
-    <div class="uidf-body__container">
+    <div class="uqds-body__container">
       <dl>
         <dt>Location</dt>
         <dd>St Lucia</dd>
@@ -88,7 +88,7 @@ export const definitionList = () => {
 
 export const horizontalRule = () => {
   return `
-    <div class="uidf-body__container">
+    <div class="uqds-body__container">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse interdum nulla vitae consectetur interdum. Quisque sed nibh in lorem malesuada egestas. Integer varius orci in ligula mollis sodales. Sed dapibus rutrum finibus. Vestibulum tellus velit, dictum eu cursus at, luctus condimentum leo. Vestibulum malesuada consectetur sem, nec fermentum nibh molestie at. Pellentesque posuere enim leo, in blandit sem interdum ut. Duis lobortis lectus vitae mi pellentesque sagittis. Fusce eget eros sit amet enim placerat commodo quis id nisl.</p>
       <hr />
       <p>Praesent risus libero, viverra eu libero ultricies, tincidunt posuere sem. Phasellus eros mauris, commodo at orci ut, dictum consectetur sem. Sed urna elit, faucibus et feugiat tincidunt, ultrices at dui. Nulla facilisi. Praesent eget urna eget odio ullamcorper ornare et ut arcu. Integer mollis risus sit amet gravida congue. Praesent eget efficitur erat, ut sodales magna. Nulla at ullamcorper tortor. Aenean et porta nulla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nullam aliquet augue eu elementum pretium. Etiam ac feugiat orci, ac molestie tortor. In ac suscipit sapien. Donec tempus mauris id ex tristique convallis nec sit amet ex. Integer semper porttitor sapien ut interdum.</p>

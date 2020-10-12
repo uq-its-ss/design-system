@@ -21,8 +21,8 @@ npm i @uqds/header
 ## Dependency graph
 
 ```shell
-@uqds/header
-├─ @uqds/core
-└─ @uqds/foundation-global
-   └─ @uqds/core
+@uq-uidf/header
+├─ @uq-uidf/core
+└─ @uq-uidf/grid
+   └─ @uq-uidf/core
 ```

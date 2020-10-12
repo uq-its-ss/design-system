@@ -9,7 +9,7 @@ $use-encapsulation: false !default;
   font-size: 1rem;
   font-family: core.$font-family;
   font-weight: 400;
-  line-height: core.$line-height-h;
+  line-height: core.$line-height;
 }
 
 @mixin body-styles {
@@ -308,7 +308,8 @@ $use-encapsulation: false !default;
   .scroll-container {
     @include table.table-wrapper;
   }
-.uq-table {
+  
+  .uq-table {
     @include table.table;
 
     caption {

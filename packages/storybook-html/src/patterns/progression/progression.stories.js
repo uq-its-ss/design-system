@@ -14,8 +14,8 @@ export default {
 export const example = () => {
     return `
       <br/><br/>
-      <div class="row">
-        <div class="column">
+      <div class="uq-grid">
+        <div class="uq-grid__col uq-grid__col--6">
           <div class="progression-text">Step <span class="step-current">2</span> of <span class="step-total">4</span></div>
         </div>
       </div>

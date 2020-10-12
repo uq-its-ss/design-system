@@ -1,14 +1,18 @@
-@use "@uqds/core/src/scss/_component" as core with (
-  $uq-font-path: "../node_modules/@uqds/core/src/fonts/uq-icons/font",
+@use "@uq-uidf/core/src/scss/_global" as core-global;
+@use "@uq-uidf/core/src/scss/_component" as core with (
+  $uq-font-path: "../node_modules/@uq-uidf/core/src/fonts/uq-icons/font",
   $fa-font-path: "../node_modules/font-awesome/fonts",
   $uq-bg-image-path: '../node_modules/@uqds/core/src/images'
 );
-@use "@uqds/foundation-grid/src/scss/_component" as grid;
-@use "@uqds/foundation-block-grid/src/scss/_component" as block-grid;
-@use "@uqds/foundation-misc/src/scss/_component" as misc;
-@use "@uqds/body/src/scss/_component" as body;
+@use "@uq-uidf/foundation-block-grid/src/scss/_component" as block-grid;
+@use "@uq-uidf/foundation-misc/src/scss/_component" as misc;
+@use "@uq-uidf/body/src/scss/_component" as body;
 
 body {
   // Prevent the @uqds/body from imposing a background colour.
   background-color: transparent !important;
+}
+
+.sbdocs.sbdocs-content {
+  max-width: core-global.$screen-xl;
 }

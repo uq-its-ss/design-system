@@ -1,7 +1,12 @@
+@use 'space' as space;
+
 // FS: custom media & breakpoints (from a mobile first perspective)
 
-// Note that the width values are written as ranges (https://www.w3.org/TR/mediaqueries-5/#mq-range-context).
-// Evaluating media features in range context is new to Level 4 of media queries.
+/* Note that the width values are written as ranges
+ * (https://www.w3.org/TR/mediaqueries-5/#mq-range-context).
+ * Evaluating media features in range context is new to Level 4 of media queries
+ * specification (not supported in major browsers yet).
+ */
 
 // Original post-css-custom-media syntax
 // =====================================
@@ -31,37 +36,45 @@
 // Breakpoints
 // -----------
 
-$screen-xs: 420px !default;
-$screen-s: 540px !default;
-$screen-m: 641px !default;
-$screen-l: 1024px !default;
-$screen-xl: 1140px !default;
+// !! Please try to keep these to multiples of 8px (0.5rem)
+
+// Considered to be the "mobile" sizes in discussion
+// Firstly the trivial 0 size (of course), then:
+$screen-xs: 26rem !default; // ~416px
+$screen-sm: 34rem !default; // ~544px
+
+// Considered to be the "tablet" sizes in discussion
+$screen-md: 48rem !default; // ~768px
+$screen-lg: 64rem !default; // ~1024px
+
+// Considered to be the "desktop" size in discussion
+$screen-xl: 90rem !default; // ~1440px
 
 // Media query strings
 // -------------------
 
 // x-small 
-$screen-xs-up: "(width >= #{$screen-xs})" !default;
-$screen-xs-down: "(width < #{$screen-xs})" !default;
-$screen-xs-s: "(#{$screen-xs} <= width < #{$screen-s})" !default;
+$screen-xs-up: "(min-width: #{$screen-xs})" !default;
+$screen-xs-down: "(max-width: #{$screen-xs - 0.0625rem})" !default;
+$screen-xs-sm: "(min-width: #{$screen-xs}) and (max-width: #{$screen-sm - 0.0625rem})" !default;
 
 // small
-$screen-s-up: "(width >= #{$screen-s})" !default;
-$screen-s-down: "(width < #{$screen-s})" !default;
-$screen-s-m: "(#{$screen-s} <= width < #{$screen-m})" !default;
+$screen-sm-up: "(min-width: #{$screen-sm})" !default;
+$screen-sm-down: "(max-width: #{$screen-sm - 0.0625rem})" !default;
+$screen-sm-md: "(min-width: #{$screen-sm}) and (max-width: #{$screen-md - 0.0625rem})" !default;
 
 // medium
-$screen-m-up: "(width >= #{$screen-m})" !default;
-$screen-m-down: "(width < #{$screen-m})" !default;
-$screen-m-l: "(#{$screen-m} <= width < #{$screen-l})" !default;
+$screen-md-up: "(min-width: #{$screen-md})" !default;
+$screen-md-down: "(max-width: #{$screen-md - 0.0625rem})" !default;
+$screen-md-lg: "(min-width: #{$screen-md}) and (max-width: #{$screen-lg - 0.0625rem})" !default;
 
 // large
-$screen-l-up: "(width >= #{$screen-l})" !default;
-$screen-l-down: "(width < #{$screen-l})" !default;
-$screen-l-l: "(#{$screen-l} <= width < #{$screen-xl})" !default;
+$screen-lg-up: "(min-width: #{$screen-lg})" !default;
+$screen-lg-down: "(max-width: #{$screen-lg - 0.0625rem})" !default;
+$screen-lg-xl: "(min-width: #{$screen-lg}) and (max-width: #{$screen-xl - 0.0625rem})" !default;
 
 // x-large
-$screen-xl-up: "(width >= #{$screen-xl})" !default;
-$screen-xl-down: "(width < #{$screen-xl})" !default;
+$screen-xl-up: "(min-width: #{$screen-xl})" !default;
+$screen-xl-down: "(max-width: #{$screen-xl - 0.0625rem})" !default;
 
 // TODO: add screen density mq's

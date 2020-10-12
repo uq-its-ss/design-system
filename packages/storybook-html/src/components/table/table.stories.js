@@ -25,34 +25,29 @@ export default {
 export const table = () => {
   return tableHTML;
 };
-table.story = {
-  name: 'Table Scroll'
-}
+
+table.storyName = 'Table Scroll';
 
 export const tableMultipleHeaders = () => {
   return tableMultipleHeadersHTML;
 };
-tableMultipleHeaders.story = {
-  name: 'Table Multiple-Headers Scroll'
-}
+
+tableMultipleHeaders.storyName= 'Table Multiple-Headers Scroll';
 
 export const tableIrregularHeaders = () => {
   return tableIrregularHeadersHTML;
 };
-tableIrregularHeaders.story = {
-  name: 'Table Irregular-Headers Scroll'
-}
+
+tableIrregularHeaders.storyName = 'Table Irregular-Headers Scroll';
 
 export const tableMultiLevelHeaders = () => {
   return tableMultiLevelHeadersHTML;
 };
-tableMultiLevelHeaders.story = {
-  name: 'Table Multi-Level-Headers Scroll'
-}
+
+tableMultiLevelHeaders.storyName = 'Table Multi-Level-Headers Scroll';
 
 export const tableCard = () => {
   return tableCardHTML;
 };
-tableCard.story = {
-  name: 'Table Card'
-}
+
+tableCard.storyName = 'Table Card';

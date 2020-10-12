@@ -12,18 +12,31 @@ export const parameters = {
         ],
         'Core',
         [
+          'Introduction',
+          'Fonts',
+          'Space',
+          'Breakpoints',
           'Colour',
           [
             'Colour usage',
             'Purple gradient',
             'Base colour palette'
-          ],
+          ]
         ],
         'Base',
         [
-          'Body'
+          'Body',
+          [
+            'Body',
+            'Elements',
+            'Utilities'
+          ]
         ],
         'Layout',
+        [
+          'Layout',
+          'Grid'
+        ],
         'Components',
         'Forms',
         [

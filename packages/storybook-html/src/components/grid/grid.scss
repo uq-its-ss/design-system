@@ -1,0 +1,78 @@
+@use '@uq-uidf/core/src/scss/_global' as core;
+@use '@uq-uidf/grid/src/scss/_component' as grid;
+
+.uqds-example-grid {
+  background: repeating-linear-gradient(
+    45deg,
+    core.$uq-neutral-light40,
+    core.$uq-neutral-light40 10px,
+    core.$uq-neutral-light20 10px,
+    core.$uq-neutral-light20 20px
+  );
+  padding: core.$space-md 0;
+  overflow: visible;
+
+  &--wrap-content {
+    .uq-grid {
+      &__col {
+        > span {
+          text-align: left !important;
+          white-space: normal !important;
+        }
+      }
+    }
+  }
+
+  &__highlight {
+    background-color: greenyellow;
+    box-shadow: 0 0 0 4px greenyellow;
+  }
+
+  .uq-grid {
+    &__col {
+      > span {
+        background-color: lighten(core.$uq-aqua, 45%);
+        border: 1px solid core.$uq-aqua;
+        display: block;
+        height: 100%;
+        font-size: core.$font-size-xs;
+        padding: core.$space-xs;
+        text-align: center;
+        white-space: nowrap;
+
+        .uqds-example-grid__highlight {
+          margin: -(core.$space-xs);
+        }
+
+        @media #{core.$screen-xs-up} {
+          background-color: lighten(core.$uq-yellow, 35%);
+          border-color: core.$uq-yellow;
+        }
+
+        @media #{core.$screen-sm-up} {
+          background-color: lighten(core.$uq-orange, 35%);
+          border-color: core.$uq-orange;
+        }
+  
+        @media #{core.$screen-md-up} {
+          background-color: lighten(core.$uq-purple, 45%);
+          border-color: core.$uq-purple;
+        }
+  
+        @media #{core.$screen-lg-up} {
+          background-color: lighten(core.$uq-green, 45%);
+          border-color: core.$uq-green;
+        }
+  
+        @media #{core.$screen-xl-up} {
+          background-color: lighten(core.$uq-blue, 40%);
+          border-color: core.$uq-blue;
+        }
+      }
+    }
+
+    + .uq-grid {
+      margin-top: core.$space;
+    }
+  }
+}

@@ -37,13 +37,11 @@
     "url": "https://github.com/uq-its-ss/user-interface-development-framework/issues"
   },
   "dependencies": {
-    "@uqds/core": "^0.0.0",
-    "@uqds/foundation-global": "^0.0.0",
-    "@uqds/foundation-grid": "^0.0.0"
+    "@uq-uidf/core": "^0.0.0",
+    "@uq-uidf/foundation-global": "^0.0.0"
   },
   "peerDependencies": {
-    "@uqds/core": "^0.0.0",
-    "@uqds/foundation-global": "^0.0.0",
-    "@uqds/foundation-grid": "^0.0.0"
+    "@uq-uidf/core": "^0.0.0",
+    "@uq-uidf/foundation-global": "^0.0.0"
   }
 }

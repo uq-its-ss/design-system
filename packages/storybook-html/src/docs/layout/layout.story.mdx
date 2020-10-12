@@ -1,0 +1,121 @@
+import './layout.scss';
+import { Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="Layout/Layout" parameters={{ layout: "fullscreen", docs: { inlineStories: false } }} />
+
+# Layout
+
+Our responsive layout system gives you the tools to organise content and UI
+components in a variety of ways. It also adapts to different screen sizes and
+orientation. The primary elements of our layout system are *columns*, *margins*,
+and *gutters* (the ingredients of a *horizontal* grid system). Our unit of
+measurement is the [*rem*](https://www.w3schools.com/cssref/css_units.asp).
+
+## Getting started
+
+To help you compose your pages, we have several options in our layout system
+for you to choose from.
+
+1. **`@uqds/grid`:** general use CSS grid classes.
+
+| Name         | Description | Thumbnail |
+| ------------ | ----------- | ------------------ |
+| [Golden](/?path=/docs/layout-grid--golden#golden) | Inspired by [*The Golden Ratio*](https://www.canva.com/learn/what-is-the-golden-ratio/). A preset to give you a layout that is pleasing to the eye. | Coming soon |
+| [Halves](/?path=/docs/layout-grid--halves#halves) | A two-column grid. | Coming soon |
+| [Thirds](/?path=/docs/layout-grid--thirds#thirds) | A three-column grid. | Coming soon |
+| [Quarters](/?path=/docs/layout-grid--quarters#quarters) | A four-column grid. | Coming soon |
+| [Flexible grid](/?path=/docs/layout-grid--flexible-1#flexible-grid) | Auto-sizing column grid. | Coming soon |
+| Scrolling grid | [TODO] A grid that scrolls horizontally on mobile. Useful for holding cards. | Coming soon |
+| [6-8-12](/?path=/docs/layout-grid--twelve-eight-six#6-8-12-grid) | Advanced. The most flexible option. This is an implementation of our base grid (see below). | Coming soon |
+
+2. **`@uqds/sections`:** CSS classes that combine layout and typography. Great
+for laying out discrete blocks of content. We recommend these options for
+situations such as pull quotes, calls to action, landing pages etc.
+
+## Our base grid
+
+Our layout system is built upon a 6-8-12 column strategy — our base grid.
+
+### Specifications per breakpoint range
+
+| Name(s)                 | Mockups | Breakpoint range                 | Columns | Margins (minimum) | Gutters        | Max width          |
+|-------------------------|---------|----------------------------------|---------|-------------------|----------------| ------------------ |
+| **\* (mobile)**         | ✓       | 0—25.9375rem **(~0—415px )**     | 6       | 1.5rem (~24px)    | 1rem (~16px)   | Fluid              |
+| XS                      |         | 26—33.9375rem **(~416—543px)**   | ''      | ''                | ''             | ''                 |
+| SM                      |         | 34—47.9375rem **(~544—767px)**   | ''      | ''                | ''             | ''                 |
+| **MD (tablet)**         | ✓       | 48—63.9375rem **(~768—1023px)**  | 8       | 4rem (~64px)      | 1.5rem (~24px) | Fluid              |
+| LG                      |         | 64—89.9375rem **(~1024—1439px)** | ''      | ''                | ''             | ''                 |
+| **XL (desktop/laptop)** | ✓       | 90rem—∞ **(~1440px—∞)**          | 12      | 9.375rem (~150px) | 2rem (~32px)   | 71.25rem (~1140px) |   
+
+> Pixel units (px) provided are based on the default rem unit analogue of 16px.
+> Breakpoint ranges refer to [viewport](https://www.w3schools.com/css/css_rwd_viewport.asp)
+> width.
+
+export const BaseLayoutGrid = () => `
+  <div class="uqds-base-layout-grid">
+    <div class="uq-grid">
+      <div class="uq-grid__col uq-grid__col--1 uq-grid__col--md-1 uq-grid__col--xl-1"><span>Col<br/>&larr;&rarr;</span></div>
+      <div class="uq-grid__col uq-grid__col--1 uq-grid__col--md-1 uq-grid__col--xl-1"><span>Col<br/>&larr;&rarr;</span></div>
+      <div class="uq-grid__col uq-grid__col--1 uq-grid__col--md-1 uq-grid__col--xl-1"><span>Col<br/>&larr;&rarr;</span></div>
+      <div class="uq-grid__col uq-grid__col--1 uq-grid__col--md-1 uq-grid__col--xl-1"><span>Col<br/>&larr;&rarr;</span></div>
+      <div class="uq-grid__col uq-grid__col--1 uq-grid__col--md-1 uq-grid__col--xl-1"><span>Col<br/>&larr;&rarr;</span></div>
+      <div class="uq-grid__col uq-grid__col--1 uq-grid__col--md-1 uq-grid__col--xl-1"><span>Col<br/>&larr;&rarr;</span></div>
+      <div class="uq-grid__col uq-grid__col--md-1 uq-grid__col--xl-1"><span>Col<br/>&larr;&rarr;</span></div>
+      <div class="uq-grid__col uq-grid__col--md-1 uq-grid__col--xl-1"><span>Col<br/>&larr;&rarr;</span></div>
+      <div class="uq-grid__col uq-grid__col--xl-1"><span>Col<br/>&larr;&rarr;</span></div>
+      <div class="uq-grid__col uq-grid__col--xl-1"><span>Col<br/>&larr;&rarr;</span></div>
+      <div class="uq-grid__col uq-grid__col--xl-1"><span>Col<br/>&larr;&rarr;</span></div>
+      <div class="uq-grid__col uq-grid__col--xl-1"><span>Col<br/>&larr;&rarr;</span></div>
+    </div>
+  </div>
+`;
+
+<Story height={300} name="Base layout grid visualised">
+  {BaseLayoutGrid.bind({})}
+</Story>
+
+> The grid forms the basis of our layout system when applied to the entire
+> viewport width. The layout system is currently 1-dimensional (horizontal
+> only).
+
+## Designing with the base grid (for UI mockups)
+
+We should prepare mockups for our three major breakpoints: mobile, tablet, and
+desktop/laptop. We recommend creating **375px width artboard mockups for the
+mobile range. For the others, we take the starting value of the range** as our
+artboard width. In some UI design programs (e.g. Figma, Adobe XD), you can
+define a layout grid using the column, margin, and gutter (px) values we've
+supplied. You can also use the following sizing/spacing references.
+
+### Desktop
+
+![Desktop mockup horizontal grid specs](/images/12-column-horizontal-grid-desktop.png)
+
+### Tablet
+
+![Tablet mockup horizontal grid specs](/images/8-column-horizontal-grid-tablet.png)
+
+### Mobile
+
+![Mobile mockup horizontal grid specs](/images/6-column-horizontal-grid-mobile.png)
+
+## Glossary
+
+### Columns
+
+Columns are the areas of space where content can be displayed. Column width is
+calculated based on percentages and gutter width.
+
+### Gutters
+
+A gutter is the spacing between columns. They are fixed-width but the value
+changes to adapt to different screen sizes.
+
+### Margins
+
+Margins are the space on either side of the entire row of columns. They are
+specified using a minimum width because they change to adapt to different screen
+sizes. I.e. we use wider margins for larger screens. Therefore, to ensure that
+larger screens always have a wider set of columns than smaller screens, we
+perform an easing technique from one margin ideal to the next ideal. Think of it
+as counter-balancing the big jumps in margin width.

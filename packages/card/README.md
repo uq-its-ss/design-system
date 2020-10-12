@@ -25,7 +25,4 @@ npm i @uqds/card
 ├─ @uqds/core
 └─ @uqds/foundation-global
    └─ @uqds/core
-└─ @uqds/foundation-grid
-   └─ @uqds/foundation-global
-      └─ @uqds/core
 ```

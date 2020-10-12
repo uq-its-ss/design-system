@@ -21,11 +21,10 @@ npm i @uqds/alert
 ## Dependency graph
 
 ```shell
-@uqds/alert-classic
+@uqds/alert
 ├─ @uqds/core
-├─ @uqds/foundation-global
+├─ @uqds/grid
 │  └─ @uqds/core
-└─ @uqds/foundation-grid
-   └─ @uqds/foundation-global
-      └─ @uqds/core
+└─ @uqds/foundation-global
+   └─ @uqds/core
 ```

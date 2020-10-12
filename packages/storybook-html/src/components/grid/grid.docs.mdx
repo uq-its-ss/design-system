@@ -2,18 +2,18 @@ import { Meta, Story } from '@storybook/addon-docs/blocks';
 
 # Grid
 
-Layouts using our grid are achieved using a combination of `.uq-grid` and
-`.uq-grid__col` elements and their modifiers.
+Layouts using our grid are achieved using a combination of `.uq-grid` (grid
+container) and `.uq-grid__col` (grid column) elements and their modifiers.
 
 ## Golden
 
 This grid gives you a *main* content column and a *sidebar* column that stack
-for mobile. "Under the hood", is our 6-8-12 grid so you can keep your content
+for mobile. Under the hood, is our *6-8-12* grid so you can keep your content
 consistently aligned with the base grid.
 
 <Story height="160" id="layout-grid--golden" />
 
-### How to
+### How-to
 
 Add two `.uq-grid__col` elements within a grid container (with the
 `.uq-grid--golden` modifier) like the following.
@@ -27,17 +27,68 @@ Add two `.uq-grid__col` elements within a grid container (with the
 
 See what happens when you add more columns to the same container!
 
+> All of our grids' rows get the same gutter (gap) as columns by default. So,
+> when columns stack, your contents are conveniently spaced out.
+
+## Halves
+
+Behaves like *Golden* but has two columns of equal size at larger screen sizes.
+
+<Story height={85} id="layout-grid--halves" />
+
+### How-to
+
+```html
+<div class="uq-grid uq-grid--halves">
+  <div class="uq-grid__col">Content</div>
+  <div class="uq-grid__col">Content</div>
+</div>
+```
+
+## Thirds
+
+Behaves like *Golden* but has three columns of equal size at larger screen
+sizes.
+
+<Story height={85} id="layout-grid--thirds" />
+
+### How-to
+
+```html
+<div class="uq-grid uq-grid--thirds">
+  <div class="uq-grid__col">Content</div>
+  <div class="uq-grid__col">Content</div>
+  <div class="uq-grid__col">Content</div>
+</div>
+```
+
+## Quarters
+
+Behaves like *Golden* but has four columns of equal size at larger screen sizes.
+
+<Story height={85} id="layout-grid--quarters" />
+
+### How-to
+
+```html
+<div class="uq-grid uq-grid--quarters">
+  <div class="uq-grid__col">Content</div>
+  <div class="uq-grid__col">Content</div>
+  <div class="uq-grid__col">Content</div>
+  <div class="uq-grid__col">Content</div>
+</div>
+```
+
 ## Flexible grid
 
 The flexible grid leverages the power of [*CSS Grid Layout*](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout)
 to give you a quick & flexible layout solution. You can use this grid to
 organise your content into columns that stack when browser sizes are smaller.
-Therefore, it makes it an ideal solution for arranging linear material. Rows
-also get the same gutter (gap) as columns to make things super easy.
+Therefore, it makes it an ideal solution for arranging linear material.
 
-<Story height={220} id="layout-grid--flexible-1" />
+<Story height={175} id="layout-grid--flexible-1" />
 
-### How to
+### How-to
 
 As an example, you can achieve three columns of content by adding three
 `.uq-grid__col` elements to the grid container (with the `.uq-grid--flexible`
@@ -57,16 +108,17 @@ Pay attention to what the grid does when the screens get very small.
 
 ## 6-8-12 grid
 
-We've built a grid that adapts the number of available columns to different
-screen sizes. It's a 6-, 8-, and 12-column grid built into one CSS class system!
-Starting from _mobile_, the _column-span_ classes give you the freedom to craft
-layouts to suit different screen sizes.
+If you're looking for more control over your layout, we've built a grid that
+adapts the number of available columns to different screen sizes. It's a 6-, 8-,
+and 12-column grid built into one CSS class system! Starting from _mobile_, the
+_column-span_ classes give you the freedom to craft layouts to suit different
+screen sizes.
 
 > By default, we add the [specified margins](?path=/docs/layout-layout--base-layout-grid-visualised#specifications-per-breakpoint)
 > to both sides of the column row *and* apply a max-width on XL screens on the
 > root `.uq-grid` node.
 
-### Basic usage
+### Basic how-to
 
 ```html
 <div class="uq-grid">
@@ -101,7 +153,7 @@ Create layouts for the smallest screens.
 
 `uq-grid__col--[1—6]`, e.g. `<div class="uq-grid__col uq-grid__col--4">...</div>`
 
-<Story height={250} id="layout-grid--twelve-eight-six-mobile" />
+<Story height={265} id="layout-grid--twelve-eight-six-mobile" />
 
 ### The 8-column grid column-span classes (designed for _tablet_ displays)
 
@@ -109,7 +161,7 @@ Shift the layout for larger screens.
 
 `uq-grid__col--md-[1—8]`, e.g. `<div class="uq-grid__col uq-grid__col--4 uq-grid__col--md-6">...</div>` 
 
-<Story height={290} id="layout-grid--twelve-eight-six-tablet" />
+<Story height={305} id="layout-grid--twelve-eight-six-tablet" />
 
 ### The 12-column grid column-span classes (designed for _desktop/laptop_ displays)
 
@@ -117,7 +169,7 @@ Shift the layout for the largest screens.
 
 `uq-grid__col--xl-[1—12]`, e.g. `<div class="uq-grid__col uq-grid__col--4 uq-grid__col--md-6 uq-grid__col--xl-8">...</div>`
 
-<Story height={420} id="layout-grid--twelve-eight-six-desktop" />
+<Story height={430} id="layout-grid--twelve-eight-six-desktop" />
 
 ## Nesting
 
@@ -148,7 +200,9 @@ container, you can apply the `uq-grid--full-width` modifier class.
   <div class="uq-grid__col">Content</div>
   <div class="uq-grid__col">Content</div>
   <div class="uq-grid__col">Content</div>
+  <div class="uq-grid__col">Content</div>
+  <div class="uq-grid__col">Content</div>
 </div>
 ```
 
-<Story height={85} id="layout-grid--flexible-full-width" />
+<Story height={120} id="layout-grid--flexible-full-width" />

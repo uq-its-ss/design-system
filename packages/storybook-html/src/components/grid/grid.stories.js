@@ -240,13 +240,6 @@ export const flexible1 = () => `
       <div class="uq-grid__col"><span>3rd item</span></div>
       <div class="uq-grid__col"><span>4th item</span></div>
     </div>
-    <div class="uq-grid uq-grid--flexible">
-      <div class="uq-grid__col"><span>1st item</span></div>
-      <div class="uq-grid__col"><span>2nd item</span></div>
-      <div class="uq-grid__col"><span>3rd item</span></div>
-      <div class="uq-grid__col"><span>4th item</span></div>
-      <div class="uq-grid__col"><span>5th item</span></div>
-    </div>
   </div>
 `;
 
@@ -270,6 +263,8 @@ export const flexibleFullWidth = () => `
   <div class="uqds-example-grid">
     <div class="uqds-example-grid__highlight">
       <div class="uq-grid uq-grid--flexible uq-grid--full-width">
+        <div class="uq-grid__col"><span>Content</span></div>
+        <div class="uq-grid__col"><span>Content</span></div>
         <div class="uq-grid__col"><span>Content</span></div>
         <div class="uq-grid__col"><span>Content</span></div>
         <div class="uq-grid__col"><span>Content</span></div>

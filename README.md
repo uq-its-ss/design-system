@@ -4,7 +4,7 @@
 
 This is the repository for the UQ Design System.
 
-Go to the [UQ Design System] (https://design-system.uq.edu.au/) website for information about:
+Go to the [UQ Design System](https://design-system.uq.edu.au/) website for information about:
 
 - what the design system is
 - how to use it
@@ -19,7 +19,7 @@ Go to the [UQ Design System] (https://design-system.uq.edu.au/) website for info
 This documentation covers how to work in the repository.
 
 - [Setup instructions](./docs/setup-instructions.md)
-- [Using Storybook as a styleguide for component development]((./docs/using-storybook-as-a-styleguide-for-component-development.md)
+- [Using Storybook as a styleguide for component development](./docs/using-storybook-as-a-styleguide-for-component-development.md)
 - [Creating a new package](./docs/create-a-package.md)
 - [Bundling](./docs/bundling.md)
 - [Code standards and style [MOVE TO STORYBOOK]](./docs/standards/standards.md)

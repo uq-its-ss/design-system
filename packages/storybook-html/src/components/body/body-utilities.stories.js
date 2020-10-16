@@ -1,7 +1,7 @@
 import docs from './body-utilities.docs.mdx';
 
 export default {
-  title: 'Base/Body/Utilities',
+  title: 'Components/Body/Utilities',
   parameters: {
     docs: {
       page: docs

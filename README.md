@@ -23,7 +23,7 @@ This contains information only relevent to working in the repository. Documentat
 Contents:
 
 - [Setup instructions](./docs/setup-instructions.md)
-- [Using Storybook as a styleguide for component development](./docs/using-storybook-as-a-styleguide-for-component-development.md)
+- [Using Storybook as a styleguide for component development](./docs/using-storybook.md)
 - [Creating a new package](./docs/create-a-package.md)
 - [Bundling](./docs/bundling.md)
 - [Code standards and style [MOVE TO STORYBOOK]](./docs/standards/standards.md)

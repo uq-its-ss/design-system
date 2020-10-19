@@ -4,7 +4,7 @@ import './body.scss';
 import docs from './body-elements.docs.mdx';
 
 export default {
-  title: 'Base/Body/Elements',
+  title: 'Components/Body/Elements',
   parameters: {
     docs: {
       page: docs

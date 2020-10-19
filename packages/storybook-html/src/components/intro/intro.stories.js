@@ -10,7 +10,7 @@ import gridMenuEqualiser from '@uqds/grid-menu/src/js/grid-menu';
 import kitchenSinkHTML from './kitchen-sink.html';
 
 export default {
-  title: 'Introduction/Showcase',
+  title: 'Gallery & Examples/Kitchen Sink',
   parameters: {
     layout: "fullscreen"
   }

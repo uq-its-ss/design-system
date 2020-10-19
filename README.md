@@ -4,6 +4,8 @@
 
 This is the repository for the UQ Design System.
 
+The UQ Design System is a guide to how user interfaces should look, feel, behave and be coded at UQ.  It includes a guide to the core styles, components, patterns and standards for UQ user interfaces.
+
 Go to the [UQ Design System](https://design-system.uq.edu.au/) website for information about:
 
 - what the design system is
@@ -16,7 +18,9 @@ Go to the [UQ Design System](https://design-system.uq.edu.au/) website for infor
 
 ## GitHub documentation
 
-This documentation covers how to work in the repository.
+This contains information only relevent to working in the repository. Documentation about designing and developing user interfaces is on the [UQ Design System](https://design-system.uq.edu.au/) website.
+
+Contents:
 
 - [Setup instructions](./docs/setup-instructions.md)
 - [Using Storybook as a styleguide for component development](./docs/using-storybook-as-a-styleguide-for-component-development.md)

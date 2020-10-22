@@ -1,7 +1,5 @@
 // Variables, functions, and mixins
 @use '@uqds/core/src/scss/global' as core;
-@use '@uqds/foundation-global/src/scss/global' as *;
-@use '@uqds/foundation-block-grid/src/scss/global' as *;
 
 $linked-list-color: core.$link-color;
 $linked-list-color-hover: core.$uq-white;
@@ -11,59 +9,27 @@ $linked-list-border: core.$uq-neutral-light40; //EEE;
 
 // Two column layout.
 @mixin grid-menu-2-column {
-  @media #{$medium-up}{
-    @include block-grid(
-      $per-row: 2,
-      $spacing: core.$space
-    );
-    > li {
-      margin-bottom: core.$space-none;
-    }
+  @media only screen and (min-width:641px) and (max-width:1024px) {
+    grid: auto-flow / repeat(2, 1fr);
   }
 }
 
 // Three column layout.
 @mixin grid-menu-3-column {
-  @media #{$medium-up}{
-    @include block-grid(
-      $per-row: 2,
-      $spacing: core.$space
-    );
-    > li {
-      margin-bottom: core.$space-none;
-    }
+  @media only screen and (min-width:641px) and (max-width:1024px) {
+    grid: auto-flow / repeat(2, 1fr);
   }
-
-  @media #{$large-up}{
-    @include block-grid(
-      $per-row: 3,
-      $spacing: core.$space
-    );
-    > li {
-      margin-bottom: core.$space-none;
-    }
+  @media only screen and (min-width:1025px) {
+    grid: auto-flow / repeat(3, 1fr);
   }
 }
 
 // Four column layout.
 @mixin grid-menu-4-column {
-  @media #{$medium-up}{
-    @include block-grid(
-      $per-row: 2,
-      $spacing: core.$space
-    );
-    > li {
-      margin-bottom: core.$space-none;
-    }
+  @media only screen and (min-width:641px) and (max-width:1024px) {
+    grid: auto-flow / repeat(2, 1fr);
   }
-
-  @media #{$large-up}{
-    @include block-grid(
-      $per-row: 4,
-      $spacing: core.$space
-    );
-    > li {
-      margin-bottom: core.$space-none;
-    }
+  @media only screen and (min-width:1025px) {
+    grid: auto-flow / repeat(4, 1fr);
   }
 }

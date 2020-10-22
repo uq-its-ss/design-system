@@ -1,18 +1,19 @@
 @use '@uqds/core/src/scss/global' as core;
-@use '@uqds/foundation-global/src/scss/global' as *;
-@use '@uqds/foundation-block-grid/src/scss/global' as *;
 @use 'global' as *;
-@import 'font-awesome/scss/mixins';
 
 .grid-menu {
-  @include block-grid(
-    $per-row: 1,
-    $spacing: core.$space-none
-  );
-
+  display: grid;
+  list-style: none;
+  gap: core.$space;
+  @media only screen and (max-width:640px) {
+    gap: core.$space-none;
+  }
+  > li {
+    margin-bottom: core.$space-none;
+  }
   // Behave as 3 column layout by default.
   @include grid-menu-3-column;
-
+  
   &--2-column {
     @include grid-menu-2-column;
   }
@@ -41,7 +42,9 @@
       position: absolute;
       right: 1.5rem;
       top: 1.25rem;
-      transition: .3s;
+      width: 2rem;
+      height: 2rem;
+      transition: ease 0.3s;
     }
 
     &:hover {
@@ -50,8 +53,9 @@
       text-decoration: none;
 
       &::after {
-        //@include fa-icon; 
-        content: core.$fa-var-angle-right;
+        content: '';
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-5 0 24 24' %3E%3Cpath d='M5.145 14.285l6.167-6a.41.41 0 000-.598L5.145 1.715' fill='none' stroke='%23FFF' stroke-width='.75' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
         right: 1rem;
       }
 
@@ -80,6 +84,7 @@
   &__icon {
     margin-right: core.$space-sm;
   }
+  
 
   // Dark text variant.
   &--dark-text {

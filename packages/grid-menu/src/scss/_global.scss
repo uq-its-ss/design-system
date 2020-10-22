@@ -9,7 +9,7 @@ $linked-list-border: core.$uq-neutral-light40; //EEE;
 
 // Two column layout.
 @mixin grid-menu-2-column {
-  @media only screen and (min-width:641px) and (max-width:1024px) {
+  @media only screen and (min-width:641px) {
     grid: auto-flow / repeat(2, 1fr);
   }
 }

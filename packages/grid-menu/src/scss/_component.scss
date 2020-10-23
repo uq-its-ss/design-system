@@ -2,15 +2,21 @@
 @use 'global' as *;
 
 .grid-menu {
+  box-sizing: border-box;
   display: grid;
   list-style: none;
-  gap: core.$space;
-  @media only screen and (max-width:640px) {
-    gap: core.$space-none;
+  gap: core.$space-none;
+  margin: 0;
+  padding: 0;
+
+  *, *:before, *:after {
+    box-sizing: border-box;
   }
+
   > li {
     margin-bottom: core.$space-none;
   }
+
   // Behave as 3 column layout by default.
   @include grid-menu-3-column;
   
@@ -45,6 +51,7 @@
       width: 2rem;
       height: 2rem;
       transition: ease 0.3s;
+      margin-top: -0.2rem;
     }
 
     &:hover {
@@ -64,6 +71,10 @@
         color: $linked-list-color-hover;
         text-decoration: none;
       }
+
+      .grid-menu__icon {
+        filter: core.$filter-white;
+      }
     }
   }
 
@@ -82,7 +93,9 @@
   }
 
   &__icon {
+    margin-top: -0.3rem;
     margin-right: core.$space-sm;
+    transition: filter 0.2s;
   }
   
 
@@ -92,6 +105,10 @@
     a {
       color: core.$dark-palette-color;
     }
+  }
+
+  @media only screen and (min-width: 641px) {
+    gap: core.$space;
   }
 }
 

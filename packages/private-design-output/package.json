@@ -38,7 +38,7 @@
     "gulp-sass": "^4.1.0",
     "gulp-uglify": "^3.0.2",
     "rollup": "^2.10.9",
-    "sass": "^1.26.5",
+    "sass": "^1.27.0",
     "vinyl-buffer": "^1.0.1",
     "vinyl-source-stream": "^2.0.0"
   },

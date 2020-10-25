@@ -1,3 +1,22 @@
+import { Meta, Story } from '@storybook/addon-docs/blocks';
+
+# Grid menu
+
+## Overview
+
+Grid menu is a list of unordered list elements that can be displayed in either 1, 2, 3 or 4 columns. 
+By default it is displayed as a 3 column layout and changes on different responsive breakpoints.
+
+There are broadly 2 categories of Grid menus. 
+One where the height of the list elements is by default set to 'auto' and the other where all the list element heights are equalised via JS.
+
+### a) Grid menu - Height auto 
+
+<Canvas withToolbar>
+    <Story id="components-grid-menu--grid-menu-all" height='1850px' />
+</Canvas>
+
+```html
 <h2>Grid menu default</h2>
 <ul class="uq-grid-menu">
   <li><a href="#"><span class="uq-grid-menu__title">Menu link 1</span></a></li>
@@ -135,3 +154,24 @@
   <li><a href="#"><span class="uq-grid-menu__icon uq-icon uq-icon--icon-plane-1"> </span> <span class="uq-grid-menu__title">Menu link 5</span></a></li>
   <li><a href="#"><span class="uq-grid-menu__icon uq-icon uq-icon--bicycle"> </span> <span class="uq-grid-menu__title">Menu link 6</span></a></li>
 </ul>
+```
+
+
+### b) Grid menu - Height equalised
+In this category of the grid menu component, if the height of an item is bigger the alignment of the items are taken care of via JS.
+
+<Canvas withToolbar>
+    <Story id="components-grid-menu--equalised" height='400px' />
+</Canvas>
+
+```html
+<h3>Grid menu - Equalised</h3>
+<ul class="uq-grid-menu">
+  <li class="uq-grid-menu--equalised"><a href="#"><span class="uq-grid-menu__title">Refresh to see me equalise!</span></a></li>
+  <li class="uq-grid-menu--equalised"><a href="#"><span class="uq-grid-menu__title">Menu link 2</span></a></li>
+  <li class="uq-grid-menu--equalised"><a href="#"><span class="uq-grid-menu__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi interdum eros vitae dignissim luctus. Phasellus et ligula est.</span></a></li>
+  <li class="uq-grid-menu--equalised"><a href="#"><span class="uq-grid-menu__title">Menu link 4</span></a></li>
+  <li class="uq-grid-menu--equalised"><a href="#"><span class="uq-grid-menu__title">Menu link 5</span></a></li>
+  <li class="uq-grid-menu--equalised"><a href="#"><span class="uq-grid-menu__title">Menu link 6</span></a></li>
+</ul>
+```

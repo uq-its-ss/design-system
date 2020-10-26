@@ -33,7 +33,7 @@ gridMenuAll.parameters = { notes: 'links'};
 
 export const equalised = () => {
   useEffect(() => {
-    var equaliseGridMenu = new gridMenuEqualiser('.grid-menu--equalised>a');
+    var equaliseGridMenu = new gridMenuEqualiser('.uq-grid-menu--equalised>a');
     equaliseGridMenu.align();
   });
   return gridMenuEqualisedHTML;

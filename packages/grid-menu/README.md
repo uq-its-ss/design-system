@@ -22,10 +22,5 @@ npm i @uqds/grid-menu
 
 ```shell
 @uqds/grid-menu
-├─ @uqds/core
-├─ @uqds/foundation-global
-│  └─ @uqds/core
-└─ @uqds/foundation-block-grid
-   └─ @uqds/foundation-global
-      └─ @uqds/core
+└─ @uqds/core
 ```

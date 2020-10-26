@@ -6,28 +6,37 @@ import './grid-menu.scss';
 // import scripts
 import gridMenuEqualiser from '@uqds/grid-menu/src/js/grid-menu';
 
+// import docs
+import docs from './grid-menu.docs.mdx';
+
 // import HTML template strings
-import allHTML from './grid-menu.html';
-import equalisedHTML from './grid-menu-equalised.html';
+import gridMenuHTML from './grid-menu.html';
+import gridMenuEqualisedHTML from './grid-menu-equalised.html';
 
 export default {
-  title: 'Components/Grid menu'
+  title: 'Components/Grid menu',
+  parameters: {
+    docs: {
+      page: docs
+    },
+    layout: "padded"
+  }
 };
 
-export const all = () => {
-  return allHTML;
+export const gridMenuAll = () => {
+  return gridMenuHTML;
 };
 
 // add more keywords
-all.parameters = { notes: 'links'};
+gridMenuAll.parameters = { notes: 'links'};
 
 
 export const equalised = () => {
   useEffect(() => {
-    var equaliseGridMenu = new gridMenuEqualiser('.grid-menu--equalised>a');
+    var equaliseGridMenu = new gridMenuEqualiser('.uq-grid-menu--equalised>a');
     equaliseGridMenu.align();
   });
-  return equalisedHTML;
+  return gridMenuEqualisedHTML;
 };
 
-equalised.storyName = "Equalised (JS)";
+equalised.storyName = "Grid Menu Equalised (JS)";

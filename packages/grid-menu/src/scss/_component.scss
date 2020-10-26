@@ -1,18 +1,25 @@
 @use '@uqds/core/src/scss/global' as core;
-@use '@uqds/foundation-global/src/scss/global' as *;
-@use '@uqds/foundation-block-grid/src/scss/global' as *;
 @use 'global' as *;
-@import 'font-awesome/scss/mixins';
 
-.grid-menu {
-  @include block-grid(
-    $per-row: 1,
-    $spacing: core.$space-none
-  );
+.uq-grid-menu {
+  box-sizing: border-box;
+  display: grid;
+  list-style: none;
+  gap: core.$space-none;
+  margin: 0;
+  padding: 0;
+
+  *, *:before, *:after {
+    box-sizing: border-box;
+  }
+
+  > li {
+    margin-bottom: core.$space-none;
+  }
 
   // Behave as 3 column layout by default.
   @include grid-menu-3-column;
-
+  
   &--2-column {
     @include grid-menu-2-column;
   }
@@ -41,7 +48,10 @@
       position: absolute;
       right: 1.5rem;
       top: 1.25rem;
-      transition: .3s;
+      width: 2rem;
+      height: 2rem;
+      transition: ease 0.3s;
+      margin-top: -0.2rem;
     }
 
     &:hover {
@@ -50,15 +60,20 @@
       text-decoration: none;
 
       &::after {
-        //@include fa-icon; 
-        content: core.$fa-var-angle-right;
+        content: '';
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-5 0 24 24' %3E%3Cpath d='M5.145 14.285l6.167-6a.41.41 0 000-.598L5.145 1.715' fill='none' stroke='%23FFF' stroke-width='.75' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
         right: 1rem;
       }
 
       a,
-      .grid-menu__description {
+      .uq-grid-menu__description {
         color: $linked-list-color-hover;
         text-decoration: none;
+      }
+
+      .uq-grid-menu__icon {
+        filter: core.$filter-white;
       }
     }
   }
@@ -78,30 +93,37 @@
   }
 
   &__icon {
+    margin-top: -0.3rem;
     margin-right: core.$space-sm;
+    transition: filter 0.2s;
   }
+  
 
   // Dark text variant.
   &--dark-text {
-    .grid-menu__link,
+    .uq-grid-menu__link,
     a {
       color: core.$dark-palette-color;
     }
+  }
+
+  @media only screen and (min-width: 641px) {
+    gap: core.$space;
   }
 }
 
 // Palettes applied to section wrapping grid-menu.
 .light-palette {
-  .grid-menu {
+  .uq-grid-menu {
     a,
-    .grid-menu__description {
+    .uq-grid-menu__description {
       @extend %light-palette;
 
       &:hover {
         background-color: core.$light-palette-link-color;
         color: core.$link-color;
 
-        .grid-menu__description {
+        .uq-grid-menu__description {
           background-color: core.$light-palette-link-color;
           color: core.$link-color;
         }
@@ -111,16 +133,16 @@
 }
 
 .dark-palette {
-  .grid-menu {
+  .uq-grid-menu {
     a,
-    .grid-menu__description {
+    .uq-grid-menu__description {
       @extend %dark-palette;
 
       &:hover {
         background-color: core.$link-color;
         color: core.$uq-white;
 
-        .grid-menu__description {
+        .uq-grid-menu__description {
           background-color: core.$link-color;
           color: core.$uq-white;
         }
@@ -131,7 +153,7 @@
 
 // Grid menu inside a section with background image.
 .section--background-image {
-  .grid-menu {
+  .uq-grid-menu {
     a {
       border-color: rgba(core.$uq-white, .4);
     }

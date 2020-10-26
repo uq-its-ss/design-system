@@ -4,7 +4,6 @@
   $fa-font-path: "../node_modules/font-awesome/fonts",
   $uq-bg-image-path: '../node_modules/@uqds/core/src/images'
 );
-@use "@uqds/foundation-misc/src/scss/_component" as misc;
 @use "@uqds/body/src/scss/_component" as body;
 @use '@uqds/grid/src/scss/_component' as grid;
 

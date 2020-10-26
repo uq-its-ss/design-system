@@ -1,19 +1,26 @@
 @use "@uqds/core/src/scss/global" as core;
 
-$grid-cols: 6, 8, 12;
+// Grid schema
+// name: (columns, gutter, margin)
+$schema: (
+  "base": (6, core.$space, core.$space-md),
+  "md": (8, core.$space-md, core.$space-xxxxl),
+  "xl": (12, core.$space-lg, 9.375rem)
+) !default;
 
-$gutter-width: (
-  "base": core.$space,
-  "md": core.$space-md,
-  "xl": core.$space-lg
-);
+$schema-base: map-get($map: $schema, $key: "base") !default;
+$schema-md: map-get($map: $schema, $key: "md") !default;
+$schema-xl: map-get($map: $schema, $key: "xl") !default;
+
+$shadow-column-count: 24 !default;
+$max-container-width: 71.25rem !default;
 
 /**
  * Layout containment (breakpoint driven)
  */
 @mixin layout-containment {
-  margin-left: core.$space-md - map-get($map: $gutter-width, $key: "base") / 2;
-  margin-right: core.$space-md - map-get($map: $gutter-width, $key: "base") / 2;
+  margin-left: nth($schema-base, 3) - nth($schema-base, 2) / 2;
+  margin-right: nth($schema-base, 3) - nth($schema-base, 2) / 2;
 
   // TODO: if we can perform the following checks on the parent element width
   // instead of the viewport width, we can achieve a more friendlier to use
@@ -22,26 +29,36 @@ $gutter-width: (
   // nested.
 
   // Ease into larger margin
-  @media (min-width: #{core.$screen-md + (2 * core.$space-md) - (2 * core.$space-xxxxl)}) {
+  @media (min-width: #{core.$screen-md + (2 * nth($schema-base, 3)) - (2 * nth($schema-md, 3))}) {
     margin-left: core.$space-auto;
     margin-right: core.$space-auto;
-    max-width: (core.$screen-md - 0.0625rem) - (2 * core.$space-xxxxl) + map-get($map: $gutter-width, $key: "base");
+    max-width: core.$screen-md - (2 * nth($schema-md, 3)) + nth($schema-base, 2);
   }
 
   @media #{core.$screen-md-up} {
-    margin-left: core.$space-xxxxl - map-get($map: $gutter-width, $key: "md") / 2;
-    margin-right: core.$space-xxxxl - map-get($map: $gutter-width, $key: "md") / 2;
+    margin-left: nth($schema-md, 3) - nth($schema-md, 2) / 2;
+    margin-right: nth($schema-md, 3) - nth($schema-md, 2) / 2;
     max-width: none;
   }
   
-  @media (min-width: #{core.$screen-xl + (2 * core.$space-xxxxl) - 18.75rem}) {
+  // Ease into larger margin
+  @media (min-width: #{core.$screen-xl + (2 * nth($schema-md, 3)) - (2 * nth($schema-xl, 3))}) {
     margin-left: core.$space-auto;
     margin-right: core.$space-auto;
-    max-width: core.$screen-xl - 18.75rem + map-get($map: $gutter-width, $key: "md");
+    max-width: core.$screen-xl - 2 * nth($schema-xl, 3) + nth($schema-md, 2);
   }
 
   @media (min-width: #{core.$screen-xl}) {
-    max-width: core.$screen-xl - 18.75rem + map-get($map: $gutter-width, $key: "xl");
+    margin-left: nth($schema-xl, 3) - nth($schema-xl, 2) / 2;
+    margin-right: nth($schema-xl, 3) - nth($schema-xl, 2) / 2;
+    max-width: none;
+  }
+
+  // Terminal
+  @media (min-width: #{$max-container-width + (2 * nth($schema-xl, 3))}) {
+    margin-left: core.$space-auto;
+    margin-right: core.$space-auto;
+    max-width: $max-container-width + nth($schema-xl, 2);
   }
 }
 
@@ -49,18 +66,18 @@ $gutter-width: (
  * Full-width container
  */
 @mixin layout-full-width {
-  margin-left: -(map-get($map: $gutter-width, $key: "base") / 2);
-  margin-right: -(map-get($map: $gutter-width, $key: "base") / 2);
+  margin-left: -(nth($schema-base, 2) / 2);
+  margin-right: -(nth($schema-base, 2) / 2);
   max-width: none;
 
   @media #{core.$screen-md-up} {
-    margin-left: -(map-get($map: $gutter-width, $key: "md") / 2);
-    margin-right: -(map-get($map: $gutter-width, $key: "md") / 2);
+    margin-left: -(nth($schema-md, 2) / 2);
+    margin-right: -(nth($schema-md, 2) / 2);
   }
 
   @media #{core.$screen-xl-up} {
-    margin-left: -(map-get($map: $gutter-width, $key: "xl") / 2);
-    margin-right: -(map-get($map: $gutter-width, $key: "xl") / 2);
+    margin-left: -(nth($schema-xl, 2) / 2);
+    margin-right: -(nth($schema-xl, 2) / 2);
   }
 }
 
@@ -69,24 +86,24 @@ $gutter-width: (
  */
  @function _grid-fraction-to-percent(
   $columns,
-  $column-count: nth($grid-cols, 1)) {
+  $column-count: nth($schema-base, 1)) {
 
   @return percentage($columns / $column-count);
 }
 
 /* Padding to make up gaps/gutters (horizonal) */
 @mixin grid-col-padding {
-  padding-left: map-get($map: $gutter-width, $key: "base") / 2;
-  padding-right: map-get($map: $gutter-width, $key: "base") / 2;
+  padding-left: nth($schema-base, 2) / 2;
+  padding-right: nth($schema-base, 2) / 2;
 
   @media #{core.$screen-md-up} {
-    padding-left: map-get($map: $gutter-width, $key: "md") / 2;
-    padding-right: map-get($map: $gutter-width, $key: "md") / 2;
+    padding-left: nth($schema-md, 2) / 2;
+    padding-right: nth($schema-md, 2) / 2;
   }
 
   @media #{core.$screen-xl-up} {
-    padding-left: map-get($map: $gutter-width, $key: "xl") / 2;
-    padding-right: map-get($map: $gutter-width, $key: "xl") / 2;
+    padding-left: nth($schema-xl, 2) / 2;
+    padding-right: nth($schema-xl, 2) / 2;
   }
 }
 
@@ -101,9 +118,9 @@ $gutter-width: (
  * Col span classes
  */
  @mixin grid-col-span-classes(
-  $column-count: nth($grid-cols, 1),
+  $column-count: nth($schema-base, 1),
   $breakpoint-name: null,
-  $shadow-column-count: $column-count) {
+  $shadow-column-count: $shadow-column-count) {
 
   $col-span-mod-prefix: "";
 
@@ -136,9 +153,9 @@ $gutter-width: (
  * Generate grid classes (CSS Grid implementation)
  */
 @mixin grid-row(
-  $column-count: nth($grid-cols, 1),
+  $column-count: nth($schema-base, 1),
   $breakpoint-name: null,
-  $shadow-column-count: $column-count) {
+  $shadow-column-count: $shadow-column-count) {
   
   // Flex fallback implemenation
   @include _grid-row--flex($column-count, $breakpoint-name);
@@ -151,18 +168,18 @@ $gutter-width: (
       // Using the CSS Grid gap/grid-gap property is causing overflow problems
       // with small screens and nested grids. We are using padding to implement
       // horizontal gutters instead.
-      grid-gap: map-get($map: $gutter-width, $key: "base") 0;
+      grid-gap: nth($schema-base, 2) 0;
       margin-top: 0; // required to enable a flexbox fallback
       margin-bottom: 0; // required to enable a flexbox fallback
 
       @media #{core.$screen-md-up} {
-        grid-row-gap: map-get($map: $gutter-width, $key: "md");
+        grid-row-gap: nth($schema-md, 2);
         margin-top: 0; // required to enable a flexbox fallback
         margin-bottom: 0; // required to enable a flexbox fallback
       }
 
       @media #{core.$screen-xl-up} {
-        grid-row-gap: map-get($map: $gutter-width, $key: "xl");
+        grid-row-gap: nth($schema-xl, 2);
         margin-top: 0; // required to enable a flexbox fallback
         margin-bottom: 0; // required to enable a flexbox fallback
       }
@@ -207,7 +224,7 @@ $gutter-width: (
  * Generate Flex fallback grid classes
  */
  @mixin _grid-row--flex(
-  $column-count: nth($grid-cols, 1),
+  $column-count: nth($schema-base, 1),
   $breakpoint-name: null) {
   
   $col-span-mod-prefix: "";
@@ -240,44 +257,44 @@ $gutter-width: (
  */
 @mixin grid-col-width(
   $columns,
-  $column-count: nth($grid-cols, 1)) {
+  $column-count: nth($schema-base, 1)) {
   width: _grid-fraction-to-percent($columns, $column-count)
 }
 
 @mixin grid-col-offset(
   $columns,
-  $column-count: nth($grid-cols, 1)) {
+  $column-count: nth($schema-base, 1)) {
   margin-left: _grid-fraction-to-percent($columns, $column-count);
 }
 
 /* Padding to make up gaps/gutters (vertical) */
 @mixin _grid-col-v-padding {
-  padding-top: map-get($map: $gutter-width, $key: "base") / 2;
-  padding-bottom: map-get($map: $gutter-width, $key: "base") / 2;
+  padding-top: nth($schema-base, 2) / 2;
+  padding-bottom: nth($schema-base, 2) / 2;
 
   @media #{core.$screen-md-up} {
-    padding-top: map-get($map: $gutter-width, $key: "md") / 2;
-    padding-bottom: map-get($map: $gutter-width, $key: "md") / 2;
+    padding-top: nth($schema-md, 2) / 2;
+    padding-bottom: nth($schema-md, 2) / 2;
   }
 
   @media #{core.$screen-xl-up} {
-    padding-top: map-get($map: $gutter-width, $key: "xl") / 2;
-    padding-bottom: map-get($map: $gutter-width, $key: "xl") / 2;
+    padding-top: nth($schema-xl, 2) / 2;
+    padding-bottom: nth($schema-xl, 2) / 2;
   }
 }
 
 /* Margins to normalise the gaps/gutter offset (vertical) */
 @mixin _grid-row-v-margins {
-  margin-top: -(map-get($map: $gutter-width, $key: "base") / 2);
-  margin-bottom: -(map-get($map: $gutter-width, $key: "base") / 2);
+  margin-top: -(nth($schema-base, 2) / 2);
+  margin-bottom: -(nth($schema-base, 2) / 2);
 
   @media #{core.$screen-md-up} {
-    margin-top: -(map-get($map: $gutter-width, $key: "md") / 2);
-    margin-bottom: -(map-get($map: $gutter-width, $key: "md") / 2);
+    margin-top: -(nth($schema-md, 2) / 2);
+    margin-bottom: -(nth($schema-md, 2) / 2);
   }
 
   @media #{core.$screen-xl-up} {
-    margin-top: -(map-get($map: $gutter-width, $key: "xl") / 2);
-    margin-bottom: -(map-get($map: $gutter-width, $key: "xl") / 2);
+    margin-top: -(nth($schema-xl, 2) / 2);
+    margin-bottom: -(nth($schema-xl, 2) / 2);
   }
 }

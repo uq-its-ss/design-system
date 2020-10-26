@@ -274,3 +274,13 @@ export const flexibleFullWidth = () => `
 `;
 
 flexibleFullWidth.storyName = "Flexible grid full width";
+
+export const layoutContainment = () => `
+  <div class="uqds-example-grid">
+    <div class="my-custom-container">
+      Hello world!
+    </div>
+  </div>
+`;
+
+layoutContainment.storyName = "Mixin: layout-containment";

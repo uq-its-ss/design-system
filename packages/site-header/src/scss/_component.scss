@@ -274,11 +274,11 @@
     }
 
     @media #{core.$screen-lg-up} {
-      margin: core.$space-none calc(#{map-get($map: grid.$gutter-width, $key: "md") / 2} - #{core.$space-md});
+      margin: core.$space-none calc(#{nth(grid.$schema-md, 2) / 2} - #{core.$space-md});
     }
 
     @media #{core.$screen-xl-up} {
-      margin: core.$space-none calc(#{map-get($map: grid.$gutter-width, $key: "xl") / 2} - #{core.$space-md});
+      margin: core.$space-none calc(#{nth(grid.$schema-xl, 2) / 2} - #{core.$space-md});
     }
   }
 }

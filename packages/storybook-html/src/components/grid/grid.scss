@@ -1,5 +1,5 @@
 @use '@uqds/core/src/scss/_global' as core;
-@use '@uqds/grid/src/scss/_component' as grid;
+@use '@uqds/grid/src/scss/_global' as grid;
 
 .uqds-example-grid {
   background: repeating-linear-gradient(
@@ -74,5 +74,10 @@
     + .uq-grid {
       margin-top: core.$space;
     }
+  }
+
+  // mixin usage example class
+  .my-custom-container {
+    @include grid.layout-containment;
   }
 }

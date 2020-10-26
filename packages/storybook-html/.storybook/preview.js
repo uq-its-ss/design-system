@@ -23,7 +23,12 @@ export const parameters = {
             'Base colour palette'
           ]
         ],
-        'Base',
+        'Layout',
+        [
+          'Layout system',
+          'Grid'
+        ],
+        'Components',
         [
           'Body',
           [
@@ -32,12 +37,6 @@ export const parameters = {
             'Utilities'
           ]
         ],
-        'Layout',
-        [
-          'Layout system',
-          'Grid'
-        ],
-        'Components',
         'Forms',
         [
           'Form',

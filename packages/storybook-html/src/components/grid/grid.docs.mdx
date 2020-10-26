@@ -206,3 +206,44 @@ container, you can apply the `uq-grid--full-width` modifier class.
 ```
 
 <Story height={120} id="layout-grid--flexible-full-width" />
+
+## Mixins
+
+The `@uqds/grid` package provides [*mixins*](https://sass-lang.com/documentation/at-rules/mixin)
+to help you develop your own CSS rules using Sass such that they align with our
+layout system.
+
+### `layout-containment`
+
+Modifies the `margin-[left, right]` and `max-width` properties of your element
+to contain the contents within in the design system fashion.
+
+<Story height={72} id="layout-grid--layout-containment" />
+
+```html
+<!-- custom.html -->
+
+<!-- ... -->
+
+<div class="my-custom-container">
+  Hello world!
+</div>
+
+<!-- ... -->
+```
+
+```scss
+/* custom.scss */
+
+// First, import and declare namespace for the grid mixins file 
+@use '@uqds/grid/src/scss/global' as grid;
+
+.my-custom-container {
+  // Then, use the mixin like so:
+  @include grid.layout-containment;
+  
+  // ...
+}
+
+// ...
+```

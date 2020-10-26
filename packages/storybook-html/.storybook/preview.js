@@ -34,7 +34,7 @@ export const parameters = {
         ],
         'Layout',
         [
-          'Layout',
+          'Layout system',
           'Grid'
         ],
         'Components',

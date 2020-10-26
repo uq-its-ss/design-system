@@ -7,6 +7,7 @@
 @use "@uqds/foundation-block-grid/src/scss/_component" as block-grid;
 @use "@uqds/foundation-misc/src/scss/_component" as misc;
 @use "@uqds/body/src/scss/_component" as body;
+@use '@uqds/grid/src/scss/_component' as grid;
 
 body {
   // Prevent the @uqds/body from imposing a background colour.

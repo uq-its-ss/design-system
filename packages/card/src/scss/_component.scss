@@ -1,5 +1,4 @@
 @use '@uqds/core/src/scss/global' as core;
-@use '@uqds/foundation-global/src/scss/global' as *;
 @use 'global' as *;
 @import 'font-awesome/scss/mixins';
 
@@ -70,7 +69,7 @@
   }
 
   &__content {
-    padding: $space;
+    padding: core.$space;
   }
 
   // Force image heights to be the same for cards sitting next to each other.
@@ -211,9 +210,9 @@
     .card__summary {
       display: block; // Fallback for non-webkit.
       display: -webkit-box;
-      font-size: $base-font-size;
-      line-height: $base-line-height;
-      max-height: $base-font-size * core.$line-height * $card-summary-lines-to-show; // Fallback for non-webkit.
+      font-size: core.$font-size-m;
+      line-height: core.$line-height;
+      max-height: core.$font-size-m * core.$line-height * $card-summary-lines-to-show; // Fallback for non-webkit.
       -webkit-line-clamp: $card-summary-lines-to-show;
       -webkit-box-orient: vertical;
       overflow: hidden;
@@ -256,7 +255,7 @@
     max-width: 100%;
     width: $card-square-width;
 
-    @media #{$small-only} {
+    @media #{core.$screen-md-down} {
       width: $card-full-width;
     }
 
@@ -273,7 +272,7 @@
     max-width: 100%;
     width: $card-portrait-width;
 
-    @media #{$small-only} {
+    @media #{core.$screen-md-down} {
       width: $card-full-width;
     }
 
@@ -290,7 +289,7 @@
     max-width: 100%;
     width: $card-landscape-width;
 
-    @media #{$small-only} {
+    @media #{core.$screen-md-down} {
       width: $card-full-width;
     }
 
@@ -336,12 +335,12 @@
     margin-bottom: core.$space-md;
     overflow-y: auto;
 
-    @media #{$medium-up} {
+    @media #{core.$screen-md-up} {
       height: 18rem;
     }
 
     .card__content {
-      @media #{$medium-up} {
+      @media #{core.$screen-md-up} {
         display: table-cell;
         height: 18rem;
         padding-left: core.$space-lg;
@@ -351,7 +350,7 @@
     }
 
     .card__image-container {
-      @media #{$medium-up} {
+      @media #{core.$screen-md-up} {
         padding: 0 core.$space;
         width: 50%;
       }
@@ -359,7 +358,7 @@
 
     &.card--media-right,
     %card--media-right {
-      @media #{$medium-up} {
+      @media #{core.$screen-md-up} {
         .card__image-container {
           float: right;
         }

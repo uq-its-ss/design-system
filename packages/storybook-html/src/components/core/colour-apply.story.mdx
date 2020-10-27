@@ -11,15 +11,15 @@ Colour should be applied to user interfaces in only two ways:
 - to apply the UQ brand to the user interface
 -	in functional and semantic ways such as containers for related content or red for errors. 
 
-Colour should not be added to an interface for the sole purpose of creating visual interest. Standard styles and components will provide sufficient and appropriate colour. When a user interface needs to be more visually engaging to achieve its goals, incorporate photography aligned with the brand guidelines.
+Colour should not be added to an interface for the sole purpose of creating visual interest. Standard styles and components will incorporate appropriate colour. When a user interface needs to be more visually engaging to achieve its goals, incorporate photography aligned with the brand guidelines.
 
 
 # Accessibility
 
 Use of colour must meet the following requirements:
 
--	[Sufficient colour contrast](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum) between text and background colours
--	[Colour is not used as the only visual means of conveying information](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color)
+-	[sufficient colour contrast](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum) between text and background colours
+-	[colour is not used as the only visual means of conveying information](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color).
 
 
 # UQ Purple and purple gradient
@@ -76,31 +76,31 @@ Icons should generally be the same colour as any adjacent text
     <th class="uqds-table__heading">Usage</th>
   </tr>
   <tr  class="uqds-table__row">
-    <td class="uqds-table__item"><div class="uqds-colour__palette uqds-text-bgcolor"></div></td>
+    <td class="uqds-table__item"><strong class="uqds-text-color--default">Default text</strong> <div class="uqds-colour__palette uqds-text-bgcolor"></div></td>
     <td class="uqds-table__item" data-title="Name:">Default text</td>
     <td class="uqds-table__item" data-title="Variable:"><code>$text</code></td>
     <td class="uqds-table__item" data-title="Usage:">
     <ul>
-    <li>we avoid solid black for text, it is too harsh on screens for reading</li>
-    <li>created from a darkened Neutral <code>$uq-neutral-dark80</code></li>
+    <li>We avoid solid black for text, it is too harsh on screens for reading</li>
+    <li>Created from a darkened Neutral <code>$uq-neutral-dark80</code></li>
     </ul>
     </td>
   </tr>
   <tr class="uqds-table__row">
-    <td class="uqds-table__item"><div class="uqds-colour__palette uqds-neutral-dark40"></div></td>
+    <td class="uqds-table__item"><strong class="uqds-text-color--secondary">Secondary text</strong> <div class="uqds-colour__palette uqds-neutral-dark40"></div></td>
     <td class="uqds-table__item" data-title="Name:">Secondary text</td>
     <td class="uqds-table__item" data-title="Variable:"><code>$uq-neutral-dark40</code></td>
     <td class="uqds-table__item" data-title="Usage:">
     <ul>
-    <li>used to reduce the emphasis of text</li>
-    <li>should not be used in isolation but in a supporting role to default text</li>
+    <li>Used to reduce the emphasis of text</li>
+    <li>Should not be used in isolation but in a supporting role to default text</li>
     <li>Used where emphasis and contrast is needed, e.g. titles, categories and data</li>
     </ul>
     </td>
   </tr>
   <tr class="uqds-table__row">
-    <td class="uqds-table__item"><strong class="uqds-text-color--white">White Text</strong> <div class="uqds-colour__palette uqds-colour--white"></div></td>
-    <td class="uqds-table__item" data-title="Name:">white text</td>
+    <td class="uqds-table__item"><strong class="uqds-text-color--white">White text</strong> <div class="uqds-colour__palette uqds-colour--white"></div></td>
+    <td class="uqds-table__item" data-title="Name:">White text</td>
     <td class="uqds-table__item" data-title="Variable:"><code>$uq-white</code></td>
     <td class="uqds-table__item" data-title="Usage:">
     <ul>
@@ -226,9 +226,7 @@ These colours can only be used for components which alert a user or display a st
 
 ## Light colours
 
-These can be used as background colours to dark text.
-
-Example: alerts. -- *add link eventually*
+These can be used as background colours to default text, e.g. alerts.
 
 <table class="uqds-table">
 <tbody class="uqds-table__body">
@@ -248,19 +246,59 @@ Example: alerts. -- *add link eventually*
     <td class="uqds-table__item"><div class="uqds-colour__palette uqds-colour--warning"></div></td>
     <td class="uqds-table__item" data-title="Name:">Warning</td>
     <td class="uqds-table__item" data-title="Variable:"><code>$warning-color</code></td>
-    <td class="uqds-table__item" data-title="Usage:">Warning</td>
+    <td class="uqds-table__item" data-title="Usage:">Warning; there <em>may</em> be a problem</td>
   </tr>
   <tr  class="uqds-table__row">
     <td class="uqds-table__item"><div class="uqds-colour__palette uqds-colour--danger"></div></td>
     <td class="uqds-table__item" data-title="Name:">Danger</td>
     <td class="uqds-table__item" data-title="Variable:"><code>$danger-color</code></td>
-    <td class="uqds-table__item" data-title="Usage:">Error, unavailable</td>
+    <td class="uqds-table__item" data-title="Usage:">Error, unavailable; there <em>is</em> a problem</td>
   </tr>
   <tr  class="uqds-table__row">
     <td class="uqds-table__item"><div class="uqds-colour__palette uqds-colour--info"></div></td>
     <td class="uqds-table__item" data-title="Name:">Information</td>
     <td class="uqds-table__item" data-title="Variable:"><code>$info-color</code></td>
-    <td class="uqds-table__item" data-title="Usage:">For information</td>
+    <td class="uqds-table__item" data-title="Usage:">Information that is neither positive or negative but important to know</td>
+  </tr>
+</tbody>
+</table>
+
+
+## Dark colours 
+
+These can be used on a white background or as background colours to white text, e.g. form validation errors.
+
+<table class="uqds-table">
+<tbody class="uqds-table__body">
+  <tr class="uqds-table__mobile-heading">
+    <th class="uqds-table__heading">Example</th>
+    <th class="uqds-table__heading">Name</th>
+    <th class="uqds-table__heading">Variable</th>
+    <th class="uqds-table__heading">Usage</th>
+  </tr>  
+  <tr  class="uqds-table__row">
+    <td class="uqds-table__item" data-title="Example:">Not yet defined</td>
+    <td class="uqds-table__item" data-title="Name:">Success</td>
+    <td class="uqds-table__item" data-title="Variable:">Not yet defined</td>
+    <td class="uqds-table__item" data-title="Usage:">Success, available</td>
+  </tr>
+  <tr class="uqds-table__row">
+    <td class="uqds-table__item">Not yet defined</td>
+    <td class="uqds-table__item" data-title="Name:">Warning</td>
+    <td class="uqds-table__item" data-title="Variable:">Not yet defined</td>
+    <td class="uqds-table__item" data-title="Usage:">Warning; there <em>may</em> be a problem</td>
+  </tr>
+  <tr  class="uqds-table__row">
+    <td class="uqds-table__item"><div class="uqds-colour__palette uqds-red-dark20"></div></td>
+    <td class="uqds-table__item" data-title="Name:">UQ Red Dark 40</td>
+    <td class="uqds-table__item" data-title="Variable:"><code>$uq-red-dark20</code></td>
+    <td class="uqds-table__item" data-title="Usage:">Error, unavailable; there <em>is</em> a problem</td>
+  </tr>
+  <tr  class="uqds-table__row">
+    <td class="uqds-table__item">Not yet defined</td>
+    <td class="uqds-table__item" data-title="Name:">Information</td>
+    <td class="uqds-table__item" data-title="Variable:">Not yet defined</td>
+    <td class="uqds-table__item" data-title="Usage:">Information that is neither positive or negative but important to know</td>
   </tr>
 </tbody>
 </table>

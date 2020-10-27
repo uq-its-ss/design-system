@@ -57,7 +57,7 @@ export const textWeightUtils = () => {
   `;
 };
 
-textWeightUtils.storyName = 'Text (font) weight';
+textWeightUtils.storyName = 'Text weight';
 
 export const textAlignUtils = () => {
   return `
@@ -100,6 +100,18 @@ export const backgroundColourUtils = () => {
 };
 
 backgroundColourUtils.storyName = 'Background colour';
+
+export const visibilityUtils = () => `
+  <div class="text--xl">
+    <div>.hidden <span class="hidden">🕺</span></div>
+    <div>.hidden--mobile-only <span class="hidden--mobile-only">🕺</span></div>
+    <div>.hidden--md (or .hidden--tablet) <span class="hidden--md">🕺</span></div>
+    <div>.hidden--xl (or .hidden--desktop) <span class="hidden--xl">🕺</span></div>
+    <div>.visually-hidden <span class="visually-hidden">🕺 There's a person dancing in secret. Shhhhhhhh.</span></div>
+  </div>
+`;
+
+visibilityUtils.storyName = 'Visibility';
 
 export const scrollContainerUtils = () => {
   return `

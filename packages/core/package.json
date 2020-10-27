@@ -37,7 +37,6 @@
     "url": "https://github.com/uq-its-ss/design-system/issues"
   },
   "dependencies": {
-    "compass-mixins": "^0.12.10",
     "font-awesome": "^4.7.0"
   }
 }

@@ -1,4 +1,4 @@
-@use '@uqds/core/src/scss/global' as *;
+@use '@uqds/core/src/scss/global' as core;
 @use '@uqds/foundation-global/src/scss/global' as *;
 @use 'global' as *;
 @import 'font-awesome/scss/mixins';
@@ -19,14 +19,14 @@
 
 %card,
 .card {
-  background-color: $uq-white;
-  margin-bottom: $space-md;
+  background-color: core.$uq-white;
+  margin-bottom: core.$space-md;
   position: relative;
   overflow-wrap: break-word;
   word-wrap: break-word;
 
   &__wrapper {
-    margin-bottom: $space-md;
+    margin-bottom: core.$space-md;
   }
 
   &__header {
@@ -35,21 +35,21 @@
 
   &__footer {
     .card__link-column {
-      border-top: 1px solid $uq-neutral-light40; //eee;
+      border-top: 1px solid core.$uq-neutral-light40; //eee;
 
       & + .card__link-column {
-        border-left: 1px solid $uq-neutral-light40; //eee;
+        border-left: 1px solid core.$uq-neutral-light40; //eee;
       }
     }
     .card__link {
       display: block;
-      padding: $space $space-lg $space $space; //1rem 1.8rem 1rem 1rem
+      padding: core.$space core.$space-lg core.$space core.$space; //1rem 1.8rem 1rem 1rem
       position: relative;
 
       &::after {
         @include fa-icon;
         content: $fa-var-angle-right;
-        margin-top: -$space-sm;
+        margin-top: -(core.$space-sm);
         opacity: .5;
         position: absolute;
         right: 1rem;
@@ -75,8 +75,8 @@
 
   // Force image heights to be the same for cards sitting next to each other.
   &__image-container {
-    @include background-cover();
-    background-color: $uq-neutral-light40; //eee;
+    @include core.background-cover();
+    background-color: core.$uq-neutral-light40; //eee;
     height: 18rem;
     overflow: hidden;
     position: relative;
@@ -97,7 +97,7 @@
     font-size: 1.6rem;
     font-weight: 400;
     line-height: 1.2;
-    margin-bottom: $space-sm;
+    margin-bottom: core.$space-sm;
     transition: all ease .35s;
 
     // Stop system generated divs forcing link to behave as a block element.
@@ -114,7 +114,7 @@
     &::before {
       @include fa-icon;
       content: $fa-var-map-marker;
-      margin-right: $space-sm;
+      margin-right: core.$space-sm;
     }
   }
 
@@ -133,7 +133,7 @@
     vertical-align: middle;
 
     &::before {
-      background: $uq-black;
+      background: core.$uq-black;
       content: '';
       display: block;
       height: 100%;
@@ -144,7 +144,7 @@
       width: 100%;
       z-index: 1;
 
-      @media #{$screen-xl-up} {
+      @media #{core.$screen-xl-up} {
         transition: all ease .35s;
       }
     }
@@ -163,18 +163,18 @@
     }
 
     .card__footer {
-      background: rgba($uq-black, .4);
-      bottom: $space-none;
-      left: $space-none;
+      background: rgba(core.$uq-black, .4);
+      bottom: core.$space-none;
+      left: core.$space-none;
       position: absolute;
       text-align: left;
       width: 100%;
 
       .card__link-column {
-        border-color: rgba($uq-white, .4);
+        border-color: rgba(core.$uq-white, .4);
 
         & + .card__link-column {
-          border-color: rgba($uq-white, .4);
+          border-color: rgba(core.$uq-white, .4);
         }
       }
 
@@ -184,24 +184,24 @@
     }
 
     .card__title {
-      margin-bottom: $space-none;
+      margin-bottom: core.$space-none;
 
-      @media #{$screen-xl-up} {
-        text-shadow: 0 1px 1px rgba($uq-black, .4);
+      @media #{core.$screen-xl-up} {
+        text-shadow: 0 1px 1px rgba(core.$uq-black, .4);
         transform: translate3d(0, 2rem, 0);
 
         &::after {
-          background-color: rgba($uq-black, .3);
-          border: 2px solid $uq-gold;
+          background-color: rgba(core.$uq-black, .3);
+          border: 2px solid core.$uq-gold;
           clear: both;
           content: 'View';
-          color: $uq-gold;
+          color: core.$uq-gold;
           display: table;
           font-size: 1rem;
           font-weight: 500;
-          margin: $space $space-auto $space-none; //.7rem auto 0
+          margin: core.$space core.$space-auto core.$space-none; //.7rem auto 0
           opacity: 0;
-          padding: $space-sm $space; //.3rem 1.2rem;
+          padding: core.$space-sm core.$space; //.3rem 1.2rem;
           text-transform: uppercase;
           transition: all ease .35s;
           visibility: hidden;
@@ -213,7 +213,7 @@
       display: -webkit-box;
       font-size: $base-font-size;
       line-height: $base-line-height;
-      max-height: $base-font-size * $compass-base-line-height-ratio * $card-summary-lines-to-show; // Fallback for non-webkit.
+      max-height: $base-font-size * core.$line-height * $card-summary-lines-to-show; // Fallback for non-webkit.
       -webkit-line-clamp: $card-summary-lines-to-show;
       -webkit-box-orient: vertical;
       overflow: hidden;
@@ -224,7 +224,7 @@
   // Primary link.
   &__primary-link {
     display: inline-block;
-    margin-bottom: $space-md;
+    margin-bottom: core.$space-md;
 
     &:hover,
     &:focus {
@@ -233,13 +233,13 @@
       // Background image variant with primary link.
       .card--background-image {
         .card__title {
-          @media #{$screen-xl-up} {
+          @media #{core.$screen-xl-up} {
             transform: translate3d(0, 0, 0);
           }
         }
 
         .card__title {
-          @media #{$screen-xl-up} {
+          @media #{core.$screen-xl-up} {
             &::after {
               opacity: 1;
               visibility: visible;
@@ -333,7 +333,7 @@
 
   // Horizontal layout.
   &--horizontal {
-    margin-bottom: $space-md;
+    margin-bottom: core.$space-md;
     overflow-y: auto;
 
     @media #{$medium-up} {
@@ -344,7 +344,7 @@
       @media #{$medium-up} {
         display: table-cell;
         height: 18rem;
-        padding-left: $space-lg;
+        padding-left: core.$space-lg;
         vertical-align: middle;
         width: 50%;
       }
@@ -352,7 +352,7 @@
 
     .card__image-container {
       @media #{$medium-up} {
-        padding: 0 $space;
+        padding: 0 core.$space;
         width: 50%;
       }
     }
@@ -397,13 +397,13 @@
   &--collapsed {
     .uq-grid {
       &__col {
-        padding-left: $space-none;
-        padding-right: $space-none;
+        padding-left: core.$space-none;
+        padding-right: core.$space-none;
       }
     }
 
     .card {
-      margin-bottom: $space-none;
+      margin-bottom: core.$space-none;
     }
   }
 }

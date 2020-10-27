@@ -1,17 +1,9 @@
 @forward '_partials/spacing-constants';
 @forward '_partials/text-constants';
+@use '_partials/text-constants' as *;
 @forward '_partials/colour-constants';
 @forward '_partials/space';
 @forward '_partials/media-constants';
-
-/**
- *
- * Some compass features may still be required for Foundation 5 (TODO: remove
- * this forward when Foundation and other dependencies have been stripped out).
- */
-@forward '_partials/compass' as compass-*;
-// Variables, functions, and mixins
-@use '_partials/compass' as compass;
 
 $roboto:  'Roboto', "Helvetica Neue", Helvetica, Arial, sans-serif;
 $merriweather:  'Merriweather', Georgia, serif;
@@ -24,12 +16,12 @@ $font-monospace: $courier;
 
 // Font Awesome settings
 @forward "font-awesome/scss/variables";
-$fa-font-size-base: compass.$base-font-size;
+$fa-font-size-base: $font-size-m;
 $fa-css-prefix: icon;
 
 // UQ icons settings
 @forward "../fonts/uq-icons/scss/variables";
-$uq-font-size-base: compass.$base-font-size;
+$uq-font-size-base: $font-size-m;
 $uq-css-prefix: icon;
 
 // Only base colours should be listed in this file. Mixed and modified colour should be done at the associated component or supporting file. 

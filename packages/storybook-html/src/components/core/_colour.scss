@@ -212,19 +212,19 @@
     color: $text;
   }
 
-  /* Alerts 
+  /* Alerts */
   .uqds-colour--info{
-    background-color: $alert-info-bg-color;
+    background-color: $info-color;
   }
   .uqds-colour--success{
-    background-color: $alert-success-bg-color;
+    background-color: $success-color;
   }
   .uqds-colour--warning{
-    background-color: $alert-warning-bg-color;
+    background-color: $warning-color;
   }
   .uqds-colour--danger{
-    background-color: $alert-danger-bg-color;
-  }*/ 
+    background-color: $danger-color;
+  }
 
 
   

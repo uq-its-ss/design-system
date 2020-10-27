@@ -18,8 +18,7 @@ export const parameters = {
           'Breakpoints',
           'Colour',
           [
-            'Colour usage',
-            'Purple gradient',
+            'Applying colour',
             'Base colour palette'
           ]
         ],

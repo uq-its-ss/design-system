@@ -1,6 +1,5 @@
 @use '@uqds/core/src/scss/global' as core;
 @use '@uqds/grid/src/scss/global' as grid;
-@use '@uqds/foundation-misc/src/scss/global' as fnd-misc;
 @use 'global' as *;
 
 .uq-footer {
@@ -127,12 +126,14 @@
             list-style-type: none;
             margin: core.$space-none;
             padding: core.$space-none;
+
             li {
-                padding-left: core.$spacing-xs; // first arg needs to be supplied via emitting core
+                padding-left: core.$spacing-xs;
                 
                 & + :before {
                     content: " | ";
-                    padding-right: core.$spacing-xs; // first arg needs to be supplied via emitting core
+                    padding-right: core.$spacing-xs;
+                    text-align: center;
                 }
                 
                 &:first-of-type {
@@ -144,8 +145,25 @@
     
     &__social-media {
         font-size: 1.5rem;
+
         &__list {
-            @include fnd-misc.inline-list();
+            list-style: none;
+            margin-top: 0;
+            margin-bottom: core.$space;
+            margin-left: -(core.$space-md);
+            margin-right: 0;
+            overflow: hidden;
+            padding: 0;
+
+            > li {
+                display: block;
+                float: left;
+                margin-left: core.$space-md;
+
+                > * {
+                    display: block;
+                }
+            }
         }
         &__item + .uq-footer__social-media__item::before {
             content: " ";

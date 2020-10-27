@@ -23,9 +23,6 @@ npm i @uqds/footer
 ```shell
 @uqds/footer
 ├─ @uqds/core
-├─ @uqds/grid
-│  └─ @uqds/core
-└─ @uqds/foundation-misc
-   └─ @uqds/foundation-global
-      └─ @uqds/core
+└─ @uqds/grid
+   └─ @uqds/core
 ```

@@ -38,12 +38,10 @@
     },
     "dependencies": {
         "@uqds/core": "^0.0.0",
-        "@uqds/grid": "^0.0.0",
-        "@uqds/foundation-misc": "^0.0.0"
+        "@uqds/grid": "^0.0.0"
     },
     "peerDependencies": {
         "@uqds/core": "^0.0.0",
-        "@uqds/grid": "^0.0.0",
-        "@uqds/foundation-misc": "^0.0.0"
+        "@uqds/grid": "^0.0.0"
     }
 }

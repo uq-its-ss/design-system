@@ -211,3 +211,20 @@
   .uqds-text-color{
     color: $text;
   }
+
+  /* Alerts */
+  .uqds-colour--info{
+    background-color: $info-color;
+  }
+  .uqds-colour--success{
+    background-color: $success-color;
+  }
+  .uqds-colour--warning{
+    background-color: $warning-color;
+  }
+  .uqds-colour--danger{
+    background-color: $danger-color;
+  }
+
+
+  

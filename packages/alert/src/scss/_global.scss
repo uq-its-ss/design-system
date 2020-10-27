@@ -1,10 +1,10 @@
 @use '@uqds/core/src/scss/global' as core;
 
 $alert-default-bg-color: core.$uq-neutral-light40 !default; //EFEFEF !default;
-$alert-info-bg-color: #D4F0FF !default;
-$alert-success-bg-color: #D5EECA !default;
-$alert-warning-bg-color: #FFE0AD !default;
-$alert-danger-bg-color: #F4ACAC !default;
+$alert-info-bg-color: core.$info-color !default; //#D4F0FF !default;
+$alert-success-bg-color: core.$success-color !default; //#D5EECA!default;
+$alert-warning-bg-color: core.$warning-color !default; //#FFE0AD!default;
+$alert-danger-bg-color: core.$danger-color !default; //#F4ACAC!default;
 
 $alert-font-size-sm: .875rem !default;
 $alert-font-size-md: 1rem !default;

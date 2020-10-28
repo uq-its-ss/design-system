@@ -1,7 +1,6 @@
 // Main component stylesheet
 @use '@uqds/core/src/scss/global' as core;
 @use '@uqds/grid/src/scss/global' as grid;
-@use '@uqds/foundation-global/src/scss/global' as *;
 // @use 'global' as *;
 
 //
@@ -81,7 +80,7 @@
     .section__header, .section__footer {
       text-align: center;
 
-      @media #{$large-up} {
+      @media #{core.$screen-xl-up} {
         @include grid.grid-col-padding;
         @include grid.grid-col-offset(2, 12);
         @include grid.grid-col-width(8, 12);
@@ -96,7 +95,7 @@
       align-items: center;
     }
 
-    @media #{$medium-up} {
+    @media #{core.$screen-md-up} {
       .section__header {
         @include grid.grid-col-padding;
         @include grid.grid-col-width(4, 12);
@@ -195,11 +194,11 @@
     top: 0;
     left: 0;
     // Hide background image on small devices to ensure content doesn't overflow its length and can still be seen.
-    @media #{$small-only} {
+    @media #{core.$screen-md-down} {
       display: none;
     }
     // Ensure image behind fills full width on larger screens.
-    @media #{$large-up} {
+    @media #{core.$screen-xl-up} {
       img {
         width: 100%;
       }
@@ -247,5 +246,4 @@
       z-index: 2;
     }
   }
-
 }

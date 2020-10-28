@@ -1,5 +1,10 @@
 @use '@uqds/core/src/scss/global' as core;
 @use 'global' as *;
+
+// Remove namespace for font-awesome import
+$fa-font-size-base: core.$fa-font-size-base;
+$fa-line-height-base: core.$fa-line-height-base;
+
 @import 'font-awesome/scss/mixins';
 
 // Cards
@@ -47,7 +52,7 @@
 
       &::after {
         @include fa-icon;
-        content: $fa-var-angle-right;
+        content: core.$fa-var-angle-right;
         margin-top: -(core.$space-sm);
         opacity: .5;
         position: absolute;
@@ -112,7 +117,7 @@
   &__location {
     &::before {
       @include fa-icon;
-      content: $fa-var-map-marker;
+      content: core.$fa-var-map-marker;
       margin-right: core.$space-sm;
     }
   }

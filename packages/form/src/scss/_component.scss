@@ -2,6 +2,11 @@
 @use '@uqds/grid/src/scss/global' as grid;
 @use 'legacy';
 @use 'global' as *;
+
+// Remove namespace for font-awesome import
+$fa-font-size-base: core.$fa-font-size-base;
+$fa-line-height-base: core.$fa-line-height-base;
+
 @import 'font-awesome/scss/mixins';
 
 // Variants:
@@ -472,7 +477,7 @@ textarea,
     width: 0;
     &::before {
       @include fa-icon;
-      content: $fa-var-arrows;
+      content: core.$fa-var-arrows;
       color: core.$uq-neutral-dark40; //#777
     }
   }
@@ -488,6 +493,8 @@ select[multiple='multiple'] {
   background-color: desaturate(lighten(core.$alert, 62.5%), 25%);
   border: 1px solid core.$alert;
   border-left-width: 3px;
+  padding-bottom: core.$space;
+  padding-top: core.$space;
   margin-bottom: core.$space-md;
 
   &__title {

@@ -22,7 +22,5 @@ npm i @uqds/pane
 
 ```shell
 @uqds/pane
-├─ @uqds/core
-└─ @uqds/foundation-global
-   └─ @uqds/core
+└─ @uqds/core
 ```

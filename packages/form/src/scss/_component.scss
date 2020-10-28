@@ -1,5 +1,5 @@
-@use '@uqds/core/src/scss/global' as *;
-@use '@uqds/foundation-global/src/scss/global' as *;
+@use '@uqds/core/src/scss/global' as core;
+@use '@uqds/grid/src/scss/global' as grid;
 @use 'legacy';
 @use 'global' as *;
 @import 'font-awesome/scss/mixins';
@@ -10,40 +10,40 @@
 
 .form {
   &__required {
-    color: $alert;
+    color: core.$alert;
   }
 
   &__description {
     color: $form-description-color;
-    font-size: .875rem;
+    font-size: core.$font-size-s;
     font-style: italic;
-    margin-bottom: $space;
+    margin-bottom: core.$space;
   }
 
   &__help-text {
     color: $form-description-color;
-    font-size: .875rem;
-    margin-top: $space-none;
-    margin-bottom: $space;
+    font-size: core.$font-size-s;
+    margin-top: core.$space-none;
+    margin-bottom: core.$space;
   }
 
   &__inline-error-message {
-    background-color: $alert;
-    color: $uq-white;
+    background-color: core.$alert;
+    color: core.$uq-white;
     display: block;
-    font-size: rem-calc(14px);
+    font-size: core.$font-size-s;
     font-style: normal;
-    font-weight: 400;
+    font-weight: core.$font-weight-normal;
     line-height: 1.357;
-    margin-bottom: $space;
-    padding: $space-sm;
+    margin-bottom: core.$space;
+    padding: core.$space-sm;
   }
 
   &--transparent-fieldsets {
     fieldset {
       border: 0;
-      padding: $space-none;
-      margin: $space-none;
+      padding: core.$space-none;
+      margin: core.$space-none;
     }
   }
 }
@@ -51,24 +51,24 @@
 legend {
   &.form__legend {
     &.form__legend--error {
-      color: $alert;
+      color: core.$alert;
     }
   }
 }
 
 fieldset {
   legend {
-    font-size: .875rem;
-    font-weight: 500;
-    line-height: 1.5;
-    padding: $space-none;
-    margin-bottom: $space;
+    font-size: core.$font-size-s;
+    font-weight: core.$font-weight-bold;
+    line-height: core.$line-height;
+    padding: core.$space-none;
+    margin-bottom: core.$space;
   }
 }
 
 label {
-  font-weight: 500;
-  margin-bottom: $space;
+  font-weight: core.$font-weight-bold;
+  margin-bottom: core.$space;
   white-space: normal;
 
   + input[type="text"], 
@@ -87,7 +87,7 @@ label {
   + input[type="color"], 
   + textarea,
   + select {
-    margin-top: -(rem-calc(12px));
+    margin-top: -(core.$space);
   }
 
   > input[type="text"], 
@@ -106,17 +106,17 @@ label {
   > input[type="color"], 
   > textarea,
   > select {
-    margin-bottom: $space-none;
-    margin-top: rem-calc($space-xs);
+    margin-bottom: core.$space-none;
+    margin-top: core.$space-xs;
   }
 
   &.form__label {
     &.form__label--disabled {
-      color: $uq-neutral-dark20;
+      color: core.$uq-neutral-dark20;
       cursor: not-allowed;
     }
     &.form__label--error {
-      color: $alert;
+      color: core.$alert;
       position: relative;
 
       > input[type="text"], 
@@ -138,7 +138,7 @@ label {
         &.form__input {
           &.form__input--error {
             + .form__inline-error-message {
-              margin-top: $space-none;
+              margin-top: core.$space-none;
             }
           }
         }
@@ -149,7 +149,7 @@ label {
         &.form__input {
           &.form__input--error {
             &:before {
-              background-color: $alert;
+              background-color: core.$alert;
               bottom: -4px;
               content: "";
               display: inline-block;
@@ -183,15 +183,15 @@ textarea,
 select {
   &.form__input {
     &.form__input--error {
-      border-color: $alert;
+      border-color: core.$alert;
 
       &:focus {
-        border-color: $alert;
+        border-color: core.$alert;
       }
     }
 
     + .form__inline-error-message {
-      margin-top: -($space);
+      margin-top: -(core.$space);
     }
   }
 }
@@ -200,28 +200,28 @@ input[type="checkbox"],
 input[type="radio"] {
   float: left;
   clear: left;
-  margin-bottom: $space-none;
-  margin-right: rem-calc($space-sm);
-  margin-top: rem-calc($space-xs);
+  margin-bottom: core.$space-none;
+  margin-right: core.$space-sm;
+  margin-top: core.$space-xs;
   
   + label {
-    font-weight: 300;
+    font-weight: core.$font-weight-thin;
     display: block;
-    margin-left: $space-none;
-    margin-right: $space-none;
-    margin-bottom: $space;
+    margin-left: core.$space-none;
+    margin-right: core.$space-none;
+    margin-bottom: core.$space;
     // So long labels on multiple lines don't break around the radio/checkbox.
     max-width: 80%;
     //vertical-align: top;
 
-    @media #{$medium-up} {
+    @media #{core.$screen-md-up} {
       max-width: 85%;
     }
   }
 
   &.form__input {
     &.form__input--error {
-      margin-left: $space-sm;
+      margin-left: core.$space-sm;
     }
   }
 
@@ -229,8 +229,8 @@ input[type="radio"] {
     &.form__label {
       &.form__label--error {
         &:before {
-          background-color: $alert;
-          bottom: -($space-xs);
+          background-color: core.$alert;
+          bottom: -4px;
           content: "";
           display: inline-block;
           left: 0;
@@ -305,7 +305,7 @@ input[type="reset"][readonly] {
 // errors.
 input.error,
 textarea.error {
-  margin-bottom: $space;
+  margin-bottom: core.$space;
 }
 
 input.field-add-more-submit {
@@ -323,20 +323,20 @@ input[type='reset'] {
   font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
   line-height: normal;
-  margin: $space-none $space-none $space-md;
+  margin: core.$space-none core.$space-none core.$space-md;
   position: relative;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  padding: $space $space-lg;
-  font-size: 1rem;
-  background-color: $uq-red-dark20; //#f04124
-  border-color: $uq-red-dark40; //#cf2a0e
-  color: $uq-white;
+  padding: core.$space core.$space-lg;
+  font-size: core.$font-size-m;
+  background-color: core.$uq-red-dark20; //#f04124
+  border-color: core.$uq-red-dark40; //#cf2a0e
+  color: core.$uq-white;
 
   &:hover, &:focus {
-    background-color: $uq-red-dark40; //#cf2a0e
-    color: $uq-white;
+    background-color: core.$uq-red-dark40; //#cf2a0e
+    color: core.$uq-white;
   }
 }
 
@@ -347,21 +347,21 @@ input[type='reset'] {
 // Visually connect file uploads to the upload button.
 .form-managed-file .form-file {
   background: transparent;
-  border: 1px dashed $uq-neutral; //#ddd
-  border-right: $space-none;
-  padding: $space; //0.8rem
+  border: 1px dashed core.$uq-neutral; //#ddd
+  border-right: core.$space-none;
+  padding: core.$space; //0.8rem
 }
 
 .form-radios,
 .form-checkboxes {
-  margin-bottom: $space;
+  margin-bottom: core.$space;
 }
 
 .captcha {
-  margin: $space $space-none;
+  margin: core.$space core.$space-none;
 
   img {
-    margin-bottom: $space-sm;
+    margin-bottom: core.$space-sm;
   }
 }
 
@@ -383,15 +383,15 @@ textarea,
 select {
   &.form__input {
     &.form__input--error {
-      border-color: $alert;
+      border-color: core.$alert;
 
       &:focus {
-        border-color: $alert;
+        border-color: core.$alert;
       }
     }
 
     + .form__inline-error-message {
-      margin-top: -($space);
+      margin-top: -(core.$space);
     }
   }
 }
@@ -412,7 +412,7 @@ input[type='time'],
 input[type='url'],
 input[type='color'],
 input[type='file'] {
-  @media #{$medium-up} {
+  @media #{core.$screen-md-up} {
     max-width: 100%;
     width: auto;
   }
@@ -436,7 +436,7 @@ input[type='file'] {
   input[type='url'],
   input[type='color'],
   input[type='file'] {
-    @media #{$medium-up} {
+    @media #{core.$screen-md-up} {
       width: 100%;
     }
   }
@@ -444,9 +444,9 @@ input[type='file'] {
 
 .description {
   color: $form-description-color;
-  font-size: 0.875rem;
+  font-size: core.$font-size-s;
   font-style: italic;
-  margin-bottom: $space;
+  margin-bottom: core.$space;
 }
 
 // Move description closer to input fields.
@@ -455,17 +455,17 @@ textarea,
 .resizable-textarea,
 .date-date {
   & + .description {
-    margin-top: -($space);
+    margin-top: -(core.$space);
   }
 }
 
 .field-multiple-drag {
   background: repeating-linear-gradient(
     -55deg,
-    $uq-white,
-    $uq-white 2px,
-    $uq-neutral-light20 2px,
-    $uq-neutral-light20 4px
+    core.$uq-white,
+    core.$uq-white 2px,
+    core.$uq-neutral-light20 2px,
+    core.$uq-neutral-light20 4px
   ); //#f2f2f2
 
   .handle {
@@ -473,7 +473,7 @@ textarea,
     &::before {
       @include fa-icon;
       content: $fa-var-arrows;
-      color: $uq-neutral-dark40; //#777
+      color: core.$uq-neutral-dark40; //#777
     }
   }
 }
@@ -484,35 +484,40 @@ select[multiple='multiple'] {
 }
 
 .error-summary {
-  background-color: desaturate(lighten($alert, 62.5%), 25%);
-  border: 1px solid $alert;
+  @include grid.grid-col-padding;
+  background-color: desaturate(lighten(core.$alert, 62.5%), 25%);
+  border: 1px solid core.$alert;
   border-left-width: 3px;
-  padding: $column-gutter / 2;
-  margin-bottom: $space-md;
+  margin-bottom: core.$space-md;
+
   &__title {
-    color: $body-font-color;
-    font-size: 1.125rem;
-    font-weight: 500;
-    margin: $space-none $space-none $space $space-none;
+    color: core.$text;
+    font-size: core.$font-size-l;
+    font-weight: core.$font-weight-bold;
+    margin: core.$space-none core.$space-none core.$space core.$space-none;
   }
+
   &_body {
-    color: $body-font-color;
-    font-size: $space; //.875rem
+    color: core.$text;
+    font-size: core.$space;
   }
+  
   &__list {
-    color: $body-font-color;
-    font-size: $space; //.875rem
-    margin: 0;
+    color: core.$text;
+    font-size: core.$space;
+    margin: core.$space-none;
+
     &__item {
-      margin-bottom: $space-xs;
-      line-height: 1.5;
+      margin-bottom: core.$space-xs;
+      line-height: core.$line-height;
     }
+
     a {
-      color: $alert;
+      color: core.$alert;
       text-decoration: underline;
-      font-weight: 400;
+      font-weight: core.$font-weight-normal;
       &:hover, &:focus {
-        color: darken($alert, 5%);
+        color: darken(core.$alert, 5%);
       }
     }
   }

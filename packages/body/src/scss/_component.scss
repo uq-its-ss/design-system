@@ -181,127 +181,167 @@ $use-encapsulation: false !default;
     }
   }
 
-  // Typography > text colour
-  .text--reverse {
-    color: core.$brand-reverse;
+  // Typography utilities
+  .text {
+
+    // Text colour
+    &--reverse {
+      color: core.$brand-reverse;
+
+      h1, h2, h3, h4, h5, h6 {
+        color: inherit;
+      }
+    }
+    
+    &--primary {
+      color: core.$brand-primary;
+    }
+
+    &--grey-25 {
+      color: core.$grey-25;
+    }
+
+    &--grey-60 {
+      color: core.$grey-60;
+    }
+
+    &--grey-80 {
+      color: core.$grey-80;
+    }
+
+    &--grey-90 {
+      color: core.$grey-90;
+    }
+
+    &--primary-light {
+      color: core.$brand-primary-10;
+    }
+
+    &--black {
+      color: core.$black;
+    }
+
+    &--white {
+      color: core.$white;
+    }
+
+    &--red {
+      color: core.$red;
+    }
+
+    &--purple-50 {
+      color: core.$purple-50;
+    }
+
+    // Text size
+    &--xxxxl {
+      font-size: core.$font-size-xxxxl;
+    }
+
+    &--xxxl {
+      font-size: core.$font-size-xxxl;
+    }
+    
+    &--xxl {
+      font-size: core.$font-size-xxl;
+    }
+    
+    &--xl {
+      font-size: core.$font-size-xl;
+    }
+    
+    &--l {
+      font-size: core.$font-size-l;
+    }
+    
+    &--m {
+      font-size: core.$font-size-m;
+    }
+    
+    &--s {
+      font-size: core.$font-size-s;
+    }
+    
+    &--xs {
+      font-size: core.$font-size-xs;
+    }
+
+    // Text weight
+    &--weight-normal {
+      font-weight: core.$font-weight-normal;
+    }
   
-    h1, h2, h3, h4, h5, h6 {
-      color: inherit;
+    &--weight-bold {
+      font-weight: core.$font-weight-bold;
+    }
+  
+    &--weight-medium {
+      font-weight: core.$font-weight-medium;
+    }
+
+    // Text alignment
+    &--left {
+      text-align: left;
+    }
+    
+    &--right {
+      text-align: right;
+    }
+    
+    &--center {
+      text-align: center;
+    }
+
+    // Text prettiers
+    &--uppercase {
+      text-transform: uppercase;
+    }
+    
+    &--accent {
+      font-family: core.$font-family-accent;
+      font-weight: core.$font-weight-normal;
+      font-style: italic;
+    }
+  
+    &--shadow {
+      text-shadow: 0 4px 4px core.$transparent-black-40;
     }
   }
-  
-  .text--primary {
-    color: core.$brand-primary;
-  }
-  
-  .text--grey-25 {
-    color: core.$grey-25;
-  }
-  
-  .text--grey-60 {
-    color: core.$grey-60;
-  }
-  
-  .text--grey-80 {
-    color: core.$grey-80;
-  }
-  
-  .text--grey-90 {
-    color: core.$grey-90;
-  }
-  
-  .text--primary-light {
-    color: core.$brand-primary-10;
-  }
-  
-  .text--black {
-    color: core.$black;
-  }
-  
-  .text--white {
-    color: core.$white;
-  }
-  
-  .text--red {
-    color: core.$red;
-  }
-  
-  .text--purple-50 {
-    color: core.$purple-50;
+
+  // Visibility utilities
+  .hidden {
+    display: none !important;
+
+    &--mobile-only {
+      @media #{core.$screen-md-down} {
+        display: none !important;
+      }
+    }
+
+    &--md,
+    &--tablet {
+      @media #{core.$screen-md-up} {
+        display: none !important;
+      }
+    }
+
+    &--xl,
+    &--desktop {
+      @media #{core.$screen-xl-up} {
+        display: none !important;
+      }
+    }
   }
 
-  // Typography > text size
-  .text--xxxxl {
-    font-size: core.$font-size-xxxxl;
-  }
-  
-  .text--xxxl {
-    font-size: core.$font-size-xxxl;
-  }
-  
-  .text--xxl {
-    font-size: core.$font-size-xxl;
-  }
-  
-  .text--xl {
-    font-size: core.$font-size-xl;
-  }
-  
-  .text--l {
-    font-size: core.$font-size-l;
-  }
-  
-  .text--m {
-    font-size: core.$font-size-m;
-  }
-  
-  .text--s {
-    font-size: core.$font-size-s;
-  }
-  
-  .text--xs {
-    font-size: core.$font-size-xs;
-  }
-
-  // Typography > text (font) weight
-  .text--weight-normal {
-    font-weight: core.$font-weight-normal;
-  }
-
-  .text--weight-bold {
-    font-weight: core.$font-weight-bold;
-  }
-
-  .text--weight-medium {
-    font-weight: core.$font-weight-medium;
-  }
-
-  // Typography > text alignment
-  .text--left {
-    text-align: left;
-  }
-  
-  .text--right {
-    text-align: right;
-  }
-  
-  .text--center {
-    text-align: center;
-  }
-  
-  // Typography > text prettiers
-  .text--uppercase {
-    text-transform: uppercase;
-  }
-  
-  .text--accent {
-    font-family: core.$font-family-accent;
-    font-weight: core.$font-weight-normal;
-    font-style: italic;
-  }
-
-  .text--shadow {
-    text-shadow: 0 4px 4px core.$transparent-black-40;
+  .visually-hidden {
+    position: absolute !important;
+    overflow: hidden;
+    clip: rect(1px,1px,1px,1px);
+    width: 1px;
+    height: 1px;
+    word-wrap: normal;
+    margin: 0;
+    padding: 0;
   }
 
   // Table

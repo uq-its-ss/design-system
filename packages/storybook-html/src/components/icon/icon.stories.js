@@ -5,7 +5,12 @@ import './icon.scss';
 import iconHTML from './icon.html';
 
 export default {
-  title: 'Components/Icon'
+  title: 'Components/Icon',
+  parameters: {
+    previewTabs: {
+      canvas: {hidden: false}
+    }
+  }
 };
 
 export const icon = () => {

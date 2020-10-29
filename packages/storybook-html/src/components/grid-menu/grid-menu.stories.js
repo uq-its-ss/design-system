@@ -19,7 +19,10 @@ export default {
     docs: {
       page: docs
     },
-    layout: "padded"
+    layout: "padded",
+    previewTabs: {
+      canvas: {hidden: false}
+    }
   }
 };
 

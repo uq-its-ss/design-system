@@ -5,7 +5,12 @@ import './pane.scss';
 import paneHTML from './pane.html';
 
 export default {
-  title: 'Components/Pane'
+  title: 'Components/Pane',
+  parameters: {
+    previewTabs: {
+      canvas: {hidden: false}
+    }
+  }
 };
 
 export const all = () => {

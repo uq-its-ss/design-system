@@ -25,6 +25,9 @@ export default {
       values: [
         { name: 'UQ Neutral 1', value: '#D7D1CC' }
       ]
+    },
+    previewTabs: {
+      canvas: {hidden: false}
     }
   }
 };

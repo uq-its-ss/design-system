@@ -7,7 +7,10 @@ export default {
       docs: {
         inlineStories: false
       },
-      layout: 'padded'
+      layout: 'padded',
+      previewTabs: {
+        canvas: {hidden: false}
+      }
     }
 };
 

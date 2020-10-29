@@ -10,6 +10,9 @@ export default {
   parameters: {
     docs: {
       page: docs
+    },
+    previewTabs: {
+      canvas: {hidden: false}
     }
   }
 };

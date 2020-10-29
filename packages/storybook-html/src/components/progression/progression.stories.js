@@ -13,6 +13,9 @@ export default {
     docs: {
       page: docs,
       inlineStories: false
+    },
+    previewTabs: {
+      canvas: {hidden: false}
     }
   }
 };

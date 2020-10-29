@@ -6,7 +6,12 @@ import alertHTML from './alert.html';
 
 export default {
   title: 'Components/Alert',
-  parameters: { layout: "fullscreen" }
+  parameters: {
+    layout: "fullscreen",
+    previewTabs: {
+      canvas: {hidden: false}
+    }
+  }
 };
 
 export const all = () => {

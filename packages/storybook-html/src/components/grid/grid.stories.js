@@ -10,7 +10,10 @@ export default {
       page: docs,
       inlineStories: false
     },
-    layout: "fullscreen"
+    layout: "fullscreen",
+    previewTabs: {
+      canvas: {hidden: false}
+    }
   }
 };
 

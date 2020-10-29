@@ -22,7 +22,5 @@ npm i @uqds/card
 
 ```shell
 @uqds/card
-├─ @uqds/core
-└─ @uqds/foundation-global
-   └─ @uqds/core
+└─ @uqds/core
 ```

@@ -22,7 +22,5 @@ npm i @uqds/sections
 
 ```shell
 @uqds/sections
-├─ @uqds/core
-└─ @uqds/foundation-global
-   └─ @uqds/core
+└─ @uqds/core
 ```

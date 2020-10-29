@@ -1,6 +1,10 @@
-@use '@uqds/core/src/scss/global' as *;
-@use '@uqds/foundation-global/src/scss/global' as *;
+@use '@uqds/core/src/scss/global' as core;
 @use 'global' as *;
+
+// Remove namespace for uq-icons import
+$uq-font-size-base: core.$uq-font-size-base;
+$uq-icons: core.$uq-icons;
+
 @import '@uqds/core/src/fonts/uq-icons/scss/mixins';
 
 // Accordion / Toggle style
@@ -17,14 +21,14 @@
 .accordion {
   border-bottom: 1px solid $accordion-border-color;
   list-style: none;
-  margin-bottom: $space-md;
+  margin-bottom: core.$space-md;
   overflow: hidden;
-  padding: $space-none;
+  padding: core.$space-none;
 
   // Accordion item.
   &__item {
     border-top: 1px solid $accordion-border-color;
-    margin-bottom: $space-none;
+    margin-bottom: core.$space-none;
   }
 
   // Accordion title / toggle button.
@@ -35,24 +39,24 @@
     border-radius: 0;
     border-style: solid;
     border-width: 0;
-    color: $text;
+    color: core.$text;
     cursor: pointer;
     display: inline-block;
-    font-family: $font-body;
+    font-family: core.$font-body;
     font-size: 1.2rem;
     font-weight: 400;
     line-height: normal;
-    margin: $space-none;
-    padding: $space $space-lg $space $space-none;
+    margin: core.$space-none;
+    padding: core.$space core.$space-lg core.$space core.$space-none;
     position: relative;
     text-align: left;
     text-decoration: none;
     transition: all ease .2s;
     width: 100%;
 
-    @media #{$medium-up} {
+    @media #{core.$screen-md-up} {
       font-size: 1.5rem;
-      padding: $space $space-xxl $space $space;
+      padding: core.$space core.$space-xxl core.$space core.$space;
     }
 
     // Closed state.
@@ -62,23 +66,23 @@
       float: right;
       font-size: 1.2rem;
       font-weight: 100;
-      margin-right: -($space-lg);
-      margin-top: $space-xs; //.1rem
+      margin-right: -(core.$space-lg);
+      margin-top: core.$space-xs; //.1rem
 
-      @media #{$medium-up} {
-        margin-top: $space-xs; //.3rem
+      @media #{core.$screen-md-up} {
+        margin-top: core.$space-xs; //.3rem
       }
     }
 
     &:focus,
     &:hover {
-      color: $body-font-color;
+      color: core.$text;
       background-color: $accordion-title-bg;
     }
 
     &:focus {
       outline: 0 none;
-      color: $link-color;
+      color: core.$link-color;
       text-decoration: underline;
     }
 
@@ -107,12 +111,12 @@
   // Accordion content
   &__content {
     overflow: hidden;
-    padding: $space-none;
+    padding: core.$space-none;
     word-wrap: break-word;
     transition: height 200ms ease;  
 
-    @media #{$medium-up} {
-      padding: $space-none $space;
+    @media #{core.$screen-md-up} {
+      padding: core.$space-none core.$space;
     }
 
     &:not(.accordion__content--active) {
@@ -120,7 +124,7 @@
     }
 
     p:first-of-type {
-      margin-top: $space-none;
+      margin-top: core.$space-none;
     }
   }
 
@@ -148,7 +152,7 @@
 
   // No bottom spacing variant.
   &--no-bottom-spacing {
-    margin-bottom: $space-none;
+    margin-bottom: core.$space-none;
   }
 
   // Small toggle variant.
@@ -157,7 +161,7 @@
       &__toggle {
         font-size: 1.1rem;
 
-        @media #{$medium-up} {
+        @media #{core.$screen-md-up} {
           font-size: 1.2rem;
         }
       }

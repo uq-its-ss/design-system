@@ -1,4 +1,4 @@
-// Variables, functions, and mixins
+@use '@uqds/core/src/scss/global' as core;
 
 $card-square-height: 22rem;
 $card-square-width: 22rem;
@@ -9,3 +9,4 @@ $card-landscape-width: 34rem;
 $card-full-height: 22rem;
 $card-full-width: 134rem;
 $card-summary-lines-to-show: 4;
+$card-shaded-bg: core.$uq-neutral-light20;

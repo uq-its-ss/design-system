@@ -39,11 +39,6 @@
   },
   "dependencies": {
     "@uqds/core": "^0.0.0",
-    "@uqds/foundation-global": "^0.0.0",
     "domready": "^1.0.8"
-  },
-  "peerDependencies": {
-    "@uqds/core": "^0.0.0",
-    "@uqds/foundation-global": "^0.0.0"
   }
 }

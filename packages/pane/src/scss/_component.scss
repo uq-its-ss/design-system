@@ -1,5 +1,4 @@
 @use '@uqds/core/src/scss/global' as core;
-@use '@uqds/foundation-global/src/scss/global' as *;
 @use 'global' as *;
 
 //
@@ -131,14 +130,6 @@
 
 // Pane grid
 .pane-grid {
-  .pane {
-    // TODO: Remove this once we've upgraded to Foundation 5.52 which introduces media queries for data-equalizer
-    // http://foundation.zurb.com/sites/docs/v/5.5.3/components/equalizer.html
-    @media #{$small-only} {
-      height: auto !important; // Override equal height when on mobile and panes are stacked in a single column
-    }
-  }
-
   &--shaded {
     .pane {
       @include pane-shaded;
@@ -191,7 +182,7 @@
   .row {
     &::before,
     &::after {
-      @media #{$medium-only}{
+      @media #{core.$screen-md-up}{
         clear: left;
       }
     }

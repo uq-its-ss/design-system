@@ -11,7 +11,7 @@
     box-sizing: border-box;
     font-family: core.$font-body;
     font-weight: core.$font-weight-thin;
-    line-height: core.$compass-base-line-height-ratio;
+    line-height: core.$line-height;
 
     *, *:before, *:after {
         box-sizing: border-box;
@@ -29,7 +29,7 @@
             padding-top: core.$space;
             padding-bottom: core.$space;
 
-            @media #{core.$screen-lg-up} {
+            @media #{core.$screen-xl-up} {
                 padding-top: core.$space-md;
                 padding-bottom: core.$space-md;
             }
@@ -42,6 +42,11 @@
                 margin-top: core.$space-none;
                 padding-left: core.$space-none;
 
+                @media #{core.$screen-lg-up} {
+                    padding-left: core.$space-lg;
+                    white-space: nowrap;
+                }
+
                 li {
                     display: none;
 
@@ -49,6 +54,7 @@
                         display: inline;
                         margin-left: core.$space-md;
                         word-wrap: break-word;
+
                         &:first-of-type {
                             margin-left: core.$space-none;
                         }
@@ -133,7 +139,7 @@
                 font-style: italic;
                 font-weight: core.$font-weight-normal;
 
-                @media #{core.$screen-lg-up} {
+                @media #{core.$screen-xl-up} {
                     font-size: core.$font-size-xl;
                 }
             }
@@ -198,7 +204,11 @@
                     border-radius: 2px;
                     background-color: core.$uq-white;
                     background-position: 1rem;
-                    margin-bottom: 1.5rem;
+                    margin-bottom: core.$space;
+
+                    @media #{core.$screen-xl-up} {
+                        margin-bottom: core.$space-md;
+                    }
                 }
 
                 &__input {
@@ -337,22 +347,25 @@
 
     .logo--large {
         display: none;
-        @media #{core.$screen-lg-up} {
-            display: block;
-        }
-        & img {
+
+        img {
             height: 2.625rem;
             width: 17.875rem;
+        }
+
+        @media #{core.$screen-xl-up} {
+            display: block;
         }
     }
 
     .logo--small {
-        @media #{core.$screen-lg-up} {
-            display: none;
-        }
-        & img {
+        img {
             height: 2.625rem;
             width: 10rem;
+        }
+
+        @media #{core.$screen-xl-up} {
+            display: none;
         }
     }
 

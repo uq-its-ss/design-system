@@ -1,1 +1,1 @@
-import './titleAddon';
+import './custom/addons/titleAddon';

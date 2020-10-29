@@ -23,8 +23,6 @@ npm i @uqds/alert
 ```shell
 @uqds/alert
 ├─ @uqds/core
-├─ @uqds/grid
-│  └─ @uqds/core
-└─ @uqds/foundation-global
+└─ @uqds/grid
    └─ @uqds/core
 ```

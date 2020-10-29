@@ -38,11 +38,6 @@
   },
   "dependencies": {
     "@uqds/core": "^0.0.0",
-    "@uqds/foundation-global": "^0.0.0",
     "font-awesome": "^4.7.0"
-  },
-  "peerDependencies": {
-    "@uqds/core": "^0.0.0",
-    "@uqds/foundation-global": "^0.0.0"
   }
 }

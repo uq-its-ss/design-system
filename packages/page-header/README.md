@@ -22,7 +22,5 @@ npm i @uqds/page-header
 
 ```shell
 @uqds/page-header
-├─ @uqds/core
-└─ @uqds/foundation-global
-   └─ @uqds/core
+└─ @uqds/core
 ```

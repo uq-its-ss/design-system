@@ -6,9 +6,9 @@
   color: core.$text;
   box-sizing: border-box;
   font-family: core.$font-body;
-  font-size: core.$compass-base-font-size;
+  font-size: core.$font-size-m;
   font-weight: core.$font-weight-normal;
-  line-height: core.$compass-base-line-height-ratio;
+  line-height: core.$line-height;
 
   *, *:before, *:after {
     box-sizing: border-box;

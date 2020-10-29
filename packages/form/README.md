@@ -23,6 +23,6 @@ npm i @uqds/form
 ```shell
 @uqds/form
 ├─ @uqds/core
-└─ @uqds/foundation-global
+└─ @uqds/grid
    └─ @uqds/core
 ```

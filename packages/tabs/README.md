@@ -22,7 +22,5 @@ npm i @uqds/tabs
 
 ```shell
 @uqds/tabs
-├─ @uqds/core
-└─ @uqds/foundation-global
-   └─ @uqds/core
+└─ @uqds/core
 ```

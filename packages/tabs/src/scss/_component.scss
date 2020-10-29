@@ -1,5 +1,4 @@
 @use '@uqds/core/src/scss/global' as core;
-@use '@uqds/foundation-global/src/scss/global' as *;
 @use 'global' as *;
 
 // Tabs
@@ -22,7 +21,10 @@
   .tabs {
     padding: core.$space-none;
     margin: core.$space-none;
-    @include clearfix;
+
+    // Clearfix from Foundation 5
+    &:before, &:after { content: " "; display: table; }
+    &:after { clear: both; }
 
     // Foundaton classname for li wrapping tab title
     .tab-title {
@@ -55,11 +57,11 @@
       // tab sub-title
       .tabs__sub-title {
         display: block;
-        font-weight: 400;
-        font-size: 0.875rem;
+        font-weight: core.$font-weight-normal;
+        font-size: 0.6875rem;
 
-        @media #{$small-only} {
-          font-size: 0.6875rem;
+        @media #{core.$screen-md-up} {
+          font-size: core.$font-size-s;
         }
       }
     }
@@ -115,7 +117,7 @@
 
       // Foundaton classname for li wrapping tab title
       .tab-title {
-        font-weight: 500;
+        font-weight: core.$font-weight-bold;
 
         // active tab
         &.active {
@@ -140,7 +142,7 @@
 
       // Foundaton classname for li wrapping tab title
       .tab-title {
-        font-weight: 500;
+        font-weight: core.$font-weight-bold;
         border: 1px solid $panel-border;
         border-left: 0;
         background: $app-wrapper;
@@ -168,7 +170,7 @@
 
       // Foundaton classname for li wrapping tab title
       .tab-title {
-        font-weight: 300;
+        font-weight: core.$font-weight-thin;
         border-right: 1px solid $panel-border;
 
         // active tab

@@ -9,6 +9,9 @@ export default {
         { name: 'Dark', value: '#000000' },
         { name: 'UQ purple', value: '#51247a' }
       ]
+    },
+    previewTabs: {
+      canvas: {hidden: false}
     }
   }
 };

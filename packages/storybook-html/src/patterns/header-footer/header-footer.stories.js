@@ -12,7 +12,10 @@ import footerHTML from '../../components/footer/footer.html';
 export default {
     title: 'Patterns/Header - site title - content - footer',
     parameters: {
-      layout: "fullscreen"
+      layout: "fullscreen",
+      previewTabs: {
+        canvas: {hidden: false}
+      }
     }
 };
 

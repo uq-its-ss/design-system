@@ -12,6 +12,9 @@ export default {
     layout: "padded",
     docs: {
       inlineStories: false
+    },
+    previewTabs: {
+      canvas: {hidden: false}
     }
   }
 };

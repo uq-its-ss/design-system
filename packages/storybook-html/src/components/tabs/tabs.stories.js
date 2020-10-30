@@ -7,7 +7,10 @@ import tabsHTML from './tabs.html';
 export default {
   title: 'Components/Tabs',
   parameters: {
-    layout: "padded"
+    layout: "padded",
+    previewTabs: {
+      canvas: {hidden: false}
+    }
   }
 };
 

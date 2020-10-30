@@ -5,7 +5,12 @@ import './card.scss';
 import cardsHTML from './card.html';
 
 export default {
-  title: 'Components/Cards'
+  title: 'Components/Cards',
+  parameters: {
+    previewTabs: {
+      canvas: {hidden: false}
+    }
+  }
 };
 
 export const all = () => {

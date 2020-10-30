@@ -6,7 +6,12 @@ import listsHTML from './lists.html';
 
 
 export default {
-  title: 'Components/Lists'
+  title: 'Components/Lists',
+  parameters: {
+    previewTabs: {
+      canvas: {hidden: false}
+    }
+  }
 };
 
 export const all = () => {

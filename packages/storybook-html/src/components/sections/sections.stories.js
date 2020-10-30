@@ -16,7 +16,10 @@ export default {
     docs: {
       page: docs
     },
-    layout: "fullscreen"
+    layout: "fullscreen",
+    previewTabs: {
+      canvas: {hidden: false}
+    }
   }
 };
 

@@ -8,7 +8,10 @@ import textAreaHTML from './text-area.html';
 import selectHTML from './select.html';
 
 export default {
-  title: 'Forms/Form'
+  title: 'Forms/Form',
+  previewTabs: {
+    canvas: {hidden: false}
+  }
 };
 
 export const kitchenSink = () => {

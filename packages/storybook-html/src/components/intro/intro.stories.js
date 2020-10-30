@@ -12,7 +12,12 @@ import kitchenSinkHTML from './kitchen-sink.html';
 export default {
   title: 'Gallery & Examples/Kitchen Sink',
   parameters: {
-    layout: "fullscreen"
+    layout: "fullscreen",
+    viewMode: 'story',
+    previewTabs: {
+      'storybook/docs/panel': {hidden: true},
+      canvas: {hidden: false}
+    }
   }
 };
 

@@ -19,7 +19,9 @@ export default {
     },
     layout: 'padded'
   },
-  //decorators: [expandedStory]
+  previewTabs: {
+    canvas: {hidden: false}
+  }
 };
 
 export const table = () => {

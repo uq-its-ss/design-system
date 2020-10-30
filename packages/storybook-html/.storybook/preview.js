@@ -2,6 +2,11 @@ import './preview.scss';
 
 export const parameters = {
   layout: 'centered',
+  viewMode: 'docs', // There's a bug, reproducable upon first-load of Storybook, where viewMode is ignored
+  previewTabs: {
+    'storybook/docs/panel': {index: -1},
+    canvas: {hidden: true}
+  },
   options: {
     storySort: {
       order: [

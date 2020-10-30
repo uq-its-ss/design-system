@@ -5,7 +5,12 @@ import './blockquote.scss';
 import blockquoteHTML from './blockquote.html';
 
 export default {
-  title: 'Components/Blockquote'
+  title: 'Components/Blockquote',
+  parameters: {
+    previewTabs: {
+      canvas: {hidden: false}
+    }
+  }
 };
 
 export const blockquote = () => {

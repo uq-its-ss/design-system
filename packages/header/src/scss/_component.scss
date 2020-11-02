@@ -92,9 +92,9 @@
                             }
                         }
 
-                        &:focus {
+                        /*&:focus {
                             outline: none;
-                        }
+                        }*/
                     }
                 }
 
@@ -114,10 +114,12 @@
         .nav-search {
             height: 0;
             overflow: hidden;
+            visibility: hidden;
             transition: height .25s, padding-top .25s, padding-bottom .25s;
 
             &--open {
                 height: auto;
+                visibility: visible;
                 padding-top: core.$space-sm;
                 padding-bottom: core.$space-sm;
             }

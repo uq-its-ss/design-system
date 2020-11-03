@@ -15,7 +15,29 @@ module.exports = {
     // You can change the configuration based on that.
     // 'PRODUCTION' is used when building the static version of storybook.
 
-    // Make whatever fine-grained changes you need
+    /* 
+      Add JSX syntax support
+      ----------------------
+    */
+    // Find the matching JavaScript module rule
+    const jsRule = config.module.rules.find(rule => '.js'.match(rule.test));
+
+    if(jsRule) {
+      const options = jsRule.use[0].options;
+      
+      // Ensure the rule has presets
+      if(!options.hasOwnProperty('presets')) {
+        options.presets = [];
+      }
+
+      // Add Babel’s preset-react to the rule’s presets
+      options.presets.push('@babel/preset-react');
+    }
+
+    /* 
+      Add Sass/SCSS file import support
+      ---------------------------------
+    */
     config.module.rules.push(
       {
         test: /\.s[ac]ss$/i,
@@ -49,7 +71,11 @@ module.exports = {
         ]
       }
     );
-
+    
+    /* 
+      From v6 migration
+      -----------------
+    */
     // Temporary workaround: https://github.com/storybookjs/storybook/issues/11255#issuecomment-673899817
     // Due to breaking change during Storybook v5.3 to v6.0 migration
     config.resolve.alias['core-js/modules'] = path.resolve(__dirname, '..', 'node_modules/core-js/modules');

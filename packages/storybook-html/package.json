@@ -29,9 +29,7 @@
     "sass": "^1.27.0",
     "sass-loader": "^8.0.2",
     "ts-loader": "^6.2.1",
-    "typescript": "^3.8.2"
-  },
-  "dependencies": {
+    "typescript": "^3.8.2",
     "@uqds/accordion": "^0.0.0",
     "@uqds/alert": "^0.0.0",
     "@uqds/blockquote": "^0.0.0",

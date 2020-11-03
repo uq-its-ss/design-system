@@ -1,8 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { DocsContainer } from '@storybook/addon-docs/blocks';
-import Toc from './Toc';
 import tocbot from 'tocbot';
-import './TocDocs.scss';
 
 const tocConfiguration = {
   tocSelector: '.js-toc',
@@ -34,7 +32,6 @@ const TocDocs = (props) => {
   
   return (
     <>
-      <Toc />
       <DocsContainer {...props} />
     </>
   )

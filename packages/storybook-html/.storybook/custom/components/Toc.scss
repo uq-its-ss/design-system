@@ -1,83 +1,91 @@
 @use '@uqds/core/src/scss/_global' as core;
 @use 'tocbot/src/scss/tocbot';
 
-$toc-width: 16rem;
-
+// tocbot style overrides
 .uqds-toc {
-  padding: core.$space-lg core.$space-none core.$space-none core.$space-none;
   box-sizing: border-box;
   background-color: core.$uq-white;
+  padding: core.$space-lg core.$space-none core.$space-none core.$space-none;
+  margin-bottom: core.$space;
 
-  > .toc-list {
-    padding-left: core.$space-none;
-  }
+  &__toc {
+    font-size: core.$font-size-s;
+    margin-left: -(core.$space-sm);
 
-  a.toc-link {
-    margin: core.$space-xs core.$space-none;
-    color: core.$link;
-    padding-left: core.$space;
-    padding-right: core.$space;
-    text-indent: -(core.$space);
-  
-    &::before {
-      width: 0;
+    .toc-list {
+      padding-left: core.$space-sm;
+
+      &-item {
+        margin: core.$space-xs core.$space-none;
+      }
     }
-  
-    &:hover,
-    &:focus {
-      color: core.$link-hover;
-    }
-  }
 
-  .is-active-link {
-    font-weight: core.$font-weight-normal;
+    a.toc-link {
+      color: core.$link;
+      text-indent: -(core.$space);
+    
+      &::before {
+        width: 0;
+      }
+    
+      &:hover,
+      &:focus {
+        color: core.$link-hover;
+      }
+    }
+
+    .is-active-link {
+      font-weight: core.$font-weight-normal;
+    }
   }
 }
 
-@media only screen and (min-width: #{core.$screen-xl + $toc-width * 2}) {
+@media only screen and (min-width: #{core.$screen-md + 16.5rem}) {
   .uqds-toc {
-    width: $toc-width;
+    width: 12.5rem;
     position: fixed;
     top: 0;
     right: 0;
     padding-top: core.$space-ul;
     height: 100%;
-    font-size: core.$font-size-s;
 
-    > .toc-list {
-      padding-left: core.$space;
+    &__toc {
+      margin-left: -(core.$space);
 
-      &:last-child {
-        margin-bottom: core.$space-none;
+      .toc-list {
+        padding-left: core.$space;
       }
-    }
 
-    a.toc-link {
-      display: inline-block;
-      margin: core.$space-xs core.$space-none;
-      text-decoration: none;
-      transition: all 0.125s ease-in;
-      color: core.$text;
-  
-      &::before {
-        width: core.$space-xs;
-      }
-  
-      &:hover,
-      &:focus {
+      a.toc-link {
+        display: inline-block;
+        margin: core.$space-xs core.$space-none;
+        padding-left: core.$space;
+        padding-right: core.$space;
+        text-decoration: none;
+        transition: all 0.125s ease-in;
         color: core.$text;
+    
+        &::before {
+          width: core.$space-xs;
+        }
+    
+        &:hover,
+        &:focus {
+          color: core.$text;
+        }
       }
-    }
-  
-    .is-active-link {
-      font-weight: core.$font-weight-bold;
-  
-      &::before {
-        background-color: core.$uq-purple;
+    
+      .is-active-link {
+        font-weight: core.$font-weight-bold;
+    
+        &::before {
+          background-color: core.$uq-purple;
+        }
       }
     }
 
-    .toc-heading {
+    &__heading {
+      // Visually hide heading
       position: absolute;
       width: 1px;
       height: 1px;

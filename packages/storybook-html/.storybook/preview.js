@@ -1,3 +1,4 @@
+import TocDocs from './custom/components/TocDocs';
 import './preview.scss';
 
 export const parameters = {
@@ -6,6 +7,9 @@ export const parameters = {
   previewTabs: {
     'storybook/docs/panel': {index: -1},
     canvas: {hidden: true}
+  },
+  docs: {
+    container: TocDocs
   },
   options: {
     storySort: {

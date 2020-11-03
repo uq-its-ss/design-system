@@ -1,5 +1,6 @@
 @use '@uqds/core/src/scss/global' as *;
 
+/* colour table custom */ 
 .uqds-colour__palette {
   width: 100%;
   border-radius: 0.25rem;
@@ -8,73 +9,23 @@
 .uqds-colour__palette--large {
   padding: $space-xl;
 }
-
-
-/* Table version */ 
-.uqds-table {
-  width:100%;
-  border: none;
-  border-collapse:collapse;
+/* Colour table custom sizing */ 
+.uqds-table--colour .uqds-table__item {
+  width: 9.375rem; /*  set all table cells to 150px */
 }
-.uqds-table .uqds-table__mobile-heading {
-  border:none;
+.uqds-table--colour .uqds-table__item[data-title="Variable:"] {
+  width: 13.75rem;
 }
-.uqds-table .uqds-table__heading {
-  font-weight:500;
-  text-align:left;
-  color:#51247a;
-  background-color:#f1f1f1;
-  border:none; /* overrride storybook default */
-  border-bottom:1px solid #e2e2e2;
-  padding:1rem;
-  vertical-align:top;
- }
- .uqds-table .uqds-table__item {
-  padding:1rem;
-  border: none;
-  border-bottom:1px solid #e2e2e2;
-  vertical-align:top;
- }
- .uqds-table .uqds-table__row:nth-of-type(2n) {
-   background-color: #fff;   /* overrride storybook default */
- }
+.uqds-table--colour .uqds-table__item[data-title="HEX:"] {
+  width: 6rem;
+}
+.uqds-table--colour .uqds-table__item[data-title="Usage:"] {
+  width: auto;
+}
 
  @media (max-width:800px) {
-
-  /* Table card */
-  .uqds-table .uqds-table__body {
-    display:grid;
-    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
-    /* padding: 32px; /* Remove once in afinished layout - only for testing. */
-    column-gap: 32px;
-    row-gap: 32px;
-  }
-  .uqds-table .uqds-table__mobile-heading, .uqds-table .uqds-table__heading {
-    display:none;
-  }
-  /* table content */
- .uqds-table .uqds-table__row  {
-   display: grid;
-    align-items: stretch;
-    grid-template-columns: 1fr;
-    row-gap: 8px;
-    /* border:1px solid #e2e2e2; */
-    border:none; /* overrride storybook default */
-    border: 1px solid #f1f1f1;
-    border-radius: .25rem;
-    box-shadow: 0 .25rem .5rem rgba(24,24,24,.05);
-    padding: 1rem;
-  }
-  .uqds-table .uqds-table__item, .uqds-table .uqds-table__heading {
-    border: none;
-    padding: 0;
-  }
-  /* colour styles */
-  .uqds-table .uqds-table__item:before {
-    content: attr(data-title);
-    display: block;
-    color:rgb(111, 111, 111);
-    font-size: 0.875rem;
+  .uqds-table--colour .uqds-table__item {
+    width: auto;
   }
   .uqds-colour__palette {
     width: 100%;
@@ -83,9 +34,7 @@
     /*width: 32px;
     border-radius: 100%;*/
   }
-
 }
-
 
   /* colour styles */
 

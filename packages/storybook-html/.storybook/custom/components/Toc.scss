@@ -1,0 +1,99 @@
+@use '@uqds/core/src/scss/_global' as core;
+@use 'tocbot/src/scss/tocbot';
+
+// tocbot style overrides
+.uqds-toc {
+  box-sizing: border-box;
+  background-color: core.$uq-white;
+  padding: core.$space-lg core.$space-none core.$space-none core.$space-none;
+  margin-bottom: core.$space;
+
+  &__toc {
+    font-size: core.$font-size-s;
+    margin-left: -(core.$space-sm);
+
+    .toc-list {
+      padding-left: core.$space-sm;
+
+      &-item {
+        margin: core.$space-xs core.$space-none;
+      }
+    }
+
+    a.toc-link {
+      color: core.$link;
+      text-indent: -(core.$space);
+    
+      &::before {
+        width: 0;
+      }
+    
+      &:hover,
+      &:focus {
+        color: core.$link-hover;
+      }
+    }
+
+    .is-active-link {
+      font-weight: core.$font-weight-normal;
+    }
+  }
+}
+
+@media only screen and (min-width: #{core.$screen-md + 16.5rem}) {
+  .uqds-toc {
+    width: 12.5rem;
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding-top: core.$space-ul;
+    height: 100%;
+
+    &__toc {
+      margin-left: -(core.$space);
+
+      .toc-list {
+        padding-left: core.$space;
+      }
+
+      a.toc-link {
+        display: inline-block;
+        margin: core.$space-xs core.$space-none;
+        padding-left: core.$space;
+        padding-right: core.$space;
+        text-decoration: none;
+        transition: all 0.125s ease-in;
+        color: core.$text;
+    
+        &::before {
+          width: core.$space-xs;
+        }
+    
+        &:hover,
+        &:focus {
+          color: core.$text;
+        }
+      }
+    
+      .is-active-link {
+        font-weight: core.$font-weight-bold;
+    
+        &::before {
+          background-color: core.$uq-purple;
+        }
+      }
+    }
+
+    &__heading {
+      // Visually hide heading
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+    }
+  }
+}

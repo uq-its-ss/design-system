@@ -1,5 +1,6 @@
 import TocDocs from './custom/components/TocDocs';
 import DocsHeader from './custom/components/DocsHeader';
+import DocsPage from './custom/components/DocsPage';
 import './preview.scss';
 
 export const parameters = {
@@ -11,7 +12,8 @@ export const parameters = {
   },
   docs: {
     components: {h1: DocsHeader},
-    container: TocDocs
+    container: TocDocs,
+    page: DocsPage
   },
   options: {
     storySort: {

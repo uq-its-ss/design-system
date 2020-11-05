@@ -7,10 +7,19 @@ import inputHTML from './input.html';
 import textAreaHTML from './text-area.html';
 import selectHTML from './select.html';
 
+import docs from './form.docs.mdx';
+
 export default {
-  title: 'Forms/Form',
-  previewTabs: {
-    canvas: {hidden: false}
+  title: 'Components/Form',
+  parameters: {
+    docs: {
+      page: docs
+    },
+    previewTabs: {
+      canvas: {
+        hidden: false
+      }
+    }
   }
 };
 

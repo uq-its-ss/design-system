@@ -1,7 +1,7 @@
 {
-  "name": "@uqds/form",
+  "name": "@uqds/form-legacy",
   "version": "0.0.0",
-  "description": "Form element style rules",
+  "description": "Deprecated form elements",
   "keywords": [
     "uqds",
     "uq",
@@ -37,6 +37,8 @@
     "url": "https://github.com/uq-its-ss/design-system/issues"
   },
   "dependencies": {
-    "@uqds/core": "^0.0.0"
+    "@uqds/core": "^0.0.0",
+    "@uqds/grid": "^0.0.0",
+    "font-awesome": "^4.7.0"
   }
 }

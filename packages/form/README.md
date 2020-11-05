@@ -20,9 +20,7 @@ npm i @uqds/form
 
 ## Dependencies
 
-```shell
+```
 @uqds/form
-├─ @uqds/core
-└─ @uqds/grid
-   └─ @uqds/core
+└─ @uqds/core
 ```

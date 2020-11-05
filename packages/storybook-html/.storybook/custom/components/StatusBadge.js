@@ -4,7 +4,7 @@ import './StatusBadge.scss';
 const variants = {
   experimental: {
     label: "Experimental",
-    title: "This is an experimental feature — use with caution"
+    title: "This is an experimental feature — use with caution, support may be limited"
   },
   development: {
     label: "In development",
@@ -12,15 +12,15 @@ const variants = {
   },
   stable: {
     label: "Stable",
-    title: "This feature is stable — any changes will be bug fixes"
+    title: "This feature is stable — any changes will be bug fixes or enhancements"
   },
   review: {
     label: "Under review",
-    title: "This feature is under review — may be deprecated in the future"
+    title: "This feature is under review — may be deprecated or redesigned in the future"
   },
   deprecated: {
     label: "Deprecated",
-    title: "Deprecated — this will be removed in the future"
+    title: "Deprecated — no longer supported and will be removed in the future"
   }
 };
 

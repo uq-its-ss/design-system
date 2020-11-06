@@ -1,5 +1,4 @@
 @use "@uqds/core/src/scss/global" as core;
-@use "@uqds/table/src/scss/global" as table;
 @use 'global' as *;
 
 $use-encapsulation: false !default;
@@ -342,34 +341,6 @@ $use-encapsulation: false !default;
     word-wrap: normal;
     margin: 0;
     padding: 0;
-  }
-
-  // Table
-  .scroll-container {
-    @include table.table-wrapper;
-  }
-  
-  .uq-table {
-    @include table.table;
-
-    caption {
-      @include table.table-caption;
-    }
-    thead {
-      @include table.table-head;
-    }
-    tbody {
-      @include table.table-body;
-    }
-    tr {
-      @include table.table-row;
-    }
-    td {
-      @include table.table-cell;
-    }
-    th {
-      @include table.table-header;
-    }
   }
 }
 

@@ -61,7 +61,7 @@
     &__row {
         display: grid;
         grid: auto-flow / 1fr;
-        gap: 1rem 3rem;
+        gap: 2rem 3rem;
         justify-items: stretch;
         justify-content: stretch;
         align-items: start;
@@ -97,10 +97,6 @@
 
         .uq-footer__row {
             grid: auto-flow / 1fr;
-            
-            @media #{core.$screen-md-up} {
-                grid: auto-flow / 1fr;
-            }
     
             @media #{core.$screen-lg-up} {
                 grid: auto-flow / 3fr 1fr;
@@ -117,12 +113,13 @@
             padding: core.$space-none;
 
             li {
-                padding-right: core.$spacing-xs;
+                margin-bottom: core.$spacing-xs;
                 
                 &:after {
-                    content: "|";
+                    content: " | ";
                     padding: core.$space-none core.$spacing-xs;
                     text-align: center;
+                    float: right;
                 }
 
                 &:last-of-type {

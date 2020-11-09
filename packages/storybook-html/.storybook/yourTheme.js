@@ -3,23 +3,23 @@
 import { create } from '@storybook/theming/create';
 
 export default create({
-  base: 'dark',
+  base: 'light',
 
   colorPrimary: 'hotpink',
   colorSecondary: 'deepskyblue',
 
   // UI
-  appBg: '#51247A',
+  appBg: 'white',
   appContentBg: 'white',
   appBorderColor: 'grey',
   appBorderRadius: 4,
 
   // Typography
-  fontBase: '"Open Sans", sans-serif',
+  fontBase: '"Roboto", "Open Sans", sans-serif',
   fontCode: 'monospace',
 
   // Text colors
-  textColor: 'white',
+  textColor: '#2b2b2b',
   textInverseColor: 'rgba(255,255,255,0.9)',
 
   // Toolbar default and active colors
@@ -30,10 +30,10 @@ export default create({
   // Form colors
   inputBg: 'white',
   inputBorder: 'silver',
-  inputTextColor: 'white',
+  inputTextColor: '#2b2b2b',
   inputBorderRadius: 4,
 
   brandTitle: 'UQ Design System',
   brandUrl: 'https://uq.edu.au',
-  brandImage: 'https://static.uq.net.au/v11/logos/corporate/uq-logo--reversed.svg',
+  brandImage: 'https://static.uq.net.au/v11/logos/corporate/uq-logo.svg',
 });

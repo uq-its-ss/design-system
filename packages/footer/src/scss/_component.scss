@@ -59,46 +59,31 @@
     }
 
     &__row {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-between;
-        align-items: stretch;
-	    align-content: stretch;
-    }
-
-    &__column {
-        flex: 1 1 100%;
-        padding: core.$space-none (nth(grid.$schema-base, 2) / 2) core.$space-none core.$space-none;
-
-        + .uq-footer__column {
-            flex: 1 1 100%;
-
-            @media #{core.$screen-md-up} {
-                flex: 1 1 25%;
-            }
-        }
-
-        &:last-child {
-            padding: core.$space-none;
-        }
-
+        display: grid;
+        grid: auto-flow / 1fr;
+        gap: 2rem 3rem;
+        justify-items: stretch;
+        justify-content: stretch;
+        align-items: start;
+        align-content: stretch;
+        
         @media #{core.$screen-md-up} {
-            flex: 3 1 75%;
-            padding-right: nth(grid.$schema-md, 2) / 2;
+            grid: auto-flow / 2fr 1fr;
         }
 
         @media #{core.$screen-lg-up} {
-            padding-right: nth(grid.$schema-xl, 2) / 2;
+            grid: auto-flow / 3fr 1fr;
         }
+    }
+
+    &__column {
+        justify-self: start;
+        align-self: start;
     }
 
     &__aside {
         display: inline-block;
-        margin: core.$space-md core.$space-none core.$space-none core.$space-none;
-
-        @media #{core.$screen-lg-up} {
-            margin: core.$space-none;
-        }
+        margin: core.$space-none;
     }
 
     &__sub-title {
@@ -110,11 +95,11 @@
         margin: core.$space-lg core.$space-none core.$space-none core.$space-none;
         overflow: hidden;
 
-        .uq-footer__column + .uq-footer__column {
-            flex: 1 1 100%;
-
+        .uq-footer__row {
+            grid: auto-flow / 1fr;
+    
             @media #{core.$screen-lg-up} {
-                flex: 1 1 25%;
+                grid: auto-flow / 3fr 1fr;
             }
         }
     }
@@ -128,16 +113,19 @@
             padding: core.$space-none;
 
             li {
-                padding-left: core.$spacing-xs;
+                margin-bottom: core.$spacing-xs;
                 
-                & + :before {
+                &:after {
                     content: " | ";
-                    padding-right: core.$spacing-xs;
+                    padding: core.$space-none core.$spacing-xs;
                     text-align: center;
                 }
-                
-                &:first-of-type {
-                    padding-left: core.$space-none;
+
+                &:last-of-type {
+                    &:after {
+                        content: none;
+                        padding-right: core.$space-none;
+                    }
                 }
             }
         }

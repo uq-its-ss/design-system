@@ -1,0 +1,422 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+
+<Meta title="Core/Standards/Browser support" />
+
+# Browser support
+
+## Overview
+
+The goal of the browser support plan is to ensure the accessibility of content, no matter how the user is choosing to access it.  The focus of the browser support plan is to:
+
+* Outline a framework for managing lists of supported browsers; 
+* Provide best-practice development advice and testing protocols to help ensure websites and web applications can support listed browsers.
+
+## Browser Support
+
+The following support levels outline a general approach to browser support. The core aim is to maintain the integrity of content while gracefully degrading non essential aspects “bells and whistles”. 
+
+### Full support
+
+Typically expected to covers only the **latest version** of browsers. Users of these browsers should receive a similarly, consistent and high user experience in all technology layers: 
+
+We define technology layers as: 
+
+* Content
+* Presentation
+* Behaviour
+
+Browsers covered by full support: 
+
+* Chrome
+* Internet Explorer
+* Safari
+* Firefox
+* Edge
+
+### Reduced support
+
+Reduced support is reserved for less-capable browsers ( **versions 2 - 3 years old** ) that persist in usage statistics. 
+
+* Visually essential content and navigation should have little to no degradation (especially when used to convey crucial interface elements)
+* Basic styling elements should degrade gracefully
+* Scripts should reduce functionality when needed. 
+
+Browsers covered by reduced support: 
+
+* Chrome
+* Internet Explorer
+* Safari
+* Firefox
+* Edge
+
+### Unspecified support
+
+Unspecified covers anything not in Full or Reduced support. 
+
+* Aim for the best possible graceful degradation. 
+* Where possible and time permitting, identified content and presentational issues should be addressed. 
+
+
+There is no requirement to develop for browsers where the software developer has stopped providing technical support or security updates, Users in these instances should be directed to discontinue their usage and seek technical support in upgrading browsers. Upgrade messages may be the most appropriate solution where users have out of date browsers and auto-update disabled.
+
+### Operating systems
+
+Analytics identifies the following operating systems as statistically significant and should be used in combination with browsers to test page compliance.
+
+* Windows
+* Macintosh (Mac OS)
+* iOS
+* Android
+
+Refer to the following section for more detailed information on operating system versions UQ statistics
+
+## Assessing individual site requirements
+
+If a  solution requires significant backward compatibility, there should be discussion with the **ITS ADS UI** team and a review in the context of the application. You can request support from webservices@uq.edu.au.
+
+### Modifying browser behaviour
+
+Where graceful degradation does not provide an acceptable solution it may be possible to use modern techniques:
+
+* graceful degradation
+* CSS preprocessors
+* polyfills
+* alerts/upgrade messages or modals
+
+### Audience
+
+Every site has an audience and you should investigate yours to see whether it has particular characteristics that you need to be aware of. Do you have existing data for the browsers and devices that your audience has been using already? If so, analyse it to see if you can identify any patterns in usage, or any combinations of:
+
+* operating system
+* browser
+* browser version
+* screen size/resolution
+* mobile device
+
+This data may sometimes support the case for de-prioritising or justifying certain development work.
+
+### Internal Audiences
+
+For internal audiences, upgrade messages may be the most appropriate solution where users have out of date browsers and auto-update disabled.
+
+## Testing & Compliance
+
+The level of testing and compliance checks should reflect the significance and impact of the site and content. 
+
+It's important to note that there are two main types of checking, automated checks and human checks, and that you need to do both in order to check for full compliance of your content.
+
+### Human checks
+
+For many aspects of browser testing, it is not possible to do an automated check. For example, an automated check can tell you that an interface item is correctly located, but it may not tell you whether the interaction states work or display correctly on different browsers or screen sizes.  A human needs to check that the interaction is appropriate for the interface. 
+
+### Automated checks
+
+Tools to for browser testing have the ability to setup tests which can be run with little, or no, deliberate human intervention.
+
+In most cases the time, resources and device cost to test across multiple combinations of browsers , hardware and operating systems is impractical. Automated tools can be used to practically test more variations. 
+
+What you'll need to check depends on your site and content.
+
+### Basic daily testing
+
+A small, low value page or template, should at minimum have been tested against the following. 
+
+* A Windows operating system based browser from “Full Support” list, i.e. Chrome Browser (latest Version).
+* Windows operating system (Version 7 or Latest).
+
+Ideally this will be compared to at least one other browser and operating system combination from the “Full Support” list.
+
+Aim to cover as many browser and operating systems as you can. Pages should also pass other University standards. 
+
+* Markup Validation
+* Accessibility
+
+#### Focus on 
+
+* ** Base Functionality:** Are links, dialogs, menus available as required
+* ** User Interface:**  Does the appearance match the specification
+* ** Graceful Degradation:**  Does the experience adjust between desktop and mobile browsers
+* ** Responsiveness:**  Does the site adjust in mobile browsers based on criteria such as resolution, rotation, and location
+* ** Performance:**  Does the site load within a suitable time frame, whilst allowing for network connection speed
+
+### Recommended testing
+
+All listed browsers should be tested on at least one operating system or emulation tool. A combination of manual and automated testing can provide better results than either on its own. To achieve broader testing it is highly recommended that an automation tool is used in conjunction with manual testing.
+
+Browser & OS
+	
+
+Windows
+	
+
+Macintosh
+	
+
+iOS
+	
+
+Android
+
+Chrome
+	
+
+TEST
+	
+
+TEST
+	
+
+TEST
+	
+
+TEST
+
+Internet Explorer
+	
+
+TEST
+	
+
+N/A
+	
+
+N/A
+	
+
+N/A
+
+Safari
+	
+
+N/A
+	
+
+TEST
+	
+
+TEST
+	
+
+N/A
+
+Firefox
+	
+
+TEST
+	
+
+TEST
+	
+
+N/A
+	
+
+N/A
+
+Edge
+	
+
+TEST
+	
+
+N/A
+	
+
+N/A
+	
+
+N/A
+
+
+Versions of operating systems can also introduce variations in the rendering of code. If resources permit extend testing to combinations of operating system and browsers. 
+
+Browser & OS
+	
+
+Windows 10
+	
+
+Windows 7
+	
+
+Windows 8.1
+	
+
+Windows XP
+
+Chrome
+	
+
+TEST
+	
+
+TEST
+	
+
+TEST
+	
+
+TEST
+
+
+### Small screen devices
+
+
+Testing preference for devices released in the previous 12 months or where significant statistical usage is identified. Where possible test against the most recent browser version. When devices are not easily available Chrome’s Device Mode and Mobile Emulation or virtualization tools like BrowserStack may be substituted. 
+
+### Templates and components 
+
+
+When testing elements that are repeatable it may become impractical to test every instance of usage. We recommend setting up test scenarios, bugs that are due to an extra-long name or paragraph of CMS or user-generated content.
+
+It’s important to test both typical content and extreme content values. If your app dictates a username can be up to 255 characters long, how does your app display that? Likewise, what happens when values are missing?
+
+### Non Compliance
+
+Any organisational unit publishing content on the web or creating websites needs to be aware of their obligations regarding content quality and web accessibility, and take measures to ensure they meet the web content guidelines or offer alternative ways for users to consume content being published, so as to not disenfranchise.
+
+
+
+## UQ statistics
+
+The following tables should be used as a general guide for focusing core testing effort. 
+
+### Browser and operating system
+
+Analytics: https://uq.edu.au | 01 Mar 2016 - 07 Mar 2017 (Sessions)
+
+Browser & OS
+	
+
+Windows
+	
+
+Macintosh
+	
+
+iOS
+	
+
+Android
+
+Chrome
+	
+
+2,700,667
+	
+
+400,294
+	
+
+31,251
+	
+
+251,165
+
+Internet Explorer
+	
+
+1,011,160
+	
+
+N/A
+	
+
+N/A
+	
+
+N/A
+
+Safari
+	
+
+N/A
+	
+
+512,440 
+	
+
+452,158
+	
+
+N/A
+
+Firefox
+	
+
+700,796
+	
+
+138,238
+	
+
+N/A
+	
+
+N/A
+
+Edge
+	
+
+154,408
+	
+
+N/A
+	
+
+N/A
+	
+
+N/A
+
+Notes: 
+
+    24 Operating systems and 92 Browsers are identified in the statistics, Stats past the ones displayed are not of a volume to warrant inclusion. 
+    N/A indicates combination is not available or not listed in the stats. 
+
+
+
+Analytics: https://uq.edu.au | 01 Mar 2016 - 07 Mar 2017 (Sessions)
+
+Browser & OS
+	
+
+Windows 10
+	
+
+Windows 7
+	
+
+Windows 8.1
+	
+
+Windows XP
+
+Chrome
+	
+
+837,697 (18.27%)
+	
+
+1,499,037 (32.70%)
+	
+
+304,404 (6.64%)
+	
+
+25,941 (0.57%)
+
+## References
+
+* Queensland Government Browser Support List (2012-2014 Audit)
+* Gov.UK Browser Support Standards
+* 31 Ways to Spend Less Time on Manual Cross–Browser 
+
+
+### Additional notes
+
+
+Microsoft will end technical support and security updates for older versions of Internet Explorer
+http://www.news.com.au/technology/online/security/microsoft-will-end-technical-support-and-security-updates-for-older-versions-of-internet-explorer/news-story/52896819a4236fa5f8b00de0f508527d
+
+Microsoft has provided Enterprise Mode for IE 11 to allow users to run the browser in compatibility mode when they visit a site that works with older versions of IE. It is also possible to give users the ability to enable Enterprise Mode from the Tools menu in the browser.

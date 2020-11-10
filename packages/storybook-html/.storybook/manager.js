@@ -1,8 +1,8 @@
 import './custom/addons/titleAddon';
 
 import { addons } from '@storybook/addons';
-import yourTheme from './yourTheme';
+import uqTheme from './uqTheme';
 
 addons.setConfig({
-  theme: yourTheme,
+  theme: uqTheme,
 });

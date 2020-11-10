@@ -13,7 +13,7 @@ export const parameters = {
   docs: {
     components: {h1: DocsHeader},
     container: TocDocs,
-    page: DocsPage,
+    page: DocsPage
   },
   options: {
     storySort: {

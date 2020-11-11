@@ -2,8 +2,8 @@ import React from 'react';
 import './StatusBadge.scss';
 
 const variants = {
-  experimental: {
-    label: "Experimental",
+  experiment: {
+    label: "Experimental candidate",
     title: "This is an experimental feature — use with caution, support may be limited"
   },
   development: {
@@ -24,17 +24,20 @@ const variants = {
   }
 };
 
-const StatusBadge = ({variant}) => {
+const StatusBadge = ({variant, showRoadmapLink}) => {
   return (
-    variants[variant] && <span className={`uqds-status-badge uqds-status-badge--${variant}`} title={variants[variant]?.title}>{variants[variant]?.label}</span>
+    <>
+      {variants[variant] && <span className={`uqds-status-badge uqds-status-badge--${variant}`} title={variants[variant]?.title}>{variants[variant]?.label}</span>}
+      {showRoadmapLink && <a className="uqds-status-badge-addendum" href="#">See our roadmap &rarr;</a>}
+    </>
   );
 };
 
-StatusBadge.Experimental = () => <StatusBadge variant="experimental" />;
-StatusBadge.Development = () => <StatusBadge variant="development" />;
-StatusBadge.Stable = () => <StatusBadge variant="stable" />;
-StatusBadge.Review = () => <StatusBadge variant="review" />;
-StatusBadge.Deprecated = () => <StatusBadge variant="deprecated" />;
+StatusBadge.Experiment = ({variant, ...props}) => <StatusBadge variant="experiment" {...props} />;
+StatusBadge.Development = ({variant, ...props}) => <StatusBadge variant="development" {...props} />;
+StatusBadge.Stable = ({variant, ...props}) => <StatusBadge variant="stable" {...props} />;
+StatusBadge.Review = ({variant, ...props}) => <StatusBadge variant="review" {...props} />;
+StatusBadge.Deprecated = ({variant, ...props}) => <StatusBadge variant="deprecated" {...props} />;
 
 StatusBadge.displayName = "StatusBadge";
 

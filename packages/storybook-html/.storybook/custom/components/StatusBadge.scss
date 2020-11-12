@@ -1,0 +1,44 @@
+@use '@uqds/core/src/scss/_global' as core;
+
+.uqds-status-badge {
+  box-sizing: border-box;
+  border-radius: 9999px;
+  color: core.$text;
+  cursor: help;
+  display: inline-block;
+  font-size: core.$font-size-s;
+  line-height: core.$line-height-ui;
+  margin-bottom: core.$space;
+  margin-left: -(core.$space-xs);
+  margin-right: core.$space;
+  padding: core.$space-sm core.$space;
+  vertical-align: baseline;
+
+  &--stable {
+    background-color: core.$success-color;
+  }
+
+  &--development,
+  &--experiment {
+    background-color: core.$danger-color;
+  }
+
+  &--review {
+    background-color: core.$warning-color;
+  }
+
+  &--deprecated {
+    color: core.$uq-white;
+    background-color: core.$uq-red-dark40;
+  }
+
+  &-addendum {
+    display: inline-block;
+    font-size: core.$font-size-s;
+    line-height: core.$line-height-ui;
+    margin-bottom: core.$space-md;
+    margin-right: core.$space-md;
+    white-space: nowrap;
+    vertical-align: baseline;
+  }
+}

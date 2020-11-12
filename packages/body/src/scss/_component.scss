@@ -20,6 +20,11 @@ $use-encapsulation: false !default;
 }
 
 @mixin base-styles {
+  /**
+   * TODO: user should be able to configure whether or not they want this
+   * normalised or we remove it and make sure our packages are self-contained w/
+   * this style rule.
+   */
   *, *::before, *::after {
     box-sizing: border-box;
   }

@@ -1,18 +1,18 @@
 import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import StatusBadge from '../../../.storybook/custom/components/StatusBadge';
 
 # Table
+<StatusBadge.Review />
 
 ## Overview
 
-Table components are used to display data in grids. 
-Accessible tables need HTML markup that indicates the difference between header cells and data cells, and indicate the relationship between them. 
-The table should be responsive on different viewport devices and accessible to assistive technologies like screen readers.
+Table components are used to display data in grids. The table should be responsive on different viewport devices and accessible to assistive technologies like screen readers.
 
-## Responsive
+## Base Example
 
-When it comes to responsive behaviour in tables, there is no one solution. The solution depends on the amount of table data and how complex the table structure is. Shown below are 2 different approaches in acheiving responsive behaviour in tables.
+When it comes to responsive behaviour in tables, there is no one solution. The solution depends on the amount of table data and how complex the table structure is. Shown below is a base approach in acheiving responsive behaviour in tables.
 
-### a) Table Scroll
+### Table Scroll
 
 This is the default approach and should be implemented when there is lots of data. In this approach the component table horizontal scroll is triggered when the table width is greater than the table container width helping the user to view data even on smaller viewport devices. 
 
@@ -102,7 +102,9 @@ For instance when there is more content to the left, a transparent shadow appear
 
 
 
-### b) Table Card
+## Variant Example(s)
+
+### Table Card
 
 In this responsive approach, the component table `tr` is displayed as a grid. At a certain responsive breakpoint, it behaves as folded cards and hides the header `thead`. 
 The data attributes assigned to each `tbody` cell helps in understanding the connection between the call value and its associated header when the header `thead` is hidden. 
@@ -147,11 +149,19 @@ The data attributes assigned to each `tbody` cell helps in understanding the con
 
 #### Breakpoints
 
-The breakpoint for table cards are less than 640px.
+The table card stacks up when it hits breakpoints less than 640px.
+
+
+
+## Use case(s)
+
+For complex tables, it's recommended to split the table for better user experience with assistive technologies like screen readers.
+
+
 
 ## Accessibility
 
-Data tables are used to organize data with a logical relationship in grids. Accessible tables need HTML markup that indicates header cells and data cells and defines their relationship. Assistive technologies use this information to provide context to users.
+Data tables are used to organize data with a logical relationship in grids. Accessible tables need HTML markup that indicates the difference between header cells and data cells, and indicate the relationship between them. Assistive technologies use this information to provide context to users.
 
 Accessibility in tables can be acheived to an extend by following some or part of the steps below depending on the table data structure.
 
@@ -265,6 +275,7 @@ Accessibility in tables can be acheived to an extend by following some or part o
 </div>
 ``` 
 
+
 8. Tables with multi-level headers have multiple header cells associated per data cell: For tables that are so complex that header cells can’t be associated in a strictly horizontal or vertical way, use `id` and `headers` attributes to associate header and data cells explicitly.
 
 <Canvas withToolbar>
@@ -344,5 +355,3 @@ Accessibility in tables can be acheived to an extend by following some or part o
     </table>
 </div>
 ``` 
-
-For complex tables, it's recommended to split the table for better user experience on screen readers.

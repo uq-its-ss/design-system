@@ -1,7 +1,8 @@
 import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
 import StatusBadge from '../../../.storybook/custom/components/StatusBadge';
 
-<Meta title="Templates/Component Documentation" />
+<Meta title="Templates/Documentation of a Component" />
+
 
 # Component Name
 
@@ -11,37 +12,20 @@ import StatusBadge from '../../../.storybook/custom/components/StatusBadge';
 <StatusBadge.Review />
 <StatusBadge.Deprecated />
 
+<a href="https://github.com/uq-its-ss/design-system/issues" class="uq-button uq-button--text">Check for open issues</a>
+
 
 ## Overview
 
-<text> - Summary of Component
+<text> or <bullet points> - Summary of Component
 
 
-## Base Example
+## Custom Setup
 
-<text>
+Add custom setup as required 
 
-<Canvas withSource="none">
-  <Story height="100px" id="components-component-name--component-name" />
-</Canvas>
 
-```html
-<code>
-```
-
-## Variant Example(s)
-
-<text>
-
-<Canvas withSource="none">
-  <Story height="100px" id="components-component-name--component-name" />
-</Canvas>
-
-```html
-<code>
-```
-
-### Sub-variant Example(s)
+## Default Example
 
 <text>
 
@@ -54,9 +38,36 @@ import StatusBadge from '../../../.storybook/custom/components/StatusBadge';
 ```
 
 
-## Use Case(s)
+## Variant Examples
 
-<text> - how and when to use the component, DO’s & DONT’s
+<text>
+
+<Canvas withSource="none">
+  <Story height="100px" id="components-component-name--component-name" />
+</Canvas>
+
+```html
+<code>
+```
+
+
+### Sub-variant Examples
+
+<text>
+
+<Canvas withSource="none">
+  <Story height="100px" id="components-component-name--component-name" />
+</Canvas>
+
+```html
+<code>
+```
+
+
+## When and how to use
+
+<text> or <bullet points> if only a few 
+<table> - if complex scenarios  
 
 <table className="uqds-table  uqds-table--card uqds-table--colour">
   <tbody className="uqds-table__body">
@@ -68,25 +79,28 @@ import StatusBadge from '../../../.storybook/custom/components/StatusBadge';
     </tr>
     <tr  className="uqds-table__row">
       <td className="uqds-table__item">Cell data</td>
-      <td className="uqds-table__item" data-title="Name:">Cell data</td>
-      <td className="uqds-table__item" data-title="Variable:">Cell data</td>
-      <td className="uqds-table__item" data-title="HEX:">Cell data</td>
-      <td className="uqds-table__item" data-title="Usage:">Cell data</td>
+      <td className="uqds-table__item" data-title="Data Title 1:">Cell data</td>
+      <td className="uqds-table__item" data-title="Data Title 2:">Cell data</td>
+      <td className="uqds-table__item" data-title="Data Title 3:">Cell data</td>
+      <td className="uqds-table__item" data-title="Data Title 4:">Cell data</td>
     </tr>
     <tr  className="uqds-table__row">
       <td className="uqds-table__item">Cell data</td>
-      <td className="uqds-table__item" data-title="Name:">Cell data</td>
-      <td className="uqds-table__item" data-title="Variable:">Cell data</td>
-      <td className="uqds-table__item" data-title="HEX:">Cell data</td>
-      <td className="uqds-table__item" data-title="Usage:">Cell data</td>
+      <td className="uqds-table__item" data-title="Data Title 1:">Cell data</td>
+      <td className="uqds-table__item" data-title="Data Title 2:">Cell data</td>
+      <td className="uqds-table__item" data-title="Data Title 3:">Cell data</td>
+      <td className="uqds-table__item" data-title="Data Title 4:">Cell data</td>
     </tr>
   </tbody>
 </table>
 
+- If multiple sections or topics, break up with H3 
+
 
 ## Accessibility
 
-<text>
+<text> - What accessibility considerations apply to this component, regardless of the variant? 
+e.g. keyboard access if it’s a menu or accordion, screen reader access if it’s a table, announcements if it’s an alert
 
 <Canvas withSource="none">
   <Story height="100px" id="components-component-name--component-name" />
@@ -96,17 +110,23 @@ import StatusBadge from '../../../.storybook/custom/components/StatusBadge';
 <code>
 ```
 
+<table> - Key testing issues
+<table> - Accessibility tag  
+<Reference links> - i.e. WCAG component link 
+
+- If multiple sections or topics, break up with H3
+
 
 ## Analytics
 
 <text>
 
 
-## Additional Info
+## Additional info
 
 ### Related
 
-<text> - patterns, gallery, bibliography, etc… 
+<text> - components that are used in relation to this component, patterns, gallery, bibliography, etc… 
 
 
 ### Known issue(s)

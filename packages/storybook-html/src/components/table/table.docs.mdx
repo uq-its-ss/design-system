@@ -388,25 +388,40 @@ Accessibility in tables can be acheived to an extend by following the considerat
 - Basic tables will have one header row and/or one header column. Header cells must be marked up with `<th>` and data cells with `<td>` to make tables accessible.
 - For complex tables, split data to keep it simple or else user's using assistive technologies like screen readers will find it difficult to interpret data relationships.
 
-Reference: <https://www.w3.org/WAI/tutorials/tables/>
-
 ### Accessibility tags
 
 <div class="uq-table__wrapper">
     <table class="uq-table">
         <thead>
             <tr>
-                <th>Accessibility tags</th>
+                <th>Tag</th>
                 <th>Values</th>
                 <th>Description</th>
             </tr>
         </thead>
         <tbody>
             <tr>
+                <td> &lt;caption&gt; </td>
+                <td> &lt;caption&gt; Types of food and ratings &lt;/caption&gt; </td>
+                <td> &lt;caption&gt; element describes a table as its heading</td>
+            </tr>
+            <tr>
                 <td>scope</td>
-                <td>col, row, colgroup</td>
+                <td>scope="col", scope="row", scope="colgroup"</td>
                 <td>Applied to the header cell (th) to signify if it is a 'row' or 'col' or 'colgroup'</td>
+            </tr>
+            <tr>
+                <td>id</td>
+                <td>id="a1", id="b1"</td>
+                <td>Applied to the header cell (th) to identify the relationship with associated data</td>
+            </tr>
+            <tr>
+                <td>headers</td>
+                <td>headers="a1 b1"</td>
+                <td>Applied to the data cell (td) to identify relationship with header cell</td>
             </tr>
         </tbody>
     </table>
 </div>
+
+Reference: <https://www.w3.org/WAI/tutorials/tables/>

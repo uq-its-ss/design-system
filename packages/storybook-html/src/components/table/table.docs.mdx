@@ -11,7 +11,7 @@ import StatusBadge from '../../../.storybook/custom/components/StatusBadge';
 
 ## Overview
 
-Table components are used to display data. The table should be responsive on different viewport devices and accessible to assistive technologies like screen readers.
+Table components are used to display data for data comparison. The table should be responsive on different viewport devices and accessible to assistive technologies like screen readers.
 
 
 
@@ -23,7 +23,7 @@ When it comes to responsive behaviour in tables, there is no one solution. The s
 
 This is the default approach and should be implemented when there is lots of data. In this approach the component table horizontal scroll is triggered when the table width is greater than the table container width helping the user to view data even on smaller viewport devices. 
 
-To enable scroll feature, the table is wrapped by a container div with class `uq-table__wrapper`.
+To enable scroll feature, the table is wrapped in a container div with class `uq-table__wrapper`.
 
 A shadow feature is added to the sides of the table when it overflows the container. It serves as a visual indication to the user that there is more data to be scrolled to the left or right. 
 For instance when there is more content to the left, a transparent shadow appears to the left side of the table and when there is more content to the right, the shadow appears to the right side of the table.

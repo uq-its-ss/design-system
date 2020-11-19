@@ -3,6 +3,7 @@ import './table.scss';
 
 // import HTML template strings
 import tableHTML from './table.html';
+import tableClassesHTML from './table-with-classes.html';
 import tableMultipleHeadersHTML from './table-multiple-headers.html';
 import tableIrregularHeadersHTML from './table-irregular-headers.html';
 import tableMultiLevelHeadersHTML from './table-multi-level-headers.html';
@@ -29,6 +30,12 @@ export const table = () => {
 };
 
 table.storyName = 'Table Scroll';
+
+export const tableClasses = () => {
+  return tableClassesHTML;
+};
+
+tableClasses.storyName = 'Table with Classes Scroll';
 
 export const tableMultipleHeaders = () => {
   return tableMultipleHeadersHTML;

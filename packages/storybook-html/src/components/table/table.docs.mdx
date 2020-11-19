@@ -2,17 +2,24 @@ import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
 import StatusBadge from '../../../.storybook/custom/components/StatusBadge';
 
 # Table
+
 <StatusBadge.Review />
+
+<a href="https://github.com/uq-its-ss/design-system/issues" class="uq-button uq-button--text" target="_blank">Check for open issues</a>
+
+
 
 ## Overview
 
 Table components are used to display data in grids. The table should be responsive on different viewport devices and accessible to assistive technologies like screen readers.
 
-## Base Example
+
+
+## Default example
 
 When it comes to responsive behaviour in tables, there is no one solution. The solution depends on the amount of table data and how complex the table structure is. Shown below is a base approach in acheiving responsive behaviour in tables.
 
-### Table Scroll
+### Table scroll
 
 This is the default approach and should be implemented when there is lots of data. In this approach the component table horizontal scroll is triggered when the table width is greater than the table container width helping the user to view data even on smaller viewport devices. 
 
@@ -21,12 +28,14 @@ To enable scroll feature, the table is wrapped by a container div with class `uq
 A shadow feature is added to the sides of the table when it overflows the container. It serves as a visual indication to the user that there is more data to be scrolled to the left or right. 
 For instance when there is more content to the left, a transparent shadow appears to the left side of the table and when there is more content to the right, the shadow appears to the right side of the table.
 
+#### a. Table scroll - Basic tags with minimal classes
+
 <Canvas withToolbar>
     <Story id="components-table--table" />
 </Canvas>
 
 ```html
-<h3>Table - Basic tags with minimal classes</h3>
+<!-- Table scroll - Basic tags with minimal classes -->
 <div class="uq-table__wrapper">
     <table class="uq-table">
         <caption>Types of food and ratings</caption>
@@ -60,11 +69,18 @@ For instance when there is more content to the left, a transparent shadow appear
         </tbody>
     </table>
 </div>
+```
 
 
 
+#### b. Table scroll - Basic tags with classes
 
-<h3>Table - Basic tags with classes</h3>
+<Canvas withToolbar>
+    <Story id="components-table--table-classes" />
+</Canvas>
+
+```html
+<!-- Table scroll - Basic tags with classes -->
 <div class="uq-table__wrapper">
   <table class="uq-table">
       <caption class="uq-table__caption">Types of food and ratings</caption>
@@ -102,9 +118,9 @@ For instance when there is more content to the left, a transparent shadow appear
 
 
 
-## Variant Example(s)
+## Variant examples
 
-### Table Card
+### Table card
 
 In this responsive approach, the component table `tr` is displayed as a grid. At a certain responsive breakpoint, it behaves as folded cards and hides the header `thead`. 
 The data attributes assigned to each `tbody` cell helps in understanding the connection between the call value and its associated header when the header `thead` is hidden. 
@@ -114,6 +130,7 @@ The data attributes assigned to each `tbody` cell helps in understanding the con
 </Canvas>
 
 ```html
+<!-- Table card -->
 <table class="uq-table uq-table--card">
     <caption>Types of food and ratings</caption>
     <thead>
@@ -149,13 +166,15 @@ The data attributes assigned to each `tbody` cell helps in understanding the con
 
 #### Breakpoints
 
-The table card stacks up when it hits breakpoints less than 640px.
+The table card stacks up when it hits screen viewport widths less than 640px.
 
 
 
-## Use case(s)
+## How and when to use
 
-For complex tables, it's recommended to split the table for better user experience with assistive technologies like screen readers.
+- Don't use tables for layout purposes.
+- Use table for representing data in a relational way that makes sense.
+- For complex tables, it's recommended to split the table for better user experience with assistive technologies like screen readers.
 
 
 
@@ -172,11 +191,13 @@ Accessibility in tables can be acheived to an extend by following some or part o
 5. Basic tables will have one header row and/or one header column. Header cells must be marked up with `<th>` and data cells with `<td>` to make tables accessible. Commonly header cells are the first row or first column or both in a table.
 6. Tables with two headers with unclear header directions needs to define the direction of each header by setting the scope attribute to `col` or `row`.
 
+### a. Table - Multiple Headers
 <Canvas withToolbar>
     <Story id="components-table--table-multiple-headers" />
 </Canvas>
 
 ```html
+<!-- Table - Multiple headers -->
 <!-- 
 `col` - specifies that the cell is a header for a column.  
 `row` - specifies that the cell is a header for a row. 
@@ -221,11 +242,14 @@ Accessibility in tables can be acheived to an extend by following some or part o
 
 7. Tables with irregular headers have header cells that span multiple columns and/or rows: For these tables, define column and row groups and set the range of the header cells using the `colgroup` and `rowgroup` values of the scope attribute.
 
+### b. Table - Irregular headers
+
 <Canvas withToolbar>
     <Story id="components-table--table-irregular-headers" />
 </Canvas>
 
 ```html
+<!-- Table - Irregular headers -->
 <!-- 
 `colgroup` - specifies that the cell is a header for a group of columns.  
 `rowgroup` - specifies that the cell is a header for a group of rows.
@@ -278,11 +302,14 @@ Accessibility in tables can be acheived to an extend by following some or part o
 
 8. Tables with multi-level headers have multiple header cells associated per data cell: For tables that are so complex that header cells can’t be associated in a strictly horizontal or vertical way, use `id` and `headers` attributes to associate header and data cells explicitly.
 
+### c. Table - Multiple headers
+
 <Canvas withToolbar>
     <Story id="components-table--table-multi-level-headers" />
 </Canvas>
 
 ```html
+<!-- Table - Multiple headers -->
 <!-- 
 `id` - specifies the unique id of a `<th>` header cell.  
 `headers` - specifies the `<td>` cell with a headers attribute that lists the id values of the associated header cells.

@@ -11,7 +11,7 @@ import StatusBadge from '../../../.storybook/custom/components/StatusBadge';
 
 ## Overview
 
-Table components are used to display data in grids. The table should be responsive on different viewport devices and accessible to assistive technologies like screen readers.
+Table components are used to display data. The table should be responsive on different viewport devices and accessible to assistive technologies like screen readers.
 
 
 
@@ -118,86 +118,16 @@ For instance when there is more content to the left, a transparent shadow appear
 
 
 
-## Variant examples
+#### c. Table scroll - Multiple headers
 
-### Table card
+Tables with two headers with unclear header directions needs to define the direction of each header by setting the scope attribute to `col` or `row`.
 
-In this responsive approach, the component table `tr` is displayed as a grid. At a certain responsive breakpoint, it behaves as folded cards and hides the header `thead`. 
-The data attributes assigned to each `tbody` cell helps in understanding the connection between the call value and its associated header when the header `thead` is hidden. 
-
-<Canvas withToolbar>
-    <Story id="components-table--table-card" />
-</Canvas>
-
-```html
-<!-- Table card -->
-<table class="uq-table uq-table--card">
-    <caption>Types of food and ratings</caption>
-    <thead>
-        <tr>
-            <th>Type of Food</th>
-            <th>Calories</th>
-            <th>Tasty Factor</th>
-            <th>Average Price</th>
-            <th>Rarity</th>
-            <th>Average Rating</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td data-title="Type of Food">Slice of Pizza</td>
-            <td data-title="Calories">450</td>
-            <td data-title="Tasty Factor">95%</td>
-            <td data-title="Average Price">$5.00</td>
-            <td data-title="Rarity">Common</td>
-            <td data-title="Average Rating">8/10</td>
-        </tr>
-        <tr>
-            <td data-title="Type of Food">Hamburger</td>
-            <td data-title="Calories">350</td>
-            <td data-title="Tasty Factor">87%</td>
-            <td data-title="Average Price">$3.50</td>
-            <td data-title="Rarity">Common</td>
-            <td data-title="Average Rating">7.5/10</td>
-        </tr>
-    </tbody>
-</table>
-```
-
-#### Breakpoints
-
-The table card stacks up when it hits screen viewport widths less than 640px.
-
-
-
-## How and when to use
-
-- Don't use tables for layout purposes.
-- Use table for representing data in a relational way that makes sense.
-- For complex tables, it's recommended to split the table for better user experience with assistive technologies like screen readers.
-
-
-
-## Accessibility
-
-Data tables are used to organize data with a logical relationship in grids. Accessible tables need HTML markup that indicates the difference between header cells and data cells, and indicate the relationship between them. Assistive technologies use this information to provide context to users.
-
-Accessibility in tables can be acheived to an extend by following some or part of the steps below depending on the table data structure.
-
-1. Keep the table structure simple. Split data if needed to keep it simple or else user's using assistive technologies like screen readers will find it difficult to interpret data relationships.
-2. Use right semantical html markups for tables wherever possible. (Example, `<table>`, `<thead>`, `<tfoot>`, `<tbody>`, `<th>`, `<td>`)
-3. Though `<thead>`, `<tfoot>`, `<tbody>` makes no difference with assistive technologies like screen readers, they are useful when printing long tables that run over the next page. In such instances, the `<thead>`, `<tfoot>` gets repeated on the next printed page that gives the data context.
-4. Use `<caption>` tag which defines a table caption. The `<caption>` tag must be inserted immediately after the `<table>` tag. Tip: By default, a table caption will be center-aligned above a table.
-5. Basic tables will have one header row and/or one header column. Header cells must be marked up with `<th>` and data cells with `<td>` to make tables accessible. Commonly header cells are the first row or first column or both in a table.
-6. Tables with two headers with unclear header directions needs to define the direction of each header by setting the scope attribute to `col` or `row`.
-
-### a. Table - Multiple Headers
 <Canvas withToolbar>
     <Story id="components-table--table-multiple-headers" />
 </Canvas>
 
 ```html
-<!-- Table - Multiple headers -->
+<!-- Table scroll - Multiple headers -->
 <!-- 
 `col` - specifies that the cell is a header for a column.  
 `row` - specifies that the cell is a header for a row. 
@@ -240,16 +170,18 @@ Accessibility in tables can be acheived to an extend by following some or part o
 </div>
 ```
 
-7. Tables with irregular headers have header cells that span multiple columns and/or rows: For these tables, define column and row groups and set the range of the header cells using the `colgroup` and `rowgroup` values of the scope attribute.
 
-### b. Table - Irregular headers
+
+#### d. Table scroll - Irregular headers
+
+Tables with irregular headers have header cells that span multiple columns and/or rows: For these tables, define column and row groups and set the range of the header cells using the `colgroup` and `rowgroup` values of the scope attribute.
 
 <Canvas withToolbar>
     <Story id="components-table--table-irregular-headers" />
 </Canvas>
 
 ```html
-<!-- Table - Irregular headers -->
+<!-- Table scroll - Irregular headers -->
 <!-- 
 `colgroup` - specifies that the cell is a header for a group of columns.  
 `rowgroup` - specifies that the cell is a header for a group of rows.
@@ -300,16 +232,17 @@ Accessibility in tables can be acheived to an extend by following some or part o
 ``` 
 
 
-8. Tables with multi-level headers have multiple header cells associated per data cell: For tables that are so complex that header cells can’t be associated in a strictly horizontal or vertical way, use `id` and `headers` attributes to associate header and data cells explicitly.
 
-### c. Table - Multiple headers
+#### e. Table scroll - Multi-level headers
+
+Tables with multi-level headers have multiple header cells associated per data cell: For tables that are so complex that header cells can’t be associated in a strictly horizontal or vertical way, use `id` and `headers` attributes to associate header and data cells explicitly.
 
 <Canvas withToolbar>
     <Story id="components-table--table-multi-level-headers" />
 </Canvas>
 
 ```html
-<!-- Table - Multiple headers -->
+<!-- Table scroll - Multi-level headers -->
 <!-- 
 `id` - specifies the unique id of a `<th>` header cell.  
 `headers` - specifies the `<td>` cell with a headers attribute that lists the id values of the associated header cells.
@@ -382,3 +315,98 @@ Accessibility in tables can be acheived to an extend by following some or part o
     </table>
 </div>
 ``` 
+
+
+## Variant examples
+
+### Table card
+
+In this responsive approach, the component table `tr` is displayed as a grid. At a certain responsive breakpoint, it behaves as folded cards and hides the header `thead`. 
+The data attributes assigned to each `tbody` cell helps in understanding the connection between the call value and its associated header when the header `thead` is hidden. 
+
+<Canvas withToolbar>
+    <Story id="components-table--table-card" />
+</Canvas>
+
+```html
+<!-- Table card -->
+<table class="uq-table uq-table--card">
+    <caption>Types of food and ratings</caption>
+    <thead>
+        <tr>
+            <th>Type of Food</th>
+            <th>Calories</th>
+            <th>Tasty Factor</th>
+            <th>Average Price</th>
+            <th>Rarity</th>
+            <th>Average Rating</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td data-title="Type of Food">Slice of Pizza</td>
+            <td data-title="Calories">450</td>
+            <td data-title="Tasty Factor">95%</td>
+            <td data-title="Average Price">$5.00</td>
+            <td data-title="Rarity">Common</td>
+            <td data-title="Average Rating">8/10</td>
+        </tr>
+        <tr>
+            <td data-title="Type of Food">Hamburger</td>
+            <td data-title="Calories">350</td>
+            <td data-title="Tasty Factor">87%</td>
+            <td data-title="Average Price">$3.50</td>
+            <td data-title="Rarity">Common</td>
+            <td data-title="Average Rating">7.5/10</td>
+        </tr>
+    </tbody>
+</table>
+```
+
+#### Breakpoints
+
+The table card stacks up when it hits screen viewport widths less than 640px.
+
+
+
+## How and when to use
+
+- Don't use tables for layout purposes.
+- Use table for organising data with logical relationships.
+- Use 'Table scroll' example when there is lots of data, otherwise 'Table card'.
+
+
+
+## Accessibility
+
+Accessibility in tables can be acheived to an extend by following the considerations below.
+
+- Keep the table structure simple. 
+- Use right semantical html markups for tables wherever possible. (Example, `<table>`, `<thead>`, `<tfoot>`, `<tbody>`, `<th>`, `<td>`)
+- Though `<thead>`, `<tfoot>`, `<tbody>` makes no difference with assistive technologies like screen readers, they are useful when printing long tables that run over the next page. In such instances, the `<thead>`, `<tfoot>` gets repeated on the next printed page that gives the data context.
+- Use `<caption>` tag which defines a table caption. It must be inserted immediately after the `<table>` tag. By default it is center-aligned above a table.
+- Basic tables will have one header row and/or one header column. Header cells must be marked up with `<th>` and data cells with `<td>` to make tables accessible.
+- For complex tables, split data to keep it simple or else user's using assistive technologies like screen readers will find it difficult to interpret data relationships.
+
+Reference: <https://www.w3.org/WAI/tutorials/tables/>
+
+### Accessibility tags
+
+<div class="uq-table__wrapper">
+    <table class="uq-table">
+        <thead>
+            <tr>
+                <th>Accessibility tags</th>
+                <th>Values</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>scope</td>
+                <td>col, row, colgroup</td>
+                <td>Applied to the header cell (th) to signify if it is a 'row' or 'col' or 'colgroup'</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

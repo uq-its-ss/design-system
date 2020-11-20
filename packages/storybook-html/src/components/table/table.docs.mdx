@@ -1,32 +1,41 @@
 import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import StatusBadge from '../../../.storybook/custom/components/StatusBadge';
 
 # Table
 
+<StatusBadge.Review />
+
+<a href="https://github.com/uq-its-ss/design-system/issues" class="uq-button uq-button--text" target="_blank">Check for open issues</a>
+
+
+
 ## Overview
 
-Table components are used to display data in grids. 
-Accessible tables need HTML markup that indicates the difference between header cells and data cells, and indicate the relationship between them. 
-The table should be responsive on different viewport devices and accessible to assistive technologies like screen readers.
+Table components are used to display data for data comparison. The table should be responsive on different viewport devices and accessible to assistive technologies like screen readers.
 
-## Responsive
 
-When it comes to responsive behaviour in tables, there is no one solution. The solution depends on the amount of table data and how complex the table structure is. Shown below are 2 different approaches in acheiving responsive behaviour in tables.
 
-### a) Table Scroll
+## Default example
+
+When it comes to responsive behaviour in tables, there is no one solution. The solution depends on the amount of table data and how complex the table structure is. Shown below is a base approach in acheiving responsive behaviour in tables.
+
+### Table scroll
 
 This is the default approach and should be implemented when there is lots of data. In this approach the component table horizontal scroll is triggered when the table width is greater than the table container width helping the user to view data even on smaller viewport devices. 
 
-To enable scroll feature, the table is wrapped by a container div with class `uq-table__wrapper`.
+To enable scroll feature, the table is wrapped in a container div with class `uq-table__wrapper`.
 
 A shadow feature is added to the sides of the table when it overflows the container. It serves as a visual indication to the user that there is more data to be scrolled to the left or right. 
 For instance when there is more content to the left, a transparent shadow appears to the left side of the table and when there is more content to the right, the shadow appears to the right side of the table.
+
+#### a. Table scroll - Basic tags with minimal classes
 
 <Canvas withToolbar>
     <Story id="components-table--table" />
 </Canvas>
 
 ```html
-<h3>Table - Basic tags with minimal classes</h3>
+<!-- Table scroll - Basic tags with minimal classes -->
 <div class="uq-table__wrapper">
     <table class="uq-table">
         <caption>Types of food and ratings</caption>
@@ -60,11 +69,18 @@ For instance when there is more content to the left, a transparent shadow appear
         </tbody>
     </table>
 </div>
+```
 
 
 
+#### b. Table scroll - Basic tags with classes
 
-<h3>Table - Basic tags with classes</h3>
+<Canvas withToolbar>
+    <Story id="components-table--table-classes" />
+</Canvas>
+
+```html
+<!-- Table scroll - Basic tags with classes -->
 <div class="uq-table__wrapper">
   <table class="uq-table">
       <caption class="uq-table__caption">Types of food and ratings</caption>
@@ -102,71 +118,16 @@ For instance when there is more content to the left, a transparent shadow appear
 
 
 
-### b) Table Card
+#### c. Table scroll - Multiple headers
 
-In this responsive approach, the component table `tr` is displayed as a grid. At a certain responsive breakpoint, it behaves as folded cards and hides the header `thead`. 
-The data attributes assigned to each `tbody` cell helps in understanding the connection between the call value and its associated header when the header `thead` is hidden. 
-
-<Canvas withToolbar>
-    <Story id="components-table--table-card" />
-</Canvas>
-
-```html
-<table class="uq-table uq-table--card">
-    <caption>Types of food and ratings</caption>
-    <thead>
-        <tr>
-            <th>Type of Food</th>
-            <th>Calories</th>
-            <th>Tasty Factor</th>
-            <th>Average Price</th>
-            <th>Rarity</th>
-            <th>Average Rating</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td data-title="Type of Food">Slice of Pizza</td>
-            <td data-title="Calories">450</td>
-            <td data-title="Tasty Factor">95%</td>
-            <td data-title="Average Price">$5.00</td>
-            <td data-title="Rarity">Common</td>
-            <td data-title="Average Rating">8/10</td>
-        </tr>
-        <tr>
-            <td data-title="Type of Food">Hamburger</td>
-            <td data-title="Calories">350</td>
-            <td data-title="Tasty Factor">87%</td>
-            <td data-title="Average Price">$3.50</td>
-            <td data-title="Rarity">Common</td>
-            <td data-title="Average Rating">7.5/10</td>
-        </tr>
-    </tbody>
-</table>
-```
-
-#### Breakpoints
-
-The breakpoint for table cards are less than 640px.
-
-## Accessibility
-
-Data tables are used to organize data with a logical relationship in grids. Accessible tables need HTML markup that indicates header cells and data cells and defines their relationship. Assistive technologies use this information to provide context to users.
-
-Accessibility in tables can be acheived to an extend by following some or part of the steps below depending on the table data structure.
-
-1. Keep the table structure simple. Split data if needed to keep it simple or else user's using assistive technologies like screen readers will find it difficult to interpret data relationships.
-2. Use right semantical html markups for tables wherever possible. (Example, `<table>`, `<thead>`, `<tfoot>`, `<tbody>`, `<th>`, `<td>`)
-3. Though `<thead>`, `<tfoot>`, `<tbody>` makes no difference with assistive technologies like screen readers, they are useful when printing long tables that run over the next page. In such instances, the `<thead>`, `<tfoot>` gets repeated on the next printed page that gives the data context.
-4. Use `<caption>` tag which defines a table caption. The `<caption>` tag must be inserted immediately after the `<table>` tag. Tip: By default, a table caption will be center-aligned above a table.
-5. Basic tables will have one header row and/or one header column. Header cells must be marked up with `<th>` and data cells with `<td>` to make tables accessible. Commonly header cells are the first row or first column or both in a table.
-6. Tables with two headers with unclear header directions needs to define the direction of each header by setting the scope attribute to `col` or `row`.
+Tables with two headers with unclear header directions needs to define the direction of each header by setting the scope attribute to `col` or `row`.
 
 <Canvas withToolbar>
     <Story id="components-table--table-multiple-headers" />
 </Canvas>
 
 ```html
+<!-- Table scroll - Multiple headers -->
 <!-- 
 `col` - specifies that the cell is a header for a column.  
 `row` - specifies that the cell is a header for a row. 
@@ -209,13 +170,18 @@ Accessibility in tables can be acheived to an extend by following some or part o
 </div>
 ```
 
-7. Tables with irregular headers have header cells that span multiple columns and/or rows: For these tables, define column and row groups and set the range of the header cells using the `colgroup` and `rowgroup` values of the scope attribute.
+
+
+#### d. Table scroll - Irregular headers
+
+Tables with irregular headers have header cells that span multiple columns and/or rows: For these tables, define column and row groups and set the range of the header cells using the `colgroup` and `rowgroup` values of the scope attribute.
 
 <Canvas withToolbar>
     <Story id="components-table--table-irregular-headers" />
 </Canvas>
 
 ```html
+<!-- Table scroll - Irregular headers -->
 <!-- 
 `colgroup` - specifies that the cell is a header for a group of columns.  
 `rowgroup` - specifies that the cell is a header for a group of rows.
@@ -265,13 +231,18 @@ Accessibility in tables can be acheived to an extend by following some or part o
 </div>
 ``` 
 
-8. Tables with multi-level headers have multiple header cells associated per data cell: For tables that are so complex that header cells can’t be associated in a strictly horizontal or vertical way, use `id` and `headers` attributes to associate header and data cells explicitly.
+
+
+#### e. Table scroll - Multi-level headers
+
+Tables with multi-level headers have multiple header cells associated per data cell: For tables that are so complex that header cells can’t be associated in a strictly horizontal or vertical way, use `id` and `headers` attributes to associate header and data cells explicitly.
 
 <Canvas withToolbar>
     <Story id="components-table--table-multi-level-headers" />
 </Canvas>
 
 ```html
+<!-- Table scroll - Multi-level headers -->
 <!-- 
 `id` - specifies the unique id of a `<th>` header cell.  
 `headers` - specifies the `<td>` cell with a headers attribute that lists the id values of the associated header cells.
@@ -345,4 +316,112 @@ Accessibility in tables can be acheived to an extend by following some or part o
 </div>
 ``` 
 
-For complex tables, it's recommended to split the table for better user experience on screen readers.
+
+## Variant examples
+
+### Table card
+
+In this responsive approach, the component table `tr` is displayed as a grid. At a certain responsive breakpoint, it behaves as folded cards and hides the header `thead`. 
+The data attributes assigned to each `tbody` cell helps in understanding the connection between the call value and its associated header when the header `thead` is hidden. 
+
+<Canvas withToolbar>
+    <Story id="components-table--table-card" />
+</Canvas>
+
+```html
+<!-- Table card -->
+<table class="uq-table uq-table--card">
+    <caption>Types of food and ratings</caption>
+    <thead>
+        <tr>
+            <th>Type of Food</th>
+            <th>Calories</th>
+            <th>Tasty Factor</th>
+            <th>Average Price</th>
+            <th>Rarity</th>
+            <th>Average Rating</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td data-title="Type of Food">Slice of Pizza</td>
+            <td data-title="Calories">450</td>
+            <td data-title="Tasty Factor">95%</td>
+            <td data-title="Average Price">$5.00</td>
+            <td data-title="Rarity">Common</td>
+            <td data-title="Average Rating">8/10</td>
+        </tr>
+        <tr>
+            <td data-title="Type of Food">Hamburger</td>
+            <td data-title="Calories">350</td>
+            <td data-title="Tasty Factor">87%</td>
+            <td data-title="Average Price">$3.50</td>
+            <td data-title="Rarity">Common</td>
+            <td data-title="Average Rating">7.5/10</td>
+        </tr>
+    </tbody>
+</table>
+```
+
+#### Breakpoints
+
+The table card stacks up when it hits screen viewport widths less than 640px.
+
+
+
+## How and when to use
+
+- Use the table component to let users compare information in rows and columns.
+- Never use the table component to layout content on a page. Instead, use the grid system.
+- Use 'Table scroll' example when there is lots of data, otherwise 'Table card'.
+
+
+
+## Accessibility
+
+Accessibility in tables can be acheived to an extend by following the considerations below.
+
+- Keep the table structure simple. 
+- Use right semantical html markups for tables wherever possible. (Example, `<table>`, `<thead>`, `<tfoot>`, `<tbody>`, `<th>`, `<td>`)
+- Though `<thead>`, `<tfoot>`, `<tbody>` makes no difference with assistive technologies like screen readers, they are useful when printing long tables that run over the next page. In such instances, the `<thead>`, `<tfoot>` gets repeated on the next printed page that gives the data context.
+- Use `<caption>` tag which defines a table caption. It must be inserted immediately after the `<table>` tag. By default it is center-aligned above a table.
+- Basic tables will have one header row and/or one header column. Header cells must be marked up with `<th>` and data cells with `<td>` to make tables accessible.
+- For complex tables, split data to keep it simple or else user's using assistive technologies like screen readers will find it difficult to interpret data relationships.
+
+### Accessibility tags
+
+<div class="uq-table__wrapper">
+    <table class="uq-table">
+        <thead>
+            <tr>
+                <th>Tag</th>
+                <th>Values</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td> &lt;caption&gt; </td>
+                <td> &lt;caption&gt; Types of food and ratings &lt;/caption&gt; </td>
+                <td> &lt;caption&gt; element describes a table as its heading</td>
+            </tr>
+            <tr>
+                <td>scope</td>
+                <td>scope="col", scope="row", scope="colgroup"</td>
+                <td>Applied to the header cell (th) to signify if it is a 'row' or 'col' or 'colgroup'</td>
+            </tr>
+            <tr>
+                <td>id</td>
+                <td>id="a1", id="b1"</td>
+                <td>Applied to the header cell (th) to identify the relationship with associated data</td>
+            </tr>
+            <tr>
+                <td>headers</td>
+                <td>headers="a1 b1"</td>
+                <td>Applied to the data cell (td) to identify relationship with header cell</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+Reference: <https://www.w3.org/WAI/tutorials/tables/>

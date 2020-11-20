@@ -1,23 +1,30 @@
 import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
 import StatusBadge from '../../../.storybook/custom/components/StatusBadge';
 
-# Previous Next
+# Previous next
+
 <StatusBadge.Stable />
+
+<a href="https://github.com/uq-its-ss/design-system/issues" class="uq-button uq-button--text" target="_blank">Check for open issues</a>
+
+
 
 ## Overview
 
-The Previous-Next component is is also a form of pagination. 
-It provides previous and next buttons (links) to navigate between pages or between tab contents on the same page. 
-They are aligned to the sides of the page or in some instances to the sides of the tab contents.
+- The Previous-next component is also a form of pagination. 
+- It provides previous and next buttons (links) to navigate between pages or between tab contents on the same page. 
+- They are aligned to the sides of the page or in some instances to the sides of the tab contents.
 
-## Instances
 
-### First instance, Default instance
+
+## Default example
+
+### a. Initial instance
 
 An instance when only the next button is visible
 
 <Canvas withSource="none">
-  <Story id="components-previous-next--previous-next-first" />
+  <Story id="components-previous-next--previous-next-initial" />
 </Canvas>
 
 ```html
@@ -32,12 +39,12 @@ An instance when only the next button is visible
   </div>
 ```
 
-### Middle instance
+### b. Middle instance
 
 An instance when both the previous and next buttons are visible
 
 <Canvas withSource="none">
-  <Story id="components-previous-next--previous-next" />
+  <Story id="components-previous-next--previous-next-middle" />
 </Canvas>
 
 ```html
@@ -53,12 +60,12 @@ An instance when both the previous and next buttons are visible
 </div>
 ```
 
-### Last instance
+### c. Final instance
 
 An instance when only the previous button is visible
 
 <Canvas withSource="none">
-  <Story id="components-previous-next--previous-next-last" />
+  <Story id="components-previous-next--previous-next-final" />
 </Canvas>
 
 ```html
@@ -73,6 +80,18 @@ An instance when only the previous button is visible
   </div>
 ```
 
-## Breakpoints
 
-The previous and next buttons collapses at 640px
+
+## How and when to use
+
+- The Previous-next component can be used with or without the progression component.
+
+### Breakpoints
+
+- The previous and next buttons collapses at viewport widths less than 640px.
+
+
+
+## Related
+
+- Progression component could be used in conjunction with the Previous-next component.

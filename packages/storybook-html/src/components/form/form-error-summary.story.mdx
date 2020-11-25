@@ -1,0 +1,57 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+
+<Meta title="Components/Form/Error summary" parameters={{ previewTabs: {canvas: {hidden: false}} }} />
+
+# Error summary
+
+export const ErrorSummary = () => {
+  return `
+    <div id="errorSummary" role="alert" class="error-summary">
+      <div class="error-summary__body">
+        <h2 class="error-summary__title">Your form could not be submitted</h2>
+        <ul class="error-summary__list">
+          <li class="error-summary__list__item"><a href="#password">Your password is shorter than eight characters</a></li>
+          <li class="error-summary__list__item"><a href="#password">Your password does not contain a digit or allowed special character</a></li>
+          <li class="error-summary__list__item"><a href="#confirmPassword">Confirm your new password by re-entering it</a></li>
+        </ul>
+      </div>
+    </div>
+  `;
+};
+
+<Story name="Error summary">
+  {ErrorSummary.bind({})}
+</Story>
+
+## Accessibility requirements
+
+Using `role="alert"` on an element implies `aria-live="assertive"` as well as
+`aria-atomic="true"` (W3C, "[Alert Example](https://www.w3.org/TR/wai-aria-practices-1.1/examples/alert/alert.html.)",
+2019). So if we want screen readers to read aloud error summaries in full, they
+should be injected into an element with this specialised role active.
+
+## Basic setup
+
+```html
+<!-- Before error insertion -->
+<div id="errorSummary" role="alert"></div>
+ 
+<!-- After error insertion -->
+<div id="errorSummary" role="alert" class="error-summary">
+    <h2 class="error-summary__title">There is a problem</h2>
+    <div class="error-summary__body">
+        <ul class="error-summary__list">
+            <li class="error-summary__list-item">
+                <!-- links should go to respective controls -->
+                <a href="#mobile">Enter a valid mobile number</a>
+            </li>
+            <li class="error-summary__list-item">
+                <a href="#favouriteRed">You need to select a favourite</a>
+            </li>
+            <li class="error-summary__list-item">
+                <a href="#terms">You need to agree to the terms of service</a>
+            </li>
+        </ul>
+    </div>
+</div>
+```

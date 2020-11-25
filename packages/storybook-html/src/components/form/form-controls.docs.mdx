@@ -6,7 +6,13 @@ import StatusBadge from '../../../.storybook/custom/components/StatusBadge';
 
 ## Overview
 
-Intro to form styles and kitchen sink here.
+Forms allow users to interact with your website or web
+application by providing some information. For example,
+- entering login details
+- setting a new password
+- selecting search filters
+- customising site preferences
+- and more.
 
 ## Accessibility requirements
 
@@ -19,8 +25,8 @@ of both in the basic setup per control.
 ### Inline validation feedback is announced and associated with a control
 
 Creating an excellent form-filling experience, for the most part, involves using
-effective [*form validation*][2] practices. And, as part of good client-side
-form validation, we should display useful inline feedback to guide users when
+effective [*form validation*][2] practices where it is helpful. And, as part of
+good client-side form validation, we should display useful inline feedback to guide users when
 the need arises. So then, **how do we ensure that this feedback is also
 accessible?** On the client-side, we can implement form validation in two ways:
 using [built-in form validation][3], and using JavaScript. We'll be focusing on
@@ -38,9 +44,7 @@ attribute. In our code examples, we'll be demonstrating the usage of
 
 You can also review your form with [this checklist by the A11Y project][6] if
 you are unsure that you comply with Web Content Accessibility Guidelines (WCAG)
-standards.
-
-We also highly recommend reading our [form validation][1] docs for further
+standards. We highly recommend reading our [form validation][1] docs for further
 recommendations and examples.
 
 ## Controls
@@ -324,12 +328,6 @@ Use a `fieldset` and `legend` to group and label your radio options.
 
 ---
 
-### File input
-
-Coming soon
-
----
-
 ### Number input
 
 <Story id="components-form-controls--input-number" />
@@ -342,7 +340,13 @@ Coming soon
 
 ---
 
-## Encapsulating the styles (in Sass) for established projects
+### File input
+
+Coming soon
+
+---
+
+## Optional setup step (Sass only)
 
 This stylesheet can affect HTML elements globally and provides non-`uq-`-prefixed
 utility CSS classes. If you are modifying an existing project with base form
@@ -359,21 +363,25 @@ You can now wrap any amount of HTML content with the `uq` class to apply the
 package stylesheet to a subset of DOM elements. For example:
 
 ```html
-  ...
+...
   <div class="uq">
-    <h2>I will be styled with <span class="text--weight-medium">this</span> stylesheet.</h2>
-    <p>As will I.</p>
+    <!-- these elements will now be styled using UQ style rules -->
+    <form>
+      <input type="text" name="firstname" />
+      <input type="text" name="lastname" />
+      <input type="submit" />
+    </form>
   </div>
-  ...
+...
 ```
 
 You can also apply the `uq` class to the `<body>` tag to use the styles globally
-(i.e. to add more [specificity](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity)
-to the resulting CSS).
+(i.e. just to add more [specificity](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity)
+to the resulting CSS to override third-party styles).
 
 ```html
 <body class="uq">
-  ...
+...
 ```
 
 ## Known issues
@@ -394,4 +402,4 @@ better when used within search filters and other discrete content controls.
 [4]: https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions
 [5]: https://www.w3.org/WAI/tutorials/forms/labels/
 [6]: https://www.a11yproject.com/checklist/#forms
-[7]: /?path=/docs/components-form-error-summary--page
+[7]: /?path=/docs/components-form-error-summary--error-summary

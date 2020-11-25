@@ -1,19 +1,25 @@
 import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import StatusBadge from '../../../.storybook/custom/components/StatusBadge';
 
 <Meta title="Components/Form/Error summary" parameters={{ previewTabs: {canvas: {hidden: false}} }} />
 
 # Error summary
+<StatusBadge.Development />
 
 export const ErrorSummary = () => {
   return `
-    <div id="errorSummary" role="alert" class="error-summary">
-      <div class="error-summary__body">
-        <h2 class="error-summary__title">Your form could not be submitted</h2>
-        <ul class="error-summary__list">
-          <li class="error-summary__list__item"><a href="#password">Your password is shorter than eight characters</a></li>
-          <li class="error-summary__list__item"><a href="#password">Your password does not contain a digit or allowed special character</a></li>
-          <li class="error-summary__list__item"><a href="#confirmPassword">Confirm your new password by re-entering it</a></li>
-        </ul>
+    <div class="uq-grid uq-grid--golden uq-grid--full-width">
+      <div class="uq-grid__col">
+        <div id="errorSummary" role="alert" class="error-summary">
+          <div class="error-summary__body">
+            <h2 class="error-summary__title">Your form could not be submitted</h2>
+            <ul class="error-summary__list">
+              <li class="error-summary__list__item"><a href="#password">Your password is shorter than eight characters</a></li>
+              <li class="error-summary__list__item"><a href="#password">Your password does not contain a digit or allowed special character</a></li>
+              <li class="error-summary__list__item"><a href="#confirmPassword">Confirm your new password by re-entering it</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   `;
@@ -55,3 +61,8 @@ should be injected into an element with this specialised role active.
     </div>
 </div>
 ```
+
+## Related
+
+- [Form controls](/?path=/docs/components-form-controls--input-text)
+- [Form validation](/?path=/docs/patterns-form-validation--page)

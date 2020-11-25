@@ -1,5 +1,4 @@
 import './form.scss';
-import allHTML from './all.html';
 import docs from './form-controls.docs.mdx';
 
 export default {
@@ -49,10 +48,6 @@ const gridLayout = (main, aside) => `
     `: ''}
   </div>
 `;
-
-export const primary = () => {
-  return allHTML;
-};
 
 export const inputText = () => layout([
   `<label for="text1">First name</label>

@@ -44,21 +44,26 @@ $use-encapsulation: false !default;
     display: block;
     font-size: $form-label-size;
     font-weight: core.$font-weight-bold;
-    line-height: core.$line-height-ui;
   }
 
   legend {
     margin-bottom: $form-spacing;
     font-size: $form-text-size;
+    line-height: core.$line-height-h;
     padding: 0;
 
     &.legend--error {
+      color: $form-color-error;
+    }
+
+    .legend__required {
       color: $form-color-error;
     }
   }
   
   label {
     cursor: pointer;
+    line-height: core.$line-height-ui;
 
     &.label {
       &--inline {
@@ -134,6 +139,10 @@ $use-encapsulation: false !default;
           opacity: .5;
         }
       }
+    }
+
+    .label__required {
+      color: $form-color-error;
     }
   }
 
@@ -367,6 +376,7 @@ $use-encapsulation: false !default;
       color: core.$text;
       font-size: core.$font-size-l;
       font-weight: core.$font-weight-bold;
+      line-height: core.$line-height-h;
       margin: core.$space-none core.$space-none core.$space core.$space-none;
     }
   

@@ -317,7 +317,7 @@ radioAlt.storyName = "Radio buttons (nested)";
 
 export const radioError = () => gridLayout(`
   <fieldset>
-    <legend>What semester will you start?</legend>
+    <legend class="legend--error">What semester will you start?</legend>
     <input id="singleRadio7" type="radio" name="radioGroup3" class="input--error" aria-invalid="true" aria-describedby="radioButtonFeedback">
     <label for="singleRadio7" class="label--error">Semester 1</label><br/>
     <input id="singleRadio8" type="radio" name="radioGroup3" class="input--error" aria-invalid="true" aria-describedby="radioButtonFeedback">
@@ -330,7 +330,7 @@ radioError.storyName = "Radio buttons (error)";
 
 export const radioErrorAlt = () => gridLayout(`
   <fieldset>
-    <legend>What semester will you start?</legend>
+    <legend class="legend--error">What semester will you start?</legend>
     <label class="label--error">
       <input type="radio" name="radioGroup4" class="input--error" aria-invalid="true" aria-describedby="radioButtonFeedback">
       <span>Semester 1</span>

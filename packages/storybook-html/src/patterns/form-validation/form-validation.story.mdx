@@ -1,5 +1,9 @@
 import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import { useEffect } from '@storybook/client-api';
 import baddestForm from './form-errors-kitchen-sink.html';
+import passwordResetHTML from './examples/password-reset.html';
+import passwordResetInit from './examples/password-reset.es6';
+import './examples/password-reset.scss';
 
 <Meta title="Patterns/Form validation" />
 
@@ -24,7 +28,7 @@ export const BadFormExample = () => {
   return baddestForm;
 };
 
-<Story name="Bad form submission example">
+<Story name="Primary">
   {BadFormExample.bind({})}
 </Story>
 
@@ -110,6 +114,21 @@ different types of instantaneously feedback types and usage examples.
 |---------------|-----------------------------------------------------------------------------------------------------------------------------------------------|--------------------------|
 | Scaled | Communicates validation result on a scaled classification or rating system. <a href="/?path=/docs/forms-working-examples--password-form">See password form working example</a>. | Password strength meter. |
 | Binary | Communicates true or false validation result. | Username availability. |
+
+## Example: password reset form
+
+export const PasswordForm = () => {
+  useEffect(() => {
+    var init = new passwordResetInit();
+  });
+  return passwordResetHTML;
+};
+
+<Canvas withSource="none" withToolbar>
+  <Story name="Password form" inline={false} height={600} parameters={{layout: "padded"}}>
+    {PasswordForm.bind({})}
+  </Story>
+</Canvas>
 
 ## Glossary
 

@@ -246,10 +246,12 @@ $use-encapsulation: false !default;
   input[type="radio"],
   input[type="checkbox"] {
     appearance: none;
+    display: inline-block;
     border: $form-checkbox-border-width solid $form-border-color;
     cursor: pointer;
     height: $form-checkbox-size;
     width: $form-checkbox-size;
+    vertical-align: top;
 
     &:focus {
       border-color: $form-focus-color;

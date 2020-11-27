@@ -130,7 +130,7 @@
                 margin: core.$space-none core.$space-none core.$space-sm core.$space-none;
                 padding: core.$space-none;
 
-                @media #{core.$screen-xl-up} {
+                @media #{core.$screen-lg-up} {
                     margin-bottom: core.$space;
                 }
             }
@@ -142,9 +142,12 @@
                 font-style: italic;
                 font-weight: core.$font-weight-normal;
 
+                @media #{core.$screen-lg-up} {
+                    vertical-align: middle;
+                }
+
                 @media #{core.$screen-xl-up} {
                     font-size: core.$font-size-xl;
-                    vertical-align: middle;
                 }
             }
 

@@ -27,6 +27,7 @@ export const parameters = {
         [
           'Introduction',
           'Fonts',
+          'Typography',
           'Space',
           'Breakpoints',
           'Colour',

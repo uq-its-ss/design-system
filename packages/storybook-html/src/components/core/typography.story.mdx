@@ -11,57 +11,18 @@ Typography is the art and technique of arranging type (letters and characters). 
 
 The 3 typefaces used in the design system are Roboto, Merriweather & Montserrat.
 
-<table>
-  <tbody className="uqds-table__body">
-    <tr className="uqds-table__mobile-heading">
-      <th className="uqds-table__heading text--left">Category</th>
-      <th className="uqds-table__heading text--left">Font name</th>
-      <th className="uqds-table__heading text--left">Usage</th>
-    </tr>
-    <tr className="uqds-table__row">
-      <td className="uqds-table__item" data-title="Category:">Primary</td>
-      <td className="uqds-table__item" data-title="Font name:">
-        <div class="uqds-fonts uqds-font--roboto">Roboto Regular 400</div>
-      </td>
-      <td className="uqds-table__item" data-title="Usage:">Default text</td>
-    </tr>
-    <tr className="uqds-table__row">
-      <td className="uqds-table__item" data-title="Category:">Primary</td>
-      <td className="uqds-table__item" data-title="Font name:">
-        <div class="uqds-fonts uqds-font--roboto uqds-font--500">Roboto Medium 500</div>
-      </td>
-      <td className="uqds-table__item" data-title="Usage:">Bold text</td>
-    </tr>
-    <tr className="uqds-table__row">
-      <td className="uqds-table__item" data-title="Category:">Primary</td>
-      <td className="uqds-table__item" data-title="Font name:">
-        <div class="uqds-fonts uqds-font--roboto uqds-font--italic">Roboto Regular 400 Italic</div>
-      </td>
-      <td className="uqds-table__item" data-title="Usage:">Emphasise</td>
-    </tr>
-    <tr className="uqds-table__row">
-      <td className="uqds-table__item" data-title="Category:">Primary</td>
-      <td className="uqds-table__item" data-title="Font name:">
-        <div class="uqds-fonts uqds-font--roboto uqds-font--500 uqds-font--italic">Roboto Medium 500 Italic</div>
-      </td>
-      <td className="uqds-table__item" data-title="Usage:">Emphasise</td>
-    </tr>
-    <tr className="uqds-table__row">
-      <td className="uqds-table__item" data-title="Category:">Secondary</td>
-      <td className="uqds-table__item" data-title="Font name:">
-        <div class="uqds-fonts uqds-font--merriweather uqds-font--italic">Merriweather Regular 400 Italic</div>
-      </td>
-      <td className="uqds-table__item" data-title="Usage:">Statement</td>
-    </tr>
-    <tr className="uqds-table__row">
-      <td className="uqds-table__item" data-title="Category:">Title</td>
-      <td className="uqds-table__item" data-title="Font name:">
-        <div class="uqds-fonts uqds-font--montserrat">Montserrat Medium 500</div>
-      </td>
-      <td className="uqds-table__item" data-title="Usage:">Page title</td>
-    </tr>
-  </tbody>
-</table>
+export const FontList = () => `
+  <div class="uqds-fonts">
+    <div class="uqds-font uqds-font--roboto">Roboto Regular 400</div>
+    <div class="uqds-font uqds-font--roboto uqds-font--500">Roboto Medium 500</div>
+    <div class="uqds-font uqds-font--merriweather uqds-font--italic">Merriweather Regular 400 italic</div>
+    <div class="uqds-font uqds-font--montserrat uqds-font--500">Montserrat Medium 500</div>
+  </div>
+`;
+
+<Story name="Font list">{FontList.bind({})}</Story>
+
+<br /><br />
 
 ## Loading fonts
 
@@ -84,70 +45,84 @@ Copy the HTML or CSS lines below and paste it into your project to load design s
 ## Font size
 
 <table>
-  <tbody className="uqds-table__body">
-    <tr className="uqds-table__mobile-heading">
-      <th className="uqds-table__heading text--right">Rem</th>
-      <th className="uqds-table__heading text--right">Px</th>
-      <th className="uqds-table__heading text--left">Class name</th>
+  <thead>
+    <tr>
+      <th>rem</th>
+      <th>px</th>
     </tr>
-    <tr className="uqds-table__row">
-      <td className="text--right" data-title="rem:">0.75</td>
-      <td className="text--right" data-title="px:">12</td>
-      <td className="uqds-table__item" data-title="Usage:">.text--xs</td>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0.75</td>
+      <td>12</td>
     </tr>
-    <tr className="uqds-table__row">
-      <td className="text--right" data-title="rem:">0.875</td>
-      <td className="text--right" data-title="px:">14</td>
-      <td className="uqds-table__item" data-title="Usage:">.text--s</td>
+    <tr>
+      <td>0.875</td>
+      <td>14</td>
     </tr>
-    <tr className="uqds-table__row">
-      <td className="text--right" data-title="rem:">1</td>
-      <td className="text--right" data-title="px:">16</td>
-      <td className="" data-title="Usage:">.text--m</td>
+    <tr>
+      <td>1</td>
+      <td>16</td>
     </tr>
-    <tr className="uqds-table__row">
-      <td className="text--right" data-title="rem:">1.125</td>
-      <td className="text--right" data-title="px:">18</td>
-      <td className="uqds-table__item" data-title="Usage:">.text--l</td>
+    <tr>
+      <td>1.125</td>
+      <td>18</td>
     </tr>
-    <tr className="uqds-table__row">
-      <td className="text--right" data-title="rem:">1.25</td>
-      <td className="text--right" data-title="px:">20</td>
-      <td className="" data-title="Usage:">.text--xl</td>
+    <tr>
+      <td>1.25</td>
+      <td>20</td>
     </tr>
-    <tr className="uqds-table__row">
-      <td className="text--right" data-title="rem:">1.5</td>
-      <td className="text--right" data-title="px:">24</td>
-      <td className="" data-title="Usage:">.text--xxl</td>
+    <tr>
+      <td>1.5</td>
+      <td>24</td>
     </tr>
-    <tr className="uqds-table__row">
-      <td className="text--right" data-title="rem:">2</td>
-      <td className="text--right" data-title="px:">32</td>
-      <td className="" data-title="Usage:">.text--xxxl</td>
+    <tr>
+      <td>2</td>
+      <td>32</td>
     </tr>
-    <tr className="uqds-table__row">
-      <td className="text--right" data-title="rem:">2.5</td>
-      <td className="text--right" data-title="px:">40</td>
-      <td className="" data-title="Usage:">.text--xxxxl</td>
+    <tr>
+      <td>2.5</td>
+      <td>40</td>
     </tr>
-    <tr className="uqds-table__row">
-      <td className="text--right" data-title="rem:">3</td>
-      <td className="text--right" data-title="px:">48</td>
-      <td className="" data-title="Usage:">.text--xxxxxl</td>
+    <tr>
+      <td>3</td>
+      <td>48</td>
     </tr>
   </tbody>
 </table>
 
-## Font weight
+## Font style
 
-## Title wrap
+### Weight
 
-export const TitleWrap = () => `
-  <h1>This is an example of a very long title that wraps. This is an example of a very long title that wraps.</h1>
+The 2 font weights used are Regular (400) and Medium (500).
+
+export const FontWeight = () => `
+  <div class="uqds-fonts">
+    <div class="uqds-font uqds-font--roboto">Regular (400)</div>
+    <div class="uqds-font uqds-font--roboto uqds-font--500">Medium (500)</div>
+  </div>
 `;
 
-<Story name="Title Wrap">{TitleWrap.bind({})}</Story>
+<Story name="Font weights">{FontWeight.bind({})}</Story>
 
+<br />
+
+### Italic
+
+Italic style should be used when you need to emphasize certain words in a sentence or a statement.
+
+export const FontItalic = () => `
+  <div class="uqds-fonts">
+    <div class="uqds-font uqds-font--roboto uqds-font--italic">Roboto Regular (400) Italic</div>
+    <div class="uqds-font uqds-font--roboto uqds-font--500 uqds-font--italic">Roboto Medium (500) Italic</div>
+    <div class="uqds-font uqds-font--merriweather uqds-font--italic">Merriweather Regular (400) Italic</div>
+  </div>
+`;
+
+<Story name="Font italic">{FontItalic.bind({})}</Story>
+
+<br /><br />
 
 ## Base typography palette
 

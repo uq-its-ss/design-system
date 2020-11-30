@@ -129,6 +129,10 @@
                 border: none;
                 margin: core.$space-none core.$space-none core.$space-sm core.$space-none;
                 padding: core.$space-none;
+
+                @media #{core.$screen-xl-up} {
+                    margin-bottom: core.$space;
+                }
             }
 
             &__title {
@@ -140,6 +144,7 @@
 
                 @media #{core.$screen-xl-up} {
                     font-size: core.$font-size-xl;
+                    vertical-align: middle;
                 }
             }
 
@@ -150,10 +155,12 @@
                 &__radio-wrapper {
                     font-size: core.$font-size-m;
                     margin: core.$space-none core.$space-none core.$space-sm core.$space-none;
+                    white-space: nowrap;
 
                     @media #{core.$screen-lg-up} {
                         display: inline-block;
                         margin: core.$space-none;
+                        vertical-align: middle;
                     }
                 }
 
@@ -161,22 +168,45 @@
                     margin-top: core.$space-sm;
                     padding-top: core.$space-xs;
 
-                    input {
+                    input[type="radio"], label {
+                        cursor: pointer;
                         display: inline-block;
-                        float: none;
-                        clear: none;
-                        margin: core.$space-xs core.$space-xs core.$space-none core.$space-xs;
-                        padding: core.$space-none;
+                        margin-bottom: 0;
+                        vertical-align: top;
+                    }
+
+                    input[type="radio"] {
+                        appearance: none;
+                        border: 1px solid core.$uq-neutral-light40;
+                        border-radius: 50%;
+                        height: 24px;
+                        width: 24px;
+                        margin: 0;
+                        
+                        &:focus {
+                            outline: 2px solid core.$link;
+                            box-shadow: 0 0 0 1px core.$uq-white;
+                        }
+
+                        &:checked {
+                            border-color: core.$uq-white;
+                            border-width: 4px;
+
+                            &:focus {
+                                box-shadow: 0 0 0 1px core.$uq-white;
+                            }
+                        }
                     }
 
                     label {
                         color: core.$uq-white;
-                        display: inline;
                         font-size: core.$font-size-s;
                         font-weight: core.$font-weight-normal;
-                        margin: core.$space-none;
-                        padding: core.$space-none;
-                        max-width: none;
+                        line-height: core.$line-height;
+                        margin-left: core.$space-sm;
+                        margin-right: core.$space;
+                        padding-top: .2rem;
+                        white-space: normal;
                     }
                                 
                     @media #{core.$screen-lg-up} {
@@ -184,13 +214,14 @@
                         margin-top: core.$space-none;
                         padding-left: core.$space;
                         padding-top: core.$space-none;
-                    } 
+                    }
                 }
 
                 @media #{core.$screen-lg-up} {
                     display: inline;
                     font-size: core.$font-size-s;
                     margin-left: core.$space;
+                    vertical-align: middle;
                 }
             }
 
@@ -212,7 +243,7 @@
 
                 &__input {
                     background: transparent;
-                    margin: core.$space-none;
+                    margin: core.$space-none !important;
                     width: 100%;
                     padding: .75rem 1rem;
                     border: 1px solid #e2e2e2;

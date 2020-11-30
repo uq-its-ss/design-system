@@ -12,7 +12,7 @@ var passwordResetValidation = (function() {
    */
   function passwordResetValidation() {
     this.form                = document.getElementById("passwordResetForm");
-    this.labelDisabledClass  = "form__label--disabled";
+    this.labelDisabledClass  = "label--disabled";
     this.errorSummary        = document.getElementById("errorSummary");
 
     this.passwordInput                     = document.getElementById("password");
@@ -281,10 +281,10 @@ var passwordResetValidation = (function() {
       // set error state
       var error = this.choosePasswordFormErrors[errorKey];
 
-      labelElem.classList.add("form__label--error");
-      inputElem.classList.add("form__input--error");
+      labelElem.classList.add("label--error");
+      inputElem.classList.add("input--error");
       inputElem.setAttribute("aria-invalid", "true");
-      errorElem.classList.add("form__inline-error-message");
+      errorElem.classList.add("inline-error-message");
 
       if (_.isArray(error)) {
         var error = error.join(",<br/>");
@@ -293,10 +293,10 @@ var passwordResetValidation = (function() {
       errorElem.innerHTML = error;
     } else {
       // remove error state
-      labelElem.classList.remove("form__label--error");
-      inputElem.classList.remove("form__input--error");
+      labelElem.classList.remove("label--error");
+      inputElem.classList.remove("input--error");
       inputElem.setAttribute("aria-invalid", "false");
-      errorElem.classList.remove("form__inline-error-message");
+      errorElem.classList.remove("inline-error-message");
       errorElem.innerHTML = "";
     }
   };

@@ -1,0 +1,405 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import StatusBadge from '../../../.storybook/custom/components/StatusBadge';
+
+# Form
+<StatusBadge.Development />
+
+## Overview
+
+Forms allow users to interact with your website or web
+application by providing some information. For example,
+- entering login details
+- setting a new password
+- selecting search filters
+- customising site preferences
+- and more.
+
+## Accessibility requirements
+
+### A label and a form control should be associated with each other
+
+You can [associate a label and control with each other][5] using an explicit or
+implicit method. **Whenever possible, do so explicitly.** We'll provide examples
+of both in the basic setup per control.
+
+### Inline validation feedback is announced and associated with a control
+
+Creating an excellent form-filling experience, for the most part, involves using
+effective [*form validation*][2] practices where it is helpful. And, as part of
+good client-side form validation, we should display useful inline feedback to guide users when
+the need arises. So then, **how do we ensure that this feedback is also
+accessible?** On the client-side, we can implement form validation in two ways:
+using [built-in form validation][3], and using JavaScript. We'll be focusing on
+the latter because it gives us more control over styling and behaviour.
+
+Inline messages that are injected into the page using JavaScript are done so
+after the initial page load. Therefore, **we need to "tell" the browser that
+we've made a change. To do that, inject text or elements into an existing
+`aria-live` region** (MDN contributors, "[ARIA live regions][4]", 2019). We also
+associate the feedback with the affected control using the `aria-describedby`
+attribute. In our code examples, we'll be demonstrating the usage of
+`aria-live="polite"`, `aria-invalid`, and `aria-describedby` attributes.
+
+---
+
+You can also review your form with [this checklist by the A11Y project][6] if
+you are unsure that you comply with Web Content Accessibility Guidelines (WCAG)
+standards. We highly recommend reading our [form validation][1] docs for further
+recommendations and examples.
+
+## Controls
+
+### Text input
+
+Input for freestyle text entry. Use when asking for open-ended, single-line
+answers from your users. E.g. "first name", "street address". For multi-line
+answers, consider using a *text area*.
+
+<Story id="components-form-controls--input-text" />
+
+#### Basic setup
+
+```html
+<form>
+  <!-- Explicit control-label association -->
+  <label for="firstname">First name</label>
+  <input type="text" id="firstname" name="firstname" aria-describedby="firstnameFeedback" />
+  <span id="firstnameFeedback" aria-live="polite"><!-- Feedback injection point --></span>
+
+  <!-- Implicit control-label association -->
+  <label>First name 
+    <input type="text" name="firstname" aria-describedby="firstnameFeedback" />
+    <span id="firstnameFeedback" aria-live="polite"><!-- Feedback injection point --></span>
+  </label>
+</form>
+```
+
+#### Error feedback
+
+<Story id="components-form-controls--input-text-error" />
+
+```html
+<form>
+  <label for="firstname" class="label--error" >First name</label>
+  <input type="text" id="firstname" name="firstname" aria-describedby="firstnameFeedback" aria-invalid="true" class="input--error" />
+  <span id="firstnameFeedback" aria-live="polite" class="inline-error-message">Enter your first name</span>
+</form>
+```
+
+#### Success feedback
+
+Success feedback on an individual form field should be used selectively and only
+when a user truly requires extra guidance. E.g. where there are strict
+formatting or unique value requirements.
+
+<Story id="components-form-controls--input-text-success" />
+
+```html
+<form>
+  <label for="username" class="label--success">Username</label>
+  <input type="text" id="username" name="username" aria-describedby="usernameFeedback" class="input--success" />
+  <span id="usernameFeedback" aria-live="polite" class="inline-success-message">Your chosen username is available</span>
+</form>
+```
+
+#### Inline label and input field
+
+Useful for contextual menus e.g. filter search results based on keywords.
+
+<Story id="components-form-controls--input-text-inline" />
+
+Apply the `label--inline` class name to the `label` element like so:
+
+```html
+<form>
+  <!-- Explicit control-label association -->
+  <!-- Note: wrap elements in an "inline-block" level element to ensure that the both input and label wrap together -->
+  <div style="display: inline-block">
+    <label class="label--inline">Keyword</label>
+    <input type="text" name="keyword" />
+  </div>
+
+  <!-- Implicit control-label association -->
+  <label class="label--inline">Keyword <input type="text" name="keyword" /></label>
+</form>
+```
+
+#### Large input field
+
+Only suitable for featured text fields, e.g. within discrete sections and
+panels. For search fields, consider setting `type="search"`.
+
+> Note: there's still an expectation that there's an associated label whether
+> visually hidden or not.
+
+<Story id="components-form-controls--input-text-large" />
+
+Apply the `input--large` class name to the `input` element like so:
+
+```html
+<form>
+  <input type="text" class="input--large" placeholder="Optional placeholder" />
+</form>
+```
+
+---
+
+### Select
+
+The select field, used to choose a single option from a list. If multiple
+options can be selected at the same time, consider using multiple checkboxes
+instead.
+
+<Story id="components-form-controls--select" />
+
+#### Basic setup
+
+```html
+<form>
+  <!-- Explicit control-label association -->
+  <label for="CommencementYear">Begin study in</label>
+  <select id="CommencementYear" name="commencementyear" aria-describedby="CommencementYearError">
+    <option value=""></option>
+    <option value="2021">2021</option>
+    <option value="2022">2022</option>
+  </select>
+  <span id="CommencementYearError" aria-live="polite"></span>
+
+  <!-- Implicit control-label association -->
+  <label>Begin study in
+    <select name="commencementyear" aria-describedby="CommencementYearError">
+      <option value=""></option>
+      <option value="2021">2021</option>
+      <option value="2022">2022</option>
+    </select>
+    <span id="CommencementYearError" aria-live="polite"></span>
+  </label>
+</form>
+```
+
+#### Error feedback
+
+<Story id="components-form-controls--select-error" />
+
+```html
+<form>
+  <label class="label--error">Begin study in
+    <select name="commencementyear" class="input--error" aria-describedby="CommencementYearError" aria-invalid="true">
+      <option value=""></option>
+      <option value="2021">2021</option>
+      <option value="2022">2022</option>
+    </select>
+    <span id="CommencementYearError" class="inline-error-message" aria-live="polite">Select the year you will commence study at UQ</span>
+  </label>
+</form>
+```
+
+#### Inline label and select
+
+<Story id="components-form-controls--select-inline" />
+
+Apply the `label--inline` class name to the `label` element like so:
+
+```html
+<form>
+  <!-- Explicit control-label association -->
+  <!-- Note: wrap elements in an "inline-block" level element to ensure that the both select and label wrap together -->
+  <div style="display: inline-block">
+    <label for="CommencementYear" class="label--inline">Begin study in</label>
+    <select id="CommencementYear" name="commencementyear">
+      <option value=""></option>
+      <option value="2021">2021</option>
+      <option value="2022">2022</option>
+    </select>
+  </div>
+
+  <!-- Implicit control-label association -->
+  <label class="label--inline">Begin study in
+    <select name="commencementyear">
+      <option value=""></option>
+      <option value="2021">2021</option>
+      <option value="2022">2022</option>
+    </select>
+  </label>
+</form>
+```
+
+---
+
+### Checkbox
+
+Use to provided users with multiple yes or no options. For example, accepting
+terms and conditions and opting into communications.
+
+<Story id="components-form-controls--checkbox" />
+
+#### Basic setup
+
+```html
+<form>
+  <!-- Explicit control-label association -->
+  <input id="Confirm" type="checkbox" name="confirm" aria-describedby="ConfirmFeedback" />
+  <label for="Confirm">I declare that the information I've provided is correct and true</label>
+  <span id="ConfirmFeedback" aria-live="polite"></span>
+
+  <!-- Implicit control-label association -->
+  <label>
+    <input type="checkbox" name="confirm" aria-describedby="ConfirmFeedback" />
+    <span>I declare that the information I've provided is correct and true</span>
+  </label>
+  <span id="ConfirmFeedback" aria-live="polite"></span>
+</form>
+```
+
+#### Error feedback
+
+<Story id="components-form-controls--checkbox-error" />
+
+```html
+<form>
+  <input id="Confirm" type="checkbox" name="confirm" aria-describedby="ConfirmFeedback" aria-invalid="true" class="input--error" />
+  <label for="Confirm" class="label--error">I declare that the information I've provided is correct and true</label>
+  <span id="ConfirmFeedback" aria-live="polite" class="inline-error-message">Make sure your details are correct and then check the declaration statement</span>
+</form>
+```
+
+---
+
+### Radio buttons
+
+Use to provide users with up to three, mutually exclusive options. If you have
+more than three options, please consider a *select* control instead.
+
+<Story id="components-form-controls--radio" />
+
+#### Basic setup
+
+Use a `fieldset` and `legend` to group and label your radio options.
+
+```html
+<form>
+  <fieldset>
+    <legend>What semester will you start</legend>
+
+    <!-- Explicit control-label association -->
+    <input id="Semester1" type="radio" name="semester" aria-describedby="semesterFeedback" />
+    <label for="Semester1">Semester 1</label><br/>
+    <input id="Semester2" type="radio" name="semester" aria-describedby="semesterFeedback" />
+    <label for="Semester2">Semester 2</label>
+    <span id="semesterFeedback" aria-live="polite" class="inline-error-message"></span>
+
+    <!-- Implicit control-label association -->
+    <label>
+      <input type="radio" name="semester" aria-describedby="semesterFeedback" />
+      <span>Semester 1</span>
+    </label>
+    <label>
+      <input type="radio" name="semester" aria-describedby="semesterFeedback" />
+      <span>Semester 2</span>
+    </label>
+    <span id="semesterFeedback" aria-live="polite" class="inline-error-message"></span>
+
+  </fieldset>
+</form>
+```
+
+#### Error feedback
+
+<Story id="components-form-controls--radio-error" />
+
+```html
+<form>
+  <fieldset>
+    <legend class="legend--error">What semester will you start?</legend>
+    <input id="Semester1" type="radio" name="semester" class="input--error" aria-invalid="true" aria-describedby="semesterFeedback" />
+    <label for="Semester2" class="label--error">Semester 1</label><br/>
+    <input id="Semester2" type="radio" name="semester" class="input--error" aria-invalid="true" aria-describedby="semesterFeedback" />
+    <label for="Semester2" class="label--error">Semester 2</label>
+    <span id="semesterFeedback" aria-live="polite" class="inline-error-message">Please select a semester</span>
+  </fieldset>
+</form>
+```
+
+---
+
+### Text area
+
+<Story id="components-form-controls--text-area" />
+
+---
+
+### Number input
+
+<Story id="components-form-controls--input-number" />
+
+---
+
+### Password input
+
+<Story id="components-form-controls--input-password" />
+
+---
+
+### File input
+
+Coming soon
+
+---
+
+## Optional setup step (Sass only)
+
+This stylesheet can affect HTML elements globally and provides non-`uq-`-prefixed
+utility CSS classes. If you are modifying an existing project with base form
+styles already in place, we recommended importing the stylesheet with
+encapsulation enabled (to avoid selector clashes).
+
+```scss
+@use '@uqds/form/src/scss/_component' as form with (
+  $use-encapsulation: true
+);
+```
+
+You can now wrap any amount of HTML content with the `uq` class to apply the
+package stylesheet to a subset of DOM elements. For example:
+
+```html
+...
+  <div class="uq">
+    <!-- these elements will now be styled using UQ style rules -->
+    <form>
+      <input type="text" name="firstname" />
+      <input type="text" name="lastname" />
+      <input type="submit" />
+    </form>
+  </div>
+...
+```
+
+You can also apply the `uq` class to the `<body>` tag to use the styles globally
+(i.e. just to add more [specificity](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity)
+to the resulting CSS to override third-party styles).
+
+```html
+<body class="uq">
+...
+```
+
+## Known issues
+
+The inline variants of the various input elements do not have well-defined error
+styling rules. This is partly by design—the inline variants will unlikely be 
+appropriate for forms requiring validation in the first place. I.e. they look
+better when used within search filters and other discrete content controls.
+
+## Related
+
+- [Error summary][7]
+- [Form validation][1]
+
+[1]: /?path=/docs/patterns-form-validation--primary
+[2]: https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation
+[3]: https://developer.mozilla.org/en-US/docs/Learn/Forms/HTML5_input_types
+[4]: https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions
+[5]: https://www.w3.org/WAI/tutorials/forms/labels/
+[6]: https://www.a11yproject.com/checklist/#forms
+[7]: /?path=/docs/components-form-error-summary--error-summary

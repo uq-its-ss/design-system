@@ -18,6 +18,8 @@ export const kitchenSink = () => {
   return allHTML;
 };
 
+kitchenSink.storyName = "Kitchen sink";
+
 export const input = () => {
   return inputHTML;
 };
@@ -25,6 +27,8 @@ export const input = () => {
 export const textArea = () => {
   return textAreaHTML;
 };
+
+textArea.storyName = "Text area";
 
 export const select = () => {
   return selectHTML;

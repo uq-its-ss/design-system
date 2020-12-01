@@ -40,6 +40,8 @@ export const errorSlim = () => {
   `;
 }
 
+errorSlim.storyName = 'Error slim';
+
 export const success = () => {
   return `
     <div class="alert alert--success" role="alert">
@@ -61,3 +63,5 @@ export const successSlim = () => {
     </div>
   `;
 }
+
+successSlim.storyName = 'Success slim';

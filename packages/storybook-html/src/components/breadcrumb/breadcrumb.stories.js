@@ -40,7 +40,7 @@ export const breadcrumbMultiLevel = () => {
 
 breadcrumbMultiLevel.storyName = 'Breadcrumb Multi Level';
 
-export const breadcrumbTrucation = () => {
+export const breadcrumbTruncation = () => {
   return `
   <nav aria-label="breadcrumb">
     <ol class="uq-breadcrumb" itemscope="" itemtype="http://schema.org/BreadcrumbList">
@@ -61,4 +61,4 @@ export const breadcrumbTrucation = () => {
   `;
 };
 
-breadcrumbTrucation.storyName = 'Breadcrumb Truncation';
+breadcrumbTruncation.storyName = 'Breadcrumb Truncation';

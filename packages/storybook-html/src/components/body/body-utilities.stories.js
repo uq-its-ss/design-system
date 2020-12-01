@@ -12,19 +12,73 @@ export default {
 
 export const textColorUtils = () => {
   return `
-    <div class="uqds-body__text-utility__container">
-      <div class="uqds-body__text-utility black text--reverse">.text--reverse</div>
-      <div class="uqds-body__text-utility black text--white">.text--white</div>
-      <div class="uqds-body__text-utility text--primary">.text--primary</div>
-      <div class="uqds-body__text-utility text--primary-light">.text--primary-light</div>
-      <div class="uqds-body__text-utility text--purple-50">.text--purple-50</div>
-      <div class="uqds-body__text-utility text--grey-25">.text--grey-25</div>
-      <div class="uqds-body__text-utility text--grey-60">.text--grey-60</div>
-      <div class="uqds-body__text-utility text--grey-80">.text--grey-80</div>
-      <div class="uqds-body__text-utility text--grey-90">.text--grey-90</div>
-      <div class="uqds-body__text-utility text--black">.text--black</div>
-      <div class="uqds-body__text-utility text--red">.text--red</div>
-    </div>
+<table>
+  <caption>Text Colour</caption>
+  <thead>
+  <tr>
+    <th>Example</th>
+    <th>Class</th>
+    <th>usage</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td><div class="uqds-body__text-utility text--black">Text black</div></td>
+    <td><code>text--black</code></td>
+    <td>use cases or scenarios to be defined</td>
+  </tr>
+  <tr>
+    <td><div class="uqds-body__text-utility black text--reverse">Text reverse</div></td>
+    <td><code>text--reverse</code></td>
+    <td>Future students reverse brand colour</td>
+  </tr>
+  <tr>
+    <td><div class="uqds-body__text-utility black text--white">Text white</div></td>
+    <td><code>text--white</code></td>
+    <td>For use on dark backgrounds</td>
+  </tr>
+  <tr>
+    <td><div class="uqds-body__text-utility text--primary">Text Primary</div></td>
+    <td><code>text--primary</code></td>
+    <td>use cases or scenarios to be defined</td>
+  </tr>
+  <tr>
+    <td><div class="uqds-body__text-utility text--primary-light">Text primary light</div></td>
+    <td><code>text--primary-light</code></td>
+    <td>use cases or scenarios to be defined</td>
+  </tr>
+  <tr>
+    <td><div class="uqds-body__text-utility text--purple-50">Text purple 50</div></td>
+    <td><code>text--purple-50</code></td>
+    <td>use cases or scenarios to be defined</td>
+  </tr>
+  <tr>
+    <td><div class="uqds-body__text-utility text--grey-25">Text grey 25</div></td>
+    <td><code>text--grey-25</code></td>
+    <td>use cases or scenarios to be defined</td>
+  </tr>
+  <tr>
+    <td><div class="uqds-body__text-utility text--grey-60">Text grey 60</div></td>
+    <td><code>text--grey-60</code></td>
+    <td>use cases or scenarios to be defined</td>
+  </tr>
+  <tr>
+    <td><div class="uqds-body__text-utility text--grey-80">Text grey 80</div></td>
+    <td><code>text--grey-80</code></td>
+    <td>use cases or scenarios to be defined</td>
+  </tr>
+  <tr>
+    <td><div class="uqds-body__text-utility text--grey-90">Text grey 90</div></td>
+    <td><code>text--grey-90</code></td>
+    <td>use cases or scenarios to be defined</td>
+  </tr>
+  <tr>
+    <td><div class="uqds-body__text-utility text--red">Text red</div></td>
+    <td><code>text--red</code></td>
+    <td>use cases or scenarios to be defined</td>
+  </tr>
+  </tbody>
+</table>
   `;
 };
 
@@ -32,16 +86,58 @@ textColorUtils.storyName = 'Text colours';
 
 export const textSizeUtils = () => {
   return `
-    <div class="uqds-body__text-utility__container">
-      <div class="uqds-body__text-utility text--xxxxl">.text--xxxxl</div>
-      <div class="uqds-body__text-utility text--xxxl">.text--xxxl</div>
-      <div class="uqds-body__text-utility text--xxl">.text--xxl</div>
-      <div class="uqds-body__text-utility text--xl">.text--xl</div>
-      <div class="uqds-body__text-utility text--l">.text--l</div>
-      <div class="uqds-body__text-utility text--m">.text--m</div>
-      <div class="uqds-body__text-utility text--s">.text--s</div>
-      <div class="uqds-body__text-utility text--xs">.text--xs</div>
-    </div>
+<table>
+  <caption>Text Size</caption>
+  <thead>
+  <tr>
+    <th>Example</th>
+    <th>Class</th>
+    <th>usage</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td><div class="uqds-body__text-utility text--xxxxl">Text xxxxl</div></td>
+    <td><code>text--xxxxl</code></td>
+    <td>use cases or scenarios to be defined</td>
+  </tr>
+  <tr>
+    <td><div class="uqds-body__text-utility text--xxxl">Text xxxl</div></td>
+    <td><code>text--xxxl</code></td>
+    <td>use cases or scenarios to be defined</td>
+  </tr>
+  <tr>
+    <td><div class="uqds-body__text-utility text--xxl">Text xxl</div></td>
+    <td><code>text--xxl</code></td>
+    <td>use cases or scenarios to be defined</td>
+  </tr>
+  <tr>
+    <td><div class="uqds-body__text-utility text--xl">Text xl</div></td>
+    <td><code>text--xl</code></td>
+    <td>use cases or scenarios to be defined</td>
+  </tr>
+  <tr>
+    <td><div class="uqds-body__text-utility text--l">Text l</div></td>
+    <td><code>text--l</code></td>
+    <td>use cases or scenarios to be defined</td>
+  </tr>
+  <tr>
+    <td><div class="uqds-body__text-utility text--m">Text m</div></td>
+    <td><code>text--m</code></td>
+    <td>use cases or scenarios to be defined</td>
+  </tr>
+  <tr>
+    <td><div class="uqds-body__text-utility text--s">Text s</div></td>
+    <td><code>text--s</code></td>
+    <td>use cases or scenarios to be defined</td>
+  </tr>
+  <tr>
+    <td><div class="uqds-body__text-utility text--xs">Text xs</div></td>
+    <td><code>text--xs</code></td>
+    <td>use cases or scenarios to be defined</td>
+  </tr>
+  </tbody>
+</table>
   `;
 };
 

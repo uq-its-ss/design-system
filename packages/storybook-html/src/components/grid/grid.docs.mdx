@@ -220,7 +220,7 @@ layout system.
 Modifies the `margin-[left, right]` and `max-width` properties of your element
 to contain the contents within in the design system fashion.
 
-<Story height={72} id="layout-grid--layout-containment" />
+<Story id="layout-grid--layout-containment" />
 
 ```html
 <!-- custom.html -->
@@ -228,7 +228,17 @@ to contain the contents within in the design system fashion.
 <!-- ... -->
 
 <div class="my-custom-container">
-  Hello world!
+  Hello word!
+</div>
+
+<div class="uqds-example-grid">
+  <div class="my-custom-container">
+    <div class="uq-grid__col">Content</div>
+    <div class="uq-grid__col">Content</div>
+    <div class="uq-grid__col">Content</div>
+    <div class="uq-grid__col">Content</div>
+    <div class="uq-grid__col">Content</div>
+  </div>
 </div>
 
 <!-- ... -->

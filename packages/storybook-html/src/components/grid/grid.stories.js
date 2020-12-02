@@ -284,6 +284,16 @@ export const layoutContainment = () => `
       Hello world!
     </div>
   </div>
+
+  <div class="uqds-example-grid">
+    <div class="my-custom-container">
+      <div class="uq-grid__col">Content</div>
+      <div class="uq-grid__col">Content</div>
+      <div class="uq-grid__col">Content</div>
+      <div class="uq-grid__col">Content</div>
+      <div class="uq-grid__col">Content</div>
+    </div>
+  </div>
 `;
 
 layoutContainment.storyName = "Mixin: layout-containment";

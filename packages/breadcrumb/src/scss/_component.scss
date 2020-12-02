@@ -19,14 +19,16 @@
   
   // Breadcrumb item
   &__item {
+    display: inline;
     float: left;
     margin: core.$space-none;
 
     &:before {
       content: '';
-      padding: core.$space-none .75rem;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-5 2 24 24' %3E%3Cpath d='M5.145 14.285l6.167-6a.41.41 0 000-.598L5.145 1.715' fill='none' stroke='%23565452' stroke-width='1' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      padding: 0.65rem 0.75rem;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-5 -6 24 24' %3E%3Cpath d='M5.145 14.285l6.167-6a.41.41 0 000-.598L5.145 1.715' fill='none' stroke='%23565452' stroke-width='1' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
       background-repeat: no-repeat;
+      float: left;
     }
 
     &:first-child {
@@ -39,13 +41,13 @@
 
   // Breadcrumb link
   &__link {
-    display: inline-block;
     color: $breadcrumb-link;
     text-decoration: none;
     max-width: 260px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    display: inline-block;
 
     &:hover {
       color: $breadcrumb-link;

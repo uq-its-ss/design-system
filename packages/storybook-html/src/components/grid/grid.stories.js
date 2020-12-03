@@ -286,7 +286,7 @@ export const layoutContainer = () => `
   </div>
 `;
 
-layoutContainer.storyName = "layout container";
+layoutContainer.storyName = "Layout container";
 
 export const layoutContainment = () => `
   <div class="uqds-example-grid">

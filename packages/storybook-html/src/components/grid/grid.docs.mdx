@@ -209,6 +209,20 @@ container, you can apply the `uq-grid--full-width` modifier class.
 
 <Story height={120} id="layout-grid--flexible-full-width" />
 
+## Alternative layout container
+
+The `.uq-layout-container` class is used as an alternative to the `.uq-grid` class. its display is set to `block` instead of `grid` or `flex`. 
+It uses @mixins `layout-containment` and `grid-col-padding` to set its margin and paddings respectively. It is used as a complimentary class to layout contents.
+
+```html
+  <div class="uq-layout-container">
+    Hello world!
+  </div>
+```
+
+<Story height={85} id="layout-grid--layout-container" />
+
+
 ## Mixins
 
 The `@uqds/grid` package provides [*mixins*](https://sass-lang.com/documentation/at-rules/mixin)

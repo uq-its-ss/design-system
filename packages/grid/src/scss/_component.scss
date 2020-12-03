@@ -1,6 +1,11 @@
 @use "@uqds/core/src/scss/global" as core;
 @use 'global' as *;
 
+.uq-layout-container {
+  @include layout-containment;
+  @include grid-col-padding;
+}
+
 /**
  * Grid container (incl. full width modifier class)
  */

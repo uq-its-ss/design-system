@@ -59,3 +59,5 @@ export const passwordForm = () => {
     </div>
   `;
 };
+
+passwordForm.storyName = 'Password form';

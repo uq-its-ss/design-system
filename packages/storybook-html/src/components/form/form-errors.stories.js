@@ -29,6 +29,8 @@ export const errorSummary = () => {
   `;
 };
 
+errorSummary.storyName = "Error summary";
+
 export const textInput = () => {
   return `
     <form class="form form--full-width">  
@@ -52,6 +54,8 @@ export const textInput = () => {
     </form>
   `;
 };
+
+textInput.storyName = "Text input";
 
 export const checkbox = () => {
   return `
@@ -109,6 +113,8 @@ export const radioButton = () => {
     </form>
   `;
 };
+
+radioButton.storyName = "Radio button";
 
 export const select = () => {
   return `
@@ -184,6 +190,8 @@ export const kitchenSink = () => {
   // See other stories for markup examples
   return kitchenSinkHTML;
 };
+
+kitchenSink.storyName = "Kitchen sink";
 
 kitchenSink.parameters = {
   docs: {

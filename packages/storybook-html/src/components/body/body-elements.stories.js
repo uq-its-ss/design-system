@@ -38,6 +38,8 @@ export const textBlock = () => {
   `;
 };
 
+textBlock.storyName = 'Text block';
+
 export const unorderedList = () => {
   return `
     <div class="uqds-body__container">
@@ -53,6 +55,8 @@ export const unorderedList = () => {
   `;
 }
 
+unorderedList.storyName = 'Unordered list';
+
 export const orderedList = () => {
   return `
     <div class="uqds-body__container">
@@ -67,6 +71,8 @@ export const orderedList = () => {
     </div>
   `;
 }
+
+orderedList.storyName = 'Ordered list';
 
 export const definitionList = () => {
   return `
@@ -89,6 +95,8 @@ export const definitionList = () => {
   `;
 }
 
+definitionList.storyName = 'Definition list';
+
 export const horizontalRule = () => {
   return `
     <div class="uqds-body__container">
@@ -98,3 +106,5 @@ export const horizontalRule = () => {
     </div>
   `;
 };
+
+horizontalRule.storyName = 'Horizontal rule';

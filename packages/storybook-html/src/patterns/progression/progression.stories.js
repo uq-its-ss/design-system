@@ -2,7 +2,7 @@
 import progressionHTML from '../../components/progression/progression.html';
 
 export default {
-    title: 'Patterns/Progression - Text, Step ',
+    title: 'Patterns/Progression - text, step ',
     parameters: {
       docs: {
         inlineStories: false

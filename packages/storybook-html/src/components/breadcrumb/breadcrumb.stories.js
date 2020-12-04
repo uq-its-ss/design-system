@@ -32,15 +32,15 @@ export const breadcrumbOneLevel = () => {
   `;
 };
 
-breadcrumbOneLevel.storyName = 'Breadcrumb One Level';
+breadcrumbOneLevel.storyName = 'Breadcrumb one level';
 
 export const breadcrumbMultiLevel = () => {
   return breadcrumbHTML;
 };
 
-breadcrumbMultiLevel.storyName = 'Breadcrumb Multi Level';
+breadcrumbMultiLevel.storyName = 'Breadcrumb multi level';
 
-export const breadcrumbTrucation = () => {
+export const breadcrumbTruncation = () => {
   return `
   <nav aria-label="breadcrumb">
     <ol class="uq-breadcrumb" itemscope="" itemtype="http://schema.org/BreadcrumbList">
@@ -61,4 +61,4 @@ export const breadcrumbTrucation = () => {
   `;
 };
 
-breadcrumbTrucation.storyName = 'Breadcrumb Truncation';
+breadcrumbTrucation.storyName = 'Breadcrumb truncation';

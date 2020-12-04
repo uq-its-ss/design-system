@@ -61,4 +61,4 @@ export const breadcrumbTrucation = () => {
   `;
 };
 
-breadcrumbTrucation.storyName = 'Breadcrumb truncation';
+breadcrumbTrucation.storyName = 'Breadcrumb Truncation';

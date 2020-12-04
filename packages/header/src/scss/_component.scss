@@ -117,6 +117,7 @@
             &--open {
                 height: auto;
                 visibility: visible;
+                overflow: initial;
                 padding-top: core.$space-sm;
                 padding-bottom: core.$space-sm;
             }
@@ -185,18 +186,31 @@
                         height: 24px;
                         width: 24px;
                         margin: 0;
+                        position: relative;
                         
                         &:focus {
                             outline: 2px solid core.$link;
-                            box-shadow: 0 0 0 1px core.$uq-white;
+                            box-shadow: 0 0 0 1px core.$link;
                         }
 
                         &:checked {
                             border-color: core.$uq-white;
-                            border-width: 4px;
+                            border-width: 2px;
 
                             &:focus {
-                                box-shadow: 0 0 0 1px core.$uq-white;
+                                box-shadow: 0 0 0 1px core.$link;
+                            }
+
+                            &::after {
+                                border-radius: 50%;
+                                background-color: core.$uq-white;
+                                content: "";
+                                display: block;
+                                position: absolute;
+                                top: 3px;
+                                left: 3px;
+                                height: 14px;
+                                width: 14px;
                             }
                         }
                     }

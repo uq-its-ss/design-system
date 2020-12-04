@@ -28,5 +28,5 @@
   $form-checkbox-button-text-active: core.$uq-white;
   $form-checkbox-button-text: core.$brand-text;
   $form-checkbox-check-color: core.$uq-white;
-  $form-checkbox-check-size: 16px;
   $form-checkbox-size: 24px;
+  $form-checkbox-check-size: $form-checkbox-size;

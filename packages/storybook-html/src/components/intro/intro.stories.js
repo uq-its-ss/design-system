@@ -33,6 +33,8 @@ export const kitchenSink = () => {
   return kitchenSinkHTML;
 };
 
+kitchenSink.storyName = 'Kitchen sink';
+
 kitchenSink.parameters = {
   docs: {
     page: null

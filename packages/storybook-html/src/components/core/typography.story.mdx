@@ -4,10 +4,44 @@ import './_fonts.scss';
 <Meta title="Core/Typography" />
 
 # Typography
+At UQ, we have a set of complementary font assets and typeface rules that ensure a consistent look and feel of online content across devices and computers.
 
 Typography is the art and technique of arranging type (letters and characters). It sets the theme and mood of the design via the typeface family and font styles like size, weight, style, colour, line-height, letter-spacing etc on single and multiple lines.
 
-## Font list
+## Fonts
+
+Online fonts are used for websites and applications, where the font can be embedded into code to display seamlessly. 
+
+The 3 fonts used for UQ online applications are Roboto, Merriweather & Montserrat.
+
+export const Fonts = () => `
+  <div class="uqds-fonts">
+    <div class="uqds-font uqds-font--roboto">Roboto</div>
+    <div class="uqds-font uqds-font--merriweather uqds-font--italic">Merriweather</div>
+    <div class="uqds-font uqds-font--montserrat uqds-font--500">Montserrat</div>
+  </div>
+`;
+
+<Story name="Fonts">{Fonts.bind({})}</Story> 
+
+> ***Print font usage*** Please refer to the [Print brand guidelines](https://marketing-communication.uq.edu.au/) for offline "Print" font applications.
+
+### Primary font
+
+Roboto is a Google font and therefore can be displayed in online applications seamlessly. Roboto is our alternative to Gotham for online environments.
+
+> While ***Gotham is our primary brand font***, We use alternative fonts online due to the costs to licence for websites and application and a lack of robust embedded versions. 
+
+### Secondary font
+
+MerriweatherMerriweather is a Google font and therefore can be displayed in online applications seamlessly. Merriweather can be used for pull out quotes and to break up long headings. It is ***not to be used for body text***.
+
+
+### Font licenses
+
+## Alternative fonts
+
+## Typeface list
 
 The 3 typefaces used in the design system are Roboto, Merriweather & Montserrat.
 
@@ -36,7 +70,7 @@ font-family: Merriweather, Georgia, serif;
 ```
 Montserrat
 ```scss
-font-family: Montserrat, Helvetica, Arial, sans-serif;
+font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
 ```
 
 <br />

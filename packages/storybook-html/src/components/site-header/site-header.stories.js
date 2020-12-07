@@ -37,3 +37,5 @@ export const siteHeader = () => {
     });
   return siteHeaderHTML;
 };
+
+siteHeader.storyName = 'Site header';

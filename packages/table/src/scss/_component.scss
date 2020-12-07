@@ -1,71 +1,88 @@
 @use '@uqds/core/src/scss/global' as core;
 @use 'global' as *;
 
-// Table
+table,
 .uq-table {
   @include table;
 
+  // Table scroll wrapper
   &__wrapper {
     @include table-wrapper;
   }
+
   caption,
-  &__caption {
+  .uq-table__caption {
     @include table-caption;
   }
-  head,
-  &__head {
+
+  thead,
+  .uq-table__head {
     @include table-head;
   }
-  body,
-  &__body {
+
+  tbody,
+  .uq-table__body {
     @include table-body;
   }
+
   tr,
-  &__row {
+  .uq-table__row {
     @include table-row;
   }
+
   td,
-  &__cell {
+  .uq-table__cell {
     @include table-cell;
   }
+
   th,
-  &__header {
+  .uq-table__header {
     @include table-header;
   }
+}
 
-  &--striped {
-    tr {
-      &:nth-child(even) {
-        background: rgba(core.$uq-neutral, 0.1);
-      }
+/* Variant: Striped */
+.uq-table--striped {
+  tr,
+  .uq-table__row {
+    &:nth-child(even) {
+      background: rgba(core.$uq-neutral, 0.1);
     }
   }
+}
 
-  /* Table - Card */
-  &--card {
-    tr {
-      display: grid;
-      grid: auto-flow / repeat(6, 1fr);
+/* Variant: Card */
+.uq-table--card {
+  tr, .table__row {
+    display: grid;
+    grid: auto-flow / repeat(6, 1fr);
+  }
+  
+  th, td, .table__header, .table__cell {
+    margin: core.$space-none -1px -1px core.$space-none;
+    word-break: break-word;
+  }
+
+  @media #{core.$screen-md-down} {
+    thead,
+    .uq-table__head {
+      left: -9999px;
+      position: absolute;
+      visibility: hidden;
     }
-    th,td {
-      margin: core.$space-none -1px -1px core.$space-none;
-      word-break: break-word;
+
+    tr,
+    .uq-table__row {
+      grid: auto-flow / 1fr;
+      align-items: stretch;
+      margin-bottom: core.$space-md;
     }
-    @media (max-width: 640px) {
-      thead {
-        left: -9999px;
-        position: absolute;
-        visibility: hidden;
-      }
-      tr {
-        grid: auto-flow / 1fr;
-        align-items: stretch;
-        margin-bottom: core.$space-md;
-      }
-      td {
-        padding: core.$space-sm core.$space;
-      }
-      td:before {
+
+    td,
+    .uq-table__cell {
+      padding: core.$space-sm core.$space;
+
+      &:before {
         content: attr(data-title);
         color: core.$uq-purple;
         font-weight: core.$font-weight-bold;
@@ -73,5 +90,4 @@
       }
     }
   }
-  
 }

@@ -188,8 +188,8 @@ container, you can apply the `uq-grid--full-width` modifier class.
 
 ```html
 <div class="uq-grid uq-grid--full-width">
-  <div class="uq-grid__col uq-grid__col--7">Your content</div>
-  <div class="uq-grid__col uq-grid__col--5">Your content</div>
+  <div class="uq-grid__col uq-grid__col--3">Your content</div>
+  <div class="uq-grid__col uq-grid__col--3">Your content</div>
 </div>
 ```
 
@@ -207,9 +207,29 @@ container, you can apply the `uq-grid--full-width` modifier class.
 </div>
 ```
 
-<Story height={120} id="layout-grid--flexible-full-width" />
+<Story height={145} id="layout-grid--flexible-full-width" />
 
-## Mixins
+## Alternative layout container
+
+The `.uq-layout-container` class can be used as an alternative to using a grid
+container (`.uq-grid`) and a full length grid column (`.uq-grid__col`).
+
+```html
+<div class="uq-layout-container">
+  Hello world!
+</div>
+
+<!-- Equivalent using grid classes -->
+<div class="uq-grid">
+  <div class="uq-grid__col uq-grid__col--6">
+    Hello world!
+  </div>
+</div>
+```
+
+<Story height={85} id="layout-grid--layout-container" />
+
+## SASS mixins
 
 The `@uqds/grid` package provides [*mixins*](https://sass-lang.com/documentation/at-rules/mixin)
 to help you develop your own CSS rules using Sass such that they align with our
@@ -218,9 +238,7 @@ layout system.
 ### `layout-containment`
 
 Modifies the `margin-[left, right]` and `max-width` properties of your element
-to contain the contents within in the design system fashion.
-
-<Story height={72} id="layout-grid--layout-containment" />
+to contain the contents in a grid container fashion.
 
 ```html
 <!-- custom.html -->

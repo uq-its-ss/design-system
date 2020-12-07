@@ -213,12 +213,12 @@ twelveEightSixNested.storyName = "6-8-12 nested";
 
 export const twelveEightSixFullWidth = () => `
   <div class="uqds-example-grid">
-    <div class="uqds-example-grid__highlight">
-      <div class="uq-grid uq-grid--full-width">
-        <div class="uq-grid__col uq-grid__col--3">
-          <span>Content</span>
-        </div>
-        <div class="uq-grid__col uq-grid__col--3"><span>Content</span></div>
+    <div class="uq-grid uq-grid--full-width">
+      <div class="uq-grid__col uq-grid__col--3">
+        <span>Content</span>
+      </div>
+      <div class="uq-grid__col uq-grid__col--3">
+        <span>Content</span>
       </div>
     </div>
   </div>
@@ -264,26 +264,24 @@ flexible2.storyName = "Flexible grid example 2";
 
 export const flexibleFullWidth = () => `
   <div class="uqds-example-grid">
-    <div class="uqds-example-grid__highlight">
-      <div class="uq-grid uq-grid--flexible uq-grid--full-width">
-        <div class="uq-grid__col"><span>Content</span></div>
-        <div class="uq-grid__col"><span>Content</span></div>
-        <div class="uq-grid__col"><span>Content</span></div>
-        <div class="uq-grid__col"><span>Content</span></div>
-        <div class="uq-grid__col"><span>Content</span></div>
-      </div>
+    <div class="uq-grid uq-grid--flexible uq-grid--full-width">
+      <div class="uq-grid__col"><span>Content</span></div>
+      <div class="uq-grid__col"><span>Content</span></div>
+      <div class="uq-grid__col"><span>Content</span></div>
+      <div class="uq-grid__col"><span>Content</span></div>
+      <div class="uq-grid__col"><span>Content</span></div>
     </div>
   </div>
 `;
 
 flexibleFullWidth.storyName = "Flexible grid full width";
 
-export const layoutContainment = () => `
+export const layoutContainer = () => `
   <div class="uqds-example-grid">
-    <div class="my-custom-container">
+    <div class="uq-layout-container">
       Hello world!
     </div>
   </div>
 `;
 
-layoutContainment.storyName = "Mixin: layout-containment";
+layoutContainer.storyName = "Layout container";

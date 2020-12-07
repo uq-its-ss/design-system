@@ -30,6 +30,8 @@ export const gridMenuAll = () => {
   return gridMenuHTML;
 };
 
+gridMenuAll.storyName = "Grid menu all";
+
 // add more keywords
 gridMenuAll.parameters = { notes: 'links'};
 
@@ -42,4 +44,4 @@ export const equalised = () => {
   return gridMenuEqualisedHTML;
 };
 
-equalised.storyName = "Grid Menu Equalised (JS)";
+equalised.storyName = "Grid menu equalised (JS)";

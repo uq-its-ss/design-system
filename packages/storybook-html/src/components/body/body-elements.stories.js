@@ -38,6 +38,8 @@ export const textBlock = () => {
   `;
 };
 
+textBlock.storyName = 'Text block';
+
 export const unorderedList = () => {
   return `
     <div class="uqds-body__container">
@@ -53,6 +55,8 @@ export const unorderedList = () => {
   `;
 }
 
+unorderedList.storyName = 'Unordered list';
+
 export const orderedList = () => {
   return `
     <div class="uqds-body__container">
@@ -67,6 +71,8 @@ export const orderedList = () => {
     </div>
   `;
 }
+
+orderedList.storyName = 'Ordered list';
 
 export const definitionList = () => {
   return `
@@ -89,6 +95,8 @@ export const definitionList = () => {
   `;
 }
 
+definitionList.storyName = 'Definition list';
+
 export const horizontalRule = () => {
   return `
     <div class="uqds-body__container">
@@ -99,40 +107,4 @@ export const horizontalRule = () => {
   `;
 };
 
-export const table = () => {
-  return `
-    <div class="scroll-container">
-        <table class="uq-table">
-            <caption>Types of food and ratings</caption>
-            <thead>
-                <tr>
-                    <th>Type of Food</th>
-                    <th>Calories</th>
-                    <th>Tasty Factor</th>
-                    <th>Average Price</th>
-                    <th>Rarity</th>
-                    <th>Average Rating</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Slice of Pizza</th>
-                    <td>450</td>
-                    <td>95%</td>
-                    <td>$5.00</td>
-                    <td>Common</td>
-                    <td>8/10</td>
-                </tr>
-                <tr>
-                    <td>Hamburger</th>
-                    <td>350</td>
-                    <td>87%</td>
-                    <td>$3.50</td>
-                    <td>Common</td>
-                    <td>7.5/10</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-  `;
-};
+horizontalRule.storyName = 'Horizontal rule';

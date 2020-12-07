@@ -21,7 +21,7 @@ export const pagination = () => {
   return paginationHTML;
 };
 
-pagination.storyName = 'Pagination All';
+pagination.storyName = 'Pagination all';
 
 export const paginationFirst = () => {
   return `
@@ -40,7 +40,7 @@ export const paginationFirst = () => {
   `;
 };
 
-paginationFirst.storyName = 'Pagination First';
+paginationFirst.storyName = 'Pagination first';
 
 export const paginationMiddle = () => {
   return `
@@ -62,7 +62,7 @@ export const paginationMiddle = () => {
   `;
 };
 
-paginationMiddle.storyName = 'Pagination Middle';
+paginationMiddle.storyName = 'Pagination middle';
 
 export const paginationLast = () => {
   return `
@@ -81,4 +81,4 @@ export const paginationLast = () => {
   `;
 };
 
-paginationLast.storyName = 'Pagination Last';
+paginationLast.storyName = 'Pagination last';

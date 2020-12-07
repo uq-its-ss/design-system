@@ -24,7 +24,7 @@ export const progressionInitial = () => {
   return progressionHTML;
 };
 
-progressionInitial.storyName = 'Progression Initial';
+progressionInitial.storyName = 'Progression initial';
 
 export const progressionMiddle = () => {
   return `
@@ -85,7 +85,7 @@ export const progressionMiddle = () => {
   `;
 };
 
-progressionMiddle.storyName = 'Progression Middle';
+progressionMiddle.storyName = 'Progression middle';
 
 export const progressionFinal = () => {
   return `
@@ -146,4 +146,4 @@ export const progressionFinal = () => {
   `;
 };
 
-progressionFinal.storyName = 'Progression Final';
+progressionFinal.storyName = 'Progression final';

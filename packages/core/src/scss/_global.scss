@@ -62,6 +62,8 @@ $uq-darkgrey-light80: #ada9a6; // rgb(173, 169, 166), rgba(153, 148, 144, 0.8)
 // UQ Secondary - Red Shades
 $uq-red-dark20: #be1b38; // Consolidated - B80017, D6492A, F04124, F00000, D8481F
 $uq-red-dark40: #9b1129; // Consolidated - CF2A0E
+// UQ Secondary - Green Shades
+$uq-green-dark10: darken($uq-green, 10%);
 
 // Link Blue
 $link: #2377cb;
@@ -78,6 +80,7 @@ $text: $uq-neutral-dark80; //#2b2b2b;
 $external-link-icon-color: $uq-neutral-dark20; //bbb;
 // Alerts
 $alert: $uq-red-dark20; //B80017;
+$success: $uq-green-dark10;
 $info-color: #d4f0ff !default; //#D4F0FF !default;
 $success-color: #d5eeca !default; //#D5EECA!default;
 $warning-color: #ffe0ad !default; //#FFE0AD!default;

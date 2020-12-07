@@ -5,10 +5,10 @@
 .uq-previous-next {
 
 	&__item {
-		width: 50%;
+		width: 100%;
 		float: left;
-		@media (max-width: 640px) {
-			width: 100%;
+		@media (min-width: 640px) {
+			width: 50%;
 		}
 		&--hidden {
 			visibility: hidden;

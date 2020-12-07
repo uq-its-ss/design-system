@@ -13,8 +13,8 @@ $use-encapsulation: false !default;
   select,
   textarea,
   .error-summary,
-  .inline-error-message,
-  .inline-success-message,
+  .error-message,
+  .success-message,
   .inline-help  {
     box-sizing: border-box;
     font-family: core.$font-family;
@@ -215,8 +215,8 @@ $use-encapsulation: false !default;
       border-radius: core.$spacing-xxs;
     }
 
-    + .inline-error-message,
-    + .inline-success-message {
+    + .error-message,
+    + .success-message {
       margin-top: -(core.$space-md);
       border-radius: 0 0 $form-border-radius $form-border-radius;
     }
@@ -423,8 +423,8 @@ $use-encapsulation: false !default;
     }
   }
 
-  .inline-error-message,
-  .inline-success-message {
+  .error-message,
+  .success-message {
     color: core.$uq-white;
     display: block;
     font-size: core.$font-size-m;
@@ -451,7 +451,7 @@ $use-encapsulation: false !default;
     }
   }
 
-  .inline-error-message {
+  .error-message {
     background-color: $form-color-error;
 
     &::before {
@@ -459,7 +459,7 @@ $use-encapsulation: false !default;
     }
   }
 
-  .inline-success-message {
+  .success-message {
     background-color: $form-color-success;
 
     &::before {

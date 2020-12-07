@@ -91,7 +91,7 @@ inputTextLarge.storyName = "Text input (large)";
 export const inputTextError = () => gridLayout(`
   <label class="label--error" for="textError1">First name</label>
   <input type="text" id="textError1" class="input--error" aria-describedby="textError1Error" aria-invalid="true" />
-  <span id="textError1Error" class="inline-error-message" aria-live="polite">Enter your first name</span>
+  <span id="textError1Error" class="error-message" aria-live="polite">Enter your first name</span>
 `);
 
 inputTextError.storyName = "Text input (error)";
@@ -99,7 +99,7 @@ inputTextError.storyName = "Text input (error)";
 export const inputTextSuccess = () => gridLayout(`
   <label class="label--success" for="textSuccess1">Mobile number</label>
   <input type="text" id="textSuccess1" value="0421 234 456" class="input--success" aria-describedby="textSuccess1Feedback" />
-  <span id="textSuccess1Feedback" class="inline-success-message" aria-live="polite">That number looks correct. It will still need to be verified via SMS.</span>
+  <span id="textSuccess1Feedback" class="success-message" aria-live="polite">That number looks correct. It will still need to be verified via SMS.</span>
 `);
 
 inputTextSuccess.storyName = "Text input (success)";
@@ -146,7 +146,7 @@ export const selectError = () => gridLayout(`
     <option value="2021">2021</option>
     <option value="2022">2022</option>
   </select>
-  <span id="selectError1Error" aria-live="polite" class="inline-error-message">Select the year you will commence study at UQ</span>
+  <span id="selectError1Error" aria-live="polite" class="error-message">Select the year you will commence study at UQ</span>
 `);
 
 selectError.storyName = "Select (error)";
@@ -158,7 +158,7 @@ export const selectErrorAlt = () => gridLayout(`
       <option value="2021">2021</option>
       <option value="2022">2022</option>
     </select>
-    <span id="selectError2Error" aria-live="polite" class="inline-error-message">Select the year you will commence study at UQ</span>
+    <span id="selectError2Error" aria-live="polite" class="error-message">Select the year you will commence study at UQ</span>
   </label>
 `);
 
@@ -232,7 +232,7 @@ checkboxAlt.storyName = "Checkbox (nested)";
 export const checkboxError = () => gridLayout(`
   <input id="singleCheckboxError1" type="checkbox" class="input--error" aria-describedby="singleCheckboxError1Feedback" aria-invalid="true" />
   <label for="singleCheckboxError1" class="label--error">I declare that the information I've provided is correct and true</label>
-  <span id="singleCheckboxError1Feedback" aria-live="polite" class="inline-error-message">Make sure your details are correct and then check the declaration statement</span>
+  <span id="singleCheckboxError1Feedback" aria-live="polite" class="error-message">Make sure your details are correct and then check the declaration statement</span>
 `);
 
 checkboxError.storyName = "Checkbox (error)";
@@ -242,7 +242,7 @@ export const checkboxErrorAlt = () => gridLayout(`
     <input type="checkbox" class="input--error" aria-describedby="singleCheckboxError2Feedback" aria-invalid="true" />
     <span>I declare that the information I've provided is correct and true</span>
   </label>
-  <span id="singleCheckboxError2Feedback" aria-live="polite" class="inline-error-message">Make sure your details are correct and then check the declaration statement</span>
+  <span id="singleCheckboxError2Feedback" aria-live="polite" class="error-message">Make sure your details are correct and then check the declaration statement</span>
 `);
 
 checkboxErrorAlt.storyName = "Checkbox (nested & error)";
@@ -322,7 +322,7 @@ export const radioError = () => gridLayout(`
     <label for="singleRadio7" class="label--error">Semester 1</label><br/>
     <input id="singleRadio8" type="radio" name="radioGroup3" class="input--error" aria-invalid="true" aria-describedby="radioButtonFeedback">
     <label for="singleRadio8" class="label--error">Semester 2</label>
-    <span id="radioButtonFeedback" aria-live="polite" class="inline-error-message">Please select a semester</label>
+    <span id="radioButtonFeedback" aria-live="polite" class="error-message">Please select a semester</label>
   </fieldset>
 `);
 
@@ -339,7 +339,7 @@ export const radioErrorAlt = () => gridLayout(`
       <input type="radio" name="radioGroup4" class="input--error" aria-invalid="true" aria-describedby="radioButtonFeedback">
       <span>Semester 2</span>
     </label>
-    <span id="radioButtonFeedback" aria-live="polite" class="inline-error-message">Please select a semester</label>
+    <span id="radioButtonFeedback" aria-live="polite" class="error-message">Please select a semester</label>
   </fieldset>
 `);
 

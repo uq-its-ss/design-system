@@ -1,6 +1,11 @@
 import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import { useEffect } from '@storybook/client-api';
+import baddestForm from './form-errors-kitchen-sink.html';
+import passwordResetHTML from './examples/password-reset.html';
+import passwordResetInit from './examples/password-reset.es6';
+import './examples/password-reset.scss';
 
-<Meta title="Forms/Form validation" />
+<Meta title="Patterns/Form validation" parameters={{ previewTabs: { canvas: { hidden: false } } }} />
 
 # Form validation
 
@@ -12,30 +17,6 @@ when paired with accessible form design, is an essential part of providing ease
 of use when completing forms. So here are some basic recommendations for form
 validation.
 
-## Glossary
-
-<dl>
-  <dt>Form validation messages</dt>
-  <dd>Intersection of <i>error summary</i> and <i>inline validation messages</i>.</dd>
-  <dt>Inline validation messages</dt>
-  <dd>Error messages, success messages, or feedback messages displayed within a form context.</dd>
-</dl>
-
-<details>
-  <summary>Read more</summary>
-
-  Throughout this document, references will be made to certain
-  [HTML DOM events](https://www.w3schools.com/jsref/dom_obj_event.asp) that
-  should be used to trigger validation functions.
-
-  | Event  | Description |
-  |--------|-------------|
-  | Input  | Triggered every time a user modifies a value. |
-  | Change | Triggered when the element is finished changing i.e. for text inputs, it's when the element loses focus. for other elements (select, checkbox, radio), it triggers right after the selection changes. |
-  | Blur   | When a form element loses focus. The value doesn’t have to be changed to trigger this event. |
-  | Submit | Triggers on form submit. |
-</details>
-
 ## Recommendations
 
 ### Include both an error summary _and_ inline validation messages
@@ -43,33 +24,28 @@ validation.
 Display an error summary _above/before_ the form when the user submits the form
 (_on submit_).
 
-<Story id="forms-form-errors--error-summary" />
+export const BadFormExample = () => {
+  return baddestForm;
+};
 
-#### What should go into an error summary?
-
-| Component element | Purpose |
-|-------------------|---------|
-| Title | Quickly informs the user of the action that has failed and the state of the form, e.g. "Your form could not be submitted, some form fields need correction". |
-| List of inline validation errors present | Read by the user and screen readers for an overview of form errors. Enables the user to skip directly to the fields that need correction. |
-
-The following example shows insertion of errors when the user tries to submit
-the form without data.
-
-<Story id="forms-form-errors--kitchen-sink" />
+<Story name="Primary">
+  {BadFormExample.bind({})}
+</Story>
 
 ---
 
 ### Validation messages must be highly visible
 
-According to [Neilsen](https://www.nngroup.com/articles/error-message-guidelines/)
-(2001), error messages should be visible and highly noticeable. He says that
-solely turning the field label red "...violates one of the oldest and simplest
-rules for making technology accessible to users with disabilities."
+> According to [Neilsen](https://www.nngroup.com/articles/error-message-guidelines/)
+> (2001), error messages should be visible and highly noticeable. He says that
+> solely turning the field label red "...violates one of the oldest and simplest
+> rules for making technology accessible to users with disabilities."
 
 Error messages should be attributable to the corresponding input element(s)
 using a combination of proximity, colour, content, and visual decorators. Error
 messages should be boldly distinguishable by ensuring enough contrast with
-surrounding elements.
+surrounding elements. Please make appropriate use of our form error styles to
+comply to this requirement.
 
 ---
 
@@ -139,16 +115,51 @@ different types of instantaneously feedback types and usage examples.
 | Scaled | Communicates validation result on a scaled classification or rating system. <a href="/?path=/docs/forms-working-examples--password-form">See password form working example</a>. | Password strength meter. |
 | Binary | Communicates true or false validation result. | Username availability. |
 
-## Implementation for web sites/apps
-  
-> <a href="/?path=/docs/forms-form-errors--error-summary">See Form errors</a>.
+## Example: password reset form
 
-## Other form feedback
+export const PasswordForm = () => {
+  useEffect(() => {
+    var init = new passwordResetInit();
+  });
+  return passwordResetHTML;
+};
+
+<Canvas withSource="none" withToolbar>
+  <Story name="Password form" inline={false} height={600} parameters={{layout: "padded"}}>
+    {PasswordForm.bind({})}
+  </Story>
+</Canvas>
+
+## Glossary
+
+<dl>
+  <dt>Form validation messages</dt>
+  <dd>Intersection of <i>error summary</i> and <i>inline validation messages</i>.</dd>
+  <dt>Inline validation messages</dt>
+  <dd>Error messages, success messages, or feedback messages displayed within a form context.</dd>
+</dl>
+
+### DOM object event terminology
+Throughout this document, references will be made to certain
+[HTML DOM events](https://www.w3schools.com/jsref/dom_obj_event.asp) that
+should be used to trigger validation functions.
+
+| Event  | Description |
+|--------|-------------|
+| Input  | Triggered every time a user modifies a value. |
+| Change | Triggered when the element is finished changing i.e. for text inputs, it's when the element loses focus. for other elements (select, checkbox, radio), it triggers right after the selection changes. |
+| Blur   | When a form element loses focus. The value doesn’t have to be changed to trigger this event. |
+| Submit | Triggers on form submit. |
+
+## Related
+
+- [Form controls](/?path=/docs/components-form-controls--input-text)  
+- [Error summary](/?path=/docs/components-form-error-summary--error-summary)
 
 ### Form submission failure due to server-side or policy errors
 
-> <a href="/?path=/docs/components-alert--error">See Alerts</a> for more information
+[See Alerts](/?path=/docs/components-alert--error) for more information
 
 ### Successful form submission feedback
 
-> <a href="/?path=/docs/components-alert--success">See Alerts</a> for more information
+[See Alerts](/?path=/docs/components-alert--success) for more information

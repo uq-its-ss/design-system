@@ -49,13 +49,6 @@ export const parameters = {
             'Utilities'
           ]
         ],
-        'Forms',
-        [
-          'Form',
-          'Form errors',
-          'Form validation',
-          'Working examples'
-        ],
         'Patterns'
       ]
     }

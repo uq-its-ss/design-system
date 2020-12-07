@@ -1,7 +1,7 @@
 {
   "name": "@uqds/form",
   "version": "0.0.0",
-  "description": "Form elements",
+  "description": "Form element style rules",
   "keywords": [
     "uqds",
     "uq",
@@ -31,14 +31,20 @@
     "url": "git+https://github.com/uq-its-ss/design-system.git"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "build-icons": "node src/script/icon-scan.js"
   },
   "bugs": {
     "url": "https://github.com/uq-its-ss/design-system/issues"
   },
   "dependencies": {
-    "@uqds/core": "^0.0.0",
-    "@uqds/grid": "^0.0.0",
-    "font-awesome": "^4.7.0"
+    "@uqds/core": "^0.0.0"
+  },
+  "devDependencies": {
+    "@svgdotjs/svg.js": "^3.0.16",
+    "glob": "^7.1.6",
+    "js-yaml": "^3.14.0",
+    "mini-svg-data-uri": "^1.2.3",
+    "svgdom": "^0.1.8",
+    "svgo": "^1.3.2"
   }
 }

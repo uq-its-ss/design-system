@@ -1,0 +1,153 @@
+import { Meta, Story, Canvas, Preview } from '@storybook/addon-docs/blocks';
+import './_fonts.scss';
+
+<Meta title="Core/Typography/Applying typography" />
+
+# Applying Typography
+Most common use cases have already been setup in the basic HTML elements and components. Follow existing examples or reference the chart below when configuring new websites and components. 
+
+* The font weights used are Regular (400) and Medium (500). 
+* Italic style should be used when you need to emphasize certain words in a sentence or a statement.
+
+### Roboto
+
+* Roboto is the primary font used on websites and applications
+* Roboto can be used for headings and body text. 
+
+### Merriweather
+
+* Merriweather can be used for pull out quotes and to break up long headings.
+* Merriweather is ***not to be used for body text***.
+
+### Montserrat
+
+* Montserrat is used for main page (banner) heading.
+* Montserrat is ***not to be used for body text***.
+
+### Monospace
+
+* The monospace font stack is often applied to special HTML tags typically used to distinguish code or data from natural-language text.
+
+## Basic typography usage
+
+<table className="uqds-table uqds-table--card">
+  <thead>
+    <tr className="uqds-table__mobile-heading">
+      <th className="uqds-table__heading">Element</th>
+      <th className="uqds-table__heading">Font</th>
+      <th className="uqds-table__heading">Size</th>
+      <th className="uqds-table__heading">Weight</th>
+      <th className="uqds-table__heading">Colour (SASS Variable)</th>
+      <th className="uqds-table__heading">Line-height</th>
+      <th className="uqds-table__heading">Usage example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr className="uqds-table__row">
+      <td className="uqds-table__item">H1</td>
+      <td className="uqds-table__item" data-title="Font:">Montserrat</td>
+      <td className="uqds-table__item" data-title="Size:">XL - 2.5rem, <br /> MD - 1.875rem</td>
+      <td className="uqds-table__item" data-title="Weight:">Medium, 500</td>
+      <td className="uqds-table__item" data-title="Colour (SASS Variable):"><code>$uq-purple</code></td>
+      <td className="uqds-table__item" data-title="Line-height:">1.4</td>
+      <td className="uqds-table__item" data-title="Usage example:">Page Header</td>
+    </tr>
+    <tr className="uqds-table__row">
+      <td className="uqds-table__item">H2</td>
+      <td className="uqds-table__item" data-title="Font:">Roboto</td>
+      <td className="uqds-table__item" data-title="Size:">XL - 2rem, <br /> MD - 1.5rem</td>
+      <td className="uqds-table__item" data-title="Weight:">Medium, 500</td>
+      <td className="uqds-table__item" data-title="Colour (SASS Variable):"><code>$uq-purple</code></td>
+      <td className="uqds-table__item" data-title="Line-height:">1.4</td>
+      <td className="uqds-table__item" data-title="Usage example:">Header</td>
+    </tr>
+    <tr className="uqds-table__row">
+      <td className="uqds-table__item">H3</td>
+      <td className="uqds-table__item" data-title="Font:">Roboto</td>
+      <td className="uqds-table__item" data-title="Size:">XL - 1.5rem, <br /> MD - 1.375rem</td>
+      <td className="uqds-table__item" data-title="Weight:">Medium, 500</td>
+      <td className="uqds-table__item" data-title="Colour (SASS Variable):"><code>$uq-purple</code></td>
+      <td className="uqds-table__item" data-title="Line-height:">1.4</td>
+      <td className="uqds-table__item" data-title="Usage example:">Header</td>
+    </tr>
+    <tr className="uqds-table__row">
+      <td className="uqds-table__item">H4</td>
+      <td className="uqds-table__item" data-title="Font:">Roboto</td>
+      <td className="uqds-table__item" data-title="Size:">XL - 1.25rem, <br /> MD - 1.25rem</td>
+      <td className="uqds-table__item" data-title="Weight:">Medium, 500</td>
+      <td className="uqds-table__item" data-title="Colour (SASS Variable):"><code>$uq-purple</code></td>
+      <td className="uqds-table__item" data-title="Line-height:">1.4</td>
+      <td className="uqds-table__item" data-title="Usage example:">Header</td>
+    </tr>
+    <tr className="uqds-table__row">
+      <td className="uqds-table__item">H5</td>
+      <td className="uqds-table__item" data-title="Font:">Roboto</td>
+      <td className="uqds-table__item" data-title="Size:">XL - 1.125rem, <br /> MD - 1.125rem</td>
+      <td className="uqds-table__item" data-title="Weight:">Medium, 500</td>
+      <td className="uqds-table__item" data-title="Colour (SASS Variable):"><code>$uq-purple</code></td>
+      <td className="uqds-table__item" data-title="Line-height:">1.4</td>
+      <td className="uqds-table__item" data-title="Usage example:">Header</td>
+    </tr>
+    <tr className="uqds-table__row">
+      <td className="uqds-table__item">H6</td>
+      <td className="uqds-table__item" data-title="Font:">Roboto</td>
+      <td className="uqds-table__item" data-title="Size:">XL - 1rem, <br /> MD - 1rem</td>
+      <td className="uqds-table__item" data-title="Weight:">Medium, 500</td>
+      <td className="uqds-table__item" data-title="Colour (SASS Variable):"><code>$uq-purple</code></td>
+      <td className="uqds-table__item" data-title="Line-height:">1.4</td>
+      <td className="uqds-table__item" data-title="Usage example:">Header</td>
+    </tr>
+    <tr className="uqds-table__row">
+      <td className="uqds-table__item">Text</td>
+      <td className="uqds-table__item" data-title="Font:">Roboto</td>
+      <td className="uqds-table__item" data-title="Size:">XL - 1rem, <br /> MD - 1rem</td>
+      <td className="uqds-table__item" data-title="Weight:">Regular, 400</td>
+      <td className="uqds-table__item" data-title="Colour (SASS Variable):">Default text, <code>$text</code>, <code>$uq-neutral-dark80</code>, #2b2a29</td>
+      <td className="uqds-table__item" data-title="Line-height:">1.5</td>
+      <td className="uqds-table__item" data-title="Usage example:">Text</td>
+    </tr>
+    <tr className="uqds-table__row">
+      <td className="uqds-table__item">Bold</td>
+      <td className="uqds-table__item" data-title="Font:">Roboto</td>
+      <td className="uqds-table__item" data-title="Size:">XL - 1rem, <br /> MD - 1rem</td>
+      <td className="uqds-table__item" data-title="Weight:">Medium, 500</td>
+      <td className="uqds-table__item" data-title="Colour (SASS Variable):">Default text, <code>$text</code>, <code>$uq-neutral-dark80</code>, #2b2a29</td>
+      <td className="uqds-table__item" data-title="Line-height:">1.5</td>
+      <td className="uqds-table__item" data-title="Usage example:">Text bold</td>
+    </tr>
+    <tr className="uqds-table__row">
+      <td className="uqds-table__item">Emphasis, Accent</td>
+      <td className="uqds-table__item" data-title="Font:">Merriweather</td>
+      <td className="uqds-table__item" data-title="Size:">XL - 1rem, <br /> MD - 1rem</td>
+      <td className="uqds-table__item" data-title="Weight:">Regular 400</td>
+      <td className="uqds-table__item" data-title="Colour (SASS Variable):">Default text, <code>$text--accent</code></td>
+      <td className="uqds-table__item" data-title="Line-height:">1.5</td>
+      <td className="uqds-table__item" data-title="Usage example:">Emphasis, Blockquote, Statement</td>
+    </tr>
+  </tbody>
+</table>
+
+## Example Typography 
+
+export const ExampleType = () => `
+    <div class="uqds-body__container">
+      <h1>Heading level 1 (h1)</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse interdum nulla vitae consectetur interdum. Quisque sed nibh in lorem malesuada egestas. Integer varius orci in ligula mollis sodales. Sed dapibus rutrum finibus. Vestibulum tellus velit, dictum eu cursus at, luctus condimentum leo. Vestibulum malesuada consectetur sem, nec fermentum nibh molestie at. Pellentesque posuere enim leo, in blandit sem interdum ut. Duis lobortis lectus vitae mi pellentesque sagittis. Fusce eget eros sit amet enim placerat commodo quis id nisl.</p>
+      <p><strong>Strong text</strong> <em>Emphasis text</em></p>
+      <h2>Heading level 2 (h2)</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse interdum nulla vitae consectetur interdum. Quisque sed nibh in lorem malesuada egestas. Integer varius orci in ligula mollis sodales. Sed dapibus rutrum finibus. Vestibulum tellus velit, dictum eu cursus at, luctus condimentum leo. Vestibulum malesuada consectetur sem, nec fermentum nibh molestie at. Pellentesque posuere enim leo, in blandit sem interdum ut. Duis lobortis lectus vitae mi pellentesque sagittis. Fusce eget eros sit amet enim placerat commodo quis id nisl.</p>
+      <blockquote>Fusce vitae tortor consequat, consectetur metus id, ultricies risus. Nulla pharetra ornare sem, at placerat nisi sollicitudin bibendum. Nulla in pulvinar augue. Etiam tincidunt leo egestas congue congue. Phasellus feugiat mattis finibus. Duis bibendum pharetra risus, non aliquet augue consequat sit amet. Vestibulum sit amet enim fermentum, fringilla massa nec, facilisis augue.</blockquote>
+      <h3>Heading level 3 (h3)</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse interdum nulla vitae consectetur interdum. Quisque sed nibh in lorem malesuada egestas. Integer varius orci in ligula mollis sodales. Sed dapibus rutrum finibus. Vestibulum tellus velit, dictum eu cursus at, luctus condimentum leo. Vestibulum malesuada consectetur sem, nec fermentum nibh molestie at. Pellentesque posuere enim leo, in blandit sem interdum ut. Duis lobortis lectus vitae mi pellentesque sagittis. Fusce eget eros sit amet enim placerat commodo quis id nisl.</p>
+      <h4>Heading level 4 (h4)</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse interdum nulla vitae consectetur interdum. Quisque sed nibh in lorem malesuada egestas. Integer varius orci in ligula mollis sodales. Sed dapibus rutrum finibus. Vestibulum tellus velit, dictum eu cursus at, luctus condimentum leo. Vestibulum malesuada consectetur sem, nec fermentum nibh molestie at. Pellentesque posuere enim leo, in blandit sem interdum ut. Duis lobortis lectus vitae mi pellentesque sagittis. Fusce eget eros sit amet enim placerat commodo quis id nisl.</p>
+      <h5>Heading level 5 (h5)</h5>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse interdum nulla vitae consectetur interdum. Quisque sed nibh in lorem malesuada egestas. Integer varius orci in ligula mollis sodales. Sed dapibus rutrum finibus. Vestibulum tellus velit, dictum eu cursus at, luctus condimentum leo. Vestibulum malesuada consectetur sem, nec fermentum nibh molestie at. Pellentesque posuere enim leo, in blandit sem interdum ut. Duis lobortis lectus vitae mi pellentesque sagittis. Fusce eget eros sit amet enim placerat commodo quis id nisl.</p>
+      <h6>Heading level 6 (h6)</h6>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse interdum nulla vitae consectetur interdum. Quisque sed nibh in lorem malesuada egestas. Integer varius orci in ligula mollis sodales. Sed dapibus rutrum finibus. Vestibulum tellus velit, dictum eu cursus at, luctus condimentum leo. Vestibulum malesuada consectetur sem, nec fermentum nibh molestie at. Pellentesque posuere enim leo, in blandit sem interdum ut. Duis lobortis lectus vitae mi pellentesque sagittis. Fusce eget eros sit amet enim placerat commodo quis id nisl.</p>
+      <blockquote>Fusce vitae tortor consequat, consectetur metus id, ultricies risus. Nulla pharetra ornare sem, at placerat nisi sollicitudin bibendum. Nulla in pulvinar augue. Etiam tincidunt leo egestas congue congue. Phasellus feugiat mattis finibus. Duis bibendum pharetra risus, non aliquet augue consequat sit amet. Vestibulum sit amet enim fermentum, fringilla massa nec, facilisis augue.</blockquote>
+      <p>Praesent risus libero, viverra eu libero ultricies, tincidunt posuere sem. Phasellus eros mauris, commodo at orci ut, dictum consectetur sem. Sed urna elit, faucibus et feugiat tincidunt, ultrices at dui. Nulla facilisi. Praesent eget urna eget odio ullamcorper ornare et ut arcu. Integer mollis risus sit amet gravida congue. Praesent eget efficitur erat, ut sodales magna. Nulla at ullamcorper tortor. Aenean et porta nulla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nullam aliquet augue eu elementum pretium. Etiam ac feugiat orci, ac molestie tortor. In ac suscipit sapien. Donec tempus mauris id ex tristique convallis nec sit amet ex. Integer semper porttitor sapien ut interdum.</p>
+    </div>
+`;
+
+<Story name="Text block">{ExampleType.bind({})}</Story>

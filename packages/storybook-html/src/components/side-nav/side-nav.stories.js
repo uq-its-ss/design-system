@@ -39,21 +39,21 @@ export const sideNavMultiLevel = () => {
   <nav class="uq-side-nav__container" aria-label="Side navigation">
     <ul class="uq-side-nav__list uq-side-nav__list--level-1">
       <li class="uq-side-nav__list-item">
-        <a href="#" class="uq-side-nav__link">Sidenav list1</a>
+        <a href="#" class="uq-side-nav__link">Side nav list1</a>
       </li>
       <li class="uq-side-nav__list-item uq-side-nav__list-item--has-subnav uq-side-nav__list-item--active">
-        <a href="#" class="uq-side-nav__link" aria-haspopup="true" aria-expanded="true">Sidenav list2</a>
-        <ul class="uq-side-nav__list uq-side-nav__list--level-2" aria-label="Sidenav list2 submenu">
+        <a href="#" class="uq-side-nav__link" aria-haspopup="true" aria-expanded="true">Side nav list2</a>
+        <ul class="uq-side-nav__list uq-side-nav__list--level-2" aria-label="Side nav list2 submenu">
           <li class="uq-side-nav__list-item">
-            <a href="#" class="uq-side-nav__link">Sidenav list2 submenu1</a>
+            <a href="#" class="uq-side-nav__link">Side nav list2 submenu1</a>
           </li>
           <li class="uq-side-nav__list-item uq-side-nav__list-item--active">
-            <a href="#" class="uq-side-nav__link">Sidenav list2 submenu2</a>
+            <a href="#" class="uq-side-nav__link">Side nav list2 submenu2</a>
           </li>
         </ul>
       </li>
       <li class="uq-side-nav__list-item">
-        <a href="#" class="uq-side-nav__link">Sidenav list3</a>
+        <a href="#" class="uq-side-nav__link">Side nav list3</a>
       </li>
     </ul>
   </nav>

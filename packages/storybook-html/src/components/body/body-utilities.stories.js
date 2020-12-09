@@ -145,11 +145,32 @@ textSizeUtils.storyName = 'Text size';
 
 export const textWeightUtils = () => {
   return `
-    <div class="uqds-body__text-utility__container">
-      <div class="uqds-body__text-utility text--weight-normal">.text--weight-normal</div>
-      <div class="uqds-body__text-utility text--weight-bold">.text--weight-bold</div>
-      <div class="uqds-body__text-utility text--weight-medium">.text--weight-medium (same as bold)</div>
-    </div>
+<table>
+  <thead>
+    <tr>
+      <th>Example</th>
+      <th>Class</th>
+      <th>usage</th>
+    </tr>
+  </thead> 
+  <tbody>
+    <tr>
+      <td><div class="uqds-body__text-utility text--weight-normal">text--weight-normal</div></td>
+      <td><code>text--weight-normal</code></td>
+      <td>use cases or scenarios to be defined</td>
+    </tr>
+    <tr>
+      <td><div class="uqds-body__text-utility text--weight-bold">text--weight-bold</div></td>
+      <td><code>text--weight-bold</code></td>
+      <td>use cases or scenarios to be defined</td>
+    </tr>
+    <tr>
+      <td><div class="uqds-body__text-utility text--weight-medium">text--weight-medium</div></td>
+      <td><code>text--weight-medium</code></td>
+      <td>(same as bold) use cases or scenarios to be defined</td>
+    </tr>
+  </tbody>
+</table>
   `;
 };
 

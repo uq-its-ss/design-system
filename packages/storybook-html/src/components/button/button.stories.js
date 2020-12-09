@@ -4,12 +4,6 @@ import './button.scss';
 export default {
   title: 'Components/Button',
   parameters: {
-    backgrounds: {
-      values: [
-        { name: 'Dark', value: '#000000' },
-        { name: 'UQ purple', value: '#51247a' }
-      ]
-    },
     previewTabs: {
       canvas: {hidden: false}
     }
@@ -77,11 +71,7 @@ export const secondaryLight = () => {
 secondaryLight.storyName = "Secondary --light";
 secondaryLight.parameters = {
   backgrounds: {
-    default: 'Dark',
-    values: [
-      { name: 'Dark', value: '#000000' },
-      { name: 'UQ purple', value: '#51247a' }
-    ]
+    default: 'Dark'
   } 
 };
 

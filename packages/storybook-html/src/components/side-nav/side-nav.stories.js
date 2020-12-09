@@ -1,5 +1,3 @@
-import { useEffect } from '@storybook/client-api';
-
 // import styles
 import './side-nav.scss';
 
@@ -12,23 +10,56 @@ export default {
   title: 'Components/Side nav',
   parameters: {
     docs: {
-      page: docs,
-      inlineStories: false
+      page: docs
     },
     layout: "padded",
-    backgrounds: {
-      values: [
-        { name: 'UQ Neutral 1', value: '#D7D1CC' }
-      ]
-    },
     previewTabs: {
       canvas: {hidden: false}
     }
   }
 };
 
-export const sideNav = () => {
+export const sideNavSingleLevel = () => {
   return sideNavHTML;
 };
 
-sideNav.storyName = 'Side nav';
+sideNavSingleLevel.storyName = 'Side nav single-level';
+
+export const sideNavMultiLevel = () => {
+  return `
+  <!-- Side nav multi-level -->
+  <div class="uq-side-nav">
+
+  <!-- Side nav title -->
+  <h3 class="uq-side-nav__title">
+    <a href="#" class="uq-side-nav__title-link">Side nav title</a>
+  </h3>
+
+  <!-- Side nav -->
+  <nav class="uq-side-nav__container" aria-label="Side navigation">
+    <ul class="uq-side-nav__list uq-side-nav__list--level-1">
+      <li class="uq-side-nav__list-item">
+        <a href="#" class="uq-side-nav__link">Sidenav list1</a>
+      </li>
+      <li class="uq-side-nav__list-item uq-side-nav__list-item--has-subnav uq-side-nav__list-item--active">
+        <a href="#" class="uq-side-nav__link" aria-haspopup="true" aria-expanded="true">Sidenav list2</a>
+        <ul class="uq-side-nav__list uq-side-nav__list--level-2" aria-label="Sidenav list2 submenu">
+          <li class="uq-side-nav__list-item">
+            <a href="#" class="uq-side-nav__link">Sidenav list2 submenu1</a>
+          </li>
+          <li class="uq-side-nav__list-item uq-side-nav__list-item--active">
+            <a href="#" class="uq-side-nav__link">Sidenav list2 submenu2</a>
+          </li>
+        </ul>
+      </li>
+      <li class="uq-side-nav__list-item">
+        <a href="#" class="uq-side-nav__link">Sidenav list3</a>
+      </li>
+    </ul>
+  </nav>
+
+</div>
+  `;
+};
+
+sideNavMultiLevel.storyName = 'Side nav multi-level';

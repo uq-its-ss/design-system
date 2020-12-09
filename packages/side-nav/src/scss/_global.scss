@@ -1,15 +1,6 @@
 @use "@uqds/core/src/scss/global" as core;
 
-$title-font-size: core.$font-size-xl;
-$title-font-weight: core.$font-weight-bold;
-
-$nav-primary: core.$uq-black;
-$nav-primary-active-bg: core.$grey-05; /* #F1F1F1 */
-$nav-dropdown-width: 320px;
-$nav-dropdown-bg: core.$grey-05; /* #F1F1F1 */
-$nav-dropdown-active-bg: core.$grey-10; /* #E2E2E2 */
-$nav-dropdown-divider: core.$grey-10; /* #E2E2E2 */
-$nav-dropdown-animation-distance: core.$space-sm;
-$nav-chevron: core.$uq-purple;
-$nav-active: core.$uq-purple;
+$sidenav-list-item-bg: core.$grey-05; /* #F1F1F1 */
+$sidenav-list-item-active-bg: core.$grey-10; /* #E2E2E2 */
+$sidenav-list-item-divider: core.$grey-10; /* #E2E2E2 */
 

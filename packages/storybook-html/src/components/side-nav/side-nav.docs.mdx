@@ -2,32 +2,89 @@ import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
 import StatusBadge from '../../../.storybook/custom/components/StatusBadge';
 
 # Side nav
+
 <StatusBadge.Development />
 
 ## Overview
 
-The side navigation component is a multi level submenu and generally appears to the right side of the web page content. It wraps under the content on smaller viewports. 
+The side nav component is a multi level submenu and generally appears to the right side of the webpage content. On smaller viewports, the side nav shifts underneath the page content. 
 
 ## Default example
 
-A simple one level side menu list
+### Single-level
 
-<Canvas height="350px" withSource="none">
-  <Story id="components-side-nav--side-nav" />
+<Canvas withSource="none">
+  <Story id="components-side-nav--side-nav-single-level" />
 </Canvas>
 
-## with dropdown
+```html
+<!-- Side nav single-level -->
+<div class="uq-side-nav">
 
+  <!-- Side nav title -->
+  <h3 class="uq-side-nav__title">
+    <a href="#" class="uq-side-nav__title-link">Side nav title</a>
+  </h3>
 
-**Examples include:** 
+  <!-- Side nav -->
+  <nav class="uq-side-nav__container" aria-label="Side navigation">
+    <ul class="uq-side-nav__list uq-side-nav__list--level-1">
+      <li class="uq-side-nav__list-item uq-side-nav__list-item--active">
+        <a href="#" class="uq-side-nav__link">Sidenav list1</a>
+      </li>
+      <li class="uq-side-nav__list-item">
+        <a href="#" class="uq-side-nav__link">Sidenav list2</a>
+      </li>
+      <li class="uq-side-nav__list-item">
+        <a href="#" class="uq-side-nav__link">Sidenav list3</a>
+      </li>
+    </ul>
+  </nav>
+  
+</div>
+```
 
-* Future Students dropdown for domestic and international.
-* UQ Maps, expand to fill whole screen
-* UQ researchers shortlist
+### Multi-level
 
-## Break points
+<Canvas withSource="none">
+  <Story id="components-side-nav--side-nav-multi-level" />
+</Canvas>
 
-* Desktop above 1140px
-* Mobile and tablet below 1140px 
+```html
+<!-- Side nav multi-level -->
+<div class="uq-side-nav">
+
+  <!-- Side nav title -->
+  <h3 class="uq-side-nav__title">
+    <a href="#" class="uq-side-nav__title-link">Side nav title</a>
+  </h3>
+
+  <!-- Side nav -->
+  <nav class="uq-side-nav__container" aria-label="Side navigation">
+    <ul class="uq-side-nav__list uq-side-nav__list--level-1">
+      <li class="uq-side-nav__list-item">
+        <a href="#" class="uq-side-nav__link">Sidenav list1</a>
+      </li>
+      <li class="uq-side-nav__list-item uq-side-nav__list-item--has-subnav uq-side-nav__list-item--active">
+        <a href="#" class="uq-side-nav__link" aria-haspopup="true" aria-expanded="true">Sidenav list2</a>
+        <ul class="uq-side-nav__list uq-side-nav__list--level-2" aria-label="Sidenav list2 submenu">
+          <li class="uq-side-nav__list-item">
+            <a href="#" class="uq-side-nav__link">Sidenav list2 submenu1</a>
+          </li>
+          <li class="uq-side-nav__list-item uq-side-nav__list-item--active">
+            <a href="#" class="uq-side-nav__link">Sidenav list2 submenu2</a>
+          </li>
+        </ul>
+      </li>
+      <li class="uq-side-nav__list-item">
+        <a href="#" class="uq-side-nav__link">Sidenav list3</a>
+      </li>
+    </ul>
+  </nav>
+
+</div>
+```
+
+## Accessibility
 
 ## Known issues

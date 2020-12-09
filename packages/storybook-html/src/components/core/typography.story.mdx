@@ -6,7 +6,7 @@ import './_fonts.scss';
 # Typography
 At UQ, we have a set of complementary font assets and typeface rules that ensure a consistent look and feel of online content across devices and computers.
 
-## Fonts
+## UQ's Fonts
 
 Web based fonts are used for websites and applications, where the font can be embedded into code to display seamlessly. 
 The 3 fonts used for UQ online applications are Roboto, Merriweather & Montserrat.
@@ -41,6 +41,8 @@ export const FontStyles = () => `
 <Story name="Font styles">{FontStyles.bind({})}</Story>
 
 ## Size
+
+We use 16px as the base or deafult for most browsers and devices.
 
 <table>
   <thead>
@@ -131,7 +133,14 @@ You can use them freely in your products & projects - print or digital, commerci
   </tbody>
 </table>
 
-### Font stack
+### Font stacks
+
+The following font family declarations use widely available fonts.
+A user's web browser will look at the comma-separated list and will
+attempt to use each font in turn until it finds one that is available
+on the user's computer. The final "generic" font (sans-serif, serif or
+monospace) hints at what type of font to use if the web browser doesn't
+find any of the fonts in the list.
 
 Roboto
 ```css
@@ -146,7 +155,10 @@ Montserrat
 font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
 ```
 
-<br />
+Monospace (Based on available system fonts across common OS's and devices)
+```css
+font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+```
 
 ### Loading fonts, HTML, CSS
 

@@ -1,7 +1,5 @@
 # UQ Design System (UQDS)
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/bf36e9d5-9887-4be6-bb76-705d8e27453d/deploy-status)](https://app.netlify.com/sites/eager-engelbart-6dcb4a/deploys)
-
 This is the repository for the UQ Design System.
 
 The UQ Design System is a guide to how user interfaces should look, feel, behave and be coded at UQ.  It includes a guide to the core styles, components, patterns and standards for UQ user interfaces.

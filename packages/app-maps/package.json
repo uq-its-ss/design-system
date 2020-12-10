@@ -1,0 +1,52 @@
+{
+  "name": "@uqds/app-maps",
+  "version": "0.0.0",
+  "description": "Application stylesheets for UQ Maps",
+  "keywords": [
+    "uqds",
+    "uq",
+    "University of Queensland",
+    "design system",
+    "scss",
+    "sass",
+    "css",
+    "application",
+    "maps"
+  ],
+  "author": {
+    "name": "University of Queensland",
+    "email": "webservices@uq.edu.au",
+    "url": "https://uq.edu.au"
+  },
+  "homepage": "https://github.com/uq-its-ss/design-system#readme",
+  "license": "ISC",
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "lib/*",
+    "src/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uq-its-ss/design-system.git"
+  },
+  "scripts": {
+    "build-icons": "node scripts/icon-scan.js"
+  },
+  "bugs": {
+    "url": "https://github.com/uq-its-ss/design-system/issues"
+  },
+  "dependencies": {
+    "@uqds/core": "^0.0.0"
+  },
+  "devDependencies": {
+    "@svgdotjs/svg.js": "^3.0.16",
+    "chalk": "^4.1.0",
+    "glob": "^7.1.6",
+    "js-yaml": "^3.14.1",
+    "mini-svg-data-uri": "^1.2.3",
+    "svgdom": "^0.1.8",
+    "svgo": "^1.3.2"
+  }
+}

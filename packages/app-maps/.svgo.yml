@@ -55,7 +55,7 @@ plugins:
   - sortDefsChildren
   - removeTitle: false
   - removeDesc
-  - removeDimensions: false
+  - removeDimensions: true
   - removeAttrs: false
   - removeAttributesBySelector: false
   - removeElementsByAttr: false

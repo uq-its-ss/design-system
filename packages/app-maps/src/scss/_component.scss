@@ -1,0 +1,152 @@
+@use '@uqds/core/src/scss/global' as core;
+@use "@material/circular-progress/mdc-circular-progress";
+@use "@material/circular-progress/mixins" as mdc-circular-progress-mixins;
+@use 'icons' as *;
+
+.uq-maps {
+  &__search-field {
+    $input-height: 3.375rem;
+    $icon-height: 1.75rem;
+    $icon-width: $icon-height;
+    $button-height: $input-height - core.$space-sm;
+    $button-width: $button-height;
+
+    align-items: center;
+    background-color: core.$uq-white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .08),
+                0 8px 16px rgba(0, 0, 0, .16);
+    box-sizing: border-box;
+    display: flex;
+    margin: core.$space;
+    max-width: 360px;
+    overflow: hidden;
+    position: relative;
+    transition: height .6s;
+    white-space: nowrap;
+
+    &::before, &::after, *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    input[type=text].uq-maps__search-field__input,
+    &__back,
+    &__clear {
+      background-color: transparent;
+      background-repeat: no-repeat;
+      background-size: $icon-height $icon-width;
+    }
+
+    input[type=text].uq-maps__search-field__input {
+      appearance: none;
+      background-image: url(get-icon('ui--search'));
+      background-position: core.$space-sm + ($button-width - $icon-width) / 2 center;
+      border: 0 none;
+      color: core.$text;
+      font-size: core.$font-size-s;
+      font-weight: core.$font-weight-normal;
+      flex-grow: 1;
+      height: $input-height;
+      margin: 0;
+      max-width: none;
+      min-width: 0;
+      padding: 0 core.$space-sm 0 core.$space + $button-width;
+
+      &:focus {
+        box-shadow: none;
+        outline: 0 none;
+      }
+    }
+
+    &__back,
+    &__clear {
+      // hide text
+      appearance: none;
+      background-position: center;
+      border-radius: 50%;
+      border: 0 none;
+      cursor: pointer;
+      display: none;
+      flex-grow: 0;
+      flex-shrink: 0;
+      margin: 0;
+      outline: 0 none;
+      overflow: hidden;
+      padding: 0;
+      text-indent: -9999px;
+      height: $button-height;
+      width: $button-width;
+
+      &:hover {
+        background-color: rgba(core.$uq-black, .04);
+      }
+
+      &:active {
+        background-color: rgba(core.$uq-black, .07);
+      }
+    }
+
+    &__back {
+      background-image: url(get-icon('ui--arrow-left'));
+      margin-left: core.$space-sm;
+
+      &:hover {
+        background-image: url(get-icon('ui--arrow-left', darken(core.$uq-purple, 10%)));
+      }
+    }
+
+    &__clear {
+      background-image: url(get-icon('ui--close'));
+      margin-right: core.$space-sm;
+
+      &:hover {
+        background-image: url(get-icon('ui--close', darken(core.$uq-purple, 10%)));
+      }
+    }
+
+    &__progress-indicator {
+      align-items: center;
+      box-sizing: content-box;
+      display: flex;
+      font-size: 0;
+      height: $button-height;
+      justify-content: center;
+      margin-right: core.$space-sm;
+      white-space: nowrap;
+      width: $button-width;
+
+      * {
+        box-sizing: content-box;
+      }
+
+      .mdc-circular-progress {
+        @include mdc-circular-progress-mixins.color(core.$uq-purple);
+        flex-grow: 0;
+        flex-shrink: 0;
+      }
+    }
+
+    // focused on empty field
+    &--is-focused {
+      .uq-maps__search-field__back {
+        display: inline-block;
+      }
+    }
+
+    // has search query
+    &--is-searching {
+      .uq-maps__search-field__back,
+      .uq-maps__search-field__clear {
+        display: inline-block;
+      }
+    }
+
+    &--is-focused,
+    &--is-searching {
+      input[type=text].uq-maps__search-field__input {
+        background: transparent;
+        padding: 0 core.$space-sm;
+      }
+    }
+  }
+}

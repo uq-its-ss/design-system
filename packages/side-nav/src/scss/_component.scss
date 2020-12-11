@@ -39,6 +39,10 @@
     margin: core.$space-none;
     padding: core.$space-none;
 
+    &--level-1 {
+      
+    }
+
     &--level-2 {
       background-color: $sidenav-list-item-bg;
       display: block;
@@ -62,7 +66,7 @@
   
         &:hover,
         &:focus {
-          background-color: $sidenav-list-item-active-bg;
+          background-color: $sidenav-list-item-active-bg !important;
         }
       }
     }
@@ -94,14 +98,14 @@
         }
       }
 
+      // hidden for now until JS implementation
       &__sub-toggle {
         position: absolute;
         top: 0;
         right: 0;
-        display: block;
+        display: none; //block 
         width: 3rem;
         padding: core.$space core.$space-md;
-        border-left: 1px solid $sidenav-list-item-divider;
         text-indent: -100vw;
         background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' stroke='%2351247A'%3E%3Cpath d='M14.285 5.145l-6 6.167a.41.41 0 01-.598 0L1.715 5.145' fill='none' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
         background-position: center center;
@@ -109,7 +113,8 @@
         overflow: hidden;
       }
 
-      &--open {
+      &--open, 
+      &--has-subnav:focus {
         .uq-side-nav__list-item__sub-toggle {
           background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' stroke='%2351247A'%3E%3Cpath d='M1.715 10.855l6-6.168a.41.41 0 01.597 0l5.973 6.168' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
         }
@@ -123,7 +128,8 @@
         }
       }
 
-      &--active {
+      &--active,
+      &:focus {
         .uq-side-nav__link {
           background-color: $sidenav-list-item-bg;
         }

@@ -1,9 +1,6 @@
 // import styles
 import './side-nav.scss';
 
-// import scripts
-import sideNavJS from '@uqds/side-nav/src/js/side-nav.es6';
-
 // import HTML template strings
 import sideNavMultiLevelHTML from './side-nav-multi-level.html';
 
@@ -51,10 +48,6 @@ export const sideNavSingleLevel = () => {
 sideNavSingleLevel.storyName = 'Side nav single-level';
 
 export const sideNavMultiLevel = () => {
-  useEffect(() => {
-      var navelement = document.getElementById("jsSideNav");
-      var nav = new sideNavJS(navelement, "uq-side-nav__container");
-    });
   return sideNavMultiLevelHTML;
 };
 

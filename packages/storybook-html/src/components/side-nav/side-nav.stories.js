@@ -1,8 +1,11 @@
 // import styles
 import './side-nav.scss';
 
+// import scripts
+import sideNavJS from '@uqds/side-nav/src/js/side-nav.es6';
+
 // import HTML template strings
-import sideNavHTML from './side-nav.html';
+import sideNavMultiLevelHTML from './side-nav-multi-level.html';
 
 import docs from './side-nav.docs.mdx';
 
@@ -20,46 +23,39 @@ export default {
 };
 
 export const sideNavSingleLevel = () => {
-  return sideNavHTML;
+  return `
+  <!-- Side nav single-level -->
+  <div class="uq-side-nav">
+    <!-- Parent page title -->
+    <h3 class="uq-side-nav__title">
+      <a href="#" class="uq-side-nav__title-link">Parent page title</a>
+    </h3>
+    <!-- Side nav -->
+    <nav class="uq-side-nav__container" aria-label="Side navigation" id="jsSideNav">
+      <ul class="uq-side-nav__list uq-side-nav__list--level-1">
+        <li class="uq-side-nav__list-item uq-side-nav__list-item--active">
+          <a href="#" class="uq-side-nav__link">Sibling list1</a>
+        </li>
+        <li class="uq-side-nav__list-item">
+          <a href="#" class="uq-side-nav__link">Sibling list2</a>
+        </li>
+        <li class="uq-side-nav__list-item">
+          <a href="#" class="uq-side-nav__link">Sibling list3</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+`
 };
 
 sideNavSingleLevel.storyName = 'Side nav single-level';
 
 export const sideNavMultiLevel = () => {
-  return `
-  <!-- Side nav multi-level -->
-  <div class="uq-side-nav">
-
-  <!-- Side nav title -->
-  <h3 class="uq-side-nav__title">
-    <a href="#" class="uq-side-nav__title-link">Side nav title</a>
-  </h3>
-
-  <!-- Side nav -->
-  <nav class="uq-side-nav__container" aria-label="Side navigation">
-    <ul class="uq-side-nav__list uq-side-nav__list--level-1">
-      <li class="uq-side-nav__list-item">
-        <a href="#" class="uq-side-nav__link">Side nav list1</a>
-      </li>
-      <li class="uq-side-nav__list-item uq-side-nav__list-item--has-subnav uq-side-nav__list-item--active">
-        <a href="#" class="uq-side-nav__link" aria-haspopup="true" aria-expanded="true">Side nav list2</a>
-        <ul class="uq-side-nav__list uq-side-nav__list--level-2" aria-label="Side nav list2 submenu">
-          <li class="uq-side-nav__list-item">
-            <a href="#" class="uq-side-nav__link">Side nav list2 submenu1</a>
-          </li>
-          <li class="uq-side-nav__list-item uq-side-nav__list-item--active">
-            <a href="#" class="uq-side-nav__link">Side nav list2 submenu2</a>
-          </li>
-        </ul>
-      </li>
-      <li class="uq-side-nav__list-item">
-        <a href="#" class="uq-side-nav__link">Side nav list3</a>
-      </li>
-    </ul>
-  </nav>
-
-</div>
-  `;
+  useEffect(() => {
+      var navelement = document.getElementById("jsSideNav");
+      var nav = new sideNavJS(navelement, "uq-side-nav__container");
+    });
+  return sideNavMultiLevelHTML;
 };
 
 sideNavMultiLevel.storyName = 'Side nav multi-level';

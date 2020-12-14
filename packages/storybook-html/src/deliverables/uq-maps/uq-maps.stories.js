@@ -1,6 +1,7 @@
 import { useEffect } from '@storybook/client-api';
 import { MDCCircularProgress } from '@material/circular-progress';
 import './uq-maps.scss';
+import docs from './uq-maps.docs.mdx';
 
 export default {
   title: 'Deliverables/UQ Maps',
@@ -8,6 +9,10 @@ export default {
     layout: 'fullscreen',
     previewTabs: {
       canvas: {hidden: false}
+    },
+    docs: {
+      page: docs,
+      inlineStories: false
     },
     backgrounds: {
       default: 'Diagonal stripes'

@@ -1,0 +1,92 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import StatusBadge from '../../../.storybook/custom/components/StatusBadge';
+
+# UQ Maps
+<StatusBadge.Development />
+
+## Search field
+
+### Initial
+
+What the search field looks like when the app loads.
+
+#### Basic usage
+
+Use the HTML markup provided in the example below to apply the styles from the
+provided CSS.
+
+<Canvas>
+  <Story height={120} id="deliverables-uq-maps--search-field" />
+</Canvas>
+
+### On focus or selecting origin/destination
+
+What the search field looks like when a user clicks or taps the search bar but
+hasn't entered any text yet. Identical to when it is used to let a user choose
+an origin or destination in wayfinding mode.
+
+#### Basic usage
+
+Using the same HTML markup as above, also apply the `uq-maps__search-field--is-focused`
+class to the container.
+
+<Canvas>
+  <Story height={200} id="deliverables-uq-maps--search-field-focused" />
+</Canvas>
+
+### With search value
+
+What the search field looks like when there has been text entered.
+
+#### Basic usage
+
+Using the same HTML markup as above, except we're applying the `uq-maps__search-field--is-searching`
+class to the container instead.
+
+<Canvas>
+  <Story height={120} id="deliverables-uq-maps--search-field-searching" />
+</Canvas>
+
+### With circular progression indicator
+
+What the search field looks like when the app is working on a search query.
+
+#### Basic usage
+
+Using the same HTML markup as above and also applying the `uq-maps__search-field--is-working`
+class to the container instead. We also have to add in some extra markup and
+scripted behaviour for the *Material* progress indicator. Please see example
+code.
+
+<Canvas>
+  <Story height={120} id="deliverables-uq-maps--search-field-working" />
+</Canvas>
+
+## Wayfinding controls
+
+### Initial
+
+What the wayfinding panel looks like when a use chooses to navigate to a
+location.
+
+#### Basic usage
+
+Use the HTML markup provided in the example below to apply the styles from the
+provided CSS.
+
+<Canvas>
+  <Story height={240} id="deliverables-uq-maps--wayfinding-control" />
+</Canvas>
+
+### With circular progress indicator
+
+#### Basic usage
+
+Using the same HTML markup as above, except we're applying the `uq-maps__wayfinding-controls--is-working`
+class to the container instead. We also have to add in some extra markup and
+scripted behaviour for the *Material* progress indicator. Please see example
+code.
+
+<Canvas>
+  <Story height={240} id="deliverables-uq-maps--wayfinding-control-working" />
+</Canvas>

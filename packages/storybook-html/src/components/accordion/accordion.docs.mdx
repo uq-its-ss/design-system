@@ -1,0 +1,99 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import StatusBadge from '../../../.storybook/custom/components/StatusBadge';
+
+# Accordion
+
+<StatusBadge.Stable />
+
+<a href="https://github.com/uq-its-ss/design-system/issues" class="uq-button uq-button--text" target="_blank">Check for open issues</a>
+
+## Overview
+
+Accordion component helps users to see only the content they need. Accordions expand and collapse sections of content.
+
+## Default example
+
+### a. Default
+
+<Canvas withSource="none">
+  <Story id="components-accordion--base" />
+</Canvas>
+
+```html
+<div class="accordion" aria-label="Accordion button group" role="presentation">
+    <div class="accordion__item">
+    <button class="accordion__toggle" aria-controls="content-1" aria-expanded="false" id="accordion-title-1">Step 1</button>
+    <div class="accordion__content" aria-hidden="true" id="content-1" aria-labelledby="accordion-title-1">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor eros dui, vitae iaculis leo ornare eget. Etiam tristique lobortis ligula non mattis. Ut dapibus libero neque, vel tincidunt nunc tempus eget.</p>
+    </div>
+    </div>
+    ...
+    ...
+</div>
+```
+
+### b. Default using list tags
+
+<Canvas withSource="none">
+  <Story id="components-accordion--base-using-lists" />
+</Canvas>
+
+```html
+<ul class="accordion" aria-label="Accordion button group" role="presentation">
+    <li class="accordion__item">
+    <button class="accordion__toggle" aria-controls="content-11" aria-expanded="false" id="accordion-title-11">Step 1</button>
+    <div class="accordion__content" role="region" aria-hidden="true" id="content-11" aria-labelledby="accordion-title-11">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor eros dui, vitae iaculis leo ornare eget. Etiam tristique lobortis ligula non mattis. Ut dapibus libero neque, vel tincidunt nunc tempus eget.</p>
+    </div>
+    </li>
+    ...
+    ...
+</ul>
+```
+
+## Variant examples
+
+### a. Shaded
+
+<Canvas withSource="none">
+  <Story id="components-accordion--shaded" />
+</Canvas>
+
+```html
+<div class="accordion accordion--shaded" aria-label="Accordion button group" role="presentation">
+    <div class="accordion__item">
+    <button class="accordion__toggle" aria-controls="content-111" aria-expanded="false" id="accordion-title-111">Step 1</button>
+    <div class="accordion__content" role="region" aria-hidden="true" id="content-111" aria-labelledby="accordion-title-111">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor eros dui, vitae iaculis leo ornare eget. Etiam tristique lobortis ligula non mattis. Ut dapibus libero neque, vel tincidunt nunc tempus eget.</p>
+    </div>
+    </div>
+    ...
+    ...
+</div>
+```
+
+### b. Secondary
+
+<Canvas withSource="none">
+  <Story id="components-accordion--secondary" />
+</Canvas>
+
+```html
+<div class="accordion accordion--secondary" aria-label="Accordion button group" role="presentation">
+    <div class="accordion__item">
+    <button class="accordion__toggle" aria-controls="content-1111" aria-expanded="false" id="accordion-title-1111">Step 1</button>
+    <div class="accordion__content" role="region" aria-hidden="true" id="content-1111" aria-labelledby="accordion-title-1111">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor eros dui, vitae iaculis leo ornare eget. Etiam tristique lobortis ligula non mattis. Ut dapibus libero neque, vel tincidunt nunc tempus eget.</p>
+    </div>
+    </div>
+    ...
+    ...
+</div>
+```
+
+## How and when to use
+
+- Use the default accordion example if you have preference for `div` elements in the components html code.
+- Use default accordion which uses list tags if you have preference using `ul` and `li` elements in the components html code.
+- Use the shaded accordion if you need the accordion toggle panels to be shaded light grey instead of white.
+- Use secondary accordion example if you would like the accordion title font size to be smaller than the default.

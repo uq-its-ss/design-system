@@ -1,5 +1,8 @@
 import { useEffect } from '@storybook/client-api';
 
+// documentation
+import docs from './accordion.docs.mdx';
+
 // import styles
 import '@uqds/accordion/src/scss/_component.scss';
 
@@ -11,7 +14,7 @@ export default {
   parameters: {
     layout: "padded",
     docs: {
-      inlineStories: false
+      page: docs
     },
     previewTabs: {
       canvas: {hidden: false}
@@ -58,9 +61,6 @@ export const base = () => {
 base.storyName = 'Default';
 
 export const baseUsingLists = () => {
-  useEffect(() => {
-    new accordion();  
-  });
   return `
     <ul class="accordion" aria-label="Accordion button group" role="presentation">
       <li class="accordion__item">
@@ -93,12 +93,9 @@ export const baseUsingLists = () => {
   `;
 };
 
-baseUsingLists.storyName = 'Default using <ul> and <li>';
+baseUsingLists.storyName = 'Default using list tags';
 
 export const shaded = () => {
-  useEffect(() => {
-    new accordion();  
-  });
   return `
     <div class="accordion accordion--shaded" aria-label="Accordion button group" role="presentation">
       <div class="accordion__item">
@@ -124,9 +121,6 @@ export const shaded = () => {
 }
 
 export const secondary = () => {
-  useEffect(() => {
-    new accordion();  
-  });
   return `
     <div class="accordion accordion--secondary" aria-label="Accordion button group" role="presentation">
       <div class="accordion__item">

@@ -39,7 +39,8 @@
   },
   "dependencies": {
     "@material/circular-progress": "^8.0.0",
-    "@uqds/core": "^0.0.0"
+    "@uqds/core": "^0.0.0",
+    "@uqds/body": "^0.0.0"
   },
   "devDependencies": {
     "@svgdotjs/svg.js": "^3.0.16",

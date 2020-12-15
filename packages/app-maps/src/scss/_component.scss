@@ -9,11 +9,11 @@ $-icon-button-width: $-icon-button-height;
 $-icon-button-icon-height: 1.75rem;
 $-icon-button-icon-width: $-icon-button-icon-height;
 
-.uq-maps {
+%uq-maps {
   /* ------------------------ */
   /* Circular icon button     */
   /* ------------------------ */
-
+  
   &__icon-button {
     appearance: none;
     background-position: center;
@@ -44,7 +44,9 @@ $-icon-button-icon-width: $-icon-button-icon-height;
       box-sizing: border-box;
     }
   }
-  
+}
+ 
+.uq-maps {
   /* ------------------------ */
   /* Search field             */
   /* ------------------------ */
@@ -105,6 +107,11 @@ $-icon-button-icon-width: $-icon-button-icon-height;
       display: none;
       flex-grow: 0;
       flex-shrink: 0;
+    }
+
+    &__back,
+    &__clear {
+      @extend %uq-maps__icon-button;
     }
 
     &__back {
@@ -251,6 +258,7 @@ $-icon-button-icon-width: $-icon-button-icon-height;
 
     &__back,
     &__swap {
+      @extend %uq-maps__icon-button;
       flex-grow: 0;
       flex-shrink: 0;
       margin-left: core.$space-sm;

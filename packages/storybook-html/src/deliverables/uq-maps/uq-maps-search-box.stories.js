@@ -23,10 +23,10 @@ export default {
 export const searchField = () => {
   return `
     <div class="uq-maps__search-field">
-      <button class="uq-maps__icon-button uq-maps__search-field__back">Back</button>
+      <button class="uq-maps__search-field__back">Back</button>
       <label for="search" class="uq-maps__search-field__label">Search</label>
       <input type="text" id="search" class="uq-maps__search-field__input" placeholder="Search" autocomplete="off" />
-      <button class="uq-maps__icon-button uq-maps__search-field__clear">Clear</button>
+      <button class="uq-maps__search-field__clear">Clear</button>
     </div>
   `;
 };
@@ -36,16 +36,16 @@ searchField.storyName = "Search field (initial)";
 export const searchFieldFocused = () => {
   return `
     <div class="uq-maps__search-field uq-maps__search-field--is-focused">
-      <button class="uq-maps__icon-button uq-maps__search-field__back">Back</button>
+      <button class="uq-maps__search-field__back">Back</button>
       <label for="search" class="uq-maps__search-field__label">Search</label>
       <input type="text" class="uq-maps__search-field__input" placeholder="Search" autocomplete="off" />
-      <button class="uq-maps__icon-button uq-maps__search-field__clear">Clear</button>
+      <button class="uq-maps__search-field__clear">Clear</button>
     </div>
     <div class="uq-maps__search-field uq-maps__search-field--is-focused">
-      <button class="uq-maps__icon-button uq-maps__search-field__back">Back</button>
+      <button class="uq-maps__search-field__back">Back</button>
       <label for="search" class="uq-maps__search-field__label">Search or click on map</label>
       <input type="text" class="uq-maps__search-field__input" placeholder="Search or click on map" autocomplete="off" />
-      <button class="uq-maps__icon-button uq-maps__search-field__clear">Clear</button>
+      <button class="uq-maps__search-field__clear">Clear</button>
     </div>
   `;
 };
@@ -55,10 +55,10 @@ searchFieldFocused.storyName = "Search field on focus or selecting origin/destin
 export const searchFieldSearching = () => {
   return `
     <div class="uq-maps__search-field uq-maps__search-field--is-searching">
-      <button class="uq-maps__icon-button uq-maps__search-field__back">Back</button>
+      <button class="uq-maps__search-field__back">Back</button>
       <label for="search" class="uq-maps__search-field__label">Search</label>
       <input type="text" class="uq-maps__search-field__input" placeholder="Search" value="Bagels" autocomplete="off" />
-      <button class="uq-maps__icon-button uq-maps__search-field__clear">Clear</button>
+      <button class="uq-maps__search-field__clear">Clear</button>
     </div>
   `;
 };
@@ -74,10 +74,10 @@ export const searchFieldWorking = () => {
   
   return `
     <div class="uq-maps__search-field uq-maps__search-field--is-working">
-      <button class="uq-maps__icon-button uq-maps__search-field__back">Back</button>
+      <button class="uq-maps__search-field__back">Back</button>
       <label for="search" class="uq-maps__search-field__label">Search</label>
       <input type="text" id="search" class="uq-maps__search-field__input" placeholder="Search" value="Bagels" autocomplete="off" />
-      <button class="uq-maps__icon-button uq-maps__search-field__clear">Clear</button>
+      <button class="uq-maps__search-field__clear">Clear</button>
       <div class="uq-maps__search-field__progress-indicator">
 
         <!-- START MDC circular-progress component -->

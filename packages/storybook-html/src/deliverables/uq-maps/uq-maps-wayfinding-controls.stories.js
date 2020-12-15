@@ -24,11 +24,11 @@ export const wayfindingControl = () => `
   <div class="uq-maps__wayfinding-controls">
     <div class="uq-maps__wayfinding-controls__main">
       <div class="uq-maps__wayfinding-controls__row">
-        <button class="uq-maps__icon-button uq-maps__wayfinding-controls__back">Back</button>
+        <button class="uq-maps__wayfinding-controls__back">Back</button>
         <button class="uq-maps__wayfinding-controls__text-button uq-maps__wayfinding-controls__text-button--placeholder">Starting point</button>
       </div>
       <div class="uq-maps__wayfinding-controls__row">
-        <button class="uq-maps__icon-button uq-maps__wayfinding-controls__swap">Swap starting point and destination</button>
+        <button class="uq-maps__wayfinding-controls__swap">Swap starting point and destination</button>
         <button class="uq-maps__wayfinding-controls__text-button">Phizz Food Court</button>
       </div>
       <div class="uq-maps__wayfinding-controls__row uq-maps__wayfinding-controls__stairs-toggle">
@@ -53,11 +53,11 @@ export const wayfindingControlWorking = () => {
     <div class="uq-maps__wayfinding-controls uq-maps__wayfinding-controls--is-working">
       <div class="uq-maps__wayfinding-controls__main">
         <div class="uq-maps__wayfinding-controls__row">
-          <button class="uq-maps__icon-button uq-maps__wayfinding-controls__back">Back</button>
+          <button class="uq-maps__wayfinding-controls__back">Back</button>
           <button class="uq-maps__wayfinding-controls__text-button">UQ Intercampus Bus Stop</button>
         </div>
         <div class="uq-maps__wayfinding-controls__row">
-          <button class="uq-maps__icon-button uq-maps__wayfinding-controls__swap">Swap starting point and destination</button>
+          <button class="uq-maps__wayfinding-controls__swap">Swap starting point and destination</button>
           <button class="uq-maps__wayfinding-controls__text-button">Phizz Food Court</button>
         </div>
         <div class="uq-maps__wayfinding-controls__row uq-maps__wayfinding-controls__stairs-toggle">

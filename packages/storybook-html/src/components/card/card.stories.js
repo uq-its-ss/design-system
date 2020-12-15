@@ -1,16 +1,13 @@
 // import styles
 import './card.scss';
 
-// import HTML template strings
-import cardsHTML from './card.html';
-
 // import documentation
 import docs from './card.docs.mdx';
 
 export default {
   title: 'Components/Cards',
   parameters: {
-    layout: "padded",
+    layout: "fullscreen",
     docs: {
       page: docs
     },
@@ -18,10 +15,6 @@ export default {
       canvas: {hidden: false}
     }
   }
-};
-
-export const all = () => {
-  return cardsHTML;
 };
 
 export const cardDefault = () => {
@@ -157,7 +150,7 @@ export const cardSquareOverlayText = () => {
 
 cardSquareOverlayText.storyName = 'Card square overlay text';
 
-export const cardSquareOverlayTextLink = () => {
+export const cardSquareOverlayLink = () => {
   return `
     <div class="uq-grid">
       <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-4">
@@ -185,7 +178,7 @@ export const cardSquareOverlayTextLink = () => {
   `;
 };
 
-cardSquareOverlayTextLink.storyName = 'Card square overlay text link';
+cardSquareOverlayLink.storyName = 'Card square overlay link';
 
 
 

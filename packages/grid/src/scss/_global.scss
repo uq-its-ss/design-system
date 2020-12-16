@@ -156,8 +156,16 @@ $max-container-width: 71.25rem !default;
   $column-count: nth($schema-base, 1),
   $breakpoint-name: null,
   $shadow-column-count: $shadow-column-count) {
+
+  .uq-grid {
+    box-sizing: border-box;
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+  }
   
-  // Flex fallback implemenation
+  // Flex fallback implementation
   @include _grid-row--flex($column-count, $breakpoint-name);
   
   // Start CSS Grid implementation
@@ -185,7 +193,6 @@ $max-container-width: 71.25rem !default;
       }
 
       &__col {
-        // @include grid-col-padding;
         padding-top: 0; // required to enable a flexbox fallback
         padding-bottom: 0; // required to enable a flexbox fallback
 

@@ -2,6 +2,7 @@
 import './side-nav.scss';
 
 // import HTML template strings
+import sideNavSingleLevelHTML from './side-nav.html';
 import sideNavMultiLevelHTML from './side-nav-multi-level.html';
 
 import docs from './side-nav.docs.mdx';
@@ -20,29 +21,7 @@ export default {
 };
 
 export const sideNavSingleLevel = () => {
-  return `
-  <!-- Side nav single-level -->
-  <div class="uq-side-nav">
-    <!-- Parent page title -->
-    <h3 class="uq-side-nav__title">
-      <a href="#" class="uq-side-nav__title-link">Parent page title</a>
-    </h3>
-    <!-- Side nav -->
-    <nav class="uq-side-nav__container" aria-label="Side navigation" id="jsSideNav">
-      <ul class="uq-side-nav__list uq-side-nav__list--level-1">
-        <li class="uq-side-nav__list-item uq-side-nav__list-item--active">
-          <a href="#" class="uq-side-nav__link">Sibling list1</a>
-        </li>
-        <li class="uq-side-nav__list-item">
-          <a href="#" class="uq-side-nav__link">Sibling list2</a>
-        </li>
-        <li class="uq-side-nav__list-item">
-          <a href="#" class="uq-side-nav__link">Sibling list3</a>
-        </li>
-      </ul>
-    </nav>
-  </div>
-`
+  return sideNavSingleLevelHTML;
 };
 
 sideNavSingleLevel.storyName = 'Side nav single-level';

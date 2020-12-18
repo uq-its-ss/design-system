@@ -5,9 +5,11 @@ import './_fonts.scss';
 
 # Applying Typography
 
-Most common use cases have already been setup in the basic HTML elements and components. Follow existing examples or reference the charts below when configuring new websites and components.
+The most common use cases have already been setup in the basic HTML elements and components. Follow existing examples or reference the charts below when configuring new websites and components.
 
-## General usage
+## Font choices
+
+How we apply fonts based on the UQ brand guidelines. 
 
 export const FontUsage = () => `
 <table className="uqds-table uqds-table--card">
@@ -42,31 +44,12 @@ export const FontUsage = () => `
 
 - The font weights used are Regular (400) and Medium (500).
 - Italic style should be used when you need to emphasize certain words in a sentence or a statement.
+- Use sentence case/minimal capitalisation in headings and subheadings. Use a capital for the first letter of the first word, with subsequent words in lower case.
+- All-caps text — meaning text with all the letters capitalised — is best used sparingly.
+- Reference the offical [Written style guide](https://marketing-communication.uq.edu.au/written-style-guide) for detailed instructions for writing content.  
+- Ellipsis, use the Ellipsis to indicate incompletenes. Truncated text.
 
-## Written style guide
-
-Reference the offical [Written style guide](https://marketing-communication.uq.edu.au/written-style-guide) for detailed instructions for writing content.  
-
-### Capitalization / Letter-case
-
-Use sentence case/minimal capitalisation in headings and subheadings. Use a capital for the first letter of the first word, with subsequent words in lower case.
-
-Sentance case
-
-All-caps text — meaning text with all the letters capitalised — is best used sparingly.
-
-School and faculty naming 
-
-### Abbreviations
-### Truncation
-
-Ellipsis, use the Ellipsis to indicate incompletenes. Truncated text.
-
-Line Length. 
-Limit line length to 70–80 characters.
-Font size should be a minimum of 16pt.
-
-## Basic typography usage
+## Default typography
 
 export const TypographyUsage = () => `
 <table className="uqds-table uqds-table--card">
@@ -77,7 +60,7 @@ export const TypographyUsage = () => `
       <th className="uqds-table__heading">Size</th>
       <th className="uqds-table__heading">Line-height</th>
       <th className="uqds-table__heading">Weight</th>
-      <th className="uqds-table__heading">Usage example</th>
+      <th className="uqds-table__heading">Usage</th>
     </tr>
   </thead>
   <tbody>
@@ -111,7 +94,8 @@ export const TypographyUsage = () => `
       <td className="uqds-table__item" data-title="Size:"><code>$font-size-m</code></td>
       <td className="uqds-table__item" data-title="Line-height:">1.5</td>
       <td className="uqds-table__item" data-title="Weight:">Regular, 400</td>
-      <td className="uqds-table__item" data-title="Usage example:">Text</td>
+      <td className="uqds-table__item" data-title="Usage example:">deafult Text<br /> Limit line length to 70–80 characters.<br /> 
+Font size should be a minimum of 16px.</td>
     </tr>
     <tr className="uqds-table__row">
       <td className="uqds-table__item"><strong>Strong Text</strong></td>
@@ -123,7 +107,7 @@ export const TypographyUsage = () => `
     </tr>
     <tr className="uqds-table__row">
       <td className="uqds-table__item"><em>Emphasis text</em></td>
-      <td className="uqds-table__item" data-title="Font:">Merriweather</td>
+      <td className="uqds-table__item" data-title="Font:">Roboto</td>
       <td className="uqds-table__item" data-title="Size:"><code>$font-size-m</code></td>
       <td className="uqds-table__item" data-title="Line-height:">1.5</td>
       <td className="uqds-table__item" data-title="Weight:">Regular 400</td>
@@ -134,6 +118,22 @@ export const TypographyUsage = () => `
 `;
 
 <Story name="Typogrphy Usage">{TypographyUsage.bind({})}</Story>
+
+## Example usage
+
+export const ExampleType = () => `
+    <div class="uqds-body__container">
+      <h1>Heading level 1 (h1)</h1>
+      <p><strong>Strong text</strong> <em>Emphasis text</em> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse interdum nulla vitae consectetur interdum. Quisque sed nibh in lorem malesuada egestas. Integer varius orci in ligula mollis sodales. Sed dapibus rutrum finibus. Vestibulum tellus velit, dictum eu cursus at, luctus condimentum leo. Vestibulum malesuada consectetur sem, nec fermentum nibh molestie at. Pellentesque posuere enim leo, in blandit sem interdum ut. Duis lobortis lectus vitae mi pellentesque sagittis. Fusce eget eros sit amet enim placerat commodo quis id nisl.</p>
+      <h2>Heading level 2 (h2)</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse interdum nulla vitae consectetur interdum. Quisque sed nibh in lorem malesuada egestas. Integer varius orci in ligula mollis sodales. Sed dapibus rutrum finibus. Vestibulum tellus velit, dictum eu cursus at, luctus condimentum leo. Vestibulum malesuada consectetur sem, nec fermentum nibh molestie at. Pellentesque posuere enim leo, in blandit sem interdum ut. Duis lobortis lectus vitae mi pellentesque sagittis. Fusce eget eros sit amet enim placerat commodo quis id nisl.</p>
+      <blockquote>Fusce vitae tortor consequat, consectetur metus id, ultricies risus. Nulla pharetra ornare sem, at placerat nisi sollicitudin bibendum. Nulla in pulvinar augue. Etiam tincidunt leo egestas congue congue. Phasellus feugiat mattis finibus. Duis bibendum pharetra risus, non aliquet augue consequat sit amet. Vestibulum sit amet enim fermentum, fringilla massa nec, facilisis augue.</blockquote>
+      <h3>Heading level 3 (h3)</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse interdum nulla vitae consectetur interdum. Quisque sed nibh in lorem malesuada egestas. Integer varius orci in ligula mollis sodales. Sed dapibus rutrum finibus. Vestibulum tellus velit, dictum eu cursus at, luctus condimentum leo. Vestibulum malesuada consectetur sem, nec fermentum nibh molestie at. Pellentesque posuere enim leo, in blandit sem interdum ut. Duis lobortis lectus vitae mi pellentesque sagittis. Fusce eget eros sit amet enim placerat commodo quis id nisl.</p>
+    </div>
+`;
+
+<Story name="Text block">{ExampleType.bind({})}</Story>
 
 ## Inline text elements
 
@@ -185,204 +185,73 @@ export const InlineElements = () => `
       <td><code>&lt;dfn title="something"&gt;&lt;/dfn&gt;</code></td>
       <td>Used to indicate the term being defined within the context of a definition phrase or sentence.</td>
     </tr>
-    <td><em>Emphasis</em></td>
+    <tr>
+      <td><em>Emphasis</em></td>
       <td><code>&lt;em&gt;&lt;/em&gt;</code></td>
       <td>Marks text that has stress emphasis. The <em> element can be nested, with each level of nesting indicating a greater degree of emphasis.</td>
     </tr>
-    <td><kbd>Shift</kbd> + <kbd>S</kbd></td>
+    <tr>
+      <td><kbd>Shift</kbd> + <kbd>S</kbd></td>
       <td><coded>&lt;kbd&gt;&lt;/kbd&gt;</code></td>
       <td>Represents a span of inline text denoting textual user input from a keyboard, voice input, or any other text entry device.</td>
+    </tr>
+    <tr>
+      <td><mark>Marked text</mark></td>
+      <td><coded>&lt;mark&gt;&lt;/mark&gt;</code></td>
+      <td>Text which is marked or highlighted for reference or notation purposes, due to the marked passage's relevance or importance in the enclosing context.</td>
+    </tr>
+    <tr>
+      <td><q>Inline quotation</q></td>
+      <td><coded>&lt;q&gt;&lt;/q&gt;</code></td>
+      <td>indicates that the enclosed text is a short inline quotation. Most modern browsers implement this by surrounding the text in quotation marks.</td>
+    </tr>
+    <tr>
+      <td><s>Strikethrough</s></td>
+      <td><coded>&lt;s&gt;&lt;/s&gt;</code></td>
+      <td>renders text with a strikethrough, or a line through it. Use the <code>&lt;s&gt;</code> element to represent things that are no longer relevant or no longer accurate. However, <code>&lt;s&gt;</code> is not appropriate when indicating document edits; for that, use the del and ins elements, as appropriate.</td>
+    </tr>
+    <tr>
+      <td><samp>Output from a computer program</samp></td>
+      <td><coded>&lt;samp&gt;&lt;/samp&gt;</code></td>
+      <td>Is used to enclose inline text which represents sample (or quoted) output from a computer program.</td>
+    </tr>
+    <tr>
+      <td><small>Small text</small></td>
+      <td><coded>&lt;small&gt;&lt;/small&gt;</code></td>
+      <td>Represents side-comments and small print, like copyright and legal text, independent of its styled presentation. By default, it renders text within it one font-size smaller.</td>
+    </tr>
+    <tr>
+      <td><strong>Strong text</strong></td>
+      <td><coded>&lt;strong&gt;&lt;/strong&gt;</code></td>
+      <td>Indicates that its contents have strong importance, seriousness, or urgency.</td>
+    </tr>
+    <tr>
+      <td><sub>Subscript text</sub></td>
+      <td><coded>&lt;sub&gt;&lt;/sub&gt;</code></td>
+      <td>Specifies inline text which should be displayed as subscript for solely typographical reasons.</td>
+    </tr>
+    <tr>
+      <td><sup>Superscript text</sup></td>
+      <td><coded>&lt;sup&gt;&lt;/sup&gt;</code></td>
+      <td>Specifies inline text which is to be displayed as superscript for solely typographical reasons.</td>
+    </tr>
+    <tr>
+      <td><time>July 7</time></td>
+      <td><coded>&lt;time datetime="2018-07-07"&gt;&lt;/time&gt;</code></td>
+      <td>Represents a specific period in time.</td>
+    </tr>
+    <tr>
+      <td><u>Unarticulated Annotation</u></td>
+      <td><coded>&lt;u&gt;&lt;/u&gt;</code></td>
+      <td>Represents a span of inline text which should be rendered in a way that indicates that it has a non-textual annotation.</td>
+    </tr>
+    <tr>
+      <td><var>Variable text</var></td>
+      <td><coded>&lt;var&gt;&lt;/var&gt;</code></td>
+      <td>represents the name of a variable in a mathematical expression or a programming context.</td>
     </tr>
   </tbody>
 </table>
 `;
 
 <Story name="Inline Elements">{InlineElements.bind({})}</Story>
-
-## Example Typography
-
-export const ExampleType = () => `
-    <div class="uqds-body__container">
-      <h1>Heading level 1 (h1)</h1>
-      <p><strong>Strong text</strong> <em>Emphasis text</em> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse interdum nulla vitae consectetur interdum. Quisque sed nibh in lorem malesuada egestas. Integer varius orci in ligula mollis sodales. Sed dapibus rutrum finibus. Vestibulum tellus velit, dictum eu cursus at, luctus condimentum leo. Vestibulum malesuada consectetur sem, nec fermentum nibh molestie at. Pellentesque posuere enim leo, in blandit sem interdum ut. Duis lobortis lectus vitae mi pellentesque sagittis. Fusce eget eros sit amet enim placerat commodo quis id nisl.</p>
-      <h2>Heading level 2 (h2)</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse interdum nulla vitae consectetur interdum. Quisque sed nibh in lorem malesuada egestas. Integer varius orci in ligula mollis sodales. Sed dapibus rutrum finibus. Vestibulum tellus velit, dictum eu cursus at, luctus condimentum leo. Vestibulum malesuada consectetur sem, nec fermentum nibh molestie at. Pellentesque posuere enim leo, in blandit sem interdum ut. Duis lobortis lectus vitae mi pellentesque sagittis. Fusce eget eros sit amet enim placerat commodo quis id nisl.</p>
-      <blockquote>Fusce vitae tortor consequat, consectetur metus id, ultricies risus. Nulla pharetra ornare sem, at placerat nisi sollicitudin bibendum. Nulla in pulvinar augue. Etiam tincidunt leo egestas congue congue. Phasellus feugiat mattis finibus. Duis bibendum pharetra risus, non aliquet augue consequat sit amet. Vestibulum sit amet enim fermentum, fringilla massa nec, facilisis augue.</blockquote>
-      <h3>Heading level 3 (h3)</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse interdum nulla vitae consectetur interdum. Quisque sed nibh in lorem malesuada egestas. Integer varius orci in ligula mollis sodales. Sed dapibus rutrum finibus. Vestibulum tellus velit, dictum eu cursus at, luctus condimentum leo. Vestibulum malesuada consectetur sem, nec fermentum nibh molestie at. Pellentesque posuere enim leo, in blandit sem interdum ut. Duis lobortis lectus vitae mi pellentesque sagittis. Fusce eget eros sit amet enim placerat commodo quis id nisl.</p>
-    </div>
-`;
-
-<Story name="Text block">{ExampleType.bind({})}</Story>
-
-## Inline text semantics
-
-export const InlineSemantics = () => `
-<table class="standard-table">
- <thead>
-  <tr>
-    <th scope="col">Element</th>
-   <th scope="col">example</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td style="vertical-align: top;"><a href="/en-US/docs/Web/HTML/Element/a" title="The HTML <a> element (or anchor element), with its href attribute, creates a hyperlink to web pages, files, email addresses, locations in the same page, or anything else a URL can address."><code>&lt;a&gt;</code></a></td>
-   <td><a href=#>Mad mad world</a/></td>
-   <td>The <strong>HTML <code>&lt;a&gt;</code> element</strong> (or <em>anchor</em> element), with <a href="#href">its <code>href</code> attribute</a>, creates a hyperlink to web pages, files, email addresses, locations in the same page, or anything else a URL can address.</td>
-  </tr>
-  <tr>
-   <td style="vertical-align: top;"><a href="/en-US/docs/Web/HTML/Element/abbr" title="The HTML Abbreviation element (<abbr>) represents an abbreviation or acronym; the optional title attribute can provide an expansion or description for the abbreviation."><code>&lt;abbr&gt;</code></a></td>
-   <td>The <strong>HTML Abbreviation element </strong>(<strong><code>&lt;abbr&gt;</code></strong>) represents an abbreviation or acronym; the optional <code><a href="/en-US/docs/Web/HTML/Global_attributes#attr-title">title</a></code> attribute can provide an expansion or description for the abbreviation.</td>
-  </tr>
-  <tr>
-   <td style="vertical-align: top;"><a href="/en-US/docs/Web/HTML/Element/b" title="The HTML Bring Attention To element (<b>) is used to draw the reader's attention to the element's contents, which are not otherwise granted special importance."><code>&lt;b&gt;</code></a></td>
-   <td>The <strong>HTML Bring Attention To element (<code>&lt;b&gt;</code>)</strong> is used to draw the reader's attention to the element's contents, which are not otherwise granted special importance.</td>
-  </tr>
-  <tr>
-   <td style="vertical-align: top;"><a href="/en-US/docs/Web/HTML/Element/bdi" title="The HTML Bidirectional Isolate element (<bdi>)&nbsp; tells the browser's bidirectional algorithm to treat the text it contains in isolation from its surrounding text."><code>&lt;bdi&gt;</code></a></td>
-   <td>The HTML <strong>Bidirectional Isolate element</strong> (<strong><code>&lt;bdi&gt;</code></strong>)&nbsp; tells the browser's bidirectional algorithm to treat the text it contains in isolation from its surrounding text.</td>
-  </tr>
-  <tr>
-   <td style="vertical-align: top;"><a href="/en-US/docs/Web/HTML/Element/bdo" title="The HTML Bidirectional Text Override element (<bdo>) overrides the current directionality of text, so that the text within is rendered in a different direction."><code>&lt;bdo&gt;</code></a></td>
-   <td>The <strong>HTML Bidirectional Text Override element</strong> (<strong><code>&lt;bdo&gt;</code></strong>) overrides the current directionality of text, so that the text within is rendered in a different direction.</td>
-  </tr>
-  <tr>
-   <td style="vertical-align: top;"><a href="/en-US/docs/Web/HTML/Element/br" title="The HTML <br> element produces a line break in text (carriage-return). It is useful for writing a poem or an address, where the division of lines is significant."><code>&lt;br&gt;</code></a></td>
-   <td>The <strong>HTML <code>&lt;br&gt;</code> element</strong> produces a line break in text (carriage-return). It is useful for writing a poem or an address, where the division of lines is significant.</td>
-  </tr>
-  <tr>
-   <td style="vertical-align: top;"><a href="/en-US/docs/Web/HTML/Element/cite" title="The HTML Citation element (<cite>) is used to describe a reference to a cited creative work, and must include the title of that work."><code>&lt;cite&gt;</code></a></td>
-   <td>The <strong>HTML Citation element</strong> (<strong><code>&lt;cite&gt;</code></strong>) is used to describe a reference to a cited creative work, and must include the title of that work.</td>
-  </tr>
-  <tr>
-   <td style="vertical-align: top;"><a href="/en-US/docs/Web/HTML/Element/code" title="The HTML <code> element displays its contents styled in a fashion intended to indicate that the text is a short fragment of computer code."><code>&lt;code&gt;</code></a></td>
-   <td>The <strong>HTML <code>&lt;code&gt;</code> element</strong> displays its contents styled in a fashion intended to indicate that the text is a short fragment of computer code.</td>
-  </tr>
-  <tr>
-   <td style="vertical-align: top;"><a href="/en-US/docs/Web/HTML/Element/data" title="The HTML <data> element links a given piece of&nbsp;content with a machine-readable translation. If the content is time- or date-related, the <time> element must be used."><code>&lt;data&gt;</code></a></td>
-   <td>The <strong>HTML <code>&lt;data&gt;</code> element</strong> links a given piece of&nbsp;content with a machine-readable translation. If the content is time- or date-related, the <a href="/en-US/docs/Web/HTML/Element/time" title="The HTML <time> element represents a specific period in time."><code>&lt;time&gt;</code></a> element must be used.</td>
-  </tr>
-  <tr>
-   <td style="vertical-align: top;"><a href="/en-US/docs/Web/HTML/Element/dfn" title="The HTML Definition element (<dfn>) is used to indicate the term being defined within the context of a definition phrase or sentence."><code>&lt;dfn&gt;</code></a></td>
-   <td>The <strong>HTML Definition element</strong> (<code><strong><dfn>&lt;dfn&gt;</dfn></strong></code>) is used to indicate the term being defined within the context of a definition phrase or sentence.</td>
-  </tr>
-  <tr>
-   <td style="vertical-align: top;"><a href="/en-US/docs/Web/HTML/Element/em" title="The HTML <em> element marks text that has stress emphasis. The <em> element can be nested, with each level of nesting indicating a greater degree of emphasis."><code>&lt;em&gt;</code></a></td>
-   <td>The <strong>HTML <code>&lt;em&gt;</code> element</strong> marks text that has stress emphasis. The <code>&lt;em&gt;</code> element can be nested, with each level of nesting indicating a greater degree of emphasis.</td>
-  </tr>
-<tr>
-  <td style="vertical-align: top;">
-    <a
-      href="/en-US/docs/Web/HTML/Element/i"
-      title="The HTML Idiomatic&nbsp;Text element (<i>) represents a range of text that is set off from the normal text for some reason, such as idiomatic text, technical terms, taxonomical designations, among others."
-    >
-      <code>&lt;i&gt;</code>
-    </a>
-  </td>
-  <td>
-    The
-    <strong>
-      HTML Idiomatic&nbsp;Text element (<code>&lt;i&gt;</code>)
-    </strong>
-    represents a range of text that is set off from the normal text for some
-    reason, such as idiomatic text, technical terms, taxonomical designations,
-    among others.
-  </td>
-</tr>
-<tr>
-  <td style="vertical-align: top;">
-    <a
-      href="/en-US/docs/Web/HTML/Element/kbd"
-      title="The HTML Keyboard Input element (<kbd>) represents a span of inline text denoting textual user input from a keyboard, voice input, or any other text entry device."
-    >
-      <code>&lt;kbd&gt;</code>
-    </a>
-  </td>
-  <td>
-    The <strong>HTML Keyboard Input element</strong> (
-    <strong>
-      <code>&lt;kbd&gt;</code>
-    </strong>
-    ) represents a span of inline text denoting textual user input from a
-    keyboard, voice input, or any other text entry device.
-  </td>
-</tr>
-  <tr>
-   <td style="vertical-align: top;"><a href="/en-US/docs/Web/HTML/Element/mark" title="The HTML Mark Text element (<mark>) represents text which is marked or highlighted for reference or notation purposes, due to the marked passage's relevance or importance in the enclosing context."><code>&lt;mark&gt;</code></a></td>
-   <td>The <strong>HTML Mark Text element</strong> (<strong><code>&lt;mark&gt;</code></strong>) represents text which is <strong>marked</strong> or <strong>highlighted</strong> for reference or notation purposes, due to the marked passage's relevance or importance in the enclosing context.</td>
-  </tr>
-  <tr>
-   <td style="vertical-align: top;"><a href="/en-US/docs/Web/HTML/Element/q" title="The HTML <q> element  indicates that the enclosed text is a short inline quotation. Most modern browsers implement this by surrounding the text in quotation marks. "><code>&lt;q&gt;</code></a></td>
-   <td>The <strong>HTML <code>&lt;q&gt;</code> element </strong> indicates that the enclosed text is a short inline quotation. Most modern browsers implement this by surrounding the text in quotation marks. </td>
-  </tr>
-  <tr>
-   <td style="vertical-align: top;"><a href="/en-US/docs/Web/HTML/Element/rb" title="The HTML Ruby Base (<rb>) element is used to delimit the base text component of a&nbsp; <ruby> annotation, i.e. the text that is being annotated."><code>&lt;rb&gt;</code></a></td>
-   <td>The <strong>HTML Ruby Base (<code>&lt;rb&gt;</code>) element</strong> is used to delimit the base text component of a&nbsp; <a href="/en-US/docs/Web/HTML/Element/ruby" title="The HTML <ruby> element represents small annotations that are rendered above, below, or next to base text, usually used for showing the pronunciation of East Asian characters. It can also be used for annotating other kinds of text, but this usage is less common."><code>&lt;ruby&gt;</code></a> annotation, i.e. the text that is being annotated.</td>
-  </tr>
-  <tr>
-   <td style="vertical-align: top;"><a href="/en-US/docs/Web/HTML/Element/rp" title="The HTML Ruby Fallback Parenthesis (<rp>) element is used to provide fall-back parentheses for browsers that do not support display of ruby annotations using the <ruby> element."><code>&lt;rp&gt;</code></a></td>
-   <td>The <strong>HTML Ruby Fallback Parenthesis (<code>&lt;rp&gt;</code>) element</strong> is used to provide fall-back parentheses for browsers that do not support display of ruby annotations using the <a href="/en-US/docs/Web/HTML/Element/ruby" title="The HTML <ruby> element represents small annotations that are rendered above, below, or next to base text, usually used for showing the pronunciation of East Asian characters. It can also be used for annotating other kinds of text, but this usage is less common."><code>&lt;ruby&gt;</code></a> element.</td>
-  </tr>
-  <tr>
-   <td style="vertical-align: top;"><a href="/en-US/docs/Web/HTML/Element/rt" title="The HTML Ruby Text (<rt>) element specifies the ruby text component of a ruby annotation, which is used to provide pronunciation, translation, or transliteration information for East Asian typography. The <rt> element must always be contained within a <ruby> element."><code>&lt;rt&gt;</code></a></td>
-   <td>The <strong>HTML Ruby Text (<code>&lt;rt&gt;</code>) element</strong> specifies the ruby text component of a ruby annotation, which is used to provide pronunciation, translation, or transliteration information for East Asian typography. The <code>&lt;rt&gt;</code> element must always be contained within a <a href="/en-US/docs/Web/HTML/Element/ruby" title="The HTML <ruby> element represents small annotations that are rendered above, below, or next to base text, usually used for showing the pronunciation of East Asian characters. It can also be used for annotating other kinds of text, but this usage is less common."><code>&lt;ruby&gt;</code></a> element.</td>
-  </tr>
-  <tr>
-   <td style="vertical-align: top;"><a href="/en-US/docs/Web/HTML/Element/rtc" title="The HTML Ruby Text Container (<rtc>) element embraces semantic annotations of characters presented in a ruby of <rb> elements used inside of <ruby> element. <rb> elements can have both pronunciation (<rt>) and semantic (<rtc>) annotations."><code>&lt;rtc&gt;</code></a></td>
-   <td>The <strong>HTML Ruby Text Container (<code>&lt;rtc&gt;</code>) element</strong> embraces semantic annotations of characters presented in a ruby of <a href="/en-US/docs/Web/HTML/Element/rb" title="The HTML Ruby Base (<rb>) element is used to delimit the base text component of a&nbsp; <ruby> annotation, i.e. the text that is being annotated."><code>&lt;rb&gt;</code></a> elements used inside of <a href="/en-US/docs/Web/HTML/Element/ruby" title="The HTML <ruby> element represents small annotations that are rendered above, below, or next to base text, usually used for showing the pronunciation of East Asian characters. It can also be used for annotating other kinds of text, but this usage is less common."><code>&lt;ruby&gt;</code></a> element. <a href="/en-US/docs/Web/HTML/Element/rb" title="The HTML Ruby Base (<rb>) element is used to delimit the base text component of a&nbsp; <ruby> annotation, i.e. the text that is being annotated."><code>&lt;rb&gt;</code></a> elements can have both pronunciation (<a href="/en-US/docs/Web/HTML/Element/rt" title="The HTML Ruby Text (<rt>) element specifies the ruby text component of a ruby annotation, which is used to provide pronunciation, translation, or transliteration information for East Asian typography. The <rt> element must always be contained within a <ruby> element."><code>&lt;rt&gt;</code></a>) and semantic (<a href="/en-US/docs/Web/HTML/Element/rtc" title="The HTML Ruby Text Container (<rtc>) element embraces semantic annotations of characters presented in a ruby of <rb> elements used inside of <ruby> element. <rb> elements can have both pronunciation (<rt>) and semantic (<rtc>) annotations."><code>&lt;rtc&gt;</code></a>) annotations.</td>
-  </tr>
-  <tr>
-   <td style="vertical-align: top;"><a href="/en-US/docs/Web/HTML/Element/ruby" title="The HTML <ruby> element represents small annotations that are rendered above, below, or next to base text, usually used for showing the pronunciation of East Asian characters. It can also be used for annotating other kinds of text, but this usage is less common."><code>&lt;ruby&gt;</code></a></td>
-   <td>The <strong>HTML <code>&lt;ruby&gt;</code> element</strong> represents small annotations that are rendered above, below, or next to base text, usually used for showing the pronunciation of East Asian characters. It can also be used for annotating other kinds of text, but this usage is less common.</td>
-  </tr>
-  <tr>
-   <td style="vertical-align: top;"><a href="/en-US/docs/Web/HTML/Element/s" title="The HTML <s> element renders text with a strikethrough, or a line through it. Use the <s> element to represent things that are no longer relevant or no longer accurate. However, <s> is not appropriate when indicating document edits; for that, use the <del> and <ins> elements, as appropriate."><code>&lt;s&gt;</code></a></td>
-   <td>The <strong>HTML <code>&lt;s&gt;</code> element</strong> renders text with a strikethrough, or a line through it. Use the <code>&lt;s&gt;</code> element to represent things that are no longer relevant or no longer accurate. However, <code>&lt;s&gt;</code> is not appropriate when indicating document edits; for that, use the <a href="/en-US/docs/Web/HTML/Element/del" title="The HTML <del> element represents a range of text that has been deleted from a document."><code>&lt;del&gt;</code></a> and <a href="/en-US/docs/Web/HTML/Element/ins" title="The HTML <ins> element represents a range of text that has been added to a document."><code>&lt;ins&gt;</code></a> elements, as appropriate.</td>
-  </tr>
-  <tr>
-   <td style="vertical-align: top;"><a href="/en-US/docs/Web/HTML/Element/samp" title="The HTML Sample Element (<samp>) is used to enclose inline text which represents sample (or quoted) output from a computer program."><code>&lt;samp&gt;</code></a></td>
-   <td>The <strong>HTML Sample Element</strong> (<strong><code>&lt;samp&gt;</code></strong>) is used to enclose inline text which represents sample (or quoted) output from a computer program.</td>
-  </tr>
-  <tr>
-   <td style="vertical-align: top;"><a href="/en-US/docs/Web/HTML/Element/small" title="The HTML <small> element represents side-comments and small print, like copyright and legal text, independent of its styled presentation. By default, it renders text within it one font-size smaller, such as from small to x-small."><code>&lt;small&gt;</code></a></td>
-   <td>The <strong>HTML <code>&lt;small&gt;</code></strong> <strong>element </strong>represents side-comments and small print, like copyright and legal text, independent of its styled presentation. By default, it renders text within it one font-size smaller, such as from <code>small</code> to <code>x-small</code>.</td>
-  </tr>
-  <tr>
-   <td style="vertical-align: top;"><a href="/en-US/docs/Web/HTML/Element/span" title="The HTML <span> element is a generic inline container for phrasing content, which does not inherently represent anything. It can be used to group elements for styling purposes (using the class or id attributes), or because they share attribute values, such as lang."><code>&lt;span&gt;</code></a></td>
-   <td>The <strong>HTML <code>&lt;span&gt;</code> element</strong> is a generic inline container for phrasing content, which does not inherently represent anything. It can be used to group elements for styling purposes (using the <code><a href="/en-US/docs/Web/HTML/Global_attributes#attr-class">class</a></code> or <code><a href="/en-US/docs/Web/HTML/Global_attributes#attr-id">id</a></code> attributes), or because they share attribute values, such as <code><a href="/en-US/docs/Web/HTML/Global_attributes#attr-lang">lang</a></code>.</td>
-  </tr>
-  <tr>
-   <td style="vertical-align: top;"><a href="/en-US/docs/Web/HTML/Element/strong" title="The HTML Strong Importance Element (<strong>) indicates that its contents have strong importance, seriousness, or urgency. Browsers typically render the contents in bold type."><code>&lt;strong&gt;</code></a></td>
-   <td>The HTML <strong>Strong Importance Element</strong> (<strong><code>&lt;strong&gt;</code></strong>) indicates that its contents have strong importance, seriousness, or urgency. Browsers typically render the contents in bold type.</td>
-  </tr>
-  <tr>
-   <td style="vertical-align: top;"><a href="/en-US/docs/Web/HTML/Element/sub" title="The HTML Subscript element (<sub>) specifies inline text which should be displayed as subscript for solely typographical reasons."><code>&lt;sub&gt;</code></a></td>
-   <td>The HTML <strong>Subscript element</strong> (<strong><code>&lt;sub&gt;</code></strong>) specifies inline text which should be displayed as subscript for solely typographical reasons.</td>
-  </tr>
-  <tr>
-   <td style="vertical-align: top;"><a href="/en-US/docs/Web/HTML/Element/sup" title="The HTML Superscript element (<sup>) specifies inline text which is to be displayed as superscript for solely typographical reasons."><code>&lt;sup&gt;</code></a></td>
-   <td>The <strong>HTML Superscript element</strong> (<strong><code>&lt;sup&gt;</code></strong>) specifies inline text which is to be displayed as superscript for solely typographical reasons.</td>
-  </tr>
-  <tr>
-   <td style="vertical-align: top;"><a href="/en-US/docs/Web/HTML/Element/time" title="The HTML <time> element represents a specific period in time."><code>&lt;time&gt;</code></a></td>
-   <td>The HTML <strong><code>&lt;time&gt;</code> element</strong> represents a specific period in time.</td>
-  </tr>
-  <tr>
-   <td style="vertical-align: top;"><a href="/en-US/docs/Web/HTML/Element/u" title="The HTML Unarticulated Annotation element (<u>) represents a span of inline text which should be rendered in a way that indicates that it has a non-textual annotation."><code>&lt;u&gt;</code></a></td>
-   <td>The <strong>HTML</strong> <strong>Unarticulated Annotation element</strong> (<strong><code>&lt;u&gt;</code></strong>) represents a span of inline text which should be rendered in a way that indicates that it has a non-textual annotation.</td>
-  </tr>
-  <tr>
-   <td style="vertical-align: top;"><a href="/en-US/docs/Web/HTML/Element/var" title="The HTML Variable element (<var>) represents the name of a variable in a mathematical expression or a programming context."><code>&lt;var&gt;</code></a></td>
-   <td>The HTML <strong>Variable element</strong> (<strong><code>&lt;var&gt;</code></strong>) represents the name of a variable in a mathematical expression or a programming context.</td>
-  </tr>
-  <tr>
-   <td style="vertical-align: top;"><a href="/en-US/docs/Web/HTML/Element/wbr" title="The HTML <wbr> element represents a word break opportunity—a position within text where the browser may optionally break a line, though its line-breaking rules would not otherwise create a break at that location."><code>&lt;wbr&gt;</code></a></td>
-   <td>The <strong>HTML <code>&lt;wbr&gt;</code> element</strong> represents a word break opportunity—a position within text where the browser may optionally break a line, though its line-breaking rules would not otherwise create a break at that location.</td>
-  </tr>
- </tbody>
-</table>
-`;
-
-<Story name="Inline Semantics">{InlineSemantics.bind({})}</Story>

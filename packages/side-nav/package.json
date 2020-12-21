@@ -1,0 +1,47 @@
+{
+  "name": "@uqds/side-nav",
+  "version": "0.0.0",
+  "description": "Side nav (title, side navigation)",
+  "keywords": [
+    "uqds",
+    "uq",
+    "University of Queensland",
+    "design system",
+    "scss",
+    "sass",
+    "css",
+    "side nav"
+  ],
+  "author": {
+    "name": "University of Queensland",
+    "email": "webservices@uq.edu.au",
+    "url": "https://uq.edu.au"
+  },
+  "homepage": "https://github.com/uq-its-ss/design-system#readme",
+  "license": "ISC",
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "lib/*",
+    "src/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uq-its-ss/design-system.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/uq-its-ss/design-system/issues"
+  },
+  "dependencies": {
+    "@uqds/core": "^0.0.0",
+    "@uqds/grid": "^0.0.0"
+  },
+  "peerDependencies": {
+    "@uqds/core": "^0.0.0",
+    "@uqds/grid": "^0.0.0"
+  }
+}

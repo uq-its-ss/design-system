@@ -3,57 +3,57 @@ import StatusBadge from '../../../.storybook/custom/components/StatusBadge';
 
 # Accordion
 
-<StatusBadge.Stable />
+<StatusBadge.Development />
 
 <a href="https://github.com/uq-its-ss/design-system/issues" class="uq-button uq-button--text" target="_blank">Check for open issues</a>
 
 ## Overview
 
-Accordion component helps users to see only the content they need. Accordions expand and collapse sections of content.
+An accordion is a vertically stacked group of titles that expand or collapse associated content, helping users to see more of the content if needed.
 
 ## Default example
 
-### a. Default
+### Using divs
 
 <Canvas withSource="none">
-  <Story id="components-accordion--base" />
+  <Story id="components-accordion--using-divs" />
 </Canvas>
 
 ```html
 <div class="accordion" aria-label="Accordion button group" role="presentation">
     <div class="accordion__item">
-    <button class="accordion__toggle" aria-controls="content-1" aria-expanded="false" id="accordion-title-1">Step 1</button>
-    <div class="accordion__content" aria-hidden="true" id="content-1" aria-labelledby="accordion-title-1">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor eros dui, vitae iaculis leo ornare eget. Etiam tristique lobortis ligula non mattis. Ut dapibus libero neque, vel tincidunt nunc tempus eget.</p>
-    </div>
+      <button class="accordion__toggle" aria-controls="content-1" aria-expanded="false" id="accordion-title-1">Title 1</button>
+      <div class="accordion__content" aria-hidden="true" id="content-1" aria-labelledby="accordion-title-1">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor eros dui, vitae iaculis leo ornare eget. Etiam tristique lobortis ligula non mattis. Ut dapibus libero neque, vel tincidunt nunc tempus eget.</p>
+      </div>
     </div>
     ...
     ...
 </div>
 ```
 
-### b. Default using list tags
+## Variant examples
+
+### Using lists
 
 <Canvas withSource="none">
-  <Story id="components-accordion--base-using-lists" />
+  <Story id="components-accordion--using-lists" />
 </Canvas>
 
 ```html
 <ul class="accordion" aria-label="Accordion button group" role="presentation">
     <li class="accordion__item">
-    <button class="accordion__toggle" aria-controls="content-11" aria-expanded="false" id="accordion-title-11">Step 1</button>
-    <div class="accordion__content" role="region" aria-hidden="true" id="content-11" aria-labelledby="accordion-title-11">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor eros dui, vitae iaculis leo ornare eget. Etiam tristique lobortis ligula non mattis. Ut dapibus libero neque, vel tincidunt nunc tempus eget.</p>
-    </div>
+      <button class="accordion__toggle" aria-controls="content-11" aria-expanded="false" id="accordion-title-11">Title 1</button>
+      <div class="accordion__content" role="region" aria-hidden="true" id="content-11" aria-labelledby="accordion-title-11">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor eros dui, vitae iaculis leo ornare eget. Etiam tristique lobortis ligula non mattis. Ut dapibus libero neque, vel tincidunt nunc tempus eget.</p>
+      </div>
     </li>
     ...
     ...
 </ul>
 ```
 
-## Variant examples
-
-### a. Shaded
+### Shaded
 
 <Canvas withSource="none">
   <Story id="components-accordion--shaded" />
@@ -62,29 +62,29 @@ Accordion component helps users to see only the content they need. Accordions ex
 ```html
 <div class="accordion accordion--shaded" aria-label="Accordion button group" role="presentation">
     <div class="accordion__item">
-    <button class="accordion__toggle" aria-controls="content-111" aria-expanded="false" id="accordion-title-111">Step 1</button>
-    <div class="accordion__content" role="region" aria-hidden="true" id="content-111" aria-labelledby="accordion-title-111">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor eros dui, vitae iaculis leo ornare eget. Etiam tristique lobortis ligula non mattis. Ut dapibus libero neque, vel tincidunt nunc tempus eget.</p>
-    </div>
+      <button class="accordion__toggle" aria-controls="content-111" aria-expanded="false" id="accordion-title-111">Title 1</button>
+      <div class="accordion__content" role="region" aria-hidden="true" id="content-111" aria-labelledby="accordion-title-111">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor eros dui, vitae iaculis leo ornare eget. Etiam tristique lobortis ligula non mattis. Ut dapibus libero neque, vel tincidunt nunc tempus eget.</p>
+      </div>
     </div>
     ...
     ...
 </div>
 ```
 
-### b. Secondary
+### Small title
 
 <Canvas withSource="none">
-  <Story id="components-accordion--secondary" />
+  <Story id="components-accordion--small-title" />
 </Canvas>
 
 ```html
 <div class="accordion accordion--secondary" aria-label="Accordion button group" role="presentation">
     <div class="accordion__item">
-    <button class="accordion__toggle" aria-controls="content-1111" aria-expanded="false" id="accordion-title-1111">Step 1</button>
-    <div class="accordion__content" role="region" aria-hidden="true" id="content-1111" aria-labelledby="accordion-title-1111">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor eros dui, vitae iaculis leo ornare eget. Etiam tristique lobortis ligula non mattis. Ut dapibus libero neque, vel tincidunt nunc tempus eget.</p>
-    </div>
+      <button class="accordion__toggle" aria-controls="content-1111" aria-expanded="false" id="accordion-title-1111">Title 1</button>
+      <div class="accordion__content" role="region" aria-hidden="true" id="content-1111" aria-labelledby="accordion-title-1111">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor eros dui, vitae iaculis leo ornare eget. Etiam tristique lobortis ligula non mattis. Ut dapibus libero neque, vel tincidunt nunc tempus eget.</p>
+      </div>
     </div>
     ...
     ...
@@ -93,7 +93,12 @@ Accordion component helps users to see only the content they need. Accordions ex
 
 ## How and when to use
 
-- Use the default accordion example if you have preference for `div` elements in the components html code.
-- Use default accordion which uses list tags if you have preference using `ul` and `li` elements in the components html code.
-- Use the shaded accordion if you need the accordion toggle panels to be shaded light grey instead of white.
-- Use secondary accordion example if you would like the accordion title font size to be smaller than the default.
+Accordions can be implemented using `div` or `<ul> <li>` lists. The default example uses divs. 
+
+- Use the default accordion example if there is significant amount of content.
+- Use accordions using lists if content is less and when the semantics of a list serves better with assistive technologies like screen readers.
+- Use shaded accordion when the title area needs to be shaded light grey when collapsed.
+- Use secondary accordion example for smaller title font sizes.
+
+## Accessibility
+

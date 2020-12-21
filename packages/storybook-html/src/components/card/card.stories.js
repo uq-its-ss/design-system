@@ -17,7 +17,7 @@ export default {
   }
 };
 
-export const cardDefault = () => {
+export const defaultCard = () => {
   return `
     <div class="uq-grid">
       <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-4">
@@ -25,17 +25,63 @@ export const cardDefault = () => {
           <div class="card__header"></div>
           <div class="card__body">
             <a class="card__link" href="#">
-              <div class="card__image-container" style="background-image: url('https://campuses.uq.edu.au/files/9749/gatton-card2.jpg')"></div>
+              <div class="card__image-container" style="background-image: url('https://campuses.uq.edu.au/files/9749/gatton-card2.jpg');"></div>
             </a>
             <div class="card__content">
               <h2 class="card__title">
                 <a class="card__link" href="#">Title of item</a>
               </h2>
-              <div class="card__date">Sunday 16 August, 2015</div>
+              <div class="card__date" tabindex="0">Sunday 16 August, 2015</div>
               <div class="card__location">
                 <a class="card__link" href="#">Gatton campus</a>
               </div>
-              <div class="card__summary">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+              <div class="card__summary" tabindex="0">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+              </div>
+            </div>
+          </div>
+          <div class="card__footer"></div>
+        </div>
+      </div>
+      <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-4">
+        <div class="card">
+          <div class="card__header"></div>
+          <div class="card__body">
+            <a class="card__link" href="#">
+              <div class="card__image-container" style="background-image: url('https://campuses.uq.edu.au/files/9749/gatton-card2.jpg');"></div>
+            </a>
+            <div class="card__content">
+              <h2 class="card__title">
+                <a class="card__link" href="#">Title of item</a>
+              </h2>
+              <div class="card__date" tabindex="0">Sunday 16 August, 2015</div>
+              <div class="card__location">
+                <a class="card__link" href="#">Gatton campus</a>
+              </div>
+              <div class="card__summary" tabindex="0">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+              </div>
+            </div>
+          </div>
+          <div class="card__footer"></div>
+        </div>
+      </div>
+      <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-4">
+        <div class="card">
+          <div class="card__header"></div>
+          <div class="card__body">
+            <a class="card__link" href="#">
+              <div class="card__image-container" style="background-image: url('https://campuses.uq.edu.au/files/9749/gatton-card2.jpg');"></div>
+            </a>
+            <div class="card__content">
+              <h2 class="card__title">
+                <a class="card__link" href="#">Title of item</a>
+              </h2>
+              <div class="card__date" tabindex="0">Sunday 16 August, 2015</div>
+              <div class="card__location">
+                <a class="card__link" href="#">Gatton campus</a>
+              </div>
+              <div class="card__summary" tabindex="0">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
                 tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
               </div>
             </div>
@@ -47,9 +93,9 @@ export const cardDefault = () => {
   `;
 };
 
-cardDefault.storyName = 'Card default';
+defaultCard.storyName = 'Default card';
 
-export const cardDefaultWithLink = () => {
+export const defaultCardWithLink = () => {
   return `
     <div class="uq-grid">
       <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-4">
@@ -63,11 +109,11 @@ export const cardDefaultWithLink = () => {
               <h2 class="card__title">
                 <a class="card__link" href="#">Title of item</a>
               </h2>
-              <div class="card__date">Sunday 16 August, 2015</div>
+              <div class="card__date" tabindex="0">Sunday 16 August, 2015</div>
               <div class="card__location">
                 <a class="card__link" href="#">Gatton campus</a>
               </div>
-              <div class="card__summary">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+              <div class="card__summary" tabindex="0">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
                 tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
               </div>
             </div>
@@ -88,13 +134,13 @@ export const cardDefaultWithLink = () => {
   `;
 };
 
-cardDefaultWithLink.storyName = 'Card default with link';
+defaultCardWithLink.storyName = 'Default card with link';
 
 
 
 
 
-export const cardSquareOverlayTitle = () => {
+export const overlayCardSquare = () => {
   return `
     <div class="uq-grid">
       <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-4">
@@ -104,13 +150,9 @@ export const cardSquareOverlayTitle = () => {
             <div class="card__body">
               <div class="card__content">
                 <div class="card__title">
-                  <div class="field field-name-field-uq-card-title field-type-text field-label-hidden">
-                    <div class="field-items">
-                      <div class="field-item even">St Lucia</div>
-                    </div>
-                  </div>
+                  <span tabindex="0">St Lucia</span>
                 </div>
-                <div class="card__summary"></div>
+                <div class="card__summary" tabindex="0"></div>
               </div>
             </div>
           </div>
@@ -120,9 +162,9 @@ export const cardSquareOverlayTitle = () => {
   `;
 };
 
-cardSquareOverlayTitle.storyName = 'Card square overlay title';
+overlayCardSquare.storyName = 'Overlay card square';
 
-export const cardSquareOverlayText = () => {
+export const overlayCardSquareWithAdditionalText = () => {
   return `
     <div class="uq-grid">
       <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-4">
@@ -148,9 +190,9 @@ export const cardSquareOverlayText = () => {
   `;
 };
 
-cardSquareOverlayText.storyName = 'Card square overlay text';
+overlayCardSquareWithAdditionalText.storyName = 'Overlay card square with additional text';
 
-export const cardSquareOverlayLink = () => {
+export const overlayCardSquareWithLink = () => {
   return `
     <div class="uq-grid">
       <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-4">
@@ -178,11 +220,11 @@ export const cardSquareOverlayLink = () => {
   `;
 };
 
-cardSquareOverlayLink.storyName = 'Card square overlay link';
+overlayCardSquareWithLink.storyName = 'Overlay card square with link';
 
 
 
-export const cardPortraitOverlay = () => {
+export const overlayCardPortrait = () => {
   return `
     <div class="uq-grid">
       <div class="uq-grid__col uq-grid__col--6">
@@ -207,9 +249,9 @@ export const cardPortraitOverlay = () => {
   `;
 };
 
-cardPortraitOverlay.storyName = 'Card portrait overlay';
+overlayCardPortrait.storyName = 'Overlay card portrait';
 
-export const cardLandscapeOverlay = () => {
+export const overlayCardLandscape = () => {
   return `
     <div class="uq-grid">
       <div class="uq-grid__col uq-grid__col--6">
@@ -234,77 +276,4 @@ export const cardLandscapeOverlay = () => {
   `;
 };
 
-cardLandscapeOverlay.storyName = 'Card landscape overlay';
-
-
-
-
-
-export const cardHorizontal = () => {
-  return `
-    <div class="uq-grid card card--horizontal">
-      <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 card__header">
-        <a class="card__link" href="#">
-          <div class="card__image-container"  style="background:url('https://campuses.uq.edu.au/files/9749/gatton-card2.jpg') no-repeat center; background-size:cover">
-          </div>
-        </a>
-      </div>
-      <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 card__body">
-        <div class="card__content">
-          <h2 class="card__title">
-            <a class="card__link" href="#">Title of item</a>
-          </h2>
-          <div class="card__date">Sunday 16 August, 2015</div>
-        </div>
-      </div>
-    </div>
-  `;
-};
-
-cardHorizontal.storyName = 'Card horizontal';
-
-export const cardHorizontalShaded = () => {
-  return `
-    <div class="uq-grid card card--horizontal card--shaded">
-      <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 card__header">
-        <a class="card__link" href="#">
-          <div class="card__image-container" style="background:url('https://campuses.uq.edu.au/files/9749/gatton-card2.jpg') no-repeat center; background-size:cover">
-          </div>
-        </a>
-      </div>
-      <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 card__body">
-        <div class="card__content">
-          <h2 class="card__title">
-            <a class="card__link" href="#">Title of item</a>
-          </h2>
-          <div class="card__date">Sunday 16 August, 2015</div>
-        </div>
-      </div>
-    </div>
-  `;
-};
-
-cardHorizontalShaded.storyName = 'Card horizontal shaded';
-
-export const cardHorizontalAlignMediaRight = () => {
-  return `
-    <div class="uq-grid card card--horizontal card--media-right">
-      <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 card__header">
-        <a class="card__link" href="#">
-          <div class="card__image-container" style="background:url('https://campuses.uq.edu.au/files/9749/gatton-card2.jpg') no-repeat center; background-size:cover">
-          </div>
-        </a>
-      </div>
-      <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 card__body">
-        <div class="card__content">
-          <h2 class="card__title">
-            <a class="card__link" href="#">Title of item</a>
-          </h2>
-          <div class="card__date">Sunday 16 August, 2015</div>
-        </div>
-      </div>
-    </div>
-  `;
-};
-
-cardHorizontalAlignMediaRight.storyName = 'Card horizontal align media right';
+overlayCardLandscape.storyName = 'Overlay card landscape';

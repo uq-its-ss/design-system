@@ -42,6 +42,8 @@ export const sectionsBasic = () => {
 `;
 };
 
+sectionsBasic.storyName = 'Sections basic';
+
 export const sectionsCentered = () => {
   return `
   <div class="section section--centered">
@@ -67,6 +69,8 @@ export const sectionsCentered = () => {
   </div>
   `;
 };
+
+sectionsCentered.storyName = 'Sections centered';
 
 export const sectionsHorizontal = () => {
   return `
@@ -94,6 +98,8 @@ export const sectionsHorizontal = () => {
 `;
 };
 
+sectionsHorizontal.storyName = 'Sections horizontal';
+
 export const sectionsShaded = () => {
   return `
 <div class="section section--shaded section--centered">
@@ -120,6 +126,8 @@ export const sectionsShaded = () => {
 `;
 };
 
+sectionsShaded.storyName = 'Sections shaded';
+
 export const sectionsBackground = () => {
   return `
 <div class="section section--centered section--image-behind section--light-text light-palette">
@@ -142,6 +150,8 @@ export const sectionsBackground = () => {
 `;
 };
 
+sectionsBackground.storyName = 'Sections background';
+
 export const sectionsLightTint = () => {
   return `
 <div class="section section--centered section--background-image section--light-tint section--dark-text" style="background-image: url('//lorempixel.com/1920/600/abstract/3');">
@@ -162,6 +172,8 @@ export const sectionsLightTint = () => {
 `;
 };
 
+sectionsLightTint.storyName = 'Sections light tint';
+
 export const sectionsDarkTint = () => {
   return `
 <div class="section section--centered section--dark-tint section--light-text light-palette" style="background-image: url('//lorempixel.com/1920/600/abstract/3');">
@@ -181,3 +193,5 @@ export const sectionsDarkTint = () => {
 </div>
 `;
 };
+
+sectionsDarkTint.storyName = 'Sections dark tint';

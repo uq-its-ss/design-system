@@ -15,6 +15,11 @@ export const parameters = {
     container: TocDocs,
     page: DocsPage
   },
+  backgrounds: {
+    grid: {
+      disable: true
+    }
+  },
   options: {
     storySort: {
       order: [

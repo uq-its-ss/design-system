@@ -7,7 +7,7 @@ module.exports = {
   addons: [
     '@storybook/addon-docs',
     '@storybook/addon-viewport/register',
-    '@storybook/addon-backgrounds/register'
+    '@storybook/addon-backgrounds'
   ],
   webpackFinal: async (config, { configType }) => {
     // Export a function. Accept the base config as the only param.

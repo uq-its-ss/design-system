@@ -10,7 +10,7 @@ import gridMenuEqualiser from '@uqds/grid-menu/src/js/grid-menu';
 import kitchenSinkHTML from './kitchen-sink.html';
 
 export default {
-  title: 'Gallery & Examples/Kitchen Sink',
+  title: 'Gallery & Examples/Kitchen sink',
   parameters: {
     layout: "fullscreen",
     viewMode: 'story',
@@ -27,11 +27,13 @@ export const kitchenSink = () => {
     var navelement = document.getElementById("jsNav");
     var nav = new siteHeaderNav(navelement, "uq-site-header__navigation");
     new accordion();
-    var equaliseGridMenu = new gridMenuEqualiser('.grid-menu--equalised>a');
+    var equaliseGridMenu = new gridMenuEqualiser('.uq-grid-menu--equalised>a');
     equaliseGridMenu.align(); 
   });
   return kitchenSinkHTML;
 };
+
+kitchenSink.storyName = 'Kitchen sink';
 
 kitchenSink.parameters = {
   docs: {

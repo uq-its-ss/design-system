@@ -284,7 +284,7 @@ var passwordResetValidation = (function() {
       labelElem.classList.add("label--error");
       inputElem.classList.add("input--error");
       inputElem.setAttribute("aria-invalid", "true");
-      errorElem.classList.add("inline-error-message");
+      errorElem.classList.add("error-message");
 
       if (_.isArray(error)) {
         var error = error.join(",<br/>");
@@ -296,7 +296,7 @@ var passwordResetValidation = (function() {
       labelElem.classList.remove("label--error");
       inputElem.classList.remove("input--error");
       inputElem.setAttribute("aria-invalid", "false");
-      errorElem.classList.remove("inline-error-message");
+      errorElem.classList.remove("error-message");
       errorElem.innerHTML = "";
     }
   };

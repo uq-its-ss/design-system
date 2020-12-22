@@ -5,7 +5,7 @@
   $form-border-radius: 2px;
   $form-border-width: 1px;
   $form-color-error: core.$alert;
-  $form-color-success: darken(core.$green, 10%);
+  $form-color-success: core.$success;
   $form-description-size: core.$font-size-xs;
   $form-element-height: core.$space-xl;
   $form-focus-color: core.$blue;
@@ -28,5 +28,5 @@
   $form-checkbox-button-text-active: core.$uq-white;
   $form-checkbox-button-text: core.$brand-text;
   $form-checkbox-check-color: core.$uq-white;
-  $form-checkbox-check-size: 16px;
   $form-checkbox-size: 24px;
+  $form-checkbox-check-size: $form-checkbox-size;

@@ -144,7 +144,7 @@
 
   // section with palettes
   &--light-text {
-    .section__header, .section__summary, .section__footer {
+    .section__header, .section__title, .section__summary, .section__footer {
       @extend %light-palette;
     }
   }

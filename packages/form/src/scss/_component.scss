@@ -13,8 +13,8 @@ $use-encapsulation: false !default;
   select,
   textarea,
   .error-summary,
-  .inline-error-message,
-  .inline-success-message,
+  .error-message,
+  .success-message,
   .inline-help  {
     box-sizing: border-box;
     font-family: core.$font-family;
@@ -215,8 +215,8 @@ $use-encapsulation: false !default;
       border-radius: core.$spacing-xxs;
     }
 
-    + .inline-error-message,
-    + .inline-success-message {
+    + .error-message,
+    + .success-message {
       margin-top: -(core.$space-md);
       border-radius: 0 0 $form-border-radius $form-border-radius;
     }
@@ -281,11 +281,11 @@ $use-encapsulation: false !default;
     }
 
     &:checked {
-      border-color: $form-focus-color;
+      border-color: core.$grey-60;
 
       &:focus {
-        border-color: darken($form-focus-color, 15%);
-        box-shadow: 0 0 0 1px darken($form-focus-color, 15%);
+        border-color: $form-focus-color;
+        box-shadow: 0 0 0 1px $form-focus-color;
       }
     }
 
@@ -328,12 +328,12 @@ $use-encapsulation: false !default;
       background-position: center center;
       top: -1px;
       left: -1px;
-      height: $form-checkbox-size;
-      width: $form-checkbox-size;
+      height: $form-checkbox-check-size;
+      width: $form-checkbox-check-size;
     }
 
     &:checked {
-      background-color: $form-focus-color;
+      background-color: core.$grey-60;
 
       &::after {
         background-image: url(get-icon("form-checkbox-check", $form-checkbox-check-color));
@@ -349,14 +349,31 @@ $use-encapsulation: false !default;
   
   input[type="radio"] {
     border-radius: 50%;
+    position: relative;
   
     &:checked {
-      border-width: 4px;
+      border-width: 2px;
+
+      &::after {
+        border-radius: 50%;
+        background-color: core.$grey-60;
+        content: "";
+        display: block;
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        height: $form-checkbox-size - 10px;
+        width: $form-checkbox-size - 10px;
+      }
     }
 
     &.input--error {
       &:checked {
         border-color: $form-color-error;
+
+        &::after {
+          background-color: $form-color-error;
+        }
       }
     }
   }
@@ -406,8 +423,8 @@ $use-encapsulation: false !default;
     }
   }
 
-  .inline-error-message,
-  .inline-success-message {
+  .error-message,
+  .success-message {
     color: core.$uq-white;
     display: block;
     font-size: core.$font-size-m;
@@ -434,7 +451,7 @@ $use-encapsulation: false !default;
     }
   }
 
-  .inline-error-message {
+  .error-message {
     background-color: $form-color-error;
 
     &::before {
@@ -442,7 +459,7 @@ $use-encapsulation: false !default;
     }
   }
 
-  .inline-success-message {
+  .success-message {
     background-color: $form-color-success;
 
     &::before {

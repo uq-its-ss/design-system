@@ -1,8 +1,7 @@
 {
-  "name": "@uqds/foundation-normalise",
+  "name": "@uqds/side-nav",
   "version": "0.0.0",
-  "description": "Foundation normalize.scss",
-  "private": true,
+  "description": "Side nav (title, side navigation)",
   "keywords": [
     "uqds",
     "uq",
@@ -11,10 +10,7 @@
     "scss",
     "sass",
     "css",
-    "foundation 5",
-    "reset",
-    "normalise",
-    "normalize"
+    "side nav"
   ],
   "author": {
     "name": "University of Queensland",
@@ -24,8 +20,7 @@
   "homepage": "https://github.com/uq-its-ss/design-system#readme",
   "license": "ISC",
   "directories": {
-    "lib": "lib",
-    "test": "__tests__"
+    "lib": "lib"
   },
   "files": [
     "lib/*",
@@ -40,5 +35,13 @@
   },
   "bugs": {
     "url": "https://github.com/uq-its-ss/design-system/issues"
+  },
+  "dependencies": {
+    "@uqds/core": "^0.0.0",
+    "@uqds/grid": "^0.0.0"
+  },
+  "peerDependencies": {
+    "@uqds/core": "^0.0.0",
+    "@uqds/grid": "^0.0.0"
   }
 }

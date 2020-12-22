@@ -2,18 +2,52 @@
 @use '@uqds/body/src/scss/global' as body;
 @use "@material/circular-progress/mdc-circular-progress";
 @use "@material/circular-progress/mixins" as mdc-circular-progress-mixins;
+@use 'global' as *;
 @use 'icons' as *;
 
-$-icon-button-height: 2.875rem;
+$-icon-width: 1.75rem;
+$-icon-height: $-icon-width;
+$-icon-spacing: 1.125rem / 2;
+
+$-icon-button-icon-height: $-icon-width;
+$-icon-button-icon-width: $-icon-height;
+$-icon-button-icon-spacing: $-icon-spacing;
+$-icon-button-height: $-icon-button-icon-height + $-icon-button-icon-spacing * 2;
 $-icon-button-width: $-icon-button-height;
-$-icon-button-icon-height: 1.75rem;
-$-icon-button-icon-width: $-icon-button-icon-height;
+
+$-result-icon-height: $-icon-height;
+$-result-icon-width: $-icon-width;
+$-result-icon-spacing: $-icon-spacing;
 
 %uq-maps {
   /* ------------------------ */
+  /* Package core             */
+  /* ------------------------ */
+  &__box-sizing {
+    box-sizing: border-box;
+    
+    &::before, &::after, *, *::before, *::after {
+      box-sizing: border-box;
+    }
+  }
+
+  &__primary-text {
+    color: core.$text;
+    font-family: core.$font-family;
+    font-size: core.$font-size-s;
+    font-weight: core.$font-weight-normal;
+    line-height: core.$line-height;
+  }
+
+  &__secondary-text {
+    color: core.$uq-neutral-dark40;
+    font-size: core.$font-size-xs;
+  }
+
+  /* ------------------------ */
   /* Circular icon button     */
   /* ------------------------ */
-  
+
   &__icon-button {
     appearance: none;
     background-position: center;
@@ -22,7 +56,6 @@ $-icon-button-icon-width: $-icon-button-icon-height;
     background-size: $-icon-button-icon-height $-icon-button-icon-width;
     border-radius: 50%;
     border: 0 none;
-    box-sizing: border-box;
     cursor: pointer;
     margin: 0;
     outline: 0 none;
@@ -39,10 +72,6 @@ $-icon-button-icon-width: $-icon-button-icon-height;
     &:active {
       background-color: rgba(core.$uq-black, .07);
     }
-
-    &::before, &::after, *, *::before, *::after {
-      box-sizing: border-box;
-    }
   }
 }
  
@@ -52,6 +81,9 @@ $-icon-button-icon-width: $-icon-button-icon-height;
   /* ------------------------ */
 
   &__search-field {
+    @extend %uq-maps__box-sizing;
+    @extend %uq-maps__primary-text;
+
     $-input-height: $-icon-button-height + core.$space-sm;
 
     align-items: center;
@@ -59,25 +91,20 @@ $-icon-button-icon-width: $-icon-button-icon-height;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, .08),
                 0 8px 16px rgba(0, 0, 0, .16);
-    box-sizing: border-box;
     display: flex;
-    font-family: core.$font-family;
     margin: core.$space;
-    //max-width: 360px;
     overflow: hidden;
     position: relative;
     transition: height .6s;
     white-space: nowrap;
-
-    &::before, &::after, *, *::before, *::after {
-      box-sizing: border-box;
-    }
 
     &__label {
       @include body.visually-hidden;
     }
 
     input[type=text].uq-maps__search-field__input {
+      @extend %uq-maps__primary-text;
+
       appearance: none;
       background-image: url(get-icon('ui--search'));
       background-position: core.$space-sm + ($-icon-button-width - $-icon-button-icon-width) / 2 center;
@@ -85,15 +112,13 @@ $-icon-button-icon-width: $-icon-button-icon-height;
       background-repeat: no-repeat;
       background-size: $-icon-button-icon-height $-icon-button-icon-width;
       border: 0 none;
-      color: core.$text;
-      font-size: core.$font-size-s;
-      font-weight: core.$font-weight-normal;
+      border-radius: 0;
       flex-grow: 1;
       height: $-input-height;
       margin: 0;
       max-width: none;
       min-width: 0;
-      padding: 0 core.$space-sm 0 core.$space + $-icon-button-width;
+      padding: 0 core.$space 0 core.$space + $-icon-button-width;
 
       &:focus {
         box-shadow: none;
@@ -190,24 +215,19 @@ $-icon-button-icon-width: $-icon-button-icon-height;
   /* ------------------------ */
 
   &__wayfinding-controls {
+    @extend %uq-maps__box-sizing;
+    @extend %uq-maps__primary-text;
+
     align-items: stretch;
     display: flex;
-    font-family: core.$font-family;
     margin: core.$space;
-    //max-width: 360px;
     padding: core.$space 0;
     border-radius: 8px;
     background-color: core.$uq-white;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08),
                 0px 8px 16px rgba(0, 0, 0, 0.16);
-    box-sizing: border-box;
-    color: core.$text;
     overflow: hidden;
     position: relative;
-
-    &::before, &::after, *, *::before, *::after {
-      box-sizing: border-box;
-    }
 
     &__main {
       flex-grow: 1;
@@ -231,11 +251,7 @@ $-icon-button-icon-width: $-icon-button-icon-height;
       border: 0 none;
       border-radius: 8px;
       background-color: core.$uq-neutral-light20;
-      font-size: core.$font-size-s;
-      color: core.$text;
       text-align: left;
-      line-height: core.$line-height;
-      font-weight: core.$font-weight-normal;
       padding: core.$space-sm core.$space;
       transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
                   box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
@@ -321,10 +337,9 @@ $-icon-button-icon-width: $-icon-button-icon-height;
         }
 
         + label.uq-maps__wayfinding-controls__stairs-toggle__label {
+          @extend %uq-maps__primary-text;
+
           cursor: pointer;
-          color: core.$text;
-          font-size: core.$font-size-s;
-          font-weight: core.$font-weight-normal;
           line-height: core.$line-height-ui;
           margin: 0;
           padding: 0;
@@ -373,6 +388,192 @@ $-icon-button-icon-width: $-icon-button-icon-height;
       .uq-maps__wayfinding-controls__progress-indicator {
         display: flex;
       }
+    }
+  }
+
+  /* ------------------------------ */
+  /* Search combo menu              */
+  /* ------------------------------ */
+
+  &__search {
+    @extend %uq-maps__box-sizing;
+    @extend %uq-maps__primary-text;
+
+    background-color: core.$uq-white;
+    border-radius: 8px;
+    height: auto;
+    margin: core.$space;
+    transition: height 0.6s;
+
+    > .uq-maps__search-field,
+    > .uq-maps__wayfinding-controls {
+      margin: 0;
+    }
+
+    &__results {
+      display: block;
+      margin: core.$space 0;
+      padding: 0;
+
+      &__item {
+        display: block;
+        margin: 0;
+        padding: 0;
+
+        > a {
+          align-items: center;
+          color: core.$text;
+          display: flex;
+          justify-content: flex-start;
+          min-height: 3rem + core.$space-sm * 2;
+          padding: core.$space-sm core.$space-md;
+          width: 100%;
+
+          &:hover {
+            background-color: core.$uq-neutral-light20;
+            text-decoration: none;
+          }
+        }
+
+        &__icon {
+          background-color: transparent;
+          height: $-result-icon-height;
+          width: $-result-icon-width;
+          margin: 0 $-icon-spacing;
+          flex-grow: 0;
+          flex-shrink: 0;
+        }
+
+        &__text {
+          margin: 0 core.$space-sm;
+          flex-grow: 1;
+
+          > span, > small {
+            display: block;
+          }
+
+          small {
+            @extend %uq-maps__secondary-text;
+          }
+        }
+
+        &--category {
+          position: relative;
+
+          &::after {
+            position: absolute;
+            right: core.$space-lg;
+            top: 50%;
+            margin-top: -($-result-icon-height / 2);
+            background-image: url(get-icon('ui--chevron-right', core.$uq-neutral));
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: $-result-icon-height $-result-icon-width;
+            content: '';
+            height: $-result-icon-height;
+            width: $-result-icon-width;
+          }
+
+          &:hover {
+            &::after {
+              background-image: url(get-icon('ui--chevron-right', core.$uq-neutral-dark20));
+            }
+          }
+
+          > a {
+            padding-right: core.$space-xxxxl;
+          }
+        }
+      }
+    }
+
+    &__no-results {
+      display: none;
+      margin: core.$space-lg core.$space;
+      text-align: center;
+    }
+
+    &--is-focused,
+    &--is-searching {
+      height: 100%;
+      margin: 0;
+      border-radius: 0;
+      overflow-y: scroll;
+      overflow-x: hidden;
+
+      > .uq-maps__search-field,
+      > .uq-maps__wayfinding-controls {
+        margin: core.$space;
+      }
+
+      .uq-maps__search__no-results {
+        display: block;
+      }
+    }
+  }
+
+  /* ------------------------ */
+  /* Live data indicator      */
+  /* ------------------------ */
+
+  @keyframes glow {
+    0% {
+      opacity: 0.75;
+      transform: scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(2);
+    }
+  }
+
+  &__live-data-dot {
+    position: relative;
+    display: inline-block;
+    margin-right: core.$space-xs;
+    height: 8px;
+    width: 8px;
+
+    &::before,
+    &::after {
+      // can be coloured using the 'color' property to allow for easy dynamic colouring
+      background-color: currentColor;
+      border-radius: 50%;
+      content: '';
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 8px;
+      width: 8px;
+    }
+
+    &::before {
+      animation: glow 3s linear infinite;
+    }
+
+    &--blue {
+      color: core.$uq-blue;
+    }
+
+    &--green {
+      color: core.$uq-green;
+    }
+
+    &--yellow {
+      color: core.$uq-yellow;
+    }
+
+    &--orange {
+      color: core.$uq-orange;
+    }
+
+    &--red {
+      color: core.$uq-red;
+    }
+
+    &--grey {
+      color: core.$uq-neutral;
     }
   }
 }

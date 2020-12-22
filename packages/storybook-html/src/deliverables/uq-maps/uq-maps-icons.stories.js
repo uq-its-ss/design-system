@@ -1,7 +1,14 @@
 import './uq-maps.scss';
 
+import docs from './uq-maps-icons.docs.mdx';
+
 export default {
-  title: 'Deliverables/UQ Maps/Icons'
+  title: 'Deliverables/UQ Maps/Icons',
+  parameters: {
+    docs: {
+      page: docs
+    }
+  }
 };
 
 export const UI = () => {

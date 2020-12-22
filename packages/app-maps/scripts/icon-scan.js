@@ -1,5 +1,5 @@
 const CHALK = require('chalk');
-const FS = require('fs');
+const FS = require('fs').promises;
 const GLOB = require('glob');
 const SVGO = require('svgo/lib/svgo');
 const svgConverter = require('mini-svg-data-uri');
@@ -45,13 +45,13 @@ const svgSassFn = `
 
   @warn 'The requested icon - "' + $icon + '" - is not defined in the $icons map.';
   @return null;
-}`;
+}\n`;
 
 (async () => {
 
-let optimiser = await (() => new Promise((resolve, reject) => {
+let optimiser = await (() => new Promise(async (resolve, reject) => {
   try {
-    const optimiserConfigData = FS.readFileSync(optimiserConfigPath, 'utf8');
+    const optimiserConfigData = await FS.readFile(optimiserConfigPath, 'utf8');
     const optimiserConfig = YAML.safeLoad(optimiserConfigData);
 
     resolve(new SVGO(optimiserConfig));
@@ -73,50 +73,64 @@ GLOB('./src/images/**/*.svg', async (err, files) => {
     const explode = file.replace('./src/images/', '').split('/');
     const category = explode[0];
     const filename = explode[explode.length - 1].split('.')[0];
+    let svg;
 
-    let svg = await (() => new Promise((resolve, reject) => {
-      FS.readFile(file, 'utf8', async (err, data) => {
-        if (err) {
-          reject(err);
-        }
-
-        let result = await optimiser.optimize(data);
-        resolve(result);
+    await FS.readFile(file, 'utf8')
+      .then(async (data) => {
+        // Optimise SVGs
+        svg = await optimiser.optimize(data);
       })
-    }))();
-
-    /**
-     * Trial strategy to implement colour options via Sass functions using a
-     * special string placeholder. Ideally we want it to do more than
-     * postcss-inline-svg does by design for this monochromatic icon work.
-     * 
-     * Related reading:
-     * https://css-tricks.com/creating-a-maintainable-icon-system-with-sass/
-     * https://www.w3.org/TR/SVG/painting.html#SpecifyingStrokePaint
-     * https://www.w3.org/TR/SVG/painting.html#FillProperty
-     */
-
-    // create canvas (svg root node but also the children)
-    const canvas = SVG(svg.data);
-    
-    // Apply the fill placeholder to the `<svg>` node except when value is explicitly set to `none`.
-    // Importantly, set the placeholder even if fill attr. wasn't originally set — to override default setting.
-    if (canvas.attr('fill') != 'none') {
-      canvas.attr({
-        fill: colorPlaceholder
+      .catch((err) => {
+        throw err;
       });
+
+    if (category == 'ui') {
+      /**
+       * Trial strategy to implement colour options via Sass functions using a
+       * special string placeholder. Ideally we want it to do more than
+       * postcss-inline-svg does by design for monochromatic (UI) icon work.
+       * 
+       * Related reading:
+       * https://css-tricks.com/creating-a-maintainable-icon-system-with-sass/
+       * https://www.w3.org/TR/SVG/painting.html#SpecifyingStrokePaint
+       * https://www.w3.org/TR/SVG/painting.html#FillProperty
+       */
+
+      // create canvas (svg root node but also the children)
+      const canvas = SVG(svg.data);
+      
+      // Apply the fill placeholder to the `<svg>` node except when value is explicitly set to `none`.
+      // Importantly, set the placeholder even if fill attr. wasn't originally set — to override default setting.
+      if (canvas.attr('fill') != 'none') {
+        canvas.attr({
+          fill: colorPlaceholder
+        });
+      }
+
+      svg = canvas.svg();
+
+      // Replace all fill and stroke attributes except when value is explicitly set to `none`.
+      // TODO: improve regex to only require one replace step.
+      svg = svg.replace(/fill="(?!none")[^"]+"/g, `fill="${colorPlaceholder}"`);
+      svg = svg.replace(/stroke="(?!none")[^"]+"/g, `stroke="${colorPlaceholder}"`);
+
+      const svgDataURI = svgConverter(svg);
+      icons += `  "${category}--${filename}": "${svgDataURI}",\n`;
+
+      resolve(svgDataURI);
+
+    } else {
+      
+      const dir = `./dist/images/${category}`;
+
+      await FS.mkdir(dir, { recursive: true })
+        .catch((err) => { throw err });
+
+      await FS.writeFile(`${dir}/${filename}.svg`, svg.data)
+        .catch((err) => { throw err });
+
+      resolve(`${dir}/${filename}.svg`);
     }
-
-    svg = canvas.svg();
-
-    // Replace all fill and stroke attributes except when value is explicitly set to `none`.
-    // TODO: improve regex to only require one replace step.
-    svg = svg.replace(/fill="(?!none")[^"]+"/g, `fill="${colorPlaceholder}"`);
-    svg = svg.replace(/stroke="(?!none")[^"]+"/g, `stroke="${colorPlaceholder}"`);
-
-    const svgDataURI = svgConverter(svg);
-    icons += `  "${category}--${filename}": "${svgDataURI}",\n`;
-    resolve(svgDataURI);
   })));
 
   icons += ');';

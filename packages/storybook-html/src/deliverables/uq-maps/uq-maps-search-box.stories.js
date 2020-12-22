@@ -110,7 +110,7 @@ export const searchFieldWorking = () => {
           </div>
         </div>
 
-        <!-- START MDC circular-progress component -->
+        <!-- END MDC circular-progress component -->
 
       </div>
     </div>

@@ -13,10 +13,10 @@ The card component is used to provide a brief summary of content or a task, ofte
 
 ## Default example
 
-### Default card
+### Card default
 
 <Canvas withSource="none">
-  <Story id="components-cards--default-card" />
+  <Story id="components-cards--card-default" />
 </Canvas>
 
 ```html
@@ -30,11 +30,7 @@ The card component is used to provide a brief summary of content or a task, ofte
       <h2 class="card__title">
         <a class="card__link" href="#">Title of item</a>
       </h2>
-      <div class="card__date" tabindex="0">Sunday 16 August, 2015</div>
-      <div class="card__location">
-        <a class="card__link" href="#">Gatton campus</a>
-      </div>
-      <div class="card__summary" tabindex="0">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+      <div class="card__summary">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
         tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
       </div>
     </div>
@@ -43,19 +39,18 @@ The card component is used to provide a brief summary of content or a task, ofte
 </div>
 ```
 
-### Default card with link
+## Variant examples
+
+### Card with links
 
 <Canvas withSource="none">
-  <Story id="components-cards--default-card-with-link" />
+  <Story id="components-cards--card-with-links" />
 </Canvas>
 
 ```html
 <div class="card">
-  <div class="card__header"></div>
-  <div class="card__body">
-    ...
-    ...
-  </div>
+  ...
+  ...
   <div class="card__footer">
     <div class="uq-grid">
       <div class="uq-grid__col uq-grid__col--3">
@@ -69,7 +64,33 @@ The card component is used to provide a brief summary of content or a task, ofte
 </div>
 ```
 
-## Variant examples
+### Card with additional text
+
+<Canvas withSource="none">
+  <Story id="components-cards--card-with-additional-text" />
+</Canvas>
+
+```html
+<div class="card">
+  ...
+  <div class="card__body">
+    ...
+    <div class="card__content">
+      <h2 class="card__title">
+        <a class="card__link" href="#">Title of item</a>
+      </h2>
+      <div class="card__date">Sunday 16 August, 2015</div>
+      <div class="card__location">
+        <a class="card__link" href="#">Gatton campus</a>
+      </div>
+      <div class="card__summary">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+        tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+      </div>
+    </div>
+  </div>
+  ...
+</div>
+```
 
 ### Overlay card square
 
@@ -79,72 +100,16 @@ The card component is used to provide a brief summary of content or a task, ofte
 
 ```html
 <a class="card__primary-link" href="https://campuses.uq.edu.au/st-lucia">
-  <div class="entity entity-paragraphs-item paragraphs-item-card-custom card--square view-mode-card_overlay card card--background-image" style="background-image: url('https://campuses.uq.edu.au/files/9492/stlucia-card.jpg')">
-    <div class="card__header"></div>
+  <div class="card card--square card--background-image" style="background-image: url('https://campuses.uq.edu.au/files/9492/stlucia-card.jpg')">
+    ...
     <div class="card__body">
       <div class="card__content">
-        <div class="card__title">
-          <span tabindex="0">St Lucia</span>
-        </div>
-        <div class="card__summary" tabindex="0"></div>
+        <div class="card__title">Title of item</div>
+        ...
       </div>
     </div>
   </div>
 </a>
-```
-
-### Overlay card square with additional text
-
-<Canvas withSource="none">
-  <Story id="components-cards--overlay-card-square-with-additional-text" />
-</Canvas>
-
-```html
-<div class="card card--background-image card--square" style="background-image: url('https://campuses.uq.edu.au/files/9749/gatton-card2.jpg')">
-  <div class="card__header"></div>
-  <div class="card__body">
-    <div class="card__content">
-      <h2 class="card__title">
-        <a class="card__link" href="#">Title of item</a>
-      </h2>
-      <div class="card__date">
-        <a class="card__link" href="#">Sunday 16 August, 2015</a>
-      </div>
-      <div class="card__location">
-        <a class="card__link" href="#">Gatton campus</a>
-      </div>
-    </div>
-  </div>
-  <div class="card__footer"></div>
-</div>
-```
-
-### Overlay card square with link
-
-<Canvas withSource="none">
-  <Story id="components-cards--overlay-card-square-with-link" />
-</Canvas>
-
-```html
-<div class="card card--background-image card--square" style="background-image: url('https://campuses.uq.edu.au/files/9749/gatton-card2.jpg')">
-  <div class="card__header"></div>
-  <div class="card__body">
-    <div class="card__content">
-      <h2 class="card__title">
-        <a class="card__link" href="#">Title of item</a>
-      </h2>
-      <div class="card__date">
-        <a class="card__link" href="#">Sunday 16 August, 2015</a>
-      </div>
-      <div class="card__location">
-        <a class="card__link" href="#">Gatton campus</a>
-      </div>
-    </div>
-  </div>
-  <div class="card__footer">
-    <a class="card__link" href="#">Action link</a>
-  </div>
-</div>
 ```
 
 ### Overlay card portrait
@@ -154,7 +119,7 @@ The card component is used to provide a brief summary of content or a task, ofte
 </Canvas>
 
 ```html
-<div class="card card--background-image card--portrait" style="background-image: url('https://campuses.uq.edu.au/files/9749/gatton-card2.jpg')">
+<div class="card card--portrait card--background-image" style="background-image: url('https://campuses.uq.edu.au/files/9749/gatton-card2.jpg')">
   ...
   ...
 </div>
@@ -167,12 +132,63 @@ The card component is used to provide a brief summary of content or a task, ofte
 </Canvas>
 
 ```html
-<div class="card card--background-image card--landscape" style="background-image: url('https://campuses.uq.edu.au/files/9749/gatton-card2.jpg')">
+<div class="card card--landscape card--background-image" style="background-image: url('https://campuses.uq.edu.au/files/9749/gatton-card2.jpg')">
   ...
   ...
 </div>
 ```
 
-## Accessibility
+### Overlay card compact
 
-In the card component where text nodes aren't accessible via tabbing, `tabindex="0"` is added to the node.
+<Canvas withSource="none">
+  <Story id="components-cards--overlay-card-compact" />
+</Canvas>
+
+```html
+<div class="card card--compact card--background-image" style="background-image: url('https://campuses.uq.edu.au/files/9749/gatton-card2.jpg')">
+  ...
+  ...
+</div>
+```
+
+### Overlay card square with link
+
+<Canvas withSource="none">
+  <Story id="components-cards--overlay-card-square-with-link" />
+</Canvas>
+
+```html
+<div class="card card--square card--background-image" style="background-image: url('https://campuses.uq.edu.au/files/9749/gatton-card2.jpg')">
+  ...
+  ...
+  <div class="card__footer">
+    <a class="card__link" href="#">Action link</a>
+  </div>
+</div>
+```
+
+### Overlay card square with additional text
+
+<Canvas withSource="none">
+  <Story id="components-cards--overlay-card-square-with-additional-text" />
+</Canvas>
+
+```html
+<div class="card card--square card--background-image" style="background-image: url('https://campuses.uq.edu.au/files/9749/gatton-card2.jpg')">
+  ...
+  <div class="card__body">
+    <div class="card__content">
+      <h2 class="card__title">
+        <a class="card__link" href="#">Title of item</a>
+      </h2>
+      <div class="card__date">
+        <a class="card__link" href="#">Sunday 16 August, 2015</a>
+      </div>
+      <div class="card__location">
+        <a class="card__link" href="#">Gatton campus</a>
+      </div>
+    </div>
+  </div>
+  ...
+</div>
+```

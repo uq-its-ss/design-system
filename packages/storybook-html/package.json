@@ -48,6 +48,7 @@
     "@uqds/previous-next": "^0.0.0",
     "@uqds/progression": "^0.0.0",
     "@uqds/sections": "^0.0.0",
+    "@uqds/side-nav": "^0.0.0",
     "@uqds/site-header": "^0.0.0",
     "@uqds/table": "^0.0.0",
     "@uqds/tabs": "^0.0.0",

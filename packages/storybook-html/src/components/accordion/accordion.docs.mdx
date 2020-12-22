@@ -105,7 +105,6 @@ Accordions can be implemented using `<div>` or `<ul> <li>` lists. The default ex
 - The title of each accordion item is contained in a button element.
 - If the accordion content panel associated with an accordion title is visible, the button element has aria-expanded set to true. If the content panel is not visible, aria-expanded is set to false.
 - The accordion button element has aria-controls set to the ID of the element containing the accordion content panel.
-- If the accordion content panel associated with an accordion title is visible, and if the accordion does not permit the content panel to be collapsed, the button element has aria-disabled set to true.
 - Optionally, each element that serves as a container for panel content has `role="region"` and `aria-labelledby` with a value that refers to the button that controls display of the panel.
   - Avoid using role region in circumstances that create landmark region proliferation, e.g., in an accordion that contains more than approximately 6 panels that can be expanded at the same time.
   - Role region is especially helpful to the perception of structure by screen reader users when panels contain heading elements or a nested accordion.

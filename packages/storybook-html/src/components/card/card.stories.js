@@ -237,7 +237,7 @@ export const overlayCardCompact = () => {
 
 overlayCardCompact.storyName = 'Overlay card compact';
 
-export const overlayCardSquareWithLink = () => {
+export const overlayCardWithLink = () => {
   return `
   <div class="uq-grid">
     <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-4">
@@ -259,9 +259,9 @@ export const overlayCardSquareWithLink = () => {
   `;
 };
 
-overlayCardSquareWithLink.storyName = 'Overlay card square with link';
+overlayCardWithLink.storyName = 'Overlay card with link';
 
-export const overlayCardSquareWithAdditionalText = () => {
+export const overlayCardWithAdditionalText = () => {
   return `
   <div class="uq-grid">
     <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-4">
@@ -287,4 +287,4 @@ export const overlayCardSquareWithAdditionalText = () => {
   `;
 };
 
-overlayCardSquareWithAdditionalText.storyName = 'Overlay card square with additional text';
+overlayCardWithAdditionalText.storyName = 'Overlay card with additional text';

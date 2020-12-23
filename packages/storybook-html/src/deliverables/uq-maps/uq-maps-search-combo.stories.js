@@ -5,6 +5,7 @@ export default {
   title: 'Deliverables/UQ Maps/Search combo menu',
   parameters: {
     layout: 'fullscreen',
+    // viewMode: 'story',
     previewTabs: {
       canvas: {hidden: false}
     },
@@ -222,10 +223,7 @@ export const searching = () => `
             <span>Main <em>Food</em> Court</span>
 
             <!-- Zero or more of these as supporting description -->
-            <small>
-              <span>Floor 3 • </span>
-              <span>21B (Main Refectory)</span>
-            </small>
+            <small>Floor 3 • 21B (Main Refectory)</small>
           </span>
         </a>
       </li>
@@ -236,10 +234,7 @@ export const searching = () => `
           </span>
           <span class="uq-maps__search__results__item__text">
             <span>Main Course <em>Food</em> Precinct</span>
-            <small>
-              <span>Floor 3 • </span>
-              <span>21B (Main Refectory)</span>
-            </small>
+            <small>Floor 3 • 21B (Main Refectory)</small>
           </span>
         </a>
       </li>
@@ -250,10 +245,7 @@ export const searching = () => `
           </span>
           <span class="uq-maps__search__results__item__text">
             <span>Phizz <em>Food</em> Court</span>
-            <small>
-              <span>Floor 2 • </span>
-              <span>63 (Physiology Lecture Theatres)</span>
-            </small>
+            <small>Floor 2 • 63 (Physiology Lecture Theatres)</small>
           </span>
         </a>
       </li>
@@ -264,10 +256,7 @@ export const searching = () => `
           </span>
           <span class="uq-maps__search__results__item__text">
             <span>Market Cart</span>
-            <small>
-              <span>Floor 2 • </span>
-              <span>63 (Physiology Lecture Theatres)</span>
-            </small>
+            <small>Floor 2 • 63 (Physiology Lecture Theatres)</small>
           </span>
         </a>
       </li>
@@ -278,10 +267,7 @@ export const searching = () => `
           </span>
           <span class="uq-maps__search__results__item__text">
             <span>Pizza Caffe</span>
-            <small>
-              <span>Floor 3 • </span>
-              <span>22 (Schonell Theatre)</span>
-            </small>
+            <small>Floor 3 • 22 (Schonell Theatre)</small>
           </span>
         </a>
       </li>
@@ -292,10 +278,7 @@ export const searching = () => `
           </span>
           <span class="uq-maps__search__results__item__text">
             <span>Kenko Sushi</span>
-            <small>
-              <span>Floor 2 • </span>
-              <span>63 (Physiology Lecture Theatres)</span>
-            </small>
+            <small>Floor 2 • 63 (Physiology Lecture Theatres)</small>
           </span>
         </a>
       </li>
@@ -306,17 +289,14 @@ export const searching = () => `
           </span>
           <span class="uq-maps__search__results__item__text">
             <span>Bam Boo Haus</span>
-            <small>
-              <span>Floor 3 • </span>
-              <span>21B (Main Refectory)</span>
-            </small>
+            <small>Floor 3 • 21B (Main Refectory)</small>
           </span>
         </a>
       </li>
       <li class="uq-maps__search__results__item">
         <a href="javascript:void(0)" title="Vending machine with fresh food">
           <span class="uq-maps__search__results__item__icon">
-            <img src="/images/app-maps/light_purple_vending-machine.svg" />
+            <img src="/images/app-maps/light_purple_food-and-beverage.svg" aria-hidden="true" />
           </span>
           <span class="uq-maps__search__results__item__text">
             <span>Vending machine with fresh <em>food</em></span>
@@ -330,10 +310,7 @@ export const searching = () => `
           </span>
           <span class="uq-maps__search__results__item__text">
             <span>Red Room Bar and Grill</span>
-            <small>
-              <span>Floor 2 • </span>
-              <span>21C (Aung San Suu Kyi Conference Centre)</span>
-            </small>
+            <small>Floor 2 • 21C (Aung San Suu Kyi Conference Centre)</small>
           </span>
         </a>
       </li>
@@ -344,10 +321,7 @@ export const searching = () => `
           </span>
           <span class="uq-maps__search__results__item__text">
             <span>Student microwave</span>
-            <small>
-              <span>Floor 3 • </span>
-              <span>21B (Main Refectory)</span>
-            </small>
+            <small>Floor 3 • 21B (Main Refectory)</small>
           </span>
         </a>
       </li>
@@ -388,3 +362,173 @@ export const searchingError = () => `
 `;
 
 searchingError.storyName = "With search value but with error";
+
+export const searchingInCategory = () => `
+  <div class="uq-maps__search uq-maps__search--is-searching">
+
+    <!-- START search field component -->
+    <div class="uq-maps__search-field uq-maps__search-field--is-searching">
+      <button class="uq-maps__search-field__back">Back</button>
+      <label for="search" class="uq-maps__search-field__label">Search</label>
+      <input type="text" class="uq-maps__search-field__input" placeholder="Search" value="Food" autocomplete="off" />
+      <button class="uq-maps__search-field__clear">Clear</button>
+    </div>
+    <!-- END search field component -->
+    
+    <div class="uq-maps__search__category-title">Food & beverage</div>
+
+    <ul class="uq-maps__search__results">
+      <li class="uq-maps__search__results__item uq-maps__search__results__item--view-all">
+        <a href="javascript:void(0)" title="View all on map">
+          <span class="uq-maps__search__results__item__text">
+            <span>View all on map</span>
+            <small>42 locations</small>
+          </span>
+        </a>
+      </li>
+      <li class="uq-maps__search__results__item">
+        <a href="javascript:void(0)" title="Genies Cafe">
+          <span class="uq-maps__search__results__item__icon">
+            <img src="/images/app-maps/light_purple_food-and-beverage.svg" aria-hidden="true" />
+          </span>
+          <span class="uq-maps__search__results__item__text">
+            <span>Genies Cafe</span>
+            <small>Floor 2 • 80 (Queensland Bioscience Precinct - QBP)</small>
+          </span>
+        </a>
+      </li>
+      <li class="uq-maps__search__results__item">
+        <a href="javascript:void(0)" title="Merlo Coffee">
+          <span class="uq-maps__search__results__item__icon">
+            <img src="/images/app-maps/light_purple_food-and-beverage.svg" aria-hidden="true" />
+          </span>
+          <span class="uq-maps__search__results__item__text">
+            <span>Merlo Coffee</span>
+            <small>Floor 2 • 2 (Duhig Tower)</small>
+          </span>
+        </a>
+      </li>
+      <li class="uq-maps__search__results__item">
+        <a href="javascript:void(0)" title="Bean Engineered Coffee">
+          <span class="uq-maps__search__results__item__icon">
+            <img src="/images/app-maps/light_purple_food-and-beverage.svg" aria-hidden="true" />
+          </span>
+          <span class="uq-maps__search__results__item__text">
+            <span>Bean Engineered Coffee</span>
+            <small>Floor 2 • 50 (Hawken Engineering Building)</small>
+          </span>
+        </a>
+      </li>
+      <li class="uq-maps__search__results__item">
+        <a href="javascript:void(0)" title="Brew Point Synthetic Fields Cafe">
+          <span class="uq-maps__search__results__item__icon">
+            <img src="/images/app-maps/light_purple_food-and-beverage.svg" aria-hidden="true" />
+          </span>
+          <span class="uq-maps__search__results__item__text">
+            <span>Brew Point Synthetic Fields Cafe</span>
+            <small>Floor 2 • 33 (Building 33)</small>
+          </span>
+        </a>
+      </li>
+      <li class="uq-maps__search__results__item">
+        <a href="javascript:void(0)" title="Chatime">
+          <span class="uq-maps__search__results__item__icon">
+            <img src="/images/app-maps/light_purple_food-and-beverage.svg" aria-hidden="true" />
+          </span>
+          <span class="uq-maps__search__results__item__text">
+            <span>Chatime</span>
+            <small>Floor 3 • 22 (Schonell Theatre)</small>
+          </span>
+        </a>
+      </li>
+      <li class="uq-maps__search__results__item">
+        <a href="javascript:void(0)" title="Pizza Caffe">
+          <span class="uq-maps__search__results__item__icon">
+            <img src="/images/app-maps/light_purple_food-and-beverage.svg" aria-hidden="true" />
+          </span>
+          <span class="uq-maps__search__results__item__text">
+            <span>Pizza Caffe</span>
+            <small>Floor 3 • 22 (Schonell Theatre)</small>
+          </span>
+        </a>
+      </li>
+      <li class="uq-maps__search__results__item">
+        <a href="javascript:void(0)" title="Main Course Food Precinct">
+          <span class="uq-maps__search__results__item__icon">
+            <img src="/images/app-maps/light_purple_food-and-beverage.svg" aria-hidden="true" />
+          </span>
+          <span class="uq-maps__search__results__item__text">
+            <span>Main Course Food Precinct</span>
+            <small>Floor 3 • 21B (Main Refectory)</small>
+          </span>
+        </a>
+      </li>
+      <li class="uq-maps__search__results__item">
+        <a href="javascript:void(0)" title="Market Cart">
+          <span class="uq-maps__search__results__item__icon">
+            <img src="/images/app-maps/light_purple_food-and-beverage.svg" aria-hidden="true" />
+          </span>
+          <span class="uq-maps__search__results__item__text">
+            <span>Market Cart</span>
+            <small>Floor 2 • 63 (Physiology Lecture Theatres)</small>
+          </span>
+        </a>
+      </li>
+      <li class="uq-maps__search__results__item">
+        <a href="javascript:void(0)" title="Kenko Sushi">
+          <span class="uq-maps__search__results__item__icon">
+            <img src="/images/app-maps/light_purple_food-and-beverage.svg" aria-hidden="true" />
+          </span>
+          <span class="uq-maps__search__results__item__text">
+            <span>Kenko Sushi</span>
+            <small>Floor 2 • 63 (Physiology Lecture Theatres)</small>
+          </span>
+        </a>
+      </li>
+      <li class="uq-maps__search__results__item">
+        <a href="javascript:void(0)" title="Bam Boo Haus">
+          <span class="uq-maps__search__results__item__icon">
+            <img src="/images/app-maps/light_purple_food-and-beverage.svg" aria-hidden="true" />
+          </span>
+          <span class="uq-maps__search__results__item__text">
+            <span>Bam Boo Haus</span>
+            <small>Floor 3 • 21B (Main Refectory)</small>
+          </span>
+        </a>
+      </li>
+      <li class="uq-maps__search__results__item">
+        <a href="javascript:void(0)" title="Vending machine with fresh food">
+          <span class="uq-maps__search__results__item__icon">
+            <img src="/images/app-maps/light_purple_food-and-beverage.svg" aria-hidden="true" />
+          </span>
+          <span class="uq-maps__search__results__item__text">
+            <span>Vending machine with fresh food</span>
+          </span>
+        </a>
+      </li>
+      <li class="uq-maps__search__results__item">
+        <a href="javascript:void(0)" title="Red Room Bar and Grill">
+          <span class="uq-maps__search__results__item__icon">
+            <img src="/images/app-maps/light_purple_food-and-beverage.svg" aria-hidden="true" />
+          </span>
+          <span class="uq-maps__search__results__item__text">
+            <span>Red Room Bar and Grill</span>
+            <small>Floor 2 • 21C (Aung San Suu Kyi Conference Centre)</small>
+          </span>
+        </a>
+      </li>
+      <li class="uq-maps__search__results__item">
+        <a href="javascript:void(0)" title="Bagel Boys">
+          <span class="uq-maps__search__results__item__icon">
+            <img src="/images/app-maps/light_purple_food-and-beverage.svg" aria-hidden="true" />
+          </span>
+          <span class="uq-maps__search__results__item__text">
+            <span>Bagel Boys</span>
+          </span>
+        </a>
+      </li>
+    </ul>
+  </div>
+`;
+
+searchingInCategory.storyName = "With search value and category list open";

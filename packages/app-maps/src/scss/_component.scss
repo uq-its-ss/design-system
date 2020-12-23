@@ -410,6 +410,15 @@ $-result-icon-spacing: $-icon-spacing;
       margin: 0;
     }
 
+    &__category-title {
+      color: core.$uq-purple;
+      font-size: core.$font-size-xxs;
+      font-weight: core.$font-weight-bold;
+      text-transform: uppercase;
+      display: inline-block;
+      margin: core.$space core.$space-md 0 (core.$space-md + $-icon-spacing);
+    }
+
     &__results {
       display: block;
       margin: core.$space 0;
@@ -435,17 +444,8 @@ $-result-icon-spacing: $-icon-spacing;
           }
         }
 
-        &__icon {
-          background-color: transparent;
-          height: $-result-icon-height;
-          width: $-result-icon-width;
-          margin: 0 $-icon-spacing;
-          flex-grow: 0;
-          flex-shrink: 0;
-        }
-
         &__text {
-          margin: 0 core.$space-sm;
+          margin: 0 0 0 ($-icon-spacing * 2 + $-result-icon-height + core.$space-sm);
           flex-grow: 1;
 
           > span, > small {
@@ -457,21 +457,59 @@ $-result-icon-spacing: $-icon-spacing;
           }
         }
 
-        &--category {
-          position: relative;
+        &__icon {
+          background-color: transparent;
+          height: $-result-icon-height;
+          width: $-result-icon-width;
+          margin: 0 $-icon-spacing;
+          flex-grow: 0;
+          flex-shrink: 0;
 
-          &::after {
+          + .uq-maps__search__results__item__text {
+            margin-left: core.$space-sm;
+          }
+        }
+
+        &--view-all {
+          position: relative;
+          
+          > a {
+            color: core.$uq-purple;
+          }
+
+          &::before {
             position: absolute;
-            right: core.$space-lg;
+            left: core.$space-md + $-result-icon-spacing;
             top: 50%;
             margin-top: -($-result-icon-height / 2);
-            background-image: url(get-icon('ui--chevron-right', core.$uq-neutral));
+            background-image: url(get-icon('ui--map-pin', core.$uq-purple));
             background-position: center;
             background-repeat: no-repeat;
             background-size: $-result-icon-height $-result-icon-width;
             content: '';
             height: $-result-icon-height;
             width: $-result-icon-width;
+          }
+        }
+
+        &--category {
+          position: relative;
+
+          &::after {
+            $width: 1.25rem;
+            $height: $width;
+
+            position: absolute;
+            right: core.$space-md + ($-icon-button-width - $width) / 2;
+            top: 50%;
+            margin-top: -($height / 2);
+            background-image: url(get-icon('ui--chevron-right', core.$uq-neutral));
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: $height $width;
+            content: '';
+            height: $height;
+            width: $width;
           }
 
           &:hover {

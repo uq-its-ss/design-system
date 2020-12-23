@@ -22,10 +22,12 @@ Visually, it looks identical to a *search field* by itself.
 When the focus is on the search field, the search combo box expands to fill the
 available height and width of its parent container—on mobile, this should be the
 full screen. Meanwhile, the search field should not have changed position on the
-screen at all. Some search suggestions should be provided before the user enters
-any text.
+screen at all.
 
 ### Basic usage
+
+Some POI and/or category items should be suggested before the user enters any
+text. The following example shows an alphabetical list of categories.
 
 <Canvas withSource="open" withToolbar>
   <Story height={800} id="deliverables-uq-maps-search-combo-menu--focused" />
@@ -75,5 +77,5 @@ list items.
 ### Basic usage
 
 <Canvas withSource="open" withToolbar>
-  <Story height={176} id="deliverables-uq-maps-search-combo-menu--searching-error" />
+  <Story height={800} id="deliverables-uq-maps-search-combo-menu--searching-in-category" />
 </Canvas>

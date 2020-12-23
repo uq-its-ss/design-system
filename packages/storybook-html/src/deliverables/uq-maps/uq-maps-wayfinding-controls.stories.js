@@ -70,7 +70,7 @@ export const wayfindingControlWorking = () => {
 
         <!-- START MDC circular-progress component -->
 
-        <div id="wayfindingProgressIndicator" class="mdc-circular-progress" style="width:28px;height:28px;" role="progressbar" aria-label="Please wait" aria-valuemin="0" aria-valuemax="1">
+        <div id="wayfindingProgressIndicator" class="mdc-circular-progress" style="width:1.75rem;height:1.75rem;" role="progressbar" aria-label="Please wait" aria-valuemin="0" aria-valuemax="1">
           <div class="mdc-circular-progress__determinate-container">
             <svg class="mdc-circular-progress__determinate-circle-graphic" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
               <circle class="mdc-circular-progress__determinate-track" cx="16" cy="16" r="12.5" stroke-width="1.33"/>

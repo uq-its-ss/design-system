@@ -28,10 +28,6 @@ export const initial = () => `
       <input type="text" class="uq-maps__search-field__input" placeholder="Search" autocomplete="off" />
     </div>
     <!-- END search field component -->
-
-    <ul class="uq-maps__search__results"></ul>
-
-    <div class="uq-maps__search__no-results">No results found</div>
     
   </div>
 `;
@@ -54,7 +50,7 @@ export const focused = () => `
       <li class="uq-maps__search__results__item uq-maps__search__results__item--category">
         <a href="javascript:void(0)" title="Open banks & ATMs category">
           <span class="uq-maps__search__results__item__icon">
-            <img src="/images/app-maps/light_purple_banks-and-atms.svg" />
+            <img src="/images/app-maps/light_purple_banks-and-atms.svg" aria-hidden="true" />
           </span>
           <span class="uq-maps__search__results__item__text">
             <span>Banks & ATMs</span>
@@ -64,7 +60,7 @@ export const focused = () => `
       <li class="uq-maps__search__results__item uq-maps__search__results__item--category">
         <a href="javascript:void(0)" title="Open bicycle repair stations category">
           <span class="uq-maps__search__results__item__icon">
-            <img src="/images/app-maps/light_purple_bike-repair-station.svg" />
+            <img src="/images/app-maps/light_purple_bike-repair-station.svg" aria-hidden="true" />
           </span>
           <span class="uq-maps__search__results__item__text">
             <span>Bicycle repair stations</span>
@@ -74,7 +70,7 @@ export const focused = () => `
       <li class="uq-maps__search__results__item uq-maps__search__results__item--category">
         <a href="javascript:void(0)" title="Open bicycle storage rooms category">
           <span class="uq-maps__search__results__item__icon">
-            <img src="/images/app-maps/light_purple_bike-storage-room.svg" />
+            <img src="/images/app-maps/light_purple_bike-storage-room.svg" aria-hidden="true" />
           </span>
           <span class="uq-maps__search__results__item__text">
             <span>Bicycle storage rooms</span>
@@ -84,7 +80,7 @@ export const focused = () => `
       <li class="uq-maps__search__results__item uq-maps__search__results__item--category">
         <a href="javascript:void(0)" title="Open bike boxes category">
           <span class="uq-maps__search__results__item__icon">
-            <img src="/images/app-maps/light_purple_bike-box.svg" />
+            <img src="/images/app-maps/light_purple_bike-box.svg" aria-hidden="true" />
           </span>
           <span class="uq-maps__search__results__item__text">
             <span>Bike boxes</span>
@@ -94,7 +90,7 @@ export const focused = () => `
       <li class="uq-maps__search__results__item uq-maps__search__results__item--category">
         <a href="javascript:void(0)" title="Open bike racks category">
           <span class="uq-maps__search__results__item__icon">
-            <img src="/images/app-maps/light_purple_bike-rack.svg" />
+            <img src="/images/app-maps/light_purple_bike-rack.svg" aria-hidden="true" />
           </span>
           <span class="uq-maps__search__results__item__text">
             <span>Bike racks</span>
@@ -104,7 +100,7 @@ export const focused = () => `
       <li class="uq-maps__search__results__item uq-maps__search__results__item--category">
         <a href="javascript:void(0)" title="Open car parking category">
           <span class="uq-maps__search__results__item__icon">
-            <img src="/images/app-maps/light_purple_car-parking.svg" />
+            <img src="/images/app-maps/light_purple_car-parking.svg" aria-hidden="true" />
           </span>
           <span class="uq-maps__search__results__item__text">
             <span>Car parking</span>
@@ -115,7 +111,7 @@ export const focused = () => `
       <li class="uq-maps__search__results__item uq-maps__search__results__item--category">
         <a href="javascript:void(0)" title="Open child care facility category">
           <span class="uq-maps__search__results__item__icon">
-            <img src="/images/app-maps/light_purple_parenting-facility.svg" />
+            <img src="/images/app-maps/light_purple_parenting-facility.svg" aria-hidden="true" />
           </span>
           <span class="uq-maps__search__results__item__text">
             <span>Child care facility</span>
@@ -125,7 +121,7 @@ export const focused = () => `
       <li class="uq-maps__search__results__item uq-maps__search__results__item--category">
         <a href="javascript:void(0)" title="Open CityCycle category">
           <span class="uq-maps__search__results__item__icon">
-            <img src="/images/app-maps/light_purple_citycycle.svg" />
+            <img src="/images/app-maps/light_purple_citycycle.svg" aria-hidden="true" />
           </span>
           <span class="uq-maps__search__results__item__text">
             <span>CityCycle</span>
@@ -135,7 +131,7 @@ export const focused = () => `
       <li class="uq-maps__search__results__item uq-maps__search__results__item--category">
         <a href="javascript:void(0)" title="Open computers — open access category">
           <span class="uq-maps__search__results__item__icon">
-            <img src="/images/app-maps/light_purple_computer-lab.svg" />
+            <img src="/images/app-maps/light_purple_computer-lab.svg" aria-hidden="true" />
           </span>
           <span class="uq-maps__search__results__item__text">
             <span>Computers — open access</span>
@@ -146,7 +142,7 @@ export const focused = () => `
       <li class="uq-maps__search__results__item uq-maps__search__results__item--category">
         <a href="javascript:void(0)" title="Open emergency points category">
           <span class="uq-maps__search__results__item__icon">
-            <img src="/images/app-maps/light_purple_emergency-distress-beacon.svg" />
+            <img src="/images/app-maps/light_purple_emergency-distress-beacon.svg" aria-hidden="true" />
           </span>
           <span class="uq-maps__search__results__item__text">
             <span>Emergency points</span>
@@ -156,7 +152,7 @@ export const focused = () => `
       <li class="uq-maps__search__results__item uq-maps__search__results__item--category">
         <a href="javascript:void(0)" title="Open food & beverage category">
           <span class="uq-maps__search__results__item__icon">
-            <img src="/images/app-maps/light_purple_food-and-beverage.svg" />
+            <img src="/images/app-maps/light_purple_food-and-beverage.svg" aria-hidden="true" />
           </span>
           <span class="uq-maps__search__results__item__text">
             <span>Food & beverage</span>
@@ -166,7 +162,7 @@ export const focused = () => `
       <li class="uq-maps__search__results__item uq-maps__search__results__item--category">
         <a href="javascript:void(0)" title="Open hand sanitiser category">
           <span class="uq-maps__search__results__item__icon">
-            <img src="/images/app-maps/light_purple_hand-sanitiser.svg" />
+            <img src="/images/app-maps/light_purple_hand-sanitiser.svg" aria-hidden="true" />
           </span>
           <span class="uq-maps__search__results__item__text">
             <span>Hand sanitiser</span>
@@ -176,7 +172,7 @@ export const focused = () => `
       <li class="uq-maps__search__results__item uq-maps__search__results__item--category">
         <a href="javascript:void(0)" title="Open landmarks category">
           <span class="uq-maps__search__results__item__icon">
-            <img src="/images/app-maps/light_purple_landmark.svg" />
+            <img src="/images/app-maps/light_purple_landmark.svg" aria-hidden="true" />
           </span>
           <span class="uq-maps__search__results__item__text">
             <span>Landmarks</span>
@@ -205,7 +201,7 @@ export const searching = () => `
       <li class="uq-maps__search__results__item uq-maps__search__results__item--category">
         <a href="javascript:void(0)" title="Open food & beverage category">
           <span class="uq-maps__search__results__item__icon">
-            <img src="/images/app-maps/light_purple_food-and-beverage.svg" />
+            <img src="/images/app-maps/light_purple_food-and-beverage.svg" aria-hidden="true" />
           </span>
           <span class="uq-maps__search__results__item__text">
             <span><em>Food</em> & beverage</span>
@@ -215,7 +211,7 @@ export const searching = () => `
       <li class="uq-maps__search__results__item">
         <a href="javascript:void(0)" title="Main Food Court">
           <span class="uq-maps__search__results__item__icon">
-            <img src="/images/app-maps/light_purple_generic.svg" />
+            <img src="/images/app-maps/light_purple_generic.svg" aria-hidden="true" />
           </span>
           <span class="uq-maps__search__results__item__text">
 
@@ -230,7 +226,7 @@ export const searching = () => `
       <li class="uq-maps__search__results__item">
         <a href="javascript:void(0)" title="Main Course Food Precinct">
           <span class="uq-maps__search__results__item__icon">
-            <img src="/images/app-maps/light_purple_food-and-beverage.svg" />
+            <img src="/images/app-maps/light_purple_food-and-beverage.svg" aria-hidden="true" />
           </span>
           <span class="uq-maps__search__results__item__text">
             <span>Main Course <em>Food</em> Precinct</span>
@@ -241,7 +237,7 @@ export const searching = () => `
       <li class="uq-maps__search__results__item">
         <a href="javascript:void(0)" title="Phizz Food Court">
           <span class="uq-maps__search__results__item__icon">
-            <img src="/images/app-maps/light_purple_food-and-beverage.svg" />
+            <img src="/images/app-maps/light_purple_food-and-beverage.svg" aria-hidden="true" />
           </span>
           <span class="uq-maps__search__results__item__text">
             <span>Phizz <em>Food</em> Court</span>
@@ -252,7 +248,7 @@ export const searching = () => `
       <li class="uq-maps__search__results__item">
         <a href="javascript:void(0)" title="Market Cart">
           <span class="uq-maps__search__results__item__icon">
-            <img src="/images/app-maps/light_purple_food-and-beverage.svg" />
+            <img src="/images/app-maps/light_purple_food-and-beverage.svg" aria-hidden="true" />
           </span>
           <span class="uq-maps__search__results__item__text">
             <span>Market Cart</span>
@@ -263,7 +259,7 @@ export const searching = () => `
       <li class="uq-maps__search__results__item">
         <a href="javascript:void(0)" title="Pizza Caffe">
           <span class="uq-maps__search__results__item__icon">
-            <img src="/images/app-maps/light_purple_food-and-beverage.svg" />
+            <img src="/images/app-maps/light_purple_food-and-beverage.svg" aria-hidden="true" />
           </span>
           <span class="uq-maps__search__results__item__text">
             <span>Pizza Caffe</span>
@@ -274,7 +270,7 @@ export const searching = () => `
       <li class="uq-maps__search__results__item">
         <a href="javascript:void(0)" title="Kenko Sushi">
           <span class="uq-maps__search__results__item__icon">
-            <img src="/images/app-maps/light_purple_food-and-beverage.svg" />
+            <img src="/images/app-maps/light_purple_food-and-beverage.svg" aria-hidden="true" />
           </span>
           <span class="uq-maps__search__results__item__text">
             <span>Kenko Sushi</span>
@@ -285,7 +281,7 @@ export const searching = () => `
       <li class="uq-maps__search__results__item">
         <a href="javascript:void(0)" title="Bam Boo Haus">
           <span class="uq-maps__search__results__item__icon">
-            <img src="/images/app-maps/light_purple_food-and-beverage.svg" />
+            <img src="/images/app-maps/light_purple_food-and-beverage.svg" aria-hidden="true" />
           </span>
           <span class="uq-maps__search__results__item__text">
             <span>Bam Boo Haus</span>
@@ -306,7 +302,7 @@ export const searching = () => `
       <li class="uq-maps__search__results__item">
         <a href="javascript:void(0)" title="Red Room Bar and Grill">
           <span class="uq-maps__search__results__item__icon">
-            <img src="/images/app-maps/light_purple_food-and-beverage.svg" />
+            <img src="/images/app-maps/light_purple_food-and-beverage.svg" aria-hidden="true" />
           </span>
           <span class="uq-maps__search__results__item__text">
             <span>Red Room Bar and Grill</span>
@@ -317,7 +313,7 @@ export const searching = () => `
       <li class="uq-maps__search__results__item">
         <a href="javascript:void(0)" title="Student microwave">
           <span class="uq-maps__search__results__item__icon">
-            <img src="/images/app-maps/light_purple_microwave.svg" />
+            <img src="/images/app-maps/light_purple_microwave.svg" aria-hidden="true" />
           </span>
           <span class="uq-maps__search__results__item__text">
             <span>Student microwave</span>

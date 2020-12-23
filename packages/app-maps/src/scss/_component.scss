@@ -242,7 +242,10 @@ $-result-icon-spacing: $-icon-spacing;
       }
     }
 
-    &__text-button {
+    &__text-button,
+    button.uq-maps__wayfinding-controls__text-button {
+      @extend %uq-maps__primary-text;
+
       appearance: none;
       cursor: pointer;
       width: 100%;
@@ -569,8 +572,8 @@ $-result-icon-spacing: $-icon-spacing;
     position: relative;
     display: inline-block;
     margin-right: core.$space-xs;
-    height: 8px;
-    width: 8px;
+    height: .5rem;
+    width: .5rem;
 
     &::before,
     &::after {
@@ -582,8 +585,8 @@ $-result-icon-spacing: $-icon-spacing;
       position: absolute;
       top: 0;
       left: 0;
-      height: 8px;
-      width: 8px;
+      height: .5rem;
+      width: .5rem;
     }
 
     &::before {

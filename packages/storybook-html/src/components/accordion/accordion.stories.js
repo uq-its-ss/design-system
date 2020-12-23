@@ -1,5 +1,8 @@
 import { useEffect } from '@storybook/client-api';
 
+// documentation
+import docs from './accordion.docs.mdx';
+
 // import styles
 import '@uqds/accordion/src/scss/_component.scss';
 
@@ -11,7 +14,7 @@ export default {
   parameters: {
     layout: "padded",
     docs: {
-      inlineStories: false
+      page: docs
     },
     previewTabs: {
       canvas: {hidden: false}
@@ -19,26 +22,26 @@ export default {
   }
 };
 
-export const base = () => {
+export const usingDivs = () => {
   useEffect(() => {
-    new accordion();  
+    new accordion(); 
   });
   return `
     <div class="accordion" aria-label="Accordion button group" role="presentation">
       <div class="accordion__item">
-        <button class="accordion__toggle" aria-controls="content-1" aria-expanded="false" id="accordion-title-1">Step 1</button>
-        <div class="accordion__content" aria-hidden="true" id="content-1" aria-labelledby="accordion-title-1">
+        <button class="accordion__toggle" aria-controls="content-1" aria-expanded="false" id="accordion-title-1">Title 1</button>
+        <div class="accordion__content" role="region" aria-hidden="true" id="content-1" aria-labelledby="accordion-title-1">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor eros dui, vitae iaculis leo ornare eget. Etiam tristique lobortis ligula non mattis. Ut dapibus libero neque, vel tincidunt nunc tempus eget.</p>
         </div>
       </div>
       <div class="accordion__item">
-        <button class="accordion__toggle" aria-controls="content-2" aria-expanded="false" id="accordion-title-2">Step 2</button>
+        <button class="accordion__toggle" aria-controls="content-2" aria-expanded="false" id="accordion-title-2">Title 2</button>
         <div class="accordion__content" role="region" aria-hidden="true" id="content-2" aria-labelledby="accordion-title-2">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor eros dui, vitae iaculis leo ornare eget. Etiam tristique lobortis ligula non mattis. Ut dapibus libero neque, vel tincidunt nunc tempus eget.</p>
         </div>
       </div>
       <div class="accordion__item">
-        <button class="accordion__toggle" aria-controls="content-3" aria-expanded="false" id="accordion-title-3">Step 3</button>
+        <button class="accordion__toggle" aria-controls="content-3" aria-expanded="false" id="accordion-title-3">Title 3</button>
         <div class="accordion__content" role="region" aria-hidden="true" id="content-3" aria-labelledby="accordion-title-3">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor eros dui, vitae iaculis leo ornare eget. Etiam tristique lobortis ligula non mattis. Ut dapibus libero neque, vel tincidunt nunc tempus eget.</p>
 
@@ -55,28 +58,25 @@ export const base = () => {
   `;
 };
 
-base.storyName = 'Default';
+usingDivs.storyName = 'Using divs';
 
-export const baseUsingLists = () => {
-  useEffect(() => {
-    new accordion();  
-  });
+export const usingLists = () => {
   return `
     <ul class="accordion" aria-label="Accordion button group" role="presentation">
       <li class="accordion__item">
-        <button class="accordion__toggle" aria-controls="content-11" aria-expanded="false" id="accordion-title-11">Step 1</button>
+        <button class="accordion__toggle" aria-controls="content-11" aria-expanded="false" id="accordion-title-11">Title 1</button>
         <div class="accordion__content" role="region" aria-hidden="true" id="content-11" aria-labelledby="accordion-title-11">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor eros dui, vitae iaculis leo ornare eget. Etiam tristique lobortis ligula non mattis. Ut dapibus libero neque, vel tincidunt nunc tempus eget.</p>
         </div>
       </li>
       <li class="accordion__item">
-        <button class="accordion__toggle" aria-controls="content-22" aria-expanded="false" id="accordion-title-22">Step 2</button>
+        <button class="accordion__toggle" aria-controls="content-22" aria-expanded="false" id="accordion-title-22">Title 2</button>
         <div class="accordion__content" role="region" aria-hidden="true" id="content-22" aria-labelledby="accordion-title-22">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor eros dui, vitae iaculis leo ornare eget. Etiam tristique lobortis ligula non mattis. Ut dapibus libero neque, vel tincidunt nunc tempus eget.</p>
         </div>
       </li>
       <li class="accordion__item">
-        <button class="accordion__toggle" aria-controls="content-33" aria-expanded="false" id="accordion-title-33">Step 3</button>
+        <button class="accordion__toggle" aria-controls="content-33" aria-expanded="false" id="accordion-title-33">Title 3</button>
         <div class="accordion__content" role="region" aria-hidden="true" id="content-33" aria-labelledby="accordion-title-33">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor eros dui, vitae iaculis leo ornare eget. Etiam <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor eros dui, vitae iaculis leo ornare eget. Etiam tristique lobortis ligula non mattis. Ut dapibus libero neque, vel tincidunt nunc tempus eget.</p>
 
@@ -93,28 +93,25 @@ export const baseUsingLists = () => {
   `;
 };
 
-baseUsingLists.storyName = 'Default using <ul> and <li>';
+usingLists.storyName = 'Using lists';
 
 export const shaded = () => {
-  useEffect(() => {
-    new accordion();  
-  });
   return `
     <div class="accordion accordion--shaded" aria-label="Accordion button group" role="presentation">
       <div class="accordion__item">
-        <button class="accordion__toggle" aria-controls="content-111" aria-expanded="false" id="accordion-title-111">Step 1</button>
+        <button class="accordion__toggle" aria-controls="content-111" aria-expanded="false" id="accordion-title-111">Title 1</button>
         <div class="accordion__content" role="region" aria-hidden="true" id="content-111" aria-labelledby="accordion-title-111">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor eros dui, vitae iaculis leo ornare eget. Etiam tristique lobortis ligula non mattis. Ut dapibus libero neque, vel tincidunt nunc tempus eget.</p>
         </div>
       </div>
       <div class="accordion__item">
-        <button class="accordion__toggle" aria-controls="content-222" aria-expanded="false" id="accordion-title-222">Step 2</button>
+        <button class="accordion__toggle" aria-controls="content-222" aria-expanded="false" id="accordion-title-222">Title 2</button>
         <div class="accordion__content" role="region" aria-hidden="true" id="content-222" aria-labelledby="accordion-title-222">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor eros dui, vitae iaculis leo ornare eget. Etiam tristique lobortis ligula non mattis. Ut dapibus libero neque, vel tincidunt nunc tempus eget.</p>
         </div>
       </div>
       <div class="accordion__item">
-        <button class="accordion__toggle" aria-controls="content-333" aria-expanded="false" id="accordion-title-333">Step 3</button>
+        <button class="accordion__toggle" aria-controls="content-333" aria-expanded="false" id="accordion-title-333">Title 3</button>
         <div class="accordion__content" role="region" aria-hidden="true" id="content-333" aria-labelledby="accordion-title-333">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor eros dui, vitae iaculis leo ornare eget. Etiam tristique lobortis ligula non mattis. Ut dapibus libero neque, vel tincidunt nunc tempus eget.</p>
         </div>
@@ -123,26 +120,23 @@ export const shaded = () => {
   `;
 }
 
-export const secondary = () => {
-  useEffect(() => {
-    new accordion();  
-  });
+export const smallTitle = () => {
   return `
     <div class="accordion accordion--secondary" aria-label="Accordion button group" role="presentation">
       <div class="accordion__item">
-        <button class="accordion__toggle" aria-controls="content-1111" aria-expanded="false" id="accordion-title-1111">Step 1</button>
+        <button class="accordion__toggle" aria-controls="content-1111" aria-expanded="false" id="accordion-title-1111">Title 1</button>
         <div class="accordion__content" role="region" aria-hidden="true" id="content-1111" aria-labelledby="accordion-title-1111">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor eros dui, vitae iaculis leo ornare eget. Etiam tristique lobortis ligula non mattis. Ut dapibus libero neque, vel tincidunt nunc tempus eget.</p>
         </div>
       </div>
       <div class="accordion__item">
-        <button class="accordion__toggle" aria-controls="content-2222" aria-expanded="false" id="accordion-title-2222">Step 2</button>
+        <button class="accordion__toggle" aria-controls="content-2222" aria-expanded="false" id="accordion-title-2222">Title 2</button>
         <div class="accordion__content" role="region" aria-hidden="true" id="content-2222" aria-labelledby="accordion-title-2222">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor eros dui, vitae iaculis leo ornare eget. Etiam tristique lobortis ligula non mattis. Ut dapibus libero neque, vel tincidunt nunc tempus eget.</p>
         </div>
       </div>
       <div class="accordion__item">
-        <button class="accordion__toggle" aria-controls="content-3333" aria-expanded="false" id="accordion-title-3333">Step 3</button>
+        <button class="accordion__toggle" aria-controls="content-3333" aria-expanded="false" id="accordion-title-3333">Title 3</button>
         <div class="accordion__content" role="region" aria-hidden="true" id="content-3333" aria-labelledby="accordion-title-3333">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor eros dui, vitae iaculis leo ornare eget. Etiam tristique lobortis ligula non mattis. Ut dapibus libero neque, vel tincidunt nunc tempus eget.</p>
         </div>
@@ -150,3 +144,5 @@ export const secondary = () => {
     </div>
   `;
 }
+
+smallTitle.storyName = 'Small title';

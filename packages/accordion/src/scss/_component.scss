@@ -32,6 +32,10 @@ $uq-icons: core.$uq-icons;
   }
 
   // Accordion title / toggle button.
+  h3 {
+    margin: core.$space-none;
+  }
+
   &__toggle {
     -moz-appearance: none;
     -webkit-appearance: none;

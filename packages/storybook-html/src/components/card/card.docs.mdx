@@ -1,0 +1,214 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import StatusBadge from '../../../.storybook/custom/components/StatusBadge';
+
+# Card
+
+<StatusBadge.Development />
+
+<a href="https://github.com/uq-its-ss/design-system/issues" class="uq-button uq-button--text" target="_blank">Check for open issues</a>
+
+## Overview
+
+The card component is used to provide a brief summary of content or a task, often with a link to more detail. Cards are frequently displayed alongside other cards to group related content or tasks.
+
+## Default example
+
+### Card default
+
+The most common and basic card used.
+
+<Canvas withSource="none">
+  <Story id="components-cards--card-default" />
+</Canvas>
+
+```html
+<div class="card">
+  <div class="card__header"></div>
+  <div class="card__body">
+    <a class="card__link" href="#">
+      <div class="card__image-container" style="background-image: url('https://campuses.uq.edu.au/files/9749/gatton-card2.jpg');"></div>
+    </a>
+    <div class="card__content">
+      <h3 class="card__title">
+        <a class="card__link" href="#">Title of item</a>
+      </h3>
+      <div class="card__summary">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+        tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+      </div>
+    </div>
+  </div>
+  <div class="card__footer"></div>
+</div>
+```
+
+## Variant examples
+
+### Card compact
+
+Slightly smaller version of a card. Typically used with just a title and no additional information. <code>card--compact</code> 
+
+<Canvas withSource="none">
+  <Story id="components-cards--card-compact" />
+</Canvas>
+
+```html
+<div class="card card--compact">
+  ...
+  ...
+</div>
+```
+
+### Card with action links
+
+Add action links to cards when multiple link options are required. Link for main title can also be removed. 
+
+<Canvas withSource="none">
+  <Story id="components-cards--card-with-links" />
+</Canvas>
+
+```html
+<div class="card">
+  ...
+  ...
+  <div class="card__footer">
+    <div class="uq-grid">
+      <div class="uq-grid__col uq-grid__col--3">
+        <a class="card__link" href="#">Action link A</a>
+      </div>
+      <div class="uq-grid__col uq-grid__col--3">
+        <a class="card__link" href="#">Action link B</a>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+### Card with additional text
+
+Additional text can also be added to cards. this includes <code>card-date</code> and <code>card-location</code>
+
+<Canvas withSource="none">
+  <Story id="components-cards--card-with-additional-text" />
+</Canvas>
+
+```html
+<div class="card">
+  ...
+  <div class="card__body">
+    ...
+    <div class="card__content">
+      <h3 class="card__title">
+        <a class="card__link" href="#">Title of item</a>
+      </h3>
+      <div class="card__date">Sunday 16 August, 2015</div>
+      <div class="card__location">
+        <a class="card__link" href="#">Gatton campus</a>
+      </div>
+      <div class="card__summary">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+        tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+      </div>
+    </div>
+  </div>
+  ...
+</div>
+```
+
+### Overlay card square
+
+Square cards are more compact and ,  
+Add the class <code>card--square</code> to the Card wrapper. 
+
+<Canvas withSource="none">
+  <Story id="components-cards--overlay-card-square" />
+</Canvas>
+
+```html
+<a class="card__primary-link" href="https://campuses.uq.edu.au/st-lucia">
+  <div class="card card--square card--background-image" style="background-image: url('https://campuses.uq.edu.au/files/9492/stlucia-card.jpg')">
+    ...
+    <div class="card__body">
+      <div class="card__content">
+        <div class="card__title">Title of item</div>
+        ...
+      </div>
+    </div>
+  </div>
+</a>
+```
+
+### Overlay card portrait
+
+Allow more vertical coverage for greater image impact. <code>card--portrait</code>
+
+<Canvas withSource="none">
+  <Story id="components-cards--overlay-card-portrait" />
+</Canvas>
+
+```html
+<div class="card card--portrait card--background-image" style="background-image: url('https://campuses.uq.edu.au/files/9749/gatton-card2.jpg')">
+  ...
+  ...
+</div>
+```
+
+### Overlay card landscape
+
+Allow more horizontal coverage for greater image impact. <code>card--landscape</code>
+The width does restrict the number of cards that can be displayed in the same row. 
+
+<Canvas withSource="none">
+  <Story id="components-cards--overlay-card-landscape" />
+</Canvas>
+
+```html
+<div class="card card--landscape card--background-image" style="background-image: url('https://campuses.uq.edu.au/files/9749/gatton-card2.jpg')">
+  ...
+  ...
+</div>
+```
+
+### Overlay card with link
+
+Add an action link to change point of interaction. 
+
+<Canvas withSource="none">
+  <Story id="components-cards--overlay-card-with-link" />
+</Canvas>
+
+```html
+<div class="card card--square card--background-image" style="background-image: url('https://campuses.uq.edu.au/files/9749/gatton-card2.jpg')">
+  ...
+  ...
+  <div class="card__footer">
+    <a class="card__link" href="#">Action link</a>
+  </div>
+</div>
+```
+
+### Overlay card with additional text
+
+Additional text can also be added to cards. this includes <code>card-date</code> and <code>card-location</code>
+
+<Canvas withSource="none">
+  <Story id="components-cards--overlay-card-with-additional-text" />
+</Canvas>
+
+```html
+<div class="card card--square card--background-image" style="background-image: url('https://campuses.uq.edu.au/files/9749/gatton-card2.jpg')">
+  ...
+  <div class="card__body">
+    <div class="card__content">
+      <h3 class="card__title">
+        <a class="card__link" href="#">Title of item</a>
+      </h3>
+      <div class="card__date">
+        <a class="card__link" href="#">Sunday 16 August, 2015</a>
+      </div>
+      <div class="card__location">
+        <a class="card__link" href="#">Gatton campus</a>
+      </div>
+    </div>
+  </div>
+  ...
+</div>
+```

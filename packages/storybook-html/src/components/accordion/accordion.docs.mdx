@@ -1,0 +1,115 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import StatusBadge from '../../../.storybook/custom/components/StatusBadge';
+
+# Accordion
+
+<StatusBadge.Development />
+
+<a href="https://github.com/uq-its-ss/design-system/issues" class="uq-button uq-button--text" target="_blank">Check for open issues</a>
+
+## Overview
+
+An accordion is a vertically stacked group of titles that on interaction expand or collapse associated content, helping users to see more of the content if needed.
+
+Accordions can be implemented using `<div>` or `<ul> <li>` lists. The default example uses divs. 
+
+## Default example
+
+Use the default accordion example if there is significant amount of content.
+
+### Using divs
+
+<Canvas withSource="none">
+  <Story id="components-accordion--using-divs" />
+</Canvas>
+
+```html
+<div class="accordion" aria-label="Accordion button group">
+    <div class="accordion__item">
+      <button class="accordion__toggle" aria-controls="content-1" aria-expanded="false" id="accordion-title-1">Title 1</button>
+      <div class="accordion__content" aria-hidden="true" id="content-1" aria-labelledby="accordion-title-1">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor eros dui, vitae iaculis leo ornare eget. Etiam tristique lobortis ligula non mattis. Ut dapibus libero neque, vel tincidunt nunc tempus eget.</p>
+      </div>
+    </div>
+    ...
+    ...
+</div>
+```
+
+## Variant examples
+
+### Using lists
+
+Use accordions using lists if content is less and when the semantics of a list serves better with assistive technologies like screen readers.
+
+<Canvas withSource="none">
+  <Story id="components-accordion--using-lists" />
+</Canvas>
+
+```html
+<ul class="accordion" aria-label="Accordion button group">
+    <li class="accordion__item">
+      <button class="accordion__toggle" aria-controls="content-11" aria-expanded="false" id="accordion-title-11">Title 1</button>
+      <div class="accordion__content" role="region" aria-hidden="true" id="content-11" aria-labelledby="accordion-title-11">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor eros dui, vitae iaculis leo ornare eget. Etiam tristique lobortis ligula non mattis. Ut dapibus libero neque, vel tincidunt nunc tempus eget.</p>
+      </div>
+    </li>
+    ...
+    ...
+</ul>
+```
+
+### Shaded
+
+Use shaded accordion when the title area needs to be shaded light grey when collapsed.
+
+<Canvas withSource="none">
+  <Story id="components-accordion--shaded" />
+</Canvas>
+
+```html
+<div class="accordion accordion--shaded" aria-label="Accordion button group">
+    <div class="accordion__item">
+      <button class="accordion__toggle" aria-controls="content-111" aria-expanded="false" id="accordion-title-111">Title 1</button>
+      <div class="accordion__content" role="region" aria-hidden="true" id="content-111" aria-labelledby="accordion-title-111">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor eros dui, vitae iaculis leo ornare eget. Etiam tristique lobortis ligula non mattis. Ut dapibus libero neque, vel tincidunt nunc tempus eget.</p>
+      </div>
+    </div>
+    ...
+    ...
+</div>
+```
+
+### Small title
+
+Use small title accordion example for smaller title font sizes.
+
+<Canvas withSource="none">
+  <Story id="components-accordion--small-title" />
+</Canvas>
+
+```html
+<div class="accordion accordion--secondary" aria-label="Accordion button group">
+    <div class="accordion__item">
+      <button class="accordion__toggle" aria-controls="content-1111" aria-expanded="false" id="accordion-title-1111">Title 1</button>
+      <div class="accordion__content" role="region" aria-hidden="true" id="content-1111" aria-labelledby="accordion-title-1111">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor eros dui, vitae iaculis leo ornare eget. Etiam tristique lobortis ligula non mattis. Ut dapibus libero neque, vel tincidunt nunc tempus eget.</p>
+      </div>
+    </div>
+    ...
+    ...
+</div>
+```
+
+## How and when to use
+
+Accordions are more suitable when people need only a few key pieces of content on a single page. By hiding most of the content, users can spend their time more efficiently focused on the few topics that matter.
+
+## Accessibility
+
+- The title of each accordion item is contained in a button element.
+- If the accordion content panel associated with an accordion title is visible, the button element has aria-expanded set to true. If the content panel is not visible, aria-expanded is set to false.
+- The accordion button element has aria-controls set to the ID of the element containing the accordion content panel.
+- Optionally, each element that serves as a container for panel content has `role="region"` and `aria-labelledby` with a value that refers to the button that controls display of the panel.
+  - Avoid using role region in circumstances that create landmark region proliferation, e.g., in an accordion that contains more than approximately 6 panels that can be expanded at the same time.
+  - Role region is especially helpful to the perception of structure by screen reader users when panels contain heading elements or a nested accordion.

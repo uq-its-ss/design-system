@@ -11,7 +11,11 @@ import StatusBadge from '../../../.storybook/custom/components/StatusBadge';
 
 An accordion is a vertically stacked group of titles that on interaction expand or collapse associated content, helping users to see more of the content if needed.
 
+Accordions can be implemented using `<div>` or `<ul> <li>` lists. The default example uses divs. 
+
 ## Default example
+
+Use the default accordion example if there is significant amount of content.
 
 ### Using divs
 
@@ -36,6 +40,8 @@ An accordion is a vertically stacked group of titles that on interaction expand 
 
 ### Using lists
 
+Use accordions using lists if content is less and when the semantics of a list serves better with assistive technologies like screen readers.
+
 <Canvas withSource="none">
   <Story id="components-accordion--using-lists" />
 </Canvas>
@@ -54,6 +60,8 @@ An accordion is a vertically stacked group of titles that on interaction expand 
 ```
 
 ### Shaded
+
+Use shaded accordion when the title area needs to be shaded light grey when collapsed.
 
 <Canvas withSource="none">
   <Story id="components-accordion--shaded" />
@@ -74,6 +82,8 @@ An accordion is a vertically stacked group of titles that on interaction expand 
 
 ### Small title
 
+Use small title accordion example for smaller title font sizes.
+
 <Canvas withSource="none">
   <Story id="components-accordion--small-title" />
 </Canvas>
@@ -93,12 +103,7 @@ An accordion is a vertically stacked group of titles that on interaction expand 
 
 ## How and when to use
 
-Accordions can be implemented using `<div>` or `<ul> <li>` lists. The default example uses divs. 
-
-- Use the default accordion example if there is significant amount of content.
-- Use accordions using lists if content is less and when the semantics of a list serves better with assistive technologies like screen readers.
-- Use shaded accordion when the title area needs to be shaded light grey when collapsed.
-- Use secondary accordion example for smaller title font sizes.
+Accordions are more suitable when people need only a few key pieces of content on a single page. By hiding most of the content, users can spend their time more efficiently focused on the few topics that matter.
 
 ## Accessibility
 

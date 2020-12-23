@@ -15,6 +15,8 @@ The card component is used to provide a brief summary of content or a task, ofte
 
 ### Card default
 
+The most common and basic card used.
+
 <Canvas withSource="none">
   <Story id="components-cards--card-default" />
 </Canvas>
@@ -41,7 +43,24 @@ The card component is used to provide a brief summary of content or a task, ofte
 
 ## Variant examples
 
-### Card with links
+### Card compact
+
+Slightly smaller version of a card. Typically used with just a title and no additional information. <code>card--compact</code> 
+
+<Canvas withSource="none">
+  <Story id="components-cards--card-compact" />
+</Canvas>
+
+```html
+<div class="card card--compact">
+  ...
+  ...
+</div>
+```
+
+### Card with action links
+
+Add action links to cards when multiple link options are required. Link for main title can also be removed. 
 
 <Canvas withSource="none">
   <Story id="components-cards--card-with-links" />
@@ -65,6 +84,8 @@ The card component is used to provide a brief summary of content or a task, ofte
 ```
 
 ### Card with additional text
+
+Additional text can also be added to cards. this includes <code>card-date</code> and <code>card-location</code>
 
 <Canvas withSource="none">
   <Story id="components-cards--card-with-additional-text" />
@@ -94,6 +115,9 @@ The card component is used to provide a brief summary of content or a task, ofte
 
 ### Overlay card square
 
+Square cards are more compact and ,  
+Add the class <code>card--square</code> to the Card wrapper. 
+
 <Canvas withSource="none">
   <Story id="components-cards--overlay-card-square" />
 </Canvas>
@@ -114,6 +138,8 @@ The card component is used to provide a brief summary of content or a task, ofte
 
 ### Overlay card portrait
 
+Allow more vertical coverage for greater image impact. <code>card--portrait</code>
+
 <Canvas withSource="none">
   <Story id="components-cards--overlay-card-portrait" />
 </Canvas>
@@ -127,6 +153,9 @@ The card component is used to provide a brief summary of content or a task, ofte
 
 ### Overlay card landscape
 
+Allow more horizontal coverage for greater image impact. <code>card--landscape</code>
+The width does restrict the number of cards that can be displayed in the same row. 
+
 <Canvas withSource="none">
   <Story id="components-cards--overlay-card-landscape" />
 </Canvas>
@@ -138,20 +167,9 @@ The card component is used to provide a brief summary of content or a task, ofte
 </div>
 ```
 
-### Overlay card compact
-
-<Canvas withSource="none">
-  <Story id="components-cards--overlay-card-compact" />
-</Canvas>
-
-```html
-<div class="card card--compact card--background-image" style="background-image: url('https://campuses.uq.edu.au/files/9749/gatton-card2.jpg')">
-  ...
-  ...
-</div>
-```
-
 ### Overlay card with link
+
+Add an action link to change point of interaction. 
 
 <Canvas withSource="none">
   <Story id="components-cards--overlay-card-with-link" />
@@ -168,6 +186,8 @@ The card component is used to provide a brief summary of content or a task, ofte
 ```
 
 ### Overlay card with additional text
+
+Additional text can also be added to cards. this includes <code>card-date</code> and <code>card-location</code>
 
 <Canvas withSource="none">
   <Story id="components-cards--overlay-card-with-additional-text" />

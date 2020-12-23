@@ -83,6 +83,30 @@ export const cardDefault = () => {
 
 cardDefault.storyName = 'Card Default';
 
+export const CardCompact = () => {
+  return `
+  <div class="uq-grid">
+    <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-4">
+      <div class="card card--compact">
+      <div class="card__body">
+        <a class="card__link" href="#">
+          <div class="card__image-container" style="background-image: url('https://campuses.uq.edu.au/files/9749/gatton-card2.jpg');"></div>
+        </a>
+        <div class="card__content">
+          <h3 class="card__title">
+            <a class="card__link" href="#">Title of item</a>
+          </h3>
+        </div>
+      </div>
+    </div>    
+    </div>
+  </div>
+  `;
+};
+
+CardCompact.storyName = 'Card compact';
+
+
 export const cardWithLinks = () => {
   return `
   <div class="uq-grid">
@@ -95,7 +119,7 @@ export const cardWithLinks = () => {
           </a>
           <div class="card__content">
             <h3 class="card__title">
-              <a class="card__link" href="#">Title of item</a>
+              Title of item
             </h3>
             <div class="card__summary">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
               tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
@@ -215,27 +239,6 @@ export const overlayCardLandscape = () => {
 };
 
 overlayCardLandscape.storyName = 'Overlay card landscape';
-
-export const overlayCardCompact = () => {
-  return `
-  <div class="uq-grid">
-    <div class="uq-grid__col uq-grid__col--6">
-      <div class="card card--compact card--background-image" style="background-image: url('https://campuses.uq.edu.au/files/9749/gatton-card2.jpg')">
-        <div class="card__header"></div>
-        <div class="card__body">
-          <div class="card__content">
-            <h3 class="card__title">
-              <a class="card__link" href="#">Title of item</a>
-            </h3>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  `;
-};
-
-overlayCardCompact.storyName = 'Overlay card compact';
 
 export const overlayCardWithLink = () => {
   return `

@@ -101,7 +101,7 @@ $fa-line-height-base: core.$fa-line-height-base;
     font-size: 1.6rem;
     font-weight: 400;
     line-height: 1.2;
-    margin-bottom: core.$space-sm;
+    margin: core.$space-sm core.$space-none;
     transition: all ease .35s;
 
     // Stop system generated divs forcing link to behave as a block element.

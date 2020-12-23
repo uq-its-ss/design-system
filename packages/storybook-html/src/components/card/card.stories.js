@@ -28,9 +28,9 @@ export const cardDefault = () => {
             <div class="card__image-container" style="background-image: url('https://campuses.uq.edu.au/files/9749/gatton-card2.jpg');"></div>
           </a>
           <div class="card__content">
-            <h2 class="card__title">
+            <h3 class="card__title">
               <a class="card__link" href="#">Title of item</a>
-            </h2>
+            </h3>
             <div class="card__summary">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
               tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
             </div>
@@ -47,9 +47,9 @@ export const cardDefault = () => {
             <div class="card__image-container" style="background-image: url('https://campuses.uq.edu.au/files/9749/gatton-card2.jpg');"></div>
           </a>
           <div class="card__content">
-            <h2 class="card__title">
+            <h3 class="card__title">
               <a class="card__link" href="#">Title of item</a>
-            </h2>
+            </h3>
             <div class="card__summary">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
               tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
             </div>
@@ -66,9 +66,9 @@ export const cardDefault = () => {
             <div class="card__image-container" style="background-image: url('https://campuses.uq.edu.au/files/9749/gatton-card2.jpg');"></div>
           </a>
           <div class="card__content">
-            <h2 class="card__title">
+            <h3 class="card__title">
               <a class="card__link" href="#">Title of item</a>
-            </h2>
+            </h3>
             <div class="card__summary">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
               tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
             </div>
@@ -94,9 +94,9 @@ export const cardWithLinks = () => {
             <div class="card__image-container" style="background-image: url('https://campuses.uq.edu.au/files/9749/gatton-card2.jpg')"></div>
           </a>
           <div class="card__content">
-            <h2 class="card__title">
+            <h3 class="card__title">
               <a class="card__link" href="#">Title of item</a>
-            </h2>
+            </h3>
             <div class="card__summary">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
               tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
             </div>
@@ -131,9 +131,9 @@ export const cardWithAdditionalText = () => {
             <div class="card__image-container" style="background-image: url('https://campuses.uq.edu.au/files/9749/gatton-card2.jpg');"></div>
           </a>
           <div class="card__content">
-            <h2 class="card__title">
+            <h3 class="card__title">
               <a class="card__link" href="#">Title of item</a>
-            </h2>
+            </h3>
             <div class="card__date">Sunday 16 August, 2015</div>
             <div class="card__location">
               <a class="card__link" href="#">Gatton campus</a>
@@ -182,9 +182,9 @@ export const overlayCardPortrait = () => {
         <div class="card__header"></div>
         <div class="card__body">
           <div class="card__content">
-            <h2 class="card__title">
+            <h3 class="card__title">
               <a class="card__link" href="#">Title of item</a>
-            </h2>
+            </h3>
           </div>
         </div>
       </div>
@@ -203,9 +203,9 @@ export const overlayCardLandscape = () => {
         <div class="card__header"></div>
         <div class="card__body">
           <div class="card__content">
-            <h2 class="card__title">
+            <h3 class="card__title">
               <a class="card__link" href="#">Title of item</a>
-            </h2>
+            </h3>
           </div>
         </div>
       </div>
@@ -224,9 +224,9 @@ export const overlayCardCompact = () => {
         <div class="card__header"></div>
         <div class="card__body">
           <div class="card__content">
-            <h2 class="card__title">
+            <h3 class="card__title">
               <a class="card__link" href="#">Title of item</a>
-            </h2>
+            </h3>
           </div>
         </div>
       </div>
@@ -245,9 +245,9 @@ export const overlayCardWithLink = () => {
         <div class="card__header"></div>
         <div class="card__body">
           <div class="card__content">
-            <h2 class="card__title">
+            <h3 class="card__title">
               <a class="card__link" href="#">Title of item</a>
-            </h2>
+            </h3>
           </div>
         </div>
         <div class="card__footer">
@@ -269,9 +269,9 @@ export const overlayCardWithAdditionalText = () => {
         <div class="card__header"></div>
         <div class="card__body">
           <div class="card__content">
-            <h2 class="card__title">
+            <h3 class="card__title">
               <a class="card__link" href="#">Title of item</a>
-            </h2>
+            </h3>
             <div class="card__date">
               <a class="card__link" href="#">Sunday 16 August, 2015</a>
             </div>

@@ -1,0 +1,264 @@
+import { Meta, Story, Canvas, Preview } from '@storybook/addon-docs/blocks';
+import './_fonts.scss';
+
+<Meta title="Core/Typography/Applying typography" />
+
+# Applying Typography
+
+The most common use cases have already been setup in the basic HTML elements and components. Follow existing examples or reference the charts below when configuring new websites and components.
+
+## Font choices
+
+How we apply fonts based on the UQ brand guidelines. 
+
+export const FontUsage = () => `
+<table className="uqds-table uqds-table--card">
+  <thead>
+    <tr>
+      <th>Font</th>
+      <th>Usage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Roboto</td>
+      <td>Used for headings and body text. Roboto is the primary font used on websites and applications</td>
+    </tr>
+    <tr>
+      <td>Merriweather</td>
+      <td>Merriweather can be used for pull out quotes and to break up long headings. <strong>Not to be used for body text</strong>.</td>
+    </tr>
+    <tr>
+      <td>Montserrat</td>
+      <td>Montserrat is used for the main page (banner) heading. <strong>Not to be used for body text</strong>.</td>
+    </tr>
+    <tr>
+      <td>Monospace</td>
+      <td>The monospace font stack is often applied to special HTML tags typically used to distinguish code or data from natural-language text.</td>
+    </tr>
+  </tbody>
+  </table>
+`;
+
+<Story name="Font Usage">{FontUsage.bind({})}</Story>
+
+- The font weights used are Regular (400) and Medium (500).
+- Italic style should be used when you need to emphasize certain words in a sentence or a statement.
+- Use sentence case/minimal capitalisation in headings and subheadings. Use a capital for the first letter of the first word, with subsequent words in lower case.
+- All-caps text — meaning text with all the letters capitalised — is best used sparingly.
+- Reference the offical [Written style guide](https://marketing-communication.uq.edu.au/written-style-guide) for detailed instructions for writing content.  
+- Ellipsis, use the Ellipsis to indicate incompleteness. Truncated text.
+
+## Default typography
+
+export const TypographyUsage = () => `
+<table className="uqds-table uqds-table--card">
+  <thead>
+    <tr className="uqds-table__mobile-heading">
+      <th className="uqds-table__heading">Element</th>
+      <th className="uqds-table__heading">Font</th>
+      <th className="uqds-table__heading">Size</th>
+      <th className="uqds-table__heading">Line-height</th>
+      <th className="uqds-table__heading">Weight</th>
+      <th className="uqds-table__heading">Colour</th>
+      <th className="uqds-table__heading">Usage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr className="uqds-table__row">
+      <td className="uqds-table__item"><h1>H1 header</h1></td>
+      <td className="uqds-table__item" data-title="Font:">Montserrat</td>
+      <td className="uqds-table__item" data-title="Size:"><code>$font-size-xxxxl</code></td>
+      <td className="uqds-table__item" data-title="Line-height:">1.4</td>
+      <td className="uqds-table__item" data-title="Weight:">Medium, 500</td>
+      <td className="uqds-table__item" data-title="Colour:"><code>$uq-purple</code></td>
+      <td className="uqds-table__item" data-title="Usage:">Page Header</td>
+    </tr>
+    <tr className="uqds-table__row">
+      <td className="uqds-table__item"><h2>H2 header</h2></td>
+      <td className="uqds-table__item" data- stitle="Font:">Roboto</td>
+      <td className="uqds-table__item" data-title="Size:"><code>$font-size-xxxl</code></td>
+      <td className="uqds-table__item" data-title="Line-height:">1.4</td>
+      <td className="uqds-table__item" data-title="Weight:">Medium, 500</td>
+      <td className="uqds-table__item" data-title="Colour:"><code>$uq-purple</code></td>
+      <td className="uqds-table__item" data-title="Usage:">Header</td>
+    </tr>
+    <tr className="uqds-table__row">
+      <td className="uqds-table__item"><h3>H3 header</h3></td>
+      <td className="uqds-table__item" data-title="Font:">Roboto</td>
+      <td className="uqds-table__item" data-title="Size:"><code>$font-size-xxl</code></td>
+      <td className="uqds-table__item" data-title="Line-height:">1.4</td>
+      <td className="uqds-table__item" data-title="Weight:">Medium, 500</td>
+      <td className="uqds-table__item" data-title="Colour:"><code>$uq-purple</code></td>
+      <td className="uqds-table__item" data-title="Usage:">Header</td>
+    </tr>
+    <tr className="uqds-table__row">
+      <td className="uqds-table__item"><p>Paragraph text</p></td>
+      <td className="uqds-table__item" data-title="Font:">Roboto</td>
+      <td className="uqds-table__item" data-title="Size:"><code>$font-size-m</code></td>
+      <td className="uqds-table__item" data-title="Line-height:">1.5</td>
+      <td className="uqds-table__item" data-title="Weight:">Regular, 400</td>
+      <td className="uqds-table__item" data-title="Colour:"><code>$text</code></td>
+      <td className="uqds-table__item" data-title="Usage:">Deafult text<br /> Limit line length to 70–80 characters.<br /> 
+Font size should be a minimum of 16px.</td>
+    </tr>
+    <tr className="uqds-table__row">
+      <td className="uqds-table__item"><strong>Strong text</strong></td>
+      <td className="uqds-table__item" data-title="Font:">Roboto</td>
+      <td className="uqds-table__item" data-title="Size:"><code>$font-size-m</code></td>
+      <td className="uqds-table__item" data-title="Line-height:">1.5</td>
+      <td className="uqds-table__item" data-title="Weight:">Medium, 500</td>
+      <td className="uqds-table__item" data-title="Colour:"><code>$text</code></td>
+      <td className="uqds-table__item" data-title="Usage:">Text bold</td>
+    </tr>
+    <tr className="uqds-table__row">
+      <td className="uqds-table__item"><em>Emphasis text</em></td>
+      <td className="uqds-table__item" data-title="Font:">Roboto</td>
+      <td className="uqds-table__item" data-title="Size:"><code>$font-size-m</code></td>
+      <td className="uqds-table__item" data-title="Line-height:">1.5</td>
+      <td className="uqds-table__item" data-title="Weight:">Regular 400</td>
+      <td className="uqds-table__item" data-title="Colour:"><code>$text</code></td>
+      <td className="uqds-table__item" data-title="Usage:">Emphasis</td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+<Story name="Typogrphy Usage">{TypographyUsage.bind({})}</Story>
+
+## Example usage
+
+export const ExampleType = () => `
+    <div class="uqds-body__container">
+      <h1>Heading level 1 (h1)</h1>
+      <p><strong>Strong text</strong> <em>Emphasis text</em> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse interdum nulla vitae consectetur interdum. Quisque sed nibh in lorem malesuada egestas. Integer varius orci in ligula mollis sodales. Sed dapibus rutrum finibus. Vestibulum tellus velit, dictum eu cursus at, luctus condimentum leo. Vestibulum malesuada consectetur sem, nec fermentum nibh molestie at. Pellentesque posuere enim leo, in blandit sem interdum ut. Duis lobortis lectus vitae mi pellentesque sagittis. Fusce eget eros sit amet enim placerat commodo quis id nisl.</p>
+      <h2>Heading level 2 (h2)</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse interdum nulla vitae consectetur interdum. Quisque sed nibh in lorem malesuada egestas. Integer varius orci in ligula mollis sodales. Sed dapibus rutrum finibus. Vestibulum tellus velit, dictum eu cursus at, luctus condimentum leo. Vestibulum malesuada consectetur sem, nec fermentum nibh molestie at. Pellentesque posuere enim leo, in blandit sem interdum ut. Duis lobortis lectus vitae mi pellentesque sagittis. Fusce eget eros sit amet enim placerat commodo quis id nisl.</p>
+      <blockquote>Fusce vitae tortor consequat, consectetur metus id, ultricies risus. Nulla pharetra ornare sem, at placerat nisi sollicitudin bibendum. Nulla in pulvinar augue. Etiam tincidunt leo egestas congue congue. Phasellus feugiat mattis finibus. Duis bibendum pharetra risus, non aliquet augue consequat sit amet. Vestibulum sit amet enim fermentum, fringilla massa nec, facilisis augue.</blockquote>
+      <h3>Heading level 3 (h3)</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse interdum nulla vitae consectetur interdum. Quisque sed nibh in lorem malesuada egestas. Integer varius orci in ligula mollis sodales. Sed dapibus rutrum finibus. Vestibulum tellus velit, dictum eu cursus at, luctus condimentum leo. Vestibulum malesuada consectetur sem, nec fermentum nibh molestie at. Pellentesque posuere enim leo, in blandit sem interdum ut. Duis lobortis lectus vitae mi pellentesque sagittis. Fusce eget eros sit amet enim placerat commodo quis id nisl.</p>
+    </div>
+`;
+
+<Story name="Text block">{ExampleType.bind({})}</Story>
+
+## Inline text elements
+
+Use the HTML inline text elements to define the meaning, structure, or style of a word, line, or any arbitrary piece of text.
+Reference: [MDN HTML elements reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
+
+export const InlineElements = () => `
+<table>
+  <thead>
+    <tr>
+      <th>Example</th>
+      <th>Element</th>
+      <th>Desription</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="#">link text</a></td>
+      <td><code>&lt;a  href="#"&gt;&lt;/a&gt;</code></td>
+      <td>Creates a hyperlink to web pages, files, email addresses, locations in the same page, or anything else a URL can address.</td>
+    </tr>
+    <tr>
+      <td><abbr title="The University of Queensland">UQ</abbr></td>
+      <td><code>&lt;abbr title="something"&gt;&lt;/abbr&gt;</code></td>
+      <td>an abbreviation or acronym; the optional title attribute can provide an expansion or description for the abbreviation.</td>
+    </tr>
+    <tr>
+      <td><b>Bold Text</b></td>
+      <td><code>&lt;b&gt;&lt;/b&gt;</code></td>
+      <td>Used to draw the reader's attention to the element's contents, which are not otherwise granted special importance.</td>
+    </tr>
+    <tr>
+      <td>Text<br> Break</td>
+      <td><code>&lt;br&gt;</code></td>
+      <td>produces a line break in text (carriage-return). It is useful for writing a poem or an address, where the division of lines is significant.</td>
+    </tr>
+    <tr>
+      <td><cite>UQ Design system</cite></td>
+      <td><code>&lt;cite&gt;&lt;/cite&gt;</code></td>
+      <td>Used to describe a reference to a cited creative work, and must include the title of that work.</td>
+    </tr>
+    <tr>
+      <td><code>Some code</code></td>
+      <td><code>&lt;code&gt;&lt;/code&gt;</code></td>
+      <td>Displays its contents styled in a fashion intended to indicate that the text is a short fragment of computer code.</td>
+    </tr>
+    <tr>
+      <td><dfn title="Humanities and Social Sciences">HASS</dfn></td>
+      <td><code>&lt;dfn title="something"&gt;&lt;/dfn&gt;</code></td>
+      <td>Used to indicate the term being defined within the context of a definition phrase or sentence.</td>
+    </tr>
+    <tr>
+      <td><em>Emphasis</em></td>
+      <td><code>&lt;em&gt;&lt;/em&gt;</code></td>
+      <td>Marks text that has stress emphasis. The <em> element can be nested, with each level of nesting indicating a greater degree of emphasis.</td>
+    </tr>
+    <tr>
+      <td><kbd>Shift</kbd> + <kbd>S</kbd></td>
+      <td><coded>&lt;kbd&gt;&lt;/kbd&gt;</code></td>
+      <td>Represents a span of inline text denoting textual user input from a keyboard, voice input, or any other text entry device.</td>
+    </tr>
+    <tr>
+      <td><mark>Marked text</mark></td>
+      <td><coded>&lt;mark&gt;&lt;/mark&gt;</code></td>
+      <td>Text which is marked or highlighted for reference or notation purposes, due to the marked passage's relevance or importance in the enclosing context.</td>
+    </tr>
+    <tr>
+      <td><q>Inline quotation</q></td>
+      <td><coded>&lt;q&gt;&lt;/q&gt;</code></td>
+      <td>indicates that the enclosed text is a short inline quotation. Most modern browsers implement this by surrounding the text in quotation marks.</td>
+    </tr>
+    <tr>
+      <td><s>Strikethrough</s></td>
+      <td><coded>&lt;s&gt;&lt;/s&gt;</code></td>
+      <td>renders text with a strikethrough, or a line through it. Use the <code>&lt;s&gt;</code> element to represent things that are no longer relevant or no longer accurate. However, <code>&lt;s&gt;</code> is not appropriate when indicating document edits; for that, use the del and ins elements, as appropriate.</td>
+    </tr>
+    <tr>
+      <td><samp>Output from a computer program</samp></td>
+      <td><coded>&lt;samp&gt;&lt;/samp&gt;</code></td>
+      <td>Is used to enclose inline text which represents sample (or quoted) output from a computer program.</td>
+    </tr>
+    <tr>
+      <td><small>Small text</small></td>
+      <td><coded>&lt;small&gt;&lt;/small&gt;</code></td>
+      <td>Represents side-comments and small print, like copyright and legal text, independent of its styled presentation. By default, it renders text within it one font-size smaller.</td>
+    </tr>
+    <tr>
+      <td><strong>Strong text</strong></td>
+      <td><coded>&lt;strong&gt;&lt;/strong&gt;</code></td
+      <td>Indicates that its contents have strong importance, seriousness, or urgency.</td>
+    </tr>
+    <tr>
+      <td><sub>Subscript text</sub></td>
+      <td><coded>&lt;sub&gt;&lt;/sub&gt;</code></td>
+      <td>Specifies inline text which should be displayed as subscript for solely typographical reasons.</td>
+    </tr>
+    <tr>
+      <td><sup>Superscript text</sup></td>
+      <td><coded>&lt;sup&gt;&lt;/sup&gt;</code></td>
+      <td>Specifies inline text which is to be displayed as superscript for solely typographical reasons.</td>
+    </tr>
+    <tr>
+      <td><time>July 7</time></td>
+      <td><coded>&lt;time datetime="2018-07-07"&gt;&lt;/time&gt;</code></td>
+      <td>Represents a specific period in time.</td>
+    </tr>
+    <tr>
+      <td><u>Unarticulated Annotation</u></td>
+      <td><coded>&lt;u&gt;&lt;/u&gt;</code></td>
+      <td>Represents a span of inline text which should be rendered in a way that indicates that it has a non-textual annotation.</td>
+    </tr>
+    <tr>
+      <td><var>Variable text</var></td>
+      <td><coded>&lt;var&gt;&lt;/var&gt;</code></td>
+      <td>represents the name of a variable in a mathematical expression or a programming context.</td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+<Story name="Inline Elements">{InlineElements.bind({})}</Story>

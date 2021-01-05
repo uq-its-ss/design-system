@@ -1,0 +1,79 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import StatusBadge from '../../../.storybook/custom/components/StatusBadge';
+
+<Meta title="Deliverables/UQ Maps/Overview" />
+
+# UQ Maps
+<StatusBadge.Development />
+
+## Overview
+
+These are temporary installation & usage instructions; intended only for the
+*UQ Maps* project team.
+
+## Getting started
+
+1. [🔒 Download `@uqds/app-maps`][1]  
+   **If you want to use the Sass files,** you will also need these package
+   dependencies:
+   - [🔒 Download `@uqds/core`][5]
+   - [🔒 Download `@uqds/body`][6]
+     
+   > Downloads restricted to ITS-ADS staff only.
+2. (Optional) Add the package as a JavaScript module dependency into your
+   project. Unfortunately, it's not as simple as running `npm i @uqds/app-maps`
+   *yet*.  
+   [TODO: package.json instructions here...]
+
+## Using HTML templates
+
+Refer to the documentation for each component/pattern to see examples that you
+can copy and modify. Then, you need to load the stylesheets (CSS or Sass) to
+style the elements.
+
+## Using CSS files
+
+If you've added the package as a module into your project as mentioned above,
+you can import and use the css files as you would normally with a module bundler
+of your choice.
+
+### Without module bundling
+
+Find and manually link the CSS file from the `dist` folder into your project.
+
+## Using SCSS files
+
+### Dependencies
+
+[Sass (Dart implementation)][4].
+
+If you've added the package as a module into your project as mentioned above,
+you an use it via a module bundler with some configuration.
+
+### Webpack
+
+Use and configure `sass-loader`.
+
+### CRA (create-react-app) configuration
+
+[TODO] If your application is an *unejected* `create-react-app` project, you will have
+to...
+
+### Without module bundling
+
+## Using optimised icon SVGs
+See [UQ Maps: icons][3].
+
+## Additional resources
+
+Restricted to *UQ Maps* project team members only. Contact web services to
+request access.
+
+[🔒 Icon design file (Figma)][2]
+
+[1]: #
+[2]: https://www.figma.com/file/MKgUvdM8E2jOwF80Qwg8Ha/UQ-Maps-Icon-Export?node-id=0%3A1
+[3]: /?path=/docs/deliverables-uq-maps-icons--ui
+[4]: https://sass-lang.com/dart-sass
+[5]: #
+[6]: #

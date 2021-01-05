@@ -21,10 +21,10 @@
   "homepage": "https://github.com/uq-its-ss/design-system#readme",
   "license": "ISC",
   "directories": {
-    "lib": "lib"
+    "lib": "src"
   },
   "files": [
-    "lib/*",
+    "dist/*",
     "src/*"
   ],
   "repository": {
@@ -32,7 +32,9 @@
     "url": "git+https://github.com/uq-its-ss/design-system.git"
   },
   "scripts": {
-    "build-icons": "node scripts/icon-scan.js"
+    "build-icons": "node scripts/build-icons.js",
+    "build-css": "node scripts/build-css.js",
+    "build": "node scripts/build-icons.js && node scripts/build-css.js"
   },
   "bugs": {
     "url": "https://github.com/uq-its-ss/design-system/issues"
@@ -48,6 +50,7 @@
     "glob": "^7.1.6",
     "js-yaml": "^3.14.1",
     "mini-svg-data-uri": "^1.2.3",
+    "sass": "^1.30.0",
     "svgdom": "^0.1.8",
     "svgo": "^1.3.2"
   }

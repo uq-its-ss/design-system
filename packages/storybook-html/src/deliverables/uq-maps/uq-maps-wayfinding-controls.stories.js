@@ -10,12 +10,16 @@ export default {
     previewTabs: {
       canvas: {hidden: false}
     },
+    backgrounds: {
+      values: [
+        { name: 'Static map', value: '#D7D1CC url("\/images\/app-maps\/map-sample-bg.jpg") center top / 1920px 969px repeat'},
+        { name: 'Diagonal stripes', value: 'repeating-linear-gradient(45deg, #efedeb, #efedeb 10px, #f7f6f5 10px, #f7f6f5 20px)' }
+      ],
+      default: 'Static map'
+    },
     docs: {
       page: docs,
       inlineStories: false
-    },
-    backgrounds: {
-      default: 'Diagonal stripes'
     }
   }
 };

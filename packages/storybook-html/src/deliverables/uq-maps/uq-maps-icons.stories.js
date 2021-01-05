@@ -1,5 +1,4 @@
-import './uq-maps.scss';
-
+//import './uq-maps.scss';
 import docs from './uq-maps-icons.docs.mdx';
 
 export default {

@@ -37,6 +37,16 @@ $-result-icon-spacing: $-icon-spacing;
     font-size: core.$font-size-s;
     font-weight: core.$font-weight-normal;
     line-height: core.$line-height;
+    // letter-spacing: 0.5px;
+
+    a {
+      color: core.$uq-purple;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 
   &__secondary-text {
@@ -71,6 +81,11 @@ $-result-icon-spacing: $-icon-spacing;
 
     &:active {
       background-color: rgba(core.$uq-black, .07);
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 2px core.$blue;
+      outline: 0 none;
     }
   }
 }
@@ -118,6 +133,7 @@ $-result-icon-spacing: $-icon-spacing;
       margin: 0;
       max-width: none;
       min-width: 0;
+      outline: 0 none;
       padding: 0 core.$space 0 core.$space + $-icon-button-width;
 
       &:focus {
@@ -255,6 +271,7 @@ $-result-icon-spacing: $-icon-spacing;
       border-radius: 8px;
       background-color: core.$uq-neutral-light20;
       text-align: left;
+      outline: 0 none;
       padding: core.$space-sm core.$space;
       transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
                   box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
@@ -267,6 +284,7 @@ $-result-icon-spacing: $-icon-spacing;
       }
 
       &:focus {
+        box-shadow: 0 0 0 2px core.$blue;
         outline: 0 none;
       }
 
@@ -317,6 +335,7 @@ $-result-icon-spacing: $-icon-spacing;
         height: 1.25rem;
         width: 1.25rem;
         margin: 0 core.$space-sm 0 0;
+        outline: 0 none;
 
         &::after {
           content: "";
@@ -346,6 +365,12 @@ $-result-icon-spacing: $-icon-spacing;
           line-height: core.$line-height-ui;
           margin: 0;
           padding: 0;
+        }
+
+        &:focus {
+          border-color: core.$blue;
+          box-shadow: 0 0 0 1px core.$blue;
+          outline: none;
         }
       }
     }
@@ -420,6 +445,17 @@ $-result-icon-spacing: $-icon-spacing;
       text-transform: uppercase;
       display: inline-block;
       margin: core.$space core.$space-md 0 (core.$space-md + $-icon-spacing);
+
+      &::before {
+        background-image: url(get-icon('ui--nav-right', core.$uq-purple));
+        content: '';
+        display: inline-block;
+        height: core.$font-size-xxs;
+        width: core.$font-size-xxs;
+        margin-right: core.$space-xs;
+        margin-bottom: 0.13rem;
+        vertical-align: middle;
+      }
     }
 
     &__results {
@@ -444,6 +480,11 @@ $-result-icon-spacing: $-icon-spacing;
           &:hover {
             background-color: core.$uq-neutral-light20;
             text-decoration: none;
+          }
+
+          &:focus {
+            outline: 0 none;
+            box-shadow: 2px 0 0 0 core.$blue inset;
           }
         }
 
@@ -518,6 +559,12 @@ $-result-icon-spacing: $-icon-spacing;
           &:hover {
             &::after {
               background-image: url(get-icon('ui--chevron-right', core.$uq-neutral-dark20));
+            }
+          }
+
+          &:focus-within {
+            &::after {
+              background-image: url(get-icon('ui--chevron-right', core.$blue));
             }
           }
 
@@ -616,5 +663,83 @@ $-result-icon-spacing: $-icon-spacing;
     &--grey {
       color: core.$uq-neutral;
     }
+  }
+
+  /* ------------------------ */
+  /* Slide out drawer         */
+  /* ------------------------ */
+  
+  &__drawer {
+    $actions-allowance: 3rem;
+
+    @extend %uq-maps__box-sizing;
+    @extend %uq-maps__primary-text;
+
+    background-color: core.$uq-white;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: core.$space-lg core.$space-md core.$space-xxl;
+
+    &__menu-bar {
+      margin-bottom: core.$space-md;
+
+      &__close {
+        @extend %uq-maps__icon-button;
+
+        background-image: url(get-icon('ui--arrow-down'));
+      }
+    }
+
+    &__main,
+    &__actions {
+      padding: 0 core.$space-compressed-md;
+    }
+
+    &__main {
+      background-image: linear-gradient(to bottom, core.$uq-white, rgba(core.$uq-white, 0)),
+                        linear-gradient(to top, core.$uq-white, rgba(core.$uq-white, 0)),
+                        linear-gradient(to bottom, core.$uq-neutral-light20, rgba(core.$uq-neutral-light20, 0)),
+                        linear-gradient(to top, core.$uq-neutral-light20, rgba(core.$uq-neutral-light20, 0));
+      background-position: 0 0, 0 100%, 0 0, 0 100%;
+      background-repeat: no-repeat;
+      background-color: core.$uq-white;
+      background-size: 100% 4rem, 100% 4rem, 100% 1rem, 100% 1rem;
+      background-attachment: local, local, scroll, scroll;
+      height: calc(100% - #{$actions-allowance + $-icon-button-height + core.$space-md * 2});
+      margin-bottom: core.$space-md;
+      overflow-y: scroll;
+      overflow-x: hidden;
+
+      &__details-block {
+        @extend %uq-maps__secondary-text;
+
+        color: core.$text;
+        display: block;
+        margin-top: core.$space-sm;
+      }
+    }
+  }
+
+  /* ------------------------ */
+  /* Badge (UQ icon)          */
+  /* ------------------------ */
+
+  &__badge {
+    $icon-size: 1.75rem;
+
+    appearance: none;
+    background-image: url(get-icon('logo--uq-shield'));
+    background-size: $icon-size;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 0 none;
+    cursor: pointer;
+    height: $icon-size;
+    width: $icon-size;
+    margin: core.$space;
+    overflow: hidden;
+    text-indent: -9999px;   
   }
 }

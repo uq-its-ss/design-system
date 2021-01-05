@@ -1,20 +1,24 @@
-import './uq-maps.scss';
+// import './uq-maps.scss';
 import docs from './uq-maps-search-combo.docs.mdx';
 
 export default {
   title: 'Deliverables/UQ Maps/Search combo menu',
   parameters: {
     layout: 'fullscreen',
-    // viewMode: 'story',
+    //viewMode: 'story',
     previewTabs: {
       canvas: {hidden: false}
+    },
+    backgrounds: {
+      values: [
+        { name: 'Static map', value: '#D7D1CC url("\/images\/app-maps\/map-sample-bg.jpg") center top / 1920px 969px repeat'},
+        { name: 'Diagonal stripes', value: 'repeating-linear-gradient(45deg, #efedeb, #efedeb 10px, #f7f6f5 10px, #f7f6f5 20px)' }
+      ],
+      default: 'Static map'
     },
     docs: {
       page: docs,
       inlineStories: false
-    },
-    backgrounds: {
-      default: 'Diagonal stripes'
     }
   }
 };

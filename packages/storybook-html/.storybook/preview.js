@@ -61,7 +61,15 @@ export const parameters = {
             'Utilities'
           ]
         ],
-        'Patterns'
+        'Patterns',
+        'Gallery & Examples',
+        'Deliverables',
+        [
+          'UQ Maps',
+          [
+            'Overview'
+          ]
+        ]
       ]
     }
   }

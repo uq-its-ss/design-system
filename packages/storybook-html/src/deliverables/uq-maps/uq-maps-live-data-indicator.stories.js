@@ -1,4 +1,4 @@
-import './uq-maps.scss';
+//import './uq-maps.scss';
 import docs from './uq-maps-live-data-indicator.docs.mdx';
 
 export default {

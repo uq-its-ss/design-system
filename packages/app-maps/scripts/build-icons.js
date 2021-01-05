@@ -75,6 +75,7 @@ GLOB('./src/images/**/*.svg', async (err, files) => {
     const filename = explode[explode.length - 1].split('.')[0];
     let svg;
 
+    // Read file
     await FS.readFile(file, 'utf8')
       .then(async (data) => {
         // Optimise SVGs
@@ -83,7 +84,17 @@ GLOB('./src/images/**/*.svg', async (err, files) => {
       .catch((err) => {
         throw err;
       });
+    
+    // Write to dist
+    const dir = `./dist/images/${category}`;
 
+    await FS.mkdir(dir, { recursive: true })
+      .catch((err) => { throw err });
+
+    await FS.writeFile(`${dir}/${filename}.svg`, svg.data)
+      .catch((err) => { throw err });
+    
+    // Create data URI's for Sass use
     if (category == 'ui') {
       /**
        * Trial strategy to implement colour options via Sass functions using a
@@ -114,23 +125,16 @@ GLOB('./src/images/**/*.svg', async (err, files) => {
       svg = svg.replace(/fill="(?!none")[^"]+"/g, `fill="${colorPlaceholder}"`);
       svg = svg.replace(/stroke="(?!none")[^"]+"/g, `stroke="${colorPlaceholder}"`);
 
+      // Convert data to URI string
       const svgDataURI = svgConverter(svg);
       icons += `  "${category}--${filename}": "${svgDataURI}",\n`;
 
-      resolve(svgDataURI);
-
-    } else {
-      
-      const dir = `./dist/images/${category}`;
-
-      await FS.mkdir(dir, { recursive: true })
-        .catch((err) => { throw err });
-
-      await FS.writeFile(`${dir}/${filename}.svg`, svg.data)
-        .catch((err) => { throw err });
-
-      resolve(`${dir}/${filename}.svg`);
+    } else if (category == 'logo') {
+      const svgDataURI = svgConverter(svg.data);
+      icons += `  "${category}--${filename}": "${svgDataURI}",\n`;
     }
+
+    resolve(`${dir}/${filename}.svg`);
   })));
 
   icons += ');';

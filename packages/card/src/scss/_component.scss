@@ -411,3 +411,124 @@ $fa-line-height-base: core.$fa-line-height-base;
     }
   }
 }
+
+// Card Default
+.fs-card {
+  position: relative;
+  background-color: core.$uq-white;
+  border: 1px solid core.$uq-neutral-light40;
+  border-radius: core.$space-xs;
+  margin-bottom: core.$space-md;
+  box-shadow: 0 core.$space-xs core.$space-sm rgba(core.$uq-neutral-dark80, 0.1);
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  overflow: hidden;
+  transition: all ease .25s;
+
+  &:hover {
+    box-shadow: 0 core.$space-sm core.$space-md rgba(core.$uq-neutral-dark80, 0.2);
+  }
+
+  // Card bordered
+  &--bordered {
+    border-bottom: core.$space-sm solid core.$uq-purple;
+    min-height: 17rem;
+
+    .fs-card__title__super {
+      color: core.$uq-purple;
+    }
+  }
+
+  &__link__outer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-indent: -1000%;
+    z-index: 10;
+  }
+
+  &__imagery__wrapper {
+    max-height: 18.5rem;
+    overflow: hidden;
+  }
+  &__imagery {
+    position: relative;
+    height: 0;
+    padding-bottom: 70%;
+    overflow: hidden;
+  }
+  &__image {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    -o-object-fit: cover;
+    object-fit: cover;
+    z-index: 0;
+  }
+
+  &__content {
+    padding: core.$space-md;
+
+    :last-child .fs-card__title {
+      margin-bottom: core.$space-none;
+    }
+  }
+
+  &__header {
+
+  }
+
+  &__body {
+    p:last-child {
+      margin-bottom: core.$space-none;
+    }
+  }
+
+  &__actions {
+    padding: core.$space-md;
+
+    p:last-child {
+      margin-bottom: core.$space-none;
+    }
+  }
+
+  &__title {
+    font-size: core.$font-size-xl;
+    font-weight: 500;
+    color: core.$uq-neutral-dark80;
+    margin: core.$space-none core.$space-none core.$space;
+
+    @media #{core.$screen-md-up} {
+      font-size: core.$font-size-xxl;
+    }
+  }
+  &__title__super {
+    font-size: core.$font-size-s;
+    font-weight: 500;
+    color: core.$uq-purple-light;
+    text-transform: uppercase;
+    margin: core.$space-none core.$space-none core.$space-xs;
+
+    @media #{core.$screen-md-up} {
+      font-size: core.$font-size-m;
+    }
+
+    &--grey {
+      color: core.$uq-darkgrey;
+    }
+  }
+}
+
+.text--center {
+  text-align: center;
+}
+.text--small {
+  font-size: core.$font-size-s;
+}
+.text--grey {
+  color: core.$uq-darkgrey;
+}

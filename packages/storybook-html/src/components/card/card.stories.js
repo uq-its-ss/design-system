@@ -81,7 +81,7 @@ export const cardDefault = () => {
   `;
 };
 
-cardDefault.storyName = 'Card Default';
+cardDefault.storyName = 'Card default';
 
 export const CardCompact = () => {
   return `
@@ -291,3 +291,111 @@ export const overlayCardWithAdditionalText = () => {
 };
 
 overlayCardWithAdditionalText.storyName = 'Overlay card with additional text';
+
+export const fsCardDefault = () => {
+  return `
+  <div class="uq-grid">
+    <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-3">
+      <div class="fs-card">
+        <a class="fs-card__link__outer" href="#">Card title</a>
+        <div class="fs-card__imagery__wrapper">
+          <div class="fs-card__imagery">
+            <img src="https://campuses.uq.edu.au/files/9749/gatton-card2.jpg" alt="Card image description" class="fs-card__image">
+          </div>
+        </div>
+        <div class="fs-card__content">
+          <div class="fs-card__header">
+            <h3 class="fs-card__title">Card title</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-3">
+      <div class="fs-card">
+        <a class="fs-card__link__outer" href="#">Card title</a>
+        <div class="fs-card__imagery__wrapper">
+          <div class="fs-card__imagery">
+            <img src="https://campuses.uq.edu.au/files/9749/gatton-card2.jpg" alt="Card image description" class="fs-card__image">
+          </div>
+        </div>
+        <div class="fs-card__content">
+          <div class="fs-card__header">
+            <h3 class="fs-card__title">Card title</h3>
+          </div>
+          <div class="fs-card__body">
+            <p>Card summary text Card summary text Card summary text</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-3">
+      <div class="fs-card">
+        <a class="fs-card__link__outer" href="#">Card title</a>
+        <div class="fs-card__imagery__wrapper">
+          <div class="fs-card__imagery">
+            <img src="https://campuses.uq.edu.au/files/9749/gatton-card2.jpg" alt="Card image description" class="fs-card__image">
+          </div>
+        </div>
+        <div class="fs-card__content">
+          <div class="fs-card__header">
+            <p class="fs-card__title__super">Card sub-title</p>
+            <h3 class="fs-card__title">Card title</h3>
+          </div>
+          <div class="fs-card__body">
+              <p>Card summary text Card summary text Card summary text</p>
+          </div>
+        </div>
+        <div class="fs-card__actions">
+          <p class="text--small text--grey">5 minute read</p>
+        </div>
+      </div>
+    </div>
+    <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-3">
+      <div class="fs-card">
+        <div class="fs-card__imagery__wrapper">
+          <div class="fs-card__imagery">
+            <img src="https://campuses.uq.edu.au/files/9749/gatton-card2.jpg" alt="Card image description" class="fs-card__image">
+          </div>
+        </div>
+        <div class="fs-card__content">
+          <div class="fs-card__header">
+            <p class="fs-card__title__super fs-card__title__super--grey">Card sub-title</p>
+            <h3 class="fs-card__title">Card title</h3>
+          </div>
+          <div class="fs-card__body">
+              <p>Card summary text Card summary text Card summary text</p>
+          </div>
+        </div>
+        <div class="fs-card__actions">
+          <a href="#" class="fs-card__link">Card link</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  `;
+};
+
+fsCardDefault.storyName = 'FS card default';
+
+export const fsCardBordered = () => {
+  return `
+  <div class="uq-grid">
+    <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-3">
+      <div class="fs-card fs-card--bordered">
+        <a class="fs-card__link__outer" href="#">Card title</a>
+        <div class="fs-card__content">
+          <div class="fs-card__header">
+            <p class="fs-card__title__super">Card sub-title</p>
+            <h3 class="fs-card__title">Card title</h3>
+          </div>
+          <div class="fs-card__body">
+            <p>Card summary text Card summary text Card summary text</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  `;
+};
+
+fsCardBordered.storyName = 'FS card bordered';

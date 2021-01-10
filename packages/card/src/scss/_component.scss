@@ -419,14 +419,94 @@ $fa-line-height-base: core.$fa-line-height-base;
   border: 1px solid core.$uq-neutral-light40;
   border-radius: core.$space-xs;
   margin-bottom: core.$space-md;
-  box-shadow: 0 core.$space-xs core.$space-sm rgba(core.$uq-neutral-dark80, 0.1);
   overflow-wrap: break-word;
   word-wrap: break-word;
   overflow: hidden;
   transition: all ease .25s;
 
-  &:hover {
-    box-shadow: 0 core.$space-sm core.$space-md rgba(core.$uq-neutral-dark80, 0.2);
+  &--shadow {
+    box-shadow: 0 core.$space-xs core.$space-sm rgba(core.$uq-neutral-dark80, 0.1);
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 core.$space-sm core.$space-md rgba(core.$uq-neutral-dark80, 0.2);
+    }
+  }
+
+  // Card horizontal
+  &--horizontal {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    @media #{core.$screen-md-up} {
+      flex-direction: row;
+    }
+
+    &-left {
+
+      .fs-card__image__wrapper {
+        min-width: 100%;
+        margin-right: 0%;
+        max-height: 100%;
+        overflow: hidden;
+
+        @media #{core.$screen-md-up} {
+          min-width: 48%;
+          margin-right: 2%;
+        }
+      }
+      .fs-card__image {
+        height: auto;
+
+        @media #{core.$screen-md-up} {
+          min-height: 100%;
+        }
+      }
+
+      .fs-card__content {
+        min-width: 100%;
+        padding: core.$space-md core.$space-lg;
+
+        @media #{core.$screen-md-up} {
+          min-width: 50%;
+          padding: core.$space-xl core.$space-xxl;
+        }
+      }
+    }
+
+    &-right {
+
+      .fs-card__image__wrapper {
+        min-width: 100%;
+        margin-left: 0%;
+        max-height: 100%;
+        overflow: hidden;
+
+        @media #{core.$screen-md-up} {
+          min-width: 48%;
+          margin-left: 2%;
+          order: 2;
+        }
+      }
+      .fs-card__image {
+        height: auto;
+
+        @media #{core.$screen-md-up} {
+          min-height: 100%;
+        }
+      }
+
+      .fs-card__content {
+        min-width: 100%;
+        padding: core.$space-md core.$space-lg;
+
+        @media #{core.$screen-md-up} {
+          min-width: 50%;
+          padding: core.$space-xl core.$space-xxl;
+        }
+      }
+    }
   }
 
   // Card bordered
@@ -449,25 +529,25 @@ $fa-line-height-base: core.$fa-line-height-base;
     z-index: 10;
   }
 
-  &__imagery__wrapper {
+  &__image__wrapper {
     max-height: 18.5rem;
     overflow: hidden;
   }
-  &__imagery {
+  &__image {
     position: relative;
-    height: 0;
     padding-bottom: 70%;
     overflow: hidden;
-  }
-  &__image {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    -o-object-fit: cover;
-    object-fit: cover;
-    z-index: 0;
+
+    img {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      -o-object-fit: cover;
+      object-fit: cover;
+      z-index: 0;
+    }
   }
 
   &__content {
@@ -480,6 +560,13 @@ $fa-line-height-base: core.$fa-line-height-base;
 
   &__header {
 
+    :first-child {
+      margin: core.$space-none;
+    }
+
+    :last-child {
+      margin: core.$space-none core.$space-none core.$space;
+    }
   }
 
   &__body {
@@ -498,27 +585,39 @@ $fa-line-height-base: core.$fa-line-height-base;
 
   &__title {
     font-size: core.$font-size-xl;
-    font-weight: 500;
     color: core.$uq-neutral-dark80;
     margin: core.$space-none core.$space-none core.$space;
 
     @media #{core.$screen-md-up} {
       font-size: core.$font-size-xxl;
     }
-  }
-  &__title__super {
-    font-size: core.$font-size-s;
-    font-weight: 500;
-    color: core.$uq-purple-light;
-    text-transform: uppercase;
-    margin: core.$space-none core.$space-none core.$space-xs;
 
-    @media #{core.$screen-md-up} {
-      font-size: core.$font-size-m;
+    &__super {
+      font-size: core.$font-size-s;
+      font-weight: 500;
+      color: core.$uq-purple-light;
+      text-transform: uppercase;
+      margin: core.$space-none core.$space-none core.$space-xs;
+  
+      @media #{core.$screen-md-up} {
+        font-size: core.$font-size-m;
+      }
+  
+      &--grey {
+        color: core.$uq-darkgrey;
+      }
     }
 
-    &--grey {
+    &__sub {
+      font-size: core.$font-size-s;
+      font-weight: 400;
       color: core.$uq-darkgrey;
+      text-transform: uppercase;
+      margin: core.$space-none core.$space-none core.$space-xs;
+  
+      @media #{core.$screen-md-up} {
+        font-size: core.$font-size-m;
+      }
     }
   }
 }

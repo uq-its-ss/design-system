@@ -296,11 +296,11 @@ export const fsCardDefault = () => {
   return `
   <div class="uq-grid">
     <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-3">
-      <div class="fs-card">
+      <div class="fs-card fs-card--shadow">
         <a class="fs-card__link__outer" href="#">Card title</a>
-        <div class="fs-card__imagery__wrapper">
-          <div class="fs-card__imagery">
-            <img src="https://campuses.uq.edu.au/files/9749/gatton-card2.jpg" alt="Card image description" class="fs-card__image">
+        <div class="fs-card__image__wrapper">
+          <div class="fs-card__image">
+            <img src="https://campuses.uq.edu.au/files/9749/gatton-card2.jpg" alt="Card image description">
           </div>
         </div>
         <div class="fs-card__content">
@@ -311,11 +311,11 @@ export const fsCardDefault = () => {
       </div>
     </div>
     <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-3">
-      <div class="fs-card">
+      <div class="fs-card fs-card--shadow">
         <a class="fs-card__link__outer" href="#">Card title</a>
-        <div class="fs-card__imagery__wrapper">
-          <div class="fs-card__imagery">
-            <img src="https://campuses.uq.edu.au/files/9749/gatton-card2.jpg" alt="Card image description" class="fs-card__image">
+        <div class="fs-card__image__wrapper">
+          <div class="fs-card__image">
+            <img src="https://campuses.uq.edu.au/files/9749/gatton-card2.jpg" alt="Card image description">
           </div>
         </div>
         <div class="fs-card__content">
@@ -323,17 +323,17 @@ export const fsCardDefault = () => {
             <h3 class="fs-card__title">Card title</h3>
           </div>
           <div class="fs-card__body">
-            <p>Card summary text Card summary text Card summary text</p>
+            <p tabindex="0">Card summary text Card summary text Card summary text</p>
           </div>
         </div>
       </div>
     </div>
     <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-3">
-      <div class="fs-card">
+      <div class="fs-card fs-card--shadow">
         <a class="fs-card__link__outer" href="#">Card title</a>
-        <div class="fs-card__imagery__wrapper">
-          <div class="fs-card__imagery">
-            <img src="https://campuses.uq.edu.au/files/9749/gatton-card2.jpg" alt="Card image description" class="fs-card__image">
+        <div class="fs-card__image__wrapper">
+          <div class="fs-card__image">
+            <img src="https://campuses.uq.edu.au/files/9749/gatton-card2.jpg" alt="Card image description">
           </div>
         </div>
         <div class="fs-card__content">
@@ -342,7 +342,7 @@ export const fsCardDefault = () => {
             <h3 class="fs-card__title">Card title</h3>
           </div>
           <div class="fs-card__body">
-              <p>Card summary text Card summary text Card summary text</p>
+              <p tabindex="0">Card summary text Card summary text Card summary text</p>
           </div>
         </div>
         <div class="fs-card__actions">
@@ -351,19 +351,19 @@ export const fsCardDefault = () => {
       </div>
     </div>
     <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-3">
-      <div class="fs-card">
-        <div class="fs-card__imagery__wrapper">
-          <div class="fs-card__imagery">
-            <img src="https://campuses.uq.edu.au/files/9749/gatton-card2.jpg" alt="Card image description" class="fs-card__image">
+      <div class="fs-card fs-card--shadow">
+        <div class="fs-card__image__wrapper">
+          <div class="fs-card__image">
+            <img src="https://campuses.uq.edu.au/files/9749/gatton-card2.jpg" alt="Card image description">
           </div>
         </div>
         <div class="fs-card__content">
           <div class="fs-card__header">
             <p class="fs-card__title__super fs-card__title__super--grey">Card sub-title</p>
-            <h3 class="fs-card__title">Card title</h3>
+            <h3 class="fs-card__title"><a href="#" class="fs-card__link">Card title</a></h3>
           </div>
           <div class="fs-card__body">
-              <p>Card summary text Card summary text Card summary text</p>
+              <p tabindex="0">Card summary text Card summary text Card summary text</p>
           </div>
         </div>
         <div class="fs-card__actions">
@@ -381,7 +381,7 @@ export const fsCardBordered = () => {
   return `
   <div class="uq-grid">
     <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-3">
-      <div class="fs-card fs-card--bordered">
+      <div class="fs-card fs-card--bordered fs-card--shadow">
         <a class="fs-card__link__outer" href="#">Card title</a>
         <div class="fs-card__content">
           <div class="fs-card__header">
@@ -389,7 +389,21 @@ export const fsCardBordered = () => {
             <h3 class="fs-card__title">Card title</h3>
           </div>
           <div class="fs-card__body">
-            <p>Card summary text Card summary text Card summary text</p>
+            <p tabindex="0">Card summary text Card summary text Card summary text</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-3">
+      <div class="fs-card fs-card--bordered fs-card--shadow">
+        <a class="fs-card__link__outer" href="#">Card title</a>
+        <div class="fs-card__content">
+          <div class="fs-card__header">
+            <h3 class="fs-card__title">Card title</h3>
+            <p class="fs-card__title__sub">Card sub-title</p>
+          </div>
+          <div class="fs-card__body">
+            <p tabindex="0">Card summary text Card summary text Card summary text</p>
           </div>
         </div>
       </div>
@@ -399,3 +413,59 @@ export const fsCardBordered = () => {
 };
 
 fsCardBordered.storyName = 'FS card bordered';
+
+export const fsCardHorizontalLeft = () => {
+  return `
+  <div class="uq-grid">
+    <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-8 uq-grid__col--xl-12">
+      <div class="fs-card fs-card--horizontal fs-card--horizontal-left fs-card--shadow">
+        <a class="fs-card__link__outer" href="#">Card title</a>
+        <div class="fs-card__image__wrapper">
+          <div class="fs-card__image">
+            <img src="https://campuses.uq.edu.au/files/9749/gatton-card2.jpg" alt="Card image description">
+          </div>
+        </div>
+        <div class="fs-card__content">
+          <div class="fs-card__header">
+            <p class="fs-card__title__super">Card sub-title</p>
+            <h3 class="fs-card__title">Card title</h3>
+          </div>
+          <div class="fs-card__body">
+            <p tabindex="0">Card summary text Card summary text Card summary text</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  `;
+};
+
+fsCardHorizontalLeft.storyName = 'FS card horizontal left';
+
+export const fsCardHorizontalRight = () => {
+  return `
+  <div class="uq-grid">
+    <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-8 uq-grid__col--xl-12">
+      <div class="fs-card fs-card--horizontal fs-card--horizontal-right fs-card--shadow">
+        <a class="fs-card__link__outer" href="#">Card title</a>
+        <div class="fs-card__image__wrapper">
+          <div class="fs-card__image">
+            <img src="https://campuses.uq.edu.au/files/9749/gatton-card2.jpg" alt="Card image description">
+          </div>
+        </div>
+        <div class="fs-card__content">
+          <div class="fs-card__header">
+            <p class="fs-card__title__super">Card sub-title</p>
+            <h3 class="fs-card__title">Card title</h3>
+          </div>
+          <div class="fs-card__body">
+            <p tabindex="0">Card summary text Card summary text Card summary text</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  `;
+};
+
+fsCardHorizontalRight.storyName = 'FS card horizontal right';

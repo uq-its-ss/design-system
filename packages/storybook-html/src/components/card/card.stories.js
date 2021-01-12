@@ -294,8 +294,8 @@ overlayCardWithAdditionalText.storyName = 'Overlay card with additional text';
 
 export const fsCardDefault = () => {
   return `
-  <div class="uq-grid">
-    <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-3">
+  <div class="uq-grid uq-grid--full-width">
+    <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-4">
       <div class="fs-card fs-card--shadow">
         <a class="fs-card__link__outer" href="#">Card title</a>
         <div class="fs-card__image__wrapper">
@@ -310,7 +310,7 @@ export const fsCardDefault = () => {
         </div>
       </div>
     </div>
-    <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-3">
+    <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-4">
       <div class="fs-card fs-card--shadow">
         <a class="fs-card__link__outer" href="#">Card title</a>
         <div class="fs-card__image__wrapper">
@@ -328,7 +328,7 @@ export const fsCardDefault = () => {
         </div>
       </div>
     </div>
-    <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-3">
+    <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-4">
       <div class="fs-card fs-card--shadow">
         <a class="fs-card__link__outer" href="#">Card title</a>
         <div class="fs-card__image__wrapper">
@@ -350,8 +350,17 @@ export const fsCardDefault = () => {
         </div>
       </div>
     </div>
-    <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-3">
-      <div class="fs-card fs-card--shadow">
+  </div>
+  `;
+};
+
+fsCardDefault.storyName = 'FS card default';
+
+export const fsCardTextLink = () => {
+  return `
+  <div class="uq-grid uq-grid--full-width">
+    <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-4">
+      <div class="fs-card">
         <div class="fs-card__image__wrapper">
           <div class="fs-card__image">
             <img src="https://campuses.uq.edu.au/files/9749/gatton-card2.jpg" alt="Card image description">
@@ -375,12 +384,69 @@ export const fsCardDefault = () => {
   `;
 };
 
-fsCardDefault.storyName = 'FS card default';
+fsCardTextLink.storyName = 'FS card text link';
+
+export const fsCardNoImage = () => {
+  return `
+  <div class="uq-grid">
+    <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-6">
+      <div class="fs-card fs-card--no-image">
+        <a class="fs-card__link__outer" href="#">Card title</a>
+        <div class="fs-card__content">
+          <div class="fs-card__header">
+            <h3 class="fs-card__title">Card title</h3>
+          </div>
+          <div class="fs-card__body">
+            <p tabindex="0">Card summary text Card summary text Card summary text</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-6">
+      <div class="fs-card fs-card--no-image">
+        <a class="fs-card__link__outer" href="#">Card title</a>
+        <div class="fs-card__content">
+          <div class="fs-card__header">
+            <h3 class="fs-card__title">Card title</h3>
+          </div>
+          <div class="fs-card__body">
+            <p tabindex="0">Card summary text Card summary text Card summary text</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  `;
+};
+
+fsCardNoImage.storyName = 'FS card no image';
+
+export const fsCardNoImageShaded = () => {
+  return `
+  <div class="uq-grid">
+    <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-8 uq-grid__col--xl-12">
+      <div class="fs-card fs-card--no-image fs-card--shaded">
+        <a class="fs-card__link__outer" href="#">Card title</a>
+        <div class="fs-card__content">
+          <div class="fs-card__header">
+            <h3 class="fs-card__title">Card title</h3>
+          </div>
+          <div class="fs-card__body">
+            <p tabindex="0">Card summary text Card summary text Card summary text Card summary text Card summary text Card summary text Card summary text Card summary text Card summary text</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  `;
+};
+
+fsCardNoImageShaded.storyName = 'FS card no image shaded';
 
 export const fsCardBordered = () => {
   return `
   <div class="uq-grid">
-    <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-3">
+    <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-4">
       <div class="fs-card fs-card--bordered fs-card--shadow">
         <a class="fs-card__link__outer" href="#">Card title</a>
         <div class="fs-card__content">
@@ -394,7 +460,7 @@ export const fsCardBordered = () => {
         </div>
       </div>
     </div>
-    <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-3">
+    <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-4">
       <div class="fs-card fs-card--bordered fs-card--shadow">
         <a class="fs-card__link__outer" href="#">Card title</a>
         <div class="fs-card__content">

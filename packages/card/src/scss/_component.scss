@@ -433,6 +433,10 @@ $fa-line-height-base: core.$fa-line-height-base;
     }
   }
 
+  &--shaded {
+    background-color: $card-shaded-bg;
+  }
+
   // Card horizontal
   &--horizontal {
     display: flex;
@@ -518,6 +522,18 @@ $fa-line-height-base: core.$fa-line-height-base;
 
     .fs-card__title__super {
       color: core.$uq-purple;
+    }
+  }
+
+  // Card no image
+  &--no-image {
+
+    .fs-card__link__outer+.fs-card__content .fs-card__title {
+      color: core.$link;
+    }
+    .fs-card__link__outer:hover+.fs-card__content .fs-card__title {
+      color: core.$link;
+      text-decoration: underline;
     }
   }
 

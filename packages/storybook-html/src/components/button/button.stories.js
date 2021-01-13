@@ -74,7 +74,7 @@ export const secondaryLight = () => {
   `;
 };
 
-secondaryLight.storyName = "Secondary --light";
+secondaryLight.storyName = 'secondary --light';
 secondaryLight.parameters = {
   backgrounds: {
     default: 'Dark',
@@ -83,6 +83,26 @@ secondaryLight.parameters = {
       { name: 'UQ purple', value: '#51247a' }
     ]
   } 
+};
+
+export const tertiary = () => {
+  return `
+    <button class="uq-button uq-button--tertiary">Button</button>
+    <button class="uq-button uq-button--tertiary uq-button--outline">Button</button>
+    <button class="uq-button uq-button--tertiary uq-button--text">Button</button>
+    <br/><br/>
+    <button class="uq-button uq-button--tertiary uq-button--tiny">Button</button>
+    <button class="uq-button uq-button--tertiary uq-button--tiny uq-button--outline">Button</button>
+    <button class="uq-button uq-button--tertiary uq-button--tiny uq-button--text">Button</button>
+    <br/><br/>
+    <button class="uq-button uq-button--tertiary uq-button--small">Button</button>
+    <button class="uq-button uq-button--tertiary uq-button--small uq-button--outline">Button</button>
+    <button class="uq-button uq-button--tertiary uq-button--small uq-button--text">Button</button>
+    <br/><br/>
+    <button class="uq-button uq-button--tertiary uq-button--large">Button</button>
+    <button class="uq-button uq-button--tertiary uq-button--large uq-button--outline">Button</button>
+    <button class="uq-button uq-button--tertiary uq-button--large uq-button--text">Button</button>
+  `;
 };
 
 export const expanded = () => {
@@ -98,6 +118,12 @@ export const expanded = () => {
     <button class="uq-button uq-button--secondary uq-button--expand uq-button--outline">Button</button>
     <br/><br/>
     <button class="uq-button uq-button--secondary uq-button--expand uq-button--text">Button</button>
+    <br/><br/>
+    <button class="uq-button uq-button--tertiary uq-button--expand">Button</button>
+    <br/><br/>
+    <button class="uq-button uq-button--tertiary uq-button--expand uq-button--outline">Button</button>
+    <br/><br/>
+    <button class="uq-button uq-button--tertiary uq-button--expand uq-button--text">Button</button>
   `;
 };
 

@@ -11,9 +11,16 @@ $button-bg-hover-color: $link-active-color !default;
 $button-border-color: $link-color !default;
 $button-border-hover-color: $link-active-color !default;
 
-$button-secondary-color: $uq-neutral-dark80 !default; //2b2b2b;
-$button-secondary-hover-color: $uq-black !default;
-$button-secondary-bg-color: $uq-neutral !default; //d7d1cc;
-$button-secondary-bg-hover-color: $uq-neutral-dark20 !default; //bdb0a5;
-$button-secondary-border-color: $uq-neutral !default; //d7d1cc;
-$button-secondary-border-hover-color: $uq-neutral-dark20 !default; //bdb0a5;
+$button-secondary-color: $uq-white !default;
+$button-secondary-hover-color: $uq-white !default;
+$button-secondary-bg-color: $uq-purple !default;
+$button-secondary-bg-hover-color: $uq-purple-dark !default;
+$button-secondary-border-color: $uq-purple !default;
+$button-secondary-border-hover-color: $uq-purple-dark !default;
+
+$button-tertiary-color: $uq-neutral-dark80 !default; //2b2b2b;
+$button-tertiary-hover-color: $uq-black !default;
+$button-tertiary-bg-color: $uq-neutral !default; //d7d1cc;
+$button-tertiary-bg-hover-color: $uq-neutral-dark20 !default; //bdb0a5;
+$button-tertiary-border-color: $uq-neutral !default; //d7d1cc;
+$button-tertiary-border-hover-color: $uq-neutral-dark20 !default; //bdb0a5;

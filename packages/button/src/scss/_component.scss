@@ -108,6 +108,59 @@
     }
   }
 
+  /* button tertiary */
+  &--tertiary {
+    background-color: $button-tertiary-bg-color;
+    border-color: $button-tertiary-border-color;
+    color: $button-tertiary-color;
+
+    &:hover, &:focus {
+      background-color: $button-tertiary-bg-hover-color;
+      border-color: $button-tertiary-border-hover-color;
+      color: $button-tertiary-hover-color;
+    }
+
+    &.uq-button--outline {
+      background-color: transparent;
+      border-color: $button-tertiary-bg-color;
+      color: $button-tertiary-bg-color;
+
+      &:hover, &:focus {
+        background-color: $button-tertiary-bg-hover-color;
+        border-color: $button-tertiary-bg-hover-color;
+        color: $button-tertiary-color;
+      }
+
+      &.uq-button--light {
+        color: $button-tertiary-bg-color;
+
+        &:hover, &:focus {
+          color: $button-tertiary-color;
+        }
+      }
+    }
+
+    &.uq-button--text {
+      background-color: transparent;
+      border-color: transparent;
+      color: $button-tertiary-bg-color;
+  
+      &:hover, &:focus {
+        background-color: transparent;
+        border-color: transparent;
+        color: $button-tertiary-bg-hover-color;
+      }
+
+      &.uq-button--light {
+        color: $button-tertiary-bg-color;
+
+        &:hover, &:focus {
+          color: $button-tertiary-bg-hover-color;
+        }
+      }
+    }
+  }
+
   /* button sizes */
   &--tiny {
     font-size: 12px;

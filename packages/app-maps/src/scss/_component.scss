@@ -677,7 +677,7 @@ $-result-icon-spacing: $-icon-spacing;
 
     background-color: core.$uq-white;
     height: 100%;
-    overflow-y: scroll;
+    overflow-y: auto;
     overflow-x: hidden;
     padding: core.$space-lg core.$space-md core.$space-xxl;
 
@@ -708,8 +708,13 @@ $-result-icon-spacing: $-icon-spacing;
       background-attachment: local, local, scroll, scroll;
       height: calc(100% - #{$actions-allowance + $-icon-button-height + core.$space-md * 2});
       margin-bottom: core.$space-md;
-      overflow-y: scroll;
+      overflow-y: auto;
       overflow-x: hidden;
+      scrollbar-width: none; // FF only for now
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
 
       &__details-block {
         @extend %uq-maps__secondary-text;

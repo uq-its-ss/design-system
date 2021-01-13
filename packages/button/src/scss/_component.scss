@@ -108,34 +108,34 @@
     }
   }
 
-  /* button tertiary */
-  &--tertiary {
-    background-color: $button-tertiary-bg-color;
-    border-color: $button-tertiary-border-color;
-    color: $button-tertiary-color;
+  /* button purple */
+  &--purple {
+    background-color: $button-purple-bg-color;
+    border-color: $button-purple-border-color;
+    color: $button-purple-color;
 
     &:hover, &:focus {
-      background-color: $button-tertiary-bg-hover-color;
-      border-color: $button-tertiary-border-hover-color;
-      color: $button-tertiary-hover-color;
+      background-color: $button-purple-bg-hover-color;
+      border-color: $button-purple-border-hover-color;
+      color: $button-purple-hover-color;
     }
 
     &.uq-button--outline {
       background-color: transparent;
-      border-color: $button-tertiary-bg-color;
-      color: $button-tertiary-bg-color;
+      border-color: $button-purple-bg-color;
+      color: $button-purple-bg-color;
 
       &:hover, &:focus {
-        background-color: $button-tertiary-bg-hover-color;
-        border-color: $button-tertiary-bg-hover-color;
-        color: $button-tertiary-color;
+        background-color: $button-purple-bg-hover-color;
+        border-color: $button-purple-bg-hover-color;
+        color: $button-purple-color;
       }
 
       &.uq-button--light {
-        color: $button-tertiary-bg-color;
+        color: $button-purple-bg-color;
 
         &:hover, &:focus {
-          color: $button-tertiary-color;
+          color: $button-purple-color;
         }
       }
     }
@@ -143,19 +143,19 @@
     &.uq-button--text {
       background-color: transparent;
       border-color: transparent;
-      color: $button-tertiary-bg-color;
+      color: $button-purple-bg-color;
   
       &:hover, &:focus {
         background-color: transparent;
         border-color: transparent;
-        color: $button-tertiary-bg-hover-color;
+        color: $button-purple-bg-hover-color;
       }
 
       &.uq-button--light {
-        color: $button-tertiary-bg-color;
+        color: $button-purple-bg-color;
 
         &:hover, &:focus {
-          color: $button-tertiary-bg-hover-color;
+          color: $button-purple-bg-hover-color;
         }
       }
     }

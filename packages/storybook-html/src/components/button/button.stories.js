@@ -111,7 +111,7 @@ export const purple = () => {
   `;
 };
 
-export const expanded = () => {
+export const expand = () => {
   return `
     <button class="uq-button uq-button--expand">Button</button>
     <br/><br/>
@@ -124,6 +124,10 @@ export const expanded = () => {
     <button class="uq-button uq-button--secondary uq-button--expand uq-button--outline">Button</button>
     <br/><br/>
     <button class="uq-button uq-button--secondary uq-button--expand uq-button--text">Button</button>
+    <br/><br/>
+    <button class="uq-button uq-button--secondary uq-button--expand uq-button--outline uq-button--light">Button</button>
+    <br/><br/>
+    <button class="uq-button uq-button--secondary uq-button--expand uq-button--text uq-button--light">Button</button>
     <br/><br/>
     <button class="uq-button uq-button--purple uq-button--expand">Button</button>
     <br/><br/>

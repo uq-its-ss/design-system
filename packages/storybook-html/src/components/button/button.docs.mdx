@@ -9,7 +9,7 @@ import StatusBadge from '../../../.storybook/custom/components/StatusBadge';
 
 ## Overview
 
-- The button component is used to action navigation to a web link or to an anchor tag on the same page or different page. 
+The button component is used to navigate to a web link or to an anchor name tag on the same page or different page. 
 - The buttons categories are primary, secondary, secondary-light and purple. 
 - Each category also has its variant styles like normal, outline, text and expanded options to be used in different scenarios.
 
@@ -46,9 +46,9 @@ Secondary button is used to highlight important actions. For example, save butto
 <button class="uq-button uq-button--secondary uq-button--text">Button</button>
 ```
 
-### Secondary-Light
+### Secondary-light
 
-Secondary-Light button variant is used on dark backgrounds.
+Secondary-light button variant is used on dark backgrounds.
 
 <Canvas withSource="none">
   <Story id="components-button--secondary-light" />
@@ -73,12 +73,12 @@ Purple button uses the color purple which is the UQ's brand primary color. It ne
 <button class="uq-button uq-button--purple uq-button--text">Button</button>
 ```
 
-### Expanded
+### Expand
 
-Expanded version of the button would extend the width of the button to full width of its parent container.
+Expand version of the button would extend the width of the button to full width of its parent container.
 
 <Canvas withSource="none">
-  <Story id="components-button--expanded" />
+  <Story id="components-button--expand" />
 </Canvas>
 
 ```html
@@ -97,6 +97,36 @@ Expanded version of the button would extend the width of the button to full widt
 
 ## How and when to use
 
+<table className="uqds-table  uqds-table--card uqds-table--colour">
+  <tbody className="uqds-table__body">
+    <tr className="uqds-table__mobile-heading">
+      <th className="uqds-table__heading">Category</th>
+      <th className="uqds-table__heading">Styles</th>
+      <th className="uqds-table__heading">How/When to use:</th>
+    </tr>
+    <tr className="uqds-table__row">
+      <td className="uqds-table__item">Primary</td>
+      <td className="uqds-table__item" data-title="Styles:">Normal, Outline, Text, Expand</td>
+      <td className="uqds-table__item" data-title="How/When to use:">Most important call to action button on the webpage</td>
+    </tr>
+    <tr className="uqds-table__row">
+      <td className="uqds-table__item">Secondary</td>
+      <td className="uqds-table__item" data-title="Styles:">Normal, Outline, Text, Expand</td>
+      <td className="uqds-table__item" data-title="How/When to use:">Important actions like save etc.</td>
+    </tr>
+    <tr className="uqds-table__row">
+      <td className="uqds-table__item">Secondary light</td>
+      <td className="uqds-table__item" data-title="Styles:">Normal, Outline, Text, Expand</td>
+      <td className="uqds-table__item" data-title="How/When to use:">On dark backgrounds</td>
+    </tr>
+    <tr className="uqds-table__row">
+      <td className="uqds-table__item">Purple</td>
+      <td className="uqds-table__item" data-title="Styles:">Normal, Outline, Text, Expand</td>
+      <td className="uqds-table__item" data-title="How/When to use:">Used in a section</td>
+    </tr>
+  </tbody>
+</table>
+
 ### States
 
 Default - the button text is not underlined. <br />
@@ -104,9 +134,9 @@ Hover - the button text is underlined. The background and text color may change 
 
 ### Breakpoints
 
-Breakpoints have no effect on the button component and it visually remains the same.
+Breakpoints have no effect on the button component and visually remains the same.
 
 ## Accessibility
 
-Accessibility colour contrast test for all buttons showed a WCAG AA Pass.
+Colour contrast test for all buttons showed a WCAG AA Pass.
 

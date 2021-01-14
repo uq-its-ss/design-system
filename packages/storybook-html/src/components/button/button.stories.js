@@ -1,9 +1,15 @@
 // import styles
 import './button.scss';
 
+// documentation
+import docs from './button.docs.mdx';
+
 export default {
   title: 'Components/Button',
   parameters: {
+    docs: {
+      page: docs
+    },
     backgrounds: {
       values: [
         { name: 'Dark', value: '#000000' },
@@ -74,7 +80,7 @@ export const secondaryLight = () => {
   `;
 };
 
-secondaryLight.storyName = 'Secondary --light';
+secondaryLight.storyName = 'Secondary light';
 secondaryLight.parameters = {
   backgrounds: {
     default: 'Dark',
@@ -126,5 +132,3 @@ export const expanded = () => {
     <button class="uq-button uq-button--purple uq-button--expand uq-button--text">Button</button>
   `;
 };
-
-expanded.parameters = { layout: "padded" };

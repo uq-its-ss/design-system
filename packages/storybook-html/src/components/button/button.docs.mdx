@@ -28,6 +28,7 @@ It should only be used once on a webpage.
 <button class="uq-button">Button</button>
 <button class="uq-button uq-button--outline">Button</button>
 <button class="uq-button uq-button--text">Button</button>
+...
 ```
 
 ## Variant examples
@@ -44,6 +45,7 @@ Secondary button is used to highlight important actions. For example, save butto
 <button class="uq-button uq-button--secondary">Button</button>
 <button class="uq-button uq-button--secondary uq-button--outline">Button</button>
 <button class="uq-button uq-button--secondary uq-button--text">Button</button>
+...
 ```
 
 ### Secondary-light
@@ -57,6 +59,7 @@ Secondary-light button variant is used on dark backgrounds.
 ```html
 <button class="uq-button uq-button--secondary uq-button--outline uq-button--light">Button</button>
 <button class="uq-button uq-button--secondary uq-button--text uq-button--light">Button</button>
+...
 ```
 
 ### Purple
@@ -71,6 +74,7 @@ Purple button uses the color purple which is the UQ's brand primary color. It ne
 <button class="uq-button uq-button--purple">Button</button>
 <button class="uq-button uq-button--purple uq-button--outline">Button</button>
 <button class="uq-button uq-button--purple uq-button--text">Button</button>
+...
 ```
 
 ### Expand
@@ -90,6 +94,9 @@ Expand version of the button would extend the width of the button to full width 
 <button class="uq-button uq-button--secondary uq-button--expand uq-button--outline">Button</button>
 <button class="uq-button uq-button--secondary uq-button--expand uq-button--text">Button</button>
 
+<button class="uq-button uq-button--secondary uq-button--expand uq-button--outline uq-button--light">Button</button>
+<button class="uq-button uq-button--secondary uq-button--expand uq-button--text uq-button--light">Button</button>
+
 <button class="uq-button uq-button--purple uq-button--expand">Button</button>
 <button class="uq-button uq-button--purple uq-button--expand uq-button--outline">Button</button>
 <button class="uq-button uq-button--purple uq-button--expand uq-button--text">Button</button>
@@ -105,27 +112,29 @@ Expand version of the button would extend the width of the button to full width 
       <th className="uqds-table__heading">How/When to use:</th>
     </tr>
     <tr className="uqds-table__row">
-      <td className="uqds-table__item">Primary</td>
-      <td className="uqds-table__item" data-title="Styles:">Normal, Outline, Text, Expand</td>
-      <td className="uqds-table__item" data-title="How/When to use:">Most important call to action button on the webpage</td>
+      <td className="uqds-table__item" data-title="Category:">Primary</td>
+      <td className="uqds-table__item" data-title="Styles:">Normal, outline, text, expand</td>
+      <td className="uqds-table__item" data-title="How/When to use:">Used for most important call to action button on the webpage</td>
     </tr>
     <tr className="uqds-table__row">
-      <td className="uqds-table__item">Secondary</td>
-      <td className="uqds-table__item" data-title="Styles:">Normal, Outline, Text, Expand</td>
-      <td className="uqds-table__item" data-title="How/When to use:">Important actions like save etc.</td>
+      <td className="uqds-table__item" data-title="Category:">Secondary</td>
+      <td className="uqds-table__item" data-title="Styles:">Normal, outline, text, expand</td>
+      <td className="uqds-table__item" data-title="How/When to use:">Used for important actions like save etc.</td>
     </tr>
     <tr className="uqds-table__row">
-      <td className="uqds-table__item">Secondary light</td>
-      <td className="uqds-table__item" data-title="Styles:">Normal, Outline, Text, Expand</td>
-      <td className="uqds-table__item" data-title="How/When to use:">On dark backgrounds</td>
+      <td className="uqds-table__item" data-title="Category:">Secondary light</td>
+      <td className="uqds-table__item" data-title="Styles:">Normal, outline, text, expand</td>
+      <td className="uqds-table__item" data-title="How/When to use:">Used on dark backgrounds</td>
     </tr>
     <tr className="uqds-table__row">
-      <td className="uqds-table__item">Purple</td>
-      <td className="uqds-table__item" data-title="Styles:">Normal, Outline, Text, Expand</td>
-      <td className="uqds-table__item" data-title="How/When to use:">Used in a section</td>
+      <td className="uqds-table__item" data-title="Category:">Purple</td>
+      <td className="uqds-table__item" data-title="Styles:">Normal, outline, text, expand</td>
+      <td className="uqds-table__item" data-title="How/When to use:">Used in UQ events and stories sections</td>
     </tr>
   </tbody>
 </table>
+
+- Outline style is used as a tertiary button to signify their lesser prominence from the normal style.
 
 ### States
 
@@ -135,6 +144,7 @@ Hover - the button text is underlined. The background and text color may change 
 ### Breakpoints
 
 Breakpoints have no effect on the button component and visually remains the same.
+
 
 ## Accessibility
 

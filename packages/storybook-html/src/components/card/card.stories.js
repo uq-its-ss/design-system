@@ -295,23 +295,8 @@ overlayCardWithAdditionalText.storyName = 'Overlay card with additional text';
 export const fsCardDefault = () => {
   return `
   <div class="uq-grid uq-grid--full-width">
-    <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-4">
-      <div class="fs-card fs-card--shadow">
-        <a class="fs-card__link__outer" href="#">Card title</a>
-        <div class="fs-card__image__wrapper">
-          <div class="fs-card__image">
-            <img src="https://campuses.uq.edu.au/files/9749/gatton-card2.jpg" alt="Card image description">
-          </div>
-        </div>
-        <div class="fs-card__content">
-          <div class="fs-card__header">
-            <h3 class="fs-card__title">Card title</h3>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-4">
-      <div class="fs-card fs-card--shadow">
+    <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-3">
+      <div class="fs-card">
         <a class="fs-card__link__outer" href="#">Card title</a>
         <div class="fs-card__image__wrapper">
           <div class="fs-card__image">
@@ -323,30 +308,74 @@ export const fsCardDefault = () => {
             <h3 class="fs-card__title">Card title</h3>
           </div>
           <div class="fs-card__body">
-            <p tabindex="0">Card summary text Card summary text Card summary text</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-4">
-      <div class="fs-card fs-card--shadow">
-        <a class="fs-card__link__outer" href="#">Card title</a>
-        <div class="fs-card__image__wrapper">
-          <div class="fs-card__image">
-            <img src="https://campuses.uq.edu.au/files/9749/gatton-card2.jpg" alt="Card image description">
-          </div>
-        </div>
-        <div class="fs-card__content">
-          <div class="fs-card__header">
-            <p class="fs-card__title__super">Card sub-title</p>
-            <h3 class="fs-card__title">Card title</h3>
-          </div>
-          <div class="fs-card__body">
-              <p tabindex="0">Card summary text Card summary text Card summary text</p>
+              <p>Card summary text</p>
           </div>
         </div>
         <div class="fs-card__actions">
-          <p class="text--small text--grey">5 minute read</p>
+          <a class="text--link" href="#">Learn more</a>
+        </div>
+      </div>
+    </div>
+    <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-3">
+      <div class="fs-card">
+        <a class="fs-card__link__outer" href="#">Card title</a>
+        <div class="fs-card__image__wrapper">
+          <div class="fs-card__image">
+            <img src="https://campuses.uq.edu.au/files/9749/gatton-card2.jpg" alt="Card image description">
+          </div>
+        </div>
+        <div class="fs-card__content">
+          <div class="fs-card__header">
+            <h3 class="fs-card__title">Card title</h3>
+          </div>
+          <div class="fs-card__body">
+              <p>Card summary text Card summary text Card summary text</p>
+          </div>
+        </div>
+        <div class="fs-card__actions">
+          <a class="text--link" href="#">Learn more</a>
+        </div>
+      </div>
+    </div>
+    <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-3">
+      <div class="fs-card">
+        <a class="fs-card__link__outer" href="#">Card title</a>
+        <div class="fs-card__image__wrapper">
+          <div class="fs-card__image">
+            <img src="https://campuses.uq.edu.au/files/9749/gatton-card2.jpg" alt="Card image description">
+          </div>
+        </div>
+        <div class="fs-card__content">
+          <div class="fs-card__header">
+            <h3 class="fs-card__title">Card title</h3>
+          </div>
+          <div class="fs-card__body">
+              <p>Card summary text Card summary text Card summary text</p>
+          </div>
+        </div>
+        <div class="fs-card__actions">
+          <a class="text--link" href="#">Learn more</a>
+        </div>
+      </div>
+    </div>
+    <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-3">
+      <div class="fs-card">
+        <a class="fs-card__link__outer" href="#">Card title</a>
+        <div class="fs-card__image__wrapper">
+          <div class="fs-card__image">
+            <img src="https://campuses.uq.edu.au/files/9749/gatton-card2.jpg" alt="Card image description">
+          </div>
+        </div>
+        <div class="fs-card__content">
+          <div class="fs-card__header">
+            <h3 class="fs-card__title">Card title</h3>
+          </div>
+          <div class="fs-card__body">
+              <p>Card summary text Card summary text Card summary text</p>
+          </div>
+        </div>
+        <div class="fs-card__actions">
+          <a class="text--link" href="#">Learn more</a>
         </div>
       </div>
     </div>
@@ -372,7 +401,7 @@ export const fsCardTextLink = () => {
             <h3 class="fs-card__title"><a href="#" class="fs-card__link">Card title</a></h3>
           </div>
           <div class="fs-card__body">
-              <p tabindex="0">Card summary text Card summary text Card summary text</p>
+              <p>Card summary text Card summary text Card summary text</p>
           </div>
         </div>
         <div class="fs-card__actions">
@@ -397,7 +426,7 @@ export const fsCardNoImage = () => {
             <h3 class="fs-card__title">Card title</h3>
           </div>
           <div class="fs-card__body">
-            <p tabindex="0">Card summary text Card summary text Card summary text</p>
+            <p>Card summary text Card summary text Card summary text</p>
           </div>
         </div>
       </div>
@@ -410,7 +439,7 @@ export const fsCardNoImage = () => {
             <h3 class="fs-card__title">Card title</h3>
           </div>
           <div class="fs-card__body">
-            <p tabindex="0">Card summary text Card summary text Card summary text</p>
+            <p>Card summary text Card summary text Card summary text</p>
           </div>
         </div>
       </div>
@@ -432,7 +461,7 @@ export const fsCardNoImageShaded = () => {
             <h3 class="fs-card__title">Card title</h3>
           </div>
           <div class="fs-card__body">
-            <p tabindex="0">Card summary text Card summary text Card summary text Card summary text Card summary text Card summary text Card summary text Card summary text Card summary text</p>
+            <p>Card summary text Card summary text Card summary text Card summary text Card summary text Card summary text Card summary text Card summary text Card summary text</p>
           </div>
         </div>
       </div>
@@ -447,7 +476,7 @@ export const fsCardBordered = () => {
   return `
   <div class="uq-grid">
     <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-4">
-      <div class="fs-card fs-card--bordered fs-card--shadow">
+      <div class="fs-card fs-card--bordered">
         <a class="fs-card__link__outer" href="#">Card title</a>
         <div class="fs-card__content">
           <div class="fs-card__header">
@@ -455,13 +484,13 @@ export const fsCardBordered = () => {
             <h3 class="fs-card__title">Card title</h3>
           </div>
           <div class="fs-card__body">
-            <p tabindex="0">Card summary text Card summary text Card summary text</p>
+            <p>Card summary text Card summary text Card summary text</p>
           </div>
         </div>
       </div>
     </div>
     <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-4">
-      <div class="fs-card fs-card--bordered fs-card--shadow">
+      <div class="fs-card fs-card--bordered">
         <a class="fs-card__link__outer" href="#">Card title</a>
         <div class="fs-card__content">
           <div class="fs-card__header">
@@ -469,7 +498,7 @@ export const fsCardBordered = () => {
             <p class="fs-card__title__sub">Card sub-title</p>
           </div>
           <div class="fs-card__body">
-            <p tabindex="0">Card summary text Card summary text Card summary text</p>
+            <p>Card summary text Card summary text Card summary text</p>
           </div>
         </div>
       </div>
@@ -484,7 +513,7 @@ export const fsCardHorizontalLeft = () => {
   return `
   <div class="uq-grid">
     <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-8 uq-grid__col--xl-12">
-      <div class="fs-card fs-card--horizontal fs-card--horizontal-left fs-card--shadow">
+      <div class="fs-card fs-card--horizontal fs-card--horizontal-left">
         <a class="fs-card__link__outer" href="#">Card title</a>
         <div class="fs-card__image__wrapper">
           <div class="fs-card__image">
@@ -497,7 +526,7 @@ export const fsCardHorizontalLeft = () => {
             <h3 class="fs-card__title">Card title</h3>
           </div>
           <div class="fs-card__body">
-            <p tabindex="0">Card summary text Card summary text Card summary text</p>
+            <p>Card summary text Card summary text Card summary text</p>
           </div>
         </div>
       </div>
@@ -512,7 +541,7 @@ export const fsCardHorizontalRight = () => {
   return `
   <div class="uq-grid">
     <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-8 uq-grid__col--xl-12">
-      <div class="fs-card fs-card--horizontal fs-card--horizontal-right fs-card--shadow">
+      <div class="fs-card fs-card--horizontal fs-card--horizontal-right">
         <a class="fs-card__link__outer" href="#">Card title</a>
         <div class="fs-card__image__wrapper">
           <div class="fs-card__image">
@@ -525,7 +554,7 @@ export const fsCardHorizontalRight = () => {
             <h3 class="fs-card__title">Card title</h3>
           </div>
           <div class="fs-card__body">
-            <p tabindex="0">Card summary text Card summary text Card summary text</p>
+            <p>Card summary text Card summary text Card summary text</p>
           </div>
         </div>
       </div>

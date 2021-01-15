@@ -415,22 +415,24 @@ $fa-line-height-base: core.$fa-line-height-base;
 // Card Default
 .fs-card {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   background-color: core.$uq-white;
   border: 1px solid core.$uq-neutral-light40;
   border-radius: core.$space-xs;
-  margin-bottom: core.$space-md;
+  box-shadow: 0 core.$space-xs core.$space-xs rgba(core.$uq-neutral-dark80, 0.05);
+  color: $card-body-text;
+  line-height: core.$space-md;
+  margin-bottom: core.$space-md;    
   overflow-wrap: break-word;
   word-wrap: break-word;
   overflow: hidden;
   transition: all ease .25s;
-
-  &--shadow {
-    box-shadow: 0 core.$space-xs core.$space-sm rgba(core.$uq-neutral-dark80, 0.1);
-
-    &:hover,
-    &:focus {
-      box-shadow: 0 core.$space-sm core.$space-md rgba(core.$uq-neutral-dark80, 0.2);
-    }
+  
+  &:hover,
+  &:focus {
+    box-shadow: 0 core.$space-sm core.$space-md rgba(core.$uq-neutral-dark80, 0.2);
   }
 
   &--shaded {
@@ -548,7 +550,7 @@ $fa-line-height-base: core.$fa-line-height-base;
   }
 
   &__image__wrapper {
-    max-height: 18.5rem;
+    max-height: 15rem;
     overflow: hidden;
   }
   &__image {
@@ -560,8 +562,6 @@ $fa-line-height-base: core.$fa-line-height-base;
       position: absolute;
       height: 100%;
       width: 100%;
-      top: 0;
-      left: 0;
       -o-object-fit: cover;
       object-fit: cover;
       z-index: 0;
@@ -569,6 +569,8 @@ $fa-line-height-base: core.$fa-line-height-base;
   }
 
   &__content {
+
+    flex-grow: 1;
     padding: core.$space-md;
 
     :last-child .fs-card__title {
@@ -581,9 +583,8 @@ $fa-line-height-base: core.$fa-line-height-base;
     :first-child {
       margin: core.$space-none;
     }
-
     :last-child {
-      margin: core.$space-none core.$space-none core.$space;
+      margin: core.$space-none core.$space-none core.$space-sm;
     }
   }
 
@@ -594,7 +595,7 @@ $fa-line-height-base: core.$fa-line-height-base;
   }
 
   &__actions {
-    padding: core.$space-md;
+    padding: core.$space-none core.$space-md core.$space-md;
 
     p:last-child {
       margin-bottom: core.$space-none;
@@ -604,7 +605,7 @@ $fa-line-height-base: core.$fa-line-height-base;
   &__title {
     font-size: core.$font-size-xl;
     color: core.$uq-neutral-dark80;
-    margin: core.$space-none core.$space-none core.$space;
+    margin: core.$space-none core.$space-none core.$space-sm;
 
     @media #{core.$screen-md-up} {
       font-size: core.$font-size-xxl;
@@ -615,26 +616,15 @@ $fa-line-height-base: core.$fa-line-height-base;
       font-weight: 500;
       color: core.$uq-purple-light;
       text-transform: uppercase;
-      margin: core.$space-none core.$space-none core.$space-xs;
+      margin: core.$space-none core.$space-none core.$space-sm;
   
       @media #{core.$screen-md-up} {
         font-size: core.$font-size-m;
       }
   
       &--grey {
+        font-weight: 400;
         color: core.$uq-darkgrey;
-      }
-    }
-
-    &__sub {
-      font-size: core.$font-size-s;
-      font-weight: 400;
-      color: core.$uq-darkgrey;
-      text-transform: uppercase;
-      margin: core.$space-none core.$space-none core.$space-xs;
-  
-      @media #{core.$screen-md-up} {
-        font-size: core.$font-size-m;
       }
     }
   }

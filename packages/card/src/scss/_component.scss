@@ -439,6 +439,10 @@ $fa-line-height-base: core.$fa-line-height-base;
     background-color: $card-shaded-bg;
   }
 
+  &.height-non-equalised {
+    height: auto;
+  }
+
   // Card horizontal
   &--horizontal {
     display: flex;
@@ -638,4 +642,9 @@ $fa-line-height-base: core.$fa-line-height-base;
 }
 .text--grey {
   color: core.$uq-darkgrey;
+}
+
+// Set height of card to not equalise
+.height-non-equalised .fs-card {
+  height: auto;
 }

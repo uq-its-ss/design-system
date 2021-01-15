@@ -385,27 +385,58 @@ export const fsCardDefault = () => {
 
 fsCardDefault.storyName = 'FS card default';
 
-export const fsCardTextLink = () => {
+export const fsCardDefaultNoImage = () => {
   return `
-  <div class="uq-grid uq-grid--full-width">
-    <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-4">
+  <div class="uq-grid uq-grid--full-width height-non-equalised">
+    <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-3">
       <div class="fs-card">
-        <div class="fs-card__image__wrapper">
-          <div class="fs-card__image">
-            <img src="https://campuses.uq.edu.au/files/9749/gatton-card2.jpg" alt="Card image description">
-          </div>
-        </div>
+        <a class="fs-card__link__outer" href="#">Card title</a>
         <div class="fs-card__content">
           <div class="fs-card__header">
-            <p class="fs-card__title__super fs-card__title__super--grey">Card sub-title</p>
-            <h3 class="fs-card__title"><a href="#" class="fs-card__link">Card title</a></h3>
+            <h3 class="fs-card__title">Card title</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-3">
+      <div class="fs-card">
+        <a class="fs-card__link__outer" href="#">Card title</a>
+        <div class="fs-card__content">
+          <div class="fs-card__header">
+            <h3 class="fs-card__title">Card title</h3>
+          </div>
+          <div class="fs-card__body">
+              <p>Card summary text Card summary text Card summary text</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-3">
+      <div class="fs-card">
+        <a class="fs-card__link__outer" href="#">Card title</a>
+        <div class="fs-card__content">
+          <div class="fs-card__header">
+            <h3 class="fs-card__title">Card title</h3>
           </div>
           <div class="fs-card__body">
               <p>Card summary text Card summary text Card summary text</p>
           </div>
         </div>
         <div class="fs-card__actions">
-          <a href="#" class="fs-card__link">Card link</a>
+          <a class="text--link" href="#">Learn more</a>
+        </div>
+      </div>
+    </div>
+    <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-3">
+      <div class="fs-card">
+        <a class="fs-card__link__outer" href="#">Card title</a>
+        <div class="fs-card__content">
+          <div class="fs-card__header">
+            <h3 class="fs-card__title">Card title</h3>
+          </div>
+        </div>
+        <div class="fs-card__actions">
+          <a class="text--link" href="#">Learn more</a>
         </div>
       </div>
     </div>
@@ -413,34 +444,60 @@ export const fsCardTextLink = () => {
   `;
 };
 
-fsCardTextLink.storyName = 'FS card text link';
+fsCardDefaultNoImage.storyName = 'FS card default, no image';
 
-export const fsCardNoImage = () => {
+export const fsCardDefaultNoImageShaded = () => {
   return `
-  <div class="uq-grid">
-    <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-6">
-      <div class="fs-card fs-card--no-image">
+  <div class="uq-grid uq-grid--full-width height-non-equalised">
+    <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-3">
+      <div class="fs-card fs-card--shaded">
         <a class="fs-card__link__outer" href="#">Card title</a>
         <div class="fs-card__content">
           <div class="fs-card__header">
             <h3 class="fs-card__title">Card title</h3>
-          </div>
-          <div class="fs-card__body">
-            <p>Card summary text Card summary text Card summary text</p>
           </div>
         </div>
       </div>
     </div>
-    <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-6">
-      <div class="fs-card fs-card--no-image">
+    <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-3">
+      <div class="fs-card fs-card--shaded">
         <a class="fs-card__link__outer" href="#">Card title</a>
         <div class="fs-card__content">
           <div class="fs-card__header">
             <h3 class="fs-card__title">Card title</h3>
           </div>
           <div class="fs-card__body">
-            <p>Card summary text Card summary text Card summary text</p>
+              <p>Card summary text Card summary text Card summary text</p>
           </div>
+        </div>
+      </div>
+    </div>
+    <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-3">
+      <div class="fs-card fs-card--shaded">
+        <a class="fs-card__link__outer" href="#">Card title</a>
+        <div class="fs-card__content">
+          <div class="fs-card__header">
+            <h3 class="fs-card__title">Card title</h3>
+          </div>
+          <div class="fs-card__body">
+              <p>Card summary text Card summary text Card summary text</p>
+          </div>
+        </div>
+        <div class="fs-card__actions">
+          <a class="text--link" href="#">Learn more</a>
+        </div>
+      </div>
+    </div>
+    <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-3">
+      <div class="fs-card fs-card--shaded">
+        <a class="fs-card__link__outer" href="#">Card title</a>
+        <div class="fs-card__content">
+          <div class="fs-card__header">
+            <h3 class="fs-card__title">Card title</h3>
+          </div>
+        </div>
+        <div class="fs-card__actions">
+          <a class="text--link" href="#">Learn more</a>
         </div>
       </div>
     </div>
@@ -448,21 +505,37 @@ export const fsCardNoImage = () => {
   `;
 };
 
-fsCardNoImage.storyName = 'FS card no image';
+fsCardDefaultNoImageShaded.storyName = 'FS card default, no image, shaded';
 
-export const fsCardNoImageShaded = () => {
+export const fsCardDefaultNoImageButton = () => {
   return `
-  <div class="uq-grid">
-    <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-8 uq-grid__col--xl-12">
-      <div class="fs-card fs-card--no-image fs-card--shaded">
+  <div class="uq-grid uq-grid--full-width height-non-equalised">
+    <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-3">
+      <div class="fs-card">
+        <a class="fs-card__link__outer" href="#">Card title</a>
+        <div class="fs-card__content">
+          <div class="fs-card__header">
+            <h3 class="fs-card__title">Card title</h3>
+          </div>
+        </div>
+        <div class="fs-card__actions">
+          <button class="uq-button uq-button--purple" href="#">Learn more</button>
+        </div>
+      </div>
+    </div>
+    <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-3">
+      <div class="fs-card">
         <a class="fs-card__link__outer" href="#">Card title</a>
         <div class="fs-card__content">
           <div class="fs-card__header">
             <h3 class="fs-card__title">Card title</h3>
           </div>
           <div class="fs-card__body">
-            <p>Card summary text Card summary text Card summary text Card summary text Card summary text Card summary text Card summary text Card summary text Card summary text</p>
+              <p>Card summary text Card summary text Card summary text</p>
           </div>
+        </div>
+        <div class="fs-card__actions">
+          <button class="uq-button uq-button--purple" href="#">Learn more</button>
         </div>
       </div>
     </div>
@@ -470,7 +543,52 @@ export const fsCardNoImageShaded = () => {
   `;
 };
 
-fsCardNoImageShaded.storyName = 'FS card no image shaded';
+fsCardDefaultNoImageButton.storyName = 'FS card default, no image, button';
+
+export const fsCardDefaultNoImageButtonShaded = () => {
+  return `
+  <div class="uq-grid uq-grid--full-width height-non-equalised">
+    <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-3">
+      <div class="fs-card fs-card--shaded height-non-equalised">
+        <a class="fs-card__link__outer" href="#">Card title</a>
+        <div class="fs-card__content">
+          <div class="fs-card__header">
+            <h3 class="fs-card__title">Card title</h3>
+          </div>
+        </div>
+        <div class="fs-card__actions">
+          <button class="uq-button uq-button--purple" href="#">Learn more</button>
+        </div>
+      </div>
+    </div>
+    <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-3">
+      <div class="fs-card fs-card--shaded">
+        <a class="fs-card__link__outer" href="#">Card title</a>
+        <div class="fs-card__content">
+          <div class="fs-card__header">
+            <h3 class="fs-card__title">Card title</h3>
+          </div>
+          <div class="fs-card__body">
+              <p>Card summary text Card summary text Card summary text</p>
+          </div>
+        </div>
+        <div class="fs-card__actions">
+          <button class="uq-button uq-button--purple" href="#">Learn more</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  `;
+};
+
+fsCardDefaultNoImageButtonShaded.storyName = 'FS card default, no image, button, shaded';
+
+
+
+
+
+
+
 
 export const fsCardBordered = () => {
   return `

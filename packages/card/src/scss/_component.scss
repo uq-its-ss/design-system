@@ -421,7 +421,7 @@ $fa-line-height-base: core.$fa-line-height-base;
 
 
 // Card Default
-.fs-card {
+.uq-card {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -430,7 +430,7 @@ $fa-line-height-base: core.$fa-line-height-base;
   border: 1px solid core.$uq-neutral-light40;
   border-radius: core.$space-xs;
   box-shadow: 0 core.$space-xs core.$space-xs rgba(core.$uq-neutral-dark80, 0.05);
-  color: $card-body-text;
+  color: core.$uq-neutral-dark60;
   line-height: core.$space-md; 
   overflow-wrap: break-word;
   word-wrap: break-word;
@@ -486,7 +486,7 @@ $fa-line-height-base: core.$fa-line-height-base;
     flex-grow: 1;
     padding: core.$space-md;
 
-    :last-child .fs-card__title {
+    :last-child .uq-card__title {
       margin-bottom: core.$space-none;
     }
   }
@@ -537,7 +537,7 @@ $fa-line-height-base: core.$fa-line-height-base;
   
       &--grey {
         font-weight: 400;
-        color: core.$uq-darkgrey;
+        color: core.$uq-neutral-dark60;
       }
     }
   }
@@ -564,18 +564,16 @@ $fa-line-height-base: core.$fa-line-height-base;
 
     &-left {
 
-      .fs-card__image__wrapper {
+      .uq-card__image__wrapper {
         min-width: 100%;
-        margin-right: 0%;
         max-height: 100%;
         overflow: hidden;
 
         @media #{core.$screen-md-up} {
-          min-width: 48%;
-          margin-right: 2%;
+          min-width: 50%;
         }
       }
-      .fs-card__image {
+      .uq-card__image {
         padding-bottom: 70%;
 
         @media #{core.$screen-md-up} {
@@ -583,8 +581,7 @@ $fa-line-height-base: core.$fa-line-height-base;
           padding-bottom: 0%;
         }
       }
-
-      .fs-card__content {
+      .uq-card__content {
         min-width: 100%;
         padding: core.$space-md;
 
@@ -597,19 +594,17 @@ $fa-line-height-base: core.$fa-line-height-base;
 
     &-right {
 
-      .fs-card__image__wrapper {
+      .uq-card__image__wrapper {
         min-width: 100%;
-        margin-left: 0%;
         max-height: 100%;
         overflow: hidden;
 
         @media #{core.$screen-md-up} {
-          min-width: 48%;
-          margin-left: 2%;
+          min-width: 50%;
           order: 2;
         }
       }
-      .fs-card__image {
+      .uq-card__image {
         padding-bottom: 70%;
 
         @media #{core.$screen-md-up} {
@@ -617,8 +612,7 @@ $fa-line-height-base: core.$fa-line-height-base;
           padding-bottom: 0%;
         }
       }
-
-      .fs-card__content {
+      .uq-card__content {
         min-width: 100%;
         padding: core.$space-md;
 
@@ -635,7 +629,7 @@ $fa-line-height-base: core.$fa-line-height-base;
     border-bottom: core.$space-sm solid core.$uq-purple;
     min-height: 17rem;
 
-    .fs-card__title__super {
+    .uq-card__title__super {
       color: core.$uq-purple;
     }
   }
@@ -643,10 +637,10 @@ $fa-line-height-base: core.$fa-line-height-base;
   // Card no image
   &--no-image {
 
-    .fs-card__link__outer+.fs-card__content .fs-card__title {
+    .uq-card__link__outer+.uq-card__content .uq-card__title {
       color: core.$link;
     }
-    .fs-card__link__outer:hover+.fs-card__content .fs-card__title {
+    .uq-card__link__outer:hover+.uq-card__content .uq-card__title {
       color: core.$link;
       text-decoration: underline;
     }
@@ -657,7 +651,7 @@ $fa-line-height-base: core.$fa-line-height-base;
   &__col--md-8,
   &__col--xl-12 {
 
-    .fs-card {
+    .uq-card {
 
       @media #{core.$screen-md-up} {
         flex-direction: row;
@@ -723,6 +717,6 @@ $fa-line-height-base: core.$fa-line-height-base;
 }
 
 // Set height of card to not equalise
-.height-non-equalised .fs-card {
+.height-non-equalised .uq-card {
   height: auto;
 }

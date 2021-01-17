@@ -13,273 +13,139 @@ The card component is used to provide a brief summary of content or a task, ofte
 
 ## Default example
 
-### Card default
-
-The most common and basic card used.
+### Default card
 
 <Canvas withSource="none">
-  <Story id="components-cards--card-default" />
+  <Story id="components-cards--default-card" />
 </Canvas>
 
 ```html
-<div class="card">
-  <div class="card__header"></div>
-  <div class="card__body">
-    <a class="card__link" href="#">
-      <div class="card__image-container" style="background-image: url('https://campuses.uq.edu.au/files/9749/gatton-card2.jpg');"></div>
-    </a>
-    <div class="card__content">
-      <h3 class="card__title">
-        <a class="card__link" href="#">Title of item</a>
-      </h3>
-      <div class="card__summary">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-        tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-      </div>
-    </div>
-  </div>
-  <div class="card__footer"></div>
-</div>
+
 ```
+
+
+
+
+### Default card variants
+
+#### - Without image
+
+<Canvas withSource="none">
+  <Story id="components-cards--default-card-no-image" />
+</Canvas>
+
+```html
+
+```
+
+#### - Without image, shaded
+
+<Canvas withSource="none">
+  <Story id="components-cards--default-card-no-image-shaded" />
+</Canvas>
+
+```html
+
+```
+
+#### - Without image, button
+
+<Canvas withSource="none">
+  <Story id="components-cards--default-card-no-image-button" />
+</Canvas>
+
+```html
+
+```
+
+#### - Without image, button, shaded
+
+<Canvas withSource="none">
+  <Story id="components-cards--default-card-no-image-button-shaded" />
+</Canvas>
+
+```html
+
+```
+
+#### - With image
+
+<Canvas withSource="none">
+  <Story id="components-cards--default-card-image" />
+</Canvas>
+
+```html
+
+```
+
+#### - With image, button
+
+<Canvas withSource="none">
+  <Story id="components-cards--default-card-image-button" />
+</Canvas>
+
+```html
+
+```
+
+
+
+
+
+### Default card layout
+
+#### - One column
+
+<Canvas withSource="none">
+  <Story id="components-cards--default-card-1-col" />
+</Canvas>
+
+```html
+
+```
+
+#### - Two column
+
+<Canvas withSource="none">
+  <Story id="components-cards--default-card-2-col" />
+</Canvas>
+
+```html
+
+```
+
+#### - Three column
+
+<Canvas withSource="none">
+  <Story id="components-cards--default-card-3-col" />
+</Canvas>
+
+```html
+
+```
+
+#### - Four column
+
+<Canvas withSource="none">
+  <Story id="components-cards--default-card-4-col" />
+</Canvas>
+
+```html
+
+```
+
+
+
+
+
+
+
 
 ## Variant examples
 
-### Card compact
+### Card story
 
-Slightly smaller version of a card. Typically used with just a title and no additional information. <code>card--compact</code> 
-
-<Canvas withSource="none">
-  <Story id="components-cards--card-compact" />
-</Canvas>
-
-```html
-<div class="card card--compact">
-  ...
-  ...
-</div>
-```
-
-### Card with action links
-
-Add action links to cards when multiple link options are required. Link for main title can also be removed. 
-
-<Canvas withSource="none">
-  <Story id="components-cards--card-with-links" />
-</Canvas>
-
-```html
-<div class="card">
-  ...
-  ...
-  <div class="card__footer">
-    <div class="uq-grid">
-      <div class="uq-grid__col uq-grid__col--3">
-        <a class="card__link" href="#">Action link A</a>
-      </div>
-      <div class="uq-grid__col uq-grid__col--3">
-        <a class="card__link" href="#">Action link B</a>
-      </div>
-    </div>
-  </div>
-</div>
-```
-
-### Card with additional text
-
-Additional text can also be added to cards. this includes <code>card-date</code> and <code>card-location</code>
-
-<Canvas withSource="none">
-  <Story id="components-cards--card-with-additional-text" />
-</Canvas>
-
-```html
-<div class="card">
-  ...
-  <div class="card__body">
-    ...
-    <div class="card__content">
-      <h3 class="card__title">
-        <a class="card__link" href="#">Title of item</a>
-      </h3>
-      <div class="card__date">Sunday 16 August, 2015</div>
-      <div class="card__location">
-        <a class="card__link" href="#">Gatton campus</a>
-      </div>
-      <div class="card__summary">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-        tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-      </div>
-    </div>
-  </div>
-  ...
-</div>
-```
-
-### Overlay card square _(deprecated)_
-
-Square cards are more compact and ,  
-Add the class <code>card--square</code> to the Card wrapper. 
-
-<Canvas withSource="none">
-  <Story id="components-cards--overlay-card-square" />
-</Canvas>
-
-```html
-<a class="card__primary-link" href="https://campuses.uq.edu.au/st-lucia">
-  <div class="card card--square card--background-image" style="background-image: url('https://campuses.uq.edu.au/files/9492/stlucia-card.jpg')">
-    ...
-    <div class="card__body">
-      <div class="card__content">
-        <div class="card__title">Title of item</div>
-        ...
-      </div>
-    </div>
-  </div>
-</a>
-```
-
-### Overlay card portrait _(deprecated)_
-
-Allow more vertical coverage for greater image impact. <code>card--portrait</code>
-
-<Canvas withSource="none">
-  <Story id="components-cards--overlay-card-portrait" />
-</Canvas>
-
-```html
-<div class="card card--portrait card--background-image" style="background-image: url('https://campuses.uq.edu.au/files/9749/gatton-card2.jpg')">
-  ...
-  ...
-</div>
-```
-
-### Overlay card landscape _(deprecated)_
-
-Allow more horizontal coverage for greater image impact. <code>card--landscape</code>
-The width does restrict the number of cards that can be displayed in the same row. 
-
-<Canvas withSource="none">
-  <Story id="components-cards--overlay-card-landscape" />
-</Canvas>
-
-```html
-<div class="card card--landscape card--background-image" style="background-image: url('https://campuses.uq.edu.au/files/9749/gatton-card2.jpg')">
-  ...
-  ...
-</div>
-```
-
-### Overlay card with link _(deprecated)_
-
-Add an action link to change point of interaction. 
-
-<Canvas withSource="none">
-  <Story id="components-cards--overlay-card-with-link" />
-</Canvas>
-
-```html
-<div class="card card--square card--background-image" style="background-image: url('https://campuses.uq.edu.au/files/9749/gatton-card2.jpg')">
-  ...
-  ...
-  <div class="card__footer">
-    <a class="card__link" href="#">Action link</a>
-  </div>
-</div>
-```
-
-### Overlay card with additional text _(deprecated)_
-
-Additional text can also be added to cards. this includes <code>card-date</code> and <code>card-location</code>
-
-<Canvas withSource="none">
-  <Story id="components-cards--overlay-card-with-additional-text" />
-</Canvas>
-
-```html
-<div class="card card--square card--background-image" style="background-image: url('https://campuses.uq.edu.au/files/9749/gatton-card2.jpg')">
-  ...
-  <div class="card__body">
-    <div class="card__content">
-      <h3 class="card__title">
-        <a class="card__link" href="#">Title of item</a>
-      </h3>
-      <div class="card__date">
-        <a class="card__link" href="#">Sunday 16 August, 2015</a>
-      </div>
-      <div class="card__location">
-        <a class="card__link" href="#">Gatton campus</a>
-      </div>
-    </div>
-  </div>
-  ...
-</div>
-```
-
-### FS card default
-
-<Canvas withSource="none">
-  <Story id="components-cards--fs-card-default" />
-</Canvas>
-
-```html
-
-```
-
-### FS card default, no image
-
-<Canvas withSource="none">
-  <Story id="components-cards--fs-card-default-no-image" />
-</Canvas>
-
-```html
-
-```
-
-### FS card default, no image, shaded
-
-<Canvas withSource="none">
-  <Story id="components-cards--fs-card-default-no-image-shaded" />
-</Canvas>
-
-```html
-
-```
-
-### FS card default, no image, button
-
-<Canvas withSource="none">
-  <Story id="components-cards--fs-card-default-no-image-button" />
-</Canvas>
-
-```html
-
-```
-
-### FS card default, no image, button, shaded
-
-<Canvas withSource="none">
-  <Story id="components-cards--fs-card-default-no-image-button-shaded" />
-</Canvas>
-
-```html
-
-```
-
-
-
-
-
-
-
-### FS card bordered
-
-<Canvas withSource="none">
-  <Story id="components-cards--fs-card-bordered" />
-</Canvas>
-
-```html
-
-```
-
-### FS card horizontal left
+#### - Card horizontal left
 
 <Canvas withSource="none">
   <Story id="components-cards--fs-card-horizontal-left" />
@@ -289,7 +155,7 @@ Additional text can also be added to cards. this includes <code>card-date</code>
 
 ```
 
-### FS card horizontal right
+#### - Card horizontal right
 
 <Canvas withSource="none">
   <Story id="components-cards--fs-card-horizontal-right" />
@@ -298,3 +164,14 @@ Additional text can also be added to cards. this includes <code>card-date</code>
 ```html
 
 ```
+
+### Card event
+
+<Canvas withSource="none">
+  <Story id="components-cards--fs-card-bordered" />
+</Canvas>
+
+```html
+
+```
+

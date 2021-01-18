@@ -1,422 +1,8 @@
 @use '@uqds/core/src/scss/global' as core;
 @use 'global' as *;
 
-// Remove namespace for font-awesome import
-$fa-font-size-base: core.$fa-font-size-base;
-$fa-line-height-base: core.$fa-line-height-base;
-
-@import 'font-awesome/scss/mixins';
-
-// Cards
-// Used in the Card Grid component.
-//
-// Variants:
-// .card--background-image - Overlays the content on the image when it is used as an inline background image style.
-// .card--square - Forces the card to equal height and width dimensions. For use with .card--background-image.
-// .card--portrait - Forces the card to portrait dimensions. For use with .card--background-image.
-// .card--landscape - Forces the card to landscape dimensions. For use with .card--background-image.
-// .card--full-width - Forces the card to full-width landscape dimensions. For use with .card--background-image.
-// .card--shaded - Applies a shaded gray background color to the whole card.
-// .card--compact - A tighter layout with a landscape image and no summary.
-// .card--horizontal - A full width horizontal layout with a landscape image.
-//
-
-%card,
-.card {
-  background-color: core.$uq-white;
-  margin-bottom: core.$space-md;
-  position: relative;
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-
-  &__wrapper {
-    margin-bottom: core.$space-md;
-  }
-
-  &__header {
-    transition: all ease .35s;
-  }
-
-  &__footer {
-    .card__link-column {
-      border-top: 1px solid core.$uq-neutral-light40; //eee;
-
-      & + .card__link-column {
-        border-left: 1px solid core.$uq-neutral-light40; //eee;
-      }
-    }
-    .card__link {
-      display: block;
-      padding: core.$space core.$space-lg core.$space core.$space; //1rem 1.8rem 1rem 1rem
-      position: relative;
-
-      &::after {
-        @include fa-icon;
-        content: core.$fa-var-angle-right;
-        margin-top: -(core.$space-sm);
-        opacity: .5;
-        position: absolute;
-        right: 1rem;
-        top: 50%;
-      }
-
-      &:hover {
-        &::after {
-          opacity: 1;
-          text-decoration: none;
-        }
-      }
-    }
-  }
-
-  &__body {
-    transition: all ease .35s;
-  }
-
-  &__content {
-    padding: core.$space;
-  }
-
-  // Force image heights to be the same for cards sitting next to each other.
-  &__image-container {
-    @include core.background-cover();
-    background-color: core.$uq-neutral-light40; //eee;
-    height: 18rem;
-    overflow: hidden;
-    position: relative;
-  }
-
-  &__image-bg_link {
-    display: block;
-    height: 100%;
-    position: absolute;
-    width: 100%;
-  }
-
-  &__image {
-    width: 100%;
-  }
-
-  &__title {
-    font-size: 1.6rem;
-    font-weight: 400;
-    line-height: 1.2;
-    margin: core.$space-sm core.$space-none;
-    transition: all ease .35s;
-
-    // Stop system generated divs forcing link to behave as a block element.
-    .card__link div {
-      display: inline;
-    }
-  }
-
-  &__date {
-    font-weight: 400;
-  }
-
-  &__location {
-    &::before {
-      @include fa-icon;
-      content: core.$fa-var-map-marker;
-      margin-right: core.$space-sm;
-    }
-  }
-
-  &__link {
-    border-color: inherit;
-  }
-
-  // Background image with content overlaid.
-  &--background-image {
-    @extend %light-palette;
-    background-position: 50% 50%;
-    background-size: cover;
-    display: table-cell;
-    overflow: hidden;
-    text-align: center;
-    vertical-align: middle;
-
-    &::before {
-      background: core.$uq-black;
-      content: '';
-      display: block;
-      height: 100%;
-      left: 0;
-      opacity: .2;
-      position: absolute;
-      top: 0;
-      width: 100%;
-      z-index: 1;
-
-      @media #{core.$screen-xl-up} {
-        transition: all ease .35s;
-      }
-    }
-
-    &:hover {
-      &::before {
-        opacity: .5;
-      }
-    }
-
-    .card__header,
-    .card__body,
-    .card__footer {
-      position: relative;
-      z-index: 2;
-    }
-
-    .card__footer {
-      background: rgba(core.$uq-black, .4);
-      bottom: core.$space-none;
-      left: core.$space-none;
-      position: absolute;
-      text-align: left;
-      width: 100%;
-
-      .card__link-column {
-        border-color: rgba(core.$uq-white, .4);
-
-        & + .card__link-column {
-          border-color: rgba(core.$uq-white, .4);
-        }
-      }
-
-      .card__link {
-        @extend %light-palette;
-      }
-    }
-
-    .card__title {
-      margin-bottom: core.$space-none;
-
-      @media #{core.$screen-xl-up} {
-        text-shadow: 0 1px 1px rgba(core.$uq-black, .4);
-        transform: translate3d(0, 2rem, 0);
-
-        &::after {
-          background-color: rgba(core.$uq-black, .3);
-          border: 2px solid core.$uq-gold;
-          clear: both;
-          content: 'View';
-          color: core.$uq-gold;
-          display: table;
-          font-size: 1rem;
-          font-weight: 500;
-          margin: core.$space core.$space-auto core.$space-none; //.7rem auto 0
-          opacity: 0;
-          padding: core.$space-sm core.$space; //.3rem 1.2rem;
-          text-transform: uppercase;
-          transition: all ease .35s;
-          visibility: hidden;
-        }
-      }
-    }
-    .card__summary {
-      display: block; // Fallback for non-webkit.
-      display: -webkit-box;
-      font-size: core.$font-size-m;
-      line-height: core.$line-height;
-      max-height: core.$font-size-m * core.$line-height * $card-summary-lines-to-show; // Fallback for non-webkit.
-      -webkit-line-clamp: $card-summary-lines-to-show;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-  }
-
-  // Primary link.
-  &__primary-link {
-    display: inline-block;
-    margin-bottom: core.$space-md;
-
-    &:hover,
-    &:focus {
-      text-decoration: none;
-
-      // Background image variant with primary link.
-      .card--background-image {
-        .card__title {
-          @media #{core.$screen-xl-up} {
-            transform: translate3d(0, 0, 0);
-          }
-        }
-
-        .card__title {
-          @media #{core.$screen-xl-up} {
-            &::after {
-              opacity: 1;
-              visibility: visible;
-            }
-          }
-        }
-      }
-    }
-  }
-
-  // Force square format.
-  &--square {
-    height: $card-square-height;
-    max-width: 100%;
-    width: $card-square-width;
-
-    @media #{core.$screen-md-down} {
-      width: $card-full-width;
-    }
-
-    &::before {
-      // Because IE thinks 100% height is 100% of the table-cell content not
-      // the parent it is applied to.
-      height: $card-square-height;
-    }
-  }
-
-  // Force portrait format
-  &--portrait {
-    height: $card-portrait-height;
-    max-width: 100%;
-    width: $card-portrait-width;
-
-    @media #{core.$screen-md-down} {
-      width: $card-full-width;
-    }
-
-    &::before {
-      // Because IE thinks 100% height is 100% of the table-cell content not
-      // the parent it is applied to.
-      height: $card-portrait-height;
-    }
-  }
-
-  // Force landscape format.
-  &--landscape {
-    height: $card-landscape-height;
-    max-width: 100%;
-    width: $card-landscape-width;
-
-    @media #{core.$screen-md-down} {
-      width: $card-full-width;
-    }
-
-    &::before {
-      // Because IE thinks 100% height is 100% of the table-cell content not
-      // the parent it is applied to.
-      height: $card-landscape-height;
-    }
-  }
-
-  // Force full width format.
-  &--full-width {
-    height: $card-full-height;
-    max-width: 100%;
-    width: $card-full-width;
-
-    &::before {
-      // Because IE thinks 100% height is 100% of the table-cell content not
-      // the parent it is applied to.
-      height: $card-full-height;
-    }
-  }
-
-  // Shaded.
-  &--shaded {
-    background-color: $card-shaded-bg;
-  }
-
-  // Compact.
-  &--compact {
-
-    .card__image-container {
-      height: 12rem;
-    }
-
-    .card__title {
-      font-size: 1.425rem;
-    }
-  }
-
-  // Horizontal layout.
-  &--horizontal {
-    margin-bottom: core.$space-md;
-    overflow-y: auto;
-
-    @media #{core.$screen-md-up} {
-      height: 18rem;
-    }
-
-    .card__content {
-      @media #{core.$screen-md-up} {
-        display: table-cell;
-        height: 18rem;
-        padding-left: core.$space-lg;
-        vertical-align: middle;
-        width: 50%;
-      }
-    }
-
-    .card__image-container {
-      @media #{core.$screen-md-up} {
-        padding: 0 core.$space;
-        width: 50%;
-      }
-    }
-
-    &.card--media-right,
-    %card--media-right {
-      @media #{core.$screen-md-up} {
-        .card__image-container {
-          float: right;
-        }
-      }
-    }
-    .card__title {
-      font-size: 1.875rem;
-    }
-  }
-}
-
-// Fix for 3 column layout with more than 3 cards at medium breakpoint going
-// out of alignment due to .row's.
-// Class generated from paragraphs bundle name in uq_field_formatter module.
-//
-// Variants:
-// .cardgrid-wrapper--media-right - Apply media-right variant behaviour to nested cards.
-// .cardgrid-wrapper--shaded - Apply shaded variant behaviour to nested cards.
-// .card-grid-wrapper--collapsed - Remove spacing between nested cards so they sit flush together.
-
-.cardgrid-wrapper {
-
-  &--media-right {
-    .card {
-      @extend %card--media-right;
-    }
-  }
-
-  &--shaded {
-    .card {
-      @extend %card--shaded;
-    }
-  }
-
-  &--collapsed {
-    .uq-grid {
-      &__col {
-        padding-left: core.$space-none;
-        padding-right: core.$space-none;
-      }
-    }
-
-    .card {
-      margin-bottom: core.$space-none;
-    }
-  }
-}
-
-
-
-
-
-
+// Card Variants:
+// .uq-card--xxx - lorem ipsum
 
 
 
@@ -440,8 +26,18 @@ $fa-line-height-base: core.$fa-line-height-base;
   &:hover,
   &:focus {
     box-shadow: 0 core.$space-sm core.$space-md rgba(core.$uq-neutral-dark80, 0.2);
-  }
 
+    a {
+      color: core.$link-hover;
+      text-decoration: underline;
+    }
+    .uq-button {
+      background-color: core.$link-hover;
+      border: 2px solid core.$link-hover;
+      text-decoration: underline;
+    }
+  }
+  
   &__link__outer {
     position: absolute;
     top: 0;
@@ -492,16 +88,12 @@ $fa-line-height-base: core.$fa-line-height-base;
   }
 
   &__header {
-
-    :first-child {
-      margin: core.$space-none;
-    }
     :last-child {
       margin: core.$space-none core.$space-none core.$space-sm;
     }
   }
 
-  &__body {
+  &__body {     
     p:last-child {
       margin-bottom: core.$space-none;
     }
@@ -546,108 +138,74 @@ $fa-line-height-base: core.$fa-line-height-base;
   &--shaded {
     background-color: $card-shaded-bg;
   }
-
-  // Apply when height need not be equal between card items
-  &.height-non-equalised {
-    height: auto;
-  }
-
-  // Card horizontal
-  &--horizontal {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-
-    @media #{core.$screen-md-up} {
-      flex-direction: row;
-    }
-
-    &-left {
-
-      .uq-card__image__wrapper {
-        min-width: 100%;
-        max-height: 100%;
-        overflow: hidden;
-
-        @media #{core.$screen-md-up} {
-          min-width: 50%;
-        }
-      }
-      .uq-card__image {
-        padding-bottom: 70%;
-
-        @media #{core.$screen-md-up} {
-          min-height: 100%;
-          padding-bottom: 0%;
-        }
-      }
-      .uq-card__content {
-        min-width: 100%;
-        padding: core.$space-md;
-
-        @media #{core.$screen-md-up} {
-          min-width: 50%;
-          padding: core.$space-xxl core.$space-xxxl;
-        }
-      }
-    }
-
-    &-right {
-
-      .uq-card__image__wrapper {
-        min-width: 100%;
-        max-height: 100%;
-        overflow: hidden;
-
-        @media #{core.$screen-md-up} {
-          min-width: 50%;
-          order: 2;
-        }
-      }
-      .uq-card__image {
-        padding-bottom: 70%;
-
-        @media #{core.$screen-md-up} {
-          min-height: 100%;
-          padding-bottom: 0%;
-        }
-      }
-      .uq-card__content {
-        min-width: 100%;
-        padding: core.$space-md;
-
-        @media #{core.$screen-md-up} {
-          min-width: 50%;
-          padding: core.$space-xxl core.$space-xxxl;
-        }
-      }
-    }
-  }
-
-  // Card bordered
-  &--bordered {
-    border-bottom: core.$space-sm solid core.$uq-purple;
-    min-height: 17rem;
-
-    .uq-card__title__super {
-      color: core.$uq-purple;
-    }
-  }
-
-  // Card no image
-  &--no-image {
-
-    .uq-card__link__outer+.uq-card__content .uq-card__title {
-      color: core.$link;
-    }
-    .uq-card__link__outer:hover+.uq-card__content .uq-card__title {
-      color: core.$link;
-      text-decoration: underline;
-    }
-  }
 }
 
+/* Additional style rules */
 .uq-grid {
+
+  @media #{core.$screen-md-down} {
+
+    // Story & Event cards when > than 2 renders as lists on smaller viewports
+    .uq-card {
+
+      &--story,
+      &--event {
+
+        flex-direction: row;
+
+        .uq-card__image__wrapper {
+          min-width: 98px;
+          min-height: 100%;
+
+          @media #{core.$screen-md-up} {
+                    
+          }
+        }
+        .uq-card__image {
+          min-height: 100%;
+          padding-bottom: 0%;
+
+          @media #{core.$screen-md-up} {
+            
+          }
+        }
+        .uq-card__content__wrapper {
+          min-width: 50%;
+
+          @media #{core.$screen-md-up} {
+            
+          }
+        }
+        .uq-card__content {
+          padding: core.$space-none core.$space;
+
+          @media #{core.$screen-md-up} {
+                
+          }
+        }
+        .uq-card__title {
+          margin: core.$space-none core.$space-none core.$space-sm;
+
+          @media #{core.$screen-md-up} {
+                
+          }
+        }
+        .uq-card__body {
+          display: none;
+        }
+        .uq-card__actions {
+          padding: core.$space-none core.$space core.$space;
+
+          @media #{core.$screen-md-up} {
+            
+          }
+        }
+        
+      }
+    }
+  }
+  
+  // Full width cards
   &__col--md-8,
   &__col--xl-12 {
 
@@ -704,16 +262,6 @@ $fa-line-height-base: core.$fa-line-height-base;
 
     }
   }
-}
-
-.text--center {
-  text-align: center;
-}
-.text--small {
-  font-size: core.$font-size-s;
-}
-.text--grey {
-  color: core.$uq-darkgrey;
 }
 
 // Set height of card to not equalise

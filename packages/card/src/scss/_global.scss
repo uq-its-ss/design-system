@@ -17,3 +17,17 @@ $card-shaded-bg: core.$uq-neutral-light20;
     overflow: hidden;
     max-height: 75px;
 }
+
+@mixin with-count($n) {
+    @if $n == 1 {
+      &:first-child:nth-last-child(1) {
+        @content;
+      }
+    }
+    @else {
+      &:first-child:nth-last-child(#{$n}),
+      &:first-child:nth-last-child(#{$n}) ~ & {
+        @content;
+      }
+    }
+}

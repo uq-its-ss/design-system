@@ -6,7 +6,7 @@ import StatusBadge from '../../../.storybook/custom/components/StatusBadge';
 
 Enables the user to search for points of interest and categories.
 
-## Initial state
+## 2A. Initial state
 
 ### Basic usage
 
@@ -14,10 +14,10 @@ Use the HTML markup provided in the example below to apply the styles from the
 provided CSS.
 
 <Canvas withSource="open">
-  <Story height={120} id="deliverables-uq-maps-search-field--search-field" />
+  <Story height={120} id="deliverables-uq-maps-2-search-field--search-field" />
 </Canvas>
 
-## On focus or selecting origin/destination
+## 2B. On focus or selecting origin/destination
 
 What the search field looks like when a user clicks or taps the search bar but
 hasn't entered any text yet. Identical to when it is used to let a user choose
@@ -29,10 +29,10 @@ Using the same HTML markup as above, also apply the `uq-maps__search-field--is-f
 class to the container.
 
 <Canvas withSource="open">
-  <Story height={200} id="deliverables-uq-maps-search-field--search-field-focused" />
+  <Story height={200} id="deliverables-uq-maps-2-search-field--search-field-focused" />
 </Canvas>
 
-## With search value
+## 2C. With search value
 
 What the search field looks like when there has been text entered.
 
@@ -42,10 +42,10 @@ Using the same HTML markup as above, except we're applying the `uq-maps__search-
 class to the container instead.
 
 <Canvas withSource="open">
-  <Story height={120} id="deliverables-uq-maps-search-field--search-field-searching" />
+  <Story height={120} id="deliverables-uq-maps-2-search-field--search-field-searching" />
 </Canvas>
 
-## With circular progression indicator
+## 2D. With circular progression indicator
 
 What the search field looks like when the app is working on a search query.
 
@@ -53,11 +53,11 @@ What the search field looks like when the app is working on a search query.
 
 Using the same HTML markup as above and also applying the `uq-maps__search-field--is-working`
 class to the container instead. We also have to add in some extra markup and
-scripted behaviour for the [*Material Design*][1] progress indicator. Please see example
-code.
+scripted behaviour for the [*Material Design*][1] progress indicator. Please see
+example code.
 
 <Canvas withSource="open">
-  <Story height={120} id="deliverables-uq-maps-search-field--search-field-working" />
+  <Story height={120} id="deliverables-uq-maps-2-search-field--search-field-working" />
 </Canvas>
 
 [1]: https://material.io/components/progress-indicators#circular-progress-indicators

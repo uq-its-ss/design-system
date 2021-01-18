@@ -7,17 +7,17 @@ import StatusBadge from '../../../.storybook/custom/components/StatusBadge';
 Enables the user to search for *and* browse points of interest and categories.
 By design, the first child of this component root is the *search field*.
 
-## Initial state
+## 4A. Initial state
 
 Visually, it looks identical to a *search field* by itself.
 
 ### Basic usage
 
 <Canvas withSource="open" withToolbar>
-  <Story height={100} id="deliverables-uq-maps-search-combo-menu--initial" />
+  <Story height={100} id="deliverables-uq-maps-4-search-combo-menu--initial" />
 </Canvas>
 
-## On focus or selecting origin/destination
+## 4B. On focus or selecting origin/destination
 
 When the focus is on the search field, the search combo box expands to fill the
 available height and width of its parent container—on mobile, this should be the
@@ -27,37 +27,38 @@ screen at all.
 ### Basic usage
 
 Some POI and/or category items should be suggested before the user enters any
-text. The following example shows an alphabetical list of categories.
+text. The following example shows an alphabetical list of categories. However,
+we should show some data-driven POI's/categories instead.
 
 <Canvas withSource="open" withToolbar>
-  <Story height={800} id="deliverables-uq-maps-search-combo-menu--focused" />
+  <Story height={800} id="deliverables-uq-maps-4-search-combo-menu--focused" />
 </Canvas>
 
-## With search value
+## 4C. With search value
 
 ### Basic usage
 
 <Canvas withSource="open" withToolbar>
-  <Story height={800} id="deliverables-uq-maps-search-combo-menu--searching" />
+  <Story height={800} id="deliverables-uq-maps-4-search-combo-menu--searching" />
 </Canvas>
 
-## With search value but no results
+## 4D. With search value but no results
 
 ### Basic usage
 
 <Canvas withSource="open" withToolbar>
-  <Story height={155} id="deliverables-uq-maps-search-combo-menu--searching-no-results" />
+  <Story height={155} id="deliverables-uq-maps-4-search-combo-menu--searching-no-results" />
 </Canvas>
 
-## With search value but with search error
+## 4E. With search value but with search error
 
 ### Basic usage
 
 <Canvas withSource="open" withToolbar>
-  <Story height={176} id="deliverables-uq-maps-search-combo-menu--searching-error" />
+  <Story height={176} id="deliverables-uq-maps-4-search-combo-menu--searching-error" />
 </Canvas>
 
-## With search value AND category item opened
+## 4F. With search value AND category item opened
 
 The search term is retained as is within the search field. Introduce a "view
 all on map" clickable list item and category title above the actual category
@@ -66,7 +67,7 @@ list items.
 ### Basic usage
 
 <Canvas withSource="open" withToolbar>
-  <Story height={800} id="deliverables-uq-maps-search-combo-menu--searching-in-category" />
+  <Story height={800} id="deliverables-uq-maps-4-search-combo-menu--searching-in-category" />
 </Canvas>
 
 ## JavaScript UX enhancements

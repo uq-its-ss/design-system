@@ -32,12 +32,12 @@ local server address (http://localhost:4873/).
 ### Set up Verdaccio for local package publication
 
 Set up Verdaccio globally:
-```ssh
+```shell
 $ npm i -g verdaccio
 ```
 
 Run Verdaccio:  
-```ssh
+```shell
 $ verdaccio
 ```
 
@@ -62,7 +62,7 @@ registry=http://localhost:4873/
 ```
 
 Then publish using Lerna:
-```ssh
+```shell
 $ npx lerna publish
 ```
 Follow the instructions to bump you package versions.  

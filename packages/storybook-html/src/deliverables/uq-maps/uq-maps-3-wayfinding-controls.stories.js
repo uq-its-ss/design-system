@@ -1,10 +1,10 @@
 import { useEffect } from '@storybook/client-api';
 import { MDCCircularProgress } from '@material/circular-progress';
 // import './uq-maps.scss';
-import docs from './uq-maps-wayfinding-controls.docs.mdx';
+import docs from './uq-maps-3-wayfinding-controls.docs.mdx';
 
 export default {
-  title: 'Deliverables/UQ Maps/Wayfinding controls',
+  title: 'Deliverables/UQ Maps/3 Wayfinding controls',
   parameters: {
     layout: 'fullscreen',
     previewTabs: {
@@ -44,7 +44,7 @@ export const wayfindingControl = () => `
   </div>
 `;
 
-wayfindingControl.storyName = "Wayfinding controls";
+wayfindingControl.storyName = "3A Wayfinding controls";
 
 export const wayfindingControlWorking = () => {
   useEffect(() => {
@@ -109,4 +109,4 @@ export const wayfindingControlWorking = () => {
   `;
 };
 
-wayfindingControlWorking.storyName = "Wayfinding controls with circular progress indicator";
+wayfindingControlWorking.storyName = "3B Wayfinding controls with circular progress indicator";

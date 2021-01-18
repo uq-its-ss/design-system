@@ -1,8 +1,8 @@
 // import './uq-maps.scss';
-import docs from './uq-maps-search-combo.docs.mdx';
+import docs from './uq-maps-4-search-combo.docs.mdx';
 
 export default {
-  title: 'Deliverables/UQ Maps/Search combo menu',
+  title: 'Deliverables/UQ Maps/4 Search combo menu',
   parameters: {
     layout: 'fullscreen',
     //viewMode: 'story',
@@ -36,7 +36,7 @@ export const initial = () => `
   </div>
 `;
 
-initial.storyName = "Initial";
+initial.storyName = "4A Initial";
 
 export const focused = () => `
   <div class="uq-maps__search uq-maps__search--is-focused">
@@ -187,7 +187,7 @@ export const focused = () => `
   </div>
 `;
 
-focused.storyName = "On focus or selecting origin/destination";
+focused.storyName = "4B On focus or selecting origin/destination";
 
 export const searching = () => `
   <div class="uq-maps__search uq-maps__search--is-searching">
@@ -329,7 +329,7 @@ export const searching = () => `
   </div>
 `;
 
-searching.storyName = "With search value";
+searching.storyName = "4C With search value";
 
 export const searchingNoResults = () => `
   <div class="uq-maps__search uq-maps__search--is-searching">
@@ -345,7 +345,7 @@ export const searchingNoResults = () => `
   </div>
 `;
 
-searchingNoResults.storyName = "With search value but no results";
+searchingNoResults.storyName = "4D With search value but no results";
 
 export const searchingError = () => `
   <div class="uq-maps__search uq-maps__search--is-searching">
@@ -361,7 +361,7 @@ export const searchingError = () => `
   </div>
 `;
 
-searchingError.storyName = "With search value but with error";
+searchingError.storyName = "4E With search value but with error";
 
 export const searchingInCategory = () => `
   <div class="uq-maps__search uq-maps__search--is-searching">
@@ -531,4 +531,4 @@ export const searchingInCategory = () => `
   </div>
 `;
 
-searchingInCategory.storyName = "With search value and category list open";
+searchingInCategory.storyName = "4F With search value and category list open";

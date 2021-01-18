@@ -1,10 +1,10 @@
 import { useEffect } from '@storybook/client-api';
 import { MDCCircularProgress } from '@material/circular-progress';
 //import './uq-maps.scss';
-import docs from './uq-maps-search-box.docs.mdx';
+import docs from './uq-maps-2-search-box.docs.mdx';
 
 export default {
-  title: 'Deliverables/UQ Maps/Search field',
+  title: 'Deliverables/UQ Maps/2 Search field',
   parameters: {
     layout: 'fullscreen',
     previewTabs: {
@@ -35,7 +35,7 @@ export const searchField = () => {
   `;
 };
 
-searchField.storyName = "Search field (initial)";
+searchField.storyName = "2A Search field (initial)";
 
 export const searchFieldFocused = () => {
   return `
@@ -54,7 +54,7 @@ export const searchFieldFocused = () => {
   `;
 };
 
-searchFieldFocused.storyName = "Search field on focus or selecting origin/destination";
+searchFieldFocused.storyName = "2B Search field on focus or selecting origin/destination";
 
 export const searchFieldSearching = () => {
   return `
@@ -67,7 +67,7 @@ export const searchFieldSearching = () => {
   `;
 };
 
-searchFieldSearching.storyName = "Search field with search value";
+searchFieldSearching.storyName = "2C Search field with search value";
 
 export const searchFieldWorking = () => {
   useEffect(() => {
@@ -121,4 +121,4 @@ export const searchFieldWorking = () => {
   `;
 };
 
-searchFieldWorking.storyName = "Search field with circular progress indicator";
+searchFieldWorking.storyName = "2D Search field with circular progress indicator";

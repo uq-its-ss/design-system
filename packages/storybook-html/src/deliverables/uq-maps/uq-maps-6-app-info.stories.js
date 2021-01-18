@@ -1,8 +1,8 @@
 import './uq-maps.scss';
-import docs from './uq-maps-app-info.docs.mdx';
+import docs from './uq-maps-6-app-info.docs.mdx';
 
 export default {
-  title: 'Deliverables/UQ Maps/App info drawer',
+  title: 'Deliverables/UQ Maps/6 App info drawer',
   parameters: {
     layout: 'fullscreen',
     //viewMode: 'story',
@@ -33,6 +33,8 @@ export const closed = () => `
   </div>
 `;
 
+closed.storyName = "6A Closed";
+
 export const open = () => `
   <!-- Demo height of 400px -->
   <div style="height:400px">
@@ -53,3 +55,5 @@ export const open = () => `
     </div>
   </div>
 `;
+
+open.storyName = "6B Open";

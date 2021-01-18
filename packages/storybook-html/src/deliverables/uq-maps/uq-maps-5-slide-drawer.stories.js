@@ -1,8 +1,8 @@
 // import './uq-maps.scss';
-import docs from './uq-maps-slide-drawer.docs.mdx';
+import docs from './uq-maps-5-slide-drawer.docs.mdx';
 
 export default {
-  title: 'Deliverables/UQ Maps/Slide drawer',
+  title: 'Deliverables/UQ Maps/5 Slide drawer',
   parameters: {
     layout: 'fullscreen',
     //viewMode: 'story',
@@ -38,8 +38,11 @@ export const expanded = () => `
         </div>
       </div>
       <div class="uq-maps__drawer__actions">
-        <!-- Actions here... -->
+        <!-- Actions here: requires "@uqds/button" component scss/css -->
+        <button class="uq-button">Navigate</button>
       </div>
     </div>
   </div>
 `;
+
+expanded.storyName = "5A Expanded";

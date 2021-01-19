@@ -1,11 +1,6 @@
 @use '@uqds/core/src/scss/global' as core;
 @use 'global' as *;
 
-// Card Variants:
-// .uq-card--xxx - lorem ipsum
-
-
-
 // Card Default
 .uq-card {
   position: relative;
@@ -143,64 +138,83 @@
 /* Additional style rules */
 .uq-grid {
 
+  // On smaller viewports, Story & Event cards when > 3 renders as lists 
   @media #{core.$screen-md-down} {
 
-    // Story & Event cards when > than 2 renders as lists on smaller viewports
-    .uq-card {
+    &__col {
 
-      &--story,
-      &--event {
-
-        flex-direction: row;
-
-        .uq-card__image__wrapper {
-          min-width: 98px;
-          min-height: 100%;
-
-          @media #{core.$screen-md-up} {
-                    
-          }
-        }
-        .uq-card__image {
-          min-height: 100%;
-          padding-bottom: 0%;
-
-          @media #{core.$screen-md-up} {
-            
-          }
-        }
-        .uq-card__content__wrapper {
-          min-width: 50%;
-
-          @media #{core.$screen-md-up} {
-            
-          }
-        }
-        .uq-card__content {
-          padding: core.$space-none core.$space;
-
-          @media #{core.$screen-md-up} {
-                
-          }
-        }
-        .uq-card__title {
-          margin: core.$space-none core.$space-none core.$space-sm;
-
-          @media #{core.$screen-md-up} {
-                
-          }
-        }
-        .uq-card__body {
-          display: none;
-        }
-        .uq-card__actions {
-          padding: core.$space-none core.$space core.$space;
-
-          @media #{core.$screen-md-up} {
-            
-          }
-        }
+      // When there are 3 items
+      @include with-count(3) {
         
+        .uq-card {
+
+          &--story,
+          &--event {
+
+            flex-direction: row;
+
+            .uq-card__image__wrapper {
+              min-width: 98px;
+              min-height: 100%;
+            }
+            .uq-card__image {
+              min-height: 100%;
+              padding-bottom: 0%;
+            }
+            .uq-card__content__wrapper {
+              min-width: 50%;
+            }
+            .uq-card__content {
+              padding: core.$space-none core.$space;
+            }
+            .uq-card__title {
+              margin: core.$space-none core.$space-none core.$space-sm;
+            }
+            .uq-card__body {
+              display: none;
+            }
+            .uq-card__actions {
+              padding: core.$space-none core.$space core.$space;
+            }
+          }
+        }
+      }
+
+      // When there are 4 items
+      @include with-count(4) {
+        
+        .uq-card {
+
+          &--story,
+          &--event {
+            
+            flex-direction: row;
+
+            .uq-card__image__wrapper {
+              min-width: 98px;
+              min-height: 100%;
+            }
+            .uq-card__image {
+              min-height: 100%;
+              padding-bottom: 0%;
+            }
+            .uq-card__content__wrapper {
+              min-width: 50%;
+            }
+            .uq-card__content {
+              padding: core.$space-none core.$space;
+            }
+            .uq-card__title {
+              margin: core.$space-none core.$space-none core.$space-sm;
+            }
+            .uq-card__body {
+              display: none;
+            }
+            .uq-card__actions {
+              padding: core.$space-none core.$space core.$space;
+            }
+          }
+        }
       }
     }
   }
@@ -259,7 +273,6 @@
           padding: core.$space-none core.$space-xxxl core.$space-xxxl;
         }
       }
-
     }
   }
 }

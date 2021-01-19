@@ -11,23 +11,24 @@ $card-full-width: 134rem;
 $card-summary-lines-to-show: 4;
 $card-shaded-bg: core.$uq-neutral-light20;
 
-// Truncate card body text to 146 characters, then ellipse ...
+// Truncate card body text
 @mixin truncate-card-1col-body-text {
     white-space: normal;
     overflow: hidden;
     max-height: 75px;
 }
 
+// Find number of child items in a parent container and apply style based on it
 @mixin with-count($n) {
     @if $n == 1 {
-      &:first-child:nth-last-child(1) {
-        @content;
-      }
+        &:first-child:nth-last-child(1) {
+            @content;
+        }
     }
     @else {
-      &:first-child:nth-last-child(#{$n}),
-      &:first-child:nth-last-child(#{$n}) ~ & {
-        @content;
-      }
+        &:first-child:nth-last-child(#{$n}),
+        &:first-child:nth-last-child(#{$n}) ~ & {
+            @content;
+        }
     }
 }

@@ -32,3 +32,39 @@ $card-shaded-bg: core.$uq-neutral-light20;
         }
     }
 }
+
+// Card list styles for story/event cards when more than 2 in the grid on small viewports.
+@mixin card-list-style() {
+    .uq-card {
+
+        &--story,
+        &--event {
+        
+            flex-direction: row;
+
+            .uq-card__image__wrapper {
+                min-width: 98px;
+                min-height: 100%;
+            }
+            .uq-card__image {
+                min-height: 100%;
+                padding-bottom: 0%;
+            }
+            .uq-card__content__wrapper {
+                min-width: 50%;
+            }
+            .uq-card__content {
+                padding: core.$space-none core.$space;
+            }
+            .uq-card__title {
+                margin: core.$space-none core.$space-none core.$space-sm;
+            }
+            .uq-card__body {
+                display: none;
+            }
+            .uq-card__actions {
+                padding: core.$space-none core.$space core.$space;
+            }
+        }
+    }
+}

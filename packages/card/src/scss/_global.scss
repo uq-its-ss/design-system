@@ -41,6 +41,15 @@ $card-shaded-bg: core.$uq-neutral-light20;
         &--event {
         
             flex-direction: row;
+            padding-bottom: 1rem;
+            border: none;
+            border-bottom: 1px solid core.$uq-neutral-light40;
+            box-shadow: 0 core.$space-xs core.$space-xs rgba(core.$uq-neutral-dark80, 0);
+
+            &:hover,
+            &:focus {
+                box-shadow: 0 core.$space-sm core.$space-sm rgba(core.$uq-neutral-dark80, 0.1);
+            }
 
             .uq-card__image__wrapper {
                 min-width: 98px;
@@ -63,7 +72,7 @@ $card-shaded-bg: core.$uq-neutral-light20;
                 display: none;
             }
             .uq-card__actions {
-                padding: core.$space-none core.$space core.$space;
+                padding: core.$space-none core.$space core.$space-none;
             }
         }
     }

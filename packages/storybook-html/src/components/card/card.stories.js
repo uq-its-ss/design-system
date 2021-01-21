@@ -54,7 +54,7 @@ export const DefaultCard = () => {
         <div class="uq-card__content__wrapper">
           <div class="uq-card__content">
             <div class="uq-card__header">
-              <h3 class="uq-card__title">Card title</h3>
+              <h3 class="uq-card__title">Card title Card title Card title Card title</h3>
             </div>
             <div class="uq-card__body">
                 <p>Card summary text Card summary text Card summary text</p>
@@ -788,7 +788,7 @@ export const StoryCard = () => {
           <div class="uq-card__content">
             <div class="uq-card__header">
               <p class="uq-card__title__super uq-card__title__super--grey">SUB-TITLE</p>
-              <h3 class="uq-card__title">Card title</h3>
+              <h3 class="uq-card__title">Card title Card title Card title Card title</h3>
             </div>
           </div>
           <div class="uq-card__actions">
@@ -1157,7 +1157,7 @@ export const EventCard = () => {
           <div class="uq-card__content">
             <div class="uq-card__header">
               <p class="uq-card__title__super">DD MONTH</p>
-              <h3 class="uq-card__title">Card title</h3>
+              <h3 class="uq-card__title">Card title Card title Card title Card title</h3>
             </div>
           </div>
           <div class="uq-card__actions">

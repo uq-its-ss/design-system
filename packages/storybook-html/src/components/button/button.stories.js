@@ -10,12 +10,7 @@ export default {
     docs: {
       page: docs
     },
-    backgrounds: {
-      values: [
-        { name: 'Dark', value: '#000000' },
-        { name: 'UQ purple', value: '#51247a' }
-      ]
-    },
+    layout: "padded",
     previewTabs: {
       canvas: {hidden: false}
     }
@@ -82,6 +77,9 @@ export const secondaryLight = () => {
 
 secondaryLight.storyName = 'Secondary light';
 secondaryLight.parameters = {
+  docs: {
+     inlineStories: false
+  },
   backgrounds: {
     default: 'Dark',
     values: [

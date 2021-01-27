@@ -22,6 +22,18 @@ body {
   max-width: 1440px;
 }
 
+// Fix up height on fullscreen and padded layouts in iframe canvas/preview
+.sb-show-main.sb-main-fullscreen,
+.sb-show-main.sb-main-padded {
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.sb-show-main.sb-main-fullscreen {
+  padding-top: 1px;
+  margin-top: -1px;
+}
+
 /* UQDS Table Styles */ 
 
 /* Table large screen (large screen first as this is default table behaviour */ 

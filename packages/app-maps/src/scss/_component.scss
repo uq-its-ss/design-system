@@ -1,0 +1,750 @@
+@use '@uqds/core/src/scss/global' as core;
+@use '@uqds/body/src/scss/global' as body;
+@use "@material/circular-progress/mdc-circular-progress";
+@use "@material/circular-progress/mixins" as mdc-circular-progress-mixins;
+@use 'global' as *;
+@use 'icons' as *;
+
+$-icon-width: 1.75rem;
+$-icon-height: $-icon-width;
+$-icon-spacing: 1.125rem / 2;
+
+$-icon-button-icon-height: $-icon-width;
+$-icon-button-icon-width: $-icon-height;
+$-icon-button-icon-spacing: $-icon-spacing;
+$-icon-button-height: $-icon-button-icon-height + $-icon-button-icon-spacing * 2;
+$-icon-button-width: $-icon-button-height;
+
+$-result-icon-height: $-icon-height;
+$-result-icon-width: $-icon-width;
+$-result-icon-spacing: $-icon-spacing;
+
+%uq-maps {
+  /* ------------------------ */
+  /* Package core             */
+  /* ------------------------ */
+  &__box-sizing {
+    box-sizing: border-box;
+    
+    &::before, &::after, *, *::before, *::after {
+      box-sizing: border-box;
+    }
+  }
+
+  &__primary-text {
+    color: core.$text;
+    font-family: core.$font-family;
+    font-size: core.$font-size-s;
+    font-weight: core.$font-weight-normal;
+    line-height: core.$line-height;
+    // letter-spacing: 0.5px;
+
+    a {
+      color: core.$uq-purple;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__secondary-text {
+    color: core.$uq-neutral-dark40;
+    font-size: core.$font-size-xs;
+  }
+
+  /* ------------------------ */
+  /* Circular icon button     */
+  /* ------------------------ */
+
+  &__icon-button {
+    appearance: none;
+    background-position: center;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: $-icon-button-icon-height $-icon-button-icon-width;
+    border-radius: 50%;
+    border: 0 none;
+    cursor: pointer;
+    margin: 0;
+    outline: 0 none;
+    overflow: hidden;
+    padding: 0;
+    text-indent: -9999px;
+    height: $-icon-button-height;
+    width: $-icon-button-width;
+
+    &:hover {
+      background-color: rgba(core.$uq-black, .04);
+    }
+
+    &:active {
+      background-color: rgba(core.$uq-black, .07);
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 2px core.$blue;
+      outline: 0 none;
+    }
+  }
+}
+ 
+.uq-maps {
+  /* ------------------------ */
+  /* Search field             */
+  /* ------------------------ */
+
+  &__search-field {
+    @extend %uq-maps__box-sizing;
+    @extend %uq-maps__primary-text;
+
+    $-input-height: $-icon-button-height + core.$space-sm;
+
+    align-items: center;
+    background-color: core.$uq-white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .08),
+                0 8px 16px rgba(0, 0, 0, .16);
+    display: flex;
+    margin: core.$space;
+    overflow: hidden;
+    position: relative;
+    transition: height .6s;
+    white-space: nowrap;
+
+    &__label {
+      @include body.visually-hidden;
+    }
+
+    input[type=text].uq-maps__search-field__input {
+      @extend %uq-maps__primary-text;
+
+      appearance: none;
+      background-image: url(get-icon('ui--search'));
+      background-position: core.$space-sm + ($-icon-button-width - $-icon-button-icon-width) / 2 center;
+      background-color: transparent;
+      background-repeat: no-repeat;
+      background-size: $-icon-button-icon-height $-icon-button-icon-width;
+      border: 0 none;
+      border-radius: 0;
+      flex-grow: 1;
+      height: $-input-height;
+      margin: 0;
+      max-width: none;
+      min-width: 0;
+      outline: 0 none;
+      padding: 0 core.$space 0 core.$space + $-icon-button-width;
+
+      &:focus {
+        box-shadow: none;
+        outline: 0 none;
+      }
+    }
+
+    &__back,
+    &__clear,
+    &__progress-indicator {
+      display: none;
+      flex-grow: 0;
+      flex-shrink: 0;
+    }
+
+    &__back,
+    &__clear {
+      @extend %uq-maps__icon-button;
+    }
+
+    &__back {
+      background-image: url(get-icon('ui--arrow-left'));
+      margin-left: core.$space-sm;
+
+      &:hover {
+        background-image: url(get-icon('ui--arrow-left', darken(core.$uq-purple, 10%)));
+      }
+    }
+
+    &__clear {
+      background-image: url(get-icon('ui--close'));
+      margin-right: core.$space-sm;
+
+      &:hover {
+        background-image: url(get-icon('ui--close', darken(core.$uq-purple, 10%)));
+      }
+    }
+
+    &__progress-indicator {
+      align-items: center;
+      box-sizing: content-box;
+      font-size: 0;
+      height: $-icon-button-height;
+      justify-content: center;
+      margin-right: core.$space-sm;
+      white-space: nowrap;
+      width: $-icon-button-width;
+
+      * {
+        box-sizing: content-box;
+      }
+
+      .mdc-circular-progress {
+        @include mdc-circular-progress-mixins.color(core.$uq-purple);
+        flex-grow: 0;
+        flex-shrink: 0;
+      }
+    }
+
+    // focused on empty field
+    &--is-focused,
+    &--is-working {
+      .uq-maps__search-field__back {
+        display: inline-block;
+      }
+    }
+
+    // has search query
+    &--is-searching {
+      .uq-maps__search-field__back,
+      .uq-maps__search-field__clear {
+        display: inline-block;
+      }
+    }
+
+    &--is-working {
+      .uq-maps__search-field__progress-indicator {
+        display: flex;
+      }
+    }
+
+    &--is-focused,
+    &--is-searching,
+    &--is-working {
+      input[type=text].uq-maps__search-field__input {
+        background: transparent;
+        padding: 0 core.$space-sm;
+      }
+    }
+  }
+
+  /* ------------------------ */
+  /* Wayfinding control       */
+  /* ------------------------ */
+
+  &__wayfinding-controls {
+    @extend %uq-maps__box-sizing;
+    @extend %uq-maps__primary-text;
+
+    align-items: stretch;
+    display: flex;
+    margin: core.$space;
+    padding: core.$space 0;
+    border-radius: 8px;
+    background-color: core.$uq-white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08),
+                0px 8px 16px rgba(0, 0, 0, 0.16);
+    overflow: hidden;
+    position: relative;
+
+    &__main {
+      flex-grow: 1;
+    }
+
+    &__row {
+      display: flex;
+      align-items: center;
+
+      + .uq-maps__wayfinding-controls__row {
+        margin-top: core.$space-sm;
+      }
+    }
+
+    &__text-button,
+    button.uq-maps__wayfinding-controls__text-button {
+      @extend %uq-maps__primary-text;
+
+      appearance: none;
+      cursor: pointer;
+      width: 100%;
+      height: 2.5rem;
+      margin: 0 0 0 core.$space-sm;
+      border: 0 none;
+      border-radius: 8px;
+      background-color: core.$uq-neutral-light20;
+      text-align: left;
+      outline: 0 none;
+      padding: core.$space-sm core.$space;
+      transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+                  box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+                  border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+      user-select: none;
+      flex-grow: 1;
+
+      &:hover {
+        background-color: core.$uq-neutral-light40;
+      }
+
+      &:focus {
+        box-shadow: 0 0 0 2px core.$blue;
+        outline: 0 none;
+      }
+
+      &--placeholder {
+        color: rgba(core.$text, 0.72);
+      }
+    }
+
+    &__back,
+    &__swap {
+      @extend %uq-maps__icon-button;
+      flex-grow: 0;
+      flex-shrink: 0;
+      margin-left: core.$space-sm;
+    }
+
+    &__back {
+      background-image: url(get-icon('ui--arrow-left'));
+
+      &:hover {
+        background-image: url(get-icon('ui--arrow-left', darken(core.$uq-purple, 10%)));
+      }
+    }
+
+    &__swap {
+      background-image: url(get-icon('ui--swap'));
+
+      &:hover {
+        background-image: url(get-icon('ui--swap', darken(core.$uq-purple, 10%)));
+      }
+    }
+
+    &__stairs-toggle {
+      display: flex;
+      align-items: center;
+      font-size: 0;
+      margin-left: $-icon-button-width + core.$space;
+      padding: core.$space-sm 0;
+      white-space: nowrap;
+
+      input[type=checkbox].uq-maps__wayfinding-controls__stairs-toggle__input {
+        appearance: none;
+        border-radius: 4px;
+        position: relative;
+        display: inline-block;
+        border: 1px solid core.$uq-neutral;
+        cursor: pointer;
+        height: 1.25rem;
+        width: 1.25rem;
+        margin: 0 core.$space-sm 0 0;
+        outline: 0 none;
+
+        &::after {
+          content: "";
+          display: block;
+          position: absolute;
+          background-repeat: no-repeat;
+          background-position: center center;
+          top: -1px;
+          left: -1px;
+          height: 1.25rem;
+          width: 1.25rem;
+        }
+
+        &:checked {
+          background-color: core.$uq-neutral-dark60;
+          border-color: core.$uq-neutral-dark60;
+
+          &::after {
+            background-image: url(get-icon("ui--check", #fff));
+          }
+        }
+
+        + label.uq-maps__wayfinding-controls__stairs-toggle__label {
+          @extend %uq-maps__primary-text;
+
+          cursor: pointer;
+          line-height: core.$line-height-ui;
+          margin: 0;
+          padding: 0;
+        }
+
+        &:focus {
+          border-color: core.$blue;
+          box-shadow: 0 0 0 1px core.$blue;
+          outline: none;
+        }
+      }
+    }
+
+    &__decoration {
+      background-image: url(get-icon('ui--wayfinding-deco', core.$uq-green));
+      background-repeat: no-repeat;
+      background-position: center core.$space;
+      background-size: auto 50%;
+      flex-grow: 0;
+      flex-shrink: 0;
+      margin-right: core.$space-sm;
+      width: $-icon-button-width;
+    }
+
+    &__progress-indicator {
+      align-items: center;
+      box-sizing: content-box;
+      display: none;
+      font-size: 0;
+      height: $-icon-button-height;
+      justify-content: center;
+      margin-right: core.$space-sm;
+      white-space: nowrap;
+      width: $-icon-button-width;
+
+      * {
+        box-sizing: content-box;
+      }
+
+      .mdc-circular-progress {
+        @include mdc-circular-progress-mixins.color(core.$uq-green);
+        flex-grow: 0;
+        flex-shrink: 0;
+      }
+    }
+
+    &--is-working {
+      .uq-maps__wayfinding-controls__decoration {
+        display: none;
+      }
+
+      .uq-maps__wayfinding-controls__progress-indicator {
+        display: flex;
+      }
+    }
+  }
+
+  /* ------------------------------ */
+  /* Search combo menu              */
+  /* ------------------------------ */
+
+  &__search {
+    @extend %uq-maps__box-sizing;
+    @extend %uq-maps__primary-text;
+
+    background-color: core.$uq-white;
+    border-radius: 8px;
+    height: auto;
+    margin: core.$space;
+    transition: height 0.6s;
+
+    > .uq-maps__search-field,
+    > .uq-maps__wayfinding-controls {
+      margin: 0;
+    }
+
+    &__category-title {
+      color: core.$uq-purple;
+      font-size: core.$font-size-xxs;
+      font-weight: core.$font-weight-bold;
+      text-transform: uppercase;
+      display: inline-block;
+      margin: core.$space core.$space-md 0 (core.$space-md + $-icon-spacing);
+
+      &::before {
+        background-image: url(get-icon('ui--nav-right', core.$uq-purple));
+        content: '';
+        display: inline-block;
+        height: core.$font-size-xxs;
+        width: core.$font-size-xxs;
+        margin-right: core.$space-xs;
+        margin-bottom: 0.13rem;
+        vertical-align: middle;
+      }
+    }
+
+    &__results {
+      display: block;
+      margin: core.$space 0;
+      padding: 0;
+
+      &__item {
+        display: block;
+        margin: 0;
+        padding: 0;
+
+        > a {
+          align-items: center;
+          color: core.$text;
+          display: flex;
+          justify-content: flex-start;
+          min-height: 3rem + core.$space-sm * 2;
+          padding: core.$space-sm core.$space-md;
+          width: 100%;
+
+          &:hover {
+            background-color: core.$uq-neutral-light20;
+            text-decoration: none;
+          }
+
+          &:focus {
+            outline: 0 none;
+            box-shadow: 2px 0 0 0 core.$blue inset;
+          }
+        }
+
+        &__text {
+          margin: 0 0 0 ($-icon-spacing * 2 + $-result-icon-height + core.$space-sm);
+          flex-grow: 1;
+
+          > span, > small {
+            display: block;
+          }
+
+          small {
+            @extend %uq-maps__secondary-text;
+          }
+        }
+
+        &__icon {
+          background-color: transparent;
+          height: $-result-icon-height;
+          width: $-result-icon-width;
+          margin: 0 $-icon-spacing;
+          flex-grow: 0;
+          flex-shrink: 0;
+
+          + .uq-maps__search__results__item__text {
+            margin-left: core.$space-sm;
+          }
+        }
+
+        &--view-all {
+          position: relative;
+          
+          > a {
+            color: core.$uq-purple;
+          }
+
+          &::before {
+            position: absolute;
+            left: core.$space-md + $-result-icon-spacing;
+            top: 50%;
+            margin-top: -($-result-icon-height / 2);
+            background-image: url(get-icon('ui--map-pin', core.$uq-purple));
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: $-result-icon-height $-result-icon-width;
+            content: '';
+            height: $-result-icon-height;
+            width: $-result-icon-width;
+          }
+        }
+
+        &--category {
+          position: relative;
+
+          &::after {
+            $width: 1.25rem;
+            $height: $width;
+
+            position: absolute;
+            right: core.$space-md + ($-icon-button-width - $width) / 2;
+            top: 50%;
+            margin-top: -($height / 2);
+            background-image: url(get-icon('ui--chevron-right', core.$uq-neutral));
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: $height $width;
+            content: '';
+            height: $height;
+            width: $width;
+          }
+
+          &:hover {
+            &::after {
+              background-image: url(get-icon('ui--chevron-right', core.$uq-neutral-dark20));
+            }
+          }
+
+          &:focus-within {
+            &::after {
+              background-image: url(get-icon('ui--chevron-right', core.$blue));
+            }
+          }
+
+          > a {
+            padding-right: core.$space-xxxxl;
+          }
+        }
+      }
+    }
+
+    &__no-results {
+      display: none;
+      margin: core.$space-lg core.$space;
+      text-align: center;
+    }
+
+    &--is-focused,
+    &--is-searching {
+      height: 100%;
+      margin: 0;
+      border-radius: 0;
+      overflow-y: scroll;
+      overflow-x: hidden;
+
+      > .uq-maps__search-field,
+      > .uq-maps__wayfinding-controls {
+        margin: core.$space;
+      }
+
+      .uq-maps__search__no-results {
+        display: block;
+      }
+    }
+  }
+
+  /* ------------------------ */
+  /* Live data indicator      */
+  /* ------------------------ */
+
+  @keyframes glow {
+    0% {
+      opacity: 0.75;
+      transform: scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(2);
+    }
+  }
+
+  &__live-data-dot {
+    position: relative;
+    display: inline-block;
+    margin-right: core.$space-xs;
+    height: .5rem;
+    width: .5rem;
+
+    &::before,
+    &::after {
+      // can be coloured using the 'color' property to allow for easy dynamic colouring
+      background-color: currentColor;
+      border-radius: 50%;
+      content: '';
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: .5rem;
+      width: .5rem;
+    }
+
+    &::before {
+      animation: glow 3s linear infinite;
+    }
+
+    &--blue {
+      color: core.$uq-blue;
+    }
+
+    &--green {
+      color: core.$uq-green;
+    }
+
+    &--yellow {
+      color: core.$uq-yellow;
+    }
+
+    &--orange {
+      color: core.$uq-orange;
+    }
+
+    &--red {
+      color: core.$uq-red;
+    }
+
+    &--grey {
+      color: core.$uq-neutral;
+    }
+  }
+
+  /* ------------------------ */
+  /* Slide out drawer         */
+  /* ------------------------ */
+  
+  &__drawer {
+    $actions-allowance: 3rem;
+
+    @extend %uq-maps__box-sizing;
+    @extend %uq-maps__primary-text;
+
+    background-color: core.$uq-white;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: core.$space-lg core.$space-md core.$space-xxl;
+
+    &__menu-bar {
+      margin-bottom: core.$space-md;
+
+      &__close {
+        @extend %uq-maps__icon-button;
+
+        background-image: url(get-icon('ui--arrow-down'));
+      }
+    }
+
+    &__main,
+    &__actions {
+      padding: 0 core.$space-compressed-md;
+    }
+
+    &__main {
+      background-image: linear-gradient(to bottom, core.$uq-white, rgba(core.$uq-white, 0)),
+                        linear-gradient(to top, core.$uq-white, rgba(core.$uq-white, 0)),
+                        linear-gradient(to bottom, core.$uq-neutral-light20, rgba(core.$uq-neutral-light20, 0)),
+                        linear-gradient(to top, core.$uq-neutral-light20, rgba(core.$uq-neutral-light20, 0));
+      background-position: 0 0, 0 100%, 0 0, 0 100%;
+      background-repeat: no-repeat;
+      background-color: core.$uq-white;
+      background-size: 100% 4rem, 100% 4rem, 100% 1rem, 100% 1rem;
+      background-attachment: local, local, scroll, scroll;
+      height: calc(100% - #{$actions-allowance + $-icon-button-height + core.$space-md * 2});
+      margin-bottom: core.$space-md;
+      overflow-y: auto;
+      overflow-x: hidden;
+      scrollbar-width: none; // FF only for now
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      &__details-block {
+        @extend %uq-maps__secondary-text;
+
+        color: core.$text;
+        display: block;
+        margin-top: core.$space-sm;
+      }
+    }
+  }
+
+  /* ------------------------ */
+  /* Badge (UQ icon)          */
+  /* ------------------------ */
+
+  &__badge {
+    $icon-size: 1.75rem;
+
+    appearance: none;
+    background-image: url(get-icon('logo--uq-shield'));
+    background-size: $icon-size;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 0 none;
+    cursor: pointer;
+    height: $icon-size;
+    width: $icon-size;
+    margin: core.$space;
+    overflow: hidden;
+    text-indent: -9999px;   
+  }
+}

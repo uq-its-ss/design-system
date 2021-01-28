@@ -10,15 +10,15 @@ import StatusBadge from '../../../.storybook/custom/components/StatusBadge';
 ## Overview
 
 The button component is used to navigate to a web link or to an anchor name tag on the same page or different page. 
-- The buttons categories are primary, secondary, secondary-light and purple. 
-- Each category also has its variant styles like normal, outline, text and expanded options to be used in different scenarios.
+- The button categories are primary, secondary, secondary-light and purple. 
+- Each category also has its variant styles like outline, text and expanded options to be used in different scenarios.
 
 ## Default example
 
 ### Primary
 
-Primary buttons are used for primary actions on a webpage. For example, submit button on a form, or other critical actions in a user workflow.
-It should only be used once on a webpage.
+Primary buttons are used for primary actions on a webpage. For example, submit button on a form or other critical actions in a user workflow.
+It should only appear once on a webpage.
 
 <Canvas withSource="none">
   <Story id="components-button--primary" />
@@ -28,7 +28,6 @@ It should only be used once on a webpage.
 <button class="uq-button">Button</button>
 <button class="uq-button uq-button--outline">Button</button>
 <button class="uq-button uq-button--text">Button</button>
-...
 ```
 
 ## Variant examples
@@ -45,7 +44,6 @@ Secondary button is used to highlight important actions. For example, save butto
 <button class="uq-button uq-button--secondary">Button</button>
 <button class="uq-button uq-button--secondary uq-button--outline">Button</button>
 <button class="uq-button uq-button--secondary uq-button--text">Button</button>
-...
 ```
 
 ### Secondary-light
@@ -53,18 +51,17 @@ Secondary button is used to highlight important actions. For example, save butto
 Secondary-light button variant is used on dark backgrounds.
 
 <Canvas withSource="none">
-  <Story height="270px" id="components-button--secondary-light" />
+  <Story height="70px" id="components-button--secondary-light" />
 </Canvas>
 
 ```html
-<button class="uq-button uq-button--secondary uq-button--outline uq-button--light">Button</button>
-<button class="uq-button uq-button--secondary uq-button--text uq-button--light">Button</button>
-...
+<button class="uq-button uq-button--secondary uq-button--light uq-button--outline">Button</button>
+<button class="uq-button uq-button--secondary uq-button--light uq-button--text">Button</button>
 ```
 
 ### Purple
 
-Purple button uses the color purple which is the UQ's brand primary color. It needs to be used sparingly.
+Purple button uses UQ's brand primary color, purple. It needs to be used sparingly.
 
 <Canvas withSource="none">
   <Story id="components-button--purple" />
@@ -74,12 +71,36 @@ Purple button uses the color purple which is the UQ's brand primary color. It ne
 <button class="uq-button uq-button--purple">Button</button>
 <button class="uq-button uq-button--purple uq-button--outline">Button</button>
 <button class="uq-button uq-button--purple uq-button--text">Button</button>
-...
+```
+
+### Size
+
+The button sizes are normal, tiny `uq-button--tiny`, small `uq-button--small` and large `uq-button--large`
+
+<Canvas withSource="none">
+  <Story id="components-button--size" />
+</Canvas>
+
+```html
+<button class="uq-button">Button</button>
+<button class="uq-button uq-button--tiny">Button</button>
+<button class="uq-button uq-button--small">Button</button>
+<button class="uq-button uq-button--large">Button</button>
+<br/><br/>
+<button class="uq-button uq-button--outline">Button</button>
+<button class="uq-button uq-button--outline uq-button--tiny">Button</button>
+<button class="uq-button uq-button--outline uq-button--small">Button</button>
+<button class="uq-button uq-button--outline uq-button--large">Button</button>
+<br/><br/>
+<button class="uq-button uq-button--text">Button</button>
+<button class="uq-button uq-button--text uq-button--tiny">Button</button>
+<button class="uq-button uq-button--text uq-button--small">Button</button>
+<button class="uq-button uq-button--text uq-button--large">Button</button>
 ```
 
 ### Expand
 
-Expand version of the button would extend the width of the button to full width of its parent container.
+Expand variant of the button `uq-button--expand` would extend the width of the button to full width of its parent container.
 
 <Canvas withSource="none">
   <Story id="components-button--expand" />
@@ -89,17 +110,6 @@ Expand version of the button would extend the width of the button to full width 
 <button class="uq-button uq-button--expand">Button</button>
 <button class="uq-button uq-button--expand uq-button--outline">Button</button>
 <button class="uq-button uq-button--expand uq-button--text">Button</button>
-
-<button class="uq-button uq-button--secondary uq-button--expand">Button</button>
-<button class="uq-button uq-button--secondary uq-button--expand uq-button--outline">Button</button>
-<button class="uq-button uq-button--secondary uq-button--expand uq-button--text">Button</button>
-
-<button class="uq-button uq-button--secondary uq-button--expand uq-button--outline uq-button--light">Button</button>
-<button class="uq-button uq-button--secondary uq-button--expand uq-button--text uq-button--light">Button</button>
-
-<button class="uq-button uq-button--purple uq-button--expand">Button</button>
-<button class="uq-button uq-button--purple uq-button--expand uq-button--outline">Button</button>
-<button class="uq-button uq-button--purple uq-button--expand uq-button--text">Button</button>
 ```
 
 ## How and when to use
@@ -141,10 +151,6 @@ Expand version of the button would extend the width of the button to full width 
 
 Default - Button text is not underlined. <br />
 Hover - Button text is underlined. The background and text color may change depending on the variant.
-
-### Sizes
-
-The 4 button sizes are normal, tiny `uq-button--tiny`, small `uq-button--small` and large `uq-button--large`
 
 ### Breakpoints
 

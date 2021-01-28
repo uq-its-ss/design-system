@@ -16,13 +16,6 @@ export const parameters = {
     page: DocsPage
   },
   backgrounds: {
-    values: [
-      { name: 'Dark', value: '#000000' },
-      { name: 'UQ purple', value: '#51247a' },
-      { name: 'UQ Neutral 1', value: '#D7D1CC' },
-      { name: 'UQ gradient', value: 'linear-gradient(90deg, #51247A 0%, 87%, #962A8B 100%)' },
-      { name: 'Diagonal stripes', value: 'repeating-linear-gradient(45deg, #efedeb, #efedeb 10px, #f7f6f5 10px, #f7f6f5 20px)' }
-    ],
     grid: {
       disable: true
     }
@@ -62,16 +55,7 @@ export const parameters = {
             'Utilities'
           ]
         ],
-        'Patterns',
-        'Gallery & Examples',
-        'Deliverables',
-        [
-          'UQ Maps',
-          [
-            'Overview',
-            'UX models'
-          ]
-        ]
+        'Patterns'
       ]
     }
   }

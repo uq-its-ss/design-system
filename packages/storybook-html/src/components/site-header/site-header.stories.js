@@ -19,6 +19,11 @@ export default {
       inlineStories: false
     },
     layout: "fullscreen",
+    backgrounds: {
+      values: [
+        { name: 'UQ Neutral 1', value: '#D7D1CC' }
+      ]
+    },
     previewTabs: {
       canvas: {hidden: false}
     }

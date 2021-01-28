@@ -3,7 +3,7 @@
 
 $use-encapsulation: false !default;
 
-@mixin -text-primer {
+@mixin text-primer {
   color: core.$text;
   font-size: 1rem;
   font-family: core.$font-family;
@@ -11,14 +11,14 @@ $use-encapsulation: false !default;
   line-height: core.$line-height;
 }
 
-@mixin -body-styles {
+@mixin body-styles {
   font-size: 100%;
   background: core.$white;
   margin: core.$space-none;
   padding: core.$space-none;
 }
 
-@mixin -base-styles {
+@mixin base-styles {
   /**
    * TODO: user should be able to configure whether or not they want this
    * normalised or we remove it and make sure our packages are self-contained w/
@@ -338,24 +338,31 @@ $use-encapsulation: false !default;
   }
 
   .visually-hidden {
-    @include visually-hidden;
+    position: absolute !important;
+    overflow: hidden;
+    clip: rect(1px,1px,1px,1px);
+    width: 1px;
+    height: 1px;
+    word-wrap: normal;
+    margin: 0;
+    padding: 0;
   }
 }
 
 @if $use-encapsulation {
   .uq {
-    @include -text-primer;
-    @include -base-styles;
+    @include text-primer;
+    @include base-styles;
   }
 
   body.uq {
-    @include -body-styles;
+    @include body-styles;
   }
 } @else {
   body {
-    @include -text-primer;
-    @include -body-styles;
+    @include text-primer;
+    @include body-styles;
   }
 
-  @include -base-styles;
+  @include base-styles;
 }

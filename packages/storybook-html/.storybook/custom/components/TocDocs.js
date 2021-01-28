@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { DocsContainer } from '@storybook/addon-docs/blocks';
 import tocbot from 'tocbot';
-import mermaid from 'mermaid';
 
 const tocConfiguration = {
   tocSelector: '.js-toc',
@@ -10,8 +9,8 @@ const tocConfiguration = {
 };
 
 const TocDocs = (props) => {
+  // Set up toc bot
   useEffect(() => {
-    // Set up toc bot
     tocbot.init({
       ...tocConfiguration,
       onClick: event => {

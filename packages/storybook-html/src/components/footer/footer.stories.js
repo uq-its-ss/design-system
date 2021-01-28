@@ -9,7 +9,10 @@ export default {
   parameters: {
     layout: "fullscreen",
     backgrounds: {
-      default: 'UQ Neutral 1'
+      default: 'UQ Neutral 1',
+      values: [
+        { name: 'UQ Neutral 1', value: '#D7D1CC' }
+      ]
     },
     previewTabs: {
       canvas: {hidden: false}

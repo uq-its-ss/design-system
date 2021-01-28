@@ -63,7 +63,6 @@ module.exports = {
                 // TODO: we should implement `glob` here:
                 includePaths: [
                   'node_modules/@uqds/core/node_modules',
-                  'node_modules/@uqds/app-maps/node_modules',
                   'node_modules'
                 ]
               }

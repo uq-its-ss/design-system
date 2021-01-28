@@ -48,7 +48,11 @@ secondaryLight.parameters = {
      inlineStories: false
   },
   backgrounds: {
-    default: 'Dark'
+    default: 'Dark',
+    values: [
+      { name: 'Dark', value: '#000000' },
+      { name: 'UQ purple', value: '#51247a' }
+    ]
   } 
 };
 

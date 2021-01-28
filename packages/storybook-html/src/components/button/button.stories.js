@@ -77,18 +77,19 @@ export const expand = () => {
 export const size = () => {
   return `
     <button class="uq-button">Button</button>
-    <button class="uq-button uq-button--tiny">Button</button>
-    <button class="uq-button uq-button--small">Button</button>
-    <button class="uq-button uq-button--large">Button</button>
-    <br/><br/>
     <button class="uq-button uq-button--outline">Button</button>
-    <button class="uq-button uq-button--tiny uq-button--outline">Button</button>
-    <button class="uq-button uq-button--small uq-button--outline">Button</button>
-    <button class="uq-button uq-button--large uq-button--outline">Button</button>
-    <br/><br/>
     <button class="uq-button uq-button--text">Button</button>
+    <br/><br/>
+    <button class="uq-button uq-button--tiny">Button</button>
+    <button class="uq-button uq-button--tiny uq-button--outline">Button</button>
     <button class="uq-button uq-button--tiny uq-button--text">Button</button>
+    <br/><br/>
+    <button class="uq-button uq-button--small">Button</button>
+    <button class="uq-button uq-button--small uq-button--outline">Button</button>
     <button class="uq-button uq-button--small uq-button--text">Button</button>
-    <button class="uq-button uq-button--large uq-button--text">Button</button>
+    <br/><br/>
+    <button class="uq-button uq-button--large">Button</button>
+    <button class="uq-button uq-button--large uq-button--outline">Button</button>
+    <button class="uq-button uq-button--large uq-button--text">Button</button>    
   `;
 };

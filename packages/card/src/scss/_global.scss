@@ -10,3 +10,70 @@ $card-full-height: 22rem;
 $card-full-width: 134rem;
 $card-summary-lines-to-show: 4;
 $card-shaded-bg: core.$uq-neutral-light20;
+
+// Truncate card body text
+@mixin truncate-card-1col-body-text {
+    white-space: normal;
+    overflow: hidden;
+    max-height: 75px;
+}
+
+// Find number of child items in a parent container and apply style based on it
+@mixin with-count($n) {
+    @if $n == 1 {
+        &:first-child:nth-last-child(1) {
+            @content;
+        }
+    }
+    @else {
+        &:first-child:nth-last-child(#{$n}),
+        &:first-child:nth-last-child(#{$n}) ~ & {
+            @content;
+        }
+    }
+}
+
+// Card list styles for story/event cards when more than 2 in the grid on small viewports.
+@mixin card-list-style() {
+    .uq-card {
+
+        &--story,
+        &--event {
+        
+            flex-direction: row;
+            padding-bottom: 1rem;
+            border: none;
+            border-bottom: 1px solid core.$uq-neutral-light40;
+            box-shadow: 0 core.$space-xs core.$space-xs rgba(core.$uq-neutral-dark80, 0);
+
+            &:hover,
+            &:focus {
+                box-shadow: 0 core.$space-sm core.$space-sm rgba(core.$uq-neutral-dark80, 0.1);
+            }
+
+            .uq-card__image__wrapper {
+                min-width: 98px;
+                min-height: 100%;
+            }
+            .uq-card__image {
+                min-height: 100%;
+                padding-bottom: 0%;
+            }
+            .uq-card__content__wrapper {
+                min-width: 50%;
+            }
+            .uq-card__content {
+                padding: core.$space-none core.$space;
+            }
+            .uq-card__title {
+                margin: core.$space-none core.$space-none core.$space-sm;
+            }
+            .uq-card__body {
+                display: none;
+            }
+            .uq-card__actions {
+                padding: core.$space-none core.$space core.$space-none;
+            }
+        }
+    }
+}

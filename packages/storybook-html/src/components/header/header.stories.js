@@ -21,10 +21,7 @@ export default {
     },
     layout: "fullscreen",
     backgrounds: {
-      default: 'UQ Neutral 1',
-      values: [
-        { name: 'UQ Neutral 1', value: '#D7D1CC' }
-      ]
+      default: 'UQ Neutral 1'
     },
     previewTabs: {
       canvas: {hidden: false}

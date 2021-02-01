@@ -166,7 +166,7 @@
                 padding-bottom: core.$space-sm;
             }
 
-            // Nav btm
+            // Nav on smaller viewports
             .uq-header__nav {
                 -webkit-column-count: 3;
                 -moz-column-count: 3;
@@ -236,69 +236,71 @@
         &-form-item {
             margin-top: core.$space-sm;
             padding-top: core.$space-xs;
+        }
 
-            input[type="radio"], 
-            label {
-                cursor: pointer;
-                display: inline-block;
-                margin-bottom: 0;
-                vertical-align: top;
+        &-radio, 
+        &-option {
+            cursor: pointer;
+            display: inline-block;
+            margin-bottom: 0;
+            vertical-align: top;
+        }
+
+        // Radio input
+        &-radio {
+            appearance: none;
+            border: 1px solid core.$uq-neutral-light40;
+            border-radius: 50%;
+            height: 24px;
+            width: 24px;
+            margin: 0;
+            position: relative;
+            
+            &:focus {
+                outline: 2px solid core.$link;
+                box-shadow: 0 0 0 1px core.$link;
             }
 
-            input[type="radio"] {
-                appearance: none;
-                border: 1px solid core.$uq-neutral-light40;
-                border-radius: 50%;
-                height: 24px;
-                width: 24px;
-                margin: 0;
-                position: relative;
-                
+            &:checked {
+                border-color: core.$uq-white;
+                border-width: 2px;
+
                 &:focus {
-                    outline: 2px solid core.$link;
                     box-shadow: 0 0 0 1px core.$link;
                 }
 
-                &:checked {
-                    border-color: core.$uq-white;
-                    border-width: 2px;
-
-                    &:focus {
-                        box-shadow: 0 0 0 1px core.$link;
-                    }
-
-                    &::after {
-                        border-radius: 50%;
-                        background-color: core.$uq-white;
-                        content: "";
-                        display: block;
-                        position: absolute;
-                        top: 3px;
-                        left: 3px;
-                        height: 14px;
-                        width: 14px;
-                    }
+                &::after {
+                    border-radius: 50%;
+                    background-color: core.$uq-white;
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top: 3px;
+                    left: 3px;
+                    height: 14px;
+                    width: 14px;
                 }
             }
+        }
 
-            label {
-                color: core.$uq-white;
-                font-size: core.$font-size-s;
-                font-weight: core.$font-weight-normal;
-                line-height: core.$line-height;
-                margin-left: core.$space-sm;
-                margin-right: core.$space;
-                margin-bottom: core.$space-none !important;
-                padding-top: .2rem;
-                white-space: normal;
-            }
-                        
-            @media #{core.$screen-lg-up} {
-                display: inline-block;
-                margin-top: core.$space-none;
-                padding-left: core.$space;
-                padding-top: core.$space-none;
-            }
+        // Label for radio
+        &-option {
+            color: core.$uq-white;
+            font-size: core.$font-size-s;
+            font-weight: core.$font-weight-normal;
+            line-height: core.$line-height;
+            margin-left: core.$space-sm;
+            margin-right: core.$space;
+            margin-bottom: core.$space-none !important;
+            padding-top: .2rem;
+            white-space: normal;
+        }
+                    
+        @media #{core.$screen-lg-up} {
+            display: inline-block;
+            margin-top: core.$space-none;
+            padding-left: core.$space;
+            padding-top: core.$space-none;
         }
     }
 

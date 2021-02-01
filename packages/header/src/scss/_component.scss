@@ -268,7 +268,7 @@
                 }
 
                 &:checked {
-                    border-color: core.$uq-white;
+                    border-color: core.$uq-white !important;
                     border-width: 2px;
 
                     &:focus {

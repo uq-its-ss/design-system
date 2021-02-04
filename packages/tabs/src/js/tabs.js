@@ -1,1 +1,0 @@
-// Tabs jquery to be converted / written as ES6 JS 

@@ -225,7 +225,7 @@
 // Tabs - default
 .tabs {
 
-  // Bordered variant
+  // Tab bordered variant
   &--bordered {
     .tabs__tab-list {
       border-bottom: 1px solid $tab-border-color;
@@ -233,12 +233,25 @@
 
     .tabs__tab {
       border: 1px solid $tab-border-color;
-      border-bottom: 1px solid core.$uq-white;
+
+      &--active {
+        border-bottom: 1px solid core.$uq-white;
+      }
+    }
+  }
+
+  // Tab full width variant
+  &--full-width {
+
+    .tabs__tab {
+      flex: 1 1 auto;
     }
   }
 
   // Tab list
   &__tab-list {
+    position: relative;
+    margin-top: -1px;
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-start;
@@ -246,6 +259,7 @@
     padding: core.$space-none;
     margin: core.$space-none;
     border-bottom: 1px solid $tab-border-color;
+    overflow: visible;
   }
 
   // Tab
@@ -253,22 +267,27 @@
     flex: 0 1 auto;
     padding: core.$space core.$space-md;
     margin-right: core.$space-xs;
+    margin-bottom: -1px;
     font-size: core.$font-size-m;
     color: core.$uq-neutral-dark80;
-    background-color: rgba(core.$uq-white, 0.85);
+    background-color: rgba(core.$uq-neutral-light20, 1);
     border-radius: core.$space-xs core.$space-xs core.$space-none core.$space-none;
     border: none;
+    cursor: pointer;
 
     @media #{core.$screen-md-up} {
       padding: core.$space-md core.$space-lg;
       margin-right: core.$space-xs;
+      font-size: core.$font-size-l;
+    }
+
+    &:last-child {
+      margin-right: core.$space-none;
     }
 
     &--active {
-      margin-top: 1px;
       color: core.$uq-purple;
       background-color: rgba(core.$uq-white, 1);
-      z-index: 1;
     }
   }
 

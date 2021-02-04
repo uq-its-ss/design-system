@@ -217,3 +217,70 @@
     }
   }
 }
+
+
+
+
+
+// Tabs - default
+.tabs {
+
+  // Bordered variant
+  &--bordered {
+    .tabs__tab-list {
+      border-bottom: 1px solid $tab-border-color;
+    }
+
+    .tabs__tab {
+      border: 1px solid $tab-border-color;
+      border-bottom: 1px solid core.$uq-white;
+    }
+  }
+
+  // Tab list
+  &__tab-list {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    overflow: auto;
+    padding: core.$space-none;
+    margin: core.$space-none;
+    border-bottom: 1px solid $tab-border-color;
+  }
+
+  // Tab
+  &__tab {
+    flex: 0 1 auto;
+    padding: core.$space core.$space-md;
+    margin-right: core.$space-xs;
+    font-size: core.$font-size-m;
+    color: core.$uq-neutral-dark80;
+    background-color: rgba(core.$uq-white, 0.85);
+    border-radius: core.$space-xs core.$space-xs core.$space-none core.$space-none;
+    border: none;
+
+    @media #{core.$screen-md-up} {
+      padding: core.$space-md core.$space-lg;
+      margin-right: core.$space-xs;
+    }
+
+    &--active {
+      margin-top: 1px;
+      color: core.$uq-purple;
+      background-color: rgba(core.$uq-white, 1);
+      z-index: 1;
+    }
+  }
+
+  // tab panel
+  &__tab-panel {
+    padding: core.$space core.$space-md;
+    font-size: core.$font-size-m;
+    color: core.$uq-neutral-dark80;
+    background-color: rgba(core.$uq-white, 1);
+
+    @media #{core.$screen-md-up} {
+      padding: core.$space-md core.$space-lg;
+    }
+  }
+}

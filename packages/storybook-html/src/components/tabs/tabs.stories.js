@@ -5,7 +5,7 @@ import './tabs.scss';
 import tabsHTML from './tabs.html';
 
 // import scripts
-import '@uqds/tabs/src/js/tabs.es6';
+//import '@uqds/tabs/src/js/tabs.es6';
 
 // documentation
 //import docs from './tabs.docs.mdx';

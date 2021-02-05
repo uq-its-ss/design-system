@@ -269,6 +269,7 @@
     margin-right: core.$space-xs;
     margin-bottom: -1px;
     font-size: core.$font-size-m;
+    font-weight: core.$font-weight-normal;
     color: core.$uq-neutral-dark80;
     background-color: rgba(core.$uq-neutral-light20, 1);
     border-radius: core.$space-xs core.$space-xs core.$space-none core.$space-none;
@@ -288,6 +289,7 @@
     &--active {
       color: core.$uq-purple;
       background-color: rgba(core.$uq-white, 1);
+      font-weight: core.$font-weight-medium;
     }
   }
 

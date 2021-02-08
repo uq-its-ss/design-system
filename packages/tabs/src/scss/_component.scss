@@ -240,9 +240,26 @@
     }
   }
 
+  // Tab minimal variant
+  &--bordered-minimal {
+    .tabs__tab-list {
+      border-bottom: 1px solid $tab-border-color;
+    }
+
+    .tabs__tab {
+      border: 1px solid $tab-border-color;
+      border-radius: core.$space-none;
+      margin-right: core.$space-none;
+      margin-left: -1px;
+
+      &--active {
+        border-bottom: 1px solid core.$uq-white;
+      }
+    }
+  }
+
   // Tab full width variant
   &--full-width {
-
     .tabs__tab {
       flex: 1 1 auto;
     }
@@ -255,10 +272,9 @@
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-start;
-    overflow: auto;
+    overflow: auto; 
     padding: core.$space-none;
     margin: core.$space-none;
-    border-bottom: 1px solid $tab-border-color;
     overflow: visible;
   }
 

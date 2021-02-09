@@ -5,13 +5,14 @@
 
 .hero {
   position: relative;
+  background-color: #51247A;
 
   &__content {
-    padding-top: core.$space-xxl;
-    padding-bottom: core.$space-ul;
-    z-index: 2;
-    position: relative;
     color: white;
+    padding-top: 0;
+    padding-bottom: core.$space-lg;
+    position: relative;
+    z-index: 2;
 
     @media #{core.$screen-md-up} {
       display: flex;
@@ -22,8 +23,8 @@
   }
 
   &__text {
-    @media (--medium-up) {
-      width: 50%;
+    @media #{core.$screen-md-up} {
+      width: 45%;
     }
 
     & h1 {
@@ -63,11 +64,20 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(100deg, rgb(81, 36, 122)36%, transparent 70%);
-      //background: linear-gradient(100deg, rgb(81, 36, 122) 36%, transparent 70%);
+      //background: #51247A;
+      background: linear-gradient(100deg, rgb(81, 36, 122) 36%, transparent 70%);
       mix-blend-mode: normal;
       opacity: 1;
       z-index: 1;
+    }
+
+    @media #{core.$screen-md-down} {
+      position: relative;
+      min-height: 6rem;
+
+      &::before {
+        background: linear-gradient(360deg, rgb(81, 36, 122) 0%, transparent 42%);
+      }
     }
 
     &--small {

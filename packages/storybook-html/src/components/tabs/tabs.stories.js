@@ -1,8 +1,10 @@
+import { useEffect } from '@storybook/client-api';
+
 // import styles
 import './tabs.scss';
 
 // import scripts
-//import '@uqds/tabs/src/js/tabs.es6';
+import tabs from '@uqds/tabs/src/js/tabs.es6';
 
 // documentation
 import docs from './tabs.docs.mdx';
@@ -21,6 +23,9 @@ export default {
 };
 
 export const tabsOutline = () => {
+  useEffect(() => {
+    tabs(); 
+  });
   return `
   <div class="tabs tabs--outline">
     <div class="tabs__tab-list" role="tablist" aria-label="Tab List">

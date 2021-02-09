@@ -2,7 +2,7 @@
 *   This content is licensed according to the W3C Software License at
 *   https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document
 */
-(function () {
+const tabs = function () {
     var tablist = document.querySelectorAll('[role="tablist"]')[0];
     var tabs;
     var panels;
@@ -35,7 +35,7 @@
     };
   
     // Bind listeners
-    for (i = 0; i < tabs.length; ++i) {
+    for (let i = 0; i < tabs.length; ++i) {
       addListeners(i);
     };
   
@@ -256,4 +256,6 @@
         activateTab(target, false);
       };
     };
-  }());
+  };
+
+  export {tabs as default};

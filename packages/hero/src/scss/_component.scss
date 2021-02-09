@@ -23,19 +23,28 @@
   }
 
   &__text {
-    @media #{core.$screen-md-up} {
-      width: 45%;
-    }
-
+    
     & h1 {
       color: inherit;
       margin-top: 0;
       margin-bottom: core.$space-sm;
+
+      @media #{core.$screen-md-up} {
+        font-size: 3rem;
+      }
     }
   
     & *:last-child {
       margin-bottom: 0;
     }
+
+    @media #{core.$screen-md-up} {
+      width: 45%;
+    }
+  }
+
+  &__subtext {
+    margin-bottom: core.$space-md;
   }
 
   &__image {

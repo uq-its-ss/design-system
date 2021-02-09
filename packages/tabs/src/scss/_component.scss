@@ -222,43 +222,109 @@
 
 
 
-// Tabs - default
+// Tabs
 .tabs {
 
-  // Tab bordered variant
-  &--bordered {
+  // Lined variant
+  &--lined {
     .tabs__tab-list {
       border-bottom: 1px solid $tab-border-color;
     }
 
     .tabs__tab {
-      border: 1px solid $tab-border-color;
+      border-bottom: 1px solid $tab-border-color;
+      margin-bottom: -1px;
 
       &--active {
-        border-bottom: 1px solid core.$uq-white;
+        background-color: core.$uq-white;
+        border-bottom: 1px solid core.$uq-purple;
+
+        &:hover,
+        &:focus {
+          background-color: core.$uq-white;
+        }
       }
     }
   }
 
-  // Tab minimal variant
-  &--bordered-minimal {
+  // Outline variant
+  &--outline {
     .tabs__tab-list {
       border-bottom: 1px solid $tab-border-color;
     }
 
     .tabs__tab {
+      background-color: core.$uq-neutral-light20;
+      border: 1px solid $tab-border-color;
+      margin-bottom: -1px;
+
+      &:hover,
+      &:focus {
+        background-color: core.$uq-neutral-light40;
+      }
+
+      &--active {
+        background-color: core.$uq-white;
+        border-bottom: 1px solid core.$uq-white;
+
+        &:hover,
+        &:focus {
+          background-color: core.$uq-white;
+        }
+      }
+    }
+  }
+
+  // Boxed variant
+  &--boxed {
+    .tabs__tab-list {
+      border-bottom: 1px solid $tab-border-color;
+    }
+
+    .tabs__tab {
+      background-color: core.$uq-neutral-light20;
       border: 1px solid $tab-border-color;
       border-radius: core.$space-none;
       margin-right: core.$space-none;
       margin-left: -1px;
+      margin-bottom: -1px;
+
+      &:hover,
+      &:focus {
+        background-color: core.$uq-neutral-light40;
+      }
 
       &--active {
+        background-color: core.$uq-white;
         border-bottom: 1px solid core.$uq-white;
+
+        &:hover,
+        &:focus {
+          background-color: core.$uq-white;
+        }
       }
     }
   }
 
-  // Tab full width variant
+  // Compact variant
+  &--compact {
+    .tabs__tab {
+      padding: core.$space-sm core.$space;
+
+      @media #{core.$screen-md-up} {
+        padding: core.$space core.$space-md;
+      }
+    }
+    .tabs__tab-panel {
+      padding: core.$space-sm core.$space;
+  
+      @media #{core.$screen-md-up} {
+        padding: core.$space core.$space-md;
+      }
+    }
+  }
+
+  // Full width variant
   &--full-width {
     .tabs__tab {
       flex: 1 1 auto;
@@ -268,7 +334,6 @@
   // Tab list
   &__tab-list {
     position: relative;
-    margin-top: -1px;
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-start;
@@ -283,11 +348,10 @@
     flex: 0 1 auto;
     padding: core.$space core.$space-md;
     margin-right: core.$space-xs;
-    margin-bottom: -1px;
     font-size: core.$font-size-m;
-    font-weight: core.$font-weight-normal;
+    font-weight: core.$font-weight-thin;
     color: core.$uq-neutral-dark80;
-    background-color: rgba(core.$uq-neutral-light20, 1);
+    background-color: core.$uq-white;
     border-radius: core.$space-xs core.$space-xs core.$space-none core.$space-none;
     border: none;
     cursor: pointer;
@@ -304,8 +368,8 @@
 
     &--active {
       color: core.$uq-purple;
-      background-color: rgba(core.$uq-white, 1);
-      font-weight: core.$font-weight-medium;
+      background-color: core.$uq-white;
+      font-weight: bold;
     }
   }
 
@@ -314,7 +378,7 @@
     padding: core.$space core.$space-md;
     font-size: core.$font-size-m;
     color: core.$uq-neutral-dark80;
-    background-color: rgba(core.$uq-white, 1);
+    background-color: core.$uq-white;
 
     @media #{core.$screen-md-up} {
       padding: core.$space-md core.$space-lg;

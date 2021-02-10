@@ -9,10 +9,15 @@
 
   &__content {
     color: white;
-    padding-top: 6.5rem;
-    padding-bottom: 6.5rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
     position: relative;
     z-index: 2;
+
+    @media #{core.$screen-md-up} {
+      padding-top: 6.5rem;
+      padding-bottom: 6.5rem;
+    }
   }
 
   &__text {

@@ -24,7 +24,7 @@ export default {
 
 export const tabsOutline = () => {
   useEffect(() => {
-    tabs(); 
+    tabs();
   });
   return `
   <div class="tabs tabs--outline">

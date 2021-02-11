@@ -22,7 +22,18 @@
   &:focus {
     box-shadow: 0 core.$space-sm core.$space rgba(core.$uq-neutral-dark80, 0.15);
   }
+
+  // Card if it has text link or button
+  &.uq-card--has-link {
+    box-shadow: none;
+
+    &:hover,
+    &:focus {
+      box-shadow: none;
+    }
+  }
   
+  // Link that wraps the whole card
   &__link-outer {
     position: absolute;
     top: 0;

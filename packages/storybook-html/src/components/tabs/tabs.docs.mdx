@@ -9,7 +9,7 @@ import StatusBadge from '../../../.storybook/custom/components/StatusBadge';
 
 ## Overview
 
-The Tabs component are tab's that are aligned together which on user interaction allow navigation between groups of content that are related and at the same level of hierarchy.
+The Tabs component are tabs that are aligned together which on user interaction allow navigation between groups of content that are related and at the same level of hierarchy.
 
 ## Default example
 
@@ -76,14 +76,29 @@ The Tabs component are tab's that are aligned together which on user interaction
   </div>
 ```
 
-### With Icon
+### With icon inline
 
 <Canvas withSource="none">
-  <Story id="components-tabs--tabs-with-icon" />
+  <Story id="components-tabs--tabs-with-icon-inline" />
 </Canvas>
 
 ```html
-<div class="tabs">
+<div class="tabs tabs--icon-inline">
+  <div class="tabs__tab-list" role="tablist" aria-label="Tab List">
+    <button class="tabs__tab tabs__tab--active" role="tab" aria-selected="true" aria-controls="tab1-panel" id="tab1">
+        <span class="uq-icon uq-icon--pin"></span> Tab 1
+    </button>
+    ...
+```
+
+### With icon block
+
+<Canvas withSource="none">
+  <Story id="components-tabs--tabs-with-icon-block" />
+</Canvas>
+
+```html
+<div class="tabs tabs--icon-block">
   <div class="tabs__tab-list" role="tablist" aria-label="Tab List">
     <button class="tabs__tab tabs__tab--active" role="tab" aria-selected="true" aria-controls="tab1-panel" id="tab1">
         <span class="uq-icon uq-icon--pin"></span> Tab 1
@@ -117,6 +132,21 @@ The Tabs component are tab's that are aligned together which on user interaction
   </div>
 ```
 
+### Reversed
+
+<Canvas withSource="none">
+  <Story id="components-tabs--tabs-reversed" />
+</Canvas>
+
+```html
+  <div class="tabs tabs--reversed">
+    ...
+  </div>
+```
+
 ## How and when to use
 
-- 
+- Present tabs as a single row above their associated content.
+- Tab labels can include icons and text. Text labels should be short.
+- Don’t use tabs to move through sequential content that needs to be read in a particular order.
+- Don’t mix tabs that contain only text, with tabs that contain only icons. Use either all text labels, all icon labels, or both, across all labels.

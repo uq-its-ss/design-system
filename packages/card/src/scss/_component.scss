@@ -10,38 +10,28 @@
   background-color: core.$uq-white;
   border: 1px solid core.$uq-neutral-light40;
   border-radius: core.$space-xs;
-  box-shadow: 0 core.$space-xs core.$space-xs rgba(core.$uq-neutral-dark80, 0.05);
   color: core.$uq-neutral-dark60;
   line-height: core.$space-md; 
   overflow-wrap: break-word;
   word-wrap: break-word;
-  overflow: hidden;
-  transition: all ease .25s;
   
-  &:hover,
-  &:focus {
-    box-shadow: 0 core.$space-sm core.$space rgba(core.$uq-neutral-dark80, 0.15);
-  }
-
-  // Card if it has text link or button
-  &.uq-card--has-link {
-    box-shadow: none;
-
-    &:hover,
-    &:focus {
-      box-shadow: none;
-    }
-  }
   
   // Link that wraps the whole card
-  &__link-outer {
+  &__link {
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     text-indent: -1000%;
+    box-shadow: 0 core.$space-xs core.$space-xs rgba(core.$uq-neutral-dark80, 0.05);
+    transition: all ease .25s;
     z-index: 10;
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 core.$space-sm core.$space rgba(core.$uq-neutral-dark80, 0.15);
+    }
   }
 
   &__image-wrapper {

@@ -12,7 +12,7 @@ import StatusBadge from '../../../.storybook/custom/components/StatusBadge';
 The card component is used to provide a brief summary of content or a task, often with a link to more detail. Cards are frequently displayed alongside other cards to group related content or tasks.
 The height of the cards in a group all equalises by default. 
 
-> By default, the card component when hovered or active has a shadow but when the card contains a text link or a button, it drops the shadow.
+> By default, the card component when hovered or active has a shadow but when it contains a text link or a button, it drops the shadow.
 
 ## Default example
 
@@ -23,7 +23,33 @@ The height of the cards in a group all equalises by default.
 </Canvas>
 
 ```html
-<div class="uq-card uq-card--has-link">
+<div class="uq-card">
+  <div class="uq-card__image-wrapper">
+    <div class="uq-card__image">
+      <img src="https://campuses.uq.edu.au/files/9492/stlucia-card.jpg" alt="Card image description">
+    </div>
+  </div>
+  <div class="uq-card__content-wrapper">
+    <div class="uq-card__content">
+      <div class="uq-card__header">
+        <h3 class="uq-card__title">Card title</h3>
+      </div>
+      <div class="uq-card__body">
+          <p>Card summary text</p>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+### Default card with link or button
+
+<Canvas withSource="none">
+  <Story id="components-cards--default-card-with-link" />
+</Canvas>
+
+```html
+<div class="uq-card">
   <div class="uq-card__image-wrapper">
     <div class="uq-card__image">
       <img src="https://campuses.uq.edu.au/files/9492/stlucia-card.jpg" alt="Card image description">
@@ -77,7 +103,7 @@ Button variants are restricted to purple and it's outline version.
 </Canvas>
 
 ```html
-<div class="uq-card uq-card--has-link">
+<div class="uq-card">
   ...
   <div class="uq-card__content-wrapper">
     ...
@@ -130,7 +156,7 @@ For story card, the sub-title is grey in colour, 16px, normal weight 400 and is 
 
 ```html
 <div class="uq-card uq-card--story">
-  <a class="uq-card__link-outer" href="#">Card title</a>
+  <a class="uq-card__link" href="#">Card title</a>
   <div class="uq-card__image-wrapper">
     <div class="uq-card__image">
       <img src="https://campuses.uq.edu.au/files/9749/gatton-card2.jpg" alt="Card image description">
@@ -160,7 +186,7 @@ For event card, the sub-title is purple-light in colour, 16px, medium weight 500
 
 ```html
 <div class="uq-card uq-card--event">
-  <a class="uq-card__link-outer" href="#">Card title</a>
+  <a class="uq-card__link" href="#">Card title</a>
   <div class="uq-card__image-wrapper">
     <div class="uq-card__image">
       <img src="https://campuses.uq.edu.au/files/9480/herston-card.jpg" alt="Card image description">

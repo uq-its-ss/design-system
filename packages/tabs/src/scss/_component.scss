@@ -30,12 +30,15 @@
       //&--active,
       &[aria-selected="true"] {
         background-color: core.$uq-white;
-        border-bottom: 1px solid core.$uq-white;
 
         &:hover,
         &:focus,
         &:active {
           background-color: core.$uq-white;
+        }
+
+        &:before {
+          display: block;
         }
       }
     }
@@ -69,12 +72,15 @@
       //&--active,
       &[aria-selected="true"] {
         background-color: core.$uq-white;
-        border-bottom: 1px solid core.$uq-white;
 
         &:hover,
         &:focus,
         &:active {
           background-color: core.$uq-white;
+        }
+
+        &:before {
+          display: block;
         }
       }
     }
@@ -85,24 +91,22 @@
     //.tabs__tab-list,
     [role="tablist"] {
       border-bottom: 1px solid $tab-border-color;
-      overflow: visible;
     }
 
     //.tabs__tab,
     [role="tab"] {
-      border-bottom: 1px solid $tab-border-color;
-      margin-bottom: -1px;
 
       //&--active,
       &[aria-selected="true"] {
         background-color: core.$uq-white;
-        border-bottom: 1px solid core.$uq-purple;
+        border-bottom: 2px solid core.$uq-purple;
 
         &:hover,
         &:focus,
         &:active {
           background-color: core.$uq-white;
         }
+
       }
     }
   }
@@ -135,6 +139,55 @@
     }
   }
 
+  // Reversed variant
+  &.tabs--reversed {
+    // Tab list
+    //&__tab-list,
+    [role="tablist"] {
+      flex-flow: row-reverse nowrap
+    }
+
+    // Tab
+    //&__tab,
+    [role="tab"] {
+      margin-right: core.$space-none;
+      margin-left: core.$space-xs;
+
+      &:last-child {
+        margin-right: core.$space-none;
+        margin-left: core.$space-xs;
+      }
+    }
+  }
+
+  // Icon inline variant
+  &.tabs--icon-inline {
+
+    // Tab
+    //&__tab,
+    [role="tab"] {
+      > span {
+        display: inline-block;
+        margin: 0 auto;
+        font-size: core.$font-size-xs;
+      }
+    }
+  }
+
+  // Icon block variant
+  &.tabs--icon-block {
+
+    // Tab
+    //&__tab,
+    [role="tab"] {
+      > span {
+        display: block;
+        margin: 0 auto core.$space-sm;
+        font-size: core.$font-size-xs;
+      }
+    }
+  }
+
   // Tab list
   //&__tab-list,
   [role="tablist"] {
@@ -151,6 +204,7 @@
   // Tab
   //&__tab,
   [role="tab"] {
+    position: relative;
     flex: 0 1 auto;
     padding: core.$space core.$space-md;
     margin-right: core.$space-xs;
@@ -162,6 +216,7 @@
     border: none;
     text-align: center;
     cursor: pointer;
+    overflow: hidden;
 
     @media #{core.$screen-md-up} {
       padding: core.$space-md core.$space-lg;
@@ -173,6 +228,17 @@
       margin-right: core.$space-none;
     }
 
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: core.$uq-purple;
+      content: '';
+      display: none;
+    }
+
     //&--active,
     &[aria-selected="true"] {
       color: core.$uq-purple;
@@ -182,7 +248,8 @@
 
     > span {
       display: inline-block;
-      margin: 0 auto core.$space-sm;
+      margin: 0 auto;
+      font-size: core.$font-size-xs;
     }
   }
 

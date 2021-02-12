@@ -8,6 +8,94 @@
     box-sizing: border-box;
   }
 
+  // Tab list
+  //&__tab-list,
+  [role="tablist"] {
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    overflow: visible; 
+    padding: core.$space-none;
+    margin: core.$space-none;
+  }
+  
+  // Tab Link
+  &__link {
+    display: none;
+
+    @media #{core.$screen-md-up} {
+      display: inline;
+      margin-left: auto;
+      align-self: center;
+    }
+  }
+
+  // Tab
+  //&__tab,
+  [role="tab"] {
+    position: relative;
+    flex: 1 1 auto;
+    padding: core.$space core.$space-md;
+    margin-right: core.$space-xs;
+    font-size: core.$font-size-m;
+    font-weight: core.$font-weight-thin;
+    color: core.$uq-neutral-dark80;
+    background-color: core.$uq-white;
+    border-radius: core.$space-xs core.$space-xs core.$space-none core.$space-none;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+
+    @media #{core.$screen-md-up} {
+      flex: 0 1 auto;
+      padding: core.$space-md core.$space-lg;
+      margin-right: core.$space-xs;
+      font-size: core.$font-size-l;
+    }
+
+    &:last-child {
+      margin-right: core.$space-none;
+    }
+
+    &:before {
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: core.$uq-white;
+      content: '';
+      display: none;
+    }
+
+    //&--active,
+    &[aria-selected="true"] {
+      color: core.$uq-purple;
+      background-color: core.$uq-white;
+      font-weight: core.$font-weight-bold;
+    }
+
+    > span {
+      display: inline-block;
+      margin: 0 auto;
+      font-size: core.$font-size-xs;
+    }
+  }
+
+  // tab panel
+  //&__tab-panel,
+  [role="tabpanel"] {
+    padding: core.$space core.$space-md;
+    font-size: core.$font-size-m;
+    color: core.$uq-neutral-dark80;
+    background-color: core.$uq-white;
+
+    @media #{core.$screen-md-up} {
+      padding: core.$space-md core.$space-lg;
+    }
+  }
+
   // Default / Outline variant
   &.tabs--outline {
     //.tabs__tab-list,
@@ -17,56 +105,14 @@
 
     //.tabs__tab,
     [role="tab"] {
-      background-color: core.$uq-neutral-light20;
+      background-color: core.$uq-white;
       border: 1px solid $tab-border-color;
       margin-bottom: -1px;
 
       &:hover,
       &:focus,
       &:active {
-        background-color: core.$uq-neutral-light40;
-      }
-
-      //&--active,
-      &[aria-selected="true"] {
         background-color: core.$uq-white;
-
-        &:hover,
-        &:focus,
-        &:active {
-          background-color: core.$uq-white;
-        }
-
-        &:before {
-          display: block;
-        }
-      }
-    }
-  }
-
-  // Boxed variant
-  &.tabs--boxed {
-    //.tabs__tab-list,
-    [role="tablist"] {
-      border-bottom: 1px solid $tab-border-color;
-    }
-
-    //.tabs__tab,
-    [role="tab"] {
-      background-color: core.$uq-neutral-light20;
-      border: 1px solid $tab-border-color;
-      border-radius: core.$space-none;
-      margin-right: core.$space-none;
-      margin-bottom: -1px;
-
-      &:not(:first-child) {
-        margin-left: -1px;
-      }
-
-      &:hover,
-      &:focus,
-      &:active {
-        background-color: core.$uq-neutral-light40;
       }
 
       //&--active,
@@ -106,7 +152,6 @@
         &:active {
           background-color: core.$uq-white;
         }
-
       }
     }
   }
@@ -147,6 +192,14 @@
       flex-flow: row-reverse nowrap
     }
 
+    // Tab Link
+    .tabs__link {
+      @media #{core.$screen-md-up} {
+        margin-left: 0;
+        margin-right: auto;
+      }
+    }
+
     // Tab
     //&__tab,
     [role="tab"] {
@@ -157,112 +210,6 @@
         margin-right: core.$space-none;
         margin-left: core.$space-xs;
       }
-    }
-  }
-
-  // Icon inline variant
-  &.tabs--icon-inline {
-
-    // Tab
-    //&__tab,
-    [role="tab"] {
-      > span {
-        display: inline-block;
-        margin: 0 auto;
-        font-size: core.$font-size-xs;
-      }
-    }
-  }
-
-  // Icon block variant
-  &.tabs--icon-block {
-
-    // Tab
-    //&__tab,
-    [role="tab"] {
-      > span {
-        display: block;
-        margin: 0 auto core.$space-sm;
-        font-size: core.$font-size-xs;
-      }
-    }
-  }
-
-  // Tab list
-  //&__tab-list,
-  [role="tablist"] {
-    position: relative;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-    overflow-x: scroll; 
-    overflow-y: hidden; 
-    padding: core.$space-none;
-    margin: core.$space-none;
-  }
-
-  // Tab
-  //&__tab,
-  [role="tab"] {
-    position: relative;
-    flex: 0 1 auto;
-    padding: core.$space core.$space-md;
-    margin-right: core.$space-xs;
-    font-size: core.$font-size-m;
-    font-weight: core.$font-weight-thin;
-    color: core.$uq-neutral-dark80;
-    background-color: core.$uq-white;
-    border-radius: core.$space-xs core.$space-xs core.$space-none core.$space-none;
-    border: none;
-    text-align: center;
-    cursor: pointer;
-    overflow: hidden;
-
-    @media #{core.$screen-md-up} {
-      padding: core.$space-md core.$space-lg;
-      margin-right: core.$space-xs;
-      font-size: core.$font-size-l;
-    }
-
-    &:last-child {
-      margin-right: core.$space-none;
-    }
-
-    &:before {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 2px;
-      background-color: core.$uq-purple;
-      content: '';
-      display: none;
-    }
-
-    //&--active,
-    &[aria-selected="true"] {
-      color: core.$uq-purple;
-      background-color: core.$uq-white;
-      font-weight: core.$font-weight-bold;
-    }
-
-    > span {
-      display: inline-block;
-      margin: 0 auto;
-      font-size: core.$font-size-xs;
-    }
-  }
-
-  // tab panel
-  //&__tab-panel,
-  [role="tabpanel"] {
-    padding: core.$space core.$space-md;
-    font-size: core.$font-size-m;
-    color: core.$uq-neutral-dark80;
-    background-color: core.$uq-white;
-
-    @media #{core.$screen-md-up} {
-      padding: core.$space-md core.$space-lg;
     }
   }
 }

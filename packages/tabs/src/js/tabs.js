@@ -25,7 +25,7 @@ export default class tabs {
    */
   constructor(options) {
     // Check for valid DOM element as container
-    if (options?.container && this.isHTMLElement(options?.container)) {
+    if (options?.container && tabs.isHTMLElement(options?.container)) {
       this.container = options.container;
     }
 

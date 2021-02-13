@@ -122,3 +122,32 @@ The Tabs component are tabs that are aligned together which on user interaction 
 - Tab labels can include icons and text. Text labels should be short.
 - Don’t use tabs to move through sequential content that needs to be read in a particular order.
 - Don’t mix tabs that contain only text, with tabs that contain only icons. Use either all text labels, all icon labels, or both, across all labels.
+
+## JavaScript reference
+
+### Setup
+
+Currently, we've only made available a ES module (`@uqds/tabs/src/js/tabs`).
+
+### Class: Tabs
+
+#### Create object
+
+```javascript
+new Tabs([options]);
+```
+
+#### Parameters
+
+| Name | Type | Attributes | Description |
+| ---- | ---- | ---------- | ----------- |
+| `options` | Object | Optional | Configuration object for the tabs |
+
+#### `options` properties
+
+| Name | Type | Attributes | Default | Description |
+| ---- | ---- | ---------- | ------- | ----------- |
+| container | HTMLElement | Optional | | Optional container for tabs and panels. Useful for when you have multiple tab lists on a page. |
+| tabListSelector | String | Optional | `[role="tablist"]` | Selector string of the tab lists. |
+| tabSelector | String | Optional | `[role="tab"]` | Selector string of the tabs. |
+| tabPanelSelector | String | Optional | `[role="tabpanel"]` | Selector string of the tab panels. |

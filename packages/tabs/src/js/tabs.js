@@ -23,9 +23,9 @@ export default class Tabs {
    * @constructor
    * @param {Object} [options] - Configuration object for the tabs
    * @param {HTMLElement} [options.container] - Optional container for tabs and panels
-   * @param {String} [options.tabListSelector] - Selector string of the tab lists
-   * @param {String} [options.tabSelector] - Selector string of the tabs
-   * @param {String} [options.tabPanelSelector] - Selector string of the tab panels
+   * @param {String} [options.tabListSelector=[role="tablist"]] - Selector string of the tab lists
+   * @param {String} [options.tabSelector=[role="tab"]] - Selector string of the tabs
+   * @param {String} [options.tabPanelSelector=[role="tabpanel"]] - Selector string of the tab panels
    */
   constructor(options) {
     // Check for valid DOM element as container

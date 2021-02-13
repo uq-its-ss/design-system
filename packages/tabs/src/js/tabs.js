@@ -1,20 +1,24 @@
-'use strict';
 
-/*
+/**
+ * @file UQ (Automatic Activation) Tabs JS module.
+ * 
+ * You need to make sure your HTML is correctly formatted as per the design
+ * system docs and that the accompanying SCSS/CSS is loaded as well.
+ * 
  * This software includes material copied from or derived from "Example of Tabs
  * with Automatic Activation," (https://www.w3.org/TR/wai-aria-practices-1.1/examples/tabs/tabs-1/js/tabs.js).
  * Copyright © 2021 W3C® (MIT, ERCIM, Keio, Beihang). Licensed according to the
  * W3C Software License at https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document.
+ * 
+ * @author University of Queensland
  */
 
- /**
- * @file
- * UQ Automatic Activation Tabs JS. You need to make sure your HTML is correctly
- * formatted as per the design system docs and that the accompanying SCSS/CSS is
- * loaded as well.
+/** 
+ * Tabs module
+ * @module @uqds/tabs
  */
 
-export default class tabs {
+export default class Tabs {
   /**
    * @constructor
    * @param {Object} [options] - Configuration object for the tabs
@@ -25,7 +29,7 @@ export default class tabs {
    */
   constructor(options) {
     // Check for valid DOM element as container
-    if (options?.container && tabs.isHTMLElement(options?.container)) {
+    if (options?.container && Tabs.isHTMLElement(options?.container)) {
       this.container = options.container;
     }
 
@@ -133,12 +137,12 @@ export default class tabs {
     const key = event.keyCode;
 
     switch (key) {
-      case tabs.keys.end:
+      case Tabs.keys.end:
         event.preventDefault();
         // Activate last tab
         this.activateTab(this.tabs[this.tabs.length - 1]);
         break;
-      case tabs.keys.home:
+      case Tabs.keys.home:
         event.preventDefault();
         // Activate first tab
         this.activateTab(this.tabs[0]);
@@ -146,8 +150,8 @@ export default class tabs {
 
       // Up and down are in keydown
       // because we need to prevent page scroll >:)
-      case tabs.keys.up:
-      case tabs.keys.down:
+      case Tabs.keys.up:
+      case Tabs.keys.down:
         this.determineOrientation(event);
         break;
     };
@@ -162,8 +166,8 @@ export default class tabs {
     const key = event.keyCode;
 
     switch (key) {
-      case tabs.keys.left:
-      case tabs.keys.right:
+      case Tabs.keys.left:
+      case Tabs.keys.right:
         this.determineOrientation(event);
         break;
     };
@@ -182,13 +186,13 @@ export default class tabs {
     let proceed = false;
 
     if (vertical) {
-      if (key === tabs.keys.up || key === tabs.keys.down) {
+      if (key === Tabs.keys.up || key === Tabs.keys.down) {
         event.preventDefault();
         proceed = true;
       };
     }
     else {
-      if (key === tabs.keys.left || key === tabs.keys.right) {
+      if (key === Tabs.keys.left || key === Tabs.keys.right) {
         proceed = true;
       };
     };
@@ -211,16 +215,16 @@ export default class tabs {
       this.tabs[x].addEventListener('focus', this.focusEventHandler);
     };
 
-    if (tabs.direction[pressed]) {
+    if (Tabs.direction[pressed]) {
       var target = event.target;
       if (target.index !== undefined) {
-        if (this.tabs[target.index + tabs.direction[pressed]]) {
-          this.tabs[target.index + tabs.direction[pressed]].focus();
+        if (this.tabs[target.index + Tabs.direction[pressed]]) {
+          this.tabs[target.index + Tabs.direction[pressed]].focus();
         }
-        else if (pressed === tabs.keys.left || pressed === tabs.keys.up) {
+        else if (pressed === Tabs.keys.left || pressed === Tabs.keys.up) {
           this.focusLastTab();
         }
-        else if (pressed === tabs.keys.right || pressed == tabs.keys.down) {
+        else if (pressed === Tabs.keys.right || pressed == Tabs.keys.down) {
           this.focusFirstTab();
         };
       };

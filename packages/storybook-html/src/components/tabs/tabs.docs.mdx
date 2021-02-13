@@ -25,6 +25,7 @@ The Tabs component are tabs that are aligned together which on user interaction 
       <button class="tabs__tab tabs__tab--active" role="tab" aria-selected="true" aria-controls="tab1-panel" id="tab1">Tab 1</button>
       <button class="tabs__tab" role="tab" aria-selected="false" aria-controls="tab2-panel" id="tab2" tabindex="-1">Tab 2</button>
       <button class="tabs__tab" role="tab" aria-selected="false" aria-controls="tab3-panel" id="tab3" tabindex="-1">Tab 3</button>
+      <a class="tabs__link" href="#">Tab link</a>
     </div>
     <div class="tabs__tab-panel tabs__tab-panel--active" role="tabpanel" id="tab1-panel" aria-labelledby="tab1" tabindex="0">
       <p>Tab1 panel text</p>
@@ -64,49 +65,20 @@ The Tabs component are tabs that are aligned together which on user interaction 
   </div>
 ```
 
-### Boxed
+### With icon
 
 <Canvas withSource="none">
-  <Story id="components-tabs--tabs-boxed" />
+  <Story id="components-tabs--tabs-with-icon" />
 </Canvas>
 
 ```html
-  <div class="tabs tabs--boxed">
-    ...
-  </div>
-```
-
-### With icon inline
-
-<Canvas withSource="none">
-  <Story id="components-tabs--tabs-with-icon-inline" />
-</Canvas>
-
-```html
-<div class="tabs tabs--icon-inline">
+<div class="tabs tabs--outline">
   <div class="tabs__tab-list" role="tablist" aria-label="Tab List">
     <button class="tabs__tab tabs__tab--active" role="tab" aria-selected="true" aria-controls="tab1-panel" id="tab1">
-        <span class="uq-icon uq-icon--pin"></span> Tab 1
+        <span class="uq-icon uq-icon--search"></span> Tab 1
     </button>
     ...
 ```
-
-### With icon block
-
-<Canvas withSource="none">
-  <Story id="components-tabs--tabs-with-icon-block" />
-</Canvas>
-
-```html
-<div class="tabs tabs--icon-block">
-  <div class="tabs__tab-list" role="tablist" aria-label="Tab List">
-    <button class="tabs__tab tabs__tab--active" role="tab" aria-selected="true" aria-controls="tab1-panel" id="tab1">
-        <span class="uq-icon uq-icon--pin"></span> Tab 1
-    </button>
-    ...
-```
-
-## Sub-variant examples
 
 ### Full width
 
@@ -115,7 +87,7 @@ The Tabs component are tabs that are aligned together which on user interaction 
 </Canvas>
 
 ```html
-  <div class="tabs tabs--full-width">
+  <div class="tabs tabs--outline tabs--full-width">
     ...
   </div>
 ```
@@ -127,7 +99,7 @@ The Tabs component are tabs that are aligned together which on user interaction 
 </Canvas>
 
 ```html
-  <div class="tabs tabs--small">
+  <div class="tabs tabs--outline tabs--small">
     ...
   </div>
 ```
@@ -139,7 +111,7 @@ The Tabs component are tabs that are aligned together which on user interaction 
 </Canvas>
 
 ```html
-  <div class="tabs tabs--reversed">
+  <div class="tabs tabs--outline tabs--reversed">
     ...
   </div>
 ```

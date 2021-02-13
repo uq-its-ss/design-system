@@ -4,7 +4,7 @@ import { useEffect } from '@storybook/client-api';
 import './tabs.scss';
 
 // import scripts
-import tabs from '@uqds/tabs/src/js/tabs.es6';
+import tabs from '@uqds/tabs/src/js/tabs';
 
 // documentation
 import docs from './tabs.docs.mdx';
@@ -24,7 +24,7 @@ export default {
 
 export const tabsOutline = () => {
   useEffect(() => {
-    tabs();
+    new tabs();
   });
   return `
   <div class="tabs tabs--outline">

@@ -23,9 +23,9 @@ export class Tabs {
    * @constructor
    * @param {Object} [options] - Configuration object for the tabs
    * @param {HTMLElement} [options.container] - Optional container for tabs and panels
-   * @param {String} [options.tabListSelector=[role="tablist"]] - Selector string of the tab lists
-   * @param {String} [options.tabSelector=[role="tab"]] - Selector string of the tabs
-   * @param {String} [options.tabPanelSelector=[role="tabpanel"]] - Selector string of the tab panels
+   * @param {String} [options.tabListSelector=.tabs__tab-list] - Selector string of the tab lists
+   * @param {String} [options.tabSelector=.tabs__tab] - Selector string of the tabs
+   * @param {String} [options.panelSelector=.tabs__tab-panel] - Selector string of the tab panels
    */
   constructor(options) {
     // Check for valid DOM element as container
@@ -35,7 +35,7 @@ export class Tabs {
 
     // Define selectors for working elements
     this.tabListSelector = options?.tabListSelector ?
-      options.tabSelector : '.tabs__tab-list';
+      options.tabListSelector : '.tabs__tab-list';
     this.tabSelector = options?.tabSelector ?
       options.tabSelector : '.tabs__tab';
     this.panelSelector = options?.panelSelector ?
@@ -320,7 +320,7 @@ export class Tabs {
     const scope = this.container ? this.container : document;
     
     this.tablist = scope.querySelector(this.tabListSelector);
-    this.panels = scope.querySelectorAll(this.tabPanelSelector);
+    this.panels = scope.querySelectorAll(this.panelSelector);
     this.tabs = this.tablist.querySelectorAll(this.tabSelector);
     this.delay = this.determineDelay();
 

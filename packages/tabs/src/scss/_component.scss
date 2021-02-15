@@ -76,10 +76,15 @@
       font-weight: core.$font-weight-bold;
     }
 
-    > span {
-      display: inline-block;
-      margin: 0 auto;
+    > span.uq-icon {
+      display: block;
+      margin: 0 auto core.$space-sm;
       font-size: core.$font-size-xs;
+
+      @media #{core.$screen-md-up} {
+        display: inline-block;
+        margin: 0 core.$space-xs 0 auto;
+      }
     }
   }
 

@@ -9,7 +9,8 @@ import StatusBadge from '../../../.storybook/custom/components/StatusBadge';
 
 ## Overview
 
-The Tabs component are tabs that are aligned together which on user interaction allow navigation between groups of content that are related and at the same level of hierarchy.
+Tabs component are tabs that are aligned together which on interaction allow navigation between groups of content that are related and at the same 
+hierarchical level.
 
 ## Default example
 
@@ -118,10 +119,21 @@ The Tabs component are tabs that are aligned together which on user interaction 
 
 ## How and when to use
 
-- Present tabs as a single row above their associated content.
-- Tab labels can include icons and text. Text labels should be short.
-- Don’t use tabs to move through sequential content that needs to be read in a particular order.
+- This tab example is automatically activated and its associated panel is displayed when the tab receives focus. 
+- Tabs should only be automatically activated in circumstances where panels can be displayed instantly, i.e., all panel content is present in the DOM.
+- Tabs should appear as a single row above their associated content.
+- Tab labels can include icons and text. And the tab label text should be short.
+- Don’t use tabs for moving through sequential content that needs to be read in a particular order.
 - Don’t mix tabs that contain only text, with tabs that contain only icons. Use either all text labels, all icon labels, or both, across all labels.
+- Although label text can wrap to a second line, scrollable tabs confine text to a single row.
+- Don’t resize text labels to fit them onto a single line. If labels are too long, wrap text to a second line or use scrollable tabs.
+- Don’t truncate labels unless required.
+
+
+## Accessibility
+
+- The WAI-ARIA roles used are [role="tab"], [role="tablist"], [role="tabpanel"].
+
 
 ## JavaScript reference
 

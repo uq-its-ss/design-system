@@ -4,7 +4,7 @@ import { useEffect } from '@storybook/client-api';
 import './tabs.scss';
 
 // import scripts
-import Tabs from '@uqds/tabs/src/js/tabs';
+import { Tabs } from '@uqds/tabs/src/js/tabs';
 
 // documentation
 import docs from './tabs.docs.mdx';

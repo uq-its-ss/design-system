@@ -10,40 +10,31 @@
   background-color: core.$uq-white;
   border: 1px solid core.$uq-neutral-light40;
   border-radius: core.$space-xs;
-  box-shadow: 0 core.$space-xs core.$space-xs rgba(core.$uq-neutral-dark80, 0.05);
   color: core.$uq-neutral-dark60;
   line-height: core.$space-md; 
   overflow-wrap: break-word;
   word-wrap: break-word;
-  overflow: hidden;
-  transition: all ease .25s;
   
-  &:hover,
-  &:focus {
-    box-shadow: 0 core.$space-sm core.$space-md rgba(core.$uq-neutral-dark80, 0.2);
-
-    a {
-      color: core.$link-hover;
-      text-decoration: underline;
-    }
-    .uq-button {
-      background-color: core.$link-hover;
-      border: 2px solid core.$link-hover;
-      text-decoration: underline;
-    }
-  }
   
-  &__link__outer {
+  // Link that wraps the whole card
+  &__link {
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     text-indent: -1000%;
+    box-shadow: 0 core.$space-xs core.$space-xs rgba(core.$uq-neutral-dark80, 0.05);
+    transition: all ease .25s;
     z-index: 10;
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 core.$space-sm core.$space rgba(core.$uq-neutral-dark80, 0.15);
+    }
   }
 
-  &__image__wrapper {
+  &__image-wrapper {
     max-height: 190px;
     overflow: hidden;
 
@@ -68,7 +59,7 @@
     }
   }
 
-  &__content__wrapper {
+  &__content-wrapper {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
@@ -111,7 +102,7 @@
       font-size: core.$font-size-xxl;
     }
 
-    &__super {
+    &-super {
       font-size: core.$font-size-s;
       font-weight: 500;
       color: core.$uq-purple-light;
@@ -165,7 +156,7 @@
         flex-direction: row;
       }
   
-      &__image__wrapper {
+      &__image-wrapper {
         min-width: 100%;
         overflow: hidden;
 
@@ -182,7 +173,7 @@
           padding-bottom: 0%;
         }
       }
-      &__content__wrapper {
+      &__content-wrapper {
         min-width: 100%;
 
         @media #{core.$screen-md-up} {

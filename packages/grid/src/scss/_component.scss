@@ -14,9 +14,12 @@
     @include layout-containment; // contain the first grid wrapper by default
   }
 
-  &--full-width,
-  .uq-grid {
+  &--full-width {
     @include layout-full-width;
+  }
+
+  .uq-grid {
+    @include layout-nested;
   }
 };
 @include grid-col-span-classes(8, 'md');

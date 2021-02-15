@@ -35,11 +35,11 @@ export class Tabs {
 
     // Define selectors for working elements
     this.tabListSelector = options?.tabListSelector ?
-      options.tabSelector : '[role="tablist"]';
+      options.tabSelector : '.tabs__tab-list';
     this.tabSelector = options?.tabSelector ?
-      options.tabSelector : '[role="tab"]';
+      options.tabSelector : '.tabs__tab';
     this.panelSelector = options?.panelSelector ?
-      options.panelSelector : '[role="tabpanel"]';
+      options.panelSelector : '.tabs__tab-panel';
 
     // Bind handler method context
     this.clickEventHandler = this.clickEventHandler.bind(this);

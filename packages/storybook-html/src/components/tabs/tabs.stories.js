@@ -49,7 +49,7 @@ export const tabsOutline = () => {
 
 tabsOutline.storyName = 'Default / Outline';
 
-export const tabsScrollable = () => {
+/* export const tabsScrollable = () => {
   useEffect(() => {
     new Tabs({container: document.getElementById('tabsScrollableExample')});
   });
@@ -88,7 +88,7 @@ export const tabsScrollable = () => {
   `;
 };
 
-tabsScrollable.storyName = 'Scrollable';
+tabsScrollable.storyName = 'Scrollable';*/
 
 export const tabsMinimal = () => {
   useEffect(() => {

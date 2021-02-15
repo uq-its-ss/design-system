@@ -320,8 +320,8 @@ export class Tabs {
     const scope = this.container ? this.container : document;
     
     this.tablist = scope.querySelector(this.tabListSelector);
-    this.panels = scope.querySelectorAll('[role="tabpanel"]');
-    this.tabs = this.tablist.querySelectorAll('[role="tab"]');
+    this.panels = scope.querySelectorAll(this.tabPanelSelector);
+    this.tabs = this.tablist.querySelectorAll(this.tabSelector);
     this.delay = this.determineDelay();
 
     // Bind listeners

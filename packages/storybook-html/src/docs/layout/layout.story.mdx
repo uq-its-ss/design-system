@@ -39,7 +39,10 @@ reading.
 
 ## Our base grid
 
-Our layout system is built upon a 6-8-12 column strategy — our base grid.
+Our layout system is built upon a **6-8-12 column** strategy — our base grid.
+The grid forms the basis of our layout system **when and only when** applied to
+the entire viewport width. The layout system is currently 1-dimensional
+(horizontal only).
 
 ### Specifications per viewport (width) range
 
@@ -76,10 +79,6 @@ export const BaseLayoutGrid = () => `
 <Story height={300} name="Base layout grid visualised">
   {BaseLayoutGrid.bind({})}
 </Story>
-
-> The grid forms the basis of our layout system when applied to the entire
-> viewport width. The layout system is currently 1-dimensional (horizontal
-> only).
 
 ## Designing with the base grid (for UI mockups)
 

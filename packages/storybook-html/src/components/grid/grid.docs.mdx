@@ -4,8 +4,10 @@ import StatusBadge from '../../../.storybook/custom/components/StatusBadge';
 # Grid
 <StatusBadge.Stable />
 
-Layouts using our grid are achieved using a combination of `.uq-grid` (grid
-container) and `.uq-grid__col` (grid column) elements and their modifiers.
+Layouts using our grid are achieved using a combination of `.uq-grid` (*grid
+container*) and `.uq-grid__col` (*grid column*) elements and their modifiers.
+**Grid containers should be afforded the entire width of the viewport**
+(naturally, this doesn't apply to *nested* and *full-width* grids).
 
 ## Golden
 
@@ -29,8 +31,8 @@ Add two `.uq-grid__col` elements within a grid container (with the
 
 See what happens when you add more columns to the same container!
 
-> All of our grids' rows get the same gutter (gap) as columns by default. So,
-> when columns stack, your contents are conveniently spaced out.
+> All of our grid rows get the same gutter (gap) as columns by default. So, when
+> columns stack, your contents are conveniently spaced out.
 
 ## Halves
 
@@ -173,16 +175,35 @@ Shift the layout for the largest screens.
 
 <Story height={430} id="layout-grid--twelve-eight-six-desktop" />
 
-## Nesting
+## Nesting grids
 
-> Nested `.uq-grid` elements don't have any margins or max. width applied.
+You can nest grids, i.e. place another grid container within a grid column, to
+create nested layouts. However, columns can become too narrow if you nest too
+deeply or use small column spans.
 
 <Story height={125} id="layout-grid--twelve-eight-six-nested" />
 
-## Full-width layouts
+### Example using the 6-8-12 grid
+
+```html
+<div class="uq-grid">
+  <div class="uq-grid__col uq-grid__col--4 uq-grid__col--md-6">
+    Content
+    <!-- Nested grid -->
+    <div class="uq-grid">
+      <div class="uq-grid__col uq-grid__col--3 uq-grid__col--xl-7">Nested</div>
+      <div class="uq-grid__col uq-grid__col--3 uq-grid__col--xl-5">Nested</div>
+    </div>
+  </div>
+  <div class="uq-grid__col uq-grid__col--2 uq-grid__col--md-2">Content</div>
+</div>
+```
+
+## Full-width grid
 
 If you want to manage the margins yourself i.e. nest the grid in your own custom
-container, you can apply the `uq-grid--full-width` modifier class.
+container, you can apply the `uq-grid--full-width` modifier class. However,
+minimal margins are still applied.
 
 #### Example: 6-8-12 grid
 

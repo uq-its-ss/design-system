@@ -8,6 +8,13 @@
     box-sizing: border-box;
   }
 
+  // Tab list scrollable
+  &__tab-list-scrollable {
+    position: relative;
+    display: block;
+    overflow: scroll; 
+  }
+
   // Tab list
   //&__tab-list,
   [role="tablist"] {

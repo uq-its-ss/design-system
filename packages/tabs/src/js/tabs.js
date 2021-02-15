@@ -18,7 +18,7 @@
  * @module @uqds/tabs
  */
 
-export default class Tabs {
+export class Tabs {
   /**
    * @constructor
    * @param {Object} [options] - Configuration object for the tabs

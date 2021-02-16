@@ -6,12 +6,11 @@
 
   * {
     box-sizing: border-box;
-    outline-color: core.$link-hover;
   }
 
   // Tab list wrapper
   &__tab-list-wrapper {
-    overflow: scroll; 
+    overflow: auto; 
   }
 
   // Tab list

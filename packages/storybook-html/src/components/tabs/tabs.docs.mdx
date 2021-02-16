@@ -152,10 +152,10 @@ hierarchical level.
 
 - When the user tabs through the tabs, it receives focus and automatically opens its related tab panel.
 - The WAI-ARIA roles used are `[role="tablist"]` for the tab list, `[role="tab"]` for the individual tab items and `[role="tabpanel"]` for the tab panels.
-- Tab active state: `tabindex = "0"`, classname `tabs__tab--active` is added, attribute `aria-selected = "true"`.
-- Tab inactive state: `tabindex = "-1"`, classname `tabs__tab--active` is removed, attribute `aria-selected = "false"`.
-- Tab panel active state: `tabindex = "0"`, classname `tabs__tab-panel--active` is added, attribute `hidden` is removed.
-- Tab panel inactive state: `tabindex = "0"`, classname `tabs__tab-panel--active` is removed, attribute `hidden` is added.
+- Tab active state: `tabindex = "0"`, classname `tabs__tab--active` is added, `aria-selected = "true"`.
+- Tab inactive state: `tabindex = "-1"`, classname `tabs__tab--active` is removed, `aria-selected = "false"`.
+- Tab panel active state: `tabindex = "0"`, classname `tabs__tab-panel--active` is added, `hidden` is removed.
+- Tab panel inactive state: `tabindex = "0"`, classname `tabs__tab-panel--active` is removed, `hidden` is added.
 - Colour contrast test for the tabs showed a WCAG AA Pass.
 <br />
 

@@ -1,0 +1,175 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import StatusBadge from '../../../.storybook/custom/components/StatusBadge';
+
+# Tabs
+
+<StatusBadge.Development />
+
+<a href="https://github.com/uq-its-ss/design-system/issues" class="uq-button uq-button--text" target="_blank">Check for open issues</a>
+
+## Overview
+
+Tabs component are tabs that are aligned together which on interaction allow navigation between groups of content that are related and at the same 
+hierarchical level.
+
+## Default example
+
+### Default / Outline 
+
+<Canvas withSource="none">
+  <Story id="components-tabs--tabs-outline" />
+</Canvas>
+
+```html
+  <div id="tabsDefaultExample" class="tabs tabs--outline">
+    <div class="tabs__tab-list-wrapper">
+      <div class="tabs__tab-list" role="tablist" aria-label="Tab List">
+        <button class="tabs__tab tabs__tab--active" role="tab" aria-selected="true" aria-controls="tab1-panel" id="tab1">Tab 1</button>
+        <button class="tabs__tab" role="tab" aria-selected="false" aria-controls="tab2-panel" id="tab2" tabindex="-1">Tab 2</button>
+        <button class="tabs__tab" role="tab" aria-selected="false" aria-controls="tab3-panel" id="tab3" tabindex="-1">Tab 3</button>
+        <a class="tabs__link" href="#">Tab link</a>
+      </div>
+    </div>
+    <div class="tabs__tab-panel tabs__tab-panel--active" role="tabpanel" id="tab1-panel" aria-labelledby="tab1" tabindex="0">
+      <p>Tab1 panel text</p>
+    </div>
+    <div class="tabs__tab-panel" role="tabpanel" id="tab2-panel" aria-labelledby="tab2" tabindex="0" hidden="">
+      <p>Tab2 panel text</p>
+    </div>
+    <div class="tabs__tab-panel" role="tabpanel" id="tab3-panel" aria-labelledby="tab3" tabindex="0" hidden="">
+      <p>Tab3 panel text</p>
+    </div>
+  </div>
+```
+
+## Variant examples
+
+### Minimal
+
+<Canvas withSource="none">
+  <Story id="components-tabs--tabs-minimal" />
+</Canvas>
+
+```html
+  <div class="tabs">
+    ...
+  </div>
+```
+
+### Lined
+
+<Canvas withSource="none">
+  <Story id="components-tabs--tabs-lined" />
+</Canvas>
+
+```html
+  <div class="tabs tabs--lined">
+    ...
+  </div>
+```
+
+### With icon
+
+<Canvas withSource="none">
+  <Story id="components-tabs--tabs-with-icon" />
+</Canvas>
+
+```html
+<div class="tabs tabs--outline">
+  <div class="tabs__tab-list" role="tablist" aria-label="Tab List">
+    <button class="tabs__tab tabs__tab--active" role="tab" aria-selected="true" aria-controls="tab1-panel" id="tab1">
+        <span class="uq-icon uq-icon--search"></span> Tab 1
+    </button>
+    ...
+```
+
+### Full width
+
+<Canvas withSource="none">
+  <Story id="components-tabs--tabs-full-width" />
+</Canvas>
+
+```html
+  <div class="tabs tabs--outline tabs--full-width">
+    ...
+  </div>
+```
+
+### Small
+
+<Canvas withSource="none">
+  <Story id="components-tabs--tabs-small" />
+</Canvas>
+
+```html
+  <div class="tabs tabs--outline tabs--small">
+    ...
+  </div>
+```
+
+### Reversed
+
+<Canvas withSource="none">
+  <Story id="components-tabs--tabs-reversed" />
+</Canvas>
+
+```html
+  <div class="tabs tabs--outline tabs--reversed">
+    ...
+  </div>
+```
+
+## How and when to use
+
+- This tab example is automatically activated and its associated panel is displayed when the tab receives focus. 
+- Tabs should only be automatically activated in circumstances where panels can be displayed instantly, i.e., all panel content is present in the DOM.
+- Tabs should appear as a single row above their associated content.
+- Tab labels can include icons and text. And the tab label text should be short.
+- Don’t use tabs for moving through sequential content that needs to be read in a particular order.
+- Don’t mix tabs that contain only text, with tabs that contain only icons. Use either all text labels, all icon labels, or both, across all labels.
+- Although label text can wrap to a second line, scrollable tabs confine text to a single row.
+- Don’t resize text labels to fit them onto a single line.
+- Don’t truncate labels unless required.
+<br />
+
+## Accessibility
+
+- When the user tabs through the tabs, it receives focus and automatically opens its related tab panel.
+- The WAI-ARIA roles used are `[role="tablist"]` for the tab list, `[role="tab"]` for the individual tab items and `[role="tabpanel"]` for the tab panels.
+- Tab active state: `tabindex = "0"`, classname `tabs__tab--active` is added, `aria-selected = "true"`.
+- Tab inactive state: `tabindex = "-1"`, classname `tabs__tab--active` is removed, `aria-selected = "false"`.
+- Tab panel active state: `tabindex = "0"`, classname `tabs__tab-panel--active` is added, `hidden` is removed.
+- Tab panel inactive state: `tabindex = "0"`, classname `tabs__tab-panel--active` is removed, `hidden` is added.
+- Colour contrast test for the tabs showed a WCAG AA Pass.
+<br />
+
+## JavaScript reference
+
+### Setup
+
+Currently, we've only made available a ES module (`@uqds/tabs/src/js/tabs`).
+
+### Class: Tabs
+
+#### Create object
+
+```javascript
+import { Tabs } from '@uqds/tabs/src/js/tabs';
+
+new Tabs([options]);
+```
+
+#### Parameters
+
+| Name | Type | Attributes | Description |
+| ---- | ---- | ---------- | ----------- |
+| `options` | Object | Optional | Configuration object for the tabs |
+
+#### `options` properties
+
+| Name | Type | Attributes | Default | Description |
+| ---- | ---- | ---------- | ------- | ----------- |
+| container | HTMLElement | Optional | | Optional container for tabs and panels. Useful for when you have multiple tab lists on a page. |
+| tabListSelector | String | Optional | `.tabs__tab-list` | Selector string of the tab lists. |
+| tabSelector | String | Optional | `.tabs__tab` | Selector string of the tabs. |
+| tabPanelSelector | String | Optional | `.tabs__tab-panel` | Selector string of the tab panels. |

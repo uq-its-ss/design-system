@@ -2,217 +2,213 @@
 @use 'global' as *;
 
 // Tabs
-//
-// Variants for tabs
-// .tabs--outline - Rectangle outline style for tab group
-// .tabs--boxed - Rectangle box style for each tab
-// .tabs--square - Square box style for each tab
-// .tabs--two - Style for two tabs
-// .tabs--three - Style for three tabs
-// .tabs--four - Style for four tabs
-// .tabs--five - Style for five tabs
-//
-// Variants for tabs content
-// .tabs-content--container - Rectangle box style for tab content
+.tabs {
 
-// Tabs
-.tabs-section {
-  // Tabs - default
-  .tabs {
+  * {
+    box-sizing: border-box;
+  }
+
+  // Tab list wrapper
+  &__tab-list-wrapper {
+    overflow: auto; 
+  }
+
+  // Tab list
+  &__tab-list {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    overflow: visible; 
     padding: core.$space-none;
     margin: core.$space-none;
+  }
+  
+  // Tab Link
+  &__link {
+    display: inline;
+    margin-left: auto;
+    padding: core.$space-none core.$space-md;
+    align-self: center;
+    white-space: nowrap;
 
-    // Clearfix from Foundation 5
-    &:before, &:after { content: " "; display: table; }
-    &:after { clear: both; }
+    @media #{core.$screen-md-up} {
+      padding: core.$space-none core.$space-lg;
+    }
+  }
 
-    // Foundaton classname for li wrapping tab title
-    .tab-title {
-      text-align: center;
-      float: left;
-      list-style: none;
-      margin-bottom: core.$space-none;
-      position: relative;
-      border-bottom: 1px solid $panel-border;
+  // Tab
+  &__tab {
+    position: relative;
+    flex: 0 1 auto;
+    padding: core.$space core.$space-md;
+    margin-right: core.$space-xs;
+    font-size: core.$font-size-m;
+    font-weight: core.$font-weight-thin;
+    color: core.$uq-neutral-dark80;
+    background-color: core.$uq-white;
+    border-radius: core.$space-xs core.$space-xs core.$space-none core.$space-none;
+    border: none;
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
 
-      // active tab
-      &.active {
-        border-bottom: 1px solid $tabs-color;
-        color: $tabs-color;
-      }
+    @media #{core.$screen-md-up} {
+      padding: core.$space-md core.$space-lg;
+      margin-right: core.$space-xs;
+      font-size: core.$font-size-l;
+    }
 
-      // tab title
-      a {
-        color: $tabs-color;
-        background: core.$uq-white;
-        display: block;
-        padding: core.$space;
+    &:last-child {
+      margin-right: core.$space-none;
+    }
 
-        &:hover,
-        &:focus {
-          text-decoration: none;
-        }
-      }
+    &--active {
+      color: core.$uq-purple;
+      background-color: core.$uq-white;
+      font-weight: core.$font-weight-bold;
 
-      // tab sub-title
-      .tabs__sub-title {
-        display: block;
-        font-weight: core.$font-weight-normal;
-        font-size: 0.6875rem;
-
-        @media #{core.$screen-md-up} {
-          font-size: core.$font-size-s;
-        }
+      &:before {
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: core.$uq-white;
+        content: '';
+        display: none;
       }
     }
 
-    // ***********************************
-    // Tabs - fixed
-    &--fixed {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 99;
-    }
+    > span.uq-icon {
+      display: block;
+      margin: 0 auto core.$space-sm;
+      font-size: core.$font-size-xs;
 
-    // ***********************************
-    // Tabs - two
-    &--two {
-      .tab-title {
-        width: 50%;
+      @media #{core.$screen-md-up} {
+        display: inline-block;
+        margin: 0 core.$space-xs 0 auto;
       }
     }
+  }
 
-    // ***********************************
-    // Tabs - three
-    &--three {
-      .tab-title {
-        width: 33.33%;
-      }
+  // tab panel
+  &__tab-panel {
+    padding: core.$space core.$space-md;
+    font-size: core.$font-size-m;
+    color: core.$uq-neutral-dark80;
+    background-color: core.$uq-white;
+
+    @media #{core.$screen-md-up} {
+      padding: core.$space-md core.$space-lg;
+    }
+  }
+
+  // Default / Outline variant
+  &.tabs--outline {
+    .tabs__tab-list {
+      border-bottom: 1px solid $tab-border-color;
     }
 
-    // ***********************************
-    // Tabs - four
-    &--four {
-      .tab-title {
-        width: 25%;
-      }
-    }
-
-    // ***********************************
-    // Tabs - five
-    &--five {
-      .tab-title {
-        width: 20%;
-      }
-    }
-
-    // ***********************************
-    // Tabs - Outline
-    &--outline {
-      background: core.$uq-white;
-      border: 1px solid $panel-border;
-      border-bottom: 0;
-
-      // Foundaton classname for li wrapping tab title
-      .tab-title {
-        font-weight: core.$font-weight-bold;
-
-        // active tab
-        &.active {
-          border-bottom-color: $active-color;
-        }
-
-        // tab title
-        a {
-          padding: core.$space;
-        }
-      }
-    }
-
-    // ***********************************
-    // Tabs - Boxed
-    &--boxed {
-      border-left: 1px solid $panel-border;
-      border-top: 0;
-      border-bottom: 0;
-      border-right: 0;
+    .tabs__tab {
+      background-color: core.$uq-white;
+      border: 1px solid $tab-border-color;
       margin-bottom: -1px;
 
-      // Foundaton classname for li wrapping tab title
-      .tab-title {
-        font-weight: core.$font-weight-bold;
-        border: 1px solid $panel-border;
-        border-left: 0;
-        background: $app-wrapper;
-
-        // active tab
-        &.active {
-          border-bottom-color: core.$uq-white;
-          background: core.$uq-white;
-        }
-
-        // tab title
-        a {
-          padding: core.$space core.$space-lg;
-        }
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: core.$uq-white;
       }
-    }
 
-    // ***********************************
-    // Tabs - Square
-    &--square {
-      background: core.$uq-white;
-      border: 1px solid $panel-border;
-      border-right: 0;
-      border-bottom: 0;
+      &--active {
+        background-color: core.$uq-white;
 
-      // Foundaton classname for li wrapping tab title
-      .tab-title {
-        font-weight: core.$font-weight-thin;
-        border-right: 1px solid $panel-border;
-
-        // active tab
-        &.active {
-          border-bottom-color: $active-color;
+        &:hover,
+        &:focus,
+        &:active {
+          background-color: core.$uq-white;
         }
 
-        // tab title
-        a {
-          padding: core.$space-xl core.$space-sm core.$space;
-          text-align: center;
-          font-size: 1.4rem;
-          background: core.$uq-white;
+        &:before {
+          display: block;
         }
       }
     }
   }
 
-  // ***********************************
-  // Tabs content
-  // Foundaton classname for section wrapping tab content
-  .tabs-content {
-    width: 100%;
+  // Lined variant
+  &.tabs--lined {
+    .tabs__tab-list {
+      border-bottom: 1px solid $tab-border-color;
+    }
 
-    // Foundaton classname for tab content
-    .content {
-      display: none;
+    .tabs__tab {
 
-      &.active {
-        display: block;
+      &--active {
+        background-color: core.$uq-white;
+
+        &:hover,
+        &:focus,
+        &:active {
+          background-color: core.$uq-white;
+        }
+
+        &:before {
+          background-color: core.$uq-purple;
+          display: block;
+        }
+      }
+    }
+  }
+
+  // Full width variant
+  &.tabs--full-width {
+    .tabs__tab {
+      flex: 1 1 auto;
+    }
+  }
+
+  // Small variant
+  &.tabs--small {
+    .tabs__tab {
+      padding: core.$space-sm core.$space;
+
+      @media #{core.$screen-md-up} {
+        padding: core.$space core.$space-md;
+      }
+    }
+    .tabs__tab-panel {
+      padding: core.$space-sm core.$space;
+  
+      @media #{core.$screen-md-up} {
+        padding: core.$space core.$space-md;
+      }
+    }
+  }
+
+  // Reversed variant
+  &.tabs--reversed {
+    // Tab list
+    .tabs__tab-list {
+      flex-flow: row-reverse nowrap
+    }
+
+    // Tab Link
+    .tabs__link {
+      @media #{core.$screen-md-up} {
+        margin-left: 0;
+        margin-right: auto;
       }
     }
 
-    // Content tabs container
-    &--container {
-      border: 1px solid $panel-border;
-      border-top: 0;
-      background: core.$uq-white;
+    // Tab
+    .tabs__tab {
+      margin-right: core.$space-none;
+      margin-left: core.$space-xs;
 
-      // Foundaton classname for tab content
-      .content {
-        border-top: 1px solid $panel-border;
+      &:last-child {
+        margin-right: core.$space-none;
+        margin-left: core.$space-xs;
       }
     }
   }

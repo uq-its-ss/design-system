@@ -6,8 +6,9 @@ import StatusBadge from '../../../.storybook/custom/components/StatusBadge';
 
 Layouts using our grid are achieved using a combination of `.uq-grid` (*grid
 container*) and `.uq-grid__col` (*grid column*) elements and their modifiers.
-**Grid containers should be afforded the entire width of the viewport**
-(naturally, this doesn't apply to *nested* and *full-width* grids).
+
+> ⚠️ Important: **grid containers should be afforded the entire width of the
+> viewport** (naturally, this doesn't apply to *nested* and *full-width* grids).
 
 ## Golden
 
@@ -201,16 +202,21 @@ deeply or use small column spans.
 
 ## Full-width grid
 
-If you want to manage the margins yourself i.e. nest the grid in your own custom
-container, you can apply the `uq-grid--full-width` modifier class. However,
-minimal margins are still applied.
+If you want to manage the margins yourself, i.e. nest the grid in your own
+custom container, you can apply the `uq-grid--full-width` modifier class. This
+variant is created with the intention that it will be used to develop layouts
+from a designed mockup or design advice. It is expected that spacing rules will
+still followed.
 
 #### Example: 6-8-12 grid
 
 ```html
-<div class="uq-grid uq-grid--full-width">
-  <div class="uq-grid__col uq-grid__col--3">Your content</div>
-  <div class="uq-grid__col uq-grid__col--3">Your content</div>
+<!-- using a custom container that has padding -->
+<div class="my-custom-container">
+  <div class="uq-grid uq-grid--full-width">
+    <div class="uq-grid__col uq-grid__col--3">Your content</div>
+    <div class="uq-grid__col uq-grid__col--3">Your content</div>
+  </div>
 </div>
 ```
 
@@ -219,12 +225,15 @@ minimal margins are still applied.
 #### Example: flexible grid
 
 ```html
-<div class="uq-grid uq-grid--flexible uq-grid--full-width">
-  <div class="uq-grid__col">Content</div>
-  <div class="uq-grid__col">Content</div>
-  <div class="uq-grid__col">Content</div>
-  <div class="uq-grid__col">Content</div>
-  <div class="uq-grid__col">Content</div>
+<!-- using a custom container that has padding -->
+<div class="my-custom-container">
+  <div class="uq-grid uq-grid--flexible uq-grid--full-width">
+    <div class="uq-grid__col">Content</div>
+    <div class="uq-grid__col">Content</div>
+    <div class="uq-grid__col">Content</div>
+    <div class="uq-grid__col">Content</div>
+    <div class="uq-grid__col">Content</div>
+  </div>
 </div>
 ```
 
@@ -234,6 +243,9 @@ minimal margins are still applied.
 
 The `.uq-layout-container` class can be used as an alternative to using a grid
 container (`.uq-grid`) and a full length grid column (`.uq-grid__col`).
+
+> ⚠️ Important: **layout container should be afforded the entire width of the
+> viewport**.
 
 ```html
 <div class="uq-layout-container">

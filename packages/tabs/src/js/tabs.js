@@ -245,6 +245,9 @@ export class Tabs {
     // Remove tabindex attribute
     tab.removeAttribute('tabindex');
 
+    // Add class active
+    tab.classList.add('tabs__tab--active');
+
     // Set the tab as selected
     tab.setAttribute('aria-selected', 'true');
 
@@ -268,6 +271,7 @@ export class Tabs {
     for (let t = 0; t < this.tabs.length; t++) {
       this.tabs[t].setAttribute('tabindex', '-1');
       this.tabs[t].setAttribute('aria-selected', 'false');
+      this.tabs[t].classList.remove('tabs__tab--active');
       this.tabs[t].removeEventListener('focus', this.focusEventHandler);
     };
 

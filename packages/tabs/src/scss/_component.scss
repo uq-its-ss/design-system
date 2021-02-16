@@ -3,22 +3,20 @@
 
 // Tabs
 .tabs {
+  overflow: hidden; 
 
   * {
     box-sizing: border-box;
   }
 
-  // Tab list scrollable
-  &__tab-list-scrollable {
-    position: relative;
+  // Tab list wrapper
+  &__tab-list-wrapper {
     display: block;
     overflow: scroll; 
   }
 
   // Tab list
-  //&__tab-list,
-  [role="tablist"] {
-    position: relative;
+  &__tab-list {
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-start;
@@ -29,20 +27,20 @@
   
   // Tab Link
   &__link {
-    display: none;
+    display: inline;
+    margin-left: auto;
+    align-self: center;
+    white-space: nowrap;
 
     @media #{core.$screen-md-up} {
-      display: inline;
-      margin-left: auto;
-      align-self: center;
+
     }
   }
 
   // Tab
-  //&__tab,
-  [role="tab"] {
+  &__tab {
     position: relative;
-    flex: 1 1 auto;
+    flex: 0 1 auto;
     padding: core.$space core.$space-md;
     margin-right: core.$space-xs;
     font-size: core.$font-size-m;
@@ -52,10 +50,10 @@
     border-radius: core.$space-xs core.$space-xs core.$space-none core.$space-none;
     border: none;
     text-align: center;
+    white-space: nowrap;
     cursor: pointer;
 
     @media #{core.$screen-md-up} {
-      flex: 0 1 auto;
       padding: core.$space-md core.$space-lg;
       margin-right: core.$space-xs;
       font-size: core.$font-size-l;
@@ -65,22 +63,21 @@
       margin-right: core.$space-none;
     }
 
-    &:before {
-      position: absolute;
-      bottom: -1px;
-      left: 0;
-      width: 100%;
-      height: 2px;
-      background-color: core.$uq-white;
-      content: '';
-      display: none;
-    }
-
-    //&--active,
-    &[aria-selected="true"] {
+    &--active {
       color: core.$uq-purple;
       background-color: core.$uq-white;
       font-weight: core.$font-weight-bold;
+
+      &:before {
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: core.$uq-white;
+        content: '';
+        display: none;
+      }
     }
 
     > span.uq-icon {
@@ -96,8 +93,7 @@
   }
 
   // tab panel
-  //&__tab-panel,
-  [role="tabpanel"] {
+  &__tab-panel {
     padding: core.$space core.$space-md;
     font-size: core.$font-size-m;
     color: core.$uq-neutral-dark80;
@@ -110,13 +106,11 @@
 
   // Default / Outline variant
   &.tabs--outline {
-    //.tabs__tab-list,
-    [role="tablist"] {
+    .tabs__tab-list {
       border-bottom: 1px solid $tab-border-color;
     }
 
-    //.tabs__tab,
-    [role="tab"] {
+    .tabs__tab {
       background-color: core.$uq-white;
       border: 1px solid $tab-border-color;
       margin-bottom: -1px;
@@ -127,8 +121,7 @@
         background-color: core.$uq-white;
       }
 
-      //&--active,
-      &[aria-selected="true"] {
+      &--active {
         background-color: core.$uq-white;
 
         &:hover,
@@ -146,23 +139,24 @@
 
   // Lined variant
   &.tabs--lined {
-    //.tabs__tab-list,
-    [role="tablist"] {
+    .tabs__tab-list {
       border-bottom: 1px solid $tab-border-color;
     }
 
-    //.tabs__tab,
-    [role="tab"] {
+    .tabs__tab {
 
-      //&--active,
-      &[aria-selected="true"] {
+      &--active {
         background-color: core.$uq-white;
-        border-bottom: 2px solid core.$uq-purple;
 
         &:hover,
         &:focus,
         &:active {
           background-color: core.$uq-white;
+        }
+
+        &:before {
+          background-color: core.$uq-purple;
+          display: block;
         }
       }
     }
@@ -170,24 +164,21 @@
 
   // Full width variant
   &.tabs--full-width {
-    //.tabs__tab,
-    [role="tab"] {
+    .tabs__tab {
       flex: 1 1 auto;
     }
   }
 
   // Small variant
   &.tabs--small {
-    //.tabs__tab,
-    [role="tab"] {
+    .tabs__tab {
       padding: core.$space-sm core.$space;
 
       @media #{core.$screen-md-up} {
         padding: core.$space core.$space-md;
       }
     }
-    //.tabs__tab-panel,
-    [role="tabpanel"] {
+    .tabs__tab-panel {
       padding: core.$space-sm core.$space;
   
       @media #{core.$screen-md-up} {
@@ -199,8 +190,7 @@
   // Reversed variant
   &.tabs--reversed {
     // Tab list
-    //&__tab-list,
-    [role="tablist"] {
+    .tabs__tab-list {
       flex-flow: row-reverse nowrap
     }
 
@@ -213,8 +203,7 @@
     }
 
     // Tab
-    //&__tab,
-    [role="tab"] {
+    .tabs__tab {
       margin-right: core.$space-none;
       margin-left: core.$space-xs;
 

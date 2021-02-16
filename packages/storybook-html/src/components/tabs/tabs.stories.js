@@ -28,34 +28,7 @@ export const tabsOutline = () => {
   });
   return `
   <div id="tabsDefaultExample" class="tabs tabs--outline">
-    <div class="tabs__tab-list" role="tablist" aria-label="Tab List">
-      <button class="tabs__tab tabs__tab--active" role="tab" aria-selected="true" aria-controls="tab1-panel" id="tab1">Tab 1</button>
-      <button class="tabs__tab" role="tab" aria-selected="false" aria-controls="tab2-panel" id="tab2" tabindex="-1">Tab 2</button>
-      <button class="tabs__tab" role="tab" aria-selected="false" aria-controls="tab3-panel" id="tab3" tabindex="-1">Tab 3</button>
-      <a class="tabs__link" href="#">Tab link</a>
-    </div>
-    <div class="tabs__tab-panel tabs__tab-panel--active" role="tabpanel" id="tab1-panel" aria-labelledby="tab1" tabindex="0">
-      <p>Tab1 panel text</p>
-    </div>
-    <div class="tabs__tab-panel" role="tabpanel" id="tab2-panel" aria-labelledby="tab2" tabindex="0" hidden="">
-      <p>Tab2 panel text</p>
-    </div>
-    <div class="tabs__tab-panel" role="tabpanel" id="tab3-panel" aria-labelledby="tab3" tabindex="0" hidden="">
-      <p>Tab3 panel text</p>
-    </div>
-  </div>
-  `;
-};
-
-tabsOutline.storyName = 'Default / Outline';
-
-/* export const tabsScrollable = () => {
-  useEffect(() => {
-    new Tabs({container: document.getElementById('tabsScrollableExample')});
-  });
-  return `
-  <div id="tabsScrollableExample" class="tabs tabs--outline">
-    <div class="tabs__tab-list-scrollable">
+    <div class="tabs__tab-list-wrapper">
       <div class="tabs__tab-list" role="tablist" aria-label="Tab List">
         <button class="tabs__tab tabs__tab--active" role="tab" aria-selected="true" aria-controls="tab1-panel" id="tab1">Tab 1</button>
         <button class="tabs__tab" role="tab" aria-selected="false" aria-controls="tab2-panel" id="tab2" tabindex="-1">Tab 2</button>
@@ -63,6 +36,7 @@ tabsOutline.storyName = 'Default / Outline';
         <button class="tabs__tab" role="tab" aria-selected="false" aria-controls="tab4-panel" id="tab4" tabindex="-1">Tab 4</button>
         <button class="tabs__tab" role="tab" aria-selected="false" aria-controls="tab5-panel" id="tab5" tabindex="-1">Tab 5</button>
         <button class="tabs__tab" role="tab" aria-selected="false" aria-controls="tab6-panel" id="tab6" tabindex="-1">Tab 6</button>
+        <button class="tabs__tab" role="tab" aria-selected="false" aria-controls="tab7-panel" id="tab7" tabindex="-1">Tab 7</button>
         <a class="tabs__link" href="#">Tab link</a>
       </div>
     </div>
@@ -84,11 +58,15 @@ tabsOutline.storyName = 'Default / Outline';
     <div class="tabs__tab-panel" role="tabpanel" id="tab6-panel" aria-labelledby="tab6" tabindex="0" hidden="">
       <p>Tab6 panel text</p>
     </div>
+    <div class="tabs__tab-panel" role="tabpanel" id="tab7-panel" aria-labelledby="tab7" tabindex="0" hidden="">
+      <p>Tab7 panel text</p>
+    </div>
   </div>
   `;
 };
 
-tabsScrollable.storyName = 'Scrollable';*/
+tabsOutline.storyName = 'Default / Outline';
+
 
 export const tabsMinimal = () => {
   useEffect(() => {

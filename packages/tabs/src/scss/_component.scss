@@ -3,7 +3,6 @@
 
 // Tabs
 .tabs {
-  overflow: hidden; 
 
   * {
     box-sizing: border-box;
@@ -11,7 +10,6 @@
 
   // Tab list wrapper
   &__tab-list-wrapper {
-    display: block;
     overflow: scroll; 
   }
 

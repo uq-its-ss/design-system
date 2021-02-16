@@ -29,11 +29,12 @@
   &__link {
     display: inline;
     margin-left: auto;
+    padding: core.$space-none core.$space-md;
     align-self: center;
     white-space: nowrap;
 
     @media #{core.$screen-md-up} {
-
+      padding: core.$space-none core.$space-lg;
     }
   }
 

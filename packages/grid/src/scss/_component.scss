@@ -1,11 +1,6 @@
 @use "@uqds/core/src/scss/global" as core;
 @use 'global' as *;
 
-.uq-layout-container {
-  @include layout-containment;
-  @include grid-col-padding;
-}
-
 /**
  * Grid container (incl. full width modifier class)
  */
@@ -22,6 +17,10 @@
     @include layout-nested;
   }
 };
+
+/**
+ * Grid columns (spans)
+ */
 @include grid-col-span-classes(8, 'md');
 @include grid-col-span-classes(6);
 
@@ -52,7 +51,7 @@
 }
 
 /**
- * Golden layout
+ * Golden layout (modifier class)
  */
 .uq-grid--golden {
   > .uq-grid__col {
@@ -81,7 +80,7 @@
 }
 
 /**
- * Set column grids
+ * Set column grids (modifier classes)
  */
 .uq-grid--halves {
   > .uq-grid__col {
@@ -102,10 +101,9 @@
 }
 
 /**
- * Scroll small Grid
+ * Scroll small grid (WIP)
  * A grid the scrolls horizontally on mobile. Useful for holding cards.
  */
-
 @media #{core.$screen-lg-down} {
   .uq-grid--scroll-small {
     display: flex;
@@ -116,5 +114,17 @@
       flex: 1 0 18.75rem;
       margin-right: core.$space-md;
     }
+  }
+}
+
+/**
+ * Layout container
+ */
+.uq-layout-container {
+  @include layout-containment;
+  @include grid-col-padding;
+
+  .uq-grid {
+    @include layout-nested;
   }
 }

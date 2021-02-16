@@ -1,7 +1,7 @@
 @use "@uqds/core/src/scss/_global" as core-global;
 @use "@uqds/core/src/scss/_component" as core with (
   $uq-font-path: "../node_modules/@uqds/core/src/fonts/uq-icons/font",
-  $fa-font-path: "../node_modules/font-awesome/fonts",
+  //$fa-font-path: "../node_modules/font-awesome/fonts",
   $uq-bg-image-path: '../node_modules/@uqds/core/src/images'
 );
 @use "@uqds/body/src/scss/_component" as body;

@@ -34,7 +34,7 @@ function compileSCSS() {
 // Export resources
 function exportFontFiles() {
   return src([
-    './node_modules/font-awesome/fonts/**',
+    //'./node_modules/font-awesome/fonts/**',
     './node_modules/@uqds/core/src/fonts/uq-icons/font/**'
   ])
   .pipe(dest('./dist/fonts'));

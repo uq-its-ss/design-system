@@ -1,0 +1,118 @@
+@use '@uqds/core/src/scss/_global' as core;
+@use '@uqds/grid/src/scss/global' as grid;
+
+// Hero
+
+.hero {
+  position: relative;
+  background-color: #51247A;
+
+  &__content {
+    color: white;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    position: relative;
+    z-index: 2;
+
+    @media #{core.$screen-md-up} {
+      padding-top: 6.5rem;
+      padding-bottom: 6.5rem;
+    }
+  }
+
+  &__text {
+    
+    & h1 {
+      color: inherit;
+      margin-top: 0;
+      margin-bottom: core.$space-sm;
+
+      @media #{core.$screen-md-up} {
+        font-size: 3rem;
+      }
+    }
+  
+    & *:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__subtext {
+    margin-bottom: core.$space-md;
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+  
+    & picture,
+    & img {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+    }
+  
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(100deg, rgb(81, 36, 122) 36%, transparent 70%);
+      mix-blend-mode: normal;
+      opacity: 1;
+      z-index: 1;
+    }
+
+    &--small {
+      @media #{core.$screen-md-up} {
+        display: none;
+      }
+  
+      & img {
+        position: relative;
+        height: auto;
+      }
+    }
+
+    &--large {
+      display: none;
+
+      @media #{core.$screen-md-up} {
+        display: block;
+      }
+    }
+
+    @media #{core.$screen-md-down} {
+      position: relative;
+      min-height: 6rem;
+
+      &::before {
+        background: linear-gradient(360deg, rgb(81, 36, 122) 0%, transparent 42%);
+      }
+    }
+  }
+
+  &--feature-image {
+
+    & .hero__content {
+
+      padding-top: 0; 
+
+      @media #{core.$screen-md-up} {
+        padding-top: 6.5rem;
+      }
+    }
+   
+  }
+
+}

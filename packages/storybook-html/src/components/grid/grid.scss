@@ -23,6 +23,11 @@
     }
   }
 
+  &--full-width {
+    padding-left: core.$space-uuul;
+    padding-right: core.$space-uuul;
+  }
+
   &__highlight {
     background-color: greenyellow;
     box-shadow: 0 0 0 4px greenyellow;

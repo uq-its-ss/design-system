@@ -85,18 +85,7 @@ $max-container-width: 71.25rem !default;
  * For full-width containers (adds half gutter width to horizontal margins)
  */
 @mixin layout-full-width {
-  margin-left: nth($schema-base, 2) / 2;
-  margin-right: nth($schema-base, 2) / 2;
-
-  @media #{core.$screen-md-up} {
-    margin-left: nth($schema-md, 2) / 2;
-    margin-right: nth($schema-md, 2) / 2;
-  }
-
-  @media #{core.$screen-xl-up} {
-    margin-left: nth($schema-xl, 2) / 2;
-    margin-right: nth($schema-xl, 2) / 2;
-  }
+  @include layout-nested();
 }
 
 /*
@@ -164,7 +153,7 @@ $max-container-width: 71.25rem !default;
       }
     }
   }
- }
+}
 
 
 /**

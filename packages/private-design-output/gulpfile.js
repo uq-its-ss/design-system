@@ -42,7 +42,7 @@ function exportFontFiles() {
 
 function exportImages() {
   return src([
-    './node_modules/@uqds/core/src/images/**',
+    //'./node_modules/@uqds/core/src/images/**', code cleanup
     './node_modules/@uqds/blockquote/src/images/**'
   ])
   .pipe(dest('./dist/images'));

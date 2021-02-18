@@ -1,8 +1,0 @@
-// Generate icon styles for `.${uq-css-prefix}-<icon-name>:before`.
-@each $icon-name, $icon-code in $uq-icons {
-  .#{$uq-css-prefix}-uq-#{$icon-name}:before {
-    // `unquote()` is required because of a bug in SASS.
-    // @see https://github.com/sass/sass/issues/659
-    content: unquote("'#{$icon-code}'");
-  }
-}

@@ -1,10 +1,5 @@
-import { useEffect } from '@storybook/client-api';
-
 // import styles
 import './grid-menu.scss';
-
-// import scripts
-import gridMenuEqualiser from '@uqds/grid-menu/src/js/grid-menu';
 
 // import docs
 import docs from './grid-menu.docs.mdx';
@@ -35,13 +30,8 @@ gridMenuAll.storyName = "Grid menu all";
 // add more keywords
 gridMenuAll.parameters = { notes: 'links'};
 
-
 export const equalised = () => {
-  useEffect(() => {
-    var equaliseGridMenu = new gridMenuEqualiser('.uq-grid-menu--equalised>a');
-    equaliseGridMenu.align();
-  });
   return gridMenuEqualisedHTML;
 };
 
-equalised.storyName = "Grid menu equalised (JS)";
+equalised.storyName = "Grid menu equalised";

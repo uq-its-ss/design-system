@@ -38,12 +38,12 @@
 
   &--ruled {
     .vertical-list__title {
-      border-top: 2px solid core.$vertical-list-border;
+      border-top: 2px solid $border-color;
       padding-top: core.$space-lg;
     }
 
     .vertical-list__item {
-      border-bottom: 1px solid core.$vertical-list-border;
+      border-bottom: 1px solid $border-color;
       padding-top: core.$space; //.75rem
 
       &:first-child {
@@ -51,7 +51,7 @@
       }
 
       &--first {
-        border-top: 1px solid core.$vertical-list-border;
+        border-top: 1px solid $border-color;
         padding-top: core.$space; //.75rem
       }
 
@@ -92,12 +92,12 @@
 
   &--ruled {
     .horizontal-list__title {
-      border-top: 2px solid core.$vertical-list-border;
+      border-top: 2px solid $border-color;
       padding-top: core.$space-lg;
     }
 
     .horizontal-list__item {
-      border-right: 1px solid core.$vertical-list-border;
+      border-right: 1px solid $border-color;
       padding-right: core.$space; //.75rem;
 
       &:last-child {

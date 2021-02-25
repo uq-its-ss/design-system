@@ -113,11 +113,11 @@
             padding: core.$space-none;
 
             li {
-                margin-bottom: core.$spacing-xs;
+                margin-bottom: core.$space-sm;
                 
                 &:after {
                     content: " | ";
-                    padding: core.$space-none core.$spacing-xs;
+                    padding: core.$space-none core.$space-sm;
                     text-align: center;
                 }
 

@@ -1,7 +1,7 @@
 // Main component stylesheet
 @use '@uqds/core/src/scss/global' as core;
 @use '@uqds/grid/src/scss/global' as grid;
-// @use 'global' as *;
+@use 'global' as *;
 
 //
 // Section
@@ -73,7 +73,7 @@
   }
   // Shaded background variant
   &--shaded {
-    background-color: core.$section-shaded-bg;
+    background-color: $section-shaded-bg;
   }
   // Centers section header and footer
   &--centered {
@@ -135,7 +135,7 @@
   }
   // For when the section has an inline style background image
   &--background-image {
-    @include core.background-cover();
+    @include background-cover();
   }
   // Allows content to overflow the section if needed, such as drop downs.
   &--allow-overflow {
@@ -171,7 +171,7 @@
   }
 
   &__footer {
-    color: core.$section-footer-color;
+    color: $section-footer-color;
     margin-top: core.$space-lg;
   }
 
@@ -180,7 +180,7 @@
   }
 
   &__summary {
-    color: core.$section-summary-color;
+    color: $section-summary-color;
     margin-top: core.$space-none;
     margin-bottom: core.$space-xl;
   }
@@ -216,8 +216,8 @@
       width: 100%;
       padding: core.$space-xs core.$space-none; //0.25rem 0
       text-align: center;
-      background-color: core.$messages-warning-bg;
-      border: 1px solid core.$messages-warning-border-color;
+      background-color: $messages-warning-bg;
+      border: 1px solid $messages-warning-border-color;
     }
     &-link {
       font-weight: 500;

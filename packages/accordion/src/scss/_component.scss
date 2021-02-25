@@ -1,12 +1,6 @@
 @use '@uqds/core/src/scss/global' as core;
 @use 'global' as *;
 
-// Remove namespace for uq-icons import
-$uq-font-size-base: core.$uq-font-size-base;
-//$uq-icons: core.$uq-icons; core cleanup
-
-//@import '@uqds/core/src/fonts/uq-icons/scss/mixins'; core cleanup
-
 // Accordion / Toggle style
 //
 // Can be used on either div or ul
@@ -65,7 +59,6 @@ $uq-font-size-base: core.$uq-font-size-base;
 
     // Closed state.
     &::before {
-      //@include uq-icon(add-circle); core cleanup
       content: '';
       background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3e%3cdefs%3e%3cstyle%3e.a%7bfill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;%7d%3c/style%3e%3c/defs%3e%3ctitle%3eadd%3c/title%3e%3cline class='a' x1='12' y1='1' x2='12' y2='23'/%3e%3cline class='a' x1='23' y1='12' x2='1' y2='12'/%3e%3c/svg%3e");
       background-repeat: no-repeat;
@@ -83,7 +76,7 @@ $uq-font-size-base: core.$uq-font-size-base;
 
     &:focus {
       outline: 0 none;
-      color: core.$link-color;
+      color: core.$link;
       text-decoration: underline;
     }
 
@@ -93,7 +86,6 @@ $uq-font-size-base: core.$uq-font-size-base;
 
       // Open state.
       &::before {
-        //@include uq-icon(minus-circle); core cleanup
         background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3e%3cdefs%3e%3cstyle%3e.a%7bfill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;%7d%3c/style%3e%3c/defs%3e%3ctitle%3esubtract%3c/title%3e%3cline class='a' x1='23.5' y1='12' x2='0.5' y2='12'/%3e%3c/svg%3e");
       }
 

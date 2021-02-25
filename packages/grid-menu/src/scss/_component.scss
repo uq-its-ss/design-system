@@ -55,7 +55,7 @@
     }
 
     &:hover {
-      background-color: core.$link-color;
+      background-color: core.$link;
       color: $linked-list-color-hover;
       text-decoration: none;
 
@@ -121,11 +121,11 @@
 
       &:hover {
         background-color: core.$light-palette-link-color;
-        color: core.$link-color;
+        color: core.$link;
 
         .uq-grid-menu__description {
           background-color: core.$light-palette-link-color;
-          color: core.$link-color;
+          color: core.$link;
         }
       }
     }
@@ -139,11 +139,11 @@
       @extend %dark-palette;
 
       &:hover {
-        background-color: core.$link-color;
+        background-color: core.$link;
         color: core.$uq-white;
 
         .uq-grid-menu__description {
-          background-color: core.$link-color;
+          background-color: core.$link;
           color: core.$uq-white;
         }
       }

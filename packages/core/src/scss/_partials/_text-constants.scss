@@ -1,9 +1,15 @@
-/* FS: typography. */
-$font-family: "Roboto", Helvetica, Arial, sans-serif;
-$font-family-title: "Montserrat", Helvetica, Arial, sans-serif;
-$font-family-accent: "Merriweather", Georgia, serif;
+// font family
+$roboto:  'Roboto', "Helvetica Neue", Helvetica, Arial, sans-serif;
+$merriweather: 'Merriweather', Georgia, serif;
+$montserrat: 'Montserrat', Helvetica, Arial, sans-serif;
+$courier: "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
 
-/* FS: font sizes. */
+$font-body: $roboto;
+$font-title: $montserrat;
+$font-accent: $merriweather;
+$font-monospace: $courier;
+
+// font sizes
 $font-size-xxxxl: 2.5rem; /* 40px - H1 */
 $font-size-xxxl: 2rem; /* 32px - H2 */
 $font-size-xxl: 1.5rem; /* 24px - H3 */
@@ -14,13 +20,13 @@ $font-size-s: 0.875rem; /* 14px - Sub */
 $font-size-xs: 0.75rem; /* 12px - Small */
 $font-size-xxs: 0.625rem; /* 10px - Small uppercase */
 
-/* FS: line heights. */
-$line-height: 1.5;
-$line-height-h: 1.4;
-$line-height-ui: 1;
-
-/* FS font weights. */
+// font weights
 $font-weight-thin: 300;
 $font-weight-normal: 400;
 $font-weight-bold: 500;
 $font-weight-medium: $font-weight-bold;
+
+// line heights
+$line-height: 1.5;
+$line-height-h: 1.4;
+$line-height-ui: 1;

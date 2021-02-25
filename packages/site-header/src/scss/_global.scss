@@ -4,11 +4,11 @@ $title-font-size: core.$font-size-xl;
 $title-font-weight: core.$font-weight-bold;
 
 $nav-primary: core.$uq-black;
-$nav-primary-active-bg: core.$grey-05; /* #F1F1F1 */
+$nav-primary-active-bg: core.$uq-neutral-light20;
 $nav-dropdown-width: 320px;
-$nav-dropdown-bg: core.$grey-05; /* #F1F1F1 */
-$nav-dropdown-active-bg: core.$grey-10; /* #E2E2E2 */
-$nav-dropdown-divider: core.$grey-10; /* #E2E2E2 */
+$nav-dropdown-bg: core.$uq-neutral-light20;
+$nav-dropdown-active-bg: core.$uq-neutral-light60;
+$nav-dropdown-divider: core.$uq-neutral-light60;
 $nav-dropdown-animation-distance: core.$space-sm;
 $nav-chevron: core.$uq-purple;
 $nav-active: core.$uq-purple;

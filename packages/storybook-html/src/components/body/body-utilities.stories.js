@@ -38,43 +38,18 @@ export const textColorUtils = () => {
     <td>For use on dark backgrounds</td>
   </tr>
   <tr>
-    <td><div class="uqds-body__text-utility text--primary">Text Primary</div></td>
+    <td><div class="uqds-body__text-utility text--primary">Text primary</div></td>
     <td><code>text--primary</code></td>
     <td>use cases or scenarios to be defined</td>
   </tr>
   <tr>
-    <td><div class="uqds-body__text-utility text--primary-light">Text primary light</div></td>
-    <td><code>text--primary-light</code></td>
+    <td><div class="uqds-body__text-utility text--purple-light">Text purple light</div></td>
+    <td><code>text--purple-light</code></td>
     <td>use cases or scenarios to be defined</td>
   </tr>
   <tr>
-    <td><div class="uqds-body__text-utility text--purple-50">Text purple 50</div></td>
-    <td><code>text--purple-50</code></td>
-    <td>use cases or scenarios to be defined</td>
-  </tr>
-  <tr>
-    <td><div class="uqds-body__text-utility text--grey-25">Text grey 25</div></td>
-    <td><code>text--grey-25</code></td>
-    <td>use cases or scenarios to be defined</td>
-  </tr>
-  <tr>
-    <td><div class="uqds-body__text-utility text--grey-60">Text grey 60</div></td>
-    <td><code>text--grey-60</code></td>
-    <td>use cases or scenarios to be defined</td>
-  </tr>
-  <tr>
-    <td><div class="uqds-body__text-utility text--grey-80">Text grey 80</div></td>
-    <td><code>text--grey-80</code></td>
-    <td>use cases or scenarios to be defined</td>
-  </tr>
-  <tr>
-    <td><div class="uqds-body__text-utility text--grey-90">Text grey 90</div></td>
-    <td><code>text--grey-90</code></td>
-    <td>use cases or scenarios to be defined</td>
-  </tr>
-  <tr>
-    <td><div class="uqds-body__text-utility text--red">Text red</div></td>
-    <td><code>text--red</code></td>
+    <td><div class="uqds-body__text-utility text--error">Text error</div></td>
+    <td><code>text--error</code></td>
     <td>use cases or scenarios to be defined</td>
   </tr>
   </tbody>
@@ -205,13 +180,8 @@ export const backgroundColourUtils = () => {
     <div class="uqds-body__bg-color-utility__container">
       <div class="uqds-body__bg-color-utility purple text--reverse">.purple</div>
       <div class="uqds-body__bg-color-utility white">.white</div>
-      <div class="uqds-body__bg-color-utility grey-05">.grey-05</div>
-      <div class="uqds-body__bg-color-utility grey-10">.grey-10</div>
-      <div class="uqds-body__bg-color-utility grey-25">.grey-25</div>
-      <div class="uqds-body__bg-color-utility grey-50 text--reverse">.grey-50</div>
-      <div class="uqds-body__bg-color-utility grey-80 text--reverse">.grey-80</div>
       <div class="uqds-body__bg-color-utility black text--reverse">.black</div>
-      <div class="uqds-body__bg-color-utility blue text--reverse">.blue</div>
+      <div class="uqds-body__bg-color-utility link text--reverse">.link</div>
     </div>
   `;
 };

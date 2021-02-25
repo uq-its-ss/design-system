@@ -1,8 +1,6 @@
 @use "@uqds/core/src/scss/global" as core;
 
-$sidenav-list-item-bg: core.$grey-05; /* #F1F1F1 */
-$sidenav-list-item-active-bg: core.$grey-10; /* #E2E2E2 */
-$sidenav-list-item-divider: core.$grey-10; /* #E2E2E2 */
-
+$sidenav-list-item-bg: core.$uq-neutral-light20;
+$sidenav-list-item-active-bg: core.$uq-neutral-light60;
+$sidenav-list-item-divider: core.$uq-neutral-light60;
 $sidenav-list-item-animation-distance: core.$space-sm;
-

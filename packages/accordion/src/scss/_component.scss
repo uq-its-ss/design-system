@@ -1,12 +1,6 @@
 @use '@uqds/core/src/scss/global' as core;
 @use 'global' as *;
 
-// Remove namespace for uq-icons import
-$uq-font-size-base: core.$uq-font-size-base;
-$uq-icons: core.$uq-icons;
-
-@import '@uqds/core/src/fonts/uq-icons/scss/mixins';
-
 // Accordion / Toggle style
 //
 // Can be used on either div or ul
@@ -51,7 +45,7 @@ $uq-icons: core.$uq-icons;
     font-weight: 400;
     line-height: normal;
     margin: core.$space-none;
-    padding: core.$space core.$space-lg core.$space core.$space-none;
+    padding: core.$space core.$space core.$space core.$space-none;
     position: relative;
     text-align: left;
     text-decoration: none;
@@ -60,22 +54,18 @@ $uq-icons: core.$uq-icons;
 
     @media #{core.$screen-md-up} {
       font-size: 1.5rem;
-      padding: core.$space core.$space-xxl core.$space core.$space;
+      padding: core.$space core.$space core.$space core.$space;
     }
 
     // Closed state.
     &::before {
-      @include uq-icon(add-circle);
-      color: $accordion-icon-color;
+      content: '';
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3e%3cdefs%3e%3cstyle%3e.a%7bfill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;%7d%3c/style%3e%3c/defs%3e%3ctitle%3eadd%3c/title%3e%3cline class='a' x1='12' y1='1' x2='12' y2='23'/%3e%3cline class='a' x1='23' y1='12' x2='1' y2='12'/%3e%3c/svg%3e");
+      background-repeat: no-repeat;
+      width: core.$space;
+      height: core.$space;
       float: right;
-      font-size: 1.2rem;
-      font-weight: 100;
-      margin-right: -(core.$space-lg);
-      margin-top: core.$space-xs; //.1rem
-
-      @media #{core.$screen-md-up} {
-        margin-top: core.$space-xs; //.3rem
-      }
+      transform: translateY(50%);
     }
 
     &:focus,
@@ -86,7 +76,7 @@ $uq-icons: core.$uq-icons;
 
     &:focus {
       outline: 0 none;
-      color: core.$link-color;
+      color: core.$link;
       text-decoration: underline;
     }
 
@@ -96,9 +86,7 @@ $uq-icons: core.$uq-icons;
 
       // Open state.
       &::before {
-        @include uq-icon(minus-circle);
-        font-size: 1.2rem;
-        font-weight: 100;
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3e%3cdefs%3e%3cstyle%3e.a%7bfill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;%7d%3c/style%3e%3c/defs%3e%3ctitle%3esubtract%3c/title%3e%3cline class='a' x1='23.5' y1='12' x2='0.5' y2='12'/%3e%3c/svg%3e");
       }
 
       &:hover {

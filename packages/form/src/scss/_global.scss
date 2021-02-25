@@ -1,32 +1,27 @@
 @use '@uqds/core/src/scss/global' as core;
 
-  $form-border-color-focus: core.$blue;
-  $form-border-color: core.$grey-10;
-  $form-border-radius: 2px;
-  $form-border-width: 1px;
-  $form-color-error: core.$alert;
-  $form-color-success: core.$success;
-  $form-description-size: core.$font-size-xs;
-  $form-element-height: core.$space-xl;
-  $form-focus-color: core.$blue;
-  $form-label-size: core.$font-size-s;
-  $form-placeholder-color: core.$grey-50;
-  $form-spacing: core.$space;
-  $form-text-color: core.$brand-text;
-  $form-text-size: core.$font-size-m;
+$form-border-color-focus: core.$link;
+$form-border-color: core.$uq-neutral-light60;
+$form-border-radius: 2px;
+$form-border-width: 1px;
+$form-color-error: core.$alert;
+$form-color-success: core.$success;
+$form-description-size: core.$font-size-xs;
+$form-element-height: core.$space-xl;
+$form-focus-color: core.$link;
+$form-label-size: core.$font-size-s;
+$form-placeholder-color: core.$uq-neutral-dark40;
+$form-spacing: core.$space;
+$form-text-color: core.$text;
+$form-text-size: core.$font-size-m;
 
-  // Select
-  $form-select-icon: core.$brand-primary;
-  $form-select-icon-disabled: $form-border-color;
-  
-  // Checkbox/Radio buttons
-  $form-checkbox-border-radius: 4px;
-  $form-checkbox-border-width: 1px;
-  $form-checkbox-button-bg-active: core.$brand-primary;
-  $form-checkbox-button-bg: core.$uq-white;
-  $form-checkbox-button-border: core.$grey-05;
-  $form-checkbox-button-text-active: core.$uq-white;
-  $form-checkbox-button-text: core.$brand-text;
-  $form-checkbox-check-color: core.$uq-white;
-  $form-checkbox-size: 24px;
-  $form-checkbox-check-size: $form-checkbox-size;
+// Select
+$form-select-icon: core.$uq-purple;
+$form-select-icon-disabled: $form-border-color;
+
+// Checkbox/Radio buttons
+$form-checkbox-border-radius: 4px;
+$form-checkbox-border-width: 1px;
+$form-checkbox-check-color: core.$uq-white;
+$form-checkbox-size: 24px;
+$form-checkbox-check-size: $form-checkbox-size;

@@ -6,14 +6,14 @@ $use-encapsulation: false !default;
 @mixin -text-primer {
   color: core.$text;
   font-size: 1rem;
-  font-family: core.$font-family;
+  font-family: core.$font-body;
   font-weight: 400;
   line-height: core.$line-height;
 }
 
 @mixin -body-styles {
   font-size: 100%;
-  background: core.$white;
+  background: core.$uq-white;
   margin: core.$space-none;
   padding: core.$space-none;
 }
@@ -35,39 +35,19 @@ $use-encapsulation: false !default;
 
   // Background colour utilities
   .white {
-    background-color: core.$white;
-  }
-  
-  .grey-05 {
-    background-color: core.$grey-05;
-  }
-  
-  .grey-10 {
-    background-color: core.$grey-10;
-  }
-  
-  .grey-25 {
-    background-color: core.$grey-25;
-  }
-  
-  .grey-50 {
-    background-color: core.$grey-50;
-  }
-  
-  .grey-80 {
-    background-color: core.$grey-80;
+    background-color: core.$uq-white;
   }
   
   .black {
-    background-color: core.$black;
+    background-color: core.$uq-black;
   }
   
-  .blue {
-    background-color: core.$blue;
+  .link {
+    background-color: core.$link;
   }
   
   .purple {
-    background-color: core.$purple;
+    background-color: core.$uq-purple;
   }
   
   // Typography
@@ -86,7 +66,7 @@ $use-encapsulation: false !default;
     margin-top: core.$space-md;
     margin-bottom: core.$space-xl;
     font-size: core.$font-size-xxxxl;
-    font-family: core.$font-family-title;
+    font-family: core.$font-title;
   }
   
   h2 {
@@ -136,8 +116,8 @@ $use-encapsulation: false !default;
   blockquote {
     margin: core.$space-none core.$space-none core.$space-md;
     padding-left: core.$space-md;
-    border-left: 6px solid core.$brand-text;
-    font-family: core.$font-family-accent;
+    border-left: 6px solid core.$text;
+    font-family: core.$font-accent;
     font-style: italic;
   }
   
@@ -161,7 +141,7 @@ $use-encapsulation: false !default;
     margin-bottom: core.$space-none;
   
     dt {
-      color: core.$brand-primary;
+      color: core.$uq-purple;
       font-size: core.$font-size-s;
       text-transform: uppercase;
       font-weight: core.$font-weight-bold;
@@ -175,12 +155,12 @@ $use-encapsulation: false !default;
   }
   
   a {
-    color: core.$blue;
+    color: core.$link;
     text-decoration: none;
     transition: 0.2s color;
   
     &:hover {
-      color: core.$blue;
+      color: core.$link;
       text-decoration: underline;
     }
   }
@@ -190,51 +170,27 @@ $use-encapsulation: false !default;
 
     // Text colour
     &--reverse {
-      color: core.$brand-reverse;
-
-      h1, h2, h3, h4, h5, h6 {
-        color: inherit;
-      }
+      color: core.$uq-white;
     }
     
     &--primary {
-      color: core.$brand-primary;
+      color: core.$uq-purple;
     }
 
-    &--grey-25 {
-      color: core.$grey-25;
-    }
-
-    &--grey-60 {
-      color: core.$grey-60;
-    }
-
-    &--grey-80 {
-      color: core.$grey-80;
-    }
-
-    &--grey-90 {
-      color: core.$grey-90;
-    }
-
-    &--primary-light {
-      color: core.$brand-primary-10;
+    &--purple-light {
+      color: core.$uq-purple-light;
     }
 
     &--black {
-      color: core.$black;
+      color: core.$uq-black;
     }
 
     &--white {
-      color: core.$white;
+      color: core.$uq-white;
     }
 
-    &--red {
-      color: core.$red;
-    }
-
-    &--purple-50 {
-      color: core.$purple-50;
+    &--error {
+      color: core.$alert;
     }
 
     // Text size
@@ -302,13 +258,13 @@ $use-encapsulation: false !default;
     }
     
     &--accent {
-      font-family: core.$font-family-accent;
+      font-family: core.$font-accent;
       font-weight: core.$font-weight-normal;
       font-style: italic;
     }
   
     &--shadow {
-      text-shadow: 0 4px 4px core.$transparent-black-40;
+      text-shadow: 0 4px 4px rgba(core.$uq-black, .4)
     }
   }
 

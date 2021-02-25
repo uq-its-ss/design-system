@@ -16,9 +16,8 @@ sass.compiler = require('sass');
 
 // SCSS include paths
 const scssPaths = [
-  'node_modules/@uqds/core/node_modules',
-  'node_modules/@uqds',
-  'node_modules'
+  'node_modules',
+  'node_modules/@uqds'
 ];
 
 // Build and export SCSS
@@ -32,17 +31,15 @@ function compileSCSS() {
 }
 
 // Export resources
+/*
 function exportFontFiles() {
-  return src([
-    './node_modules/font-awesome/fonts/**',
-    './node_modules/@uqds/core/src/fonts/uq-icons/font/**'
-  ])
+  return src([])
   .pipe(dest('./dist/fonts'));
 }
+*/
 
 function exportImages() {
   return src([
-    './node_modules/@uqds/core/src/images/**',
     './node_modules/@uqds/blockquote/src/images/**'
   ])
   .pipe(dest('./dist/images'));
@@ -79,8 +76,8 @@ function bundleJS() {
 }
 
 exports.compileSCSS = compileSCSS;
-exports.exportFontFiles = exportFontFiles;
+//exports.exportFontFiles = exportFontFiles;
 exports.exportImages = exportImages;
 exports.exportExample = exportExample;
 exports.bundleJS = bundleJS;
-exports.default = parallel(compileSCSS, exportFontFiles, exportImages, exportExample, bundleJS);
+exports.default = parallel(compileSCSS, exportImages, exportExample, bundleJS);

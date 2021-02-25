@@ -1,266 +1,42 @@
-@forward '_partials/spacing-constants';
-@forward '_partials/text-constants';
-@use '_partials/text-constants' as *;
 @forward '_partials/colour-constants';
-@forward '_partials/space';
+@forward '_partials/space-constants';
+@forward '_partials/text-constants';
 @forward '_partials/media-constants';
 
-$roboto:  'Roboto', "Helvetica Neue", Helvetica, Arial, sans-serif;
-$merriweather:  'Merriweather', Georgia, serif;
-$montserrat: 'Montserrat', sans-serif;
-$courier: "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
+@use '_partials/colour-constants' as *;
+@use '_partials/text-constants' as *;
 
-// Now create some variables using the font stacks we want on this site.
-$font-body: $roboto;
-$font-monospace: $courier;
+// Placeholder styles
 
-// Font Awesome settings
-@forward "font-awesome/scss/variables";
-$fa-font-size-base: $font-size-m;
-$fa-css-prefix: icon;
-
-// UQ icons settings
-@forward "../fonts/uq-icons/scss/variables";
-$uq-font-size-base: $font-size-m;
-$uq-css-prefix: icon;
-
-// Only base colours should be listed in this file. Mixed and modified colour should be done at the associated component or supporting file. 
-// UQ brand colours
-
-// UQ Primary palette
-$uq-purple: #51247A; // rgb(81, 36, 122)
-$uq-black: #000; // rgb(0, 0, 0)
-$uq-white: #fff; // rgb(255, 255, 255)
-// UQ Secondary palette
-$uq-purple-light: #962A8B; // rgb(150, 42, 139)
-$uq-neutral: #D7D1CC; // rgb(215, 209, 204), Consolidated - DDD, D7D1CC, DBDBDB
-$uq-darkgrey: #999490; // rgb(153, 148, 144)
-$uq-gold: #BB9D65; // rgb(187, 157, 101)
-$uq-red: #E62645; // rgb(230, 38, 69)
-$uq-orange: #EB602B; // rgb(235, 96, 43)
-$uq-yellow: #FBB800; // rgb(251, 184, 0)
-$uq-blue: #4085C6; // rgb(64, 133, 198)
-$uq-aqua: #00A2C7; // rgb(0, 162, 199)
-$uq-green: #2EA836; // rgb(46, 168, 54)
-// Additional
-$uq-purple-dark: #49206c; // rgb(73, 32, 108)
-// UQ Purple gradient
-$uq-purple-gradient: linear-gradient(90deg, $uq-purple 0%, 87%, $uq-purple-light 100%);
-// UQ Secondary - Neutral Tints
-$uq-neutral-light20: #f7f6f5; // rgb(247, 246, 245), rgba(215, 209, 204, 0.2), Consolidated - F9F9F9, FCFCFC, F5F5F5, F2F2F2, F3F3F3, F7F6F5, F8F8F9, F1F1F1, F0F0F0
-$uq-neutral-light40: #efedeb; // rgb(239, 237, 235), rgba(215, 209, 204, 0.4), Consolidated - EEE, EFEFEF, EDEDED
-$uq-neutral-light60: #e7e3e0; // rgb(231, 227, 224), rgba(215, 209, 204, 0.6), Consolidated - E9E9E9, E1E1E1, E3DBE8
-$uq-neutral-light80: #dfdad6; // rgb(223, 218, 214), rgba(215, 209, 204, 0.8)
-// UQ Secondary - Neutral Shades
-$uq-neutral-dark20: #aca7a3; // Consolidated - BBB, BDB0A5, CCC, C3C3C5
-$uq-neutral-dark40: #817d7a; // Consolidated - 7F7F7F, 747474, 767676, 777, 808080, 868686, 949494
-$uq-neutral-dark60: #565452; // Consolidated - 555, 676767, 666, 6F6F6F, 444, 494949, 333
-$uq-neutral-dark80: #2b2a29; // Consolidated - 181818, 2B2A29, 222, 2B2B2B
-// UQ Secondary - Darkgrey Tints
-$uq-darkgrey-light20: #ebeae9; // rgb(235, 234, 233), rgba(153, 148, 144, 0.2)
-$uq-darkgrey-light40: #d6d4d3; // rgb(214, 212, 211), rgba(153, 148, 144, 0.4)
-$uq-darkgrey-light60: #c2bfbc; // rgb(194, 191, 188), rgba(153, 148, 144, 0.6)
-$uq-darkgrey-light80: #ada9a6; // rgb(173, 169, 166), rgba(153, 148, 144, 0.8)
-// UQ Secondary - Red Shades
-$uq-red-dark20: #be1b38; // Consolidated - B80017, D6492A, F04124, F00000, D8481F
-$uq-red-dark40: #9b1129; // Consolidated - CF2A0E
-// UQ Secondary - Green Shades
-$uq-green-dark10: darken($uq-green, 10%);
-
-// Link Blue
-$link: #1E72C6; //#2377cb
-$link-hover: #005ea5;
-// Links
-$link-color: #2377cb;
-$link-active-color: #005ea5;
-$link-hover-color: #005ea5;
-
-// Default text, Content
-$text: $uq-neutral-dark80; //#2b2b2b;
-
-// External link icon
-$external-link-icon-color: $uq-neutral-dark20; //bbb;
-// Alerts
-$alert: $uq-red-dark20; //B80017;
-$success: $uq-green-dark10;
-$info-color: #d4f0ff !default; //#D4F0FF !default;
-$success-color: #d5eeca !default; //#D5EECA!default;
-$warning-color: #ffe0ad !default; //#FFE0AD!default;
-$danger-color: #ffacac !default; //#F4ACAC!default;
-
-// Vertical lists
-$vertical-list-border: $uq-neutral-light40; //EDEDED;
-// Vertical Menu
-$vertical-menu-link-border: $uq-neutral-light20; //f5f5f5;
-$vertical-menu-link-active: $uq-black;
-$vertical-menu-shaded-bg-color: $uq-neutral-light20; //f6f6f6;
-// Administration
-$primary-tabs-bg: $uq-neutral-light40; //eee;
-// Messages
-$messages-status-bg: #eef5fb;
-$messages-status-border-color: #8ebae7;
-$messages-status-color: $uq-black;
-$messages-warning-bg: #fff9ee;
-$messages-warning-border-color: #ffd179;
-$messages-warning-color: $uq-black;
-$messages-error-bg: $uq-red-dark20; //#d8481f;
-$messages-error-border-color: $uq-red-dark20; //#d8481f;
-$messages-error-color: $uq-white;
-$messages-error-link-color: $uq-white;
-// Progress Bar
-$progress-bar-bg: $uq-neutral; //ddd;
-$progress-bar-fill-bg: $uq-neutral-dark60; //444;
-$progress-bar-border-color: $uq-neutral-dark40; //949494;
-$progress-bar-color: $uq-white;
-// Progression
-$progression-text: $uq-white;
-$progression-border: $progression-text;
-$progression-label: $uq-neutral-dark80; //222;
-$progression-step-bg: $uq-darkgrey;
-$progression-bar-bg: $uq-neutral;
-$progression-completed: $uq-green;
-// Sections
-$section-shaded-bg: $uq-neutral-light20; //f5f5f5;
-$section-summary-color: $uq-neutral-dark40; //767676;
-$section-footer-color: $uq-neutral-dark40; //767676;
-// Palettes
-$light-palette-color: $uq-neutral-light20; //f0f0f0;
-$light-palette-border-color: rgba($uq-white, .4);
-$light-palette-link-color: $uq-white;
-$light-palette-bg: $uq-white;
-$dark-palette-color: $uq-neutral-dark80; //222;
-$dark-palette-border-color: rgba($uq-black, .1);
-$dark-palette-link-color: lighten($uq-purple, 10%);
-$dark-palette-bg: $uq-neutral-dark60; //333;
-// Tints
-$dark-tint-bg: $uq-neutral-dark60; //494949;
-// Hero banner
-$hero-banner-bg: $uq-neutral-dark60; //494949;
-// Menu Block two column
-$menu-block-two-column-link-color: $link-color;
-$menu-block-two-column-inactive-link-color: $uq-neutral-dark80; //222;
-$menu-block-two-column-border-color: $uq-neutral-light40; //eee;
-// Page
-$page-header-bg: $uq-neutral-light20; //f2f2f2;
-$page-header-white-bg: $uq-white;
-$page-header-white-border-color: $uq-neutral-light40; //eee;
-// Tabs
-$tabs-shaded-bg: $uq-neutral-light20; //f5f5f5;
-$tabs-underlined-border-color: $uq-neutral-light60; //e3dbe8;
-// Article
-$article-title-color: $uq-neutral-dark60; //555;
-$article-border-color: $uq-neutral-light40; //eee;
-$article-tag-bg: $uq-neutral-light20; //f3f3f3;
-$article-tag-color: $uq-neutral-dark60; //666;
-// Icons
-$icon-light-grey-color: $uq-neutral; //ddd;
-// Catalogue
-$catalogue-index-bg: $uq-neutral-light20; //f7f6f5;
-$catalogue-index-color: $uq-neutral-dark60; //555;
-$catalogue-meta-color: $uq-neutral-light40; //eee;
-// Citation (eSpace)
-$citation-color: $uq-neutral-dark40; //868686;
-// Tags
-$tags-link-bg: $uq-neutral-light20; //f5f5f5;
-// Action items
-$action-item-bg: $uq-neutral-light20;
-$action-item-icon-bg: $uq-neutral; //dbdbdb;
-// Team
-$team-teaser-action-links: $uq-neutral-dark60; //666;
-// Asset
-$asset-border-color: $uq-neutral-dark20; //ccc;
-// Overview brand device connector
-$brand-device-connector: $uq-neutral-light60; //E1E1E1;
-// Compendium
-$compendium-border-color: $uq-neutral-dark20; //ccc;
-$compendium-title-border-color: $uq-neutral; //ddd;
-// Logo
-$logo-color: $uq-white;
-// Content column block
-$content-column-block-pane-bg: #2468c6;
-$content-column-block-pane-odd-bg: #22487e;
-// Divider
-$divider-border-color: $uq-neutral-light40; //ededed;
-// Compact
-$compact-content-color: $uq-neutral-dark40; //767676;
-
-//
-// Mixins
-//
-@mixin hide-text {
-    // http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement/
-    text-indent: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-}
-
-// Background images used for full-width cover.
-@mixin background-cover($image-path: false, $background-top: center, $background-left: center) {
-    // https://css-tricks.com/perfect-full-page-background-image
-    @if ($image-path) {
-        background-image: url($image-path);
-    }
-    background-position: $background-top $background-left;
-    background-repeat: no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-
-// Box shadow
-@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
-    @if $inset {
-        -webkit-box-shadow: inset $top $left $blur $color;
-        -moz-box-shadow: inset $top $left $blur $color;
-        box-shadow: inset $top $left $blur $color;
-    }
-    @else {
-        -webkit-box-shadow: $top $left $blur $color;
-        -moz-box-shadow: $top $left $blur $color;
-        box-shadow: $top $left $blur $color;
-    }
-}
-
-// Auto-detect external links based on path and add external icon.
-@mixin external-auto-detect {
-    &[href^="http://"],
-    &[href^="https://"],
-    &[rel^="external"] {
-        @extend %external;
-    }
-}
-
-//
-// Tints
 // Provide an overlay over backgrounds to darken, lighten an image to provide
 // better visual contrast for content.
 // Can be used as extensions on components that accommodate overlaid content.
 %tint {
   position: relative;
   overflow: hidden;
-}
 
-%tint-overlay {
-  content: '';
-  height: 100%;
-  left: 0;
-  opacity: .5;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: 1;
-}
+  &-overlay {
+    content: '';
+    height: 100%;
+    left: 0;
+    opacity: .5;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
 
-%tint-content {
-  position: relative;
-  z-index: 2;
+  &-content {
+    position: relative;
+    z-index: 2;
+  }
 }
 
 // Dark tint layer provides a black tint
 %dark-tint {
   @extend %tint;
   background-color: $dark-tint-bg;
+
   &::before {
       @extend %tint-overlay;
       background: $uq-black;
@@ -270,6 +46,7 @@ $compact-content-color: $uq-neutral-dark40; //767676;
 // Light tint layer provides a white tint
 %light-tint {
   @extend %tint;
+  
   &::before {
       @extend %tint-overlay;
       background: $uq-white;
@@ -293,7 +70,7 @@ $compact-content-color: $uq-neutral-dark40; //767676;
 
   a {
     color: $light-palette-link-color;
-    font-weight: 400;
+    font-weight: $font-weight-normal;
 
     &:hover {
       color: darken($light-palette-link-color,10%);

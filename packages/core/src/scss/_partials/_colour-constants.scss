@@ -1,49 +1,84 @@
-// FS: colours
+// UQ Primary palette
+$uq-purple: #51247A;
+$uq-black: #000;
+$uq-white: #fff;
 
-$white: rgb(255, 255, 255);
-$grey-02: rgb(252, 252, 252);
-$grey-05: rgb(241, 241, 241);
-$grey-10: rgb(226, 226, 226);
-$grey-25: rgb(194, 194, 194);
-$grey-50: rgb(128, 128, 128);
-$grey-60: rgb(111, 111, 111);
-$grey-80: rgb(57, 57, 57);
-$grey-90: rgb(24, 24, 24);
-$black: rgb(0, 0, 0);
-$blue-05: rgb(244, 248, 252);
-$blue: rgb(35, 119, 203);
-$blue-dark: rgb(0, 94, 165);
-$purple-10: rgb(212, 200, 222);
-$purple-20: rgb(118, 30, 109);
-$purple-40: rgb(96, 58, 130);
-$purple-50: rgb(150, 42, 139);
-$purple: rgb(81, 36, 122);
-$purple-dark: rgb(73, 32, 108);
-$gold: rgb(187, 157, 101);
-$yellow-05: rgb(255, 244, 228);
-$yellow: rgb(251, 184, 0);
-$green: rgb(68, 162, 72);
-$red: rgb(199, 41, 41);
-$transparent-black-75: rgba(0, 0, 0, 0.75);
-$transparent-black-40: rgba(0, 0, 0, 0.4);
-$transparent-black-20: rgba(0, 0, 0, 0.2);
-$transparent-black-10: rgba(0, 0, 0, 0.1);
-$transparent-white-30: rgba(255, 255, 255, 0.3);
-$transparent-white-85: rgba(255, 255, 255, 0.85);
-$transparent-grey-05: rgba(24, 24, 24, 0.05);
-$transparent-grey-10: rgba(24, 24, 24, 0.1);
-$transparent-purple-05: rgba(80, 36, 122, 0.05);
+// UQ Primary - Purple Shades
+$uq-purple-dark: #49206c;
 
-/* FS: brand colors */
-$brand-primary: $purple;
-$brand-primary-10: $purple-10;
-$brand-secondary: $blue;
-$brand-reverse: $white;
-$brand-text: $grey-90;
-$brand-heading: $brand-primary;
-$brand-gradient: linear-gradient(90deg, $brand-primary 0%, 87%, $purple-50 100%);
+// UQ Secondary palette
+$uq-purple-light: #962A8B;
+$uq-neutral: #D7D1CC;
+$uq-darkgrey: #999490;
+$uq-gold: #BB9D65;
+$uq-red: #E62645;
+$uq-orange: #EB602B;
+$uq-yellow: #FBB800;
+$uq-blue: #4085C6;
+$uq-aqua: #00A2C7;
+$uq-green: #2EA836;
 
-/* FS: filter colors */
+// UQ Secondary - Neutral Tints
+$uq-neutral-light20: #f7f6f5;
+$uq-neutral-light40: #efedeb;
+$uq-neutral-light60: #e7e3e0;
+$uq-neutral-light80: #dfdad6;
+
+// UQ Secondary - Neutral Shades
+$uq-neutral-dark20: #aca7a3;
+$uq-neutral-dark40: #817d7a;
+$uq-neutral-dark60: #565452;
+$uq-neutral-dark80: #2b2a29;
+
+// UQ Secondary - Darkgrey Tints
+$uq-darkgrey-light20: #ebeae9;
+$uq-darkgrey-light40: #d6d4d3;
+$uq-darkgrey-light60: #c2bfbc;
+$uq-darkgrey-light80: #ada9a6;
+
+// UQ Secondary - Red Shades
+$uq-red-dark20: #be1b38;
+$uq-red-dark40: #9b1129;
+
+// UQ Secondary - Green Shades
+$uq-green-dark10: darken($uq-green, 10%);
+
+// UQ Purple gradient
+$uq-purple-gradient: linear-gradient(90deg, $uq-purple 0%, 87%, $uq-purple-light 100%);
+
+// Default text, Content
+$text: $uq-neutral-dark80;
+
+// Link Blue
+$link: #1E72C6;
+$link-hover: #005ea5;
+$link-active: $link-hover;
+
+// Alerts and Status - Dark
+$alert: $uq-red-dark20;
+$success: $uq-green-dark10;
+
+// Alerts and Status - Light
+$info-color: #d4f0ff;
+$success-color: #d5eeca;
+$warning-color: #ffe0ad;
+$danger-color: #ffacac;
+
+// Palettes
+$light-palette-color: $uq-neutral-light20;
+$light-palette-border-color: rgba($uq-white, .4);
+$light-palette-link-color: $uq-white;
+$light-palette-bg: $uq-white;
+
+$dark-palette-color: $uq-neutral-dark80;
+$dark-palette-border-color: rgba($uq-black, .1);
+$dark-palette-link-color: lighten($uq-purple, 10%);
+$dark-palette-bg: $uq-neutral-dark60;
+
+// Overlays
+$dark-tint-bg: $uq-neutral-dark60;
+
+// Filters
 $filter-text: invert(0%) sepia(72%) saturate(588%) hue-rotate(348deg) brightness(115%) contrast(81%);
 $filter-primary: invert(20%) sepia(34%) saturate(1979%) hue-rotate(239deg) brightness(97%) contrast(107%);
 $filter-secondary: invert(35%) sepia(80%) saturate(952%) hue-rotate(181deg) brightness(94%) contrast(90%);

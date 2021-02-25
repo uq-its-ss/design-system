@@ -10,14 +10,14 @@
 		list-style: none;
 
 		.pagination__link {
-			color: core.$link-color;
+			color: core.$link;
 			font-size: 1rem;
 			font-weight: 300;
 			padding: core.$space-none core.$space-sm;
 			text-decoration: none;
 
 			&:hover {
-				color: core.$link-hover-color;
+				color: core.$link-hover;
 				text-decoration: underline;
 			}
 		}

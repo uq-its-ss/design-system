@@ -1,9 +1,9 @@
-@use '@uqds/core/src/scss/global' as *;
+@use '@uqds/core/src/scss/global' as core;
 
 // Variables, functions, and mixins
-$accordion-border-color: $uq-neutral-light60; //e9e9e9;
-$accordion-title-bg: $uq-neutral-light20; //f9f9f9;
-$accordion-title-bg-hover: $uq-neutral-light40; //eee;
-$accordion-icon-color: $uq-neutral-dark20; //bbb;
-$accordion-content-bg: $uq-white;
-$accordion-editor-outline: $uq-red-dark20; //f00;
+$accordion-border-color: core.$uq-neutral-light60; //e9e9e9;
+$accordion-title-bg: core.$uq-neutral-light20; //f9f9f9;
+$accordion-title-bg-hover: core.$uq-neutral-light40; //eee;
+$accordion-icon-color: core.$uq-neutral-dark20; //bbb;
+$accordion-content-bg: core.$uq-white;
+$accordion-editor-outline: core.$uq-red-dark20; //f00;

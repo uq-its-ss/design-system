@@ -17,7 +17,7 @@ $use-encapsulation: false !default;
   .success-message,
   .inline-help  {
     box-sizing: border-box;
-    font-family: core.$font-family;
+    font-family: core.$font-body;
   }
 
   fieldset,
@@ -160,7 +160,7 @@ $use-encapsulation: false !default;
     background-color: core.$uq-white;
     max-width: 100%;
     min-width: 100%;
-    padding: ($form-spacing - core.$spacing-xxs) $form-spacing;
+    padding: ($form-spacing - core.$space-xs) $form-spacing;
     border: $form-border-width solid $form-border-color;
     border-radius: $form-border-radius;
     font-size: $form-text-size;
@@ -211,8 +211,8 @@ $use-encapsulation: false !default;
     }
 
     &.input--large {
-      padding: 1.15625rem core.$spacing-m;
-      border-radius: core.$spacing-xxs;
+      padding: 1.15625rem core.$space-md;
+      border-radius: core.$space-xs;
     }
 
     + .error-message,
@@ -226,7 +226,7 @@ $use-encapsulation: false !default;
     appearance: none;
     background-image: url(get-icon('form-chevron-down', $form-select-icon));
     background-repeat: no-repeat;
-    background-position: right core.$spacing-s center;
+    background-position: right core.$space center;
     cursor: pointer;
     line-height: 1.2;
 
@@ -273,7 +273,7 @@ $use-encapsulation: false !default;
       font-size: core.$font-size-m;
       font-weight: core.$font-weight-normal;
       line-height: $form-checkbox-size;
-      margin-bottom: core.$spacing-s;
+      margin-bottom: core.$space;
       margin-left: core.$space-sm;
       margin-right: $form-spacing;
       padding-top: core.$space-xs;
@@ -281,7 +281,7 @@ $use-encapsulation: false !default;
     }
 
     &:checked {
-      border-color: core.$grey-60;
+      border-color: core.$uq-neutral-dark60;
 
       &:focus {
         border-color: $form-focus-color;
@@ -333,7 +333,7 @@ $use-encapsulation: false !default;
     }
 
     &:checked {
-      background-color: core.$grey-60;
+      background-color: core.$uq-neutral-dark60;
 
       &::after {
         background-image: url(get-icon("form-checkbox-check", $form-checkbox-check-color));
@@ -356,7 +356,7 @@ $use-encapsulation: false !default;
 
       &::after {
         border-radius: 50%;
-        background-color: core.$grey-60;
+        background-color: core.$uq-neutral-dark60;
         content: "";
         display: block;
         position: absolute;

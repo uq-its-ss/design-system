@@ -8,7 +8,7 @@
   gap: core.$space-none;
   margin: 0;
   padding: 0;
-  align-items: start;
+  align-items: stretch;
 
   *, *:before, *:after {
     box-sizing: border-box;
@@ -44,7 +44,7 @@
     line-height: normal;
     padding: core.$space core.$space-lg core.$space core.$space;
     position: relative;
-    height: auto;
+    height: 100%;
 
     &::after {
       content: '';
@@ -107,16 +107,6 @@
     a,
     .uq-grid-menu__link {
       color: core.$dark-palette-color;
-    }
-  }
-
-  // Equalised item heights
-  &--equalised {
-    align-items: stretch;
-
-    a,
-    &__link {
-      height: 100%;
     }
   }
 

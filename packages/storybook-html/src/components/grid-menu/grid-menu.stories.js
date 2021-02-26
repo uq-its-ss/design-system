@@ -6,7 +6,6 @@ import docs from './grid-menu.docs.mdx';
 
 // import HTML template strings
 import gridMenuHTML from './grid-menu.html';
-import gridMenuEqualisedHTML from './grid-menu-equalised.html';
 
 export default {
   title: 'Components/Grid menu',
@@ -21,17 +20,176 @@ export default {
   }
 };
 
-export const gridMenuAll = () => {
+export const gridMenuDefault = () => {
   return gridMenuHTML;
 };
 
-gridMenuAll.storyName = "Grid menu all";
+gridMenuDefault.storyName = "Default";
 
-// add more keywords
-gridMenuAll.parameters = { notes: 'links'};
-
-export const equalised = () => {
-  return gridMenuEqualisedHTML;
+export const gridMenuDescription = () => {
+  return `
+  <ul class="uq-grid-menu">
+    <li class="uq-grid-menu__item">
+      <a href="#" class="uq-grid-menu__link">
+        <span class="uq-grid-menu__icon uq-icon uq-icon--hotel-bedroom-1"></span>
+        <span class="uq-grid-menu__title">Menu link 1</span>
+        <span class="uq-grid-menu__description">Ullamcorper est sodales egestas condimentum vestibulum proin justo morbi
+          luctus porttitor adipiscing eu a eu massa inceptos cras non tempus taciti.
+        </span>
+      </a>
+    </li>
+    <li class="uq-grid-menu__item">
+      <a href="#" class="uq-grid-menu__link">
+        <span class="uq-grid-menu__icon uq-icon uq-icon--hotel-bedroom-1"></span>
+        <span class="uq-grid-menu__title">Menu link 2</span>
+        <span class="uq-grid-menu__description">Ullamcorper est sodales egestas condimentum vestibulum proin justo morbi
+          luctus porttitor adipiscing eu a eu massa inceptos cras non tempus taciti.
+        </span>
+      </a>
+    </li>
+    <li class="uq-grid-menu__item">
+      <a href="#" class="uq-grid-menu__link">
+        <span class="uq-grid-menu__icon uq-icon uq-icon--hotel-bedroom-1"></span>
+        <span class="uq-grid-menu__title">Menu link 3</span>
+        <span class="uq-grid-menu__description">Ullamcorper est sodales egestas condimentum vestibulum proin justo morbi
+          luctus porttitor adipiscing eu a eu massa inceptos cras non tempus taciti.
+        </span>
+      </a>
+    </li>
+    <li class="uq-grid-menu__item">
+      <a href="#" class="uq-grid-menu__link">
+        <span class="uq-grid-menu__icon uq-icon uq-icon--hotel-bedroom-1"></span>
+        <span class="uq-grid-menu__title">Menu link 4</span>
+        <span class="uq-grid-menu__description">Ullamcorper est sodales egestas condimentum vestibulum proin justo morbi
+          luctus porttitor adipiscing eu a eu massa inceptos cras non tempus taciti.
+        </span>
+      </a>
+    </li>
+    <li class="uq-grid-menu__item">
+      <a href="#" class="uq-grid-menu__link">
+        <span class="uq-grid-menu__icon uq-icon uq-icon--hotel-bedroom-1"></span>
+        <span class="uq-grid-menu__title">Menu link 5</span>
+        <span class="uq-grid-menu__description">Ullamcorper est sodales egestas condimentum vestibulum proin justo morbi
+          luctus porttitor adipiscing eu a eu massa inceptos cras non tempus taciti.
+        </span>
+      </a>
+    </li>
+  </ul>
+  `;
 };
 
-equalised.storyName = "Grid menu equalised";
+gridMenuDescription.storyName = 'With description';
+
+export const gridMenuDarkText = () => {
+  return `
+  <ul class="uq-grid-menu uq-grid-menu--dark-text">
+    <li class="uq-grid-menu__item">
+      <a href="#" class="uq-grid-menu__link">
+        <span class="uq-grid-menu__icon uq-icon uq-icon--hotel-bedroom-1"></span>
+        <span class="uq-grid-menu__title">Menu link 1</span>
+        <span class="uq-grid-menu__description">Ullamcorper est sodales egestas condimentum vestibulum proin justo morbi
+          luctus porttitor adipiscing eu a eu massa inceptos cras non tempus taciti.
+        </span>
+      </a>
+    </li>
+    <li class="uq-grid-menu__item">
+      <a href="#" class="uq-grid-menu__link">
+        <span class="uq-grid-menu__icon uq-icon uq-icon--hotel-bedroom-1"></span>
+        <span class="uq-grid-menu__title">Menu link 2</span>
+        <span class="uq-grid-menu__description">Ullamcorper est sodales egestas condimentum vestibulum proin justo morbi
+          luctus porttitor adipiscing eu a eu massa inceptos cras non tempus taciti.
+        </span>
+      </a>
+    </li>
+    <li class="uq-grid-menu__item">
+      <a href="#" class="uq-grid-menu__link">
+        <span class="uq-grid-menu__icon uq-icon uq-icon--hotel-bedroom-1"></span>
+        <span class="uq-grid-menu__title">Menu link 3</span>
+        <span class="uq-grid-menu__description">Ullamcorper est sodales egestas condimentum vestibulum proin justo morbi
+          luctus porttitor adipiscing eu a eu massa inceptos cras non tempus taciti.
+        </span>
+      </a>
+    </li>
+    <li class="uq-grid-menu__item">
+      <a href="#" class="uq-grid-menu__link">
+        <span class="uq-grid-menu__icon uq-icon uq-icon--hotel-bedroom-1"></span>
+        <span class="uq-grid-menu__title">Menu link 4</span>
+        <span class="uq-grid-menu__description">Ullamcorper est sodales egestas condimentum vestibulum proin justo morbi
+          luctus porttitor adipiscing eu a eu massa inceptos cras non tempus taciti.
+        </span>
+      </a>
+    </li>
+    <li class="uq-grid-menu__item">
+      <a href="#" class="uq-grid-menu__link">
+        <span class="uq-grid-menu__icon uq-icon uq-icon--hotel-bedroom-1"></span>
+        <span class="uq-grid-menu__title">Menu link 5</span>
+        <span class="uq-grid-menu__description">Ullamcorper est sodales egestas condimentum vestibulum proin justo morbi
+          luctus porttitor adipiscing eu a eu massa inceptos cras non tempus taciti.
+        </span>
+      </a>
+    </li>
+  </ul>
+  `;
+};
+
+gridMenuDarkText.storyName = 'With dark text';
+
+export const gridMenuIcons = () => {
+  return `
+  <ul class="uq-grid-menu">
+    <li><a href="#"><span class="uq-grid-menu__icon uq-icon uq-icon--car-1"> </span> <span class="uq-grid-menu__title">Menu link 1</span></a></li>
+    <li><a href="#"><span class="uq-grid-menu__icon uq-icon uq-icon--bus"> </span> <span class="uq-grid-menu__title">Menu link 2</span></a></li>
+    <li><a href="#"><span class="uq-grid-menu__icon uq-icon uq-icon--sea-transport-boat"> </span> <span class="uq-grid-menu__title">Menu link 3</span></a></li>
+    <li><a href="#"><span class="uq-grid-menu__icon uq-icon uq-icon--railroad-train-1"> </span> <span class="uq-grid-menu__title">Menu link 4</span></a></li>
+    <li><a href="#"><span class="uq-grid-menu__icon uq-icon uq-icon--icon-plane-1"> </span> <span class="uq-grid-menu__title">Menu link 5</span></a></li>
+    <li><a href="#"><span class="uq-grid-menu__icon uq-icon uq-icon--bicycle"> </span> <span class="uq-grid-menu__title">Menu link 6</span></a></li>
+  </ul>
+  `;
+};
+
+gridMenuIcons.storyName = 'With icons';
+
+export const gridMenu2Column = () => {
+  return `
+  <ul class="uq-grid-menu uq-grid-menu--2-column">
+    <li><a href="#"><span class="uq-grid-menu__title">Menu link 1</span></a></li>
+    <li><a href="#"><span class="uq-grid-menu__title">Menu link 2</span></a></li>
+    <li><a href="#"><span class="uq-grid-menu__title">Menu link 3</span></a></li>
+    <li><a href="#"><span class="uq-grid-menu__title">Menu link 4</span></a></li>
+    <li><a href="#"><span class="uq-grid-menu__title">Menu link 5</span></a></li>
+    <li><a href="#"><span class="uq-grid-menu__title">Menu link 6</span></a></li>
+  </ul>
+  `;
+};
+
+gridMenu2Column.storyName = '2 Column';
+
+export const gridMenu4Column = () => {
+  return `
+  <ul class="uq-grid-menu uq-grid-menu--4-column">
+    <li><a href="#"><span class="uq-grid-menu__title">Menu link 1</span></a></li>
+    <li><a href="#"><span class="uq-grid-menu__title">Menu link 2</span></a></li>
+    <li><a href="#"><span class="uq-grid-menu__title">Menu link 3</span></a></li>
+    <li><a href="#"><span class="uq-grid-menu__title">Menu link 4</span></a></li>
+    <li><a href="#"><span class="uq-grid-menu__title">Menu link 5</span></a></li>
+    <li><a href="#"><span class="uq-grid-menu__title">Menu link 6</span></a></li>
+  </ul>
+  `;
+};
+
+gridMenu4Column.storyName = '4 Column';
+
+export const gridMenuEqualisedHeight = () => {
+  return `
+  <ul class="uq-grid-menu">
+    <li class="uq-grid-menu__item"><a class="uq-grid-menu__link" href="#"><span class="uq-grid-menu__title">Menu link 1</span></a></li>
+    <li class="uq-grid-menu__item"><a class="uq-grid-menu__link" href="#"><span class="uq-grid-menu__title">Menu link 2</span></a></li>
+    <li class="uq-grid-menu__item"><a class="uq-grid-menu__link" href="#"><span class="uq-grid-menu__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi interdum eros vitae dignissim luctus. Phasellus et ligula est.</span></a></li>
+    <li class="uq-grid-menu__item"><a class="uq-grid-menu__link" href="#"><span class="uq-grid-menu__title">Menu link 4</span></a></li>
+    <li class="uq-grid-menu__item"><a class="uq-grid-menu__link" href="#"><span class="uq-grid-menu__title">Menu link 5</span></a></li>
+    <li class="uq-grid-menu__item"><a class="uq-grid-menu__link" href="#"><span class="uq-grid-menu__title">Menu link 6</span></a></li>
+  </ul>
+  `;
+};
+
+gridMenuEqualisedHeight.storyName = 'Equalised height';

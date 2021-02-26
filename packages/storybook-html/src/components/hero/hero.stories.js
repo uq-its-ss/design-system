@@ -11,7 +11,8 @@ export default {
   title: 'Components/Hero',
   parameters: {
     docs: {
-      page: docs
+      page: docs,
+      inlineStories: false
     },
     layout: "fullscreen",
     previewTabs: {

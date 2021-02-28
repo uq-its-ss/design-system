@@ -26,7 +26,7 @@ export const DefaultHero = () => {
   <div class="hero">  
     <div class="hero__content">
       <div class="hero__text">
-        <h1>Page title with a really long title that goes over two lines maybe even three when on mobile</h1>
+        <h1>Page title</h1>
       </div>
     </div>
   </div>

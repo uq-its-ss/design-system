@@ -24,9 +24,9 @@ export default {
 export const DefaultHero = () => {
   return `
   <div class="hero">  
-    <div class="hero__content uq-grid">
-      <div class="hero__text uq-grid__col uq-grid__col--xl-12">
-        <h1>Page title</h1>
+    <div class="hero__content">
+      <div class="hero__text">
+        <h1>Page title with a really long title that goes over two lines maybe even three when on mobile</h1>
       </div>
     </div>
   </div>
@@ -46,8 +46,8 @@ export const FeatureHero = () => {
       <img src="https://picsum.photos/1920/540" />
     </div>
   </div>
-  <div class="hero__content uq-grid">
-    <div class="hero__text uq-grid__col--6 uq-grid__col--xl-6">
+  <div class="hero__content">
+    <div class="hero__text">
       <h1>Start postgraduate study online</h1>
       <p class="hero__subtext">Apply by June 30</p>
       <p><a class="uq-button" href="#">Learn more</a></p>

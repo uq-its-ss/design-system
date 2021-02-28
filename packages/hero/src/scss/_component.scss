@@ -8,11 +8,14 @@
   background-color: #51247A;
 
   &__content {
+    @include grid.layout-containment;
+    @include grid.grid-col-padding;
     color: white;
     padding-top: 3rem;
     padding-bottom: 3rem;
     position: relative;
     z-index: 2;
+           
 
     @media #{core.$screen-md-up} {
       padding-top: 6.5rem;
@@ -97,7 +100,7 @@
       min-height: 6rem;
 
       &::before {
-        background: linear-gradient(360deg, rgb(81, 36, 122) 0%, transparent 42%);
+        background: linear-gradient(360deg, rgb(81, 36, 122) 3%, transparent 50%);
       }
     }
   }
@@ -110,6 +113,12 @@
 
       @media #{core.$screen-md-up} {
         padding-top: 6.5rem;
+      }
+    }
+
+    & .hero__text {
+      @media #{core.$screen-md-up} {
+        width: 50%;
       }
     }
    

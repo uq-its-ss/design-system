@@ -31,7 +31,7 @@
     "url": "git+https://github.com/uq-its-ss/design-system.git"
   },
   "scripts": {
-    "build-icons": "node src/script/icon-scan.js"
+    "build-icons": "node src/script/build-icons.js"
   },
   "bugs": {
     "url": "https://github.com/uq-its-ss/design-system/issues"

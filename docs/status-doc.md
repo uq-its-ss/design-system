@@ -21,6 +21,6 @@ Below are some of the status tags used for documentation of components and it's 
 
 Status tag | Name | Description
 --- | ---- | -----------
-`<StatusBadge.DraftDoc />` | Draft Doc | Documentation of component is in draft mode and will most likely change.
+`<StatusBadge.DraftDoc />` | Draft Doc | Documentation of component is in progress and will most likely change.
 `<StatusBadge.ReviewDoc />` | Review Doc | Documentation of component is under review and will likely change.
 `<StatusBadge.StableDoc />` | Complete Doc | Documentation of component is complete/stable and ready for reference.use.

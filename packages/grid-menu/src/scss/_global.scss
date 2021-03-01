@@ -8,27 +8,27 @@ $linked-list-border: core.$uq-neutral-light40;
 
 // Two column layout.
 @mixin grid-menu-2-column {
-  @media only screen and (min-width:641px) {
+  @media only screen and #{core.$screen-md-up} {
     grid: auto-flow / repeat(2, 1fr);
   }
 }
 
 // Three column layout.
 @mixin grid-menu-3-column {
-  @media only screen and (min-width:641px) and (max-width:1024px) {
+  @media only screen and #{core.$screen-md-up} {
     grid: auto-flow / repeat(2, 1fr);
   }
-  @media only screen and (min-width:1025px) {
+  @media only screen and #{core.$screen-xl-up} {
     grid: auto-flow / repeat(3, 1fr);
   }
 }
 
 // Four column layout.
 @mixin grid-menu-4-column {
-  @media only screen and (min-width:641px) and (max-width:1024px) {
+  @media only screen and #{core.$screen-md-up} {
     grid: auto-flow / repeat(2, 1fr);
   }
-  @media only screen and (min-width:1025px) {
+  @media only screen and #{core.$screen-xl-up} {
     grid: auto-flow / repeat(4, 1fr);
   }
 }

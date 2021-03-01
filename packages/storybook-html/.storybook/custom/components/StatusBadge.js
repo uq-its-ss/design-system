@@ -42,7 +42,6 @@ const StatusBadge = ({variant, showRoadmapLink}) => {
 };
 
 // Status tags for the component
-StatusBadge.Experiment = ({variant, ...props}) => <StatusBadge variant="experiment" {...props} />;
 StatusBadge.Development = ({variant, ...props}) => <StatusBadge variant="development" {...props} />;
 StatusBadge.Stable = ({variant, ...props}) => <StatusBadge variant="stable" {...props} />;
 StatusBadge.Review = ({variant, ...props}) => <StatusBadge variant="review" {...props} />;

@@ -2,37 +2,33 @@ import React from 'react';
 import './StatusBadge.scss';
 
 const variants = {
-  experiment: {
-    label: "Experimental candidate",
-    title: "This is an experimental feature — use with caution, support may be limited"
-  },
   development: {
-    label: "In development",
-    title: "This feature is under development — breaking changes may occur"
+    label: "In development COMP",
+    title: "The component is in development and should not be used yet."
   },
   stable: {
-    label: "Stable",
-    title: "This feature is stable — any changes will be bug fixes or enhancements"
+    label: "Stable COMP",
+    title: "The component is stable and ready for use."
   },
   review: {
-    label: "Under review",
-    title: "This feature is under review — may be deprecated or redesigned in the future"
+    label: "Under review COMP",
+    title: "The component is under review and will likely change"
   },
   deprecated: {
-    label: "Deprecated",
-    title: "Deprecated — no longer supported and will be removed in the future"
+    label: "Deprecated COMP",
+    title: "The component is either replaced by a new component or no longer supported and will be removed in the next major version"
   },
   draftDoc: {
-    label: "Draft documentation",
-    title: "This documentation is a draft version and in progress"
+    label: "Draft Doc",
+    title: "Documentation of component is in progress and will most likely change"
   },
   reviewDoc: {
-    label: "Review documentation",
-    title: "This documentation is complete and needs review"
+    label: "Under review Doc",
+    title: "Documentation of component is under review and will likely change"
   },
   stableDoc: {
-    label: "Stable documentation",
-    title: "This documentation is stable - may change with future enhancements to the component"
+    label: "Stable Doc",
+    title: "Documentation of component is complete/stable and ready for reference"
   }
 };
 

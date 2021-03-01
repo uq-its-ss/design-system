@@ -28,7 +28,7 @@ const variants = {
   },
   stableDoc: {
     label: "Stable Doc",
-    title: "Documentation of component is complete/stable and ready for reference"
+    title: "Documentation of component is complete and ready for reference"
   }
 };
 

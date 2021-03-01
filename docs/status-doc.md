@@ -2,27 +2,25 @@
 
 # Status
 
-In the UQ design system, status tags help us in understanding the current status of each component package and its documentation and enhance it further as needed.
+In the UQ design system, status tags help us in understanding the current status of each component and its documentation and enhance it further as needed.
 
 ## 1. Component status
 
 Below are some of the status tags used for components and it's description.
 
-Tag | Name | Description
+Status tag | Name | Description
 --- | ---- | -----------
-`<StatusBadge.Development />` | In development | Component packages are in development. Can be used to check and test. Should not be used in development.
-`<StatusBadge.Review />` | Under review | Component packages are under review. Can be used to check and test. Should not be used in development.
-`<StatusBadge.Stable />` | Stable | Component packages are stable. Ready to be used in development.
-`<StatusBadge.Deprecated />` | Deprecated | Component package is deprecated and should not be used.
+`<StatusBadge.Development />` | In development | The component is in development and should not be used yet.
+`<StatusBadge.Review />` | Under review | The component is under review and will likely change. 
+`<StatusBadge.Stable />` | Stable | The component is stable and ready for use.
+`<StatusBadge.Deprecated />` | Deprecated | The component is either replaced by a new component or no longer supported and will be removed in the next major version.
 
 ## 2. Component documentation status
 
-Follow the component documentation template **[⬅ Documentation template](/../packages/storybook-html/templates/component.docs.mdx)** to create the documentation for component package.
-
 Below are some of the status tags used for documentation of components and it's description.
 
-Tag | Name | Description
+Status tag | Name | Description
 --- | ---- | -----------
-`<StatusBadge.DraftDoc />` | Draft Doc | Documentation of component is in draft mode.
-`<StatusBadge.ReviewDoc />` | Review Doc | Documentation of component is under review. 
-`<StatusBadge.StableDoc />` | Stable Doc | Documentation of component is stable and is ready to be used.
+`<StatusBadge.DraftDoc />` | Draft Doc | Documentation of component is in draft mode and will most likely change.
+`<StatusBadge.ReviewDoc />` | Review Doc | Documentation of component is under review and will likely change.
+`<StatusBadge.StableDoc />` | Complete Doc | Documentation of component is complete/stable and ready for reference.use.

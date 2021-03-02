@@ -3,31 +3,31 @@ import './StatusBadge.scss';
 
 const variants = {
   development: {
-    label: "In development COMP",
-    title: "The component is in development and should not be used yet."
-  },
-  stable: {
-    label: "Stable COMP",
-    title: "The component is stable and ready for use."
+    label: "Comp - In development ",
+    title: "The component is in development and should not be used yet"
   },
   review: {
-    label: "Under review COMP",
+    label: "Comp - Under review",
     title: "The component is under review and will likely change"
   },
+  stable: {
+    label: "Comp - Stable",
+    title: "The component is stable and ready for use"
+  },
   deprecated: {
-    label: "Deprecated COMP",
+    label: "Comp - Deprecated",
     title: "The component is either replaced by a new component or no longer supported and will be removed in the next major version"
   },
   draftDoc: {
-    label: "Draft Doc",
+    label: "Doc - Draft",
     title: "Documentation of component is in progress and will most likely change"
   },
   reviewDoc: {
-    label: "Under review Doc",
+    label: "Doc - Under review",
     title: "Documentation of component is under review and will likely change"
   },
   stableDoc: {
-    label: "Stable Doc",
+    label: "Doc - Stable",
     title: "Documentation of component is complete and ready for reference"
   }
 };

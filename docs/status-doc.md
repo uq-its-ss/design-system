@@ -9,7 +9,7 @@ In the UQ design system, status tags help us in understanding the current status
 Below are some of the status tags used for components and it's description.
 
 Status tag | Name | Description
---- | ---- | -----------
+---------- | ---- | -----------
 `<StatusBadge.Development />` | In development | The component is in development and should not be used yet.
 `<StatusBadge.Review />` | Under review | The component is under review and will likely change. 
 `<StatusBadge.Stable />` | Stable | The component is stable and ready for use.
@@ -20,7 +20,7 @@ Status tag | Name | Description
 Below are some of the status tags used for documentation of components and it's description.
 
 Status tag | Name | Description
---- | ---- | -----------
+---------- | ---- | -----------
 `<StatusBadge.DraftDoc />` | Draft Doc | Documentation of component is in progress and will most likely change.
 `<StatusBadge.ReviewDoc />` | Review Doc | Documentation of component is under review and will likely change.
-`<StatusBadge.StableDoc />` | Complete Doc | Documentation of component is complete/stable and ready for reference.use.
+`<StatusBadge.StableDoc />` | Stable Doc | Documentation of component is complete and ready for reference with all the relevant sections (eg. overview, examples, accessibility etc ...) added.

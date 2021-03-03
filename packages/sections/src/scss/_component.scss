@@ -77,7 +77,7 @@
   }
   // Centers section header and footer
   &--centered {
-    .section__header, .section__footer {
+    .section__header, .section__content, .section__footer {
       text-align: center;
 
       @media #{core.$screen-xl-up} {
@@ -144,7 +144,7 @@
 
   // section with palettes
   &--light-text {
-    .section__header, .section__title, .section__summary, .section__footer {
+    .section__header, .section__title, .section__summary, .section__content, .section__footer {
       @extend %light-palette;
     }
   }
@@ -193,10 +193,16 @@
     z-index: 0;
     top: 0;
     left: 0;
+
     // Hide background image on small devices to ensure content doesn't overflow its length and can still be seen.
-    @media #{core.$screen-md-down} {
+    /*@media #{core.$screen-md-down} {
       display: none;
+    }*/
+
+    img {
+      min-width: 100%;
     }
+
     // Ensure image behind fills full width on larger screens.
     @media #{core.$screen-xl-up} {
       img {

@@ -1,9 +1,7 @@
 {
-    "version": "1.0.0",
+    "version": "0.0.0",
     "npmClient": "npm",
-    "packages": [
-        "packages/*"
-    ],
+    "packages": ["packages/*"],
     "command": {
         "publish": {
             "registry": "http://localhost:4873"

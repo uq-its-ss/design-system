@@ -1,6 +1,6 @@
 {
   "name": "@uqds/lists",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "The list component package",
   "keywords": [
     "uqds",
@@ -37,7 +37,7 @@
     "url": "https://github.com/uq-its-ss/design-system/issues"
   },
   "dependencies": {
-    "@uqds/core": "^1.0.0"
+    "@uqds/core": "^0.0.0"
   },
   "peerDependencies": {
     "@uqds/core": "^0.0.0"

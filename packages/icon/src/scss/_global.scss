@@ -1,5 +1,5 @@
 @use "@uqds/core/src/scss/global" as *;
-@use 'icons' as *;
+@use '_build/icons' as *;
 
 $icon-white: $uq-white;
 $icon-purple: $uq-purple;
@@ -7,42 +7,6 @@ $icon-black: $text;
 $icon-blue: $link;
 $icon-blue-dark: $link-hover;
 
-$data-svg-prefix:'data:image/svg+xml;utf-8,';
-
-
-/* Function to replace a string with something else */ 
-@function str-replace( $string, $search, $replace: '' ) {
-
-    $index: str-index( $string, $search );
-    @if $index {
-      @return str-slice( $string, 1, $index - 1 ) + $replace + str-replace( str-slice( $string, $index + str-length( $search ) ), $search, $replace);
-    }
-    @return $string;
-}
-
-
-/* Function to get the data url of the svg icon and add color (by default #222) */ 
-@function get-icon( $icon, $color: #222 ) {
-
-  @if 'color' != type-of( $color ) {
-    @warn 'The requested color - "' + $color + '" - was not recognized as a Sass color value.';
-    @return null;
-  }
-
-  @if map-has-key( $icons, $icon ) {
-    $icon: map-get( $icons, $icon );
-    $placeholder: '%%COLOR%%';
-    //$data-uri: str-replace( url( $data-svg-prefix + $icon ), $placeholder, $color );
-    $data-uri: str-replace( $icon, $placeholder, $color );
-    @return str-replace( $data-uri, '#', '%23' );
-  }
-
-  @warn 'The requested icon - "' + $icon + '" - is not defined in the $icons map.';
-  @return null;
-}
-
-
-/* Mixer Function ('folder_name', 'icon_name') */
 @mixin icon($category, $name) {
 
   .uq-icon--#{$name} {

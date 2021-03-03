@@ -102,48 +102,38 @@ const svgSassFn = `
       // Create data URI's for Sass module
       let svgDataURI;
 
-      if (category == 'ui') {
-        /**
-         * Trial strategy to implement colour options via Sass functions using a
-         * special string placeholder. Ideally we want it to do more than
-         * postcss-inline-svg does by design for monochromatic (UI) icon work.
-         * 
-         * Related reading:
-         * https://css-tricks.com/creating-a-maintainable-icon-system-with-sass/
-         * https://www.w3.org/TR/SVG/painting.html#SpecifyingStrokePaint
-         * https://www.w3.org/TR/SVG/painting.html#FillProperty
-         */
+      /**
+       * Trial strategy to implement colour options via Sass functions using a
+       * special string placeholder. Ideally we want it to do more than
+       * postcss-inline-svg does by design for monochromatic (UI) icon work.
+       * 
+       * Related reading:
+       * https://css-tricks.com/creating-a-maintainable-icon-system-with-sass/
+       * https://www.w3.org/TR/SVG/painting.html#SpecifyingStrokePaint
+       * https://www.w3.org/TR/SVG/painting.html#FillProperty
+       */
 
-        // create canvas (svg root node but also the children)
-        const canvas = SVG(svg.data);
-        
-        // Apply the fill placeholder to the `<svg>` node except when value is explicitly set to `none`.
-        // Importantly, set the placeholder even if fill attr. wasn't originally set — to override default setting.
-        if (canvas.attr('fill') != 'none') {
-          canvas.attr({
-            fill: colorPlaceholder
-          });
-        }
-
-        svg = canvas.svg();
-
-        // Replace all fill and stroke attributes except when value is explicitly set to `none`.
-        svg = svg.replace(/fill="(?!none")[^"]+"/g, `fill="${colorPlaceholder}"`);
-        svg = svg.replace(/stroke="(?!none")[^"]+"/g, `stroke="${colorPlaceholder}"`);
-
-        // Convert data to URI string
-        svgDataURI = svgConverter(svg);
-
-        resolve(`  "${category}--${filename}": "${svgDataURI}",\n`);
-
-      } else if (category == 'logo') {
-        // Convert data to URI string
-        svgDataURI = svgConverter(svg.data);
-
-        resolve(`  "${category}--${filename}": "${svgDataURI}",\n`);
-      } else {
-        resolve('');
+      // create canvas (svg root node but also the children)
+      const canvas = SVG(svg.data);
+      
+      // Apply the fill placeholder to the `<svg>` node except when value is explicitly set to `none`.
+      // Importantly, set the placeholder even if fill attr. wasn't originally set — to override default setting.
+      if (canvas.attr('fill') != 'none') {
+        canvas.attr({
+          fill: colorPlaceholder
+        });
       }
+
+      svg = canvas.svg();
+
+      // Replace all fill and stroke attributes except when value is explicitly set to `none`.
+      svg = svg.replace(/fill="(?!none")[^"]+"/g, `fill="${colorPlaceholder}"`);
+      svg = svg.replace(/stroke="(?!none")[^"]+"/g, `stroke="${colorPlaceholder}"`);
+
+      // Convert data to URI string
+      svgDataURI = svgConverter(svg);
+
+      resolve(`  "${category}--${filename}": "${svgDataURI}",\n`);
     })));
 
     for (let i = 0; i < svgStringsArr.length; i++) {
@@ -152,7 +142,7 @@ const svgSassFn = `
 
     icons += ');';
 
-    FS.writeFile('./src/scss/_icons.scss', `${icons}\n${svgSassFn}`, (err) => {
+    FS.writeFile('./src/scss/_build/_icons.scss', `${icons}\n${svgSassFn}`, (err) => {
       if (err) throw err;
     });
   });

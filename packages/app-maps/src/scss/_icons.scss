@@ -12,29 +12,29 @@ $-icons: (
   "ui--wayfinding-deco": "data:image/svg+xml,%3csvg viewBox='0 0 10 47' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M5 1c2.208 0 4 1.792 4 4S7.208 9 5 9 1 7.208 1 5s1.792-4 4-4z' stroke='~~COLOR~~'%3e%3c/path%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M5 15a1 1 0 011 1v.005a1 1 0 11-2 0V16a1 1 0 011-1zm0 3.995a1 1 0 011 1v.01a1 1 0 11-2 0v-.01a1 1 0 011-1zm0 4a1 1 0 011 1v.01a1 1 0 11-2 0v-.01a1 1 0 011-1zm0 4a1 1 0 011 1v.01a1 1 0 11-2 0v-.01a1 1 0 011-1z' fill='~~COLOR~~'%3e%3c/path%3e%3cpath d='M5 35c2.208 0 4 1.792 4 4s-2 5-4 7c-2-2-4-4.792-4-7s1.792-4 4-4z' stroke='~~COLOR~~'%3e%3c/path%3e%3c/svg%3e",
 );
 
-@function -str-replace($string, $search, $replace: '') {
-  $index: str-index($string, $search);
+  @function -str-replace($string, $search, $replace: '') {
+    $index: str-index($string, $search);
 
-  @if $index {
-    @return str-slice( $string, 1, $index - 1 ) + $replace + -str-replace( str-slice( $string, $index + str-length( $search ) ), $search, $replace);
+    @if $index {
+      @return str-slice( $string, 1, $index - 1 ) + $replace + -str-replace( str-slice( $string, $index + str-length( $search ) ), $search, $replace);
+    }
+
+    @return $string;
   }
 
-  @return $string;
-}
+  @function get-icon($icon, $color: #51247a) {
+    @if type-of($color) != 'color' and $color != 'none' {
+      @warn 'The requested color - "' + $color + '" - was not recognized as a Sass color value.';
+      @return null;
+    }
 
-@function get-icon($icon, $color: #51247a) {
-  @if type-of($color) != 'color' and $color != 'none' {
-    @warn 'The requested color - "' + $color + '" - was not recognized as a Sass color value.';
+    @if map-has-key($-icons, $icon) {
+      $icon: map-get($-icons, $icon);
+      $data-uri: -str-replace($icon, '~~COLOR~~', $color);
+
+      @return -str-replace( $data-uri, '#', '%23' );
+    }
+
+    @warn 'The requested icon - "' + $icon + '" - is not defined in the $icons map.';
     @return null;
   }
-
-  @if map-has-key($-icons, $icon) {
-    $icon: map-get($-icons, $icon);
-    $data-uri: -str-replace($icon, '~~COLOR~~', $color);
-
-    @return -str-replace( $data-uri, '#', '%23' );
-  }
-
-  @warn 'The requested icon - "' + $icon + '" - is not defined in the $icons map.';
-  @return null;
-}

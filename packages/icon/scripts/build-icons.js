@@ -1,4 +1,3 @@
-const CHALK = require('chalk');
 const FS = require('fs').promises;
 const GLOB = require('glob');
 const SVGO = require('svgo/lib/svgo');
@@ -17,9 +16,6 @@ const optimiserConfigPath = './.svgo.yml';
 
 // Placeholder string using URL safe strings that are unreserved
 const colorPlaceholder = "~~COLOR~~";
-
-// Accumulating string for Sass icons list
-let icons = '$-icons: (\n';
 
 // Define Sass functions to use the icons list
 const svgSassFn = `
@@ -63,87 +59,102 @@ const svgSassFn = `
       }).catch(err => {
         
         if (err.code === 'ENOENT') {
-          console.error(CHALK.red(`Error: couldn't find config file '${optimiserConfigPath}'. Optimising with default configuration.`));
+          console.error(`Error: couldn't find config file '${optimiserConfigPath}'. Optimising with default configuration.`);
         } else if (err.code === 'EISDIR') {
-          console.error(CHALK.red(`Error: directory '${optimiserConfigPath}' is not a config file. Optimising with default configuration.`));
+          console.error(`Error: directory '${optimiserConfigPath}' is not a config file. Optimising with default configuration.`);
         }
 
         resolve(new SVGO());
       });
   }).catch(err => {
     // This may be unnecessary as the idea is that the promise doesn't get rejected ever
-    console.error(CHALK.red(`Unable to instantiate optimiser: ${err.name} — ${err.message}`));
+    console.error(`Unable to instantiate optimiser: ${err}`);
   });
 
-  GLOB('./src/images/**/*.svg', async (err, files) => {
-    let svgStringsArr = await Promise.all(files.map((file) => new Promise(async (resolve) => {
-      // Get filename and remove file extension
-      const explode = file.replace('./src/images/', '').split('/'),
-        category = explode[0],
-        filename = explode[explode.length - 1].split('.')[0];
+  GLOB('./src/images/**/*.svg', (err, files) => {
+    (async (err, files) => {
+      let iconArr = await Promise.all(files.map((file) => new Promise(async (resolve) => {
+        // Get filename and remove file extension
+        const explode = file.replace('./src/images/', '').split('/'),
+          category = explode[0],
+          filename = explode[explode.length - 1].split('.')[0];
 
-      // Read file
-      let fileData = await FS.readFile(file, 'utf8')
-        .catch((err) => { throw err; });
-      
-      // Optimise SVGs
-      let svg = await optimiser.optimize(fileData)
-        .catch((err) => { throw err; });
-      
-      // Write to dist
-      const dir = `./dist/images/${category}`;
+        // Read file
+        let fileData = await FS.readFile(file, 'utf8')
+          .catch((err) => { throw err; });
+        
+        // Optimise SVGs
+        let svg = await optimiser.optimize(fileData)
+          .catch((err) => { throw err; });
+        
+        // Write to dist
+        const dir = `./dist/images/${category}`;
 
-      await FS.mkdir(dir, { recursive: true })
-        .catch((err) => { throw err });
+        await FS.mkdir(dir, { recursive: true })
+          .catch((err) => { throw err });
 
-      await FS.writeFile(`${dir}/${filename}.svg`, svg.data)
-        .catch((err) => { throw err });
-      
-      // Create data URI's for Sass module
-      let svgDataURI;
+        await FS.writeFile(`${dir}/${filename}.svg`, svg.data)
+          .catch((err) => { throw err });
+        
+        // Create data URI's for Sass module
+        let svgDataURI;
 
-      /**
-       * Trial strategy to implement colour options via Sass functions using a
-       * special string placeholder. Ideally we want it to do more than
-       * postcss-inline-svg does by design for monochromatic (UI) icon work.
-       * 
-       * Related reading:
-       * https://css-tricks.com/creating-a-maintainable-icon-system-with-sass/
-       * https://www.w3.org/TR/SVG/painting.html#SpecifyingStrokePaint
-       * https://www.w3.org/TR/SVG/painting.html#FillProperty
-       */
+        /**
+         * Trial strategy to implement colour options via Sass functions using a
+         * special string placeholder. Ideally we want it to do more than
+         * postcss-inline-svg does by design for monochromatic (UI) icon work.
+         * 
+         * Related reading:
+         * https://css-tricks.com/creating-a-maintainable-icon-system-with-sass/
+         * https://www.w3.org/TR/SVG/painting.html#SpecifyingStrokePaint
+         * https://www.w3.org/TR/SVG/painting.html#FillProperty
+         */
 
-      // create canvas (svg root node but also the children)
-      const canvas = SVG(svg.data);
-      
-      // Apply the fill placeholder to the `<svg>` node except when value is explicitly set to `none`.
-      // Importantly, set the placeholder even if fill attr. wasn't originally set — to override default setting.
-      if (canvas.attr('fill') != 'none') {
-        canvas.attr({
-          fill: colorPlaceholder
+        // create canvas (svg root node but also the children)
+        const canvas = SVG(svg.data);
+        
+        // Apply the fill placeholder to the `<svg>` node except when value is explicitly set to `none`.
+        // Importantly, set the placeholder even if fill attr. wasn't originally set — to override default setting.
+        if (canvas.attr('fill') != 'none') {
+          canvas.attr({
+            fill: colorPlaceholder
+          });
+        }
+
+        svg = canvas.svg();
+
+        // Replace all fill and stroke attributes except when value is explicitly set to `none`.
+        svg = svg.replace(/fill="(?!none")[^"]+"/g, `fill="${colorPlaceholder}"`);
+        svg = svg.replace(/stroke="(?!none")[^"]+"/g, `stroke="${colorPlaceholder}"`);
+
+        // Convert data to URI string
+        svgDataURI = svgConverter(svg);
+
+        resolve({
+          name: filename,
+          category,
+          svgSassData: svgDataURI
         });
-      }
+      })));
 
-      svg = canvas.svg();
+      // Accumulating string for Sass icons list
+      let icons = iconArr.reduce((acc, cur) => {
+        return acc + `  "${cur.category}--${cur.name}": "${cur.svgSassData}",\n`
+      }, '$-icons: (\n');
 
-      // Replace all fill and stroke attributes except when value is explicitly set to `none`.
-      svg = svg.replace(/fill="(?!none")[^"]+"/g, `fill="${colorPlaceholder}"`);
-      svg = svg.replace(/stroke="(?!none")[^"]+"/g, `stroke="${colorPlaceholder}"`);
+      icons += ');';
 
-      // Convert data to URI string
-      svgDataURI = svgConverter(svg);
+      await FS.writeFile('./src/js/_build/_icons.js', `export default ${JSON.stringify(iconArr, null, 2)};`)
+        .catch((err) => { throw err });
 
-      resolve(`  "${category}--${filename}": "${svgDataURI}",\n`);
-    })));
+      await FS.writeFile('./src/scss/_build/_icons.scss', `${icons}\n${svgSassFn}`)
+        .catch((err) => { throw err });
 
-    for (let i = 0; i < svgStringsArr.length; i++) {
-      icons += svgStringsArr[i];
-    }
-
-    icons += ');';
-
-    FS.writeFile('./src/scss/_build/_icons.scss', `${icons}\n${svgSassFn}`, (err) => {
-      if (err) throw err;
+    })(err, files).catch(err => {
+      console.error(err);
     });
   });
-})();
+
+})().catch(err => {
+  console.error(err);
+});

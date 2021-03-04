@@ -19,10 +19,12 @@
   },
   "homepage": "https://github.com/uq-its-ss/design-system#readme",
   "license": "ISC",
+  "main": "index.js",
   "directories": {
     "lib": "src"
   },
   "files": [
+    "index.js",
     "dist/*",
     "src/scss/*"
   ],
@@ -42,7 +44,6 @@
   },
   "devDependencies": {
     "@svgdotjs/svg.js": "^3.0.16",
-    "chalk": "^4.1.0",
     "glob": "^7.1.6",
     "js-yaml": "^3.14.1",
     "mini-svg-data-uri": "^1.2.3",

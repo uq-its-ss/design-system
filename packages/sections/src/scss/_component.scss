@@ -194,20 +194,15 @@
     top: 0;
     left: 0;
 
-    // Hide background image on small devices to ensure content doesn't overflow its length and can still be seen.
-    /*@media #{core.$screen-md-down} {
-      display: none;
-    }*/
-
     img {
-      min-width: 100%;
-    }
-
-    // Ensure image behind fills full width on larger screens.
-    @media #{core.$screen-xl-up} {
-      img {
-        width: 100%;
-      }
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 100%;
+      -o-object-fit: cover;
+      object-fit: cover;
+      transform: translate(-50%, -50%);
     }
   }
 

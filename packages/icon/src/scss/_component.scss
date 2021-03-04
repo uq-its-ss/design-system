@@ -1,13 +1,12 @@
-@use 'global' as *;
+@use '_build/icons-emit';
 
 .uq-icon {
-  width: 1.5rem;
-  height: 1.5rem;
-  stroke: currentColor;
-  fill: currentColor;
-  vertical-align: text-top;
-  background-position: center;
-  display: inline-block;
+  background-position: center center;
+  background-repeat: no-repeat;
   box-sizing: border-box;
+  display: inline-block;
+  height: 1em;
   line-height: 100%;
+  vertical-align: text-top;
+  width: 1em;
 }

@@ -1,29 +1,17 @@
-@use "@uqds/core/src/scss/global" as *;
+@forward '_build/icons';
+
+@use "@uqds/core/src/scss/global" as core;
 @use '_build/icons' as *;
 
-$icon-white: $uq-white;
-$icon-purple: $uq-purple;
-$icon-black: $text;
-$icon-blue: $link;
-$icon-blue-dark: $link-hover;
+$icon-light-color: core.$uq-white;
+$icon-default-color: core.$uq-purple;
+$icon-dark-color: core.$text;
+$icon-link-color: core.$link;
 
-@mixin icon($category, $name) {
-
+@mixin icon($name) {
   .uq-icon--#{$name} {
-    background: url( $data-svg-prefix + get-icon( #{$name} ) ) no-repeat;
-
-    &.uq-icon--light {
-      background: url( $data-svg-prefix + get-icon( #{$name}, $icon-white ) ) no-repeat;
-    }
-    &.uq-icon--dark {
-      background: url( $data-svg-prefix + get-icon( #{$name}, $icon-black ) ) no-repeat;
-    }
-    &.uq-icon--blue {
-      background: url( $data-svg-prefix + get-icon( #{$name}, $icon-blue ) ) no-repeat;
-
-      &:hover {
-        background: url( $data-svg-prefix + get-icon( #{$name}, $icon-blue-dark ) ) no-repeat;
-      }
-    }
+    background-image: url(get-icon(#{$name}, $icon-default-color));
   }
 }
+
+// default colour variants here (using filters like uq-cms-styleguide)

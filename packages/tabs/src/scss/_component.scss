@@ -4,7 +4,7 @@
 // Tabs
 .tabs {
 
-  * {
+  *, *:before, *:after {
     box-sizing: border-box;
   }
 

@@ -131,7 +131,7 @@ sectionsShaded.storyName = 'Sections shaded';
 export const sectionsBackground = () => {
   return `
 <div class="section section--centered section--image-behind section--light-text light-palette">
-  <div class="section__background"><img src="../images/uq-image-01.jpeg" /></div>
+  <div class="section__background"><img src="/images/uq-image-01.jpeg" /></div>
 
   <div class="section__container">
     <div class="section__header">
@@ -154,7 +154,7 @@ sectionsBackground.storyName = 'Sections background';
 
 export const sectionsLightTint = () => {
   return `
-<div class="section section--centered section--background-image section--light-tint section--dark-text" style="background-image: url('../images/uq-image-01.jpeg');">
+<div class="section section--centered section--background-image section--light-tint section--dark-text" style="background-image: url('/images/uq-image-01.jpeg');">
   <div class="section__container">
     <div class="section__header">
       <h2 class="section__title">Section title</h2>
@@ -176,7 +176,7 @@ sectionsLightTint.storyName = 'Sections light tint';
 
 export const sectionsDarkTint = () => {
   return `
-<div class="section section--centered section--background-image section--dark-tint section--light-text light-palette" style="background-image: url('../images/uq-image-01.jpeg') ;">
+<div class="section section--centered section--background-image section--dark-tint section--light-text light-palette" style="background-image: url('/images/uq-image-01.jpeg') ;">
   <div class="section__container">
     <div class="section__header">
       <h2 class="section__title">Section title</h2>

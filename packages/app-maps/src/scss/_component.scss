@@ -183,7 +183,7 @@ $-result-icon-spacing: $-icon-spacing;
       white-space: nowrap;
       width: $-icon-button-width;
 
-      * {
+      *, *:before, *:after {
         box-sizing: content-box;
       }
 
@@ -397,7 +397,7 @@ $-result-icon-spacing: $-icon-spacing;
       white-space: nowrap;
       width: $-icon-button-width;
 
-      * {
+      *, *:before, *:after {
         box-sizing: content-box;
       }
 

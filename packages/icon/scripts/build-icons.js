@@ -137,23 +137,28 @@ const svgSassFn = `
         });
       })));
 
-      // Accumulating string for Sass icons list
-      let icons = iconArr.reduce((acc, cur) => {
-        return acc + `  "${cur.category}--${cur.name}": "${cur.svgSassData}",\n`
+      // Map new array for JS module API
+      const iconArrModule = iconArr.map(({name, category}) => {
+        return {name, category}
+      });
+
+      await FS.writeFile('./src/js/_build/_icons.js', `export default ${JSON.stringify(iconArrModule, null, 2)};`)
+        .catch((err) => { throw err });
+
+      // Accumulating string for Sass module API
+      let icons = iconArr.reduce((acc, {name, category, svgSassData}) => {
+        return acc + `  "${category}--${name}": "${svgSassData}",\n`
       }, '$-icons: (\n');
 
       icons += ');';
 
-      // Accumulating string for emitting Sass icons using mixins
-      let iconsMixins = iconArr.reduce((acc, cur) => {
-        return acc + `@include icon('${cur.category}--${cur.name}');\n`
-      }, `@use '../global' as *;\n\n`);
-
-      await FS.writeFile('./src/js/_build/_icons.js', `export default ${JSON.stringify(iconArr, null, 2)};`)
-        .catch((err) => { throw err });
-
       await FS.writeFile('./src/scss/_build/_icons.scss', `${icons}\n${svgSassFn}`)
         .catch((err) => { throw err });
+
+      // Accumulating string for emitting icons using Sass mixins
+      const iconsMixins = iconArr.reduce((acc, {name, category}) => {
+        return acc + `@include icon('${category}--${name}');\n`
+      }, `@use '../global' as *;\n\n`);
 
       await FS.writeFile('./src/scss/_build/_icons-emit.scss', `${iconsMixins}`)
         .catch((err) => { throw err });

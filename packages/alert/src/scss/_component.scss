@@ -2,7 +2,7 @@
 @use '@uqds/grid/src/scss/global' as grid;
 @use 'global' as *;
 
-.alert {
+.uq-alert {
   background-color: $alert-default-bg-color;
   color: $alert-text-color;
   font-size: 0;
@@ -11,8 +11,8 @@
   &__container {
     @include grid.layout-containment;
 
-    > .alert__message,
-    > .alert__action {
+    > .uq-alert__message,
+    > .uq-alert__action {
       @include grid.grid-col-padding;
     }
   }
@@ -70,13 +70,13 @@
   }
 
   &--has-action {
-    .alert__message {
+    .uq-alert__message {
       padding-bottom: core.$space-none;
     }
   }
 
   &--no-close {
-    .alert__message {
+    .uq-alert__message {
       padding-right: core.$space;
     }
   }
@@ -99,7 +99,7 @@
 }
 
 @media #{core.$screen-md-up} {
-  .alert {
+  .uq-alert {
     &__message,
     &__action {
       display: inline-block;
@@ -122,18 +122,18 @@
     }
 
     &--has-action {
-      .alert__message {
+      .uq-alert__message {
         @include grid.grid-col-width(4);
         padding-bottom: core.$space;
         padding-right: core.$space;
       }
     }
     &--slim {
-      .alert__message {
+      .uq-alert__message {
         padding-bottom: core.$space;
         padding-top: core.$space;
       }
-      .alert__close {
+      .uq-alert__close {
         top: .7rem;
       }
     }
@@ -141,7 +141,7 @@
 }
 
 @media #{core.$screen-lg-up} {
-  .alert {
+  .uq-alert {
     &__message {
       padding-top: core.$space-md;
       padding-bottom: core.$space-md;
@@ -157,7 +157,7 @@
     }
 
     &--has-action {
-      .alert__message {
+      .uq-alert__message {
         @include grid.grid-col-width(7, 12);
         padding-bottom: core.$space-md;
       }

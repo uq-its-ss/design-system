@@ -16,7 +16,7 @@ class accordion {
    */
    constructor(className) {
     if (!className) {
-      className = 'accordion';
+      className = 'uq-accordion';
     } else {
       className = className;
     }

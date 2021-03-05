@@ -6,13 +6,13 @@
 // Can be used on either div or ul
 //
 // Variants:
-// .accordion--shaded - Adds a shaded colour to the toggle titles.
-// .accordion--no-bottom-border - Removes border from the bottom of accordions
+// .uq-accordion--shaded - Adds a shaded colour to the toggle titles.
+// .uq-accordion--no-bottom-border - Removes border from the bottom of accordions
 //                                for use in menus (see compendium).
-// .accordion--no-bottom-spacing - Removes margin from below accordions for use
+// .uq-accordion--no-bottom-spacing - Removes margin from below accordions for use
 //                                 in menus (see compendium).
 
-.accordion {
+.uq-accordion {
   border-bottom: 1px solid $accordion-border-color;
   list-style: none;
   margin-bottom: core.$space-md;
@@ -111,7 +111,7 @@
       padding: core.$space-none core.$space;
     }
 
-    &:not(.accordion__content--active) {
+    &:not(.uq-accordion__content--active) {
       display: none;
     }
 
@@ -122,7 +122,7 @@
 
   // Shaded variant.
   &--shaded {
-    .accordion {
+    .uq-accordion {
       &__toggle {
         background: $accordion-title-bg;
 
@@ -149,7 +149,7 @@
 
   // Small toggle variant.
   &--secondary {
-    .accordion {
+    .uq-accordion {
       &__toggle {
         font-size: 1.1rem;
 
@@ -168,7 +168,7 @@
 
 // Overrides for when displayed within wysiwyg fields.
 .cke_editable {
-  .accordion__content {
+  .uq-accordion__content {
     border: 1px dashed $accordion-editor-outline;
     display: block !important;
   }

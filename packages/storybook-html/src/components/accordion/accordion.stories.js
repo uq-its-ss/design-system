@@ -27,22 +27,22 @@ export const usingDivs = () => {
     new accordion(); 
   });
   return `
-    <div class="accordion" aria-label="Accordion button group" role="presentation">
-      <div class="accordion__item">
-        <button class="accordion__toggle" aria-controls="content-1" aria-expanded="false" id="accordion-title-1">Title 1</button>
-        <div class="accordion__content" role="region" aria-hidden="true" id="content-1" aria-labelledby="accordion-title-1">
+    <div class="uq-accordion" aria-label="Accordion button group" role="presentation">
+      <div class="uq-accordion__item">
+        <button class="uq-accordion__toggle" aria-controls="content-1" aria-expanded="false" id="accordion-title-1">Title 1</button>
+        <div class="uq-accordion__content" role="region" aria-hidden="true" id="content-1" aria-labelledby="accordion-title-1">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor eros dui, vitae iaculis leo ornare eget. Etiam tristique lobortis ligula non mattis. Ut dapibus libero neque, vel tincidunt nunc tempus eget.</p>
         </div>
       </div>
-      <div class="accordion__item">
-        <button class="accordion__toggle" aria-controls="content-2" aria-expanded="false" id="accordion-title-2">Title 2</button>
-        <div class="accordion__content" role="region" aria-hidden="true" id="content-2" aria-labelledby="accordion-title-2">
+      <div class="uq-accordion__item">
+        <button class="uq-accordion__toggle" aria-controls="content-2" aria-expanded="false" id="accordion-title-2">Title 2</button>
+        <div class="uq-accordion__content" role="region" aria-hidden="true" id="content-2" aria-labelledby="accordion-title-2">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor eros dui, vitae iaculis leo ornare eget. Etiam tristique lobortis ligula non mattis. Ut dapibus libero neque, vel tincidunt nunc tempus eget.</p>
         </div>
       </div>
-      <div class="accordion__item">
-        <button class="accordion__toggle" aria-controls="content-3" aria-expanded="false" id="accordion-title-3">Title 3</button>
-        <div class="accordion__content" role="region" aria-hidden="true" id="content-3" aria-labelledby="accordion-title-3">
+      <div class="uq-accordion__item">
+        <button class="uq-accordion__toggle" aria-controls="content-3" aria-expanded="false" id="accordion-title-3">Title 3</button>
+        <div class="uq-accordion__content" role="region" aria-hidden="true" id="content-3" aria-labelledby="accordion-title-3">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor eros dui, vitae iaculis leo ornare eget. Etiam tristique lobortis ligula non mattis. Ut dapibus libero neque, vel tincidunt nunc tempus eget.</p>
 
           <p>Maecenas faucibus mollis interdum. Etiam porta sem malesuada magna mollis euismod. Maecenas sed diam eget risus varius blandit sit amet non magna. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Nullam quis risus eget urna mollis ornare vel eu leo. Donec sed odio dui.</p>
@@ -62,22 +62,22 @@ usingDivs.storyName = 'Using divs';
 
 export const usingLists = () => {
   return `
-    <ul class="accordion" aria-label="Accordion button group" role="presentation">
-      <li class="accordion__item">
-        <button class="accordion__toggle" aria-controls="content-11" aria-expanded="false" id="accordion-title-11">Title 1</button>
-        <div class="accordion__content" role="region" aria-hidden="true" id="content-11" aria-labelledby="accordion-title-11">
+    <ul class="uq-accordion" aria-label="Accordion button group" role="presentation">
+      <li class="uq-accordion__item">
+        <button class="uq-accordion__toggle" aria-controls="content-11" aria-expanded="false" id="accordion-title-11">Title 1</button>
+        <div class="uq-accordion__content" role="region" aria-hidden="true" id="content-11" aria-labelledby="accordion-title-11">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor eros dui, vitae iaculis leo ornare eget. Etiam tristique lobortis ligula non mattis. Ut dapibus libero neque, vel tincidunt nunc tempus eget.</p>
         </div>
       </li>
-      <li class="accordion__item">
-        <button class="accordion__toggle" aria-controls="content-22" aria-expanded="false" id="accordion-title-22">Title 2</button>
-        <div class="accordion__content" role="region" aria-hidden="true" id="content-22" aria-labelledby="accordion-title-22">
+      <li class="uq-accordion__item">
+        <button class="uq-accordion__toggle" aria-controls="content-22" aria-expanded="false" id="accordion-title-22">Title 2</button>
+        <div class="uq-accordion__content" role="region" aria-hidden="true" id="content-22" aria-labelledby="accordion-title-22">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor eros dui, vitae iaculis leo ornare eget. Etiam tristique lobortis ligula non mattis. Ut dapibus libero neque, vel tincidunt nunc tempus eget.</p>
         </div>
       </li>
-      <li class="accordion__item">
-        <button class="accordion__toggle" aria-controls="content-33" aria-expanded="false" id="accordion-title-33">Title 3</button>
-        <div class="accordion__content" role="region" aria-hidden="true" id="content-33" aria-labelledby="accordion-title-33">
+      <li class="uq-accordion__item">
+        <button class="uq-accordion__toggle" aria-controls="content-33" aria-expanded="false" id="accordion-title-33">Title 3</button>
+        <div class="uq-accordion__content" role="region" aria-hidden="true" id="content-33" aria-labelledby="accordion-title-33">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor eros dui, vitae iaculis leo ornare eget. Etiam <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor eros dui, vitae iaculis leo ornare eget. Etiam tristique lobortis ligula non mattis. Ut dapibus libero neque, vel tincidunt nunc tempus eget.</p>
 
           <p>Maecenas faucibus mollis interdum. Etiam porta sem malesuada magna mollis euismod. Maecenas sed diam eget risus varius blandit sit amet non magna. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Nullam quis risus eget urna mollis ornare vel eu leo. Donec sed odio dui.</p>
@@ -97,22 +97,22 @@ usingLists.storyName = 'Using lists';
 
 export const shaded = () => {
   return `
-    <div class="accordion accordion--shaded" aria-label="Accordion button group" role="presentation">
-      <div class="accordion__item">
-        <button class="accordion__toggle" aria-controls="content-111" aria-expanded="false" id="accordion-title-111">Title 1</button>
-        <div class="accordion__content" role="region" aria-hidden="true" id="content-111" aria-labelledby="accordion-title-111">
+    <div class="uq-accordion uq-accordion--shaded" aria-label="Accordion button group" role="presentation">
+      <div class="uq-accordion__item">
+        <button class="uq-accordion__toggle" aria-controls="content-111" aria-expanded="false" id="accordion-title-111">Title 1</button>
+        <div class="uq-accordion__content" role="region" aria-hidden="true" id="content-111" aria-labelledby="accordion-title-111">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor eros dui, vitae iaculis leo ornare eget. Etiam tristique lobortis ligula non mattis. Ut dapibus libero neque, vel tincidunt nunc tempus eget.</p>
         </div>
       </div>
-      <div class="accordion__item">
-        <button class="accordion__toggle" aria-controls="content-222" aria-expanded="false" id="accordion-title-222">Title 2</button>
-        <div class="accordion__content" role="region" aria-hidden="true" id="content-222" aria-labelledby="accordion-title-222">
+      <div class="uq-accordion__item">
+        <button class="uq-accordion__toggle" aria-controls="content-222" aria-expanded="false" id="accordion-title-222">Title 2</button>
+        <div class="uq-accordion__content" role="region" aria-hidden="true" id="content-222" aria-labelledby="accordion-title-222">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor eros dui, vitae iaculis leo ornare eget. Etiam tristique lobortis ligula non mattis. Ut dapibus libero neque, vel tincidunt nunc tempus eget.</p>
         </div>
       </div>
-      <div class="accordion__item">
-        <button class="accordion__toggle" aria-controls="content-333" aria-expanded="false" id="accordion-title-333">Title 3</button>
-        <div class="accordion__content" role="region" aria-hidden="true" id="content-333" aria-labelledby="accordion-title-333">
+      <div class="uq-accordion__item">
+        <button class="uq-accordion__toggle" aria-controls="content-333" aria-expanded="false" id="accordion-title-333">Title 3</button>
+        <div class="uq-accordion__content" role="region" aria-hidden="true" id="content-333" aria-labelledby="accordion-title-333">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor eros dui, vitae iaculis leo ornare eget. Etiam tristique lobortis ligula non mattis. Ut dapibus libero neque, vel tincidunt nunc tempus eget.</p>
         </div>
       </div>
@@ -122,22 +122,22 @@ export const shaded = () => {
 
 export const smallTitle = () => {
   return `
-    <div class="accordion accordion--secondary" aria-label="Accordion button group" role="presentation">
-      <div class="accordion__item">
-        <button class="accordion__toggle" aria-controls="content-1111" aria-expanded="false" id="accordion-title-1111">Title 1</button>
-        <div class="accordion__content" role="region" aria-hidden="true" id="content-1111" aria-labelledby="accordion-title-1111">
+    <div class="uq-accordion uq-accordion--secondary" aria-label="Accordion button group" role="presentation">
+      <div class="uq-accordion__item">
+        <button class="uq-accordion__toggle" aria-controls="content-1111" aria-expanded="false" id="accordion-title-1111">Title 1</button>
+        <div class="uq-accordion__content" role="region" aria-hidden="true" id="content-1111" aria-labelledby="accordion-title-1111">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor eros dui, vitae iaculis leo ornare eget. Etiam tristique lobortis ligula non mattis. Ut dapibus libero neque, vel tincidunt nunc tempus eget.</p>
         </div>
       </div>
-      <div class="accordion__item">
-        <button class="accordion__toggle" aria-controls="content-2222" aria-expanded="false" id="accordion-title-2222">Title 2</button>
-        <div class="accordion__content" role="region" aria-hidden="true" id="content-2222" aria-labelledby="accordion-title-2222">
+      <div class="uq-accordion__item">
+        <button class="uq-accordion__toggle" aria-controls="content-2222" aria-expanded="false" id="accordion-title-2222">Title 2</button>
+        <div class="uq-accordion__content" role="region" aria-hidden="true" id="content-2222" aria-labelledby="accordion-title-2222">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor eros dui, vitae iaculis leo ornare eget. Etiam tristique lobortis ligula non mattis. Ut dapibus libero neque, vel tincidunt nunc tempus eget.</p>
         </div>
       </div>
-      <div class="accordion__item">
-        <button class="accordion__toggle" aria-controls="content-3333" aria-expanded="false" id="accordion-title-3333">Title 3</button>
-        <div class="accordion__content" role="region" aria-hidden="true" id="content-3333" aria-labelledby="accordion-title-3333">
+      <div class="uq-accordion__item">
+        <button class="uq-accordion__toggle" aria-controls="content-3333" aria-expanded="false" id="accordion-title-3333">Title 3</button>
+        <div class="uq-accordion__content" role="region" aria-hidden="true" id="content-3333" aria-labelledby="accordion-title-3333">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor eros dui, vitae iaculis leo ornare eget. Etiam tristique lobortis ligula non mattis. Ut dapibus libero neque, vel tincidunt nunc tempus eget.</p>
         </div>
       </div>

@@ -34,6 +34,7 @@ export default {
     docs: {
       page: docs
     },
+    layout: "padded",
     previewTabs: {
       canvas: {hidden: false}
     }
@@ -42,10 +43,18 @@ export default {
 
 export const icon = () => {
   return iconsByCat.categories.reduce((acc, category) => {
-    return acc + `<h2><code>${category[0]}</code></h2>\n`
+    return acc + `<h3>${category[0]}</h3>\n<div class="uqds-icon-list">`
       + iconsByCat.icons.slice(category[1], category[2] + 1)
         .reduce((acc, icon) => {
-          return acc + `<span class="uq-icon uq-icon--${category[0]}--${icon}"></span>\n`;
-        }, '');
+          return acc + `<div class="uqds-icon-list__item">
+              <div class="uqds-icon-list__item__icon">
+                <span class="uq-icon uq-icon--${category[0]}--${icon}"></span>
+              </div>
+              <div class="uqds-icon-list__item__label">
+                <small>${icon}</small>
+              </div>
+            </div>\n`;
+        }, '')
+      + '</div>';
   }, '');
 };

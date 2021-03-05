@@ -29,7 +29,7 @@ const svgSassFn = `
     @return $string;
   }
 
-  @function get-icon($icon, $color: #51247a) {
+  @function get-icon($icon, $color: #000) {
     @if type-of($color) != 'color' and $color != 'none' {
       @warn 'The requested color - "' + $color + '" - was not recognized as a Sass color value.';
       @return null;

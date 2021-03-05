@@ -1,1 +1,31 @@
-@import '@uqds/icon/src/scss/_component';
+@use '@uqds/core/src/scss/_global' as core;
+@use '@uqds/icon/src/scss/_component' as icon;
+
+.uqds-icon-list {
+  display: grid;
+  grid-gap: core.$space;
+  grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+
+  &__item {
+    border-radius: 8px;
+    padding: core.$space;
+    text-align: center;
+    background-color: core.$uq-neutral-light20;
+
+    &__icon {
+      margin-bottom: core.$space;
+      
+      .uq-icon {
+        height: 2rem;
+        width: 2rem;
+      }
+    }
+
+    &__label {
+      border-top: 1px solid core.$uq-neutral;
+      padding-top: core.$space;
+      color: core.$uq-neutral-dark40;
+      line-height: 1;
+    }
+  }
+}

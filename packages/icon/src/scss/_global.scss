@@ -3,15 +3,14 @@
 @use "@uqds/core/src/scss/global" as core;
 @use '_build/icons' as *;
 
-$icon-light-color: core.$uq-white;
-$icon-default-color: core.$uq-purple;
-$icon-dark-color: core.$text;
-$icon-link-color: core.$link;
+$icon-primary-filter: core.$filter-primary;
+$icon-light-filter: core.$filter-white;
+$icon-text-filter: core.$filter-text;
 
 @mixin icon($name) {
   .uq-icon--#{$name} {
-    background-image: url(get-icon(#{$name}, $icon-default-color));
+    &::before {
+      background-image: url(get-icon(#{$name}));
+    }
   }
 }
-
-// default colour variants here (using filters like uq-cms-styleguide)

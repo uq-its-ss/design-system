@@ -2,7 +2,7 @@
 @use 'global' as *;
 
 // Tabs
-.tabs {
+.uq-tabs {
 
   *, *:before, *:after {
     box-sizing: border-box;
@@ -104,12 +104,12 @@
   }
 
   // Default / Outline variant
-  &.tabs--outline {
-    .tabs__tab-list {
+  &.uq-tabs--outline {
+    .uq-tabs__tab-list {
       border-bottom: 1px solid $tab-border-color;
     }
 
-    .tabs__tab {
+    .uq-tabs__tab {
       background-color: core.$uq-white;
       border: 1px solid $tab-border-color;
       margin-bottom: -1px;
@@ -137,12 +137,12 @@
   }
 
   // Lined variant
-  &.tabs--lined {
-    .tabs__tab-list {
+  &.uq-tabs--lined {
+    .uq-tabs__tab-list {
       border-bottom: 1px solid $tab-border-color;
     }
 
-    .tabs__tab {
+    .uq-tabs__tab {
 
       &--active {
         background-color: core.$uq-white;
@@ -162,22 +162,22 @@
   }
 
   // Full width variant
-  &.tabs--full-width {
-    .tabs__tab {
+  &.uq-tabs--full-width {
+    .uq-tabs__tab {
       flex: 1 1 auto;
     }
   }
 
   // Small variant
-  &.tabs--small {
-    .tabs__tab {
+  &.uq-tabs--small {
+    .uq-tabs__tab {
       padding: core.$space-sm core.$space;
 
       @media #{core.$screen-md-up} {
         padding: core.$space core.$space-md;
       }
     }
-    .tabs__tab-panel {
+    .uq-tabs__tab-panel {
       padding: core.$space-sm core.$space;
   
       @media #{core.$screen-md-up} {
@@ -187,14 +187,14 @@
   }
 
   // Reversed variant
-  &.tabs--reversed {
+  &.uq-tabs--reversed {
     // Tab list
-    .tabs__tab-list {
+    .uq-tabs__tab-list {
       flex-flow: row-reverse nowrap
     }
 
     // Tab Link
-    .tabs__link {
+    .uq-tabs__link {
       @media #{core.$screen-md-up} {
         margin-left: 0;
         margin-right: auto;
@@ -202,7 +202,7 @@
     }
 
     // Tab
-    .tabs__tab {
+    .uq-tabs__tab {
       margin-right: core.$space-none;
       margin-left: core.$space-xs;
 

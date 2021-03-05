@@ -35,11 +35,11 @@ export class Tabs {
 
     // Define selectors for working elements
     this.tabListSelector = options?.tabListSelector ?
-      options.tabListSelector : '.tabs__tab-list';
+      options.tabListSelector : '.uq-tabs__tab-list';
     this.tabSelector = options?.tabSelector ?
-      options.tabSelector : '.tabs__tab';
+      options.tabSelector : '.uq-tabs__tab';
     this.tabPanelSelector = options?.tabPanelSelector ?
-      options.tabPanelSelector : '.tabs__tab-panel';
+      options.tabPanelSelector : '.uq-tabs__tab-panel';
 
     // Bind handler method context
     this.clickEventHandler = this.clickEventHandler.bind(this);
@@ -246,7 +246,7 @@ export class Tabs {
     tab.removeAttribute('tabindex');
 
     // Add class active
-    tab.classList.add('tabs__tab--active');
+    tab.classList.add('uq-tabs__tab--active');
 
     // Set the tab as selected
     tab.setAttribute('aria-selected', 'true');
@@ -271,7 +271,7 @@ export class Tabs {
     for (let t = 0; t < this.tabs.length; t++) {
       this.tabs[t].setAttribute('tabindex', '-1');
       this.tabs[t].setAttribute('aria-selected', 'false');
-      this.tabs[t].classList.remove('tabs__tab--active');
+      this.tabs[t].classList.remove('uq-tabs__tab--active');
       this.tabs[t].removeEventListener('focus', this.focusEventHandler);
     };
 

@@ -14,7 +14,6 @@
     box-sizing: border-box;
   }
 
-  > li,
   &__item {
     margin-bottom: core.$space-none;
   }
@@ -34,7 +33,6 @@
     @include grid-menu-4-column;
   }
 
-  a,
   &__link {
     border-bottom: 1px solid $linked-list-border; //#eee
     color: $linked-list-color;
@@ -69,7 +67,6 @@
         right: 0.5rem;
       }
 
-      a,
       .uq-grid-menu__link,
       .uq-grid-menu__description {
         color: $linked-list-color-hover;
@@ -104,7 +101,6 @@
 
   // Dark text variant.
   &--dark-text {
-    a,
     .uq-grid-menu__link {
       color: core.$dark-palette-color;
     }
@@ -118,7 +114,6 @@
 // Palettes applied to section wrapping grid-menu.
 .light-palette {
   .uq-grid-menu {
-    a,
     .uq-grid-menu__link,
     .uq-grid-menu__description {
       @extend %light-palette;
@@ -138,7 +133,6 @@
 
 .dark-palette {
   .uq-grid-menu {
-    a,
     .uq-grid-menu__link,
     .uq-grid-menu__description {
       @extend %dark-palette;
@@ -159,7 +153,6 @@
 // Grid menu inside a section with background image.
 .section--background-image {
   .uq-grid-menu {
-    a, 
     .uq-grid-menu__link {
       border-color: rgba(core.$uq-white, .4);
     }

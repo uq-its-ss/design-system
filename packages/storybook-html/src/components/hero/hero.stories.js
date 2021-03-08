@@ -37,7 +37,7 @@ DefaultHero.storyName = 'Default hero';
 
 export const FeatureHero = () => {
   return `
-  <div class="uq-hero uq-hero--feature-image">  
+<div class="uq-hero uq-hero--feature-image">  
   <div class="uq-hero__image">
     <div class="uq-hero__image--small">
       <img src="/images/hero/hero_example--small.jpg" />

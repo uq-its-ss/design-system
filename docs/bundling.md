@@ -8,7 +8,7 @@
 
 [Read the docs](/packages/private-design-output/README.md)
 
-## Released bundler packages
+## Released bundle packages (coming soon)
 
 These packages allow developers & designers to consume versioned bundles from
 the UQDS package registry as single imports (Sass (SCSS) & Javascript modules).
@@ -23,4 +23,4 @@ the UQDS package registry as single imports (Sass (SCSS) & Javascript modules).
 
 > Only the essentials.
 
-[Read the docs](/packages/all/README.md)
+[Read the docs](/packages/basic/README.md)

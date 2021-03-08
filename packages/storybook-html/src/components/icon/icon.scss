@@ -1,31 +1,52 @@
 @use '@uqds/core/src/scss/_global' as core;
+@use '@uqds/icon/src/scss/_global' as icon-constants;
 @use '@uqds/icon/src/scss/_component' as icon;
 
-.uqds-icon-list {
-  display: grid;
-  grid-gap: core.$space;
-  grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+.uqds-icon {
+  &-list {
+    display: grid;
+    grid-gap: core.$space;
+    grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
 
-  &__item {
-    border-radius: 8px;
-    padding: core.$space;
-    text-align: center;
-    background-color: core.$uq-neutral-light20;
+    &__item {
+      border-radius: 8px;
+      padding: core.$space;
+      text-align: center;
+      background-color: core.$uq-neutral-light20;
 
-    &__icon {
-      margin-bottom: core.$space;
-      
-      .uq-icon {
-        height: 2rem;
-        width: 2rem;
+      &__icon {
+        margin-bottom: core.$space;
+        
+        .uq-icon {
+          height: 2rem;
+          width: 2rem;
+        }
+      }
+
+      &__label {
+        border-top: 1px solid core.$uq-neutral;
+        padding-top: core.$space;
+        color: core.$uq-neutral-dark40;
+        line-height: 1;
       }
     }
+  }
 
-    &__label {
-      border-top: 1px solid core.$uq-neutral;
-      padding-top: core.$space;
-      color: core.$uq-neutral-dark40;
-      line-height: 1;
+  &--green-example {
+    display: inline-block;
+    height: 1.5rem;
+    width: 1.5rem;
+    vertical-align: middle;
+
+    &::before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 100%;
+      background-image: url(icon-constants.get-icon('agriculture-and-environment--agriculture-machine-tractor', core.$uq-green));
     }
   }
 }

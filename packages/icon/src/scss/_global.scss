@@ -7,6 +7,39 @@ $icon-primary-filter: core.$filter-primary;
 $icon-light-filter: core.$filter-white;
 $icon-text-filter: core.$filter-text;
 
+@mixin icon-base() {
+  .uq-icon {
+    display: inline-block;
+    height: 1.5rem;
+    width: 1.5rem;
+    vertical-align: middle;
+
+    &::before {
+      content: '';
+      display: block;
+      filter: $icon-primary-filter;
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 100%;
+    }
+
+    // Colour variants
+    &--light {
+      &::before {
+        filter: $icon-light-filter;
+      }
+    }
+  
+    &--text {
+      &::before {
+        filter: $icon-text-filter;
+      }
+    }
+  }
+}
+
 @mixin icon($name) {
   .uq-icon--#{$name} {
     &::before {

@@ -4,11 +4,12 @@ import StatusBadge from '../../../.storybook/custom/components/StatusBadge';
 <Meta title="Components/Hero/All" />
 
 # Hero
-<StatusBadge.Development />
+
+<StatusBadge.Development /><StatusBadge.DraftDoc />
 
 ### Default hero
 
-<Canvas withSource="none">
+<Canvas withSource="none" withToolbar>
   <Story id="components-hero--default-hero" height={505} />
 </Canvas>
 
@@ -24,7 +25,7 @@ import StatusBadge from '../../../.storybook/custom/components/StatusBadge';
 
 ### Feature image hero
 
-<Canvas withSource="none">
+<Canvas withSource="none" withToolbar>
   <Story id="components-hero--feature-hero" height={505} />
 </Canvas>
 

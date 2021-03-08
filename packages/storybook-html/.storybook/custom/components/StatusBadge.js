@@ -2,25 +2,33 @@ import React from 'react';
 import './StatusBadge.scss';
 
 const variants = {
-  experiment: {
-    label: "Experimental candidate",
-    title: "This is an experimental feature — use with caution, support may be limited"
-  },
   development: {
-    label: "In development",
-    title: "This feature is under development — breaking changes may occur"
-  },
-  stable: {
-    label: "Stable",
-    title: "This feature is stable — any changes will be bug fixes or enhancements"
+    label: "Component - In development ",
+    title: "The component is in development and should not be used yet"
   },
   review: {
-    label: "Under review",
-    title: "This feature is under review — may be deprecated or redesigned in the future"
+    label: "Component - Under review",
+    title: "The component is under review and will likely change"
+  },
+  stable: {
+    label: "Component - Stable",
+    title: "The component is stable and ready for use"
   },
   deprecated: {
-    label: "Deprecated",
-    title: "Deprecated — no longer supported and will be removed in the future"
+    label: "Component - Deprecated",
+    title: "The component is either replaced by a new component or no longer supported and will be removed in the next major version"
+  },
+  draftDoc: {
+    label: "Documentation - Draft",
+    title: "Documentation of component is in progress and will most likely change"
+  },
+  reviewDoc: {
+    label: "Documentation - Under review",
+    title: "Documentation of component is under review and will likely change"
+  },
+  stableDoc: {
+    label: "Documentation - Stable",
+    title: "Documentation of component is complete and ready for reference"
   }
 };
 
@@ -33,11 +41,16 @@ const StatusBadge = ({variant, showRoadmapLink}) => {
   );
 };
 
-StatusBadge.Experiment = ({variant, ...props}) => <StatusBadge variant="experiment" {...props} />;
+// Status tags for the component
 StatusBadge.Development = ({variant, ...props}) => <StatusBadge variant="development" {...props} />;
 StatusBadge.Stable = ({variant, ...props}) => <StatusBadge variant="stable" {...props} />;
 StatusBadge.Review = ({variant, ...props}) => <StatusBadge variant="review" {...props} />;
 StatusBadge.Deprecated = ({variant, ...props}) => <StatusBadge variant="deprecated" {...props} />;
+
+// Status tags for the component documentation
+StatusBadge.DraftDoc = ({variant, ...props}) => <StatusBadge variant="draftDoc" {...props} />;
+StatusBadge.ReviewDoc = ({variant, ...props}) => <StatusBadge variant="reviewDoc" {...props} />;
+StatusBadge.StableDoc = ({variant, ...props}) => <StatusBadge variant="stableDoc" {...props} />;
 
 StatusBadge.displayName = "StatusBadge";
 

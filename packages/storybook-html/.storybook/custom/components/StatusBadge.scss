@@ -3,6 +3,7 @@
 .uqds-status-badge {
   box-sizing: border-box;
   border-radius: 9999px;
+  border: 2px solid transparent;
   color: core.$text;
   cursor: help;
   display: inline-block;
@@ -14,6 +15,21 @@
   padding: core.$space-sm core.$space;
   vertical-align: baseline;
 
+  // Status tags for Documentation
+  &--draftDoc {
+    border: 2px solid core.$danger-color;
+    background-color: transparent;
+  }
+  &--reviewDoc {
+    border: 2px solid core.$warning-color;
+    background-color: transparent;
+  }
+  &--stableDoc {
+    border: 2px solid core.$success-color;
+    background-color: transparent;
+  }
+
+  // Status tags for components
   &--stable {
     background-color: core.$success-color;
   }

@@ -7,7 +7,7 @@ import docs from './accordion.docs.mdx';
 import '@uqds/accordion/src/scss/_component.scss';
 
 // import scripts
-import accordion from '@uqds/accordion/src/js/accordion.es6';
+import accordion from '@uqds/accordion/src/js/accordion';
 
 export default {
   title: 'Components/Accordion',

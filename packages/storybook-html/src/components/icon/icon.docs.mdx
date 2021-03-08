@@ -10,10 +10,10 @@ import StatusBadge from '../../../.storybook/custom/components/StatusBadge';
 
 ## Usage
 
-⚠️ Before using the SCSS `_component.scss` file to load the icons, I would first
-consider whether or not you need the entire list of icons for your application.
-If you're using the Sass modules, you'll have the option to be leaner when
-importing the icons you need via mixins.
+> ⚠️ Before using the SCSS `_component.scss` file to load the icons, I would
+> first consider whether or not you need the entire list of icons for your
+> application. If you're using the Sass modules, you'll have the option to be
+> leaner when importing the icons you need via mixins.
 
 ### CSS classes
 
@@ -42,8 +42,8 @@ categories and icons.
 
 ### Sass mixins and functions
 
-To include _just_ the icons that you need (and therefore, reduce file size), you
-can use the mixins and function provided.
+To include _just the icons that you need_ (and therefore, reduce file size), we
+provide mixins and a "get" function.
 
 #### Generate specific icon classes using mixins
 
@@ -60,27 +60,27 @@ can use the mixins and function provided.
 
 You can now use the CSS class in your HTML markup as previously described.
 
-#### Import the icon data into your own CSS class
+#### `get-icon($icon[, $color])`
 
+Get the data URL for a specific icon (and optional set a color for fills and
+strokes).
 
+##### Returns
+URL encoded string.
 
----
-
-##### `get-icon($icon, $color)` function
+##### Parameters
 
 | Name | Type | Attributes | Default | Description |
 | - | - | - | - | - |
-| `$icon` | string | Required | N/A | String format: `{category-name}--{icon-name}` |
+| `$icon` | string | Required | N/A | String format: `{category-name}--{icon-name}`, e.g. `science-and-mathematics--lab-tubes` |
 | `$color` | [Sass colour value](https://sass-lang.com/documentation/values/colors) | Optional | #000 | Setting this will apply a colour value to the returned SVG data string.
-
----
 
 ```scss
 // example.scss
 @use "@uqds/icon/src/scss/global" as icon-constants;
 
 .your-class {
-  background-image: url(get-icon("agriculture-and-environment--agriculture-machine-tractor"));
+  background-image: url(icon-constants.get-icon("agriculture-and-environment--agriculture-machine-tractor"));
 }
 ```
 
@@ -102,7 +102,8 @@ Here's an example using the `$color` parameter.
 
 ### SVG files
 
-You can find a set of normalised and optimised SVG in the `dist/images` folder.
+You can find a set of normalised & optimised SVG files in the `dist/images`
+folder.
 
 ## Javascript reference
 

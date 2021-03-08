@@ -4,7 +4,7 @@
 // Tabs
 .uq-tabs {
 
-  *, *:before, *:after {
+  *, *::before, *::after {
     box-sizing: border-box;
   }
 
@@ -67,7 +67,7 @@
       background-color: core.$uq-white;
       font-weight: core.$font-weight-bold;
 
-      &:before {
+      &::before {
         position: absolute;
         bottom: -1px;
         left: 0;
@@ -129,7 +129,7 @@
           background-color: core.$uq-white;
         }
 
-        &:before {
+        &::before {
           display: block;
         }
       }
@@ -153,7 +153,7 @@
           background-color: core.$uq-white;
         }
 
-        &:before {
+        &::before {
           background-color: core.$uq-purple;
           display: block;
         }

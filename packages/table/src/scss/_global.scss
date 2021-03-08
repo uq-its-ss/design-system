@@ -41,7 +41,7 @@
     color: core.$uq-neutral-dark80;
     list-style: none;
 
-    *, *:before, *:after {
+    *, *::before, *::after {
         box-sizing: border-box;
     }
 }

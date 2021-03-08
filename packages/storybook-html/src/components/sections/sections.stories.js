@@ -176,7 +176,7 @@ sectionsLightTint.storyName = 'Sections light tint';
 
 export const sectionsDarkTint = () => {
   return `
-<div class="section section--centered section--background-image section--dark-tint section--light-text light-palette" style="background-image: url('/images/uq-image-01.jpeg') ;">
+<div class="section section--centered section--background-image section--dark-tint section--light-text light-palette" style="background-image: url('/images/uq-image-01.jpeg');">
   <div class="section__container">
     <div class="section__header">
       <h2 class="section__title">Section title</h2>

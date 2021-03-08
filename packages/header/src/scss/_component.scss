@@ -11,7 +11,7 @@
     font-weight: core.$font-weight-thin;
     line-height: core.$line-height;
 
-    *, *:before, *:after {
+    *, *::before, *::after {
         box-sizing: border-box;
     }
 

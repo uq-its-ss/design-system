@@ -82,7 +82,7 @@ table,
     .uq-table__cell {
       padding: core.$space-sm core.$space;
 
-      &:before {
+      &::before {
         content: attr(data-title);
         color: core.$uq-purple;
         font-weight: core.$font-weight-bold;

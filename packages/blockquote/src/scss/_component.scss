@@ -1,5 +1,4 @@
 @use "@uqds/core/src/scss/global" as core;
-//@use 'global' as *;
 
 $image-path: '../images' !default;
 
@@ -20,7 +19,7 @@ $image-path: '../images' !default;
 		left: 0;
 		position: absolute;
 		top: 0;
-		width: 5px;
+		width: core.$space-xs;
 	}
 
 	&--light {
@@ -66,15 +65,15 @@ $image-path: '../images' !default;
 		&::before {
 			content: '';
 			height: calc(100% - 60px);
-			left: 30px;
+			left: core.$space-lg;
 			position: absolute;
-			top: 30px;
-			width: 5px;
+			top: core.$space-lg;
+			width: core.$space-xs;
 		}
 		&.blockquote--quotemark::before {
-			left: 10px;
+			left: core.$space-sm;
 			position: absolute;
-			top: 40px;
+			top: core.$space-xl;
 		}
 	}
 
@@ -83,24 +82,25 @@ $image-path: '../images' !default;
 		&::before {
 			background-color: transparent;
 			background-image: url('#{$image-path}/icon-open-doublequote-light.svg');
-			background-size: cover;
+			background-size: contain;
+			background-repeat: no-repeat;
 			display: inline-block;
 			fill: core.$uq-black;
-			height: 28px;
-			left: -20px;
+			height: core.$space-lg;
+			left: -(core.$space);
 			position: absolute;
 			stroke: core.$uq-black;
 			stroke-width: 0;
-			top: 0px;
-			width: 34px;
+			top: 0;
+			width: core.$space-lg;
 		}
 	}
 
 	&__body {
 		font-family: 'Merriweather', serif;
-		font-size: 1.2rem;
+		font-size: core.$font-size-xl;
 		font-weight: 300;
-		line-height: 1.5;
+		line-height: 1.4;
 
 		p:first-child {
 			margin-top: 0;
@@ -108,7 +108,7 @@ $image-path: '../images' !default;
 	}
 
 	&__footer {
-		font-size: 0.875rem;
+		font-size: core.$font-size-s;
 
 		p:last-child {
 			margin-bottom: 0;

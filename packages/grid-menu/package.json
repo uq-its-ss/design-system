@@ -21,18 +21,14 @@
   "license": "ISC",
   "main": "lib/grid-menu.js",
   "directories": {
-    "lib": "lib"
+    "lib": "src"
   },
   "files": [
-    "lib/*",
     "src/*"
   ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/uq-its-ss/design-system.git"
-  },
-  "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "bugs": {
     "url": "https://github.com/uq-its-ss/design-system/issues"

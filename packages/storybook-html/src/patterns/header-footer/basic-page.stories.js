@@ -1,8 +1,8 @@
 import { useEffect } from '@storybook/client-api';
 
 // import scripts
-import headerCreate from '@uqds/header/src/js/header.es6';
-import siteHeaderNav from '@uqds/site-header/src/js/site-header-navigation.es6';
+import headerCreate from '@uqds/header/src/js/header';
+import siteHeaderNav from '@uqds/site-header/src/js/site-header-navigation';
 
 // import HTML template strings
 import headerHTML from '../../components/header/header.html';

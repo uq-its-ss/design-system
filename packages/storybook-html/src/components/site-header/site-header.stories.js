@@ -4,7 +4,7 @@ import { useEffect } from '@storybook/client-api';
 import './site-header.scss';
 
 // import scripts
-import siteHeaderNav from '@uqds/site-header/src/js/site-header-navigation.es6';
+import siteHeaderNav from '@uqds/site-header/src/js/site-header-navigation';
 
 // import HTML template strings
 import siteHeaderHTML from './site-header.html';
@@ -28,7 +28,7 @@ export default {
 export const siteHeader = () => {
   useEffect(() => {
       var navelement = document.getElementById("jsNav");
-      var nav = new siteHeaderNav(navelement, "uq-site-header__navigation");
+      new siteHeaderNav(navelement, "uq-site-header__navigation");
     });
   return siteHeaderHTML;
 };

@@ -21,10 +21,9 @@
   "license": "ISC",
   "main": "lib/accordion.js",
   "directories": {
-    "lib": "lib"
+    "lib": "src"
   },
   "files": [
-    "lib/*",
     "src/*"
   ],
   "repository": {

@@ -1,47 +1,39 @@
 {
-    "name": "@uqds/footer",
-    "version": "0.0.0",
-    "description": "The UQ footer component package",
-    "keywords": [
-        "uqds",
-        "uq",
-        "University of Queensland",
-        "design system",
-        "scss",
-        "sass",
-        "css",
-        "footer"
-    ],
-    "author": {
-        "name": "University of Queensland",
-        "email": "webservices@uq.edu.au",
-        "url": "https://uq.edu.au"
-    },
-    "homepage": "https://github.com/uq-its-ss/design-system#readme",
-    "license": "ISC",
-    "directories": {
-        "lib": "lib"
-    },
-    "files": [
-        "lib/*",
-        "src/*"
-    ],
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/uq-its-ss/design-system.git"
-    },
-    "scripts": {
-        "test": "echo \"Error: run tests from root\" && exit 1"
-    },
-    "bugs": {
-        "url": "https://github.com/uq-its-ss/design-system/issues"
-    },
-    "dependencies": {
-        "@uqds/core": "^0.0.0",
-        "@uqds/grid": "^0.0.0"
-    },
-    "peerDependencies": {
-        "@uqds/core": "^0.0.0",
-        "@uqds/grid": "^0.0.0"
-    }
+  "name": "@uqds/footer",
+  "version": "0.0.0",
+  "description": "The UQ footer component package",
+  "keywords": [
+    "uqds",
+    "uq",
+    "University of Queensland",
+    "design system",
+    "scss",
+    "sass",
+    "css",
+    "footer"
+  ],
+  "author": {
+    "name": "University of Queensland",
+    "email": "webservices@uq.edu.au",
+    "url": "https://uq.edu.au"
+  },
+  "homepage": "https://github.com/uq-its-ss/design-system#readme",
+  "license": "ISC",
+  "directories": {
+    "lib": "src"
+  },
+  "files": [
+    "src/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uq-its-ss/design-system.git"
+  },
+  "bugs": {
+    "url": "https://github.com/uq-its-ss/design-system/issues"
+  },
+  "dependencies": {
+    "@uqds/core": "^0.0.0",
+    "@uqds/grid": "^0.0.0"
+  }
 }

@@ -1,4 +1,3 @@
-const CHALK = require('chalk');
 const FS = require('fs').promises;
 const GLOB = require('glob');
 const SVGO = require('svgo/lib/svgo');
@@ -18,9 +17,6 @@ const optimiserConfigPath = './.svgo.yml';
 // Placeholder string using URL safe strings that are unreserved
 const colorPlaceholder = "~~COLOR~~";
 
-// Accumulating string for Sass icons list
-let icons = '$-icons: (\n';
-
 // Define Sass functions to use the icons list
 const svgSassFn = `
   @function -str-replace($string, $search, $replace: '') {
@@ -33,7 +29,7 @@ const svgSassFn = `
     @return $string;
   }
 
-  @function get-icon($icon, $color: #51247a) {
+  @function get-icon($icon, $color: #000) {
     @if type-of($color) != 'color' and $color != 'none' {
       @warn 'The requested color - "' + $color + '" - was not recognized as a Sass color value.';
       @return null;
@@ -63,46 +59,46 @@ const svgSassFn = `
       }).catch(err => {
         
         if (err.code === 'ENOENT') {
-          console.error(CHALK.red(`Error: couldn't find config file '${optimiserConfigPath}'. Optimising with default configuration.`));
+          console.error(`Error: couldn't find config file '${optimiserConfigPath}'. Optimising with default configuration.`);
         } else if (err.code === 'EISDIR') {
-          console.error(CHALK.red(`Error: directory '${optimiserConfigPath}' is not a config file. Optimising with default configuration.`));
+          console.error(`Error: directory '${optimiserConfigPath}' is not a config file. Optimising with default configuration.`);
         }
 
         resolve(new SVGO());
       });
   }).catch(err => {
     // This may be unnecessary as the idea is that the promise doesn't get rejected ever
-    console.error(CHALK.red(`Unable to instantiate optimiser: ${err.name} — ${err.message}`));
+    console.error(`Unable to instantiate optimiser: ${err}`);
   });
 
-  GLOB('./src/images/**/*.svg', async (err, files) => {
-    let svgStringsArr = await Promise.all(files.map((file) => new Promise(async (resolve) => {
-      // Get filename and remove file extension
-      const explode = file.replace('./src/images/', '').split('/'),
-        category = explode[0],
-        filename = explode[explode.length - 1].split('.')[0];
+  GLOB('./src/images/**/*.svg', (err, files) => {
+    (async (err, files) => {
+      let iconArr = await Promise.all(files.map((file) => new Promise(async (resolve) => {
+        // Get filename and remove file extension
+        const explode = file.replace('./src/images/', '').split('/'),
+          category = explode[0],
+          filename = explode[explode.length - 1].split('.')[0];
 
-      // Read file
-      let fileData = await FS.readFile(file, 'utf8')
-        .catch((err) => { throw err; });
-      
-      // Optimise SVGs
-      let svg = await optimiser.optimize(fileData)
-        .catch((err) => { throw err; });
-      
-      // Write to dist
-      const dir = `./dist/images/${category}`;
+        // Read file
+        let fileData = await FS.readFile(file, 'utf8')
+          .catch((err) => { throw err; });
+        
+        // Optimise SVGs
+        let svg = await optimiser.optimize(fileData)
+          .catch((err) => { throw err; });
+        
+        // Write to dist
+        const dir = `./dist/images/${category}`;
 
-      await FS.mkdir(dir, { recursive: true })
-        .catch((err) => { throw err });
+        await FS.mkdir(dir, { recursive: true })
+          .catch((err) => { throw err });
 
-      await FS.writeFile(`${dir}/${filename}.svg`, svg.data)
-        .catch((err) => { throw err });
-      
-      // Create data URI's for Sass module
-      let svgDataURI;
+        await FS.writeFile(`${dir}/${filename}.svg`, svg.data)
+          .catch((err) => { throw err });
+        
+        // Create data URI's for Sass module
+        let svgDataURI;
 
-      if (category == 'ui') {
         /**
          * Trial strategy to implement colour options via Sass functions using a
          * special string placeholder. Ideally we want it to do more than
@@ -134,26 +130,44 @@ const svgSassFn = `
         // Convert data to URI string
         svgDataURI = svgConverter(svg);
 
-        resolve(`  "${category}--${filename}": "${svgDataURI}",\n`);
+        resolve({
+          name: filename,
+          category,
+          svgSassData: svgDataURI
+        });
+      })));
 
-      } else if (category == 'logo') {
-        // Convert data to URI string
-        svgDataURI = svgConverter(svg.data);
+      // Map new array for JS module API
+      const iconArrModule = iconArr.map(({name, category}) => {
+        return {name, category}
+      });
 
-        resolve(`  "${category}--${filename}": "${svgDataURI}",\n`);
-      } else {
-        resolve('');
-      }
-    })));
+      await FS.writeFile('./src/js/_build/_icons.js', `export default ${JSON.stringify(iconArrModule, null, 2)};`)
+        .catch((err) => { throw err });
 
-    for (let i = 0; i < svgStringsArr.length; i++) {
-      icons += svgStringsArr[i];
-    }
+      // Accumulating string for Sass module API
+      let icons = iconArr.reduce((acc, {name, category, svgSassData}) => {
+        return acc + `  "${category}--${name}": "${svgSassData}",\n`
+      }, '$-icons: (\n');
 
-    icons += ');';
+      icons += ');';
 
-    FS.writeFile('./src/scss/_icons.scss', `${icons}\n${svgSassFn}`, (err) => {
-      if (err) throw err;
+      await FS.writeFile('./src/scss/_build/_icons.scss', `${icons}\n${svgSassFn}`)
+        .catch((err) => { throw err });
+
+      // Accumulating string for emitting icons using Sass mixins
+      const iconsMixins = iconArr.reduce((acc, {name, category}) => {
+        return acc + `@include icon('${category}--${name}');\n`
+      }, `@use '../global' as *;\n\n`);
+
+      await FS.writeFile('./src/scss/_build/_icons-emit.scss', `${iconsMixins}`)
+        .catch((err) => { throw err });
+
+    })(err, files).catch(err => {
+      console.error(err);
     });
   });
-})();
+
+})().catch(err => {
+  console.error(err);
+});

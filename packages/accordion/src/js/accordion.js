@@ -1,7 +1,5 @@
 'use strict';
 
-import domready from 'domready';
-
 /**
  * @file
  * UQ Accordion JS (instantiates an object that controls "accordion" nodes for 
@@ -150,7 +148,7 @@ class accordion {
    * @method
    */
   init() {
-    domready(() => {
+    document.addEventListener("DOMContentLoaded" , () => {
       if (window.location.hash) {
         this.hash = window.location.hash;
       }

@@ -20,10 +20,9 @@
   "homepage": "https://github.com/uq-its-ss/design-system#readme",
   "license": "ISC",
   "directories": {
-    "lib": "lib"
+    "lib": "src"
   },
   "files": [
-    "lib/*",
     "src/*"
   ],
   "repository": {

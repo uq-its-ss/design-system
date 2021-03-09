@@ -21,10 +21,9 @@
   "license": "ISC",
   "main": "lib/accordion.js",
   "directories": {
-    "lib": "lib"
+    "lib": "src"
   },
   "files": [
-    "lib/*",
     "src/*"
   ],
   "repository": {
@@ -38,7 +37,6 @@
     "url": "https://github.com/uq-its-ss/design-system/issues"
   },
   "dependencies": {
-    "@uqds/core": "^0.0.0",
-    "domready": "^1.0.8"
+    "@uqds/core": "^0.0.0"
   }
 }

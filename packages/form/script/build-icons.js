@@ -33,7 +33,7 @@ const svgSassFn = `
     @return $string;
   }
 
-  @function get-icon($icon, $color: #51247a) {
+  @function get-icon($icon, $color: #2b2b2b) {
     @if type-of($color) != 'color' and $color != 'none' {
       @warn 'The requested color - "' + $color + '" - was not recognized as a Sass color value.';
       @return null;
@@ -78,8 +78,7 @@ const svgSassFn = `
   GLOB('./src/images/**/*.svg', async (err, files) => {
     let svgStringsArr = await Promise.all(files.map((file) => new Promise(async (resolve) => {
       // Get filename and remove file extension
-      const explode = file.replace('./src/images/', '').split('/'),
-        category = explode[0],
+      const explode = file.replace('src/images/', '').split('/'),
         filename = explode[explode.length - 1].split('.')[0];
 
       // Read file
@@ -91,59 +90,47 @@ const svgSassFn = `
         .catch((err) => { throw err; });
       
       // Write to dist
-      const dir = `./dist/images/${category}`;
+      const dir = './dist/images';
 
       await FS.mkdir(dir, { recursive: true })
         .catch((err) => { throw err });
 
       await FS.writeFile(`${dir}/${filename}.svg`, svg.data)
         .catch((err) => { throw err });
+
+      /**
+       * Create data URI's for Sass module.
+       * Trial strategy to implement colour options via Sass functions using a
+       * special string placeholder. Ideally we want it to do more than
+       * postcss-inline-svg does by design for this monochromatic icon work.
+       * 
+       * Related reading:
+       * https://css-tricks.com/creating-a-maintainable-icon-system-with-sass/
+       * https://www.w3.org/TR/SVG/painting.html#SpecifyingStrokePaint
+       * https://www.w3.org/TR/SVG/painting.html#FillProperty
+       */
+
+      // create canvas (svg root node but also the children)
+      const canvas = SVG(svg.data);
       
-      // Create data URI's for Sass module
-      let svgDataURI;
-
-      if (category == 'ui') {
-        /**
-         * Trial strategy to implement colour options via Sass functions using a
-         * special string placeholder. Ideally we want it to do more than
-         * postcss-inline-svg does by design for monochromatic (UI) icon work.
-         * 
-         * Related reading:
-         * https://css-tricks.com/creating-a-maintainable-icon-system-with-sass/
-         * https://www.w3.org/TR/SVG/painting.html#SpecifyingStrokePaint
-         * https://www.w3.org/TR/SVG/painting.html#FillProperty
-         */
-
-        // create canvas (svg root node but also the children)
-        const canvas = SVG(svg.data);
-        
-        // Apply the fill placeholder to the `<svg>` node except when value is explicitly set to `none`.
-        // Importantly, set the placeholder even if fill attr. wasn't originally set — to override default setting.
-        if (canvas.attr('fill') != 'none') {
-          canvas.attr({
-            fill: colorPlaceholder
-          });
-        }
-
-        svg = canvas.svg();
-
-        // Replace all fill and stroke attributes except when value is explicitly set to `none`.
-        svg = svg.replace(/fill="(?!none")[^"]+"/g, `fill="${colorPlaceholder}"`);
-        svg = svg.replace(/stroke="(?!none")[^"]+"/g, `stroke="${colorPlaceholder}"`);
-
-        // Convert data to URI string
-        svgDataURI = svgConverter(svg);
-
-        resolve(`  "${category}--${filename}": "${svgDataURI}",\n`);
-
-      } else if (category == 'logo') {
-        // Convert data to URI string
-        svgDataURI = svgConverter(svg.data);
-
-        resolve(`  "${category}--${filename}": "${svgDataURI}",\n`);
-      } else {
-        resolve('');
+      // Apply the fill placeholder to the `<svg>` node except when value is explicitly set to `none`.
+      // Importantly, set the placeholder even if fill attr. wasn't originally set — to override default setting.
+      if (canvas.attr('fill') != 'none') {
+        canvas.attr({
+          fill: colorPlaceholder
+        });
       }
+
+      svg = canvas.svg();
+
+      // Replace all fill and stroke attributes except when value is explicitly set to `none`.
+      svg = svg.replace(/fill="(?!none")[^"]+"/g, `fill="${colorPlaceholder}"`);
+      svg = svg.replace(/stroke="(?!none")[^"]+"/g, `stroke="${colorPlaceholder}"`);
+
+      // Convert data to URI string
+      const svgDataURI = svgConverter(svg);
+
+      resolve(`  "${filename}": "${svgDataURI}",\n`);
     })));
 
     for (let i = 0; i < svgStringsArr.length; i++) {

@@ -19,19 +19,23 @@
   },
   "homepage": "https://github.com/uq-its-ss/design-system#readme",
   "license": "ISC",
+  "main": "index.js",
   "directories": {
-    "lib": "lib"
+    "lib": "src"
   },
   "files": [
-    "lib/*",
-    "src/*"
+    "index.js",
+    "dist/*",
+    "src/js/*",
+    "src/scss/*"
   ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/uq-its-ss/design-system.git"
   },
   "scripts": {
-    "generate": "postcss src/css/*.css --base src --dir temp"
+    "build-icons": "node scripts/build-icons.js",
+    "build": "node scripts/build-icons.js"
   },
   "bugs": {
     "url": "https://github.com/uq-its-ss/design-system/issues"
@@ -39,12 +43,12 @@
   "dependencies": {
     "@uqds/core": "^0.0.0"
   },
-  "peerDependencies": {
-    "@uqds/core": "^0.0.0"
-  },
   "devDependencies": {
-    "postcss-cli": "^7.1.1",
-    "postcss-inline-svg": "^4.1.0",
-    "postcss-mixins": "^6.2.3"
+    "@svgdotjs/svg.js": "^3.0.16",
+    "glob": "^7.1.6",
+    "js-yaml": "^3.14.1",
+    "mini-svg-data-uri": "^1.2.3",
+    "svgdom": "^0.1.8",
+    "svgo": "^1.3.2"
   }
 }

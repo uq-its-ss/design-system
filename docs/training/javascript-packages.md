@@ -91,12 +91,6 @@ registry=http://localhost:4873/
 Once this is done, you can install packages as you normally would, e.g.
 `npm i @uqds/accordion`.
 
-## Next steps
-
-If you're comfortable with the above, please refer to 
-[our guide on publishing packages](./docs/development/publishing-packages.md) to
-our registry.
-
 [1]: https://docs.github.com/en/github/getting-started-with-github/fork-a-repo
 [2]: https://docs.npmjs.com/cli/v7/configuring-npm/npmrc
 [3]: https://create-react-app.dev/docs/getting-started/

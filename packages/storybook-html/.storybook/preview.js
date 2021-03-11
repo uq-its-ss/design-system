@@ -32,12 +32,11 @@ export const parameters = {
       order: [
         'Introduction',
         [
-          'Welcome',
-          'Getting started'
+          'Overview',
+          'Get started'
         ],
         'Core',
         [
-          'Introduction',
           'Fonts',
           'Typography',
           'Space',

@@ -15,11 +15,14 @@
       background-color: core.$uq-neutral-light20;
 
       &__icon {
-        margin-bottom: core.$space;
+        margin-bottom: core.$space-sm;
         
         .uq-icon {
-          height: 2rem;
-          width: 2rem;
+          &::before {
+            height: 2rem;
+            width: 2rem;
+            margin: 0;
+          }
         }
       }
 

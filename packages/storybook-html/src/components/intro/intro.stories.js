@@ -24,7 +24,7 @@ export const kitchenSink = () => {
   useEffect(() => {
     new header();
     var navelement = document.getElementById("jsNav");
-    var nav = new siteHeaderNav(navelement, "uq-site-header__navigation");
+    new siteHeaderNav(navelement, "uq-site-header__navigation");
     new accordion();
   });
   return kitchenSinkHTML;

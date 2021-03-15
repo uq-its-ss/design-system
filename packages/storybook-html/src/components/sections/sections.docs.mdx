@@ -16,9 +16,9 @@ Sections are a layout style that wraps content. They provide a header with title
 ## Default Section
 
 ```html
-<div class="section">
-  <div class="section__container">
-    <div class="section__content">
+<div class="uq-section">
+  <div class="uq-section__container">
+    <div class="uq-section__content">
       <!--section content-->
     </div>
   </div>
@@ -27,21 +27,21 @@ Sections are a layout style that wraps content. They provide a header with title
 
 ## Optional content blocks
 
-- **Title** - Optional. `.section__title`
-- **Summary** - Optional. `.section__summary` Short summary text to accompany the section title and give context to the content below.
-- **Footer** - Optional. `.section__footer` Short text that displays below the section content.
+- **Title** - Optional. `.uq-section__title`
+- **Summary** - Optional. `.uq-section__summary` Short summary text to accompany the section title and give context to the content below.
+- **Footer** - Optional. `.uq-section__footer` Short text that displays below the section content.
 
 ```html
-<div class="section">
-  <div class="section__container">
-    <div class="section__header">
-      <h2 class="section__title">Section header title</h2>
-      <p class="section__summary">Section header summary.</p>
+<div class="uq-section">
+  <div class="uq-section__container">
+    <div class="uq-section__header">
+      <h2 class="uq-section__title">Section header title</h2>
+      <p class="uq-section__summary">Section header summary.</p>
     </div>
-    <div class="section__content">
+    <div class="uq-section__content">
       <p>section content.</p>
     </div>
-    <div class="section__footer">section footer.</div>
+    <div class="uq-section__footer">section footer.</div>
   </div>
 </div>
 ```
@@ -53,7 +53,7 @@ Sections are a layout style that wraps content. They provide a header with title
 
 **Single column, centered** - Section header and footer are stacked above and below the section content, and are centered. The section content alignment is not affected by this setting.
 
-Centered layout `section--centered`
+Centered layout `uq-section--centered`
 
 <Canvas withSource="none">
   <Story id="layout-sections--sections-centered" />
@@ -63,7 +63,7 @@ Centered layout `section--centered`
 
 **Two column, left-aligned** - Section header is shifted to the left of the section content and displayed in a 4/8 column arrangement.
 
-horizontal layout `section--horizontal` 
+horizontal layout `uq-section--horizontal` 
 
 <Canvas withSource="none">
   <Story id="layout-sections--sections-horizontal" />
@@ -78,7 +78,7 @@ These settings allow a range of styling to be applied to the section. These incl
 
 **Shaded background** - Applies a light grey background to the section.
 
-Shaded Style `section--shaded` 
+Shaded Style `uq-section--shaded` 
 
 <Canvas withSource="none">
   <Story id="layout-sections--sections-shaded" />
@@ -88,16 +88,16 @@ Shaded Style `section--shaded`
 
 **Background image** - Optional. Applies the chosen image as a background to the section. It will be fitted to fully cover the section so it is recommended that the uploaded image be at least 1920px wide, and as tall as is needed to cover the amount of content in the section.
 
-Background image `section--image-behind`
-Scale background images on the section to always cover `section--background-image`
+Background image `uq-section--image-behind`
+Scale background images on the section to always cover `uq-section--background-image`
 
 <Canvas withSource="none">
   <Story id="layout-sections--sections-background" />
 </Canvas>
 
 ```html
-<div class="section section--image-behind">
-  <div class="section__background"><img src="/images/uq-image-01.jpeg" /></div>
+<div class="uq-section uq-section--image-behind">
+  <div class="uq-section__background"><img src="/images/uq-image-01.jpeg" /></div>
 </div>
 ```
 
@@ -105,11 +105,11 @@ Scale background images on the section to always cover `section--background-imag
 
 **Light tint** - Applies a light tint overlay to the section. As with the dark tint, this works in the opposite way, lightening the background image for better contrast with dark text on top.
 
-Light tint `section--light-tint` 
+Light tint `uq-section--light-tint` 
 
 **Dark text** - Sets the section title, summary, and footer text to dark grey. For use in conjunction with the light tint option.
 
-Dark text `section--dark-text`
+Dark text `uq-section--dark-text`
 
 <Canvas withSource="none">
   <Story id="layout-sections--sections-light-tint" />
@@ -119,11 +119,11 @@ Dark text `section--dark-text`
 
 **Dark tint** - Applies a dark tint overlay to the section. This is for use with a background image so that the background image can be softly muted to allow content on top to display more clearly.
 
-Dark tint `section--dark-tint` 
+Dark tint `uq-section--dark-tint` 
 
 **Light text** - Sets the section title, summary, and footer text to white. For use in conjunction with the dark tint option.
 
-light text `section--light-text`
+light text `uq-section--light-text`
 
 <Canvas withSource="none">
   <Story id="layout-sections--sections-dark-tint" />
@@ -132,17 +132,17 @@ light text `section--light-text`
 ### Spacing
 
 **Top and bottom spacing** - Sets the amount of padding at the top and bottom
-- **No spacing** `section--no-spacing` - removes vertical padding.
-- **Large spacing** `section--large-spacing` - adds large spacing top and bottom.
-- **Double spacing** `section--double-spacing` - alias of `section--large-spacing`
-- **Extra Large spacing** `section--extra-large-spacing` - adds extra large spacing top and bottom.
+- **No spacing** `uq-section--no-spacing` - removes vertical padding.
+- **Large spacing** `uq-section--large-spacing` - adds large spacing top and bottom.
+- **Double spacing** `uq-section--double-spacing` - alias of `uq-section--large-spacing`
+- **Extra Large spacing** `uq-section--extra-large-spacing` - adds extra large spacing top and bottom.
 
 **Top spacing** - Sets the amount of padding at the top of the section.
-- **No spacing top** `section--no-top-spacing` - removes top padding only.
-- **large spacing top** `section--large-top-spacing` - adds large spacing above to show more background image.
-- **Extra large spacing top** `section--extra-large-top-spacing` - adds extra large spacing above.
+- **No spacing top** `uq-section--no-top-spacing` - removes top padding only.
+- **large spacing top** `uq-section--large-top-spacing` - adds large spacing above to show more background image.
+- **Extra large spacing top** `uq-section--extra-large-top-spacing` - adds extra large spacing above.
 
 **Bottom spacing** - Sets the amount of padding at the bottom of the section.
-- **No spacing bottom** `section--no-bottom-spacing` - removes bottom padding only.
-- **large spacing bottom** `section--large-bottom-spacing` - adds large spacing below to show more background image.
-- **Extra large spacing bottom** `section--extra-large-bottom-spacing` - adds extra large spacing below.
+- **No spacing bottom** `uq-section--no-bottom-spacing` - removes bottom padding only.
+- **large spacing bottom** `uq-section--large-bottom-spacing` - adds large spacing below to show more background image.
+- **Extra large spacing bottom** `uq-section--extra-large-bottom-spacing` - adds extra large spacing below.

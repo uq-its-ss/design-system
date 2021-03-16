@@ -56,10 +56,12 @@ enough to get you started.
 Non-emitting code, i.e. `@uqds/{component}/src/scss/_global.scss`, doesn't
 result in any compiled CSS by itself when processed. The `@uqds/core` package is
 an example of a package that only contains non-emitting code. You can use this
-file wherever you need reference variables, functions, and mixins.
+file wherever you need reference variables, functions, and mixins within your
+own Sass stylesheets. Our `.scss` files are written for the [primary
+implementation of Sass (Dart Sass)][6].
 
-We recommend using namespaces when importing the non-emitting [Sass modules][5].
-For example,
+We recommend using namespaces when importing the non-emitting [modules][5] into
+your Sass files. For example,
 
 ```scss
 // With a namespace (recommended)
@@ -74,12 +76,20 @@ For example,
 ```
 
 Emitting code, i.e. `@uqds/{component}/src/scss/_component.scss`, results in
-compiled CSS when processed. This file should only be imported once (per
-component) into your project. Unlike the non-emitting code, this file can be
-safely imported without a namespace. For example,
+compiled CSS when processed. This file should only be imported or compiled once
+(per component) into your project. Unlike the non-emitting code, this file can be
+safely imported without a namespace into Sass files. For example,
 
 ```scss
 @use '@uqds/button/src/scss/component' as *;
+```
+
+You can also use emitting code in your JavaScript projects (with a bundler like
+Webpack or Rollup) by importing it as a module. The following example uses the
+ES6 import syntax.
+
+```javascript
+import '@uqds/button/src/scss/_component.scss';
 ```
 
 ### JavaScript library
@@ -124,3 +134,4 @@ Instructions coming soon after we get our house in order.
 [3]: https://www.figma.com/file/Li7SZkmaLgw8ZdiHje2q7x/Future-Students-Design-System?node-id=1691%3A0
 [4]: https://registry.npmjs.org
 [5]: https://sass-lang.com/documentation/at-rules/use
+[6]: https://sass-lang.com/dart-sass

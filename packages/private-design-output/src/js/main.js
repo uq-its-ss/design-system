@@ -1,11 +1,11 @@
-import header from '@uqds/header/src/js/header.es6';
-import siteHeaderNavigation from '@uqds/site-header/src/js/site-header-navigation.es6';
-import accordion from '@uqds/accordion/src/js/accordion.es6';
-import gridMenuEqualiser from '@uqds/grid-menu/src/js/grid-menu';
+import header from '@uqds/header/src/js/header';
+import siteHeaderNavigation from '@uqds/site-header/src/js/site-header-navigation';
+import accordion from '@uqds/accordion/src/js/accordion';
+import { Tabs } from '@uqds/tabs/src/js/tabs';
 
 export { 
   header,
   siteHeaderNavigation,
   accordion,
-  gridMenuEqualiser
+  Tabs
 };

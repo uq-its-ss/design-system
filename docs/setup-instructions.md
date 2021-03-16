@@ -1,10 +1,12 @@
 # Setup instructions
-1. Install dependencies
 
 > Firstly, you will need [Node](https://nodejs.org/en/) installed on your
-> system. We recommended installing the _current_ (not LTS) version for this
-> project. If you use Node for other projects, you may want to use
-> [NVM](https://github.com/nvm-sh/nvm) to manage different versions.
+> system. We recommended using [NVM](https://github.com/nvm-sh/nvm) to manage
+> different versions and to use the version specified in the `~/.nvmrc` file.
+
+---
+
+1. Install dependencies
 
 ```shell
 $ npm i

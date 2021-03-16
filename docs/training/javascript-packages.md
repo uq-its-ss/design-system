@@ -29,18 +29,17 @@ in JSON format (`package.json`).
 
 [TODO]
 
-## Running Verdaccio
+## Running and publishing to Verdaccio
 
 Verdaccio is a local npm registry proxy that we can use to play with publishing
-packages from the design system. By default, this (mono)repo is set to publish
-to the default Verdaccio local server address (http://localhost:4873/).
+packages from the design system.
 
-> **🚨 Before continuing, please [fork][1] the UQDS monorepo — as 
+> **🚨 Before continuing, please [fork][1] (NOT branch) the UQDS monorepo — as 
 > `npx lerna publish` will create tags on the repo.**
 
-### Set up Verdaccio for local package publication
+### 1. Set up Verdaccio for local package publication
 
-Set up Verdaccio globally:
+Install Verdaccio package globally:
 ```shell
 $ npm i -g verdaccio
 ```
@@ -50,19 +49,18 @@ Run Verdaccio:
 $ verdaccio
 ```
 
-Your registry should now be running. You may need to create a user account
+Your registry should now be running. You will need to create a user account
 during this step as well. For instructions, navigate the Verdaccio
 local server address (http://localhost:4873/ by default).
 
-🚨 IMPORTANT: you must configure the monorepo's `lerna.json` file to point your
-local registry server, i.e.:
+### 2. Point NPM to your Verdaccio registry
 
-```json
-"command": {
-  "publish": {
-    "registry": "http://localhost:4873/"
-  }
-}
+You must configure the design system folder's `.npmrc` file (you have to create
+this) to point your new local registry (Verdaccio) server, i.e.:
+
+```
+# ~/.npmrc
+registry=http://localhost:4873/
 ```
 
 With Verdaccio still running, publish the packages using the Lerna `publish`
@@ -86,18 +84,12 @@ Firstly, you will need to configure the `registry` setting in an [`.npmrc`][2]
 file (located at the root of your project or you have to create it) like below.
 
 ```
-# .npmrc
+# ~/.npmrc
 registry=http://localhost:4873/
 ```
 
 Once this is done, you can install packages as you normally would, e.g.
 `npm i @uqds/accordion`.
-
-## Next steps
-
-If you're comfortable with the above, please refer to 
-[our guide on publishing packages](./docs/development/publishing-packages.md) to
-our registry.
 
 [1]: https://docs.github.com/en/github/getting-started-with-github/fork-a-repo
 [2]: https://docs.npmjs.com/cli/v7/configuring-npm/npmrc

@@ -22,7 +22,5 @@ npm i @uqds/side-nav
 
 ```shell
 @uqds/side-nav
-├─ @uqds/core
-└─ @uqds/grid
-   └─ @uqds/core
+└─ @uqds/core
 ```

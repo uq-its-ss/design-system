@@ -1,6 +1,6 @@
 {
   "name": "@uqds/form",
-  "version": "0.0.0",
+  "version": "0.0.1-alpha.0",
   "description": "Form element style rules",
   "keywords": [
     "uqds",
@@ -20,10 +20,10 @@
   "homepage": "https://github.com/uq-its-ss/design-system#readme",
   "license": "ISC",
   "directories": {
-    "lib": "lib"
+    "lib": "src"
   },
   "files": [
-    "lib/*",
+    "dist/*",
     "src/*"
   ],
   "repository": {
@@ -31,16 +31,18 @@
     "url": "git+https://github.com/uq-its-ss/design-system.git"
   },
   "scripts": {
-    "build-icons": "node src/script/icon-scan.js"
+    "build-icons": "node script/build-icons.js",
+    "build": "node script/build-icons.js"
   },
   "bugs": {
     "url": "https://github.com/uq-its-ss/design-system/issues"
   },
   "dependencies": {
-    "@uqds/core": "^0.0.0"
+    "@uqds/core": "^0.0.1-alpha.0"
   },
   "devDependencies": {
     "@svgdotjs/svg.js": "^3.0.16",
+    "chalk": "^4.1.0",
     "glob": "^7.1.6",
     "js-yaml": "^3.14.0",
     "mini-svg-data-uri": "^1.2.3",

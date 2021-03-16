@@ -1,4 +1,5 @@
 @use '@uqds/core/src/scss/global' as core;
+@use '@uqds/icon/src/scss/global' as icon;
 @use 'global' as *;
 
 .uq-grid-menu {
@@ -34,7 +35,7 @@
   }
 
   &__link {
-    border-bottom: 1px solid $linked-list-border; //#eee
+    border-bottom: 1px solid $linked-list-border;
     color: $linked-list-color;
     display: block;
     font-size: 1.375rem;
@@ -62,9 +63,10 @@
 
       &::after {
         content: '';
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-5 0 24 24' %3E%3Cpath d='M5.145 14.285l6.167-6a.41.41 0 000-.598L5.145 1.715' fill='none' stroke='%23FFF' stroke-width='.75' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+        background-image: url(icon.get-icon('standard--arrow-right-1', core.$uq-white));
         background-repeat: no-repeat;
-        right: 0.5rem;
+        background-size: 1.4rem 1.4rem;
+        right: 0;
       }
 
       .uq-grid-menu__link,
@@ -74,7 +76,9 @@
       }
 
       .uq-grid-menu__icon {
-        filter: core.$filter-white;
+        &::before {
+          filter: icon.$icon-light-filter;
+        }
       }
     }
   }
@@ -103,6 +107,12 @@
   &--dark-text {
     .uq-grid-menu__link {
       color: core.$dark-palette-color;
+    }
+
+    .uq-grid-menu__icon {
+      &::before {
+        filter: icon.$icon-text-filter;
+      }
     }
   }
 

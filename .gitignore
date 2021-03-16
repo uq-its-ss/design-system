@@ -1,4 +1,10 @@
 node_modules
+dist
+.sass-cache
+.npmrc
 .DS_Store
+Thumbs.db
+npm-debug.log
+yarn-error.log
 lerna-debug.log
 .dump

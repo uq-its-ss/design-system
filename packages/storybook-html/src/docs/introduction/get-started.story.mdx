@@ -1,0 +1,137 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+
+<Meta title="Introduction/Get started" />
+
+# Get started
+
+<br/>
+<div className="alert alert--warning" role="alert">
+  <div className="alert__message">
+    <h2><span className="uq-icon uq-icon--architecture-and-planning--heavy-equipment-lift-hook-box uq-icon--text"></span> We're in restricted beta!</h2>
+    Currently restricted to ITS-ADS staff and/or those with access to our tools account on AWS. Please refer to the 🔒&nbsp;<a href="https://confluence.its.uq.edu.au/confluence/x/0DwDCw" target="_blank">environment setup instructions</a> if you <em>do</em> have access. Otherwise, the notes below should still give you an idea of what to expect.
+  </div>
+</div><br/>
+
+There are a few ways to get started with the UQ Design System. Which method you
+choose depends on your project's requirements and whether you're a designer, an
+analyst, or a developer. **Please note that we are still working on various
+solutions to suit a variety of project needs.**
+
+Here are the ways you can start using the UQ Design System right now;
+- If you have prior experience with npm and Sass, [use the npm CLI to install components](#using-npm-to-install-components-into-your-project).
+- If you don't have previous experience with npm or Sass, please [contact us at ADS-UI][2] for further options.
+- Designers can go straight to the docs to view working examples. Also, check out the [Future Students Design System][3] (Figma project).
+- If you would like a walkthrough of the docs for your analysis needs, please [contact us][2] for a tour.
+
+## Reading the docs
+Reading the documentation is an integral part of implementing the Design System.
+It's where we provide:
+- HTML snippets,
+- JavaScript & Sass library docs,
+- and guidance via standards, patterns, and systems.
+
+## Using npm to install components into your project
+
+> Our packages are NOT hosted on the [npm public registry][4]. Please see the
+> warning at the top of this page. We will provide instructions on how to set up
+> your environment when we release the packages publicly.
+
+Design System packages are scoped under `@uqds`.
+
+For example, to install buttons:
+
+```shell
+npm i @uqds/button
+```
+
+See the [following list of package names](#component-package-list).
+
+## General component usage
+
+This is not exhaustive advice on how to use each component but it should be
+enough to get you started.
+
+### Sass library
+
+**Non-emitting code**, i.e. `@uqds/{component}/src/scss/_global.scss`, doesn't
+result in any compiled CSS by itself when processed. The `@uqds/core` package is
+an example of a package that only contains non-emitting code. You can use this
+file wherever you need reference variables, functions, and mixins within your
+own Sass stylesheets. Our `.scss` files are written for the [primary
+implementation of Sass (Dart Sass)][6].
+
+We recommend using namespaces when importing the non-emitting [modules][5] into
+your Sass files. For example,
+
+```scss
+// With a namespace (recommended)
+@use '@uqds/core/src/scss/global' as core;
+
+// Without a namespace (no recommended)
+@use '@uqds/core/src/scss/global' as *;
+
+.example-class {
+  font-size: core.$font-size-xxl;
+}
+```
+
+**Emitting code**, i.e. `@uqds/{component}/src/scss/_component.scss`, results in
+compiled CSS when processed. This file should only be imported or compiled once
+(per component) into your project. Unlike the non-emitting code, this file can be
+safely imported without a namespace into Sass files. For example,
+
+```scss
+@use '@uqds/button/src/scss/component' as *;
+```
+
+You can also use emitting code in your JavaScript projects (with a bundler like
+Webpack or Rollup) by importing it as a module. The following example uses the
+ES6 import syntax.
+
+```javascript
+import '@uqds/button/src/scss/_component.scss';
+```
+
+### JavaScript library
+
+Instructions coming soon after we get our house in order.
+
+## Component package list
+
+| Package name        | Dependencies | Notes*                                                                                          |
+|---------------------|--------------|-------------------------------------------------------------------------------------------------|
+| @uqds/core          |              | This package only provides Sass variables, mixins, functions, and placeholder styles (% rules). |
+| @uqds/accordion     | Core         | --JS--                                                                                          |
+| @uqds/alert         | Core, Grid   |                                                                                                 |
+| @uqds/blockquote    | Core         |                                                                                                 |
+| @uqds/body          | Core         |                                                                                                 |
+| @uqds/breadcrumb    | Core         |                                                                                                 |
+| @uqds/button        | Core         |                                                                                                 |
+| @uqds/card          | Core         |                                                                                                 |
+| @uqds/footer        | Core, Grid   |                                                                                                 |
+| @uqds/form          | Core         |                                                                                                 |
+| @uqds/grid          | Core         |                                                                                                 |
+| @uqds/grid-menu     | Core, Icon   |                                                                                                 |
+| @uqds/header        | Core, Grid   | --JS--                                                                                          |
+| @uqds/hero          | Core, Grid   |                                                                                                 |
+| @uqds/icon          | Core         |                                                                                                 |
+| @uqds/lists         | Core         |                                                                                                 |
+| @uqds/page-header   | Core         | Deprecated.                                                                                     |
+| @uqds/pagination    | Core         |                                                                                                 |
+| @uqds/pane          | Core         |                                                                                                 |
+| @uqds/previous-next | Core         |                                                                                                 |
+| @uqds/progression   | Core         |                                                                                                 |
+| @uqds/sections      | Core         |                                                                                                 |
+| @uqds/side-nav      | Core         |                                                                                                 |
+| @uqds/site-header   | Core, Grid   | --JS--                                                                                          |
+| @uqds/table         | Core         |                                                                                                 |
+| @uqds/tabs          | Core         | --JS--                                                                                          |
+
+\* '--JS--' denotes that a package contains a JavaScript library.
+
+[1]: https://confluence.its.uq.edu.au/confluence/x/0DwDCw
+[2]: /?path=/docs/introduction-overview--page#contacts-and-community
+[3]: https://www.figma.com/file/Li7SZkmaLgw8ZdiHje2q7x/Future-Students-Design-System?node-id=1691%3A0
+[4]: https://registry.npmjs.org
+[5]: https://sass-lang.com/documentation/at-rules/use
+[6]: https://sass-lang.com/dart-sass

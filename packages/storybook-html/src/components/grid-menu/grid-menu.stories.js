@@ -137,12 +137,12 @@ gridMenuDarkText.storyName = 'With dark text';
 export const gridMenuIcons = () => {
   return `
   <ul class="uq-grid-menu">
-    <li><a href="#"><span class="uq-grid-menu__icon uq-icon uq-icon--other--car-1"> </span> <span class="uq-grid-menu__title">Menu link 1</span></a></li>
-    <li><a href="#"><span class="uq-grid-menu__icon uq-icon uq-icon--other--bus"> </span> <span class="uq-grid-menu__title">Menu link 2</span></a></li>
-    <li><a href="#"><span class="uq-grid-menu__icon uq-icon uq-icon--other--sea-transport-boat"> </span> <span class="uq-grid-menu__title">Menu link 3</span></a></li>
-    <li><a href="#"><span class="uq-grid-menu__icon uq-icon uq-icon--other--railroad-train-1"> </span> <span class="uq-grid-menu__title">Menu link 4</span></a></li>
-    <li><a href="#"><span class="uq-grid-menu__icon uq-icon uq-icon--engineering-and-computing--icon-plane-1"> </span> <span class="uq-grid-menu__title">Menu link 5</span></a></li>
-    <li><a href="#"><span class="uq-grid-menu__icon uq-icon uq-icon--other--bicycle"> </span> <span class="uq-grid-menu__title">Menu link 6</span></a></li>
+    <li><a href="#"><span class="uq-grid-menu__icon uq-icon uq-icon--other--car-1"></span><span class="uq-grid-menu__title">Menu link 1</span></a></li>
+    <li><a href="#"><span class="uq-grid-menu__icon uq-icon uq-icon--other--bus"></span><span class="uq-grid-menu__title">Menu link 2</span></a></li>
+    <li><a href="#"><span class="uq-grid-menu__icon uq-icon uq-icon--other--sea-transport-boat"></span><span class="uq-grid-menu__title">Menu link 3</span></a></li>
+    <li><a href="#"><span class="uq-grid-menu__icon uq-icon uq-icon--other--railroad-train-1"></span><span class="uq-grid-menu__title">Menu link 4</span></a></li>
+    <li><a href="#"><span class="uq-grid-menu__icon uq-icon uq-icon--engineering-and-computing--icon-plane-1"></span><span class="uq-grid-menu__title">Menu link 5</span></a></li>
+    <li><a href="#"><span class="uq-grid-menu__icon uq-icon uq-icon--other--bicycle"></span><span class="uq-grid-menu__title">Menu link 6</span></a></li>
   </ul>
   `;
 };

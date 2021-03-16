@@ -53,7 +53,7 @@ enough to get you started.
 
 ### Sass library
 
-Non-emitting code, i.e. `@uqds/{component}/src/scss/_global.scss`, doesn't
+**Non-emitting code**, i.e. `@uqds/{component}/src/scss/_global.scss`, doesn't
 result in any compiled CSS by itself when processed. The `@uqds/core` package is
 an example of a package that only contains non-emitting code. You can use this
 file wherever you need reference variables, functions, and mixins within your
@@ -75,7 +75,7 @@ your Sass files. For example,
 }
 ```
 
-Emitting code, i.e. `@uqds/{component}/src/scss/_component.scss`, results in
+**Emitting code**, i.e. `@uqds/{component}/src/scss/_component.scss`, results in
 compiled CSS when processed. This file should only be imported or compiled once
 (per component) into your project. Unlike the non-emitting code, this file can be
 safely imported without a namespace into Sass files. For example,

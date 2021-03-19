@@ -11,11 +11,10 @@
   padding: 0;
   align-items: stretch;
 
-  *, *:before, *:after {
+  *, *::before, *::after {
     box-sizing: border-box;
   }
 
-  > li,
   &__item {
     margin-bottom: core.$space-none;
   }
@@ -35,7 +34,6 @@
     @include grid-menu-4-column;
   }
 
-  a,
   &__link {
     border-bottom: 1px solid $linked-list-border;
     color: $linked-list-color;
@@ -71,8 +69,8 @@
         right: 0;
       }
 
-      a,
       .uq-grid-menu__link,
+      .uq-grid-menu__title,
       .uq-grid-menu__description {
         color: $linked-list-color-hover;
         text-decoration: none;
@@ -127,9 +125,9 @@
 // Palettes applied to section wrapping grid-menu.
 .light-palette {
   .uq-grid-menu {
-    a,
-    .uq-grid-menu__link,
-    .uq-grid-menu__description {
+    &__link,
+    &__title,
+    &__description {
       @extend %light-palette;
 
       &:hover {
@@ -147,9 +145,9 @@
 
 .dark-palette {
   .uq-grid-menu {
-    a,
-    .uq-grid-menu__link,
-    .uq-grid-menu__description {
+    &__link,
+    &__title,
+    &__description {
       @extend %dark-palette;
 
       &:hover {
@@ -168,8 +166,7 @@
 // Grid menu inside a section with background image.
 .section--background-image {
   .uq-grid-menu {
-    a, 
-    .uq-grid-menu__link {
+    &__link {
       border-color: rgba(core.$uq-white, .4);
     }
   }

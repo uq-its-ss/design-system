@@ -1,26 +1,26 @@
-@use '@uqds/core/src/scss/global' as *;
+@use '@uqds/core/src/scss/global' as core;
 @use 'global' as *;
 
 /* button Default */
 .uq-button {
   background-color: $button-bg-color;
   border: 2px solid $button-border-color;
-  border-radius: 5px;
+  border-radius: core.$space-xs;
   box-sizing: border-box;
   color: $button-color;
   cursor: pointer;
   display: inline-block;
   font-family: $button-font;
-  font-size: 1rem;
+  font-size: core.$font-size-m;
   font-weight: normal;
   line-height: normal;
-  padding: $space-sm $space-md;
+  padding: core.$space-sm core.$space-md;
   position: relative;
   text-align: center;
   text-decoration: none;
   transition: all 300ms ease-out;
   
-  *, *:before, *:after {
+  *, *::before, *::after {
     box-sizing: border-box;
   }
 
@@ -163,23 +163,23 @@
 
   /* button sizes */
   &--tiny {
-    font-size: 12px;
-    padding: $space-xs $space-sm;
+    font-size: core.$font-size-xs;
+    padding: core.$space-xs core.$space-sm;
   }
 
   &--small {
-    font-size: 14px;
-    padding: $space-sm $space;
+    font-size: core.$font-size-s;
+    padding: core.$space-sm core.$space;
   }
 
   &--large {
-    font-size: 18px;
-    padding: $space $space-xl;
+    font-size: core.$font-size-l;
+    padding: core.$space core.$space-xl;
   }
 
   &--expand {
-    padding-left: $space-none;
-    padding-right: $space-none;
+    padding-left: core.$space-none;
+    padding-right: core.$space-none;
     width: 100%;
   }
 }

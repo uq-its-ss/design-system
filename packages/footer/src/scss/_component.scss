@@ -11,7 +11,7 @@
     font-weight: core.$font-weight-thin;
     line-height: core.$line-height;
     
-    *, *:before, *:after {
+    *, *::before, *::after {
         box-sizing: border-box;
     }
 
@@ -115,14 +115,14 @@
             li {
                 margin-bottom: core.$space-sm;
                 
-                &:after {
+                &::after {
                     content: " | ";
                     padding: core.$space-none core.$space-sm;
                     text-align: center;
                 }
 
                 &:last-of-type {
-                    &:after {
+                    &::after {
                         content: none;
                         padding-right: core.$space-none;
                     }

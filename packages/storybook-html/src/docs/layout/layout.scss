@@ -12,7 +12,7 @@
   .uq-grid {
     position: relative;
 
-    &:before {
+    &::before {
       background: repeating-linear-gradient(
         45deg,
         lighten(core.$uq-red, 30%),
@@ -100,14 +100,14 @@
     }
 
     @media #{core.$screen-md-up} {
-      &:before {
+      &::before {
         left: core.$space-md / 2;
         right: core.$space-md / 2;
       }
     }
 
     @media #{core.$screen-xl-up} {
-      &:before {
+      &::before {
         left: core.$space-lg / 2;
         right: core.$space-lg / 2;
       }

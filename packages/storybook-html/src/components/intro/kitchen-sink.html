@@ -201,53 +201,55 @@
 </div>
 
 <!-- alert -->
-<div class="alert alert--default" role="alert">
-  <div class="alert__container">
-    <div class="alert__message">
+<div class="uq-alert uq-alert--default" role="alert">
+  <div class="uq-alert__container">
+    <div class="uq-alert__message">
       <b>I'm a default alert.</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
     </div>
   </div>
-  <a href="javascript:void(0)" class="alert__close">&times;</a>
+  <a href="javascript:void(0)" class="uq-alert__close">&times;</a>
 </div>
-<div class="alert alert--info" role="alert">
-  <div class="alert__container">
-    <div class="alert__message">
+<div class="uq-alert uq-alert--info" role="alert">
+  <div class="uq-alert__container">
+    <div class="uq-alert__message">
       <b>I come in a variety of styles and configurations.</b> See the <code>alerts</code> story for more examples.</a>
     </div>
   </div>
-  <a href="javascript:void(0)" class="alert__close">&times;</a>
+  <a href="javascript:void(0)" class="uq-alert__close">&times;</a>
 </div>
-<div class="alert alert--success" role="alert">
-  <div class="alert__message">
+<div class="uq-alert uq-alert--success" role="alert">
+  <div class="uq-alert__message">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <strong>--success</strong>.
   </div>
-  <a href="javascript:void(0)" class="alert__close">&times;</a>
+  <a href="javascript:void(0)" class="uq-alert__close">&times;</a>
 </div>
-<div class="alert alert--warning" role="alert">
-  <div class="alert__message">
+<div class="uq-alert uq-alert--warning" role="alert">
+  <div class="uq-alert__message">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <strong>--warning</strong>.
   </div>
-  <a href="javascript:void(0)" class="alert__close">&times;</a>
+  <a href="javascript:void(0)" class="uq-alert__close">&times;</a>
 </div>
-<div class="alert alert--danger" role="alert">
-  <div class="alert__message">
+<div class="uq-alert uq-alert--danger" role="alert">
+  <div class="uq-alert__message">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <strong>--danger</strong>.
   </div>
-  <a href="javascript:void(0)" class="alert__close">&times;</a>
+  <a href="javascript:void(0)" class="uq-alert__close">&times;</a>
 </div>
-<div class="hero hero--feature-image">  
-  <div class="hero__image">
-    <div class="hero__image--small">
+
+<!-- hero -->
+<div class="uq-hero uq-hero--feature-image">  
+  <div class="uq-hero__image">
+    <div class="uq-hero__image--small">
       <img src="/images/hero/hero_example--small.jpg" />
     </div>
-    <div class="hero__image--large">
+    <div class="uq-hero__image--large">
       <img src="/images/hero/hero_example--large.jpg" />
     </div>
   </div>
-  <div class="hero__content">
-    <div class="hero__text">
+  <div class="uq-hero__content">
+    <div class="uq-hero__text">
       <h1>Hero banner with feature image</h1>
-      <p class="hero__subtext">Banner sub text</p>
+      <p class="uq-hero__subtext">Banner sub text</p>
       <p><a class="uq-button" href="#">Call to action</a></p>
     </div>
   </div>
@@ -378,23 +380,23 @@
 <div class="uq-grid">
   <div class="uq-grid__col uq-grid__col--6">
     <h2>Accessible accordions</h2>
-    <div class="accordion" aria-label="Accordion button group" role="presentation">
-      <div class="accordion__item">
-        <button class="accordion__toggle" aria-controls="content-1" aria-expanded="false" id="accordion-title-1">About the accordion UI pattern</button>
-        <div class="accordion__content" aria-hidden="true" id="content-1" aria-labelledby="accordion-title-1">
+    <div class="uq-accordion" aria-label="Accordion button group" role="presentation">
+      <div class="uq-accordion__item">
+        <button class="uq-accordion__toggle" aria-controls="content-1" aria-expanded="false" id="accordion-title-1">About the accordion UI pattern</button>
+        <div class="uq-accordion__content" aria-hidden="true" id="content-1" aria-labelledby="accordion-title-1">
           <p>Accordions are used to display expandable and collapsible content organised in logical sections.</p>
           <blockquote cite="https://www.smashingmagazine.com/2017/06/designing-perfect-accordion-checklist/">It’s an immensely useful pattern for progressive disclosure — highlighting important details of a section and revealing more details upon a tap or click, if necessary. As a result, the design stays focused and displays critical information first, while everything else is easily accessible. In fact, if you encounter a problem of any kind — too many navigation options, too much content, too detailed a view — a good starting point would be to explore how you could utilize the good ol’ accordion to solve that problem. <cite><a href="https://www.smashingmagazine.com/2017/06/designing-perfect-accordion-checklist/">Designing The Perfect Accordion</a>, Smashing Magazine</cite></blockquote>
         </div>
       </div>
-      <div class="accordion__item">
-        <button class="accordion__toggle" aria-controls="content-2" aria-expanded="false" id="accordion-title-2">Click me!</button>
-        <div class="accordion__content" role="region" aria-hidden="true" id="content-2" aria-labelledby="accordion-title-2">
+      <div class="uq-accordion__item">
+        <button class="uq-accordion__toggle" aria-controls="content-2" aria-expanded="false" id="accordion-title-2">Click me!</button>
+        <div class="uq-accordion__content" role="region" aria-hidden="true" id="content-2" aria-labelledby="accordion-title-2">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor eros dui, vitae iaculis leo ornare eget. Etiam tristique lobortis ligula non mattis. Ut dapibus libero neque, vel tincidunt nunc tempus eget.</p>
         </div>
       </div>
-      <div class="accordion__item">
-        <button class="accordion__toggle" aria-controls="content-3" aria-expanded="false" id="accordion-title-3">And me!</button>
-        <div class="accordion__content" role="region" aria-hidden="true" id="content-3" aria-labelledby="accordion-title-3">
+      <div class="uq-accordion__item">
+        <button class="uq-accordion__toggle" aria-controls="content-3" aria-expanded="false" id="accordion-title-3">And me!</button>
+        <div class="uq-accordion__content" role="region" aria-hidden="true" id="content-3" aria-labelledby="accordion-title-3">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor eros dui, vitae iaculis leo ornare eget. Etiam tristique lobortis ligula non mattis. Ut dapibus libero neque, vel tincidunt nunc tempus eget.</p>
           <p>Maecenas faucibus mollis interdum. Etiam porta sem malesuada magna mollis euismod. Maecenas sed diam eget risus varius blandit sit amet non magna. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Nullam quis risus eget urna mollis ornare vel eu leo. Donec sed odio dui.</p>
           <p>Nullam quis risus eget urna mollis ornare vel eu leo. Maecenas faucibus mollis interdum. Vestibulum id ligula porta felis euismod semper. Maecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
@@ -408,284 +410,288 @@
 <br/>
 
 <!-- Card -->
-<h2>Cards</h2>
-<!-- Default card -->
-<h3>Default card</h3>
 <div class="uq-grid">
-  <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-3">
-    <div class="uq-card">
-      <a class="uq-card__link__outer" href="#">Card title</a>
-      <div class="uq-card__image__wrapper">
-        <div class="uq-card__image">
-          <img src="https://campuses.uq.edu.au/files/9492/stlucia-card.jpg" alt="Card image description">
-        </div>
-      </div>
-      <div class="uq-card__content__wrapper">
-        <div class="uq-card__content">
-          <div class="uq-card__header">
-            <h3 class="uq-card__title">Card title</h3>
-          </div>
-          <div class="uq-card__body">
-              <p>Card summary text</p>
-          </div>
-        </div>
-        <div class="uq-card__actions">
-          <a class="text--link" href="#">Learn more</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-3">
-    <div class="uq-card">
-      <a class="uq-card__link__outer" href="#">Card title</a>
-      <div class="uq-card__image__wrapper">
-        <div class="uq-card__image">
-          <img src="https://campuses.uq.edu.au/files/9492/stlucia-card.jpg" alt="Card image description">
-        </div>
-      </div>
-      <div class="uq-card__content__wrapper">
-        <div class="uq-card__content">
-          <div class="uq-card__header">
-            <h3 class="uq-card__title">Card title</h3>
-          </div>
-          <div class="uq-card__body">
-              <p>Card summary text</p>
-          </div>
-        </div>
-        <div class="uq-card__actions">
-          <a class="text--link" href="#">Learn more</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-3">
-    <div class="uq-card">
-      <a class="uq-card__link__outer" href="#">Card title</a>
-      <div class="uq-card__image__wrapper">
-        <div class="uq-card__image">
-          <img src="https://campuses.uq.edu.au/files/9492/stlucia-card.jpg" alt="Card image description">
-        </div>
-      </div>
-      <div class="uq-card__content__wrapper">
-        <div class="uq-card__content">
-          <div class="uq-card__header">
-            <h3 class="uq-card__title">Card title</h3>
-          </div>
-          <div class="uq-card__body">
-              <p>Card summary text</p>
-          </div>
-        </div>
-        <div class="uq-card__actions">
-          <a class="text--link" href="#">Learn more</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-3">
-    <div class="uq-card">
-      <a class="uq-card__link__outer" href="#">Card title</a>
-      <div class="uq-card__image__wrapper">
-        <div class="uq-card__image">
-          <img src="https://campuses.uq.edu.au/files/9492/stlucia-card.jpg" alt="Card image description">
-        </div>
-      </div>
-      <div class="uq-card__content__wrapper">
-        <div class="uq-card__content">
-          <div class="uq-card__header">
-            <h3 class="uq-card__title">Card title</h3>
-          </div>
-          <div class="uq-card__body">
-              <p>Card summary text</p>
-          </div>
-        </div>
-        <div class="uq-card__actions">
-          <a class="text--link" href="#">Learn more</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<br/>
+  <div class="uq-grid__col uq-grid__col--6"> 
 
-<!-- Story card -->
-<h3>Story card</h3>
-<div class="uq-grid">
-  <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-3">
-    <div class="uq-card uq-card--story">
-      <a class="uq-card__link__outer" href="#">Card title</a>
-      <div class="uq-card__image__wrapper">
-        <div class="uq-card__image">
-          <img src="https://campuses.uq.edu.au/files/9749/gatton-card2.jpg" alt="Card image description">
-        </div>
-      </div>
-      <div class="uq-card__content__wrapper">
-        <div class="uq-card__content">
-          <div class="uq-card__header">
-            <p class="uq-card__title__super uq-card__title__super--grey">SUB-TITLE</p>
-            <h3 class="uq-card__title">Card title</h3>
-          </div>
-        </div>
-        <div class="uq-card__actions">
-          <p>3 min read</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-3">
-    <div class="uq-card uq-card--story">
-      <a class="uq-card__link__outer" href="#">Card title</a>
-      <div class="uq-card__image__wrapper">
-        <div class="uq-card__image">
-          <img src="https://campuses.uq.edu.au/files/9749/gatton-card2.jpg" alt="Card image description">
-        </div>
-      </div>
-      <div class="uq-card__content__wrapper">
-        <div class="uq-card__content">
-          <div class="uq-card__header">
-            <p class="uq-card__title__super uq-card__title__super--grey">SUB-TITLE</p>
-            <h3 class="uq-card__title">Card title</h3>
-          </div>
-        </div>
-        <div class="uq-card__actions">
-          <p>3 min read</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-3">
-    <div class="uq-card uq-card--story">
-      <a class="uq-card__link__outer" href="#">Card title</a>
-      <div class="uq-card__image__wrapper">
-        <div class="uq-card__image">
-          <img src="https://campuses.uq.edu.au/files/9749/gatton-card2.jpg" alt="Card image description">
-        </div>
-      </div>
-      <div class="uq-card__content__wrapper">
-        <div class="uq-card__content">
-          <div class="uq-card__header">
-            <p class="uq-card__title__super uq-card__title__super--grey">SUB-TITLE</p>
-            <h3 class="uq-card__title">Card title</h3>
-          </div>
-        </div>
-        <div class="uq-card__actions">
-          <p>3 min read</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-3">
-    <div class="uq-card uq-card--story">
-      <a class="uq-card__link__outer" href="#">Card title</a>
-      <div class="uq-card__image__wrapper">
-        <div class="uq-card__image">
-          <img src="https://campuses.uq.edu.au/files/9749/gatton-card2.jpg" alt="Card image description">
-        </div>
-      </div>
-      <div class="uq-card__content__wrapper">
-        <div class="uq-card__content">
-          <div class="uq-card__header">
-            <p class="uq-card__title__super uq-card__title__super--grey">SUB-TITLE</p>
-            <h3 class="uq-card__title">Card title</h3>
-          </div>
-        </div>
-        <div class="uq-card__actions">
-          <p>3 min read</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<br/>
+    <h2>Cards</h2>
+    <!-- Default card -->
+    <h3>Default card</h3>
 
-<!-- Event card -->
-<h3>Event card</h3>
-<div class="uq-grid">
-  <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-3">
-    <div class="uq-card uq-card--event">
-      <a class="uq-card__link__outer" href="#">Card title</a>
-      <div class="uq-card__image__wrapper">
-        <div class="uq-card__image">
-          <img src="https://campuses.uq.edu.au/files/9480/herston-card.jpg" alt="Card image description">
-        </div>
-      </div>
-      <div class="uq-card__content__wrapper">
-        <div class="uq-card__content">
-          <div class="uq-card__header">
-            <p class="uq-card__title__super">DD MONTH</p>
-            <h3 class="uq-card__title">Card title</h3>
+    <div class="uq-grid">
+      <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-3">
+        <div class="uq-card">
+          <div class="uq-card__image__wrapper">
+            <div class="uq-card__image">
+              <img src="/images/uq-image-stlucia-campus.jpg" alt="Card image description">
+            </div>
+          </div>
+          <div class="uq-card__content__wrapper">
+            <div class="uq-card__content">
+              <div class="uq-card__header">
+                <h3 class="uq-card__title">Card title</h3>
+              </div>
+              <div class="uq-card__body">
+                  <p>Card summary text</p>
+              </div>
+            </div>
+            <div class="uq-card__actions">
+              <a class="text--link" href="#">Learn more</a>
+            </div>
           </div>
         </div>
-        <div class="uq-card__actions">
-          <p>Online</p>
+      </div>
+      <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-3">
+        <div class="uq-card">
+          <div class="uq-card__image__wrapper">
+            <div class="uq-card__image">
+              <img src="/images/uq-image-stlucia-campus.jpg" alt="Card image description">
+            </div>
+          </div>
+          <div class="uq-card__content__wrapper">
+            <div class="uq-card__content">
+              <div class="uq-card__header">
+                <h3 class="uq-card__title">Card title</h3>
+              </div>
+              <div class="uq-card__body">
+                  <p>Card summary text</p>
+              </div>
+            </div>
+            <div class="uq-card__actions">
+              <a class="text--link" href="#">Learn more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-3">
+        <div class="uq-card">
+          <div class="uq-card__image__wrapper">
+            <div class="uq-card__image">
+              <img src="/images/uq-image-stlucia-campus.jpg" alt="Card image description">
+            </div>
+          </div>
+          <div class="uq-card__content__wrapper">
+            <div class="uq-card__content">
+              <div class="uq-card__header">
+                <h3 class="uq-card__title">Card title</h3>
+              </div>
+              <div class="uq-card__body">
+                  <p>Card summary text</p>
+              </div>
+            </div>
+            <div class="uq-card__actions">
+              <a class="text--link" href="#">Learn more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-3">
+        <div class="uq-card">
+          <div class="uq-card__image__wrapper">
+            <div class="uq-card__image">
+              <img src="/images/uq-image-stlucia-campus.jpg" alt="Card image description">
+            </div>
+          </div>
+          <div class="uq-card__content__wrapper">
+            <div class="uq-card__content">
+              <div class="uq-card__header">
+                <h3 class="uq-card__title">Card title</h3>
+              </div>
+              <div class="uq-card__body">
+                  <p>Card summary text</p>
+              </div>
+            </div>
+            <div class="uq-card__actions">
+              <a class="text--link" href="#">Learn more</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-3">
-    <div class="uq-card uq-card--event">
-      <a class="uq-card__link__outer" href="#">Card title</a>
-      <div class="uq-card__image__wrapper">
-        <div class="uq-card__image">
-          <img src="https://campuses.uq.edu.au/files/9480/herston-card.jpg" alt="Card image description">
-        </div>
-      </div>
-      <div class="uq-card__content__wrapper">
-        <div class="uq-card__content">
-          <div class="uq-card__header">
-            <p class="uq-card__title__super">DD MONTH</p>
-            <h3 class="uq-card__title">Card title</h3>
+    <br/>
+
+    <!-- Story card -->
+    <h3>Story card</h3>
+    <div class="uq-grid">
+      <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-3">
+        <div class="uq-card uq-card--story">
+          <a class="uq-card__link" href="#">Card title</a>
+          <div class="uq-card__image__wrapper">
+            <div class="uq-card__image">
+              <img src="/images/uq-image-gatton-campus.jpg" alt="Card image description">
+            </div>
+          </div>
+          <div class="uq-card__content__wrapper">
+            <div class="uq-card__content">
+              <div class="uq-card__header">
+                <p class="uq-card__title__super uq-card__title__super--grey">SUB-TITLE</p>
+                <h3 class="uq-card__title">Card title</h3>
+              </div>
+            </div>
+            <div class="uq-card__actions">
+              <p>3 min read</p>
+            </div>
           </div>
         </div>
-        <div class="uq-card__actions">
-          <p>Online</p>
+      </div>
+      <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-3">
+        <div class="uq-card uq-card--story">
+          <a class="uq-card__link" href="#">Card title</a>
+          <div class="uq-card__image__wrapper">
+            <div class="uq-card__image">
+              <img src="/images/uq-image-gatton-campus.jpg" alt="Card image description">
+            </div>
+          </div>
+          <div class="uq-card__content__wrapper">
+            <div class="uq-card__content">
+              <div class="uq-card__header">
+                <p class="uq-card__title__super uq-card__title__super--grey">SUB-TITLE</p>
+                <h3 class="uq-card__title">Card title</h3>
+              </div>
+            </div>
+            <div class="uq-card__actions">
+              <p>3 min read</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-3">
+        <div class="uq-card uq-card--story">
+          <a class="uq-card__link" href="#">Card title</a>
+          <div class="uq-card__image__wrapper">
+            <div class="uq-card__image">
+              <img src="/images/uq-image-gatton-campus.jpg" alt="Card image description">
+            </div>
+          </div>
+          <div class="uq-card__content__wrapper">
+            <div class="uq-card__content">
+              <div class="uq-card__header">
+                <p class="uq-card__title__super uq-card__title__super--grey">SUB-TITLE</p>
+                <h3 class="uq-card__title">Card title</h3>
+              </div>
+            </div>
+            <div class="uq-card__actions">
+              <p>3 min read</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-3">
+        <div class="uq-card uq-card--story">
+          <a class="uq-card__link" href="#">Card title</a>
+          <div class="uq-card__image__wrapper">
+            <div class="uq-card__image">
+              <img src="/images/uq-image-gatton-campus.jpg" alt="Card image description">
+            </div>
+          </div>
+          <div class="uq-card__content__wrapper">
+            <div class="uq-card__content">
+              <div class="uq-card__header">
+                <p class="uq-card__title__super uq-card__title__super--grey">SUB-TITLE</p>
+                <h3 class="uq-card__title">Card title</h3>
+              </div>
+            </div>
+            <div class="uq-card__actions">
+              <p>3 min read</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-3">
-    <div class="uq-card uq-card--event">
-      <a class="uq-card__link__outer" href="#">Card title</a>
-      <div class="uq-card__image__wrapper">
-        <div class="uq-card__image">
-          <img src="https://campuses.uq.edu.au/files/9480/herston-card.jpg" alt="Card image description">
-        </div>
-      </div>
-      <div class="uq-card__content__wrapper">
-        <div class="uq-card__content">
-          <div class="uq-card__header">
-            <p class="uq-card__title__super">DD MONTH</p>
-            <h3 class="uq-card__title">Card title</h3>
+    <br/>
+
+    <!-- Event card -->
+    <h3>Event card</h3>
+    <div class="uq-grid">
+      <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-3">
+        <div class="uq-card uq-card--event">
+          <a class="uq-card__link" href="#">Card title</a>
+          <div class="uq-card__image__wrapper">
+            <div class="uq-card__image">
+              <img src="/images/uq-image-herston-campus.jpg" alt="Card image description">
+            </div>
+          </div>
+          <div class="uq-card__content__wrapper">
+            <div class="uq-card__content">
+              <div class="uq-card__header">
+                <p class="uq-card__title__super">DD MONTH</p>
+                <h3 class="uq-card__title">Card title</h3>
+              </div>
+            </div>
+            <div class="uq-card__actions">
+              <p>Online</p>
+            </div>
           </div>
         </div>
-        <div class="uq-card__actions">
-          <p>Online</p>
+      </div>
+      <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-3">
+        <div class="uq-card uq-card--event">
+          <a class="uq-card__link" href="#">Card title</a>
+          <div class="uq-card__image__wrapper">
+            <div class="uq-card__image">
+              <img src="/images/uq-image-herston-campus.jpg" alt="Card image description">
+            </div>
+          </div>
+          <div class="uq-card__content__wrapper">
+            <div class="uq-card__content">
+              <div class="uq-card__header">
+                <p class="uq-card__title__super">DD MONTH</p>
+                <h3 class="uq-card__title">Card title</h3>
+              </div>
+            </div>
+            <div class="uq-card__actions">
+              <p>Online</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-3">
+        <div class="uq-card uq-card--event">
+          <a class="uq-card__link" href="#">Card title</a>
+          <div class="uq-card__image__wrapper">
+            <div class="uq-card__image">
+              <img src="/images/uq-image-herston-campus.jpg" alt="Card image description">
+            </div>
+          </div>
+          <div class="uq-card__content__wrapper">
+            <div class="uq-card__content">
+              <div class="uq-card__header">
+                <p class="uq-card__title__super">DD MONTH</p>
+                <h3 class="uq-card__title">Card title</h3>
+              </div>
+            </div>
+            <div class="uq-card__actions">
+              <p>Online</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-3">
+        <div class="uq-card uq-card--event">
+          <a class="uq-card__link" href="#">Card title</a>
+          <div class="uq-card__image__wrapper">
+            <div class="uq-card__image">
+              <img src="/images/uq-image-herston-campus.jpg" alt="Card image description">
+            </div>
+          </div>
+          <div class="uq-card__content__wrapper">
+            <div class="uq-card__content">
+              <div class="uq-card__header">
+                <p class="uq-card__title__super">DD MONTH</p>
+                <h3 class="uq-card__title">Card title</h3>
+              </div>
+            </div>
+            <div class="uq-card__actions">
+              <p>Online</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-3">
-    <div class="uq-card uq-card--event">
-      <a class="uq-card__link__outer" href="#">Card title</a>
-      <div class="uq-card__image__wrapper">
-        <div class="uq-card__image">
-          <img src="https://campuses.uq.edu.au/files/9480/herston-card.jpg" alt="Card image description">
-        </div>
-      </div>
-      <div class="uq-card__content__wrapper">
-        <div class="uq-card__content">
-          <div class="uq-card__header">
-            <p class="uq-card__title__super">DD MONTH</p>
-            <h3 class="uq-card__title">Card title</h3>
-          </div>
-        </div>
-        <div class="uq-card__actions">
-          <p>Online</p>
-        </div>
-      </div>
-    </div>
+    <br/>
+
   </div>
 </div>
-<br/>
+
 
 <!-- grid-menu -->
 <div class="uq-grid">
@@ -695,7 +701,7 @@
     <ul class="uq-grid-menu">
       <li class="uq-grid-menu__item">
         <a href="#" class="uq-grid-menu__link">
-          <span class="uq-grid-menu__icon uq-icon uq-icon--hotel-bedroom-1"></span>
+          <span class="uq-grid-menu__icon uq-icon uq-icon--other--hotel-bedroom-1"></span>
           <span class="uq-grid-menu__title">Menu link 1</span>
           <span class="uq-grid-menu__description">Ullamcorper est sodales egestas condimentum vestibulum proin justo morbi
             luctus porttitor adipiscing eu a eu massa inceptos cras non tempus taciti.
@@ -704,7 +710,7 @@
       </li>
       <li class="uq-grid-menu__item">
         <a href="#" class="uq-grid-menu__link">
-          <span class="uq-grid-menu__icon uq-icon uq-icon--hotel-bedroom-1"></span>
+          <span class="uq-grid-menu__icon uq-icon uq-icon--education--mortarboard"></span>
           <span class="uq-grid-menu__title">Menu link 2</span>
           <span class="uq-grid-menu__description">Ullamcorper est sodales egestas condimentum vestibulum proin justo morbi
             luctus porttitor adipiscing eu a eu massa inceptos cras non tempus taciti.
@@ -713,7 +719,7 @@
       </li>
       <li class="uq-grid-menu__item">
         <a href="#" class="uq-grid-menu__link">
-          <span class="uq-grid-menu__icon uq-icon uq-icon--hotel-bedroom-1"></span>
+          <span class="uq-grid-menu__icon uq-icon uq-icon--engineering-and-computing--construction-building"></span>
           <span class="uq-grid-menu__title">Menu link 3</span>
           <span class="uq-grid-menu__description">Ullamcorper est sodales egestas condimentum vestibulum proin justo morbi
             luctus porttitor adipiscing eu a eu massa inceptos cras non tempus taciti.
@@ -722,15 +728,16 @@
       </li>
       <li class="uq-grid-menu__item">
         <a href="#" class="uq-grid-menu__link">
-          <span class="uq-grid-menu__icon uq-icon uq-icon--hotel-bedroom-1"></span>
+          <span class="uq-grid-menu__icon uq-icon uq-icon--standard--region-domestic"></span>
           <span class="uq-grid-menu__title">Menu link 4</span>
-          <span class="uq-grid-menu__description">Ullamcorper est sodales.
+          <span class="uq-grid-menu__description">Ullamcorper est sodales egestas condimentum vestibulum proin justo morbi
+            luctus porttitor adipiscing eu a eu massa inceptos cras non tempus taciti.
           </span>
         </a>
       </li>
       <li class="uq-grid-menu__item">
         <a href="#" class="uq-grid-menu__link">
-          <span class="uq-grid-menu__icon uq-icon uq-icon--hotel-bedroom-1"></span>
+          <span class="uq-grid-menu__icon uq-icon uq-icon--standard--region-international"></span>
           <span class="uq-grid-menu__title">Menu link 5</span>
           <span class="uq-grid-menu__description">Ullamcorper est sodales egestas condimentum vestibulum proin justo morbi
             luctus porttitor adipiscing eu a eu massa inceptos cras non tempus taciti.
@@ -744,7 +751,7 @@
     <ul class="uq-grid-menu uq-grid-menu--dark-text">
       <li class="uq-grid-menu__item">
         <a href="#" class="uq-grid-menu__link">
-          <span class="uq-grid-menu__icon uq-icon uq-icon--hotel-bedroom-1"></span>
+          <span class="uq-grid-menu__icon uq-icon uq-icon--other--hotel-bedroom-1"></span>
           <span class="uq-grid-menu__title">Menu link 1</span>
           <span class="uq-grid-menu__description">Ullamcorper est sodales egestas condimentum vestibulum proin justo morbi
             luctus porttitor adipiscing eu a eu massa inceptos cras non tempus taciti.
@@ -753,7 +760,7 @@
       </li>
       <li class="uq-grid-menu__item">
         <a href="#" class="uq-grid-menu__link">
-          <span class="uq-grid-menu__icon uq-icon uq-icon--hotel-bedroom-1"></span>
+          <span class="uq-grid-menu__icon uq-icon uq-icon--other--hotel-bedroom-1"></span>
           <span class="uq-grid-menu__title">Menu link 2</span>
           <span class="uq-grid-menu__description">Ullamcorper est sodales egestas condimentum vestibulum proin justo morbi
             luctus porttitor adipiscing eu a eu massa inceptos cras non tempus taciti.
@@ -762,7 +769,7 @@
       </li>
       <li class="uq-grid-menu__item">
         <a href="#" class="uq-grid-menu__link">
-          <span class="uq-grid-menu__icon uq-icon uq-icon--hotel-bedroom-1"></span>
+          <span class="uq-grid-menu__icon uq-icon uq-icon--other--hotel-bedroom-1"></span>
           <span class="uq-grid-menu__title">Menu link 3</span>
           <span class="uq-grid-menu__description">Ullamcorper est sodales egestas condimentum vestibulum proin justo morbi
             luctus porttitor adipiscing eu a eu massa inceptos cras non tempus taciti.
@@ -771,15 +778,16 @@
       </li>
       <li class="uq-grid-menu__item">
         <a href="#" class="uq-grid-menu__link">
-          <span class="uq-grid-menu__icon uq-icon uq-icon--hotel-bedroom-1"></span>
+          <span class="uq-grid-menu__icon uq-icon uq-icon--other--hotel-bedroom-1"></span>
           <span class="uq-grid-menu__title">Menu link 4</span>
-          <span class="uq-grid-menu__description">Ullamcorper est sodales.
+          <span class="uq-grid-menu__description">Ullamcorper est sodales egestas condimentum vestibulum proin justo morbi
+            luctus porttitor adipiscing eu a eu massa inceptos cras non tempus taciti.
           </span>
         </a>
       </li>
       <li class="uq-grid-menu__item">
         <a href="#" class="uq-grid-menu__link">
-          <span class="uq-grid-menu__icon uq-icon uq-icon--hotel-bedroom-1"></span>
+          <span class="uq-grid-menu__icon uq-icon uq-icon--other--hotel-bedroom-1"></span>
           <span class="uq-grid-menu__title">Menu link 5</span>
           <span class="uq-grid-menu__description">Ullamcorper est sodales egestas condimentum vestibulum proin justo morbi
             luctus porttitor adipiscing eu a eu massa inceptos cras non tempus taciti.

@@ -385,7 +385,7 @@ $use-encapsulation: false !default;
   .error-summary {
     background-color: lighten(core.$danger-color, 10%);
     border: 1px solid core.$alert;
-    border-left-width: 4px;
+    border-left-width: core.$space-xs;
     padding: core.$space;
     margin-bottom: core.$space-md;
   

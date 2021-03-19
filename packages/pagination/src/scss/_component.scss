@@ -2,14 +2,14 @@
 @use '@uqds/core/src/scss/global' as core;
 @use 'global' as *;
 
-.pagination {
+.uq-pagination {
 	display: block;
 
 	&__item {
 		display: inline-block;
 		list-style: none;
 
-		.pagination__link {
+		.uq-pagination__link {
 			color: core.$link;
 			font-size: 1rem;
 			font-weight: 300;
@@ -24,7 +24,7 @@
 
 		&--current {
 
-			.pagination__link {
+			.uq-pagination__link {
 				color: core.$uq-black;
 				font-weight: 500;
 

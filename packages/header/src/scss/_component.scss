@@ -2,9 +2,7 @@
 @use '@uqds/grid/src/scss/global' as grid;
 @use 'global' as *;
 
-//
 // Global UQ site header
-//
 .uq-header {
     background: core.$uq-purple;
     background: core.$uq-purple-gradient;
@@ -13,7 +11,7 @@
     font-weight: core.$font-weight-thin;
     line-height: core.$line-height;
 
-    *, *:before, *:after {
+    *, *::before, *::after {
         box-sizing: border-box;
     }
 

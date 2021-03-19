@@ -21,22 +21,22 @@ hierarchical level.
 </Canvas>
 
 ```html
-  <div id="tabsDefaultExample" class="tabs tabs--outline">
-    <div class="tabs__tab-list-wrapper">
-      <div class="tabs__tab-list" role="tablist" aria-label="Tab List">
-        <button class="tabs__tab tabs__tab--active" role="tab" aria-selected="true" aria-controls="tab1-panel" id="tab1">Tab 1</button>
-        <button class="tabs__tab" role="tab" aria-selected="false" aria-controls="tab2-panel" id="tab2" tabindex="-1">Tab 2</button>
-        <button class="tabs__tab" role="tab" aria-selected="false" aria-controls="tab3-panel" id="tab3" tabindex="-1">Tab 3</button>
-        <a class="tabs__link" href="#">Tab link</a>
+  <div id="tabsDefaultExample" class="uq-tabs uq-tabs--outline">
+    <div class="uq-tabs__tab-list-wrapper">
+      <div class="uq-tabs__tab-list" role="tablist" aria-label="Tab List">
+        <button class="uq-tabs__tab uq-tabs__tab--active" role="tab" aria-selected="true" aria-controls="tab1-panel" id="tab1">Tab 1</button>
+        <button class="uq-tabs__tab" role="tab" aria-selected="false" aria-controls="tab2-panel" id="tab2" tabindex="-1">Tab 2</button>
+        <button class="uq-tabs__tab" role="tab" aria-selected="false" aria-controls="tab3-panel" id="tab3" tabindex="-1">Tab 3</button>
+        <a class="uq-tabs__link" href="#">Tab link</a>
       </div>
     </div>
-    <div class="tabs__tab-panel tabs__tab-panel--active" role="tabpanel" id="tab1-panel" aria-labelledby="tab1" tabindex="0">
+    <div class="uq-tabs__tab-panel uq-tabs__tab-panel--active" role="tabpanel" id="tab1-panel" aria-labelledby="tab1" tabindex="0">
       <p>Tab1 panel text</p>
     </div>
-    <div class="tabs__tab-panel" role="tabpanel" id="tab2-panel" aria-labelledby="tab2" tabindex="0" hidden="">
+    <div class="uq-tabs__tab-panel" role="tabpanel" id="tab2-panel" aria-labelledby="tab2" tabindex="0" hidden="">
       <p>Tab2 panel text</p>
     </div>
-    <div class="tabs__tab-panel" role="tabpanel" id="tab3-panel" aria-labelledby="tab3" tabindex="0" hidden="">
+    <div class="uq-tabs__tab-panel" role="tabpanel" id="tab3-panel" aria-labelledby="tab3" tabindex="0" hidden="">
       <p>Tab3 panel text</p>
     </div>
   </div>
@@ -51,7 +51,7 @@ hierarchical level.
 </Canvas>
 
 ```html
-  <div class="tabs">
+  <div class="uq-tabs">
     ...
   </div>
 ```
@@ -63,7 +63,7 @@ hierarchical level.
 </Canvas>
 
 ```html
-  <div class="tabs tabs--lined">
+  <div class="uq-tabs uq-tabs--lined">
     ...
   </div>
 ```
@@ -75,9 +75,9 @@ hierarchical level.
 </Canvas>
 
 ```html
-<div class="tabs tabs--outline">
-  <div class="tabs__tab-list" role="tablist" aria-label="Tab List">
-    <button class="tabs__tab tabs__tab--active" role="tab" aria-selected="true" aria-controls="tab1-panel" id="tab1">
+<div class="uq-tabs uq-tabs--outline">
+  <div class="uq-tabs__tab-list" role="tablist" aria-label="Tab List">
+    <button class="uq-tabs__tab uq-tabs__tab--active" role="tab" aria-selected="true" aria-controls="tab1-panel" id="tab1">
         <span class="uq-icon uq-icon--search"></span> Tab 1
     </button>
     ...
@@ -90,7 +90,7 @@ hierarchical level.
 </Canvas>
 
 ```html
-  <div class="tabs tabs--outline tabs--full-width">
+  <div class="uq-tabs uq-tabs--outline uq-tabs--full-width">
     ...
   </div>
 ```
@@ -102,7 +102,7 @@ hierarchical level.
 </Canvas>
 
 ```html
-  <div class="tabs tabs--outline tabs--small">
+  <div class="uq-tabs uq-tabs--outline uq-tabs--small">
     ...
   </div>
 ```
@@ -114,7 +114,7 @@ hierarchical level.
 </Canvas>
 
 ```html
-  <div class="tabs tabs--outline tabs--reversed">
+  <div class="uq-tabs uq-tabs--outline uq-tabs--reversed">
     ...
   </div>
 ```
@@ -136,10 +136,10 @@ hierarchical level.
 
 - When the user tabs through the tabs, it receives focus and automatically opens its related tab panel.
 - The WAI-ARIA roles used are `[role="tablist"]` for the tab list, `[role="tab"]` for the individual tab items and `[role="tabpanel"]` for the tab panels.
-- Tab active state: `tabindex = "0"`, classname `tabs__tab--active` is added, `aria-selected = "true"`.
-- Tab inactive state: `tabindex = "-1"`, classname `tabs__tab--active` is removed, `aria-selected = "false"`.
-- Tab panel active state: `tabindex = "0"`, classname `tabs__tab-panel--active` is added, `hidden` is removed.
-- Tab panel inactive state: `tabindex = "0"`, classname `tabs__tab-panel--active` is removed, `hidden` is added.
+- Tab active state: `tabindex = "0"`, classname ` uq-tabs__tab--active` is added, `aria-selected = "true"`.
+- Tab inactive state: `tabindex = "-1"`, classname ` uq-tabs__tab--active` is removed, `aria-selected = "false"`.
+- Tab panel active state: `tabindex = "0"`, classname ` uq-tabs__tab-panel--active` is added, `hidden` is removed.
+- Tab panel inactive state: `tabindex = "0"`, classname ` uq-tabs__tab-panel--active` is removed, `hidden` is added.
 - Colour contrast test for the tabs showed a WCAG AA Pass.
 <br />
 
@@ -170,6 +170,6 @@ new Tabs([options]);
 | Name | Type | Attributes | Default | Description |
 | ---- | ---- | ---------- | ------- | ----------- |
 | container | HTMLElement | Optional | | Optional container for tabs and panels. Useful for when you have multiple tab lists on a page. |
-| tabListSelector | String | Optional | `.tabs__tab-list` | Selector string of the tab lists. |
-| tabSelector | String | Optional | `.tabs__tab` | Selector string of the tabs. |
-| tabPanelSelector | String | Optional | `.tabs__tab-panel` | Selector string of the tab panels. |
+| tabListSelector | String | Optional | `. uq-tabs__tab-list` | Selector string of the tab lists. |
+| tabSelector | String | Optional | `. uq-tabs__tab` | Selector string of the tabs. |
+| tabPanelSelector | String | Optional | `. uq-tabs__tab-panel` | Selector string of the tab panels. |

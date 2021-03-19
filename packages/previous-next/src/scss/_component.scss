@@ -19,7 +19,7 @@
 		float: right;
 	}
 
-	&:after {
+	&::after {
 		content: "";
     	display: block;
     	clear: both;
@@ -36,10 +36,10 @@
 			color: core.$link-hover;
 			text-decoration: none;
 
-			&:before {
+			&::before {
 				transform: translate(-10px, 0) rotateY(180deg);
 			}
-			&:after {
+			&::after {
 				transform: translate(10px, 0) rotateY(0deg);
 			}
 		}
@@ -50,7 +50,7 @@
 		padding-left: core.$space-xxl;
 		float: left;
 
-		&:before {
+		&::before {
 			content: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 64.82 132.25'%3E%3Cpath d='M32.08,4.38,94.62,66.91a4.37,4.37,0,0,1,0,6.18h0L32.08,135.63' transform='translate(-31.58 -3.88)' fill='none' stroke='%23D7D1CC' stroke-linecap='round' stroke-width='3' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
 			// SVG used is Streamline - Regular - arrow-right-1.svg
 			width: 3rem;
@@ -69,7 +69,7 @@
 		text-align: right;
 		float: right;
 
-		&:after {
+		&::after {
 			content: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 64.82 132.25'%3E%3Cpath d='M32.08,4.38,94.62,66.91a4.37,4.37,0,0,1,0,6.18h0L32.08,135.63' transform='translate(-31.58 -3.88)' height='100%' fill='none' stroke='%23D7D1CC' stroke-linecap='round' stroke-width='3' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
 			// SVG used is Streamline - Regular - arrow-right-1.svg
 			width: 3rem;

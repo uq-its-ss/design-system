@@ -5,8 +5,8 @@ import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
 # Get started
 
 <br/>
-<div className="alert alert--warning" role="alert">
-  <div className="alert__message">
+<div className="uq-alert uq-alert--warning" role="alert">
+  <div className="uq-alert__message">
     <h2><span className="uq-icon uq-icon--architecture-and-planning--heavy-equipment-lift-hook-box uq-icon--text"></span> We're in restricted beta!</h2>
     Currently restricted to ITS-ADS staff and/or those with access to our tools account on AWS. Please refer to the 🔒&nbsp;<a href="https://confluence.its.uq.edu.au/confluence/x/0DwDCw" target="_blank">environment setup instructions</a> if you <em>do</em> have access. Otherwise, the notes below should still give you an idea of what to expect.
   </div>
@@ -41,7 +41,7 @@ Design System packages are scoped under `@uqds`.
 For example, to install buttons:
 
 ```shell
-npm i @uqds/button
+$ npm i @uqds/button
 ```
 
 See the [following list of package names](#component-package-list).
@@ -57,13 +57,15 @@ enough to get you started.
 result in any compiled CSS by itself when processed. The `@uqds/core` package is
 an example of a package that only contains non-emitting code. You can use this
 file wherever you need reference variables, functions, and mixins within your
-own Sass stylesheets. Our `.scss` files are written for the [primary
-implementation of Sass (Dart Sass)][6].
+own Sass stylesheets. **Our `.scss` files are written for the [primary
+implementation of Sass (Dart Sass)][6]**.
 
 We recommend using namespaces when importing the non-emitting [modules][5] into
 your Sass files. For example,
 
 ```scss
+// styles.scss
+
 // With a namespace (recommended)
 @use '@uqds/core/src/scss/global' as core;
 
@@ -81,14 +83,19 @@ compiled CSS when processed. This file should only be imported or compiled once
 safely imported without a namespace into Sass files. For example,
 
 ```scss
+// styles.scss
+
 @use '@uqds/button/src/scss/component' as *;
 ```
 
-You can also use emitting code in your JavaScript projects (with a bundler like
-Webpack or Rollup) by importing it as a module. The following example uses the
-ES6 import syntax.
+You can also use emitting code in your JavaScript projects. With a bundler like
+Webpack (with `sass-loader`) or Rollup (with `rollup-plugin-scss`), you can import
+it as a module. The following example uses the ES6 import syntax. Just remember
+to [choose Dart Sass (`sass`) as the preprocessor (as opposed to `node-sass`)][7].
 
 ```javascript
+// module.js
+
 import '@uqds/button/src/scss/_component.scss';
 ```
 
@@ -135,3 +142,4 @@ Instructions coming soon after we get our house in order.
 [4]: https://registry.npmjs.org
 [5]: https://sass-lang.com/documentation/at-rules/use
 [6]: https://sass-lang.com/dart-sass
+[7]: https://webpack.js.org/loaders/sass-loader/#implementation

@@ -25,7 +25,7 @@ export const DefaultCard = () => {
         <a class="uq-card__link" href="#">Card title</a>
         <div class="uq-card__image-wrapper">
           <div class="uq-card__image">
-            <img src="/images/uq-image-stlucia-campus.jpg" alt="Card image description">
+            <img src="/images/card/card-example-st-lucia-campus.jpg" alt="Card image description">
           </div>
         </div>
         <div class="uq-card__content-wrapper">
@@ -53,7 +53,7 @@ export const DefaultCardWithLink = () => {
       <div class="uq-card">
         <div class="uq-card__image-wrapper">
           <div class="uq-card__image">
-            <img src="/images/uq-image-stlucia-campus.jpg" alt="Card image description">
+            <img src="/images/card/card-example-st-lucia-campus.jpg" alt="Card image description">
           </div>
         </div>
         <div class="uq-card__content-wrapper">
@@ -75,7 +75,7 @@ export const DefaultCardWithLink = () => {
       <div class="uq-card">
         <div class="uq-card__image-wrapper">
           <div class="uq-card__image">
-            <img src="/images/uq-image-stlucia-campus.jpg" alt="Card image description">
+            <img src="/images/card/card-example-st-lucia-campus.jpg" alt="Card image description">
           </div>
         </div>
         <div class="uq-card__content-wrapper">
@@ -321,7 +321,7 @@ export const DefaultCardImage = () => {
         <a class="uq-card__link" href="#">Card title</a>
         <div class="uq-card__image-wrapper">
           <div class="uq-card__image">
-            <img src="/images/uq-image-stlucia-campus.jpg" alt="Card image description">
+            <img src="/images/card/card-example-st-lucia-campus.jpg" alt="Card image description">
           </div>
         </div>
         <div class="uq-card__content-wrapper">
@@ -338,7 +338,7 @@ export const DefaultCardImage = () => {
         <a class="uq-card__link" href="#">Card title</a>
         <div class="uq-card__image-wrapper">
           <div class="uq-card__image">
-            <img src="/images/uq-image-stlucia-campus.jpg" alt="Card image description">
+            <img src="/images/card/card-example-st-lucia-campus.jpg" alt="Card image description">
           </div>
         </div>
         <div class="uq-card__content-wrapper">
@@ -357,7 +357,7 @@ export const DefaultCardImage = () => {
       <div class="uq-card">
         <div class="uq-card__image-wrapper">
           <div class="uq-card__image">
-            <img src="/images/uq-image-stlucia-campus.jpg" alt="Card image description">
+            <img src="/images/card/card-example-st-lucia-campus.jpg" alt="Card image description">
           </div>
         </div>
         <div class="uq-card__content-wrapper">
@@ -379,7 +379,7 @@ export const DefaultCardImage = () => {
       <div class="uq-card">
         <div class="uq-card__image-wrapper">
           <div class="uq-card__image">
-            <img src="/images/uq-image-stlucia-campus.jpg" alt="Card image description">
+            <img src="/images/card/card-example-st-lucia-campus.jpg" alt="Card image description">
           </div>
         </div>
         <div class="uq-card__content-wrapper">
@@ -407,7 +407,7 @@ export const DefaultCardImageButton = () => {
       <div class="uq-card">
         <div class="uq-card__image-wrapper">
           <div class="uq-card__image">
-            <img src="/images/uq-image-stlucia-campus.jpg" alt="Card image description">
+            <img src="/images/card/card-example-st-lucia-campus.jpg" alt="Card image description">
           </div>
         </div>
         <div class="uq-card__content-wrapper">
@@ -426,7 +426,7 @@ export const DefaultCardImageButton = () => {
       <div class="uq-card">
         <div class="uq-card__image-wrapper">
           <div class="uq-card__image">
-            <img src="/images/uq-image-stlucia-campus.jpg" alt="Card image description">
+            <img src="/images/card/card-example-st-lucia-campus.jpg" alt="Card image description">
           </div>
         </div>
         <div class="uq-card__content-wrapper">
@@ -457,7 +457,7 @@ export const DefaultCard1Col = () => {
       <div class="uq-card">
         <div class="uq-card__image-wrapper">
           <div class="uq-card__image">
-            <img src="/images/uq-image-stlucia-campus.jpg" alt="Card image description">
+            <img src="/images/card/card-example-st-lucia-campus.jpg" alt="Card image description">
           </div>
         </div>
         <div class="uq-card__content-wrapper">
@@ -488,7 +488,7 @@ export const DefaultCard2Col = () => {
       <div class="uq-card">
         <div class="uq-card__image-wrapper">
           <div class="uq-card__image">
-            <img src="/images/uq-image-stlucia-campus.jpg" alt="Card image description">
+            <img src="/images/card/card-example-st-lucia-campus.jpg" alt="Card image description">
           </div>
         </div>
         <div class="uq-card__content-wrapper">
@@ -510,7 +510,7 @@ export const DefaultCard2Col = () => {
       <div class="uq-card">
         <div class="uq-card__image-wrapper">
           <div class="uq-card__image">
-            <img src="/images/uq-image-stlucia-campus.jpg" alt="Card image description">
+            <img src="/images/card/card-example-st-lucia-campus.jpg" alt="Card image description">
           </div>
         </div>
         <div class="uq-card__content-wrapper">
@@ -541,7 +541,7 @@ export const DefaultCard3Col = () => {
       <div class="uq-card">
         <div class="uq-card__image-wrapper">
           <div class="uq-card__image">
-            <img src="/images/uq-image-stlucia-campus.jpg" alt="Card image description">
+            <img src="/images/card/card-example-st-lucia-campus.jpg" alt="Card image description">
           </div>
         </div>
         <div class="uq-card__content-wrapper">
@@ -563,7 +563,7 @@ export const DefaultCard3Col = () => {
       <div class="uq-card">
         <div class="uq-card__image-wrapper">
           <div class="uq-card__image">
-            <img src="/images/uq-image-stlucia-campus.jpg" alt="Card image description">
+            <img src="/images/card/card-example-st-lucia-campus.jpg" alt="Card image description">
           </div>
         </div>
         <div class="uq-card__content-wrapper">
@@ -585,7 +585,7 @@ export const DefaultCard3Col = () => {
       <div class="uq-card">
         <div class="uq-card__image-wrapper">
           <div class="uq-card__image">
-            <img src="/images/uq-image-stlucia-campus.jpg" alt="Card image description">
+            <img src="/images/card/card-example-st-lucia-campus.jpg" alt="Card image description">
           </div>
         </div>
         <div class="uq-card__content-wrapper">
@@ -616,7 +616,7 @@ export const DefaultCard4Col = () => {
       <div class="uq-card">
         <div class="uq-card__image-wrapper">
           <div class="uq-card__image">
-            <img src="/images/uq-image-stlucia-campus.jpg" alt="Card image description">
+            <img src="/images/card/card-example-st-lucia-campus.jpg" alt="Card image description">
           </div>
         </div>
         <div class="uq-card__content-wrapper">
@@ -638,7 +638,7 @@ export const DefaultCard4Col = () => {
       <div class="uq-card">
         <div class="uq-card__image-wrapper">
           <div class="uq-card__image">
-            <img src="/images/uq-image-stlucia-campus.jpg" alt="Card image description">
+            <img src="/images/card/card-example-st-lucia-campus.jpg" alt="Card image description">
           </div>
         </div>
         <div class="uq-card__content-wrapper">
@@ -660,7 +660,7 @@ export const DefaultCard4Col = () => {
       <div class="uq-card">
         <div class="uq-card__image-wrapper">
           <div class="uq-card__image">
-            <img src="/images/uq-image-stlucia-campus.jpg" alt="Card image description">
+            <img src="/images/card/card-example-st-lucia-campus.jpg" alt="Card image description">
           </div>
         </div>
         <div class="uq-card__content-wrapper">
@@ -682,7 +682,7 @@ export const DefaultCard4Col = () => {
       <div class="uq-card">
         <div class="uq-card__image-wrapper">
           <div class="uq-card__image">
-            <img src="/images/uq-image-stlucia-campus.jpg" alt="Card image description">
+            <img src="/images/card/card-example-st-lucia-campus.jpg" alt="Card image description">
           </div>
         </div>
         <div class="uq-card__content-wrapper">
@@ -719,7 +719,7 @@ export const StoryCard = () => {
         <a class="uq-card__link" href="#">Card title</a>
         <div class="uq-card__image-wrapper">
           <div class="uq-card__image">
-            <img src="/images/uq-image-gatton-campus.jpg" alt="Card image description">
+            <img src="/images/card/card-example-gatton-campus.jpg" alt="Card image description">
           </div>
         </div>
         <div class="uq-card__content-wrapper">
@@ -749,7 +749,7 @@ export const StoryCard1Col = () => {
         <a class="uq-card__link" href="#">Card title</a>
         <div class="uq-card__image-wrapper">
           <div class="uq-card__image">
-            <img src="/images/uq-image-gatton-campus.jpg" alt="Card image description">
+            <img src="/images/card/card-example-gatton-campus.jpg" alt="Card image description">
           </div>
         </div>
         <div class="uq-card__content-wrapper">
@@ -782,7 +782,7 @@ export const StoryCard2Col = () => {
         <a class="uq-card__link" href="#">Card title</a>
         <div class="uq-card__image-wrapper">
           <div class="uq-card__image">
-            <img src="/images/uq-image-gatton-campus.jpg" alt="Card image description">
+            <img src="/images/card/card-example-gatton-campus.jpg" alt="Card image description">
           </div>
         </div>
         <div class="uq-card__content-wrapper">
@@ -806,7 +806,7 @@ export const StoryCard2Col = () => {
         <a class="uq-card__link" href="#">Card title</a>
         <div class="uq-card__image-wrapper">
           <div class="uq-card__image">
-            <img src="/images/uq-image-gatton-campus.jpg" alt="Card image description">
+            <img src="/images/card/card-example-gatton-campus.jpg" alt="Card image description">
           </div>
         </div>
         <div class="uq-card__content-wrapper">
@@ -839,7 +839,7 @@ export const StoryCard3Col = () => {
         <a class="uq-card__link" href="#">Card title</a>
         <div class="uq-card__image-wrapper">
           <div class="uq-card__image">
-            <img src="/images/uq-image-gatton-campus.jpg" alt="Card image description">
+            <img src="/images/card/card-example-gatton-campus.jpg" alt="Card image description">
           </div>
         </div>
         <div class="uq-card__content-wrapper">
@@ -863,7 +863,7 @@ export const StoryCard3Col = () => {
         <a class="uq-card__link" href="#">Card title</a>
         <div class="uq-card__image-wrapper">
           <div class="uq-card__image">
-            <img src="/images/uq-image-gatton-campus.jpg" alt="Card image description">
+            <img src="/images/card/card-example-gatton-campus.jpg" alt="Card image description">
           </div>
         </div>
         <div class="uq-card__content-wrapper">
@@ -887,7 +887,7 @@ export const StoryCard3Col = () => {
         <a class="uq-card__link" href="#">Card title</a>
         <div class="uq-card__image-wrapper">
           <div class="uq-card__image">
-            <img src="/images/uq-image-gatton-campus.jpg" alt="Card image description">
+            <img src="/images/card/card-example-gatton-campus.jpg" alt="Card image description">
           </div>
         </div>
         <div class="uq-card__content-wrapper">
@@ -920,7 +920,7 @@ export const StoryCard4Col = () => {
         <a class="uq-card__link" href="#">Card title</a>
         <div class="uq-card__image-wrapper">
           <div class="uq-card__image">
-            <img src="/images/uq-image-gatton-campus.jpg" alt="Card image description">
+            <img src="/images/card/card-example-gatton-campus.jpg" alt="Card image description">
           </div>
         </div>
         <div class="uq-card__content-wrapper">
@@ -944,7 +944,7 @@ export const StoryCard4Col = () => {
         <a class="uq-card__link" href="#">Card title</a>
         <div class="uq-card__image-wrapper">
           <div class="uq-card__image">
-            <img src="/images/uq-image-gatton-campus.jpg" alt="Card image description">
+            <img src="/images/card/card-example-gatton-campus.jpg" alt="Card image description">
           </div>
         </div>
         <div class="uq-card__content-wrapper">
@@ -968,7 +968,7 @@ export const StoryCard4Col = () => {
         <a class="uq-card__link" href="#">Card title</a>
         <div class="uq-card__image-wrapper">
           <div class="uq-card__image">
-            <img src="/images/uq-image-gatton-campus.jpg" alt="Card image description">
+            <img src="/images/card/card-example-gatton-campus.jpg" alt="Card image description">
           </div>
         </div>
         <div class="uq-card__content-wrapper">
@@ -992,7 +992,7 @@ export const StoryCard4Col = () => {
         <a class="uq-card__link" href="#">Card title</a>
         <div class="uq-card__image-wrapper">
           <div class="uq-card__image">
-            <img src="/images/uq-image-gatton-campus.jpg" alt="Card image description">
+            <img src="/images/card/card-example-gatton-campus.jpg" alt="Card image description">
           </div>
         </div>
         <div class="uq-card__content-wrapper">
@@ -1025,7 +1025,7 @@ export const EventCard = () => {
         <a class="uq-card__link" href="#">Card title</a>
         <div class="uq-card__image-wrapper">
           <div class="uq-card__image">
-            <img src="/images/uq-image-herston-campus.jpg" alt="Card image description">
+            <img src="/images/card/card-example-herston-campus.jpg" alt="Card image description">
           </div>
         </div>
         <div class="uq-card__content-wrapper">
@@ -1055,7 +1055,7 @@ export const EventCard1Col = () => {
         <a class="uq-card__link" href="#">Card title</a>
         <div class="uq-card__image-wrapper">
           <div class="uq-card__image">
-            <img src="/images/uq-image-herston-campus.jpg" alt="Card image description">
+            <img src="/images/card/card-example-herston-campus.jpg" alt="Card image description">
           </div>
         </div>
         <div class="uq-card__content-wrapper">
@@ -1088,7 +1088,7 @@ export const EventCard2Col = () => {
         <a class="uq-card__link" href="#">Card title</a>
         <div class="uq-card__image-wrapper">
           <div class="uq-card__image">
-            <img src="/images/uq-image-herston-campus.jpg" alt="Card image description">
+            <img src="/images/card/card-example-herston-campus.jpg" alt="Card image description">
           </div>
         </div>
         <div class="uq-card__content-wrapper">
@@ -1112,7 +1112,7 @@ export const EventCard2Col = () => {
         <a class="uq-card__link" href="#">Card title</a>
         <div class="uq-card__image-wrapper">
           <div class="uq-card__image">
-            <img src="/images/uq-image-herston-campus.jpg" alt="Card image description">
+            <img src="/images/card/card-example-herston-campus.jpg" alt="Card image description">
           </div>
         </div>
         <div class="uq-card__content-wrapper">
@@ -1145,7 +1145,7 @@ export const EventCard3Col = () => {
         <a class="uq-card__link" href="#">Card title</a>
         <div class="uq-card__image-wrapper">
           <div class="uq-card__image">
-            <img src="/images/uq-image-herston-campus.jpg" alt="Card image description">
+            <img src="/images/card/card-example-herston-campus.jpg" alt="Card image description">
           </div>
         </div>
         <div class="uq-card__content-wrapper">
@@ -1169,7 +1169,7 @@ export const EventCard3Col = () => {
         <a class="uq-card__link" href="#">Card title</a>
         <div class="uq-card__image-wrapper">
           <div class="uq-card__image">
-            <img src="/images/uq-image-herston-campus.jpg" alt="Card image description">
+            <img src="/images/card/card-example-herston-campus.jpg" alt="Card image description">
           </div>
         </div>
         <div class="uq-card__content-wrapper">
@@ -1193,7 +1193,7 @@ export const EventCard3Col = () => {
         <a class="uq-card__link" href="#">Card title</a>
         <div class="uq-card__image-wrapper">
           <div class="uq-card__image">
-            <img src="/images/uq-image-herston-campus.jpg" alt="Card image description">
+            <img src="/images/card/card-example-herston-campus.jpg" alt="Card image description">
           </div>
         </div>
         <div class="uq-card__content-wrapper">
@@ -1226,7 +1226,7 @@ export const EventCard4Col = () => {
         <a class="uq-card__link" href="#">Card title</a>
         <div class="uq-card__image-wrapper">
           <div class="uq-card__image">
-            <img src="/images/uq-image-herston-campus.jpg" alt="Card image description">
+            <img src="/images/card/card-example-herston-campus.jpg" alt="Card image description">
           </div>
         </div>
         <div class="uq-card__content-wrapper">
@@ -1250,7 +1250,7 @@ export const EventCard4Col = () => {
         <a class="uq-card__link" href="#">Card title</a>
         <div class="uq-card__image-wrapper">
           <div class="uq-card__image">
-            <img src="/images/uq-image-herston-campus.jpg" alt="Card image description">
+            <img src="/images/card/card-example-herston-campus.jpg" alt="Card image description">
           </div>
         </div>
         <div class="uq-card__content-wrapper">
@@ -1274,7 +1274,7 @@ export const EventCard4Col = () => {
         <a class="uq-card__link" href="#">Card title</a>
         <div class="uq-card__image-wrapper">
           <div class="uq-card__image">
-            <img src="/images/uq-image-herston-campus.jpg" alt="Card image description">
+            <img src="/images/card/card-example-herston-campus.jpg" alt="Card image description">
           </div>
         </div>
         <div class="uq-card__content-wrapper">
@@ -1298,7 +1298,7 @@ export const EventCard4Col = () => {
         <a class="uq-card__link" href="#">Card title</a>
         <div class="uq-card__image-wrapper">
           <div class="uq-card__image">
-            <img src="/images/uq-image-herston-campus.jpg" alt="Card image description">
+            <img src="/images/card/card-example-herston-campus.jpg" alt="Card image description">
           </div>
         </div>
         <div class="uq-card__content-wrapper">

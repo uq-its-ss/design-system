@@ -40,10 +40,10 @@ export const FeatureHero = () => {
 <div class="uq-hero uq-hero--feature-image">  
   <div class="uq-hero__image">
     <div class="uq-hero__image--small">
-      <img src="/images/hero/hero_example--small.jpg" />
+      <img src="/images/hero/hero-example--small.jpg" />
     </div>
     <div class="uq-hero__image--large">
-      <img src="/images/hero/hero_example--large.jpg" />
+      <img src="/images/hero/hero-example--large.jpg" />
     </div>
   </div>
   <div class="uq-hero__content">

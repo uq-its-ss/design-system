@@ -1,5 +1,4 @@
-const Fiber = require('fibers');
-const { src, dest, series, parallel } = require('gulp');
+const { src, dest, parallel } = require('gulp');
 const sass = require('gulp-sass');
 const babel = require('gulp-babel');
 // const concat = require('gulp-concat');
@@ -24,7 +23,6 @@ const scssPaths = [
 function compileSCSS() {
   return src('./src/scss/**/*.scss')
     .pipe(sass({
-      fiber: Fiber,
       includePaths: scssPaths,
       outputStyle: 'compressed'}).on('error', sass.logError))
     .pipe(dest('./dist/css'));
@@ -67,7 +65,8 @@ function bundleJS() {
   .pipe(source('uqds.js'))
   .pipe(buffer())
   .pipe(babel({
-    presets: ['@babel/preset-env']
+    presets: ['@babel/preset-env'],
+    plugins: ['@babel/plugin-proposal-class-properties']
   }))
   .pipe(dest('./dist/js'))
   .pipe(rename('uqds.min.js'))

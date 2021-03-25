@@ -1,7 +1,6 @@
 const { src, dest, parallel } = require('gulp');
-const sass = require('gulp-sass');
+const sass = require('gulp-dart-sass');
 const babel = require('gulp-babel');
-// const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
 const rename = require('gulp-rename');
 const rollup = require('@rollup/stream');
@@ -9,9 +8,6 @@ const { nodeResolve } = require('@rollup/plugin-node-resolve');
 const cjs = require('@rollup/plugin-commonjs');
 const source = require('vinyl-source-stream');
 const buffer = require('vinyl-buffer');
-
-// Set SCSS compiler to Dart Sass (`sass`)
-sass.compiler = require('sass');
 
 // SCSS include paths
 const scssPaths = [

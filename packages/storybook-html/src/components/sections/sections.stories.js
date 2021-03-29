@@ -131,7 +131,7 @@ sectionsShaded.storyName = 'Sections shaded';
 export const sectionsBackground = () => {
   return `
 <div class="uq-section uq-section--centered uq-section--image-behind uq-section--light-text light-palette">
-  <div class="uq-section__background"><img src="/images/uq-image-01.jpeg" /></div>
+  <div class="uq-section__background"><img src="/images/section/section-example-01.jpeg" /></div>
 
   <div class="uq-section__container">
     <div class="uq-section__header">
@@ -154,7 +154,7 @@ sectionsBackground.storyName = 'Sections background';
 
 export const sectionsLightTint = () => {
   return `
-<div class="uq-section uq-section--centered uq-section--background-image uq-section--light-tint uq-section--dark-text" style="background-image: url('/images/uq-image-01.jpeg');">
+<div class="uq-section uq-section--centered uq-section--background-image uq-section--light-tint uq-section--dark-text" style="background-image: url('/images/section/section-example-01.jpeg');">
   <div class="uq-section__container">
     <div class="uq-section__header">
       <h2 class="uq-section__title">Section title</h2>
@@ -176,7 +176,7 @@ sectionsLightTint.storyName = 'Sections light tint';
 
 export const sectionsDarkTint = () => {
   return `
-<div class="uq-section uq-section--centered uq-section--background-image uq-section--dark-tint uq-section--light-text light-palette" style="background-image: url('/images/uq-image-01.jpeg');">
+<div class="uq-section uq-section--centered uq-section--background-image uq-section--dark-tint uq-section--light-text light-palette" style="background-image: url('/images/section/section-example-01.jpeg');">
   <div class="uq-section__container">
     <div class="uq-section__header">
       <h2 class="uq-section__title">Section title</h2>

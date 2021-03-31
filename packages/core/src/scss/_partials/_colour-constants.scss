@@ -82,8 +82,8 @@ $alert: $uq-red-dark10;
 // Alerts and Status - Light
 $info-light: lighten($uq-blue, 40%); //#d4f0ff;
 $success-light: lighten($uq-green, 50%); //#d5eeca;
-$warning-light: lighten($uq-yellow, 40%); //#ffe0ad;
-$alert-light: lighten($uq-red, 40%); //#ffacac;
+$warning-light: lighten($uq-yellow, 30%); //#ffe0ad;
+$alert-light: lighten($uq-red, 30%); //#ffacac;
 
 // Palettes
 $light-palette-color: $uq-neutral-light80;

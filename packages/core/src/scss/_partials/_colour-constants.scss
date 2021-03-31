@@ -14,11 +14,6 @@ $uq-purple: #51247A;
 $uq-black: #000;
 $uq-white: #fff;
 
-// UQ Primary - Darken
-$uq-purple-dark10: darken($uq-purple, 10%); //#49206c;
-
-
-
 // UQ Secondary palette
 $uq-purple-light: #962A8B;
 $uq-gold: #BB9D65;
@@ -29,17 +24,20 @@ $uq-blue: #4085C6;
 $uq-aqua: #00A2C7;
 $uq-green: #2EA836;
 
+// UQ Neutral palette
+$uq-neutral: #D7D1CC;
+$uq-darkgrey: #999490;
+
+
+
+// UQ Primary - Darken
+$uq-purple-dark10: darken($uq-purple, 10%); //#49206c;
+
 // UQ Secondary - Darken
 $uq-red-dark10: darken($uq-red, 10%); //#be1b38;
 $uq-red-dark20: darken($uq-red, 20%); //#9b1129;
 
 $uq-green-dark10: darken($uq-green, 10%);
-
-
-
-// UQ Neutral palette
-$uq-neutral: #D7D1CC;
-$uq-darkgrey: #999490;
 
 // UQ Neutral - Tint
 $uq-neutral-light20: tint($uq-neutral, 20%); //#dfdad6;

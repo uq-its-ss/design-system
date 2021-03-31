@@ -1,15 +1,19 @@
+// Function to Tint a color
+@function tint($color, $percentage) {
+    @return mix(white, $color, $percentage);
+}
+// Function to Shade a color
+@function shade($color, $percentage) {
+    @return mix(black, $color, $percentage);
+}
+
 // UQ Primary palette
 $uq-purple: #51247A;
 $uq-black: #000;
 $uq-white: #fff;
 
-// UQ Primary - Purple Shades
-$uq-purple-dark: #49206c;
-
 // UQ Secondary palette
 $uq-purple-light: #962A8B;
-$uq-neutral: #D7D1CC;
-$uq-darkgrey: #999490;
 $uq-gold: #BB9D65;
 $uq-red: #E62645;
 $uq-orange: #EB602B;
@@ -18,30 +22,36 @@ $uq-blue: #4085C6;
 $uq-aqua: #00A2C7;
 $uq-green: #2EA836;
 
-// UQ Secondary - Neutral Tints
+// UQ Neutral palette
+$uq-neutral: #D7D1CC;
+$uq-darkgrey: #999490;
+
+// UQ Primary - Darken
+$uq-purple-dark10: darken($uq-purple, 10%); //#49206c;
+
+// UQ Secondary - Darken
+$uq-red-dark10: darken($uq-red, 10%); //#be1b38;
+$uq-red-dark20: darken($uq-red, 20%); //#9b1129;
+
+$uq-green-dark10: darken($uq-green, 10%);
+
+// UQ Neutral - Tint
 $uq-neutral-light20: #f7f6f5;
 $uq-neutral-light40: #efedeb;
 $uq-neutral-light60: #e7e3e0;
 $uq-neutral-light80: #dfdad6;
 
-// UQ Secondary - Neutral Shades
+// UQ Neutral - Shade
 $uq-neutral-dark20: #aca7a3;
 $uq-neutral-dark40: #817d7a;
 $uq-neutral-dark60: #565452;
 $uq-neutral-dark80: #2b2a29;
 
-// UQ Secondary - Darkgrey Tints
+// UQ Darkgrey - Tint
 $uq-darkgrey-light20: #ebeae9;
 $uq-darkgrey-light40: #d6d4d3;
 $uq-darkgrey-light60: #c2bfbc;
 $uq-darkgrey-light80: #ada9a6;
-
-// UQ Secondary - Red Shades
-$uq-red-dark20: #be1b38;
-$uq-red-dark40: #9b1129;
-
-// UQ Secondary - Green Shades
-$uq-green-dark10: darken($uq-green, 10%);
 
 // UQ Purple gradient
 $uq-purple-gradient: linear-gradient(90deg, $uq-purple 0%, 87%, $uq-purple-light 100%);
@@ -55,7 +65,7 @@ $link-hover: #005ea5;
 $link-active: $link-hover;
 
 // Alerts and Status - Dark
-$alert: $uq-red-dark20;
+$alert: $uq-red-dark10;
 $success: $uq-green-dark10;
 
 // Alerts and Status - Light

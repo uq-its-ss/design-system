@@ -93,16 +93,16 @@
 
  /* Neutral tints */
  .uqds-neutral-light20 {
-    background-color: $uq-neutral-light20;
+    background-color: $uq-neutral-light80;
   }
   .uqds-neutral-light40 {
-    background-color: $uq-neutral-light40;
-  }
-  .uqds-neutral-light60 {
     background-color: $uq-neutral-light60;
   }
+  .uqds-neutral-light60 {
+    background-color: $uq-neutral-light40;
+  }
   .uqds-neutral-light80 {
-    background-color: $uq-neutral-light80;
+    background-color: $uq-neutral-light20;
   }
  /* Neutral shades */
  .uqds-neutral-dark20 {
@@ -122,16 +122,16 @@
   }
   /* Darkgrey tints */
   .uqds-darkgrey-light20 {
-    background-color: $uq-darkgrey-light20;
+    background-color: $uq-darkgrey-light80;
   }
   .uqds-darkgrey-light40 {
-    background-color: $uq-darkgrey-light40;
-  }
-  .uqds-darkgrey-light60 {
     background-color: $uq-darkgrey-light60;
   }
+  .uqds-darkgrey-light60 {
+    background-color: $uq-darkgrey-light40;
+  }
   .uqds-darkgrey-light80 {
-    background-color: $uq-darkgrey-light80;
+    background-color: $uq-darkgrey-light20;
   }
 
   /* Red shades */

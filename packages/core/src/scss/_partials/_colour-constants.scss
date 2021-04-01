@@ -31,13 +31,13 @@ $uq-darkgrey: #999490;
 
 
 // UQ Primary - Darken
-$uq-purple-dark10: darken($uq-purple, 10%); //#49206c;
+$uq-purple-dark10: darken($uq-purple, 10%); //#371853
 
 // UQ Secondary - Darken
-$uq-red-dark10: darken($uq-red, 10%); //#be1b38;
-$uq-red-dark20: darken($uq-red, 20%); //#9b1129;
+$uq-red-dark10: darken($uq-red, 10%); //#c31632
+$uq-red-dark20: darken($uq-red, 20%); //#951126
 
-$uq-green-dark10: darken($uq-green, 10%);
+$uq-green-dark10: darken($uq-green, 10%); //#238029
 
 
 // UQ Neutral - Tint
@@ -77,13 +77,13 @@ $link-active: $link-hover;
 $info: $uq-blue;
 $success: $uq-green-dark10;
 $warning: $uq-yellow;
-$alert: $uq-red-dark10;
+$alert: $uq-red-dark20;
 
 // Alerts and Status - Light
-$info-light: lighten($uq-blue, 40%); //#d4f0ff;
-$success-light: lighten($uq-green, 50%); //#d5eeca;
-$warning-light: lighten($uq-yellow, 30%); //#ffe0ad;
-$alert-light: lighten($uq-red, 30%); //#ffacac;
+$info-light: lighten($uq-blue, 40%); //#dde9f5
+$success-light: lighten($uq-green, 50%); //dff6e0
+$warning-light: lighten($uq-yellow, 40%); //fff0c8
+$alert-light: lighten($uq-red, 30%); //f6afbb
 
 // Palettes
 $light-palette-color: $uq-neutral-light80;

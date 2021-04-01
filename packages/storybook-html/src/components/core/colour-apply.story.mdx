@@ -120,7 +120,7 @@ Icons should generally be the same colour as any adjacent text
     </td>
   </tr>
   <tr className="uqds-table__row">
-    <td className="uqds-table__item"><strong className="uqds-text-color--purple">Purple Text</strong> <div className="uqds-colour__palette uqds-colour--purple"></div></td>
+    <td className="uqds-table__item"><strong className="uqds-text-color--purple">Purple text</strong> <div className="uqds-colour__palette uqds-colour--purple"></div></td>
     <td className="uqds-table__item" data-title="Name:">Purple text</td>
     <td className="uqds-table__item" data-title="Variable:"><code>$uq-purple</code></td>
     <td className="uqds-table__item" data-title="HEX:">#51247a</td>
@@ -177,10 +177,16 @@ Backgrounds are used to differentiate parts of an interface, and to create conta
 
 See for example: Sections, Cards, Table -- *add links eventually*
 
+The SASS function 'mix' is used to create variants for UQ neutral tones only. In all other UQ primary or secondary colours, the SASS function 'lighten' or 'darken' is used to create it's variants.
 
 ### Light backgrounds
 
 These can be used with dark and purple text.
+
+The light grey colour is a lighter variant of UQ Neutral colour produced by SASS function 'mix', e.g. <code>mix(white, $color, $percentage);</code>. The percentage value '100%' would turn the colour to white.
+
+Its darker variants is produced by SASS function 'mix', e.g. <code>mix(black, $color, $percentage);</code>. In this case, percentage value '100%' would turn the colour to black.
+
 
 <table className="uqds-table uqds-table--card  uqds-table--colour">
 <tbody className="uqds-table__body">
@@ -199,7 +205,7 @@ These can be used with dark and purple text.
     <td className="uqds-table__item" data-title="Usage:">Default background for all usage</td>
   </tr>
   <tr className="uqds-table__row">
-    <td className="uqds-table__item"><div className="uqds-colour__palette uqds-neutral-light20"></div></td>
+    <td className="uqds-table__item"><div className="uqds-colour__palette uqds-neutral-light80"></div></td>
     <td className="uqds-table__item" data-title="Name:">Light grey</td>
     <td className="uqds-table__item" data-title="Variable:"><code>$uq-neutral-light80</code></td>
     <td className="uqds-table__item" data-title="HEX:">#f7f6f5</td>
@@ -249,6 +255,8 @@ These colours can only be used for components which alert a user or display a st
 
 These can be used as background colours to default text, e.g. alerts.
 
+These light colours are lighter variants of its corresponding UQ brand colours produced by SASS function 'lighten', e.g. <code>$info-light: lighten($uq-blue, 40%);</code>
+
 <table className="uqds-table uqds-table--card uqds-table--colour">
 <tbody className="uqds-table__body">
   <tr className="uqds-table__mobile-heading">
@@ -257,34 +265,34 @@ These can be used as background colours to default text, e.g. alerts.
     <th className="uqds-table__heading">Variable</th>
     <th className="uqds-table__heading">HEX</th>
     <th className="uqds-table__heading">Usage</th>
-  </tr>  
+  </tr>
+  <tr className="uqds-table__row">
+    <td className="uqds-table__item"><div className="uqds-colour__palette uqds-colour--info"></div></td>
+    <td className="uqds-table__item" data-title="Name:">Information</td>
+    <td className="uqds-table__item" data-title="Variable:"><code>$info-light</code></td>
+    <td className="uqds-table__item" data-title="HEX:">#dde9f5</td>
+    <td className="uqds-table__item" data-title="Usage:">Information that is neither positive or negative but important to know</td>
+  </tr>
   <tr className="uqds-table__row">
     <td className="uqds-table__item"><div className="uqds-colour__palette uqds-colour--success"></div></td>
     <td className="uqds-table__item" data-title="Name:">Success</td>
     <td className="uqds-table__item" data-title="Variable:"><code>$success-light</code></td>
-    <td className="uqds-table__item" data-title="HEX:">#d5eeca</td>
+    <td className="uqds-table__item" data-title="HEX:">#dff6e0</td>
     <td className="uqds-table__item" data-title="Usage:">Success, available</td>
   </tr>
   <tr className="uqds-table__row">
     <td className="uqds-table__item"><div className="uqds-colour__palette uqds-colour--warning"></div></td>
     <td className="uqds-table__item" data-title="Name:">Warning</td>
     <td className="uqds-table__item" data-title="Variable:"><code>$warning-light</code></td>
-    <td className="uqds-table__item" data-title="HEX:">#ffe0ad</td>
+    <td className="uqds-table__item" data-title="HEX:">#fff0c8</td>
     <td className="uqds-table__item" data-title="Usage:">Warning; there <em>may</em> be a problem</td>
   </tr>
   <tr className="uqds-table__row">
-    <td className="uqds-table__item"><div className="uqds-colour__palette uqds-colour--danger"></div></td>
-    <td className="uqds-table__item" data-title="Name:">Danger</td>
+    <td className="uqds-table__item"><div className="uqds-colour__palette uqds-colour--alert"></div></td>
+    <td className="uqds-table__item" data-title="Name:">Alert</td>
     <td className="uqds-table__item" data-title="Variable:"><code>$alert-light</code></td>
-    <td className="uqds-table__item" data-title="HEX:">#ffacac</td>
+    <td className="uqds-table__item" data-title="HEX:">#f6afbb</td>
     <td className="uqds-table__item" data-title="Usage:">Error, unavailable; there <em>is</em> a problem</td>
-  </tr>
-  <tr className="uqds-table__row">
-    <td className="uqds-table__item"><div className="uqds-colour__palette uqds-colour--info"></div></td>
-    <td className="uqds-table__item" data-title="Name:">Information</td>
-    <td className="uqds-table__item" data-title="Variable:"><code>$info-light</code></td>
-    <td className="uqds-table__item" data-title="HEX:">#d4f0ff</td>
-    <td className="uqds-table__item" data-title="Usage:">Information that is neither positive or negative but important to know</td>
   </tr>
 </tbody>
 </table>
@@ -294,6 +302,8 @@ These can be used as background colours to default text, e.g. alerts.
 
 These can be used on a white background or as background colours to white text, e.g. form validation errors.
 
+Some of these dark colours are darker variants of its corresponding UQ brand colour produced by SASS function 'darken', e.g. <code>$alert: darken($uq-red, 20%);</code>
+
 <table className="uqds-table uqds-table--card uqds-table--colour">
 <tbody className="uqds-table__body">
   <tr className="uqds-table__mobile-heading">
@@ -302,7 +312,14 @@ These can be used on a white background or as background colours to white text, 
     <th className="uqds-table__heading">Variable</th>
     <th className="uqds-table__heading">HEX</th>
     <th className="uqds-table__heading">Usage</th>
-  </tr>  
+  </tr>
+  <tr className="uqds-table__row">
+    <td className="uqds-table__item"><div className="uqds-colour__palette uqds-colour--blue"></div></td>
+    <td className="uqds-table__item" data-title="Name:">Information</td>
+    <td className="uqds-table__item" data-title="Variable:"><code>$info</code></td>
+    <td className="uqds-table__item" data-title="HEX:">#4085C6</td>
+    <td className="uqds-table__item" data-title="Usage:">Information that is neither positive or negative but important to know</td>
+  </tr> 
   <tr  className="uqds-table__row">
     <td className="uqds-table__item"><div className="uqds-colour__palette uqds-green-dark10"></div></td>
     <td className="uqds-table__item" data-title="Name:">Success</td>
@@ -311,25 +328,18 @@ These can be used on a white background or as background colours to white text, 
     <td className="uqds-table__item" data-title="Usage:">Success, available</td>
   </tr>
   <tr className="uqds-table__row">
-    <td className="uqds-table__item">Not yet defined</td>
+    <td className="uqds-table__item"><div className="uqds-colour__palette uqds-colour--yellow"></div></td>
     <td className="uqds-table__item" data-title="Name:">Warning</td>
-    <td className="uqds-table__item" data-title="Variable:">Not yet defined</td>
-    <td className="uqds-table__item" data-title="HEX:">N/A</td>
+    <td className="uqds-table__item" data-title="Variable:"><code>$warning</code></td>
+    <td className="uqds-table__item" data-title="HEX:">#FBB800</td>
     <td className="uqds-table__item" data-title="Usage:">Warning; there <em>may</em> be a problem</td>
   </tr>
   <tr  className="uqds-table__row">
-    <td className="uqds-table__item"><div className="uqds-colour__palette uqds-red-dark40"></div></td>
+    <td className="uqds-table__item"><div className="uqds-colour__palette uqds-red-dark20"></div></td>
     <td className="uqds-table__item" data-title="Name:">Alert</td>
     <td className="uqds-table__item" data-title="Variable:"><code>$alert</code></td>
-    <td className="uqds-table__item" data-title="HEX:">#9b1129</td>
+    <td className="uqds-table__item" data-title="HEX:">#951126</td>
     <td className="uqds-table__item" data-title="Usage:">Error, unavailable; there <em>is</em> a problem</td>
-  </tr>
-  <tr className="uqds-table__row">
-    <td className="uqds-table__item">Not yet defined</td>
-    <td className="uqds-table__item" data-title="Name:">Information</td>
-    <td className="uqds-table__item" data-title="Variable:">Not yet defined</td>
-    <td className="uqds-table__item" data-title="HEX:">N/A</td>
-    <td className="uqds-table__item" data-title="Usage:">Information that is neither positive or negative but important to know</td>
   </tr>
 </tbody>
 </table>
@@ -346,7 +356,7 @@ These can be used on a white background or as background colours to white text, 
     <th className="uqds-table__heading">Usage</th>
   </tr>  
   <tr className="uqds-table__row">
-    <td className="uqds-table__item"><div className="uqds-colour__palette uqds-neutral-light20"></div></td>
+    <td className="uqds-table__item"><div className="uqds-colour__palette uqds-neutral-light80"></div></td>
     <td className="uqds-table__item" data-title="Name:">Light grey</td>
     <td className="uqds-table__item" data-title="Variable:"><code>$uq-neutral-light80</code></td>
     <td className="uqds-table__item" data-title="HEX:">#f7f6f5</td>

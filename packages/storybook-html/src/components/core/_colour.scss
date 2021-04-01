@@ -93,17 +93,18 @@
 
  /* Neutral tints */
  .uqds-neutral-light20 {
-    background-color: $uq-neutral-light80;
-  }
-  .uqds-neutral-light40 {
-    background-color: $uq-neutral-light60;
-  }
-  .uqds-neutral-light60 {
-    background-color: $uq-neutral-light40;
-  }
-  .uqds-neutral-light80 {
     background-color: $uq-neutral-light20;
   }
+  .uqds-neutral-light40 {
+    background-color: $uq-neutral-light40;
+  }
+  .uqds-neutral-light60 {
+    background-color: $uq-neutral-light60;
+  }
+  .uqds-neutral-light80 {
+    background-color: $uq-neutral-light80;
+  }
+  
  /* Neutral shades */
  .uqds-neutral-dark20 {
   background-color: $uq-neutral-dark20;
@@ -120,25 +121,26 @@
   .uqds-neutral-dark80 {
     background-color: $uq-neutral-dark80;
   }
+
   /* Darkgrey tints */
   .uqds-darkgrey-light20 {
-    background-color: $uq-darkgrey-light80;
+    background-color: $uq-darkgrey-light20;
   }
   .uqds-darkgrey-light40 {
-    background-color: $uq-darkgrey-light60;
-  }
-  .uqds-darkgrey-light60 {
     background-color: $uq-darkgrey-light40;
   }
+  .uqds-darkgrey-light60 {
+    background-color: $uq-darkgrey-light60;
+  }
   .uqds-darkgrey-light80 {
-    background-color: $uq-darkgrey-light20;
+    background-color: $uq-darkgrey-light80;
   }
 
   /* Red shades */
-  .uqds-red-dark20 {
+  .uqds-red-dark10 {
     background-color: $uq-red-dark10;
   }
-  .uqds-red-dark40 {
+  .uqds-red-dark20 {
     background-color: $uq-red-dark20;
   }
 
@@ -176,7 +178,7 @@
   .uqds-colour--warning{
     background-color: $warning-light;
   }
-  .uqds-colour--danger{
+  .uqds-colour--alert{
     background-color: $alert-light;
   }
 

@@ -79,13 +79,13 @@ $link-hover: #005ea5;
 $link-active: $link-hover;
 
 // Alerts and Status - Dark
-$info: $uq-blue;
+$info: $link;
 $success: $uq-green-dark10;
 $warning: $uq-yellow;
 $alert: $uq-red-dark20;
 
 // Alerts and Status - Light
-$info-light: lighten($uq-blue, 40%); //#dde9f5
+$info-light: lighten($link, 40%); //#bbd8f5
 $success-light: lighten($uq-green, 50%); //dff6e0
 $warning-light: lighten($uq-yellow, 40%); //fff0c8
 $alert-light: lighten($uq-red, 30%); //f6afbb

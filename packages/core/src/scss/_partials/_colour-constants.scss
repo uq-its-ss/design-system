@@ -1,3 +1,8 @@
+/* Variants of brand colours created via below SASS functions
+   Primary, Secondary colour : Lighten/Darken (% increments of 10)
+   Neutral colour : Tint/Shade (% increments of 20)
+*/
+
 // Function to Tint a color
 @function tint($color, $percentage) {
     @return mix(white, $color, $percentage);

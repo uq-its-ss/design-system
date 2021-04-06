@@ -39,7 +39,7 @@ $card-shaded-bg: core.$uq-neutral-light20;
 
             &:hover,
             &:focus {
-                box-shadow: 0 core.$space-sm core.$space-sm rgba(core.$uq-neutral-dark80, 0.1);
+                box-shadow: 0 core.$space-s core.$space-s rgba(core.$uq-neutral-dark80, 0.1);
             }
 
             .uq-card__image__wrapper {
@@ -57,7 +57,7 @@ $card-shaded-bg: core.$uq-neutral-light20;
                 padding: core.$space-none core.$space;
             }
             .uq-card__title {
-                margin: core.$space-none core.$space-none core.$space-sm;
+                margin: core.$space-none core.$space-none core.$space-s;
             }
             .uq-card__body {
                 display: none;

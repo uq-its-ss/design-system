@@ -6,7 +6,7 @@
   border-top: core.$space-xs solid core.$uq-purple;
   box-sizing: border-box;
   font-family: core.$font-body;
-  font-size: core.$font-size-m;
+  font-size: core.$font-size;
   font-weight: core.$font-weight-normal;
   line-height: core.$line-height;
 
@@ -16,10 +16,10 @@
 
   &__title {
     margin: core.$space-none;
-    padding: core.$space core.$space-md;
+    padding: core.$space core.$space-m;
 
     &-link {
-      font-size: core.$font-size-xl;
+      font-size: core.$font-size-l;
       color: core.$uq-purple;
       text-decoration: none;
 
@@ -75,7 +75,7 @@
 
       .uq-side-nav__link {
         display: block;
-        padding: core.$space core.$space-md;
+        padding: core.$space core.$space-m;
         color: core.$text;
         text-decoration: none;
 
@@ -100,7 +100,7 @@
         right: 0;
         display: none; //block 
         width: 3rem;
-        padding: core.$space core.$space-md;
+        padding: core.$space core.$space-m;
         text-indent: -100vw;
         background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' stroke='%2351247A'%3E%3Cpath d='M14.285 5.145l-6 6.167a.41.41 0 01-.598 0L1.715 5.145' fill='none' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
         background-position: center center;

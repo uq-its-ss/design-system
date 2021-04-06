@@ -75,12 +75,12 @@ table,
     .uq-table__row {
       grid: auto-flow / 1fr;
       align-items: stretch;
-      margin-bottom: core.$space-md;
+      margin-bottom: core.$space-m;
     }
 
     td,
     .uq-table__cell {
-      padding: core.$space-sm core.$space;
+      padding: core.$space-s core.$space;
 
       &::before {
         content: attr(data-title);

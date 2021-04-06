@@ -21,8 +21,8 @@
 
 %pane,
 .uq-pane {
-  padding: core.$space-md; //1.8rem;
-  margin-bottom: core.$space-md; //1.5rem;
+  padding: core.$space-m; //1.8rem;
+  margin-bottom: core.$space-m; //1.5rem;
 
   &--shaded {
     @include pane-shaded;

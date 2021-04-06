@@ -34,15 +34,15 @@
         border-bottom: 1px solid rgba(core.$uq-white, 0.3);
         color: $site-footer-color;
         font-family: core.$merriweather;
-        font-size: core.$font-size-m;
+        font-size: core.$font-size;
         font-style: italic;
         font-weight: core.$font-weight-normal;
         line-height: core.$line-height;
-        margin: core.$space-none core.$space-none core.$space-lg;
-        padding: core.$space-none core.$space-none core.$space-lg;
+        margin: core.$space-none core.$space-none core.$space-l;
+        padding: core.$space-none core.$space-none core.$space-l;
 
         @media #{core.$screen-md-up} {
-            font-size: core.$font-size-l;
+            font-size: core.$font-size-m;
         }
 
         &__link {
@@ -92,7 +92,7 @@
     }
 
     &__footer {
-        margin: core.$space-lg core.$space-none core.$space-none core.$space-none;
+        margin: core.$space-l core.$space-none core.$space-none core.$space-none;
         overflow: hidden;
 
         .uq-footer__row {
@@ -113,11 +113,11 @@
             padding: core.$space-none;
 
             li {
-                margin-bottom: core.$space-sm;
+                margin-bottom: core.$space-s;
                 
                 &::after {
                     content: " | ";
-                    padding: core.$space-none core.$space-sm;
+                    padding: core.$space-none core.$space-s;
                     text-align: center;
                 }
 
@@ -138,7 +138,7 @@
             list-style: none;
             margin-top: 0;
             margin-bottom: core.$space;
-            margin-left: -(core.$space-md);
+            margin-left: -(core.$space-m);
             margin-right: 0;
             overflow: hidden;
             padding: 0;
@@ -146,7 +146,7 @@
             > li {
                 display: block;
                 float: left;
-                margin-left: core.$space-md;
+                margin-left: core.$space-m;
 
                 > * {
                     display: block;
@@ -156,7 +156,7 @@
         &__item + .uq-footer__social-media__item::before {
             content: " ";
             display: inline-block;
-            margin: core.$space-none core.$space-sm core.$space-none core.$space-none;
+            margin: core.$space-none core.$space-s core.$space-none core.$space-none;
         }
         &__link {
             &:hover {

@@ -10,6 +10,7 @@ $font-accent: $merriweather;
 $font-monospace: $courier;
 
 // font sizes
+$font-size-xxxxl: 3rem; /* 48px */
 $font-size-xxxl: 2.5rem; /* 40px - H1 */
 $font-size-xxl: 2rem; /* 32px - H2 */
 $font-size-xl: 1.5rem; /* 24px - H3 */
@@ -23,8 +24,8 @@ $font-size-xxs: 0.625rem; /* 10px - Small uppercase */
 // font weights
 $font-weight-thin: 300;
 $font-weight-normal: 400;
-$font-weight-bold: 500;
-$font-weight-medium: $font-weight-bold;
+$font-weight-medium: 500;
+$font-weight-bold: $font-weight-medium;
 
 // line heights
 $line-height: 1.5;

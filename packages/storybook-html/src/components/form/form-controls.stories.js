@@ -52,9 +52,9 @@ const gridLayout = (main, aside) => `
 export const inputText = () => layout([
   `<label for="text1">First name</label>
   <input type="text" id="text1" placeholder="Optional placeholder text" />`,
-  `<label for="text2" class="label--disabled">First name</label>
+  `<label for="text2" class="uq-label--disabled">First name</label>
   <input type="text" id="text2" disabled value="can't edit or submit me" />`,
-  `<label for="text3" class="label--readonly">First name</label>
+  `<label for="text3" class="uq-label--readonly">First name</label>
   <input type="text" id="text3" readonly value="can't edit me" />`
 ]);
 
@@ -62,44 +62,44 @@ inputText.storyName = "Text input";
 
 export const inputTextAlt = () => layout([
   `<label>Label <input type="text" /></label>`,
-  `<label class="label--disabled">Label <input type="text" disabled value="can't edit or submit me" /></label>`,
-  `<label class="label--readonly">Label <input type="text" readonly value="can't edit me" /></label>`
+  `<label class="uq-label--disabled">Label <input type="text" disabled value="can't edit or submit me" /></label>`,
+  `<label class="uq-label--readonly">Label <input type="text" readonly value="can't edit me" /></label>`
 ]);
 
 inputTextAlt.storyName = "Text input (nested)";
 
 export const inputTextInline = () => `
-  <div style="display: inline-block"><label class="label--inline">Keyword</label><input type="text" /></div>
-  <div style="display: inline-block"><label class="label--inline">Author</label><input type="text" /></div>
+  <div style="display: inline-block"><label class="uq-label--inline">Keyword</label><input type="text" /></div>
+  <div style="display: inline-block"><label class="uq-label--inline">Author</label><input type="text" /></div>
 `;
 
 inputTextInline.storyName = "Text input (inline)";
 
 export const inputTextInlineAlt = () => `
-  <label class="label--inline">Keyword <input type="text" /></label>
-  <label class="label--inline">Author <input type="text" /></label>
+  <label class="uq-label--inline">Keyword <input type="text" /></label>
+  <label class="uq-label--inline">Author <input type="text" /></label>
 `;
 
 inputTextInlineAlt.storyName = "Text input (inline & nested)";
 
 export const inputTextLarge = () => `
-  <input type="text" class="input--large" placeholder="Optional placeholder" />
+  <input type="text" class="uq-input--large" placeholder="Optional placeholder" />
 `;
 
 inputTextLarge.storyName = "Text input (large)";
 
 export const inputTextError = () => gridLayout(`
-  <label class="label--error" for="textError1">First name</label>
-  <input type="text" id="textError1" class="input--error" aria-describedby="textError1Error" aria-invalid="true" />
-  <span id="textError1Error" class="error-message" aria-live="polite">Enter your first name</span>
+  <label class="uq-label--error" for="textError1">First name</label>
+  <input type="text" id="textError1" class="uq-input--error" aria-describedby="textError1Error" aria-invalid="true" />
+  <span id="textError1Error" class="uq-error-message" aria-live="polite">Enter your first name</span>
 `);
 
 inputTextError.storyName = "Text input (error)";
 
 export const inputTextSuccess = () => gridLayout(`
-  <label class="label--success" for="textSuccess1">Mobile number</label>
-  <input type="text" id="textSuccess1" value="0421 234 456" class="input--success" aria-describedby="textSuccess1Feedback" />
-  <span id="textSuccess1Feedback" class="success-message" aria-live="polite">That number looks correct. It will still need to be verified via SMS.</span>
+  <label class="uq-label--success" for="textSuccess1">Mobile number</label>
+  <input type="text" id="textSuccess1" value="0421 234 456" class="uq-input--success" aria-describedby="textSuccess1Feedback" />
+  <span id="textSuccess1Feedback" class="uq-success-message" aria-live="polite">That number looks correct. It will still need to be verified via SMS.</span>
 `);
 
 inputTextSuccess.storyName = "Text input (success)";
@@ -140,25 +140,25 @@ export const selectAlt = () => layout([
 selectAlt.storyName = "Select (nested)";
 
 export const selectError = () => gridLayout(`
-  <label for="selectError1" class="label--error">Begin study in</label>
-  <select id="selectError1" class="input--error" aria-describedby="selectError1Error" aria-invalid="true">
+  <label for="selectError1" class="uq-label--error">Begin study in</label>
+  <select id="selectError1" class="uq-input--error" aria-describedby="selectError1Error" aria-invalid="true">
     <option value=""></option>
     <option value="2021">2021</option>
     <option value="2022">2022</option>
   </select>
-  <span id="selectError1Error" aria-live="polite" class="error-message">Select the year you will commence study at UQ</span>
+  <span id="selectError1Error" aria-live="polite" class="uq-error-message">Select the year you will commence study at UQ</span>
 `);
 
 selectError.storyName = "Select (error)";
 
 export const selectErrorAlt = () => gridLayout(`
-  <label class="label--error">Begin study in
-    <select class="input--error" aria-describedby="selectError2Error" aria-invalid="true">
+  <label class="uq-label--error">Begin study in
+    <select class="uq-input--error" aria-describedby="selectError2Error" aria-invalid="true">
       <option value=""></option>
       <option value="2021">2021</option>
       <option value="2022">2022</option>
     </select>
-    <span id="selectError2Error" aria-live="polite" class="error-message">Select the year you will commence study at UQ</span>
+    <span id="selectError2Error" aria-live="polite" class="uq-error-message">Select the year you will commence study at UQ</span>
   </label>
 `);
 
@@ -166,7 +166,7 @@ selectErrorAlt.storyName = "Select (nested & error)";
 
 export const selectInline = () => `
   <div style="display: inline-block">
-    <label class="label--inline">Begin study in</label>
+    <label class="uq-label--inline">Begin study in</label>
     <select>
       <option value="2021">2021</option>
       <option value="2022">2022</option>
@@ -177,7 +177,7 @@ export const selectInline = () => `
 selectInline.storyName = "Select (inline)";
 
 export const selectInlineAlt = () => `
-  <label class="label--inline">Begin study in
+  <label class="uq-label--inline">Begin study in
     <select>
       <option value="2021">2021</option>
       <option value="2022">2022</option>
@@ -196,9 +196,9 @@ export const checkbox = () => layout([
   `,
   `
     <input id="singleCheckbox3" type="checkbox" disabled />
-    <label for="singleCheckbox3" class="label--disabled">Potato</label><br/>
+    <label for="singleCheckbox3" class="uq-label--disabled">Potato</label><br/>
     <input id="singleCheckbox4" type="checkbox" checked disabled />
-    <label for="singleCheckbox4" class="label--disabled">Potato</label>
+    <label for="singleCheckbox4" class="uq-label--disabled">Potato</label>
   `,
   'N/A'
 ]);
@@ -215,11 +215,11 @@ export const checkboxAlt = () => layout([
     </label>
   `,
   `
-    <label class="label--disabled">
+    <label class="uq-label--disabled">
       <input type="checkbox" disabled />
       <span>Potato</span>
     </label>
-    <label class="label--disabled">
+    <label class="uq-label--disabled">
       <input type="checkbox" checked disabled />
       <span>Potato</span>
     </label>
@@ -230,19 +230,19 @@ export const checkboxAlt = () => layout([
 checkboxAlt.storyName = "Checkbox (nested)";
 
 export const checkboxError = () => gridLayout(`
-  <input id="singleCheckboxError1" type="checkbox" class="input--error" aria-describedby="singleCheckboxError1Feedback" aria-invalid="true" />
-  <label for="singleCheckboxError1" class="label--error">I declare that the information I've provided is correct and true</label>
-  <span id="singleCheckboxError1Feedback" aria-live="polite" class="error-message">Make sure your details are correct and then check the declaration statement</span>
+  <input id="singleCheckboxError1" type="checkbox" class="uq-input--error" aria-describedby="singleCheckboxError1Feedback" aria-invalid="true" />
+  <label for="singleCheckboxError1" class="uq-label--error">I declare that the information I've provided is correct and true</label>
+  <span id="singleCheckboxError1Feedback" aria-live="polite" class="uq-error-message">Make sure your details are correct and then check the declaration statement</span>
 `);
 
 checkboxError.storyName = "Checkbox (error)";
 
 export const checkboxErrorAlt = () => gridLayout(`
-  <label class="label--error">
-    <input type="checkbox" class="input--error" aria-describedby="singleCheckboxError2Feedback" aria-invalid="true" />
+  <label class="uq-label--error">
+    <input type="checkbox" class="uq-input--error" aria-describedby="singleCheckboxError2Feedback" aria-invalid="true" />
     <span>I declare that the information I've provided is correct and true</span>
   </label>
-  <span id="singleCheckboxError2Feedback" aria-live="polite" class="error-message">Make sure your details are correct and then check the declaration statement</span>
+  <span id="singleCheckboxError2Feedback" aria-live="polite" class="uq-error-message">Make sure your details are correct and then check the declaration statement</span>
 `);
 
 checkboxErrorAlt.storyName = "Checkbox (nested & error)";
@@ -263,11 +263,11 @@ export const radio = () => layout([
     <fieldset>
       <legend>Radio group label</legend>
       <input id="singleRadio4" type="radio" checked disabled>
-      <label for="singleRadio4" class="label--disabled">Option one</label><br/>
+      <label for="singleRadio4" class="uq-label--disabled">Option one</label><br/>
       <input id="singleRadio5" type="radio" disabled>
-      <label for="singleRadio5" class="label--disabled">Option two</label><br/>
+      <label for="singleRadio5" class="uq-label--disabled">Option two</label><br/>
       <input id="singleRadio6" type="radio" disabled>
-      <label for="singleRadio6" class="label--disabled">Option three</br>(multi-line)</label>
+      <label for="singleRadio6" class="uq-label--disabled">Option three</br>(multi-line)</label>
     </fieldset>
   `,
   'N/A'
@@ -296,15 +296,15 @@ export const radioAlt = () => layout([
   `
     <fieldset>
       <legend>Radio group label</legend>
-      <label class="label--disabled">
+      <label class="uq-label--disabled">
         <input type="radio" checked disabled />  
         <span>Option one</span>
       </label>
-      <label class="label--disabled">
+      <label class="uq-label--disabled">
         <input type="radio" disabled />  
         <span>Option two</span>
       </label>
-      <label class="label--disabled">
+      <label class="uq-label--disabled">
         <input type="radio" disabled />  
         <span>Option three<br/>(multi-line)</span>
       </label>
@@ -317,12 +317,12 @@ radioAlt.storyName = "Radio buttons (nested)";
 
 export const radioError = () => gridLayout(`
   <fieldset>
-    <legend class="legend--error">What semester will you start?</legend>
-    <input id="singleRadio7" type="radio" name="radioGroup3" class="input--error" aria-invalid="true" aria-describedby="radioButtonFeedback">
-    <label for="singleRadio7" class="label--error">Semester 1</label><br/>
-    <input id="singleRadio8" type="radio" name="radioGroup3" class="input--error" aria-invalid="true" aria-describedby="radioButtonFeedback">
-    <label for="singleRadio8" class="label--error">Semester 2</label>
-    <span id="radioButtonFeedback" aria-live="polite" class="error-message">Please select a semester</label>
+    <legend class="uq-legend--error">What semester will you start?</legend>
+    <input id="singleRadio7" type="radio" name="radioGroup3" class="uq-input--error" aria-invalid="true" aria-describedby="radioButtonFeedback">
+    <label for="singleRadio7" class="uq-label--error">Semester 1</label><br/>
+    <input id="singleRadio8" type="radio" name="radioGroup3" class="uq-input--error" aria-invalid="true" aria-describedby="radioButtonFeedback">
+    <label for="singleRadio8" class="uq-label--error">Semester 2</label>
+    <span id="radioButtonFeedback" aria-live="polite" class="uq-error-message">Please select a semester</label>
   </fieldset>
 `);
 
@@ -330,16 +330,16 @@ radioError.storyName = "Radio buttons (error)";
 
 export const radioErrorAlt = () => gridLayout(`
   <fieldset>
-    <legend class="legend--error">What semester will you start?</legend>
-    <label class="label--error">
-      <input type="radio" name="radioGroup4" class="input--error" aria-invalid="true" aria-describedby="radioButtonFeedback">
+    <legend class="uq-legend--error">What semester will you start?</legend>
+    <label class="uq-label--error">
+      <input type="radio" name="radioGroup4" class="uq-input--error" aria-invalid="true" aria-describedby="radioButtonFeedback">
       <span>Semester 1</span>
     </label>
-    <label class="label--error">
-      <input type="radio" name="radioGroup4" class="input--error" aria-invalid="true" aria-describedby="radioButtonFeedback">
+    <label class="uq-label--error">
+      <input type="radio" name="radioGroup4" class="uq-input--error" aria-invalid="true" aria-describedby="radioButtonFeedback">
       <span>Semester 2</span>
     </label>
-    <span id="radioButtonFeedback" aria-live="polite" class="error-message">Please select a semester</label>
+    <span id="radioButtonFeedback" aria-live="polite" class="uq-error-message">Please select a semester</label>
   </fieldset>
 `);
 

@@ -12,10 +12,10 @@ $use-encapsulation: false !default;
   input,
   select,
   textarea,
-  .error-summary,
-  .error-message,
-  .success-message,
-  .inline-help  {
+  .uq-error-summary,
+  .uq-error-message,
+  .uq-success-message,
+  .uq-inline-help  {
     box-sizing: border-box;
     font-family: core.$font-body;
   }
@@ -52,11 +52,11 @@ $use-encapsulation: false !default;
     line-height: core.$line-height-h;
     padding: 0;
 
-    &.legend--error {
+    &.uq-legend--error {
       color: $form-color-error;
     }
 
-    .legend__required {
+    .uq-legend__required {
       color: $form-color-error;
     }
   }
@@ -65,7 +65,7 @@ $use-encapsulation: false !default;
     cursor: pointer;
     line-height: core.$line-height-ui;
 
-    &.label {
+    &.uq-label {
       &--inline {
         align-items: center;
         display: inline-flex;
@@ -141,7 +141,7 @@ $use-encapsulation: false !default;
       }
     }
 
-    .label__required {
+    .uq-label__required {
       color: $form-color-error;
     }
   }
@@ -189,8 +189,8 @@ $use-encapsulation: false !default;
       color: $form-placeholder-color;
     }
 
-    &.input--error,
-    &.input--success {
+    &.uq-input--error,
+    &.uq-input--success {
       border-radius: $form-border-radius;
 
       &:focus {
@@ -200,23 +200,23 @@ $use-encapsulation: false !default;
       }
     }
 
-    &.input--error {
+    &.uq-input--error {
       border-color: $form-color-error;
       box-shadow: 0 2px 0 0 $form-color-error;
     }
 
-    &.input--success {
+    &.uq-input--success {
       border-color: $form-color-success;
       box-shadow: 0 2px 0 0 $form-color-success;
     }
 
-    &.input--large {
+    &.uq-input--large {
       padding: 1.15625rem core.$space-md;
       border-radius: core.$space-xs;
     }
 
-    + .error-message,
-    + .success-message {
+    + .uq-error-message,
+    + .uq-success-message {
       margin-top: -(core.$space-md);
       border-radius: 0 0 $form-border-radius $form-border-radius;
     }
@@ -289,7 +289,7 @@ $use-encapsulation: false !default;
       }
     }
 
-    &.input--error {
+    &.uq-input--error {
       border-color: $form-color-error;
 
       &:focus {
@@ -340,7 +340,7 @@ $use-encapsulation: false !default;
       }
     }
 
-    &.input--error {
+    &.uq-input--error {
       &:checked {
         background-color: $form-color-error;
       }
@@ -367,7 +367,7 @@ $use-encapsulation: false !default;
       }
     }
 
-    &.input--error {
+    &.uq-input--error {
       &:checked {
         border-color: $form-color-error;
 
@@ -382,7 +382,7 @@ $use-encapsulation: false !default;
     appearance: none;
   }
 
-  .error-summary {
+  .uq-error-summary {
     background-color: lighten(core.$alert-light, 10%);
     border: 1px solid core.$alert;
     border-left-width: core.$space-xs;
@@ -423,8 +423,8 @@ $use-encapsulation: false !default;
     }
   }
 
-  .error-message,
-  .success-message {
+  .uq-error-message,
+  .uq-success-message {
     color: core.$uq-white;
     display: block;
     font-size: core.$font-size-m;
@@ -451,7 +451,7 @@ $use-encapsulation: false !default;
     }
   }
 
-  .error-message {
+  .uq-error-message {
     background-color: $form-color-error;
 
     &::before {
@@ -459,7 +459,7 @@ $use-encapsulation: false !default;
     }
   }
 
-  .success-message {
+  .uq-success-message {
     background-color: $form-color-success;
 
     &::before {
@@ -467,7 +467,7 @@ $use-encapsulation: false !default;
     }
   }
 
-  .inline-help {
+  .uq-inline-help {
     display: block;
     font-size: $form-description-size;
     margin: 0 0 $form-spacing;

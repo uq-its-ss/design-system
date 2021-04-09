@@ -269,7 +269,7 @@ $-result-icon-spacing: $-icon-spacing;
       margin: 0 0 0 core.$space-s;
       border: 0 none;
       border-radius: 8px;
-      background-color: core.$uq-neutral-light20;
+      background-color: core.$uq-neutral-light80;
       text-align: left;
       outline: 0 none;
       padding: core.$space-s core.$space;
@@ -280,7 +280,7 @@ $-result-icon-spacing: $-icon-spacing;
       flex-grow: 1;
 
       &:hover {
-        background-color: core.$uq-neutral-light40;
+        background-color: core.$uq-neutral-light60;
       }
 
       &:focus {
@@ -478,7 +478,7 @@ $-result-icon-spacing: $-icon-spacing;
           width: 100%;
 
           &:hover {
-            background-color: core.$uq-neutral-light20;
+            background-color: core.$uq-neutral-light80;
             text-decoration: none;
           }
 
@@ -699,8 +699,8 @@ $-result-icon-spacing: $-icon-spacing;
     &__main {
       background-image: linear-gradient(to bottom, core.$uq-white, rgba(core.$uq-white, 0)),
                         linear-gradient(to top, core.$uq-white, rgba(core.$uq-white, 0)),
-                        linear-gradient(to bottom, core.$uq-neutral-light20, rgba(core.$uq-neutral-light20, 0)),
-                        linear-gradient(to top, core.$uq-neutral-light20, rgba(core.$uq-neutral-light20, 0));
+                        linear-gradient(to bottom, core.$uq-neutral-light80, rgba(core.$uq-neutral-light80, 0)),
+                        linear-gradient(to top, core.$uq-neutral-light80, rgba(core.$uq-neutral-light80, 0));
       background-position: 0 0, 0 100%, 0 0, 0 100%;
       background-repeat: no-repeat;
       background-color: core.$uq-white;

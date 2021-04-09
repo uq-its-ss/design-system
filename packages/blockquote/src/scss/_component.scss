@@ -7,10 +7,10 @@ $image-path: '../images' !default;
 	color: core.$uq-purple;
 	font-style: italic;
 	height: auto;
-	margin-left: core.$space-lg;
-	padding: core.$space core.$space-md;
+	margin-left: core.$space-l;
+	padding: core.$space core.$space-m;
 	position: relative;
-	width: calc(100% - core.$space-lg);
+	width: calc(100% - core.$space-l);
 
 	&::before {
 		background-color: core.$uq-purple;
@@ -65,13 +65,13 @@ $image-path: '../images' !default;
 		&::before {
 			content: '';
 			height: calc(100% - 60px);
-			left: core.$space-lg;
+			left: core.$space-l;
 			position: absolute;
-			top: core.$space-lg;
+			top: core.$space-l;
 			width: core.$space-xs;
 		}
 		&.blockquote--quotemark::before {
-			left: core.$space-sm;
+			left: core.$space-s;
 			position: absolute;
 			top: core.$space-xl;
 		}
@@ -86,19 +86,19 @@ $image-path: '../images' !default;
 			background-repeat: no-repeat;
 			display: inline-block;
 			fill: core.$uq-black;
-			height: core.$space-lg;
+			height: core.$space-l;
 			left: -(core.$space);
 			position: absolute;
 			stroke: core.$uq-black;
 			stroke-width: 0;
 			top: 0;
-			width: core.$space-lg;
+			width: core.$space-l;
 		}
 	}
 
 	&__body {
 		font-family: 'Merriweather', serif;
-		font-size: core.$font-size-xl;
+		font-size: core.$font-size-l;
 		font-weight: 300;
 		line-height: 1.4;
 

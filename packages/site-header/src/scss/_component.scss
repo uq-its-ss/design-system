@@ -6,7 +6,7 @@
   color: core.$text;
   box-sizing: border-box;
   font-family: core.$font-body;
-  font-size: core.$font-size-m;
+  font-size: core.$font-size;
   font-weight: core.$font-weight-normal;
   line-height: core.$line-height;
 
@@ -32,8 +32,8 @@
     }
 
     @media #{core.$screen-lg-up} {
-      padding-top: core.$space-md;
-      padding-bottom: core.$space-sm;
+      padding-top: core.$space-m;
+      padding-bottom: core.$space-s;
     }
   }
 
@@ -117,7 +117,7 @@
       border-bottom: 1px solid $nav-dropdown-divider;
       color: $nav-primary;
       display: block;
-      padding: core.$space core.$space-md;
+      padding: core.$space core.$space-m;
       text-decoration: none;
       transition: background-color .25s, border-color .25s;
 
@@ -206,7 +206,7 @@
           }
     
           @media #{core.$screen-lg-up} {
-            padding-left: core.$space-md;
+            padding-left: core.$space-m;
           }
         }
       }
@@ -256,7 +256,7 @@
       right: 0;
       display: block;
       width: 3rem;
-      padding: core.$space core.$space-md;
+      padding: core.$space core.$space-m;
       border-left: 1px solid $nav-dropdown-divider;
       text-indent: -100vw;
       background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' stroke='%2351247A'%3E%3Cpath d='M14.285 5.145l-6 6.167a.41.41 0 01-.598 0L1.715 5.145' fill='none' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
@@ -274,11 +274,11 @@
     }
 
     @media #{core.$screen-lg-up} {
-      margin: core.$space-none calc(#{nth(grid.$schema-md, 2) / 2} - #{core.$space-md});
+      margin: core.$space-none calc(#{nth(grid.$schema-md, 2) / 2} - #{core.$space-m});
     }
 
     @media #{core.$screen-xl-up} {
-      margin: core.$space-none calc(#{nth(grid.$schema-xl, 2) / 2} - #{core.$space-md});
+      margin: core.$space-none calc(#{nth(grid.$schema-xl, 2) / 2} - #{core.$space-m});
     }
   }
 }

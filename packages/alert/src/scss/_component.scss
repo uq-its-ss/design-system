@@ -23,7 +23,7 @@
     line-height: core.$line-height-h;
     padding-top: core.$space;
     padding-bottom: core.$space;
-    padding-left: core.$space-md;
+    padding-left: core.$space-m;
     padding-right: core.$space-uul !important;
 
     a {
@@ -37,10 +37,10 @@
   }
 
   &__action {
-    padding-top: core.$space-sm;
+    padding-top: core.$space-s;
     padding-bottom: core.$space;
-    padding-left: core.$space-md;
-    padding-right: core.$space-md;
+    padding-left: core.$space-m;
+    padding-right: core.$space-m;
   }
 
   &__close {
@@ -50,7 +50,7 @@
     font-weight: 300;
     line-height: 0.9;
     opacity: 1;
-    padding: core.$space-none core.$space-sm core.$space-xs;
+    padding: core.$space-none core.$space-s core.$space-xs;
     position: absolute;
     text-decoration: none !important;
     top: .55rem;
@@ -113,7 +113,7 @@
 
     &__action {
       @include grid.grid-col-width(2);
-      padding-bottom: core.$space-sm;
+      padding-bottom: core.$space-s;
       padding-right: core.$space-uul;
     }
 
@@ -143,8 +143,8 @@
 @media #{core.$screen-lg-up} {
   .uq-alert {
     &__message {
-      padding-top: core.$space-md;
-      padding-bottom: core.$space-md;
+      padding-top: core.$space-m;
+      padding-bottom: core.$space-m;
     }
 
     &__action {
@@ -159,7 +159,7 @@
     &--has-action {
       .uq-alert__message {
         @include grid.grid-col-width(7, 12);
-        padding-bottom: core.$space-md;
+        padding-bottom: core.$space-m;
       }
     }
   }

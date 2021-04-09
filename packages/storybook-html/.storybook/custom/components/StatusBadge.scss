@@ -12,7 +12,7 @@
   margin-bottom: core.$space;
   margin-left: -(core.$space-xs);
   margin-right: core.$space;
-  padding: core.$space-sm core.$space;
+  padding: core.$space-s core.$space;
   vertical-align: baseline;
 
   // Status tags for Documentation
@@ -52,8 +52,8 @@
     display: inline-block;
     font-size: core.$font-size-s;
     line-height: core.$line-height-ui;
-    margin-bottom: core.$space-md;
-    margin-right: core.$space-md;
+    margin-bottom: core.$space-m;
+    margin-right: core.$space-m;
     white-space: nowrap;
     vertical-align: baseline;
   }

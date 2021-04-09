@@ -23,12 +23,12 @@
 
   &__item {
     list-style: none;
-    padding: core.$space-sm core.$space-none; //.75rem 0rem
+    padding: core.$space-s core.$space-none; //.75rem 0rem
   }
 
   &--large-spacing {
     .vertical-list__item {
-      padding: core.$space-lg core.$space-none;
+      padding: core.$space-l core.$space-none;
 
       &__date {
         font-size: 90%;
@@ -39,7 +39,7 @@
   &--ruled {
     .vertical-list__title {
       border-top: 2px solid $border-color;
-      padding-top: core.$space-lg;
+      padding-top: core.$space-l;
     }
 
     .vertical-list__item {
@@ -63,8 +63,8 @@
   &--shaded {
     .vertical-list__item {
       background: $pane-shaded-bg;
-      margin-bottom: core.$space-sm;
-      padding: core.$space-md;
+      margin-bottom: core.$space-s;
+      padding: core.$space-m;
 
       &__date {
         font-size: 90%;
@@ -93,7 +93,7 @@
   &--ruled {
     .horizontal-list__title {
       border-top: 2px solid $border-color;
-      padding-top: core.$space-lg;
+      padding-top: core.$space-l;
     }
 
     .horizontal-list__item {

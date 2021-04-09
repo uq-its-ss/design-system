@@ -69,9 +69,9 @@ $use-encapsulation: false !default;
       &--inline {
         align-items: center;
         display: inline-flex;
-        font-size: core.$font-size-m;
+        font-size: core.$font-size;
         line-height: core.$line-height;
-        margin-bottom: core.$space-md;
+        margin-bottom: core.$space-m;
   
         input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]),
         select,
@@ -82,7 +82,7 @@ $use-encapsulation: false !default;
           max-width: none;
           min-width: 200px;
           margin-left: core.$space;
-          margin-right: core.$space-md;
+          margin-right: core.$space-m;
         }
 
         input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]),
@@ -117,18 +117,18 @@ $use-encapsulation: false !default;
     + input:not([type="checkbox"]):not([type="radio"]),
     + select,
     + textarea {
-      margin-top: core.$space-sm;
+      margin-top: core.$space-s;
     }
 
     input[type="radio"],
     input[type="checkbox"] {
       + *:not(input):not(select):not(textarea) {
         display: inline-block;
-        font-size: core.$font-size-m;
+        font-size: core.$font-size;
         font-weight: core.$font-weight-normal;
         line-height: $form-checkbox-size;
         margin-bottom: core.$space;
-        margin-left: core.$space-sm;
+        margin-left: core.$space-s;
         margin-right: $form-spacing;
         padding-top: core.$space-xs;
         vertical-align: top;
@@ -166,7 +166,7 @@ $use-encapsulation: false !default;
     font-size: $form-text-size;
     color: $form-text-color;
     line-height: core.$line-height-ui;
-    margin-bottom: core.$space-md;
+    margin-bottom: core.$space-m;
 
     &:focus {
       border-color: $form-border-color-focus;
@@ -211,13 +211,13 @@ $use-encapsulation: false !default;
     }
 
     &.uq-input--large {
-      padding: 1.15625rem core.$space-md;
+      padding: 1.15625rem core.$space-m;
       border-radius: core.$space-xs;
     }
 
     + .uq-error-message,
     + .uq-success-message {
-      margin-top: -(core.$space-md);
+      margin-top: -(core.$space-m);
       border-radius: 0 0 $form-border-radius $form-border-radius;
     }
   }
@@ -270,11 +270,11 @@ $use-encapsulation: false !default;
 
     + label {
       display: inline-block;
-      font-size: core.$font-size-m;
+      font-size: core.$font-size;
       font-weight: core.$font-weight-normal;
       line-height: $form-checkbox-size;
       margin-bottom: core.$space;
-      margin-left: core.$space-sm;
+      margin-left: core.$space-s;
       margin-right: $form-spacing;
       padding-top: core.$space-xs;
       vertical-align: top;
@@ -387,11 +387,11 @@ $use-encapsulation: false !default;
     border: 1px solid core.$alert;
     border-left-width: core.$space-xs;
     padding: core.$space;
-    margin-bottom: core.$space-md;
+    margin-bottom: core.$space-m;
   
     &__title {
       color: core.$text;
-      font-size: core.$font-size-l;
+      font-size: core.$font-size-m;
       font-weight: core.$font-weight-bold;
       line-height: core.$line-height-h;
       margin: core.$space-none core.$space-none core.$space core.$space-none;
@@ -427,12 +427,12 @@ $use-encapsulation: false !default;
   .uq-success-message {
     color: core.$uq-white;
     display: block;
-    font-size: core.$font-size-m;
+    font-size: core.$font-size;
     font-style: normal;
     font-weight: core.$font-weight-normal;
     line-height: core.$line-height;
-    margin-bottom: core.$space-md;
-    padding: calc(#{core.$space-sm} - 1px) core.$space core.$space-sm core.$space-xxl;
+    margin-bottom: core.$space-m;
+    padding: calc(#{core.$space-s} - 1px) core.$space core.$space-s core.$space-xxl;
     position: relative;
 
     &::before {
@@ -443,7 +443,7 @@ $use-encapsulation: false !default;
       background-size: contain;
       height: core.$space;
       left: core.$space;
-      margin-right: core.$space-sm;
+      margin-right: core.$space-s;
       margin-top: calc(#{-(core.$space) / 2} - 1px);
       position: absolute;
       top: 50%;

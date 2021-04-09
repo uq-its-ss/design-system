@@ -5,15 +5,15 @@
 .uqds-toc {
   box-sizing: border-box;
   background-color: core.$uq-white;
-  padding: core.$space-lg core.$space-none core.$space-none core.$space-none;
+  padding: core.$space-l core.$space-none core.$space-none core.$space-none;
   margin-bottom: core.$space;
 
   &__toc {
     font-size: core.$font-size-s;
-    margin-left: -(core.$space-sm);
+    margin-left: -(core.$space-s);
 
     .toc-list {
-      padding-left: core.$space-sm;
+      padding-left: core.$space-s;
 
       &-item {
         margin: core.$space-xs core.$space-none;

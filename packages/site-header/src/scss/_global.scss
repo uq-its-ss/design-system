@@ -1,6 +1,6 @@
 @use "@uqds/core/src/scss/global" as core;
 
-$title-font-size: core.$font-size-xl;
+$title-font-size: core.$font-size-l;
 $title-font-weight: core.$font-weight-bold;
 
 $nav-primary: core.$uq-black;
@@ -9,6 +9,6 @@ $nav-dropdown-width: 320px;
 $nav-dropdown-bg: core.$uq-neutral-light80;
 $nav-dropdown-active-bg: core.$uq-neutral-light40;
 $nav-dropdown-divider: core.$uq-neutral-light40;
-$nav-dropdown-animation-distance: core.$space-sm;
+$nav-dropdown-animation-distance: core.$space-s;
 $nav-chevron: core.$uq-purple;
 $nav-active: core.$uq-purple;

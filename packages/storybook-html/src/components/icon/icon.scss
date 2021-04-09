@@ -15,7 +15,7 @@
       background-color: core.$uq-neutral-light80;
 
       &__icon {
-        margin-bottom: core.$space-sm;
+        margin-bottom: core.$space-s;
         
         .uq-icon {
           &::before {
@@ -28,7 +28,7 @@
 
       &__label {
         border-top: 1px solid core.$uq-neutral;
-        padding-top: core.$space-sm;
+        padding-top: core.$space-s;
         color: core.$uq-neutral-dark40;
         line-height: 1;
       }

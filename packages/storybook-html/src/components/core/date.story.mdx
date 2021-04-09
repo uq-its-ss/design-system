@@ -28,18 +28,19 @@ These date formats are designed for
     <tbody>
         <tr>
           <td>
-          10:00 AM <br />
-          2:30 PM
+          10:00AM <br />
+          2:30PM
           </td>
           <td><code>hh:mm AM/PM</code></td>
-          <td>For time, use uppercase AM or PM without periods, separated from time with a space. <br />
-          <strong>Do not use 24 hour time format</strong>.</td>
+          <td>For time, use uppercase AM or PM without periods, <br />
+          <strong>Do not</strong> separate from time with a space. <br />
+          <strong>Do not</strong> use 24 hour time format.</td>
         </tr>
         <tr>
-          <td>11:51 AM</td>
-          <td><code>hh:mm AM/PM</code></td>
+          <td>11:51AM</td>
+          <td><code>hh:mmAM/PM</code></td>
           <td>If a timestamp is within the current day, it’s generally <strong>unnecessary</strong> to show either “today”, the day or date. <br />
-          Only display the time in “hh:mm AM/PM” format</td>
+          Only display the time in “hh:mmAM/PM” format</td>
         </tr>
         <tr>
           <td>14 Jul</td>
@@ -53,11 +54,11 @@ These date formats are designed for
         </tr>
         <tr>
           <td>
-          8:00 AM – 12:30 PM <br />
+          8:00AM – 12:30PM <br />
           6 Jan – 2 Feb
           </td>
           <td>
-          <code>hh:mm AM/PM – hh:mm AM/PM</code> <br />
+          <code>hh:mmAM/PM – hh:mmAM/PM</code> <br />
           <code>DD MMM – DD MMM</code>
           </td>
           <td>If the date is a range of time, separate with an en-dash without a space on either side.</td>
@@ -78,16 +79,16 @@ These date formats are designed for
         <tr>
           <td>
           4 Jan – 31 Jan 2015, <br />
-          9:00 – 12:00 PM
+          9:00 – 12:00PM
           </td>
           <td>
-          <code>DD MMM – DD MMM YYYY, hh:mm – hh:mm AM/PM</code>
+          <code>DD MMM – DD MMM YYYY, hh:mm – hh:mmAM/PM</code>
           </td>
           <td>If there is a time range in addition to the date range, display the date range first.</td>
         </tr>
         <tr>
-          <td>8:00 – 10:30 AM</td>
-          <td><code>hh:mm – hh:mm AM/PM</code></td>
+          <td>8:00 – 10:30AM</td>
+          <td><code>hh:mm – hh:mmAM/PM</code></td>
           <td>When a range shares a common AM/PM, append only on the end of the range.</td>
         </tr>
         <tr>
@@ -176,23 +177,23 @@ Depending on the context, show either date or time, or both date and time.
     </thead>
     <tbody>
         <tr>
-          <td>10 Jan 8:00 AM</td>
-          <td><code>DD MMM hh:mm AM/PM</code></td>
+          <td>10 Jan 8:00AM</td>
+          <td><code>DD MMM hh:mmAM/PM</code></td>
           <td>Typically, future settings should append time to a day or date.</td>
         </tr>
         <tr>
-          <td>5 January 2015 7:16 AM</td>
-          <td><code>DD MMMM YYYY hh:mm AM/PM</code></td>
+          <td>5 January 2015 7:16AM</td>
+          <td><code>DD MMMM YYYY hh:mmAM/PM</code></td>
           <td>When a past time is necessary, such as a news article date, display both date and time.</td>
         </tr>
         <tr>
-          <td>Mon 10 Jan 8:00 AM</td>
-          <td><code>DDD DD MMM hh:mm AM/PM</code></td>
+          <td>Mon 10 Jan 8:00AM</td>
+          <td><code>DDD DD MMM hh:mmAM/PM</code></td>
           <td>When the day of week may be necessary, such as an event, display the abbreviated day separated by a comma.</td>
         </tr>
         <tr>
           <td>3 Jan 1997</td>
-          <td><code>DD MMM hh:mm AM/PM</code></td>
+          <td><code>DD MMM hh:mmAM/PM</code></td>
           <td>When it’s an event in the distant past, omit the time.</td>
         </tr>
         <tr>
@@ -233,15 +234,15 @@ Depending on the context, show either date or time, or both date and time.
         </tr>
         <tr>
           <td>
-          Mon 8:00 AM <br />
-          Tue 9:00 AM <br />
-          Wed 10:00 AM <br />
-          Thu 11:00 AM <br />
-          Fri 12:00 PM <br />
-          Sat 1:00 PM <br />
-          Sun 2:00 PM
+          Mon 8:00AM <br />
+          Tue 9:00AM <br />
+          Wed 10:00AM <br />
+          Thu 11:00AM <br />
+          Fri 12:00PM <br />
+          Sat 1:00PM <br />
+          Sun 2:00PM
           </td>
-          <td><code>DDD hh:mm AM/PM</code></td>
+          <td><code>DDD hh:mmAM/PM</code></td>
           <td>Abbreviate days of the week when combined with a time.</td>
         </tr>
         <tr>
@@ -251,7 +252,7 @@ Depending on the context, show either date or time, or both date and time.
           3/12/12 <br />
           </td>
           <td>
-          <code>hh AM/PM</code>
+          <code>hhAM/PM</code>
           <code>DD/MM/YY</code>
           </td>
           <td>If real estate is limited (such as with timestamps, labels on graphs, durations, etc.) abbreviate units, using numerical versions and/or by removing the “:00”: </td>
@@ -264,18 +265,18 @@ Depending on the context, show either date or time, or both date and time.
 
 19 Sep <br />
 19 Sep 2015 <br />
-19 Sep 2015 11:55 AM <br />
-Thur 19 Sep 2:30 PM <br />
-19/9/13 1 PM
+19 Sep 2015 11:55AM <br />
+Thur 19 Sep 2:30PM <br />
+19/9/13 1PM
 
-8:00 – 10:00 AM <br />
-8:00 AM – 3:30 PM <br />
+8:00 – 10:00AM <br />
+8:00AM – 3:30PM <br />
 25 – 27 Jul 2015 <br />
 25 Jul – 1 Aug 2015 <br />
 6 Jan – All day
 
 ## Relative
-1 PM – Midnight <br />
+1PM – Midnight <br />
 Today <br />
 Yesterday <br />
 Tomorrow <br />

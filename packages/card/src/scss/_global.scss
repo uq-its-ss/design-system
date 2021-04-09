@@ -1,6 +1,6 @@
 @use '@uqds/core/src/scss/global' as core;
 
-$card-shaded-bg: core.$uq-neutral-light20;
+$card-shaded-bg: core.$uq-neutral-light80;
 
 // Truncate card body text
 @mixin truncate-card-1col-body-text {
@@ -34,7 +34,7 @@ $card-shaded-bg: core.$uq-neutral-light20;
             flex-direction: row;
             padding-bottom: 1rem;
             border: none;
-            border-bottom: 1px solid core.$uq-neutral-light40;
+            border-bottom: 1px solid core.$uq-neutral-light60;
             box-shadow: 0 core.$space-xs core.$space-xs rgba(core.$uq-neutral-dark80, 0);
 
             &:hover,

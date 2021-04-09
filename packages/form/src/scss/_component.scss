@@ -383,7 +383,7 @@ $use-encapsulation: false !default;
   }
 
   .uq-error-summary {
-    background-color: lighten(core.$danger-color, 10%);
+    background-color: lighten(core.$alert-light, 10%);
     border: 1px solid core.$alert;
     border-left-width: core.$space-xs;
     padding: core.$space;

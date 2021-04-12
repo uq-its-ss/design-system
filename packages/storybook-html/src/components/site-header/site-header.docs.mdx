@@ -13,19 +13,22 @@ The main navigation component is designed to work closely with the header, site 
 
 A simple one level menu list
 
-<Canvas withSource="none">
-  <Story height="350px" id="components-site-header--site-header" />
+<Canvas withSource="none" withToolbar>
+  <Story height={505} id="components-site-header--site-header" />
 </Canvas>
 
-## with dropdown
+## No site title variant
 
-### Site title
+For special use when no site title is required (ie UQ Homepage)
 
-The site title component includes the repsonsive open/close menu button on smaller devices
-
-### Site navigation
-
-Requires the Site Title component for the Responsive menu botton.
+```html
+<div class="uq-site-header uq-site-header--no-site-title">
+  <div class="uq-site-header__title-container">
+    <div class="uq-site-header__title-container__right">
+      <button class="uq-site-header__navigation-toggle jsNavToggle">Menu</button>
+    </div>
+  </div>
+```
 
 ## Site utility
 

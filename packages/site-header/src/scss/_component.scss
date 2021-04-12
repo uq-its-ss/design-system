@@ -281,4 +281,16 @@
       margin: core.$space-none calc(#{nth(grid.$schema-xl, 2) / 2} - #{core.$space-m});
     }
   }
+
+  &--no-site-title {
+    .uq-site-header__title-container {
+
+      justify-content: flex-end;
+
+      @media #{core.$screen-lg-up} {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+    }
+  }
 }

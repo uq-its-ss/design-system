@@ -104,6 +104,7 @@
   .uqds-neutral-light80 {
     background-color: $uq-neutral-light80;
   }
+  
  /* Neutral shades */
  .uqds-neutral-dark20 {
   background-color: $uq-neutral-dark20;
@@ -120,6 +121,7 @@
   .uqds-neutral-dark80 {
     background-color: $uq-neutral-dark80;
   }
+
   /* Darkgrey tints */
   .uqds-darkgrey-light20 {
     background-color: $uq-darkgrey-light20;
@@ -135,11 +137,11 @@
   }
 
   /* Red shades */
+  .uqds-red-dark10 {
+    background-color: $uq-red-dark10;
+  }
   .uqds-red-dark20 {
     background-color: $uq-red-dark20;
-  }
-  .uqds-red-dark40 {
-    background-color: $uq-red-dark40;
   }
 
   /* Green shades */
@@ -168,16 +170,16 @@
 
   /* Alerts */
   .uqds-colour--info{
-    background-color: $info-color;
+    background-color: $info-light;
   }
   .uqds-colour--success{
-    background-color: $success-color;
+    background-color: $success-light;
   }
   .uqds-colour--warning{
-    background-color: $warning-color;
+    background-color: $warning-light;
   }
-  .uqds-colour--danger{
-    background-color: $danger-color;
+  .uqds-colour--alert{
+    background-color: $alert-light;
   }
 
 

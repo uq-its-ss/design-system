@@ -28,7 +28,7 @@
     & h1 {
       color: inherit;
       margin-top: 0;
-      margin-bottom: core.$space-sm;
+      margin-bottom: core.$space-s;
 
       @media #{core.$screen-md-up} {
         font-size: 3rem;
@@ -41,7 +41,7 @@
   }
 
   &__subtext {
-    margin-bottom: core.$space-md;
+    margin-bottom: core.$space-m;
   }
 
   &__image {

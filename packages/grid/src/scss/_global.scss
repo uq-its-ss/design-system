@@ -3,9 +3,9 @@
 // Grid schema
 // name: (columns, gutter, margin)
 $schema: (
-  "base": (6, core.$space, core.$space-md),
-  "md": (8, core.$space-md, core.$space-xxxxl),
-  "xl": (12, core.$space-lg, 9.375rem)
+  "base": (6, core.$space, core.$space-m),
+  "md": (8, core.$space-m, core.$space-xxxxl),
+  "xl": (12, core.$space-l, 9.375rem)
 ) !default;
 
 $schema-base: map-get($map: $schema, $key: "base") !default;

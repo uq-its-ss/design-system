@@ -63,45 +63,45 @@ $use-encapsulation: false !default;
   }
   
   h1 {
-    margin-top: core.$space-md;
+    margin-top: core.$space-m;
     margin-bottom: core.$space-xl;
-    font-size: core.$font-size-xxxxl;
+    font-size: core.$font-size-xxxl;
     font-family: core.$font-title;
   }
   
   h2 {
     margin-top: core.$space-xl;
-    margin-bottom: core.$space-md;
-    font-size: core.$font-size-xxxl;
-  }
-  
-  h3 {
-    margin-top: core.$space-lg;
-    margin-bottom: core.$space;
+    margin-bottom: core.$space-m;
     font-size: core.$font-size-xxl;
   }
   
-  h4 {
-    margin-top: core.$space-lg;
-    margin-bottom: core.$space-md;
+  h3 {
+    margin-top: core.$space-l;
+    margin-bottom: core.$space;
     font-size: core.$font-size-xl;
   }
   
-  h5 {
-    margin-top: core.$space-md;
-    margin-bottom: core.$space;
+  h4 {
+    margin-top: core.$space-l;
+    margin-bottom: core.$space-m;
     font-size: core.$font-size-l;
   }
   
-  h6 {
-    margin-top: core.$space-md;
-    margin-bottom: core.$space-sm;
+  h5 {
+    margin-top: core.$space-m;
+    margin-bottom: core.$space;
     font-size: core.$font-size-m;
+  }
+  
+  h6 {
+    margin-top: core.$space-m;
+    margin-bottom: core.$space-s;
+    font-size: core.$font-size;
   }
   
   p {
     margin-top: core.$space-none;
-    margin-bottom: core.$space-md;
+    margin-bottom: core.$space-m;
   }
   
   b,
@@ -114,8 +114,8 @@ $use-encapsulation: false !default;
   }
   
   blockquote {
-    margin: core.$space-none core.$space-none core.$space-md;
-    padding-left: core.$space-md;
+    margin: core.$space-none core.$space-none core.$space-m;
+    padding-left: core.$space-m;
     border-left: 6px solid core.$text;
     font-family: core.$font-accent;
     font-style: italic;
@@ -124,8 +124,8 @@ $use-encapsulation: false !default;
   ol,
   ul {
     margin-top: core.$space-none;
-    margin-bottom: core.$space-md;
-    padding-left: core.$space-md;
+    margin-bottom: core.$space-m;
+    padding-left: core.$space-m;
   
     li {
       margin-bottom: core.$space;
@@ -149,8 +149,8 @@ $use-encapsulation: false !default;
   
     dd {
       margin-left: core.$space-none;
-      margin-bottom: core.$space-md;
-      font-size: core.$font-size-l;
+      margin-bottom: core.$space-m;
+      font-size: core.$font-size-m;
     }
   }
   
@@ -195,27 +195,27 @@ $use-encapsulation: false !default;
 
     // Text size
     &--xxxxl {
-      font-size: core.$font-size-xxxxl;
+      font-size: core.$font-size-xxxl;
     }
 
     &--xxxl {
-      font-size: core.$font-size-xxxl;
-    }
-    
-    &--xxl {
       font-size: core.$font-size-xxl;
     }
     
-    &--xl {
+    &--xxl {
       font-size: core.$font-size-xl;
     }
     
-    &--l {
+    &--xl {
       font-size: core.$font-size-l;
     }
     
-    &--m {
+    &--l {
       font-size: core.$font-size-m;
+    }
+    
+    &--m {
+      font-size: core.$font-size;
     }
     
     &--s {

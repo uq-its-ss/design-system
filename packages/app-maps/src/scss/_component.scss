@@ -99,7 +99,7 @@ $-result-icon-spacing: $-icon-spacing;
     @extend %uq-maps__box-sizing;
     @extend %uq-maps__primary-text;
 
-    $-input-height: $-icon-button-height + core.$space-sm;
+    $-input-height: $-icon-button-height + core.$space-s;
 
     align-items: center;
     background-color: core.$uq-white;
@@ -122,7 +122,7 @@ $-result-icon-spacing: $-icon-spacing;
 
       appearance: none;
       background-image: url(get-icon('ui--search'));
-      background-position: core.$space-sm + ($-icon-button-width - $-icon-button-icon-width) / 2 center;
+      background-position: core.$space-s + ($-icon-button-width - $-icon-button-icon-width) / 2 center;
       background-color: transparent;
       background-repeat: no-repeat;
       background-size: $-icon-button-icon-height $-icon-button-icon-width;
@@ -157,7 +157,7 @@ $-result-icon-spacing: $-icon-spacing;
 
     &__back {
       background-image: url(get-icon('ui--arrow-left'));
-      margin-left: core.$space-sm;
+      margin-left: core.$space-s;
 
       &:hover {
         background-image: url(get-icon('ui--arrow-left', darken(core.$uq-purple, 10%)));
@@ -166,7 +166,7 @@ $-result-icon-spacing: $-icon-spacing;
 
     &__clear {
       background-image: url(get-icon('ui--close'));
-      margin-right: core.$space-sm;
+      margin-right: core.$space-s;
 
       &:hover {
         background-image: url(get-icon('ui--close', darken(core.$uq-purple, 10%)));
@@ -179,7 +179,7 @@ $-result-icon-spacing: $-icon-spacing;
       font-size: 0;
       height: $-icon-button-height;
       justify-content: center;
-      margin-right: core.$space-sm;
+      margin-right: core.$space-s;
       white-space: nowrap;
       width: $-icon-button-width;
 
@@ -221,7 +221,7 @@ $-result-icon-spacing: $-icon-spacing;
     &--is-working {
       input[type=text].uq-maps__search-field__input {
         background: transparent;
-        padding: 0 core.$space-sm;
+        padding: 0 core.$space-s;
       }
     }
   }
@@ -254,7 +254,7 @@ $-result-icon-spacing: $-icon-spacing;
       align-items: center;
 
       + .uq-maps__wayfinding-controls__row {
-        margin-top: core.$space-sm;
+        margin-top: core.$space-s;
       }
     }
 
@@ -266,13 +266,13 @@ $-result-icon-spacing: $-icon-spacing;
       cursor: pointer;
       width: 100%;
       height: 2.5rem;
-      margin: 0 0 0 core.$space-sm;
+      margin: 0 0 0 core.$space-s;
       border: 0 none;
       border-radius: 8px;
-      background-color: core.$uq-neutral-light20;
+      background-color: core.$uq-neutral-light80;
       text-align: left;
       outline: 0 none;
-      padding: core.$space-sm core.$space;
+      padding: core.$space-s core.$space;
       transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
                   box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
                   border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
@@ -280,7 +280,7 @@ $-result-icon-spacing: $-icon-spacing;
       flex-grow: 1;
 
       &:hover {
-        background-color: core.$uq-neutral-light40;
+        background-color: core.$uq-neutral-light60;
       }
 
       &:focus {
@@ -298,7 +298,7 @@ $-result-icon-spacing: $-icon-spacing;
       @extend %uq-maps__icon-button;
       flex-grow: 0;
       flex-shrink: 0;
-      margin-left: core.$space-sm;
+      margin-left: core.$space-s;
     }
 
     &__back {
@@ -322,7 +322,7 @@ $-result-icon-spacing: $-icon-spacing;
       align-items: center;
       font-size: 0;
       margin-left: $-icon-button-width + core.$space;
-      padding: core.$space-sm 0;
+      padding: core.$space-s 0;
       white-space: nowrap;
 
       input[type=checkbox].uq-maps__wayfinding-controls__stairs-toggle__input {
@@ -334,7 +334,7 @@ $-result-icon-spacing: $-icon-spacing;
         cursor: pointer;
         height: 1.25rem;
         width: 1.25rem;
-        margin: 0 core.$space-sm 0 0;
+        margin: 0 core.$space-s 0 0;
         outline: 0 none;
 
         &::after {
@@ -382,7 +382,7 @@ $-result-icon-spacing: $-icon-spacing;
       background-size: auto 50%;
       flex-grow: 0;
       flex-shrink: 0;
-      margin-right: core.$space-sm;
+      margin-right: core.$space-s;
       width: $-icon-button-width;
     }
 
@@ -393,7 +393,7 @@ $-result-icon-spacing: $-icon-spacing;
       font-size: 0;
       height: $-icon-button-height;
       justify-content: center;
-      margin-right: core.$space-sm;
+      margin-right: core.$space-s;
       white-space: nowrap;
       width: $-icon-button-width;
 
@@ -444,7 +444,7 @@ $-result-icon-spacing: $-icon-spacing;
       font-weight: core.$font-weight-bold;
       text-transform: uppercase;
       display: inline-block;
-      margin: core.$space core.$space-md 0 (core.$space-md + $-icon-spacing);
+      margin: core.$space core.$space-m 0 (core.$space-m + $-icon-spacing);
 
       &::before {
         background-image: url(get-icon('ui--nav-right', core.$uq-purple));
@@ -473,12 +473,12 @@ $-result-icon-spacing: $-icon-spacing;
           color: core.$text;
           display: flex;
           justify-content: flex-start;
-          min-height: 3rem + core.$space-sm * 2;
-          padding: core.$space-sm core.$space-md;
+          min-height: 3rem + core.$space-s * 2;
+          padding: core.$space-s core.$space-m;
           width: 100%;
 
           &:hover {
-            background-color: core.$uq-neutral-light20;
+            background-color: core.$uq-neutral-light80;
             text-decoration: none;
           }
 
@@ -489,7 +489,7 @@ $-result-icon-spacing: $-icon-spacing;
         }
 
         &__text {
-          margin: 0 0 0 ($-icon-spacing * 2 + $-result-icon-height + core.$space-sm);
+          margin: 0 0 0 ($-icon-spacing * 2 + $-result-icon-height + core.$space-s);
           flex-grow: 1;
 
           > span, > small {
@@ -510,7 +510,7 @@ $-result-icon-spacing: $-icon-spacing;
           flex-shrink: 0;
 
           + .uq-maps__search__results__item__text {
-            margin-left: core.$space-sm;
+            margin-left: core.$space-s;
           }
         }
 
@@ -523,7 +523,7 @@ $-result-icon-spacing: $-icon-spacing;
 
           &::before {
             position: absolute;
-            left: core.$space-md + $-result-icon-spacing;
+            left: core.$space-m + $-result-icon-spacing;
             top: 50%;
             margin-top: -($-result-icon-height / 2);
             background-image: url(get-icon('ui--map-pin', core.$uq-purple));
@@ -544,7 +544,7 @@ $-result-icon-spacing: $-icon-spacing;
             $height: $width;
 
             position: absolute;
-            right: core.$space-md + ($-icon-button-width - $width) / 2;
+            right: core.$space-m + ($-icon-button-width - $width) / 2;
             top: 50%;
             margin-top: -($height / 2);
             background-image: url(get-icon('ui--chevron-right', core.$uq-neutral));
@@ -577,7 +577,7 @@ $-result-icon-spacing: $-icon-spacing;
 
     &__no-results {
       display: none;
-      margin: core.$space-lg core.$space;
+      margin: core.$space-l core.$space;
       text-align: center;
     }
 
@@ -679,10 +679,10 @@ $-result-icon-spacing: $-icon-spacing;
     height: 100%;
     overflow-y: auto;
     overflow-x: hidden;
-    padding: core.$space-lg core.$space-md core.$space-xxl;
+    padding: core.$space-l core.$space-m core.$space-xxl;
 
     &__menu-bar {
-      margin-bottom: core.$space-md;
+      margin-bottom: core.$space-m;
 
       &__close {
         @extend %uq-maps__icon-button;
@@ -693,21 +693,21 @@ $-result-icon-spacing: $-icon-spacing;
 
     &__main,
     &__actions {
-      padding: 0 core.$space-compressed-md;
+      padding: 0 core.$space-compressed-m;
     }
 
     &__main {
       background-image: linear-gradient(to bottom, core.$uq-white, rgba(core.$uq-white, 0)),
                         linear-gradient(to top, core.$uq-white, rgba(core.$uq-white, 0)),
-                        linear-gradient(to bottom, core.$uq-neutral-light20, rgba(core.$uq-neutral-light20, 0)),
-                        linear-gradient(to top, core.$uq-neutral-light20, rgba(core.$uq-neutral-light20, 0));
+                        linear-gradient(to bottom, core.$uq-neutral-light80, rgba(core.$uq-neutral-light80, 0)),
+                        linear-gradient(to top, core.$uq-neutral-light80, rgba(core.$uq-neutral-light80, 0));
       background-position: 0 0, 0 100%, 0 0, 0 100%;
       background-repeat: no-repeat;
       background-color: core.$uq-white;
       background-size: 100% 4rem, 100% 4rem, 100% 1rem, 100% 1rem;
       background-attachment: local, local, scroll, scroll;
-      height: calc(100% - #{$actions-allowance + $-icon-button-height + core.$space-md * 2});
-      margin-bottom: core.$space-md;
+      height: calc(100% - #{$actions-allowance + $-icon-button-height + core.$space-m * 2});
+      margin-bottom: core.$space-m;
       overflow-y: auto;
       overflow-x: hidden;
       scrollbar-width: none; // FF only for now
@@ -721,7 +721,7 @@ $-result-icon-spacing: $-icon-spacing;
 
         color: core.$text;
         display: block;
-        margin-top: core.$space-sm;
+        margin-top: core.$space-s;
       }
     }
   }

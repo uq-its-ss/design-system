@@ -5,12 +5,12 @@
 
 .page {
   &__header {
-    padding: core.$space-md; //1.8rem;
-    margin-bottom: core.$space-md;
+    padding: core.$space-m; //1.8rem;
+    margin-bottom: core.$space-m;
     background: $page-header-shaded-bg;
   }
   
   &__title {
-    font-size: core.$font-size-xxxxl;
+    font-size: core.$font-size-xxxl;
   }
 }

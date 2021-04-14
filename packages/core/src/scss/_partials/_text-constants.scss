@@ -10,12 +10,12 @@ $font-accent: $merriweather;
 $font-monospace: $courier;
 
 // font sizes
-$font-size-xxxxl: 2.5rem; /* 40px - H1 */
-$font-size-xxxl: 2rem; /* 32px - H2 */
-$font-size-xxl: 1.5rem; /* 24px - H3 */
-$font-size-xl: 1.25rem; /* 20px - H4 */
-$font-size-l: 1.125rem; /* 18px - H5 */
-$font-size-m: 1rem; /* 16px - Body, H6 */
+$font-size-xxxl: 2.5rem; /* 40px - H1 */
+$font-size-xxl: 2rem; /* 32px - H2 */
+$font-size-xl: 1.5rem; /* 24px - H3 */
+$font-size-l: 1.25rem; /* 20px - H4 */
+$font-size-m: 1.125rem; /* 18px - H5 */
+$font-size: 1rem; /* 16px - Body, H6 */
 $font-size-s: 0.875rem; /* 14px - Sub */
 $font-size-xs: 0.75rem; /* 12px - Small */
 $font-size-xxs: 0.625rem; /* 10px - Small uppercase */
@@ -23,8 +23,8 @@ $font-size-xxs: 0.625rem; /* 10px - Small uppercase */
 // font weights
 $font-weight-thin: 300;
 $font-weight-normal: 400;
-$font-weight-bold: 500;
-$font-weight-medium: $font-weight-bold;
+$font-weight-medium: 500;
+$font-weight-bold: $font-weight-medium;
 
 // line heights
 $line-height: 1.5;

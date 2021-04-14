@@ -3,10 +3,10 @@
 .uqds-base-layout-grid {
   background: repeating-linear-gradient(
     45deg,
-    core.$uq-neutral-light40,
-    core.$uq-neutral-light40 10px,
-    core.$uq-neutral-light20 10px,
-    core.$uq-neutral-light20 20px
+    core.$uq-neutral-light60,
+    core.$uq-neutral-light60 10px,
+    core.$uq-neutral-light80 10px,
+    core.$uq-neutral-light80 20px
   );
 
   .uq-grid {
@@ -101,15 +101,15 @@
 
     @media #{core.$screen-md-up} {
       &::before {
-        left: core.$space-md / 2;
-        right: core.$space-md / 2;
+        left: core.$space-m / 2;
+        right: core.$space-m / 2;
       }
     }
 
     @media #{core.$screen-xl-up} {
       &::before {
-        left: core.$space-lg / 2;
-        right: core.$space-lg / 2;
+        left: core.$space-l / 2;
+        right: core.$space-l / 2;
       }
     }
   }

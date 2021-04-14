@@ -12,48 +12,48 @@
   margin-bottom: core.$space;
   margin-left: -(core.$space-xs);
   margin-right: core.$space;
-  padding: core.$space-sm core.$space;
+  padding: core.$space-s core.$space;
   vertical-align: baseline;
 
   // Status tags for Documentation
   &--draftDoc {
-    border: 2px solid core.$danger-color;
+    border: 2px solid core.$alert-light;
     background-color: transparent;
   }
   &--reviewDoc {
-    border: 2px solid core.$warning-color;
+    border: 2px solid core.$warning-light;
     background-color: transparent;
   }
   &--stableDoc {
-    border: 2px solid core.$success-color;
+    border: 2px solid core.$success-light;
     background-color: transparent;
   }
 
   // Status tags for components
   &--stable {
-    background-color: core.$success-color;
+    background-color: core.$success-light;
   }
 
   &--development,
   &--experiment {
-    background-color: core.$danger-color;
+    background-color: core.$alert-light;
   }
 
   &--review {
-    background-color: core.$warning-color;
+    background-color: core.$warning-light;
   }
 
   &--deprecated {
     color: core.$uq-white;
-    background-color: core.$uq-red-dark40;
+    background-color: core.$uq-red-dark20;
   }
 
   &-addendum {
     display: inline-block;
     font-size: core.$font-size-s;
     line-height: core.$line-height-ui;
-    margin-bottom: core.$space-md;
-    margin-right: core.$space-md;
+    margin-bottom: core.$space-m;
+    margin-right: core.$space-m;
     white-space: nowrap;
     vertical-align: baseline;
   }

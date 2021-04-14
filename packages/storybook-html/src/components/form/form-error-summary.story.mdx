@@ -17,13 +17,13 @@ export const ErrorSummary = () => {
   return `
     <div class="uq-grid uq-grid--golden uq-grid--full-width">
       <div class="uq-grid__col">
-        <div id="errorSummary" role="alert" class="error-summary">
-          <div class="error-summary__body">
-            <h2 class="error-summary__title">Your form could not be submitted</h2>
-            <ul class="error-summary__list">
-              <li class="error-summary__list__item"><a href="#password">Your password is shorter than eight characters</a></li>
-              <li class="error-summary__list__item"><a href="#password">Your password does not contain a digit or allowed special character</a></li>
-              <li class="error-summary__list__item"><a href="#confirmPassword">Confirm your new password by re-entering it</a></li>
+        <div id="errorSummary" role="alert" class="uq-error-summary">
+          <div class="uq-error-summary__body">
+            <h2 class="uq-error-summary__title">Your form could not be submitted</h2>
+            <ul class="uq-error-summary__list">
+              <li class="uq-error-summary__list__item"><a href="#password">Your password is shorter than eight characters</a></li>
+              <li class="uq-error-summary__list__item"><a href="#password">Your password does not contain a digit or allowed special character</a></li>
+              <li class="uq-error-summary__list__item"><a href="#confirmPassword">Confirm your new password by re-entering it</a></li>
             </ul>
           </div>
         </div>
@@ -50,18 +50,18 @@ should be injected into an element with this specialised role active.
 <div id="errorSummary" role="alert"></div>
  
 <!-- After error insertion -->
-<div id="errorSummary" role="alert" class="error-summary">
-    <h2 class="error-summary__title">There is a problem</h2>
-    <div class="error-summary__body">
-        <ul class="error-summary__list">
-            <li class="error-summary__list-item">
+<div id="errorSummary" role="alert" class="uq-error-summary">
+    <h2 class="uq-error-summary__title">There is a problem</h2>
+    <div class="uq-error-summary__body">
+        <ul class="uq-error-summary__list">
+            <li class="uq-error-summary__list-item">
                 <!-- links should go to respective controls -->
                 <a href="#mobile">Enter a valid mobile number</a>
             </li>
-            <li class="error-summary__list-item">
+            <li class="uq-error-summary__list-item">
                 <a href="#favouriteRed">You need to select a favourite</a>
             </li>
-            <li class="error-summary__list-item">
+            <li class="uq-error-summary__list-item">
                 <a href="#terms">You need to agree to the terms of service</a>
             </li>
         </ul>

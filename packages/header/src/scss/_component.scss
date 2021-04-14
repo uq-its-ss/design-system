@@ -29,8 +29,8 @@
             padding-bottom: core.$space;
 
             @media #{core.$screen-xl-up} {
-                padding-top: core.$space-md;
-                padding-bottom: core.$space-md;
+                padding-top: core.$space-m;
+                padding-bottom: core.$space-m;
             }
         }
 
@@ -42,7 +42,7 @@
                 padding-left: core.$space-none;
 
                 @media #{core.$screen-lg-up} {
-                    padding-left: core.$space-lg;
+                    padding-left: core.$space-l;
                     white-space: nowrap;
                 }
 
@@ -51,7 +51,7 @@
 
                     @media #{core.$screen-lg-up} {
                         display: inline;
-                        margin-left: core.$space-md;
+                        margin-left: core.$space-m;
                         word-wrap: break-word;
 
                         &:first-of-type {
@@ -116,8 +116,8 @@
                 height: auto;
                 visibility: visible;
                 overflow: initial;
-                padding-top: core.$space-sm;
-                padding-bottom: core.$space-sm;
+                padding-top: core.$space-s;
+                padding-bottom: core.$space-s;
             }
 
             &__form {
@@ -126,7 +126,7 @@
 
             &__wrapper {
                 border: none;
-                margin: core.$space-none core.$space-none core.$space-sm core.$space-none;
+                margin: core.$space-none core.$space-none core.$space-s core.$space-none;
                 padding: core.$space-none;
 
                 @media #{core.$screen-lg-up} {
@@ -137,7 +137,7 @@
             &__title {
                 color: core.$uq-white;
                 font-family: core.$merriweather;
-                font-size: core.$font-size-m;
+                font-size: core.$font-size;
                 font-style: italic;
                 font-weight: core.$font-weight-normal;
 
@@ -146,7 +146,7 @@
                 }
 
                 @media #{core.$screen-xl-up} {
-                    font-size: core.$font-size-xl;
+                    font-size: core.$font-size-l;
                 }
             }
 
@@ -155,8 +155,8 @@
                 font-size: core.$font-size-xs;
 
                 &__radio-wrapper {
-                    font-size: core.$font-size-m;
-                    margin: core.$space-none core.$space-none core.$space-sm core.$space-none;
+                    font-size: core.$font-size;
+                    margin: core.$space-none core.$space-none core.$space-s core.$space-none;
                     white-space: nowrap;
 
                     @media #{core.$screen-lg-up} {
@@ -167,7 +167,7 @@
                 }
 
                 .form-item {
-                    margin-top: core.$space-sm;
+                    margin-top: core.$space-s;
                     padding-top: core.$space-xs;
 
                     input[type="radio"], label {
@@ -179,7 +179,7 @@
 
                     input[type="radio"] {
                         appearance: none;
-                        border: 1px solid core.$uq-neutral-light40;
+                        border: 1px solid core.$uq-neutral-light60;
                         border-radius: 50%;
                         height: 24px;
                         width: 24px;
@@ -218,7 +218,7 @@
                         font-size: core.$font-size-s;
                         font-weight: core.$font-weight-normal;
                         line-height: core.$line-height;
-                        margin-left: core.$space-sm;
+                        margin-left: core.$space-s;
                         margin-right: core.$space;
                         padding-top: .2rem;
                         white-space: normal;
@@ -252,7 +252,7 @@
                     margin-bottom: core.$space;
 
                     @media #{core.$screen-xl-up} {
-                        margin-bottom: core.$space-md;
+                        margin-bottom: core.$space-m;
                     }
                 }
 
@@ -265,7 +265,7 @@
                     border-radius: 2px;
                     box-shadow: none;
                     font-family: sans-serif;
-                    font-size: core.$font-size-m;
+                    font-size: core.$font-size;
                     line-height: 1;
                     color: core.$uq-neutral-dark80; //#181818
                     height: auto;
@@ -284,7 +284,7 @@
                     border: 2px solid transparent;
                     color: core.$uq-purple;
                     display: inline-block;
-                    font-size: core.$font-size-m;
+                    font-size: core.$font-size;
                     height: 2.75rem;
                     line-height: core.$line-height;
                     margin-bottom: core.$space-none;
@@ -329,7 +329,7 @@
                     z-index: 3;
                     cursor: pointer;
                     outline-offset: -2px;
-                    font-size: core.$font-size-m;
+                    font-size: core.$font-size;
                 }
     
             }
@@ -350,7 +350,7 @@
                         margin-left: core.$space-none;
                         a {
                             display: block;
-                            padding: core.$space-sm;
+                            padding: core.$space-s;
                         }
                     }
                 }
@@ -360,17 +360,17 @@
 
     &__secondary {
         background-color: core.$uq-white;
-        padding-top: core.$space-md;
-        padding-bottom: core.$space-sm;
+        padding-top: core.$space-m;
+        padding-bottom: core.$space-s;
 
         &--no-menu {
-            padding-bottom: core.$space-md;
+            padding-bottom: core.$space-m;
         }
     }
 
     &__site-title {
         margin: core.$space-none;
-        font-size: core.$font-size-xl;
+        font-size: core.$font-size-l;
         font-weight: 500;
         color: core.$uq-purple;
         

@@ -229,7 +229,8 @@
             @media #{core.$screen-lg-up} {
               padding-right: core.$space-xl;
               background-image: url(icon-constants.get-icon('standard--arrow-down-1', core.$uq-purple));
-              background-position: right 1.3rem center;
+              background-size: 1rem;
+              background-position: right 1rem center;
               background-repeat: no-repeat;
             }
           }
@@ -258,7 +259,7 @@
       border-left: 1px solid $nav-dropdown-divider;
       text-indent: -100vw;
       background-image: url(icon-constants.get-icon('standard--arrow-down-1', core.$uq-purple));
-      background-size: 1.2rem;
+      background-size: 1rem;
       background-position: center center;
       background-repeat: no-repeat;
       overflow: hidden;

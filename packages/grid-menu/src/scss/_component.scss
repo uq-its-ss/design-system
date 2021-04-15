@@ -1,5 +1,5 @@
 @use '@uqds/core/src/scss/global' as core;
-@use '@uqds/icon/src/scss/global' as icon;
+@use "@uqds/icon/src/scss/global" as icon-constants;
 @use 'global' as *;
 
 .uq-grid-menu {
@@ -63,7 +63,7 @@
 
       &::after {
         content: '';
-        background-image: url(icon.get-icon('standard--arrow-right-1', core.$uq-white));
+        background-image: url(icon-constants.get-icon('standard--arrow-right-1', core.$uq-white));
         background-repeat: no-repeat;
         background-size: 1.4rem 1.4rem;
         right: 0;
@@ -78,7 +78,7 @@
 
       .uq-grid-menu__icon {
         &::before {
-          filter: icon.$icon-light-filter;
+          filter: icon-constants.$icon-light-filter;
         }
       }
     }
@@ -112,7 +112,7 @@
 
     .uq-grid-menu__icon {
       &::before {
-        filter: icon.$icon-text-filter;
+        filter: icon-constants.$icon-text-filter;
       }
     }
   }

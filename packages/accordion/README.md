@@ -22,5 +22,7 @@ npm i @uqds/accordion
 
 ```shell
 @uqds/accordion
-└─ @uqds/core
+├─ @uqds/core
+└─ @uqds/icon
+   └─ @uqds/core
 ```

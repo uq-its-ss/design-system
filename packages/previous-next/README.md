@@ -22,5 +22,7 @@ npm i @uqds/previous-next
 
 ```shell
 @uqds/previous-next
-└─ @uqds/core
+├─ @uqds/core
+└─ @uqds/icon
+   └─ @uqds/core
 ```

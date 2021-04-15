@@ -23,6 +23,8 @@ npm i @uqds/header
 ```shell
 @uqds/header
 ├─ @uqds/core
-└─ @uqds/grid
+├─ @uqds/grid
+│  └─ @uqds/core
+└─ @uqds/icon
    └─ @uqds/core
 ```

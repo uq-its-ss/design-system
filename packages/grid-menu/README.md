@@ -22,5 +22,7 @@ npm i @uqds/grid-menu
 
 ```shell
 @uqds/grid-menu
-└─ @uqds/core
+├─ @uqds/core
+└─ @uqds/icon
+   └─ @uqds/core
 ```

@@ -1,13 +1,16 @@
 // import styles
 import './alert.scss';
 
-// import HTML template strings
-import alertHTML from './alert.html';
+// documentation
+import docs from './alert.docs.mdx';
 
 export default {
   title: 'Components/Alert',
   parameters: {
-    layout: "fullscreen",
+    docs: {
+      page: docs
+    },
+    layout: "padded",
     previewTabs: {
       canvas: {hidden: false}
     }

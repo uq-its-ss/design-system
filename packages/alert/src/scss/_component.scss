@@ -12,7 +12,6 @@
     margin: 0 auto;
 
     .uq-alert__message {
-  
       &:not(:last-child) {
         padding-right: core.$space-xxl;
       }
@@ -114,6 +113,7 @@
     .uq-alert__message {
       &::before {
         background-image: url(icon.get-icon('architecture-and-planning--heavy-equipment-lift-hook-box', core.$uq-neutral-dark80));
+        //background-image: url(icon.get-icon('standard--close', core.$uq-neutral-dark80));
       }
     }
   }
@@ -188,6 +188,7 @@
       .uq-alert__message {
         &::before {
           background-image: url(icon.get-icon('architecture-and-planning--heavy-equipment-lift-hook-box', core.$uq-white));
+          //background-image: url(icon.get-icon('standard--close', core.$uq-white));
         }
       }
     }

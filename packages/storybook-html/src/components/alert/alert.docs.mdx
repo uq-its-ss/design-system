@@ -11,11 +11,11 @@ import StatusBadge from '../../../.storybook/custom/components/StatusBadge';
 
 The alert components are used to notify users of important information or changes on a page attracting the user's attention without interrupting the user's task. The alerts are mainly categorised as page alerts and global alerts.
 
-## Page alerts (Default example)
+## Page alerts 
 
 Page alerts are light versions of alerts that are used locally on pages along with components or on its own to notify users of important information or changes on a page.
 
-### Info
+### Info (Default example)
 
 <Canvas withSource="none">
   <Story id="components-alert--alert-info" />
@@ -57,17 +57,66 @@ Page alerts are light versions of alerts that are used locally on pages along wi
 </div>
 ```
 
-### Danger
+### Error
 <Canvas withSource="none">
-  <Story id="components-alert--alert-danger" />
+  <Story id="components-alert--alert-error" />
 </Canvas>
 
 ```html
-<div class="uq-alert uq-alert-danger" role="alert">
+<div class="uq-alert uq-alert-error" role="alert">
   <div class="uq-alert__message">
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
   </div>
 </div>
+```
+
+### with Link
+<Canvas withSource="none">
+  <Story id="components-alert--alert-with-link" />
+</Canvas>
+
+```html
+<div class="uq-alert" role="alert">
+    <div class="uq-alert__container">
+      <div class="uq-alert__message">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <a href="#" title="Link" class="uq-button--text uq-button--inline">Link</a>
+      </div>
+    </div>
+  </div>
+```
+
+### with Button
+<Canvas withSource="none">
+  <Story id="components-alert--alert-with-button" />
+</Canvas>
+
+```html
+<div class="uq-alert" role="alert">
+    <div class="uq-alert__container">
+      <div class="uq-alert__message">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <a href="#" title="Button" class="uq-button">Button</a>
+      </div>
+    </div>
+  </div>
+```
+
+### with Title
+<Canvas withSource="none">
+  <Story id="components-alert--alert-with-title" />
+</Canvas>
+
+```html
+<div class="uq-alert" role="alert">
+    <div class="uq-alert__container">
+      <div class="uq-alert__message">
+        <h3 class="uq-alert__title">Title goes here</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <a href="#" title="Button" class="uq-button">Button</a>
+      </div>
+    </div>
+  </div>
 ```
 
 ## Global alerts (Variant examples)
@@ -127,14 +176,14 @@ Global alerts are darker variants of alerts that are used to convey a globally i
 </div>
 ```
 
-### Danger global
+### Error global
 
 <Canvas withSource="none">
-  <Story id="components-alert--danger-global" />
+  <Story id="components-alert--error-global" />
 </Canvas>
 
 ```html
-<div class="uq-alert uq-alert--danger uq-alert--dark" role="alert">
+<div class="uq-alert uq-alert--error uq-alert--dark" role="alert">
   <div class="uq-alert__container">
     <div class="uq-alert__message">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -143,6 +192,7 @@ Global alerts are darker variants of alerts that are used to convey a globally i
   </div>
 </div>
 ```
+<br/>
 
 
 ## How and when to apply
@@ -180,8 +230,8 @@ Global alerts are darker variants of alerts that are used to convey a globally i
     <tr className="uqds-table__row">
       <td className="uqds-table__item"><div className="uqds-colour__palette uqds-colour--alert"></div></td>
       <td className="uqds-table__item" data-title="Category:">Page</td>
-      <td className="uqds-table__item" data-title="Name:">Danger</td>
-      <td className="uqds-table__item" data-title="Variable:"><code>$uq-alert--danger</code></td>
+      <td className="uqds-table__item" data-title="Name:">Error</td>
+      <td className="uqds-table__item" data-title="Variable:"><code>$uq-alert--error</code></td>
       <td className="uqds-table__item" data-title="Usage:">• Error message</td>
     </tr>
     <tr className="uqds-table__row">
@@ -189,32 +239,33 @@ Global alerts are darker variants of alerts that are used to convey a globally i
       <td className="uqds-table__item" data-title="Category:">Global</td>
       <td className="uqds-table__item" data-title="Name:">Info global</td>
       <td className="uqds-table__item" data-title="Variable:"><code>$uq-alert--info</code> <code>$uq-alert--dark</code></td>
-      <td className="uqds-table__item" data-title="Usage:">• Important global message (neither +ve nor -ve) <br/> • Can be dismissed</td>
+      <td className="uqds-table__item" data-title="Usage:">• Important message global (neither +ve nor -ve) <br/> • Can be dismissed</td>
     </tr>
     <tr className="uqds-table__row">
       <td className="uqds-table__item"><div className="uqds-colour__palette uqds-green-dark10"></div></td>
       <td className="uqds-table__item" data-title="Category:">Global</td>
       <td className="uqds-table__item" data-title="Name:">Success global</td>
       <td className="uqds-table__item" data-title="Variable:"><code>$uq-alert--success</code> <code>$uq-alert--dark</code></td>
-      <td className="uqds-table__item" data-title="Usage:">• Success message <br/> • Can be dismissed</td>
+      <td className="uqds-table__item" data-title="Usage:">• Success message global <br/> • Can be dismissed</td>
     </tr>
     <tr className="uqds-table__row">
       <td className="uqds-table__item"><div className="uqds-colour__palette uqds-colour--yellow"></div></td>
       <td className="uqds-table__item" data-title="Category:">Global</td>
       <td className="uqds-table__item" data-title="Name:">Warning global</td>
       <td className="uqds-table__item" data-title="Variable:"><code>$uq-alert--warning</code> <code>$uq-alert--dark</code></td>
-      <td className="uqds-table__item" data-title="Usage:">• Warning message <br/> • Cannot be dismissed</td>
+      <td className="uqds-table__item" data-title="Usage:">• Warning message global <br/> • Cannot be dismissed</td>
     </tr>
     <tr className="uqds-table__row">
       <td className="uqds-table__item"><div className="uqds-colour__palette uqds-red-dark20"></div></td>
       <td className="uqds-table__item" data-title="Category:">Global</td>
-      <td className="uqds-table__item" data-title="Name:">Danger global</td>
-      <td className="uqds-table__item" data-title="Variable:"><code>$uq-alert--danger</code> <code>$uq-alert--dark</code></td>
-      <td className="uqds-table__item" data-title="Usage:">• Error message <br/> • Cannot be dismissed</td>
+      <td className="uqds-table__item" data-title="Name:">Error global</td>
+      <td className="uqds-table__item" data-title="Variable:"><code>$uq-alert--error</code> <code>$uq-alert--dark</code></td>
+      <td className="uqds-table__item" data-title="Usage:">• Error message global <br/> • Cannot be dismissed</td>
     </tr>
   </tbody>
 </table>
 
+<br/>
 
 
 

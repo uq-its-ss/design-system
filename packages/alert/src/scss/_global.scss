@@ -4,12 +4,12 @@ $alert-default-bg-color: core.$uq-neutral-light60 !default; //#EFEFEF !default;
 $alert-info-bg-color: core.$info-light !default; //#D4F0FF !default;
 $alert-success-bg-color: core.$success-light !default; //#D5EECA !default;
 $alert-warning-bg-color: core.$warning-light !default; //#FFE0AD !default;
-$alert-danger-bg-color: core.$alert-light !default; //#F4ACAC !default;
+$alert-error-bg-color: core.$alert-light !default; //#F4ACAC !default;
 
 $alert-global-info-bg-color: core.$info !default;
 $alert-global-success-bg-color: core.$success !default;
 $alert-global-warning-bg-color: core.$warning !default;
-$alert-global-danger-bg-color: core.$alert !default;
+$alert-global-error-bg-color: core.$alert !default;
 
 $alert-font-size-s: core.$font-size-s !default;
 $alert-font-size: core.$font-size !default;

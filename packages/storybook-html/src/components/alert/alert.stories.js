@@ -50,16 +50,16 @@ export const alertWarning = () => {
 }
 alertWarning.storyName = 'Warning';
 
-export const alertDanger = () => {
+export const alertError = () => {
   return `
-  <div class="uq-alert uq-alert--danger" role="alert">
+  <div class="uq-alert uq-alert--error" role="alert">
     <div class="uq-alert__message">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
     </div>
   </div>
   `;
 }
-alertDanger.storyName = 'Danger';
+alertError.storyName = 'Error';
 
 export const alertWithLink = () => {
   return `
@@ -148,9 +148,9 @@ export const warningGlobal = () => {
 }
 warningGlobal.storyName = 'Warning global';
 
-export const dangerGlobal = () => {
+export const errorGlobal = () => {
   return `
-  <div class="uq-alert uq-alert--danger uq-alert--dark" role="alert">
+  <div class="uq-alert uq-alert--error uq-alert--dark" role="alert">
     <div class="uq-alert__container">
       <div class="uq-alert__message">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -160,4 +160,4 @@ export const dangerGlobal = () => {
   </div>
   `;
 }
-dangerGlobal.storyName = 'Danger global';
+errorGlobal.storyName = 'Error global';

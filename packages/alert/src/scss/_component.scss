@@ -44,7 +44,7 @@
       width: core.$space-m;
       height: core.$space-m;
       position: absolute;
-      top: core.$space;
+      top: .85rem;
       left: -(core.$space);
     }
 
@@ -111,21 +111,24 @@
 
     .uq-alert__message {
       &::before {
-        background-image: url(icon.get-icon('interface-essential--remove-shield', core.$uq-neutral-dark80));
+        background-image: url(icon.get-icon('interface-essential--remove-circle', core.$uq-neutral-dark80));
       }
     }
   }
 
 
 
+  &--global {
+    .uq-alert__container {
+      @include grid.layout-containment;
+    }
+  }
+
+  
 
   &--dark { 
     background-color: $alert-global-info-bg-color;
     color: core.$uq-white;
-
-    .uq-alert__container {
-      @include grid.layout-containment;
-    }
 
     a {
       color: core.$uq-white;
@@ -185,7 +188,7 @@
   
       .uq-alert__message {
         &::before {
-          background-image: url(icon.get-icon('interface-essential--remove-shield', core.$uq-white));
+          background-image: url(icon.get-icon('interface-essential--remove-circle', core.$uq-white));
         }
       }
     }

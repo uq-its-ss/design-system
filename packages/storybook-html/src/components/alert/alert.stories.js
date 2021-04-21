@@ -64,11 +64,9 @@ alertError.storyName = 'Error';
 export const alertWithLink = () => {
   return `
   <div class="uq-alert" role="alert">
-    <div class="uq-alert__container">
-      <div class="uq-alert__message">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        <a href="#" title="Link" class="uq-button--text uq-button--inline">Link</a>
-      </div>
+    <div class="uq-alert__message">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <a href="#" title="Link" class="uq-button--text uq-button--inline">Link</a>
     </div>
   </div>
   `;
@@ -78,11 +76,9 @@ alertWithLink.storyName = 'with Link';
 export const alertWithButton = () => {
   return `
   <div class="uq-alert" role="alert">
-    <div class="uq-alert__container">
-      <div class="uq-alert__message">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        <a href="#" title="Button" class="uq-button">Button</a>
-      </div>
+    <div class="uq-alert__message">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <a href="#" title="Button" class="uq-button">Button</a>
     </div>
   </div>
   `;
@@ -92,12 +88,10 @@ alertWithButton.storyName = 'with Button';
 export const alertWithTitle = () => {
   return `
   <div class="uq-alert" role="alert">
-    <div class="uq-alert__container">
-      <div class="uq-alert__message">
-        <h3 class="uq-alert__title">Title goes here</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        <a href="#" title="Button" class="uq-button">Button</a>
-      </div>
+    <div class="uq-alert__message">
+      <h3 class="uq-alert__title">Title goes here</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <a href="#" title="Button" class="uq-button">Button</a>
     </div>
   </div>
   `;
@@ -106,7 +100,7 @@ alertWithTitle.storyName = 'with Title';
 
 export const infoGlobal = () => {
   return `
-  <div class="uq-alert uq-alert--info uq-alert--dark" role="alert">
+  <div class="uq-alert uq-alert--info uq-alert--dark uq-alert--global" role="alert">
     <div class="uq-alert__container">
       <div class="uq-alert__message">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -121,7 +115,7 @@ infoGlobal.storyName = 'Info global';
 
 export const successGlobal = () => {
   return `
-  <div class="uq-alert uq-alert--success uq-alert--dark" role="alert">
+  <div class="uq-alert uq-alert--success uq-alert--dark uq-alert--global" role="alert">
     <div class="uq-alert__container">
       <div class="uq-alert__message">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -136,7 +130,7 @@ successGlobal.storyName = 'Success global';
 
 export const warningGlobal = () => {
   return `
-  <div class="uq-alert uq-alert--warning uq-alert--dark" role="alert">
+  <div class="uq-alert uq-alert--warning uq-alert--dark uq-alert--global" role="alert">
     <div class="uq-alert__container">
       <div class="uq-alert__message">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -150,7 +144,7 @@ warningGlobal.storyName = 'Warning global';
 
 export const errorGlobal = () => {
   return `
-  <div class="uq-alert uq-alert--error uq-alert--dark" role="alert">
+  <div class="uq-alert uq-alert--error uq-alert--dark uq-alert--global" role="alert">
     <div class="uq-alert__container">
       <div class="uq-alert__message">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>

@@ -93,7 +93,7 @@
 
     .uq-alert__message {
       &::before {
-        background-image: url(icon.get-icon('standard--check', core.$uq-neutral-dark80));
+        background-image: url(icon.get-icon('interface-essential--check-circle-1', core.$uq-neutral-dark80));
       }
     }
   }
@@ -111,7 +111,7 @@
 
     .uq-alert__message {
       &::before {
-        background-image: url(icon.get-icon('architecture-and-planning--heavy-equipment-lift-hook-box', core.$uq-neutral-dark80));
+        background-image: url(icon.get-icon('interface-essential--remove-shield', core.$uq-neutral-dark80));
       }
     }
   }
@@ -166,7 +166,7 @@
   
       .uq-alert__message {
         &::before {
-          background-image: url(icon.get-icon('standard--check', core.$uq-white));
+          background-image: url(icon.get-icon('interface-essential--check-circle-1', core.$uq-white));
         }
       }
     }
@@ -185,7 +185,7 @@
   
       .uq-alert__message {
         &::before {
-          background-image: url(icon.get-icon('architecture-and-planning--heavy-equipment-lift-hook-box', core.$uq-white));
+          background-image: url(icon.get-icon('interface-essential--remove-shield', core.$uq-white));
         }
       }
     }

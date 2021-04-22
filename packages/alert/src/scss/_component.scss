@@ -131,8 +131,7 @@
     color: core.$uq-white;
 
     a {
-      color: core.$uq-white;
-      font-weight: $alert-font-weight-medium;
+      color: inherit;
       text-decoration: underline;
 
       &:link,

@@ -19,7 +19,7 @@ export default {
 
 export const alertInfo = () => {
   return `
-  <div class="uq-alert" role="alert">
+  <div class="uq-alert uq-alert--info" role="alert">
     <div class="uq-alert__message">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
     </div>

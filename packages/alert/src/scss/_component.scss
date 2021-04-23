@@ -6,6 +6,7 @@
 .uq-alert {
   background-color: $alert-info-bg-color;
   color: $alert-text-color;
+  position: relative;
   
   &__container {
     margin: 0 auto;
@@ -117,7 +118,7 @@
   }
 
 
-
+  // Global alert
   &--global {
     .uq-alert__container {
       @include grid.layout-containment;
@@ -125,7 +126,7 @@
   }
 
   
-
+  // Dark variant
   &--dark { 
     background-color: $alert-global-info-bg-color;
     color: core.$uq-white;
@@ -143,6 +144,10 @@
       &:focus {
         text-decoration: none;
       }
+    }
+
+    .uq-alert__title {
+      color: core.$uq-white;
     }
 
     .uq-alert__close {
@@ -177,8 +182,12 @@
       background-color: $alert-global-warning-bg-color;
       color: $alert-text-color;
 
+      .uq-alert__title {
+        color: $alert-text-color;
+      }
+
       a {
-        color: core.$uq-neutral-dark80;
+        color: $alert-text-color;
       }
     }
 

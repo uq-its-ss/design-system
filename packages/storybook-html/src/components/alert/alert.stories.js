@@ -66,7 +66,7 @@ export const alertWithLink = () => {
   <div class="uq-alert" role="alert">
     <div class="uq-alert__message">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <a href="#" title="Link" class="uq-button--text uq-button--inline">Link</a>
+      <a href="#" title="Link" class="uq-button--inline">Link</a>
     </div>
   </div>
   `;
@@ -103,6 +103,7 @@ export const infoGlobal = () => {
   <div class="uq-alert uq-alert--info uq-alert--dark uq-alert--global" role="alert">
     <div class="uq-alert__container">
       <div class="uq-alert__message">
+        <h3 class="uq-alert__title">Title goes here</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         <a href="#" title="Link" class="uq-button--inline">Link</a>
       </div>
@@ -118,6 +119,7 @@ export const successGlobal = () => {
   <div class="uq-alert uq-alert--success uq-alert--dark uq-alert--global" role="alert">
     <div class="uq-alert__container">
       <div class="uq-alert__message">
+        <h3 class="uq-alert__title">Title goes here</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         <a href="#" title="Link" class="uq-button--inline">Link</a>
       </div>
@@ -133,6 +135,7 @@ export const warningGlobal = () => {
   <div class="uq-alert uq-alert--warning uq-alert--dark uq-alert--global" role="alert">
     <div class="uq-alert__container">
       <div class="uq-alert__message">
+        <h3 class="uq-alert__title">Title goes here</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         <a href="#" title="Link" class="uq-button--inline">Link</a>
       </div>
@@ -147,6 +150,7 @@ export const errorGlobal = () => {
   <div class="uq-alert uq-alert--error uq-alert--dark uq-alert--global" role="alert">
     <div class="uq-alert__container">
       <div class="uq-alert__message">
+        <h3 class="uq-alert__title">Title goes here</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         <a href="#" title="Link" class="uq-button--inline">Link</a>
       </div>

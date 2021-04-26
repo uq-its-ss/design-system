@@ -428,6 +428,18 @@ export default [
     "category": "how-youll-learn"
   },
   {
+    "name": "check-circle-1",
+    "category": "interface-essential"
+  },
+  {
+    "name": "remove-circle",
+    "category": "interface-essential"
+  },
+  {
+    "name": "remove-shield",
+    "category": "interface-essential"
+  },
+  {
     "name": "law",
     "category": "law"
   },

@@ -94,7 +94,7 @@
 
     .uq-alert__message {
       &::before {
-        background-image: url(icon.get-icon('interface-essential--check-circle-1', core.$uq-neutral-dark80));
+        background-image: url(icon.get-icon('standard--success-circle', core.$uq-neutral-dark80));
       }
     }
   }
@@ -112,7 +112,7 @@
 
     .uq-alert__message {
       &::before {
-        background-image: url(icon.get-icon('interface-essential--remove-circle', core.$uq-neutral-dark80));
+        background-image: url(icon.get-icon('standard--error-circle', core.$uq-neutral-dark80));
       }
     }
   }
@@ -173,7 +173,7 @@
   
       .uq-alert__message {
         &::before {
-          background-image: url(icon.get-icon('interface-essential--check-circle-1', core.$uq-white));
+          background-image: url(icon.get-icon('standard--success-circle', core.$uq-white));
         }
       }
     }
@@ -196,7 +196,7 @@
   
       .uq-alert__message {
         &::before {
-          background-image: url(icon.get-icon('interface-essential--remove-circle', core.$uq-white));
+          background-image: url(icon.get-icon('standard--error-circle', core.$uq-white));
         }
       }
     }

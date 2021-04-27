@@ -428,18 +428,6 @@ export default [
     "category": "how-youll-learn"
   },
   {
-    "name": "check-circle-1",
-    "category": "interface-essential"
-  },
-  {
-    "name": "remove-circle",
-    "category": "interface-essential"
-  },
-  {
-    "name": "remove-shield",
-    "category": "interface-essential"
-  },
-  {
     "name": "law",
     "category": "law"
   },
@@ -968,6 +956,10 @@ export default [
     "category": "standard"
   },
   {
+    "name": "error-circle",
+    "category": "standard"
+  },
+  {
     "name": "expand-3",
     "category": "standard"
   },
@@ -1025,6 +1017,10 @@ export default [
   },
   {
     "name": "subtract",
+    "category": "standard"
+  },
+  {
+    "name": "success-circle",
     "category": "standard"
   },
   {

@@ -79,16 +79,16 @@ $link-hover: #005ea5;
 $link-active: $link-hover;
 
 // Alerts and Status - Dark
-$info: #1E72C6;
+$info: $link;
 $success: $uq-green-dark10;
 $warning: $uq-yellow;
 $alert: $uq-red-dark20;
 
 // Alerts and Status - Light
-$info-light: lighten($info, 40%); //#bbd8f5
+$info-light: lighten($info, 50%); //#e8f1fb
 $success-light: lighten($uq-green, 50%); //dff6e0
 $warning-light: lighten($uq-yellow, 40%); //fff0c8
-$alert-light: lighten($uq-red, 30%); //f6afbb
+$alert-light: lighten($uq-red, 40%); //fbdde2
 
 // Palettes
 $light-palette-color: $uq-neutral-light80;

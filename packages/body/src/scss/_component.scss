@@ -88,20 +88,20 @@ $use-encapsulation: false !default;
   }
   
   h5 {
-    margin-top: core.$space-s;
-    margin-bottom: core.$space-s;
+    margin-top: core.$space;
+    margin-bottom: core.$space;
     font-size: core.$font-size-m;
   }
   
   h6 {
-    margin-top: core.$space-xs;
-    margin-bottom: core.$space-xs;
+    margin-top: core.$space;
+    margin-bottom: core.$space;
     font-size: core.$font-size;
   }
   
   p {
     margin-top: core.$space-none;
-    margin-bottom: core.$space-m;
+    margin-bottom: core.$space;
   }
   
   b,

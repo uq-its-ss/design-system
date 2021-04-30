@@ -5,9 +5,8 @@ module.exports = {
     '../src/**/*.@(stories|story).@(js|mdx)'
   ],
   addons: [
-    '@storybook/addon-docs',
-    '@storybook/addon-viewport/register',
-    '@storybook/addon-backgrounds'
+    "@storybook/addon-a11y",
+    "@storybook/addon-essentials"
   ],
   webpackFinal: async (config, { configType }) => {
     // Export a function. Accept the base config as the only param.

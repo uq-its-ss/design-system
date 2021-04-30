@@ -1,5 +1,5 @@
 import React from 'react';
-import { components } from '@storybook/components/dist/typography/DocumentFormatting';
+import { components } from '@storybook/components';
 import Toc from './Toc';
 
 const H1 = components.h1;

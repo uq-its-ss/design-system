@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { DocsContainer } from '@storybook/addon-docs/blocks';
 import tocbot from 'tocbot';
-import mermaid from 'mermaid';
 
 const tocConfiguration = {
   tocSelector: '.js-toc',

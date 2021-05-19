@@ -29,6 +29,11 @@ body {
   margin-top: -1px;
 }
 
+/* Getting started alert */
+.uqds-alert {
+  margin-left: 2rem !important; /* override storybook default on div */
+}
+
 /* UQDS Table Styles */ 
 
 /* Table large screen (large screen first as this is default table behaviour */ 

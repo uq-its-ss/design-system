@@ -1,0 +1,39 @@
+{
+  "name": "@uqds/loading-spinner",
+  "version": "0.0.3-alpha.0",
+  "description": "Loading spinner component",
+  "keywords": [
+    "uqds",
+    "uq",
+    "University of Queensland",
+    "design system",
+    "scss",
+    "sass",
+    "css",
+    "loading-spinner"
+  ],
+  "author": {
+    "name": "University of Queensland",
+    "email": "webservices@uq.edu.au",
+    "url": "https://uq.edu.au"
+  },
+  "homepage": "https://github.com/uq-its-ss/design-system#readme",
+  "license": "ISC",
+  "directories": {
+    "lib": "src"
+  },
+  "files": [
+    "src/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uq-its-ss/design-system.git"
+  },
+  "bugs": {
+    "url": "https://github.com/uq-its-ss/design-system/issues"
+  },
+  "dependencies": {
+    "@uqds/core": "^0.0.3-alpha.0",
+    "@uqds/icon": "^0.0.3-alpha.0"
+  }
+}

@@ -22,7 +22,9 @@ export default {
 
 export const loadingSpinner = () => {
   return `
-    <div class="uq-loading-spinner"></div>
+  <div class="uq-loading-spinner" role="alert" aria-live="assertive">
+    <span>Loading...</span>
+  </div>
   `;
 };
 

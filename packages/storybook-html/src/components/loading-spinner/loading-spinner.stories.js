@@ -2,7 +2,7 @@
 import './loading-spinner.scss';
 
 // import HTML template strings
-import previousNextHTML from './loading-spinner.html';
+import loadingSpinnerHTML from './loading-spinner.html';
 
 // documentation
 import docs from './loading-spinner.docs.mdx';
@@ -20,12 +20,17 @@ export default {
   }
 };
 
+// export const loadingSpinner = () => {
+//   return `
+//   <div class="uq-loading-spinner" role="alert" aria-live="assertive">
+//     <span>Loading...</span>
+//   </div>
+//   `;
+// };
+
 export const loadingSpinner = () => {
-  return `
-  <div class="uq-loading-spinner" role="alert" aria-live="assertive">
-    <span>Loading...</span>
-  </div>
-  `;
+  return loadingSpinnerHTML;
 };
+
 
 loadingSpinner.storyName = 'Loading spinner';

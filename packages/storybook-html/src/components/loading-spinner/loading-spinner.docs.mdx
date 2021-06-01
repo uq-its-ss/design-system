@@ -3,13 +3,9 @@ import StatusBadge from '../../../.storybook/custom/components/StatusBadge';
 
 # Loading spinner
 
-<StatusBadge.Review /><StatusBadge.ReviewDoc />
-
-<a href="https://github.com/uq-its-ss/design-system/issues" class="uq-button uq-button--text" target="_blank">Check for open issues</a>
-
 ## Overview
 
-- The Loading spinner component is a progress indicator used to indicate a loading process.
+The loading spinner component is a progress indicator used to provide feedback that data is being processed.
 
 ## Example
 
@@ -18,10 +14,15 @@ import StatusBadge from '../../../.storybook/custom/components/StatusBadge';
 </Canvas>
 
 ```html
-  <div class="uq-loading-spinner"></div>
+<div class="uq-loading-spinner" role="alert" aria-live="assertive">
+  <span>Loading...</span>
+</div>
 ```
 
 ## How and when to use
 
-- The Loading spinner component can be to represent the loading process of content or data in a page or within a component.
+The loading spinner component can be used to represent the loading of data in a page or within a component.
 
+## Accessibility
+
+To ensure screen readers notifiy users that page content is loading, include `role="alert"` and `aria-live="assertive"`.

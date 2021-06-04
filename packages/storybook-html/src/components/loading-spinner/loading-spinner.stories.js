@@ -20,17 +20,8 @@ export default {
   }
 };
 
-// export const loadingSpinner = () => {
-//   return `
-//   <div class="uq-loading-spinner" role="alert" aria-live="assertive">
-//     <span>Loading...</span>
-//   </div>
-//   `;
-// };
-
 export const loadingSpinner = () => {
   return loadingSpinnerHTML;
 };
-
 
 loadingSpinner.storyName = 'Loading spinner';

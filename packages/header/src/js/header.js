@@ -18,6 +18,13 @@ class header {
     this.searchInput = document.querySelector('.uq-header__search-query-input');
     this.meta = document.querySelector('meta.uq-header__mq--desktop');
 
+    this.searchForm = document.querySelector('.uq-header__search-form'); 
+    this.mobileNav = document.createElement('nav');
+    this.mobileNav.classList.add('uq-header__navigation', 'uq-header__navigation--mobile');
+    this.ul = document.createElement('ul');
+    this.mobileNav.appendChild(this.ul);
+    this.searchForm.insertAdjacentElement('afterend', this.mobileNav);
+
     if (this.meta == null) {
       this.meta = document.createElement('meta');
       this.meta.classList.add('uq-header__mq--desktop');
@@ -35,17 +42,11 @@ class header {
 
   mobileGlobalNav () {
     let mobileNavLinks = document.querySelectorAll('.uq-header__navigation-list-item a');
-    let searchForm = document.querySelector('.uq-header__search-form');
-    let mobileNav = document.createElement('nav');
-    let ul = document.createElement('ul');
-    
-    mobileNav.classList.add('uq-header__navigation', 'uq-header__navigation--mobile');
-    mobileNav.appendChild(ul);
-    searchForm.insertAdjacentElement('afterend', mobileNav);
+    let mobileNavContainer = document.querySelector('.uq-header__navigation--mobile ul');
 
     for (let link of mobileNavLinks) {
       let li = document.createElement('li');
-      ul.appendChild(li);
+      mobileNavContainer.appendChild(li);
       li.appendChild(link);
     }
   }

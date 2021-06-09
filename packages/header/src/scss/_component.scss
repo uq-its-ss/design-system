@@ -387,28 +387,6 @@
         }
     }    
 
-    &__secondary {
-        background-color: core.$uq-white;
-        padding-top: core.$space-m;
-        padding-bottom: core.$space-s;
-
-        &--no-menu {
-            padding-bottom: core.$space-m;
-        }
-    }
-
-    &__site-title {
-        margin: core.$space-none;
-        font-size: core.$font-size-l;
-        font-weight: 500;
-        color: core.$uq-purple;
-        
-        &:hover {
-            color: core.$uq-purple;
-            text-decoration: none;
-        }
-    }
-
 
     // Visibility utility classes
     .hidden {

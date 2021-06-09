@@ -37,6 +37,36 @@
         }
     }
 
+    &__logo {
+        img {
+            display: block;
+        }
+        
+        &--large {
+            display: none;
+    
+            img {
+                height: 2.625rem;
+                width: 17.875rem;
+            }
+    
+            @media #{core.$screen-xl-up} {
+                display: block;
+            }
+        }
+    
+        &--small {
+            img {
+                height: 2.625rem;
+                width: 10rem;
+            }
+    
+            @media #{core.$screen-xl-up} {
+                display: none;
+            }
+        }
+    }
+
     &__navigation {
         ul {
             list-style-type: none;
@@ -376,40 +406,6 @@
         &:hover {
             color: core.$uq-purple;
             text-decoration: none;
-        }
-    }
-
-    //
-    // Logo
-    //
-
-    &__logo {
-        img {
-            display: block;
-        }
-        
-        &--large {
-            display: none;
-    
-            img {
-                height: 2.625rem;
-                width: 17.875rem;
-            }
-    
-            @media #{core.$screen-xl-up} {
-                display: block;
-            }
-        }
-    
-        &--small {
-            img {
-                height: 2.625rem;
-                width: 10rem;
-            }
-    
-            @media #{core.$screen-xl-up} {
-                display: none;
-            }
         }
     }
 

@@ -33,13 +33,19 @@ class header {
     });
   }
 
-  mobileGlobalNav() {
+  mobileGlobalNav () {
     let mobileNavLinks = document.querySelectorAll('.uq-header__navigation-list-item a');
-    let mobileNavContainer = document.querySelector('.uq-header__navigation--mobile ul');
+    let searchForm = document.querySelector('.uq-header__search-form');
+    let mobileNav = document.createElement('nav');
+    let ul = document.createElement('ul');
+    
+    mobileNav.classList.add('uq-header__navigation', 'uq-header__navigation--mobile');
+    mobileNav.appendChild(ul);
+    searchForm.insertAdjacentElement('afterend', mobileNav);
 
     for (let link of mobileNavLinks) {
       let li = document.createElement('li');
-      mobileNavContainer.appendChild(li);
+      ul.appendChild(li);
       li.appendChild(link);
     }
   }

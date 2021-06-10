@@ -17,13 +17,12 @@ class header {
     this.search = document.querySelector('.uq-header__search');
     this.searchInput = document.querySelector('.uq-header__search-query-input');
     this.meta = document.querySelector('meta.uq-header__mq--desktop');
-
     this.searchForm = document.querySelector('.uq-header__search-form'); 
-    this.mobileNav = document.createElement('nav');
-    this.mobileNav.classList.add('uq-header__navigation', 'uq-header__navigation--mobile');
-    this.ul = document.createElement('ul');
-    this.mobileNav.appendChild(this.ul);
-    this.searchForm.insertAdjacentElement('afterend', this.mobileNav);
+    this.globalNav = document.querySelector('.uq-header__navigation');
+
+    this.globalNavClone = this.globalNav.cloneNode(true);
+    this.globalNavClone.classList.add('uq-header__navigation--mobile');
+    this.searchForm.insertAdjacentElement('afterend', this.globalNavClone);
 
     if (this.meta == null) {
       this.meta = document.createElement('meta');
@@ -40,17 +39,6 @@ class header {
     });
   }
 
-  mobileGlobalNav () {
-    let mobileNavLinks = document.querySelectorAll('.uq-header__navigation-list-item a');
-    let mobileNavContainer = document.querySelector('.uq-header__navigation--mobile ul');
-
-    for (let link of mobileNavLinks) {
-      let li = document.createElement('li');
-      mobileNavContainer.appendChild(li);
-      li.appendChild(link);
-    }
-  }
-
   handleToggle() {
     this.toggle.classList.toggle('uq-header__search-toggle-button--icon-close');
     this.search.classList.toggle('uq-header__search--open');
@@ -60,7 +48,6 @@ class header {
         this.searchInput.focus();
       } else {
         this.toggle.blur();
-        this.mobileGlobalNav();
       }
     } else {
       this.toggle.blur();

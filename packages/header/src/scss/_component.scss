@@ -58,38 +58,52 @@
 
     &__navigation {
         grid-area: nav;
-        -webkit-column-count: 3;
-        -moz-column-count: 3;
-        column-count: 3;
-        margin-bottom: core.$space;
-        padding: core.$space-none;
-        list-style: none;
-        height: 0;
-        overflow: hidden;
-        width: 100%;
-
-        &--open {
-            height: auto;
-            visibility: visible;
-            overflow: initial;
-        }
 
         @media #{core.$screen-lg-up} {
             justify-self: end;
-            display: flex;
-            align-content: flex-end;
-            align-items: center;
-            justify-content: center;
-            gap: core.$space-m;
-            margin: core.$space-none;
-            height: auto;
-            visibility: visible;
-            overflow: initial;
+            display: flex;         
+        }
+        
+        &-container {
+            -webkit-column-count: 3;
+            -moz-column-count: 3;
+            column-count: 3;
+            list-style: none;
+            margin-bottom: core.$space;
+            padding: core.$space-none;
+            height: 0;
+            overflow: hidden;
+            width: 100%;
 
-            li {
+            @media #{core.$screen-lg-up} {  
+                justify-self: end;
+                display: flex;
+                align-content: flex-end;
+                align-items: center;
+                justify-content: center;
+                gap: core.$space-m;
                 margin: core.$space-none;
+                height: auto;
+                visibility: visible;
+                overflow: initial;
+
+                li {
+                    margin: core.$space-none;
+                }
             }
         }
+
+        &--open {
+            width: 100%;
+
+            .uq-header__navigation-container {
+                height: auto;
+                visibility: visible;
+                overflow: initial;
+            }
+        }
+
+        
     
         &-link {
             color: core.$uq-white;
@@ -170,6 +184,8 @@
             font-weight: core.$font-weight-normal;
 
             @media #{core.$screen-lg-up} {
+                display: inline-block;
+                float: left;
                 vertical-align: baseline;
             }
 
@@ -183,12 +199,15 @@
             margin-bottom: core.$space;
 
             @media #{core.$screen-lg-up} {
-                display: inline;
+                display: inline-block;
+                margin-left: core.$space;
             }
         }
 
         &-label {
             color: core.$uq-white;
+            font-size: core.$font-size-s;
+            font-weight: core.$font-weight-normal;
         }
 
         &-radio {

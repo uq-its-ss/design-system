@@ -17,12 +17,7 @@ class header {
     this.search = document.querySelector('.uq-header__search');
     this.searchInput = document.querySelector('.uq-header__search-query-input');
     this.meta = document.querySelector('meta.uq-header__mq--desktop');
-    this.searchForm = document.querySelector('.uq-header__search-form'); 
-    this.globalNav = document.querySelector('.uq-header__navigation');
-
-    this.globalNavClone = this.globalNav.cloneNode(true);
-    this.globalNavClone.classList.add('uq-header__navigation--mobile');
-    this.searchForm.insertAdjacentElement('afterend', this.globalNavClone);
+    this.navigation = document.querySelector('.uq-header__navigation');
 
     if (this.meta == null) {
       this.meta = document.createElement('meta');
@@ -42,6 +37,7 @@ class header {
   handleToggle() {
     this.toggle.classList.toggle('uq-header__search-toggle-button--icon-close');
     this.search.classList.toggle('uq-header__search--open');
+    this.navigation.classList.toggle('uq-header__navigation--open');
 
     if (this.search.classList.contains('uq-header__search--open')) {
       if (this.mqLargeList.matches) {

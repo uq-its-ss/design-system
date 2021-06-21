@@ -1,44 +1,40 @@
 <header class="uq-header">
     <div class="uq-header__container">
-        <div class="uq-header__global">
             <div class="uq-header__logo">
                 <a class="uq-header__logo--large" href="https://www.uq.edu.au/"><img alt="The University of Queensland" src="https://static.uq.net.au/v11/logos/corporate/uq-lockup-landscape--reversed.svg"></a>
                 <a class="uq-header__logo--small" href="https://www.uq.edu.au/"><img alt="The University of Queensland" src="https://static.uq.net.au/v11/logos/corporate/uq-logo--reversed.svg"></a>
             </div>
-            <nav class="uq-header__navigation" aria-label="Global navigation">
-                <ul>
-                    <li class="uq-header__navigation-list-item"><a href="https://contacts.uq.edu.au/">Contacts</a></li>
-                    <li class="uq-header__navigation-list-item"><a href="https://future-students.uq.edu.au/">Study</a></li>
-                    <li class="uq-header__navigation-list-item"><a href="https://maps.uq.edu.au/">Maps</a></li>
-                    <li class="uq-header__navigation-list-item"><a href="https://www.uq.edu.au/news/">News</a></li>
-                    <li class="uq-header__navigation-list-item"><a href="https://www.uq.edu.au/events/">Events</a></li>
-                    <li class="uq-header__navigation-list-item"><a href="https://jobs.uq.edu.au/">Jobs</a></li>
-                    <li class="uq-header__navigation-list-item"><a href="https://www.library.uq.edu.au/">Library</a></li>
-                    <li class="uq-header__navigation-list-item"><a href="https://giving.uq.edu.au/">Give now</a></li>
-                    <li class="uq-header__navigation-list-item"><a href="https://my.uq.edu.au/">my.UQ</a></li>
-                    <li class="uq-header__navigation uq-header__search-toggle">
-                        <button class="uq-header__search-toggle-button">Toggle Search</button>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-        <div class="uq-header__search">
-            <form class="uq-header__search-form" action="https://www.uq.edu.au/search/" method="get" accept-charset="UTF-8">
-                <fieldset class="uq-header__search-scope-container">
-                    <legend class="hidden">
-                        <span class="uq-header__search-title">What are you looking for?</span>
-                    </legend>
-                    <span class="uq-header__search-title" tabindex="0">What are you looking for?</span>
-                    <span class="uq-header__search-scope" tabindex="0">Search all UQ websites</span>
+            <div class="uq-header__search-toggle">
+                <button class="uq-header__search-toggle-button">Search</button>
+            </div>
+            <div class="uq-header__search">
+              <form>
+                <fieldset>
+                    <legend class="uq-header__search-title">What are you looking for?</legend>
+                    <div class="uq-header__search-range">
+                        <label for="edit-as_sitesearch-off" class="option uq-header__search-label">Search all UQ websites</label>
+                    </div>
+                    <div class="uq-header__search-query">
+                        <label for="edit-q" class="visually-hidden">Search term</label>
+                        <input type="text" id="edit-q" name="q" value="" size="60" maxlength="128" class="uq-header__search-query-input">
+                        <span class="uq-header__search-query-button">
+                            <input type="submit" name="op" value="Search" class="uq-header__search-query-submit">
+                        </span>
+                  </div>
                 </fieldset>
-                <div class="uq-header__search-query">
-                    <label for="edit-q" class="visually-hidden">Search term</label>
-                    <input type="text" id="edit-q" name="q" value="" size="60" maxlength="128" class="uq-header__search-query-input">
-                    <span class="uq-header__search-query-button">
-                        <input type="submit" name="op" value="Search" class="uq-header__search-query-submit">
-                    </span>
-                </div>
-            </form>
+              </form>
+            </div>
+            <ul class="uq-header__navigation">
+                <li><a class="uq-header__navigation-link" href="https://contacts.uq.edu.au/">Contacts</a></li>
+                <li><a class="uq-header__navigation-link" href="https://future-students.uq.edu.au/">Study</a></li>
+                <li><a class="uq-header__navigation-link" href="https://maps.uq.edu.au/">Maps</a></li>
+                <li><a class="uq-header__navigation-link" href="https://www.uq.edu.au/news/">News</a></li>
+                <li><a class="uq-header__navigation-link" href="https://www.uq.edu.au/events/">Events</a></li>
+                <li><a class="uq-header__navigation-link" href="https://jobs.uq.edu.au/">Jobs</a></li>
+                <li><a class="uq-header__navigation-link" href="https://www.library.uq.edu.au/">Library</a></li>
+                <li><a class="uq-header__navigation-link" href="https://giving.uq.edu.au/">Give now</a></li>
+                <li><a class="uq-header__navigation-link" href="https://my.uq.edu.au/">my.UQ</a></li>
+            </ul>
         </div>
-    </div>
+    </nav>
 </header>

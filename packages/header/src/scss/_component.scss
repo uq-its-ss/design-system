@@ -96,6 +96,10 @@
         &--open {
             width: 100%;
 
+            @media #{core.$screen-lg-up} {  
+                width: auto;
+            }
+
             .uq-header__navigation-container {
                 height: auto;
                 visibility: visible;

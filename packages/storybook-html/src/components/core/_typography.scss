@@ -1,11 +1,5 @@
 @use '@uqds/core/src/scss/global' as core;
 
-.uqds-fonts {
-  font-size: 2rem;
-  font-weight: 400;
-  line-height: 1.5;
-}
-
 .uqds-font {
   &--roboto {
     font-family: core.$roboto;

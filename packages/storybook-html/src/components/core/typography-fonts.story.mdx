@@ -12,27 +12,37 @@ export const Fonts = () => `
   <thead>
     <tr>
       <th>Font</th>
+      <th>Styles</th>
       <th>Usage</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td><div class="uqds-font uqds-font--roboto">Roboto</div></td>
-      <td>For headings and paragraph text.</td>
+      <td>
+        <div class="uqds-font uqds-font--roboto">Regular (400)</div>
+        <div class="uqds-font uqds-font--roboto uqds-font--italic">Regular (400) italic</div>
+        <div class="uqds-font uqds-font--roboto uqds-font--500">Medium (500)</div>
+        <div class="uqds-font uqds-font--roboto uqds-font--500 uqds-font--italic">Medium (500) italic</div>
+      </td>
+      <td>For headings and paragraph text</td>
     </tr>
     <tr>
       <td><div class="uqds-font uqds-font--merriweather uqds-font--italic">Merriweather</div></td>
-      <td>For blockquotes and testimonials.</td>
+      <td><div class="uqds-font uqds-font--merriweather uqds-font--italic">Regular (400) Italic</div></td>
+      <td>For blockquotes and testimonials</td>
     </tr>
     <tr>
       <td><div class="uqds-font uqds-font--montserrat uqds-font--500">Montserrat</div></td>
-      <td>For the main page heading.</td>
+      <td><div class="uqds-font uqds-font--montserrat uqds-font--500">Medium (500)</div></td>
+      <td>For the main page heading</td>
     </tr>
   </tbody>
 </table>
 `;
 
 <Story name="Fonts">{Fonts.bind({})}</Story>
+
 
 <><br /><br /></>
 
@@ -78,6 +88,21 @@ font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
 When online platforms and systems are not able to display our fonts such as third party applications, use our
 alternative fonts. If none of the alternative font options are available, it is recommended to use the default font provided by the platform or system. 
 
-**Arial**: used headings and body text. This font is available as a standard PC and Mac font.
-
-**Georgia**: used for blockquotes and testimonials.
+<table className="uqds-table uqds-table--card uqds-fonts">
+  <thead>
+    <tr>
+      <th>Font</th>
+      <th>Usage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><div class="uqds-font uqds-font--arial">Arial</div></td>
+      <td>For headings and paragraph text</td>
+    </tr>
+    <tr>
+      <td><div class="uqds-font uqds-font--georgia uqds-font--italic">Georgia</div></td>
+      <td>For blockquotes and testimonials</td>
+    </tr>
+  </tbody>
+</table>

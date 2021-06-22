@@ -8,7 +8,7 @@
 
 .uqds-font {
   &--roboto {
-    font-family: core.$roboto !important;
+    font-family: core.$roboto;
   }
 
   &--merriweather {
@@ -16,7 +16,15 @@
   }
   
   &--montserrat {
-    font-family: core.$montserrat !important;
+    font-family: core.$montserrat;
+  }
+
+  &--arial {
+    font-family: Arial, sans-serif !important;
+  }
+
+  &--georgia {
+    font-family: Georgia, serif !important;
   }
 
   &--italic {

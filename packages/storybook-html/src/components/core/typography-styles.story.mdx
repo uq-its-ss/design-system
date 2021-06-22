@@ -5,6 +5,68 @@ import './_typography.scss';
 
 # Styles
 
+<><br /></>
+
+## Sizes
+
+We use 16px as the base or default font size and use it to calculate a typle scale for the other font sizes.
+
+<table className="uqds-table uqds-table--card">
+  <thead>
+    <tr>
+      <th>PX</th>
+      <th>REM</th>
+      <th>SASS variable</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>12</td>
+      <td>0.75</td>
+      <td><code>$font-size-xs</code></td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>0.875</td>
+      <td><code>$font-size-s</code></td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>1</td>
+      <td><code>$font-size</code></td>
+    </tr>
+    <tr>
+      <td>18</td>
+      <td>1.125</td>
+      <td><code>$font-size-m</code></td>
+    </tr>
+    <tr>
+      <td>20</td>
+      <td>1.25</td>
+      <td><code>$font-size-l</code></td>
+    </tr>
+    <tr>
+      <td>24</td>
+      <td>1.5</td>
+      <td><code>$font-size-xl</code></td>
+    </tr>
+    <tr>
+      <td>32</td>
+      <td>2</td>
+      <td><code>$font-size-xxl</code></td>
+    </tr>
+    <tr>
+      <td>40</td>
+      <td>2.5</td>
+      <td><code>$font-size-xxxl</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<><br /></>
+
+## Elements
+
 The following typography styles are setup in HTML elements and components. Please reference the styles below when configuring new websites and components.
 
 export const Styles = () => `
@@ -16,6 +78,7 @@ export const Styles = () => `
       <th className="uqds-table__heading">Weight</th>
       <th className="uqds-table__heading">Size</th>
       <th className="uqds-table__heading">Line-height</th>
+      <th className="uqds-table__heading">Colour</th>
       <th className="uqds-table__heading">Example</th>
     </tr>
   </thead>
@@ -24,96 +87,135 @@ export const Styles = () => `
       <td className="uqds-table__item"><h1>H1</h1></td>
       <td className="uqds-table__item" data-title="Font:">Montserrat</td>
       <td className="uqds-table__item" data-title="Weight:">Medium, 500</td>
-      <td className="uqds-table__item" data-title="Size:">40px</td>
+      <td className="uqds-table__item" data-title="Size:">$font-size-xxxl</td>
       <td className="uqds-table__item" data-title="Line-height:">1.4</td> 
+      <td className="uqds-table__item" data-title="Colour:">$uq-purple</td>
       <td className="uqds-table__item" data-title="Example"><h1>This is a main heading</h1></td> 
     </tr>
     <tr className="uqds-table__row">
       <td className="uqds-table__item"><h2>H2</h2></td>
       <td className="uqds-table__item" data-title="Font:">Roboto</td>
       <td className="uqds-table__item" data-title="Weight:">Medium, 500</td>
-      <td className="uqds-table__item" data-title="Size:">32px</td>
+      <td className="uqds-table__item" data-title="Size:">text--xxl</td>
       <td className="uqds-table__item" data-title="Line-height:">1.4</td>
-      <td className="uqds-table__item" data-title="Example"><h2>This is a main heading</h2></td> 
+      <td className="uqds-table__item" data-title="Colour:">$uq-purple</td>
+      <td className="uqds-table__item" data-title="Example"><h2>This is a supporting heading</h2></td> 
     </tr>
     <tr className="uqds-table__row">
       <td className="uqds-table__item"><h3>H3</h3></td>
       <td className="uqds-table__item" data-title="Font:">Roboto</td>
       <td className="uqds-table__item" data-title="Weight:">Medium, 500</td>
-      <td className="uqds-table__item" data-title="Size:">24px</td>
+      <td className="uqds-table__item" data-title="Size:">$font-size-xl</td>
       <td className="uqds-table__item" data-title="Line-height:">1.4</td>
-      <td className="uqds-table__item" data-title="Example">This is a supporting heading</td> 
+      <td className="uqds-table__item" data-title="Colour:">$uq-purple</td>
+      <td className="uqds-table__item" data-title="Example"><h3>This is a supporting heading</h3></td> 
     </tr>
     <tr className="uqds-table__row">
       <td className="uqds-table__item"><h4>H4</h4></td>
       <td className="uqds-table__item" data-title="Font:">Roboto</td>
       <td className="uqds-table__item" data-title="Weight:">Medium, 500</td>
-      <td className="uqds-table__item" data-title="Size:">20px</td>
+      <td className="uqds-table__item" data-title="Size:">font-size-l</td>
       <td className="uqds-table__item" data-title="Line-height:">1.4</td>
-      <td className="uqds-table__item" data-title="Example">This is a supporting heading</td> 
+      <td className="uqds-table__item" data-title="Colour:">$uq-purple</td>
+      <td className="uqds-table__item" data-title="Example"><h4>This is a supporting heading</h4></td> 
     </tr>
     <tr className="uqds-table__row">
       <td className="uqds-table__item"><h5>H5</h5></td>
       <td className="uqds-table__item" data-title="Font:">Roboto</td>
       <td className="uqds-table__item" data-title="Weight:">Medium, 500</td>
-      <td className="uqds-table__item" data-title="Size:">18px</td>
+      <td className="uqds-table__item" data-title="Size:">$font-size-m</td>
       <td className="uqds-table__item" data-title="Line-height:">1.4</td>
-      <td className="uqds-table__item" data-title="Example">This is a supporting heading</td> 
+      <td className="uqds-table__item" data-title="Colour:">$uq-purple</td>
+      <td className="uqds-table__item" data-title="Example"><h5>This is a supporting heading</h5></td> 
     </tr>
     <tr className="uqds-table__row">
       <td className="uqds-table__item"><h6>H6</h6></td>
       <td className="uqds-table__item" data-title="Font:">Roboto</td>
       <td className="uqds-table__item" data-title="Weight:">Medium, 500</td>
-      <td className="uqds-table__item" data-title="Size:">16px</td>
+      <td className="uqds-table__item" data-title="Size:">$font-size</td>
       <td className="uqds-table__item" data-title="Line-height:">1.4</td>
-      <td className="uqds-table__item" data-title="Example">This is a supporting heading</td> 
+      <td className="uqds-table__item" data-title="Colour:">$uq-purple</td>
+      <td className="uqds-table__item" data-title="Example"><h6>This is a supporting heading</h6></td> 
     </tr>
     <tr className="uqds-table__row">
       <td className="uqds-table__item"><p class="uqds-font--lead">Lead</p></td>
       <td className="uqds-table__item" data-title="Font:">Roboto</td>
       <td className="uqds-table__item" data-title="Weight:">Regular, 400</td>
-      <td className="uqds-table__item" data-title="Size:">20px</td>
+      <td className="uqds-table__item" data-title="Size:">$font-size-l</td>
       <td className="uqds-table__item" data-title="Line-height:">1.5</td>
-      <td className="uqds-table__item" data-title="Example"><p class="uqds-font--lead">This is lead text</p></td> 
+      <td className="uqds-table__item" data-title="Colour:">$text</td>
+      <td className="uqds-table__item" data-title="Example"><p class="uqds-font--lead">This is lead paragraph text</p></td> 
     </tr>
     <tr className="uqds-table__row">
       <td className="uqds-table__item"><p>Paragraph</p></td>
       <td className="uqds-table__item" data-title="Font:">Roboto</td>
       <td className="uqds-table__item" data-title="Weight:">Regular, 400</td>
-      <td className="uqds-table__item" data-title="Size:">16px</td>
+      <td className="uqds-table__item" data-title="Size:">$font-size</td>
       <td className="uqds-table__item" data-title="Line-height:">1.5</td>
+      <td className="uqds-table__item" data-title="Colour:">$text</td>
       <td className="uqds-table__item" data-title="Example">This is paragraph text</td> 
     </tr>
     <tr className="uqds-table__row">
       <td className="uqds-table__item"><p class="uqds-font--small">Paragraph small</p></td>
       <td className="uqds-table__item" data-title="Font:">Roboto</td>
       <td className="uqds-table__item" data-title="Weight:">Regular, 400</td>
-      <td className="uqds-table__item" data-title="Size:">14px</td>
+      <td className="uqds-table__item" data-title="Size:">$font-size-s</td>
       <td className="uqds-table__item" data-title="Line-height:">1.5</td>
+      <td className="uqds-table__item" data-title="Colour:">$text</td>
       <td className="uqds-table__item" data-title="Example"><p class="uqds-font--small">This is small paragraph text</p></td> 
     </tr>
     <tr className="uqds-table__row">
       <td className="uqds-table__item"><p class="uqds-font--xsmall">Paragraph xsmall</p></td>
       <td className="uqds-table__item" data-title="Font:">Roboto</td>
       <td className="uqds-table__item" data-title="Weight:">Regular, 400</td>
-      <td className="uqds-table__item" data-title="Size:">12px</td>
+      <td className="uqds-table__item" data-title="Size:">$font-size-xs</td>
       <td className="uqds-table__item" data-title="Line-height:">1.5</td>
-      <td className="uqds-table__item" data-title="Example"><p class="uqds-font--xsmall">This is small paragraph text</p></td> 
+      <td className="uqds-table__item" data-title="Colour:">$text</td>
+      <td className="uqds-table__item" data-title="Example"><p class="uqds-font--xsmall">This is extra small paragraph text</p></td> 
+    </tr>
+    <tr className="uqds-table__row">
+      <td className="uqds-table__item"><a href="">Link</a></td>
+      <td className="uqds-table__item" data-title="Font:">Roboto</td>
+      <td className="uqds-table__item" data-title="Weight:">Regular, 400</td>
+      <td className="uqds-table__item" data-title="Size:">$font-size</td>
+      <td className="uqds-table__item" data-title="Line-height:">1.5</td>
+      <td className="uqds-table__item" data-title="Colour:">$link</td>
+      <td className="uqds-table__item" data-title="Example"><a href="">This is a link</a></td> 
+    </tr>
+    <tr className="uqds-table__row">
+      <td className="uqds-table__item">Ordered list</td>
+      <td className="uqds-table__item" data-title="Font:">Roboto</td>
+      <td className="uqds-table__item" data-title="Weight:">Regular, 400</td>
+      <td className="uqds-table__item" data-title="Size:">$font-size</td>
+      <td className="uqds-table__item" data-title="Line-height:">1.5</td>
+      <td className="uqds-table__item" data-title="Colour:">$text</td>
+      <td className="uqds-table__item" data-title="Example"><ol><li>This is an ordered list item</li></ol></td> 
+    </tr>
+    <tr className="uqds-table__row">
+      <td className="uqds-table__item">Unordered list</td>
+      <td className="uqds-table__item" data-title="Font:">Roboto</td>
+      <td className="uqds-table__item" data-title="Weight:">Regular, 400</td>
+      <td className="uqds-table__item" data-title="Size:">$font-size</td>
+      <td className="uqds-table__item" data-title="Line-height:">1.5</td>
+      <td className="uqds-table__item" data-title="Colour:">$text</td>
+      <td className="uqds-table__item" data-title="Example"><ul><li>This is an unordered list item</li></ul></td> 
     </tr>
     <tr className="uqds-table__row">
       <td className="uqds-table__item"><label>Label</label></td>
       <td className="uqds-table__item" data-title="Font:">Roboto</td>
       <td className="uqds-table__item" data-title="Weight:">Regular, 400</td>
-      <td className="uqds-table__item" data-title="Size:">14px</td>
+      <td className="uqds-table__item" data-title="Size:">$font-size-s</td>
       <td className="uqds-table__item" data-title="Line-height:">1.5</td>
+      <td className="uqds-table__item" data-title="Colour:">$text</td>
       <td className="uqds-table__item" data-title="Example"><label>This is a label</label></td> 
     </tr>
     <tr className="uqds-table__row">
       <td className="uqds-table__item"><blockquote>Blockquote</blockquote></td>
       <td className="uqds-table__item" data-title="Font:">Merriweather</td>
       <td className="uqds-table__item" data-title="Weight:">Regular italic, 400</td>
-      <td className="uqds-table__item" data-title="Size:">20px</td>
+      <td className="uqds-table__item" data-title="Size:">$font-size-l</td>
       <td className="uqds-table__item" data-title="Line-height:">1.5</td>
+      <td className="uqds-table__item" data-title="Colour:">$text</td>
       <td className="uqds-table__item" data-title="Example"><blockquote>This is a blockquote</blockquote></td> 
     </tr>
   </tbody>
@@ -121,6 +223,4 @@ export const Styles = () => `
 `;
 
 <Story name="Styles">{Styles.bind({})}</Story>
-
-<><br /><br /></>
 

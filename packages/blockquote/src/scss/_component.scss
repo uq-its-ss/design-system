@@ -10,7 +10,7 @@ $image-path: '../images' !default;
 	margin-left: core.$space-l;
 	padding: core.$space core.$space-m;
 	position: relative;
-	width: calc(100% - core.$space-l);
+	width: calc(100% - #{core.$space-l});
 
 	&::before {
 		background-color: core.$uq-purple;

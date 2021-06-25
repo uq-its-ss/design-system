@@ -15,7 +15,7 @@
     &__container {
         @include grid.layout-containment;
         position: relative;  
-        padding: core.$space-m core.$space 0; 
+        padding: core.$space core.$space 0; 
         display: grid;
         grid-template-columns: auto auto;
         grid-template-areas:
@@ -25,6 +25,7 @@
         justify-items: center;
 
         @media #{core.$screen-lg-up} {
+            padding: core.$space-m core.$space 0; 
             gap: core.$space-m;
             grid-template-columns: auto auto min-content;
             grid-template-areas:
@@ -39,18 +40,19 @@
     
         img {
             height: 2.625rem;
+            vertical-align: middle;
         }
 
         &--large {
             display: none;
 
-            @media #{core.$screen-xl-up} {
+            @media only screen and (min-width: 78.5rem) {
                 display: block;
             }
         }
 
         &--small {
-            @media #{core.$screen-xl-up} {
+            @media only screen and (min-width: 78.5rem) {
                 display: none;
             }
         }

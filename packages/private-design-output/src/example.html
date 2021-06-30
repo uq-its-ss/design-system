@@ -210,41 +210,98 @@
       </div>
     </div>    
 
+    <!-- Page header (default) -->
+
+    <div class="uq-hero">  
+      <div class="uq-hero__content">
+        <div class="uq-hero__text">
+          <h1>Page title</h1>
+        </div>
+      </div>
+    </div>
+
     <!-- alert -->
-    <div class="alert alert--default" role="alert">
-      <div class="alert__container">
-        <div class="alert__message">
-          <b>I'm a default alert.</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    <div class="uq-alert uq-alert--info" role="alert">
+      <div class="uq-alert__message">
+        <p>This is a default info alert</p>
+      </div>
+    </div>
+    <div class="uq-alert uq-alert--success" role="alert">
+      <div class="uq-alert__message">
+        <p>This is a success alert</p>
+      </div>
+    </div>
+    <div class="uq-alert uq-alert--warning" role="alert">
+      <div class="uq-alert__message">
+        <p>This is a warning alert</p>
+      </div>
+    </div>
+    <div class="uq-alert uq-alert--error" role="alert">
+      <div class="uq-alert__message">
+        <p>This is a error alert</p>
+      </div>
+    </div>
+    <br />
+
+    <div class="uq-alert" role="alert">
+      <div class="uq-alert__message">
+        <p>This is a default info alert</p>    
+        <a href="#" title="Link" class="uq-button--inline">Link</a>
+      </div>
+    </div>
+    <div class="uq-alert" role="alert">
+      <div class="uq-alert__message">
+        <p>This is a default info alert</p>    
+        <a href="#" title="Button" class="uq-button">Button</a>
+      </div>
+    </div>
+    <div class="uq-alert" role="alert">
+      <div class="uq-alert__message">
+        <h3 class="uq-alert__title">Heading</h3>
+        <p>This is a default info alert</p>  
+      </div>
+    </div>
+    <br />
+
+    <div class="uq-alert uq-alert--info uq-alert--dark uq-alert--global" role="alert">
+      <div class="uq-alert__container">
+        <div class="uq-alert__message">
+          <h3 class="uq-alert__title">Heading</h3>
+          <p>This is a global info alert</p>
+          <a href="#" title="Link" class="uq-button--inline">Link</a>
+        </div>
+        <a href="javascript:void(0)" class="uq-alert__close">Close</a>
+      </div>
+    </div>
+    <div class="uq-alert uq-alert--success uq-alert--dark uq-alert--global" role="alert">
+      <div class="uq-alert__container">
+        <div class="uq-alert__message">
+          <h3 class="uq-alert__title">Heading</h3>
+          <p>This is a global success alert</p>
+          <a href="#" title="Link" class="uq-button--inline">Link</a>
+        </div>
+        <a href="javascript:void(0)" class="uq-alert__close">Close</a>
+      </div>
+    </div>
+    <div class="uq-alert uq-alert--warning uq-alert--dark uq-alert--global" role="alert">
+      <div class="uq-alert__container">
+        <div class="uq-alert__message">
+          <h3 class="uq-alert__title">Heading</h3>
+          <p>This is a global warning alert</p>
+          <a href="#" title="Link" class="uq-button--inline">Link</a>
         </div>
       </div>
-      <a href="javascript:void(0)" class="alert__close">&times;</a>
     </div>
-    <div class="alert alert--info" role="alert">
-      <div class="alert__container">
-        <div class="alert__message">
-          <b>I come in a variety of styles and configurations.</b> See the <code>alerts</code> story for more examples.</a>
+    <div class="uq-alert uq-alert--error uq-alert--dark uq-alert--global" role="alert">
+      <div class="uq-alert__container">
+        <div class="uq-alert__message">
+          <h3 class="uq-alert__title">Heading</h3>
+          <p>This is a global error alert</p>
+          <a href="#" title="Link" class="uq-button--inline">Link</a>
         </div>
       </div>
-      <a href="javascript:void(0)" class="alert__close">&times;</a>
     </div>
-    <div class="alert alert--success" role="alert">
-      <div class="alert__message">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <strong>--success</strong>.
-      </div>
-      <a href="javascript:void(0)" class="alert__close">&times;</a>
-    </div>
-    <div class="alert alert--warning" role="alert">
-      <div class="alert__message">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <strong>--warning</strong>.
-      </div>
-      <a href="javascript:void(0)" class="alert__close">&times;</a>
-    </div>
-    <div class="alert alert--danger" role="alert">
-      <div class="alert__message">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <strong>--danger</strong>.
-      </div>
-      <a href="javascript:void(0)" class="alert__close">&times;</a>
-    </div>
+    <br/>
 
     <!-- breadcrumb -->
     <br/>
@@ -328,23 +385,23 @@
     <div class="uq-grid">
       <div class="uq-grid__col uq-grid__col--6">
         <h2>Accessible accordions</h2>
-        <div class="accordion" aria-label="Accordion button group" role="presentation">
-          <div class="accordion__item">
-            <button class="accordion__toggle" aria-controls="content-1" aria-expanded="false" id="accordion-title-1">About the accordion UI pattern</button>
-            <div class="accordion__content" aria-hidden="true" id="content-1" aria-labelledby="accordion-title-1">
+        <div class="uq-accordion" aria-label="Accordion button group" role="presentation">
+          <div class="uq-accordion__item">
+            <button class="uq-accordion__toggle" aria-controls="content-1" aria-expanded="false" id="accordion-title-1">About the accordion UI pattern</button>
+            <div class="uq-accordion__content" aria-hidden="true" id="content-1" aria-labelledby="accordion-title-1">
               <p>Accordions are used to display expandable and collapsible content organised in logical sections.</p>
               <blockquote cite="https://www.smashingmagazine.com/2017/06/designing-perfect-accordion-checklist/">It’s an immensely useful pattern for progressive disclosure — highlighting important details of a section and revealing more details upon a tap or click, if necessary. As a result, the design stays focused and displays critical information first, while everything else is easily accessible. In fact, if you encounter a problem of any kind — too many navigation options, too much content, too detailed a view — a good starting point would be to explore how you could utilize the good ol’ accordion to solve that problem. <cite><a href="https://www.smashingmagazine.com/2017/06/designing-perfect-accordion-checklist/">Designing The Perfect Accordion</a>, Smashing Magazine</cite></blockquote>
             </div>
           </div>
-          <div class="accordion__item">
-            <button class="accordion__toggle" aria-controls="content-2" aria-expanded="false" id="accordion-title-2">Click me!</button>
-            <div class="accordion__content" role="region" aria-hidden="true" id="content-2" aria-labelledby="accordion-title-2">
+          <div class="uq-accordion__item">
+            <button class="uq-accordion__toggle" aria-controls="content-2" aria-expanded="false" id="accordion-title-2">Click me!</button>
+            <div class="uq-accordion__content" role="region" aria-hidden="true" id="content-2" aria-labelledby="accordion-title-2">
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor eros dui, vitae iaculis leo ornare eget. Etiam tristique lobortis ligula non mattis. Ut dapibus libero neque, vel tincidunt nunc tempus eget.</p>
             </div>
           </div>
-          <div class="accordion__item">
-            <button class="accordion__toggle" aria-controls="content-3" aria-expanded="false" id="accordion-title-3">And me!</button>
-            <div class="accordion__content" role="region" aria-hidden="true" id="content-3" aria-labelledby="accordion-title-3">
+          <div class="uq-accordion__item">
+            <button class="uq-accordion__toggle" aria-controls="content-3" aria-expanded="false" id="accordion-title-3">And me!</button>
+            <div class="uq-accordion__content" role="region" aria-hidden="true" id="content-3" aria-labelledby="accordion-title-3">
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor eros dui, vitae iaculis leo ornare eget. Etiam tristique lobortis ligula non mattis. Ut dapibus libero neque, vel tincidunt nunc tempus eget.</p>
               <p>Maecenas faucibus mollis interdum. Etiam porta sem malesuada magna mollis euismod. Maecenas sed diam eget risus varius blandit sit amet non magna. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Nullam quis risus eget urna mollis ornare vel eu leo. Donec sed odio dui.</p>
               <p>Nullam quis risus eget urna mollis ornare vel eu leo. Maecenas faucibus mollis interdum. Vestibulum id ligula porta felis euismod semper. Maecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
@@ -357,299 +414,556 @@
     </div>
     <br/>
 
-    <!-- card -->
+    <!-- Card -->
+    <div class="uq-grid">
+      <div class="uq-grid__col uq-grid__col--6"> 
+
+        <h2>Cards</h2>
+        <!-- Default card -->
+        <h3>Default card</h3>
+
+        <div class="uq-grid">
+          <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-3">
+            <div class="uq-card">
+              <a class="uq-card__link" href="#">Card title</a>
+              <div class="uq-card__image-wrapper">
+                <div class="uq-card__image">
+                  <img src="https://design-system.uq.edu.au/images/card/card-example-st-lucia-campus.jpg" alt="Card image description">
+                </div>
+              </div>
+              <div class="uq-card__content-wrapper">
+                <div class="uq-card__content">
+                  <div class="uq-card__header">
+                    <h3 class="uq-card__title">Card title</h3>
+                  </div>
+                  <div class="uq-card__body">
+                      <p>Card summary text</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-3">
+            <div class="uq-card">
+              <a class="uq-card__link" href="#">Card title</a>
+              <div class="uq-card__image-wrapper">
+                <div class="uq-card__image">
+                  <img src="https://design-system.uq.edu.au/images/card/card-example-st-lucia-campus.jpg" alt="Card image description">
+                </div>
+              </div>
+              <div class="uq-card__content-wrapper">
+                <div class="uq-card__content">
+                  <div class="uq-card__header">
+                    <h3 class="uq-card__title">Card title</h3>
+                  </div>
+                  <div class="uq-card__body">
+                      <p>Card summary text</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-3">
+            <div class="uq-card">
+              <a class="uq-card__link" href="#">Card title</a>
+              <div class="uq-card__image-wrapper">
+                <div class="uq-card__image">
+                  <img src="https://design-system.uq.edu.au/images/card/card-example-st-lucia-campus.jpg" alt="Card image description">
+                </div>
+              </div>
+              <div class="uq-card__content-wrapper">
+                <div class="uq-card__content">
+                  <div class="uq-card__header">
+                    <h3 class="uq-card__title">Card title</h3>
+                  </div>
+                  <div class="uq-card__body">
+                      <p>Card summary text</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-3">
+            <div class="uq-card">
+              <a class="uq-card__link" href="#">Card title</a>
+              <div class="uq-card__image-wrapper">
+                <div class="uq-card__image">
+                  <img src="https://design-system.uq.edu.au/images/card/card-example-st-lucia-campus.jpg" alt="Card image description">
+                </div>
+              </div>
+              <div class="uq-card__content-wrapper">
+                <div class="uq-card__content">
+                  <div class="uq-card__header">
+                    <h3 class="uq-card__title">Card title</h3>
+                  </div>
+                  <div class="uq-card__body">
+                      <p>Card summary text</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    <br/>
+
+    <!-- Story card -->
+    <h3>Story card</h3>
+    <div class="uq-grid">
+      <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-3">
+        <div class="uq-card uq-card--story">
+          <a class="uq-card__link" href="#">Card title</a>
+          <div class="uq-card__image-wrapper">
+            <div class="uq-card__image">
+              <img src="https://design-system.uq.edu.au/images/card/card-example-gatton-campus.jpg" alt="Card image description">
+            </div>
+          </div>
+          <div class="uq-card__content-wrapper">
+            <div class="uq-card__content">
+              <div class="uq-card__header">
+                <p class="uq-card__title-super uq-card__title-super--grey">SUB-TITLE</p>
+                <h3 class="uq-card__title">Card title</h3>
+              </div>
+            </div>
+            <div class="uq-card__actions">
+              <p>3 min read</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-3">
+        <div class="uq-card uq-card--story">
+          <a class="uq-card__link" href="#">Card title</a>
+          <div class="uq-card__image-wrapper">
+            <div class="uq-card__image">
+              <img src="https://design-system.uq.edu.au/images/card/card-example-gatton-campus.jpg" alt="Card image description">
+            </div>
+          </div>
+          <div class="uq-card__content-wrapper">
+            <div class="uq-card__content">
+              <div class="uq-card__header">
+                <p class="uq-card__title-super uq-card__title-super--grey">SUB-TITLE</p>
+                <h3 class="uq-card__title">Card title</h3>
+              </div>
+            </div>
+            <div class="uq-card__actions">
+              <p>3 min read</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-3">
+        <div class="uq-card uq-card--story">
+          <a class="uq-card__link" href="#">Card title</a>
+          <div class="uq-card__image-wrapper">
+            <div class="uq-card__image">
+              <img src="https://design-system.uq.edu.au/images/card/card-example-gatton-campus.jpg" alt="Card image description">
+            </div>
+          </div>
+          <div class="uq-card__content-wrapper">
+            <div class="uq-card__content">
+              <div class="uq-card__header">
+                <p class="uq-card__title-super uq-card__title-super--grey">SUB-TITLE</p>
+                <h3 class="uq-card__title">Card title</h3>
+              </div>
+            </div>
+            <div class="uq-card__actions">
+              <p>3 min read</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-3">
+        <div class="uq-card uq-card--story">
+          <a class="uq-card__link" href="#">Card title</a>
+          <div class="uq-card__image-wrapper">
+            <div class="uq-card__image">
+              <img src="https://design-system.uq.edu.au/images/card/card-example-gatton-campus.jpg" alt="Card image description">
+            </div>
+          </div>
+          <div class="uq-card__content-wrapper">
+            <div class="uq-card__content">
+              <div class="uq-card__header">
+                <p class="uq-card__title-super uq-card__title-super--grey">SUB-TITLE</p>
+                <h3 class="uq-card__title">Card title</h3>
+              </div>
+            </div>
+            <div class="uq-card__actions">
+              <p>3 min read</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br/>
+
+    <!-- Event card -->
+    <h3>Event card</h3>
+    <div class="uq-grid">
+      <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-3">
+        <div class="uq-card uq-card--event">
+          <a class="uq-card__link" href="#">Card title</a>
+          <div class="uq-card__image-wrapper">
+            <div class="uq-card__image">
+              <img src="https://design-system.uq.edu.au/images/card/card-example-herston-campus.jpg" alt="Card image description">
+            </div>
+          </div>
+          <div class="uq-card__content-wrapper">
+            <div class="uq-card__content">
+              <div class="uq-card__header">
+                <p class="uq-card__title-super">DD MONTH</p>
+                <h3 class="uq-card__title">Card title</h3>
+              </div>
+            </div>
+            <div class="uq-card__actions">
+              <p>Online</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-3">
+        <div class="uq-card uq-card--event">
+          <a class="uq-card__link" href="#">Card title</a>
+          <div class="uq-card__image-wrapper">
+            <div class="uq-card__image">
+              <img src="https://design-system.uq.edu.au/images/card/card-example-herston-campus.jpg" alt="Card image description">
+            </div>
+          </div>
+          <div class="uq-card__content-wrapper">
+            <div class="uq-card__content">
+              <div class="uq-card__header">
+                <p class="uq-card__title-super">DD MONTH</p>
+                <h3 class="uq-card__title">Card title</h3>
+              </div>
+            </div>
+            <div class="uq-card__actions">
+              <p>Online</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-3">
+        <div class="uq-card uq-card--event">
+          <a class="uq-card__link" href="#">Card title</a>
+          <div class="uq-card__image-wrapper">
+            <div class="uq-card__image">
+              <img src="https://design-system.uq.edu.au/images/card/card-example-herston-campus.jpg" alt="Card image description">
+            </div>
+          </div>
+          <div class="uq-card__content-wrapper">
+            <div class="uq-card__content">
+              <div class="uq-card__header">
+                <p class="uq-card__title-super">DD MONTH</p>
+                <h3 class="uq-card__title">Card title</h3>
+              </div>
+            </div>
+            <div class="uq-card__actions">
+              <p>Online</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-3">
+        <div class="uq-card uq-card--event">
+          <a class="uq-card__link" href="#">Card title</a>
+          <div class="uq-card__image-wrapper">
+            <div class="uq-card__image">
+              <img src="https://design-system.uq.edu.au/images/card/card-example-herston-campus.jpg" alt="Card image description">
+            </div>
+          </div>
+          <div class="uq-card__content-wrapper">
+            <div class="uq-card__content">
+              <div class="uq-card__header">
+                <p class="uq-card__title-super">DD MONTH</p>
+                <h3 class="uq-card__title">Card title</h3>
+              </div>
+            </div>
+            <div class="uq-card__actions">
+              <p>Online</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br/>
+
+  </div>
+</div>
+
+
+    <!-- grid-menu -->
     <div class="uq-grid">
       <div class="uq-grid__col uq-grid__col--6">
-        <h2>Cards</h2>
+        <h2>Grid menu</h2>
+        <h3>with icons &amp; descriptions</h3>
+        <ul class="uq-grid-menu">
+          <li class="uq-grid-menu__item">
+            <a href="#" class="uq-grid-menu__link">
+              <span class="uq-grid-menu__icon uq-icon uq-icon--architecture-and-planning--school-building"></span>
+              <span class="uq-grid-menu__title">Menu link 1</span>
+              <span class="uq-grid-menu__description">Ullamcorper est sodales egestas condimentum vestibulum proin justo morbi
+                luctus porttitor adipiscing eu a eu massa inceptos cras non tempus taciti.
+              </span>
+            </a>
+          </li>
+          <li class="uq-grid-menu__item">
+            <a href="#" class="uq-grid-menu__link">
+              <span class="uq-grid-menu__icon uq-icon uq-icon--education--mortarboard"></span>
+              <span class="uq-grid-menu__title">Menu link 2</span>
+              <span class="uq-grid-menu__description">Ullamcorper est sodales egestas condimentum vestibulum proin justo morbi
+                luctus porttitor adipiscing eu a eu massa inceptos cras non tempus taciti.
+              </span>
+            </a>
+          </li>
+          <li class="uq-grid-menu__item">
+            <a href="#" class="uq-grid-menu__link">
+              <span class="uq-grid-menu__icon uq-icon uq-icon--engineering-and-computing--construction-building"></span>
+              <span class="uq-grid-menu__title">Menu link 3</span>
+              <span class="uq-grid-menu__description">Ullamcorper est sodales egestas condimentum vestibulum proin justo morbi
+                luctus porttitor adipiscing eu a eu massa inceptos cras non tempus taciti.
+              </span>
+            </a>
+          </li>
+          <li class="uq-grid-menu__item">
+            <a href="#" class="uq-grid-menu__link">
+              <span class="uq-grid-menu__icon uq-icon uq-icon--standard--region-domestic"></span>
+              <span class="uq-grid-menu__title">Menu link 4</span>
+              <span class="uq-grid-menu__description">Ullamcorper est sodales egestas condimentum vestibulum proin justo morbi
+                luctus porttitor adipiscing eu a eu massa inceptos cras non tempus taciti.
+              </span>
+            </a>
+          </li>
+          <li class="uq-grid-menu__item">
+            <a href="#" class="uq-grid-menu__link">
+              <span class="uq-grid-menu__icon uq-icon uq-icon--standard--region-international"></span>
+              <span class="uq-grid-menu__title">Menu link 5</span>
+              <span class="uq-grid-menu__description">Ullamcorper est sodales egestas condimentum vestibulum proin justo morbi
+                luctus porttitor adipiscing eu a eu massa inceptos cras non tempus taciti.
+              </span>
+            </a>
+          </li>
+        </ul>
+        <br>
+        
+        <h3>with dark text</h3>
+        <ul class="uq-grid-menu uq-grid-menu--dark-text">
+          <li class="uq-grid-menu__item">
+            <a href="#" class="uq-grid-menu__link">
+              <span class="uq-grid-menu__icon uq-icon uq-icon--other--hotel-bedroom-1"></span>
+              <span class="uq-grid-menu__title">Menu link 1</span>
+              <span class="uq-grid-menu__description">Ullamcorper est sodales egestas condimentum vestibulum proin justo morbi
+                luctus porttitor adipiscing eu a eu massa inceptos cras non tempus taciti.
+              </span>
+            </a>
+          </li>
+          <li class="uq-grid-menu__item">
+            <a href="#" class="uq-grid-menu__link">
+              <span class="uq-grid-menu__icon uq-icon uq-icon--other--hotel-bedroom-1"></span>
+              <span class="uq-grid-menu__title">Menu link 2</span>
+              <span class="uq-grid-menu__description">Ullamcorper est sodales egestas condimentum vestibulum proin justo morbi
+                luctus porttitor adipiscing eu a eu massa inceptos cras non tempus taciti.
+              </span>
+            </a>
+          </li>
+          <li class="uq-grid-menu__item">
+            <a href="#" class="uq-grid-menu__link">
+              <span class="uq-grid-menu__icon uq-icon uq-icon--other--hotel-bedroom-1"></span>
+              <span class="uq-grid-menu__title">Menu link 3</span>
+              <span class="uq-grid-menu__description">Ullamcorper est sodales egestas condimentum vestibulum proin justo morbi
+                luctus porttitor adipiscing eu a eu massa inceptos cras non tempus taciti.
+              </span>
+            </a>
+          </li>
+          <li class="uq-grid-menu__item">
+            <a href="#" class="uq-grid-menu__link">
+              <span class="uq-grid-menu__icon uq-icon uq-icon--other--hotel-bedroom-1"></span>
+              <span class="uq-grid-menu__title">Menu link 4</span>
+              <span class="uq-grid-menu__description">Ullamcorper est sodales egestas condimentum vestibulum proin justo morbi
+                luctus porttitor adipiscing eu a eu massa inceptos cras non tempus taciti.
+              </span>
+            </a>
+          </li>
+          <li class="uq-grid-menu__item">
+            <a href="#" class="uq-grid-menu__link">
+              <span class="uq-grid-menu__icon uq-icon uq-icon--other--hotel-bedroom-1"></span>
+              <span class="uq-grid-menu__title">Menu link 5</span>
+              <span class="uq-grid-menu__description">Ullamcorper est sodales egestas condimentum vestibulum proin justo morbi
+                luctus porttitor adipiscing eu a eu massa inceptos cras non tempus taciti.
+              </span>
+            </a>
+          </li>
+        </ul>
+        <br/>
       </div>
     </div>
+    <br/>
+
     <div class="uq-grid">
-      <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-3">
-        <a class="card__primary-link" href="https://campuses.uq.edu.au/st-lucia">
-          <div class="entity entity-paragraphs-item paragraphs-item-card-custom card--square view-mode-card_overlay card card--background-image" style="background-image: url('../images/card/card-example-st-lucia-campus.jpg')">
-            <div class="card__header"></div>
-            <div class="card__body">
-              <div class="card__content">
-                <div class="card__title">
-                  <div class="field field-name-field-uq-card-title field-type-text field-label-hidden">
-                    <div class="field-items">
-                      <div class="field-item even">St Lucia</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="card__summary"></div>
-              </div>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-3">
-        <a class="card__primary-link" href="https://campuses.uq.edu.au/gatton">
-          <div class="entity entity-paragraphs-item paragraphs-item-card-custom card--square view-mode-card_overlay card card--background-image" style="background-image: url('../images/card/card-example-gatton-campus.jpg')">
-            <div class="card__header"></div>
-            <div class="card__body">
-              <div class="card__content">
-                <div class="card__title">
-                  <div class="field field-name-field-uq-card-title field-type-text field-label-hidden">
-                    <div class="field-items">
-                      <div class="field-item even">Gatton</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="card__summary"></div>
-              </div>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-3">
-        <a class="card__primary-link" href="https://campuses.uq.edu.au/herston">
-          <div class="entity entity-paragraphs-item paragraphs-item-card-custom card--square view-mode-card_overlay card card--background-image" style="background-image: url('../images/card/card-example-herston-campus.jpg')">
-            <div class="card__header"></div>
-            <div class="card__body">
-              <div class="card__content">
-                <div class="card__title">
-                  <div class="field field-name-field-uq-card-title field-type-text field-label-hidden">
-                    <div class="field-items">
-                      <div class="field-item even">Herston</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="card__summary"></div>
-              </div>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-4 uq-grid__col--xl-3">
-        <a class="card__primary-link" href="https://campuses.uq.edu.au/other-locations">
-          <div class="entity entity-paragraphs-item paragraphs-item-card-custom card--square view-mode-card_overlay card card--background-image" style="background-image: url('https://campuses.uq.edu.au/files/9779/moreton-island2.jpg')">
-            <div class="card__header"></div>
-            <div class="card__body">
-              <div class="card__content">
-                <div class="card__title">
-                  <div class="field field-name-field-uq-card-title field-type-text field-label-hidden">
-                    <div class="field-items">
-                      <div class="field-item even">Other locations</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="card__summary"></div>
-              </div>
-            </div>
-          </div>
-        </a>
+      <div class="uq-grid__col uq-grid__col--6">
+        <h2>Loading spinner</h2>
+        <div class="uq-loading-spinner" role="alert" aria-live="assertive">
+          <span>Loading...</span>
+        </div>
       </div>
     </div>
     <br/>
 
-    <!-- uq-grid-menu -->
-    <h2>Grid menu default</h2>
-    <ul class="uq-grid-menu">
-      <li><a href="#"><span class="uq-grid-menu__title">Menu link 1</span></a></li>
-      <li><a href="#"><span class="uq-grid-menu__title">Menu link 2</span></a></li>
-      <li><a href="#"><span class="uq-grid-menu__title">Menu link 3</span></a></li>
-      <li><a href="#"><span class="uq-grid-menu__title">Menu link 4</span></a></li>
-      <li><a href="#"><span class="uq-grid-menu__title">Menu link 5</span></a></li>
-      <li><a href="#"><span class="uq-grid-menu__title">Menu link 6</span></a></li>
-    </ul>
-
-    <h2>Grid menu with description</h2>
-    <ul class="uq-grid-menu">
-      <li class="uq-grid-menu__item">
-        <a href="#" class="uq-grid-menu__link">
-          <span class="uq-grid-menu__icon uq-icon uq-icon--hotel-bedroom-1"></span>
-          <span class="uq-grid-menu__title">Menu link 1</span>
-          <span class="uq-grid-menu__description">Ullamcorper est sodales egestas condimentum vestibulum proin justo morbi
-            luctus porttitor adipiscing eu a eu massa inceptos cras non tempus taciti.
-          </span>
-        </a>
-      </li>
-      <li class="uq-grid-menu__item">
-        <a href="#" class="uq-grid-menu__link">
-          <span class="uq-grid-menu__icon uq-icon uq-icon--hotel-bedroom-1"></span>
-          <span class="uq-grid-menu__title">Menu link 2</span>
-          <span class="uq-grid-menu__description">Ullamcorper est sodales egestas condimentum vestibulum proin justo morbi
-            luctus porttitor adipiscing eu a eu massa inceptos cras non tempus taciti.
-          </span>
-        </a>
-      </li>
-      <li class="uq-grid-menu__item">
-        <a href="#" class="uq-grid-menu__link">
-          <span class="uq-grid-menu__icon uq-icon uq-icon--hotel-bedroom-1"></span>
-          <span class="uq-grid-menu__title">Menu link 3</span>
-          <span class="uq-grid-menu__description">Ullamcorper est sodales egestas condimentum vestibulum proin justo morbi
-            luctus porttitor adipiscing eu a eu massa inceptos cras non tempus taciti.
-          </span>
-        </a>
-      </li>
-      <li class="uq-grid-menu__item">
-        <a href="#" class="uq-grid-menu__link">
-          <span class="uq-grid-menu__icon uq-icon uq-icon--hotel-bedroom-1"></span>
-          <span class="uq-grid-menu__title">Menu link 4</span>
-          <span class="uq-grid-menu__description">Ullamcorper est sodales egestas condimentum vestibulum proin justo morbi
-            luctus porttitor adipiscing eu a eu massa inceptos cras non tempus taciti.
-          </span>
-        </a>
-      </li>
-      <li class="uq-grid-menu__item">
-        <a href="#" class="uq-grid-menu__link">
-          <span class="uq-grid-menu__icon uq-icon uq-icon--hotel-bedroom-1"></span>
-          <span class="uq-grid-menu__title">Menu link 5</span>
-          <span class="uq-grid-menu__description">Ullamcorper est sodales egestas condimentum vestibulum proin justo morbi
-            luctus porttitor adipiscing eu a eu massa inceptos cras non tempus taciti.
-          </span>
-        </a>
-      </li>
-    </ul>
-
-    <h2>Grid menu with description and dark-text variant</h2>
-    <ul class="uq-grid-menu uq-grid-menu--dark-text">
-      <li class="uq-grid-menu__item">
-        <a href="#" class="uq-grid-menu__link">
-          <span class="uq-grid-menu__icon uq-icon uq-icon--hotel-bedroom-1"></span>
-          <span class="uq-grid-menu__title">Menu link 1</span>
-          <span class="uq-grid-menu__description">Ullamcorper est sodales egestas condimentum vestibulum proin justo morbi
-            luctus porttitor adipiscing eu a eu massa inceptos cras non tempus taciti.
-          </span>
-        </a>
-      </li>
-      <li class="uq-grid-menu__item">
-        <a href="#" class="uq-grid-menu__link">
-          <span class="uq-grid-menu__icon uq-icon uq-icon--hotel-bedroom-1"></span>
-          <span class="uq-grid-menu__title">Menu link 2</span>
-          <span class="uq-grid-menu__description">Ullamcorper est sodales egestas condimentum vestibulum proin justo morbi
-            luctus porttitor adipiscing eu a eu massa inceptos cras non tempus taciti.
-          </span>
-        </a>
-      </li>
-      <li class="uq-grid-menu__item">
-        <a href="#" class="uq-grid-menu__link">
-          <span class="uq-grid-menu__icon uq-icon uq-icon--hotel-bedroom-1"></span>
-          <span class="uq-grid-menu__title">Menu link 3</span>
-          <span class="uq-grid-menu__description">Ullamcorper est sodales egestas condimentum vestibulum proin justo morbi
-            luctus porttitor adipiscing eu a eu massa inceptos cras non tempus taciti.
-          </span>
-        </a>
-      </li>
-      <li class="uq-grid-menu__item">
-        <a href="#" class="uq-grid-menu__link">
-          <span class="uq-grid-menu__icon uq-icon uq-icon--hotel-bedroom-1"></span>
-          <span class="uq-grid-menu__title">Menu link 4</span>
-          <span class="uq-grid-menu__description">Ullamcorper est sodales egestas condimentum vestibulum proin justo morbi
-            luctus porttitor adipiscing eu a eu massa inceptos cras non tempus taciti.
-          </span>
-        </a>
-      </li>
-      <li class="uq-grid-menu__item">
-        <a href="#" class="uq-grid-menu__link">
-          <span class="uq-grid-menu__icon uq-icon uq-icon--hotel-bedroom-1"></span>
-          <span class="uq-grid-menu__title">Menu link 5</span>
-          <span class="uq-grid-menu__description">Ullamcorper est sodales egestas condimentum vestibulum proin justo morbi
-            luctus porttitor adipiscing eu a eu massa inceptos cras non tempus taciti.
-          </span>
-        </a>
-      </li>
-    </ul>
-
-    <h2>Grid menu 2 column</h2>
-    <ul class="uq-grid-menu uq-grid-menu--2-column">
-      <li><a href="#"><span class="uq-grid-menu__title">Menu link 1</span></a></li>
-      <li><a href="#"><span class="uq-grid-menu__title">Menu link 2</span></a></li>
-      <li><a href="#"><span class="uq-grid-menu__title">Menu link 3</span></a></li>
-      <li><a href="#"><span class="uq-grid-menu__title">Menu link 4</span></a></li>
-      <li><a href="#"><span class="uq-grid-menu__title">Menu link 5</span></a></li>
-      <li><a href="#"><span class="uq-grid-menu__title">Menu link 6</span></a></li>
-    </ul>
-
-    <h2>Grid menu 4 column</h2>
-    <ul class="uq-grid-menu uq-grid-menu--4-column">
-      <li><a href="#"><span class="uq-grid-menu__title">Menu link 1</span></a></li>
-      <li><a href="#"><span class="uq-grid-menu__title">Menu link 2</span></a></li>
-      <li><a href="#"><span class="uq-grid-menu__title">Menu link 3</span></a></li>
-      <li><a href="#"><span class="uq-grid-menu__title">Menu link 4</span></a></li>
-      <li><a href="#"><span class="uq-grid-menu__title">Menu link 5</span></a></li>
-      <li><a href="#"><span class="uq-grid-menu__title">Menu link 6</span></a></li>
-    </ul>
-
-    <h2>Grid menu with icons</h2>
-    <ul class="uq-grid-menu">
-      <li><a href="#"><span class="uq-grid-menu__icon uq-icon uq-icon--car-1"> </span> <span class="uq-grid-menu__title">Menu link 1</span></a></li>
-      <li><a href="#"><span class="uq-grid-menu__icon uq-icon uq-icon--bus"> </span> <span class="uq-grid-menu__title">Menu link 2</span></a></li>
-      <li><a href="#"><span class="uq-grid-menu__icon uq-icon uq-icon--sea-transport-boat"> </span> <span class="uq-grid-menu__title">Menu link 3</span></a></li>
-      <li><a href="#"><span class="uq-grid-menu__icon uq-icon uq-icon--railroad-train-1"> </span> <span class="uq-grid-menu__title">Menu link 4</span></a></li>
-      <li><a href="#"><span class="uq-grid-menu__icon uq-icon uq-icon--icon-plane-1"> </span> <span class="uq-grid-menu__title">Menu link 5</span></a></li>
-      <li><a href="#"><span class="uq-grid-menu__icon uq-icon uq-icon--bicycle"> </span> <span class="uq-grid-menu__title">Menu link 6</span></a></li>
-    </ul>
-    <br/>
-    <h2>Grid menu with equalised height (JS)</h2>
-    <ul class="uq-grid-menu">
-      <li class="uq-grid-menu--equalised"><a href="#"><span class="uq-grid-menu__title">Refresh to see me equalise!</span></a></li>
-      <li class="uq-grid-menu--equalised"><a href="#"><span class="uq-grid-menu__title">Menu link 2</span></a></li>
-      <li class="uq-grid-menu--equalised"><a href="#"><span class="uq-grid-menu__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi interdum eros vitae dignissim luctus. Phasellus et ligula est.</span></a></li>
-      <li class="uq-grid-menu--equalised"><a href="#"><span class="uq-grid-menu__title">Menu link 4</span></a></li>
-      <li class="uq-grid-menu--equalised"><a href="#"><span class="uq-grid-menu__title">Menu link 5</span></a></li>
-      <li class="uq-grid-menu--equalised"><a href="#"><span class="uq-grid-menu__title">Menu link 6</span></a></li>
-    </ul>
+    <div class="uq-grid">
+      <div class="uq-grid__col uq-grid__col--6">
+        <h2>Pagination</h2>
+        <ul class="uq-pagination">
+          <li class="uq-pagination__item uq-pagination__item--go-first"><a class="uq-pagination__link" title="Go to first page" href="#">&laquo; first</a></li>
+          <li class="uq-pagination__item uq-pagination__item--go-previous"><a class="uq-pagination__link" title="Go to previous page" href="#">&lsaquo; prev</a></li>
+          <li class="uq-pagination__ellipsis uq-pagination__ellipsis--left">…</li>
+          <li class="uq-pagination__item"><a class="uq-pagination__link" title="Go to page 8" href="#">8</a></li>
+          <li class="uq-pagination__item"><a class="uq-pagination__link" title="Go to page 9" href="#">9</a></li>
+          <li class="uq-pagination__item"><a class="uq-pagination__link" title="Go to page 10" href="#">10</a></li>
+          <li class="uq-pagination__item uq-pagination__item--current"><a class="uq-pagination__link" title="Go to page 11" href="#">11</a></li>
+          <li class="uq-pagination__item"><a class="uq-pagination__link" title="Go to page 12" href="#">12</a></li>
+          <li class="uq-pagination__item"><a class="uq-pagination__link" title="Go to page 13" href="#">13</a></li>
+          <li class="uq-pagination__item"><a class="uq-pagination__link" title="Go to page 14" href="#">14</a></li>
+          <li class="uq-pagination__ellipsis uq-pagination__ellipsis--right">…</li>
+          <li class="uq-pagination__item uq-pagination__item--go-next"><a class="uq-pagination__link" title="Go to next page" href="#">next &rsaquo;</a></li>
+          <li class="uq-pagination__item uq-pagination__item--go-last"><a class="uq-pagination__link" title="Go to last page" href="#">last &raquo;</a></li>
+        </ul>
+      </div>
+    </div>
     <br/>
 
     <div class="uq-grid">
       <div class="uq-grid__col uq-grid__col--6">
         <h2>Panes</h2>
-        <div class="pane">
-          <h3 class="pane__title">Pane title</h3>
+        <div class="uq-pane">
+          <h3 class="uq-pane__title">Pane title</h3>
           <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
         </div>
-
-        <div class="pane pane--shaded">
-          <h3 class="pane__title">Pane title (shaded)</h3>
+    
+        <div class="uq-pane uq-pane--shaded">
+          <h3 class="uq-pane__title">Pane title (shaded)</h3>
           <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
         </div>
-
-        <div class="pane pane--white">
-          <h3 class="pane__title">Pane title (white)</h3>
+    
+        <div class="uq-pane uq-pane--white">
+          <h3 class="uq-pane__title">Pane title (white)</h3>
           <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
         </div>
-
-        <div class="pane pane--outline">
-          <h3 class="pane__title">Pane title (outline)</h3>
+    
+        <div class="uq-pane uq-pane--outline">
+          <h3 class="uq-pane__title">Pane title (outline)</h3>
           <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
         </div>
-
-        <div class="pane pane--ruled">
-          <h3 class="pane__title">Pane title (ruled)</h3>
+    
+        <div class="uq-pane uq-pane--ruled">
+          <h3 class="uq-pane__title">Pane title (ruled)</h3>
           <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
         </div>
-
-        <div class="pane pane--dark-tint">
-          <h3 class="pane__title">Pane title (ruled)</h3>
+    
+        <div class="uq-pane uq-pane--dark-tint">
+          <h3 class="uq-pane__title">Pane title (ruled)</h3>
           <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
         </div>
-
-        <div class="pane pane--has-footer">
-          <div class="pane__content">
-            <h3 class="pane__title">Pane title (has footer)</h3>
-            <div class="pane__sub-title">A sub title</div>
+    
+        <div class="uq-pane uq-pane--has-footer">
+          <div class="uq-pane__content">
+            <h3 class="uq-pane__title">Pane title (has footer)</h3>
+            <div class="uq-pane__sub-title">A sub title</div>
             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
           </div>
-          <div class="pane__footer">
+          <div class="uq-pane__footer">
             This is a pane footer
           </div>
         </div>
       </div>
     </div>
+    <br/>
+
+    <div class="uq-grid">
+      <div class="uq-grid__col uq-grid__col--6">
+        <h2>Previous-next</h2>
+        <!-- Previous and Next buttons are visible -->  
+        <div class="uq-previous-next">
+          <div class="uq-previous-next__item">
+              <a href="#" class="uq-previous-next__link-previous">Enrolment basics <span class="uq-previous-next__description">Previous</span></a>
+          </div>
+          <div class="uq-previous-next__item">
+              <a href="#" class="uq-previous-next__link-next">How to enrol <span class="uq-previous-next__description">Next</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br/>
+
+    <div class="uq-grid">
+      <div class="uq-grid__col uq-grid__col--6">
+        <h2>Progression</h2>
+        <div class="uqds-progression-wrapper">
+          <ul class="uq-progression">
+              <li class="uq-progression__step is-complete">
+                  <div class="uq-progression__step-marker">
+                      <a class="uq-progression__link" href="#">
+                          <span class="uq-progression__step-number">1</span>
+                          <span class="uq-progression__step-label">Step 1</span>
+                      </a>
+                  </div>
+                  <div class="uq-progression__bar">&nbsp;</div>
+              </li>
+              <li class="uq-progression__step is-complete">
+                  <div class="uq-progression__step-marker">
+                      <a class="uq-progression__link" href="#">
+                          <span class="uq-progression__step-number">2</span>
+                          <span class="uq-progression__step-label">Step 2</span>
+                      </a>
+                  </div>
+                  <div class="uq-progression__bar">
+                      <ul class="uq-progression__sub-step">
+                          <li class="uq-progression__bar is-complete">&nbsp;</li>
+                          <li class="uq-progression__bar is-complete">&nbsp;</li>
+                          <li class="uq-progression__bar">&nbsp;</li>
+                      </ul>
+                  </div>
+              </li>
+              <li class="uq-progression__step">
+                  <div class="uq-progression__step-marker">
+                      <a class="uq-progression__link" href="#">
+                          <span class="uq-progression__step-number">3</span>
+                          <span class="uq-progression__step-label">Step 3</span>
+                      </a>
+                  </div>
+                  <div class="uq-progression__bar">
+                      <ul class="uq-progression__sub-step">
+                          <li class="uq-progression__bar">&nbsp;</li>
+                          <li class="uq-progression__bar">&nbsp;</li>
+                          <li class="uq-progression__bar">&nbsp;</li>
+                          <li class="uq-progression__bar">&nbsp;</li>
+                          <li class="uq-progression__bar">&nbsp;</li>
+                          <li class="uq-progression__bar">&nbsp;</li>
+                      </ul>
+                  </div>
+              </li>
+              <li class="uq-progression__step">
+                  <div class="uq-progression__step-marker">
+                      <a class="uq-progression__link" href="#">
+                          <span class="uq-progression__step-number">4</span>
+                          <span class="uq-progression__step-label">Step 4</span>
+                      </a>
+                  </div>
+              </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <br/>
 
     <!-- Sections -->
-    <div class="section">
-      <div class="section__container">
-        <div class="section__header">
-          <h2 class="section__title">Section title</h2>
+    <div class="uq-section">
+      <div class="uq-section__container">
+        <div class="uq-section__header">
+          <h2 class="uq-section__title">Section title</h2>
     
-          <p class="section__summary">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+          <p class="uq-section__summary">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
             invidunt ut labore.</p>
         </div>
     
-        <div class="section__content">
+        <div class="uq-section__content">
           <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
             dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
             clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
@@ -657,20 +971,20 @@
             diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
             takimata sanctus est Lorem ipsum dolor sit amet.</p>
         </div>
-        <div class="section__footer"></div>
+        <div class="uq-section__footer"></div>
       </div>
     </div>
     
-    <div class="section section--shaded section--centered">
-      <div class="section__container">
-        <div class="section__header">
-          <h2 class="section__title">Section title</h2>
+    <div class="uq-section uq-section--shaded uq-section--centered">
+      <div class="uq-section__container">
+        <div class="uq-section__header">
+          <h2 class="uq-section__title">Section title</h2>
     
-          <p class="section__summary">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+          <p class="uq-section__summary">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
             invidunt ut labore.</p>
         </div>
     
-        <div class="section__content">
+        <div class="uq-section__content">
           <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
             dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
             clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
@@ -678,20 +992,20 @@
             diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
             takimata sanctus est Lorem ipsum dolor sit amet.</p>
         </div>
-        <div class="section__footer"></div>
+        <div class="uq-section__footer"></div>
       </div>
     </div>
     
-    <div class="section section--horizontal">
-      <div class="section__container">
-        <div class="section__header">
-          <h2 class="section__title">Section title</h2>
+    <div class="uq-section uq-section--horizontal">
+      <div class="uq-section__container">
+        <div class="uq-section__header">
+          <h2 class="uq-section__title">Section title</h2>
     
-          <p class="section__summary">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+          <p class="uq-section__summary">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
             invidunt ut labore.</p>
         </div>
     
-        <div class="section__content">
+        <div class="uq-section__content">
           <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
             dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
             clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
@@ -699,57 +1013,57 @@
             diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
             takimata sanctus est Lorem ipsum dolor sit amet.</p>
         </div>
-        <div class="section__footer"></div>
+        <div class="uq-section__footer"></div>
       </div>
     </div>
     
-    <div class="section section--centered section--image-behind section--light-text">
-      <div class="section__background"><img src="http://lorempixel.com/1920/1080" /></div>
+    <div class="uq-section uq-section--centered uq-section--dark-tint uq-section--image-behind uq-section--light-text">
+      <div class="uq-section__background"><img src="http://lorempixel.com/1920/1080" /></div>
     
-      <div class="section__container">
-        <div class="section__header">
-          <h2 class="section__title">Section title</h2>
+      <div class="uq-section__container">
+        <div class="uq-section__header">
+          <h2 class="uq-section__title">Section title</h2>
     
-          <p class="section__summary">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.</p>
+          <p class="uq-section__summary">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.</p>
         </div>
     
-        <div class="section__content">
+        <div class="uq-section__content">
           <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
         </div>
     
-        <div class="section__footer"></div>
+        <div class="uq-section__footer"></div>
       </div>
     </div>
     
-    <div class="section section--centered section--background-image section--light-tint section--dark-text" style="background-image: url('//lorempixel.com/1920/600/abstract/3');">
-      <div class="section__container">
-        <div class="section__header">
-          <h2 class="section__title">Section title</h2>
+    <div class="uq-section uq-section--centered uq-section--background-image uq-section--light-tint uq-section--dark-text" style="background-image: url('//lorempixel.com/1920/600/abstract/3');">
+      <div class="uq-section__container">
+        <div class="uq-section__header">
+          <h2 class="uq-section__title">Section title</h2>
     
-          <p class="section__summary">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.</p>
+          <p class="uq-section__summary">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.</p>
         </div>
     
-        <div class="section__content">
+        <div class="uq-section__content">
           <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
         </div>
     
-        <div class="section__footer"></div>
+        <div class="uq-section__footer"></div>
       </div>
     </div>
     
-    <div class="section section--centered section--dark-tint section--light-text" style="background-image: url('//lorempixel.com/1920/600/abstract/3');">
-      <div class="section__container">
-        <div class="section__header">
-          <h2 class="section__title">Section title</h2>
+    <div class="uq-section uq-section--centered uq-section--dark-tint uq-section--light-text" style="background-image: url('//lorempixel.com/1920/600/abstract/3');">
+      <div class="uq-section__container">
+        <div class="uq-section__header">
+          <h2 class="uq-section__title">Section title</h2>
     
-          <p class="section__summary">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.</p>
+          <p class="uq-section__summary">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.</p>
         </div>
     
-        <div class="section__content">
+        <div class="uq-section__content">
           <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
         </div>
     
-        <div class="section__footer"></div>
+        <div class="uq-section__footer"></div>
       </div>
     </div>
     <br/>

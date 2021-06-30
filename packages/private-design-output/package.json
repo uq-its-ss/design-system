@@ -60,6 +60,7 @@
     "@uqds/icon": "^0.0.3-alpha.0",
     "@uqds/lists": "^0.0.3-alpha.0",
     "@uqds/pane": "^0.0.3-alpha.0",
+    "@uqds/previous-next": "^0.0.3-alpha.0",
     "@uqds/sections": "^0.0.3-alpha.0",
     "@uqds/side-nav": "^0.0.3-alpha.0",
     "@uqds/site-header": "^0.0.3-alpha.0",

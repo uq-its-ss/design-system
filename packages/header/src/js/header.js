@@ -13,10 +13,11 @@ class header {
   }
 
   init() {
-    this.toggle = document.querySelector('.search-toggle__button');
-    this.search = document.querySelector('.nav-search');
-    this.searchInput = document.querySelector('.search-query__input');
+    this.toggle = document.querySelector('.uq-header__search-toggle-button');
+    this.search = document.querySelector('.uq-header__search');
+    this.searchInput = document.querySelector('.uq-header__search-query-input');
     this.meta = document.querySelector('meta.uq-header__mq--desktop');
+    this.navigation = document.querySelector('.uq-header__navigation');
 
     if (this.meta == null) {
       this.meta = document.createElement('meta');
@@ -34,10 +35,11 @@ class header {
   }
 
   handleToggle() {
-    this.toggle.classList.toggle('search-toggle__button--icon-close');
-    this.search.classList.toggle('nav-search--open');
+    this.toggle.classList.toggle('uq-header__search-toggle-button--icon-close');
+    this.search.classList.toggle('uq-header__search--open');
+    this.navigation.classList.toggle('uq-header__navigation--open');
 
-    if (this.search.classList.contains('nav-search--open')) {
+    if (this.search.classList.contains('uq-header__search--open')) {
       if (this.mqLargeList.matches) {
         this.searchInput.focus();
       } else {

@@ -1,11 +1,5 @@
 @use '@uqds/core/src/scss/global' as core;
 
-.uqds-fonts {
-  font-size: 2rem;
-  font-weight: 400;
-  line-height: 1.5;
-}
-
 .uqds-font {
   &--roboto {
     font-family: core.$roboto;
@@ -19,6 +13,14 @@
     font-family: core.$montserrat;
   }
 
+  &--arial {
+    font-family: Arial, sans-serif !important;
+  }
+
+  &--georgia {
+    font-family: Georgia, serif !important;
+  }
+
   &--italic {
     font-style: italic;
   }
@@ -29,5 +31,17 @@
 
   &--500 {
     font-weight: 500;
+  }
+
+  &--lead {
+    font-size: 1.25rem;
+  }
+
+  &--small {
+    font-size: .875rem;
+  }
+
+  &--xsmall {
+    font-size: .75rem;
   }
 }

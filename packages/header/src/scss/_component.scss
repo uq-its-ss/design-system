@@ -223,7 +223,8 @@
 
         input[type="radio"] + label {
             font-size: core.$font-size-s;
-            margin: core.$space-none;
+            margin-bottom: core.$space-none;
+            padding-top: core.$space-xs;
         }
 
         input[type="radio"]:checked {

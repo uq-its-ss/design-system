@@ -131,7 +131,7 @@ $use-encapsulation: false !default;
         margin-left: core.$space-s;
         margin-right: $form-spacing;
         padding-top: core.$space-xs;
-        padding-left: core.$space-l;
+        padding-left: core.$space-compressed-xxxl;
         vertical-align: top;
       }
 
@@ -274,12 +274,12 @@ $use-encapsulation: false !default;
       display: inline-block;
       font-size: core.$font-size;
       font-weight: core.$font-weight-normal;
-      line-height: $form-checkbox-size;
+      line-height: core.$line-height-h;
       margin-bottom: core.$space;
       margin-left: core.$space-s;
       margin-right: $form-spacing;
-      padding-top: core.$space-xs;
-      padding-left: core.$space-l;
+      padding-top: core.$space-compressed-xs;
+      padding-left: core.$space-compressed-xxxl;
       vertical-align: top;
     }
 

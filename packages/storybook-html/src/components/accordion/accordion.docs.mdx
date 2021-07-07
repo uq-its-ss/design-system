@@ -9,16 +9,16 @@ import StatusBadge from '../../../.storybook/custom/components/StatusBadge';
 
 ## Overview
 
-An accordion is a vertically stacked group of titles that on interaction expand or collapse associated content, helping users to see more of the content if needed.
+An accordion is a vertically stacked group of titles that can expand to show, or collapse to hide associated content.
 
-Accordions can be implemented using `<div>` or `<ul> <li>` lists. The default example uses divs. 
+Accordions can be implemented using `<div>` or `<ul> <li>` lists. 
 
-Use divs if there is significant amount of content.
+Use divs if there is a significant amount of content. Use lists if there is less content and when the semantics of a list serves better with assistive technologies like screen readers.
 
-## Using divs
+### Using divs
 
-<Canvas withSource="none" withToolbar>
-  <Story height={220} id="components-accordion--using-divs" />
+<Canvas withSource="none">
+  <Story height={250} id="components-accordion--using-divs" />
 </Canvas>
 
 ```html
@@ -34,12 +34,10 @@ Use divs if there is significant amount of content.
 </div>
 ```
 
-## Using lists
+### Using lists
 
-Use lists if content is less and when the semantics of a list serves better with assistive technologies like screen readers.
-
-<Canvas withSource="none" withToolbar>
-  <Story height={220} id="components-accordion--using-lists" />
+<Canvas withSource="none">
+  <Story height={250} id="components-accordion--using-lists" />
 </Canvas>
 
 ```html
@@ -57,7 +55,7 @@ Use lists if content is less and when the semantics of a list serves better with
 
 ## How and when to use
 
-Accordions are more suitable when people need only a few key pieces of content on a single page. By hiding most of the content, users can spend their time more efficiently focused on the few topics that matter.
+Accordions are suitable when users only need to view a few key pieces of content on a page. By hiding most of the content, users can focus on the few topics that are relevant to them.
 
 ## Accessibility
 

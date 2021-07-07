@@ -83,6 +83,7 @@ class accordion {
   slideContentUp(el) {
     const content = accordion.getNextSibling(el, `.${this.className}__content`);
     el.classList.remove(`${this.className}__toggle--active`);
+    el.parentNode.classList.remove("uq-accordion__item--is-open");
     el.setAttribute('aria-expanded', 'false');
     content.style.height = '0px';
     content.addEventListener('transitionend', () => {
@@ -99,6 +100,7 @@ class accordion {
   slideContentDown(el) {
     const content = accordion.getNextSibling(el, `.${this.className}__content`);
     el.classList.add(`${this.className}__toggle--active`);
+    el.parentNode.classList.add("uq-accordion__item--is-open");
     el.setAttribute('aria-expanded', 'true');
     content.classList.add(`${this.className}__content--active`);
     content.style.height = 'auto';
@@ -148,7 +150,7 @@ class accordion {
    * @method
    */
   init() {
-    document.addEventListener("DOMContentLoaded" , () => {
+    // document.addEventListener("DOMContentLoaded" , () => {
       if (window.location.hash) {
         this.hash = window.location.hash;
       }
@@ -177,7 +179,7 @@ class accordion {
           el.addEventListener('click', this.handleToggle(togglers));
         });
       });
-    })
+    // })
   }
 };
 

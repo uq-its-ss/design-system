@@ -1,0 +1,66 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import StatusBadge from '../../../.storybook/custom/components/StatusBadge';
+
+# Blockquote
+
+<StatusBadge.Review /><StatusBadge.ReviewDoc />
+
+<a href="https://github.com/uq-its-ss/design-system/issues" class="uq-button uq-button--text" target="_blank">Check for open issues</a>
+
+## Overview
+
+For quoting a passage of text or speech from another source.
+
+## Default example
+
+<Canvas withSource="none">
+  <Story id="components-blockquote" />
+</Canvas>
+
+```html
+<blockquote class="blockquote blockquote--light">
+    <div class="blockquote__body">
+        <p>Words can be like X-rays, if you use them properly — they’ll go through anything. You read and you’re pierced.</p>
+        <p>Words can be like X-rays, if you use them properly — they’ll go through anything. You read and you’re pierced.</p>
+    </div>
+    <div class="blockquote__footer">
+        <p>Aldous Huxley, <cite><a href="#" class="blockquote__link">Brave New World</a></cite></p>
+    </div>
+</blockquote>
+```
+
+## Variant examples
+
+### Dark backgrounds
+
+<Canvas withSource="none">
+  <Story id="components-blockquote--blockquote-dark" />
+</Canvas>
+
+```html
+<blockquote class="blockquote blockquote--dark">
+    <div class="blockquote__body">
+        <p>Words can be like X-rays, if you use them properly — they’ll go through anything. You read and you’re pierced.</p>
+    </div>
+    <div class="blockquote__footer">
+        <p>Aldous Huxley, <cite><a href="#" class="blockquote__link">Brave New World</a></cite></p>
+    </div>
+</blockquote>
+```
+
+### Boxed
+
+<Canvas withSource="none">
+  <Story id="components-blockquote--blockquote-boxed" />
+</Canvas>
+
+```html
+<blockquote class="blockquote blockquote--dark blockquote--boxed">
+    <div class="blockquote__body">
+        <p>Words can be like X-rays, if you use them properly — they’ll go through anything. You read and you’re pierced.</p>
+    </div>
+    <div class="blockquote__footer">
+        <p>Aldous Huxley, <cite><a href="#" class="blockquote__link">Brave New World</a></cite></p>
+    </div>
+</blockquote>
+```

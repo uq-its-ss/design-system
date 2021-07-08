@@ -50,7 +50,7 @@
     width: 100%;
 
     @media #{core.$screen-md-up} {
-      padding: core.$space core.$space-l;
+      padding: core.$space core.$space-m;
     }
 
     // Closed state.
@@ -102,12 +102,15 @@
   // Accordion content
   &__content {
     overflow: hidden;
-    padding: core.$space;
     word-wrap: break-word;
     transition: height 200ms ease;  
 
-    @media #{core.$screen-md-up} {
-      padding: core.$space-m core.$space-l;
+    &-wrapper {
+      padding: core.$space;
+
+      @media #{core.$screen-md-up} {
+        padding: core.$space-m;
+      }
     }
 
     &:not(.uq-accordion__content--active) {

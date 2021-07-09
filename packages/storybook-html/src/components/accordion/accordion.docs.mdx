@@ -57,6 +57,25 @@ Use divs if there is a significant amount of content. Use lists if there is less
 
 Accordions are suitable when users only need to view a few key pieces of content on a page. By hiding most of the content, users can focus on the few topics that are relevant to them.
 
+By default, users can expand one accordion at a time. If you wish to enable users to expand any number of accordions at a time, add the classname `uq-accordion--expand-any` to the `<div>` or `<ul> <li>`.
+
+<Canvas withSource="none">
+  <Story height={250} id="components-accordion--expand-any" />
+</Canvas>
+
+```html
+<div class="uq-accordion uq-accordion--expand-any" aria-label="Accordion button group">
+    <div  class="uq-accordion__item">
+      <button  class="uq-accordion__toggle" aria-controls="content-1" aria-expanded="false" id="accordion-title-1">Title 1</button>
+      <div  class="uq-accordion__content" aria-hidden="true" id="content-1" aria-labelledby="accordion-title-1">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor eros dui, vitae iaculis leo ornare eget. Etiam tristique lobortis ligula non mattis. Ut dapibus libero neque, vel tincidunt nunc tempus eget.</p>
+      </div>
+    </div>
+    ...
+    ...
+</div>
+```
+
 ## Accessibility
 
 - The title of each accordion item is contained in a button element.

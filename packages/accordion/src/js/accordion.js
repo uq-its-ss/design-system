@@ -139,8 +139,12 @@ class accordion {
       if (e.target.classList.contains(`${this.className}__toggle--active`)) {
         this.slideContentUp(e.target);
       } else {
-        this.slideContentDown(e.target);
-        this.slideUpOthers(e.target, togglers);
+        if (e.target.closest(`.${this.className}`).classList.contains(`${this.className}--expand-any`)) {
+          this.slideContentDown(e.target);
+        } else {
+          this.slideContentDown(e.target);
+          this.slideUpOthers(e.target, togglers);
+        }
       }
     }
   }

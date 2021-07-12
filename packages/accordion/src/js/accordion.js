@@ -189,7 +189,7 @@ class accordion {
     accordionContents.forEach(function(accordionContent) {
       let innerContent = accordionContent.innerHTML;
       accordionContent.innerHTML = '';
-      let contentWrapper = `<div class ="uq-accordion__content-wrapper">${innerContent}</div>`;
+      let contentWrapper = `<div class ="` + `${this.className}` + `__content-wrapper">${innerContent}</div>`;
       accordionContent.innerHTML = contentWrapper;
     });
   }

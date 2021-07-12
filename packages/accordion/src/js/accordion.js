@@ -139,7 +139,7 @@ class accordion {
       if (e.target.classList.contains(`${this.className}__toggle--active`)) {
         this.slideContentUp(e.target);
       } else {
-        if (e.target.closest(`.${this.className}`).classList.contains(`${this.className}--expand-any`)) {
+        if (e.target.closest(`.${this.className}`).classList.contains(`${this.className}--expand-many`)) {
           this.slideContentDown(e.target);
         } else {
           this.slideContentDown(e.target);

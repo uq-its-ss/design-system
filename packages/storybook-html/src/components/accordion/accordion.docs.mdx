@@ -11,14 +11,14 @@ import StatusBadge from '../../../.storybook/custom/components/StatusBadge';
 
 An accordion is a vertically stacked group of titles that can expand to show, or collapse to hide associated content.
 
-Accordions can be implemented using `<div>` or `<ul> <li>` lists. 
-
-Use divs if there is a significant amount of content. Use lists if there is less content and when the semantics of a list serves better with assistive technologies like screen readers.
+Accordions can be implemented using `<div>` or `<ul>` lists. 
 
 ### Using divs
 
+Use divs if there is a significant amount of content to be displayed. 
+
 <Canvas withSource="none">
-  <Story height={250} id="components-accordion--using-divs" />
+  <Story height={300} id="components-accordion--using-divs" />
 </Canvas>
 
 ```html
@@ -36,8 +36,10 @@ Use divs if there is a significant amount of content. Use lists if there is less
 
 ### Using lists
 
+Use lists if there is less content and when the semantics of a list serves better with assistive technologies like screen readers.
+
 <Canvas withSource="none">
-  <Story height={250} id="components-accordion--using-lists" />
+  <Story height={300} id="components-accordion--using-lists" />
 </Canvas>
 
 ```html
@@ -57,14 +59,14 @@ Use divs if there is a significant amount of content. Use lists if there is less
 
 Accordions are suitable when users only need to view a few key pieces of content on a page. By hiding most of the content, users can focus on the few topics that are relevant to them.
 
-By default, users can expand one accordion at a time. If you wish to enable users to expand any number of accordions at a time, add the classname `uq-accordion--expand-any` to the `<div>` or `<ul> <li>`.
+By default, users can expand one accordion at a time. If you wish to enable users to expand any number of accordions at a time, add the classname `uq-accordion--expand-many` to the `<div>` or `<ul>`.
 
 <Canvas withSource="none">
-  <Story height={250} id="components-accordion--expand-any" />
+  <Story height={300} id="components-accordion--expand-many" />
 </Canvas>
 
 ```html
-<div class="uq-accordion uq-accordion--expand-any" aria-label="Accordion button group">
+<div class="uq-accordion uq-accordion--expand-many" aria-label="Accordion button group">
     <div  class="uq-accordion__item">
       <button  class="uq-accordion__toggle" aria-controls="content-1" aria-expanded="false" id="accordion-title-1">Title 1</button>
       <div  class="uq-accordion__content" aria-hidden="true" id="content-1" aria-labelledby="accordion-title-1">

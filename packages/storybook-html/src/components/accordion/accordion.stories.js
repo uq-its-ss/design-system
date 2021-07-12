@@ -9,7 +9,7 @@ import accordionCreate from '@uqds/accordion/src/js/accordion';
 // import HTML template strings
 import accordionDivHTML from './accordion-div.html';
 import accordionListHTML from './accordion-list.html';
-import accordionDivExpandAnyHTML from './accordion-div-expand-any.html';
+import accordionDivExpandManyHTML from './accordion-div-expand-many.html';
 
 // documentation
 import docs from './accordion.docs.mdx';
@@ -46,11 +46,11 @@ export const usingLists = () => {
 
 usingLists.storyName = 'Using lists';
 
-export const expandAny = () => {
+export const expandMany = () => {
   useEffect(() => {
     new accordionCreate(); 
   });
-  return accordionDivExpandAnyHTML;
+  return accordionDivExpandManyHTML;
 };
 
-expandAny.storyName = 'Expand any';
+expandMany.storyName = 'Expand many';

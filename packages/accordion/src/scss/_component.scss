@@ -40,7 +40,7 @@
     font-family: core.$font-body;
     font-size: 1.25rem;
     font-weight: 400;
-    line-height: normal;
+    line-height: core.$line-height-h;
     margin: core.$space-none;
     padding: core.$space core.$space-xxxl core.$space core.$space;
     position: relative;

@@ -42,7 +42,7 @@
     font-weight: 400;
     line-height: normal;
     margin: core.$space-none;
-    padding: core.$space;
+    padding: core.$space core.$space-xxxl core.$space core.$space;
     position: relative;
     text-align: left;
     text-decoration: none;
@@ -50,7 +50,7 @@
     width: 100%;
 
     @media #{core.$screen-md-up} {
-      padding: core.$space core.$space-m;
+      padding: core.$space core.$space-xxxxl core.$space core.$space-m;
     }
 
     // Closed state.

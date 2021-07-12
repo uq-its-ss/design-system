@@ -50,7 +50,7 @@
     width: 100%;
 
     @media #{core.$screen-md-up} {
-      padding: core.$space core.$space-xxxxl core.$space core.$space-m;
+      padding: core.$space core.$space-ul core.$space core.$space-m;
     }
 
     // Closed state.

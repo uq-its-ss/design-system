@@ -185,11 +185,12 @@ class accordion {
 
     // wrap contents of uq-accordion__content in a wrapper to apply padding and prevent animation jump
     const accordionContents = document.querySelectorAll(`.${this.className}__content`);
+    const accordionName = this.className;
 
     accordionContents.forEach(function(accordionContent) {
       let innerContent = accordionContent.innerHTML;
       accordionContent.innerHTML = '';
-      let contentWrapper = `<div class ="uq-accordion__content-wrapper">${innerContent}</div>`;
+      let contentWrapper = `<div class ="` + accordionName + `__content-wrapper">${innerContent}</div>`;
       accordionContent.innerHTML = contentWrapper;
     });
   }

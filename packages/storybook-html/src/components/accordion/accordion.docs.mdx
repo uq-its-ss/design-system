@@ -62,17 +62,17 @@ Use lists if there is less content and when the semantics of a list serves bette
 Accordions are suitable when users only need to view a few key pieces of content on a page. By hiding most of the content, users can focus on the few topics that are relevant to them.
 
 ### Default behaviour 
-By default, users can expand and collapse one accordion at a time as shown in the examples above using `<div>` or `<ul>`. 
+By default, users can expand and collapse one accordion at a time. When a user expands one accordion then clicks on another, the previously expanded accordion collapses automatically. This is useful if users only need to view the contents of one accordion at a time. Examples of this default behaviour are shown in the accordions above using `<div>` or `<ul>`. 
 
-### Expand many behaviour
-If you wish to enable users to expand and manually collapse any number of accordions at a time, add the classname `uq-accordion--expand-many` to the `<div>` or `<ul>`.
+### Alternate behaviour
+Alternate behaviour is to allow users to expand and collapse any number of accordions at a time. When a user expands one accordion then clicks on another, the previously expanded accordion remains expanded and the user will need to manually collapse it. This is useful if users need to view the contents of multiple accordions at a time. To enable this behaviour, add the classname `uq-accordion--is-manual` to the `<div>` or `<ul>` as shown below.
 
 <Canvas withSource="none">
-  <Story height={300} id="components-accordion--expand-many" />
+  <Story height={300} id="components-accordion--is-manual" />
 </Canvas>
 
 ```html
-<div class="uq-accordion uq-accordion--expand-many" aria-label="Accordion button group">
+<div class="uq-accordion uq-accordion--is-manual" aria-label="Accordion button group">
     <div  class="uq-accordion__item">
       <button  class="uq-accordion__toggle" aria-controls="content-1" aria-expanded="false" id="accordion-title-1">Title 1</button>
       <div  class="uq-accordion__content" aria-hidden="true" id="content-1" aria-labelledby="accordion-title-1">

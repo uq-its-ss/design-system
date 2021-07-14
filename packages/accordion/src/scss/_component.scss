@@ -56,13 +56,13 @@
     // Closed state.
     &::before {
       content: '';
-      background-image: url(icon-constants.get-icon('standard--add', core.$uq-purple));
+      background-image: url(icon-constants.get-icon('standard--arrow-down-1', core.$uq-purple));
       background-repeat: no-repeat;
       width: core.$space-m;
       height: core.$space-m;
       transform: translateY(50%);
       position: absolute;
-      top: core.$space-xs;
+      top: core.$space-s;
       right: core.$space;
 
       @media #{core.$screen-md-up} {
@@ -90,7 +90,7 @@
 
       // Open state.
       &::before {
-        background-image: url(icon-constants.get-icon('standard--subtract', core.$uq-purple));
+        background-image: url(icon-constants.get-icon('standard--arrow-up-1', core.$uq-purple));
       }
 
       &:hover,

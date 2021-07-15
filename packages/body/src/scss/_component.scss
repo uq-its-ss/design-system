@@ -59,6 +59,7 @@ $use-encapsulation: false !default;
   h6 {
     font-weight: core.$font-weight-bold;
     line-height: core.$line-height-h;
+    margin-bottom: core.$space-none;
     color: core.$uq-purple;
   }
   
@@ -94,7 +95,8 @@ $use-encapsulation: false !default;
   }
   
   p {
-    margin-top: core.$space-none;
+    margin-top: core.$space-m;
+    margin-bottom: core.$space-none;
   }
   
   b,

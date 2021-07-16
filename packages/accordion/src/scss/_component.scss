@@ -7,30 +7,26 @@
 // Can be used on either div or ul
 //
 // Variants:
-// .uq-accordion--shaded - Adds a shaded colour to the toggle titles.
-// .uq-accordion--no-bottom-border - Removes border from the bottom of accordions
-//                                for use in menus (see compendium).
-// .uq-accordion--no-bottom-spacing - Removes margin from below accordions for use
-//                                 in menus (see compendium).
+// .uq-accordion--no-bottom-spacing - Removes margin from below accordions for use in menus (see compendium).
 
 .uq-accordion {
-  border-bottom: 1px solid $accordion-border-color;
   list-style: none;
   margin-bottom: core.$space-m;
-  overflow: hidden;
   padding: core.$space-none;
 
   // Accordion item.
   &__item {
-    border-top: 1px solid $accordion-border-color;
-    margin-bottom: core.$space-none;
+    background: $accordion-content-bg;
+    border: 1px solid $accordion-border-color;
+    border-radius: 2px;
+    margin-bottom: core.$space-s;
+
+    &--is-open {
+      box-shadow: 0 0.25rem 0.5rem rgb(0 0 0 / 10%)
+    }
   }
 
   // Accordion title / toggle button.
-  h3 {
-    margin: core.$space-none;
-  }
-
   &__toggle {
     -moz-appearance: none;
     -webkit-appearance: none;
@@ -42,11 +38,11 @@
     cursor: pointer;
     display: inline-block;
     font-family: core.$font-body;
-    font-size: 1.2rem;
+    font-size: core.$font-size-l;
     font-weight: 400;
-    line-height: normal;
+    line-height: core.$line-height-h;
     margin: core.$space-none;
-    padding: core.$space core.$space core.$space core.$space-none;
+    padding: core.$space core.$space-xxxl core.$space core.$space;
     position: relative;
     text-align: left;
     text-decoration: none;
@@ -54,8 +50,7 @@
     width: 100%;
 
     @media #{core.$screen-md-up} {
-      font-size: 1.5rem;
-      padding: core.$space core.$space core.$space core.$space;
+      padding: core.$space core.$space-ul core.$space core.$space-m;
     }
 
     // Closed state.
@@ -63,22 +58,30 @@
       content: '';
       background-image: url(icon-constants.get-icon('standard--arrow-down-1', core.$uq-purple));
       background-repeat: no-repeat;
-      width: core.$space;
-      height: core.$space;
-      float: right;
+      width: core.$space-m;
+      height: core.$space-m;
       transform: translateY(50%);
+      position: absolute;
+      top: core.$space-s;
+      right: core.$space;
+
+      @media #{core.$screen-md-up} {
+        right: core.$space-m;
+      }
     }
 
     &:focus,
     &:hover {
       color: core.$text;
-      background-color: $accordion-title-bg;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $accordion-title-bg-hover;
     }
 
     &:focus {
       outline: 0 none;
-      color: core.$link;
-      text-decoration: underline;
     }
 
     // Active toggle.
@@ -88,10 +91,6 @@
       // Open state.
       &::before {
         background-image: url(icon-constants.get-icon('standard--arrow-up-1', core.$uq-purple));
-      }
-
-      &:hover {
-        text-decoration: underline;
       }
 
       &:hover,
@@ -104,12 +103,15 @@
   // Accordion content
   &__content {
     overflow: hidden;
-    padding: core.$space-none;
     word-wrap: break-word;
     transition: height 200ms ease;  
 
-    @media #{core.$screen-md-up} {
-      padding: core.$space-none core.$space;
+    &-wrapper {
+      padding: core.$space;
+
+      @media #{core.$screen-md-up} {
+        padding: core.$space-m;
+      }
     }
 
     &:not(.uq-accordion__content--active) {
@@ -119,46 +121,15 @@
     p:first-of-type {
       margin-top: core.$space-none;
     }
-  }
 
-  // Shaded variant.
-  &--shaded {
-    .uq-accordion {
-      &__toggle {
-        background: $accordion-title-bg;
-
-        &:hover {
-          background-color: $accordion-title-bg-hover;
-        }
-
-        &--active {
-          background: $accordion-content-bg;
-        }
-      }
+    :last-child {
+      margin-bottom: core.$space-none;
     }
-  }
-
-  // No bottom border variant.
-  &--no-bottom-border {
-    border-bottom: 0;
   }
 
   // No bottom spacing variant.
   &--no-bottom-spacing {
     margin-bottom: core.$space-none;
-  }
-
-  // Small toggle variant.
-  &--secondary {
-    .uq-accordion {
-      &__toggle {
-        font-size: 1.1rem;
-
-        @media #{core.$screen-md-up} {
-          font-size: 1.2rem;
-        }
-      }
-    }
   }
 
   // Contextual link region cog position fix.

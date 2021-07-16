@@ -53,4 +53,4 @@ export const isManual = () => {
   return accordionDivIsManualHTML;
 };
 
-isManual.storyName = 'Alternate behaviour';
+isManual.storyName = 'Variant behaviour';

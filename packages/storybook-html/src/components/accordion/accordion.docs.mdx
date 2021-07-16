@@ -56,15 +56,16 @@ Use lists if there is less content and when the semantics of a list serves bette
     ...
 </ul>
 ```
+<><br /></>
 
-## How and when to use
+## Behaviour
 
-Accordions are suitable when users only need to view a few key pieces of content on a page. By hiding most of the content, users can focus on the few topics that are relevant to them.
+The accordion expand and collpase behaviour can either be automatic or manual. 
 
-### Default behaviour 
+### Default behaviour (automatic)
 By default, users can expand and collapse one accordion at a time. When a user expands one accordion then clicks on another, the previously expanded accordion collapses automatically. This is useful if users only need to view the contents of one accordion at a time. Examples of this default behaviour are shown in the accordions above using `<div>` or `<ul>`. 
 
-### Alternate behaviour
+### Variant behavour (manual)
 Alternate behaviour is to allow users to expand and collapse any number of accordions at a time. When a user expands one accordion then clicks on another, the previously expanded accordion remains expanded and the user will need to manually collapse it. This is useful if users need to view the contents of multiple accordions at a time. To enable this behaviour, add the classname `uq-accordion--is-manual` to the `<div>` or `<ul>` as shown below.
 
 <Canvas withSource="none">
@@ -83,6 +84,13 @@ Alternate behaviour is to allow users to expand and collapse any number of accor
     ...
 </div>
 ```
+<><br /></>
+
+## How and when to use
+
+Accordions are suitable when users only need to view a few key pieces of content on a page. By hiding most of the content, users can focus on the few topics that are relevant to them.
+
+<><br /></>
 
 ## Accessibility
 

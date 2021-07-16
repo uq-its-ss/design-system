@@ -131,6 +131,7 @@ $use-encapsulation: false !default;
         margin-left: core.$space-s;
         margin-right: $form-spacing;
         padding-top: core.$space-xs;
+        padding-left: core.$space-m;
         vertical-align: top;
       }
 
@@ -261,6 +262,7 @@ $use-encapsulation: false !default;
     height: $form-checkbox-size;
     width: $form-checkbox-size;
     vertical-align: top;
+    position: absolute;
 
     &:focus {
       border-color: $form-focus-color;
@@ -272,11 +274,12 @@ $use-encapsulation: false !default;
       display: inline-block;
       font-size: core.$font-size;
       font-weight: core.$font-weight-normal;
-      line-height: $form-checkbox-size;
+      line-height: core.$line-height-h;
       margin-bottom: core.$space;
       margin-left: core.$space-s;
       margin-right: $form-spacing;
-      padding-top: core.$space-xs;
+      padding-top: core.$space-compressed-xs;
+      padding-left: core.$space-m;
       vertical-align: top;
     }
 
@@ -318,7 +321,6 @@ $use-encapsulation: false !default;
   
   input[type="checkbox"] {
     border-radius: $form-checkbox-border-radius;
-    position: relative;
 
     &::after {
       content: "";
@@ -349,7 +351,6 @@ $use-encapsulation: false !default;
   
   input[type="radio"] {
     border-radius: 50%;
-    position: relative;
   
     &:checked {
       border-width: 2px;

@@ -316,3 +316,93 @@ $use-encapsulation: false !default;
 
   @include -base-styles;
 }
+
+// Print styles
+@media print {
+  // Header
+  .uq-header {
+    background: none !important;
+
+    &__logo img {
+      display: block;
+      content: url(https://static.uq.net.au/v11/logos/corporate/uq-logo.png) !important;
+    }
+
+    &__search-toggle,
+    &__navigation {
+      display: none !important;
+    }
+
+    a:after {
+      content: " (" attr(href) ")";
+      font-size: 12px;
+    }
+  }
+
+  // Site header
+  .uq-site-header {
+    &__title-container__left {
+      a:after {
+        content: " (" attr(href) ")";
+        font-size: 12px;
+      }
+    }
+
+    &__title-container__right, 
+    &__navigation-container {
+      display: none !important;
+    }
+  }
+
+  .uq-header__container,
+  .uq-site-header__title-container,
+  .uq-grid,
+  .uq-footer__container {
+    max-width: 100% !important;
+  }
+
+  .uq-accordion {
+    &__content--active {
+      height: 100% !important;
+    }
+  }
+
+  .uq-card {
+    &__image__wrapper {
+      display: none !important;
+    }
+
+    a:after {
+      content: " (" attr(href) ")";
+      font-size: 12px;
+    }
+  }
+
+  // Components to hide
+  .uq-alert,
+  .uq-hero {
+    display: none !important;
+  }
+
+  // Footer
+  .uq-footer {
+    color: core.$text !important;
+
+    a {
+      color: core.$text !important;
+    }
+
+    &__container {
+      padding: 1rem !important;
+    }
+
+    &__acknowledgement {
+      color: core.$text !important;
+      padding-bottom: 0 !important;
+    }
+
+    &__login-link {
+      display: none !important;
+    }
+  }
+}

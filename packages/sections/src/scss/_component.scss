@@ -34,29 +34,29 @@
   padding-bottom: core.$space-xxxl;
   overflow: hidden;
   // Large spacing above to show more background image.
-  %large-top-spacing, &--large-top-spacing {
+  &--large-top-spacing {
     padding-top: core.$space-uul; //7rem
   }
   // Large spacing below to show more background image.
-  %large-bottom-spacing, &--large-bottom-spacing {
+  &--large-bottom-spacing {
     padding-bottom: core.$space-uul; //7rem
   }
   // Doubles default vertical spacing. Double is an alias of large.
   &--large-spacing, &--double-spacing {
-    @extend %large-top-spacing;
-    @extend %large-bottom-spacing;
+    padding-top: core.$space-uul;
+    padding-bottom: core.$space-uul;
   }
   // Extra large spacing above to show more background image.
-  %extra-large-top-spacing, &--extra-large-top-spacing {
+  &--extra-large-top-spacing {
     padding-top: core.$space-uuuul; //12rem
   }
   // Extra large spacing below to show more background image.
-  %extra-large-bottom-spacing, &--extra-large-bottom-spacing {
+  &--extra-large-bottom-spacing {
     padding-bottom: core.$space-uuuul; //12rem
   }
   &--extra-large-spacing {
-    @extend %extra-large-top-spacing;
-    @extend %extra-large-bottom-spacing;
+    padding-top: core.$space-uuuul;
+    padding-bottom: core.$space-uuuul;
   }
   // Removes vertical spacing.
   &--no-spacing {

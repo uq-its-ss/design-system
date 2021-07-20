@@ -5,15 +5,21 @@ import StatusBadge from '../../../.storybook/custom/components/StatusBadge';
 
 <StatusBadge.Review /><StatusBadge.DraftDoc />
 
+<><br /></><><br /></>
+
 ## Overview
 
-Sections are a layout style that wraps content. They provide a header with title and summary, and a footer field along with a range of themeing options. They are primarily used on landing pages to create strips of content stacked vertically down the page, while containing the content to the same page column width.
+Sections are a layout style that wrap content in a white or grey background with a range of content-width, content-alignment, and padding options. 
+
+<><br /></>
+
+## Default
+
+The default section includes left-aligned content on a white background that is contained to the page width. 
 
 <Canvas withSource="none">
-  <Story id="layout-sections--sections-basic" />
+  <Story id="layout-sections--sections-default" />
 </Canvas>
-
-## Default Section
 
 ```html
 <div class="uq-section">
@@ -25,108 +31,61 @@ Sections are a layout style that wraps content. They provide a header with title
 </div>
 ```
 
-## Optional content blocks
+## Variants
 
-- **Title** - Optional. `.uq-section__title`
-- **Summary** - Optional. `.uq-section__summary` Short summary text to accompany the section title and give context to the content below.
-- **Footer** - Optional. `.uq-section__footer` Short text that displays below the section content.
+<><br /></>
 
-```html
-<div class="uq-section">
-  <div class="uq-section__container">
-    <div class="uq-section__header">
-      <h2 class="uq-section__title">Section header title</h2>
-      <p class="uq-section__summary">Section header summary.</p>
-    </div>
-    <div class="uq-section__content">
-      <p>section content.</p>
-    </div>
-    <div class="uq-section__footer">section footer.</div>
-  </div>
-</div>
-```
-## Section layouts
+### Layouts
 
-**Single column, left-aligned** - Section header and footer are stacked above and below the section content, and are left aligned. The section content alignment is not affected by this setting.
+<><br /></>
 
-### Centered
+#### Centred
 
-**Single column, centered** - Section header and footer are stacked above and below the section content, and are centered. The section content alignment is not affected by this setting.
-
-Centered layout `uq-section--centered`
+Add class `uq-section--centered` to centre-align the content.
 
 <Canvas withSource="none">
   <Story id="layout-sections--sections-centered" />
 </Canvas>
 
-### Horizontal
-
-**Two column, left-aligned** - Section header is shifted to the left of the section content and displayed in a 4/8 column arrangement.
-
-horizontal layout `uq-section--horizontal` 
-
-<Canvas withSource="none">
-  <Story id="layout-sections--sections-horizontal" />
-</Canvas>
-
-## Alternative Styles
-These settings allow a range of styling to be applied to the section. These include
-
-**Default** - Sections have a white background by default.
-
-### Shaded
-
-**Shaded background** - Applies a light grey background to the section.
-
-Shaded Style `uq-section--shaded` 
-
-<Canvas withSource="none">
-  <Story id="layout-sections--sections-shaded" />
-</Canvas>
-
-### Background image
-
-**Background image** - Optional. Applies the chosen image as a background to the section. It will be fitted to fully cover the section so it is recommended that the uploaded image be at least 1920px wide, and as tall as is needed to cover the amount of content in the section.
-
-Background image `uq-section--image-behind`
-Scale background images on the section to always cover `uq-section--background-image`
-
-<Canvas withSource="none">
-  <Story id="layout-sections--sections-background" />
-</Canvas>
-
 ```html
-<div class="uq-section uq-section--image-behind">
-  <div class="uq-section__background"><img src="/images/section/section-example-01.jpeg" /></div>
+<div class="uq-section uq-section--centred">
+  <div class="uq-section__container">
+    <div class="uq-section__content">
+      <!--section content-->
+    </div>
+  </div>
 </div>
 ```
 
-### Light tint and dark text
+#### Narrow
 
-**Light tint** - Applies a light tint overlay to the section. As with the dark tint, this works in the opposite way, lightening the background image for better contrast with dark text on top.
-
-Light tint `uq-section--light-tint` 
-
-**Dark text** - Sets the section title, summary, and footer text to dark grey. For use in conjunction with the light tint option.
-
-Dark text `uq-section--dark-text`
+Add class `uq-section--narrow` to contain the content to a narrow container.
 
 <Canvas withSource="none">
-  <Story id="layout-sections--sections-light-tint" />
+  <Story id="layout-sections--sections-narrow" />
 </Canvas>
 
-### Dark tint and light text
+```html
+<div class="uq-section uq-section--narrow">
+  <div class="uq-section__container">
+    <div class="uq-section__content">
+      <!--section content-->
+    </div>
+  </div>
+</div>
+```
 
-**Dark tint** - Applies a dark tint overlay to the section. This is for use with a background image so that the background image can be softly muted to allow content on top to display more clearly.
 
-Dark tint `uq-section--dark-tint` 
+### Background
 
-**Light text** - Sets the section title, summary, and footer text to white. For use in conjunction with the dark tint option.
+<><br /></>
 
-light text `uq-section--light-text`
+#### Shaded
+
+Add class `uq-section--shaded` to apply a light-grey background to the section.
 
 <Canvas withSource="none">
-  <Story id="layout-sections--sections-dark-tint" />
+  <Story id="layout-sections--sections-shaded" />
 </Canvas>
 
 ### Spacing
@@ -150,3 +109,15 @@ light text `uq-section--light-text`
 <Canvas withSource="none">
   <Story id="layout-sections--sections-spacing" />
 </Canvas>
+
+<><br /></>
+
+## How and when to use
+
+Sections are primarily used on landing pages to create strips of content stacked vertically down the page, while containing the content to the same page column width.
+
+<><br /></>
+
+## Accessibility
+
+content content content

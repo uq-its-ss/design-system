@@ -47,9 +47,6 @@ export const sectionsCentered = () => {
   <div class="uq-section__container">
     <div class="uq-section__header">
       <h2 class="uq-section__title">Section header title</h2>
-
-      <p class="uq-section__summary">Section header summary. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-        invidunt ut labore.</p>
     </div>
 
     <div class="uq-section__content">
@@ -73,9 +70,6 @@ export const sectionsNarrow = () => {
   <div class="uq-section__container">
     <div class="uq-section__header">
       <h2 class="uq-section__title">Section header title</h2>
-
-      <p class="uq-section__summary">Section header summary. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-        invidunt ut labore.</p>
     </div>
 
     <div class="uq-section__content">
@@ -95,13 +89,10 @@ sectionsNarrow.storyName = 'Narrow';
 
 export const sectionsShaded = () => {
   return `
-<div class="uq-section uq-section--shaded uq-section--centered">
+<div class="uq-section uq-section--shaded">
   <div class="uq-section__container">
     <div class="uq-section__header">
       <h2 class="uq-section__title">Section title</h2>
-
-      <p class="uq-section__summary">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-        invidunt ut labore.</p>
     </div>
 
     <div class="uq-section__content">
@@ -125,8 +116,6 @@ export const sectionsSpacing = () => {
   <div class="uq-section__container">
     <div class="uq-section__header">
       <h2 class="uq-section__title">Section with extra large spacing</h2>
-
-      <p class="uq-section__summary">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor.</p>
     </div>
 
     <div class="uq-section__content">

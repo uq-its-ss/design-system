@@ -3,111 +3,22 @@
 @use '@uqds/grid/src/scss/global' as grid;
 @use 'global' as *;
 
-//
 // Section
-// Used to contain content and provide vertical spacing and backgrounds.
+// Used to contain content and provide vertical padding and backgrounds.
 //
 // Variants:
-// .uq-section--double-spacing - alias of .uq-section--large-spacing
-// .uq-section--large-top-spacing - adds large spacing above to show more background image.
-// .uq-section--large-bottom-spacing - adds large spacing below to show more background image.
-// .uq-section--large-spacing - adds large spacing top and bottom.
-// .uq-section--extra-large-top-spacing - adds extra large spacing above.
-// .uq-section--extra-large-bottom-spacing - adds extra large spacing below.
-// .uq-section--extra-large-spacing - adds extra large spacing top and bottom.
-// .uq-section--no-spacing - removes vertical padding.
-// .uq-section--no-top-spacing - removes top padding only.
-// .uq-section--no-bottom-spacing - removes bottom padding only.
-// .uq-section--centered - centers header and footer text.
-// .uq-section--shaded - adds light grey background.
-//
-// .uq-section--narrow - displays the content in a container narrower than page width.
+// .uq-section--centered - centers content
+// .uq-section--narrow - displays content in a narrow container
+// .uq-section--shaded - adds light-grey background
+// .uq-section--no-top-padding - removes top padding
+// .uq-section--no-bottom-padding - removes bottom padding
+// .uq-section--large-top-padding - adds large padding above
+// .uq-section--large-bottom-padding - adds large padding below
 
 .uq-section {
-  padding-top: core.$space-xxxl;
-  padding-bottom: core.$space-xxxl;
+  padding-top: core.$space-xxl; // 3.5rem
+  padding-bottom: core.$space-xxl; // 3.5rem
   overflow: hidden;
-
-  // Large spacing above to show more background image.
-  &--large-top-spacing {
-    padding-top: core.$space-uul; //7rem
-  }
-
-  // Large spacing below to show more background image.
-  &--large-bottom-spacing {
-    padding-bottom: core.$space-uul; //7rem
-  }
-
-  // Doubles default vertical spacing. Double is an alias of large.
-  &--large-spacing, &--double-spacing {
-    padding-top: core.$space-uul;
-    padding-bottom: core.$space-uul;
-  }
-
-  // Extra large spacing above to show more background image.
-  &--extra-large-top-spacing {
-    padding-top: core.$space-uuuul; //12rem
-  }
-
-  // Extra large spacing below to show more background image.
-  &--extra-large-bottom-spacing {
-    padding-bottom: core.$space-uuuul; //12rem
-  }
-
-  &--extra-large-spacing {
-    padding-top: core.$space-uuuul;
-    padding-bottom: core.$space-uuuul;
-  }
-
-  // Removes vertical spacing.
-  &--no-spacing {
-    padding-top: core.$space-none;
-    padding-bottom: core.$space-none;
-  }
-
-  // Removes top spacing only.
-  &--no-top-spacing {
-    padding-top: core.$space-none;
-  }
-
-  // Removes bottom spacing only.
-  &--no-bottom-spacing {
-    padding-bottom: core.$space-none;
-  }
-
-  // Shaded background variant
-  &--shaded {
-    background-color: $section-shaded-bg;
-  }
-
-  // Centers section header and footer
-  &--centered {
-    .uq-section__header, 
-    .uq-section__content{
-      text-align: center;
-    }
-  }
-
-  // Narrows the section container width
-  &--narrow {
-    .uq-section__header, 
-    .uq-section__content{
-      @media #{core.$screen-xl-up} {
-        @include grid.grid-col-padding;
-        @include grid.grid-col-offset(2, 12);
-        @include grid.grid-col-width(8, 12);
-        float: left;
-      }
-    }
-    // .uq-section__container {
-    //   max-width: (grid.$max-container-width - (grid.$max-container-width/3));
-    // }
-  }
-
-  // Allows content to overflow the section if needed, such as drop downs.
-  &--allow-overflow {
-    overflow: visible;
-  }
 
   &__container {
     @include grid.layout-containment;
@@ -121,6 +32,55 @@
   }
 
   &__title {
-    font-weight: 400;
+    margin-top: core.$space-none;
+  }
+  
+  // Large top padding
+  &--large-top-padding {
+    padding-top: core.$space-uul; // 5rem
+  }
+
+  // Large bottom padding
+  &--large-bottom-padding {
+    padding-bottom: core.$space-uul; // 5rem
+  }
+
+  // Removes top padding
+  &--no-top-padding {
+    padding-top: core.$space-none;
+  }
+
+  // Removes bottom padding
+  &--no-bottom-padding {
+    padding-bottom: core.$space-none;
+  }
+
+  // Shaded background
+  &--shaded {
+    background-color: $section-shaded-bg;
+  }
+
+  // Centers section header and content
+  &--centered {
+    .uq-section__header, 
+    .uq-section__content{
+      text-align: center;
+    }
+  }
+
+  // Narrows the section header and content
+  &--narrow {
+    .uq-section__header, 
+    .uq-section__content{
+      @media #{core.$screen-xl-up} {
+        @include grid.grid-col-padding;
+        @include grid.grid-col-offset(2.25, 12);
+        @include grid.grid-col-width(7.5, 12);
+        float: left;
+      }
+    }
+    // .uq-section__container {
+    //   max-width: (grid.$max-container-width - (grid.$max-container-width/3));
+    // }
   }
 }

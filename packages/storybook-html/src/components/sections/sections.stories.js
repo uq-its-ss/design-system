@@ -32,7 +32,12 @@ export const sectionsDefault = () => {
     </div>
 
     <div class="uq-section__content">
-      <p>Section content</p>
+      <p>Section content - Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
+        consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
+        diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+        takimata sanctus est Lorem ipsum dolor sit amet.</p>
     </div>
   </div>
   </div>
@@ -46,11 +51,11 @@ export const sectionsCentered = () => {
   <div class="uq-section uq-section--centered">
   <div class="uq-section__container">
     <div class="uq-section__header">
-      <h2 class="uq-section__title">Section header title</h2>
+      <h2 class="uq-section__title">Section title</h2>
     </div>
 
     <div class="uq-section__content">
-      <p>section content. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+      <p>Section content - Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
         dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
         clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
         consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
@@ -69,11 +74,11 @@ export const sectionsNarrow = () => {
   <div class="uq-section uq-section--narrow">
   <div class="uq-section__container">
     <div class="uq-section__header">
-      <h2 class="uq-section__title">Section header title</h2>
+      <h2 class="uq-section__title">Section title</h2>
     </div>
 
     <div class="uq-section__content">
-      <p>section content. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+      <p>Section content - Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
         dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
         clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
         consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
@@ -96,7 +101,7 @@ export const sectionsShaded = () => {
     </div>
 
     <div class="uq-section__content">
-      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+      <p>Section content - Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
         dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
         clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
         consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
@@ -110,16 +115,16 @@ export const sectionsShaded = () => {
 
 sectionsShaded.storyName = 'Shaded';
 
-export const sectionsSpacing = () => {
+export const sectionsNoPadding = () => {
   return `
-<div class="uq-section uq-section--shaded uq-section--centered uq-section--extra-large-spacing">
+<div class="uq-section uq-section--no-top-padding uq-section--no-bottom-padding">
   <div class="uq-section__container">
     <div class="uq-section__header">
-      <h2 class="uq-section__title">Section with extra large spacing</h2>
+      <h2 class="uq-section__title">Section with no padding</h2>
     </div>
 
     <div class="uq-section__content">
-      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+      <p>Section content - Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
         dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
         clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
         consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
@@ -131,4 +136,27 @@ export const sectionsSpacing = () => {
 `;
 };
 
-sectionsSpacing.storyName = 'Sections spacing';
+sectionsNoPadding.storyName = 'No padding';
+
+export const sectionsLargePadding = () => {
+  return `
+<div class="uq-section uq-section--large-top-padding uq-section--large-bottom-padding">
+  <div class="uq-section__container">
+    <div class="uq-section__header">
+      <h2 class="uq-section__title">Section with large padding</h2>
+    </div>
+
+    <div class="uq-section__content">
+      <p>Section content - Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
+        consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
+        diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+        takimata sanctus est Lorem ipsum dolor sit amet.</p>
+    </div>
+  </div>
+</div>
+`;
+};
+
+sectionsLargePadding.storyName = 'Large padding';

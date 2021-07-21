@@ -9,13 +9,13 @@ import StatusBadge from '../../../.storybook/custom/components/StatusBadge';
 
 ## Overview
 
-Sections are a layout style that wrap content in a white or grey background with a range of content-width, content-alignment, and padding options. 
+Sections are a layout style that wrap content on a white or grey background with a range of content-width, content-alignment, and top and bottom padding options. 
 
 <><br /></>
 
 ## Default
 
-The default section includes left-aligned content on a white background that is contained to the page width. 
+The default section displays left-aligned content, medium top and bottom padding on a white background contained to the page width. 
 
 <Canvas withSource="none">
   <Story id="layout-sections--sections-default" />
@@ -24,6 +24,9 @@ The default section includes left-aligned content on a white background that is 
 ```html
 <div class="uq-section">
   <div class="uq-section__container">
+    <div class="uq-section__header">
+      <h2 class="uq-section__title"><!--section title--></h2>
+    </div>
     <div class="uq-section__content">
       <!--section content-->
     </div>
@@ -33,13 +36,11 @@ The default section includes left-aligned content on a white background that is 
 
 ## Variants
 
-<><br /></>
-
-### Layouts
+The variants can be used in isolation or combined. For example if you would like a section to display with centre-aligned content in a narrow container, add both of the variant classnames to the section. 
 
 <><br /></>
 
-#### Centred
+### Centered
 
 Add class `uq-section--centered` to centre-align the content.
 
@@ -48,8 +49,11 @@ Add class `uq-section--centered` to centre-align the content.
 </Canvas>
 
 ```html
-<div class="uq-section uq-section--centred">
+<div class="uq-section uq-section--centered">
   <div class="uq-section__container">
+    <div class="uq-section__header">
+      <h2 class="uq-section__title"><!--section title--></h2>
+    </div>
     <div class="uq-section__content">
       <!--section content-->
     </div>
@@ -57,7 +61,7 @@ Add class `uq-section--centered` to centre-align the content.
 </div>
 ```
 
-#### Narrow
+### Narrow
 
 Add class `uq-section--narrow` to contain the content to a narrow container.
 
@@ -68,6 +72,9 @@ Add class `uq-section--narrow` to contain the content to a narrow container.
 ```html
 <div class="uq-section uq-section--narrow">
   <div class="uq-section__container">
+    <div class="uq-section__header">
+      <h2 class="uq-section__title"><!--section title--></h2>
+    </div>
     <div class="uq-section__content">
       <!--section content-->
     </div>
@@ -75,12 +82,7 @@ Add class `uq-section--narrow` to contain the content to a narrow container.
 </div>
 ```
 
-
-### Background
-
-<><br /></>
-
-#### Shaded
+### Shaded
 
 Add class `uq-section--shaded` to apply a light-grey background to the section.
 
@@ -88,33 +90,71 @@ Add class `uq-section--shaded` to apply a light-grey background to the section.
   <Story id="layout-sections--sections-shaded" />
 </Canvas>
 
-### Spacing
+```html
+<div class="uq-section uq-section--shaded">
+  <div class="uq-section__container">
+    <div class="uq-section__header">
+      <h2 class="uq-section__title"><!--section title--></h2>
+    </div>
+    <div class="uq-section__content">
+      <!--section content-->
+    </div>
+  </div>
+</div>
+```
 
-**Top and bottom spacing** - Sets the amount of padding at the top and bottom
-- **No spacing** `uq-section--no-spacing` - removes vertical padding.
-- **Large spacing** `uq-section--large-spacing` - adds large spacing top and bottom.
-- **Double spacing** `uq-section--double-spacing` - alias of `uq-section--large-spacing`
-- **Extra Large spacing** `uq-section--extra-large-spacing` - adds extra large spacing top and bottom.
+### Padding
 
-**Top spacing** - Sets the amount of padding at the top of the section.
-- **No spacing top** `uq-section--no-top-spacing` - removes top padding only.
-- **large spacing top** `uq-section--large-top-spacing` - adds large spacing above to show more background image.
-- **Extra large spacing top** `uq-section--extra-large-top-spacing` - adds extra large spacing above.
+Default sections have medium padding on top and bottom. The following variants provide alternate padding options.
 
-**Bottom spacing** - Sets the amount of padding at the bottom of the section.
-- **No spacing bottom** `uq-section--no-bottom-spacing` - removes bottom padding only.
-- **large spacing bottom** `uq-section--large-bottom-spacing` - adds large spacing below to show more background image.
-- **Extra large spacing bottom** `uq-section--extra-large-bottom-spacing` - adds extra large spacing below.
+**Top padding:** Set the amount of padding at the top of the section
+- No top padding - `uq-section--no-top-padding`
+- Large top padding - `uq-section--large-top-padding`
 
-<Canvas withSource="none">
-  <Story id="layout-sections--sections-spacing" />
-</Canvas>
+**Bottom padding:** Set the amount of padding at the bottom of the section
+- No bottom padding - `uq-section--no-bottom-padding` 
+- Large bottom padding - `uq-section--large-bottom-padding`
 
 <><br /></>
 
+#### No padding
+<Canvas withSource="none">
+  <Story id="layout-sections--sections-no-padding" />
+</Canvas>
+
+```html
+<div class="uq-section uq-section--no-top-padding uq-section--no-bottom-padding">
+  <div class="uq-section__container">
+    <div class="uq-section__header">
+      <h2 class="uq-section__title"><!--section title--></h2>
+    </div>
+    <div class="uq-section__content">
+      <!--section content-->
+    </div>
+  </div>
+</div>
+```
+#### Large padding
+<Canvas withSource="none">
+  <Story id="layout-sections--sections-large-padding" />
+</Canvas>
+
+```html
+<div class="uq-section uq-section--large-top-padding uq-section--large-bottom-padding">
+  <div class="uq-section__container">
+    <div class="uq-section__header">
+      <h2 class="uq-section__title"><!--section title--></h2>
+    </div>
+    <div class="uq-section__content">
+      <!--section content-->
+    </div>
+  </div>
+</div>
+```
+
 ## How and when to use
 
-Sections are primarily used on landing pages to create strips of content stacked vertically down the page, while containing the content to the same page column width.
+Sections are primarily used on landing pages to create strips of content stacked vertically down the page, while containing the content to the page width.
 
 <><br /></>
 

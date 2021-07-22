@@ -9,20 +9,20 @@ import StatusBadge from '../../../.storybook/custom/components/StatusBadge';
 
 ## Overview
 
-Sections are a layout style that wrap content on a white or grey background with a range of content-width, content-alignment, and top and bottom padding options. 
+Sections are a layout style that wrap content in a white or grey background with a range of width, alignment, and padding options. 
 
 <><br /></>
 
 ## Default
 
-The default section displays left-aligned content, medium top and bottom padding on a white background contained to the page width. 
+The default section displays left-aligned content, medium top and bottom padding, on a white background contained to the page width. 
 
 <Canvas withSource="none">
   <Story id="layout-sections--sections-default" />
 </Canvas>
 
 ```html
-<section class="uq-section">
+<section class="uq-section" aria-label="section title">
   <div class="uq-section__container">
     <div class="uq-section__header">
       <h2 class="uq-section__title"><!--section title--></h2>
@@ -49,7 +49,7 @@ Add class `uq-section--centered` to centre-align the content.
 </Canvas>
 
 ```html
-<section class="uq-section uq-section--centered">
+<section class="uq-section uq-section--centered" aria-label="section title">
   <div class="uq-section__container">
     <div class="uq-section__header">
       <h2 class="uq-section__title"><!--section title--></h2>
@@ -70,7 +70,7 @@ Add class `uq-section--narrow` to contain the content to a narrow container.
 </Canvas>
 
 ```html
-<section class="uq-section uq-section--narrow">
+<section class="uq-section uq-section--narrow" aria-label="section title">
   <div class="uq-section__container">
     <div class="uq-section__header">
       <h2 class="uq-section__title"><!--section title--></h2>
@@ -91,7 +91,7 @@ Add class `uq-section--shaded` to apply a light-grey background to the section.
 </Canvas>
 
 ```html
-<section class="uq-section uq-section--shaded">
+<section class="uq-section uq-section--shaded" aria-label="section title">
   <div class="uq-section__container">
     <div class="uq-section__header">
       <h2 class="uq-section__title"><!--section title--></h2>
@@ -105,13 +105,13 @@ Add class `uq-section--shaded` to apply a light-grey background to the section.
 
 ### Padding
 
-Default sections have medium padding on top and bottom. The following variants provide alternate padding options.
+Default sections have medium top and bottom padding. The following variants provide alternate padding options.
 
-**Top padding:** Set the amount of padding at the top of the section
+**Top padding:** Set the amount of padding at the top of the section:
 - No top padding - `uq-section--no-top-padding`
 - Large top padding - `uq-section--large-top-padding`
 
-**Bottom padding:** Set the amount of padding at the bottom of the section
+**Bottom padding:** Set the amount of padding at the bottom of the section:
 - No bottom padding - `uq-section--no-bottom-padding` 
 - Large bottom padding - `uq-section--large-bottom-padding`
 
@@ -123,7 +123,7 @@ Default sections have medium padding on top and bottom. The following variants p
 </Canvas>
 
 ```html
-<section class="uq-section uq-section--no-top-padding uq-section--no-bottom-padding">
+<section class="uq-section uq-section--no-top-padding uq-section--no-bottom-padding" aria-label="section title">
   <div class="uq-section__container">
     <div class="uq-section__header">
       <h2 class="uq-section__title"><!--section title--></h2>
@@ -140,7 +140,7 @@ Default sections have medium padding on top and bottom. The following variants p
 </Canvas>
 
 ```html
-<section class="uq-section uq-section--large-top-padding uq-section--large-bottom-padding">
+<section class="uq-section uq-section--large-top-padding uq-section--large-bottom-padding" aria-label="section title">
   <div class="uq-section__container">
     <div class="uq-section__header">
       <h2 class="uq-section__title"><!--section title--></h2>
@@ -160,4 +160,17 @@ Sections are primarily used on landing pages to create strips of content stacked
 
 ## Accessibility
 
-content content content
+Include an `aria-label` with a value that describes the section. Assistive technologies use the value to define the content of the section. 
+
+```html
+<section class="uq-section" aria-label="section title">
+  <div class="uq-section__container">
+    <div class="uq-section__header">
+      <h2 class="uq-section__title"><!--section title--></h2>
+    </div>
+    <div class="uq-section__content">
+      <!--section content-->
+    </div>
+  </div>
+</section>
+```

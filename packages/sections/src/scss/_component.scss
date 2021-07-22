@@ -4,16 +4,16 @@
 @use 'global' as *;
 
 // Section
-// Used to contain content and provide vertical padding and backgrounds.
+// Used to contain content and provide padding, background, and width options.
 //
 // Variants:
-// .uq-section--centered - centers content
-// .uq-section--narrow - displays content in a narrow container
+// .uq-section--centered - centres content
+// .uq-section--narrow - constrains content in a narrow container
 // .uq-section--shaded - adds light-grey background
 // .uq-section--no-top-padding - removes top padding
 // .uq-section--no-bottom-padding - removes bottom padding
-// .uq-section--large-top-padding - adds large padding above
-// .uq-section--large-bottom-padding - adds large padding below
+// .uq-section--large-top-padding - adds large top padding
+// .uq-section--large-bottom-padding - adds large bottom padding
 
 .uq-section {
   padding-top: core.$space-xxxl; // 3.5rem

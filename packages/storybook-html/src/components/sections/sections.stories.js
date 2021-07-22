@@ -2,11 +2,12 @@
 import './sections.scss';
 
 // import HTML template strings
-import sectionsHTML from './sections.html';
-
-export const sections = () => {
-  return sectionsHTML;
-};
+import sectionsDefaultHTML from './sections-default.html';
+import sectionsCenteredHTML from './sections-centered.html';
+import sectionsNarrowHTML from './sections-narrow.html';
+import sectionsShadedHTML from './sections-shaded.html';
+import sectionsNoPaddingHTML from './sections-no-padding.html';
+import sectionsLargePaddingHTML from './sections-large-padding.html';
 
 import docs from './sections.docs.mdx';
 
@@ -24,139 +25,37 @@ export default {
 };
 
 export const sectionsDefault = () => {
-  return `
-  <div class="uq-section">
-  <div class="uq-section__container">
-    <div class="uq-section__header">
-      <h2 class="uq-section__title">Section title</h2>
-    </div>
-
-    <div class="uq-section__content">
-      <p>Section content - Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
-        consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
-        diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-        takimata sanctus est Lorem ipsum dolor sit amet.</p>
-    </div>
-  </div>
-  </div>
-`;
+  return sectionsDefaultHTML;
 };
 
 sectionsDefault.storyName = 'Default';
 
 export const sectionsCentered = () => {
-  return `
-  <div class="uq-section uq-section--centered">
-  <div class="uq-section__container">
-    <div class="uq-section__header">
-      <h2 class="uq-section__title">Section title</h2>
-    </div>
-
-    <div class="uq-section__content">
-      <p>Section content - Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
-        consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
-        diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-        takimata sanctus est Lorem ipsum dolor sit amet.</p>
-    </div>
-  </div>
-  </div>
-  `;
+  return sectionsCenteredHTML; 
 };
 
 sectionsCentered.storyName = 'Centered';
 
 export const sectionsNarrow = () => {
-  return `
-  <div class="uq-section uq-section--narrow">
-  <div class="uq-section__container">
-    <div class="uq-section__header">
-      <h2 class="uq-section__title">Section title</h2>
-    </div>
-
-    <div class="uq-section__content">
-      <p>Section content - Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
-        consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
-        diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-        takimata sanctus est Lorem ipsum dolor sit amet.</p>
-    </div>
-  </div>
-  </div>
-  `;
+  return sectionsNarrowHTML;
 };
 
 sectionsNarrow.storyName = 'Narrow';
 
 export const sectionsShaded = () => {
-  return `
-<div class="uq-section uq-section--shaded">
-  <div class="uq-section__container">
-    <div class="uq-section__header">
-      <h2 class="uq-section__title">Section title</h2>
-    </div>
-
-    <div class="uq-section__content">
-      <p>Section content - Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
-        consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
-        diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-        takimata sanctus est Lorem ipsum dolor sit amet.</p>
-    </div>
-  </div>
-</div>
-`;
+  return sectionsShadedHTML;
 };
 
 sectionsShaded.storyName = 'Shaded';
 
 export const sectionsNoPadding = () => {
-  return `
-<div class="uq-section uq-section--no-top-padding uq-section--no-bottom-padding">
-  <div class="uq-section__container">
-    <div class="uq-section__header">
-      <h2 class="uq-section__title">Section with no padding</h2>
-    </div>
-
-    <div class="uq-section__content">
-      <p>Section content - Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
-        consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
-        diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-        takimata sanctus est Lorem ipsum dolor sit amet.</p>
-    </div>
-  </div>
-</div>
-`;
+  return sectionsNoPaddingHTML;
 };
 
 sectionsNoPadding.storyName = 'No padding';
 
 export const sectionsLargePadding = () => {
-  return `
-<div class="uq-section uq-section--large-top-padding uq-section--large-bottom-padding">
-  <div class="uq-section__container">
-    <div class="uq-section__header">
-      <h2 class="uq-section__title">Section with large padding</h2>
-    </div>
-
-    <div class="uq-section__content">
-      <p>Section content - Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
-        consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
-        diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-        takimata sanctus est Lorem ipsum dolor sit amet.</p>
-    </div>
-  </div>
-</div>
-`;
+  return sectionsLargePaddingHTML;
 };
 
 sectionsLargePadding.storyName = 'Large padding';

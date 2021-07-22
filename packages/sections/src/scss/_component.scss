@@ -16,8 +16,8 @@
 // .uq-section--large-bottom-padding - adds large padding below
 
 .uq-section {
-  padding-top: core.$space-xxl; // 3.5rem
-  padding-bottom: core.$space-xxl; // 3.5rem
+  padding-top: core.$space-xxxl; // 3.5rem
+  padding-bottom: core.$space-xxxl; // 3.5rem
   overflow: hidden;
 
   &__container {
@@ -28,7 +28,6 @@
   &__content {
     @include grid.grid-col-padding;
     @include grid.grid-col-width(6);
-    float: left;
   }
 
   &__title {
@@ -37,12 +36,12 @@
   
   // Large top padding
   &--large-top-padding {
-    padding-top: core.$space-uul; // 5rem
+    padding-top: core.$space-uuul; // 5.5rem
   }
 
   // Large bottom padding
   &--large-bottom-padding {
-    padding-bottom: core.$space-uul; // 5rem
+    padding-bottom: core.$space-uuul; // 5.5rem
   }
 
   // Removes top padding

@@ -10,10 +10,10 @@
 // .uq-section--centered - centres content
 // .uq-section--narrow - constrains content in a narrow container
 // .uq-section--shaded - adds light-grey background
-// .uq-section--no-top-padding - removes top padding
-// .uq-section--no-bottom-padding - removes bottom padding
-// .uq-section--large-top-padding - adds large top padding
-// .uq-section--large-bottom-padding - adds large bottom padding
+// .uq-section--padding-top-none - removes top padding
+// .uq-section--padding-bottom-none - removes bottom padding
+// .uq-section--padding-top-large - adds large top padding
+// .uq-section--padding-bottom-large - adds large bottom padding
 
 .uq-section {
   padding-top: core.$space-xxxl; // 3.5rem
@@ -34,23 +34,23 @@
     margin-top: core.$space-none;
   }
   
-  // Large top padding
-  &--large-top-padding {
+  // Padding top large
+  &--padding-top-large {
     padding-top: core.$space-uuul; // 5.5rem
   }
 
-  // Large bottom padding
-  &--large-bottom-padding {
+  // Paddiing bottom large
+  &--padding-bottom-large {
     padding-bottom: core.$space-uuul; // 5.5rem
   }
 
-  // Removes top padding
-  &--no-top-padding {
+  // Padding top none
+  &--padding-top-none {
     padding-top: core.$space-none;
   }
 
-  // Removes bottom padding
-  &--no-bottom-padding {
+  // Padding bottom none
+  &--padding-bottom-none {
     padding-bottom: core.$space-none;
   }
 

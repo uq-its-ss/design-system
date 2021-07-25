@@ -22,5 +22,7 @@ npm i @uqds/breadcrumb
 
 ```shell
 @uqds/breadcrumb
-└─ @uqds/core
+├─ @uqds/core
+└─ @uqds/icon
+   └─ @uqds/core
 ```

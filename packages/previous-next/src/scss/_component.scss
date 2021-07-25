@@ -1,5 +1,6 @@
 /* Pagination */
 @use '@uqds/core/src/scss/global' as core;
+@use "@uqds/icon/src/scss/global" as icon-constants;
 @use 'global' as *;
 
 .uq-previous-next {
@@ -37,10 +38,10 @@
 			text-decoration: none;
 
 			&::before {
-				transform: translate(-10px, 0) rotateY(180deg);
+				transform: translate(-10px, 0);
 			}
 			&::after {
-				transform: translate(10px, 0) rotateY(0deg);
+				transform: translate(10px, 0);
 			}
 		}
 	}
@@ -51,14 +52,13 @@
 		float: left;
 
 		&::before {
-			content: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 64.82 132.25'%3E%3Cpath d='M32.08,4.38,94.62,66.91a4.37,4.37,0,0,1,0,6.18h0L32.08,135.63' transform='translate(-31.58 -3.88)' fill='none' stroke='%23D7D1CC' stroke-linecap='round' stroke-width='3' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
-			// SVG used is Streamline - Regular - arrow-right-1.svg
+			content: url(icon-constants.get-icon('standard--arrow-left-1', core.$uq-neutral));
 			width: 3rem;
 			display: inline-block;
 			position: absolute;
 			left: 0;
 			top: 0;
-			transform: translate(0, 0) rotateY(180deg);
+			transform: translate(0, 0);
 			transition: all ease .2s;
 		} 
 	}
@@ -70,14 +70,13 @@
 		float: right;
 
 		&::after {
-			content: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 64.82 132.25'%3E%3Cpath d='M32.08,4.38,94.62,66.91a4.37,4.37,0,0,1,0,6.18h0L32.08,135.63' transform='translate(-31.58 -3.88)' height='100%' fill='none' stroke='%23D7D1CC' stroke-linecap='round' stroke-width='3' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
-			// SVG used is Streamline - Regular - arrow-right-1.svg
+			content: url(icon-constants.get-icon('standard--arrow-right-1', core.$uq-neutral));
 			width: 3rem;
 			display: inline-block;
 			position: absolute;
 			right: 0;
 			top: 0;
-			transform: translate(0, 0) rotateY(0deg);
+			transform: translate(0, 0);
 			transition: all ease .2s;
 		}
 	}

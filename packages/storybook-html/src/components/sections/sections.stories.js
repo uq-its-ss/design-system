@@ -195,3 +195,29 @@ export const sectionsDarkTint = () => {
 };
 
 sectionsDarkTint.storyName = 'Sections dark tint';
+
+export const sectionsSpacing = () => {
+  return `
+<div class="uq-section uq-section--shaded uq-section--centered uq-section--extra-large-spacing">
+  <div class="uq-section__container">
+    <div class="uq-section__header">
+      <h2 class="uq-section__title">Section with extra large spacing</h2>
+
+      <p class="uq-section__summary">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor.</p>
+    </div>
+
+    <div class="uq-section__content">
+      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
+        consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
+        diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+        takimata sanctus est Lorem ipsum dolor sit amet.</p>
+    </div>
+    <div class="uq-section__footer">section footer. Lorem ipsum dolor sit amet, consetetur sadipscing elitr sed.</div>
+  </div>
+</div>
+`;
+};
+
+sectionsSpacing.storyName = 'Sections spacing';

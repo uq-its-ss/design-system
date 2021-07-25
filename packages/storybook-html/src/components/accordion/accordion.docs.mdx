@@ -9,22 +9,22 @@ import StatusBadge from '../../../.storybook/custom/components/StatusBadge';
 
 ## Overview
 
-An accordion is a vertically stacked group of titles that on interaction expand or collapse associated content, helping users to see more of the content if needed.
+An accordion is a vertically stacked group of titles that can expand to show, or collapse to hide associated content.
 
-Accordions can be implemented using `<div>` or `<ul> <li>` lists. The default example uses divs. 
+Accordions can be implemented using `<div>` or `<ul>` lists. 
 
-## Default example
-
-Use the default accordion example if there is significant amount of content.
+<><br /></>
 
 ### Using divs
 
+Use divs if there is a significant amount of content to be displayed. 
+
 <Canvas withSource="none">
-  <Story id="components-accordion--using-divs" />
+  <Story height={300} id="components-accordion--using-divs" />
 </Canvas>
 
 ```html
-<div  class="uq-accordion" aria-label="Accordion button group">
+<div class="uq-accordion" aria-label="Accordion button group">
     <div  class="uq-accordion__item">
       <button  class="uq-accordion__toggle" aria-controls="content-1" aria-expanded="false" id="accordion-title-1">Title 1</button>
       <div  class="uq-accordion__content" aria-hidden="true" id="content-1" aria-labelledby="accordion-title-1">
@@ -36,18 +36,16 @@ Use the default accordion example if there is significant amount of content.
 </div>
 ```
 
-## Variant examples
-
 ### Using lists
 
-Use accordions using lists if content is less and when the semantics of a list serves better with assistive technologies like screen readers.
+Use lists if there is less content and when the semantics of a list serves better with assistive technologies like screen readers.
 
 <Canvas withSource="none">
-  <Story id="components-accordion--using-lists" />
+  <Story height={300} id="components-accordion--using-lists" />
 </Canvas>
 
 ```html
-<ul  class="uq-accordion" aria-label="Accordion button group">
+<ul class="uq-accordion" aria-label="Accordion button group">
     <li  class="uq-accordion__item">
       <button  class="uq-accordion__toggle" aria-controls="content-11" aria-expanded="false" id="accordion-title-11">Title 1</button>
       <div  class="uq-accordion__content" role="region" aria-hidden="true" id="content-11" aria-labelledby="accordion-title-11">
@@ -58,20 +56,27 @@ Use accordions using lists if content is less and when the semantics of a list s
     ...
 </ul>
 ```
+<><br /></>
 
-### Shaded
+## Behaviour
 
-Use shaded accordion when the title area needs to be shaded light grey when collapsed.
+The accordion expand and collpase behaviour can either be automatic or manual. 
+
+### Default behaviour (automatic)
+By default, users can expand and collapse one accordion at a time. When a user expands one accordion then clicks on another, the previously expanded accordion collapses automatically. This is useful if users only need to view the contents of one accordion at a time. Examples of this default behaviour are shown in the accordions above using `<div>` or `<ul>`. 
+
+### Variant behavour (manual)
+Alternate behaviour is to allow users to expand and collapse any number of accordions at a time. When a user expands one accordion then clicks on another, the previously expanded accordion remains expanded and the user will need to manually collapse it. This is useful if users need to view the contents of multiple accordions at a time. To enable this behaviour, add the classname `uq-accordion--is-manual` to the `<div>` or `<ul>` as shown below.
 
 <Canvas withSource="none">
-  <Story id="components-accordion--shaded" />
+  <Story height={300} id="components-accordion--is-manual" />
 </Canvas>
 
 ```html
-<div  class="uq-accordion uq-accordion--shaded" aria-label="Accordion button group">
+<div class="uq-accordion uq-accordion--is-manual" aria-label="Accordion button group">
     <div  class="uq-accordion__item">
-      <button  class="uq-accordion__toggle" aria-controls="content-111" aria-expanded="false" id="accordion-title-111">Title 1</button>
-      <div  class="uq-accordion__content" role="region" aria-hidden="true" id="content-111" aria-labelledby="accordion-title-111">
+      <button  class="uq-accordion__toggle" aria-controls="content-1" aria-expanded="false" id="accordion-title-1">Title 1</button>
+      <div  class="uq-accordion__content" aria-hidden="true" id="content-1" aria-labelledby="accordion-title-1">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor eros dui, vitae iaculis leo ornare eget. Etiam tristique lobortis ligula non mattis. Ut dapibus libero neque, vel tincidunt nunc tempus eget.</p>
       </div>
     </div>
@@ -79,31 +84,13 @@ Use shaded accordion when the title area needs to be shaded light grey when coll
     ...
 </div>
 ```
-
-### Small title
-
-Use small title accordion example for smaller title font sizes.
-
-<Canvas withSource="none">
-  <Story id="components-accordion--small-title" />
-</Canvas>
-
-```html
-<div  class="uq-accordion uq-accordion--secondary" aria-label="Accordion button group">
-    <div  class="uq-accordion__item">
-      <button  class="uq-accordion__toggle" aria-controls="content-1111" aria-expanded="false" id="accordion-title-1111">Title 1</button>
-      <div  class="uq-accordion__content" role="region" aria-hidden="true" id="content-1111" aria-labelledby="accordion-title-1111">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor eros dui, vitae iaculis leo ornare eget. Etiam tristique lobortis ligula non mattis. Ut dapibus libero neque, vel tincidunt nunc tempus eget.</p>
-      </div>
-    </div>
-    ...
-    ...
-</div>
-```
+<><br /></>
 
 ## How and when to use
 
-Accordions are more suitable when people need only a few key pieces of content on a single page. By hiding most of the content, users can spend their time more efficiently focused on the few topics that matter.
+Accordions are suitable when users only need to view a few key pieces of content on a page. By hiding most of the content, users can focus on the few topics that are relevant to them.
+
+<><br /></>
 
 ## Accessibility
 

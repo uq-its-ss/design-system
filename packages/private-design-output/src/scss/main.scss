@@ -13,10 +13,17 @@
 @use 'form/src/scss/component' as form;
 @use 'grid-menu/src/scss/component' as grid-menu;
 @use 'header/src/scss/component' as header;
+@use 'hero/src/scss/component' as hero;
+@use 'icon/src/scss/component' as icons;
 @use 'lists/src/scss/component' as lists;
+@use 'loading-spinner/src/scss/component' as loading-spinner;
+@use 'pagination/src/scss/component' as pagination;
 @use 'pane/src/scss/component' as pane;
+@use 'previous-next/src/scss/component' as previous-next;
+@use 'progression/src/scss/component' as progression;
 @use 'sections/src/scss/component' as sections;
 @use 'side-nav/src/scss/component' as side-nav;
 @use 'site-header/src/scss/component' as site-header;
 @use 'table/src/scss/component' as table;
 @use 'tabs/src/scss/component' as tabs;
+

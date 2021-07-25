@@ -83,6 +83,7 @@ class accordion {
   slideContentUp(el) {
     const content = accordion.getNextSibling(el, `.${this.className}__content`);
     el.classList.remove(`${this.className}__toggle--active`);
+    el.parentNode.classList.remove(`${this.className}__item--is-open`);
     el.setAttribute('aria-expanded', 'false');
     content.style.height = '0px';
     content.addEventListener('transitionend', () => {
@@ -99,6 +100,7 @@ class accordion {
   slideContentDown(el) {
     const content = accordion.getNextSibling(el, `.${this.className}__content`);
     el.classList.add(`${this.className}__toggle--active`);
+    el.parentNode.classList.add(`${this.className}__item--is-open`);
     el.setAttribute('aria-expanded', 'true');
     content.classList.add(`${this.className}__content--active`);
     content.style.height = 'auto';
@@ -137,8 +139,12 @@ class accordion {
       if (e.target.classList.contains(`${this.className}__toggle--active`)) {
         this.slideContentUp(e.target);
       } else {
-        this.slideContentDown(e.target);
-        this.slideUpOthers(e.target, togglers);
+        if (e.target.closest(`.${this.className}`).classList.contains(`${this.className}--is-manual`)) {
+          this.slideContentDown(e.target);
+        } else {
+          this.slideContentDown(e.target);
+          this.slideUpOthers(e.target, togglers);
+        }
       }
     }
   }
@@ -148,36 +154,45 @@ class accordion {
    * @method
    */
   init() {
-    document.addEventListener("DOMContentLoaded" , () => {
-      if (window.location.hash) {
-        this.hash = window.location.hash;
+    if (window.location.hash) {
+      this.hash = window.location.hash;
+    }
+
+    // Scroll to hash (param string) selected accordion
+    if (this.hash && this.hash !== '') {
+      const hashSelectedContent = document.querySelector(`${this.hash}.${this.className}__content`);
+
+      if (hashSelectedContent) {
+        // Only apply classes on load when linking directly to an accordion item.
+        
+        const hashSelected = accordion.getPrevSibling(hashSelectedContent, `.${this.className}__toggle`);
+        this.slideContentDown(hashSelected);
+
+        // Scroll to top of selected item.
+        window.scrollTo(0, hashSelected.getBoundingClientRect().top);
       }
+    }
 
-      // Scroll to hash (param string) selected accordion
-      if (this.hash && this.hash !== '') {
-        const hashSelectedContent = document.querySelector(`${this.hash}.${this.className}__content`);
+    const accordions = document.querySelectorAll(`.${this.className}`);
 
-        if (hashSelectedContent) {
-          // Only apply classes on load when linking directly to an accordion item.
-          
-          const hashSelected = accordion.getPrevSibling(hashSelectedContent, `.${this.className}__toggle`);
-          this.slideContentDown(hashSelected);
+    accordions.forEach((el) => {
+      const togglers = el.querySelectorAll(`.${this.className}__toggle`);
 
-          // Scroll to top of selected item.
-          window.scrollTo(0, hashSelected.getBoundingClientRect().top);
-        }
-      }
-
-      const accordions = document.querySelectorAll(`.${this.className}`);
-
-      accordions.forEach((el) => {
-        const togglers = el.querySelectorAll(`.${this.className}__toggle`);
-
-        togglers.forEach((el) => {
-          el.addEventListener('click', this.handleToggle(togglers));
-        });
+      togglers.forEach((el) => {
+        el.addEventListener('click', this.handleToggle(togglers));
       });
-    })
+    });
+
+    // wrap contents of uq-accordion__content in a wrapper to apply padding and prevent animation jump
+    const accordionContents = document.querySelectorAll(`.${this.className}__content`);
+    const accordionName = this.className;
+
+    accordionContents.forEach(function(accordionContent) {
+      let innerContent = accordionContent.innerHTML;
+      accordionContent.innerHTML = '';
+      let contentWrapper = `<div class ="` + accordionName + `__content-wrapper">${innerContent}</div>`;
+      accordionContent.innerHTML = contentWrapper;
+    });
   }
 };
 

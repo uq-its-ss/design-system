@@ -956,6 +956,10 @@ export default [
     "category": "standard"
   },
   {
+    "name": "error-circle",
+    "category": "standard"
+  },
+  {
     "name": "expand-3",
     "category": "standard"
   },
@@ -1013,6 +1017,10 @@ export default [
   },
   {
     "name": "subtract",
+    "category": "standard"
+  },
+  {
+    "name": "success-circle",
     "category": "standard"
   },
   {

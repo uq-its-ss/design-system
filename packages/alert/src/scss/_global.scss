@@ -1,15 +1,23 @@
 @use '@uqds/core/src/scss/global' as core;
 
-$alert-default-bg-color: core.$uq-neutral-light60 !default; //EFEFEF !default;
+$alert-default-bg-color: core.$uq-neutral-light60 !default; //#EFEFEF !default;
 $alert-info-bg-color: core.$info-light !default; //#D4F0FF !default;
-$alert-success-bg-color: core.$success-light !default; //#D5EECA!default;
-$alert-warning-bg-color: core.$warning-light !default; //#FFE0AD!default;
-$alert-danger-bg-color: core.$alert-light !default; //#F4ACAC!default;
+$alert-success-bg-color: core.$success-light !default; //#D5EECA !default;
+$alert-warning-bg-color: core.$warning-light !default; //#FFE0AD !default;
+$alert-error-bg-color: core.$alert-light !default; //#F4ACAC !default;
 
-$alert-font-size-sm: .875rem !default;
-$alert-font-size-md: 1rem !default;
-//$alert-font-size-lg: 1rem !default; core cleanup
+$alert-global-info-bg-color: core.$info !default;
+$alert-global-success-bg-color: core.$success !default;
+$alert-global-warning-bg-color: core.$warning !default;
+$alert-global-error-bg-color: core.$alert !default;
 
-$alert-font-weight: 300 !default;
-$alert-text-color: core.$uq-neutral-dark80 !default; //222 !default;
-$alert-close-color: core.$uq-neutral-dark40 !default; //747474 !default;
+$alert-font-size-s: core.$font-size-s !default;
+$alert-font-size: core.$font-size !default;
+$alert-font-size-m: core.$font-size-m !default;
+$alert-font-size-l: core.$font-size-l !default;
+
+$alert-font-weight-thin: core.$font-weight-thin !default;
+$alert-font-weight-medium: core.$font-weight-medium !default;
+
+$alert-text-color: core.$uq-neutral-dark80 !default; //#222 !default;
+$alert-close-color: core.$uq-neutral-dark40 !default; //#747474 !default;

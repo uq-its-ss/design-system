@@ -1,165 +1,203 @@
 @use '@uqds/core/src/scss/global' as core;
 @use '@uqds/grid/src/scss/global' as grid;
+@use '@uqds/icon/src/scss/global' as icon;
 @use 'global' as *;
 
 .uq-alert {
-  background-color: $alert-default-bg-color;
+  background-color: $alert-info-bg-color;
   color: $alert-text-color;
-  font-size: 0;
   position: relative;
-
+  
   &__container {
-    @include grid.layout-containment;
+    margin: 0 auto;
 
-    > .uq-alert__message,
-    > .uq-alert__action {
-      @include grid.grid-col-padding;
+    .uq-alert__message {
+      &:not(:last-child) {
+        padding-right: core.$space-xxl;
+      }
     }
+  }
+
+  &__title {
+    font-size: $alert-font-size-m;
+    font-weight: $alert-font-weight-medium;
+    line-height: core.$line-height-h;
+    color: $alert-text-color;
+    margin: core.$space-none core.$space-none core.$space-s;
   }
 
   &__message {
-    font-size: $alert-font-size-sm;
-    font-weight: $alert-font-weight;
+    position: relative;
+    font-size: $alert-font-size-s;
+    font-weight: $alert-font-weight-thin;
     line-height: core.$line-height-h;
     padding-top: core.$space;
     padding-bottom: core.$space;
-    padding-left: core.$space-m;
-    padding-right: core.$space-uul !important;
+    padding-left: core.$space;
+    padding-right: core.$space;
+    margin-left: core.$space-l;
 
-    a {
-      color: $alert-text-color;
-      text-decoration: underline;
-      
-      &:hover, &:focus {
-        opacity: 0.5;
+    &::before {
+      content: '';
+      background-image: url(icon.get-icon('standard--information-circle', core.$uq-neutral-dark80));
+      background-repeat: no-repeat;
+      background-size: 1.5rem;
+      width: core.$space-m;
+      height: core.$space-m;
+      position: absolute;
+      top: .85rem;
+      left: -(core.$space);
+    }
+
+    p {
+      margin-bottom: core.$space;
+
+      &:last-child {
+        margin-bottom: core.$space-none;
       }
     }
-  }
-
-  &__action {
-    padding-top: core.$space-s;
-    padding-bottom: core.$space;
-    padding-left: core.$space-m;
-    padding-right: core.$space-m;
   }
 
   &__close {
-    background: inherit;
-    color: $alert-close-color;
-    font-size: 2rem;
-    font-weight: 300;
-    line-height: 0.9;
-    opacity: 1;
-    padding: core.$space-none core.$space-s core.$space-xs;
     position: absolute;
-    text-decoration: none !important;
-    top: .55rem;
-    right: core.$space;
+    top: core.$space-none;
+    right: core.$space-none;
+    background-image: url(icon.get-icon('standard--close', core.$uq-neutral-dark80));
+    background-repeat: no-repeat;
+    background-size: 1rem;
+    background-position: center;
+    width: core.$space-xxl;
+    height: core.$space-xxl;
+    text-indent: 999px;
+    overflow: hidden;
 
-    &:hover {
-      text-decoration: none;
-    }
-
+    &:hover,
     &:focus {
-      text-decoration: underline !important;
-    }
-
-    &:hover, &:focus {
-      opacity: 0.5;
+      background-image: url(icon.get-icon('common--close', core.$uq-neutral-dark80));
     }
   }
 
-  &--has-action {
-    .uq-alert__message {
-      padding-bottom: core.$space-none;
-    }
-  }
 
-  &--no-close {
-    .uq-alert__message {
-      padding-right: core.$space;
-    }
-  }
+
 
   &--info {
     background-color: $alert-info-bg-color;
-  }
 
+    .uq-alert__message {
+      &::before {
+        background-image: url(icon.get-icon('standard--information-circle', core.$uq-neutral-dark80));
+      }
+    }
+  }
   &--success {
     background-color: $alert-success-bg-color;
-  }
 
+    .uq-alert__message {
+      &::before {
+        background-image: url(icon.get-icon('standard--success-circle', core.$uq-neutral-dark80));
+      }
+    }
+  }
   &--warning {
     background-color: $alert-warning-bg-color;
-  }
 
-  &--danger {
-    background-color: $alert-danger-bg-color;
-  }
-}
-
-@media #{core.$screen-md-up} {
-  .uq-alert {
-    &__message,
-    &__action {
-      display: inline-block;
-      vertical-align: middle;
-    }
-
-    &__message {
-      font-size: $alert-font-size-md;
-      padding-right: core.$space-uuuul !important;
-    }
-
-    &__action {
-      @include grid.grid-col-width(2);
-      padding-bottom: core.$space-s;
-      padding-right: core.$space-uul;
-    }
-
-    &__close {
-      top: .95rem;
-    }
-
-    &--has-action {
-      .uq-alert__message {
-        @include grid.grid-col-width(4);
-        padding-bottom: core.$space;
-        padding-right: core.$space;
-      }
-    }
-    &--slim {
-      .uq-alert__message {
-        padding-bottom: core.$space;
-        padding-top: core.$space;
-      }
-      .uq-alert__close {
-        top: .7rem;
+    .uq-alert__message {
+      &::before {
+        background-image: url(icon.get-icon('standard--alert-triangle', core.$uq-neutral-dark80));
       }
     }
   }
-}
+  &--error {
+    background-color: $alert-error-bg-color;
 
-@media #{core.$screen-lg-up} {
-  .uq-alert {
-    &__message {
-      padding-top: core.$space-m;
-      padding-bottom: core.$space-m;
+    .uq-alert__message {
+      &::before {
+        background-image: url(icon.get-icon('standard--error-circle', core.$uq-neutral-dark80));
+      }
+    }
+  }
+
+
+  // Global alert
+  &--global {
+    .uq-alert__container {
+      @include grid.layout-containment;
+    }
+  }
+
+  
+  // Dark variant
+  &--dark { 
+    background-color: $alert-global-info-bg-color;
+    color: core.$uq-white;
+
+    a {
+      color: inherit;
+      text-decoration: underline;
+
+      &:link,
+      &:visited,
+      &:active {
+        text-decoration: underline;
+      }
+      &:hover,
+      &:focus {
+        text-decoration: none;
+      }
     }
 
-    &__action {
-      @include grid.grid-col-offset(1, 12);
-      @include grid.grid-col-width(4, 12);
+    .uq-alert__title {
+      color: core.$uq-white;
     }
 
-    &__close {
-      top: 1.15rem;
+    .uq-alert__close {
+      background-image: url(icon.get-icon('standard--close', core.$uq-white));
+  
+      &:hover,
+      &:focus {
+        background-image: url(icon.get-icon('common--close', core.$uq-white));
+      }
     }
 
-    &--has-action {
+    &.uq-alert--info {
+  
       .uq-alert__message {
-        @include grid.grid-col-width(7, 12);
-        padding-bottom: core.$space-m;
+        &::before {
+          background-image: url(icon.get-icon('standard--information-circle', core.$uq-white));
+        }
+      }
+    }
+
+    &.uq-alert--success {
+      background-color: $alert-global-success-bg-color;
+  
+      .uq-alert__message {
+        &::before {
+          background-image: url(icon.get-icon('standard--success-circle', core.$uq-white));
+        }
+      }
+    }
+
+    &.uq-alert--warning {
+      background-color: $alert-global-warning-bg-color;
+      color: $alert-text-color;
+
+      .uq-alert__title {
+        color: $alert-text-color;
+      }
+
+      a {
+        color: $alert-text-color;
+      }
+    }
+
+    &.uq-alert--error {
+      background-color: $alert-global-error-bg-color;
+  
+      .uq-alert__message {
+        &::before {
+          background-image: url(icon.get-icon('standard--error-circle', core.$uq-white));
+        }
       }
     }
   }

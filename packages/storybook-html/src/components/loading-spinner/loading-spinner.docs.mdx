@@ -1,0 +1,28 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import StatusBadge from '../../../.storybook/custom/components/StatusBadge';
+
+# Loading spinner
+
+## Overview
+
+The loading spinner component is a progress indicator used to provide feedback that data is being processed.
+
+## Example
+
+<Canvas withSource="none">
+  <Story id="components-loading-spinner--loading-spinner" />
+</Canvas>
+
+```html
+<div class="uq-loading-spinner" role="alert" aria-live="assertive">
+  <span>Loading...</span>
+</div>
+```
+
+## How and when to use
+
+The loading spinner component can be used to represent the loading of data in a page or within a component.
+
+## Accessibility
+
+To ensure screen readers notifiy users that page content is loading, include `role="alert"` and `aria-live="assertive"`.

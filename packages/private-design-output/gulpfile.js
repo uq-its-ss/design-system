@@ -39,6 +39,14 @@ function exportImages() {
   .pipe(dest('./dist/images'));
 }
 
+// Export favicon
+function exportFavicon() {
+  return src([
+    './src/favicon.ico'
+  ])
+  .pipe(dest('./dist/'));
+}
+
 function exportExample() {
   return src('./src/example.html')
   .pipe(dest('./dist'));
@@ -73,6 +81,7 @@ function bundleJS() {
 exports.compileSCSS = compileSCSS;
 //exports.exportFontFiles = exportFontFiles;
 exports.exportImages = exportImages;
+exports.exportFavicon = exportFavicon;
 exports.exportExample = exportExample;
 exports.bundleJS = bundleJS;
-exports.default = parallel(compileSCSS, exportImages, exportExample, bundleJS);
+exports.default = parallel(compileSCSS, exportImages, exportFavicon, exportExample, bundleJS);

@@ -2,23 +2,3 @@
 @use '@uqds/core/src/scss/global' as core;
 
 $section-shaded-bg: core.$uq-neutral-light80;
-$section-summary-color: core.$uq-neutral-dark40;
-$section-footer-color: core.$uq-neutral-dark40;
-
-$messages-warning-bg: #fff9ee;
-$messages-warning-border-color: #ffd179;
-
-// Background images used for full-width cover.
-@mixin background-cover($image-path: false, $background-top: center, $background-left: center) {
-  // https://css-tricks.com/perfect-full-page-background-image
-  @if ($image-path) {
-    background-image: url($image-path);
-  }
-
-  background-position: $background-top $background-left;
-  background-repeat: no-repeat;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}

@@ -2,11 +2,12 @@
 import './sections.scss';
 
 // import HTML template strings
-import sectionsHTML from './sections.html';
-
-export const sections = () => {
-  return sectionsHTML;
-};
+import sectionsDefaultHTML from './sections-default.html';
+import sectionsCenteredHTML from './sections-centered.html';
+import sectionsNarrowHTML from './sections-narrow.html';
+import sectionsShadedHTML from './sections-shaded.html';
+import sectionsNoPaddingHTML from './sections-no-padding.html';
+import sectionsLargePaddingHTML from './sections-large-padding.html';
 
 import docs from './sections.docs.mdx';
 
@@ -23,201 +24,38 @@ export default {
   }
 };
 
-export const sectionsBasic = () => {
-  return `
-  <div class="uq-section">
-  <div class="uq-section__container">
-    <div class="uq-section__header">
-      <h2 class="uq-section__title">Section header title</h2>
-
-      <p class="uq-section__summary">Section header summary.</p>
-    </div>
-
-    <div class="uq-section__content">
-      <p>section content.</p>
-    </div>
-    <div class="uq-section__footer">section footer.</div>
-  </div>
-  </div>
-`;
+export const sectionsDefault = () => {
+  return sectionsDefaultHTML;
 };
 
-sectionsBasic.storyName = 'Sections basic';
+sectionsDefault.storyName = 'Default';
 
 export const sectionsCentered = () => {
-  return `
-  <div class="uq-section uq-section--centered">
-  <div class="uq-section__container">
-    <div class="uq-section__header">
-      <h2 class="uq-section__title">Section header title</h2>
-
-      <p class="uq-section__summary">Section header summary. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-        invidunt ut labore.</p>
-    </div>
-
-    <div class="uq-section__content">
-      <p>section content. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
-        consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
-        diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-        takimata sanctus est Lorem ipsum dolor sit amet.</p>
-    </div>
-    <div class="uq-section__footer">section footer. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-      invidunt ut labore.</div>
-  </div>
-  </div>
-  `;
+  return sectionsCenteredHTML; 
 };
 
-sectionsCentered.storyName = 'Sections centered';
+sectionsCentered.storyName = 'Centered';
 
-export const sectionsHorizontal = () => {
-  return `
-<div class="uq-section uq-section--horizontal">
-  <div class="uq-section__container">
-    <div class="uq-section__header">
-      <h2 class="uq-section__title">Section title</h2>
-
-      <p class="uq-section__summary">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-        invidunt ut labore.</p>
-    </div>
-
-    <div class="uq-section__content">
-      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
-        consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
-        diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-        takimata sanctus est Lorem ipsum dolor sit amet.</p>
-    </div>
-    <div class="uq-section__footer">section footer. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-    invidunt ut labore.</div>
-  </div>
-</div>
-`;
+export const sectionsNarrow = () => {
+  return sectionsNarrowHTML;
 };
 
-sectionsHorizontal.storyName = 'Sections horizontal';
+sectionsNarrow.storyName = 'Narrow';
 
 export const sectionsShaded = () => {
-  return `
-<div class="uq-section uq-section--shaded uq-section--centered">
-  <div class="uq-section__container">
-    <div class="uq-section__header">
-      <h2 class="uq-section__title">Section title</h2>
-
-      <p class="uq-section__summary">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-        invidunt ut labore.</p>
-    </div>
-
-    <div class="uq-section__content">
-      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
-        consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
-        diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-        takimata sanctus est Lorem ipsum dolor sit amet.</p>
-    </div>
-    <div class="uq-section__footer">section footer. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-    invidunt ut labore.</div>
-  </div>
-</div>
-`;
+  return sectionsShadedHTML;
 };
 
-sectionsShaded.storyName = 'Sections shaded';
+sectionsShaded.storyName = 'Shaded';
 
-export const sectionsBackground = () => {
-  return `
-<div class="uq-section uq-section--centered uq-section--image-behind uq-section--light-text light-palette">
-  <div class="uq-section__background"><img src="/images/section/section-example-01.jpeg" /></div>
-
-  <div class="uq-section__container">
-    <div class="uq-section__header">
-      <h2 class="uq-section__title">Section title</h2>
-
-      <p class="uq-section__summary">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.</p>
-    </div>
-
-    <div class="uq-section__content">
-      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-    </div>
-
-    <div class="uq-section__footer"></div>
-  </div>
-</div>
-`;
+export const sectionsNoPadding = () => {
+  return sectionsNoPaddingHTML;
 };
 
-sectionsBackground.storyName = 'Sections background';
+sectionsNoPadding.storyName = 'No padding';
 
-export const sectionsLightTint = () => {
-  return `
-<div class="uq-section uq-section--centered uq-section--background-image uq-section--light-tint uq-section--dark-text" style="background-image: url('/images/section/section-example-01.jpeg');">
-  <div class="uq-section__container">
-    <div class="uq-section__header">
-      <h2 class="uq-section__title">Section title</h2>
-
-      <p class="uq-section__summary">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.</p>
-    </div>
-
-    <div class="uq-section__content">
-      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-    </div>
-
-    <div class="uq-section__footer"></div>
-  </div>
-</div>
-`;
+export const sectionsLargePadding = () => {
+  return sectionsLargePaddingHTML;
 };
 
-sectionsLightTint.storyName = 'Sections light tint';
-
-export const sectionsDarkTint = () => {
-  return `
-<div class="uq-section uq-section--centered uq-section--background-image uq-section--dark-tint uq-section--light-text light-palette" style="background-image: url('/images/section/section-example-01.jpeg');">
-  <div class="uq-section__container">
-    <div class="uq-section__header">
-      <h2 class="uq-section__title">Section title</h2>
-
-      <p class="uq-section__summary">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.</p>
-    </div>
-
-    <div class="uq-section__content">
-      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-    </div>
-
-    <div class="uq-section__footer"></div>
-  </div>
-</div>
-`;
-};
-
-sectionsDarkTint.storyName = 'Sections dark tint';
-
-export const sectionsSpacing = () => {
-  return `
-<div class="uq-section uq-section--shaded uq-section--centered uq-section--extra-large-spacing">
-  <div class="uq-section__container">
-    <div class="uq-section__header">
-      <h2 class="uq-section__title">Section with extra large spacing</h2>
-
-      <p class="uq-section__summary">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor.</p>
-    </div>
-
-    <div class="uq-section__content">
-      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
-        consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
-        diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-        takimata sanctus est Lorem ipsum dolor sit amet.</p>
-    </div>
-    <div class="uq-section__footer">section footer. Lorem ipsum dolor sit amet, consetetur sadipscing elitr sed.</div>
-  </div>
-</div>
-`;
-};
-
-sectionsSpacing.storyName = 'Sections spacing';
+sectionsLargePadding.storyName = 'Large padding';

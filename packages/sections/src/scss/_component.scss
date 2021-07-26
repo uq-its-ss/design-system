@@ -3,248 +3,83 @@
 @use '@uqds/grid/src/scss/global' as grid;
 @use 'global' as *;
 
-//
 // Section
-// Used to contain content and provide vertical spacing and backgrounds.
+// Used to contain content and provide padding, background, and width options.
 //
 // Variants:
-// .uq-section--double-spacing - alias of .uq-section--large-spacing
-// .uq-section--large-top-spacing - adds large spacing above to show more background image.
-// .uq-section--large-bottom-spacing - adds large spacing below to show more background image.
-// .uq-section--large-spacing - adds large spacing top and bottom.
-// .uq-section--extra-large-top-spacing - adds extra large spacing above.
-// .uq-section--extra-large-bottom-spacing - adds extra large spacing below.
-// .uq-section--extra-large-spacing - adds extra large spacing top and bottom.
-// .uq-section--no-spacing - removes vertical padding.
-// .uq-section--no-top-spacing - removes top padding only.
-// .uq-section--no-bottom-spacing - removes bottom padding only.
-// .uq-section--centered - centers header and footer text.
-// .uq-section--shaded - adds light grey background.
-// .uq-section--horizontal - Change header and content to horizontal 2 column layout.
-// .uq-section--image-behind - Markup image in the section__background is used as a background for the section.
-// .uq-section--background-image - Scales background images on the section to always cover.
-// .uq-section--light-tint - Adds a light tint between the background image and the content to knockback the image for dark text.
-// .uq-section--dark-tint - Adds a dark tint between the background image and the content to knockback the image for light text.
-// .uq-section--light-text - Extends .light-palette on the section header and footer.
-// .uq-section--dark-text - Extends .dark-palette on the section header and footer.
-//
+// .uq-section--centered - centres content
+// .uq-section--narrow - constrains content in a narrow container
+// .uq-section--shaded - adds light-grey background
+// .uq-section--padding-top-none - removes top padding
+// .uq-section--padding-bottom-none - removes bottom padding
+// .uq-section--padding-top-large - adds large top padding
+// .uq-section--padding-bottom-large - adds large bottom padding
 
 .uq-section {
-  padding-top: core.$space-xxxl;
-  padding-bottom: core.$space-xxxl;
+  padding-top: core.$space-xxxl; // 3.5rem
+  padding-bottom: core.$space-xxxl; // 3.5rem
   overflow: hidden;
-  // Large spacing above to show more background image.
-  &--large-top-spacing {
-    padding-top: core.$space-uul; //7rem
-  }
-  // Large spacing below to show more background image.
-  &--large-bottom-spacing {
-    padding-bottom: core.$space-uul; //7rem
-  }
-  // Doubles default vertical spacing. Double is an alias of large.
-  &--large-spacing, &--double-spacing {
-    padding-top: core.$space-uul;
-    padding-bottom: core.$space-uul;
-  }
-  // Extra large spacing above to show more background image.
-  &--extra-large-top-spacing {
-    padding-top: core.$space-uuuul; //12rem
-  }
-  // Extra large spacing below to show more background image.
-  &--extra-large-bottom-spacing {
-    padding-bottom: core.$space-uuuul; //12rem
-  }
-  &--extra-large-spacing {
-    padding-top: core.$space-uuuul;
-    padding-bottom: core.$space-uuuul;
-  }
-  // Removes vertical spacing.
-  &--no-spacing {
-    padding-top: core.$space-none;
-    padding-bottom: core.$space-none;
-  }
-  // Removes top spacing only.
-  &--no-top-spacing {
-    padding-top: core.$space-none;
-  }
-  // Removes bottom spacing only.
-  &--no-bottom-spacing {
-    padding-bottom: core.$space-none;
-  }
-  // Shaded background variant
-  &--shaded {
-    background-color: $section-shaded-bg;
-  }
-  // Centers section header and footer
-  &--centered {
-    .uq-section__header, .uq-section__content, .uq-section__footer {
-      text-align: center;
-
-      @media #{core.$screen-xl-up} {
-        @include grid.grid-col-padding;
-        @include grid.grid-col-offset(2, 12);
-        @include grid.grid-col-width(8, 12);
-        float: left;
-      }
-    }
-  }
-  // Changes alignment so header sits to the side of the body.
-  &--horizontal {
-    > .uq-section__container {
-      @include grid.grid-row-flex-base;
-      align-items: center;
-    }
-
-    @media #{core.$screen-md-up} {
-      .uq-section__header {
-        @include grid.grid-col-padding;
-        @include grid.grid-col-width(4, 12);
-        flex: none;
-      }
-      .uq-section__content {
-        @include grid.grid-col-padding;
-        @include grid.grid-col-width(8, 12);
-        flex: none;
-        // Align first element with section__header column
-        p, h2, h3, h4, h5, h6, ul {
-          &:first-child {
-            margin-top: core.$space-none;
-          }
-        }
-      }
-    }
-  }
-  // For when there is an image field in dom that is displayed behind the section content
-  &--image-behind {
-    position: relative;
-    height: auto;
-    overflow: hidden;
-    .uq-section__container {
-      position: relative;
-      z-index: 2;
-    }
-    // section--image-background with palettes
-    &.light-text {
-      // Use opposite palette bg for contrast
-      @extend %dark-palette-bg;
-    }
-    &.dark-text {
-      // Use opposite palette bg for contrast
-      @extend %light-palette-bg;
-    }
-  }
-  // For when the section has an inline style background image
-  &--background-image {
-    @include background-cover();
-  }
-  // Allows content to overflow the section if needed, such as drop downs.
-  &--allow-overflow {
-    overflow: visible;
-  }
-
-  // section with palettes
-  &--light-text {
-    .uq-section__header, .uq-section__title, .uq-section__summary, .uq-section__content, .uq-section__footer {
-      @extend %light-palette;
-    }
-  }
-  &--dark-text {
-    .uq-section__header, .uq-section__summary, .uq-section__footer {
-      @extend %dark-palette;
-    }
-  }
 
   &__container {
     @include grid.layout-containment;
-
-    // clearfix from Foundation 5
-    &::before, &::after { content: " "; display: table; }
-    &::after { clear: both; }
   }
 
   &__header,
-  &__content,
-  &__footer {
+  &__content {
     @include grid.grid-col-padding;
     @include grid.grid-col-width(6);
-    float: left;
-  }
-
-  &__footer {
-    color: $section-footer-color;
-    margin-top: core.$space-l;
   }
 
   &__title {
-    font-weight: 400;
-  }
-
-  &__summary {
-    color: $section-summary-color;
     margin-top: core.$space-none;
-    margin-bottom: core.$space-xl;
+  }
+  
+  // Padding top large
+  &--padding-top-large {
+    padding-top: core.$space-uuul; // 5.5rem
   }
 
-  // For section--image-behind where the background image is output using <img> rather than an inline style.
-  &__background {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    z-index: 0;
-    top: 0;
-    left: 0;
-
-    img {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 100%;
-      height: 100%;
-      -o-object-fit: cover;
-      object-fit: cover;
-      transform: translate(-50%, -50%);
-    }
+  // Paddiing bottom large
+  &--padding-bottom-large {
+    padding-bottom: core.$space-uuul; // 5.5rem
   }
 
-  // Message indicating section requires saving, when user saves panel modal (DRUPAL?)
-  &__update {
-    &-message {
-      @extend %dark-palette;
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 999;
-      width: 100%;
-      padding: core.$space-xs core.$space-none; //0.25rem 0
+  // Padding top none
+  &--padding-top-none {
+    padding-top: core.$space-none;
+  }
+
+  // Padding bottom none
+  &--padding-bottom-none {
+    padding-bottom: core.$space-none;
+  }
+
+  // Shaded background
+  &--shaded {
+    background-color: $section-shaded-bg;
+  }
+
+  // Centers section header and content
+  &--centered {
+    .uq-section__header, 
+    .uq-section__content{
       text-align: center;
-      background-color: $messages-warning-bg;
-      border: 1px solid $messages-warning-border-color;
-    }
-    &-link {
-      font-weight: 500;
     }
   }
 
-  // Sections override pane/fieldable panel pane titles
-  .pane-title, .panel-pane__title {
-    display: none;
-  }
-
-  // Applies a light overlay background image to work better with dark-palette.
-  &--light-tint {
-    @extend %light-tint;
-    .uq-section__container {
-      position: relative;
-      z-index: 2;
+  // Narrows the section header and content
+  &--narrow {
+    .uq-section__header, 
+    .uq-section__content{
+      @media #{core.$screen-xl-up} {
+        @include grid.grid-col-padding;
+        @include grid.grid-col-offset(2.25, 12);
+        @include grid.grid-col-width(7.5, 12);
+        float: left;
+      }
     }
-  }
-
-  // Applies a dark tint to allow provide higher content contrast.
-  &--dark-tint {
-    @extend %dark-tint;
-    .uq-section__container {
-      position: relative;
-      z-index: 2;
-    }
+    // .uq-section__container {
+    //   max-width: (grid.$max-container-width - (grid.$max-container-width/3));
+    // }
   }
 }

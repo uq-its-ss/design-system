@@ -396,7 +396,9 @@ $use-encapsulation: false !default;
       padding-bottom: 0 !important;
     }
 
-    &__login-link {
+    &__emergency-contact,
+    &__login-link,
+    &__footer {
       display: none !important;
     }
   }

@@ -76,7 +76,7 @@ class MainNavigation {
     const target = this.nav.querySelectorAll(`.${this.level1Class}`);
     const ariaExpanded = toggle.getAttribute('aria-expanded') === 'true';
 
-    toggle.classList.toggle('uq-site-header__navigation-toggle--close');
+    toggle.classList.toggle(`${this.navClass}-toggle--close`);
     toggle.setAttribute('aria-expanded', !ariaExpanded);
 
     target.forEach((el) => {
@@ -146,16 +146,19 @@ class MainNavigation {
   handleKeyPress(event) {
     const parent = event.currentTarget.parentNode;
     const nav = parent.parentNode;
+    const mobileToggle = document.querySelector(`.${this.toggleClass}`);
 
     if (parent === nav.firstElementChild) {
       // If we shift tab past the first child, toggle this level.
       if (event.key === 'Tab' && event.shiftKey === true) {
         this.closeLevel(nav, nav.parentNode);
+        mobileToggle.classList.toggle(`${this.navClass}-toggle--close`);
       }
     } else if (parent === nav.lastElementChild) {
       // If we tab past the last child, toggle this level.
       if (event.key === 'Tab' && event.shiftKey === false) {
         this.closeLevel(nav, nav.parentNode);
+        mobileToggle.classList.toggle(`${this.navClass}-toggle--close`);
       }
     }
 

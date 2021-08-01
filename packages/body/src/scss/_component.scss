@@ -394,11 +394,35 @@ $use-encapsulation: false !default;
     &__acknowledgement {
       color: core.$text !important;
       padding-bottom: 0 !important;
+      margin-bottom: 1rem !important;
+      font-size: 14px !important;
+
+      a:after {
+        content: " (" attr(href) ")";
+        font-size: 12px;
+      }
     }
 
-    &__emergency-contact,
-    &__login-link,
-    &__footer {
+    .uq-footer__sub-title {
+      font-size: 14px;
+    }
+
+    .uq-footer__row {
+      gap: 1rem;
+    }
+
+    .uq-footer__footer {
+      margin-top: 1rem;
+    }
+
+    .footer__contacts-link:after,
+    .cricos__link:after,
+    &__footer a:after {
+      content: " (" attr(href) ")";
+      font-size: 12px;
+    }
+
+    &__login-link {
       display: none !important;
     }
   }

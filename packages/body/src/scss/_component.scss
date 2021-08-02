@@ -316,3 +316,114 @@ $use-encapsulation: false !default;
 
   @include -base-styles;
 }
+
+// Print styles
+@media print {
+  // Print utilities
+  .show-for-print {
+    display: block !important;
+  }
+
+  .hide-for-print {
+    display: none !important;
+  }
+
+  // Type styles
+  p {
+    font-size: core.$font-size-s !important;
+  }
+
+  // Header
+  .uq-header {
+    background: none !important;
+
+    &__logo {
+      &:after {
+        width: 160px;
+        height: 42px;
+        content: url(https://static.uq.net.au/v13/logos/corporate/uq-logo.png);
+      }
+
+      img {
+        display: none !important;
+      }
+    }
+
+    &__search-toggle,
+    &__navigation {
+      display: none !important;
+    }
+  }
+
+  // Site header
+  .uq-site-header {
+    &__title-container__left {
+      a:after {
+        content: " (" attr(href) ")";
+        font-size: 12px;
+      }
+    }
+
+    &__title-container__right, 
+    &__navigation-container {
+      display: none !important;
+    }
+  }
+
+  .uq-header__container,
+  .uq-site-header__title-container,
+  .uq-grid,
+  .uq-footer__container {
+    max-width: 100% !important;
+  }
+
+  // Footer
+  .uq-footer {
+    color: core.$text !important;
+    background: none !important;
+
+    a,
+    .uq-footer__sub-title {
+      color: core.$text !important;
+    }
+
+    &__container {
+      padding: 1rem !important;
+    }
+
+    &__acknowledgement {
+      color: core.$text !important;
+      padding-bottom: 0 !important;
+      margin-bottom: 1rem !important;
+      font-size: 14px !important;
+
+      a:after {
+        content: " (" attr(href) ")";
+        font-size: 12px;
+      }
+    }
+
+    .uq-footer__sub-title {
+      font-size: 14px;
+    }
+
+    .uq-footer__row {
+      gap: 1rem;
+    }
+
+    .uq-footer__footer {
+      margin-top: 1rem;
+    }
+
+    .footer__contacts-link:after,
+    .cricos__link:after,
+    &__footer a:after {
+      content: " (" attr(href) ")";
+      font-size: 12px;
+    }
+
+    &__login-link {
+      display: none !important;
+    }
+  }
+}

@@ -3,11 +3,11 @@ import './blockquote.scss';
 
 // import HTML template strings
 import blockquoteHTML from './blockquote.html';
-import blockquoteDarkHTML from './blockquote_dark.html';
-import blockquoteBoxedHTML from './blockquote_boxed.html';
-import blockquoteQuotemarkHTML from './blockquote_quotemark.html';
-import blockquoteQuotemarkDarkHTML from './blockquote_quotemark-dark.html';
-import blockquoteQuotemarkDarkBoxedHTML from './blockquote_quotemark-dark-boxed.html';
+import blockquoteDarkHTML from './blockquote-dark.html';
+import blockquoteBoxedHTML from './blockquote-boxed.html';
+import blockquoteQuotemarkHTML from './blockquote-quotemark.html';
+import blockquoteQuotemarkDarkHTML from './blockquote-quotemark-dark.html';
+import blockquoteQuotemarkDarkBoxedHTML from './blockquote-quotemark-dark-boxed.html';
 
 
 // documentation

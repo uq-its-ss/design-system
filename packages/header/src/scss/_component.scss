@@ -1,10 +1,10 @@
 @use '@uqds/core/src/scss/global' as core;
 @use '@uqds/grid/src/scss/global' as grid;
 @use "@uqds/icon/src/scss/global" as icon-constants;
+@use '@uqds/form/src/scss/component' as form;
 @use 'global' as *;
 
-
-.uq-header { 
+.uq-header {    
     background: core.$uq-purple;
     background: core.$uq-purple-gradient;
     box-sizing: border-box;

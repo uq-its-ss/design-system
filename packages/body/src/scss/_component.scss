@@ -64,7 +64,7 @@ $use-encapsulation: false !default;
   }
   
   h1 {
-    margin-top: $space-xl;
+    margin-top: core.$space-xl;
     font-size: core.$font-size-xxxl;
     font-family: core.$font-title;
   }

@@ -17,6 +17,59 @@ body {
   max-width: 1440px;
 }
 
+// Set heading styles
+.sbdocs {
+  &-h1,
+  &-title {
+    font-size: core-global.$font-size-xxxl !important;
+    margin: 0 0 core-global.$space-s !important;
+    font-weight: 500 !important;
+    color: core-global.$uq-purple !important;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  }
+
+  &-h2 {
+    font-size: core-global.$font-size-xxl !important;
+  }
+
+  &-h3 {
+    font-size: core-global.$font-size-xl !important;
+  }
+
+  &-h4 {
+    font-size: core-global.$font-size-l !important;
+  }
+
+  &-h5 {
+    font-size: core-global.$font-size-m !important;
+  }
+
+  &-h6 {
+    font-size: core-global.$font-size!important;
+  }
+
+  &-h2,
+  &-h3,
+  &-h4,
+  &-h5,
+  &-h6 {
+    margin: core-global.$space-xxl 0 0 !important;
+    font-weight: 500 !important;
+    padding-bottom: 0 !important;
+    border-bottom: 0 !important;
+    color: core-global.$uq-purple !important;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  }
+
+  &-h2 + :not(p),
+  &-h3 + :not(p),
+  &-h4 + :not(p),
+  &-h5 + :not(p),
+  &-h6 + :not(p) {
+    margin-top: 1rem !important;
+  }
+}
+
 // Fix up height on fullscreen and padded layouts in iframe canvas/preview
 .sb-show-main.sb-main-fullscreen,
 .sb-show-main.sb-main-padded {
@@ -31,74 +84,90 @@ body {
 
 /* Getting started alert */
 .uqds-alert {
-  margin-left: 2rem !important; /* override storybook default on div */
+  margin-left: core-global.$space-l !important; /* override storybook default on div */
+
+  .uq-alert__title {
+    /* restore original alert title styles overridden by heading styles above */
+    color: core-global.$text !important;
+    font-weight: 500 !important;
+    font-size: core-global.$font-size-m !important;
+    margin: 0 0 core-global.$space-s !important;  
+  }
 }
 
 /* UQDS Table Styles */ 
 
 /* Table large screen (large screen first as this is default table behaviour */ 
 .uqds-table {
-  width:100%;
+  width: 100%;
   border: none;
-  border-collapse:collapse;
+  border-collapse: collapse;
 }
+
 .uqds-table .uqds-table__mobile-heading {
-  border:none;
-}
-.uqds-table .uqds-table__heading {
-  font-weight:500;
-  text-align:left;
-  color:#51247a;
-  background-color:#f1f1f1;
-  border:none; /* override storybook default */
-  border-bottom:1px solid #e2e2e2;
-  padding:1rem;
-  vertical-align:top;
- }
- .uqds-table .uqds-table__item {
-  padding:1rem;
   border: none;
-  border-bottom:1px solid #e2e2e2;
-  vertical-align:top;
+}
+
+.uqds-table .uqds-table__heading {
+  font-weight: 500;
+  text-align: left;
+  color: #51247a;
+  background-color:#f1f1f1;
+  border: none; /* override storybook default */
+  border-bottom: 1px solid #e2e2e2;
+  padding: 1rem;
+  vertical-align: top;
  }
+
+ .uqds-table .uqds-table__item {
+  padding: 1rem;
+  border: none;
+  border-bottom: 1px solid #e2e2e2;
+  vertical-align: top;
+ }
+
  .uqds-table .uqds-table__row:nth-of-type(2n) {
    background-color: #fff;   /* override storybook default */
  }
 
  @media (max-width:800px) {
+  /* Table card */ 
+  .uqds-table--card .uqds-table__body {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(300px, 1fr) );
+    column-gap: 32px;
+    row-gap: 32px;
+  }
 
- /* Table card */ 
- .uqds-table--card .uqds-table__body {
-  display: grid;
-  grid-template-columns: repeat( auto-fit, minmax(300px, 1fr) );
-  column-gap: 32px;
-  row-gap: 32px;
-}
-.uqds-table--card .uqds-table__mobile-heading, .uqds-table--card .uqds-table__heading {
-  display:none;
-}
-/* table content */
-.uqds-table--card .uqds-table__row  {
-  display: grid;
-  align-items: stretch;
-  grid-template-columns: 1fr;
-  row-gap: 8px;
-  border:none; /* override storybook default */
-  border: 1px solid #f1f1f1;
-  border-radius: .25rem;
-  box-shadow: 0 .25rem .5rem rgba(24,24,24,.05);
-  padding: 1rem;
-}
-.uqds-table--card .uqds-table__item, .uqds-table--card .uqds-table__heading {
-  border: none;
-  padding: 0;
-}
-/* colour styles */
-.uqds-table--card .uqds-table__item:before {
-  content: attr(data-title);
-  display: block;
-  color:rgb(111, 111, 111);
-  font-size: 0.875rem;
-}
+  .uqds-table--card .uqds-table__mobile-heading, 
+  .uqds-table--card .uqds-table__heading {
+    display: none;
+  }
 
- }
+  /* table content */
+  .uqds-table--card .uqds-table__row  {
+    display: grid;
+    align-items: stretch;
+    grid-template-columns: 1fr;
+    row-gap: 8px;
+    border: none; /* override storybook default */
+    border: 1px solid #f1f1f1;
+    border-radius: .25rem;
+    box-shadow: 0 .25rem .5rem rgba(24,24,24,.05);
+    padding: 1rem;
+  }
+
+  .uqds-table--card .uqds-table__item,
+  .uqds-table--card .uqds-table__heading {
+    border: none;
+    padding: 0;
+  }
+
+  /* colour styles */
+  .uqds-table--card .uqds-table__item:before {
+    content: attr(data-title);
+    display: block;
+    color:rgb(111, 111, 111);
+    font-size: 0.875rem;
+  }
+}

@@ -13,7 +13,6 @@ export default {
 export const textColorUtils = () => {
   return `
 <table>
-  <caption>Text Colour</caption>
   <thead>
   <tr>
     <th>Example</th>
@@ -62,7 +61,6 @@ textColorUtils.storyName = 'Text colours';
 export const textSizeUtils = () => {
   return `
 <table>
-  <caption>Text Size</caption>
   <thead>
   <tr>
     <th>Example</th>

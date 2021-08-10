@@ -1,10 +1,10 @@
 @use '@uqds/core/src/scss/global' as core;
 @use '@uqds/grid/src/scss/global' as grid;
 @use "@uqds/icon/src/scss/global" as icon-constants;
+@use '@uqds/form/src/scss/global' as form;
 @use 'global' as *;
 
-
-.uq-header { 
+.uq-header {    
     background: core.$uq-purple;
     background: core.$uq-purple-gradient;
     box-sizing: border-box;
@@ -188,6 +188,9 @@
             font-size: core.$font-size;
             font-style: italic;
             font-weight: core.$font-weight-normal;
+            margin-bottom: form.$form-spacing;
+            line-height: core.$line-height-h;
+            padding: 0;
 
             @media #{core.$screen-lg-up} {
                 display: inline-block;
@@ -200,6 +203,68 @@
             }
         }
 
+        fieldset {
+            border: 0;
+            padding: 0;
+            margin: 0;
+        }
+
+        input[type="radio"] {
+            color: core.$uq-white;
+            border-radius: 50%;
+            appearance: none;
+            display: inline-block;
+            border: form.$form-checkbox-border-width solid form.$form-border-color;
+            cursor: pointer;
+            height: form.$form-checkbox-size;
+            width: form.$form-checkbox-size;
+            vertical-align: top;
+            position: absolute;
+
+            &:focus {
+                border-color: form.$form-focus-color;
+                box-shadow: 0 0 0 1px form.$form-focus-color;
+                outline: none;
+            }
+
+            + label {
+                color: core.$uq-white;
+                display: inline-block;
+                font-size: core.$font-size-s;
+                font-weight: core.$font-weight-normal;
+                line-height: core.$line-height-h;
+                margin-bottom: core.$space-none;
+                margin-left: core.$space-s;
+                margin-right: form.$form-spacing;
+                padding-top: core.$space-xs;
+                padding-left: core.$space-m;
+                vertical-align: top;
+                cursor: pointer;
+            }
+
+            &:checked {
+                border-width: 0.125rem;
+                border-color: core.$uq-white;
+
+                &::after {
+                    border-radius: 50%;
+                    background-color: core.$uq-white;
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top: 3px;
+                    left: 3px;
+                    height: form.$form-checkbox-size - 10px;
+                    width: form.$form-checkbox-size - 10px;
+                }
+
+                &:focus {
+                    border-color: form.$form-focus-color;
+                    box-shadow: 0 0 0 1px form.$form-focus-color;
+                }
+            }
+        }
+    
         &-range {
             display: block;
             margin-bottom: core.$space;
@@ -208,31 +273,6 @@
                 display: inline-block;
                 margin-left: core.$space;
                 line-height: 1.4;
-            }
-        }
-
-        &-label {
-            color: core.$uq-white;
-            font-size: core.$font-size-s;
-            font-weight: core.$font-weight-normal;
-        }
-
-        &-radio {
-            color: core.$uq-white;
-        }
-
-        input[type="radio"] + label {
-            font-size: core.$font-size-s;
-            margin-bottom: core.$space-none;
-            padding-top: core.$space-xs;
-        }
-
-        input[type="radio"]:checked {
-            border-color: core.$uq-white;
-            border-width: 0.125rem;
-
-            &::after {
-                background-color: core.$uq-white;
             }
         }
 

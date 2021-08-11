@@ -59,9 +59,9 @@ export const FeatureHero = () => {
 
 FeatureHero.storyName = 'Feature image hero';
 
-export const TallHero = () => {
+export const LargeHero = () => {
   return `
-<div class="uq-hero uq-hero--feature-image uq-hero--tall">  
+<div class="uq-hero uq-hero--feature-image uq-hero--large">  
   <div class="uq-hero__image">
     <div class="uq-hero__image--small">
       <img src="/images/hero/hero-example--small.jpg" alt="A postgraduate student using a laptop" />
@@ -81,7 +81,7 @@ export const TallHero = () => {
   `;
 };
 
-TallHero.storyName = 'Tall hero';
+LargeHero.storyName = 'Large variant';
 
 // export const hero = () => {
 //   return heroHTML;

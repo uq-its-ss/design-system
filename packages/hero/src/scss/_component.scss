@@ -124,12 +124,12 @@
    
   }
 
-  &--tall {
+  &--large {
 
     & .uq-hero__content {
       @media #{core.$screen-md-up} {
-        padding-top: 11rem;
-        padding-bottom: 11rem;
+        padding-top: core.$space-uuuul;
+        padding-bottom: core.$space-uuuul;
       }
     }
 

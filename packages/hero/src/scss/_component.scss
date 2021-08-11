@@ -127,8 +127,10 @@
   &--tall {
 
     & .uq-hero__content {
-      padding-top: 11rem;
-      padding-bottom: 11rem;
+      @media #{core.$screen-md-up} {
+        padding-top: 11rem;
+        padding-bottom: 11rem;
+      }
     }
 
   }

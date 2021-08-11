@@ -124,4 +124,13 @@
    
   }
 
+  &--tall {
+
+    & .uq-hero__content {
+      padding-top: 11rem;
+      padding-bottom: 11rem;
+    }
+
+  }
+
 }

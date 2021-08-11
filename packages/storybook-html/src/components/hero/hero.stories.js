@@ -40,10 +40,10 @@ export const FeatureHero = () => {
 <div class="uq-hero uq-hero--feature-image">  
   <div class="uq-hero__image">
     <div class="uq-hero__image--small">
-      <img src="/images/hero/hero-example--small.jpg" />
+      <img src="/images/hero/hero-example--small.jpg" alt="A postgraduate student using a laptop" />
     </div>
     <div class="uq-hero__image--large">
-      <img src="/images/hero/hero-example--large.jpg" />
+      <img src="/images/hero/hero-example--large.jpg" alt="A postgraduate student using a laptop" />
     </div>
   </div>
   <div class="uq-hero__content">
@@ -64,10 +64,10 @@ export const TallHero = () => {
 <div class="uq-hero uq-hero--feature-image uq-hero--tall">  
   <div class="uq-hero__image">
     <div class="uq-hero__image--small">
-      <img src="/images/hero/hero-example--small.jpg" />
+      <img src="/images/hero/hero-example--small.jpg" alt="A postgraduate student using a laptop" />
     </div>
     <div class="uq-hero__image--large">
-      <img src="/images/hero/hero-example--large.jpg" />
+      <img src="/images/hero/hero-example--large.jpg" alt="A postgraduate student using a laptop" />
     </div>
   </div>
   <div class="uq-hero__content">

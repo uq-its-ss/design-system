@@ -26,7 +26,7 @@ export const DefaultHero = () => {
   <div class="uq-hero">  
     <div class="uq-hero__content">
       <div class="uq-hero__text">
-        <h1>Page title</h1>
+        <h1 class="uq-hero__title">Page title</h1>
       </div>
     </div>
   </div>
@@ -48,7 +48,7 @@ export const FeatureHero = () => {
   </div>
   <div class="uq-hero__content">
     <div class="uq-hero__text">
-      <h1>Start postgraduate study online</h1>
+      <div class="uq-hero__title">Start postgraduate study online</div>
       <p class="uq-hero__subtext">Apply by June 30</p>
       <p><a class="uq-button" href="#">Learn more</a></p>
     </div>
@@ -72,7 +72,7 @@ export const LargeHero = () => {
   </div>
   <div class="uq-hero__content">
     <div class="uq-hero__text">
-      <h1>Start postgraduate study online</h1>
+      <div class="uq-hero__title">Start postgraduate study online</div>
       <p class="uq-hero__subtext">Apply by June 30</p>
       <p><a class="uq-button" href="#">Learn more</a></p>
     </div>

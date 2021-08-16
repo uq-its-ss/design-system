@@ -265,6 +265,7 @@
       background-repeat: no-repeat;
       background-color: transparent;
       overflow: hidden;
+      cursor: pointer;
 
       @media #{core.$screen-md-up} {
         width: core.$space-l;

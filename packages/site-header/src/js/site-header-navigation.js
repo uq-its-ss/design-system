@@ -75,13 +75,16 @@ class MainNavigation {
     const toggle = event.target;
     const target = this.nav.querySelectorAll(`.${this.level1Class}`);
     const ariaExpanded = toggle.getAttribute('aria-expanded') === 'true';
+    const ariaPressed = toggle.getAttribute('aria-pressed') === 'true';
 
     toggle.classList.toggle(`${this.navClass}-toggle--close`);
     toggle.setAttribute('aria-expanded', !ariaExpanded);
+    toggle.setAttribute('aria-pressed', !ariaPressed);
 
     target.forEach((el) => {
       el.classList.toggle(this.openModifier);
       el.setAttribute('aria-expanded', !ariaExpanded);
+      el.setAttribute('aria-pressed', !ariaPressed);
     });
   }
 
@@ -113,6 +116,8 @@ class MainNavigation {
     subNav.classList.add(this.openModifier);
     menuItem.classList.add(this.levelOpenModifier);
     menuItem.querySelector('a').setAttribute('aria-expanded', 'true');
+    menuItem.querySelector('button').setAttribute('aria-expanded', 'true');
+    menuItem.querySelector('button').setAttribute('aria-pressed', 'true');
   }
 
   closeLevel(subNav, menuItem) {
@@ -120,6 +125,8 @@ class MainNavigation {
     this.setOrientation(menuItem);
     menuItem.classList.remove(this.levelOpenModifier);
     menuItem.querySelector('a').setAttribute('aria-expanded', 'false');
+    menuItem.querySelector('button').setAttribute('aria-expanded', 'false');
+    menuItem.querySelector('button').setAttribute('aria-pressed', 'false');
   }
 
   closeAllLevels() {
@@ -154,6 +161,7 @@ class MainNavigation {
         this.closeLevel(nav, nav.parentNode);
         mobileToggle.classList.toggle(`${this.navClass}-toggle--close`);
         mobileToggle.setAttribute('aria-expanded', 'false');
+        mobileToggle.setAttribute('aria-pressed', 'false');
       }
     } else if (parent === nav.lastElementChild) {
       // If we tab past the last child, toggle this level.
@@ -161,6 +169,7 @@ class MainNavigation {
         this.closeLevel(nav, nav.parentNode);
         mobileToggle.classList.toggle(`${this.navClass}-toggle--close`);
         mobileToggle.setAttribute('aria-expanded', 'false');
+        mobileToggle.setAttribute('aria-pressed', 'false');
       }
     }
 

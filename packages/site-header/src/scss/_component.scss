@@ -254,13 +254,13 @@
       top: 0;
       right: 0;
       display: block;
-      width: 3rem;
-      padding: 1.275rem core.$space-m;
+      width: core.$space-xxl;
+      padding: core.$space-compressed-xxxl core.$space-m;
       border: 0;
       border-left: 1px solid $nav-dropdown-divider;
       text-indent: -100vw;
       background-image: url(icon-constants.get-icon('standard--arrow-down-1', core.$uq-purple));
-      background-size: 1rem;
+      background-size: core.$space;
       background-position: center center;
       background-repeat: no-repeat;
       background-color: transparent;
@@ -269,7 +269,7 @@
 
       @media #{core.$screen-md-up} {
         width: core.$space-l;
-        padding: 1.275rem core.$space-m 1.275rem core.$space;
+        padding: core.$space-compressed-xxxl core.$space-m core.$space-compressed-xxxl core.$space;
       }
   
       @media #{core.$screen-lg-up} {

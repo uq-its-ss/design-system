@@ -116,6 +116,7 @@ class MainNavigation {
     subNav.classList.add(this.openModifier);
     menuItem.classList.add(this.levelOpenModifier);
     menuItem.querySelector('a').setAttribute('aria-expanded', 'true');
+    menuItem.querySelector('button').setAttribute('aria-expanded', 'true');
     menuItem.querySelector('button').setAttribute('aria-pressed', 'true');
   }
 
@@ -124,6 +125,7 @@ class MainNavigation {
     this.setOrientation(menuItem);
     menuItem.classList.remove(this.levelOpenModifier);
     menuItem.querySelector('a').setAttribute('aria-expanded', 'false');
+    menuItem.querySelector('button').setAttribute('aria-expanded', 'false');
     menuItem.querySelector('button').setAttribute('aria-pressed', 'false');
   }
 

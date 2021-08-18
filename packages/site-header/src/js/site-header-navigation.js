@@ -127,6 +127,14 @@ class MainNavigation {
     menuItem.querySelector('a').setAttribute('aria-expanded', 'false');
     menuItem.querySelector('button').setAttribute('aria-expanded', 'false');
     menuItem.querySelector('button').setAttribute('aria-pressed', 'false');
+    menuItem.parentNode.querySelector('ul').setAttribute('aria-expanded', 'false');
+    menuItem.parentNode.querySelector('ul').setAttribute('aria-pressed', 'false');
+  }
+
+  closeNav(menuItem) {
+    menuItem.classList.remove(this.openModifier);
+    menuItem.parentNode.querySelector('ul').setAttribute('aria-expanded', 'false');
+    menuItem.parentNode.querySelector('ul').setAttribute('aria-pressed', 'false');
   }
 
   closeAllLevels() {
@@ -158,18 +166,28 @@ class MainNavigation {
     if (parent === nav.firstElementChild) {
       // If we shift tab past the first child, toggle this level.
       if (event.key === 'Tab' && event.shiftKey === true) {
-        this.closeLevel(nav, nav.parentNode);
         mobileToggle.classList.toggle(`${this.navClass}-toggle--close`);
         mobileToggle.setAttribute('aria-expanded', 'false');
         mobileToggle.setAttribute('aria-pressed', 'false');
+
+        if (parent.classList.contains(this.subNavClass)) {
+          this.closeLevel(nav, nav.parentNode);
+        } else {
+          this.closeNav(nav);  
+        }
       }
     } else if (parent === nav.lastElementChild) {
       // If we tab past the last child, toggle this level.
       if (event.key === 'Tab' && event.shiftKey === false) {
-        this.closeLevel(nav, nav.parentNode);
         mobileToggle.classList.toggle(`${this.navClass}-toggle--close`);
         mobileToggle.setAttribute('aria-expanded', 'false');
         mobileToggle.setAttribute('aria-pressed', 'false');
+
+        if (parent.classList.contains(this.subNavClass)) {
+          this.closeLevel(nav, nav.parentNode);
+        } else {
+          this.closeNav(nav);   
+        }
       }
     }
 

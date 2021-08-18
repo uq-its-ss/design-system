@@ -9,9 +9,17 @@ import StatusBadge from '../../../.storybook/custom/components/StatusBadge';
 
 The main navigation component is designed to work closely with the header, site title component and collapses down to a conventional open/close menu button on smaller devices. 
 
-## Basic example
+## Basic examples
 
-A simple one level menu list
+### Without sub-navigation
+A one-level menu list.
+
+<Canvas withSource="none" withToolbar>
+  <Story height={200} id="components-site-header--site-header-without-subnav" />
+</Canvas>
+
+### With sub-navigation
+A two-level menu list.
 
 <Canvas withSource="none" withToolbar>
   <Story height={505} id="components-site-header--site-header" />

@@ -7,27 +7,87 @@ import StatusBadge from '../../../.storybook/custom/components/StatusBadge';
 
 ## Overview
 
-The main navigation component is designed to work closely with the header, site title component and collapses down to a conventional open/close menu button on smaller devices. 
+The site header component is comprised of the site title, the site navigation, and an optional site utility section. It collapses down to a conventional open/close menu button on smaller devices and is designed to work closely with the header component. 
 
-## Basic examples
+## Default
 
 ### Without sub-navigation
-A one-level menu list.
+A site header with site title and a one-level site navigation.
 
 <Canvas withSource="none" withToolbar>
   <Story height={200} id="components-site-header--site-header-without-subnav" />
 </Canvas>
 
+```html
+<div class="uq-site-header">
+  <!-- Site title with mobile nav toggler (JS) -->
+  <div class="uq-site-header__title-container">
+    <div class="uq-site-header__title-container__left">
+      <a href="/" class="uq-site-header__title">Site title</a>
+    </div>
+    <div class="uq-site-header__title-container__right">
+      <button class="uq-site-header__navigation-toggle jsNavToggle">Menu</button>
+    </div>
+  </div>
+
+  <!-- Navigation menu  -->
+  <div class="uq-site-header__navigation-container">
+    <nav class="uq-site-header__navigation" id="jsNav">
+      <ul class="uq-site-header__navigation__list uq-site-header__navigation__list--level-1">
+        <li class="uq-site-header__navigation__list-item">
+          <a href="/">Navigation list item</a>
+        </li>
+        ...
+    </nav>
+  </div>
+</div> 
+```
+
 ### With sub-navigation
-A two-level menu list.
+A site header with a site title, a site utility, and a two-level site navigation with sub-navigation.
 
 <Canvas withSource="none" withToolbar>
-  <Story height={505} id="components-site-header--site-header" />
+  <Story height={505} id="components-site-header--site-header-with-subnav" />
 </Canvas>
 
-## No site title variant
+```html
+<div class="uq-site-header">
+  <!-- Site title and utility with mobile nav toggler (JS) -->
+  <div class="uq-site-header__title-container">
+    <div class="uq-site-header__title-container__left">
+      <a href="/" class="uq-site-header__title">Site title</a>
+    </div>
+    <div class="uq-site-header__title-container__right">
+      <div>[Site utilities go here]</div>
+      <button class="uq-site-header__navigation-toggle jsNavToggle">Menu</button>
+    </div>
+  </div>
 
-For special use when no site title is required (ie UQ Homepage)
+  <!-- Navigation menu  -->
+  <div class="uq-site-header__navigation-container">
+    <nav class="uq-site-header__navigation" aria-label="Site navigation" id="jsNav">
+      <ul class="uq-site-header__navigation__list uq-site-header__navigation__list--level-1">
+        <li class="uq-site-header__navigation__list-item uq-site-header__navigation__list-item--has-subnav uq-site-header__navigation__list-item--active">
+          <a href="/" aria-haspopup="true" aria-expanded="false">Navigation list item</a>
+          <button class="uq-site-header__navigation__sub-toggle"><span class="visually-hidden">Show Navigation list item sub-navigation</span></button>
+          <ul class="uq-site-header__navigation__list uq-site-header__navigation__list--level-2" aria-label="Navigation list item sub-navigation">
+            <li class="uq-site-header__navigation__list-item">
+              <a href="/">Sub-navigation list item</a>
+            </li>
+            ...
+          </ul>
+        </li>
+        ...
+      </ul>
+    </nav>
+  </div>
+</div>
+```
+
+## Variants
+
+### No site title
+For special use when no site title is required (E.g. UQ Homepage).
 
 ```html
 <div class="uq-site-header uq-site-header--no-site-title">
@@ -38,19 +98,30 @@ For special use when no site title is required (ie UQ Homepage)
   </div>
 ```
 
-## Site utility
+## How and when to use
 
-The Site title section includes a small space for secondary actions. `uq-site-header__navigation-header__actions`
-
-This is not an advertising or spam section, but intended for discrete, site wide functionality.
+### Site utility
+The component includes a small space for secondary actions. This section is not intended for advertising or spam, but intended for discrete, site wide functionality.
 
 **Examples include:** 
-
 * Future Students dropdown for domestic and international.
 * UQ Maps, expand to fill whole screen
 * UQ researchers shortlist
 
-## Break points
+```html
+<div class="uq-site-header">
+  <div class="uq-site-header__title-container">
+    <div class="uq-site-header__title-container__left">
+      <a href="/" class="uq-site-header__title">Site title</a>
+    </div>
+    <div class="uq-site-header__title-container__right">
+      <div>[Site utilities go here]</div>
+      <button class="uq-site-header__navigation-toggle jsNavToggle">Menu</button>
+    </div>
+  </div>
+```
 
-* Desktop above 1140px
-* Mobile and tablet below 1140px 
+
+
+## Accessibility
+

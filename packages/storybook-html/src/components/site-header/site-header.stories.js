@@ -7,7 +7,7 @@ import './site-header.scss';
 import siteHeaderNav from '@uqds/site-header/src/js/site-header-navigation';
 
 // import HTML template strings
-import siteHeaderHTML from './site-header.html';
+import siteHeaderWithSubnavHTML from './site-header-with-subnav.html';
 import siteHeaderWithoutSubnavHTML from './site-header-without-subnav.html';
 
 import docs from './site-header.docs.mdx';
@@ -26,15 +26,15 @@ export default {
   }
 };
 
-export const siteHeader = () => {
+export const siteHeaderWithSubnav = () => {
   useEffect(() => {
       var navelement = document.getElementById("jsNav");
       new siteHeaderNav(navelement, "uq-site-header__navigation");
     });
-  return siteHeaderHTML;
+  return siteHeaderWithSubnavHTML;
 };
 
-siteHeader.storyName = 'Site header with sub-navigation';
+siteHeaderWithSubnav.storyName = 'With sub-navigation';
 
 export const siteHeaderWithoutSubnav = () => {
   useEffect(() => {
@@ -44,4 +44,4 @@ export const siteHeaderWithoutSubnav = () => {
   return siteHeaderWithoutSubnavHTML;
 };
 
-siteHeaderWithoutSubnav.storyName = 'Site header without sub-navigation';
+siteHeaderWithoutSubnav.storyName = 'Without sub-navigation';

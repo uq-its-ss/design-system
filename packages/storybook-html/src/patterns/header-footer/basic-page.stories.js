@@ -6,7 +6,7 @@ import siteHeaderNav from '@uqds/site-header/src/js/site-header-navigation';
 
 // import HTML template strings
 import headerHTML from '../../components/header/header.html';
-import siteHeaderHTML from '../../components/site-header/site-header.html';
+import siteHeaderHTML from '../../components/site-header/site-header-with-subnav.html';
 import footerHTML from '../../components/footer/footer.html';
 
 import docs from './basic-page.docs.mdx';

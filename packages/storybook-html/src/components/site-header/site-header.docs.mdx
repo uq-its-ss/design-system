@@ -3,7 +3,9 @@ import StatusBadge from '../../../.storybook/custom/components/StatusBadge';
 
 # Site header
 
-<StatusBadge.Development /><StatusBadge.DraftDoc />
+<StatusBadge.Stable /><StatusBadge.StableDoc />
+
+<a href="https://github.com/uq-its-ss/design-system/issues" class="uq-button uq-button--text" target="_blank">Check for open issues</a>
 
 ## Overview
 
@@ -108,20 +110,10 @@ The component includes a small space for secondary actions. This section is not 
 * UQ Maps, expand to fill whole screen
 * UQ researchers shortlist
 
-```html
-<div class="uq-site-header">
-  <div class="uq-site-header__title-container">
-    <div class="uq-site-header__title-container__left">
-      <a href="/" class="uq-site-header__title">Site title</a>
-    </div>
-    <div class="uq-site-header__title-container__right">
-      <div>[Site utilities go here]</div>
-      <button class="uq-site-header__navigation-toggle jsNavToggle">Menu</button>
-    </div>
-  </div>
-```
-
-
 
 ## Accessibility
 
+aria-label
+aria-haspopup
+aria-expanded
+aria-pressed

@@ -34,7 +34,7 @@ A site header with site title and a one-level site navigation.
 
   <!-- Navigation menu  -->
   <div class="uq-site-header__navigation-container">
-    <nav class="uq-site-header__navigation" id="jsNav">
+    <nav class="uq-site-header__navigation" aria-label="Site navigation"  id="jsNav">
       <ul class="uq-site-header__navigation__list uq-site-header__navigation__list--level-1">
         <li class="uq-site-header__navigation__list-item">
           <a href="/">Navigation list item</a>
@@ -46,7 +46,7 @@ A site header with site title and a one-level site navigation.
 ```
 
 ### With sub-navigation
-A site header with a site title, a site utility, and a two-level site navigation with sub-navigation.
+A site header with a site title, a site utility, and a two-level site navigation.
 
 <Canvas withSource="none" withToolbar>
   <Story height={505} id="components-site-header--site-header-with-subnav" />
@@ -89,7 +89,7 @@ A site header with a site title, a site utility, and a two-level site navigation
 ## Variants
 
 ### No site title
-For special use when no site title is required (E.g. UQ Homepage).
+Displays a site header without a site title. This variant can be used with one-level or two-level site navigation.
 
 ```html
 <div class="uq-site-header uq-site-header--no-site-title">
@@ -102,6 +102,9 @@ For special use when no site title is required (E.g. UQ Homepage).
 
 ## How and when to use
 
+### No site title
+For special use when no site title is required, E.g. UQ Homepage.
+
 ### Site utility
 The component includes a small space for secondary actions. This section is not intended for advertising or spam, but intended for discrete, site wide functionality.
 
@@ -112,8 +115,8 @@ The component includes a small space for secondary actions. This section is not 
 
 
 ## Accessibility
+Include an `aria-label` for the level one main navigation. 
 
-aria-label
-aria-haspopup
-aria-expanded
-aria-pressed
+If you are using a site header with a level two sub-navigation, include an `aria-label` for the sub-navigation list and update the `visually-hidden` button label that toggles the sub-navigation. Also ensure the level one main navigation parent item for the sub-navigation includes an `aria-haspopup="true"` and `aria-expanded="false"`. 
+
+The JavaScript included with the site header handles the dynamic states for `aria-haspopup`, `aria-expanded`, and `aria-pressed` when interacting with the mobile navigation toggle, sub-navigation toggles, and sub-navigation lists. 

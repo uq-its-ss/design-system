@@ -162,31 +162,31 @@ class MainNavigation {
     const parent = event.currentTarget.parentNode;
     const nav = parent.parentNode;
     const mobileToggle = document.querySelector(`.${this.toggleClass}`);
-
+    
     if (parent === nav.firstElementChild) {
       // If we shift tab past the first child, toggle this level.
       if (event.key === 'Tab' && event.shiftKey === true) {
-        mobileToggle.classList.toggle(`${this.navClass}-toggle--close`);
-        mobileToggle.setAttribute('aria-expanded', 'false');
-        mobileToggle.setAttribute('aria-pressed', 'false');
-
-        if (parent.classList.contains(this.subNavClass)) {
-          this.closeLevel(nav, nav.parentNode);
+        if (nav.classList.contains(this.level2Class)) {
+          this.closeLevel(nav, nav.parentNode, subNav);
+          nav.parentNode.classList.remove(this.levelOpenModifier);
         } else {
           this.closeNav(nav);  
+          mobileToggle.classList.toggle(`${this.navClass}-toggle--close`);
+          mobileToggle.setAttribute('aria-expanded', 'false');
+          mobileToggle.setAttribute('aria-pressed', 'false');
         }
       }
     } else if (parent === nav.lastElementChild) {
       // If we tab past the last child, toggle this level.
       if (event.key === 'Tab' && event.shiftKey === false) {
-        mobileToggle.classList.toggle(`${this.navClass}-toggle--close`);
-        mobileToggle.setAttribute('aria-expanded', 'false');
-        mobileToggle.setAttribute('aria-pressed', 'false');
-
-        if (parent.classList.contains(this.subNavClass)) {
+        if (nav.classList.contains(this.level2Class)) {
           this.closeLevel(nav, nav.parentNode);
+          nav.parentNode.classList.remove(this.levelOpenModifier);
         } else {
-          this.closeNav(nav);   
+          this.closeNav(nav);  
+          mobileToggle.classList.toggle(`${this.navClass}-toggle--close`);
+          mobileToggle.setAttribute('aria-expanded', 'false');
+          mobileToggle.setAttribute('aria-pressed', 'false');  
         }
       }
     }

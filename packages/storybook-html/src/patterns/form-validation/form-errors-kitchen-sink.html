@@ -3,18 +3,18 @@
     <h4>Before the user tries to submit this empty form</h4>
     <form method="post">
       <fieldset>
-        <label for="username">UQ username <span class="label__required">(required)</span></label>
+        <label for="username">UQ username <span class="uq-label__required">(required)</span></label>
         <input type="text" name="username">
-        <p class="inline-help"><a href="https://support.my.uq.edu.au/app/answers/detail/a_id/2535" target="_blank">Forgotten your username?</a></p>
+        <p class="uq-inline-help"><a href="https://support.my.uq.edu.au/app/answers/detail/a_id/2535" target="_blank">Forgotten your username?</a></p>
       </fieldset>
       <fieldset>
-        <legend>We'll send you a verification code so you can regain access to your account. Where should we send your verification code? <span class="legend__required">(required)</span></legend>
+        <legend>We'll send you a verification code so you can regain access to your account. Where should we send your verification code? <span class="uq-legend__required">(required)</span></legend>
         <div>
           <label>
             <input type="radio" name="method" value="email" title="Send verification code to personal email address">
             <span>Personal email</span>
           </label>
-          <label class="label--disabled">The personal email address you had set in my.UQ dashboard</label>
+          <label class="uq-label--disabled">The personal email address you had set in my.UQ dashboard</label>
           <input type="email" name="email" disabled>
         </div>
         <div>
@@ -22,7 +22,7 @@
             <input type="radio" name="method" value="mobile" title="Send verification code to mobile number">
             <span>Mobile number</span>
           </label>
-          <label class="label--disabled">The mobile number you had set in my.UQ dashboard</label>
+          <label class="uq-label--disabled">The mobile number you had set in my.UQ dashboard</label>
           <input type="text" name="mobile" disabled>
         </div>
       </fieldset>
@@ -30,45 +30,45 @@
   </div>
   <div class="uq-grid__col">
     <h4>After the user tries to submit this empty form</h4>
-    <div id="errorSummary" class="error-summary" role="alert">
-      <h2 class="error-summary__title">Your form was not submitted. Please fix the following issues.</h2>
-      <ul class="error-summary__list">
-        <li class="error-summary__list__item">
+    <div id="errorSummary" class="uq-error-summary" role="alert">
+      <h2 class="uq-error-summary__title">Your form was not submitted. Please fix the following issues.</h2>
+      <ul class="uq-error-summary__list">
+        <li class="uq-error-summary__list__item">
           <a href="#usernameLabel">Enter your UQ username</a>
         </li>
-        <li class="error-summary__list__item">
+        <li class="uq-error-summary__list__item">
           <a href="#methodDesc">Select a verification method to complete</a>
         </li>
       </ul>
     </div>
     <form method="post">
       <fieldset>
-        <label for="username" id="usernameLabel" class="label--error">UQ username <span class="label__required">(required)</span></label>
-        <input type="text" name="username" id="username" class="input--error" aria-describedby="usernameError usernameDesc" aria-invalid="true">
-        <div id="usernameError" aria-live="polite" class="error-message">Enter your UQ username</div>
-        <p id="usernameDesc" class="inline-help"><a href="https://support.my.uq.edu.au/app/answers/detail/a_id/2535" target="_blank">Forgotten your username?</a></p>
+        <label for="username" id="usernameLabel" class="uq-label--error">UQ username <span class="uq-label__required">(required)</span></label>
+        <input type="text" name="username" id="username" class="uq-input--error" aria-describedby="usernameError usernameDesc" aria-invalid="true">
+        <div id="usernameError" aria-live="polite" class="uq-error-message">Enter your UQ username</div>
+        <p id="usernameDesc" class="uq-inline-help"><a href="https://support.my.uq.edu.au/app/answers/detail/a_id/2535" target="_blank">Forgotten your username?</a></p>
       </fieldset>
       <fieldset>
-        <legend id="methodDesc" class="legend--error">We'll send you a verification code so you can regain access to your account. Where should we send your verification code? <span class="legend__required">(required)</span></legend>
+        <legend id="methodDesc" class="uq-legend--error">We'll send you a verification code so you can regain access to your account. Where should we send your verification code? <span class="uq-legend__required">(required)</span></legend>
         <div>
-          <label class="label--error">
-            <input type="radio" id="methodEmail" class="input--error" name="method" value="email" title="Send verification code to personal email address" aria-describedby="methodError methodDesc" aria-invalid="true">
+          <label class="uq-label--error">
+            <input type="radio" id="methodEmail" class="uq-input--error" name="method" value="email" title="Send verification code to personal email address" aria-describedby="methodError methodDesc" aria-invalid="true">
             <span>Personal email</span>
           </label>
-          <label for="email" class="label--disabled">The personal email address you had set in my.UQ dashboard</label>
+          <label for="email" class="uq-label--disabled">The personal email address you had set in my.UQ dashboard</label>
           <input type="email" name="email" id="email" aria-describedby="emailError" disabled aria-invalid="false">
           <div id="emailError" aria-live="polite"></div>
         </div>
         <div>
-          <label class="label--error">
-            <input type="radio" id="methodMobile" class="input--error" name="method" value="mobile" title="Send verification code to mobile number" aria-describedby="methodError methodDesc" aria-invalid="true">
+          <label class="uq-label--error">
+            <input type="radio" id="methodMobile" class="uq-input--error" name="method" value="mobile" title="Send verification code to mobile number" aria-describedby="methodError methodDesc" aria-invalid="true">
             <span>Mobile number</span>
           </label>
-          <label for="mobile" class="label--disabled">The mobile number you had set in my.UQ dashboard</label>
+          <label for="mobile" class="uq-label--disabled">The mobile number you had set in my.UQ dashboard</label>
           <input type="text" name="mobile" id="mobile" aria-describedby="mobileError" disabled aria-invalid="false">
           <div id="mobileError" aria-live="polite"></div>
         </div>
-        <div id="methodError" aria-live="polite" class="error-message">Select a verification method to complete</div>
+        <div id="methodError" aria-live="polite" class="uq-error-message">Select a verification method to complete</div>
       </fieldset>
     </form>
   </div>

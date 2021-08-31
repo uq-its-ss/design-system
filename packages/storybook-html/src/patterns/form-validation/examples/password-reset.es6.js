@@ -12,7 +12,7 @@ var passwordResetValidation = (function() {
    */
   function passwordResetValidation() {
     this.form                = document.getElementById("passwordResetForm");
-    this.labelDisabledClass  = "label--disabled";
+    this.labelDisabledClass  = "uq-label--disabled";
     this.errorSummary        = document.getElementById("errorSummary");
 
     this.passwordInput                     = document.getElementById("password");
@@ -281,10 +281,10 @@ var passwordResetValidation = (function() {
       // set error state
       var error = this.choosePasswordFormErrors[errorKey];
 
-      labelElem.classList.add("label--error");
-      inputElem.classList.add("input--error");
+      labelElem.classList.add("uq-label--error");
+      inputElem.classList.add("uq-input--error");
       inputElem.setAttribute("aria-invalid", "true");
-      errorElem.classList.add("error-message");
+      errorElem.classList.add("uq-error-message");
 
       if (_.isArray(error)) {
         var error = error.join(",<br/>");
@@ -293,10 +293,10 @@ var passwordResetValidation = (function() {
       errorElem.innerHTML = error;
     } else {
       // remove error state
-      labelElem.classList.remove("label--error");
-      inputElem.classList.remove("input--error");
+      labelElem.classList.remove("uq-label--error");
+      inputElem.classList.remove("uq-input--error");
       inputElem.setAttribute("aria-invalid", "false");
-      errorElem.classList.remove("error-message");
+      errorElem.classList.remove("uq-error-message");
       errorElem.innerHTML = "";
     }
   };
@@ -304,12 +304,12 @@ var passwordResetValidation = (function() {
   passwordResetValidation.prototype.renderChoosePasswordErrorSummary = function () {
     this.errorSummary.innerHTML = "";
     var errorSummaryHeading = document.createElement("h2");
-    errorSummaryHeading.className = "error-summary__title";
+    errorSummaryHeading.className = "uq-error-summary__title";
     errorSummaryHeading.innerText = "Your form could not be submitted";
     var errorSummaryBody = document.createElement("div");
-    errorSummaryBody.className = "error-summary__body";
+    errorSummaryBody.className = "uq-error-summary__body";
     var errorSummaryList = document.createElement("ul");
-    errorSummaryList.className = "error-summary__list";
+    errorSummaryList.className = "uq-error-summary__list";
     
     // error keys to render
     var itemsToRenderProcess = [
@@ -323,13 +323,13 @@ var passwordResetValidation = (function() {
         if (_.isArray(value)) {
           value.forEach((line) => {
             var link = document.createElement("li");
-            link.classList.add("error-summary__list__item");
+            link.classList.add("uq-error-summary__list__item");
             link.innerHTML = "<a href=\"#" +item[1]+ "\">" + line + "</a>";
             errorSummaryList.appendChild(link);
           });
         } else {
           var link = document.createElement("li");
-          link.classList.add("error-summary__list__item");
+          link.classList.add("uq-error-summary__list__item");
           link.innerHTML = "<a href=\"#" +item[1]+ "\">" + value + "</a>";
           errorSummaryList.appendChild(link);
         }
@@ -340,7 +340,7 @@ var passwordResetValidation = (function() {
     errorSummaryBody.appendChild(errorSummaryHeading);
     errorSummaryBody.appendChild(errorSummaryList);
     errorSummary.appendChild(errorSummaryBody);
-    errorSummary.classList.add("error-summary");    
+    errorSummary.classList.add("uq-error-summary");    
   };
 
   passwordResetValidation.prototype.renderAllInlineChoosePasswordErrors = function () {

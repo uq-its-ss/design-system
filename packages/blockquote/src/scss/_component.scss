@@ -20,14 +20,6 @@
 		width: core.$space-xs;
 	}
 
-	&--light {
-		color: core.$uq-purple;
-
-		&::before {
-			background-color: core.$uq-purple;
-		}
-	}
-
 	&--dark {
 		background-color: core.$uq-purple;
 		color: core.$uq-white;
@@ -48,27 +40,14 @@
 		}
 	}
 
-	&--boxed {
-		background: core.$uq-purple-gradient;
-		margin-left: core.$space-none;
-		padding: core.$space-xxl core.$space-xxl;
-		width: 100%;
-
-		&::before {
-			content: '';
-			height: calc(100% - 60px);
-			left: core.$space-l;
-			position: absolute;
-			top: core.$space-l;
-			width: core.$space-xs;
-		}
-	}
-
 	&__body {
 		font-family: 'Merriweather', serif;
 		font-size: core.$font-size-l;
 		font-weight: 300;
 		line-height: 1.4;
+		margin-left: core.$space-none;
+		padding-left: core.$space-none;
+		border-left: none;
 
 		p:first-child {
 			margin-top: 0;

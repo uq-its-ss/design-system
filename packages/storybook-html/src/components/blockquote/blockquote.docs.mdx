@@ -13,7 +13,7 @@ The blockquote component is used for quoting a passage of text or speech, the au
 
 ## Default
 
-Displays the blockquote text, author, and source in purple text to be displayed on light backgrounds such as white or light-grey.
+Displays the blockquote text, author, and source in purple text for use on light backgrounds such as white or light-grey.
 
 <Canvas withSource="none">
   <Story height={170} id="components-blockquote" />
@@ -25,7 +25,7 @@ Displays the blockquote text, author, and source in purple text to be displayed 
         <p>Words can be like X-rays, if you use them properly—they’ll go through anything. You read and you’re pierced.</p>
     </blockquote>
     <figcaption class="blockquote__footer">
-        —Aldous Huxley, <cite><a href="#" class="blockquote__link">Brave New World</a></cite>
+        —Aldous Huxley, <cite><a href="https://www.huxley.net/bnw/four.html" class="blockquote__link">Brave New World</a></cite>
     </figcaption>
 </figure>
 ```
@@ -34,7 +34,7 @@ Displays the blockquote text, author, and source in purple text to be displayed 
 
 ### Light 
 
-This variant changes the colour of the blockquote text to white so it can be displayed on darker backgrounds such as UQ purple. 
+Changes the colour of the blockquote text to white so it can be used on darker backgrounds such as UQ purple. 
 
 <Canvas withSource="none">
   <Story height={170} id="components-blockquote--blockquote-light" />
@@ -46,15 +46,15 @@ This variant changes the colour of the blockquote text to white so it can be dis
         <p>Words can be like X-rays, if you use them properly—they’ll go through anything. You read and you’re pierced.</p>
     </blockquote>
     <figcaption class="blockquote__footer">
-        —Aldous Huxley, <cite><a href="#" class="blockquote__link">Brave New World</a></cite>
+        —Aldous Huxley, <cite><a href="https://www.huxley.net/bnw/four.html" class="blockquote__link">Brave New World</a></cite>
     </figcaption>
 </figure>
 ```
 
 ## How and when to use
-The quoted content is contained in the ```blockquote``` element. The author and source are placed outside that element so they do not become a part of the quoted content. If referencing the source of the quote, the source title should be placed in a ```cite``` element. This element should only contain the title of the source not the author as the author is not considered the source according to the specifcations of the ```cite``` element. 
-
-The blockquote element represents the text is a quotation from another source. It should not be used for visual styling of other content.
+* The quoted content is contained in the ```blockquote``` element. The author and source are placed outside that element so they do not become a part of the quoted content. 
+* If referencing the source of the quote, the source title should be placed in a ```cite``` element. This element should only contain the title of the source, not the author as the author is not considered the source according to the specifcations of the ```cite``` element. 
+* The use of the blockquote element indicates the text is a quotation from another source. It should not be used for visual styling of other content.
 
 ## Accessibility
 The ```blockquote``` element is a semantic element and does not require additonal accessibility labels. 

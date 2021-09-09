@@ -1,7 +1,5 @@
 @use "@uqds/core/src/scss/global" as core;
 
-$image-path: '../images' !default;
-
 .blockquote {
 	border: none;
 	color: core.$uq-purple;
@@ -23,25 +21,10 @@ $image-path: '../images' !default;
 	}
 
 	&--light {
-		color: core.$uq-purple;
-
-		&::before {
-			background-color: core.$uq-purple;
-		}
-		&.blockquote--quotemark::before {
-			background-image: url('#{$image-path}/icon-open-doublequote-light.svg');
-		}
-	}
-
-	&--dark {
-		background-color: core.$uq-purple;
 		color: core.$uq-white;
 
 		&::before {
 			background-color: core.$uq-white;
-		}
-		&.blockquote--quotemark::before {
-			background-image: url('#{$image-path}/icon-open-doublequote-dark.svg');
 		}
 
 		.blockquote__link,
@@ -56,51 +39,14 @@ $image-path: '../images' !default;
 		}
 	}
 
-	&--boxed {
-		background: core.$uq-purple-gradient;
-		margin-left: core.$space-none;
-		padding: core.$space-xxl core.$space-xxl;
-		width: 100%;
-
-		&::before {
-			content: '';
-			height: calc(100% - 60px);
-			left: core.$space-l;
-			position: absolute;
-			top: core.$space-l;
-			width: core.$space-xs;
-		}
-		&.blockquote--quotemark::before {
-			left: core.$space-s;
-			position: absolute;
-			top: core.$space-xl;
-		}
-	}
-
-	&--quotemark {
-
-		&::before {
-			background-color: transparent;
-			background-image: url('#{$image-path}/icon-open-doublequote-light.svg');
-			background-size: contain;
-			background-repeat: no-repeat;
-			display: inline-block;
-			fill: core.$uq-black;
-			height: core.$space-l;
-			left: -(core.$space);
-			position: absolute;
-			stroke: core.$uq-black;
-			stroke-width: 0;
-			top: 0;
-			width: core.$space-l;
-		}
-	}
-
 	&__body {
 		font-family: 'Merriweather', serif;
 		font-size: core.$font-size-l;
 		font-weight: 300;
 		line-height: 1.4;
+		margin-left: core.$space-none;
+		padding-left: core.$space-none;
+		border-left: none;
 
 		p:first-child {
 			margin-top: 0;

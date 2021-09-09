@@ -3,116 +3,58 @@ import StatusBadge from '../../../.storybook/custom/components/StatusBadge';
 
 # Blockquote
 
-<StatusBadge.Review /><StatusBadge.ReviewDoc />
+<StatusBadge.Stable /><StatusBadge.StableDoc />
 
 <a href="https://github.com/uq-its-ss/design-system/issues" class="uq-button uq-button--text" target="_blank">Check for open issues</a>
 
 ## Overview
 
-For quoting a passage of text or speech from another source.
+The blockquote component is used for quoting a passage of text or speech, the author, and the source. 
 
 ## Default
 
-Displays the text content and attribution of the blockquote in purple text on a white background. 
+Displays the blockquote text, author, and source in purple text for use on light backgrounds such as white or light-grey.
 
 <Canvas withSource="none">
   <Story height={170} id="components-blockquote" />
 </Canvas>
 
 ```html
-<blockquote class="blockquote blockquote--light">
-    <div class="blockquote__body">
-        <p>Words can be like X-rays, if you use them properly — they’ll go through anything. You read and you’re pierced.</p>
-    </div>
-    <div class="blockquote__footer">
-        <p>Aldous Huxley, <cite><a href="#" class="blockquote__link">Brave New World</a></cite></p>
-    </div>
-</blockquote>
+<figure class="blockquote">
+    <blockquote class="blockquote__body">
+        <p>Words can be like X-rays, if you use them properly—they’ll go through anything. You read and you’re pierced.</p>
+    </blockquote>
+    <figcaption class="blockquote__footer">
+        —Aldous Huxley, <cite><a href="https://www.huxley.net/bnw/four.html" class="blockquote__link">Brave New World</a></cite>
+    </figcaption>
+</figure>
 ```
 
 ## Variants
 
-### Dark backgrounds
+### Light 
+
+Changes the colour of the blockquote text to white so it can be used on darker backgrounds such as UQ purple. 
 
 <Canvas withSource="none">
-  <Story height={170} id="components-blockquote--blockquote-dark" />
+  <Story height={170} id="components-blockquote--blockquote-light" />
 </Canvas>
 
 ```html
-<blockquote class="blockquote blockquote--dark">
-    <div class="blockquote__body">
-        <p>Words can be like X-rays, if you use them properly — they’ll go through anything. You read and you’re pierced.</p>
-    </div>
-    <div class="blockquote__footer">
-        <p>Aldous Huxley, <cite><a href="#" class="blockquote__link">Brave New World</a></cite></p>
-    </div>
-</blockquote>
+<figure class="blockquote blockquote--light">
+    <blockquote class="blockquote__body">
+        <p>Words can be like X-rays, if you use them properly—they’ll go through anything. You read and you’re pierced.</p>
+    </blockquote>
+    <figcaption class="blockquote__footer">
+        —Aldous Huxley, <cite><a href="https://www.huxley.net/bnw/four.html" class="blockquote__link">Brave New World</a></cite>
+    </figcaption>
+</figure>
 ```
 
-### Boxed
+## How and when to use
+* The quoted content is contained in the ```blockquote``` element. The author and source are placed outside that element so they do not become a part of the quoted content. 
+* If referencing the source of the quote, the source title should be placed in a ```cite``` element. This element should only contain the title of the source, not the author as the author is not considered the source according to the specifcations of the ```cite``` element. 
+* The use of the blockquote element indicates the text is a quotation from another source. It should not be used for visual styling of other content.
 
-<Canvas withSource="none">
-  <Story id="components-blockquote--blockquote-boxed" />
-</Canvas>
-
-```html
-<blockquote class="blockquote blockquote--dark blockquote--boxed">
-    <div class="blockquote__body">
-        <p>Words can be like X-rays, if you use them properly — they’ll go through anything. You read and you’re pierced.</p>
-    </div>
-    <div class="blockquote__footer">
-        <p>Aldous Huxley, <cite><a href="#" class="blockquote__link">Brave New World</a></cite></p>
-    </div>
-</blockquote>
-```
-
-### Quotemark
-
-<Canvas withSource="none">
-  <Story id="components-blockquote--blockquote-quotemark" />
-</Canvas>
-
-```html
-<blockquote class="blockquote blockquote--light blockquote--quotemark">
-    <div class="blockquote__body">
-        <p>Words can be like X-rays, if you use them properly — they’ll go through anything. You read and you’re pierced.</p>
-    </div>
-    <div class="blockquote__footer">
-        <p>Aldous Huxley, <cite><a href="#" class="blockquote__link">Brave New World</a></cite></p>
-    </div>
-</blockquote>
-```
-
-### Quotemark, Dark
-
-<Canvas withSource="none">
-  <Story height={170} id="components-blockquote--blockquote-quotemark-dark" />
-</Canvas>
-
-```html
-<blockquote class="blockquote blockquote--dark blockquote--quotemark">
-    <div class="blockquote__body">
-        <p>Words can be like X-rays, if you use them properly — they’ll go through anything. You read and you’re pierced.</p>
-    </div>
-    <div class="blockquote__footer">
-        <p>Aldous Huxley, <cite><a href="#" class="blockquote__link">Brave New World</a></cite></p>
-    </div>
-</blockquote>
-```
-
-### Quotemark, Dark, Boxed
-
-<Canvas withSource="none">
-  <Story id="components-blockquote--blockquote-quotemark-dark-boxed" />
-</Canvas>
-
-```html
-<blockquote class="blockquote blockquote--dark blockquote--boxed blockquote--quotemark">
-    <div class="blockquote__body">
-        <p>Words can be like X-rays, if you use them properly — they’ll go through anything. You read and you’re pierced.</p>
-    </div>
-    <div class="blockquote__footer">
-        <p>Aldous Huxley, <cite><a href="#" class="blockquote__link">Brave New World</a></cite></p>
-    </div>
-</blockquote>
-```
+## Accessibility
+The ```blockquote``` element is a semantic element and does not require additonal accessibility labels. 

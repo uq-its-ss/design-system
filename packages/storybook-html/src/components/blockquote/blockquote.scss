@@ -1,6 +1,4 @@
-@use '@uqds/blockquote/src/scss/_component' as * with (
-    $image-path: '../../../node_modules/@uqds/blockquote/src/images'
-);
+@import '@uqds/blockquote/src/scss/_component';
 
 // Please don't apply random global styles here. You will affect other stories.
 // If you must style a story, please consider scoping to ensure no style 

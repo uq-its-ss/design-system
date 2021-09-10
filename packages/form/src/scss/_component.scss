@@ -83,6 +83,7 @@ $use-encapsulation: false !default;
           min-width: 200px;
           margin-left: core.$space;
           margin-right: core.$space-m;
+          width: auto;
         }
 
         input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]),
@@ -230,6 +231,7 @@ $use-encapsulation: false !default;
     background-position: right core.$space center;
     cursor: pointer;
     line-height: 1.2;
+    width: 100%;
 
     &:focus {
       background-image: url(get-icon('form-chevron-down', $form-focus-color));

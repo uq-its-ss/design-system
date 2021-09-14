@@ -19,26 +19,11 @@ export default {
   }
 };
 
-export const breadcrumbOneLevel = () => {
-  return `
-  <nav aria-label="breadcrumb">
-    <ol class="uq-breadcrumb" itemscope="" itemtype="https://schema.org/BreadcrumbList">
-      <li class="uq-breadcrumb__item uq-breadcrumb__item--home" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
-        <a class="uq-breadcrumb__link uq-breadcrumb__link--home" href="/">Home</a>
-        <meta itemprop="position" content="1">
-      </li>
-    </ol>
-  </nav>
-  `;
-};
-
-breadcrumbOneLevel.storyName = 'Breadcrumb one level';
-
-export const breadcrumbMultiLevel = () => {
+export const breadcrumb = () => {
   return breadcrumbHTML;
 };
 
-breadcrumbMultiLevel.storyName = 'Breadcrumb multi level';
+breadcrumb.storyName = 'Default';
 
 export const breadcrumbTruncation = () => {
   return `
@@ -53,7 +38,7 @@ export const breadcrumbTruncation = () => {
         <meta itemprop="position" content="2">
       </li>
       <li class="uq-breadcrumb__item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
-        <a class="uq-breadcrumb__link" itemprop="item" href="/information-and-services/human-resources">Human resources for University of Queensland</a>
+        <a class="uq-breadcrumb__link" itemprop="item" href="/information-and-services/accessing-it-systems-and-software-remotely">Accessing IT systems and software remotely</a>
         <meta itemprop="position" content="3">
       </li>
     </ol>
@@ -61,4 +46,4 @@ export const breadcrumbTruncation = () => {
   `;
 };
 
-breadcrumbTruncation.storyName = 'Breadcrumb truncation';
+breadcrumbTruncation.storyName = 'Truncation';

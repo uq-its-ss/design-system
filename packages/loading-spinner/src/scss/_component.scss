@@ -5,10 +5,10 @@
 	color: core.$uq-purple;
 	background-color: transparent;
 	border-radius: 50%;
-	height: 3rem;
-	padding: .25rem;
+	height: core.$space-xxl;
+	padding: core.$space-xs;
 	overflow: hidden;
-	width: 3rem;
+	width: core.$space-xxl;
 	-webkit-mask-image: linear-gradient(transparent 50%,#000 0),linear-gradient(90deg,transparent 50%,#000 0);
 	mask-image: linear-gradient(transparent 50%,#000 0),linear-gradient(90deg,transparent 50%,#000 0);
 	-webkit-animation: pure-material-progress-circular 6s cubic-bezier(.3,.6,1,1) infinite;
@@ -16,17 +16,36 @@
 
 	&::before {
 		background-color: transparent;
-		border: .25rem solid transparent;
+		border: core.$space-xs solid transparent;
 		border-top-color: core.$uq-purple;
 		border-radius: 50%;
 		box-sizing: border-box;
 		content: "";
 		display: block;
 		height: 100%;
-		margin-bottom: .25rem;
+		margin-bottom: core.$space-xs;
 		width: 100%;
 		-webkit-animation: pure-material-progress-circular-pseudo .75s linear infinite alternate;
 		animation: pure-material-progress-circular-pseudo .75s linear infinite alternate;
+	}
+
+	&--light {
+		color: core.$uq-white;
+
+		&::before {
+			border-top-color: core.$uq-white;
+		}
+	}
+
+	&--small {
+		height: core.$space-m;
+		width: core.$space-m;
+		padding: core.$space-compressed-xs;
+
+		&::before {
+			border: core.$space-compressed-xs solid transparent;
+			margin-bottom: core.$space-compressed-xs;
+		}
 	}
 }
 

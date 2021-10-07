@@ -55,14 +55,61 @@ Use lists if there is less content and when the semantics of a list serves bette
 </ul>
 ```
 
-## Behaviour
+## Variants
+
+### Subtitle
+
+The subtitle allows for a secondary context. Typically the primary title should provide enough information. 
+
+<Canvas withSource="none">
+  <Story height={300} id="components-accordion--has-subtitle" />
+</Canvas>
+
+```html
+<div class="uq-accordion uq-accordion--is-manual" aria-label="Accordion button group">
+    <div  class="uq-accordion__item">
+     <button class="uq-accordion__toggle" aria-controls="content-1" aria-expanded="false" id="accordion-title-1">
+        Title 1
+        <span class="uq-accordion__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor eros dui, vitae iaculis leo ornare eget.</span>
+    </button>
+      <div  class="uq-accordion__content" aria-hidden="true" id="content-1" aria-labelledby="accordion-title-1">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor eros dui, vitae iaculis leo ornare eget. Etiam tristique lobortis ligula non mattis. Ut dapibus libero neque, vel tincidunt nunc tempus eget.</p>
+      </div>
+    </div>
+    ...
+    ...
+</div>
+```
+
+### Compact
+
+A smaller more compact version. 
+
+<Canvas withSource="none">
+  <Story height={300} id="components-accordion--is-compact" />
+</Canvas>
+
+```html
+<div class="uq-accordion uq-accordion--compact" aria-label="Accordion button group">
+    <div  class="uq-accordion__item">
+      <button  class="uq-accordion__toggle" aria-controls="content-1" aria-expanded="false" id="accordion-title-1">Title 1</button>
+      <div  class="uq-accordion__content" aria-hidden="true" id="content-1" aria-labelledby="accordion-title-1">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor eros dui, vitae iaculis leo ornare eget. Etiam tristique lobortis ligula non mattis. Ut dapibus libero neque, vel tincidunt nunc tempus eget.</p>
+      </div>
+    </div>
+    ...
+    ...
+</div>
+```
+
+### Behaviour
 
 The accordion expand and collpase behaviour can either be automatic or manual. 
 
-### Default behaviour (automatic)
+#### Automatic behaviour
 By default, users can expand and collapse one accordion at a time. When a user expands one accordion then clicks on another, the previously expanded accordion collapses automatically. This is useful if users only need to view the contents of one accordion at a time. Examples of this default behaviour are shown in the accordions above using `<div>` or `<ul>`. 
 
-### Variant behavour (manual)
+#### Manual Behaviour
 Alternate behaviour is to allow users to expand and collapse any number of accordions at a time. When a user expands one accordion then clicks on another, the previously expanded accordion remains expanded and the user will need to manually collapse it. This is useful if users need to view the contents of multiple accordions at a time. To enable this behaviour, add the classname `uq-accordion--is-manual` to the `<div>` or `<ul>` as shown below.
 
 <Canvas withSource="none">

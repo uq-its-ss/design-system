@@ -145,3 +145,27 @@
     display: block !important;
   }
 }
+
+
+
+.uq-accordion--compact {
+   
+}
+.uq-accordion--compact .uq-accordion__toggle {
+  font-size: core.$font-size;
+  padding: core.$space-s core.$space-xxxl core.$space-s core.$space;
+}
+
+.uq-accordion__subtitle {
+  font-size: core.$font-size-s;
+  font-weight: 400;
+  color: #6f6f6f;
+  line-height: 1.4;
+
+// required for ellipsis and line value that will truncate text
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+}
+

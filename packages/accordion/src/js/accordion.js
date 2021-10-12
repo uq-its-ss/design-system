@@ -136,14 +136,15 @@ class accordion {
   handleToggle(togglers) {
     return (e) => {
       e.preventDefault();
-      if (e.target.classList.contains(`${this.className}__toggle--active`)) {
-        this.slideContentUp(e.target);
+      const toggle = e.target.closest(`.${this.className}__toggle`);
+      if (toggle.classList.contains(`${this.className}__toggle--active`)) {
+        this.slideContentUp(toggle);
       } else {
-        if (e.target.closest(`.${this.className}`).classList.contains(`${this.className}--is-manual`)) {
-          this.slideContentDown(e.target);
+        if (toggle.closest(`.${this.className}`).classList.contains(`${this.className}--is-manual`)) {
+          this.slideContentDown(toggle);
         } else {
-          this.slideContentDown(e.target);
-          this.slideUpOthers(e.target, togglers);
+          this.slideContentDown(toggle);
+          this.slideUpOthers(toggle, togglers);
         }
       }
     }

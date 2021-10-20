@@ -117,13 +117,13 @@ export const tabsWithIcon = () => {
     <div class="uq-tabs__tab-list-wrapper">
       <div class="uq-tabs__tab-list" role="tablist" aria-label="Tab List">
         <button class="uq-tabs__tab uq-tabs__tab--active" role="tab" aria-selected="true" aria-controls="tab41-panel" id="tab41">
-          <span class="uq-icon uq-icon--search"></span> Tab 1
+          <span class="uq-icon uq-icon--common--search"></span> Tab 1
         </button>
         <button class="uq-tabs__tab" role="tab" aria-selected="false" aria-controls="tab42-panel" id="tab42" tabindex="-1">
-          <span class="uq-icon uq-icon--search"></span> Tab 2
+          <span class="uq-icon uq-icon--common--search"></span> Tab 2
         </button>
         <button class="uq-tabs__tab" role="tab" aria-selected="false" aria-controls="tab43-panel" id="tab43" tabindex="-1">
-          <span class="uq-icon uq-icon--search"></span> Tab 3
+          <span class="uq-icon uq-icon--common--search"></span> Tab 3
         </button>
       </div>
     </div>

@@ -9,6 +9,8 @@ import accordionCreate from '@uqds/accordion/src/js/accordion';
 // import HTML template strings
 import accordionDivHTML from './accordion-div.html';
 import accordionListHTML from './accordion-list.html';
+import accordionSubtitleHTML from './accordion-subtitle.html';
+import accordionCompactHTML from './accordion-compact.html';
 import accordionDivIsManualHTML from './accordion-div-is-manual.html';
 
 // documentation
@@ -45,6 +47,24 @@ export const usingLists = () => {
 };
 
 usingLists.storyName = 'Using lists';
+
+export const HasSubtitle = () => {
+  useEffect(() => {
+    new accordionCreate(); 
+  });
+  return accordionSubtitleHTML;
+};
+
+HasSubtitle.storyName = 'Subtitle';
+
+export const IsCompact = () => {
+  useEffect(() => {
+    new accordionCreate(); 
+  });
+  return accordionCompactHTML;
+};
+
+IsCompact.storyName = 'Compact';
 
 export const isManual = () => {
   useEffect(() => {

@@ -960,6 +960,10 @@ export default [
     "category": "standard"
   },
   {
+    "name": "exclamation-circle",
+    "category": "standard"
+  },
+  {
     "name": "expand-3",
     "category": "standard"
   },

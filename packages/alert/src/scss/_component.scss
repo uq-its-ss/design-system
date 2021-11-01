@@ -103,7 +103,7 @@
 
     .uq-alert__message {
       &::before {
-        background-image: url(icon.get-icon('standard--alert-triangle', core.$uq-neutral-dark80));
+        background-image: url(icon.get-icon('standard--exclamation-circle', core.$uq-neutral-dark80));
       }
     }
   }
@@ -112,7 +112,7 @@
 
     .uq-alert__message {
       &::before {
-        background-image: url(icon.get-icon('standard--error-circle', core.$uq-neutral-dark80));
+        background-image: url(icon.get-icon('standard--alert-triangle', core.$uq-neutral-dark80));
       }
     }
   }
@@ -196,7 +196,7 @@
   
       .uq-alert__message {
         &::before {
-          background-image: url(icon.get-icon('standard--error-circle', core.$uq-white));
+          background-image: url(icon.get-icon('standard--alert-triangle', core.$uq-white));
         }
       }
     }

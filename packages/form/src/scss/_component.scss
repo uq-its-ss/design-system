@@ -286,7 +286,7 @@ $use-encapsulation: false !default;
     }
 
     &:checked {
-      border-color: core.$uq-neutral-dark60;
+      border-color: core.$link;
 
       &:focus {
         border-color: $form-focus-color;
@@ -314,9 +314,15 @@ $use-encapsulation: false !default;
 
     &[disabled] {
       cursor: not-allowed;
+      border-color: $form-border-color;
+      background-color: core.$uq-neutral-light80;
 
       + label {
-        opacity: .5;
+        opacity: .5; /* need to replace with a solid colour */
+      }
+
+      &:checked {
+        background-color: core.$uq-neutral-light20;
       }
     }
   }
@@ -330,17 +336,18 @@ $use-encapsulation: false !default;
       position: absolute;
       background-repeat: no-repeat;
       background-position: center center;
-      top: -1px;
-      left: -1px;
+      top: 1px;
+      left: 1px;
       height: $form-checkbox-check-size;
       width: $form-checkbox-check-size;
     }
 
     &:checked {
-      background-color: core.$uq-neutral-dark60;
+      background-color: core.$link;
 
       &::after {
-        background-image: url(get-icon("form-checkbox-check", $form-checkbox-check-color));
+        background-image: url(icon.get-icon('standard--check', $form-checkbox-check-color));
+        padding: 0px;
       }
     }
 
@@ -359,7 +366,7 @@ $use-encapsulation: false !default;
 
       &::after {
         border-radius: 50%;
-        background-color: core.$uq-neutral-dark60;
+        background-color: core.$link;
         content: "";
         display: block;
         position: absolute;
@@ -367,6 +374,15 @@ $use-encapsulation: false !default;
         left: 3px;
         height: $form-checkbox-size - 10px;
         width: $form-checkbox-size - 10px;
+      }
+    }
+
+    &[disabled] {
+      &:checked {
+        background-color: core.$uq-neutral-light80;
+        &::after {
+          background-color: core.$uq-neutral-light20;
+        }
       }
     }
 

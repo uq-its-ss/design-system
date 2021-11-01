@@ -226,15 +226,16 @@ $use-encapsulation: false !default;
 
   select {
     appearance: none;
-    background-image: url(get-icon('form-chevron-down', $form-select-icon));
+    background-image: url(icon.get-icon('standard--chevron-down-sml', $form-select-icon));
     background-repeat: no-repeat;
-    background-position: right core.$space center;
+    background-position: right core.$space-xs center;
+    padding-right: 2.5rem;
     cursor: pointer;
     line-height: 1.2;
     width: 100%;
 
     &:focus {
-      background-image: url(get-icon('form-chevron-down', $form-focus-color));
+      background-image: url(icon.get-icon('standard--chevron-down-sml', $form-focus-color));
     }
   
     &[multiple] {
@@ -247,7 +248,7 @@ $use-encapsulation: false !default;
     }
   
     &[disabled] {
-      background-image: url(get-icon('form-chevron-down', $form-select-icon-disabled));
+      background-image: url(icon.get-icon('standard--chevron-down-sml', $form-select-icon-disabled));
     }
   }
 

@@ -932,6 +932,10 @@ export default [
         "category": "standard"
     },
     {
+        "name": "chevron-left-sml",
+        "category": "standard"
+    },
+    {
         "name": "close",
         "category": "standard"
     },
@@ -957,6 +961,10 @@ export default [
     },
     {
         "name": "error-circle",
+        "category": "standard"
+    },
+    {
+        "name": "exclamation-circle",
         "category": "standard"
     },
     {

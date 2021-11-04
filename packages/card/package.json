@@ -1,6 +1,6 @@
 {
   "name": "@uqds/card",
-  "version": "0.0.3-alpha.0",
+  "version": "0.0.4-alpha.0",
   "description": "Card components",
   "keywords": [
     "uqds",
@@ -33,6 +33,6 @@
     "url": "https://github.com/uq-its-ss/design-system/issues"
   },
   "dependencies": {
-    "@uqds/core": "^0.0.3-alpha.0"
+    "@uqds/core": "^0.0.4-alpha.0"
   }
 }

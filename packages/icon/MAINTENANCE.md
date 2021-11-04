@@ -1,6 +1,6 @@
 # Special maintenance instructions
 
-In an effort to make maintenance easier, a build script (`scripts/build-icons.js`)
+In an effort to make maintenance easier, a build script (`src/ts/build-icons/index.ts` compiled to `dist/index.js`)
 generates resources (into `src/scss/_build`) by processing the `src/images`
 folder. The image folder has this convention, which you should follow:
 

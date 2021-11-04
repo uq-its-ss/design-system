@@ -34,8 +34,12 @@
     "url": "git+https://github.com/uq-its-ss/design-system.git"
   },
   "scripts": {
-    "build-icons": "node scripts/build-icons.js",
-    "build": "node scripts/build-icons.js"
+    "build": "npm run build-ts && npm run build-icons",
+    "build-ts": "tsc -p ./src/ts/tsconfig.json",
+    "build-icons": "node dist/index.js",
+    "clean": "npm run clean-ts && npm run clean-icons",
+    "clean-ts": "rm -rf ./dist/*.js*",
+    "clean-icons": "rm -rf ./dist/images src/*/_build/*"
   },
   "bugs": {
     "url": "https://github.com/uq-its-ss/design-system/issues"
@@ -44,11 +48,18 @@
     "@uqds/core": "^0.0.3-alpha.0"
   },
   "devDependencies": {
-    "@svgdotjs/svg.js": "^3.0.16",
-    "glob": "^7.1.6",
-    "js-yaml": "^3.14.1",
-    "mini-svg-data-uri": "^1.2.3",
+    "@svgdotjs/svg.js": "^3.1.1",
+    "@types/node": "^16.11.6",
+    "@types/svgo": "^2.6.0",
+    "@typescript-eslint/eslint-plugin": "^5.3.0",
+    "@typescript-eslint/parser": "^5.3.0",
+    "eslint": "^8.1.0",
+    "glob": "^7.2.0",
+    "mini-svg-data-uri": "^1.4.3",
+    "prettier": "^2.4.1",
     "svgdom": "^0.1.8",
-    "svgo": "^2.7.0"
+    "svgo": "^2.8.0",
+    "typescript": "^4.4.4",
+    "@types/glob": "^7.2.0"
   }
 }

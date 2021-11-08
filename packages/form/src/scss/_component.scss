@@ -96,7 +96,7 @@ $use-encapsulation: false !default;
 
       &--disabled,
       &--readonly {
-        color: core.$uq-neutral-dark20;
+        color: $form-text-disabled-color;
       }
 
       &--disabled {
@@ -138,7 +138,7 @@ $use-encapsulation: false !default;
 
       &[disabled] {
         + *:not(input):not(select):not(textarea) {
-          opacity: .5;
+          color: $form-text-disabled-color;
         }
       }
     }
@@ -226,15 +226,16 @@ $use-encapsulation: false !default;
 
   select {
     appearance: none;
-    background-image: url(get-icon('form-chevron-down', $form-select-icon));
+    background-image: url(icon.get-icon('standard--chevron-down-sml', $form-select-icon));
     background-repeat: no-repeat;
-    background-position: right core.$space center;
+    background-position: right core.$space-xs center;
+    padding-right: 2.5rem;
     cursor: pointer;
     line-height: 1.2;
     width: 100%;
 
     &:focus {
-      background-image: url(get-icon('form-chevron-down', $form-focus-color));
+      background-image: url(icon.get-icon('standard--chevron-down-sml', $form-focus-color));
     }
   
     &[multiple] {
@@ -247,7 +248,7 @@ $use-encapsulation: false !default;
     }
   
     &[disabled] {
-      background-image: url(get-icon('form-chevron-down', $form-select-icon-disabled));
+      background-image: url(icon.get-icon('standard--chevron-down-sml', $form-select-icon-disabled));
     }
   }
 
@@ -286,7 +287,7 @@ $use-encapsulation: false !default;
     }
 
     &:checked {
-      border-color: core.$uq-neutral-dark60;
+      border-color: core.$link;
 
       &:focus {
         border-color: $form-focus-color;
@@ -314,9 +315,15 @@ $use-encapsulation: false !default;
 
     &[disabled] {
       cursor: not-allowed;
+      border-color: $form-border-color;
+      background-color: core.$uq-neutral-light80;
 
       + label {
-        opacity: .5;
+        color: $form-text-disabled-color;
+      }
+
+      &:checked {
+        background-color: core.$uq-neutral-light20;
       }
     }
   }
@@ -330,17 +337,18 @@ $use-encapsulation: false !default;
       position: absolute;
       background-repeat: no-repeat;
       background-position: center center;
-      top: -1px;
-      left: -1px;
+      top: 1px;
+      left: 1px;
       height: $form-checkbox-check-size;
       width: $form-checkbox-check-size;
     }
 
     &:checked {
-      background-color: core.$uq-neutral-dark60;
+      background-color: core.$link;
 
       &::after {
-        background-image: url(get-icon("form-checkbox-check", $form-checkbox-check-color));
+        background-image: url(icon.get-icon('standard--check', $form-checkbox-check-color));
+        padding: 0px;
       }
     }
 
@@ -359,7 +367,7 @@ $use-encapsulation: false !default;
 
       &::after {
         border-radius: 50%;
-        background-color: core.$uq-neutral-dark60;
+        background-color: core.$link;
         content: "";
         display: block;
         position: absolute;
@@ -367,6 +375,15 @@ $use-encapsulation: false !default;
         left: 3px;
         height: $form-checkbox-size - 10px;
         width: $form-checkbox-size - 10px;
+      }
+    }
+
+    &[disabled] {
+      &:checked {
+        background-color: core.$uq-neutral-light80;
+        &::after {
+          background-color: core.$uq-neutral-light20;
+        }
       }
     }
 

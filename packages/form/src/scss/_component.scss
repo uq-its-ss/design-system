@@ -96,7 +96,7 @@ $use-encapsulation: false !default;
 
       &--disabled,
       &--readonly {
-        color: core.$uq-neutral-dark20;
+        color: $form-text-disabled-color;
       }
 
       &--disabled {
@@ -138,7 +138,7 @@ $use-encapsulation: false !default;
 
       &[disabled] {
         + *:not(input):not(select):not(textarea) {
-          opacity: .5;
+          color: $form-text-disabled-color;
         }
       }
     }
@@ -319,7 +319,7 @@ $use-encapsulation: false !default;
       background-color: core.$uq-neutral-light80;
 
       + label {
-        opacity: .5; /* need to replace with a solid colour */
+        color: $form-text-disabled-color; /* need to replace with a solid colour  uq-neutral-dark20 */
       }
 
       &:checked {

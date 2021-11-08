@@ -319,7 +319,7 @@ $use-encapsulation: false !default;
       background-color: core.$uq-neutral-light80;
 
       + label {
-        color: $form-text-disabled-color; /* need to replace with a solid colour  uq-neutral-dark20 */
+        color: $form-text-disabled-color;
       }
 
       &:checked {

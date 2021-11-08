@@ -13,6 +13,7 @@ $form-label-size: core.$font-size-s;
 $form-placeholder-color: core.$uq-neutral-dark40;
 $form-spacing: core.$space;
 $form-text-color: core.$text;
+$form-text-disabled-color: core.$uq-neutral-dark20;
 $form-text-size: core.$font-size;
 
 // Select
@@ -23,5 +24,5 @@ $form-select-icon-disabled: $form-border-color;
 $form-checkbox-border-radius: 4px;
 $form-checkbox-border-width: 1px;
 $form-checkbox-check-color: core.$uq-white;
-$form-checkbox-size: 18px;
-$form-checkbox-check-size: $form-checkbox-size;
+$form-checkbox-size: 20px;
+$form-checkbox-check-size: 16px;

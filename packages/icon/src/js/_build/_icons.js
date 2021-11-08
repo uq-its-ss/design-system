@@ -932,6 +932,10 @@ export default [
     "category": "standard"
   },
   {
+    "name": "chevron-down-sml",
+    "category": "standard"
+  },
+  {
     "name": "close",
     "category": "standard"
   },

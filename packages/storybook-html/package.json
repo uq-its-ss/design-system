@@ -41,6 +41,7 @@
 		"@uqds/icon": "^0.0.4-alpha.0",
 		"@uqds/lists": "^0.0.4-alpha.0",
 		"@uqds/loading-spinner": "^0.0.4-alpha.0",
+		"@uqds/new-footer": "^0.0.4-alpha.0",
 		"@uqds/page-header": "^0.0.4-alpha.0",
 		"@uqds/pagination": "^0.0.4-alpha.0",
 		"@uqds/pane": "^0.0.4-alpha.0",

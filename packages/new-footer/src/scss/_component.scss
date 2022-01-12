@@ -42,6 +42,13 @@
       @media #{core.$screen-lg-up} {
         padding: 2.5rem 0;
       }
+
+      &--is-open {
+        .new-footer__navigation-level-2 {
+          height: auto;
+          overflow: auto;
+        }
+      }
     }
 
     &__navigation-list {
@@ -62,6 +69,8 @@
       @media #{core.$screen-lg-up} {
         border: none;
       }
+
+
       
     }
 
@@ -106,6 +115,14 @@
     }
 
     &__navigation-level-2 {
+      height: 0;
+      overflow: hidden;
+
+      @media #{core.$screen-lg-up} {
+        height: auto;
+        overflow: auto
+      }
+
       .new-footer__navigation-item {
         background-color: #f7f6f5;
 

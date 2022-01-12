@@ -1,0 +1,7 @@
+@use '@uqds/core/src/scss/global' as core;
+@use '@uqds/grid/src/scss/global' as grid;
+@use 'global' as *;
+
+.new-header {
+  border: 1px solid red !important;
+} 

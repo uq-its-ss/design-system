@@ -100,10 +100,8 @@
       //   grid-template-columns: repeat(3, minmax(0, 1fr));
       // }
 
-    
-
       @media #{core.$screen-lg-up} {
-        grid-template-columns: repeat(5, minmax(0, 1fr));
+        grid-template-columns: repeat(5, 1fr);
         grid-gap: 1rem;
         padding: 0 1rem;
       }
@@ -177,6 +175,54 @@
       }
     }
 
+    &__contact {
+      font-size: 0.875rem;
+      padding: 2.5rem 2.5rem 0;
+      display: grid;
+      grid-template-columns: auto;
+      grid-gap: 1.5rem;
+
+      // .new-footer__contact-enquiries {
+      //   grid-column-start: 1;
+      //   grid-column-end: 5;
+      //   grid-row-start: 1;
+      //   grid-row-end: 2;
+      // }
+
+      // .new-footer__contact-emergency {
+      //   grid-column-start: 1;
+      //   grid-column-end: 3;
+      //   grid-row-start: 3;
+      //   grid-row-end: 4;
+      // }
+
+      // .new-footer__contact-security {
+      //   grid-column-start: 3;
+      //   grid-column-end: 5;
+      //   grid-row-start: 3;
+      //   grid-row-end: 4;
+      // }
+
+      // .new-footer__contact-social {
+      //   grid-column-start: 1;
+      //   grid-column-end: 5;
+      //   grid-row-start: 5;
+      //   grid-row-end: 6;
+      // }
+
+      @media #{core.$screen-lg-up} {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 1.5rem;
+        justify-content: space-between; 
+        padding: 2.5rem 0 0;
+        grid-auto-columns: auto;
+      }
+
+      
+    }
+
+
   }  
   
 
@@ -237,26 +283,20 @@
   }
 
   /* Footer contact details */
-  .new-footer__contact {
-    font-size: 0.875rem;
-    padding: 2.5rem 2.5rem 0;
-    display: grid;
-    grid-template-columns: auto;
-    grid-gap: 1.5rem;
-  }
+
   .new-footer__contact-item {
   }
   .new-footer__contact-item p:last-of-type {
   margin-bottom: 0; /* allows grid gap to dictate spacing between last P tags (which currently have bottom instead of top margin.) */
   }
   @media(min-width: 73.25rem) {
-   .new-footer__contact {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    grid-gap: 1.5rem;
-    justify-content: space-between; 
-    padding: 2.5rem 0 0;
-   }
+  //  .new-footer__contact {
+  //   display: grid;
+  //   grid-template-columns: auto auto auto auto;
+  //   grid-gap: 1.5rem;
+  //   justify-content: space-between; 
+  //   padding: 2.5rem 0 0;
+  //  }
   }
   .new-footer__sub-title {
     color: #d4c8de;

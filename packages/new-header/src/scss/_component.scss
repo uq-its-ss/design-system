@@ -3,8 +3,9 @@
 @use 'global' as *;
 
 .new-header {
-  &__black {
-    background-color: #ccc;
+  &__black-nav-container {
+    background-color: #f5f5f5;
+    // grid-area: snav;
   }
 
   &__black-nav {
@@ -41,18 +42,21 @@
   &__main {
     background:linear-gradient(90deg, #51247A 0%, 87%, #962A8B 100%);
     box-sizing:border-box;
-    display: flex;
+    // display: flex;
     justify-content: space-between;
-    align-items: center;
+    // align-items: center;
+    display: grid;
+    grid-template-columns: auto auto;
 
     
   }
   &__main-container {
-
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto;
+    // display: flex;
     justify-content: space-between;
     align-items: center;
-
+    // grid-area: main;
     
 
     @media #{core.$screen-lg-up} {
@@ -75,6 +79,7 @@
 
   & .main-nav__search-toggle {
     padding: 2rem 1.5rem;
+    // grid-area: search;
   }
 
   &__logo {
@@ -91,6 +96,10 @@
     position: absolute;
     width: 100%;
     z-index: 3;
+  }
+
+  &__main-nav {
+    // grid-area: mainnav;
   }
 
   &__main-nav-list {
@@ -146,7 +155,8 @@
 
       & li {
         & a {
-          padding-left: 4.5rem;        }
+          padding-left: 4.5rem;        
+        }
       }
     }
 

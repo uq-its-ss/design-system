@@ -49,6 +49,27 @@
             </ul>
           </nav>
         </div>
+        <div class="new-header__search">
+          <form>
+            <fieldset>
+              <div class="new-header__search-query">
+                <label for="edit-q" class="visually-hidden">Search term</label>
+                <input type="text" id="edit-q" name="q" value="" maxlength="128" placeholder="Search by keyword" class="new-header__search-query-input">
+                <span class="new-header__search-query-button">
+                  <input type="submit" name="op" value="Search" class="new-header__search-query-submit">
+                </span>
+              </div>
+              <div class="new-header__search-range">
+                <input type="radio" id="edit-as_sitesearch-off" name="as_sitesearch" value="" class="form-radio new-header__search-radio">
+                <label for="edit-as_sitesearch-off" class="option new-header__search-label">Search all UQ websites</label>
+              </div>
+              <div class="new-header__search-range">
+                <input type="radio" id="edit-as_sitesearch-on" name="as_sitesearch" value="https://future-students.uq.edu.au/" checked="checked" class="form-radio new-header__search-radio">
+                <label for="edit-as_sitesearch-on" class="option new-header__search-label">Search this website (future-students.uq.edu.au)</label>
+              </div>
+            </fieldset>
+          </form>
+        </div>
       </div>
       <div class="new-header__black-nav-wrapper">
         <nav class="new-header__black-nav">

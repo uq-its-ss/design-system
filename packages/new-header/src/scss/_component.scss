@@ -175,7 +175,7 @@
   }
 
   .mega-menu {
-    display: none;
+    //display: none;
     background-color: #fff;
     list-style-type: none;
     margin: 0;
@@ -357,7 +357,7 @@
   &__main-nav-wrapper,
   &__black-nav-wrapper {
     @media #{core.$screen-lg-down} {
-      display: none;
+     // display: none;
     }
   }
 

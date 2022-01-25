@@ -9,8 +9,9 @@
   align-items: center;
   grid-template-columns: auto;
   grid-template-areas:
-    "mainheader "
+    "mainheader"
     "secondarynav";
+  position: relative;
 
   @media #{core.$screen-lg-up} {
     grid-template-areas:
@@ -27,19 +28,21 @@
     grid-area: mainheader;
     grid-template-areas:
     "menutoggle logo searchtoggle"
-    "mainnav mainnav mainnav"
-    "search search search";
+    "search search search"
+    "mainnav mainnav mainnav";
     
 
     @media #{core.$screen-lg-up} {
-      padding: 1rem;
       margin-left:auto;
       margin-right:auto;
       max-width:73.25rem;
       grid-template-areas:
         "logo mainnav searchtoggle"
         "search search search";
+      padding-left: 1rem;
+      padding-right: 1rem;
     }
+    
   }
 
   &__menu-toggle  {
@@ -111,11 +114,15 @@
 
   &__main-nav-wrapper {
     grid-area: mainnav;
-    // display: none;
+    display: none;
     // background: #fff;
     // position: absolute;
     width: 100%;
     z-index: 3;
+
+    @media #{core.$screen-lg-up} {
+      display: block;
+    }
   }
 
   &__main-nav {
@@ -142,6 +149,13 @@
 
     & li {
       margin: 0;
+
+      &:hover {
+        & > .new-header__megamenu-wrapper {
+          height: auto;
+          visibility: visible;
+        }
+      }
     }
   }
 
@@ -155,7 +169,7 @@
     position: relative;
 
     @media #{core.$screen-lg-up} {
-      padding: 1rem 2.5rem 1rem 1.5rem;
+      padding: 2rem 2.5rem 2rem 1.5rem;
     }
 
     &::after {
@@ -166,7 +180,7 @@
       height: 1rem;
       transform: translateY(50%);
       position: absolute;
-      top: 0.688rem;
+      top: 1.688rem;
       right: 1.75rem;
 
       @media #{core.$screen-lg-up} {
@@ -267,10 +281,24 @@
 
   &__search {
     grid-area: search;
+    transition: opacity .2s ease, transform .2s ease, visibility .2s ease, height .2s ease-in-out;
+    transform: translateY(-0.5rem);
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
     padding: 0 1.5rem;
 
     @media #{core.$screen-lg-up} {
-      padding: 1rem 0;
+      padding: 0;
+    }
+
+
+    &--is-open {
+      //display: grid;      
+      transform: translateY(0);
+      visibility: visible;
+      opacity: 1;
+      height: auto;
     }
   }
 
@@ -283,6 +311,10 @@
     background-color: #fff;
     background-position: 1rem;
     margin-bottom: 1rem;
+
+    @media #{core.$screen-lg-up} {
+      margin-top: 1rem;
+    }
   }
 
   &__search-query-input {
@@ -339,7 +371,7 @@
     font-size: 1rem;
   }
 
-  &__search-range{
+  &__search-range {
 
     display: inline-block;
 
@@ -350,9 +382,6 @@
     }
   }
 
-  &__search {
-    display: none;
-  }
 
 
   &__main-nav-wrapper,
@@ -362,18 +391,88 @@
     }
   }
 
+
+
+ 
+
   &__megamenu-wrapper {
-    grid-area: megamenu;
+    position: absolute;
+    top: 8.25rem;
+    left: 0;
     background: #f5f5f5;
+    width: 100%;
+    z-index: 40;
+    height: 0;
+    visibility: hidden;
+
+    // @media #{core.$screen-lg-up} {
+    //   display: block;
+    // }
     
   }
 
   &__megamenu {
-    display: none;
 
-    @media #{core.$screen-lg-up} {
-      display: grid;
+    margin-left:auto;
+    margin-right:auto;
+    max-width:73.25rem;
+    padding: 1rem 1rem 2rem 1rem;
+  }
+
+  // &__megamenu {
+    
+  //   transition: opacity .2s ease, transform .2s ease, visibility .2s ease;
+  //   transform: translateY(-0.5rem);
+  //   visibility: hidden;
+  //   opacity: 0;
+  //   height: 0;
+  //   margin-left:auto;
+  //   margin-right:auto;
+  //   max-width:73.25rem;
+
+  //   &--open {
+  //     padding: 1rem 1rem 2rem 1rem;
+  //     transform: translateY(0);
+  //     visibility: visible;
+  //     opacity: 1;
+  //     height: auto;
+  //   }
+  // }
+
+  .megamenu__row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .megamenu__overview-link {
+    display: block;
+    padding: .5rem 0;
+    color: core.$uq-purple;
+  }
+
+  .megamenu__heading {
+    color: core.$uq-purple;
+    font-weight: 500;
+    padding: .5rem 0;
+  }
+
+  .megamenu__menu {
+    & ul {
+      list-style-type: none;
+      margin: 0;
+      padding-left: 0;
+
+      & li {
+        margin: 0;
+
+        & a {
+          display: block;
+          padding: .25rem 0;
+          color: core.$uq-purple;
+        }
+      }
     }
   }
+
 
 } 

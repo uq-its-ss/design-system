@@ -52,6 +52,12 @@ function exportExample() {
   .pipe(dest('./dist'));
 }
 
+// Temporary slidemenu addition
+function exportSlidmenu() {
+  return src('./src/js/slide-menu.js')
+  .pipe(dest('./dist/js'));
+}
+
 // Bundle Javascript modules
 /**
  * TODO: Babel presets/targets need setting if clients have browser support
@@ -83,5 +89,8 @@ exports.compileSCSS = compileSCSS;
 exports.exportImages = exportImages;
 exports.exportFavicon = exportFavicon;
 exports.exportExample = exportExample;
+// Temporary slidemenu addition
+exports.exportSlidmenu = exportSlidmenu;
 exports.bundleJS = bundleJS;
-exports.default = parallel(compileSCSS, exportImages, exportFavicon, exportExample, bundleJS);
+// Temporary slidemenu additiongit pull
+exports.default = parallel(compileSCSS, exportImages, exportFavicon, exportExample, exportSlidmenu, bundleJS);

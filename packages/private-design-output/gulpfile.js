@@ -33,9 +33,7 @@ function exportFontFiles() {
 */
 
 function exportImages() {
-  return src([
-    './node_modules/@uqds/blockquote/src/images/**'
-  ])
+  return src('./src/images/rap-artwork.png')
   .pipe(dest('./dist/images'));
 }
 

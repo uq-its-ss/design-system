@@ -114,7 +114,7 @@
   &__navigation {
     a {
       border-bottom: 1px solid $nav-dropdown-divider;
-      color: $nav-primary;
+      color: core.$uq-purple;
       display: block;
       padding: core.$space core.$space-m;
       text-decoration: none;
@@ -126,7 +126,6 @@
         text-decoration: underline;
 
         @media #{core.$screen-lg-up} {
-          color: inherit;
           outline: 0 none;
           text-decoration: none;
           border-color: $nav-primary-active-bg;

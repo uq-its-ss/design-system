@@ -29,16 +29,25 @@ class header {
     this.mqLarge = this.mqLarge.trim().slice(1, -1); // browsers re-quote string style values
     this.mqLargeList = window.matchMedia(this.mqLarge);
 
-    console.log('init');
+    // TODO: REFACTOR SEARCH
 
+    this.menuToggle = document.querySelector('.main-nav__menu-toggle');
+    this.body = document.querySelector('body');
+
+    this.menuToggle.addEventListener('click', () => {
+      this.body.classList.toggle('no-scroll');
+
+    });
+
+    // TODO: REFACTOR
 
     this.searchToggle = document.querySelector('.main-nav__search-toggle');
     this.searchBlock = document.querySelector('.new-header__search');
 
-
-    this.searchToggle.addEventListener('click', (event) => {
+    this.searchToggle.addEventListener('click', () => {
+      this.searchToggle.classList.toggle('main-nav__search-toggle--is-open');
       this.searchBlock.classList.toggle('new-header__search--is-open');
-      event.preventDefault();
+
     });
 
 

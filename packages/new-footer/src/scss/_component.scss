@@ -3,7 +3,7 @@
 @use 'global' as *;
 
 .new-footer {
-    background:linear-gradient(90deg, #51247A 0%, 87%, #962A8B 100%);
+    background: core.$uq-purple; 
     box-sizing:border-box;
     color:#d4c8de;
 
@@ -37,7 +37,7 @@
     }
 
     &__navigation {
-      border-bottom: 1px solid #d4c8de;
+      /* border-bottom: 1px solid #d4c8de; */
 
       @media #{core.$screen-lg-up} {
         padding: 2.5rem 0;
@@ -59,7 +59,7 @@
     }
 
     &__navigation-item {
-      border-top: 1px solid #d4c8de;
+      /* border-top: 1px solid #d4c8de; */
       background-color: transparent;
       display: block;
       margin: 0;
@@ -90,6 +90,12 @@
       }
 
       
+    }
+    &__navigation-toggle {
+
+      @media #{core.$screen-lg-up} {
+        display: none;
+      }
     }
 
     &__navigation-level-1 {
@@ -122,7 +128,7 @@
       }
 
       .new-footer__navigation-item {
-        background-color: #f7f6f5;
+        /*background-color: #f7f6f5;*/
 
         @media #{core.$screen-lg-up} {
           background-color: transparent;
@@ -131,9 +137,9 @@
       }
 
       .new-footer__navigation-link {
-        color: #2b2a29;
+        /*color: #2b2a29;*/
         &:hover {
-          color: #2b2a29;
+          /*color: #2b2a29;*/
         }
 
         @media #{core.$screen-lg-up} {
@@ -304,6 +310,11 @@
     font-weight: 500;
     margin: 0;
   }
+
+  .new-footer__contact {
+    padding: 2.5rem 2.5rem 0;
+    font-size: 0.875rem;
+  }
   .new-footer__meta {
     padding: 2.5rem 2.5rem 0;
     font-size: 0.875rem;
@@ -361,6 +372,12 @@
       font-size: 1.25rem;
       line-height: 1.5;
     }
+    .new-footer__navigation {
+      padding: 2.5rem 0 0;
+    }
+    .new-footer__contact {
+      padding: 2.5rem 0 0;
+    }
     .new-footer__meta {
       padding: 2.5rem 0 0;
     }
@@ -368,3 +385,38 @@
       padding: 2.5rem 0;
     }
   } 
+
+  .new-footer--desktop {
+    display: none;
+  }
+  .new-footer--mobile {  
+    display: block;
+  }
+
+  .new-footer--mobile .uq-accordion {
+padding: 1.5rem;
+  }
+  .new-footer--mobile .uq-accordion__item {
+    color: #d4c8de;
+    border: none;
+  }
+  .new-footer--mobile .uq-accordion__toggle {
+    background-color: core.$uq-purple;
+    color:#fff;
+    font-size: 1rem;
+  }
+  .new-footer--mobile .uq-accordion__content {
+    
+  }
+  .new-footer--mobile .uq-accordion__content-wrapper {
+    padding:0;
+  }
+
+  @media(min-width: 64.25rem) {
+    .new-footer--desktop {
+      display: block;
+    }
+    .new-footer--mobile {  
+      display: none;
+    }
+  }

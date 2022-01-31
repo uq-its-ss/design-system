@@ -109,7 +109,6 @@
       @media #{core.$screen-lg-up} {
         grid-template-columns: repeat(5, 1fr);
         grid-gap: 1rem;
-        padding: 0 1rem;
       }
 
       @media #{core.$screen-xl-up} {
@@ -310,7 +309,9 @@
     font-weight: 500;
     margin: 0;
   }
-
+  .new-footer__navigation {
+    padding: 2.5rem 2.5rem 0;
+  }
   .new-footer__contact {
     padding: 2.5rem 2.5rem 0;
     font-size: 0.875rem;
@@ -394,16 +395,21 @@
   }
 
   .new-footer--mobile .uq-accordion {
-padding: 1.5rem;
+  padding: 0rem;
   }
   .new-footer--mobile .uq-accordion__item {
     color: #d4c8de;
     border: none;
+    padding-left: 0;
   }
   .new-footer--mobile .uq-accordion__toggle {
     background-color: core.$uq-purple;
     color:#fff;
     font-size: 1rem;
+    padding-left: 0;
+  }
+  .new-footer--mobile .uq-accordion__item--is-open {
+    box-shadow: none;
   }
   .new-footer--mobile .uq-accordion__content {
     

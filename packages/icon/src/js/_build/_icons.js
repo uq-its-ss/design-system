@@ -876,11 +876,19 @@ export default [
         "category": "social"
     },
     {
+        "name": "social-instagram2-circle",
+        "category": "social"
+    },
+    {
         "name": "social-linkedin-circle",
         "category": "social"
     },
     {
         "name": "social-twitter-circle",
+        "category": "social"
+    },
+    {
+        "name": "social-you-tube-circle",
         "category": "social"
     },
     {

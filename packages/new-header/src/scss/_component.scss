@@ -639,4 +639,35 @@ body.no-scroll {
       margin-right:.5rem;
   }
 
+  .slide-menu .new-header__black-nav-item {
+ background-color:#48206C;
+  }
+  .slide-menu .new-header__black-nav-item:hover {
+    background-color:#48206C;
+  }
   
+  .slide-menu .new-header__black-nav-link {
+color:#fff;
+  }
+  .slide-menu .new-header__black-nav-link:hover {
+    color:#fff;
+    background-color:#48206C;
+  }
+
+  .slide-menu .new-header__newglobal-nav-item {
+    background-color:#51247A;
+  }
+  .slide-menu .new-header__newglobal-nav-link {
+    color:#fff;
+    background-color:#51247A;
+  }
+  .slide-menu .new-header__newglobal-nav-link:hover {
+    color:#fff;
+    background-color:#51247A;
+  }
+
+  .slide-menu .new-header__newglobal-nav-link .slide-menu__decorator::before {
+    content: "";
+
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23FFFFFF'%3e%3cpath d='m5.145 14.285 6.167-6a.41.41 0 0 0 0-.598L5.145 1.715' fill='none' stroke='%23FFF' stroke-width='.75' stroke-linecap='round' stroke-linejoin='round'%3e%3c/path%3e%3c/svg%3e");
+}

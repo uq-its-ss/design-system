@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>UQ UQDS Example</title>
@@ -34,8 +35,8 @@
             <button type="button" class="btn slide-menu__control" data-action="close">Close</button>
           </div> -->
           <ul>
-            <li>
-              <a href="#">Study</a>
+            <li  class="new-header__newglobal-nav-item">
+              <a  class="new-header__newglobal-nav-link" href="#">Study</a>
               <ul>
                 <li>
                   <a href="#">Study overview</a>
@@ -73,8 +74,8 @@
                 </li>
               </ul>
             </li>
-            <li>
-              <a href="#">Research</a>
+            <li  class="new-header__newglobal-nav-item">
+              <a  class="new-header__newglobal-nav-link" href="#">Research</a>
               <ul>
                 <li>
                   <a href="#">Research overview</a>
@@ -105,8 +106,8 @@
                 </li>
               </ul>
             </li>
-            <li>
-              <a href="#">Partners and community</a>
+            <li  class="new-header__newglobal-nav-item">
+              <a  class="new-header__newglobal-nav-link" href="#">Partners and community</a>
               <ul>
                 <li>
                   <a href="#">Partners and community overview</a>
@@ -137,8 +138,8 @@
                 </li>
               </ul>
             </li>
-            <li>
-              <a href="#">About</a>
+            <li class="new-header__newglobal-nav-item">
+              <a class="new-header__newglobal-nav-link" href="#">About</a>
               <ul>
                 <li>
                   <a href="#">About overview</a>
@@ -830,42 +831,34 @@
           </ul>
         </nav>
         <!-- Footer contact details -->
-        <div class="new-footer__contact">
-          <div class="new-footer__contact-item new-footer__contact-enquiries">
-            <h2 class="new-footer__sub-title">Enquiries</h2>
-            <p>Phone: <a href="tel:+61733651111" class="new-footer__link" onclick="gtag('event', 'click', {'event_category': 'UQ Footer', 'event_label': 'Enquiries phone'});"><span itemprop="telephone">+61 7 3365 1111</span></a></p>
-            <p><a href="https://uq.edu.au/contacts" class="new-footer__link" onclick="gtag('event', 'click', {'event_category': 'UQ Footer', 'event_label': 'Contact directory'});">Contact directory</a></p>
-          </div>   
-          <div class="new-footer__contact-item new-footer__contact-emergency">
-            <h2 class="new-footer__sub-title">Emergency</h2>
-            <p>Phone: <a href="tel:+61733651111" class="new-footer__link" onclick="gtag('event', 'click', {'event_category': 'UQ Footer', 'event_label': 'Emergency phone'});"><span itemprop="telephone">+61 7 3365 3333</span></a></p>
-          </div>
-          <div class="new-footer__contact-item new-footer__contact-security">
-            <h2 class="new-footer__sub-title">UQ security</h2>
-            <p>Phone: <a href="tel:+61733651111" class="new-footer__link" onclick="gtag('event', 'click', {'event_category': 'UQ Footer', 'event_label': 'Emergency phone'});"><span itemprop="telephone">+61 7 3365 1234</span></a></p>
-          </div>
-          <div class="new-footer__contact-item new-footer__contact-social">
+        <div class="new-footer__contact">   
+          <nav class="new-footer__contact-item">
             <!-- <h2 class="new-footer__sub-title">Social media links</h2> -->
-            <p class="new-footer__meta-icons">
-              <a class="uq-icon uq-icon--social--social-email-circle uq-icon--light"></a> 
-              <a class="uq-icon uq-icon--social--social-facebook-circle uq-icon--light"></a> 
-              <a class="uq-icon uq-icon--social--social-linkedin-circle uq-icon--light"></a> 
-              <a class="uq-icon uq-icon--social--social-twitter-circle uq-icon--light"></a>
-            </p>
-            <p><a href="https://uq.edu.au/contacts" class="new-footer__link" onclick="gtag('event', 'click', {'event_category': 'UQ Footer', 'event_label': 'Web feedback'});">Web feedback</a></p>
-          </div> 
+            <ul class="new-footer__footer-list new-footer__contact-social"> 
+              <li class="new-footer__footer-item"><a class="uq-icon uq-icon--social--social-facebook-circle uq-icon--light new-footer__meta-icons"></a></li> 
+              <li class="new-footer__footer-item"><a class="uq-icon uq-icon--social--social-linkedin-circle uq-icon--light new-footer__meta-icons"></a></li> 
+              <li class="new-footer__footer-item"><a class="uq-icon uq-icon--social--social-twitter-circle uq-icon--light new-footer__meta-icons"></a></li>
+              <li class="new-footer__footer-item"><a class="uq-icon uq-icon--social--social-you-tube-circle uq-icon--light new-footer__meta-icons"></a></li>
+              <li class="new-footer__footer-item"><a class="uq-icon uq-icon--social--social-instagram2-circle uq-icon--light new-footer__meta-icons"></a></li>
+            </ul>
+          </nav> 
+          <div class="new-footer__contact-item new-footer__contact-login"><a href="#" class="new-footer__link" onclick="gtag('event', 'click', {'event_category': 'UQ Footer', 'event_label': 'Web login'});">Web login</a></div>
+       
         </div>
-        <div class="new-footer__meta">
-          <div class="new-footer__copyright">© The University of Queensland</div>
-          <div>
-              <abbr title="Australian Business Number">ABN</abbr>: 63 942 912 684 &nbsp; | &nbsp;
-              <abbr title="Commonwealth Register of Institutions and Courses for Overseas Students">CRICOS</abbr> Provider No: <a class="new-footer__link" href="https://www.uq.edu.au/about/cricos-link" rel="external" onclick="gtag('event', 'click', {'event_category': 'UQ Footer', 'event_label': 'CRICOS'});">00025B</a>
-          </div>
-        </div>
+        <nav class="new-footer__meta">
+          <ul  class="new-footer__footer-list">
+            <li class="new-footer__footer-item">© The University of Queensland</li>
+            <li class="new-footer__footer-item"><abbr title="Australian Business Number">ABN</abbr>: 63 942 912 684 </li>
+            <li class="new-footer__footer-item"><abbr title="Commonwealth Register of Institutions and Courses for Overseas Students">CRICOS</abbr> Provider No: <a class="new-footer__link" href="https://www.uq.edu.au/about/cricos-link" rel="external" onclick="gtag('event', 'click', {'event_category': 'UQ Footer', 'event_label': 'CRICOS'});">00025B</a></li>
+          </ul>
+        </nav>
         <nav class="new-footer__footer">
           <ul class="new-footer__footer-list">
               <li class="new-footer__footer-item">
                   <a href="https://www.uq.edu.au/terms-of-use/" rel="external" class="new-footer__link" onclick="gtag('event', 'click', {'event_category': 'UQ Footer', 'event_label': 'Privacy'});">Privacy &amp; Terms of use</a>
+              </li>
+              <li class="new-footer__footer-item">
+                <a href="https://ppl.app.uq.edu.au/" rel="external" class="new-footer__link" onclick="gtag('event', 'click', {'event_category': 'UQ Footer', 'event_label': 'Policy and procedures'});">Policy and procedures</a>
               </li>
               <li class="new-footer__footer-item">
                   <a href="https://www.uq.edu.au/rti/" rel="external" class="new-footer__link" onclick="gtag('event', 'click', {'event_category': 'UQ Footer', 'event_label': 'Right to information'});">Right to information</a>
@@ -873,14 +866,11 @@
               <li class="new-footer__footer-item">
                   <a href="https://uq.edu.au/accessibility/" rel="external" class="new-footer__link" onclick="gtag('event', 'click', {'event_category': 'UQ Footer', 'event_label': 'Accessibility'});">Accessibility</a>
               </li>
-              <li class="new-footer__footer-item">
-                <a href="https://ppl.app.uq.edu.au/" rel="external" class="new-footer__link" onclick="gtag('event', 'click', {'event_category': 'UQ Footer', 'event_label': 'Policy and procedures'});">Policy and procedures</a>
-              </li>
               <li class="new-footer__footer-menu__item">
-                <a href="https://my.uq.edu.au/student-support" rel="external" class="new-footer__link" onclick="gtag('event', 'click', {'event_category': 'UQ Footer', 'event_label': 'Counselling and support'});">Counselling and support</a>
+                <a href="https://uq.edu.au/contacts" rel="external" class="new-footer__link" onclick="gtag('event', 'click', {'event_category': 'UQ Footer', 'event_label': 'Feedback'});">Feedback</a>
               </li>
           </ul>
-        </nav>
+           </nav>
       </div>
     </footer>
 

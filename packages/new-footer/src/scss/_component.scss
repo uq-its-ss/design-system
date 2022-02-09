@@ -159,9 +159,9 @@
     }
 
 
-    &__navigation-toggle::after {
+    &__navigation-toggle::before {
       content: "";
-      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath d='m14.285 5.145-6 6.167a.41.41 0 0 1-.598 0L1.715 5.145' fill='none' stroke='%23ffffff' stroke-width='.75' stroke-linecap='round' stroke-linejoin='round'%3e%3c/path%3e%3c/svg%3e");
+      background-image: url(icon-constants.get-icon("standard--chevron-down", core.$uq-white));
       background-repeat: no-repeat;
       width: 1rem;
       height: 1rem;
@@ -283,6 +283,10 @@
   }
 
   /* Footer contact details */
+
+  .new-footer .uq-accordion__toggle--active::before {
+    background-image: url(icon-constants.get-icon("standard--chevron-up", core.$uq-white));
+  }
 
   .new-footer__contact-item {
   }
@@ -431,7 +435,7 @@
   }
    */
   .new-footer__footer-item {
-    margin-bottom: 0.5rem;
+    /* margin-top: 0.5rem; */
   }
 
   @media(min-width: 73.25rem) {

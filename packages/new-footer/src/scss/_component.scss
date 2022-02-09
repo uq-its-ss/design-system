@@ -1,4 +1,5 @@
 @use '@uqds/core/src/scss/global' as core;
+@use "@uqds/icon/src/scss/global" as icon-constants;
 @use '@uqds/grid/src/scss/global' as grid;
 @use 'global' as *;
 
@@ -308,6 +309,57 @@
     padding: 2.5rem 2.5rem 0;
     font-size: 0.875rem;
   }
+
+  .new-footer__meta-icons::before {
+    content: "";
+    display: inline-block;
+    margin-right: 0.3em;
+    height: 1.5em;
+    width: 1.5em;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    vertical-align: text-bottom;
+  }
+  .new-footer__meta-icons:hover::before {
+    transition: all ease .5s;
+  }
+  .new-footer__meta-icons--facebook::before {
+    background-image: url(icon-constants.get-icon("social--social-facebook-circle", core.$uq-white));
+
+  }
+  .new-footer__meta-icons--facebook:hover::before {
+    background-image: url(icon-constants.get-icon("social--social-facebook-circle", #d4c8de));
+  }
+
+  .new-footer__meta-icons--linkedin::before {
+    background-image: url(icon-constants.get-icon("social--social-linkedin-circle", core.$uq-white));
+  }
+  .new-footer__meta-icons--linkedin:hover::before {
+    background-image: url(icon-constants.get-icon("social--social-linkedin-circle", #d4c8de));
+  }
+
+  .new-footer__meta-icons--twitter::before {
+    background-image: url(icon-constants.get-icon("social--social-twitter-circle", core.$uq-white));
+  }
+  .new-footer__meta-icons--twitter:hover::before {
+    background-image: url(icon-constants.get-icon("social--social-twitter-circle", #d4c8de));
+  }
+
+  .new-footer__meta-icons--youtube::before {
+    background-image: url(icon-constants.get-icon("social--social-you-tube-circle", core.$uq-white));
+  }
+  .new-footer__meta-icons--youtube:hover::before {
+    background-image: url(icon-constants.get-icon("social--social-you-tube-circle", #d4c8de));
+  }
+
+  .new-footer__meta-icons--instagram::before {
+    background-image: url(icon-constants.get-icon("social--social-instagram2-circle", core.$uq-white));
+  }
+  .new-footer__meta-icons--instagram:hover::before {
+    background-image: url(icon-constants.get-icon("social--social-instagram2-circle", #d4c8de));
+  }
+
   @media(min-width: 64.25rem) {
     .new-footer__contact {
       display: flex;

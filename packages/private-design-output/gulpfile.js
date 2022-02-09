@@ -33,7 +33,7 @@ function exportFontFiles() {
 */
 
 function exportImages() {
-  return src('./src/images/rap-artwork.png', './src/images/hero-example--large.jpg', './src/images/hero-example--small.jpg')
+  return src('./src/images/*.*')
   .pipe(dest('./dist/images'));
 }
 
@@ -45,18 +45,8 @@ function exportFavicon() {
   .pipe(dest('./dist/'));
 }
 
-function exportInterum() {
-  return src('./src/interum.html')
-  .pipe(dest('./dist'));
-}
-
-function exportHomepage() {
-  return src('./src/homepage.html')
-  .pipe(dest('./dist'));
-}
-
-function exportExample() {
-  return src('./src/example.html')
+function exportHtml() {
+  return src('./src/*.html')
   .pipe(dest('./dist'));
 }
 
@@ -96,11 +86,9 @@ exports.compileSCSS = compileSCSS;
 //exports.exportFontFiles = exportFontFiles;
 exports.exportImages = exportImages;
 exports.exportFavicon = exportFavicon;
-exports.exportInterum = exportInterum;
-exports.exportHomepage = exportHomepage;
-exports.exportExample = exportExample;
+exports.exportHtml = exportHtml;
 // Temporary slidemenu addition
 exports.exportSlidmenu = exportSlidmenu;
 exports.bundleJS = bundleJS;
 // Temporary slidemenu additiongit pull
-exports.default = parallel(compileSCSS, exportImages, exportFavicon, exportInterum, exportHomepage, exportExample,exportSlidmenu, bundleJS);
+exports.default = parallel(compileSCSS, exportImages, exportFavicon, exportHtml, exportSlidmenu, bundleJS);

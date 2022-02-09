@@ -121,10 +121,12 @@
     &__navigation-level-2 {
       height: 0;
       overflow: hidden;
+      background-color: #48206c;
 
       @media #{core.$screen-lg-up} {
         height: auto;
-        overflow: auto
+        overflow: auto;
+        background-color: transparent;
       }
 
       .new-footer__navigation-item {
@@ -303,7 +305,7 @@
     margin: 0;
   }
   .new-footer__navigation {
-    padding: 2.5rem 2.5rem 0;
+    padding: 0;
   }
   .new-footer__contact {
     padding: 2.5rem 2.5rem 0;
@@ -485,7 +487,7 @@
     background-color: core.$uq-purple;
     color:#fff;
     font-size: 1rem;
-    padding-left: 0;
+    padding-left: 2.5rem;
   }
   .new-footer--mobile .uq-accordion__item--is-open {
     box-shadow: none;

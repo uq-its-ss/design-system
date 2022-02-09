@@ -55,6 +55,11 @@ function exportHomepage() {
   .pipe(dest('./dist'));
 }
 
+function exportExample() {
+  return src('./src/example.html')
+  .pipe(dest('./dist'));
+}
+
 // Temporary slidemenu addition
 function exportSlidmenu() {
   return src('./src/js/slide-menu.js')
@@ -93,8 +98,9 @@ exports.exportImages = exportImages;
 exports.exportFavicon = exportFavicon;
 exports.exportInterum = exportInterum;
 exports.exportHomepage = exportHomepage;
+exports.exportExample = exportExample;
 // Temporary slidemenu addition
 exports.exportSlidmenu = exportSlidmenu;
 exports.bundleJS = bundleJS;
 // Temporary slidemenu additiongit pull
-exports.default = parallel(compileSCSS, exportImages, exportFavicon, exportInterum, exportHomepage, exportSlidmenu, bundleJS);
+exports.default = parallel(compileSCSS, exportImages, exportFavicon, exportInterum, exportHomepage, exportExample,exportSlidmenu, bundleJS);

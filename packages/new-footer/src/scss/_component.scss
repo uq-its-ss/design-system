@@ -307,6 +307,11 @@
   .new-footer__navigation {
     padding: 0;
   }
+  @media(min-width: 64.25rem) {
+    .new-footer__navigation {
+      padding: 2.5rem 2.5rem 0;
+    }
+  }
   .new-footer__contact {
     padding: 2.5rem 2.5rem 0;
     font-size: 0.875rem;
@@ -439,7 +444,7 @@
     }
     .new-footer__reconciliation {
     background:#000;
-    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.0) 400px, rgba(0, 0, 0, 1) 640px), url("../images/rap-artwork.png");
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.0) 400px, rgba(0, 0, 0, 1) 640px), url("../images/brisbane-river-artwork.png");
     /*background-repeat: no-repeat;*/
     }
     .new-footer__acknowledgement {

@@ -205,9 +205,17 @@
       text-decoration: none;
     }
 
+
     @media #{core.$screen-lg-up} {
-      padding: 2rem 2.75rem 2rem 1.5rem;
+      padding: 2rem;
     }
+
+  }
+
+  .main-nav-link--has-dropdown {
+
+    padding: 2rem 2.75rem 2rem 1.5rem;
+
 
     &::after {
       content: "";

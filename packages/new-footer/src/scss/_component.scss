@@ -327,9 +327,8 @@
   .new-footer__meta-icons::before {
     content: "";
     display: inline-block;
-    margin-right: 0.3em;
-    height: 1.5em;
-    width: 1.5em;
+    height: 2rem;
+    width: 2rem;
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
@@ -386,6 +385,7 @@
   }
   .new-footer__contact-login {
     margin-top: 2.5rem;
+    font-size: 1rem;
   }
   @media(min-width: 64.25rem) {
     .new-footer__contact-login {
@@ -422,6 +422,11 @@
 }
 .new-footer__contact-social {
   flex-direction: row;
+}
+@media(min-width: 64.25rem) {
+  .new-footer__contact-social .new-footer__footer-item {
+    margin-bottom: 0rem;
+  }
 }
   .new-footer__footer-item {
     padding-right: 1rem;

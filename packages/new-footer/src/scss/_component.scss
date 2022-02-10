@@ -16,7 +16,7 @@
 
     &__acknowledgement {
       max-width: 73.25rem;
-      padding: 2.5rem;
+      padding: 2.5rem 1.5rem;
       color: #d4c8de;
       font-family: "Merriweather",Georgia,serif;
       font-style: italic;
@@ -77,7 +77,7 @@
 
     &__navigation-link {
       display: block;
-      padding: 1rem 2.5rem;
+      padding: 1rem 1.5rem;
       color: #FFFFFF;
 
       &:hover {
@@ -185,7 +185,7 @@
 
     &__contact {
       font-size: 0.875rem;
-      padding: 2.5rem 2.5rem 0;
+      padding: 2.5rem 1.5rem 0;
 
       // .new-footer__contact-enquiries {
       //   grid-column-start: 1;
@@ -313,11 +313,11 @@
   }
   @media(min-width: 64.25rem) {
     .new-footer__navigation {
-      padding: 2.5rem 2.5rem 0;
+      padding: 2.5rem 1.5rem 0;
     }
   }
   .new-footer__contact {
-    padding: 2.5rem 2.5rem 0;
+    padding: 2.5rem 1.5rem 0;
     font-size: 0.875rem;
   }
 
@@ -390,14 +390,14 @@
     }
   }
   .new-footer__meta {
-    padding: 2.5rem 2.5rem 0;
+    padding: 2.5rem 1.5rem 0;
     font-size: 0.875rem;
   }
   .new-footer__meta-icons {
     font-size: 1.5rem;
   }
   .new-footer__footer {
-    padding:2.5rem;
+    padding:2.5rem 1.5rem;
   }
   .new-footer__footer-list {
     display: flex;
@@ -491,7 +491,7 @@
     background-color: core.$uq-purple;
     color:#fff;
     font-size: 1rem;
-    padding-left: 2.5rem;
+    padding-left: 1.5rem;
   }
   .new-footer--mobile .uq-accordion__item--is-open {
     box-shadow: none;

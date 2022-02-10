@@ -86,8 +86,8 @@
       }
 
       @media #{core.$screen-lg-up} {
-        padding:0.5rem 0 0;
-        font-weight: 700;
+        padding:1rem 0 0;
+        font-weight: 500;
       }
 
       
@@ -135,6 +135,10 @@
         @media #{core.$screen-lg-up} {
           background-color: transparent;
           border: none;
+          padding: 0.75rem 0 0;
+        }
+        &:first-of-type {
+          padding: 1rem 0 0;
         }
       }
 
@@ -146,13 +150,12 @@
 
         @media #{core.$screen-lg-up} {
           color: #fff;
-          padding: 0.5rem 0 0;
+          padding: 0;
           font-weight: normal;
 
           &:hover {
             color: #fff;
           }
-
         }
       }
       

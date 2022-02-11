@@ -97,13 +97,6 @@
     color: #fff;
     position: relative;
 
-    // & .uq-icon--standard--search {
-    //   display: flex;
-    // }
-    // & .uq-icon--standard--close {
-    //   display: none;
-    // }
-
     &::before {
       content: "";
       background-image: url(icon-constants.get-icon("standard--search", core.$uq-white));
@@ -124,6 +117,14 @@
     &:hover {
       background-color: #48206c;
       outline: none;
+    }
+
+    &--is-open {
+      background-color: #48206c;
+
+      &::before {
+        background-image: url(icon-constants.get-icon("standard--close", core.$uq-white));
+      }
     }
 
   }

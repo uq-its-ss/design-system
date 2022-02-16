@@ -727,3 +727,29 @@ body.no-scroll {
    background-image: url(icon-constants.get-icon("standard--chevron-right", core.$uq-white));
 }
 }
+
+/* LOCAL SITE NAVIGATION MODIFIERS */
+
+.global-mobile-nav {
+
+  .uq-site-header__title-container {
+    margin: 0;
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+
+  .uq-site-header__title-container__left {
+
+  }
+
+  .uq-site-header__title {
+    padding: 1rem 1.5rem;
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+
+}
+
+.uq-site-header__navigation-toggle {
+  display:None;
+}

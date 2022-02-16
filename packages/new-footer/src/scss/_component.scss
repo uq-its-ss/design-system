@@ -9,22 +9,22 @@
     color:#d4c8de;
 
     &__reconciliation {
-      background:$uq-black;
+      background:core.$uq-black;
       background-image: linear-gradient(90deg, rgba(81, 36, 122, .7), rgba(81, 36, 122, .7)), url("../images/brisbane-river-artwork.png");
       /*background-repeat: no-repeat;*/
     }
 
     &__acknowledgement {
       max-width: 73.25rem;
-      padding: $space-xl $space-m;
+      padding: core.$space-xl core.$space-m;
       color: #d4c8de;
       font-weight: 400;
-      font-size: $font-size-m;
+      font-size: core.$font-size-m;
       line-height: 1.5;
       margin:auto;
 
       @media #{core.$screen-xl-up} {
-        padding: $space-xl $space;
+        padding: core.$space-xl core.$space;
       }
 
     }
@@ -33,11 +33,11 @@
       font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
       font-style: normal;
       font-weight: 400;
-      color:$uq-white;
+      color:core.$uq-white;
       
       &:hover {
         text-decoration:underline;
-        color:$uq-white;
+        color:core.$uq-white;
       }
     }
 
@@ -45,13 +45,13 @@
 
     &__navigation {
       /* border-bottom: 1px solid #d4c8de; */
-      padding: 0;
+      padding: core.$space-none;
 
       @media #{core.$screen-lg-up} {
-        padding: $space-xl $space-m $space-none;
+        padding: core.$space-xl core.$space-m core.$space-none;
       }
       @media #{core.$screen-xl-up} {
-        padding: $space-xl $space-none $space-none;
+        padding: core.$space-xl core.$space-none core.$space-none;
       }
 
       &--is-open {
@@ -65,16 +65,16 @@
     &__navigation-list {
       display: block;
       list-style-type: none;
-      margin: $space-none;
-      padding: $space-none;
+      margin: core.$space-none;
+      padding: core.$space-none;
     }
 
     &__navigation-item {
       /* border-top: 1px solid #d4c8de; */
       background-color: transparent;
       display: block;
-      margin: $space-none;
-      padding: $space-none;
+      margin: core.$space-none;
+      padding: core.$space-none;
       position: relative;  
 
       @media #{core.$screen-lg-up} {
@@ -84,23 +84,23 @@
 
     &__navigation-title {
       color: #d4c8de;
-      font-size: $font-size-m;
+      font-size: core.$font-size-m;
       font-weight: 500;
-      margin: $space-none;
+      margin: core.$space-none;
     }
 
     &__navigation-link {
       display: block;
-      padding: $space $space-m;
-      color: $uq-white;
+      padding: core.$space core.$space-m;
+      color: core.$uq-white;
 
       &:hover {
-        color: $uq-white;
+        color: core.$uq-white;
         text-decoration: underline;
       }
 
       @media #{core.$screen-lg-up} {
-        padding:$space $space-none $space-none;
+        padding:core.$space core.$space-none core.$space-none;
         font-weight: 500;
       }
 
@@ -123,17 +123,17 @@
 
       @media #{core.$screen-lg-up} {
         grid-template-columns: repeat(5, 1fr);
-        grid-gap: $space;
+        grid-gap: core.$space;
       }
 
       @media #{core.$screen-xl-up} {
-        padding: $space-none;
+        padding: core.$space-none;
       }
 
     }
 
     &__navigation-level-2 {
-      height: $space-none;
+      height: core.$space-none;
       overflow: hidden;
       background-color: #48206c;
 
@@ -148,22 +148,22 @@
         @media #{core.$screen-lg-up} {
           background-color: transparent;
           border: none;
-          padding: 0.75rem $space-none $space-none;
+          padding: 0.75rem core.$space-none core.$space-none;
         }
         &:first-of-type {
-          padding: $space $space-none $space-none;
+          padding: core.$space core.$space-none core.$space-none;
         }
       }
 
       .new-footer__navigation-link {
 
         @media #{core.$screen-lg-up} {
-          color: $uq-white;
-          padding: $space-none;
+          color: core.$uq-white;
+          padding: core.$space-none;
           font-weight: normal;
 
           &:hover {
-            color: $uq-white;
+            color: core.$uq-white;
           }
         }
       }
@@ -174,12 +174,12 @@
       content: "";
       background-image: url(icon-constants.get-icon("standard--chevron-down", core.$uq-white));
       background-repeat: no-repeat;
-      width: $space;
-      height: $space;
+      width: core.$space;
+      height: core.$space;
       transform: translateY(50%);
       position: absolute;
       top: 0.688rem;
-      right: $space-xl;
+      right: core.$space-xl;
 
       @media #{core.$screen-lg-up} {
         background-image: none;
@@ -194,10 +194,10 @@
     /* FOOTER */
 
     &__footer {
-      padding:$space-xl $space-m;
+      padding:core.$space-xl core.$space-m;
 
       @media #{core.$screen-xl-up} {
-        padding: $space-m $space-none;
+        padding: core.$space-m core.$space-none;
       }
 
     }
@@ -207,28 +207,28 @@
       flex-wrap: wrap;
       flex-direction: column;
       list-style-type: none;
-      margin: $space-none;
-      padding: $space-none;
-      font-size: $font-size-s;
+      margin: core.$space-none;
+      padding: core.$space-none;
+      font-size: core.$font-size-s;
 
       @media #{core.$screen-lg-up} {
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
-        margin: $space-none;
-        padding: $space-none;
+        margin: core.$space-none;
+        padding: core.$space-none;
       }
     }
 
     &__footer-item {
-      padding-right: $space;
+      padding-right: core.$space;
     }
 
     /* CONTACT */
 
     &__contact {
-      font-size: $font-size-s;
-      padding: $space-xl $space-m $space-none;
+      font-size: core.$font-size-s;
+      padding: core.$space-xl core.$space-m core.$space-none;
 
       @media #{core.$screen-lg-up} { 
         display: flex;
@@ -236,20 +236,20 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        margin: $space-none;
-        padding: $space-xl $space-m $space-none;
+        margin: core.$space-none;
+        padding: core.$space-xl core.$space-m core.$space-none;
       }
       @media #{core.$screen-xl-up} { 
-        padding: $space-m $space-none $space-none;
+        padding: core.$space-m core.$space-none core.$space-none;
       }    
        
     }
     &__contact-login {
-      margin-top: $space-xl;
-      font-size: $font-size;
+      margin-top: core.$space-xl;
+      font-size: core.$font-size;
 
       @media #{core.$screen-lg-up} {
-        margin-top: $space-none;
+        margin-top: core.$space-none;
       }
     }
 
@@ -257,7 +257,7 @@
       flex-direction: row;
 
       .new-footer__footer-item {
-        margin-bottom: $space-none;
+        margin-bottom: core.$space-none;
       }
 
     }
@@ -265,23 +265,23 @@
     /* META */
 
     &__meta {
-      padding: $space-xl $space-m $space-none;
-      font-size: $font-size-s;
+      padding: core.$space-xl core.$space-m core.$space-none;
+      font-size: core.$font-size-s;
 
       @media #{core.$screen-xl-up} {
-        padding: $space-m $space-none $space-none;
+        padding: core.$space-m core.$space-none core.$space-none;
       }
     
     }
 
     &__meta-icons {
-      font-size: $font-size-xl;
+      font-size: core.$font-size-xl;
 
       &::before {
         content: "";
         display: inline-block;
-        height: $space-l;
-        width: $space-l;
+        height: core.$space-l;
+        width: core.$space-l;
         background-repeat: no-repeat;
         background-position: center;
         background-size: 100%;
@@ -351,19 +351,19 @@
       }
 
       .uq-accordion {
-        padding: $space-none;
+        padding: core.$space-none;
 
         &__item {
           color: #d4c8de;
           border: none;
-          padding-left: $space-none;
+          padding-left: core.$space-none;
         }
 
         &__toggle {
           background-color: core.$uq-purple;
-          color:$uq-white;
-          font-size: $font-size;
-          padding-left: $space-m;
+          color:core.$uq-white;
+          font-size: core.$font-size;
+          padding-left: core.$space-m;
         }
 
         &__item--is-open {
@@ -371,7 +371,7 @@
         }
 
         &__content-wrapper {
-          padding:$space-none;
+          padding:core.$space-none;
         }
       }
 
@@ -379,8 +379,8 @@
 
     @media #{core.$screen-xl-up} { 
       &__container {
-        padding-left: $space-m;
-        padding-right: $space-m;
+        padding-left: core.$space-m;
+        padding-right: core.$space-m;
         margin-left:auto;
         margin-right:auto;
         max-width:73.25rem;

@@ -39,8 +39,8 @@
       max-width:73.25rem;
       grid-template-areas:
         "logo mainnav searchtoggle";
-      padding-left: $space;
-      padding-right: $space;
+      padding-left: core.$space;
+      padding-right: core.$space;
     }
     
   }
@@ -65,32 +65,32 @@
   & .main-nav__toggle {
     background: none;
     border: none;
-    padding: 1.75rem $space-l;
+    padding: 1.75rem core.$space-l;
     height: 100%;
 
     @media #{core.$screen-lg-up} {
-      padding: $space 1.25rem $space 2.75rem;
+      padding: core.$space 1.25rem core.$space 2.75rem;
       height: auto;
     }
   }
 
   &__search-toggle {
     text-align: right;
-    color: $uq-white;
+    color: core.$uq-white;
 
     .search-toggle__label {
       display: none;
 
       @media #{core.$screen-lg-up} {
         display: block;
-        font-size: $font-size;
+        font-size: core.$font-size;
       }
     }
   }
 
   & .main-nav__menu-toggle {
     cursor: pointer;
-    color: $uq-white;
+    color: core.$uq-white;
     position: relative;
     text-indent: -9999px;                 
     white-space: nowrap;            
@@ -103,19 +103,19 @@
       height: 1.25rem;
       transform: translate(50%, 50%);
       position: absolute;
-      top: $space;
-      right: $space-l;
+      top: core.$space;
+      right: core.$space-l;
       
       @media #{core.$screen-lg-up} {
-        top: $space-xs;
-        left: $space-s;
+        top: core.$space-xs;
+        left: core.$space-s;
       }
     }
   }
 
   & .main-nav__search-toggle {
     cursor: pointer;
-    color: $uq-white;
+    color: core.$uq-white;
     position: relative;
 
     &::before {
@@ -126,12 +126,12 @@
       height: 1.25rem;
       transform: translate(50%, 50%);
       position: absolute;
-      top: $space;
-      right: $space-l;
+      top: core.$space;
+      right: core.$space-l;
       
       @media #{core.$screen-lg-up} {
-        top: $space-xs;
-        left: $space-s;
+        top: core.$space-xs;
+        left: core.$space-s;
       }
     }
 
@@ -196,7 +196,7 @@
   &__main-nav {
     
     @media #{core.$screen-lg-up} {
-      padding: 0 $space-l;
+      padding: 0 core.$space-l;
     }
   }
 
@@ -233,29 +233,29 @@
 
   &__main-nav-link {
     display: block;
-    color: $uq-white; //core.$uq-purple;
+    color: core.$uq-white; //core.$uq-purple;
     text-decoration: none;
-    padding: $space $space-m;
+    padding: core.$space core.$space-m;
     transition: background-color .25s,border-color .25s;
     font-weight: 400;
     position: relative;
     border-bottom: 4px solid core.$uq-purple;
 
     &:hover {
-      color: $uq-white;
+      color: core.$uq-white;
       text-decoration: none;
     }
 
 
     @media #{core.$screen-lg-up} {
-      padding: $space-l;
+      padding: core.$space-l;
     }
 
   }
 
   .main-nav-link--has-dropdown {
 
-    padding: $space-l 2.75rem $space-l $space-m;
+    padding: core.$space-l 2.75rem core.$space-l core.$space-m;
 
 
     &::after {
@@ -264,8 +264,8 @@
       //background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m7 10 5 5 5-5' stroke='%23FFF' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3e%3c/path%3e%3c/svg%3e");
       // background-size: 0.6rem;
       background-repeat: no-repeat;
-      width: $space;
-      height: $space;
+      width: core.$space;
+      height: core.$space;
       transform: translateY(50%);
       position: absolute;
       top: 1.7rem;
@@ -279,7 +279,7 @@
 
   .mega-menu {
     display: none;
-    background-color: $uq-white;
+    background-color: core.$uq-white;
     list-style-type: none;
     margin: 0;
     padding-left: 0;
@@ -287,7 +287,7 @@
     & li {
 
       & a {
-        padding-left: $space-xxl;
+        padding-left: core.$space-xxl;
         color: core.$uq-purple;
       }
     }
@@ -299,7 +299,7 @@
 
       & li {
         & a {
-          padding-left: $space-ul;        
+          padding-left: core.$space-ul;        
         }
       }
     }
@@ -313,8 +313,8 @@
 
   &__black-nav {
     @media #{core.$screen-lg-up} {
-      padding-left: $space;
-      padding-right: $space;
+      padding-left: core.$space;
+      padding-right: core.$space;
       margin-left:auto;
       margin-right:auto;
       max-width:73.25rem;
@@ -348,11 +348,11 @@
   &__black-nav-link {
     display: block;
     color: #d4c8de; //core.$uq-purple;
-    padding: $space $space-m;
+    padding: core.$space core.$space-m;
 
     @media #{core.$screen-lg-up} {
-      font-size: $font-size-s;
-      padding: .625rem $space;
+      font-size: core.$font-size-s;
+      padding: .625rem core.$space;
     }
 
     &:hover {
@@ -366,7 +366,7 @@
     width: 100%;
     top: 3.95rem;
     z-index: 50;
-    box-shadow: 0 .75rem $space-m rgb(24 24 24 / 20%);
+    box-shadow: 0 .75rem core.$space-m rgb(24 24 24 / 20%);
 
     @media #{core.$screen-lg-up} {
       top: 8.3rem;
@@ -381,11 +381,11 @@
     visibility: hidden;
     opacity: 0;
     height: 0;
-    padding: 0 $space-m;
+    padding: 0 core.$space-m;
 
     @media #{core.$screen-lg-up} {
-      padding-left: $space;
-      padding-right: $space;
+      padding-left: core.$space;
+      padding-right: core.$space;
       margin-left:auto;
       margin-right:auto;
       max-width:73.25rem;
@@ -397,8 +397,8 @@
       visibility: visible;
       opacity: 1;
       height: auto;
-      padding-top: $space;
-      padding-bottom: $space;
+      padding-top: core.$space;
+      padding-bottom: core.$space;
     }
   }
 
@@ -408,8 +408,8 @@
     max-width: 100%;
     min-width: 100%;
     border-radius: 5px;
-    background-position: $space;
-    margin-bottom: $space;
+    background-position: core.$space;
+    margin-bottom: core.$space;
 
   }
 
@@ -420,12 +420,12 @@
   &__search-query-button {
 
     background-clip: padding-box;
-    background-color: $uq-white;
+    background-color: core.$uq-white;
     border-radius: 5px;
     border: 2px solid transparent;
-    color: $uq-purple;
+    color: core.$uq-purple;
     display: inline-block;
-    font-size: $font-size;
+    font-size: core.$font-size;
     height: 2.75rem;
     line-height: 1.5;
     margin-bottom: 0;
@@ -443,10 +443,10 @@
       content: "";
       position: absolute;
       display: block;
-      width: $space-m;
-      height: $space-m;
-      top: $space-s;
-      left: $space-s;
+      width: core.$space-m;
+      height: core.$space-m;
+      top: core.$space-s;
+      left: core.$space-s;
       background-size: 100%;
       background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2351247A'%3e%3cg fill='none' stroke='%2351247A' stroke-width='.75'%3e%3cpath d='M6.57 11.145a4.573 4.573 0 1 0 .003-9.146 4.573 4.573 0 0 0-.003 9.146zm0 0'%3e%3c/path%3e%3cpath d='m9.715 10 4.57 4.285' stroke-linecap='round' stroke-linejoin='round'%3e%3c/path%3e%3c/g%3e%3c/svg%3e");
     }
@@ -458,13 +458,13 @@
     display: block;
     width: 100%;
     height: 100%;
-    margin: $space-none;
-    border: $space-none;
+    margin: core.$space-none;
+    border: core.$space-none;
     background-color: transparent;
     z-index: 3;
     cursor: pointer;
     outline-offset: -2px;
-    font-size: $font-size;
+    font-size: core.$font-size;
   }
 
   &__search-range {
@@ -472,7 +472,7 @@
     display: inline-block;
 
     & label {
-      color: $uq-white;
+      color: core.$uq-white;
     }
   }
 
@@ -481,7 +481,7 @@
     line-height: 1.7 !important;
 
     @media #{core.$screen-lg-up} {
-      font-size: $font-size !important;
+      font-size: core.$font-size !important;
       line-height: 1.4 !important;
     }
   }
@@ -497,12 +497,12 @@
     position: absolute;
     top: 8.3rem;
     left: 0;
-    background: $uq-white;
+    background: core.$uq-white;
     width: 100%;
     z-index: 30;
     height: 0;
     visibility: hidden;
-    box-shadow: 0 0.75rem $space-m rgb(24 24 24 / 20%);
+    box-shadow: 0 0.75rem core.$space-m rgb(24 24 24 / 20%);
     
   }
 
@@ -511,7 +511,7 @@
     margin-left:auto;
     margin-right:auto;
     max-width:73.25rem;
-    padding: $space $space $space-l $space;
+    padding: core.$space core.$space core.$space-l core.$space;
   }
 
   .megamenu__row {
@@ -521,28 +521,28 @@
 
   .megamenu__overview-link {
     display: block;
-    padding: $space-s $space-none;
+    padding: core.$space-s core.$space-none;
     color: core.$uq-purple;
   }
 
   .megamenu__heading {
     color: core.$uq-purple;
     font-weight: 500;
-    padding: $space-s $space-none;
+    padding: core.$space-s core.$space-none;
   }
 
   .megamenu__menu {
     & ul {
       list-style-type: none;
-      margin: $space-none;
-      padding-left: $space-none;
+      margin: core.$space-none;
+      padding-left: core.$space-none;
 
       & li {
-        margin: $space-none;
+        margin: core.$space-none;
 
         & a {
           display: inline-block;
-          padding: $space-xs $space-none;
+          padding: core.$space-xs core.$space-none;
           color: core.$uq-purple;
         }
       }
@@ -569,11 +569,11 @@ body.no-scroll {
   z-index:1000;
   grid-area: mainnav-mobile;
   position:fixed;
-  top: 3.95rem;
-  right:$space-none;
+  top: 4.5rem;
+  right:core.$space-none;
   overflow-y:auto;
-  font-size: $font-size;
-  color:$uq-purple;
+  font-size: core.$font-size;
+  color:core.$uq-purple;
 
   .slide-menu__slider {
     width:100%;
@@ -585,18 +585,18 @@ body.no-scroll {
   ul {
     position:relative;
     width:100%;
-    margin:$space-none;
-    padding-left:$space-none;
+    margin:core.$space-none;
+    padding-left:core.$space-none;
     list-style:none; 
-    background-color: $uq-white;
+    background-color: core.$uq-white;
 
     ul {
       position:absolute;
-      top:$space-none;left:100%;
+      top:core.$space-none;left:100%;
       display:none;
 
       a {
-        padding: $space $space-m $space $space-xl;
+        padding: core.$space core.$space-m core.$space core.$space-xl;
       }
     }
 
@@ -606,7 +606,7 @@ body.no-scroll {
   }
 
   li {
-    margin-bottom: $space-none;
+    margin-bottom: core.$space-none;
 
     &:hover {
       background-color:#f1f1f1;
@@ -616,25 +616,25 @@ body.no-scroll {
 
   a {
     cursor:pointer;
-    padding: $space $space-m;
+    padding: core.$space core.$space-m;
     text-decoration:none;
-    font-size: $font-size;
-    color:$uq-purple;
+    font-size: core.$font-size;
+    color:core.$uq-purple;
 
     &:hover {
-      color:$uq-purple;
+      color:core.$uq-purple;
       background-color:#f1f1f1;
     }
   }
 
   & .slide-menu__backlink {
     font-weight: 500;
-    padding-left: $space-s;
+    padding-left: core.$space-s;
 
     &::before {
       content: "";
-      margin: $space-xs $space-s;
-      padding: $space-xs $space-s;
+      margin: core.$space-xs core.$space-s;
+      padding: core.$space-s core.$space-s;
       background-image: url(icon-constants.get-icon("standard--chevron-left", core.$uq-purple));
       background-repeat: no-repeat;
       float: left;
@@ -645,8 +645,8 @@ body.no-scroll {
   
     &::before {
       content: "";
-      margin: $space-xs $space-s;
-      padding: $space-s $space-s;
+      margin: core.$space-xs core.$space-s;
+      padding: core.$space-s core.$space-s;
       background-image: url(icon-constants.get-icon("standard--chevron-right", core.$uq-purple));
       background-repeat: no-repeat;
       float: right;
@@ -656,15 +656,15 @@ body.no-scroll {
   /* Controls */
   .controls {
     display:flex;
-    margin-bottom:$space;
+    margin-bottom:core.$space;
   }
 
   .btn {
-    padding:.75rem $space-m;
+    padding:.75rem core.$space-m;
     flex:1 0 auto;
     font-size:90%;
-    color:$uq-purple;
-    background-color:$uq-white;
+    color:core.$uq-purple;
+    background-color:core.$uq-white;
     text-transform:uppercase;
 
     border:none;
@@ -699,25 +699,25 @@ body.no-scroll {
   }
 
   .new-header__black-nav-link {
-    color:$uq-white;
+    color:core.$uq-white;
 
     &:hover {
-      color:$uq-white;
+      color:core.$uq-white;
       background-color:#48206C;
     }
   }
 
   .new-header__newglobal-nav-item {
-    background-color:$uq-purple;
+    background-color:core.$uq-purple;
   }
 
   .new-header__newglobal-nav-link {
-    color:$uq-white;
-    background-color:$uq-purple;
+    color:core.$uq-white;
+    background-color:core.$uq-purple;
 
     &:hover {
-      color:$uq-white;
-      background-color:$uq-purple;
+      color:core.$uq-white;
+      background-color:core.$uq-purple;
     }
   }
 

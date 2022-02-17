@@ -43,11 +43,16 @@ class header {
 
     this.searchToggle = document.querySelector('.main-nav__search-toggle');
     this.searchBlock = document.querySelector('.new-header__search');
+    this.searchLabel = document.querySelector('.search-toggle__label');
 
     this.searchToggle.addEventListener('click', () => {
       this.searchToggle.classList.toggle('main-nav__search-toggle--is-open');
       this.searchBlock.classList.toggle('new-header__search--is-open');
-
+      if ( this.searchLabel.innerHTML === "Search") {
+        this.searchLabel.innerHTML = "Close";
+      } else {
+        this.searchLabel.innerHTML = "Search";
+      }
     });
 
 

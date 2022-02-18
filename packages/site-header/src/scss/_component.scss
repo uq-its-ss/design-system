@@ -283,11 +283,11 @@
     }
 
     @media #{core.$screen-lg-up} {
-      margin: core.$space-none calc(#{nth(grid.$schema-md, 2) / 2} - #{core.$space-m});
+      margin: core.$space-none calc(#{nth(grid.$schema-md, 2) * 0.5} - #{core.$space-m});
     }
 
     @media #{core.$screen-xl-up} {
-      margin: core.$space-none calc(#{nth(grid.$schema-xl, 2) / 2} - #{core.$space-m});
+      margin: core.$space-none calc(#{nth(grid.$schema-xl, 2) * 0.5} - #{core.$space-m});
     }
   }
 

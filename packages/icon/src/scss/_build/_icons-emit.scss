@@ -58,6 +58,8 @@
   @include icon('common--menu');
   @include icon('common--pin');
   @include icon('common--search');
+  @include icon('common--share-circle');
+  @include icon('common--share');
   @include icon('education--basketball-ball');
   @include icon('education--bookmarks-document');
   @include icon('education--family-hold');
@@ -268,3 +270,4 @@
   @include icon('student-services--single-neutral-briefcase');
   @include icon('student-services--study-desk');
   @include icon('student-services--transportation-ticket-bus-transfer-1');
+  @include icon('transport--road-sign-turn-right-1');

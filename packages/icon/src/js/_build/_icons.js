@@ -884,11 +884,19 @@ export default [
         "category": "social"
     },
     {
+        "name": "social-instagram2-circle",
+        "category": "social"
+    },
+    {
         "name": "social-linkedin-circle",
         "category": "social"
     },
     {
         "name": "social-twitter-circle",
+        "category": "social"
+    },
+    {
+        "name": "social-you-tube-circle",
         "category": "social"
     },
     {
@@ -936,6 +944,14 @@ export default [
         "category": "standard"
     },
     {
+        "name": "check-circle",
+        "category": "standard"
+    },
+    {
+        "name": "check-sml",
+        "category": "standard"
+    },
+    {
         "name": "check",
         "category": "standard"
     },
@@ -944,7 +960,31 @@ export default [
         "category": "standard"
     },
     {
+        "name": "chevron-down",
+        "category": "standard"
+    },
+    {
         "name": "chevron-left-sml",
+        "category": "standard"
+    },
+    {
+        "name": "chevron-left",
+        "category": "standard"
+    },
+    {
+        "name": "chevron-right-sml",
+        "category": "standard"
+    },
+    {
+        "name": "chevron-right",
+        "category": "standard"
+    },
+    {
+        "name": "chevron-up-sml",
+        "category": "standard"
+    },
+    {
+        "name": "chevron-up",
         "category": "standard"
     },
     {
@@ -980,11 +1020,27 @@ export default [
         "category": "standard"
     },
     {
+        "name": "exclamation-triangle",
+        "category": "standard"
+    },
+    {
         "name": "expand-3",
         "category": "standard"
     },
     {
+        "name": "infomation-circle",
+        "category": "standard"
+    },
+    {
         "name": "information-circle",
+        "category": "standard"
+    },
+    {
+        "name": "minus-sml",
+        "category": "standard"
+    },
+    {
+        "name": "minus",
         "category": "standard"
     },
     {
@@ -1009,6 +1065,14 @@ export default [
     },
     {
         "name": "pin",
+        "category": "standard"
+    },
+    {
+        "name": "plus-sml",
+        "category": "standard"
+    },
+    {
+        "name": "plus",
         "category": "standard"
     },
     {
@@ -1041,6 +1105,18 @@ export default [
     },
     {
         "name": "success-circle",
+        "category": "standard"
+    },
+    {
+        "name": "x-circle",
+        "category": "standard"
+    },
+    {
+        "name": "x-sml",
+        "category": "standard"
+    },
+    {
+        "name": "x",
         "category": "standard"
     },
     {

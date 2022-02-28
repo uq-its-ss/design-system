@@ -150,7 +150,7 @@
 
   &__logo {
     grid-area: logo;
-    height: 39.8px;
+    height: 40px;
 
     & a {
       display: grid;
@@ -236,12 +236,12 @@
 
   .main-nav-link--has-dropdown {
 
-    padding: core.$space-l 2.75rem core.$space-l core.$space-m;
+    padding: core.$space-l core.$space-l core.$space-l core.$space;
 
 
     &::after {
       content: "";
-      background-image: url(icon-constants.get-icon("standard--chevron-down", core.$uq-white));
+      background-image: url(icon-constants.get-icon("standard--chevron-down-sml", core.$uq-white));
       //background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m7 10 5 5 5-5' stroke='%23FFF' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3e%3c/path%3e%3c/svg%3e");
       // background-size: 0.6rem;
       background-repeat: no-repeat;
@@ -253,7 +253,7 @@
       right: 1.75rem;
 
       @media #{core.$screen-lg-up} {
-        right: 1.3rem;
+        right: .75rem;
       }
     }
   }

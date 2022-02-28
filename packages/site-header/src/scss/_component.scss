@@ -219,10 +219,10 @@
           }
   
           .uq-site-header__navigation__sub-toggle {
-            background-image: url(icon-constants.get-icon("standard--chevron-up", core.$uq-purple));
+            background-image: url(icon-constants.get-icon("standard--chevron-up-sml", core.$uq-purple));
 
             @media #{core.$screen-lg-up} {
-              background-image: url(icon-constants.get-icon("standard--chevron-down", core.$uq-purple));
+              background-image: url(icon-constants.get-icon("standard--chevron-down-sml", core.$uq-purple));
             }
           }
         }
@@ -258,7 +258,7 @@
       border: 0;
       border-left: 1px solid $nav-dropdown-divider;
       text-indent: -100vw;
-      background-image: url(icon-constants.get-icon("standard--chevron-down", core.$uq-purple));
+      background-image: url(icon-constants.get-icon("standard--chevron-down-sml", core.$uq-purple));
       background-size: core.$space;
       background-position: center center;
       background-repeat: no-repeat;

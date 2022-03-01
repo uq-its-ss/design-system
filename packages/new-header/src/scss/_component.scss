@@ -150,14 +150,19 @@
 
   &__logo {
     grid-area: logo;
-    height: 40px;
+
 
     & a {
       display: grid;
+      padding: 1rem 0;
     }
 
     & img {
-      height: 39.8px;
+      height: 32px;
+
+      @media #{core.$screen-lg-up} {
+        height: 40px;
+      }
     }
   }
 
@@ -229,7 +234,7 @@
 
 
     @media #{core.$screen-lg-up} {
-      padding: core.$space-l;
+      padding: core.$space-l core.$space;
     }
 
   }

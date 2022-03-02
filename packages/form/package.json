@@ -1,6 +1,6 @@
 {
   "name": "@uqds/form",
-  "version": "0.0.4-alpha.0",
+  "version": "0.0.5-alpha.0",
   "description": "Form element style rules",
   "keywords": [
     "uqds",
@@ -41,7 +41,7 @@
     "url": "https://github.com/uq-its-ss/design-system/issues"
   },
   "dependencies": {
-    "@uqds/core": "^0.0.4-alpha.0"
+    "@uqds/core": "^0.0.5-alpha.0"
   },
   "devDependencies": {
     "@svgdotjs/svg.js": "^3.0.16",

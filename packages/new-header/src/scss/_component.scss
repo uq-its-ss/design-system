@@ -485,12 +485,11 @@
     position: absolute;
     top: 8.3rem;
     left: 0;
-    background: core.$uq-white;
     width: 100%;
     z-index: 30;
     height: 0;
     visibility: hidden;
-    box-shadow: 0 0.75rem core.$space-m rgb(24 24 24 / 20%);
+
     
     //transition-delay: 2s;
   }
@@ -499,8 +498,10 @@
 
     margin-left:auto;
     margin-right:auto;
-    max-width:73.25rem;
-    padding: core.$space core.$space core.$space-l core.$space;
+    max-width:76.25rem;
+    padding: core.$space core.$space-xxl core.$space-l core.$space-xxl;
+    background: core.$uq-white;
+    box-shadow: 0 0.75rem core.$space-m rgb(24 24 24 / 20%);
   }
 
   .megamenu__row {

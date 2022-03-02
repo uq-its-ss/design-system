@@ -12,6 +12,9 @@
     "css",
     "loading-spinner"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "author": {
     "name": "University of Queensland",
     "email": "webservices@uq.edu.au",

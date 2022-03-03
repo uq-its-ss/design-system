@@ -84,6 +84,8 @@
       @media #{core.$screen-lg-up} {
         display: block;
         font-size: core.$font-size;
+        text-align: right;
+        width: 3.2rem;
       }
     }
   }
@@ -141,7 +143,7 @@
     &--is-open {
 
       &::before {
-        background-image: url(icon-constants.get-icon("standard--close", core.$uq-white));
+        background-image: url(icon-constants.get-icon("standard--x", core.$uq-white));
       }
     }
 

@@ -202,11 +202,11 @@
     @media #{core.$screen-lg-up} {
       align-items: center;
       flex-direction: row;
-      gap: core.$space-l;
     }
 
     & li {
       margin: 0;
+      padding-right: 2rem;
 
       &:hover {
         & > .new-header__megamenu-wrapper {
@@ -238,7 +238,7 @@
 
 
     @media #{core.$screen-lg-up} {
-      padding: core.$space-l core.$space;
+      padding: core.$space-l core.$space-s;
     }
 
   }

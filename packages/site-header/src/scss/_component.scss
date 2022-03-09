@@ -33,8 +33,8 @@
     }
 
     @media #{core.$screen-lg-up} {
-      padding-top: core.$space-m;
-      padding-bottom: core.$space-s;
+      padding-top: core.$space;
+      padding-bottom: 0;
     }
   }
 

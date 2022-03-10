@@ -34,13 +34,14 @@
     
 
     @media #{core.$screen-lg-up} {
-      margin-left:auto;
-      margin-right:auto;
-      max-width:73.25rem;
+      // margin-left:auto;
+      // margin-right:auto;
+      // max-width:73.25rem;
       grid-template-areas:
         "logo mainnav searchtoggle";
       padding-left: core.$space;
       padding-right: core.$space;
+      @include grid.layout-containment;
     }
     
   }
@@ -83,6 +84,7 @@
 
       @media #{core.$screen-lg-up} {
         display: block;
+        font-family: core.$roboto;
         font-size: core.$font-size;
         text-align: right;
         width: 3.2rem;
@@ -107,7 +109,12 @@
       position: absolute;
       top: .625rem;
       right: core.$space-l;
-      
+    }
+
+    &--is-open {
+      &::before {
+        background-image: url(icon-constants.get-icon("standard--x", core.$uq-white));
+      }
     }
   }
 
@@ -128,7 +135,7 @@
       right: core.$space-l;
       
       @media #{core.$screen-lg-up} {
-        top: 0;
+        top: .1rem;
         left: core.$space-xs;
       }
     }
@@ -405,7 +412,7 @@
 
   &__search-query-input {
     margin: 0 !important;
-    padding: core.$space core.$space-m !important;
+    padding: .75rem core.$space !important;
 
   }
 

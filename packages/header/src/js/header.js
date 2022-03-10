@@ -36,7 +36,7 @@ class header {
 
     this.menuToggle.addEventListener('click', () => {
       this.body.classList.toggle('no-scroll');
-
+      this.menuToggle.classList.toggle('main-nav__menu-toggle--is-open');
     });
 
     // TODO: REFACTOR

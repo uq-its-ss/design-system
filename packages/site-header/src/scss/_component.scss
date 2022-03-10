@@ -116,7 +116,7 @@
       border-bottom: 1px solid $nav-dropdown-divider;
       color: core.$uq-purple;
       display: block;
-      padding: core.$space core.$space-m;
+      padding: core.$space core.$space;
       text-decoration: none;
       transition: background-color .25s, border-color .25s;
 
@@ -230,7 +230,7 @@
         &--has-subnav {
           > a {
             @media #{core.$screen-lg-up} {
-              padding-right: core.$space-xl;
+              padding-right: core.$space-l;
             }
           }
         }

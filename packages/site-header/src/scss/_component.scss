@@ -23,8 +23,8 @@
     flex-wrap: wrap;
     float: none;
     justify-content: space-between;
-    padding-top: core.$space;
-    padding-bottom: core.$space;
+    padding-top: .75rem;
+    padding-bottom: .75rem;
     position: relative;
 
     &__right {
@@ -108,6 +108,7 @@
 
     @media #{core.$screen-lg-up} {
       @include grid.layout-containment;
+      padding: 0 .5rem;
     }
   }
 

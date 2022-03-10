@@ -598,7 +598,7 @@ body.no-scroll {
       display:none;
 
       a {
-        padding: core.$space core.$space-m core.$space core.$space-xl;
+        padding: core.$space core.$space-m core.$space core.$space-xxl;
       }
     }
 
@@ -622,6 +622,7 @@ body.no-scroll {
     text-decoration:none;
     font-size: core.$font-size;
     color:core.$uq-purple;
+    position: relative;
 
     &:hover {
       color:core.$uq-purple;
@@ -631,15 +632,21 @@ body.no-scroll {
 
   & .slide-menu__backlink {
     font-weight: 500;
-    padding-left: core.$space-s;
+    padding-left: core.$space-xxl;
 
     &::before {
       content: "";
-      margin: core.$space-xs core.$space-s;
-      padding: core.$space-s core.$space-s;
-      background-image: url(icon-constants.get-icon("standard--chevron-left", core.$uq-purple));
+      // margin: core.$space-xs core.$space-s;
+      // padding: core.$space-s core.$space-s;
+      background-image: url(icon-constants.get-icon("standard--chevron-left-sml", core.$uq-purple));
       background-repeat: no-repeat;
-      float: left;
+      // float: left;
+      width: 1rem;
+      height: 1rem;
+      transform: translateY(50%);
+      position: absolute;
+      left: 1.25rem;
+      top: .75rem;
     }
   }
 
@@ -647,11 +654,14 @@ body.no-scroll {
   
     &::before {
       content: "";
-      margin: core.$space-xs core.$space-s;
-      padding: core.$space-s core.$space-s;
-      background-image: url(icon-constants.get-icon("standard--chevron-right", core.$uq-purple));
+      background-image: url(icon-constants.get-icon("standard--chevron-right-sml", core.$uq-purple));
       background-repeat: no-repeat;
-      float: right;
+      width: 1rem;
+      height: 1rem;
+      transform: translateY(50%);
+      position: absolute;
+      right: 1.25rem;
+      top: .75rem;
     }
   }
 
@@ -726,7 +736,7 @@ body.no-scroll {
   .new-header__newglobal-nav-link .slide-menu__decorator::before {
     content: "";
 
-   background-image: url(icon-constants.get-icon("standard--chevron-right", core.$uq-white));
+   background-image: url(icon-constants.get-icon("standard--chevron-right-sml", core.$uq-white));
 }
 }
 

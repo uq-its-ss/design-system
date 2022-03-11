@@ -114,7 +114,7 @@
 
   &__navigation {
     a {
-      border-bottom: 1px solid $nav-dropdown-divider;
+      //border-bottom: 1px solid $nav-dropdown-divider;
       color: core.$uq-purple;
       display: block;
       padding: core.$space core.$space;
@@ -123,18 +123,18 @@
 
       &:hover,
       &:focus {
-        background-color: $nav-primary-active-bg;
+        //background-color: $nav-primary-active-bg;
         text-decoration: underline;
 
         @media #{core.$screen-lg-up} {
           outline: 0 none;
           text-decoration: none;
-          border-color: $nav-primary-active-bg;
+          //border-color: $nav-primary-active-bg;
         }
       }
 
       @media #{core.$screen-lg-up} {
-        border-bottom: 2px solid transparent;
+        //border-bottom: 4px solid #fff;
       }
     }
 
@@ -173,13 +173,14 @@
         left: 0;
         width: 100%;
         opacity: 0;
-        background-color: $nav-dropdown-bg;
+        background-color: #fff;
         transform: translateY(-($nav-dropdown-animation-distance));
     
         @media #{core.$screen-lg-up} {
           position: absolute;
           width: $nav-dropdown-width;
           transition: opacity .2s ease, transform .2s ease, visibility 0.2s ease;
+          padding: 1rem 0;
         }
 
         &.uq-site-header__navigation__list--open {
@@ -196,8 +197,10 @@
         }
 
         a {
-          border-bottom: 1px solid $nav-dropdown-divider;
+          //border-bottom: 1px solid $nav-dropdown-divider;
           padding-left: core.$space-xxl;
+          padding-top: .75rem;
+          padding-bottom: .75rem;
     
           &:hover,
           &:focus {
@@ -216,7 +219,7 @@
 
         &--open {
           > a {
-            background-color: $nav-primary-active-bg;
+            //background-color: $nav-primary-active-bg;
           }
   
           .uq-site-header__navigation__sub-toggle {
@@ -242,7 +245,7 @@
 
             @media #{core.$screen-lg-up} {
               border-left: 0 none;
-              border-bottom: 2px solid core.$uq-purple;
+              border-bottom: 4px solid core.$uq-purple;
             }
           }
         }
@@ -269,7 +272,7 @@
 
       @media #{core.$screen-md-up} {
         width: core.$space-l;
-        padding: core.$space-compressed-xxxl core.$space-m core.$space-compressed-xxxl core.$space;
+        padding: core.$space-compressed-xxxl core.$space-m core.$space-compressed-xxxl core.$space-s;
       }
   
       @media #{core.$screen-lg-up} {

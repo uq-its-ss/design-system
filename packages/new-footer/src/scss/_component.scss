@@ -84,7 +84,7 @@
 
     &__navigation-title {
       color: #d4c8de;
-      font-size: core.$font-size-m;
+      font-size: core.$font-size;
       font-weight: 500;
       margin: core.$space-none;
     }
@@ -144,14 +144,15 @@
       }
 
       .new-footer__navigation-item {
-
+        
         @media #{core.$screen-lg-up} {
           background-color: transparent;
           border: none;
           padding: 0.75rem core.$space-none core.$space-none;
-        }
-        &:first-of-type {
-          padding: core.$space core.$space-none core.$space-none;
+          
+          &:first-of-type {
+            padding: core.$space core.$space-none core.$space-none;
+          }
         }
       }
 
@@ -179,7 +180,7 @@
       transform: translateY(50%);
       position: absolute;
       top: 0.688rem;
-      right: core.$space-xl;
+      right: core.$space-m;
 
       @media #{core.$screen-lg-up} {
         background-image: none;
@@ -246,7 +247,7 @@
     }
     &__contact-login {
       margin-top: core.$space-xl;
-      font-size: core.$font-size;
+      font-size: core.$font-size-s;
 
       @media #{core.$screen-lg-up} {
         margin-top: core.$space-none;
@@ -361,7 +362,7 @@
 
         &__toggle {
           background-color: core.$uq-purple;
-          color:core.$uq-white;
+          color: #d4c8de;
           font-size: core.$font-size;
           padding-left: core.$space-m;
         }

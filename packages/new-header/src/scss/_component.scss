@@ -660,7 +660,7 @@ body.no-scroll {
       height: 1rem;
       transform: translateY(50%);
       position: absolute;
-      right: 1.25rem;
+      right: 1.5rem;
       top: .75rem;
     }
   }
@@ -717,6 +717,10 @@ body.no-scroll {
       color:core.$uq-white;
       background-color:#48206C;
     }
+  }
+
+  .new-header__newglobal-nav-parent {
+    font-weight: 500;
   }
 
   .new-header__newglobal-nav-item {

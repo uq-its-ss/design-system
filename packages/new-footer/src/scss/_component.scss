@@ -37,7 +37,7 @@
       
       &:hover {
         text-decoration:underline;
-        color:core.$uq-white;
+        color:#d4c8de;
       }
     }
 
@@ -95,7 +95,7 @@
       color: core.$uq-white;
 
       &:hover {
-        color: core.$uq-white;
+        color: #d4c8de;
         text-decoration: underline;
       }
 
@@ -164,7 +164,7 @@
           font-weight: normal;
 
           &:hover {
-            color: core.$uq-white;
+            color: #d4c8de;
           }
         }
       }
@@ -175,11 +175,11 @@
       content: "";
       background-image: url(icon-constants.get-icon("standard--chevron-down", core.$uq-white));
       background-repeat: no-repeat;
-      width: core.$space;
-      height: core.$space;
+      width: core.$space-m;
+      height: core.$space-m;
       transform: translateY(50%);
       position: absolute;
-      top: 0.688rem;
+      top: core.$space-xs;
       right: core.$space-m;
 
       @media #{core.$screen-lg-up} {

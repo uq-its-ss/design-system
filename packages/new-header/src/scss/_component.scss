@@ -513,6 +513,7 @@
     padding: core.$space core.$space-xxl core.$space-l core.$space-xxl;
     background: core.$uq-white;
     box-shadow: 0 0.75rem core.$space-m rgb(24 24 24 / 20%);
+    border-radius: 0 0 .25rem .25rem;
   }
 
   .megamenu__row {
@@ -523,7 +524,7 @@
 
   .megamenu__overview-link {
     display: block;
-    padding: core.$space-s core.$space-none;
+    padding: core.$space core.$space-none;
     color: core.$uq-purple;
   }
 

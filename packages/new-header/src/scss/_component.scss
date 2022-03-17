@@ -636,11 +636,8 @@ body.no-scroll {
 
     &::before {
       content: "";
-      // margin: core.$space-xs core.$space-s;
-      // padding: core.$space-s core.$space-s;
       background-image: url(icon-constants.get-icon("standard--chevron-left-sml", core.$uq-purple));
       background-repeat: no-repeat;
-      // float: left;
       width: 1.5rem;
       height: 1.5rem;
       transform: translateY(50%);

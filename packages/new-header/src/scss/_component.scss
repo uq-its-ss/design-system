@@ -70,7 +70,7 @@
     height: 100%;
 
     @media #{core.$screen-lg-up} {
-      padding: core.$space 1.25rem core.$space 2.75rem;
+      padding: 1rem 0 1rem 1.5rem;
       height: auto;
     }
   }
@@ -135,15 +135,15 @@
       right: core.$space-l;
       
       @media #{core.$screen-lg-up} {
-        top: .1rem;
-        left: core.$space-xs;
+        top: 0.1rem;
+        left: -1rem;
       }
     }
 
     @media #{core.$screen-lg-up} {
       &:hover {
-        background-color: #48206c;
-        outline: none;
+        color: #d4c8de;
+        text-decoration: underline;
       }
     }
 

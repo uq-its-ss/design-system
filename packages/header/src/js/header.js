@@ -53,7 +53,11 @@ class header {
       this.searchToggle.classList.toggle('main-nav__search-toggle--is-open');
       this.searchBlock.classList.toggle('new-header__search--is-open');
       this.menuToggle.classList.remove('main-nav__menu-toggle--is-open');
-
+      if ( this.searchLabel.innerHTML === "Search") {
+        this.searchLabel.innerHTML = "Close";
+      } else {
+        this.searchLabel.innerHTML = "Search";
+      }
     });
 
 

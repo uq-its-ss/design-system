@@ -204,7 +204,8 @@
     
           &:hover,
           &:focus {
-            background-color: $nav-dropdown-active-bg;
+            // background-color: $nav-dropdown-active-bg;
+            text-decoration: underline;
           }
     
           @media #{core.$screen-lg-up} {
@@ -239,7 +240,8 @@
           }
         }
 
-        &--active {
+        &--active,
+        &:hover {
           > a {
             border-left: 2px solid core.$uq-purple;
 

@@ -225,6 +225,10 @@
           border-bottom: 4px solid white;
         }
       }
+
+      & .new-header__main-nav-link--active {
+        border-bottom: 4px solid white;
+      }
     }
   }
 

@@ -314,8 +314,8 @@
 
   &__black-nav {
     @media #{core.$screen-lg-up} {
-      padding-left: core.$space;
-      padding-right: core.$space;
+      // padding-left: core.$space;
+      // padding-right: core.$space;
       margin-left:auto;
       margin-right:auto;
       max-width:73.25rem;

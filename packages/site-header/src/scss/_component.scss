@@ -241,7 +241,7 @@
         }
 
         &--active,
-        &:hover {
+        &--open {
           > a {
             border-left: 2px solid core.$uq-purple;
 
@@ -251,6 +251,8 @@
             }
           }
         }
+
+
       }
     }
 

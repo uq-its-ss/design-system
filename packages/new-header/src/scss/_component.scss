@@ -567,7 +567,7 @@ body.no-scroll {
   width:100%;
   max-width:100%;
   background-color:#FFFFFF;
-  height:100vh;
+  height: calc(100vh - 69px);
   display:none;
   box-sizing:border-box;
   transition:transform .3s ease-in-out;
@@ -576,9 +576,10 @@ body.no-scroll {
   z-index:1000;
   grid-area: mainnav-mobile;
   position:fixed;
-  top: 4.4rem;
+  top: 4.3rem;
   right:core.$space-none;
   overflow-y:auto;
+  overflow-x:hidden;
   font-size: core.$font-size;
   color:core.$uq-purple;
 
@@ -599,7 +600,8 @@ body.no-scroll {
 
     ul {
       position:absolute;
-      top:core.$space-none;left:100%;
+      top:core.$space-none;
+      left:100%;
       display:none;
 
       a {

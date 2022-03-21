@@ -44,15 +44,7 @@
     /* NAVIGATION */
 
     &__navigation {
-      /* border-bottom: 1px solid #d4c8de; */
-      padding: core.$space-none;
-
-      @media #{core.$screen-lg-up} {
-        padding: core.$space-xl core.$space-m core.$space-none;
-      }
-      @media #{core.$screen-xl-up} {
-        padding: core.$space-xl core.$space-none core.$space-none;
-      }
+      grid-area: FooterNavigation;
 
       &--is-open {
         .new-footer__navigation-level-2 {
@@ -193,14 +185,8 @@
 
 
     /* FOOTER */
-
     &__footer {
-      padding:core.$space-xl core.$space-m;
-
-      @media #{core.$screen-xl-up} {
-        padding: core.$space-m core.$space-none;
-      }
-
+      grid-area: FooterTerms;
     }
 
     &__footer-list {
@@ -215,10 +201,19 @@
       @media #{core.$screen-lg-up} {
         display: flex;
         flex-wrap: wrap;
+        justify-content: start;
         flex-direction: row;
         margin: core.$space-none;
         padding: core.$space-none;
+
+        .new-footer__footer-item {
+          margin-bottom: core.$space-none;
+        }
       }
+      @media #{core.$screen-xl-up} {
+        justify-content: flex-end;
+      }
+
     }
 
     &__footer-item {
@@ -229,7 +224,7 @@
 
     &__contact {
       font-size: core.$font-size-s;
-      padding: core.$space-xl core.$space-m core.$space-none;
+      grid-area: FooterSocial;
 
       @media #{core.$screen-lg-up} { 
         display: flex;
@@ -238,11 +233,7 @@
         justify-content: space-between;
         align-items: center;
         margin: core.$space-none;
-        padding: core.$space-xl core.$space-m core.$space-none;
-      }
-      @media #{core.$screen-xl-up} { 
-        padding: core.$space-m core.$space-none core.$space-none;
-      }    
+      } 
        
     }
     &__contact-login {
@@ -266,13 +257,8 @@
     /* META */
 
     &__meta {
-      padding: core.$space-xl core.$space-m core.$space-none;
-      font-size: core.$font-size-s;
-
-      @media #{core.$screen-xl-up} {
-        padding: core.$space-m core.$space-none core.$space-none;
-      }
-    
+      font-size: core.$font-size-s; 
+      grid-area: FooterOrg;
     }
 
     &__meta-icons {
@@ -346,6 +332,9 @@
 
     &--mobile {
       display: block;
+      min-width: calc(100% + 3rem);
+      margin-left: -24px;
+      margin-right: -24px;
 
       @media #{core.$screen-lg-up} {
         display: none;
@@ -378,13 +367,32 @@
 
     }
 
-    @media #{core.$screen-xl-up} { 
-      &__container {
-        padding-left: core.$space-m;
-        padding-right: core.$space-m;
-        margin-left:auto;
-        margin-right:auto;
-        max-width:73.25rem;
+    &__container {
+      display: grid;
+      grid-template-areas:
+      "FooterNavigation"
+      "FooterSocial"
+      "FooterOrg"
+      "FooterTerms";
+      row-gap: 40px;
+      padding: 0 24px 40px;
+
+      max-width: 73.25rem;
+      width: 100%; /* may not be needed but forces it to take up space when empty */
+      margin-left: auto;
+      margin-right: auto;
+
+      @media #{core.$screen-lg-up}  { 
+        row-gap: 24px;
+        padding-top: 40px;
+      }
+      @media #{core.$screen-xl-up}  { 
+        grid-template-areas:
+        "FooterNavigation FooterNavigation"
+        "FooterSocial FooterSocial"
+        "FooterOrg FooterTerms";
+        row-gap: 24px;
+        padding-top: 40px;
       }
     }
 

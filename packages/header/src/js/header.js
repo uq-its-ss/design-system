@@ -34,10 +34,7 @@ class header {
     this.menuToggle = document.querySelector('.main-nav__menu-toggle');
     this.body = document.querySelector('body');
 
-    this.menuToggle.addEventListener('click', () => {
-      this.body.classList.toggle('no-scroll');
-      this.menuToggle.classList.toggle('main-nav__menu-toggle--is-open');
-    });
+  
 
     // TODO: REFACTOR
 
@@ -45,16 +42,23 @@ class header {
     this.searchBlock = document.querySelector('.new-header__search');
     this.searchLabel = document.querySelector('.search-toggle__label');
 
+    this.menuToggle.addEventListener('click', () => {
+      this.body.classList.toggle('no-scroll');
+      this.menuToggle.classList.toggle('main-nav__menu-toggle--is-open');
+      this.searchToggle.classList.remove('main-nav__search-toggle--is-open');
+      this.searchBlock.classList.remove('new-header__search--is-open');
+    });
+
     this.searchToggle.addEventListener('click', () => {
       this.searchToggle.classList.toggle('main-nav__search-toggle--is-open');
       this.searchBlock.classList.toggle('new-header__search--is-open');
+      this.menuToggle.classList.remove('main-nav__menu-toggle--is-open');
       if ( this.searchLabel.innerHTML === "Search") {
         this.searchLabel.innerHTML = "Close";
       } else {
         this.searchLabel.innerHTML = "Search";
       }
     });
-
 
 
 

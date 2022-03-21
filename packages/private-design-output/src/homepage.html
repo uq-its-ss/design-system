@@ -51,7 +51,7 @@
                 <li><a href="#">Events for prospective students</a></li>
                 
                 <li>
-                  <a class="new-header__newglobal-nav-parent" href="#">Information for</a>
+                  <a href="#">Information for</a>
                   <ul>
                     <li><a href="#">International students</a></li>
                     <li><a href="#">International agents</a></li>
@@ -68,7 +68,7 @@
               </ul>
             </li>
             <li  class="new-header__newglobal-nav-item">
-              <a  class="new-header__newglobal-nav-link" href="#">Research</a>
+              <a  class="new-header__newglobal-nav-link " href="#">Research</a>
               <ul>
                 <li>
                   <a href="#">Research overview</a>
@@ -205,7 +205,7 @@
                   </div>
               </div>
               </li>
-              <li><a class="new-header__main-nav-link main-nav-link--has-dropdown" href="https://research.uq.edu.au/" class="gtm-processed">Research</a>
+              <li><a class="new-header__main-nav-link main-nav-link--has-dropdown new-header__main-nav-link--active" href="https://research.uq.edu.au/" class="gtm-processed">Research</a>
                 <div class="new-header__megamenu-wrapper">
                   <div class="new-header__megamenu">
                     <a href="#" class="megamenu__overview-link">Research overview</a>
@@ -346,56 +346,7 @@
           </ul>
         </nav>
       </div>
-      <!-- <div class="new-header__megamenu-wrapper">
-        
-        <div class="new-header__megamenu new-header__megamenu--research">
-          <a href="#" class="megamenu__overview-link">Research overview</a>
-          <div class="megamenu__row">
-            <div class="megamenu__column">
-              <div class="megamenu__heading">Research options</div>
-              <nav class="megamenu__menu">
-                <ul>
-                  <li><a href="#">Find a course or program</a></li>
-                  <li><a href="#">Browse study areas</a></li>
-                  <li><a href="#">Why choose UQ</a></li>
-                  <li><a href="#">Enriching student experience</a></li>
-                  <li><a href="#">Study options & course types</a></li>
-                  <li><a href="#">Scholarships</a></li>
-                  <li><a href="#">Life at UQ & accommodation</a></li>
-
-                </ul>
-              </nav>
-            </div>
-            <div class="megamenu__column">
-              <div class="megamenu__heading">Information for</div>
-              <nav class="megamenu__menu">
-                <ul>
-                  <li><a href="#">International</a></li>
-                  <li><a href="#">Internation agents</a></li>
-                  <li><a href="#">High school</a></li>
-                  <li><a href="#">Mature</a></li>
-                  <li><a href="#">Postgraduate research (HDR)</a></li>
-
-                </ul>
-              </nav>
-            </div>
-            <div class="megamenu__column">
-              <div class="megamenu__heading">Information for</div>
-              <nav class="megamenu__menu">
-                <ul>
-                  <li><a href="#">International students</a></li>
-                  <li><a href="#">Internation agents</a></li>
-                  <li><a href="#">High school students</a></li>
-                  <li><a href="#">Mature students</a></li>
-                  <li><a href="#">Postgraduate research (HDR) students</a></li>
-
-                </ul>
-              </nav>
-            </div>
-            
-          </div>
-        </div>
-      </div> -->
+     
       
     </header>
     <!-- <header class="uq-header new-header">
@@ -723,6 +674,14 @@
           submenuLinkAfter: ' ',
           backLinkBefore: ' ',
         });
+
+        this.searchToggle = document.querySelector('.main-nav__search-toggle');
+
+        this.searchToggle.addEventListener('click', () => {
+          menuLeft.close();
+
+        });
+        
 
       });
     </script>

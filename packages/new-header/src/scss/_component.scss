@@ -31,6 +31,8 @@
     "menutoggle logo searchtoggle"
     // "search search search"
     "mainnav-mobile mainnav-mobile mainnav-mobile";
+    position: relative;
+    z-index: 999;
     
 
     @media #{core.$screen-lg-up} {
@@ -193,7 +195,7 @@
   &__main-nav {
     
     @media #{core.$screen-lg-up} {
-      padding: 0 core.$space-xl;
+      padding: 0 0 0 core.$space-xl;
     }
   }
 
@@ -557,6 +559,10 @@
   }
 } 
 
+:root {
+  --app-height: 100%;
+}
+
 body.no-scroll {
   position: fixed;
 }
@@ -567,7 +573,7 @@ body.no-scroll {
   width:100%;
   max-width:100%;
   background-color:#FFFFFF;
-  height: calc(100vh - 69px);
+  height: calc(var(--app-height) - 4.3rem);
   display:none;
   box-sizing:border-box;
   transition:transform .3s ease-in-out;

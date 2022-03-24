@@ -220,7 +220,7 @@
             </ul>
           </li>
           <li  class="new-header__newglobal-nav-item">
-            <a  class="new-header__newglobal-nav-link " href="#">Research</a>
+            <a  class="new-header__newglobal-nav-link" href="#">Research</a>
             <ul>
               <li>
                 <a href="#">Research overview</a>
@@ -236,7 +236,7 @@
               <li><a href="#">Research communities and networks</a></li>
               <li><a href="#">Participate in a research project</a></li>
               <li>
-                <a href="#  class="global-mobile-nav__audience-link">Information for</a>
+                <a href="#" class="global-mobile-nav__audience-link">Information for</a>
                 <ul>
                   <li><a href="#">Future research students</a></li>
                   <li><a href="#">New research students</a></li>
@@ -668,7 +668,6 @@
       const appHeight = () => {
         const doc = document.documentElement
         doc.style.setProperty('--app-height', `${window.innerHeight}px`)
-        console.log(window.innerHeight);
       }
       window.addEventListener('resize', appHeight)
       appHeight()
@@ -690,13 +689,12 @@
           menuLeft.close();
         });
 
-        //this.slideMenuBackButtons = document.querySelectorAll('.slide-menu__backlink');
+
         var slideMenuBackButtons = document.querySelectorAll('.slide-menu__backlink, .global-mobile-nav__audience-link');
         
         Array.prototype.forEach.call(slideMenuBackButtons, function(el, i){
             el.addEventListener('click', () => {
               document.querySelector('.global-mobile-nav').scrollTop = 0;
-              console.log('slide-menu__backlink clicked');
             });
         });
       });

@@ -175,6 +175,8 @@
         opacity: 0;
         background-color: #fff;
         transform: translateY(-($nav-dropdown-animation-distance));
+        box-shadow: 0 0.75rem 1.5rem rgb(24 24 24 / 20%);
+        border-radius: 0 0 0.25rem 0.25rem;
     
         @media #{core.$screen-lg-up} {
           position: absolute;
@@ -251,16 +253,12 @@
           }
         }
 
-
-        
-
-
-      }
-
-      &-link {
         &:hover {
-          border-bottom: 4px solid core.$uq-purple;
+          & .uq-site-header__navigation__list-link {
+            border-bottom: 4px solid core.$uq-purple;
+          }
         }
+
       }
     }
 

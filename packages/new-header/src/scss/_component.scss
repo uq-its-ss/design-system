@@ -626,7 +626,7 @@ body.no-scroll {
 
   a {
     cursor:pointer;
-    padding: core.$space core.$space-m;
+    padding: .75rem core.$space-m;
     text-decoration:none;
     font-size: core.$font-size;
     color:core.$uq-purple;
@@ -761,7 +761,7 @@ body.no-scroll {
 
   .uq-site-header__title {
     padding: 1rem 1.5rem;
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-weight: 500;
   }
 

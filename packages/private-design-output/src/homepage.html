@@ -707,6 +707,8 @@
               //reset the menu toggle after closing. 
               this.mainNavToggle = document.querySelector('.main-nav__toggle');
               this.mainNavToggle.classList.remove('main-nav__menu-toggle--is-open');
+              this.body = document.querySelector('body');
+              this.body.classList.remove('no-scroll');
               }
         });
       });

@@ -759,13 +759,13 @@ body.no-scroll {
     padding-right: 0rem;
   }
 
-  .uq-site-header__title-container__left {
-
-  }
-
   .uq-site-header__title {
     padding: 1rem 1.5rem;
     font-size: 1.25rem;
+    font-weight: 500;
+  }
+
+  &__audience-link {
     font-weight: 500;
   }
 

@@ -718,6 +718,18 @@
               document.querySelector('.global-mobile-nav').scrollTop = 0;
             });
         });
+
+        // Responsive Resize Close menu and update toggles 
+        window.addEventListener('resize', (event) => {
+        
+        // Target Resize of LG ($screen-lg, 64rem, 1024px). 
+        if (window.innerWidth > 1024) {
+              menuLeft.close(true);
+              //reset the menu toggle after closing. 
+              this.mainNavToggle = document.querySelector('.main-nav__toggle');
+              this.mainNavToggle.classList.remove('main-nav__menu-toggle--is-open');
+              }
+        });
       });
     </script>
     <script type="text/javascript" src="js/slide-menu.js"></script></body>

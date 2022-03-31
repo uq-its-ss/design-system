@@ -140,7 +140,7 @@
         @media #{core.$screen-lg-up} {
           background-color: transparent;
           border: none;
-          padding: 0.75rem core.$space-none core.$space-none;
+          padding: 0.5rem core.$space-none core.$space-none;
           
           &:first-of-type {
             padding: core.$space core.$space-none core.$space-none;
@@ -383,16 +383,16 @@
       margin-right: auto;
 
       @media #{core.$screen-lg-up}  { 
-        row-gap: 24px;
-        padding-top: 40px;
+        row-gap: 32px;
+        padding-top: 32px;
       }
       @media #{core.$screen-xl-up}  { 
         grid-template-areas:
         "FooterNavigation FooterNavigation"
         "FooterSocial FooterSocial"
         "FooterOrg FooterTerms";
-        row-gap: 24px;
-        padding-top: 40px;
+        row-gap: 32px;
+        padding-top: 32px;
       }
     }
 

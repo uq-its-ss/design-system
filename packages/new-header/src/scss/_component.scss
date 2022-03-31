@@ -371,30 +371,26 @@
     position: absolute;
     width: 100%;
     top: 3.95rem;
-    z-index: 50;
+    z-index: 999;
     box-shadow: 0 .75rem core.$space-m rgb(24 24 24 / 20%);
+    // overflow: hidden;
 
     @media #{core.$screen-lg-up} {
       top: 8.3rem;
     }
 
-    transition:  height .2s ease-in-out, visibility .1s ease;// visibility .2s ease,  opacity .2s ease;
-    //transform: translateY(-1rem);
+    transition:  height .2s ease-in-out, transform .2s ease-in-out, visibility .2s ease;// visibility .2s ease,  opacity .2s ease;
+    transform: translateY(-1rem);
     visibility: hidden;
     //opacity: 0;
     height: 0;
 
-    
-
 
     &--is-open {    
-      //transform: translateY(0);
+      transform: translateY(0);
       visibility: visible;
       //opacity: 1;
       height: auto;
-
-      padding-top: core.$space;
-      padding-bottom: core.$space;
     }
   }
 
@@ -417,6 +413,8 @@
     border-radius: 5px;
     background-position: core.$space;
     margin-bottom: core.$space;
+    padding-top: core.$space;
+    padding-bottom: core.$space;
 
   }
 

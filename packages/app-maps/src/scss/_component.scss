@@ -7,7 +7,7 @@
 
 $-icon-width: 1.75rem;
 $-icon-height: $-icon-width;
-$-icon-spacing: 1.125rem / 2;
+$-icon-spacing: 1.125rem * 0.5;
 
 $-icon-button-icon-height: $-icon-width;
 $-icon-button-icon-width: $-icon-height;
@@ -122,7 +122,7 @@ $-result-icon-spacing: $-icon-spacing;
 
       appearance: none;
       background-image: url(get-icon('ui--search'));
-      background-position: core.$space-s + ($-icon-button-width - $-icon-button-icon-width) / 2 center;
+      background-position: core.$space-s + ($-icon-button-width - $-icon-button-icon-width) * 0.5 center;
       background-color: transparent;
       background-repeat: no-repeat;
       background-size: $-icon-button-icon-height $-icon-button-icon-width;
@@ -525,7 +525,7 @@ $-result-icon-spacing: $-icon-spacing;
             position: absolute;
             left: core.$space-m + $-result-icon-spacing;
             top: 50%;
-            margin-top: -($-result-icon-height / 2);
+            margin-top: -($-result-icon-height * 0.5);
             background-image: url(get-icon('ui--map-pin', core.$uq-purple));
             background-position: center;
             background-repeat: no-repeat;
@@ -544,9 +544,9 @@ $-result-icon-spacing: $-icon-spacing;
             $height: $width;
 
             position: absolute;
-            right: core.$space-m + ($-icon-button-width - $width) / 2;
+            right: core.$space-m + ($-icon-button-width - $width) * 0.5;
             top: 50%;
-            margin-top: -($height / 2);
+            margin-top: -($height * 0.5);
             background-image: url(get-icon('ui--chevron-right', core.$uq-neutral));
             background-position: center;
             background-repeat: no-repeat;

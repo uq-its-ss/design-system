@@ -232,6 +232,14 @@ export default [
         "category": "common"
     },
     {
+        "name": "share-circle",
+        "category": "common"
+    },
+    {
+        "name": "share",
+        "category": "common"
+    },
+    {
         "name": "basketball-ball",
         "category": "education"
     },
@@ -1146,5 +1154,9 @@ export default [
     {
         "name": "transportation-ticket-bus-transfer-1",
         "category": "student-services"
+    },
+    {
+        "name": "road-sign-turn-right-1",
+        "category": "transport"
     }
 ];

@@ -1,6 +1,6 @@
 {
   "name": "@uqds/pagination",
-  "version": "0.0.4-alpha.0",
+  "version": "0.0.5-alpha.0",
   "description": "Pagination component",
   "keywords": [
     "uqds",
@@ -13,6 +13,9 @@
     "navigation",
     "pagination"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "author": {
     "name": "University of Queensland",
     "email": "webservices@uq.edu.au",
@@ -34,6 +37,6 @@
     "url": "https://github.com/uq-its-ss/design-system/issues"
   },
   "dependencies": {
-    "@uqds/core": "^0.0.4-alpha.0"
+    "@uqds/core": "^0.0.5-alpha.0"
   }
 }

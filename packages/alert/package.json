@@ -1,6 +1,6 @@
 {
   "name": "@uqds/alert",
-  "version": "0.0.4-alpha.0",
+  "version": "0.0.5-alpha.0",
   "description": "Alert component",
   "keywords": [
     "uqds",
@@ -12,6 +12,9 @@
     "css",
     "alert"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "author": {
     "name": "University of Queensland",
     "email": "webservices@uq.edu.au",
@@ -36,7 +39,7 @@
     "url": "https://github.com/uq-its-ss/design-system/issues"
   },
   "dependencies": {
-    "@uqds/core": "^0.0.4-alpha.0",
-    "@uqds/grid": "^0.0.4-alpha.0"
+    "@uqds/core": "^0.0.5-alpha.0",
+    "@uqds/grid": "^0.0.5-alpha.0"
   }
 }

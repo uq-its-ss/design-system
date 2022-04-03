@@ -464,7 +464,7 @@ $use-encapsulation: false !default;
       height: core.$space-compressed-xl;
       left: core.$space;
       margin-right: core.$space-s;
-      margin-top: calc(#{-(core.$space-compressed-xl) / 2} - 1px);
+      margin-top: calc(#{-(core.$space-compressed-xl) * 0.5} - 1px);
       position: absolute;
       top: 50%;
       width: core.$space-compressed-xl;

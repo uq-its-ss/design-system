@@ -310,8 +310,8 @@
             <a class="new-header__black-nav-link" href="#">Contact</a>
           </li>  
       </nav>
-      <div class="new-header__search-wrapper">
-        <div class="new-header__search">
+      <div class="new-header__search">
+        <div class="new-header__search-container">
           <form>
             <fieldset>
               <div class="new-header__search-query">
@@ -696,6 +696,20 @@
             el.addEventListener('click', () => {
               document.querySelector('.global-mobile-nav').scrollTop = 0;
             });
+        });
+
+        // Responsive Resize Close menu and update toggles 
+        window.addEventListener('resize', (event) => {
+        
+        // Target Resize of LG ($screen-lg, 64rem, 1024px). 
+        if (window.innerWidth > 1024) {
+              menuLeft.close(true);
+              //reset the menu toggle after closing. 
+              this.mainNavToggle = document.querySelector('.main-nav__toggle');
+              this.mainNavToggle.classList.remove('main-nav__menu-toggle--is-open');
+              this.body = document.querySelector('body');
+              this.body.classList.remove('no-scroll');
+              }
         });
       });
 

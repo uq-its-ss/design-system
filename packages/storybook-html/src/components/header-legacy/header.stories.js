@@ -4,7 +4,7 @@ import { useEffect } from '@storybook/client-api';
 import './header.scss';
 
 // import scripts
-import headerCreate from '@uqds/header/src/js/header';
+import headerCreate from '@uqds/header-legacy/src/js/header';
 
 // import HTML template strings
 import headerHTML from './header.html';
@@ -13,7 +13,7 @@ import headerNoLocalSearchHTML from './header_no-local-search.html';
 import docs from './header.docs.mdx';
 
 export default {
-  title: 'Components/Header',
+  title: 'Legacy/Header',
   parameters: {
     docs: {
       page: docs,

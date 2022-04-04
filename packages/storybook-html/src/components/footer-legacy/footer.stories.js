@@ -7,7 +7,7 @@ import footerHTML from './footer.html';
 import docs from './footer.docs.mdx';
 
 export default {
-  title: 'Components/Footer',
+  title: 'Legacy/Footer',
   parameters: {
     layout: "fullscreen",
     backgrounds: {

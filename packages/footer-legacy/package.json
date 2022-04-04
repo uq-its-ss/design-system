@@ -1,7 +1,8 @@
 {
-  "name": "@uqds/header",
+  "name": "@uqds/footer-legacy",
   "version": "0.0.5-alpha.0",
-  "description": "Header component",
+  "description": "The UQ footer component package",
+  "private": true,
   "keywords": [
     "uqds",
     "uq",
@@ -10,11 +11,8 @@
     "scss",
     "sass",
     "css",
-    "header"
+    "footer"
   ],
-  "publishConfig": {
-    "access": "public"
-  },
   "author": {
     "name": "University of Queensland",
     "email": "webservices@uq.edu.au",
@@ -37,7 +35,6 @@
   },
   "dependencies": {
     "@uqds/core": "^0.0.5-alpha.0",
-    "@uqds/grid": "^0.0.5-alpha.0",
-    "@uqds/icon": "^0.0.5-alpha.0"
+    "@uqds/grid": "^0.0.5-alpha.0"
   }
 }

@@ -33,7 +33,10 @@ function exportFontFiles() {
 */
 
 function exportImages() {
-  return src('./src/images/*.*')
+  return src([
+    './src/images/*.*',
+    './node_modules/@uqds/new-footer/src/images/**'
+  ])
   .pipe(dest('./dist/images'));
 }
 

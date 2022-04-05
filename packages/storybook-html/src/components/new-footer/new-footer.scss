@@ -1,1 +1,3 @@
-@import '@uqds/footer/src/scss/_component';
+@use '@uqds/new-footer/src/scss/_component' with (
+    $image-path: '../../../node_modules/@uqds/new-footer/src/images'
+);

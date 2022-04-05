@@ -38,6 +38,7 @@
 		"@uqds/grid": "^0.0.5-alpha.0",
 		"@uqds/grid-menu": "^0.0.5-alpha.0",
 		"@uqds/header": "^0.0.5-alpha.0",
+		"@uqds/new-header": "^0.0.5-alpha.0",
 		"@uqds/hero": "^0.0.5-alpha.0",
 		"@uqds/icon": "^0.0.5-alpha.0",
 		"@uqds/lists": "^0.0.5-alpha.0",

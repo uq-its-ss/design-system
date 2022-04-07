@@ -508,9 +508,6 @@
     z-index: 30;
     height: 0;
     visibility: hidden;
-
-    
-    //transition-delay: 2s;
   }
 
   &__megamenu {
@@ -519,6 +516,10 @@
     background: core.$uq-white;
     box-shadow: 0 0.75rem core.$space-m rgb(24 24 24 / 20%);
     border-radius: 0 0 .25rem .25rem;
+    
+    @media #{core.$screen-xl-up} {
+      max-width: 71.25rem;
+    }
   }
 
   .megamenu__row {
@@ -626,6 +627,11 @@ body.no-scroll {
       background-color:#f1f1f1;
     }
 
+  }
+
+  .slide-menu__control {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 
   a {

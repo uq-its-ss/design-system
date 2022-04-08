@@ -23,10 +23,10 @@ $image-path: '../images' !default;
 
     &__acknowledgement {
       max-width: 73.25rem;
-      padding: core.$space-xl core.$space-m;
+      padding: core.$space-l core.$space-m;
       color: #d4c8de;
       font-weight: 400;
-      font-size: core.$font-size-m;
+      font-size: core.$font-size;
       line-height: 1.5;
       margin:auto;
 
@@ -35,7 +35,7 @@ $image-path: '../images' !default;
       flex-wrap: wrap;
 
       @media #{core.$screen-xl-up} {
-        padding: core.$space-xl core.$space;
+        padding: core.$space-l core.$space;
       }
 
     }
@@ -219,6 +219,12 @@ $image-path: '../images' !default;
     /* FOOTER */
     &__footer {
       grid-area: FooterTerms;
+
+      @media #{core.$screen-xl-up} {
+        & :last-child{
+          justify-content: flex-end;
+        }
+      }
     }
 
     &__footer-list {
@@ -242,10 +248,6 @@ $image-path: '../images' !default;
           margin-bottom: core.$space-none;
         }
       }
-      @media #{core.$screen-xl-up} {
-        justify-content: flex-end;
-      }
-
     }
 
     &__footer-item {
@@ -383,9 +385,14 @@ $image-path: '../images' !default;
 
         &__toggle {
           background-color: core.$uq-purple;
-          color: #d4c8de;
+          color: core.$uq-white;
           font-size: core.$font-size;
           padding-left: core.$space-m;
+
+          &:hover {
+            color: #d4c8de;
+            text-decoration: underline;
+          }
         }
 
         &__item--is-open {
@@ -424,7 +431,7 @@ $image-path: '../images' !default;
         "FooterSocial FooterSocial"
         "FooterOrg FooterTerms";
         row-gap: core.$space-l;
-        padding-top: core.$space-l;
+        padding: core.$space-l core.$space core.$space-xl;
       }
     }
 

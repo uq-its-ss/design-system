@@ -12,8 +12,13 @@ $image-path: '../images' !default;
 
     &__reconciliation {
       background:core.$uq-black;
+      background-image: linear-gradient(180deg, #451D68 45.31%, rgba(69, 29, 104, 0.554545) 85.94%, rgba(69, 29, 104, 0) 100%), url('#{$image-path}/brisbane-river-artwork.png');
+      /*background-repeat: no-repeat;
       background-image: linear-gradient(90deg, rgba(81, 36, 122, .7), rgba(81, 36, 122, .7)), url('#{$image-path}/brisbane-river-artwork.png');
-      /*background-repeat: no-repeat;*/
+      */
+      @media #{core.$screen-xl-up} {
+        background-image: linear-gradient(90deg, #451D68 28.12%, rgba(70, 30, 106, 0.65) 70.31%, rgba(72, 32, 108, 0) 100%), url('#{$image-path}/brisbane-river-artwork.png');
+      }
     }
 
     &__acknowledgement {
@@ -25,8 +30,33 @@ $image-path: '../images' !default;
       line-height: 1.5;
       margin:auto;
 
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+
       @media #{core.$screen-xl-up} {
         padding: core.$space-xl core.$space;
+      }
+
+    }
+
+    &__acknowledgement-flag {
+      width: 2.25rem;
+      height: core.$space-m;
+
+      &:first-child {
+        margin-right: core.$space-s;
+      }
+    }
+
+    &__acknowledgement-text {
+      margin-top: core.$space;
+      flex-basis: 100%;
+
+      @media #{core.$screen-xl-up} {
+        flex-basis: auto;
+        margin-top: core.$space-none;
+        padding-left: core.$space-m;
       }
 
     }
@@ -142,7 +172,7 @@ $image-path: '../images' !default;
         @media #{core.$screen-lg-up} {
           background-color: transparent;
           border: none;
-          padding: 0.5rem core.$space-none core.$space-none;
+          padding: core.$space-s core.$space-none core.$space-none;
           
           &:first-of-type {
             padding: core.$space core.$space-none core.$space-none;
@@ -334,9 +364,9 @@ $image-path: '../images' !default;
 
     &--mobile {
       display: block;
-      min-width: calc(100% + 3rem);
-      margin-left: -24px;
-      margin-right: -24px;
+      min-width: calc(100% + core.$space-xxl);
+      margin-left: -1.5rem;
+      margin-right: -1.5rem;
 
       @media #{core.$screen-lg-up} {
         display: none;
@@ -376,8 +406,8 @@ $image-path: '../images' !default;
       "FooterSocial"
       "FooterOrg"
       "FooterTerms";
-      row-gap: 40px;
-      padding: 0 24px 40px;
+      row-gap: core.$space-xl;
+      padding: core.$space-none core.$space-m core.$space-xl;
 
       max-width: 73.25rem;
       width: 100%; /* may not be needed but forces it to take up space when empty */
@@ -385,16 +415,16 @@ $image-path: '../images' !default;
       margin-right: auto;
 
       @media #{core.$screen-lg-up}  { 
-        row-gap: 32px;
-        padding-top: 32px;
+        row-gap: core.$space-l;
+        padding-top: core.$space-l;
       }
       @media #{core.$screen-xl-up}  { 
         grid-template-areas:
         "FooterNavigation FooterNavigation"
         "FooterSocial FooterSocial"
         "FooterOrg FooterTerms";
-        row-gap: 32px;
-        padding-top: 32px;
+        row-gap: core.$space-l;
+        padding-top: core.$space-l;
       }
     }
 

@@ -197,7 +197,7 @@ $image-path: '../images' !default;
 
     &__navigation-toggle::before {
       content: "";
-      background-image: url(icon-constants.get-icon("standard--chevron-down", core.$uq-white));
+      background-image: url(icon-constants.get-icon("standard--chevron-down-sml", core.$uq-white));
       background-repeat: no-repeat;
       width: core.$space-m;
       height: core.$space-m;
@@ -212,7 +212,7 @@ $image-path: '../images' !default;
     }
     
     .uq-accordion__toggle--active::before {
-      background-image: url(icon-constants.get-icon("standard--chevron-up", core.$uq-white));
+      background-image: url(icon-constants.get-icon("standard--chevron-up-sml", core.$uq-white));
     }
 
 

@@ -649,19 +649,19 @@
             });
         });
 
-        // Responsive Resize Close menu and update toggles 
-        window.addEventListener('resize', (event) => {
+        // // Responsive Resize Close menu and update toggles 
+        // window.addEventListener('resize', (event) => {
         
-        // Target Resize of LG ($screen-lg, 64rem, 1024px). 
-        if (window.innerWidth > 1024) {
-              menuLeft.close(true);
-              //reset the menu toggle after closing. 
-              this.mainNavToggle = document.querySelector('.nav-primary__toggle');
-              this.mainNavToggle.classList.remove('nav-primary__menu-toggle--is-open');
-              this.body = document.querySelector('body');
-              this.body.classList.remove('no-scroll');
-              }
-        });
+        // // Target Resize of LG ($screen-lg, 64rem, 1024px). 
+        // if (window.innerWidth > 1024) {
+        //       menuLeft.close(true);
+        //       //reset the menu toggle after closing. 
+        //       this.mainNavToggle = document.querySelector('.nav-primary__toggle');
+        //       this.mainNavToggle.classList.remove('nav-primary__menu-toggle--is-open');
+        //       this.body = document.querySelector('body');
+        //       this.body.classList.remove('no-scroll');
+        //       }
+        // });
       });
 
     </script>

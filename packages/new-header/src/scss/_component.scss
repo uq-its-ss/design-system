@@ -565,6 +565,9 @@
 
 body.no-scroll {
   position: fixed;
+  @media #{core.$screen-lg-up} {
+    position: relative;
+  }
 }
 
 // Slide mobile menu 

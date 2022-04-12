@@ -84,7 +84,7 @@
     height: 100%;
 
     @media #{core.$screen-lg-up} {
-      padding: 1rem 0 1rem 1.5rem;
+      padding: .85rem 0 1rem 1.5rem;
       height: auto;
     }
   }
@@ -253,7 +253,7 @@
 
   }
 
-  .nav-primary--has-dropdown {
+  .nav-primary-link--has-dropdown {
 
     padding: core.$space-l core.$space-m core.$space-l core.$space-s;
 
@@ -512,13 +512,15 @@
     max-width: 73.25rem;
     margin-left: auto;
     margin-right: auto;
+    // padding: core.$space core.$space core.$space-xl core.$space;
     padding: core.$space core.$space-xxl core.$space-xl core.$space-xxl;
     background: core.$uq-white;
     box-shadow: 0 0.75rem core.$space-m rgb(24 24 24 / 20%);
     border-radius: 0 0 .25rem .25rem;
     
     @media #{core.$screen-xl-up} {
-      max-width: 71.25rem;
+      max-width: 77.25rem;
+      // padding: core.$space core.$space-xxl core.$space-xl core.$space-xxl;
     }
   }
 

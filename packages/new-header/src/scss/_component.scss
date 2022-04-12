@@ -589,6 +589,10 @@ body.no-scroll {
   font-size: core.$font-size;
   color:core.$uq-purple;
 
+  @media #{core.$screen-lg-up} {
+    display: none !important;
+  }
+
   .slide-menu__slider {
     width:100%;
     transform:translateX(0);

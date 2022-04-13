@@ -84,7 +84,7 @@
     height: 100%;
 
     @media #{core.$screen-lg-up} {
-      padding: .85rem 0 1rem 1.5rem;
+      padding: 1rem 0 1rem 1.5rem;
       height: auto;
     }
   }
@@ -538,8 +538,8 @@
   .megamenu__heading {
     color: core.$uq-purple;
     font-weight: 500;
-    padding-top: core.$space-s;
-    padding-bottom: core.$space-s;
+    padding-top: core.$space-xs;
+    padding-bottom: core.$space-xs;
 
     &:nth-of-type(2) {
       padding-top: core.$space-xl;

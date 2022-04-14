@@ -14,31 +14,12 @@ class newHeader {
 
   init() {
 
-    
     this.body = document.querySelector('body');
-    // this.toggle = document.querySelector('.uq-header__search-toggle-button');
-    // this.search = document.querySelector('.uq-header__search');
-
     this.menuToggle = document.querySelector('.nav-primary__menu-toggle');
     this.searchToggle = document.querySelector('.nav-primary__search-toggle');
     this.searchLabel = document.querySelector('.search-toggle__label');
-    
     this.searchBlock = document.querySelector('.new-header__search');
-
-
     this.searchInput = document.querySelector('.new-header__search-query-input');
-    // this.meta = document.querySelector('meta.uq-header__mq--desktop');
-    // this.navigation = document.querySelector('.uq-header__navigation');
-
-    // if (this.meta == null) {
-    //   this.meta = document.createElement('meta');
-    //   this.meta.classList.add('uq-header__mq--desktop');
-    //   document.head.appendChild(this.meta);
-    // };
-
-    // this.mqLarge = window.getComputedStyle(this.meta).getPropertyValue('font-family');
-    // this.mqLarge = this.mqLarge.trim().slice(1, -1); // browsers re-quote string style values
-    // this.mqLargeList = window.matchMedia(this.mqLarge);
 
     // REFACTOR
 
@@ -67,12 +48,6 @@ class newHeader {
     });
   }
 
-  // handleToggle() {
-  //   this.search.classList.toggle('uq-header__search--open');
-  //   this.navigation.classList.toggle('uq-header__navigation--open');
-
-
-  // }
 };
 
 export {newHeader as default};

@@ -4,7 +4,7 @@ import { useEffect } from '@storybook/client-api';
 import './new-header.scss';
 
 // import scripts
-import headerCreate from '@uqds/header/src/js/header';
+import headerCreate from '@uqds/new-header/src/js/new-header';
 
 // import HTML template strings
 import newHeaderHTML from './new-header.html';

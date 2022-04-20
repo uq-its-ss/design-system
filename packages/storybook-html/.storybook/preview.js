@@ -70,7 +70,8 @@ export const parameters = {
             'Overview',
             'UX models'
           ]
-        ]
+        ],
+        'Legacy'
       ]
     }
   }

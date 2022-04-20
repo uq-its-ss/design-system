@@ -3,7 +3,7 @@ import StatusBadge from '../../../.storybook/custom/components/StatusBadge';
 
 # Global header
 
-<StatusBadge.Stable /><StatusBadge.StableDoc />
+<StatusBadge.Deprecated /><StatusBadge.StableDoc />
 
 ## Overview
 
@@ -21,7 +21,7 @@ using [*UQ Search*](https://www.uq.edu.au/search).
 > searching for books or articles in a library database.
 
 <Canvas withSource="none" withToolbar>
-  <Story height={220} id="components-header--header-no-local-search" />
+  <Story height={220} id="legacy-header--header-no-local-search" />
 </Canvas>
 
 ```html
@@ -78,7 +78,7 @@ allow users to choose to search all UQ sites or just the content on your site\*.
 > to use the global header **with global search only**.
 
 <Canvas withSource="none" withToolbar>
-  <Story height={220} id="components-header--header" />
+  <Story height={220} id="legacy-header--header" />
 </Canvas>
 
 ```html

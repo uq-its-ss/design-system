@@ -1,18 +1,18 @@
 import { useEffect } from '@storybook/client-api';
 
 // import styles
-import './new-header.scss';
+import './header.scss';
 
 // import scripts
-import headerCreate from '@uqds/new-header/src/js/new-header';
+import headerCreate from '@uqds/header/src/js/header';
 
 // import HTML template strings
-import newHeaderHTML from './new-header.html';
+import HeaderHTML from './header.html';
 
-import docs from './new-header.docs.mdx';
+import docs from './header.docs.mdx';
 
 export default {
-  title: 'Components/New Header',
+  title: 'Components/Header',
   parameters: {
     docs: {
       page: docs,
@@ -28,11 +28,11 @@ export default {
   }
 };
 
-export const newHeader = () => {
+export const Header = () => {
   useEffect(() => {
     new headerCreate();
   });
-  return newHeaderHTML;
+  return HeaderHTML;
 };
 
-newHeader.storyName = 'New Header';
+Header.storyName = 'Header';

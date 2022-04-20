@@ -34,8 +34,7 @@ function exportFontFiles() {
 
 function exportImages() {
   return src([
-    './src/images/*.*',
-    './node_modules/@uqds/new-footer/src/images/**'
+    './src/images/*.*'
   ])
   .pipe(dest('./dist/images'));
 }
@@ -93,5 +92,5 @@ exports.exportHtml = exportHtml;
 // Temporary slidemenu addition
 exports.exportSlidmenu = exportSlidmenu;
 exports.bundleJS = bundleJS;
-// Temporary slidemenu additiongit pull
+// Temporary slidemenu addition
 exports.default = parallel(compileSCSS, exportImages, exportFavicon, exportHtml, exportSlidmenu, bundleJS);

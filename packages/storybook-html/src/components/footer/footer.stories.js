@@ -1,18 +1,18 @@
 import { useEffect } from '@storybook/client-api';
 
 // import styles
-import './new-footer.scss';
+import './footer.scss';
 
 // import scripts
 import accordionCreate from '@uqds/accordion/src/js/accordion';
 
 // import HTML template strings
-import footerHTML from './new-footer.html';
+import footerHTML from './footer.html';
 
-import docs from './new-footer.docs.mdx';
+import docs from './footer.docs.mdx';
 
 export default {
-  title: 'Components/New Footer',
+  title: 'Components/Footer',
   parameters: {
     layout: "fullscreen",
     backgrounds: {
@@ -28,11 +28,11 @@ export default {
   }
 };
 
-export const newFooter = () => {
+export const footer = () => {
   useEffect(() => {
     new accordionCreate(); 
   });
   return footerHTML;
 };
 
-newFooter.storyName = 'New Footer';
+footer.storyName = 'Footer';

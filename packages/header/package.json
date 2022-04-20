@@ -1,7 +1,7 @@
 {
-  "name": "@uqds/new-footer",
+  "name": "@uqds/header",
   "version": "0.0.5-alpha.0",
-  "description": "The POC UQ footer component package",
+  "description": "The POC UQ Header component package",
   "keywords": [
     "uqds",
     "uq",
@@ -10,7 +10,7 @@
     "scss",
     "sass",
     "css",
-    "footer"
+    "header"
   ],
   "author": {
     "name": "University of Queensland",
@@ -34,7 +34,6 @@
   },
   "dependencies": {
     "@uqds/core": "^0.0.5-alpha.0",
-    "@uqds/grid": "^0.0.5-alpha.0",
-    "@uqds/accordion": "^0.0.5-alpha.0"
+    "@uqds/grid": "^0.0.5-alpha.0"
   }
 }

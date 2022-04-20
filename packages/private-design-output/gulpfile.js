@@ -34,7 +34,8 @@ function exportFontFiles() {
 
 function exportImages() {
   return src([
-    './node_modules/@uqds/blockquote/src/images/**'
+    './src/images/*.*',
+    './node_modules/@uqds/new-footer/src/images/**'
   ])
   .pipe(dest('./dist/images'));
 }
@@ -47,9 +48,15 @@ function exportFavicon() {
   .pipe(dest('./dist/'));
 }
 
-function exportExample() {
-  return src('./src/example.html')
+function exportHtml() {
+  return src('./src/*.html')
   .pipe(dest('./dist'));
+}
+
+// Temporary slidemenu addition
+function exportSlidmenu() {
+  return src('./src/js/slide-menu.js')
+  .pipe(dest('./dist/js'));
 }
 
 // Bundle Javascript modules
@@ -82,6 +89,9 @@ exports.compileSCSS = compileSCSS;
 //exports.exportFontFiles = exportFontFiles;
 exports.exportImages = exportImages;
 exports.exportFavicon = exportFavicon;
-exports.exportExample = exportExample;
+exports.exportHtml = exportHtml;
+// Temporary slidemenu addition
+exports.exportSlidmenu = exportSlidmenu;
 exports.bundleJS = bundleJS;
-exports.default = parallel(compileSCSS, exportImages, exportFavicon, exportExample, bundleJS);
+// Temporary slidemenu additiongit pull
+exports.default = parallel(compileSCSS, exportImages, exportFavicon, exportHtml, exportSlidmenu, bundleJS);

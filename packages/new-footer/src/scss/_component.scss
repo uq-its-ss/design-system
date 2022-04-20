@@ -1,0 +1,434 @@
+@use '@uqds/core/src/scss/global' as core;
+@use "@uqds/icon/src/scss/global" as icon-constants;
+@use '@uqds/grid/src/scss/global' as grid;
+@use 'global' as *;
+
+.new-footer {
+    background: core.$uq-purple; 
+    box-sizing:border-box;
+    color:#d4c8de;
+
+    &__reconciliation {
+      background:core.$uq-black;
+      background-image: linear-gradient(180deg, #451D68 45.31%, rgba(69, 29, 104, 0.554545) 85.94%, rgba(69, 29, 104, 0) 100%), url('https://static.uq.net.au/v14/images/rap/brisbane-river-artwork.png');
+      
+      @media #{core.$screen-xl-up} {
+        background-image: linear-gradient(90deg, #451D68 28.12%, rgba(70, 30, 106, 0.65) 70.31%, rgba(72, 32, 108, 0) 100%), url('https://static.uq.net.au/v14/images/rap/brisbane-river-artwork.png');
+      }
+    }
+
+    &__acknowledgement {
+      max-width: 73.25rem;
+      padding: core.$space-l core.$space-m;
+      color: #d4c8de;
+      font-weight: 400;
+      font-size: core.$font-size;
+      line-height: 1.5;
+      margin:auto;
+
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      @media #{core.$screen-xl-up} {
+        padding: core.$space-l core.$space;
+      }
+
+    }
+
+    &__acknowledgement-flag {
+      width: 2.25rem;
+      height: core.$space-m;
+
+      &:first-child {
+        margin-right: core.$space-s;
+      }
+    }
+
+    &__acknowledgement-text {
+      margin-top: core.$space;
+      flex-basis: 100%;
+
+      @media #{core.$screen-xl-up} {
+        flex-basis: auto;
+        margin-top: core.$space-none;
+        padding-left: core.$space-m;
+      }
+
+    }
+
+    &__link {
+      font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      color:core.$uq-white;
+      
+      &:hover {
+        text-decoration:underline;
+        color:#d4c8de;
+      }
+    }
+
+    /* NAVIGATION */
+
+    &__navigation {
+      grid-area: FooterNavigation;
+
+      &--is-open {
+        .new-footer__navigation-level-2 {
+          height: auto;
+          overflow:hidden;
+        }
+      }
+    }
+
+    &__navigation-list {
+      display: block;
+      list-style-type: none;
+      margin: core.$space-none;
+      padding: core.$space-none;
+    }
+
+    &__navigation-item {
+      /* border-top: 1px solid #d4c8de; */
+      background-color: transparent;
+      display: block;
+      margin: core.$space-none;
+      padding: core.$space-none;
+      position: relative;  
+
+      @media #{core.$screen-lg-up} {
+        border: none;
+      } 
+    }
+
+    &__navigation-title {
+      color: #d4c8de;
+      font-size: core.$font-size;
+      font-weight: 500;
+      margin: core.$space-none;
+    }
+
+    &__navigation-link {
+      display: block;
+      padding: core.$space core.$space-m;
+      color: core.$uq-white;
+
+      &:hover {
+        color: #d4c8de;
+        text-decoration: underline;
+      }
+
+      @media #{core.$screen-lg-up} {
+        padding:core.$space core.$space-none core.$space-none;
+        font-weight: 500;
+      }
+
+      
+    }
+    &__navigation-toggle {
+
+      @media #{core.$screen-lg-up} {
+        display: none;
+      }
+    }
+
+    &__navigation-level-1 {
+      border: none;
+      display: grid;
+
+      // @media #{core.$screen-md-up} {
+      //   grid-template-columns: repeat(3, minmax(0, 1fr));
+      // }
+
+      @media #{core.$screen-lg-up} {
+        grid-template-columns: repeat(5, 1fr);
+        grid-gap: core.$space;
+      }
+
+      @media #{core.$screen-xl-up} {
+        padding: core.$space-none;
+      }
+
+    }
+
+    &__navigation-level-2 {
+      height: core.$space-none;
+      overflow: hidden;
+      background-color: #48206c;
+
+      @media #{core.$screen-lg-up} {
+        height: auto;
+        overflow: auto;
+        background-color: transparent;
+      }
+
+      .new-footer__navigation-item {
+        
+        @media #{core.$screen-lg-up} {
+          background-color: transparent;
+          border: none;
+          padding: core.$space-s core.$space-none core.$space-none;
+          
+          &:first-of-type {
+            padding: core.$space core.$space-none core.$space-none;
+          }
+        }
+      }
+
+      .new-footer__navigation-link {
+
+        @media #{core.$screen-lg-up} {
+          color: core.$uq-white;
+          padding: core.$space-none;
+          font-weight: normal;
+
+          &:hover {
+            color: #d4c8de;
+          }
+        }
+      }
+      
+    }
+
+    &__navigation-toggle::before {
+      content: "";
+      background-image: url(icon-constants.get-icon("standard--chevron-down-sml", core.$uq-white));
+      background-repeat: no-repeat;
+      width: core.$space-m;
+      height: core.$space-m;
+      transform: translateY(50%);
+      position: absolute;
+      top: core.$space-xs;
+      right: core.$space-m;
+
+      @media #{core.$screen-lg-up} {
+        background-image: none;
+      }
+    }
+    
+    .uq-accordion__toggle--active::before {
+      background-image: url(icon-constants.get-icon("standard--chevron-up-sml", core.$uq-white));
+    }
+
+
+    /* FOOTER */
+    &__footer {
+      grid-area: FooterTerms;
+
+      @media #{core.$screen-xl-up} {
+        & :last-child{
+          justify-content: flex-end;
+        }
+      }
+    }
+
+    &__footer-list {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      list-style-type: none;
+      margin: core.$space-none;
+      padding: core.$space-none;
+      font-size: core.$font-size-s;
+
+      @media #{core.$screen-lg-up} {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: start;
+        flex-direction: row;
+        margin: core.$space-none;
+        padding: core.$space-none;
+
+        .new-footer__footer-item {
+          margin-bottom: core.$space-none;
+        }
+      }
+    }
+
+    &__footer-item {
+      padding-right: core.$space;
+    }
+
+    /* CONTACT */
+
+    &__contact {
+      font-size: core.$font-size-s;
+      grid-area: FooterSocial;
+
+      @media #{core.$screen-lg-up} { 
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: core.$space-none;
+      } 
+       
+    }
+    &__contact-login {
+      margin-top: core.$space-xl;
+      font-size: core.$font-size-s;
+
+      @media #{core.$screen-lg-up} {
+        margin-top: core.$space-none;
+      }
+    }
+
+    &__contact-social {
+      flex-direction: row;
+
+      .new-footer__footer-item {
+        margin-bottom: core.$space-none;
+      }
+
+    }
+
+    /* META */
+
+    &__meta {
+      font-size: core.$font-size-s; 
+      grid-area: FooterOrg;
+    }
+
+    &__meta-icons {
+      font-size: core.$font-size-xl;
+
+      &::before {
+        content: "";
+        display: inline-block;
+        height: core.$space-l;
+        width: core.$space-l;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100%;
+        vertical-align: text-bottom;
+      }
+
+      &:hover::before {
+        transition: all ease .5s;
+      }
+
+      /* Facebook icon */
+      &--facebook::before {
+        background-image: url(icon-constants.get-icon("social--social-facebook-circle", core.$uq-white));
+    
+      }
+      &--facebook:hover::before {
+        background-image: url(icon-constants.get-icon("social--social-facebook-circle", #d4c8de));
+      }
+
+      /* Linkedin icon */
+      &--linkedin::before {
+        background-image: url(icon-constants.get-icon("social--social-linkedin-circle", core.$uq-white));
+      }
+      &--linkedin:hover::before {
+        background-image: url(icon-constants.get-icon("social--social-linkedin-circle", #d4c8de));
+      }
+
+      /* Twitter icon */
+      &--twitter::before {
+        background-image: url(icon-constants.get-icon("social--social-twitter-circle", core.$uq-white));
+      }
+      &--twitter:hover::before {
+        background-image: url(icon-constants.get-icon("social--social-twitter-circle", #d4c8de));
+      }
+
+      /* Youtube icon */
+      &--youtube::before {
+        background-image: url(icon-constants.get-icon("social--social-you-tube-circle", core.$uq-white));
+      }
+      &--youtube:hover::before {
+        background-image: url(icon-constants.get-icon("social--social-you-tube-circle", #d4c8de));
+      }
+    
+      /* Instagram icon */
+      &--instagram::before {
+        background-image: url(icon-constants.get-icon("social--social-instagram2-circle", core.$uq-white));
+      }
+      &--instagram:hover::before {
+        background-image: url(icon-constants.get-icon("social--social-instagram2-circle", #d4c8de));
+      }
+
+    }
+
+    &--desktop {
+      display: none;
+
+      @media #{core.$screen-lg-up} {
+        display: block;
+      }
+    }
+
+    &--mobile {
+      display: block;
+      min-width: calc(100% + core.$space-xxl);
+      margin-left: -1.5rem;
+      margin-right: -1.5rem;
+
+      @media #{core.$screen-lg-up} {
+        display: none;
+      }
+
+      .uq-accordion {
+        padding: core.$space-none;
+
+        &__item {
+          color: #d4c8de;
+          border: none;
+          padding-left: core.$space-none;
+        }
+
+        &__toggle {
+          background-color: core.$uq-purple;
+          color: core.$uq-white;
+          font-size: core.$font-size;
+          padding-left: core.$space-m;
+
+          &:hover {
+            color: #d4c8de;
+            text-decoration: underline;
+          }
+        }
+
+        &__item--is-open {
+          box-shadow: none;
+        }
+
+        &__content-wrapper {
+          padding:core.$space-none;
+        }
+      }
+
+    }
+
+    &__container {
+      display: grid;
+      grid-template-areas:
+      "FooterNavigation"
+      "FooterSocial"
+      "FooterOrg"
+      "FooterTerms";
+      row-gap: core.$space-xl;
+      padding: core.$space-none core.$space-m core.$space-xl;
+
+      max-width: 73.25rem;
+      width: 100%; /* may not be needed but forces it to take up space when empty */
+      margin-left: auto;
+      margin-right: auto;
+
+      @media #{core.$screen-lg-up}  { 
+        row-gap: core.$space-l;
+        padding-top: core.$space-l;
+      }
+      @media #{core.$screen-xl-up}  { 
+        grid-template-areas:
+        "FooterNavigation FooterNavigation"
+        "FooterSocial FooterSocial"
+        "FooterOrg FooterTerms";
+        row-gap: core.$space-l;
+        padding: core.$space-l core.$space core.$space-xl;
+      }
+    }
+
+  }  

@@ -2,7 +2,7 @@
 @use '@uqds/grid/src/scss/global' as grid;
 @use 'global' as *;
 
-.uq-footer {
+.legacy-footer {
     background: core.$uq-purple-gradient;
     box-sizing: border-box;
     color: $site-footer-color;
@@ -95,7 +95,7 @@
         margin: core.$space-l core.$space-none core.$space-none core.$space-none;
         overflow: hidden;
 
-        .uq-footer__row {
+        .legacy-footer__row {
             grid: auto-flow / 1fr;
     
             @media #{core.$screen-lg-up} {
@@ -153,7 +153,7 @@
                 }
             }
         }
-        &__item + .uq-footer__social-media__item::before {
+        &__item + .legacy-footer__social-media__item::before {
             content: " ";
             display: inline-block;
             margin: core.$space-none core.$space-s core.$space-none core.$space-none;

@@ -3,7 +3,7 @@
 @use '@uqds/grid/src/scss/global' as grid;
 @use 'global' as *;
 
-.new-header {
+.uq-header {
 
   background: core.$uq-purple; //linear-gradient(90deg, $uq-purple 0%, 87%, #962A8B 100%);
   display: grid;
@@ -205,17 +205,17 @@
       padding-right: 2rem;
 
       &:hover {
-        & > .new-header__megamenu {
+        & > .uq-header__megamenu {
           height: auto;
           visibility: visible;
         }
 
-        & .new-header__nav-primary-link {
+        & .uq-header__nav-primary-link {
           border-bottom: 4px solid white;
         }
       }
 
-      & .new-header__nav-primary-link--active {
+      & .uq-header__nav-primary-link--active {
         border-bottom: 4px solid white;
       }
     }
@@ -698,7 +698,7 @@ body.no-scroll {
     }
   }
 
-  .new-header__nav-secondary-item {
+  .uq-header__nav-secondary-item {
     background-color:#48206C;
 
     &:hover {
@@ -706,7 +706,7 @@ body.no-scroll {
     }
   }
 
-  .new-header__nav-secondary-link {
+  .uq-header__nav-secondary-link {
     color:core.$uq-white;
 
     &:hover {
@@ -715,15 +715,15 @@ body.no-scroll {
     }
   }
 
-  .new-header__newglobal-nav-parent {
+  .uq-header__newglobal-nav-parent {
     font-weight: 500;
   }
 
-  .new-header__newglobal-nav-item {
+  .uq-header__newglobal-nav-item {
     background-color:core.$uq-purple;
   }
 
-  .new-header__newglobal-nav-link {
+  .uq-header__newglobal-nav-link {
     color:core.$uq-white;
     background-color:core.$uq-purple;
 
@@ -733,7 +733,7 @@ body.no-scroll {
     }
   }
 
-  .new-header__newglobal-nav-link .slide-menu__decorator::before {
+  .uq-header__newglobal-nav-link .slide-menu__decorator::before {
     content: "";
     background-image: url(icon-constants.get-icon("standard--chevron-right-sml", core.$uq-white));
   }

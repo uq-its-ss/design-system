@@ -3,7 +3,7 @@
 @use '@uqds/grid/src/scss/global' as grid;
 @use 'global' as *;
 
-.new-footer {
+.uq-footer {
     background: core.$uq-purple; 
     box-sizing:border-box;
     color:#d4c8de;
@@ -75,7 +75,7 @@
       grid-area: FooterNavigation;
 
       &--is-open {
-        .new-footer__navigation-level-2 {
+        .uq-footer__navigation-level-2 {
           height: auto;
           overflow:hidden;
         }
@@ -163,7 +163,7 @@
         background-color: transparent;
       }
 
-      .new-footer__navigation-item {
+      .uq-footer__navigation-item {
         
         @media #{core.$screen-lg-up} {
           background-color: transparent;
@@ -176,7 +176,7 @@
         }
       }
 
-      .new-footer__navigation-link {
+      .uq-footer__navigation-link {
 
         @media #{core.$screen-lg-up} {
           color: core.$uq-white;
@@ -240,7 +240,7 @@
         margin: core.$space-none;
         padding: core.$space-none;
 
-        .new-footer__footer-item {
+        .uq-footer__footer-item {
           margin-bottom: core.$space-none;
         }
       }
@@ -278,7 +278,7 @@
     &__contact-social {
       flex-direction: row;
 
-      .new-footer__footer-item {
+      .uq-footer__footer-item {
         margin-bottom: core.$space-none;
       }
 

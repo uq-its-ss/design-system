@@ -8,7 +8,6 @@ const { nodeResolve } = require('@rollup/plugin-node-resolve');
 const cjs = require('@rollup/plugin-commonjs');
 const source = require('vinyl-source-stream');
 const buffer = require('vinyl-buffer');
-const fs = require('fs');
 
 // SCSS include paths
 const scssPaths = [
@@ -59,11 +58,6 @@ function exportExample() {
  * issues
  */
 function bundleJS() {
-  if (!fs.existsSync(`${process.cwd()}/src/js/main.js`)) {
-    return new Promise((resolve) => {
-      resolve();
-    });
-  }
   return rollup({
     input: './src/js/main.js',
     output: {
@@ -91,5 +85,3 @@ exports.exportFavicon = exportFavicon;
 exports.exportExample = exportExample;
 exports.bundleJS = bundleJS;
 exports.default = parallel(compileSCSS, exportImages, exportFavicon, exportExample, bundleJS);
-
-exports.prepare = parallel(compileSCSS, bundleJS);

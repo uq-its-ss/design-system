@@ -41,7 +41,7 @@
     "url": "https://github.com/uq-its-ss/design-system/issues"
   },
   "dependencies": {
-    "@uqds/core": "file:../core",
-    "@uqds/icon": "file:../icon"
+    "@uqds/core": "^0.0.5-alpha.0",
+    "@uqds/icon": "^0.0.5-alpha.0"
   }
 }

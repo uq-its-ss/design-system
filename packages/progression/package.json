@@ -40,6 +40,6 @@
     "url": "https://github.com/uqds/design-system/issues"
   },
   "dependencies": {
-    "@uqds/core": "file:../core"
+    "@uqds/core": "^0.0.5-alpha.0"
   }
 }

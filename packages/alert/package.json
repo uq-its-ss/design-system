@@ -40,7 +40,7 @@
     "url": "https://github.com/uq-its-ss/design-system/issues"
   },
   "dependencies": {
-    "@uqds/core": "file:../core",
-    "@uqds/grid": "file:../grid"
+    "@uqds/core": "^0.0.5-alpha.0",
+    "@uqds/grid": "^0.0.5-alpha.0"
   }
 }

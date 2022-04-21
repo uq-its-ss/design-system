@@ -39,6 +39,6 @@
     "url": "https://github.com/uq-its-ss/design-system/issues"
   },
   "dependencies": {
-    "@uqds/core": "file:../core"
+    "@uqds/core": "^0.0.5-alpha.0"
   }
 }

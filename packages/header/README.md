@@ -1,4 +1,4 @@
-# `@uqds/uq-header`
+# `@uqds/header`
 
 > New Header component
 
@@ -8,12 +8,12 @@
 
 With Yarn:
 ```shell
-yarn add @uqds/uq-header
+yarn add @uqds/header
 ```
 
 With NPM:
 ```shell
-npm i @uqds/uq-header
+npm i @uqds/header
 ```
 
 ---
@@ -21,7 +21,7 @@ npm i @uqds/uq-header
 ## Dependency graph
 
 ```shell
-@uqds/uq-header
+@uqds/header
 ├─ @uqds/core
 └─ @uqds/grid
    └─ @uqds/core

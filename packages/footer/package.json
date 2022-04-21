@@ -41,5 +41,8 @@
   "dependencies": {
     "@uqds/core": "^0.0.5-alpha.0",
     "@uqds/grid": "^0.0.5-alpha.0"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2"
   }
 }

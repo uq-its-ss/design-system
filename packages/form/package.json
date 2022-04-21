@@ -35,21 +35,13 @@
   },
   "scripts": {
     "build-icons": "node script/build-icons.js",
-    "build": "node script/build-icons.js"
+    "build": "node script/build-icons.js",
+    "prepare": "gulp -f ../../gulpfile.js --cwd=. prepare"
   },
   "bugs": {
     "url": "https://github.com/uq-its-ss/design-system/issues"
   },
   "dependencies": {
-    "@uqds/core": "^0.0.5-alpha.0"
-  },
-  "devDependencies": {
-    "@svgdotjs/svg.js": "^3.0.16",
-    "chalk": "^4.1.0",
-    "glob": "^7.1.6",
-    "js-yaml": "^3.14.0",
-    "mini-svg-data-uri": "^1.2.3",
-    "svgdom": "^0.1.8",
-    "svgo": "^1.3.2"
+    "@uqds/core": "file:../core"
   }
 }

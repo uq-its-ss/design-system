@@ -25,6 +25,9 @@
   "directories": {
     "lib": "src"
   },
+  "scripts": {
+    "prepare": "gulp -f ../../gulpfile.js --cwd=. prepare"
+  },
   "files": [
     "src/*"
   ],
@@ -36,6 +39,6 @@
     "url": "https://github.com/uq-its-ss/design-system/issues"
   },
   "dependencies": {
-    "@uqds/core": "^0.0.5-alpha.0"
+    "@uqds/core": "file:../core"
   }
 }

@@ -1,1 +1,4 @@
-export * from './tabs'
+import { Tabs } from './tabs';
+export { 
+    Tabs
+};

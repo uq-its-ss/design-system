@@ -753,6 +753,10 @@ body.no-scroll {
     padding: 1rem 1.5rem;
     font-size: 1rem;
     font-weight: 500;
+    
+    &:hover {
+      background: none;
+    }
   }
 
   &__audience-link {

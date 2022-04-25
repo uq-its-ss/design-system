@@ -26,7 +26,7 @@
     flex-wrap: wrap;
     float: none;
     justify-content: space-between;
-    padding: .75rem core.$space;
+    padding: .75rem core.$space-m;
     position: relative;
 
     &__right {
@@ -35,8 +35,7 @@
     }
 
     @media #{core.$screen-lg-up} {
-      padding-top: core.$space;
-      padding-bottom: 0;
+      padding: core.$space core.$space 0 core.$space;
     }
   }
 

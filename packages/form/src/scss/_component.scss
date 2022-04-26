@@ -226,6 +226,7 @@ $use-encapsulation: false !default;
 
   select {
     appearance: none;
+    -webkit-appearance: none;
     background-image: url(icon.get-icon('standard--chevron-down-sml', $form-select-icon));
     background-repeat: no-repeat;
     background-position: right core.$space-xs center;
@@ -259,6 +260,7 @@ $use-encapsulation: false !default;
   input[type="radio"],
   input[type="checkbox"] {
     appearance: none;
+    -webkit-appearance: none;
     display: inline-block;
     border: $form-checkbox-border-width solid $form-border-color;
     cursor: pointer;

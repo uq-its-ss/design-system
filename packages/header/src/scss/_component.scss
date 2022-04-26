@@ -345,7 +345,7 @@
     position: absolute;
     width: 100%;
     top: 3.95rem;
-    z-index: 99;
+    z-index: 20;
     box-shadow: 0 .75rem core.$space-m rgb(24 24 24 / 20%);
     transition:  max-height .2s ease-in-out, transform .2s ease-in-out;//, visibility .2s ease;
     transform: translateY(-1rem);

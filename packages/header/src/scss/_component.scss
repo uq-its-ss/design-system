@@ -347,10 +347,10 @@
     top: 3.95rem;
     z-index: 99;
     box-shadow: 0 .75rem core.$space-m rgb(24 24 24 / 20%);
-    transition:  height .2s ease-in-out, transform .2s ease-in-out, visibility .2s ease;// visibility .2s ease,  opacity .2s ease;
+    transition:  max-height .2s ease-in-out, transform .2s ease-in-out;//, visibility .2s ease;
     transform: translateY(-1rem);
-    visibility: hidden;
-    height: 0;
+    max-height: 0;
+    overflow: hidden;
 
     @media #{core.$screen-lg-up} {
       top: 8.3rem;
@@ -358,12 +358,12 @@
 
     &--is-open {    
       transform: translateY(0);
-      visibility: visible;
-      height: auto;
+      max-height: 50vh;
     }
   }
 
   &__search-container {
+    
     padding: 0 core.$space-m;
 
     @media #{core.$screen-lg-up} {
@@ -372,6 +372,8 @@
       max-width: 73.25rem;
       margin-left: auto;
       margin-right: auto;
+      padding-top: 0;
+      padding-bottom: 1rem;
     }
   }
 
@@ -382,7 +384,6 @@
     min-width: 100%;
     border-radius: 5px;
     background-position: core.$space;
-    margin-bottom: core.$space;
     padding-top: core.$space;
     padding-bottom: core.$space;
   }

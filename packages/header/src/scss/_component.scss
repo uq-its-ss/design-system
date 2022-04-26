@@ -450,6 +450,20 @@
       color: core.$uq-white;
     }
   }
+  
+  .uq-header__search-radio {
+    &:checked {
+        border-color: core.$uq-white;
+
+        &:focus {
+            border-color: core.$uq-white;
+        }
+
+        &::after {
+            background-color: core.$uq-white;
+        }
+    }
+  }
 
   &__search-label {
     font-size: .8rem !important;

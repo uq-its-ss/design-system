@@ -2,20 +2,6 @@
   "name": "root",
   "private": true,
   "devDependencies": {
-    "@babel/core": "^7.17.9",
-    "@babel/plugin-proposal-class-properties": "^7.16.7",
-    "@babel/preset-env": "^7.16.11",
-    "@rollup/plugin-commonjs": "^21.1.0",
-    "@rollup/plugin-node-resolve": "^13.2.1",
-    "@rollup/stream": "^2.0.0",
-    "gulp": "^4.0.2",
-    "gulp-babel": "^8.0.0",
-    "gulp-dart-sass": "^1.0.2",
-    "gulp-rename": "^2.0.0",
-    "gulp-uglify": "^3.0.2",
-    "lerna": "^4.0.0",
-    "rollup": "^2.70.2",
-    "vinyl-buffer": "^1.0.1",
-    "vinyl-source-stream": "^2.0.0"
+    "lerna": "^4.0.0"
   }
 }

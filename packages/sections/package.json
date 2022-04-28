@@ -28,9 +28,6 @@
   "files": [
     "src/*"
   ],
-  "scripts": {
-    "prepare": "gulp -f ../../gulpfile.js --cwd=. prepare"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/uq-its-ss/design-system.git"
@@ -39,7 +36,6 @@
     "url": "https://github.com/uq-its-ss/design-system/issues"
   },
   "dependencies": {
-    "@uqds/core": "^0.0.5-alpha.0",
-    "@uqds/grid": "^0.0.5-alpha.0"
+    "@uqds/core": "^0.0.5-alpha.0"
   }
 }

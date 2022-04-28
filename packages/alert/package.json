@@ -33,15 +33,13 @@
     "url": "git+https://github.com/uq-its-ss/design-system.git"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1",
-    "prepare": "gulp -f ../../gulpfile.js --cwd=. prepare"
+    "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "bugs": {
     "url": "https://github.com/uq-its-ss/design-system/issues"
   },
   "dependencies": {
     "@uqds/core": "^0.0.5-alpha.0",
-    "@uqds/grid": "^0.0.5-alpha.0",
-    "@uqds/icon": "^0.0.5-alpha.0"
+    "@uqds/grid": "^0.0.5-alpha.0"
   }
 }

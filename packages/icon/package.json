@@ -42,8 +42,7 @@
     "build-icons": "node dist/index.js",
     "clean": "npm run clean-ts && npm run clean-icons",
     "clean-ts": "rm -rf ./dist/*.js*",
-    "clean-icons": "rm -rf ./dist/images src/*/_build/*",
-    "prepare": "gulp -f ../../gulpfile.js --cwd=. prepare"
+    "clean-icons": "rm -rf ./dist/images src/*/_build/*"
   },
   "bugs": {
     "url": "https://github.com/uq-its-ss/design-system/issues"

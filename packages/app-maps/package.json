@@ -35,8 +35,7 @@
   "scripts": {
     "build-icons": "node scripts/build-icons.js",
     "build-css": "node scripts/build-css.js",
-    "build": "node scripts/build-icons.js && node scripts/build-css.js",
-    "prepare": "gulp -f ../../gulpfile.js --cwd=. prepare"
+    "build": "node scripts/build-icons.js && node scripts/build-css.js"
   },
   "bugs": {
     "url": "https://github.com/uq-its-ss/design-system/issues"

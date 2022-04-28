@@ -15,7 +15,8 @@
     "url": "git+https://github.com/uq-its-ss/design-system.git"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "prepare": "gulp -f ../../gulpfile.js --cwd=. prepare"
   },
   "bugs": {
     "url": "https://github.com/uq-its-ss/design-system/issues"

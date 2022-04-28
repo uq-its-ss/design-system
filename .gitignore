@@ -1,3 +1,4 @@
+packages/*/package-lock.json
 node_modules
 dist
 .sass-cache

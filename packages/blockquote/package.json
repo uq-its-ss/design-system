@@ -25,6 +25,9 @@
   "directories": {
     "lib": "src"
   },
+  "scripts": {
+    "prepare": "gulp -f ../../gulpfile.js --cwd=. prepare"
+  },
   "files": [
     "src/*"
   ],

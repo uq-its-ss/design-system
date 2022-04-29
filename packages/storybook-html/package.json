@@ -20,6 +20,7 @@
 		"@material/circular-progress": "^8.0.0",
 		"@storybook/addon-a11y": "^6.4.22",
 		"@storybook/addon-essentials": "^6.4.22",
+		"@storybook/addon-docs": "^6.4.22",
 		"@storybook/addons": "^6.4.22",
 		"@storybook/html": "^6.4.22",
 		"@storybook/theming": "^6.4.22",

@@ -15,7 +15,11 @@ import { svgoOptions } from "./svgoOptions";
  */
 const optimiseSVG = (svgInput: string): string => {
     const result = optimize(svgInput, svgoOptions);
-    if (result.data) return result.data;
+        //@ts-ignore
+        if (result.data) {
+            //@ts-ignore
+            return result.data;
+        }
     throw new Error("Failed to optimise SVG using SVGO dependency.");
 };
 

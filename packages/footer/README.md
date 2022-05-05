@@ -1,6 +1,6 @@
 # `@uqds/footer`
 
-> Footer component
+> New Footer component
 
 ## Usage
 

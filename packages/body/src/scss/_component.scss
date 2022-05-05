@@ -334,7 +334,7 @@ $use-encapsulation: false !default;
   }
 
   // Header
-  .uq-header {
+  .legacy-header {
     background: none !important;
 
     &__logo {
@@ -370,20 +370,20 @@ $use-encapsulation: false !default;
     }
   }
 
-  .uq-header__container,
+  .legacy-header__container,
   .uq-site-header__title-container,
   .uq-grid,
-  .uq-footer__container {
+  .legacy-footer__container {
     max-width: 100% !important;
   }
 
   // Footer
-  .uq-footer {
+  .legacy-footer {
     color: core.$text !important;
     background: none !important;
 
     a,
-    .uq-footer__sub-title {
+    .legacy-footer__sub-title {
       color: core.$text !important;
     }
 
@@ -403,15 +403,15 @@ $use-encapsulation: false !default;
       }
     }
 
-    .uq-footer__sub-title {
+    .legacy-footer__sub-title {
       font-size: 14px;
     }
 
-    .uq-footer__row {
+    .legacy-footer__row {
       gap: 1rem;
     }
 
-    .uq-footer__footer {
+    .legacy-footer__footer {
       margin-top: 1rem;
     }
 

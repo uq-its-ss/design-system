@@ -1,7 +1,7 @@
 import { useEffect } from '@storybook/client-api';
 
 // import scripts
-import header from '@uqds/header/src/js/header';
+import header from '@uqds/header-legacy/src/js/header';
 import siteHeaderNav from '@uqds/site-header/src/js/site-header-navigation';
 import accordion from '@uqds/accordion/src/js/accordion';
 

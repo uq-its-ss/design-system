@@ -1,5 +1,10 @@
+import { useEffect } from '@storybook/client-api';
+
 // import styles
 import './footer.scss';
+
+// import scripts
+import accordionCreate from '@uqds/accordion/src/js/accordion';
 
 // import HTML template strings
 import footerHTML from './footer.html';
@@ -24,5 +29,10 @@ export default {
 };
 
 export const footer = () => {
+  useEffect(() => {
+    new accordionCreate(); 
+  });
   return footerHTML;
 };
+
+footer.storyName = 'Footer';

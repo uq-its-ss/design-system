@@ -1,6 +1,6 @@
 # `@uqds/header`
 
-> Header component
+> New Header component
 
 ## Usage
 
@@ -23,8 +23,6 @@ npm i @uqds/header
 ```shell
 @uqds/header
 ├─ @uqds/core
-├─ @uqds/grid
-│  └─ @uqds/core
-└─ @uqds/icon
+└─ @uqds/grid
    └─ @uqds/core
 ```

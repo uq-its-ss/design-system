@@ -1,7 +1,7 @@
 {
   "name": "@uqds/footer",
   "version": "0.0.5-alpha.0",
-  "description": "The UQ footer component package",
+  "description": "The POC UQ footer component package",
   "keywords": [
     "uqds",
     "uq",
@@ -12,9 +12,6 @@
     "css",
     "footer"
   ],
-  "publishConfig": {
-    "access": "public"
-  },
   "author": {
     "name": "University of Queensland",
     "email": "webservices@uq.edu.au",
@@ -40,7 +37,9 @@
   },
   "dependencies": {
     "@uqds/core": "^0.0.5-alpha.0",
-    "@uqds/grid": "^0.0.5-alpha.0"
+    "@uqds/grid": "^0.0.5-alpha.0",
+    "@uqds/icon": "^0.0.5-alpha.0",
+    "@uqds/accordion": "^0.0.5-alpha.0"
   },
   "devDependencies": {
     "gulp": "^4.0.2"

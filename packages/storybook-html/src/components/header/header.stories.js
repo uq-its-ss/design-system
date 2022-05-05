@@ -7,8 +7,7 @@ import './header.scss';
 import headerCreate from '@uqds/header/src/js/header';
 
 // import HTML template strings
-import headerHTML from './header.html';
-import headerNoLocalSearchHTML from './header_no-local-search.html';
+import HeaderHTML from './header.html';
 
 import docs from './header.docs.mdx';
 
@@ -29,18 +28,11 @@ export default {
   }
 };
 
-export const header = () => {
+export const Header = () => {
   useEffect(() => {
     new headerCreate();
   });
-  return headerHTML;
+  return HeaderHTML;
 };
 
-export const headerNoLocalSearch = () => {
-  useEffect(() => {
-    new headerCreate();
-  });
-  return headerNoLocalSearchHTML;
-};
-
-headerNoLocalSearch.storyName = "Header with global search only";
+Header.storyName = 'Header';

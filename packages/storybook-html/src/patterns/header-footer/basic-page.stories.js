@@ -1,13 +1,13 @@
 import { useEffect } from '@storybook/client-api';
 
 // import scripts
-import headerCreate from '@uqds/header/src/js/header';
+import headerCreate from '@uqds/header-legacy/src/js/header';
 import siteHeaderNav from '@uqds/site-header/src/js/site-header-navigation';
 
 // import HTML template strings
-import headerHTML from '../../components/header/header.html';
+import headerHTML from '../../components/header-legacy/header.html';
 import siteHeaderHTML from '../../components/site-header/site-header-with-subnav.html';
-import footerHTML from '../../components/footer/footer.html';
+import footerHTML from '../../components/footer-legacy/footer.html';
 
 import docs from './basic-page.docs.mdx';
 

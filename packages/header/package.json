@@ -1,7 +1,7 @@
 {
   "name": "@uqds/header",
   "version": "0.0.5-alpha.0",
-  "description": "Header component",
+  "description": "The POC UQ Header component package",
   "keywords": [
     "uqds",
     "uq",
@@ -12,9 +12,6 @@
     "css",
     "header"
   ],
-  "publishConfig": {
-    "access": "public"
-  },
   "author": {
     "name": "University of Queensland",
     "email": "webservices@uq.edu.au",

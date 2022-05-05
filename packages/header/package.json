@@ -23,7 +23,7 @@
     "lib": "src"
   },
   "files": [
-    "src/*"
+    "src/*", "dist/*"
   ],
   "scripts": {
     "prepare": "gulp -f ../../gulpfile.js --cwd=. prepare"

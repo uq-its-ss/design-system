@@ -120,7 +120,7 @@
       //border-bottom: 1px solid $nav-dropdown-divider;
       color: core.$uq-purple;
       display: block;
-      padding: core.$space core.$space;
+      padding: core.$space core.$space 1.25rem;
       text-decoration: none;
       transition: background-color .25s, border-color .25s;
 
@@ -258,6 +258,7 @@
 
         &:hover {
           & .uq-site-header__navigation__list-link {
+            padding-bottom: core.$space;
             border-bottom: 4px solid core.$uq-purple;
           }
         }

@@ -1,5 +1,5 @@
-import { renderFromString } from "../../../../tests/jest/jest-dom";
-import headerMarkup from "@design-system-output/header/header.html"
+import { renderFromString } from "@uqds/test-utils";
+import headerMarkup from "@uqds/output/header/header.html"
 import newHeader from "../js/header.js";
 import { fireEvent, waitFor, getByRole, getAllByRole, getByLabelText } from "@testing-library/dom"
 

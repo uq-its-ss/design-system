@@ -1,9 +1,13 @@
 import { renderFromString } from "@uqds/test-utils";
+import { axe, toHaveNoViolations } from 'jest-axe';
 import headerMarkup from "@uqds/output/header/header.html"
 import newHeader from "../js/header.js";
 import { fireEvent, waitFor, getByRole, getAllByRole, getByLabelText } from "@testing-library/dom"
 
 describe('Header', () => {
+  it('Should output accessible markup', async () => {
+    expect(await axe(headerMarkup)).toHaveNoViolations()
+  });
   it('Should toggle search form', async () => {
     const container = renderFromString(headerMarkup);
     const searchBlock = container.querySelector('.uq-header__search');

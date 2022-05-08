@@ -1,20 +1,20 @@
 // import styles
-import './alert.scss';
+import "./alert.scss";
 
 // documentation
-import docs from './alert.docs.mdx';
+import docs from "./alert.docs.mdx";
 
 export default {
-  title: 'Components/Alert',
+  title: "Components/Alert",
   parameters: {
     docs: {
-      page: docs
+      page: docs,
     },
     layout: "padded",
     previewTabs: {
-      canvas: {hidden: false}
-    }
-  }
+      canvas: { hidden: false },
+    },
+  },
 };
 
 export const alertInfo = () => {
@@ -25,8 +25,8 @@ export const alertInfo = () => {
     </div>
   </div>
   `;
-}
-alertInfo.storyName = 'Info';
+};
+alertInfo.storyName = "Info";
 
 export const alertSuccess = () => {
   return `
@@ -36,8 +36,8 @@ export const alertSuccess = () => {
     </div>
   </div>
   `;
-}
-alertSuccess.storyName = 'Success';
+};
+alertSuccess.storyName = "Success";
 
 export const alertWarning = () => {
   return `
@@ -47,8 +47,8 @@ export const alertWarning = () => {
     </div>
   </div>
   `;
-}
-alertWarning.storyName = 'Warning';
+};
+alertWarning.storyName = "Warning";
 
 export const alertError = () => {
   return `
@@ -58,8 +58,8 @@ export const alertError = () => {
     </div>
   </div>
   `;
-}
-alertError.storyName = 'Error';
+};
+alertError.storyName = "Error";
 
 export const alertWithLink = () => {
   return `
@@ -70,8 +70,8 @@ export const alertWithLink = () => {
     </div>
   </div>
   `;
-}
-alertWithLink.storyName = 'with Link';
+};
+alertWithLink.storyName = "with Link";
 
 export const alertWithButton = () => {
   return `
@@ -82,8 +82,8 @@ export const alertWithButton = () => {
     </div>
   </div>
   `;
-}
-alertWithButton.storyName = 'with Button';
+};
+alertWithButton.storyName = "with Button";
 
 export const alertWithTitle = () => {
   return `
@@ -95,8 +95,8 @@ export const alertWithTitle = () => {
     </div>
   </div>
   `;
-}
-alertWithTitle.storyName = 'with Title';
+};
+alertWithTitle.storyName = "with Title";
 
 export const infoGlobal = () => {
   return `
@@ -111,8 +111,8 @@ export const infoGlobal = () => {
     </div>
   </div>
   `;
-}
-infoGlobal.storyName = 'Info global';
+};
+infoGlobal.storyName = "Info global";
 
 export const successGlobal = () => {
   return `
@@ -127,8 +127,8 @@ export const successGlobal = () => {
     </div>
   </div>
   `;
-}
-successGlobal.storyName = 'Success global';
+};
+successGlobal.storyName = "Success global";
 
 export const warningGlobal = () => {
   return `
@@ -142,8 +142,8 @@ export const warningGlobal = () => {
     </div>
   </div>
   `;
-}
-warningGlobal.storyName = 'Warning global';
+};
+warningGlobal.storyName = "Warning global";
 
 export const errorGlobal = () => {
   return `
@@ -157,5 +157,5 @@ export const errorGlobal = () => {
     </div>
   </div>
   `;
-}
-errorGlobal.storyName = 'Error global';
+};
+errorGlobal.storyName = "Error global";

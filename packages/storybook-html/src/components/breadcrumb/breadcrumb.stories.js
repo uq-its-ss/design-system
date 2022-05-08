@@ -1,29 +1,29 @@
 // import styles
-import './breadcrumb.scss';
+import "./breadcrumb.scss";
 
 // import HTML template strings
-import breadcrumbHTML from './breadcrumb.html';
+import breadcrumbHTML from "./breadcrumb.html";
 
 // documentation
-import docs from './breadcrumb.docs.mdx';
+import docs from "./breadcrumb.docs.mdx";
 
 export default {
-  title: 'Components/Breadcrumb',
+  title: "Components/Breadcrumb",
   parameters: {
     docs: {
-      page: docs
+      page: docs,
     },
     previewTabs: {
-      canvas: {hidden: false}
-    }
-  }
+      canvas: { hidden: false },
+    },
+  },
 };
 
 export const breadcrumb = () => {
   return breadcrumbHTML;
 };
 
-breadcrumb.storyName = 'Default';
+breadcrumb.storyName = "Default";
 
 export const breadcrumbTruncation = () => {
   return `
@@ -46,4 +46,4 @@ export const breadcrumbTruncation = () => {
   `;
 };
 
-breadcrumbTruncation.storyName = 'Truncation';
+breadcrumbTruncation.storyName = "Truncation";

@@ -1,29 +1,44 @@
-import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import { Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
 
 <Meta title="Introduction/Get started" />
 
 # Get started
 
-<br/>
+<br />
 <div className="uq-alert uq-alert--info" role="alert">
   <div className="uqds-alert uq-alert__message">
     <h3 className="uq-alert__title">We're in production!</h3>
-    <p><strong>The Design system is in active use in current projects at UQ.</strong> Our NPM packages are currently restricted to ITS-ADS staff with AWS tools access. If you have access, please refer to the <a href="https://confluence.its.uq.edu.au/confluence/x/0DwDCw">environment setup instructions</a>. If you do not have access, <a href="mailto:webservices@uq.edu.au">contact us</a> and we can package up styles and components for you to use in your project.</p>
+    <p>
+      <strong>
+        The Design system is in active use in current projects at UQ.
+      </strong>{" "}
+      Our NPM packages are currently restricted to ITS-ADS staff with AWS tools
+      access. If you have access, please refer to the{" "}
+      <a href="https://confluence.its.uq.edu.au/confluence/x/0DwDCw">
+        environment setup instructions
+      </a>
+      . If you do not have access, <a href="mailto:webservices@uq.edu.au">
+        contact us
+      </a> and we can package up styles and components for you to use in your project.
+    </p>
   </div>
 </div>
-<br/>
+<br />
 
 There are a few ways to get started with the UQ Design System. Which method you choose depends on your project's requirements and whether you're a designer, an analyst, or a developer. **Please note that we are still working on various solutions to suit a variety of project needs.**
 
 Here are the ways you can start using the UQ Design System right now;
+
 - If you have prior experience with npm and Sass, [use the npm CLI to install components](#using-npm-to-install-components-into-your-project).
 - If you don't have previous experience with npm or Sass, please [contact us at ADS-UI][2] for further options.
 - Designers can go straight to the docs to view working examples. Also, check out the [Future Students Design System][3] (Figma project).
 - If you would like a walkthrough of the docs for your analysis needs, please [contact us][2] for a tour.
 
 ## Reading the docs
+
 Reading the documentation is an integral part of implementing the Design System.
 It's where we provide:
+
 - HTML snippets,
 - JavaScript & Sass library docs,
 - and guidance via standards, patterns, and systems.
@@ -63,10 +78,10 @@ your Sass files. For example,
 // styles.scss
 
 // With a namespace (recommended)
-@use '@uqds/core/src/scss/global' as core;
+@use "@uqds/core/src/scss/global" as core;
 
 // Without a namespace (no recommended)
-@use '@uqds/core/src/scss/global' as *;
+@use "@uqds/core/src/scss/global" as *;
 
 .example-class {
   font-size: core.$font-size-xl;
@@ -81,7 +96,7 @@ safely imported without a namespace into Sass files. For example,
 ```scss
 // styles.scss
 
-@use '@uqds/button/src/scss/component' as *;
+@use "@uqds/button/src/scss/component" as *;
 ```
 
 You can also use emitting code in your JavaScript projects. With a bundler like
@@ -92,7 +107,7 @@ to [choose Dart Sass (`sass`) as the preprocessor (as opposed to `node-sass`)][7
 ```javascript
 // module.js
 
-import '@uqds/button/src/scss/_component.scss';
+import "@uqds/button/src/scss/_component.scss";
 ```
 
 ### JavaScript library
@@ -101,8 +116,8 @@ Instructions coming soon after we get our house in order.
 
 ## Component package list
 
-| Package name        | Dependencies     | Notes*                                                                                          |
-|---------------------|------------------|-------------------------------------------------------------------------------------------------|
+| Package name        | Dependencies     | Notes\*                                                                                         |
+| ------------------- | ---------------- | ----------------------------------------------------------------------------------------------- |
 | @uqds/core          |                  | This package only provides Sass variables, mixins, functions, and placeholder styles (% rules). |
 | @uqds/accordion     | Core, Icon       | --JS--                                                                                          |
 | @uqds/alert         | Core, Grid       |                                                                                                 |

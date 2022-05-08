@@ -1,7 +1,7 @@
-@use '@uqds/core/src/scss/global' as core;
-@use '@uqds/icon/src/scss/global' as icon;
-@use 'global' as *;
-@use 'icons' as *;
+@use "@uqds/core/src/scss/global" as core;
+@use "@uqds/icon/src/scss/global" as icon;
+@use "global" as *;
+@use "icons" as *;
 
 $use-encapsulation: false !default;
 
@@ -16,7 +16,7 @@ $use-encapsulation: false !default;
   .uq-error-summary,
   .uq-error-message,
   .uq-success-message,
-  .uq-inline-help  {
+  .uq-inline-help {
     box-sizing: border-box;
     font-family: core.$font-body;
   }
@@ -27,8 +27,11 @@ $use-encapsulation: false !default;
   input,
   select,
   textarea {
-    &::before, &::after,
-    *, *::before, *::after {
+    &::before,
+    &::after,
+    *,
+    *::before,
+    *::after {
       box-sizing: border-box;
     }
   }
@@ -60,7 +63,7 @@ $use-encapsulation: false !default;
       color: $form-color-error;
     }
   }
-  
+
   label {
     cursor: pointer;
     line-height: core.$line-height-ui;
@@ -72,7 +75,7 @@ $use-encapsulation: false !default;
         font-size: core.$font-size;
         line-height: core.$line-height;
         margin-bottom: core.$space-m;
-  
+
         input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]),
         select,
         textarea,
@@ -198,7 +201,7 @@ $use-encapsulation: false !default;
       &:focus {
         border-color: $form-border-color-focus;
         box-shadow: 0 2px 0 0 $form-border-color-focus,
-                    0 0 0 1px $form-border-color-focus inset;
+          0 0 0 1px $form-border-color-focus inset;
       }
     }
 
@@ -226,8 +229,11 @@ $use-encapsulation: false !default;
 
   select {
     appearance: none;
-    -webkit-appearance: none;
-    background-image: url(icon.get-icon('standard--chevron-down-sml', $form-select-icon));
+    appearance: none;
+    background-image: url(icon.get-icon(
+      "standard--chevron-down-sml",
+      $form-select-icon
+    ));
     background-repeat: no-repeat;
     background-position: right core.$space-xs center;
     padding-right: 2.5rem;
@@ -236,9 +242,12 @@ $use-encapsulation: false !default;
     width: 100%;
 
     &:focus {
-      background-image: url(icon.get-icon('standard--chevron-down-sml', $form-focus-color));
+      background-image: url(icon.get-icon(
+        "standard--chevron-down-sml",
+        $form-focus-color
+      ));
     }
-  
+
     &[multiple] {
       height: auto;
       background-image: none;
@@ -247,9 +256,12 @@ $use-encapsulation: false !default;
         background-image: none;
       }
     }
-  
+
     &[disabled] {
-      background-image: url(icon.get-icon('standard--chevron-down-sml', $form-select-icon-disabled));
+      background-image: url(icon.get-icon(
+        "standard--chevron-down-sml",
+        $form-select-icon-disabled
+      ));
     }
   }
 
@@ -260,7 +272,7 @@ $use-encapsulation: false !default;
   input[type="radio"],
   input[type="checkbox"] {
     appearance: none;
-    -webkit-appearance: none;
+    appearance: none;
     display: inline-block;
     border: $form-checkbox-border-width solid $form-border-color;
     cursor: pointer;
@@ -329,7 +341,7 @@ $use-encapsulation: false !default;
       }
     }
   }
-  
+
   input[type="checkbox"] {
     border-radius: $form-checkbox-border-radius;
 
@@ -349,8 +361,11 @@ $use-encapsulation: false !default;
       background-color: core.$link;
 
       &::after {
-        background-image: url(icon.get-icon('standard--check', $form-checkbox-check-color));
-        padding: 0px;
+        background-image: url(icon.get-icon(
+          "standard--check",
+          $form-checkbox-check-color
+        ));
+        padding: 0;
       }
     }
 
@@ -360,10 +375,10 @@ $use-encapsulation: false !default;
       }
     }
   }
-  
+
   input[type="radio"] {
     border-radius: 50%;
-  
+
     &:checked {
       border-width: 2px;
 
@@ -383,6 +398,7 @@ $use-encapsulation: false !default;
     &[disabled] {
       &:checked {
         background-color: core.$uq-neutral-light80;
+
         &::after {
           background-color: core.$uq-neutral-light20;
         }
@@ -410,7 +426,7 @@ $use-encapsulation: false !default;
     border-left-width: core.$space-xs;
     padding: core.$space;
     margin-bottom: core.$space-m;
-  
+
     &__title {
       color: core.$text;
       font-size: core.$font-size-m;
@@ -418,27 +434,29 @@ $use-encapsulation: false !default;
       line-height: core.$line-height-h;
       margin: core.$space-none core.$space-none core.$space core.$space-none;
     }
-  
+
     &_body {
       color: core.$text;
       font-size: core.$space;
     }
-    
+
     &__list {
       color: core.$text;
       font-size: core.$space;
       margin: core.$space-none;
-  
+
       &__item {
         margin-bottom: core.$space-xs;
         line-height: core.$line-height;
       }
-  
+
       a {
         color: core.$alert;
         text-decoration: underline;
         font-weight: core.$font-weight-normal;
-        &:hover, &:focus {
+
+        &:hover,
+        &:focus {
           color: darken(core.$alert, 5%);
         }
       }
@@ -454,11 +472,12 @@ $use-encapsulation: false !default;
     font-weight: core.$font-weight-normal;
     line-height: core.$line-height;
     margin-bottom: core.$space-m;
-    padding: calc(#{core.$space-s} - 1px) core.$space core.$space-s core.$space-xxl;
+    padding: calc(#{core.$space-s} - 1px) core.$space core.$space-s
+      core.$space-xxl;
     position: relative;
 
     &::before {
-      content: '';
+      content: "";
       display: block;
       background-position: center;
       background-repeat: no-repeat;
@@ -466,7 +485,7 @@ $use-encapsulation: false !default;
       height: core.$space-compressed-xl;
       left: core.$space;
       margin-right: core.$space-s;
-      margin-top: calc(#{-(core.$space-compressed-xl) * 0.5} - 1px);
+      margin-top: calc(#{- (core.$space-compressed-xl) * 0.5} - 1px);
       position: absolute;
       top: 50%;
       width: core.$space-compressed-xl;
@@ -477,7 +496,10 @@ $use-encapsulation: false !default;
     background-color: $form-color-error;
 
     &::before {
-      background-image: url(icon.get-icon('standard--alert-triangle', core.$uq-white));
+      background-image: url(icon.get-icon(
+        "standard--alert-triangle",
+        core.$uq-white
+      ));
     }
   }
 
@@ -485,7 +507,10 @@ $use-encapsulation: false !default;
     background-color: $form-color-success;
 
     &::before {
-      background-image: url(icon.get-icon('standard--success-circle', core.$uq-white));
+      background-image: url(icon.get-icon(
+        "standard--success-circle",
+        core.$uq-white
+      ));
     }
   }
 

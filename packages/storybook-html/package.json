@@ -22,6 +22,7 @@
 		"@storybook/addon-docs": "^6.4.22",
 		"@storybook/addon-essentials": "^6.4.22",
 		"@storybook/addons": "^6.4.22",
+		"@storybook/client-api": "^6.4.22",
 		"@storybook/html": "^6.4.22",
 		"@storybook/theming": "^6.4.22",
 		"@uqds/accordion": "^0.0.7-alpha.0",
@@ -67,5 +68,6 @@
 		"typescript": "^3.8.2",
 		"underscore": "^1.13.2",
 		"zxcvbn": "^4.4.2"
-	}
+	},
+	"type": "module"
 }

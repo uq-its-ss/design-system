@@ -28,23 +28,25 @@ Prefix such classes with
 `uqds` E.g. `.uqds-button-example`, `.uqds-example-container`.
 
 #### Repo packages that this rule applies to:
-* `storybook-html`
-* `private-design-output`
+
+- `storybook-html`
+- `private-design-output`
 
 ## Class naming convention
 
-In short, we use [BEM](http://getbem.com/) methodology to create reusable 
+In short, we use [BEM](http://getbem.com/) methodology to create reusable
 components.
 
 ## Sass modules & namespacing
 
 We use the [`@use` rule](https://sass-lang.com/documentation/at-rules/use) to
-load other Sass stylesheets as *modules*.
+load other Sass stylesheets as _modules_.
 To [load the members](https://sass-lang.com/documentation/at-rules/use#loading-members)
 of a stylesheet outside the immediate package, we should always
 [choose a namespace](https://sass-lang.com/documentation/at-rules/use#choosing-a-namespace).
 
 For example in `button/src/scss/_component.scss`, I may have:
+
 ```scss
 @use '@uqds/core/src/scss/_global' as core;
 
@@ -58,6 +60,7 @@ For example in `button/src/scss/_component.scss`, I may have:
 
 If I'm loading a stylesheet within the `button` package as well, it might be
 more like this:
+
 ```scss
 @use '@uqds/core/src/scss/_global' as core;
 @use '_global' as *;

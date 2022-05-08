@@ -1,7 +1,7 @@
 // Main component stylesheet
-@use '@uqds/core/src/scss/global' as core;
-@use '@uqds/grid/src/scss/global' as grid;
-@use 'global' as *;
+@use "@uqds/core/src/scss/global" as core;
+@use "@uqds/grid/src/scss/global" as grid;
+@use "global" as *;
 
 // Section
 // Used to contain content and provide padding, background, and width options.
@@ -33,7 +33,7 @@
   &__title {
     margin-top: core.$space-none;
   }
-  
+
   // Padding top large
   &--padding-top-large {
     padding-top: core.$space-uuul; // 5.5rem
@@ -61,23 +61,25 @@
 
   // Centers section header and content
   &--centered {
-    .uq-section__header, 
-    .uq-section__content{
+    .uq-section__header,
+    .uq-section__content {
       text-align: center;
     }
   }
 
   // Narrows the section header and content
   &--narrow {
-    .uq-section__header, 
-    .uq-section__content{
+    .uq-section__header,
+    .uq-section__content {
       @media #{core.$screen-xl-up} {
         @include grid.grid-col-padding;
         @include grid.grid-col-offset(2.25, 12);
         @include grid.grid-col-width(7.5, 12);
+
         float: left;
       }
     }
+
     // .uq-section__container {
     //   max-width: (grid.$max-container-width - (grid.$max-container-width/3));
     // }

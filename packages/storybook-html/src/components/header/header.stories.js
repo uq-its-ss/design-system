@@ -1,31 +1,31 @@
-import { useEffect } from '@storybook/client-api';
+import { useEffect } from "@storybook/client-api";
 
 // import styles
-import './header.scss';
+import "./header.scss";
 
 // import scripts
-import headerCreate from '@uqds/header/src/js/header';
+import headerCreate from "@uqds/header/src/js/header";
 
 // import HTML template strings
-import HeaderHTML from './header.html';
+import HeaderHTML from "./header.html";
 
-import docs from './header.docs.mdx';
+import docs from "./header.docs.mdx";
 
 export default {
-  title: 'Components/Header',
+  title: "Components/Header",
   parameters: {
     docs: {
       page: docs,
-      inlineStories: false
+      inlineStories: false,
     },
     layout: "fullscreen",
     backgrounds: {
-      default: 'UQ Neutral 1'
+      default: "UQ Neutral 1",
     },
     previewTabs: {
-      canvas: {hidden: false}
-    }
-  }
+      canvas: { hidden: false },
+    },
+  },
 };
 
 export const Header = () => {
@@ -35,4 +35,4 @@ export const Header = () => {
   return HeaderHTML;
 };
 
-Header.storyName = 'Header';
+Header.storyName = "Header";

@@ -1,7 +1,7 @@
-@forward '_build/icons';
+@forward "_build/icons";
 
 @use "@uqds/core/src/scss/global" as core;
-@use '_build/icons' as *;
+@use "_build/icons" as *;
 
 $icon-primary-filter: core.$filter-primary;
 $icon-light-filter: core.$filter-white;
@@ -10,9 +10,9 @@ $icon-text-filter: core.$filter-text;
 @mixin icon-base() {
   .uq-icon {
     &::before {
-      content: '';
+      content: "";
       display: inline-block;
-      margin-right: .3em;
+      margin-right: 0.3em;
       height: 1.5em;
       width: 1.5em;
       filter: $icon-primary-filter;
@@ -28,7 +28,7 @@ $icon-text-filter: core.$filter-text;
         filter: $icon-light-filter;
       }
     }
-  
+
     &--text {
       &::before {
         filter: $icon-text-filter;

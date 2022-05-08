@@ -1,7 +1,7 @@
 @use "@uqds/core/src/scss/global" as core;
 @use "@uqds/grid/src/scss/global" as grid;
 @use "@uqds/icon/src/scss/global" as icon-constants;
-@use 'global' as *;
+@use "global" as *;
 
 .uq-site-header {
   color: core.$text;
@@ -11,7 +11,9 @@
   font-weight: core.$font-weight-normal;
   line-height: core.$line-height;
 
-  *, *::before, *::after {
+  *,
+  *::before,
+  *::after {
     box-sizing: border-box;
   }
 
@@ -26,7 +28,7 @@
     flex-wrap: wrap;
     float: none;
     justify-content: space-between;
-    padding: .75rem core.$space-m;
+    padding: 0.75rem core.$space-m;
     position: relative;
 
     &__right {
@@ -45,7 +47,7 @@
     font-weight: $title-font-weight;
     margin: core.$space-none;
     text-decoration: none;
-  
+
     &:hover,
     &:focus {
       color: core.$uq-purple;
@@ -79,9 +81,12 @@
     }
 
     &::before {
-      background-image: url(icon-constants.get-icon('standard--navigation-menu', core.$uq-purple));
+      background-image: url(icon-constants.get-icon(
+        "standard--navigation-menu",
+        core.$uq-purple
+      ));
       background-size: 100%;
-      content: '';
+      content: "";
       display: block;
       height: 1.5rem;
       left: 0;
@@ -92,7 +97,10 @@
 
     &--close {
       &::before {
-        background-image: url(icon-constants.get-icon('standard--close', core.$uq-purple));
+        background-image: url(icon-constants.get-icon(
+          "standard--close",
+          core.$uq-purple
+        ));
       }
     }
 
@@ -122,7 +130,7 @@
       display: block;
       padding: core.$space core.$space;
       text-decoration: none;
-      transition: background-color .25s, border-color .25s;
+      transition: background-color 0.25s, border-color 0.25s;
 
       &:hover,
       &:focus {
@@ -132,6 +140,7 @@
         @media #{core.$screen-lg-up} {
           outline: 0 none;
           text-decoration: none;
+
           //border-color: $nav-primary-active-bg;
         }
       }
@@ -152,7 +161,7 @@
 
         @media #{core.$screen-lg-up} {
           display: flex;
-    
+
           > li {
             display: inline-block;
           }
@@ -161,7 +170,7 @@
         &.uq-site-header__navigation__list--open {
           display: block;
           border-top: 1px solid $nav-dropdown-divider;
-    
+
           @media #{core.$screen-lg-up} {
             border-top: 0 none;
           }
@@ -180,12 +189,13 @@
         transform: translateY(-($nav-dropdown-animation-distance));
         box-shadow: 0 0.75rem 1.5rem rgb(24 24 24 / 20%);
         border-radius: 0 0 0.25rem 0.25rem;
-    
+
         @media #{core.$screen-lg-up} {
           position: absolute;
           width: $nav-dropdown-width;
-          transition: opacity .2s ease, transform .2s ease, visibility 0.2s ease;
-          padding: .5rem 0 1.5rem 0;
+          transition: opacity 0.2s ease, transform 0.2s ease,
+            visibility 0.2s ease;
+          padding: 0.5rem 0 1.5rem;
         }
 
         &.uq-site-header__navigation__list--open {
@@ -204,15 +214,15 @@
         a {
           //border-bottom: 1px solid $nav-dropdown-divider;
           padding-left: core.$space-xxl;
-          padding-top: .75rem;
+          padding-top: 0.75rem;
           padding-bottom: 0;
-    
+
           &:hover,
           &:focus {
             // background-color: $nav-dropdown-active-bg;
             text-decoration: underline;
           }
-    
+
           @media #{core.$screen-lg-up} {
             padding-left: core.$space-m;
           }
@@ -227,12 +237,18 @@
           > a {
             //background-color: $nav-primary-active-bg;
           }
-  
+
           .uq-site-header__navigation__sub-toggle {
-            background-image: url(icon-constants.get-icon("standard--chevron-up-sml", core.$uq-purple));
+            background-image: url(icon-constants.get-icon(
+              "standard--chevron-up-sml",
+              core.$uq-purple
+            ));
 
             @media #{core.$screen-lg-up} {
-              background-image: url(icon-constants.get-icon("standard--chevron-down-sml", core.$uq-purple));
+              background-image: url(icon-constants.get-icon(
+                "standard--chevron-down-sml",
+                core.$uq-purple
+              ));
             }
           }
         }
@@ -261,7 +277,6 @@
             border-bottom: 4px solid core.$uq-purple;
           }
         }
-
       }
     }
 
@@ -275,7 +290,10 @@
       border: 0;
       border-left: 1px solid $nav-dropdown-divider;
       text-indent: -100vw;
-      background-image: url(icon-constants.get-icon("standard--chevron-down-sml", core.$uq-purple));
+      background-image: url(icon-constants.get-icon(
+        "standard--chevron-down-sml",
+        core.$uq-purple
+      ));
       background-size: core.$space;
       background-position: center center;
       background-repeat: no-repeat;
@@ -285,9 +303,10 @@
 
       @media #{core.$screen-md-up} {
         width: core.$space-l;
-        padding: core.$space-compressed-xxxl core.$space-m core.$space-compressed-xxxl core.$space-s;
+        padding: core.$space-compressed-xxxl core.$space-m
+          core.$space-compressed-xxxl core.$space-s;
       }
-  
+
       @media #{core.$screen-lg-up} {
         border-left: 0;
 
@@ -308,7 +327,6 @@
 
   &--no-site-title {
     .uq-site-header__title-container {
-
       justify-content: flex-end;
 
       @media #{core.$screen-lg-up} {

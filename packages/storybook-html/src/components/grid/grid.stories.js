@@ -1,20 +1,20 @@
 // import stylesheet
-import './grid.scss';
+import "./grid.scss";
 
-import docs from './grid.docs.mdx';
+import docs from "./grid.docs.mdx";
 
 export default {
-  title: 'Layout/Grid',
+  title: "Layout/Grid",
   parameters: {
     docs: {
       page: docs,
-      inlineStories: false
+      inlineStories: false,
     },
     layout: "fullscreen",
     previewTabs: {
-      canvas: {hidden: false}
-    }
-  }
+      canvas: { hidden: false },
+    },
+  },
 };
 
 export const golden = () => `

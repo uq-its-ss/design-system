@@ -1,13 +1,13 @@
-@use '@uqds/core/src/scss/global' as core;
-@use '@uqds/grid/src/scss/global' as grid;
-@use '@uqds/icon/src/scss/global' as icon;
-@use 'global' as *;
+@use "@uqds/core/src/scss/global" as core;
+@use "@uqds/grid/src/scss/global" as grid;
+@use "@uqds/icon/src/scss/global" as icon;
+@use "global" as *;
 
 .uq-alert {
   background-color: $alert-info-bg-color;
   color: $alert-text-color;
   position: relative;
-  
+
   &__container {
     margin: 0 auto;
 
@@ -38,14 +38,17 @@
     margin-left: core.$space-l;
 
     &::before {
-      content: '';
-      background-image: url(icon.get-icon('standard--information-circle', core.$uq-neutral-dark80));
+      content: "";
+      background-image: url(icon.get-icon(
+        "standard--information-circle",
+        core.$uq-neutral-dark80
+      ));
       background-repeat: no-repeat;
       background-size: 1.5rem;
       width: core.$space-m;
       height: core.$space-m;
       position: absolute;
-      top: .85rem;
+      top: 0.85rem;
       left: -(core.$space);
     }
 
@@ -62,7 +65,10 @@
     position: absolute;
     top: core.$space-none;
     right: core.$space-none;
-    background-image: url(icon.get-icon('standard--close', core.$uq-neutral-dark80));
+    background-image: url(icon.get-icon(
+      "standard--close",
+      core.$uq-neutral-dark80
+    ));
     background-repeat: no-repeat;
     background-size: 1rem;
     background-position: center;
@@ -73,50 +79,64 @@
 
     &:hover,
     &:focus {
-      background-image: url(icon.get-icon('common--close', core.$uq-neutral-dark80));
+      background-image: url(icon.get-icon(
+        "common--close",
+        core.$uq-neutral-dark80
+      ));
     }
   }
-
-
-
 
   &--info {
     background-color: $alert-info-bg-color;
 
     .uq-alert__message {
       &::before {
-        background-image: url(icon.get-icon('standard--information-circle', core.$uq-neutral-dark80));
+        background-image: url(icon.get-icon(
+          "standard--information-circle",
+          core.$uq-neutral-dark80
+        ));
       }
     }
   }
+
   &--success {
     background-color: $alert-success-bg-color;
 
     .uq-alert__message {
       &::before {
-        background-image: url(icon.get-icon('standard--success-circle', core.$uq-neutral-dark80));
+        background-image: url(icon.get-icon(
+          "standard--success-circle",
+          core.$uq-neutral-dark80
+        ));
       }
     }
   }
+
   &--warning {
     background-color: $alert-warning-bg-color;
 
     .uq-alert__message {
       &::before {
-        background-image: url(icon.get-icon('standard--exclamation-circle', core.$uq-neutral-dark80));
+        background-image: url(icon.get-icon(
+          "standard--exclamation-circle",
+          core.$uq-neutral-dark80
+        ));
       }
     }
   }
+
   &--error {
     background-color: $alert-error-bg-color;
 
     .uq-alert__message {
       &::before {
-        background-image: url(icon.get-icon('standard--alert-triangle', core.$uq-neutral-dark80));
+        background-image: url(icon.get-icon(
+          "standard--alert-triangle",
+          core.$uq-neutral-dark80
+        ));
       }
     }
   }
-
 
   // Global alert
   &--global {
@@ -125,9 +145,8 @@
     }
   }
 
-  
   // Dark variant
-  &--dark { 
+  &--dark {
     background-color: $alert-global-info-bg-color;
     color: core.$uq-white;
 
@@ -140,6 +159,7 @@
       &:active {
         text-decoration: underline;
       }
+
       &:hover,
       &:focus {
         text-decoration: none;
@@ -151,29 +171,34 @@
     }
 
     .uq-alert__close {
-      background-image: url(icon.get-icon('standard--close', core.$uq-white));
-  
+      background-image: url(icon.get-icon("standard--close", core.$uq-white));
+
       &:hover,
       &:focus {
-        background-image: url(icon.get-icon('common--close', core.$uq-white));
+        background-image: url(icon.get-icon("common--close", core.$uq-white));
       }
     }
 
     &.uq-alert--info {
-  
       .uq-alert__message {
         &::before {
-          background-image: url(icon.get-icon('standard--information-circle', core.$uq-white));
+          background-image: url(icon.get-icon(
+            "standard--information-circle",
+            core.$uq-white
+          ));
         }
       }
     }
 
     &.uq-alert--success {
       background-color: $alert-global-success-bg-color;
-  
+
       .uq-alert__message {
         &::before {
-          background-image: url(icon.get-icon('standard--success-circle', core.$uq-white));
+          background-image: url(icon.get-icon(
+            "standard--success-circle",
+            core.$uq-white
+          ));
         }
       }
     }
@@ -193,10 +218,13 @@
 
     &.uq-alert--error {
       background-color: $alert-global-error-bg-color;
-  
+
       .uq-alert__message {
         &::before {
-          background-image: url(icon.get-icon('standard--alert-triangle', core.$uq-white));
+          background-image: url(icon.get-icon(
+            "standard--alert-triangle",
+            core.$uq-white
+          ));
         }
       }
     }

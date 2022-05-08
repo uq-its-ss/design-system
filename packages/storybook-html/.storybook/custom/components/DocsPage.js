@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 import {
   Title,
   Subtitle,
   Description,
   Stories,
-} from '@storybook/addon-docs/blocks';
-import Toc from './Toc';
+} from "@storybook/addon-docs/blocks";
+import Toc from "./Toc";
 
 const DocsPage = () => (
   <>
@@ -15,6 +15,6 @@ const DocsPage = () => (
     <Description />
     <Stories includePrimary title={"Examples"} />
   </>
-)
+);
 
 export default DocsPage;

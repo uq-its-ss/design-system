@@ -1,5 +1,5 @@
-@use '@uqds/core/src/scss/global' as core;
-@use 'global' as *;
+@use "@uqds/core/src/scss/global" as core;
+@use "global" as *;
 
 // Panes: Blocks of colour with padding around content.
 //
@@ -50,6 +50,7 @@
 
   &--has-footer {
     @include pane-has-footer;
+
     &.uq-pane--shaded {
       .uq-pane__footer {
         background-color: darken($pane-shaded-bg, 5%);
@@ -59,7 +60,7 @@
     &.uq-pane--dark-tint {
       .uq-pane__footer {
         background-color: core.$uq-black;
-        background-color: rgba(core.$uq-black, 0.3);
+        background-color: rgb(core.$uq-black 0.3);
       }
     }
   }
@@ -128,7 +129,7 @@
 
     .uq-pane__footer {
       background-color: core.$uq-black;
-      background-color: rgba(core.$uq-black, .3);
+      background-color: rgb(core.$uq-black 0.3);
     }
   }
 }

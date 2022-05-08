@@ -1,15 +1,14 @@
 ---
 name: Question ❓
 about: Ask a Question about the UQ Design System
-title: ''
+title: ""
 labels: question
-assignees: ''
-
+assignees: ""
 ---
 
-<!-- 
-It looks like you might have a question about our work, 
-help us out by filling out a couple of details below! 
+<!--
+It looks like you might have a question about our work,
+help us out by filling out a couple of details below!
 -->
 
 ## Summary

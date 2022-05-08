@@ -1,16 +1,17 @@
-@use '@uqds/core/src/scss/global' as core;
-@use 'global' as *;
+@use "@uqds/core/src/scss/global" as core;
+@use "global" as *;
 
 // Tabs
 .uq-tabs {
-
-  *, *::before, *::after {
+  *,
+  *::before,
+  *::after {
     box-sizing: border-box;
   }
 
   // Tab list wrapper
   &__tab-list-wrapper {
-    overflow: auto; 
+    overflow: auto;
   }
 
   // Tab list
@@ -18,11 +19,11 @@
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-start;
-    overflow: visible; 
+    overflow: visible;
     padding: core.$space-none;
     margin: core.$space-none;
   }
-  
+
   // Tab Link
   &__link {
     display: inline;
@@ -46,7 +47,8 @@
     font-weight: core.$font-weight-thin;
     color: core.$uq-neutral-dark80;
     background-color: core.$uq-white;
-    border-radius: core.$space-xs core.$space-xs core.$space-none core.$space-none;
+    border-radius: core.$space-xs core.$space-xs core.$space-none
+      core.$space-none;
     border: none;
     text-align: center;
     white-space: nowrap;
@@ -74,7 +76,7 @@
         width: 100%;
         height: 2px;
         background-color: core.$uq-white;
-        content: '';
+        content: "";
         display: none;
       }
     }
@@ -143,7 +145,6 @@
     }
 
     .uq-tabs__tab {
-
       &--active {
         background-color: core.$uq-white;
 
@@ -177,9 +178,10 @@
         padding: core.$space core.$space-m;
       }
     }
+
     .uq-tabs__tab-panel {
       padding: core.$space-s core.$space;
-  
+
       @media #{core.$screen-md-up} {
         padding: core.$space core.$space-m;
       }
@@ -190,7 +192,7 @@
   &.uq-tabs--reversed {
     // Tab list
     .uq-tabs__tab-list {
-      flex-flow: row-reverse nowrap
+      flex-flow: row-reverse nowrap;
     }
 
     // Tab Link

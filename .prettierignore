@@ -1,0 +1,9 @@
+# Dependencies
+/node_modules
+/vendor
+/bin
+package.json
+package-lock.json
+
+# Build
+/packages/**/dist

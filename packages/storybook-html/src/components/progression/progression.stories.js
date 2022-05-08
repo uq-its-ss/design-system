@@ -1,30 +1,30 @@
 // import styles
-import './progression.scss';
+import "./progression.scss";
 
 // import HTML template strings
-import progressionHTML from './progression.html';
+import progressionHTML from "./progression.html";
 
 // documentation
-import docs from './progression.docs.mdx';
+import docs from "./progression.docs.mdx";
 
 export default {
-  title: 'Components/Progression',
+  title: "Components/Progression",
   parameters: {
     docs: {
       page: docs,
-      inlineStories: false
+      inlineStories: false,
     },
     previewTabs: {
-      canvas: {hidden: false}
-    }
-  }
+      canvas: { hidden: false },
+    },
+  },
 };
 
 export const progressionInitial = () => {
   return progressionHTML;
 };
 
-progressionInitial.storyName = 'Progression initial';
+progressionInitial.storyName = "Progression initial";
 
 export const progressionMiddle = () => {
   return `
@@ -85,7 +85,7 @@ export const progressionMiddle = () => {
   `;
 };
 
-progressionMiddle.storyName = 'Progression middle';
+progressionMiddle.storyName = "Progression middle";
 
 export const progressionFinal = () => {
   return `
@@ -146,4 +146,4 @@ export const progressionFinal = () => {
   `;
 };
 
-progressionFinal.storyName = 'Progression final';
+progressionFinal.storyName = "Progression final";

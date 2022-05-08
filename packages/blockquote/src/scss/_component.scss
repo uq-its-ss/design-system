@@ -1,67 +1,68 @@
 @use "@uqds/core/src/scss/global" as core;
 
 .blockquote {
-	border: none;
-	color: core.$uq-purple;
-	font-style: italic;
-	height: auto;
-	margin-left: core.$space-l;
-	padding: core.$space core.$space-m;
-	position: relative;
-	width: calc(100% - #{core.$space-l});
+  border: none;
+  color: core.$uq-purple;
+  font-style: italic;
+  height: auto;
+  margin-left: core.$space-l;
+  padding: core.$space core.$space-m;
+  position: relative;
+  width: calc(100% - #{core.$space-l});
 
-	&::before {
-		background-color: core.$uq-purple;
-		content: '';
-		height: 100%;
-		left: 0;
-		position: absolute;
-		top: 0;
-		width: core.$space-xs;
-	}
+  &::before {
+    background-color: core.$uq-purple;
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: core.$space-xs;
+  }
 
-	&--light {
-		color: core.$uq-white;
+  &--light {
+    color: core.$uq-white;
 
-		&::before {
-			background-color: core.$uq-white;
-		}
+    &::before {
+      background-color: core.$uq-white;
+    }
 
-		.blockquote__link,
-		.blockquote__link:link,
-		.blockquote__link:visited,
-		.blockquote__link:active {
-			color: core.$uq-white;
-			text-decoration: underline;
-		}
-		.blockquote__link:hover {
-			text-decoration: none;
-		}
-	}
+    .blockquote__link,
+    .blockquote__link:link,
+    .blockquote__link:visited,
+    .blockquote__link:active {
+      color: core.$uq-white;
+      text-decoration: underline;
+    }
 
-	&__body {
-		font-family: 'Merriweather', serif;
-		font-size: core.$font-size-l;
-		font-weight: 300;
-		line-height: 1.4;
-		margin-left: core.$space-none;
-		padding-left: core.$space-none;
-		border-left: none;
+    .blockquote__link:hover {
+      text-decoration: none;
+    }
+  }
 
-		p:first-child {
-			margin-top: 0;
-		}
-	}
+  &__body {
+    font-family: Merriweather, serif;
+    font-size: core.$font-size-l;
+    font-weight: 300;
+    line-height: 1.4;
+    margin-left: core.$space-none;
+    padding-left: core.$space-none;
+    border-left: none;
 
-	&__footer {
-		font-size: core.$font-size-s;
+    p:first-child {
+      margin-top: 0;
+    }
+  }
 
-		p:last-child {
-			margin-bottom: 0;
-		}
-	}
+  &__footer {
+    font-size: core.$font-size-s;
 
-	cite {
-		display: inline-block !important;
-	}
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  cite {
+    display: inline-block !important;
+  }
 }

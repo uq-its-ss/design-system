@@ -1,11 +1,11 @@
-import { Meta, Story, Canvas, Preview } from '@storybook/addon-docs/blocks';
-import './_typography.scss';
+import { Meta, Story, Canvas, Preview } from "@storybook/addon-docs/blocks";
+import "./_typography.scss";
 
 <Meta title="Core/Typography" />
 
-# Typography 
+# Typography
 
-## Fonts 
+## Fonts
 
 The following fonts are used for UQ online applications:
 
@@ -50,17 +50,31 @@ export const Fonts = () => `
 Copy the HTML or CSS below and paste it into your project to load design system fonts.
 
 **HTML**
+
 ```html
-<link rel="stylesheet" type="text/css" href="https://static.uq.net.au/v13/fonts/Roboto/roboto.css" />
-<link rel="stylesheet" type="text/css" href="https://static.uq.net.au/v13/fonts/Merriweather/merriweather.css" />
-<link rel="stylesheet" type="text/css" href="https://static.uq.net.au/v13/fonts/Montserrat/montserrat.css" />
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="https://static.uq.net.au/v13/fonts/Roboto/roboto.css"
+/>
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="https://static.uq.net.au/v13/fonts/Merriweather/merriweather.css"
+/>
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="https://static.uq.net.au/v13/fonts/Montserrat/montserrat.css"
+/>
 ```
 
 **CSS**
+
 ```css
-@import url('https://static.uq.net.au/v13/fonts/Roboto/roboto.css');
-@import url('https://static.uq.net.au/v13/fonts/Merriweather/merriweather.css');
-@import url('https://static.uq.net.au/v13/fonts/Montserrat/montserrat.css');
+@import url("https://static.uq.net.au/v13/fonts/Roboto/roboto.css");
+@import url("https://static.uq.net.au/v13/fonts/Merriweather/merriweather.css");
+@import url("https://static.uq.net.au/v13/fonts/Montserrat/montserrat.css");
 ```
 
 ### Font stacks
@@ -70,24 +84,35 @@ attempt to use each font in turn until it finds one that is available on the use
 find any of the fonts in the list.
 
 **Roboto**
+
 ```css
 font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
 ```
+
 **Merriweather**
+
 ```css
 font-family: Merriweather, Georgia, serif;
 ```
+
 **Montserrat**
+
 ```css
 font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
 ```
 
 ### Fallback fonts
 
-When platforms and systems such as third party applications are not able to display our fonts, use fallback fonts. If none of the alternative font options are available, it is recommended to use the default font provided by the platform or system. 
+When platforms and systems such as third party applications are not able to display our fonts, use fallback fonts. If none of the alternative font options are available, it is recommended to use the default font provided by the platform or system.
 
-<p><span class="uqds-font uqds-font--arial">Arial</span>: For headings and paragraph text</p>
-<p><span class="uqds-font uqds-font--georgia uqds-font--italic">Georgia</span>: For blockquotes and testimonials</p>
+<p>
+  <span class="uqds-font uqds-font--arial">Arial</span>: For headings and
+  paragraph text
+</p>
+<p>
+  <span class="uqds-font uqds-font--georgia uqds-font--italic">Georgia</span>:
+  For blockquotes and testimonials
+</p>
 
 ## Sizes
 
@@ -151,7 +176,7 @@ export const Sizes = () => `
 
 ## Styles
 
-The following typography styles are setup in HTML elements and components. Please reference the styles below when configuring new websites and components. For detailed documentation about writing style at UQ, reference the <a href="https://marketing-communication.uq.edu.au/written-style-guide" target="_blank" rel="nofollow noopener noreferrer" class="sbdocs sbdocs-a css-19nbuh3">written style guide</a>. 
+The following typography styles are setup in HTML elements and components. Please reference the styles below when configuring new websites and components. For detailed documentation about writing style at UQ, reference the <a href="https://marketing-communication.uq.edu.au/written-style-guide" target="_blank" rel="nofollow noopener noreferrer" class="sbdocs sbdocs-a css-19nbuh3">written style guide</a>.
 
 export const Styles = () => `
 <table className="uqds-table uqds-table--card">

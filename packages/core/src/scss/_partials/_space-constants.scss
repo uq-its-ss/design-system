@@ -1,7 +1,7 @@
-// Space is calculated as multiples of eight 
+// Space is calculated as multiples of eight
 // Baseline is default of device or broswer, typically 16px
 
-$space-uuuul: 10rem; /* 160px */ 
+$space-uuuul: 10rem; /* 160px */
 $space-uuul: 5.5rem; /* 88px */
 $space-uul: 5rem; /* 80px */
 $space-ul: 4.5rem; /* 72px */
@@ -12,16 +12,16 @@ $space-xl: 2.5rem; /* 40px */
 $space-l: 2rem; /* 32px */
 $space-m: 1.5rem; /* 24px */
 $space: 1rem; /* 16px */ /* Default */
-$space-s: 0.5rem; /* 8px */ 
+$space-s: 0.5rem; /* 8px */
 $space-xs: 0.25rem; /* 4px */
+
 /* 2px (0.125rem) */
+
 /* 1px (0.0625rem) */
 $space-none: 0; /* zero - no spacing */
 $space-auto: auto; /* auto */
 
-
-
-/* Conceptual spacing options - use with caution as these may change. */ 
+/* Conceptual spacing options - use with caution as these may change. */
 
 /* compressed - half the original value */
 $space-compressed-uuuul: 5rem; /* 80px (160px) */
@@ -38,12 +38,10 @@ $space-compressed: 0.5rem; /* 8px (16px) */
 $space-compressed-s: 0.25rem; /* 4px (8px) */
 $space-compressed-xs: 0.125rem; /* 2px (4px) */
 
-
-
 /* stretched - 1.5 times the original value */
 $space-stretched-uuuul: 15rem; /* 80px (160px) */
 $space-stretched-uuul: 8.25rem; /* 132px (88px) */
-$space-stretched-uul:  7.5rem; /* 120px (80px) */
+$space-stretched-uul: 7.5rem; /* 120px (80px) */
 $space-stretched-ul: 6.75rem; /* 108px (72px) */
 $space-stretched-xxxxl: 6rem; /* 96px (64px) */
 $space-stretched-xxxl: 5.25rem; /* 84px (56px) */

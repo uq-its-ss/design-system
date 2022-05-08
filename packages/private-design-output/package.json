@@ -72,5 +72,6 @@
     "@uqds/site-header": "^0.0.7-alpha.0",
     "@uqds/table": "^0.0.7-alpha.0",
     "@uqds/tabs": "^0.0.7-alpha.0"
-  }
+  },
+  "type": "module"
 }

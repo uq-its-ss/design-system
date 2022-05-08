@@ -1,28 +1,28 @@
-import { useEffect } from '@storybook/client-api';
+import { useEffect } from "@storybook/client-api";
 
 // import scripts
-import headerCreate from '@uqds/header-legacy/src/js/header';
-import siteHeaderNav from '@uqds/site-header/src/js/site-header-navigation';
+import headerCreate from "@uqds/header-legacy/src/js/header";
+import siteHeaderNav from "@uqds/site-header/src/js/site-header-navigation";
 
 // import HTML template strings
-import headerHTML from '../../components/header-legacy/header.html';
-import siteHeaderHTML from '../../components/site-header/site-header-with-subnav.html';
-import footerHTML from '../../components/footer-legacy/footer.html';
+import headerHTML from "../../components/header-legacy/header.html";
+import siteHeaderHTML from "../../components/site-header/site-header-with-subnav.html";
+import footerHTML from "../../components/footer-legacy/footer.html";
 
-import docs from './basic-page.docs.mdx';
+import docs from "./basic-page.docs.mdx";
 
 export default {
-  title: 'Patterns/Basic page',
+  title: "Patterns/Basic page",
   parameters: {
     layout: "fullscreen",
     previewTabs: {
-      canvas: {hidden: false}
+      canvas: { hidden: false },
     },
     docs: {
       page: docs,
-      inlineStories: false
-    }
-  }
+      inlineStories: false,
+    },
+  },
 };
 
 export const basicPage = () => {

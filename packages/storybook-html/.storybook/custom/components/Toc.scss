@@ -1,5 +1,5 @@
-@use '@uqds/core/src/scss/_global' as core;
-@use 'tocbot/src/scss/tocbot';
+@use "@uqds/core/src/scss/_global" as core;
+@use "tocbot/src/scss/tocbot";
 
 // tocbot style overrides
 .uqds-toc {
@@ -23,11 +23,11 @@
     a.toc-link {
       color: core.$link;
       text-indent: -(core.$space);
-    
+
       &::before {
         width: 0;
       }
-    
+
       &:hover,
       &:focus {
         color: core.$link-hover;
@@ -64,20 +64,20 @@
         text-decoration: none;
         transition: all 0.125s ease-in;
         color: core.$text;
-    
+
         &::before {
           width: core.$space-xs;
         }
-    
+
         &:hover,
         &:focus {
           color: core.$text;
         }
       }
-    
+
       .is-active-link {
         font-weight: core.$font-weight-bold;
-    
+
         &::before {
           background-color: core.$uq-purple;
         }

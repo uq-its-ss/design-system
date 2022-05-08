@@ -7,11 +7,13 @@
 ### Installation
 
 With Yarn:
+
 ```shell
 yarn add @uqds/alert
 ```
 
 With NPM:
+
 ```shell
 npm i @uqds/alert
 ```

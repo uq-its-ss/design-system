@@ -38,5 +38,6 @@
     "@uqds/core": "^0.0.7-alpha.0",
     "@uqds/grid": "^0.0.7-alpha.0",
     "@uqds/icon": "^0.0.7-alpha.0"
-  }
+  },
+  "type": "module"
 }

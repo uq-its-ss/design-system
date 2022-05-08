@@ -1,143 +1,148 @@
 /* Pagination */
-@use '@uqds/core/src/scss/global' as core;
-@use 'global' as *;
+@use "@uqds/core/src/scss/global" as core;
+@use "global" as *;
 
 .uq-progression {
+  display: flex;
+  list-style: none;
+  margin: 0 1.5rem;
+  padding: 0 0 2rem;
+
+  &__step {
     display: flex;
+    flex: auto;
     list-style: none;
-    margin: 0 1.5rem;
-	padding: 0 0 2rem;
+    margin: 0;
+    padding: 0;
 
-	&__step {
-		display: flex;
-		flex: auto;
-		list-style: none;
-		margin: 0;
-		padding: 0;
+    &:last-of-type {
+      flex: none;
+    }
 
-		&:last-of-type {
-			flex: none;
-		}
+    .uq-progression__link {
+      &:hover {
+        background-color: core.$uq-neutral-dark40;
+        text-decoration: none;
+      }
+    }
+  }
 
-		.uq-progression__link {
-			&:hover {
-				background-color: core.$uq-neutral-dark40;
-				text-decoration: none;
-			}
-		}
-	}
+  &__step-marker {
+    display: block;
+    position: relative;
+    text-align: center;
+    width: 1.875rem;
+    @media (min-width: 640px) {
+      width: 2.5rem;
+    }
+  }
 
-	&__step-marker {
-		display: block;
-		position: relative;
-		text-align: center;
-		width: 1.875rem;
-		@media (min-width: 640px) {
-			width: 2.5rem;
-		}
-	}
-	&__link {
-		text-decoration: none;
-		&:link,
-		&:visited,
-		&:active {
-			text-decoration: none;
-		}
-		&:hover {
-			.uq-progression__step-number { 
-				background-color: core.$uq-neutral-dark40;
-				text-decoration: none;
-			}
-		}
-	}
-	&__step-number {
-		background-color: core.$uq-neutral-dark20;
-		border-radius: 50%;
-		color: core.$uq-white;
-		display: block;
-		height: 1.875rem;
-		line-height: 1.875rem;
-		position: relative;
-		text-align: center;
-		width: 1.875rem;
-		@media (min-width: 640px) {
-			height: 2.5rem;
-			line-height: 2.5rem;
-			width: 2.5rem;
-		}
-	}
-	&__step-label {
-		display: none;
-		@media (min-width: 640px) {
-			color: core.$uq-neutral-dark80;
-			display: block;
-			line-height: 1.2;
-			position: absolute;
-			top: 2.75rem;
-			left: 50%;
-			transform: translateX(-50%);
-			margin: 0 auto;
-			text-align: center;
-			white-space: nowrap;
-		}
-	}
+  &__link {
+    text-decoration: none;
 
-	&__bar {
-		background-color: core.$uq-neutral;
-		border-right: 1px solid core.$uq-white;
-		border-left: 1px solid core.$uq-white;
-		display: flex;
-		flex: 1;
-		height: 10px;
-		height: .625rem;
-		margin: 10px 0;
-		margin: .625rem 0;
-		@media (min-width: 640px) {
-			margin: 15px 0;
-    		margin: .9375rem 0;
-		}
-		
-		& .uq-progression__bar {
-			background-color: core.$uq-neutral-light20;
-			margin: 0;
-		}
-	}
+    &:link,
+    &:visited,
+    &:active {
+      text-decoration: none;
+    }
 
-	&__sub-step {
-		display: none;
-		@media (min-width: 640px) {
-			display: flex;
-			flex: auto;
-			list-style: none;
-			margin: 0;
-			padding: 0;
-		}
-	}
+    &:hover {
+      .uq-progression__step-number {
+        background-color: core.$uq-neutral-dark40;
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__step-number {
+    background-color: core.$uq-neutral-dark20;
+    border-radius: 50%;
+    color: core.$uq-white;
+    display: block;
+    height: 1.875rem;
+    line-height: 1.875rem;
+    position: relative;
+    text-align: center;
+    width: 1.875rem;
+    @media (min-width: 640px) {
+      height: 2.5rem;
+      line-height: 2.5rem;
+      width: 2.5rem;
+    }
+  }
+
+  &__step-label {
+    display: none;
+    @media (min-width: 640px) {
+      color: core.$uq-neutral-dark80;
+      display: block;
+      line-height: 1.2;
+      position: absolute;
+      top: 2.75rem;
+      left: 50%;
+      transform: translateX(-50%);
+      margin: 0 auto;
+      text-align: center;
+      white-space: nowrap;
+    }
+  }
+
+  &__bar {
+    background-color: core.$uq-neutral;
+    border-right: 1px solid core.$uq-white;
+    border-left: 1px solid core.$uq-white;
+    display: flex;
+    flex: 1;
+    height: 10px;
+    height: 0.625rem;
+    margin: 10px 0;
+    margin: 0.625rem 0;
+    @media (min-width: 640px) {
+      margin: 15px 0;
+      margin: 0.9375rem 0;
+    }
+
+    & .uq-progression__bar {
+      background-color: core.$uq-neutral-light20;
+      margin: 0;
+    }
+  }
+
+  &__sub-step {
+    display: none;
+    @media (min-width: 640px) {
+      display: flex;
+      flex: auto;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+  }
 }
 
 .is-complete {
-	.uq-progression__step-number, 
-	.uq-progression__link .uq-progression__step-number, 
-	.uq-progression__bar {
-		background-color: core.$uq-green;
-		color: core.$uq-white;
-	}
+  .uq-progression__step-number,
+  .uq-progression__link .uq-progression__step-number,
+  .uq-progression__bar {
+    background-color: core.$uq-green;
+    color: core.$uq-white;
+  }
 
-	.uq-progression__step .uq-progression__link:hover, 
-	.uq-progression__link:hover .uq-progression__step-number {
-		background-color: darken(core.$uq-green, 10%);
-		text-decoration: none;
-	}
+  .uq-progression__step .uq-progression__link:hover,
+  .uq-progression__link:hover .uq-progression__step-number {
+    background-color: darken(core.$uq-green, 10%);
+    text-decoration: none;
+  }
 }
 
 .uq-progression__bar {
+  .uq-progression__bar {
+    background-color: core.$uq-neutral-light20;
+    color: core.$uq-white;
+  }
 
-	.uq-progression__bar {
-		background-color: core.$uq-neutral-light20;
-		color: core.$uq-white;
-	}
-	.is-complete {
-		background-color: core.$uq-green !important;
-		color: core.$uq-white;
-	}
+  .is-complete {
+    background-color: core.$uq-green !important;
+    color: core.$uq-white;
+  }
 }

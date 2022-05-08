@@ -30,81 +30,81 @@ class MainNavigation {
     const subNavItems = this.nav.querySelectorAll(`.${this.subNavClass}`);
     const subNavLinks = this.nav.querySelectorAll(`.${this.subNavClass} > a`);
     const subNavL2Items = this.nav.querySelectorAll(
-      `.${this.level2Class} .${this.subNavClass}`,
+      `.${this.level2Class} .${this.subNavClass}`
     );
     const subNavL2Links = this.nav.querySelectorAll(
-      `.${this.level2Class} .${this.subNavClass} > a`,
+      `.${this.level2Class} .${this.subNavClass} > a`
     );
-    const navLinks = this.nav.querySelectorAll('li > a');
+    const navLinks = this.nav.querySelectorAll("li > a");
     const subNavToggles = this.nav.querySelectorAll(`.${this.subToggleClass}`);
 
-    mobileToggle.addEventListener('click', this.handleMobileToggle);
+    mobileToggle.addEventListener("click", this.handleMobileToggle);
 
-    subNavItems.forEach((item) => {
+    subNavItems.forEach(item => {
       this.setOrientation(item);
-      item.addEventListener('mouseenter', this.handleToggle);
-      item.addEventListener('mouseleave', this.handleToggle);
+      item.addEventListener("mouseenter", this.handleToggle);
+      item.addEventListener("mouseleave", this.handleToggle);
     });
 
-    subNavLinks.forEach((item) => {
-      if (window.matchMedia('(min-width: 1024px)').matches) {
-        item.addEventListener('touchend', this.handleToggle);
+    subNavLinks.forEach(item => {
+      if (window.matchMedia("(min-width: 1024px)").matches) {
+        item.addEventListener("touchend", this.handleToggle);
       }
     });
 
-    subNavL2Items.forEach((item) => {
+    subNavL2Items.forEach(item => {
       this.setOrientation(item);
-      item.addEventListener('mouseenter', this.handleToggle);
-      item.addEventListener('mouseleave', this.handleToggle);
+      item.addEventListener("mouseenter", this.handleToggle);
+      item.addEventListener("mouseleave", this.handleToggle);
     });
 
-    subNavL2Links.forEach((item) => {
-      item.addEventListener('touchend', this.handleToggle);
+    subNavL2Links.forEach(item => {
+      item.addEventListener("touchend", this.handleToggle);
     });
 
-    navLinks.forEach((item) => {
-      item.addEventListener('keydown', this.handleKeyPress);
+    navLinks.forEach(item => {
+      item.addEventListener("keydown", this.handleKeyPress);
     });
 
-    subNavToggles.forEach((item) => {
-      item.addEventListener('click', this.handleToggle);
+    subNavToggles.forEach(item => {
+      item.addEventListener("click", this.handleToggle);
     });
   }
 
   handleMobileToggle(event) {
     const toggle = event.target;
     const target = this.nav.querySelectorAll(`.${this.level1Class}`);
-    const ariaExpanded = toggle.getAttribute('aria-expanded') === 'true';
-    const ariaPressed = toggle.getAttribute('aria-pressed') === 'true';
+    const ariaExpanded = toggle.getAttribute("aria-expanded") === "true";
+    const ariaPressed = toggle.getAttribute("aria-pressed") === "true";
 
     toggle.classList.toggle(`${this.navClass}-toggle--close`);
-    toggle.setAttribute('aria-expanded', !ariaExpanded);
-    toggle.setAttribute('aria-pressed', !ariaPressed);
+    toggle.setAttribute("aria-expanded", !ariaExpanded);
+    toggle.setAttribute("aria-pressed", !ariaPressed);
 
-    target.forEach((el) => {
+    target.forEach(el => {
       el.classList.toggle(this.openModifier);
-      el.setAttribute('aria-expanded', !ariaExpanded);
-      el.setAttribute('aria-pressed', !ariaPressed);
+      el.setAttribute("aria-expanded", !ariaExpanded);
+      el.setAttribute("aria-pressed", !ariaPressed);
     });
   }
 
   handleToggle(event) {
     if (
-      (event.type === 'mouseenter' || event.type === 'mouseleave') &&
-      window.matchMedia('(max-width: 1024px)').matches
+      (event.type === "mouseenter" || event.type === "mouseleave") &&
+      window.matchMedia("(max-width: 1024px)").matches
     ) {
       return;
     }
     let menuItem = event.target;
-    if (menuItem.tagName !== 'LI') {
+    if (menuItem.tagName !== "LI") {
       menuItem = menuItem.parentElement;
     }
-    const subNav = menuItem.querySelector('ul');
+    const subNav = menuItem.querySelector("ul");
 
     if (subNav.classList.contains(this.openModifier)) {
       this.closeLevel(subNav, menuItem);
     } else {
-      if (event.type === 'touchend') {
+      if (event.type === "touchend") {
         event.preventDefault();
       }
       this.closeAllLevels();
@@ -115,31 +115,39 @@ class MainNavigation {
   openLevel(subNav, menuItem) {
     subNav.classList.add(this.openModifier);
     menuItem.classList.add(this.levelOpenModifier);
-    menuItem.querySelector('a').setAttribute('aria-expanded', 'true');
-    menuItem.querySelector('button').setAttribute('aria-expanded', 'true');
-    menuItem.querySelector('button').setAttribute('aria-pressed', 'true');
+    menuItem.querySelector("a").setAttribute("aria-expanded", "true");
+    menuItem.querySelector("button").setAttribute("aria-expanded", "true");
+    menuItem.querySelector("button").setAttribute("aria-pressed", "true");
   }
 
   closeLevel(subNav, menuItem) {
     subNav.classList.remove(this.openModifier);
     this.setOrientation(menuItem);
     menuItem.classList.remove(this.levelOpenModifier);
-    menuItem.querySelector('a').setAttribute('aria-expanded', 'false');
-    menuItem.querySelector('button').setAttribute('aria-expanded', 'false');
-    menuItem.querySelector('button').setAttribute('aria-pressed', 'false');
-    menuItem.parentNode.querySelector('ul').setAttribute('aria-expanded', 'false');
-    menuItem.parentNode.querySelector('ul').setAttribute('aria-pressed', 'false');
+    menuItem.querySelector("a").setAttribute("aria-expanded", "false");
+    menuItem.querySelector("button").setAttribute("aria-expanded", "false");
+    menuItem.querySelector("button").setAttribute("aria-pressed", "false");
+    menuItem.parentNode
+      .querySelector("ul")
+      .setAttribute("aria-expanded", "false");
+    menuItem.parentNode
+      .querySelector("ul")
+      .setAttribute("aria-pressed", "false");
   }
 
   closeNav(menuItem) {
     menuItem.classList.remove(this.openModifier);
-    menuItem.parentNode.querySelector('ul').setAttribute('aria-expanded', 'false');
-    menuItem.parentNode.querySelector('ul').setAttribute('aria-pressed', 'false');
+    menuItem.parentNode
+      .querySelector("ul")
+      .setAttribute("aria-expanded", "false");
+    menuItem.parentNode
+      .querySelector("ul")
+      .setAttribute("aria-pressed", "false");
   }
 
   closeAllLevels() {
     const levels = this.nav.querySelectorAll(`.${this.subNavClass}`);
-    levels.forEach((level) => {
+    levels.forEach(level => {
       const item = level.querySelector(`.${this.level2Class}`);
       this.closeLevel(item, level);
     });
@@ -162,31 +170,31 @@ class MainNavigation {
     const parent = event.currentTarget.parentNode;
     const nav = parent.parentNode;
     const mobileToggle = document.querySelector(`.${this.toggleClass}`);
-    
+
     if (parent === nav.firstElementChild) {
       // If we shift tab past the first child, toggle this level.
-      if (event.key === 'Tab' && event.shiftKey === true) {
+      if (event.key === "Tab" && event.shiftKey === true) {
         if (nav.classList.contains(this.level2Class)) {
           this.closeLevel(nav, nav.parentNode, subNav);
           nav.parentNode.classList.remove(this.levelOpenModifier);
         } else {
-          this.closeNav(nav);  
+          this.closeNav(nav);
           mobileToggle.classList.toggle(`${this.navClass}-toggle--close`);
-          mobileToggle.setAttribute('aria-expanded', 'false');
-          mobileToggle.setAttribute('aria-pressed', 'false');
+          mobileToggle.setAttribute("aria-expanded", "false");
+          mobileToggle.setAttribute("aria-pressed", "false");
         }
       }
     } else if (parent === nav.lastElementChild) {
       // If we tab past the last child, toggle this level.
-      if (event.key === 'Tab' && event.shiftKey === false) {
+      if (event.key === "Tab" && event.shiftKey === false) {
         if (nav.classList.contains(this.level2Class)) {
           this.closeLevel(nav, nav.parentNode);
           nav.parentNode.classList.remove(this.levelOpenModifier);
         } else {
-          this.closeNav(nav);  
+          this.closeNav(nav);
           mobileToggle.classList.toggle(`${this.navClass}-toggle--close`);
-          mobileToggle.setAttribute('aria-expanded', 'false');
-          mobileToggle.setAttribute('aria-pressed', 'false');  
+          mobileToggle.setAttribute("aria-expanded", "false");
+          mobileToggle.setAttribute("aria-pressed", "false");
         }
       }
     }
@@ -207,4 +215,4 @@ class MainNavigation {
   }
 }
 
-export {MainNavigation as default};
+export { MainNavigation as default };

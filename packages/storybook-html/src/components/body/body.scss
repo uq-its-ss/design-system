@@ -1,5 +1,6 @@
-@use '@uqds/core/src/scss/global' as core;
-@use '@uqds/grid/src/scss/global' as grid;
+@use "@uqds/core/src/scss/global" as core;
+@use "@uqds/grid/src/scss/global" as grid;
+
 // @use '@uqds/body/src/scss/_component' as body with (
 //   $use-encapsulation: true
 // );
@@ -46,6 +47,6 @@
       text-align: left;
       padding-right: 2rem;
       white-space: nowrap;
-    } 
+    }
   }
 }

@@ -1,32 +1,36 @@
-@use '@uqds/core/src/scss/global' as core;
-@use '@uqds/body/src/scss/global' as body;
+@use "@uqds/core/src/scss/global" as core;
+@use "@uqds/body/src/scss/global" as body;
 @use "@material/circular-progress/mdc-circular-progress";
 @use "@material/circular-progress/mixins" as mdc-circular-progress-mixins;
-@use 'global' as *;
-@use 'icons' as *;
+@use "global" as *;
+@use "icons" as *;
 
 $-icon-width: 1.75rem;
 $-icon-height: $-icon-width;
 $-icon-spacing: 1.125rem * 0.5;
-
 $-icon-button-icon-height: $-icon-width;
 $-icon-button-icon-width: $-icon-height;
 $-icon-button-icon-spacing: $-icon-spacing;
 $-icon-button-height: $-icon-button-icon-height + $-icon-button-icon-spacing * 2;
 $-icon-button-width: $-icon-button-height;
-
 $-result-icon-height: $-icon-height;
 $-result-icon-width: $-icon-width;
 $-result-icon-spacing: $-icon-spacing;
 
 %uq-maps {
   /* ------------------------ */
+
   /* Package core             */
+
   /* ------------------------ */
   &__box-sizing {
     box-sizing: border-box;
-    
-    &::before, &::after, *, *::before, *::after {
+
+    &::before,
+    &::after,
+    *,
+    *::before,
+    *::after {
       box-sizing: border-box;
     }
   }
@@ -37,6 +41,7 @@ $-result-icon-spacing: $-icon-spacing;
     font-size: core.$font-size-s;
     font-weight: core.$font-weight-normal;
     line-height: core.$line-height;
+
     // letter-spacing: 0.5px;
 
     a {
@@ -55,7 +60,9 @@ $-result-icon-spacing: $-icon-spacing;
   }
 
   /* ------------------------ */
+
   /* Circular icon button     */
+
   /* ------------------------ */
 
   &__icon-button {
@@ -76,11 +83,11 @@ $-result-icon-spacing: $-icon-spacing;
     width: $-icon-button-width;
 
     &:hover {
-      background-color: rgba(core.$uq-black, .04);
+      background-color: rgb(core.$uq-black 0.04);
     }
 
     &:active {
-      background-color: rgba(core.$uq-black, .07);
+      background-color: rgb(core.$uq-black 0.07);
     }
 
     &:focus {
@@ -89,10 +96,12 @@ $-result-icon-spacing: $-icon-spacing;
     }
   }
 }
- 
+
 .uq-maps {
   /* ------------------------ */
+
   /* Search field             */
+
   /* ------------------------ */
 
   &__search-field {
@@ -104,25 +113,25 @@ $-result-icon-spacing: $-icon-spacing;
     align-items: center;
     background-color: core.$uq-white;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, .08),
-                0 8px 16px rgba(0, 0, 0, .16);
+    box-shadow: 0 4px 8px rgb(0 0 0 / 8%), 0 8px 16px rgb(0 0 0 / 16%);
     display: flex;
     margin: core.$space;
     overflow: hidden;
     position: relative;
-    transition: height .6s;
+    transition: height 0.6s;
     white-space: nowrap;
 
     &__label {
       @include body.visually-hidden;
     }
 
-    input[type=text].uq-maps__search-field__input {
+    input[type="text"].uq-maps__search-field__input {
       @extend %uq-maps__primary-text;
 
       appearance: none;
-      background-image: url(get-icon('ui--search'));
-      background-position: core.$space-s + ($-icon-button-width - $-icon-button-icon-width) * 0.5 center;
+      background-image: url(get-icon("ui--search"));
+      background-position: core.$space-s +
+        ($-icon-button-width - $-icon-button-icon-width) * 0.5 center;
       background-color: transparent;
       background-repeat: no-repeat;
       background-size: $-icon-button-icon-height $-icon-button-icon-width;
@@ -156,20 +165,26 @@ $-result-icon-spacing: $-icon-spacing;
     }
 
     &__back {
-      background-image: url(get-icon('ui--arrow-left'));
+      background-image: url(get-icon("ui--arrow-left"));
       margin-left: core.$space-s;
 
       &:hover {
-        background-image: url(get-icon('ui--arrow-left', darken(core.$uq-purple, 10%)));
+        background-image: url(get-icon(
+          "ui--arrow-left",
+          darken(core.$uq-purple, 10%)
+        ));
       }
     }
 
     &__clear {
-      background-image: url(get-icon('ui--close'));
+      background-image: url(get-icon("ui--close"));
       margin-right: core.$space-s;
 
       &:hover {
-        background-image: url(get-icon('ui--close', darken(core.$uq-purple, 10%)));
+        background-image: url(get-icon(
+          "ui--close",
+          darken(core.$uq-purple, 10%)
+        ));
       }
     }
 
@@ -183,12 +198,15 @@ $-result-icon-spacing: $-icon-spacing;
       white-space: nowrap;
       width: $-icon-button-width;
 
-      *, *::before, *::after {
+      *,
+      *::before,
+      *::after {
         box-sizing: content-box;
       }
 
       .mdc-circular-progress {
         @include mdc-circular-progress-mixins.color(core.$uq-purple);
+
         flex-grow: 0;
         flex-shrink: 0;
       }
@@ -219,7 +237,7 @@ $-result-icon-spacing: $-icon-spacing;
     &--is-focused,
     &--is-searching,
     &--is-working {
-      input[type=text].uq-maps__search-field__input {
+      input[type="text"].uq-maps__search-field__input {
         background: transparent;
         padding: 0 core.$space-s;
       }
@@ -227,7 +245,9 @@ $-result-icon-spacing: $-icon-spacing;
   }
 
   /* ------------------------ */
+
   /* Wayfinding control       */
+
   /* ------------------------ */
 
   &__wayfinding-controls {
@@ -240,8 +260,8 @@ $-result-icon-spacing: $-icon-spacing;
     padding: core.$space 0;
     border-radius: 8px;
     background-color: core.$uq-white;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08),
-                0px 8px 16px rgba(0, 0, 0, 0.16);
+    box-shadow: 0 4px 8px rgb(0 0 0 / 8%),
+      0 8px 16px rgb(0 0 0 / 16%);
     overflow: hidden;
     position: relative;
 
@@ -274,8 +294,8 @@ $-result-icon-spacing: $-icon-spacing;
       outline: 0 none;
       padding: core.$space-s core.$space;
       transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
-                  box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
-                  border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+        box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+        border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
       user-select: none;
       flex-grow: 1;
 
@@ -289,31 +309,38 @@ $-result-icon-spacing: $-icon-spacing;
       }
 
       &--placeholder {
-        color: rgba(core.$text, 0.72);
+        color: rgb(core.$text 0.72);
       }
     }
 
     &__back,
     &__swap {
       @extend %uq-maps__icon-button;
+
       flex-grow: 0;
       flex-shrink: 0;
       margin-left: core.$space-s;
     }
 
     &__back {
-      background-image: url(get-icon('ui--arrow-left'));
+      background-image: url(get-icon("ui--arrow-left"));
 
       &:hover {
-        background-image: url(get-icon('ui--arrow-left', darken(core.$uq-purple, 10%)));
+        background-image: url(get-icon(
+          "ui--arrow-left",
+          darken(core.$uq-purple, 10%)
+        ));
       }
     }
 
     &__swap {
-      background-image: url(get-icon('ui--swap'));
+      background-image: url(get-icon("ui--swap"));
 
       &:hover {
-        background-image: url(get-icon('ui--swap', darken(core.$uq-purple, 10%)));
+        background-image: url(get-icon(
+          "ui--swap",
+          darken(core.$uq-purple, 10%)
+        ));
       }
     }
 
@@ -325,7 +352,7 @@ $-result-icon-spacing: $-icon-spacing;
       padding: core.$space-s 0;
       white-space: nowrap;
 
-      input[type=checkbox].uq-maps__wayfinding-controls__stairs-toggle__input {
+      input[type="checkbox"].uq-maps__wayfinding-controls__stairs-toggle__input {
         appearance: none;
         border-radius: 4px;
         position: relative;
@@ -376,7 +403,7 @@ $-result-icon-spacing: $-icon-spacing;
     }
 
     &__decoration {
-      background-image: url(get-icon('ui--wayfinding-deco', core.$uq-green));
+      background-image: url(get-icon("ui--wayfinding-deco", core.$uq-green));
       background-repeat: no-repeat;
       background-position: center core.$space;
       background-size: auto 50%;
@@ -397,12 +424,15 @@ $-result-icon-spacing: $-icon-spacing;
       white-space: nowrap;
       width: $-icon-button-width;
 
-      *, *::before, *::after {
+      *,
+      *::before,
+      *::after {
         box-sizing: content-box;
       }
 
       .mdc-circular-progress {
         @include mdc-circular-progress-mixins.color(core.$uq-green);
+
         flex-grow: 0;
         flex-shrink: 0;
       }
@@ -420,7 +450,9 @@ $-result-icon-spacing: $-icon-spacing;
   }
 
   /* ------------------------------ */
+
   /* Search combo menu              */
+
   /* ------------------------------ */
 
   &__search {
@@ -447,8 +479,8 @@ $-result-icon-spacing: $-icon-spacing;
       margin: core.$space core.$space-m 0 (core.$space-m + $-icon-spacing);
 
       &::before {
-        background-image: url(get-icon('ui--nav-right', core.$uq-purple));
-        content: '';
+        background-image: url(get-icon("ui--nav-right", core.$uq-purple));
+        content: "";
         display: inline-block;
         height: core.$font-size-xxs;
         width: core.$font-size-xxs;
@@ -489,10 +521,12 @@ $-result-icon-spacing: $-icon-spacing;
         }
 
         &__text {
-          margin: 0 0 0 ($-icon-spacing * 2 + $-result-icon-height + core.$space-s);
+          margin: 0 0 0
+            ($-icon-spacing * 2 + $-result-icon-height + core.$space-s);
           flex-grow: 1;
 
-          > span, > small {
+          > span,
+          > small {
             display: block;
           }
 
@@ -516,7 +550,7 @@ $-result-icon-spacing: $-icon-spacing;
 
         &--view-all {
           position: relative;
-          
+
           > a {
             color: core.$uq-purple;
           }
@@ -526,11 +560,11 @@ $-result-icon-spacing: $-icon-spacing;
             left: core.$space-m + $-result-icon-spacing;
             top: 50%;
             margin-top: -($-result-icon-height * 0.5);
-            background-image: url(get-icon('ui--map-pin', core.$uq-purple));
+            background-image: url(get-icon("ui--map-pin", core.$uq-purple));
             background-position: center;
             background-repeat: no-repeat;
             background-size: $-result-icon-height $-result-icon-width;
-            content: '';
+            content: "";
             height: $-result-icon-height;
             width: $-result-icon-width;
           }
@@ -547,24 +581,30 @@ $-result-icon-spacing: $-icon-spacing;
             right: core.$space-m + ($-icon-button-width - $width) * 0.5;
             top: 50%;
             margin-top: -($height * 0.5);
-            background-image: url(get-icon('ui--chevron-right', core.$uq-neutral));
+            background-image: url(get-icon(
+              "ui--chevron-right",
+              core.$uq-neutral
+            ));
             background-position: center;
             background-repeat: no-repeat;
             background-size: $height $width;
-            content: '';
+            content: "";
             height: $height;
             width: $width;
           }
 
           &:hover {
             &::after {
-              background-image: url(get-icon('ui--chevron-right', core.$uq-neutral-dark20));
+              background-image: url(get-icon(
+                "ui--chevron-right",
+                core.$uq-neutral-dark20
+              ));
             }
           }
 
           &:focus-within {
             &::after {
-              background-image: url(get-icon('ui--chevron-right', core.$link));
+              background-image: url(get-icon("ui--chevron-right", core.$link));
             }
           }
 
@@ -601,7 +641,9 @@ $-result-icon-spacing: $-icon-spacing;
   }
 
   /* ------------------------ */
+
   /* Live data indicator      */
+
   /* ------------------------ */
 
   @keyframes glow {
@@ -609,6 +651,7 @@ $-result-icon-spacing: $-icon-spacing;
       opacity: 0.75;
       transform: scale(1);
     }
+
     100% {
       opacity: 0;
       transform: scale(2);
@@ -619,21 +662,21 @@ $-result-icon-spacing: $-icon-spacing;
     position: relative;
     display: inline-block;
     margin-right: core.$space-xs;
-    height: .5rem;
-    width: .5rem;
+    height: 0.5rem;
+    width: 0.5rem;
 
     &::before,
     &::after {
       // can be coloured using the 'color' property to allow for easy dynamic colouring
-      background-color: currentColor;
+      background-color: currentcolor;
       border-radius: 50%;
-      content: '';
+      content: "";
       display: inline-block;
       position: absolute;
       top: 0;
       left: 0;
-      height: .5rem;
-      width: .5rem;
+      height: 0.5rem;
+      width: 0.5rem;
     }
 
     &::before {
@@ -666,9 +709,11 @@ $-result-icon-spacing: $-icon-spacing;
   }
 
   /* ------------------------ */
+
   /* Slide out drawer         */
+
   /* ------------------------ */
-  
+
   &__drawer {
     $actions-allowance: 3rem;
 
@@ -687,7 +732,7 @@ $-result-icon-spacing: $-icon-spacing;
       &__close {
         @extend %uq-maps__icon-button;
 
-        background-image: url(get-icon('ui--arrow-down'));
+        background-image: url(get-icon("ui--arrow-down"));
       }
     }
 
@@ -697,16 +742,30 @@ $-result-icon-spacing: $-icon-spacing;
     }
 
     &__main {
-      background-image: linear-gradient(to bottom, core.$uq-white, rgba(core.$uq-white, 0)),
-                        linear-gradient(to top, core.$uq-white, rgba(core.$uq-white, 0)),
-                        linear-gradient(to bottom, core.$uq-neutral-light80, rgba(core.$uq-neutral-light80, 0)),
-                        linear-gradient(to top, core.$uq-neutral-light80, rgba(core.$uq-neutral-light80, 0));
+      background-image: linear-gradient(
+          to bottom,
+          core.$uq-white,
+          rgb(core.$uq-white 0)
+        ),
+        linear-gradient(to top, core.$uq-white, rgb(core.$uq-white 0)),
+        linear-gradient(
+          to bottom,
+          core.$uq-neutral-light80,
+          rgb(core.$uq-neutral-light80 0)
+        ),
+        linear-gradient(
+          to top,
+          core.$uq-neutral-light80,
+          rgb(core.$uq-neutral-light80 0)
+        );
       background-position: 0 0, 0 100%, 0 0, 0 100%;
       background-repeat: no-repeat;
       background-color: core.$uq-white;
       background-size: 100% 4rem, 100% 4rem, 100% 1rem, 100% 1rem;
       background-attachment: local, local, scroll, scroll;
-      height: calc(100% - #{$actions-allowance + $-icon-button-height + core.$space-m * 2});
+      height: calc(
+        100% - #{$actions-allowance + $-icon-button-height + core.$space-m * 2}
+      );
       margin-bottom: core.$space-m;
       overflow-y: auto;
       overflow-x: hidden;
@@ -727,14 +786,16 @@ $-result-icon-spacing: $-icon-spacing;
   }
 
   /* ------------------------ */
+
   /* Badge (UQ icon)          */
+
   /* ------------------------ */
 
   &__badge {
     $icon-size: 1.75rem;
 
     appearance: none;
-    background-image: url(get-icon('logo--uq-shield'));
+    background-image: url(get-icon("logo--uq-shield"));
     background-size: $icon-size;
     background-color: transparent;
     background-repeat: no-repeat;
@@ -745,6 +806,6 @@ $-result-icon-spacing: $-icon-spacing;
     width: $icon-size;
     margin: core.$space;
     overflow: hidden;
-    text-indent: -9999px;   
+    text-indent: -9999px;
   }
 }

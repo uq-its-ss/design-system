@@ -1,90 +1,97 @@
 /* Pagination */
-@use '@uqds/core/src/scss/global' as core;
+@use "@uqds/core/src/scss/global" as core;
 @use "@uqds/icon/src/scss/global" as icon-constants;
-@use 'global' as *;
+@use "global" as *;
 
 .uq-previous-next {
+  &__item {
+    width: 100%;
+    float: left;
+    @media (min-width: 640px) {
+      width: 50%;
+    }
 
-	&__item {
-		width: 100%;
-		float: left;
-		@media (min-width: 640px) {
-			width: 50%;
-		}
-		&--hidden {
-			visibility: hidden;
-		}
-	}
+    &--hidden {
+      visibility: hidden;
+    }
+  }
 
-	&__item + &__item {
-		float: right;
-	}
+  &__item + &__item {
+    float: right;
+  }
 
-	&::after {
-		content: "";
-    	display: block;
-    	clear: both;
-	}
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
 
-	a {
-		color: core.$link;
-		font-size: 1.7rem;
-		font-weight: 400;
-		line-height: 1.2;
-		text-decoration: none;
+  a {
+    color: core.$link;
+    font-size: 1.7rem;
+    font-weight: 400;
+    line-height: 1.2;
+    text-decoration: none;
 
-		&:hover {
-			color: core.$link-hover;
-			text-decoration: none;
+    &:hover {
+      color: core.$link-hover;
+      text-decoration: none;
 
-			&::before {
-				transform: translate(-10px, 0);
-			}
-			&::after {
-				transform: translate(10px, 0);
-			}
-		}
-	}
+      &::before {
+        transform: translate(-10px, 0);
+      }
 
-	&__link-previous {
-		position: relative;
-		padding-left: core.$space-xxl;
-		float: left;
+      &::after {
+        transform: translate(10px, 0);
+      }
+    }
+  }
 
-		&::before {
-			content: url(icon-constants.get-icon('standard--arrow-left-1', core.$uq-neutral));
-			width: 3rem;
-			display: inline-block;
-			position: absolute;
-			left: 0;
-			top: 0;
-			transform: translate(0, 0);
-			transition: all ease .2s;
-		} 
-	}
+  &__link-previous {
+    position: relative;
+    padding-left: core.$space-xxl;
+    float: left;
 
-	&__link-next {
-		position: relative;
-		padding-right: core.$space-xxl;
-		text-align: right;
-		float: right;
+    &::before {
+      content: url(icon-constants.get-icon(
+        "standard--arrow-left-1",
+        core.$uq-neutral
+      ));
+      width: 3rem;
+      display: inline-block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      transform: translate(0, 0);
+      transition: all ease 0.2s;
+    }
+  }
 
-		&::after {
-			content: url(icon-constants.get-icon('standard--arrow-right-1', core.$uq-neutral));
-			width: 3rem;
-			display: inline-block;
-			position: absolute;
-			right: 0;
-			top: 0;
-			transform: translate(0, 0);
-			transition: all ease .2s;
-		}
-	}
-	
-	&__description {
-		display: block;
-		font-size: 1rem;
-		font-style: italic;
-		font-weight: 300;
-	}
+  &__link-next {
+    position: relative;
+    padding-right: core.$space-xxl;
+    text-align: right;
+    float: right;
+
+    &::after {
+      content: url(icon-constants.get-icon(
+        "standard--arrow-right-1",
+        core.$uq-neutral
+      ));
+      width: 3rem;
+      display: inline-block;
+      position: absolute;
+      right: 0;
+      top: 0;
+      transform: translate(0, 0);
+      transition: all ease 0.2s;
+    }
+  }
+
+  &__description {
+    display: block;
+    font-size: 1rem;
+    font-style: italic;
+    font-weight: 300;
+  }
 }

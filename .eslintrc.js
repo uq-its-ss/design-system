@@ -1,5 +1,11 @@
 module.exports = {
-  globals: {},
+  globals: {
+    describe: true,
+    it: true,
+    beforeEach: true,
+    afterEach: true,
+    expect: true
+  },
   parser: "@babel/eslint-parser",
   extends: ["prettier"],
   plugins: ["jest-dom", "testing-library", "unused-imports", "import"],
@@ -26,7 +32,7 @@ module.exports = {
       "error",
       {
         devDependencies: [
-          "packages/**/tests/**/*.test.js",
+          "packages/**/src/__tests__/*.test.js",
           "tests/jest/*.js",
           "packages/storybook-html/src/**/*.stories.js",
           "packages/storybook-html/src/**/examples/*.js",

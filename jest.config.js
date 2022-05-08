@@ -11,12 +11,15 @@ module.exports = {
   moduleNameMapper: {
     "^.+\\.css$": "identity-obj-proxy",
     "@uqds/(.*)$": "<rootDir>/packages/$1",
+    "@design-system-output/(.*)$": "<rootDir>/packages/storybook-html/src/components/$1"
   },
   transform: {
     "^.+\\.jsx?$": "babel-jest",
+    "^.+\\.html$": "<rootDir>/tests/jest/html-transform.js",
   },
   setupFilesAfterEnv: [
     "<rootDir>/tests/jest/testing-library-jest-dom.js",
     "<rootDir>/tests/jest/jest-axe.js",
+    "<rootDir>/tests/jest/jest-dom.js",
   ],
 };

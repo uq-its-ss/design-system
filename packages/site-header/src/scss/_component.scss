@@ -81,10 +81,7 @@
     }
 
     &::before {
-      background-image: url(icon-constants.get-icon(
-        "standard--navigation-menu",
-        core.$uq-purple
-      ));
+      background-image: url('icon-constants.get-icon("standard--navigation-menu", core.$uq-purple)');
       background-size: 100%;
       content: "";
       display: block;
@@ -97,10 +94,7 @@
 
     &--close {
       &::before {
-        background-image: url(icon-constants.get-icon(
-          "standard--close",
-          core.$uq-purple
-        ));
+        background-image: url('icon-constants.get-icon("standard--close", core.$uq-purple)');
       }
     }
 
@@ -116,7 +110,7 @@
     position: relative;
 
     @media #{core.$screen-lg-up} {
-      //@include grid.layout-containment;
+      // @include grid.layout-containment;
       margin-left: auto;
       margin-right: auto;
       max-width: 73.25rem;
@@ -125,7 +119,7 @@
 
   &__navigation {
     a {
-      //border-bottom: 1px solid $nav-dropdown-divider;
+      // border-bottom: 1px solid $nav-dropdown-divider;
       color: core.$uq-purple;
       display: block;
       padding: core.$space core.$space;
@@ -134,19 +128,19 @@
 
       &:hover,
       &:focus {
-        //background-color: $nav-primary-active-bg;
+        // background-color: $nav-primary-active-bg;
         text-decoration: underline;
 
         @media #{core.$screen-lg-up} {
           outline: 0 none;
           text-decoration: none;
 
-          //border-color: $nav-primary-active-bg;
+          // border-color: $nav-primary-active-bg;
         }
       }
 
       @media #{core.$screen-lg-up} {
-        //border-bottom: 4px solid #fff;
+        // border-bottom: 4px solid #fff;
       }
     }
 
@@ -212,7 +206,7 @@
         }
 
         a {
-          //border-bottom: 1px solid $nav-dropdown-divider;
+          // border-bottom: 1px solid $nav-dropdown-divider;
           padding-left: core.$space-xxl;
           padding-top: 0.75rem;
           padding-bottom: 0;
@@ -235,20 +229,14 @@
 
         &--open {
           > a {
-            //background-color: $nav-primary-active-bg;
+            // background-color: $nav-primary-active-bg;
           }
 
           .uq-site-header__navigation__sub-toggle {
-            background-image: url(icon-constants.get-icon(
-              "standard--chevron-up-sml",
-              core.$uq-purple
-            ));
+            background-image: url('icon-constants.get-icon("standard--chevron-up-sml", core.$uq-purple)');
 
             @media #{core.$screen-lg-up} {
-              background-image: url(icon-constants.get-icon(
-                "standard--chevron-down-sml",
-                core.$uq-purple
-              ));
+              background-image: url('icon-constants.get-icon("standard--chevron-down-sml", core.$uq-purple)');
             }
           }
         }
@@ -290,10 +278,7 @@
       border: 0;
       border-left: 1px solid $nav-dropdown-divider;
       text-indent: -100vw;
-      background-image: url(icon-constants.get-icon(
-        "standard--chevron-down-sml",
-        core.$uq-purple
-      ));
+      background-image: url('icon-constants.get-icon("standard--chevron-down-sml", core.$uq-purple)');
       background-size: core.$space;
       background-position: center center;
       background-repeat: no-repeat;

@@ -36,7 +36,7 @@
   .uq-grid {
     &__col {
       > span {
-        background-color: lighten(core.$uq-aqua, 45%);
+        background-color: color.adjust(core.$uq-aqua, $lightness: 45%);
         border: 1px solid core.$uq-aqua;
         display: block;
         height: 100%;
@@ -50,27 +50,27 @@
         }
 
         @media #{core.$screen-xs-up} {
-          background-color: lighten(core.$uq-yellow, 35%);
+          background-color: color.adjust(core.$uq-yellow, $lightness: 35%);
           border-color: core.$uq-yellow;
         }
 
         @media #{core.$screen-sm-up} {
-          background-color: lighten(core.$uq-orange, 35%);
+          background-color: color.adjust(core.$uq-orange, $lightness: 35%);
           border-color: core.$uq-orange;
         }
 
         @media #{core.$screen-md-up} {
-          background-color: lighten(core.$uq-purple, 45%);
+          background-color: color.adjust(core.$uq-purple, $lightness: 45%);
           border-color: core.$uq-purple;
         }
 
         @media #{core.$screen-lg-up} {
-          background-color: lighten(core.$uq-green, 45%);
+          background-color: color.adjust(core.$uq-green, $lightness: 45%);
           border-color: core.$uq-green;
         }
 
         @media #{core.$screen-xl-up} {
-          background-color: lighten(core.$uq-blue, 40%);
+          background-color: color.adjust(core.$uq-blue, $lightness: 40%);
           border-color: core.$uq-blue;
         }
       }

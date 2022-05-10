@@ -1,7 +1,7 @@
 @use "@uqds/core/src/scss/_global" as core;
 
-$pane-border: core.$uq-neutral-light60; //eee;
-$pane-shaded-bg: core.$uq-neutral-light80; //f5f5f5;
+$pane-border: core.$uq-neutral-light60; // eee;
+$pane-shaded-bg: core.$uq-neutral-light80; // f5f5f5;
 $pane-title-color: core.$uq-purple;
 
 @mixin pane-shaded {
@@ -41,12 +41,12 @@ $pane-title-color: core.$uq-purple;
 
   .uq-pane {
     &__content {
-      padding: core.$space-m core.$space-m core.$space core.$space-m; //1.8rem 1.8rem 1rem 1.8rem
+      padding: core.$space-m core.$space-m core.$space core.$space-m; // 1.8rem 1.8rem 1rem 1.8rem
     }
 
     &__footer {
       background-color: $pane-shaded-bg;
-      padding: core.$space-m; //1.8rem;
+      padding: core.$space-m; // 1.8rem;
     }
   }
 }

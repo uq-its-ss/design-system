@@ -3,48 +3,11 @@
 @mixin table-wrapper {
   width: 100%;
   overflow-x: auto;
-  background-image: -webkit-gradient(
-      linear,
-      0% 50%,
-      100% 50%,
-      color-stop(0%, core.$uq-white),
-      color-stop(100%, rgb(255 255 255 / 0%))
-    ),
-    -webkit-gradient(linear, 100% 50%, 0% 50%, color-stop(0%, core.$uq-white), color-stop(100%, rgb(255 255 255 / 0%))),
-    -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, core.$uq-neutral-dark20), color-stop(100%, rgb(195 195 197 / 0%))),
-    -webkit-gradient(linear, 100% 50%, 0% 50%, color-stop(0%, core.$uq-neutral-dark20), color-stop(100%, rgb(195 195 197 / 0%)));
-  background-image: linear-gradient(
-      left,
-      core.$uq-white,
-      rgb(255 255 255 / 0%)
-    ),
-    linear-gradient(right, core.$uq-white, rgb(255 255 255 / 0%)),
-    linear-gradient(left, core.$uq-neutral, rgb(195 195 197 / 0%)),
-    linear-gradient(right, core.$uq-neutral, rgb(195 195 197 / 0%));
-  background-image: linear-gradient(
-      left,
-      core.$uq-white,
-      rgb(255 255 255 / 0%)
-    ),
-    linear-gradient(right, core.$uq-white, rgb(255 255 255 / 0%)),
-    linear-gradient(left, core.$uq-neutral, rgb(195 195 197 / 0%)),
-    linear-gradient(right, core.$uq-neutral, rgb(195 195 197 / 0%));
-  background-image: linear-gradient(
-      left,
-      core.$uq-white,
-      rgb(255 255 255 / 0%)
-    ),
-    linear-gradient(right, core.$uq-white, rgb(255 255 255 / 0%)),
-    linear-gradient(left, core.$uq-neutral, rgb(195 195 197 / 0%)),
-    linear-gradient(right, core.$uq-neutral, rgb(195 195 197 / 0%));
-  background-image: linear-gradient(
-      left,
-      core.$uq-white,
-      rgb(255 255 255 / 0%)
-    ),
-    linear-gradient(right, core.$uq-white, rgb(255 255 255 / 0%)),
-    linear-gradient(left, core.$uq-neutral, rgb(195 195 197 / 0%)),
-    linear-gradient(right, core.$uq-neutral, rgb(195 195 197 / 0%));
+  background-image:
+    linear-gradient(to left, core.$uq-white,rgb(255 255 255 / 0%)),
+    linear-gradient(to right, core.$uq-white, rgb(255 255 255 / 0%)),
+    linear-gradient(to left, core.$uq-neutral, rgb(195 195 197 / 0%)),
+    linear-gradient(to right, core.$uq-neutral, rgb(195 195 197 / 0%));
   background-position: 0 0, 100% 0, 0 0, 100% 0;
   background-repeat: no-repeat;
   background-color: core.$uq-white;

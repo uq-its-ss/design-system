@@ -4,7 +4,7 @@
 @use "global" as *;
 
 .uq-header {
-  background: core.$uq-purple; //linear-gradient(90deg, $uq-purple 0%, 87%, #962A8B 100%);
+  background: core.$uq-purple; // linear-gradient(90deg, $uq-purple 0%, 87%, #962A8B 100%);
   display: grid;
   align-items: center;
   grid-template-columns: auto;
@@ -90,10 +90,7 @@
 
     &::before {
       content: "";
-      background-image: url(icon-constants.get-icon(
-        "standard--navigation-menu",
-        core.$uq-white
-      ));
+      background-image: url('icon-constants.get-icon("standard--navigation-menu", core.$uq-white)');
       background-repeat: no-repeat;
       width: 1.5rem;
       height: 1.5rem;
@@ -105,10 +102,7 @@
 
     &--is-open {
       &::before {
-        background-image: url(icon-constants.get-icon(
-          "standard--x",
-          core.$uq-white
-        ));
+        background-image: url('icon-constants.get-icon("standard--x", core.$uq-white)');
       }
     }
   }
@@ -120,10 +114,7 @@
 
     &::before {
       content: "";
-      background-image: url(icon-constants.get-icon(
-        "standard--search",
-        core.$uq-white
-      ));
+      background-image: url('icon-constants.get-icon("standard--search", core.$uq-white)');
       background-repeat: no-repeat;
       width: 1.5rem;
       height: 1.5rem;
@@ -147,10 +138,7 @@
 
     &--is-open {
       &::before {
-        background-image: url(icon-constants.get-icon(
-          "standard--x",
-          core.$uq-white
-        ));
+        background-image: url('icon-constants.get-icon("standard--x", core.$uq-white)');
       }
     }
   }
@@ -228,7 +216,7 @@
 
   &__nav-primary-link {
     display: block;
-    color: core.$uq-white; //core.$uq-purple;
+    color: core.$uq-white; // core.$uq-purple;
     text-decoration: none;
     padding: core.$space core.$space-m;
     transition: background-color 0.25s, border-color 0.25s;
@@ -251,10 +239,7 @@
 
     &::after {
       content: "";
-      background-image: url(icon-constants.get-icon(
-        "standard--chevron-down-sml",
-        core.$uq-white
-      ));
+      background-image: url('icon-constants.get-icon("standard--chevron-down-sml", core.$uq-white)');
       background-repeat: no-repeat;
       width: core.$space;
       height: core.$space;
@@ -427,10 +412,7 @@
       top: core.$space-s;
       left: core.$space-s;
       background-size: 100%;
-      background-image: url(icon-constants.get-icon(
-        "standard--search",
-        core.$uq-purple
-      ));
+      background-image: url('icon-constants.get-icon("standard--search", core.$uq-purple)');
     }
   }
 
@@ -654,10 +636,7 @@ body.no-scroll {
 
     &::before {
       content: "";
-      background-image: url(icon-constants.get-icon(
-        "standard--chevron-left-sml",
-        core.$uq-purple
-      ));
+      background-image: url('icon-constants.get-icon("standard--chevron-left-sml", core.$uq-purple)');
       background-repeat: no-repeat;
       width: 1.5rem;
       height: 1.5rem;
@@ -671,10 +650,7 @@ body.no-scroll {
   &__decorator {
     &::before {
       content: "";
-      background-image: url(icon-constants.get-icon(
-        "standard--chevron-right-sml",
-        core.$uq-purple
-      ));
+      background-image: url('icon-constants.get-icon("standard--chevron-right-sml", core.$uq-purple)');
       background-repeat: no-repeat;
       width: 1.5rem;
       height: 1.5rem;
@@ -759,10 +735,7 @@ body.no-scroll {
 
   .uq-header__newglobal-nav-link .slide-menu__decorator::before {
     content: "";
-    background-image: url(icon-constants.get-icon(
-      "standard--chevron-right-sml",
-      core.$uq-white
-    ));
+    background-image: url('icon-constants.get-icon("standard--chevron-right-sml", core.$uq-white)');
   }
 }
 

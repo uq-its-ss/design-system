@@ -5,7 +5,7 @@ export default {
   title: "Deliverables/UQ Maps/5 Slide drawer",
   parameters: {
     layout: "fullscreen",
-    //viewMode: 'story',
+    // viewMode: 'story',
     previewTabs: {
       canvas: { hidden: false },
     },

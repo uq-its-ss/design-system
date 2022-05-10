@@ -69,8 +69,6 @@
 
     &-container {
       column-count: 3;
-      column-count: 3;
-      column-count: 3;
       list-style: none;
       margin-bottom: core.$space;
       padding: core.$space-none;
@@ -170,18 +168,12 @@
           width: 100%;
           height: 100%;
           background-size: 100%;
-          background-image: url(icon-constants.get-icon(
-            "standard--search",
-            core.$uq-white
-          ));
+          background-image: url('icon-constants.get-icon("standard--search", core.$uq-white)');
         }
 
         &--icon-close {
           &::before {
-            background-image: url(icon-constants.get-icon(
-              "standard--close",
-              core.$uq-white
-            ));
+            background-image: url('icon-constants.get-icon("standard--close", core.$uq-white)');
           }
         }
       }
@@ -352,10 +344,7 @@
           top: 0.5rem;
           left: 0.5rem;
           background-size: 100%;
-          background-image: url(icon-constants.get-icon(
-            "standard--search",
-            core.$uq-purple
-          ));
+          background-image: url('icon-constants.get-icon("standard--search", core.$uq-purple)');
         }
       }
 

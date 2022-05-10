@@ -5,7 +5,7 @@ export default {
   title: "Deliverables/UQ Maps/4 Search combo menu",
   parameters: {
     layout: "fullscreen",
-    //viewMode: 'story',
+    // viewMode: 'story',
     previewTabs: {
       canvas: { hidden: false },
     },

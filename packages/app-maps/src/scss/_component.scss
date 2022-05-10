@@ -129,7 +129,7 @@ $-result-icon-spacing: $-icon-spacing;
       @extend %uq-maps__primary-text;
 
       appearance: none;
-      background-image: url(get-icon("ui--search"));
+      background-image: url('get-icon("ui--search")');
       background-position: core.$space-s +
         ($-icon-button-width - $-icon-button-icon-width) * 0.5 center;
       background-color: transparent;
@@ -165,26 +165,20 @@ $-result-icon-spacing: $-icon-spacing;
     }
 
     &__back {
-      background-image: url(get-icon("ui--arrow-left"));
+      background-image: url('get-icon("ui--arrow-left")');
       margin-left: core.$space-s;
 
       &:hover {
-        background-image: url(get-icon(
-          "ui--arrow-left",
-          darken(core.$uq-purple, 10%)
-        ));
+        background-image: url('get-icon("ui--arrow-left", darken(core.$uq-purple, 10%))');
       }
     }
 
     &__clear {
-      background-image: url(get-icon("ui--close"));
+      background-image: url('get-icon("ui--close")');
       margin-right: core.$space-s;
 
       &:hover {
-        background-image: url(get-icon(
-          "ui--close",
-          darken(core.$uq-purple, 10%)
-        ));
+        background-image: url('get-icon("ui--close", darken(core.$uq-purple, 10%))');
       }
     }
 
@@ -323,24 +317,18 @@ $-result-icon-spacing: $-icon-spacing;
     }
 
     &__back {
-      background-image: url(get-icon("ui--arrow-left"));
+      background-image: url('get-icon("ui--arrow-left")');
 
       &:hover {
-        background-image: url(get-icon(
-          "ui--arrow-left",
-          darken(core.$uq-purple, 10%)
-        ));
+        background-image: url('get-icon("ui--arrow-left", darken(core.$uq-purple, 10%))');
       }
     }
 
     &__swap {
-      background-image: url(get-icon("ui--swap"));
+      background-image: url('get-icon("ui--swap")');
 
       &:hover {
-        background-image: url(get-icon(
-          "ui--swap",
-          darken(core.$uq-purple, 10%)
-        ));
+        background-image: url('get-icon("ui--swap", darken(core.$uq-purple, 10%))');
       }
     }
 
@@ -381,7 +369,7 @@ $-result-icon-spacing: $-icon-spacing;
           border-color: core.$uq-neutral-dark60;
 
           &::after {
-            background-image: url(get-icon("ui--check", #fff));
+            background-image: url('get-icon("ui--check", #fff)');
           }
         }
 
@@ -403,7 +391,7 @@ $-result-icon-spacing: $-icon-spacing;
     }
 
     &__decoration {
-      background-image: url(get-icon("ui--wayfinding-deco", core.$uq-green));
+      background-image: url('get-icon("ui--wayfinding-deco", core.$uq-green)');
       background-repeat: no-repeat;
       background-position: center core.$space;
       background-size: auto 50%;
@@ -479,7 +467,7 @@ $-result-icon-spacing: $-icon-spacing;
       margin: core.$space core.$space-m 0 (core.$space-m + $-icon-spacing);
 
       &::before {
-        background-image: url(get-icon("ui--nav-right", core.$uq-purple));
+        background-image: url('get-icon("ui--nav-right", core.$uq-purple)');
         content: "";
         display: inline-block;
         height: core.$font-size-xxs;
@@ -560,7 +548,7 @@ $-result-icon-spacing: $-icon-spacing;
             left: core.$space-m + $-result-icon-spacing;
             top: 50%;
             margin-top: -($-result-icon-height * 0.5);
-            background-image: url(get-icon("ui--map-pin", core.$uq-purple));
+            background-image: url('get-icon("ui--map-pin", core.$uq-purple)');
             background-position: center;
             background-repeat: no-repeat;
             background-size: $-result-icon-height $-result-icon-width;
@@ -580,11 +568,8 @@ $-result-icon-spacing: $-icon-spacing;
             position: absolute;
             right: core.$space-m + ($-icon-button-width - $width) * 0.5;
             top: 50%;
-            margin-top: -($height * 0.5);
-            background-image: url(get-icon(
-              "ui--chevron-right",
-              core.$uq-neutral
-            ));
+            margin-top: -('$height * 0.5);
+            background-image: url('get-icon("ui--chevron-right", core.$uq-neutral)');
             background-position: center;
             background-repeat: no-repeat;
             background-size: $height $width;
@@ -595,16 +580,13 @@ $-result-icon-spacing: $-icon-spacing;
 
           &:hover {
             &::after {
-              background-image: url(get-icon(
-                "ui--chevron-right",
-                core.$uq-neutral-dark20
-              ));
+              background-image: url('get-icon("ui--chevron-right", core.$uq-neutral-dark20)');
             }
           }
 
           &:focus-within {
             &::after {
-              background-image: url(get-icon("ui--chevron-right", core.$link));
+              background-image: url('get-icon("ui--chevron-right", core.$link)'');
             }
           }
 
@@ -732,7 +714,7 @@ $-result-icon-spacing: $-icon-spacing;
       &__close {
         @extend %uq-maps__icon-button;
 
-        background-image: url(get-icon("ui--arrow-down"));
+        background-image: url('get-icon("ui--arrow-down")');
       }
     }
 
@@ -795,7 +777,7 @@ $-result-icon-spacing: $-icon-spacing;
     $icon-size: 1.75rem;
 
     appearance: none;
-    background-image: url(get-icon("logo--uq-shield"));
+    background-image: url('get-icon("logo--uq-shield")');
     background-size: $icon-size;
     background-color: transparent;
     background-repeat: no-repeat;

@@ -65,10 +65,7 @@
 
       &::after {
         content: "";
-        background-image: url(icon-constants.get-icon(
-          "standard--arrow-right-1",
-          core.$uq-white
-        ));
+        background-image: url('icon-constants.get-icon("standard--arrow-right-1", core.$uq-white)');
         background-repeat: no-repeat;
         background-size: 1.4rem 1.4rem;
         right: 0;

@@ -14,8 +14,7 @@
   &__bg-color-utility__container,
   &__text-utility__container {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     justify-content: center;
   }
 

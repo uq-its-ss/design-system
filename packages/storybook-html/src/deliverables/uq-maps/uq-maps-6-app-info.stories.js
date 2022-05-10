@@ -5,7 +5,7 @@ export default {
   title: "Deliverables/UQ Maps/6 App info drawer",
   parameters: {
     layout: "fullscreen",
-    //viewMode: 'story',
+    // viewMode: 'story',
     previewTabs: {
       canvas: { hidden: false },
     },

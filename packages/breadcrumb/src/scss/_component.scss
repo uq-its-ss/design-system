@@ -30,10 +30,7 @@
       content: "";
       margin: core.$space-xs core.$space-s;
       padding: core.$space-s core.$space-s;
-      background-image: url(icon-constants.get-icon(
-        "standard--arrow-right-1",
-        core.$uq-neutral-dark60
-      ));
+      background-image: url('icon-constants.get-icon("standard--arrow-right-1", core.$uq-neutral-dark60)');
       background-repeat: no-repeat;
       float: left;
     }

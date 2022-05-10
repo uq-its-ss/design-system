@@ -3,9 +3,9 @@
 @use "global" as *;
 
 // Accordion / Toggle style
-//
+
 // Can be used on either div or ul
-//
+
 // Variants:
 // .uq-accordion--no-bottom-spacing - Removes margin from below accordions for use in menus (see compendium).
 
@@ -28,7 +28,6 @@
 
   // Accordion title / toggle button.
   &__toggle {
-    appearance: none;
     appearance: none;
     background: $accordion-content-bg;
     border-radius: 0;
@@ -56,10 +55,7 @@
     // Closed state.
     &::before {
       content: "";
-      background-image: url(icon-constants.get-icon(
-        "standard--arrow-down-1",
-        core.$uq-purple
-      ));
+      background-image: url('icon-constants.get-icon("standard--arrow-down-1", core.$uq-purple)');
       background-repeat: no-repeat;
       width: core.$space-m;
       height: core.$space-m;
@@ -76,10 +72,6 @@
     &:focus,
     &:hover {
       color: core.$text;
-    }
-
-    &:hover,
-    &:focus {
       background-color: $accordion-title-bg-hover;
     }
 
@@ -93,10 +85,7 @@
 
       // Open state.
       &::before {
-        background-image: url(icon-constants.get-icon(
-          "standard--arrow-up-1",
-          core.$uq-purple
-        ));
+        background-image: url('icon-constants.get-icon("standard--arrow-up-1", core.$uq-purple)');
       }
 
       &:hover,

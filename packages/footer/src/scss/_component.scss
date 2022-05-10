@@ -196,10 +196,7 @@
 
   &__navigation-toggle::before {
     content: "";
-    background-image: url(icon-constants.get-icon(
-      "standard--chevron-down-sml",
-      core.$uq-white
-    ));
+    background-image: url('icon-constants.get-icon("standard--chevron-down-sml", core.$uq-white)');
     background-repeat: no-repeat;
     width: core.$space-m;
     height: core.$space-m;
@@ -214,10 +211,7 @@
   }
 
   .uq-accordion__toggle--active::before {
-    background-image: url(icon-constants.get-icon(
-      "standard--chevron-up-sml",
-      core.$uq-white
-    ));
+    background-image: url('icon-constants.get-icon("standard--chevron-up-sml", core.$uq-white)');
   }
 
   /* FOOTER */
@@ -318,77 +312,47 @@
 
     /* Facebook icon */
     &--facebook::before {
-      background-image: url(icon-constants.get-icon(
-        "social--social-facebook-circle",
-        core.$uq-white
-      ));
+      background-image: url('icon-constants.get-icon("social--social-facebook-circle", core.$uq-white)');
     }
 
     &--facebook:hover::before {
-      background-image: url(icon-constants.get-icon(
-        "social--social-facebook-circle",
-        #d4c8de
-      ));
+      background-image: url('icon-constants.get-icon("social--social-facebook-circle", #d4c8de)');
     }
 
     /* Linkedin icon */
     &--linkedin::before {
-      background-image: url(icon-constants.get-icon(
-        "social--social-linkedin-circle",
-        core.$uq-white
-      ));
+      background-image: url('icon-constants.get-icon("social--social-linkedin-circle", core.$uq-white)');
     }
 
     &--linkedin:hover::before {
-      background-image: url(icon-constants.get-icon(
-        "social--social-linkedin-circle",
-        #d4c8de
-      ));
+      background-image: url('icon-constants.get-icon("social--social-linkedin-circle",#d4c8de)');
     }
 
     /* Twitter icon */
     &--twitter::before {
-      background-image: url(icon-constants.get-icon(
-        "social--social-twitter-circle",
-        core.$uq-white
-      ));
+      background-image: url('icon-constants.get-icon("social--social-twitter-circle", core.$uq-white)');
     }
 
     &--twitter:hover::before {
-      background-image: url(icon-constants.get-icon(
-        "social--social-twitter-circle",
-        #d4c8de
-      ));
+      background-image: url('icon-constants.get-icon("social--social-twitter-circle", #d4c8de)');
     }
 
     /* Youtube icon */
     &--youtube::before {
-      background-image: url(icon-constants.get-icon(
-        "social--social-you-tube-circle",
-        core.$uq-white
-      ));
+      background-image: url('icon-constants.get-icon("social--social-you-tube-circle", core.$uq-white)');
     }
 
     &--youtube:hover::before {
-      background-image: url(icon-constants.get-icon(
-        "social--social-you-tube-circle",
-        #d4c8de
-      ));
+      background-image: url('icon-constants.get-icon("social--social-you-tube-circle", #d4c8de)');
     }
 
     /* Instagram icon */
     &--instagram::before {
-      background-image: url(icon-constants.get-icon(
-        "social--social-instagram2-circle",
-        core.$uq-white
-      ));
+      background-image: url('icon-constants.get-icon("social--social-instagram2-circle", core.$uq-white)');
     }
 
     &--instagram:hover::before {
-      background-image: url(icon-constants.get-icon(
-        "social--social-instagram2-circle",
-        #d4c8de
-      ));
+      background-image: url('icon-constants.get-icon("social--social-instagram2-circle", #d4c8de)');
     }
   }
 

@@ -230,10 +230,7 @@ $use-encapsulation: false !default;
   select {
     appearance: none;
     appearance: none;
-    background-image: url(icon.get-icon(
-      "standard--chevron-down-sml",
-      $form-select-icon
-    ));
+    background-image: url('icon.get-icon( "standard--chevron-down-sml", $form-select-icon)');
     background-repeat: no-repeat;
     background-position: right core.$space-xs center;
     padding-right: 2.5rem;
@@ -242,10 +239,7 @@ $use-encapsulation: false !default;
     width: 100%;
 
     &:focus {
-      background-image: url(icon.get-icon(
-        "standard--chevron-down-sml",
-        $form-focus-color
-      ));
+      background-image: url('icon.get-icon("standard--chevron-down-sml", $form-focus-color)');
     }
 
     &[multiple] {
@@ -258,10 +252,7 @@ $use-encapsulation: false !default;
     }
 
     &[disabled] {
-      background-image: url(icon.get-icon(
-        "standard--chevron-down-sml",
-        $form-select-icon-disabled
-      ));
+      background-image: url('icon.get-icon("standard--chevron-down-sml", $form-select-icon-disabled)');
     }
   }
 
@@ -361,10 +352,7 @@ $use-encapsulation: false !default;
       background-color: core.$link;
 
       &::after {
-        background-image: url(icon.get-icon(
-          "standard--check",
-          $form-checkbox-check-color
-        ));
+        background-image: url('icon.get-icon("standard--check", $form-checkbox-check-color)');
         padding: 0;
       }
     }
@@ -496,10 +484,7 @@ $use-encapsulation: false !default;
     background-color: $form-color-error;
 
     &::before {
-      background-image: url(icon.get-icon(
-        "standard--alert-triangle",
-        core.$uq-white
-      ));
+      background-image: url('icon.get-icon("standard--alert-triangle", core.$uq-white)');
     }
   }
 
@@ -507,10 +492,7 @@ $use-encapsulation: false !default;
     background-color: $form-color-success;
 
     &::before {
-      background-image: url(icon.get-icon(
-        "standard--success-circle",
-        core.$uq-white
-      ));
+      background-image: url('icon.get-icon("standard--success-circle", core.$uq-white)');
     }
   }
 

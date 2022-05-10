@@ -31,18 +31,12 @@
     font-size: $alert-font-size-s;
     font-weight: $alert-font-weight-thin;
     line-height: core.$line-height-h;
-    padding-top: core.$space;
-    padding-bottom: core.$space;
-    padding-left: core.$space;
-    padding-right: core.$space;
+    padding: core.$space;
     margin-left: core.$space-l;
 
     &::before {
       content: "";
-      background-image: url(icon.get-icon(
-        "standard--information-circle",
-        core.$uq-neutral-dark80
-      ));
+      background-image: url('icon.get-icon("standard--information-circle", core.$uq-neutral-dark80)');
       background-repeat: no-repeat;
       background-size: 1.5rem;
       width: core.$space-m;
@@ -50,6 +44,9 @@
       position: absolute;
       top: 0.85rem;
       left: -(core.$space);
+
+      // https://stackoverflow.com/questions/13296419/sass-negative-variable-value 
+      // https://sass-lang.com/documentation/operators/numeric#unary-operators 
     }
 
     p {
@@ -65,10 +62,7 @@
     position: absolute;
     top: core.$space-none;
     right: core.$space-none;
-    background-image: url(icon.get-icon(
-      "standard--close",
-      core.$uq-neutral-dark80
-    ));
+    background-image: url('icon.get-icon("standard--close", core.$uq-neutral-dark80)');
     background-repeat: no-repeat;
     background-size: 1rem;
     background-position: center;
@@ -79,10 +73,7 @@
 
     &:hover,
     &:focus {
-      background-image: url(icon.get-icon(
-        "common--close",
-        core.$uq-neutral-dark80
-      ));
+      background-image: url('icon.get-icon(="common--close", core.$uq-neutral-dark80)');
     }
   }
 
@@ -91,10 +82,7 @@
 
     .uq-alert__message {
       &::before {
-        background-image: url(icon.get-icon(
-          "standard--information-circle",
-          core.$uq-neutral-dark80
-        ));
+        background-image: url('icon.get-icon("standard--information-circle", core.$uq-neutral-dark80)');
       }
     }
   }
@@ -104,10 +92,7 @@
 
     .uq-alert__message {
       &::before {
-        background-image: url(icon.get-icon(
-          "standard--success-circle",
-          core.$uq-neutral-dark80
-        ));
+        background-image: url('icon.get-icon("standard--success-circle", core.$uq-neutral-dark80)');
       }
     }
   }
@@ -117,10 +102,7 @@
 
     .uq-alert__message {
       &::before {
-        background-image: url(icon.get-icon(
-          "standard--exclamation-circle",
-          core.$uq-neutral-dark80
-        ));
+        background-image: url('icon.get-icon("standard--exclamation-circle", core.$uq-neutral-dark80)');
       }
     }
   }
@@ -130,10 +112,7 @@
 
     .uq-alert__message {
       &::before {
-        background-image: url(icon.get-icon(
-          "standard--alert-triangle",
-          core.$uq-neutral-dark80
-        ));
+        background-image: url('icon.get-icon("standard--alert-triangle", core.$uq-neutral-dark80)');
       }
     }
   }
@@ -171,21 +150,18 @@
     }
 
     .uq-alert__close {
-      background-image: url(icon.get-icon("standard--close", core.$uq-white));
+      background-image: url('icon.get-icon("standard--close", core.$uq-white)');
 
       &:hover,
       &:focus {
-        background-image: url(icon.get-icon("common--close", core.$uq-white));
+        background-image: url('icon.get-icon("common--close", core.$uq-white)');
       }
     }
 
     &.uq-alert--info {
       .uq-alert__message {
         &::before {
-          background-image: url(icon.get-icon(
-            "standard--information-circle",
-            core.$uq-white
-          ));
+          background-image: url('icon.get-icon("standard--information-circle", core.$uq-white)');
         }
       }
     }
@@ -195,10 +171,7 @@
 
       .uq-alert__message {
         &::before {
-          background-image: url(icon.get-icon(
-            "standard--success-circle",
-            core.$uq-white
-          ));
+          background-image: url('icon.get-icon("standard--success-circle", core.$uq-white)');
         }
       }
     }
@@ -221,10 +194,7 @@
 
       .uq-alert__message {
         &::before {
-          background-image: url(icon.get-icon(
-            "standard--alert-triangle",
-            core.$uq-white
-          ));
+          background-image: url('icon.get-icon("standard--alert-triangle", core.$uq-white)');
         }
       }
     }

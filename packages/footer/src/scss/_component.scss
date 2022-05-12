@@ -38,8 +38,7 @@
     line-height: 1.5;
     margin: auto;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
 
     @media #{core.$screen-xl-up} {
       padding: core.$space-l core.$space;
@@ -227,8 +226,7 @@
 
   &__footer-list {
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
+    flex-flow: column wrap;
     list-style-type: none;
     margin: core.$space-none;
     padding: core.$space-none;
@@ -236,9 +234,8 @@
 
     @media #{core.$screen-lg-up} {
       display: flex;
-      flex-wrap: wrap;
       justify-content: start;
-      flex-direction: row;
+      flex-flow: row wrap;
       margin: core.$space-none;
       padding: core.$space-none;
 
@@ -260,8 +257,7 @@
 
     @media #{core.$screen-lg-up} {
       display: flex;
-      flex-wrap: wrap;
-      flex-direction: row;
+      flex-flow: row wrap;
       justify-content: space-between;
       align-items: center;
       margin: core.$space-none;

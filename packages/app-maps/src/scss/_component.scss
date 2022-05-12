@@ -568,7 +568,7 @@ $-result-icon-spacing: $-icon-spacing;
             position: absolute;
             right: core.$space-m + ($-icon-button-width - $width) * 0.5;
             top: 50%;
-            margin-top: -('$height * 0.5);
+            margin-top: -($height * 0.5);
             background-image: url('get-icon("ui--chevron-right", core.$uq-neutral)');
             background-position: center;
             background-repeat: no-repeat;
@@ -586,7 +586,7 @@ $-result-icon-spacing: $-icon-spacing;
 
           &:focus-within {
             &::after {
-              background-image: url('get-icon("ui--chevron-right", core.$link)'');
+              background-image: url('get-icon("ui--chevron-right", core.$link)');
             }
           }
 

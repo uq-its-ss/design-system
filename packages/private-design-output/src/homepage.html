@@ -14,15 +14,15 @@
 
     <header class="uq-header" data-gtm-category="Header">
       <div class="uq-header__container">
-        <div class="uq-header__menu-toggle">
+        <div class="uq-header__menu-toggle" data-gtm-category="Primary header">
           <button type="button" class="nav-primary__toggle nav-primary__menu-toggle slide-menu__control" data-target="global-mobile-nav" data-action="toggle">Menu</button>
         </div>
-        <div class="uq-header__logo">
-          <a class="logo--large" href="https://www.uq.edu.au/">
+        <div class="uq-header__logo" data-gtm-category="Primary header">
+          <a class="logo--large" href="https://www.uq.edu.au/" data-gtm-label="UQ Logo">
             <img alt="The University of Queensland" src="https://static.uq.net.au/v11/logos/corporate/uq-logo--reversed.svg">
           </a>
         </div>
-        <div class="uq-header__nav-primary" data-gtm-category="Header navigation">
+        <div class="uq-header__nav-primary" data-gtm-category="Primary header">
           <nav class="uq-header__nav-primary-container">
             <ul class="uq-header__nav-primary-list">
               <li><a class="uq-header__nav-primary-link nav-primary-link--has-dropdown" href="https://future-students.uq.edu.au/">Study</a>
@@ -211,15 +211,15 @@
             </ul>
           </nav>
         </div>
-        <div class="uq-header__search-toggle">
-          <button class="nav-primary__toggle nav-primary__search-toggle">
+        <div class="uq-header__search-toggle"  data-gtm-category="Search">
+          <button class="nav-primary__toggle nav-primary__search-toggle" data-gtm-action="Toggle">
              <div class="search-toggle__label">Search</div>
           </button>
         </div>
       </div>
-      <nav class="slide-menu global-mobile-nav" id="global-mobile-nav"  data-gtm-category="Header navigation mobile">
+      <nav class="slide-menu global-mobile-nav" id="global-mobile-nav">
         <ul>
-          <li class="uq-header__newglobal-nav-item">
+          <li class="uq-header__newglobal-nav-item" data-gtm-category="Primary header">
             <a class="uq-header__newglobal-nav-link slide-menu__control" href="#">Study</a>
             <ul>
               <li>
@@ -268,7 +268,7 @@
               </li>
             </ul>
           </li>
-          <li  class="uq-header__newglobal-nav-item">
+          <li  class="uq-header__newglobal-nav-item" data-gtm-category="Primary header">
             <a  class="uq-header__newglobal-nav-link slide-menu__control" href="#">Research</a>
             <ul>
               <li>
@@ -303,7 +303,7 @@
               </li>
             </ul>
           </li>
-          <li  class="uq-header__newglobal-nav-item">
+          <li  class="uq-header__newglobal-nav-item" data-gtm-category="Primary header">
             <a class="uq-header__newglobal-nav-link slide-menu__control" href="#">Partners and community</a> 
             <ul>
               <li>
@@ -341,7 +341,7 @@
               </li>
             </ul>
           </li>
-          <li class="uq-header__newglobal-nav-item">
+          <li class="uq-header__newglobal-nav-item" data-gtm-category="Primary header">
             <a class="uq-header__newglobal-nav-link slide-menu__control" href="#">About</a>
             <ul>
               <li>
@@ -375,23 +375,23 @@
               </li>
             </ul>
           </li>
-          <li  class="uq-header__nav-secondary-item">
+          <li  class="uq-header__nav-secondary-item" data-gtm-category="Secondary header">
             <a class="uq-header__nav-secondary-link" href="#">UQ home</a>
           </li>
-          <li  class="uq-header__nav-secondary-item">
+          <li  class="uq-header__nav-secondary-item" data-gtm-category="Secondary header">
             <a class="uq-header__nav-secondary-link" href="#">News</a>
           </li>
-          <li  class="uq-header__nav-secondary-item">
+          <li  class="uq-header__nav-secondary-item" data-gtm-category="Secondary header">
             <a class="uq-header__nav-secondary-link" href="#">Events</a>
           </li>
-          <li  class="uq-header__nav-secondary-item">
+          <li  class="uq-header__nav-secondary-item" data-gtm-category="Secondary header">
             <a class="uq-header__nav-secondary-link" href="#">Give</a>
           </li>
-          <li  class="uq-header__nav-secondary-item">
+          <li  class="uq-header__nav-secondary-item" data-gtm-category="Secondary header">
             <a class="uq-header__nav-secondary-link" href="#">Contact</a>
           </li>  
       </nav>
-      <div class="uq-header__search" data-gtm-category="Header search">
+      <div class="uq-header__search" data-gtm-category="Search">
         <div class="uq-header__search-container">
           <form>
             <fieldset>
@@ -406,7 +406,7 @@
           </form>
         </div>
       </div>
-      <div class="uq-header__nav-secondary">
+      <div class="uq-header__nav-secondary" data-gtm-category="Secondary header">
         <nav class="uq-header__nav-secondary-container">
           <ul class="uq-header__nav-secondary-list">
               <li class="uq-header__nav-secondary-item">
@@ -478,7 +478,7 @@
         </div>
       </div>
       <div class="uq-footer__container">
-        <nav class="uq-footer__navigation uq-footer--desktop" data-gtm-category="Footer navigation">
+        <nav class="uq-footer__navigation uq-footer--desktop">
           <ul class="uq-footer__navigation-list uq-footer__navigation-level-1">
             <li class="uq-footer__navigation-item uq-footer__navigation--is-open">
               <h2 class="uq-footer__navigation-title">Media</h2>
@@ -566,10 +566,10 @@
         </nav>
 
         <!-- Mobile Footer Navigation-->
-        <nav class="uq-footer__navigation uq-footer--mobile" data-gtm-category="Footer navigation">
+        <nav class="uq-footer__navigation uq-footer--mobile">
           <ul class="uq-accordion uq-footer__navigation-list uq-footer__navigation-level-1">
             <li class="uq-accordion__item uq-footer__navigation-item uq-footer__navigation--is-open">
-              <button class="uq-accordion__toggle uq-footer__navigation-toggle">Media</button>
+              <button class="uq-accordion__toggle uq-footer__navigation-toggle" data-action="toggle">Media</button>
               <ul class="uq-accordion__content uq-footer__navigation-list uq-footer__navigation-level-2">
                 <li class="uq-footer__navigation-item">
                   <a href="https://marketing-communication.uq.edu.au/contact" class="uq-footer__navigation-link">Media team contacts</a>
@@ -583,7 +583,7 @@
               </ul>
             </li>
             <li class="uq-accordion__item uq-footer__navigation-item">
-              <button class="uq-accordion__toggle uq-footer__navigation-toggle">Staff</button>
+              <button class="uq-accordion__toggle uq-footer__navigation-toggle" data-action="toggle">Staff</button>
               <ul class="uq-accordion__content uq-footer__navigation-list uq-footer__navigation-level-2">
                 <li class="uq-footer__navigation-item">
                   <a href="https://staff.uq.edu.au/" class="uq-footer__navigation-link">Current Staff</a>
@@ -603,7 +603,7 @@
               </ul>
             </li>
             <li class="uq-accordion__item uq-footer__navigation-item">
-              <button class="uq-accordion__toggle uq-footer__navigation-toggle">Current students</button>
+              <button class="uq-accordion__toggle uq-footer__navigation-toggle" data-action="toggle">Current students</button>
               <ul class="uq-accordion__content uq-footer__navigation-list uq-footer__navigation-level-2">
                 <li class="uq-footer__navigation-item">
                   <a href="https://my.uq.edu.au/" class="uq-footer__navigation-link">my.UQ</a>
@@ -623,7 +623,7 @@
               </ul>
             </li>
             <li class="uq-accordion__item uq-footer__navigation-item">
-              <button class="uq-accordion__toggle uq-footer__navigation-toggle">Library</button>
+              <button class="uq-accordion__toggle uq-footer__navigation-toggle" data-action="toggle">Library</button>
               <ul class="uq-accordion__content uq-footer__navigation-list uq-footer__navigation-level-2">
                 <li class="uq-footer__navigation-item">
                   <a href="https://www.library.uq.edu.au/" class="uq-footer__navigation-link">Library</a>
@@ -631,7 +631,7 @@
               </ul>
             </li>
             <li class="uq-accordion__item uq-footer__navigation-item">
-              <button class="uq-accordion__toggle uq-footer__navigation-toggle">Contact</button>
+              <button class="uq-accordion__toggle uq-footer__navigation-toggle" data-action="toggle">Contact</button>
               <ul class="uq-accordion__content uq-footer__navigation-list uq-footer__navigation-level-2">
                 <li class="uq-footer__navigation-item">
                   <a href="https://contacts.uq.edu.au/contacts" class="uq-footer__navigation-link">UQ Contact</a>
@@ -655,12 +655,12 @@
         <!-- Footer contact details -->
         <div class="uq-footer__contact">   
           <nav class="uq-footer__contact-item">
-            <ul class="uq-footer__footer-list uq-footer__contact-social"> 
-              <li class="uq-footer__footer-item"><a href="https://www.facebook.com/uniofqld" class="uq-footer__meta-icons--facebook uq-footer__meta-icons"></a></li> 
-              <li class="uq-footer__footer-item"><a href="https://www.linkedin.com/edu/school?id=10238" class="uq-footer__meta-icons--linkedin uq-footer__meta-icons"></a></li> 
-              <li class="uq-footer__footer-item"><a href="https://twitter.com/uq_news" class="uq-footer__meta-icons--twitter uq-footer__meta-icons"></a></li>
-              <li class="uq-footer__footer-item"><a href="https://www.youtube.com/user/universityqueensland" class="uq-footer__meta-icons--youtube uq-footer__meta-icons"></a></li>
-              <li class="uq-footer__footer-item"><a href="https://instagram.com/uniofqld/" class="uq-footer__meta-icons--instagram uq-footer__meta-icons"></a></li>
+            <ul class="uq-footer__footer-list uq-footer__contact-social" data-gtm-category="Social share link"> 
+              <li class="uq-footer__footer-item"><a href="https://www.facebook.com/uniofqld" class="uq-footer__meta-icons--facebook uq-footer__meta-icons" data-gtm-label="Facebook"></a></li> 
+              <li class="uq-footer__footer-item"><a href="https://www.linkedin.com/edu/school?id=10238" class="uq-footer__meta-icons--linkedin uq-footer__meta-icons"  data-gtm-label="Linkedin"></a></li> 
+              <li class="uq-footer__footer-item"><a href="https://twitter.com/uq_news" class="uq-footer__meta-icons--twitter uq-footer__meta-icons" data-gtm-label="Twitter"></a></li>
+              <li class="uq-footer__footer-item"><a href="https://www.youtube.com/user/universityqueensland" class="uq-footer__meta-icons--youtube uq-footer__meta-icons" data-gtm-label="Footer"></a></li>
+              <li class="uq-footer__footer-item"><a href="https://instagram.com/uniofqld/" class="uq-footer__meta-icons--instagram uq-footer__meta-icons" data-gtm-label="Instagram"></a></li>
             </ul>
           </nav> 
           <div class="uq-footer__contact-item uq-footer__contact-login"><a href="#" class="uq-footer__link" rel="nofollow">Web login</a></div>
@@ -670,7 +670,7 @@
           <ul  class="uq-footer__footer-list">
             <li class="uq-footer__footer-item">&copy; The University of Queensland</li>
             <li class="uq-footer__footer-item"><abbr title="Australian Business Number">ABN</abbr>: 63 942 912 684 </li>
-            <li class="uq-footer__footer-item"><abbr title="Commonwealth Register of Institutions and Courses for Overseas Students">CRICOS</abbr> Provider No: <a class="uq-footer__link" href="https://www.uq.edu.au/about/cricos-link" rel="external">00025B</a></li>
+            <li class="uq-footer__footer-item"><abbr title="Commonwealth Register of Institutions and Courses for Overseas Students">CRICOS</abbr> Provider No: <a class="uq-footer__link" href="https://www.uq.edu.au/about/cricos-link" rel="external" data-gtm-label="CRICOS 00025B">00025B</a></li>
           </ul>
         </nav>
         <nav class="uq-footer__footer">

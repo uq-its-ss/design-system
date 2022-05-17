@@ -387,6 +387,10 @@
     padding-top: core.$space;
     padding-bottom: core.$space;
   }
+  
+  &__search-query-label {
+    color: core.$uq-white;
+  }
 
   &__search-query-input {
     margin: 0 !important;

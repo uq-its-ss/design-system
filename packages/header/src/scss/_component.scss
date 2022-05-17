@@ -351,6 +351,7 @@
     transform: translateY(-1rem);
     max-height: 0;
     overflow: hidden;
+    visibility: hidden;
 
     @media #{core.$screen-lg-up} {
       top: 8.3rem;
@@ -359,6 +360,7 @@
     &--is-open {    
       transform: translateY(0);
       max-height: 50vh;
+      visibility: visible;
     }
   }
 
@@ -387,7 +389,7 @@
     padding-top: core.$space;
     padding-bottom: core.$space;
   }
-  
+
   &__search-query-label {
     color: core.$uq-white;
   }

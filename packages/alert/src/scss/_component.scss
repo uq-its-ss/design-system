@@ -130,6 +130,7 @@
       @media #{core.$screen-md-up} {
         font-size: $alert-font-size;
       }
+      line-height: core.$line-height;
       font-weight: core.$font-weight-normal;
       margin-left: core.$space-xxl;
       padding: core.$space-stretched-s core.$space-m core.$space-stretched-s core.$space-s;

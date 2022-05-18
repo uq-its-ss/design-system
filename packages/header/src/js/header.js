@@ -30,7 +30,9 @@ class newHeader {
       this.searchBlock.classList.remove('uq-header__search--is-open');
     });
 
+
     this.searchToggle.addEventListener('click', (e) => {
+      this.body.classList.remove('no-scroll');
       this.searchToggle.classList.toggle('nav-primary__search-toggle--is-open');
       this.searchBlock.classList.toggle('uq-header__search--is-open');
       this.menuToggle.classList.remove('nav-primary__menu-toggle--is-open');

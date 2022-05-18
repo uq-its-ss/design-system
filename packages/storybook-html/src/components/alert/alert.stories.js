@@ -159,3 +159,31 @@ export const errorGlobal = () => {
   `;
 }
 errorGlobal.storyName = 'Error global';
+
+export const infoGlobalNoTitleOrDismiss = () => {
+  return `
+  <div class="uq-alert uq-alert--info uq-alert--dark uq-alert--global uq-alert" role="alert">
+    <div class="uq-alert__container">
+      <div class="uq-alert__message">
+        <h3 class="uq-alert__title visually-hidden">Title goes here</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <a href="#" title="Link" class="uq-button--inline">Link</a></p>
+      </div>
+    </div>
+  </div>
+  `;
+}
+infoGlobalNoTitleOrDismiss.storyName = 'Info global (no title, no dismiss)';
+
+export const warningGlobalNoTitleOrDismiss = () => {
+  return `
+  <div class="uq-alert uq-alert--warning uq-alert--dark uq-alert--global uq-alert" role="alert">
+    <div class="uq-alert__container">
+      <div class="uq-alert__message">
+        <h3 class="uq-alert__title visually-hidden">Title goes here</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <a href="#" title="Link" class="uq-button--inline">Link</a></p>
+      </div>
+    </div>
+  </div>
+  `;
+}
+warningGlobalNoTitleOrDismiss.storyName = 'Warning global (no title, no dismiss)';

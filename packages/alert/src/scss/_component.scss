@@ -7,7 +7,7 @@
   background-color: $alert-info-bg-color;
   color: $alert-text-color;
   position: relative;
-  
+
   &__container {
     margin: 0 auto;
 
@@ -121,13 +121,35 @@
   // Global alert
   &--global {
     .uq-alert__container {
-      @include grid.layout-containment;
+      @media #{core.$screen-md-up} {
+        @include grid.layout-containment;
+      }
     }
+
+    .uq-alert__message {
+      @media #{core.$screen-md-up} {
+        font-size: $alert-font-size;
+      }
+      font-weight: core.$font-weight-normal;
+      margin-left: core.$space-xxl;
+      padding: core.$space-stretched-s core.$space-m core.$space-stretched-s core.$space-s;
+
+      &::before {
+        content: '';
+        background-size: 1.5rem;
+        width: core.$space-m;
+        height: core.$space-m;
+        position: absolute;
+        top: core.$space-stretched-s;
+        left: -(core.$space-m);
+      }
+    }
+
   }
 
-  
+
   // Dark variant
-  &--dark { 
+  &--dark {
     background-color: $alert-global-info-bg-color;
     color: core.$uq-white;
 
@@ -152,7 +174,7 @@
 
     .uq-alert__close {
       background-image: url(icon.get-icon('standard--close', core.$uq-white));
-  
+
       &:hover,
       &:focus {
         background-image: url(icon.get-icon('common--close', core.$uq-white));
@@ -160,7 +182,7 @@
     }
 
     &.uq-alert--info {
-  
+
       .uq-alert__message {
         &::before {
           background-image: url(icon.get-icon('standard--information-circle', core.$uq-white));
@@ -170,7 +192,7 @@
 
     &.uq-alert--success {
       background-color: $alert-global-success-bg-color;
-  
+
       .uq-alert__message {
         &::before {
           background-image: url(icon.get-icon('standard--success-circle', core.$uq-white));
@@ -193,7 +215,7 @@
 
     &.uq-alert--error {
       background-color: $alert-global-error-bg-color;
-  
+
       .uq-alert__message {
         &::before {
           background-image: url(icon.get-icon('standard--alert-triangle', core.$uq-white));

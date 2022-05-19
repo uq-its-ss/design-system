@@ -221,6 +221,19 @@ Global alerts are darker variants of alerts that are used to convey a globally i
   </div>
 ```
 
+### Loaded from an external API
+
+<Canvas withSource="none">
+  <Story id="components-alert--loaded-from-external-uri" />
+</Canvas>
+
+```html
+  <div id="global-alerts-container" data-uri="/api/v1/alerts.json"></div>
+```
+
+```javascript
+  new Alerts(document.getElementById('global-alerts-container'));
+```
 
 ## How and when to use 
 

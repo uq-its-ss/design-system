@@ -66,14 +66,19 @@
     background-repeat: no-repeat;
     background-size: 1rem;
     background-position: center;
+    background-color: transparent;
+    border: none;
     width: core.$space-xxl;
     height: core.$space-xxl;
     text-indent: 999px;
     overflow: hidden;
+    cursor: pointer;
 
     &:hover,
     &:focus {
       background-image: url(icon.get-icon('common--close', core.$uq-neutral-dark80));
+      background-color: transparent;
+      border: none;
     }
   }
 

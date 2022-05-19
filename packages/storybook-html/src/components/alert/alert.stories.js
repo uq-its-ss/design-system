@@ -1,5 +1,10 @@
+import { useEffect } from '@storybook/client-api';
+
 // import styles
 import './alert.scss';
+
+// import scripts
+import Alerts from '@uqds/alert/src/js/alerts';
 
 // documentation
 import docs from './alert.docs.mdx';
@@ -107,7 +112,7 @@ export const infoGlobal = () => {
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         <a href="#" title="Link" class="uq-button--inline">Link</a>
       </div>
-      <a href="javascript:void(0)" class="uq-alert__close">Close</a>
+      <button class="uq-alert__close">Close</button>
     </div>
   </div>
   `;
@@ -123,7 +128,7 @@ export const successGlobal = () => {
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         <a href="#" title="Link" class="uq-button--inline">Link</a>
       </div>
-      <a href="javascript:void(0)" class="uq-alert__close">Close</a>
+      <button class="uq-alert__close">Close</button>
     </div>
   </div>
   `;
@@ -187,3 +192,14 @@ export const warningGlobalNoTitleOrDismiss = () => {
   `;
 }
 warningGlobalNoTitleOrDismiss.storyName = 'Warning global (no title, no dismiss)';
+
+export const loadedFromExternalUri = () => {
+  useEffect(() => {
+    new Alerts(document.getElementById('global-alerts-container'));
+  });
+  return `
+  <div id="global-alerts-container" data-uri="/api/v1/alerts.json">
+  </div>
+  `;
+}
+loadedFromExternalUri.storyName = 'Loaded via an API end-point';

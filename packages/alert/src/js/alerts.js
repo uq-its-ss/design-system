@@ -13,19 +13,44 @@ class Alerts {
   async init() {
     const response = await fetch(this.uri);
     const json = await response.json();
-    Alerts.filter(json).forEach(alert => {
+    this.el.innerHTML = '';
+    Alerts.filter(json.sitewideAlerts).forEach(alert => {
       const alertEl = document.createElement('div');
-      div.outerHTML = alert.renderedOutput;
+      alertEl.innerHTML = alert.renderedAlert;
+      if (alert.dismissible) {
+        const close = alertEl.querySelector('.uq-alert__close');
+        if (close) {
+          close.addEventListener('click', (el) => {
+            window.localStorage.setItem(
+              `alert-dismissed-${alert.uuid}`,
+              String(Math.round(new Date().getTime() / 1000)),
+            );
+            alertEl.remove();
+          });
+        }
+      }
       this.el.appendChild(alertEl);
     });
   }
-  static filter(json) {
-    const uri = `${window.location.hostname}/${window.location.pathname}`
-    return json.filter(alert => {
-      if (!alert.pages) {
+  static filter(alerts) {
+    return alerts.filter(alert => {
+      const dismissedAtTimestamp = Number(
+        window.localStorage.getItem(`alert-dismissed-${alert.uuid}`),
+      );
+
+      if (dismissedAtTimestamp > alert.dismissalIgnoreBefore) {
+        return false;
+      }
+      if (!alert.showOnPages.length) {
         return true;
       }
-      return alert.pages.find(page => uri.match(new RegExp(page))) !== undefined;
+      return alert.showOnPages.find(page => {
+        const quoted = `${page}`
+          .replace(new RegExp(`[.\\\\+?\\[^\\]$(){}=!<>|:\\-]`, 'g'), '\\$&');
+        return window.location.href.match(new RegExp(quoted.replaceAll('*', '.*')));
+      }) !== undefined;
     })
   }
 }
+
+export default Alerts;

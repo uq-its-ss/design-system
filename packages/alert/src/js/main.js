@@ -1,4 +1,4 @@
-import accordion from './accordion';
+import Alert from './alerts';
 export { 
-  accordion
+  Alert
 };

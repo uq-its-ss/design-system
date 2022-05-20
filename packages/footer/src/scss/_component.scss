@@ -305,10 +305,6 @@
         vertical-align: text-bottom;
       }
 
-      &:hover::before {
-        transition: all ease .5s;
-      }
-
       /* Facebook icon */
       &--facebook::before {
         background-image: url(icon-constants.get-icon("social--social-facebook-circle", core.$uq-white));

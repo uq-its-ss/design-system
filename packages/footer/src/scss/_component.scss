@@ -10,10 +10,10 @@
 
     &__reconciliation {
       background:core.$uq-black;
-      background-image: linear-gradient(180deg, #451D68 45.31%, rgba(69, 29, 104, 0.554545) 85.94%, rgba(69, 29, 104, 0) 100%), url('https://static.uq.net.au/v14/images/rap/brisbane-river-artwork.png');
+      background-image: linear-gradient(180deg, #48206c 45.31%, rgba(72, 32, 108, 0.55) 85.94%, rgba(72, 32, 108, 0) 100%), url('https://static.uq.net.au/v14/images/rap/brisbane-river-artwork.png');
       
       @media #{core.$screen-xl-up} {
-        background-image: linear-gradient(90deg, #451D68 28.12%, rgba(70, 30, 106, 0.65) 70.31%, rgba(72, 32, 108, 0) 100%), url('https://static.uq.net.au/v14/images/rap/brisbane-river-artwork.png');
+        background-image: linear-gradient(90deg, #48206c 28.12%, rgba(72, 32, 108, 0.65) 70.31%, rgba(72, 32, 108, 0) 100%), url('https://static.uq.net.au/v14/images/rap/brisbane-river-artwork.png');
       }
     }
 

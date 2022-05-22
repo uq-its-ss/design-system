@@ -10,27 +10,29 @@ class Alerts {
     this.el = el;
     this.init();
   }
-  async init() {
-    const response = await fetch(this.uri);
-    const json = await response.json();
-    this.el.innerHTML = '';
-    Alerts.filter(json.sitewideAlerts).forEach(alert => {
-      const alertEl = document.createElement('div');
-      alertEl.innerHTML = alert.renderedAlert;
-      if (alert.dismissible) {
-        const close = alertEl.querySelector('.uq-alert__close');
-        if (close) {
-          close.addEventListener('click', (el) => {
-            window.localStorage.setItem(
-              `alert-dismissed-${alert.uuid}`,
-              String(Math.round(new Date().getTime() / 1000)),
-            );
-            alertEl.remove();
-          });
-        }
-      }
-      this.el.appendChild(alertEl);
-    });
+  init() {
+    const response = fetch(this.uri)
+      .then(resp => resp.json())
+      .then(json => {
+        this.el.innerHTML = '';
+        Alerts.filter(json.sitewideAlerts).forEach(alert => {
+          const alertEl = document.createElement('div');
+          alertEl.innerHTML = alert.renderedAlert;
+          if (alert.dismissible) {
+            const close = alertEl.querySelector('.uq-alert__close');
+            if (close) {
+              close.addEventListener('click', (el) => {
+                window.localStorage.setItem(
+                  `alert-dismissed-${alert.uuid}`,
+                  String(Math.round(new Date().getTime() / 1000)),
+                );
+                alertEl.remove();
+              });
+            }
+          }
+          this.el.appendChild(alertEl);
+        });
+      })
   }
   static filter(alerts) {
     return alerts.filter(alert => {

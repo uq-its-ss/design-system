@@ -28,15 +28,16 @@ class NewHeader {
       this.searchBlock.classList.remove('uq-header__search--is-open');
     });
 
-    this.searchToggle.addEventListener('click', () => {
-      document.body.classList.remove('no-scroll');
+
+    this.searchToggle.addEventListener('click', (e) => {
+      this.body.classList.remove('no-scroll');
       this.searchToggle.classList.toggle('nav-primary__search-toggle--is-open');
       this.searchBlock.classList.toggle('uq-header__search--is-open');
       this.menuToggle.classList.remove('nav-primary__menu-toggle--is-open');
       if (this.searchBlock.classList.contains('uq-header__search--is-open')) {
-        window.setTimeout(() => this.searchInput.focus(), 50);
+        this.searchInput.focus();
       } else {
-        window.setTimeout(() => this.searchInput.blur(), 50);
+        this.searchInput.blur();
         this.searchToggle.blur();
       }
       if (this.searchLabel.innerHTML === "Search") {
@@ -44,6 +45,7 @@ class NewHeader {
       } else {
         this.searchLabel.innerHTML = "Search";
       }
+      e.preventDefault();
     });
   }
 }

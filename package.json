@@ -26,6 +26,10 @@
     "msw": "^0.41.0",
     "rollup": "^2.70.2",
     "vinyl-buffer": "^1.0.1",
-    "vinyl-source-stream": "^2.0.0"
+    "vinyl-source-stream": "^2.0.0",
+    "whatwg-fetch": "^3.6.2"
+  },
+  "scripts": {
+    "test": "jest"
   }
 }

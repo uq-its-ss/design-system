@@ -22,5 +22,6 @@ module.exports = {
     "<rootDir>/tests/jest/testing-library-jest-dom.js",
     "<rootDir>/tests/jest/jest-axe.js",
     "<rootDir>/tests/jest/jest-dom.js",
+    "<rootDir>/tests/jest/jest-msw.js",
   ],
 };

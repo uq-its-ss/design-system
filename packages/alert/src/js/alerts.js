@@ -11,7 +11,7 @@ class Alerts {
     this.init();
   }
   init() {
-    const response = fetch(this.uri)
+    fetch(this.uri)
       .then(resp => resp.json())
       .then(json => {
         this.el.innerHTML = '';

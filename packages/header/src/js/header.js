@@ -49,6 +49,18 @@ class newHeader {
       }
       e.preventDefault();
     });
+
+    // megamenu
+    document.querySelectorAll('.uq-header__nav-primary-item').forEach(megaMenuToggle => {
+      megaMenuToggle.addEventListener('mouseover', () => {
+        megaMenuToggle.classList.add('uq-header__nav-primary-item--is-open');
+
+      }),
+      megaMenuToggle.addEventListener('mouseout', () => {
+        megaMenuToggle.classList.remove('uq-header__nav-primary-item--is-open');
+      })
+    })
+
   }
 
 };

@@ -1,0 +1,35 @@
+name: validate
+on:
+  push:
+    branches:
+      - 'master'
+      - 'beta'
+  pull_request: {}
+jobs:
+  main:
+    strategy:
+      matrix:
+        node: [16]
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🛑 Cancel Previous Runs
+        uses: styfle/cancel-workflow-action@0.9.0
+
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v2
+
+      - name: ⎔ Setup node
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node }}
+
+      - name: 📥 Download deps
+        uses: bahmutov/npm-install@v1
+        with:
+          useLockFile: false
+
+#      - name: 🧹 Linting
+#        run: npm run lint
+
+      - name: ✅ Tests
+        run: npm run test

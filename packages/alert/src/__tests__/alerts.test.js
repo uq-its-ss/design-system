@@ -1,7 +1,7 @@
 import { renderFromString } from "@uqds/test-utils";
 import headerMarkup from "../__tests__/fixtures/markup.html";
 import Alerts from "../js/alerts.js";
-import { waitFor, screen, fireEvent } from "@testing-library/dom"
+import { waitFor, screen, fireEvent, getByRole } from "@testing-library/dom"
 
 describe('Alert close behaviour', () => {
   afterAll(() => {
@@ -13,11 +13,11 @@ describe('Alert close behaviour', () => {
     let alerts;
     await waitFor(() => {
       alerts = screen.getAllByRole('alert');
-      expect(alerts).toHaveLength(1);
+      expect(alerts).toHaveLength(2);
     })
-    fireEvent.click(screen.getByRole('button', {name: 'Close'}))
+    fireEvent.click(getByRole(alerts[0], 'button', {name: 'Close'}))
     await waitFor(() => {
-      expect(screen.queryByRole('alert')).not.toBeInTheDocument();
+      expect(alerts[0]).not.toBeInTheDocument();
     })
   });
   it('Removal should persist', async () => {
@@ -27,7 +27,7 @@ describe('Alert close behaviour', () => {
     await waitFor(() => {
       expect(el).not.toHaveTextContent('this gets removed on render');
     })
-    expect(screen.queryByRole('alert')).not.toBeInTheDocument();
+    expect(screen.getAllByRole('alert')).toHaveLength(1);
     expect(container.body.innerHTML).toMatchSnapshot();
   });
   it('Dismissals can be ignored', async () => {
@@ -36,7 +36,7 @@ describe('Alert close behaviour', () => {
     const container = renderFromString(headerMarkup);
     new Alerts(container.querySelector('.uq-alerts-global-container'));
     await waitFor(() => {
-      expect(screen.getAllByRole('alert')).toHaveLength(1);
+      expect(screen.getAllByRole('alert')).toHaveLength(2);
     })
   });
 });
@@ -51,9 +51,10 @@ describe('Alert default behaviour', () => {
     await waitFor(() => {
       // 1 item is filtered out.
       alerts = screen.getAllByRole('alert');
-      expect(alerts).toHaveLength(1);
+      expect(alerts).toHaveLength(2);
     })
     expect(alerts[0]).toHaveTextContent("You're doing a great job. Keep it up!")
+    expect(alerts[1]).toHaveTextContent("Danger!")
     expect(container.body.innerHTML).toMatchSnapshot();
   });
   it('Should be removed on close', async () => {
@@ -64,12 +65,12 @@ describe('Alert default behaviour', () => {
     await waitFor(() => {
       // 1 item is filtered out.
       alerts = screen.getAllByRole('alert');
-      expect(alerts).toHaveLength(1);
+      expect(alerts).toHaveLength(2);
     })
     expect(alerts[0]).toHaveTextContent("You're doing a great job. Keep it up!")
-    fireEvent.click(screen.getByRole('button', {name: 'Close'}))
+    fireEvent.click(getByRole(alerts[0], 'button', {name: 'Close'}))
     await waitFor(() => {
-      expect(screen.queryByRole('alert')).not.toBeInTheDocument();
+      expect(alerts[0]).not.toBeInTheDocument();
     })
     expect(container.body.innerHTML).toMatchSnapshot();
     expect(parseInt(window.localStorage.getItem(`alert-dismissed-8da600f4-0a64-4df5-8bc5-a410d7496a26`))).toBeGreaterThanOrEqual(now);
@@ -83,6 +84,7 @@ describe('Alert default behaviour', () => {
     });
     new Alerts(container.querySelector('.uq-alerts-global-container'));
     await waitFor(() => {
+      // Should filter out the negated version.
       expect(screen.getAllByRole('alert')).toHaveLength(2);
     })
     expect(container).toMatchSnapshot();

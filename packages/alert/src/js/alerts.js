@@ -46,11 +46,20 @@ class Alerts {
       if (!alert.showOnPages.length) {
         return true;
       }
-      return alert.showOnPages.find(page => {
+      if (!alert.negateShowOnPages) {
+        // Any match will do here.
+        return alert.showOnPages.find(page => {
+          const quoted = `${page}`
+            .replace(new RegExp(`[.\\\\+?\\[^\\]$(){}=!<>|:\\-]`, 'g'), '\\$&');
+          return window.location.href.match(new RegExp(quoted.replaceAll('*', '.*')));
+        }) !== undefined;
+      }
+      // None should match here.
+      return alert.showOnPages.filter(page => {
         const quoted = `${page}`
           .replace(new RegExp(`[.\\\\+?\\[^\\]$(){}=!<>|:\\-]`, 'g'), '\\$&');
         return window.location.href.match(new RegExp(quoted.replaceAll('*', '.*')));
-      }) !== undefined;
+      }).length === 0;
     })
   }
 }

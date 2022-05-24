@@ -591,7 +591,8 @@
     <script type="text/javascript" src="js/uqds.min.js"></script>
     <script type="text/javascript">
       // Initialise header
-      new uq.header(document);
+      var uqheader = document.querySelector('.uq-header');
+      new uq.header(uqheader);
       // Initialise Main Navigation
       var navelement = document.getElementById("jsNav");
       new uq.siteHeaderNavigation(navelement, "uq-site-header__navigation");

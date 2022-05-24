@@ -21,15 +21,12 @@ class newHeader {
     this.searchBlock = document.querySelector('.uq-header__search');
     this.searchInput = document.querySelector('.uq-header__search-query-input');
 
-    // REFACTOR
-
     this.menuToggle.addEventListener('click', () => {
       this.body.classList.toggle('no-scroll');
       this.menuToggle.classList.toggle('nav-primary__menu-toggle--is-open');
       this.searchToggle.classList.remove('nav-primary__search-toggle--is-open');
       this.searchBlock.classList.remove('uq-header__search--is-open');
     });
-
 
     this.searchToggle.addEventListener('click', (e) => {
       this.body.classList.remove('no-scroll');
@@ -51,16 +48,31 @@ class newHeader {
     });
 
     // megamenu
-    document.querySelectorAll('.uq-header__nav-primary-item').forEach(megaMenuToggle => {
-      megaMenuToggle.addEventListener('mouseover', () => {
-        megaMenuToggle.classList.add('uq-header__nav-primary-item--is-open');
+    const megaMenuItem = document.querySelectorAll('.uq-header__nav-primary-item');
+    megaMenuItem.forEach((item) => {
+      item.addEventListener('mouseenter', this.handleToggle);
+      item.addEventListener('mouseleave', this.handleToggle);
+    });
+  }
 
-      }),
-      megaMenuToggle.addEventListener('mouseout', () => {
-        megaMenuToggle.classList.remove('uq-header__nav-primary-item--is-open');
-      })
-    })
+  handleToggle(event) {
+    if (
+      (event.type === 'mouseenter' || event.type === 'mouseleave') &&
+      window.matchMedia('(max-width: 1024px)').matches
+    ) {
+      return;
+    }
+    
+    let menuItem = event.target;
+    if (menuItem.tagName !== 'LI') {
+      menuItem = menuItem.parentElement;
+    }
 
+    if (menuItem.classList.contains('uq-header__nav-primary-item--is-open')) {
+      menuItem.classList.remove('uq-header__nav-primary-item--is-open');
+    } else {
+      menuItem.classList.add('uq-header__nav-primary-item--is-open');
+    }
   }
 
 };

@@ -912,10 +912,6 @@ export default [
         "category": "standard"
     },
     {
-        "name": "alert-triangle",
-        "category": "standard"
-    },
-    {
         "name": "arrow-down-1",
         "category": "standard"
     },
@@ -1012,10 +1008,6 @@ export default [
         "category": "standard"
     },
     {
-        "name": "error-circle",
-        "category": "standard"
-    },
-    {
         "name": "exclamation-circle",
         "category": "standard"
     },
@@ -1025,10 +1017,6 @@ export default [
     },
     {
         "name": "expand-3",
-        "category": "standard"
-    },
-    {
-        "name": "infomation-circle",
         "category": "standard"
     },
     {
@@ -1101,10 +1089,6 @@ export default [
     },
     {
         "name": "subtract",
-        "category": "standard"
-    },
-    {
-        "name": "success-circle",
         "category": "standard"
     },
     {

@@ -477,7 +477,7 @@ $use-encapsulation: false !default;
     background-color: $form-color-error;
 
     &::before {
-      background-image: url(icon.get-icon('standard--alert-triangle', core.$uq-white));
+      background-image: url(icon.get-icon('standard--exclamation-triangle', core.$uq-white));
     }
   }
 
@@ -485,7 +485,7 @@ $use-encapsulation: false !default;
     background-color: $form-color-success;
 
     &::before {
-      background-image: url(icon.get-icon('standard--success-circle', core.$uq-white));
+      background-image: url(icon.get-icon('standard--check-circle', core.$uq-white));
     }
   }
 

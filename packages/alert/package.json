@@ -43,7 +43,7 @@
   "dependencies": {
     "@uqds/core": "^0.0.7-alpha.0",
     "@uqds/grid": "^0.0.7-alpha.0",
-    "@uqds/icon": "^0.0.7-alpha.0"
+    "@uqds/icon": "https://gitpkg.now.sh/api/pkg?url=uq-its-ss/design-system/packages/icon&commit=cxp-14337"
   },
   "devDependencies": {
     "gulp": "^4.0.2"

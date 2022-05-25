@@ -62,7 +62,7 @@
     position: absolute;
     top: core.$space-none;
     right: core.$space-none;
-    background-image: url(icon.get-icon('standard--close', core.$uq-neutral-dark80));
+    background-image: url(icon.get-icon('standard--x', core.$uq-neutral-dark80));
     background-repeat: no-repeat;
     background-size: 1rem;
     background-position: center;
@@ -76,7 +76,7 @@
 
     &:hover,
     &:focus {
-      background-image: url(icon.get-icon('common--close', core.$uq-neutral-dark80));
+      background-image: url(icon.get-icon('standard--x', core.$uq-neutral-dark80));
       background-color: transparent;
       border: none;
     }
@@ -179,11 +179,11 @@
     }
 
     .uq-alert__close {
-      background-image: url(icon.get-icon('standard--close', core.$uq-white));
+      background-image: url(icon.get-icon('standard--x', core.$uq-white));
 
       &:hover,
       &:focus {
-        background-image: url(icon.get-icon('common--close', core.$uq-white));
+        background-image: url(icon.get-icon('standard--x', core.$uq-white));
       }
     }
 

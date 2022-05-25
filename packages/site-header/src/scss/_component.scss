@@ -140,6 +140,10 @@
         //border-bottom: 4px solid #fff;
       }
     }
+    
+    &__list-link {
+      border-bottom: 4px solid transparent;
+    }  
 
     &__list {
       list-style-type: none;
@@ -255,7 +259,7 @@
             }
           }
         }
-
+        
         &:hover {
           & .uq-site-header__navigation__list-link {
             border-bottom: 4px solid core.$uq-purple;

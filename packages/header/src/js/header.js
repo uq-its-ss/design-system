@@ -7,24 +7,22 @@
  * TODO: make this class configurable
  */
 
-class newHeader {
-  constructor() {
-    this.init();
+class NewHeader {
+  constructor(el) {
+    this.init(el);
   }
 
-  init() {
-
-    this.body = document.querySelector('body');
-    this.menuToggle = document.querySelector('.nav-primary__menu-toggle');
-    this.searchToggle = document.querySelector('.nav-primary__search-toggle');
-    this.searchLabel = document.querySelector('.search-toggle__label');
-    this.searchBlock = document.querySelector('.uq-header__search');
-    this.searchInput = document.querySelector('.uq-header__search-query-input');
+  init(el) {
+    this.menuToggle = el.querySelector('.nav-primary__menu-toggle');
+    this.searchToggle = el.querySelector('.nav-primary__search-toggle');
+    this.searchLabel = el.querySelector('.search-toggle__label');
+    this.searchBlock = el.querySelector('.uq-header__search');
+    this.searchInput = el.querySelector('.uq-header__search-query-input');
 
     // REFACTOR
 
     this.menuToggle.addEventListener('click', () => {
-      this.body.classList.toggle('no-scroll');
+      document.body.classList.toggle('no-scroll');
       this.menuToggle.classList.toggle('nav-primary__menu-toggle--is-open');
       this.searchToggle.classList.remove('nav-primary__search-toggle--is-open');
       this.searchBlock.classList.remove('uq-header__search--is-open');
@@ -32,7 +30,7 @@ class newHeader {
 
 
     this.searchToggle.addEventListener('click', (e) => {
-      this.body.classList.remove('no-scroll');
+      document.body.classList.remove('no-scroll');
       this.searchToggle.classList.toggle('nav-primary__search-toggle--is-open');
       this.searchBlock.classList.toggle('uq-header__search--is-open');
       this.menuToggle.classList.remove('nav-primary__menu-toggle--is-open');
@@ -42,7 +40,7 @@ class newHeader {
         this.searchInput.blur();
         this.searchToggle.blur();
       }
-      if ( this.searchLabel.innerHTML === "Search") {
+      if (this.searchLabel.innerHTML === "Search") {
         this.searchLabel.innerHTML = "Close";
       } else {
         this.searchLabel.innerHTML = "Search";
@@ -50,7 +48,6 @@ class newHeader {
       e.preventDefault();
     });
   }
+}
 
-};
-
-export {newHeader as default};
+export default NewHeader;

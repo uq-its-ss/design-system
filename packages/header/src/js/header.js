@@ -53,27 +53,31 @@ class newHeader {
       item.addEventListener('mouseenter', this.handleToggle);
       item.addEventListener('mouseleave', this.handleToggle);
     });
+
   }
 
   handleToggle(event) {
+    let menuItem = event.target;
+    if (menuItem.tagName !== 'LI') {
+      menuItem = menuItem.parentElement;
+    }
+    menuItem.eventType = event.type;
+
+    window.setTimeout(function() { 
     if (
       (event.type === 'mouseenter' || event.type === 'mouseleave') &&
       window.matchMedia('(max-width: 1024px)').matches
     ) {
       return;
     }
-    
-    let menuItem = event.target;
-    if (menuItem.tagName !== 'LI') {
-      menuItem = menuItem.parentElement;
-    }
 
-    if (menuItem.classList.contains('uq-header__nav-primary-item--is-open')) {
-      menuItem.classList.remove('uq-header__nav-primary-item--is-open');
-    } else {
+    if (menuItem.eventType === 'mouseenter') {
       menuItem.classList.add('uq-header__nav-primary-item--is-open');
+    } else  {
+      menuItem.classList.remove('uq-header__nav-primary-item--is-open');
     }
-  }
+  }, 250);
+}
 
 };
 

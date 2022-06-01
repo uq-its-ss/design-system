@@ -1,6 +1,6 @@
 {
   "name": "@uqds/core",
-  "version": "0.0.7-alpha.0",
+  "version": "0.0.8-alpha.0",
   "description": "The core package that all component packages depend on",
   "keywords": [
     "uqds",

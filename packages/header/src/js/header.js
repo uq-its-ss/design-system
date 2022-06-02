@@ -19,15 +19,12 @@ class NewHeader {
     this.searchBlock = el.querySelector('.uq-header__search');
     this.searchInput = el.querySelector('.uq-header__search-query-input');
 
-    // REFACTOR
-
     this.menuToggle.addEventListener('click', () => {
       document.body.classList.toggle('no-scroll');
       this.menuToggle.classList.toggle('nav-primary__menu-toggle--is-open');
       this.searchToggle.classList.remove('nav-primary__search-toggle--is-open');
       this.searchBlock.classList.remove('uq-header__search--is-open');
     });
-
 
     this.searchToggle.addEventListener('click', (e) => {
       document.body.classList.remove('no-scroll');
@@ -47,6 +44,37 @@ class NewHeader {
       }
       e.preventDefault();
     });
+
+    // megamenu
+    const megaMenuItem = document.querySelectorAll('.uq-header__nav-primary-item');
+    megaMenuItem.forEach((item) => {
+      item.addEventListener('mouseenter', this.handleToggle);
+      item.addEventListener('mouseleave', this.handleToggle);
+    });
+
+  }
+
+  handleToggle(event) {
+    let menuItem = event.target;
+    if (menuItem.tagName !== 'LI') {
+      menuItem = menuItem.parentElement;
+    }
+    menuItem.eventType = event.type;
+
+    window.setTimeout(function() { 
+      if (
+        (event.type === 'mouseenter' || event.type === 'mouseleave') &&
+        window.matchMedia('(max-width: 1024px)').matches
+      ) {
+        return;
+      }
+
+      if (menuItem.eventType === 'mouseenter') {
+        menuItem.classList.add('uq-header__nav-primary-item--is-open');
+      } else  {
+        menuItem.classList.remove('uq-header__nav-primary-item--is-open');
+      }
+    }, 250);
   }
 }
 

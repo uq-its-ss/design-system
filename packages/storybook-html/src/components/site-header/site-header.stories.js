@@ -28,8 +28,8 @@ export default {
 
 export const siteHeaderWithSubnav = () => {
   useEffect(() => {
-      var navelement = document.getElementById("jsNav");
-      new siteHeaderNav(navelement, "uq-site-header__navigation");
+      var navElem = document.getElementById("jsNav");
+      new siteHeaderNav(navElem, "uq-site-header__navigation");
     });
   return siteHeaderWithSubnavHTML;
 };
@@ -38,8 +38,8 @@ siteHeaderWithSubnav.storyName = 'With sub-navigation';
 
 export const siteHeaderWithoutSubnav = () => {
   useEffect(() => {
-      var navelement = document.getElementById("jsNav");
-      new siteHeaderNav(navelement, "uq-site-header__navigation");
+      var navElem = document.getElementById("jsNav");
+      new siteHeaderNav(navElem, "uq-site-header__navigation");
     });
   return siteHeaderWithoutSubnavHTML;
 };

@@ -30,7 +30,8 @@ export default {
 
 export const Header = () => {
   useEffect(() => {
-    new headerCreate();
+    const headerElem = document.querySelector('.uq-header');
+    new headerCreate(headerElem);
   });
   return HeaderHTML;
 };

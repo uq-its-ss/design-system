@@ -89,4 +89,18 @@ describe('Alert default behaviour', () => {
     })
     expect(container).toMatchSnapshot();
   });
+  it('Should not match on child pages', async () => {
+    const container = renderFromString(headerMarkup);
+    Object.defineProperty(window, 'location', {
+      value: {
+        href: 'https://www.uq.edu.au/stuff/i-wish-i-had-known'
+      }
+    });
+    new Alerts(container.querySelector('.uq-alerts-global-container'));
+    await waitFor(() => {
+      // Should filter out the negated version.
+      expect(screen.getAllByRole('alert')).toHaveLength(2);
+    })
+    expect(container).toMatchSnapshot();
+  });
 });

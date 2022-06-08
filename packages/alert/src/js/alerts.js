@@ -46,20 +46,20 @@ class Alerts {
       if (!alert.showOnPages.length) {
         return true;
       }
+      const href = window.location.href.replace(/\/+$/, '');
+      const hrefMatches = (page) => {
+        const expression = `${page}`
+          .replace(/\/+$/, '')
+          .replace(new RegExp(`[.\\\\+?\\[^\\]$(){}=!<>|:\\-]`, 'g'), '\\$&')
+          .concat('$');
+        return href.match(new RegExp(expression.replaceAll('*', '.*')));
+      };
       if (!alert.negateShowOnPages) {
         // Any match will do here.
-        return alert.showOnPages.find(page => {
-          const quoted = `${page}`
-            .replace(new RegExp(`[.\\\\+?\\[^\\]$(){}=!<>|:\\-]`, 'g'), '\\$&');
-          return window.location.href.match(new RegExp(quoted.replaceAll('*', '.*')));
-        }) !== undefined;
+        return alert.showOnPages.find(hrefMatches) !== undefined;
       }
       // None should match here.
-      return alert.showOnPages.filter(page => {
-        const quoted = `${page}`
-          .replace(new RegExp(`[.\\\\+?\\[^\\]$(){}=!<>|:\\-]`, 'g'), '\\$&');
-        return window.location.href.match(new RegExp(quoted.replaceAll('*', '.*')));
-      }).length === 0;
+      return alert.showOnPages.filter(hrefMatches).length === 0;
     })
   }
 }

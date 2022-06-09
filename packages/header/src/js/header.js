@@ -74,7 +74,7 @@ class NewHeader {
       } else  {
         menuItem.classList.remove('uq-header__nav-primary-item--is-open');
       }
-    }, 250);
+    }, 0);
   }
 }
 

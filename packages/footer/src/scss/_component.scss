@@ -426,5 +426,21 @@
         padding: core.$space-l core.$space core.$space-xl;
       }
     }
-
   }  
+
+// D7 overrides and hacks
+.d7-footer {
+  font-family: core.$roboto;
+
+  button.uq-accordion__toggle.uq-footer__navigation-toggle {
+    @media #{core.$screen-lg-down}  { 
+      margin: 0;
+      width: 100%;
+      text-align: left;
+    }
+  }
+
+  .uq-footer__navigation-link {
+    font-weight: 400;
+  }
+}

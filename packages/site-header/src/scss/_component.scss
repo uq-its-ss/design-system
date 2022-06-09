@@ -322,3 +322,28 @@
     }
   }
 }
+
+// D7 overrides and hacks
+.d7-site-header {
+  font-family: core.$roboto;
+}
+
+.d7-site-header .uq-site-header__title-container,
+.d7-site-header__nav.uq-site-header__navigation-container {
+    @media #{core.$screen-lg-up} {
+      max-width: 71.25rem;
+    }
+}
+
+.d7-site-header__nav {
+  button.uq-site-header__navigation__sub-toggle:hover {
+    background-color: transparent;
+  }
+
+  a.uq-site-header__navigation__list-link,
+  .uq-site-header__navigation__list-item a,
+  .uq-site-header__navigation__list-item a {
+    color: core.$uq-purple;
+    font-weight: 400;
+  }
+}

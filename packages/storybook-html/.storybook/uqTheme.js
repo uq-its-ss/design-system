@@ -16,5 +16,5 @@ export default create({
 
   brandTitle: 'UQ Design System',
   brandUrl: 'https://uq.edu.au',
-  brandImage: 'https://static.uq.net.au/v11/logos/corporate/uq-logo.svg',
+  brandImage: 'https://static.uq.net.au/v15/logos/corporate/uq-logo.svg',
 });

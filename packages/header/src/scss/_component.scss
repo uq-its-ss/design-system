@@ -859,3 +859,57 @@ body.no-scroll {
     
   }
 }
+
+.uq-header__logo img {
+  max-width: unset;
+}
+
+.uq-header__search-query-submit {
+  background-color: unset !important;
+}
+
+.uq-header__nav-primary-list li {
+  margin: 0;
+  padding-right: 2rem;
+}
+
+.uq-header__nav-primary-list li:hover .uq-header__nav-primary-link {
+  border-bottom: 4px solid #fff;
+}
+
+.uq-header__nav-primary-link {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  transition: background-color .25s,border-color .25s;
+  font-weight: 400;
+  position: relative;
+  border-bottom: 4px solid #51247a;
+}
+
+.uq-header__search-container {
+  padding: 0 1.5rem;
+  form, fieldset {
+      border: unset;
+      padding: 0;
+      margin: 0;
+  }
+}
+
+.uq-header__search-query-input {
+  height: 50px !important;
+}
+
+.uq-header .nav-primary__search-toggle {
+  margin-bottom: 0;
+}
+
+.uq-site-header__navigation__list-link:hover,
+.uq-site-header__navigation__sub-toggle {
+  color: #51247a !important;
+  background-color: transparent !important;
+}
+
+.uq-header .nav-primary__menu-toggle {
+  margin-bottom: 0 !important;
+}

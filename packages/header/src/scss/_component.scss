@@ -288,7 +288,7 @@
 
       & li {
         & a {
-          padding-left: core.$space-ul;        
+          padding-left: core.$space-ul;
         }
       }
     }
@@ -884,11 +884,10 @@ body.no-scroll {
   transition: background-color .25s,border-color .25s;
   font-weight: 400;
   position: relative;
-  border-bottom: 4px solid #51247a;
+  border-bottom: 4px solid core.$uq-purple;
 }
 
 .uq-header__search-container {
-  padding: 0 1.5rem;
   form, fieldset {
       border: unset;
       padding: 0;
@@ -906,10 +905,16 @@ body.no-scroll {
 
 .uq-site-header__navigation__list-link:hover,
 .uq-site-header__navigation__sub-toggle {
-  color: #51247a !important;
+  /* override for bless css in D7 sites.*/
+  color: core.$uq-purple !important;
   background-color: transparent !important;
 }
 
 .uq-header .nav-primary__menu-toggle {
   margin-bottom: 0 !important;
+}
+
+.uq-site-header__navigation a {
+  /* override for bless css in D7 sites.*/
+  color: core.$uq-purple !important;
 }

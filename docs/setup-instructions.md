@@ -17,3 +17,7 @@ $ npm i
 ```shell
 $ npx lerna bootstrap
 ```
+
+## Depending on your operating system, you may encounter the following:
+
+Using ```node 18``` and ```npm 8.12.2``` we encounterd ```node-gyp``` issues that required installation of ```x-code`` [see node-gyp instuctions](https://github.com/nodejs/node-gyp#on-macos).

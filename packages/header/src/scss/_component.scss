@@ -903,30 +903,11 @@ body.no-scroll {
   margin-bottom: 0;
 }
 
-.uq-site-header__navigation__list-link:hover,
-.uq-site-header__navigation__sub-toggle {
-  /* override for bless css in D7 sites.*/
-  color: core.$uq-purple !important;
-  background-color: transparent !important;
-}
-
 .uq-header .nav-primary__menu-toggle {
   margin-bottom: 0 !important;
   font: initial;
   font-size: 0.833rem;
   line-height: normal;
-}
-
-.uq-site-header__navigation a {
-  /* override for bless css in D7 sites.*/
-  color: core.$uq-purple !important;
-}
-
-.uq-site-header__nav-secondary-link {
-
-  @media #{core.$screen-lg-up} {
-    line-height: 1.5;
-  }
 }
 
 

@@ -323,6 +323,31 @@
   }
 }
 
+
+// Temp fix for Button bug in menus 
+.uq-site-header__navigation__sub-toggle {
+  display: none;
+}
+
+.uq-site-header__navigation__list-item--has-subnav .uq-site-header__navigation__list-link::after {
+content:'';
+position: absolute;
+top: 0;
+right: 0;
+display: block;
+width: core.$space-xl;
+padding: core.$space-compressed-xxxl core.$space;
+border: 0;
+text-indent: -100vw;
+background-image: url(icon-constants.get-icon("standard--chevron-down-sml", core.$uq-purple));
+background-size: core.$space;
+background-position: center center;
+background-repeat: no-repeat;
+background-color: transparent;
+overflow: hidden;
+cursor: pointer;
+}
+
 // D7 overrides and hacks
 .d7-site-header {
   font-family: core.$roboto;
@@ -345,5 +370,24 @@
   .uq-site-header__navigation__list-item a {
     color: core.$uq-purple;
     font-weight: 400;
+  }
+}
+
+.uq-site-header__navigation__list-link:hover,
+.uq-site-header__navigation__sub-toggle {
+  /* override for bless css in D7 sites.*/
+  color: core.$uq-purple !important;
+  background-color: transparent !important;
+}
+
+.uq-site-header__navigation a {
+  /* override for bless css in D7 sites.*/
+  color: core.$uq-purple !important;
+}
+
+.uq-site-header__nav-secondary-link {
+
+  @media #{core.$screen-lg-up} {
+    line-height: 1.5;
   }
 }

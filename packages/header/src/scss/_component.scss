@@ -921,3 +921,27 @@ body.no-scroll {
   /* override for bless css in D7 sites.*/
   color: core.$uq-purple !important;
 }
+
+.uq-site-header__nav-secondary-link {
+
+  @media #{core.$screen-lg-up} {
+    line-height: 1.5;
+  }
+}
+
+.uq-footer--mobile .uq-accordion__toggle {
+  margin-bottom: 0;
+  position: unset;
+  padding-left: 1.5rem;
+  padding: 1rem 4.5rem 1rem 1.5rem;
+}
+
+.uq-footer__navigation--is-open .uq-footer__navigation-level-2 {
+  height: auto;
+  overflow: hidden;
+}
+.uq-accordion__content:not(.uq-accordion__content--active) {
+  display: none;
+}
+
+

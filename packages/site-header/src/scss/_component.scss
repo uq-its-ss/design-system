@@ -348,6 +348,11 @@ overflow: hidden;
 cursor: pointer;
 }
 
+.uq-site-header__navigation .uq-site-header__navigation__list-link:focus {
+  outline: 2px solid core.$link;
+  outline-offset: 0;
+}
+
 // D7 overrides and hacks
 .d7-site-header {
   font-family: core.$roboto;

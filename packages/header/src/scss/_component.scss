@@ -771,12 +771,11 @@ body.no-scroll {
 
   .uq-site-header__title-container {
     margin: 0;
-    padding-left: 0rem;
-    padding-right: 0rem;
+    padding-left: 1rem 1.5rem;
   }
 
   .uq-site-header__title {
-    padding: 1rem 1.5rem;
+    padding: 0;
     font-size: 1rem;
     font-weight: 500;
     display:block;

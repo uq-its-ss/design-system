@@ -796,59 +796,6 @@ body.no-scroll {
 }
 
 // D7 overrides and hacks
-.d7-header.uq-header {
-  font-family: core.$roboto;
-
-  .uq-header__container,
-  .uq-header__nav-secondary-container,
-  .uq-header__search-container {
-    @media #{core.$screen-lg-up} {
-      max-width: 71.25rem;
-    }
-  }
-
-  .uq-header__nav-secondary-item a {
-    font-weight: 400;
-  }
-
-  .uq-header__logo {  
-    & img {
-      height: 32px !important;
-      max-width: none;
-
-      @media #{core.$screen-lg-up} {
-        height: 40px !important;
-      }
-    }
-  }
-
-  button.nav-primary__toggle {
-    margin: 0;
-    padding: 1.75rem 2rem 1.25rem 2rem;
-  }
-
-  button.nav-primary__toggle.nav-primary__search-toggle {
-    padding: 1rem 0 1rem 1.5rem;
-  }
-
-  .uq-header__search-container form {
-    margin: 0;
-  }
-
-  .uq-header__search-query-input {
-    height: auto;
-  }
-
-  .uq-header__search-query-submit {
-    background-color: transparent;
-  } 
-  
-  label.option.uq-header__search-label {
-    max-width: 100%;
-    font-weight: 400;
-    padding-top: 0;
-  }
-}
 
 .admin-menu {
   .slide-menu {
@@ -860,7 +807,10 @@ body.no-scroll {
     
   }
 }
-
+.uq-header {
+  line-height: 1.5;
+  font-family: core.$roboto;
+}
 .uq-header__logo img {
   max-width: unset;
 }
@@ -878,7 +828,7 @@ body.no-scroll {
   border-bottom: 4px solid #fff;
 }
 
-.uq-header__nav-primary-link {
+.uq-header__nav-primary-link, .uq-header__nav-primary-link:focus {
   display: block;
   color: #fff;
   text-decoration: none;
@@ -886,6 +836,10 @@ body.no-scroll {
   font-weight: 400;
   position: relative;
   border-bottom: 4px solid core.$uq-purple;
+}
+
+.uq-header a:focus {
+  color: #d4c8de;
 }
 
 .uq-header__search-container {
@@ -897,7 +851,7 @@ body.no-scroll {
 }
 
 .uq-header__search-query-input {
-  height: 50px !important;
+  height: 45px !important;
 }
 
 .uq-header .nav-primary__search-toggle {

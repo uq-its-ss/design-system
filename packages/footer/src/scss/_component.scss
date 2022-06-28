@@ -429,27 +429,16 @@
   }  
 
 // D7 overrides and hacks
-.d7-footer {
+.uq-footer {
   font-family: core.$roboto;
-
-  button.uq-accordion__toggle.uq-footer__navigation-toggle {
-    @media #{core.$screen-lg-down}  { 
-      margin: 0;
-      width: 100%;
-      text-align: left;
-    }
-  }
-
-  .uq-footer__navigation-link {
-    font-weight: 400;
-  }
 }
-
 .uq-footer--mobile .uq-accordion__toggle {
   margin-bottom: 0;
   position: unset;
   padding-left: 1.5rem;
   padding: 1rem 4.5rem 1rem 1.5rem;
+  width: 100%;
+  text-align: left;
 }
 
 .uq-footer__navigation--is-open .uq-footer__navigation-level-2 {

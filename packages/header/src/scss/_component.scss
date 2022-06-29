@@ -456,8 +456,18 @@
 
     display: inline-block;
 
+    & input[type=radio] {
+      height: 20px;
+      width: 20px;
+      vertical-align: top;
+      display: inline-block;
+    }
+
     & label {
       color: core.$uq-white;
+      font-weight: 400;
+      display: inline-block;
+      vertical-align: top;
     }
   }
   
@@ -817,6 +827,10 @@ body.no-scroll {
 
 .uq-header__search-query-submit {
   background-color: unset !important;
+}
+
+.uq-header__search-range .uq-header__search-label {
+  max-width: unset;
 }
 
 .uq-header__nav-primary-list li {

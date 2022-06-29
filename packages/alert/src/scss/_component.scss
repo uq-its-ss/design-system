@@ -126,8 +126,10 @@
   // Global alert
   &--global {
     .uq-alert__container {
-      @media #{core.$screen-md-up} {
-        @include grid.layout-containment;
+      @media #{core.$screen-lg-up} {
+        max-width: 73.25rem;
+        margin-left: auto;
+        margin-right: auto;
       }
     }
 
@@ -137,7 +139,7 @@
       }
       line-height: core.$line-height;
       font-weight: core.$font-weight-normal;
-      margin-left: core.$space-xxl;
+      margin-left: core.$space-xl;
       padding: core.$space-stretched-s core.$space-m core.$space-stretched-s core.$space-s;
 
       &::before {

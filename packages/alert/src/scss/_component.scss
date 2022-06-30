@@ -134,16 +134,17 @@
     }
 
     .uq-alert__message {
-      @media #{core.$screen-md-up} {
-        font-size: $alert-font-size;
-      }
-      line-height: core.$line-height;
+      line-height: #{core.$line-height}rem;
       font-weight: core.$font-weight-normal;
       margin-left: core.$space-compressed-uuul;
       padding: core.$space-stretched-s core.$space-m core.$space-stretched-s core.$space-s;
 
+      @media #{core.$screen-md-up} {
+        font-size: $alert-font-size;
+      }
+
       @media #{core.$screen-lg-up} {
-        margin-left: core.$space-xl;
+        margin-left: core.$space-compressed-uul;
       }
 
       &::before {

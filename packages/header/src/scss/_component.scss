@@ -880,9 +880,9 @@ body.no-scroll {
   vertical-align: top;
   display: inline-block;
   border-radius: 50%;
-  background-color: core.$uq-purple;
+  background-color: transparent;
   margin:3px 3px 0 5px;
-  position: relative;
+  position: absolute;
 
   /* Missing form component styles */
   appearance: none;
@@ -895,7 +895,7 @@ body.no-scroll {
   margin-left: 0.5rem;
   margin-right: 1rem;
     padding-top: 0.125rem;
-    padding-left: 0;
+    padding-left: 1.5rem;
 }
 
 .uq-header__search-range label {

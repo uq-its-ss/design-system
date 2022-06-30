@@ -456,18 +456,8 @@
 
     display: inline-block;
 
-    & input[type=radio] {
-      height: 20px;
-      width: 20px;
-      vertical-align: top;
-      display: inline-block;
-    }
-
     & label {
       color: core.$uq-white;
-      font-weight: 400;
-      display: inline-block;
-      vertical-align: top;
     }
   }
   
@@ -880,3 +870,36 @@ body.no-scroll {
 }
 
 
+//D7 and D9 search fixes 
+.uq-header__search-range {
+  display: inline-block;
+}
+
+.uq-header__search-range input[type="radio"] {
+  height: 20px;
+  width: 20px;
+  vertical-align: top;
+  display: inline-block;
+  border-radius: 50%;
+  background-color: core.$uq-purple;
+}
+
+.uq-header__search-range label {
+  color: core.$uq-white;
+  font-weight: 400;
+  display: inline-block;
+  vertical-align: top;
+}
+
+input[type="radio"].uq-header__search-radio:checked {
+  border-color: core.$uq-white;
+}
+
+input[type="radio"].uq-header__search-radio:focus {
+  border-color: core.$uq-white;
+}
+
+input[type="radio"].uq-header__search-radio:checked::after {
+  content:"";
+  background-color: core.$uq-white;
+}

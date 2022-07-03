@@ -564,6 +564,7 @@
 
 body.no-scroll {
   position: fixed;
+  max-width: 100%;
   @media #{core.$screen-lg-up} {
     position: relative;
   }

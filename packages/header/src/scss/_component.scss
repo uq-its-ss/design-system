@@ -794,3 +794,136 @@ body.no-scroll {
 .uq-site-header__navigation-toggle {
   display: none;
 }
+
+/* D7 overrides and hacks */
+
+.admin-menu {
+  .slide-menu {
+    top: 7.5rem;
+
+    @media #{core.$screen-md-up} {
+      top: 6.15rem;
+    }
+    
+  }
+}
+.uq-header {
+  line-height: 1.5;
+  font-family: core.$roboto;
+}
+.uq-header__logo img {
+  max-width: unset;
+}
+
+.uq-header__search-query-submit {
+  background-color: unset !important;
+}
+
+.uq-header__search-range .uq-header__search-label {
+  max-width: unset;
+}
+
+.uq-header__nav-primary-list li {
+  margin: 0;
+  padding-right: 2rem;
+}
+
+.uq-header__nav-primary-list li:hover .uq-header__nav-primary-link {
+  border-bottom: 4px solid #fff;
+}
+
+.uq-header__nav-primary-link, .uq-header__nav-primary-link:focus {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  transition: background-color .25s,border-color .25s;
+  font-weight: 400;
+  position: relative;
+  border-bottom: 4px solid core.$uq-purple;
+}
+
+.uq-header a:focus {
+  color: #d4c8de;
+}
+
+.uq-header__search-container {
+  form, fieldset {
+      border: unset;
+      padding: 0;
+      margin: 0;
+  }
+}
+
+.uq-header__search-query-input {
+  height: 45px !important;
+}
+
+.uq-header .nav-primary__search-toggle {
+  margin-bottom: 0;
+}
+
+.uq-header .nav-primary__menu-toggle {
+  margin-bottom: 0 !important;
+  font: initial;
+  font-size: 0.833rem;
+  line-height: normal;
+}
+
+
+/* D7 and D9 search fixes */ 
+.uq-header__search-range {
+  display: inline-block;
+}
+
+.uq-header__search-range input[type="radio"] {
+  height: 20px;
+  width: 20px;
+  vertical-align: top;
+  display: inline-block;
+  border-radius: 50%;
+  background-color: transparent;
+  margin:3px 3px 0 5px;
+  position: absolute;
+
+  /* Missing form component styles */
+  appearance: none;
+  -webkit-appearance: none;
+  border: 1px solid #e7e3e0;
+  cursor: pointer;
+}
+.uq-header__search-range input[type=radio]+label {
+  margin-bottom: 1rem;
+  margin-left: 0.5rem;
+  margin-right: 1rem;
+    padding-top: 0.125rem;
+    padding-left: 1.5rem;
+}
+
+.uq-header__search-range label {
+  color: core.$uq-white;
+  font-weight: 400;
+  display: inline-block;
+  vertical-align: top;
+}
+
+input[type="radio"].uq-header__search-radio:checked {
+  border-color: core.$uq-white;
+  border-width: 2px;
+}
+
+input[type="radio"].uq-header__search-radio:focus {
+  border-color: core.$uq-white;
+}
+
+input[type="radio"].uq-header__search-radio:checked::after {
+  content:"";
+  background-color: core.$uq-white;
+  border-radius: 50%;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  height: 10px;
+  width: 10px;
+}

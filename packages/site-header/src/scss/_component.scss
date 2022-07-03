@@ -322,3 +322,32 @@
     }
   }
 }
+
+ // Temp fix for Button bug in menus - to be fully integrated
+.uq-site-header__navigation__sub-toggle {
+  display: none;
+}
+
+.uq-site-header__navigation__list-item--has-subnav .uq-site-header__navigation__list-link::after {
+content:'';
+position: absolute;
+top: 0;
+right: 0;
+display: block;
+width: core.$space-xl;
+padding: core.$space-compressed-xxxl core.$space;
+border: 0;
+text-indent: -100vw;
+background-image: url(icon-constants.get-icon("standard--chevron-down-sml", core.$uq-purple));
+background-size: core.$space;
+background-position: center center;
+background-repeat: no-repeat;
+background-color: transparent;
+overflow: hidden;
+cursor: pointer;
+}
+
+.uq-site-header__navigation .uq-site-header__navigation__list-link:focus {
+  outline: 2px solid core.$link;
+  outline-offset: 0;
+}

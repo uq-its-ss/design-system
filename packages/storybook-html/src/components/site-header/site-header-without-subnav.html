@@ -1,34 +1,39 @@
-<div class="uq-site-header">
-  <!-- Site title with mobile nav toggler (JS) -->
-  <div class="uq-site-header__title-container">
-    <div class="uq-site-header__title-container__left">
-      <a href="/" class="uq-site-header__title">Site title</a>
+    <!-- Site header -->
+    <div class="uq-site-header">
+      <!-- Site title and utility area with mobile nav toggler (JS) -->
+      <div class="uq-site-header__title-container">
+        <div class="uq-site-header__title-container__left">
+          <a href="/" class="uq-site-header__title">Site title</a>
+        </div>
+        <div class="uq-site-header__title-container__right">
+          <!-- <div>[Site utilities go here]</div> -->
+          <button class="uq-site-header__navigation-toggle jsNavToggle" data-gtm-action="Toggle">Menu</button>
+        </div>
+      </div>
+    
+      <!-- Navigation menu  -->
+      <div class="uq-site-header__navigation-container" data-gtm-category="Main navigation">
+        <nav class="uq-site-header__navigation" aria-label="Site navigation" id="jsNav">
+          <ul class="uq-site-header__navigation__list uq-site-header__navigation__list--level-1">
+            <li class="uq-site-header__navigation__list-item uq-site-header__navigation__list-item--active">
+              <a href="/study" class="uq-site-header__navigation__list-link">Study</a>
+            </li>
+            <li class="uq-site-header__navigation__list-item">
+              <a href="/admissions" class="uq-site-header__navigation__list-link">Admissions</a>
+            </li>
+            <li class="uq-site-header__navigation__list-item">
+              <a href="/university-life" class="uq-site-header__navigation__list-link">University life</a>
+            </li>
+            <li class="uq-site-header__navigation__list-item">
+              <a href="/events" class="uq-site-header__navigation__list-link">Events</a>
+            </li>
+            <li class="uq-site-header__navigation__list-item">
+              <a href="/stories" class="uq-site-header__navigation__list-link">Stories</a>
+            </li>
+            <li class="uq-site-header__navigation__list-item">
+              <a href="/contact-us" class="uq-site-header__navigation__list-link">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </div>
-    <div class="uq-site-header__title-container__right">
-      <button class="uq-site-header__navigation-toggle jsNavToggle">Menu</button>
-    </div>
-  </div>
-
-  <!-- Navigation menu  -->
-  <div class="uq-site-header__navigation-container">
-    <nav class="uq-site-header__navigation" aria-label="Site navigation"  id="jsNav">
-      <ul class="uq-site-header__navigation__list uq-site-header__navigation__list--level-1">
-        <li class="uq-site-header__navigation__list-item">
-          <a href="/">Home</a>
-        </li>
-        <li class="uq-site-header__navigation__list-item">
-          <a href="/">Starting at UQ</a>
-        </li>
-        <li class="uq-site-header__navigation__list-item">
-          <a href="/">Programs and Courses</a>
-        </li>
-        <li class="uq-site-header__navigation__list-item">
-          <a href="/">Graduation</a>
-        </li>
-        <li class="uq-site-header__navigation__list-item">
-          <a href="/">Contact</a>
-        </li>
-      </ul>
-    </nav>
-  </div>
-</div> 

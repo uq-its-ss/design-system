@@ -3,6 +3,7 @@ import { useEffect } from '@storybook/client-api';
 // import scripts
 import header from '@uqds/header/src/js/header';
 import accordion from '@uqds/accordion/src/js/accordion';
+import siteHeaderNavigation from '@uqds/site-header/src/js/site-header-navigation';
 
 // import HTML template strings
 import kitchenSinkHTML from './kitchen-sink.html';
@@ -22,6 +23,10 @@ export default {
 export const kitchenSink = () => {
   useEffect(() => {
     new accordion();
+
+    // Initialise Main Navigation
+    const navElem = document.getElementById("jsNav");
+    new siteHeaderNavigation(navElem, "uq-site-header__navigation");
 
     const headerkitch = document.querySelector('.uq-header');
     new header(headerkitch);

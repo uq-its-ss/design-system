@@ -3,6 +3,7 @@ import { useEffect } from '@storybook/client-api';
 // import scripts
 import headerBasic from '@uqds/header/src/js/header';
 import accordion from '@uqds/accordion/src/js/accordion';
+import siteHeaderNavigation from '@uqds/site-header/src/js/site-header-navigation';
 
 // import HTML template strings
 import headerHTML from '../../components/header/header-interim.html';
@@ -28,6 +29,11 @@ export default {
 export const basicPage = () => {
   useEffect(() => {
     new accordion();
+
+    // Initialise Main Navigation
+    const navElem = document.getElementById("jsNav");
+    new siteHeaderNavigation(navElem, "uq-site-header__navigation");
+
     const headerBas = document.querySelector('.uq-header');
     new headerBasic(headerBas);
 

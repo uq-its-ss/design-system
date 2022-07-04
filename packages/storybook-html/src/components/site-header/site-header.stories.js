@@ -40,6 +40,8 @@ export const siteHeaderWithoutSubnav = () => {
   useEffect(() => {
       var navElem = document.getElementById("jsNav");
       new siteHeaderNav(navElem, "uq-site-header__navigation");
+
+      
     });
   return siteHeaderWithoutSubnavHTML;
 };

@@ -24,6 +24,7 @@ class NewHeader {
       this.menuToggle.classList.toggle('nav-primary__menu-toggle--is-open');
       this.searchToggle.classList.remove('nav-primary__search-toggle--is-open');
       this.searchBlock.classList.remove('uq-header__search--is-open');
+      this.searchLabel.innerHTML = "Search";
     });
 
     this.searchToggle.addEventListener('click', (e) => {

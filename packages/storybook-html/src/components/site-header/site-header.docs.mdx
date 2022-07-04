@@ -13,38 +13,6 @@ The site header component is comprised of the site title, the site navigation, a
 
 ## Default
 
-### Without sub-navigation
-A site header with site title and a one-level site navigation.
-
-<Canvas withSource="none" withToolbar>
-  <Story height={200} id="components-site-header--site-header-without-subnav" />
-</Canvas>
-
-```html
-<div class="uq-site-header">
-  <!-- Site title with mobile nav toggler (JS) -->
-  <div class="uq-site-header__title-container">
-    <div class="uq-site-header__title-container__left">
-      <a href="/" class="uq-site-header__title">Site title</a>
-    </div>
-    <div class="uq-site-header__title-container__right">
-      <button class="uq-site-header__navigation-toggle jsNavToggle">Menu</button>
-    </div>
-  </div>
-
-  <!-- Navigation menu  -->
-  <div class="uq-site-header__navigation-container">
-    <nav class="uq-site-header__navigation" aria-label="Site navigation"  id="jsNav">
-      <ul class="uq-site-header__navigation__list uq-site-header__navigation__list--level-1">
-        <li class="uq-site-header__navigation__list-item">
-          <a href="/">Navigation list item</a>
-        </li>
-        ...
-    </nav>
-  </div>
-</div> 
-```
-
 ### With sub-navigation
 A site header with a site title, a site utility, and a two-level site navigation.
 
@@ -84,6 +52,38 @@ A site header with a site title, a site utility, and a two-level site navigation
     </nav>
   </div>
 </div>
+```
+
+### Without sub-navigation
+A site header with site title and a one-level site navigation.
+
+<Canvas withSource="none" withToolbar>
+  <Story height={200} id="components-site-header--site-header-without-subnav" />
+</Canvas>
+
+```html
+<div class="uq-site-header">
+  <!-- Site title with mobile nav toggler (JS) -->
+  <div class="uq-site-header__title-container">
+    <div class="uq-site-header__title-container__left">
+      <a href="/" class="uq-site-header__title">Site title</a>
+    </div>
+    <div class="uq-site-header__title-container__right">
+      <button class="uq-site-header__navigation-toggle jsNavToggle">Menu</button>
+    </div>
+  </div>
+
+  <!-- Navigation menu  -->
+  <div class="uq-site-header__navigation-container">
+    <nav class="uq-site-header__navigation" aria-label="Site navigation"  id="jsNav">
+      <ul class="uq-site-header__navigation__list uq-site-header__navigation__list--level-1">
+        <li class="uq-site-header__navigation__list-item">
+          <a href="/">Navigation list item</a>
+        </li>
+        ...
+    </nav>
+  </div>
+</div> 
 ```
 
 ## Variants

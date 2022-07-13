@@ -19,6 +19,7 @@ class NewHeader {
     this.searchBlock = el.querySelector('.uq-header__search');
     this.searchInput = el.querySelector('.uq-header__search-query-input');
 
+
     this.menuToggle.addEventListener('click', () => {
       document.body.classList.toggle('no-scroll');
       this.menuToggle.classList.toggle('nav-primary__menu-toggle--is-open');
@@ -48,9 +49,12 @@ class NewHeader {
 
     // megamenu
     const megaMenuItem = document.querySelectorAll('.uq-header__nav-primary-item');
+
     megaMenuItem.forEach((item) => {
       item.addEventListener('mouseenter', this.handleToggle);
       item.addEventListener('mouseleave', this.handleToggle);
+      item.addEventListener('keydown', this.handleKeyPress);
+      
     });
 
   }
@@ -72,11 +76,34 @@ class NewHeader {
 
       if (menuItem.eventType === 'mouseenter') {
         menuItem.classList.add('uq-header__nav-primary-item--is-open');
+        menuItem.querySelector('a').setAttribute('aria-expanded', 'true');
       } else  {
         menuItem.classList.remove('uq-header__nav-primary-item--is-open');
+        menuItem.querySelector('a').setAttribute('aria-expanded', 'false');
       }
     }, 250);
   }
+
+  // Keyboard Toggle Event
+  handleKeyPress(event) {
+    
+
+      // Toggle nav on Space (32) or any Arrow key (37-40).
+      switch (event.keyCode) {
+        case 32:
+        case 37:
+        case 38:
+        case 39:
+        case 40:
+          event.preventDefault();
+          this.handleToggle(event);
+          break;
+        default:
+          break;
+      }  
+
+  }
+
 }
 
 export default NewHeader;

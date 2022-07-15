@@ -31,6 +31,15 @@
     "whatwg-fetch": "^3.6.2"
   },
   "scripts": {
+    "format": "prettier --write \"**/*.{css,scss,js,jsx,json,md,mdx}\"",
+    "lint": "prettier --check \"**/*.{css,scss,js,jsx,json,md,mdx}\"",
+    "lint-fix": "npm run format",
     "test": "jest"
-  }
+  },
+  "browserslist": [
+    "last 4 chrome versions",
+    "last 4 firefox versions",
+    "safari > 14",
+    "ios_saf > 12"
+  ]
 }

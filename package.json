@@ -24,6 +24,7 @@
     "jsdom": "^19.0.0",
     "lerna": "^4.0.0",
     "msw": "^0.41.0",
+    "prettier": "2.7.1",
     "rollup": "^2.70.2",
     "vinyl-buffer": "^1.0.1",
     "vinyl-source-stream": "^2.0.0",

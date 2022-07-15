@@ -10,7 +10,5 @@ conventions (see [here](stylesheets.md)).
 Use 'camel case'. For example:
 
 ```html
-<a class="uq-button doSomethingWithJSToThisAsWell" href="#">
-  ...
-</a>
+<a class="uq-button doSomethingWithJSToThisAsWell" href="#"> ... </a>
 ```

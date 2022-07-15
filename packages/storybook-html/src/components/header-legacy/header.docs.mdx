@@ -1,9 +1,10 @@
-import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
-import StatusBadge from '../../../.storybook/custom/components/StatusBadge';
+import { Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
+import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
 
 # Global header
 
-<StatusBadge.Deprecated /><StatusBadge.StableDoc />
+<StatusBadge.Deprecated />
+<StatusBadge.StableDoc />
 
 ## Overview
 
@@ -14,7 +15,7 @@ quickly identify and trust UQ websites.
 ## With global search only
 
 Provides the UQ strapline, global links, and a general UQ site search feature
-using [*UQ Search*](https://www.uq.edu.au/search).
+using [_UQ Search_](https://www.uq.edu.au/search).
 
 > Don't reappropriate the search function for special integrated search
 > functionality within your application e.g. searching for a location on a map,
@@ -28,8 +29,16 @@ using [*UQ Search*](https://www.uq.edu.au/search).
 <header class="legacy-header">
   <div class="legacy-header__container">
     <div class="legacy-header__logo">
-      <a class="legacy-header__logo--large" href="https://www.uq.edu.au/"><img alt="The University of Queensland" src="https://static.uq.net.au/v15/logos/corporate/uq-lockup-landscape--reversed.svg"></a>
-      <a class="legacy-header__logo--small" href="https://www.uq.edu.au/"><img alt="The University of Queensland" src="https://static.uq.net.au/v15/logos/corporate/uq-logo--reversed.svg"></a>
+      <a class="legacy-header__logo--large" href="https://www.uq.edu.au/"
+        ><img
+          alt="The University of Queensland"
+          src="https://static.uq.net.au/v15/logos/corporate/uq-lockup-landscape--reversed.svg"
+      /></a>
+      <a class="legacy-header__logo--small" href="https://www.uq.edu.au/"
+        ><img
+          alt="The University of Queensland"
+          src="https://static.uq.net.au/v15/logos/corporate/uq-logo--reversed.svg"
+      /></a>
     </div>
     <div class="legacy-header__search-toggle">
       <button class="legacy-header__search-toggle-button">Search</button>
@@ -37,15 +46,34 @@ using [*UQ Search*](https://www.uq.edu.au/search).
     <div class="legacy-header__search">
       <form>
         <fieldset>
-          <legend class="legacy-header__search-title">What are you looking for?</legend>
+          <legend class="legacy-header__search-title">
+            What are you looking for?
+          </legend>
           <div class="legacy-header__search-range">
-            <label for="edit-as_sitesearch-off" class="option legacy-header__search-label">Search all UQ websites</label>
+            <label
+              for="edit-as_sitesearch-off"
+              class="option legacy-header__search-label"
+              >Search all UQ websites</label
+            >
           </div>
           <div class="legacy-header__search-query">
             <label for="edit-q" class="visually-hidden">Search term</label>
-            <input type="text" id="edit-q" name="q" value="" size="60" maxlength="128" class="legacy-header__search-query-input">
+            <input
+              type="text"
+              id="edit-q"
+              name="q"
+              value=""
+              size="60"
+              maxlength="128"
+              class="legacy-header__search-query-input"
+            />
             <span class="legacy-header__search-query-button">
-              <input type="submit" name="op" value="Search" class="legacy-header__search-query-submit">
+              <input
+                type="submit"
+                name="op"
+                value="Search"
+                class="legacy-header__search-query-submit"
+              />
             </span>
           </div>
         </fieldset>
@@ -53,15 +81,67 @@ using [*UQ Search*](https://www.uq.edu.au/search).
     </div>
     <nav class="legacy-header__navigation">
       <ul class="legacy-header__navigation-container">
-        <li><a class="legacy-header__navigation-link" href="https://contacts.uq.edu.au/">Contacts</a></li>
-        <li><a class="legacy-header__navigation-link" href="https://future-students.uq.edu.au/">Study</a></li>
-        <li><a class="legacy-header__navigation-link" href="https://maps.uq.edu.au/">Maps</a></li>
-        <li><a class="legacy-header__navigation-link" href="https://www.uq.edu.au/news/">News</a></li>
-        <li><a class="legacy-header__navigation-link" href="https://www.uq.edu.au/events/">Events</a></li>
-        <li><a class="legacy-header__navigation-link" href="https://jobs.uq.edu.au/">Jobs</a></li>
-        <li><a class="legacy-header__navigation-link" href="https://www.library.uq.edu.au/">Library</a></li>
-        <li><a class="legacy-header__navigation-link" href="https://giving.uq.edu.au/">Give now</a></li>
-        <li><a class="legacy-header__navigation-link" href="https://my.uq.edu.au/">my.UQ</a></li>
+        <li>
+          <a
+            class="legacy-header__navigation-link"
+            href="https://contacts.uq.edu.au/"
+            >Contacts</a
+          >
+        </li>
+        <li>
+          <a
+            class="legacy-header__navigation-link"
+            href="https://future-students.uq.edu.au/"
+            >Study</a
+          >
+        </li>
+        <li>
+          <a
+            class="legacy-header__navigation-link"
+            href="https://maps.uq.edu.au/"
+            >Maps</a
+          >
+        </li>
+        <li>
+          <a
+            class="legacy-header__navigation-link"
+            href="https://www.uq.edu.au/news/"
+            >News</a
+          >
+        </li>
+        <li>
+          <a
+            class="legacy-header__navigation-link"
+            href="https://www.uq.edu.au/events/"
+            >Events</a
+          >
+        </li>
+        <li>
+          <a
+            class="legacy-header__navigation-link"
+            href="https://jobs.uq.edu.au/"
+            >Jobs</a
+          >
+        </li>
+        <li>
+          <a
+            class="legacy-header__navigation-link"
+            href="https://www.library.uq.edu.au/"
+            >Library</a
+          >
+        </li>
+        <li>
+          <a
+            class="legacy-header__navigation-link"
+            href="https://giving.uq.edu.au/"
+            >Give now</a
+          >
+        </li>
+        <li>
+          <a class="legacy-header__navigation-link" href="https://my.uq.edu.au/"
+            >my.UQ</a
+          >
+        </li>
       </ul>
     </nav>
   </div>
@@ -71,7 +151,7 @@ using [*UQ Search*](https://www.uq.edu.au/search).
 ## With global and site search
 
 Provides the UQ strapline, global links, and a site search feature using
-[*UQ Search*](https://www.uq.edu.au/search). Two radio options are included to
+[_UQ Search_](https://www.uq.edu.au/search). Two radio options are included to
 allow users to choose to search all UQ sites or just the content on your site\*.
 
 > \*If your application/website isn't indexed by UQ Search, please opt
@@ -85,8 +165,16 @@ allow users to choose to search all UQ sites or just the content on your site\*.
 <header class="legacy-header">
   <div class="legacy-header__container">
     <div class="legacy-header__logo">
-      <a class="legacy-header__logo--large" href="https://www.uq.edu.au/"><img alt="The University of Queensland" src="https://static.uq.net.au/v15/logos/corporate/uq-lockup-landscape--reversed.svg"></a>
-      <a class="legacy-header__logo--small" href="https://www.uq.edu.au/"><img alt="The University of Queensland" src="https://static.uq.net.au/v15/logos/corporate/uq-logo--reversed.svg"></a>
+      <a class="legacy-header__logo--large" href="https://www.uq.edu.au/"
+        ><img
+          alt="The University of Queensland"
+          src="https://static.uq.net.au/v15/logos/corporate/uq-lockup-landscape--reversed.svg"
+      /></a>
+      <a class="legacy-header__logo--small" href="https://www.uq.edu.au/"
+        ><img
+          alt="The University of Queensland"
+          src="https://static.uq.net.au/v15/logos/corporate/uq-logo--reversed.svg"
+      /></a>
     </div>
     <div class="legacy-header__search-toggle">
       <button class="legacy-header__search-toggle-button">Search</button>
@@ -94,37 +182,125 @@ allow users to choose to search all UQ sites or just the content on your site\*.
     <div class="legacy-header__search">
       <form>
         <fieldset>
-          <legend class="legacy-header__search-title">What are you looking for?</legend>
+          <legend class="legacy-header__search-title">
+            What are you looking for?
+          </legend>
           <div class="legacy-header__search-range">
-            <input type="radio" id="edit-as_sitesearch-off" name="as_sitesearch" value="" class="form-radio">
-            <label for="edit-as_sitesearch-off" class="option legacy-header__search-label">Search all UQ websites</label>
+            <input
+              type="radio"
+              id="edit-as_sitesearch-off"
+              name="as_sitesearch"
+              value=""
+              class="form-radio"
+            />
+            <label
+              for="edit-as_sitesearch-off"
+              class="option legacy-header__search-label"
+              >Search all UQ websites</label
+            >
           </div>
           <!-- Customise the site search URL for your website -->
           <div class="legacy-header__search-range">
-              <input type="radio" id="edit-as_sitesearch-on" name="as_sitesearch" value="[https://your-site-domain.uq.edu.au]" checked="checked" class="form-radio legacy-header__search-radio">
-              <label for="edit-as_sitesearch-on" class="option legacy-header__search-label">Search this website ([your-site-domain.uq.edu.au])</label>
-            </div>
-            <div class="legacy-header__search-query">
-              <label for="edit-q" class="visually-hidden">Search term</label>
-              <input type="text" id="edit-q" name="q" value="" size="60" maxlength="128" class="legacy-header__search-query-input">
-              <span class="legacy-header__search-query-button">
-                <input type="submit" name="op" value="Search" class="legacy-header__search-query-submit">
-              </span>
-            </div>
-          </fieldset>
-        </form>
-      </div>
-      <nav class="legacy-header__navigation">
-        <ul class="legacy-header__navigation-container">
-          <li><a class="legacy-header__navigation-link" href="https://contacts.uq.edu.au/">Contacts</a></li>
-          <li><a class="legacy-header__navigation-link" href="https://future-students.uq.edu.au/">Study</a></li>
-          <li><a class="legacy-header__navigation-link" href="https://maps.uq.edu.au/">Maps</a></li>
-          <li><a class="legacy-header__navigation-link" href="https://www.uq.edu.au/news/">News</a></li>
-          <li><a class="legacy-header__navigation-link" href="https://www.uq.edu.au/events/">Events</a></li>
-          <li><a class="legacy-header__navigation-link" href="https://jobs.uq.edu.au/">Jobs</a></li>
-          <li><a class="legacy-header__navigation-link" href="https://www.library.uq.edu.au/">Library</a></li>
-          <li><a class="legacy-header__navigation-link" href="https://giving.uq.edu.au/">Give now</a></li>
-          <li><a class="legacy-header__navigation-link" href="https://my.uq.edu.au/">my.UQ</a></li>
+            <input
+              type="radio"
+              id="edit-as_sitesearch-on"
+              name="as_sitesearch"
+              value="[https://your-site-domain.uq.edu.au]"
+              checked="checked"
+              class="form-radio legacy-header__search-radio"
+            />
+            <label
+              for="edit-as_sitesearch-on"
+              class="option legacy-header__search-label"
+              >Search this website ([your-site-domain.uq.edu.au])</label
+            >
+          </div>
+          <div class="legacy-header__search-query">
+            <label for="edit-q" class="visually-hidden">Search term</label>
+            <input
+              type="text"
+              id="edit-q"
+              name="q"
+              value=""
+              size="60"
+              maxlength="128"
+              class="legacy-header__search-query-input"
+            />
+            <span class="legacy-header__search-query-button">
+              <input
+                type="submit"
+                name="op"
+                value="Search"
+                class="legacy-header__search-query-submit"
+              />
+            </span>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+    <nav class="legacy-header__navigation">
+      <ul class="legacy-header__navigation-container">
+        <li>
+          <a
+            class="legacy-header__navigation-link"
+            href="https://contacts.uq.edu.au/"
+            >Contacts</a
+          >
+        </li>
+        <li>
+          <a
+            class="legacy-header__navigation-link"
+            href="https://future-students.uq.edu.au/"
+            >Study</a
+          >
+        </li>
+        <li>
+          <a
+            class="legacy-header__navigation-link"
+            href="https://maps.uq.edu.au/"
+            >Maps</a
+          >
+        </li>
+        <li>
+          <a
+            class="legacy-header__navigation-link"
+            href="https://www.uq.edu.au/news/"
+            >News</a
+          >
+        </li>
+        <li>
+          <a
+            class="legacy-header__navigation-link"
+            href="https://www.uq.edu.au/events/"
+            >Events</a
+          >
+        </li>
+        <li>
+          <a
+            class="legacy-header__navigation-link"
+            href="https://jobs.uq.edu.au/"
+            >Jobs</a
+          >
+        </li>
+        <li>
+          <a
+            class="legacy-header__navigation-link"
+            href="https://www.library.uq.edu.au/"
+            >Library</a
+          >
+        </li>
+        <li>
+          <a
+            class="legacy-header__navigation-link"
+            href="https://giving.uq.edu.au/"
+            >Give now</a
+          >
+        </li>
+        <li>
+          <a class="legacy-header__navigation-link" href="https://my.uq.edu.au/"
+            >my.UQ</a
+          >
+        </li>
       </ul>
     </nav>
   </div>

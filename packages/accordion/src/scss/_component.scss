@@ -1,6 +1,6 @@
-@use '@uqds/core/src/scss/global' as core;
+@use "@uqds/core/src/scss/global" as core;
 @use "@uqds/icon/src/scss/global" as icon-constants;
-@use 'global' as *;
+@use "global" as *;
 
 // Accordion / Toggle style
 //
@@ -22,7 +22,7 @@
     margin-bottom: core.$space-s;
 
     &--is-open {
-      box-shadow: 0 0.25rem 0.5rem rgb(0 0 0 / 10%)
+      box-shadow: 0 0.25rem 0.5rem rgb(0 0 0 / 10%);
     }
   }
 
@@ -46,7 +46,7 @@
     position: relative;
     text-align: left;
     text-decoration: none;
-    transition: all ease .2s;
+    transition: all ease 0.2s;
     width: 100%;
 
     @media #{core.$screen-md-up} {
@@ -55,8 +55,11 @@
 
     // Closed state.
     &::before {
-      content: '';
-      background-image: url(icon-constants.get-icon('standard--arrow-down-1', core.$uq-purple));
+      content: "";
+      background-image: url(icon-constants.get-icon(
+        "standard--arrow-down-1",
+        core.$uq-purple
+      ));
       background-repeat: no-repeat;
       width: core.$space-m;
       height: core.$space-m;
@@ -90,7 +93,10 @@
 
       // Open state.
       &::before {
-        background-image: url(icon-constants.get-icon('standard--arrow-up-1', core.$uq-purple));
+        background-image: url(icon-constants.get-icon(
+          "standard--arrow-up-1",
+          core.$uq-purple
+        ));
       }
 
       &:hover,
@@ -104,11 +110,11 @@
     font-weight: 400;
     color: #6f6f6f;
     line-height: 1.4;
-  
+
     // required to Truncate text and add ellipsis
     display: -webkit-box;
     -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;  
+    -webkit-box-orient: vertical;
     overflow: hidden;
   }
 
@@ -116,7 +122,7 @@
   &__content {
     overflow: hidden;
     word-wrap: break-word;
-    transition: height 200ms ease;  
+    transition: height 200ms ease;
 
     &-wrapper {
       padding: core.$space;
@@ -151,7 +157,6 @@
 
   // Compact Modifier, reduces size for use in mixed components.
   &--compact {
-
     & .uq-accordion__toggle {
       font-size: core.$font-size;
       padding: core.$space-s core.$space-xxxl core.$space-s core.$space;
@@ -170,9 +175,7 @@
       top: core.$space-xs;
       right: core.$space;
     }
-
   }
-
 }
 
 // Overrides for when displayed within wysiwyg fields.

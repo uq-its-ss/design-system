@@ -7,11 +7,13 @@
 ### Installation
 
 With Yarn:
+
 ```shell
 yarn add @uqds/pagination
 ```
 
 With NPM:
+
 ```shell
 npm i @uqds/pagination
 ```

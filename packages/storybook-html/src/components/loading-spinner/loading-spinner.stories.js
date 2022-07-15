@@ -1,55 +1,55 @@
 // import styles
-import './loading-spinner.scss';
+import "./loading-spinner.scss";
 
 // import HTML template strings
-import loadingSpinnerHTML from './loading-spinner.html';
-import loadingSpinnerLightHTML from './loading-spinner-light.html';
-import loadingSpinnerSmallHTML from './loading-spinner-small.html';
+import loadingSpinnerHTML from "./loading-spinner.html";
+import loadingSpinnerLightHTML from "./loading-spinner-light.html";
+import loadingSpinnerSmallHTML from "./loading-spinner-small.html";
 
 // documentation
-import docs from './loading-spinner.docs.mdx';
+import docs from "./loading-spinner.docs.mdx";
 
 export default {
-  title: 'Components/Loading spinner',
+  title: "Components/Loading spinner",
   parameters: {
     docs: {
-      page: docs
+      page: docs,
     },
     layout: "padded",
     previewTabs: {
-      canvas: {hidden: false}
-    }
-  }
+      canvas: { hidden: false },
+    },
+  },
 };
 
 export const loadingSpinner = () => {
   return loadingSpinnerHTML;
 };
 
-loadingSpinner.storyName = 'Default';
+loadingSpinner.storyName = "Default";
 
 export const loadingSpinnerLight = () => {
   return loadingSpinnerLightHTML;
-}
+};
 
-loadingSpinnerLight.storyName = 'Light';
+loadingSpinnerLight.storyName = "Light";
 loadingSpinnerLight.parameters = {
   docs: {
-    inlineStories: false
+    inlineStories: false,
   },
   backgrounds: {
-    default: 'Purple',
+    default: "Purple",
     values: [
       {
-        name: 'Purple',
-        value: '#51247A',
-      }
-    ]
-  }
+        name: "Purple",
+        value: "#51247A",
+      },
+    ],
+  },
 };
 
 export const loadingSpinnerSmall = () => {
   return loadingSpinnerSmallHTML;
-}
+};
 
-loadingSpinnerSmall.storyName = 'Small';
+loadingSpinnerSmall.storyName = "Small";

@@ -1,9 +1,9 @@
 # Access requests - Granting user accesss to repo
 
-These are the current access levels for the Design System repo. 
+These are the current access levels for the Design System repo.
 In general all requests will typically be for the **Viewer access**
 
-Access is managed through teams linked to the repo. 
+Access is managed through teams linked to the repo.
 
 - `user-interface-development-framework-viewer`
 - `user-interface-development-framework-member`
@@ -46,13 +46,13 @@ Requests for access are sent to its.softwareservices@uq.edu.au
 `Subject: Github access - UQ Design System repo`
 
 ```md
-Hi, 
+Hi,
 
-Can you plese add new users to the UQ Design System repo. 
+Can you plese add new users to the UQ Design System repo.
 
-Please add to this team: 
+Please add to this team:
 <<add team name>>
 
-Users: 
+Users:
 <<Github ID or username>>
 ```

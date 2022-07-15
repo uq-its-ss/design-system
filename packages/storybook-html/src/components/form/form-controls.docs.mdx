@@ -1,14 +1,16 @@
-import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
-import StatusBadge from '../../../.storybook/custom/components/StatusBadge';
+import { Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
+import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
 
 # Form
 
-<StatusBadge.Development /><StatusBadge.DraftDoc />
+<StatusBadge.Development />
+<StatusBadge.DraftDoc />
 
 ## Overview
 
 Forms allow users to interact with your website or web
 application by providing some information. For example,
+
 - entering login details
 - setting a new password
 - selecting search filters
@@ -26,7 +28,7 @@ of both in the basic setup per control.
 ### Inline validation feedback is announced and associated with a control
 
 Creating an excellent form-filling experience, for the most part, involves using
-effective [*form validation*][2] practices where it is helpful. And, as part of
+effective [_form validation_][2] practices where it is helpful. And, as part of
 good client-side form validation, we should display useful inline feedback to guide users when
 the need arises. So then, **how do we ensure that this feedback is also
 accessible?** On the client-side, we can implement form validation in two ways:
@@ -54,7 +56,7 @@ recommendations and examples.
 
 Input for freestyle text entry. Use when asking for open-ended, single-line
 answers from your users. E.g. "first name", "street address". For multi-line
-answers, consider using a *text area*.
+answers, consider using a _text area_.
 
 <Story id="components-form-controls--input-text" />
 
@@ -64,13 +66,23 @@ answers, consider using a *text area*.
 <form>
   <!-- Explicit control-label association -->
   <label for="firstname">First name</label>
-  <input type="text" id="firstname" name="firstname" aria-describedby="firstnameFeedback" />
-  <span id="firstnameFeedback" aria-live="polite"><!-- Feedback injection point --></span>
+  <input
+    type="text"
+    id="firstname"
+    name="firstname"
+    aria-describedby="firstnameFeedback"
+  />
+  <span id="firstnameFeedback" aria-live="polite"
+    ><!-- Feedback injection point --></span
+  >
 
   <!-- Implicit control-label association -->
-  <label>First name 
+  <label
+    >First name
     <input type="text" name="firstname" aria-describedby="firstnameFeedback" />
-    <span id="firstnameFeedback" aria-live="polite"><!-- Feedback injection point --></span>
+    <span id="firstnameFeedback" aria-live="polite"
+      ><!-- Feedback injection point --></span
+    >
   </label>
 </form>
 ```
@@ -81,9 +93,18 @@ answers, consider using a *text area*.
 
 ```html
 <form>
-  <label for="firstname" class="uq-label--error" >First name</label>
-  <input type="text" id="firstname" name="firstname" aria-describedby="firstnameFeedback" aria-invalid="true" class="uq-input--error" />
-  <span id="firstnameFeedback" aria-live="polite" class="uq-error-message">Enter your first name</span>
+  <label for="firstname" class="uq-label--error">First name</label>
+  <input
+    type="text"
+    id="firstname"
+    name="firstname"
+    aria-describedby="firstnameFeedback"
+    aria-invalid="true"
+    class="uq-input--error"
+  />
+  <span id="firstnameFeedback" aria-live="polite" class="uq-error-message"
+    >Enter your first name</span
+  >
 </form>
 ```
 
@@ -98,8 +119,16 @@ formatting or unique value requirements.
 ```html
 <form>
   <label for="username" class="uq-label--success">Username</label>
-  <input type="text" id="username" name="username" aria-describedby="usernameFeedback" class="uq-input--success" />
-  <span id="usernameFeedback" aria-live="polite" class="uq-success-message">Your chosen username is available</span>
+  <input
+    type="text"
+    id="username"
+    name="username"
+    aria-describedby="usernameFeedback"
+    class="uq-input--success"
+  />
+  <span id="usernameFeedback" aria-live="polite" class="uq-success-message"
+    >Your chosen username is available</span
+  >
 </form>
 ```
 
@@ -121,7 +150,9 @@ Apply the `label--inline` class name to the `label` element like so:
   </div>
 
   <!-- Implicit control-label association -->
-  <label class="uq-label--inline">Keyword <input type="text" name="keyword" /></label>
+  <label class="uq-label--inline"
+    >Keyword <input type="text" name="keyword"
+  /></label>
 </form>
 ```
 
@@ -139,7 +170,11 @@ Apply the `input--large` class name to the `input` element like so:
 
 ```html
 <form>
-  <input type="text" class="uq-input--large" placeholder="Optional placeholder" />
+  <input
+    type="text"
+    class="uq-input--large"
+    placeholder="Optional placeholder"
+  />
 </form>
 ```
 
@@ -157,7 +192,11 @@ instead.
 <form>
   <!-- Explicit control-label association -->
   <label for="CommencementYear">Begin study in</label>
-  <select id="CommencementYear" name="commencementyear" aria-describedby="CommencementYearError">
+  <select
+    id="CommencementYear"
+    name="commencementyear"
+    aria-describedby="CommencementYearError"
+  >
     <option value=""></option>
     <option value="2021">2021</option>
     <option value="2022">2022</option>
@@ -165,7 +204,8 @@ instead.
   <span id="CommencementYearError" aria-live="polite"></span>
 
   <!-- Implicit control-label association -->
-  <label>Begin study in
+  <label
+    >Begin study in
     <select name="commencementyear" aria-describedby="CommencementYearError">
       <option value=""></option>
       <option value="2021">2021</option>
@@ -182,13 +222,21 @@ instead.
 
 ```html
 <form>
-  <label class="uq-label--error">Begin study in
-    <select name="commencementyear" class="uq-input--error" aria-describedby="CommencementYearError" aria-invalid="true">
+  <label class="uq-label--error"
+    >Begin study in
+    <select
+      name="commencementyear"
+      class="uq-input--error"
+      aria-describedby="CommencementYearError"
+      aria-invalid="true"
+    >
       <option value=""></option>
       <option value="2021">2021</option>
       <option value="2022">2022</option>
     </select>
-    <span id="CommencementYearError" class="uq-error-message" aria-live="polite">Select the year you will commence study at UQ</span>
+    <span id="CommencementYearError" class="uq-error-message" aria-live="polite"
+      >Select the year you will commence study at UQ</span
+    >
   </label>
 </form>
 ```
@@ -204,7 +252,9 @@ Apply the `label--inline` class name to the `label` element like so:
   <!-- Explicit control-label association -->
   <!-- Note: wrap elements in an "inline-block" level element to ensure that the both select and label wrap together -->
   <div style="display: inline-block">
-    <label for="CommencementYear" class="uq-label--inline">Begin study in</label>
+    <label for="CommencementYear" class="uq-label--inline"
+      >Begin study in</label
+    >
     <select id="CommencementYear" name="commencementyear">
       <option value=""></option>
       <option value="2021">2021</option>
@@ -213,7 +263,8 @@ Apply the `label--inline` class name to the `label` element like so:
   </div>
 
   <!-- Implicit control-label association -->
-  <label class="uq-label--inline">Begin study in
+  <label class="uq-label--inline"
+    >Begin study in
     <select name="commencementyear">
       <option value=""></option>
       <option value="2021">2021</option>
@@ -235,14 +286,23 @@ terms and conditions and opting into communications.
 ```html
 <form>
   <!-- Explicit control-label association -->
-  <input id="Confirm" type="checkbox" name="confirm" aria-describedby="ConfirmFeedback" />
-  <label for="Confirm">I declare that the information I've provided is correct and true</label>
+  <input
+    id="Confirm"
+    type="checkbox"
+    name="confirm"
+    aria-describedby="ConfirmFeedback"
+  />
+  <label for="Confirm"
+    >I declare that the information I've provided is correct and true</label
+  >
   <span id="ConfirmFeedback" aria-live="polite"></span>
 
   <!-- Implicit control-label association -->
   <label>
     <input type="checkbox" name="confirm" aria-describedby="ConfirmFeedback" />
-    <span>I declare that the information I've provided is correct and true</span>
+    <span
+      >I declare that the information I've provided is correct and true</span
+    >
   </label>
   <span id="ConfirmFeedback" aria-live="polite"></span>
 </form>
@@ -254,16 +314,28 @@ terms and conditions and opting into communications.
 
 ```html
 <form>
-  <input id="Confirm" type="checkbox" name="confirm" aria-describedby="ConfirmFeedback" aria-invalid="true" class="uq-input--error" />
-  <label for="Confirm" class="uq-label--error">I declare that the information I've provided is correct and true</label>
-  <span id="ConfirmFeedback" aria-live="polite" class="uq-error-message">Make sure your details are correct and then check the declaration statement</span>
+  <input
+    id="Confirm"
+    type="checkbox"
+    name="confirm"
+    aria-describedby="ConfirmFeedback"
+    aria-invalid="true"
+    class="uq-input--error"
+  />
+  <label for="Confirm" class="uq-label--error"
+    >I declare that the information I've provided is correct and true</label
+  >
+  <span id="ConfirmFeedback" aria-live="polite" class="uq-error-message"
+    >Make sure your details are correct and then check the declaration
+    statement</span
+  >
 </form>
 ```
 
 ### Radio buttons
 
 Use to provide users with up to three, mutually exclusive options. If you have
-more than three options, please consider a *select* control instead.
+more than three options, please consider a _select_ control instead.
 
 <Story id="components-form-controls--radio" />
 
@@ -277,11 +349,25 @@ Use a `fieldset` and `legend` to group and label your radio options.
     <legend>What semester will you start</legend>
 
     <!-- Explicit control-label association -->
-    <input id="Semester1" type="radio" name="semester" aria-describedby="semesterFeedback" />
-    <label for="Semester1">Semester 1</label><br/>
-    <input id="Semester2" type="radio" name="semester" aria-describedby="semesterFeedback" />
+    <input
+      id="Semester1"
+      type="radio"
+      name="semester"
+      aria-describedby="semesterFeedback"
+    />
+    <label for="Semester1">Semester 1</label><br />
+    <input
+      id="Semester2"
+      type="radio"
+      name="semester"
+      aria-describedby="semesterFeedback"
+    />
     <label for="Semester2">Semester 2</label>
-    <span id="semesterFeedback" aria-live="polite" class="uq-error-message"></span>
+    <span
+      id="semesterFeedback"
+      aria-live="polite"
+      class="uq-error-message"
+    ></span>
 
     <!-- Implicit control-label association -->
     <label>
@@ -292,8 +378,11 @@ Use a `fieldset` and `legend` to group and label your radio options.
       <input type="radio" name="semester" aria-describedby="semesterFeedback" />
       <span>Semester 2</span>
     </label>
-    <span id="semesterFeedback" aria-live="polite" class="uq-error-message"></span>
-
+    <span
+      id="semesterFeedback"
+      aria-live="polite"
+      class="uq-error-message"
+    ></span>
   </fieldset>
 </form>
 ```
@@ -306,11 +395,27 @@ Use a `fieldset` and `legend` to group and label your radio options.
 <form>
   <fieldset>
     <legend class="uq-legend--error">What semester will you start?</legend>
-    <input id="Semester1" type="radio" name="semester" class="uq-input--error" aria-invalid="true" aria-describedby="semesterFeedback" />
-    <label for="Semester2" class="uq-label--error">Semester 1</label><br/>
-    <input id="Semester2" type="radio" name="semester" class="uq-input--error" aria-invalid="true" aria-describedby="semesterFeedback" />
+    <input
+      id="Semester1"
+      type="radio"
+      name="semester"
+      class="uq-input--error"
+      aria-invalid="true"
+      aria-describedby="semesterFeedback"
+    />
+    <label for="Semester2" class="uq-label--error">Semester 1</label><br />
+    <input
+      id="Semester2"
+      type="radio"
+      name="semester"
+      class="uq-input--error"
+      aria-invalid="true"
+      aria-describedby="semesterFeedback"
+    />
     <label for="Semester2" class="uq-label--error">Semester 2</label>
-    <span id="semesterFeedback" aria-live="polite" class="uq-error-message">Please select a semester</span>
+    <span id="semesterFeedback" aria-live="polite" class="uq-error-message"
+      >Please select a semester</span
+    >
   </fieldset>
 </form>
 ```
@@ -339,7 +444,7 @@ styles already in place, we recommended importing the stylesheet with
 encapsulation enabled (to avoid selector clashes).
 
 ```scss
-@use '@uqds/form/src/scss/_component' as form with (
+@use "@uqds/form/src/scss/_component" as form with (
   $use-encapsulation: true
 );
 ```
@@ -349,14 +454,14 @@ package stylesheet to a subset of DOM elements. For example:
 
 ```html
 ...
-  <div class="uq">
-    <!-- these elements will now be styled using UQ style rules -->
-    <form>
-      <input type="text" name="firstname" />
-      <input type="text" name="lastname" />
-      <input type="submit" />
-    </form>
-  </div>
+<div class="uq">
+  <!-- these elements will now be styled using UQ style rules -->
+  <form>
+    <input type="text" name="firstname" />
+    <input type="text" name="lastname" />
+    <input type="submit" />
+  </form>
+</div>
 ...
 ```
 
@@ -366,13 +471,14 @@ to the resulting CSS to override third-party styles).
 
 ```html
 <body class="uq">
-...
+  ...
+</body>
 ```
 
 ## Known issues
 
 The inline variants of the various input elements do not have well-defined error
-styling rules. This is partly by design—the inline variants will unlikely be 
+styling rules. This is partly by design—the inline variants will unlikely be
 appropriate for forms requiring validation in the first place. I.e. they look
 better when used within search filters and other discrete content controls.
 

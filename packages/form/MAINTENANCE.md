@@ -11,10 +11,10 @@ For example, we can use the function as follows:
 ```scss
 // src/scss/_component.scss
 
-@use 'icons' as *;
+@use "icons" as *;
 
 select {
-  background-image: url(get-icon('form-chevron-down', core.$uq-purple));
+  background-image: url(get-icon("form-chevron-down", core.$uq-purple));
 }
 
 // where `form-chevron-down` is a key in the generated icon map.
@@ -23,11 +23,11 @@ select {
 ### Add, remove, or modify an icon
 
 1. Add/remove an icon (to/from the `src/images` directory), or modify an
-existing SVG file.
+   existing SVG file.
 2. Then, run the following command from the package root:
 
 ```bash
-npm run build-icons 
+npm run build-icons
 ```
 
 3. Commit your newly generated `_icon.scss` file.

@@ -2,7 +2,7 @@
 
 This is the repository for the UQ Design System.
 
-The UQ Design System is a guide to how user interfaces should look, feel, behave and be coded at UQ.  It includes a guide to the core styles, components, patterns and standards for UQ user interfaces.
+The UQ Design System is a guide to how user interfaces should look, feel, behave and be coded at UQ. It includes a guide to the core styles, components, patterns and standards for UQ user interfaces.
 
 Go to the [UQ Design System](https://design-system.uq.edu.au/) website for information about:
 
@@ -10,7 +10,6 @@ Go to the [UQ Design System](https://design-system.uq.edu.au/) website for infor
 - how to use it
 - UQ styles, components, patterns and examples
 - how to contribute.
-
 
 ---
 

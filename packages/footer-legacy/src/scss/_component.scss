@@ -1,172 +1,174 @@
-@use '@uqds/core/src/scss/global' as core;
-@use '@uqds/grid/src/scss/global' as grid;
-@use 'global' as *;
+@use "@uqds/core/src/scss/global" as core;
+@use "@uqds/grid/src/scss/global" as grid;
+@use "global" as *;
 
 .legacy-footer {
-    background: core.$uq-purple-gradient;
+  background: core.$uq-purple-gradient;
+  box-sizing: border-box;
+  color: $site-footer-color;
+  font-family: core.$font-body;
+  font-size: $site-footer-font-size;
+  font-weight: core.$font-weight-thin;
+  line-height: core.$line-height;
+
+  *,
+  *::before,
+  *::after {
     box-sizing: border-box;
+  }
+
+  a {
+    color: $site-footer-link-color;
+    font-weight: 500;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  abbr[title] {
+    text-decoration: none;
+    border-bottom: 1px dotted;
+  }
+
+  &__acknowledgement {
+    border-bottom: 1px solid rgba(core.$uq-white, 0.3);
     color: $site-footer-color;
-    font-family: core.$font-body;
-    font-size: $site-footer-font-size;
-    font-weight: core.$font-weight-thin;
+    font-family: core.$merriweather;
+    font-size: core.$font-size;
+    font-style: italic;
+    font-weight: core.$font-weight-normal;
     line-height: core.$line-height;
-    
-    *, *::before, *::after {
-        box-sizing: border-box;
+    margin: core.$space-none core.$space-none core.$space-l;
+    padding: core.$space-none core.$space-none core.$space-l;
+
+    @media #{core.$screen-md-up} {
+      font-size: core.$font-size-m;
     }
 
-    a {
-        color: $site-footer-link-color;
-        font-weight: 500;
-        text-decoration: none;
+    &__link {
+      font-family: core.$font-body;
+      font-style: normal;
+    }
+  }
 
-        &:hover {
-            text-decoration: underline;
+  &__container {
+    @include grid.layout-containment;
+    @include grid.grid-col-padding;
+    padding-top: core.$space-xxl;
+    padding-bottom: core.$space-xxl;
+  }
+
+  &__row {
+    display: grid;
+    grid: auto-flow / 1fr;
+    gap: 2rem 3rem;
+    justify-items: stretch;
+    justify-content: stretch;
+    align-items: start;
+    align-content: stretch;
+
+    @media #{core.$screen-md-up} {
+      grid: auto-flow / 2fr 1fr;
+    }
+
+    @media #{core.$screen-lg-up} {
+      grid: auto-flow / 3fr 1fr;
+    }
+  }
+
+  &__column {
+    justify-self: start;
+    align-self: start;
+  }
+
+  &__aside {
+    display: inline-block;
+    margin: core.$space-none;
+  }
+
+  &__sub-title {
+    color: $site-footer-link-color;
+    font-size: 1.125em;
+  }
+
+  &__footer {
+    margin: core.$space-l core.$space-none core.$space-none core.$space-none;
+    overflow: hidden;
+
+    .legacy-footer__row {
+      grid: auto-flow / 1fr;
+
+      @media #{core.$screen-lg-up} {
+        grid: auto-flow / 3fr 1fr;
+      }
+    }
+  }
+
+  &__footer-menu {
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      list-style-type: none;
+      margin: core.$space-none;
+      padding: core.$space-none;
+
+      li {
+        margin-bottom: core.$space-s;
+
+        &::after {
+          content: " | ";
+          padding: core.$space-none core.$space-s;
+          text-align: center;
         }
-    }
 
-    abbr[title] {
-        text-decoration: none;
-        border-bottom: 1px dotted;
+        &:last-of-type {
+          &::after {
+            content: none;
+            padding-right: core.$space-none;
+          }
+        }
+      }
     }
+  }
 
-    &__acknowledgement {
-        border-bottom: 1px solid rgba(core.$uq-white, 0.3);
+  &__social-media {
+    font-size: 1.5rem;
+
+    &__list {
+      list-style: none;
+      margin-top: 0;
+      margin-bottom: core.$space;
+      margin-left: -(core.$space-m);
+      margin-right: 0;
+      overflow: hidden;
+      padding: 0;
+
+      > li {
+        display: block;
+        float: left;
+        margin-left: core.$space-m;
+
+        > * {
+          display: block;
+        }
+      }
+    }
+    &__item + .legacy-footer__social-media__item::before {
+      content: " ";
+      display: inline-block;
+      margin: core.$space-none core.$space-s core.$space-none core.$space-none;
+    }
+    &__link {
+      &:hover {
         color: $site-footer-color;
-        font-family: core.$merriweather;
-        font-size: core.$font-size;
-        font-style: italic;
-        font-weight: core.$font-weight-normal;
-        line-height: core.$line-height;
-        margin: core.$space-none core.$space-none core.$space-l;
-        padding: core.$space-none core.$space-none core.$space-l;
-
-        @media #{core.$screen-md-up} {
-            font-size: core.$font-size-m;
-        }
-
-        &__link {
-            font-family: core.$font-body;
-            font-style: normal;
-        }
+        transition: all ease 0.5s;
+      }
     }
+  }
 
-    &__container {
-        @include grid.layout-containment;
-        @include grid.grid-col-padding;
-        padding-top: core.$space-xxl;
-        padding-bottom: core.$space-xxl;
-    }
-
-    &__row {
-        display: grid;
-        grid: auto-flow / 1fr;
-        gap: 2rem 3rem;
-        justify-items: stretch;
-        justify-content: stretch;
-        align-items: start;
-        align-content: stretch;
-        
-        @media #{core.$screen-md-up} {
-            grid: auto-flow / 2fr 1fr;
-        }
-
-        @media #{core.$screen-lg-up} {
-            grid: auto-flow / 3fr 1fr;
-        }
-    }
-
-    &__column {
-        justify-self: start;
-        align-self: start;
-    }
-
-    &__aside {
-        display: inline-block;
-        margin: core.$space-none;
-    }
-
-    &__sub-title {
-        color: $site-footer-link-color;
-        font-size: 1.125em;
-    }
-
-    &__footer {
-        margin: core.$space-l core.$space-none core.$space-none core.$space-none;
-        overflow: hidden;
-
-        .legacy-footer__row {
-            grid: auto-flow / 1fr;
-    
-            @media #{core.$screen-lg-up} {
-                grid: auto-flow / 3fr 1fr;
-            }
-        }
-    }
-
-    &__footer-menu {
-        &__list {
-            display: flex;
-            flex-wrap: wrap;
-            list-style-type: none;
-            margin: core.$space-none;
-            padding: core.$space-none;
-
-            li {
-                margin-bottom: core.$space-s;
-                
-                &::after {
-                    content: " | ";
-                    padding: core.$space-none core.$space-s;
-                    text-align: center;
-                }
-
-                &:last-of-type {
-                    &::after {
-                        content: none;
-                        padding-right: core.$space-none;
-                    }
-                }
-            }
-        }
-    }
-    
-    &__social-media {
-        font-size: 1.5rem;
-
-        &__list {
-            list-style: none;
-            margin-top: 0;
-            margin-bottom: core.$space;
-            margin-left: -(core.$space-m);
-            margin-right: 0;
-            overflow: hidden;
-            padding: 0;
-
-            > li {
-                display: block;
-                float: left;
-                margin-left: core.$space-m;
-
-                > * {
-                    display: block;
-                }
-            }
-        }
-        &__item + .legacy-footer__social-media__item::before {
-            content: " ";
-            display: inline-block;
-            margin: core.$space-none core.$space-s core.$space-none core.$space-none;
-        }
-        &__link {
-            &:hover {
-                color: $site-footer-color;
-                transition: all ease .5s;
-            }
-        }
-    }
-
-    &--full-width {
-        padding: core.$space-none core.$space;
-    }
+  &--full-width {
+    padding: core.$space-none core.$space;
+  }
 }

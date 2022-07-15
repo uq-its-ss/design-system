@@ -1,17 +1,18 @@
-import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
-import StatusBadge from '../../../.storybook/custom/components/StatusBadge';
+import { Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
+import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
 
 # Sections
 
-<StatusBadge.Stable /><StatusBadge.StableDoc />
+<StatusBadge.Stable />
+<StatusBadge.StableDoc />
 
 ## Overview
 
-Sections are a layout style that wrap content in a white or grey background with a range of width, alignment, and padding options. 
+Sections are a layout style that wrap content in a white or grey background with a range of width, alignment, and padding options.
 
 ## Default
 
-The default section displays left-aligned content, medium top and bottom padding, on a white background contained to the page width. 
+The default section displays left-aligned content, medium top and bottom padding, on a white background contained to the page width.
 
 <Canvas withSource="none">
   <Story id="layout-sections--sections-default" />
@@ -32,7 +33,7 @@ The default section displays left-aligned content, medium top and bottom padding
 
 ## Variants
 
-The variants can be used in isolation or combined. For example if you would like a section to display with centre-aligned content in a narrow container, add both of the variant classnames to the section. 
+The variants can be used in isolation or combined. For example if you would like a section to display with centre-aligned content in a narrow container, add both of the variant classnames to the section.
 
 ### Centered
 
@@ -102,20 +103,26 @@ Add class `uq-section--shaded` to apply a light-grey background to the section.
 Default sections have medium top and bottom padding. The following variants provide alternate padding options.
 
 **Top padding:** Set the amount of padding at the top of the section:
+
 - No top padding - `uq-section--padding-top-none`
 - Large top padding - `uq-section--padding-top-large`
 
 **Bottom padding:** Set the amount of padding at the bottom of the section:
-- No bottom padding - `uq-section--padding-bottom-none` 
+
+- No bottom padding - `uq-section--padding-bottom-none`
 - Large bottom padding - `uq-section--padding-bottom-large`
 
 #### No padding
+
 <Canvas withSource="none">
   <Story id="layout-sections--sections-no-padding" />
 </Canvas>
 
 ```html
-<section class="uq-section uq-section--padding-top-none uq-section--padding-bottom-none" aria-label="section title">
+<section
+  class="uq-section uq-section--padding-top-none uq-section--padding-bottom-none"
+  aria-label="section title"
+>
   <div class="uq-section__container">
     <div class="uq-section__header">
       <h2 class="uq-section__title"><!--section title--></h2>
@@ -126,13 +133,18 @@ Default sections have medium top and bottom padding. The following variants prov
   </div>
 </section>
 ```
+
 #### Large padding
+
 <Canvas withSource="none">
   <Story id="layout-sections--sections-large-padding" />
 </Canvas>
 
 ```html
-<section class="uq-section uq-section--padding-top-large uq-section--padding-bottom-large" aria-label="section title">
+<section
+  class="uq-section uq-section--padding-top-large uq-section--padding-bottom-large"
+  aria-label="section title"
+>
   <div class="uq-section__container">
     <div class="uq-section__header">
       <h2 class="uq-section__title"><!--section title--></h2>
@@ -150,7 +162,7 @@ Sections are primarily used on landing pages to create strips of content stacked
 
 ## Accessibility
 
-Include an `aria-label` with a value that describes the section. Assistive technologies use the value to define the content of the section. 
+Include an `aria-label` with a value that describes the section. Assistive technologies use the value to define the content of the section.
 
 ```html
 <section class="uq-section" aria-label="section title">

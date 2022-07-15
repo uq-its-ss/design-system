@@ -1,30 +1,30 @@
-import { useEffect } from '@storybook/client-api';
+import { useEffect } from "@storybook/client-api";
 
 // import styles
-import './tabs.scss';
+import "./tabs.scss";
 
 // import scripts
-import { Tabs } from '@uqds/tabs/src/js/tabs';
+import { Tabs } from "@uqds/tabs/src/js/tabs";
 
 // documentation
-import docs from './tabs.docs.mdx';
+import docs from "./tabs.docs.mdx";
 
 export default {
-  title: 'Components/Tabs',
+  title: "Components/Tabs",
   parameters: {
     docs: {
-      page: docs
+      page: docs,
     },
     layout: "padded",
     previewTabs: {
-      canvas: {hidden: false}
-    }
-  }
+      canvas: { hidden: false },
+    },
+  },
 };
 
 export const tabsOutline = () => {
   useEffect(() => {
-    new Tabs({container: document.getElementById('tabsDefaultExample')});
+    new Tabs({ container: document.getElementById("tabsDefaultExample") });
   });
   return `
   <div id="tabsDefaultExample" class="uq-tabs uq-tabs--outline">
@@ -49,12 +49,11 @@ export const tabsOutline = () => {
   `;
 };
 
-tabsOutline.storyName = 'Default / Outline';
-
+tabsOutline.storyName = "Default / Outline";
 
 export const tabsMinimal = () => {
   useEffect(() => {
-    new Tabs({container: document.getElementById('tabsMinimalExample')});
+    new Tabs({ container: document.getElementById("tabsMinimalExample") });
   });
   return `
   <div id="tabsMinimalExample" class="uq-tabs">
@@ -78,11 +77,11 @@ export const tabsMinimal = () => {
   `;
 };
 
-tabsMinimal.storyName = 'Minimal';
+tabsMinimal.storyName = "Minimal";
 
 export const tabsLined = () => {
   useEffect(() => {
-    new Tabs({container: document.getElementById('tabsLinedExample')});
+    new Tabs({ container: document.getElementById("tabsLinedExample") });
   });
   return `
   <div id="tabsLinedExample" class="uq-tabs uq-tabs--lined">
@@ -106,11 +105,11 @@ export const tabsLined = () => {
   `;
 };
 
-tabsLined.storyName = 'Lined';
+tabsLined.storyName = "Lined";
 
 export const tabsWithIcon = () => {
   useEffect(() => {
-    new Tabs({container: document.getElementById('tabsWithIconExample')});
+    new Tabs({ container: document.getElementById("tabsWithIconExample") });
   });
   return `
   <div id="tabsWithIconExample" class="uq-tabs uq-tabs--outline">
@@ -140,11 +139,11 @@ export const tabsWithIcon = () => {
   `;
 };
 
-tabsWithIcon.storyName = 'With icon';
+tabsWithIcon.storyName = "With icon";
 
 export const tabsFullWidth = () => {
   useEffect(() => {
-    new Tabs({container: document.getElementById('tabsFullWidthExample')});
+    new Tabs({ container: document.getElementById("tabsFullWidthExample") });
   });
   return `
   <div id="tabsFullWidthExample" class="uq-tabs uq-tabs--outline uq-tabs--full-width">
@@ -168,11 +167,11 @@ export const tabsFullWidth = () => {
   `;
 };
 
-tabsFullWidth.storyName = 'Full width';
+tabsFullWidth.storyName = "Full width";
 
 export const tabsSmall = () => {
   useEffect(() => {
-    new Tabs({container: document.getElementById('tabsSmallExample')});
+    new Tabs({ container: document.getElementById("tabsSmallExample") });
   });
   return `
   <div id="tabsSmallExample" class="uq-tabs uq-tabs--outline uq-tabs--small">
@@ -196,11 +195,11 @@ export const tabsSmall = () => {
   `;
 };
 
-tabsSmall.storyName = 'Small';
+tabsSmall.storyName = "Small";
 
 export const tabsReversed = () => {
   useEffect(() => {
-    new Tabs({container: document.getElementById('tabsReversedExample')});
+    new Tabs({ container: document.getElementById("tabsReversedExample") });
   });
   return `
   <div id="tabsReversedExample" class="uq-tabs uq-tabs--outline uq-tabs--reversed">
@@ -224,4 +223,4 @@ export const tabsReversed = () => {
   `;
 };
 
-tabsReversed.storyName = 'Reversed';
+tabsReversed.storyName = "Reversed";

@@ -1,13 +1,14 @@
-import { Meta, Story } from '@storybook/addon-docs/blocks';
-import StatusBadge from '../../../.storybook/custom/components/StatusBadge';
+import { Meta, Story } from "@storybook/addon-docs/blocks";
+import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
 
 # Grid menu
 
-<StatusBadge.Review /><StatusBadge.DraftDoc />
+<StatusBadge.Review />
+<StatusBadge.DraftDoc />
 
 ## Overview
 
-Grid menu is a list of unordered list elements that can be displayed in either 1, 2, 3 or 4 columns. 
+Grid menu is a list of unordered list elements that can be displayed in either 1, 2, 3 or 4 columns.
 By default it is displayed as a 3 column layout and changes on different responsive breakpoints.
 
 The height of the grid menu items is by default equalised on its row.
@@ -19,12 +20,24 @@ The height of the grid menu items is by default equalised on its row.
 ```html
 <h2>Grid menu default</h2>
 <ul class="uq-grid-menu">
-  <li><a href="#"><span class="uq-grid-menu__title">Menu link 1</span></a></li>
-  <li><a href="#"><span class="uq-grid-menu__title">Menu link 2</span></a></li>
-  <li><a href="#"><span class="uq-grid-menu__title">Menu link 3</span></a></li>
-  <li><a href="#"><span class="uq-grid-menu__title">Menu link 4</span></a></li>
-  <li><a href="#"><span class="uq-grid-menu__title">Menu link 5</span></a></li>
-  <li><a href="#"><span class="uq-grid-menu__title">Menu link 6</span></a></li>
+  <li>
+    <a href="#"><span class="uq-grid-menu__title">Menu link 1</span></a>
+  </li>
+  <li>
+    <a href="#"><span class="uq-grid-menu__title">Menu link 2</span></a>
+  </li>
+  <li>
+    <a href="#"><span class="uq-grid-menu__title">Menu link 3</span></a>
+  </li>
+  <li>
+    <a href="#"><span class="uq-grid-menu__title">Menu link 4</span></a>
+  </li>
+  <li>
+    <a href="#"><span class="uq-grid-menu__title">Menu link 5</span></a>
+  </li>
+  <li>
+    <a href="#"><span class="uq-grid-menu__title">Menu link 6</span></a>
+  </li>
 </ul>
 ```
 
@@ -38,10 +51,14 @@ The height of the grid menu items is by default equalised on its row.
 <ul class="uq-grid-menu">
   <li class="uq-grid-menu__item">
     <a href="#" class="uq-grid-menu__link">
-      <span class="uq-grid-menu__icon uq-icon uq-icon--other--hotel-bedroom-1"></span>
+      <span
+        class="uq-grid-menu__icon uq-icon uq-icon--other--hotel-bedroom-1"
+      ></span>
       <span class="uq-grid-menu__title">Menu link 1</span>
-      <span class="uq-grid-menu__description">Ullamcorper est sodales egestas condimentum vestibulum proin justo morbi
-        luctus porttitor adipiscing eu a eu massa inceptos cras non tempus taciti.
+      <span class="uq-grid-menu__description"
+        >Ullamcorper est sodales egestas condimentum vestibulum proin justo
+        morbi luctus porttitor adipiscing eu a eu massa inceptos cras non tempus
+        taciti.
       </span>
     </a>
   </li>
@@ -57,10 +74,14 @@ The height of the grid menu items is by default equalised on its row.
 <ul class="uq-grid-menu uq-grid-menu--dark-text">
   <li class="uq-grid-menu__item">
     <a href="#" class="uq-grid-menu__link">
-      <span class="uq-grid-menu__icon uq-icon uq-icon--other--hotel-bedroom-1"></span>
+      <span
+        class="uq-grid-menu__icon uq-icon uq-icon--other--hotel-bedroom-1"
+      ></span>
       <span class="uq-grid-menu__title">Menu link 1</span>
-      <span class="uq-grid-menu__description">Ullamcorper est sodales egestas condimentum vestibulum proin justo morbi
-        luctus porttitor adipiscing eu a eu massa inceptos cras non tempus taciti.
+      <span class="uq-grid-menu__description"
+        >Ullamcorper est sodales egestas condimentum vestibulum proin justo
+        morbi luctus porttitor adipiscing eu a eu massa inceptos cras non tempus
+        taciti.
       </span>
     </a>
   </li>
@@ -74,7 +95,12 @@ The height of the grid menu items is by default equalised on its row.
 
 ```html
 <ul class="uq-grid-menu">
-  <li><a href="#"><span class="uq-grid-menu__icon uq-icon uq-icon--other--car-1"></span><span class="uq-grid-menu__title">Menu link 1</span></a></li>
+  <li>
+    <a href="#"
+      ><span class="uq-grid-menu__icon uq-icon uq-icon--other--car-1"></span
+      ><span class="uq-grid-menu__title">Menu link 1</span></a
+    >
+  </li>
   ...
 </ul>
 ```
@@ -87,7 +113,9 @@ The height of the grid menu items is by default equalised on its row.
 
 ```html
 <ul class="uq-grid-menu uq-grid-menu--2-column">
-  <li><a href="#"><span class="uq-grid-menu__title">Menu link 1</span></a></li>
+  <li>
+    <a href="#"><span class="uq-grid-menu__title">Menu link 1</span></a>
+  </li>
   ...
 </ul>
 ```
@@ -98,7 +126,9 @@ The height of the grid menu items is by default equalised on its row.
 
 ```html
 <ul class="uq-grid-menu uq-grid-menu--4-column">
-  <li><a href="#"><span class="uq-grid-menu__title">Menu link 1</span></a></li>
+  <li>
+    <a href="#"><span class="uq-grid-menu__title">Menu link 1</span></a>
+  </li>
   ...
 </ul>
 ```

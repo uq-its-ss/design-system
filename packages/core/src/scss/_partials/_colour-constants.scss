@@ -5,35 +5,31 @@
 
 // Function to Tint a color
 @function tint($color, $percentage) {
-    @return mix(white, $color, $percentage);
+  @return mix(white, $color, $percentage);
 }
 // Function to Shade a color
 @function shade($color, $percentage) {
-    @return mix(black, $color, $percentage);
+  @return mix(black, $color, $percentage);
 }
 
-
-
 // UQ Primary palette
-$uq-purple: #51247A;
+$uq-purple: #51247a;
 $uq-black: #000;
 $uq-white: #fff;
 
 // UQ Secondary palette
-$uq-purple-light: #962A8B;
-$uq-gold: #BB9D65;
-$uq-red: #E62645;
-$uq-orange: #EB602B;
-$uq-yellow: #FBB800;
-$uq-blue: #4085C6;
-$uq-aqua: #00A2C7;
-$uq-green: #2EA836;
+$uq-purple-light: #962a8b;
+$uq-gold: #bb9d65;
+$uq-red: #e62645;
+$uq-orange: #eb602b;
+$uq-yellow: #fbb800;
+$uq-blue: #4085c6;
+$uq-aqua: #00a2c7;
+$uq-green: #2ea836;
 
 // UQ Neutral palette
-$uq-neutral: #D7D1CC;
+$uq-neutral: #d7d1cc;
 $uq-darkgrey: #999490;
-
-
 
 // UQ Primary - Darken
 $uq-purple-dark10: darken($uq-purple, 10%); //#371853
@@ -43,7 +39,6 @@ $uq-red-dark10: darken($uq-red, 10%); //#c31632
 $uq-red-dark20: darken($uq-red, 20%); //#951126
 
 $uq-green-dark10: darken($uq-green, 10%); //#238029
-
 
 // UQ Neutral - Tint
 $uq-neutral-light20: tint($uq-neutral, 20%); //#dfdad6;
@@ -63,23 +58,24 @@ $uq-darkgrey-light40: tint($uq-neutral, 40%); //#c2bfbc;
 $uq-darkgrey-light60: tint($uq-neutral, 60%); //#d6d4d3;
 $uq-darkgrey-light80: tint($uq-neutral, 80%); //#ebeae9;
 
-
-
 // UQ Purple gradient
-$uq-purple-gradient: linear-gradient(90deg, $uq-purple 0%, 87%, $uq-purple-light 100%);
-
-
+$uq-purple-gradient: linear-gradient(
+  90deg,
+  $uq-purple 0%,
+  87%,
+  $uq-purple-light 100%
+);
 
 // Default text, Content
 $text: $uq-neutral-dark80;
 
 // Link Blue
-$link: #1E72C6;
+$link: #1e72c6;
 $link-hover: #005ea5;
 $link-active: $link-hover;
 
 // Alerts and Status - Dark
-$info: #0D6DCD;
+$info: #0d6dcd;
 $success: $uq-green-dark10;
 $warning: $uq-yellow;
 $alert: $uq-red-dark20;
@@ -92,12 +88,12 @@ $alert-light: lighten($uq-red, 40%); //fbdde2
 
 // Palettes
 $light-palette-color: $uq-neutral-light80;
-$light-palette-border-color: rgba($uq-white, .4);
+$light-palette-border-color: rgba($uq-white, 0.4);
 $light-palette-link-color: $uq-white;
 $light-palette-bg: $uq-white;
 
 $dark-palette-color: $uq-neutral-dark80;
-$dark-palette-border-color: rgba($uq-black, .1);
+$dark-palette-border-color: rgba($uq-black, 0.1);
 $dark-palette-link-color: lighten($uq-purple, 10%);
 $dark-palette-bg: $uq-neutral-dark60;
 
@@ -105,7 +101,11 @@ $dark-palette-bg: $uq-neutral-dark60;
 $dark-tint-bg: $uq-neutral-dark60;
 
 // Filters from #000000
-$filter-text: invert(0%) sepia(72%) saturate(588%) hue-rotate(348deg) brightness(115%) contrast(81%);
-$filter-primary: invert(20%) sepia(34%) saturate(1979%) hue-rotate(239deg) brightness(97%) contrast(107%);
-$filter-secondary: invert(35%) sepia(80%) saturate(952%) hue-rotate(181deg) brightness(94%) contrast(90%);
-$filter-white: invert(100%) sepia(0%) saturate(1%) hue-rotate(122deg) brightness(111%) contrast(102%);
+$filter-text: invert(0%) sepia(72%) saturate(588%) hue-rotate(348deg)
+  brightness(115%) contrast(81%);
+$filter-primary: invert(20%) sepia(34%) saturate(1979%) hue-rotate(239deg)
+  brightness(97%) contrast(107%);
+$filter-secondary: invert(35%) sepia(80%) saturate(952%) hue-rotate(181deg)
+  brightness(94%) contrast(90%);
+$filter-white: invert(100%) sepia(0%) saturate(1%) hue-rotate(122deg)
+  brightness(111%) contrast(102%);

@@ -5,7 +5,7 @@
 Our Javascript development style:
 [StandardJS](https://standardjs.com/index.html)
 
-## Namespacing precompiled code 
+## Namespacing precompiled code
 
 Precompiled code should be scoped within a `uq` namespace.
 For example if I have a class called `header`, I would use it in a statement

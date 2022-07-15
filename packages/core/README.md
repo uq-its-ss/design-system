@@ -6,12 +6,14 @@
 
 ### Installation
 
-With Yarn:  
+With Yarn:
+
 ```shell
 yarn add @uqds/core
 ```
 
-With NPM:  
+With NPM:
+
 ```shell
 npm i @uqds/core
 ```

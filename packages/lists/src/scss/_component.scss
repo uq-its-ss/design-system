@@ -1,5 +1,5 @@
-@use '@uqds/core/src/scss/global' as core;
-@use 'global' as *;
+@use "@uqds/core/src/scss/global" as core;
+@use "global" as *;
 
 // Lists
 // For listing of content such as node teasers. It can be applied to <ul> and <div> elements alike.
@@ -86,7 +86,7 @@
   &__item {
     float: left;
     list-style: none;
-    padding: core.$space-none core.$space;//0 .75rem;
+    padding: core.$space-none core.$space; //0 .75rem;
     margin: core.$space-none core.$space-none core.$space core.$space-none; //0 0 .75rem 0
   }
 

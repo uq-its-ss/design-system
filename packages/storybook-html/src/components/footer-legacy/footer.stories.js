@@ -1,26 +1,26 @@
 // import styles
-import './footer.scss';
+import "./footer.scss";
 
 // import HTML template strings
-import footerHTML from './footer.html';
+import footerHTML from "./footer.html";
 
-import docs from './footer.docs.mdx';
+import docs from "./footer.docs.mdx";
 
 export default {
-  title: 'Legacy/Footer',
+  title: "Legacy/Footer",
   parameters: {
     layout: "fullscreen",
     backgrounds: {
-      default: 'UQ Neutral 1'
+      default: "UQ Neutral 1",
     },
     docs: {
       page: docs,
-      inlineStories: false
+      inlineStories: false,
     },
     previewTabs: {
-      canvas: {hidden: false}
-    }
-  }
+      canvas: { hidden: false },
+    },
+  },
 };
 
 export const footer = () => {

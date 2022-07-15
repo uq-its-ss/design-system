@@ -1,20 +1,20 @@
 // import styles
-import './card.scss';
+import "./card.scss";
 
 // import documentation
-import docs from './card.docs.mdx';
+import docs from "./card.docs.mdx";
 
 export default {
-  title: 'Components/Cards',
+  title: "Components/Cards",
   parameters: {
     layout: "fullscreen",
     docs: {
-      page: docs
+      page: docs,
     },
     previewTabs: {
-      canvas: {hidden: false}
-    }
-  }
+      canvas: { hidden: false },
+    },
+  },
 };
 
 export const DefaultCard = () => {
@@ -44,7 +44,7 @@ export const DefaultCard = () => {
   `;
 };
 
-DefaultCard.storyName = 'Default card';
+DefaultCard.storyName = "Default card";
 
 export const DefaultCardWithLink = () => {
   return `
@@ -97,7 +97,7 @@ export const DefaultCardWithLink = () => {
   `;
 };
 
-DefaultCardWithLink.storyName = 'Default card with link';
+DefaultCardWithLink.storyName = "Default card with link";
 
 export const DefaultCardNoImage = () => {
   return `
@@ -164,7 +164,7 @@ export const DefaultCardNoImage = () => {
   `;
 };
 
-DefaultCardNoImage.storyName = 'Default card, no image';
+DefaultCardNoImage.storyName = "Default card, no image";
 
 export const DefaultCardNoImageShaded = () => {
   return `
@@ -231,7 +231,7 @@ export const DefaultCardNoImageShaded = () => {
   `;
 };
 
-DefaultCardNoImageShaded.storyName = 'Default card, no image, shaded';
+DefaultCardNoImageShaded.storyName = "Default card, no image, shaded";
 
 export const DefaultCardNoImageButton = () => {
   return `
@@ -271,7 +271,7 @@ export const DefaultCardNoImageButton = () => {
   `;
 };
 
-DefaultCardNoImageButton.storyName = 'Default card, no image, button';
+DefaultCardNoImageButton.storyName = "Default card, no image, button";
 
 export const DefaultCardNoImageButtonShaded = () => {
   return `
@@ -311,7 +311,8 @@ export const DefaultCardNoImageButtonShaded = () => {
   `;
 };
 
-DefaultCardNoImageButtonShaded.storyName = 'Default card, no image, button, shaded';
+DefaultCardNoImageButtonShaded.storyName =
+  "Default card, no image, button, shaded";
 
 export const DefaultCardImage = () => {
   return `
@@ -398,7 +399,7 @@ export const DefaultCardImage = () => {
   `;
 };
 
-DefaultCardImage.storyName = 'Default card, image';
+DefaultCardImage.storyName = "Default card, image";
 
 export const DefaultCardImageButton = () => {
   return `
@@ -448,7 +449,7 @@ export const DefaultCardImageButton = () => {
   `;
 };
 
-DefaultCardImageButton.storyName = 'Default card, image, button';
+DefaultCardImageButton.storyName = "Default card, image, button";
 
 export const DefaultCard1Col = () => {
   return `
@@ -479,7 +480,7 @@ export const DefaultCard1Col = () => {
   `;
 };
 
-DefaultCard1Col.storyName = 'Default card, 1 column';
+DefaultCard1Col.storyName = "Default card, 1 column";
 
 export const DefaultCard2Col = () => {
   return `
@@ -532,7 +533,7 @@ export const DefaultCard2Col = () => {
   `;
 };
 
-DefaultCard2Col.storyName = 'Default card, 2 column';
+DefaultCard2Col.storyName = "Default card, 2 column";
 
 export const DefaultCard3Col = () => {
   return `
@@ -607,7 +608,7 @@ export const DefaultCard3Col = () => {
   `;
 };
 
-DefaultCard3Col.storyName = 'Default card, 3 column';
+DefaultCard3Col.storyName = "Default card, 3 column";
 
 export const DefaultCard4Col = () => {
   return `
@@ -704,12 +705,7 @@ export const DefaultCard4Col = () => {
   `;
 };
 
-DefaultCard4Col.storyName = 'Default card, 4 column';
-
-
-
-
-
+DefaultCard4Col.storyName = "Default card, 4 column";
 
 export const StoryCard = () => {
   return `
@@ -739,7 +735,7 @@ export const StoryCard = () => {
   `;
 };
 
-StoryCard.storyName = 'Story card';
+StoryCard.storyName = "Story card";
 
 export const StoryCard1Col = () => {
   return `
@@ -772,7 +768,7 @@ export const StoryCard1Col = () => {
   `;
 };
 
-StoryCard1Col.storyName = 'Story card, 1 column';
+StoryCard1Col.storyName = "Story card, 1 column";
 
 export const StoryCard2Col = () => {
   return `
@@ -829,7 +825,7 @@ export const StoryCard2Col = () => {
   `;
 };
 
-StoryCard2Col.storyName = 'Story card, 2 column';
+StoryCard2Col.storyName = "Story card, 2 column";
 
 export const StoryCard3Col = () => {
   return `
@@ -910,7 +906,7 @@ export const StoryCard3Col = () => {
   `;
 };
 
-StoryCard3Col.storyName = 'Story card, 3 column';
+StoryCard3Col.storyName = "Story card, 3 column";
 
 export const StoryCard4Col = () => {
   return `
@@ -1015,7 +1011,7 @@ export const StoryCard4Col = () => {
   `;
 };
 
-StoryCard4Col.storyName = 'Story card, 4 column';
+StoryCard4Col.storyName = "Story card, 4 column";
 
 export const EventCard = () => {
   return `
@@ -1045,7 +1041,7 @@ export const EventCard = () => {
   `;
 };
 
-EventCard.storyName = 'Event card';
+EventCard.storyName = "Event card";
 
 export const EventCard1Col = () => {
   return `
@@ -1078,7 +1074,7 @@ export const EventCard1Col = () => {
   `;
 };
 
-EventCard1Col.storyName = 'Event card, 1 column';
+EventCard1Col.storyName = "Event card, 1 column";
 
 export const EventCard2Col = () => {
   return `
@@ -1135,7 +1131,7 @@ export const EventCard2Col = () => {
   `;
 };
 
-EventCard2Col.storyName = 'Event card, 2 column';
+EventCard2Col.storyName = "Event card, 2 column";
 
 export const EventCard3Col = () => {
   return `
@@ -1216,7 +1212,7 @@ export const EventCard3Col = () => {
   `;
 };
 
-EventCard3Col.storyName = 'Event card, 3 column';
+EventCard3Col.storyName = "Event card, 3 column";
 
 export const EventCard4Col = () => {
   return `
@@ -1321,4 +1317,4 @@ export const EventCard4Col = () => {
   `;
 };
 
-EventCard4Col.storyName = 'Event card, 4 column';
+EventCard4Col.storyName = "Event card, 4 column";

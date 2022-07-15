@@ -1,10 +1,10 @@
-@forward '_partials/colour-constants';
-@forward '_partials/space-constants';
-@forward '_partials/text-constants';
-@forward '_partials/media-constants';
+@forward "_partials/colour-constants";
+@forward "_partials/space-constants";
+@forward "_partials/text-constants";
+@forward "_partials/media-constants";
 
-@use '_partials/colour-constants' as *;
-@use '_partials/text-constants' as *;
+@use "_partials/colour-constants" as *;
+@use "_partials/text-constants" as *;
 
 // Placeholder styles
 
@@ -16,10 +16,10 @@
   overflow: hidden;
 
   &-overlay {
-    content: '';
+    content: "";
     height: 100%;
     left: 0;
-    opacity: .5;
+    opacity: 0.5;
     position: absolute;
     top: 0;
     width: 100%;
@@ -38,18 +38,18 @@
   background-color: $dark-tint-bg;
 
   &::before {
-      @extend %tint-overlay;
-      background: $uq-black;
+    @extend %tint-overlay;
+    background: $uq-black;
   }
 }
 
 // Light tint layer provides a white tint
 %light-tint {
   @extend %tint;
-  
+
   &::before {
-      @extend %tint-overlay;
-      background: $uq-white;
+    @extend %tint-overlay;
+    background: $uq-white;
   }
 }
 
@@ -73,7 +73,7 @@
     font-weight: $font-weight-normal;
 
     &:hover {
-      color: darken($light-palette-link-color,10%);
+      color: darken($light-palette-link-color, 10%);
     }
   }
 }
@@ -91,7 +91,7 @@
     color: $dark-palette-link-color;
 
     &:hover {
-      color: darken($dark-palette-link-color,10%);
+      color: darken($dark-palette-link-color, 10%);
     }
   }
 }

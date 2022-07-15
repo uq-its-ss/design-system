@@ -1,5 +1,5 @@
-@use '@uqds/core/src/scss/global' as core;
-@use 'global' as *;
+@use "@uqds/core/src/scss/global" as core;
+@use "global" as *;
 
 // Panes: Blocks of colour with padding around content.
 //
@@ -128,7 +128,7 @@
 
     .uq-pane__footer {
       background-color: core.$uq-black;
-      background-color: rgba(core.$uq-black, .3);
+      background-color: rgba(core.$uq-black, 0.3);
     }
   }
 }

@@ -28,8 +28,8 @@ jobs:
         with:
           useLockFile: false
 
-#      - name: 🧹 Linting
-#        run: npm run lint
+      - name: 🧹 Linting
+        run: npm run lint
 
       - name: ✅ Tests
         run: npm run test

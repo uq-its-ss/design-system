@@ -24,12 +24,22 @@
     "jsdom": "^19.0.0",
     "lerna": "^4.0.0",
     "msw": "^0.41.0",
+    "prettier": "2.7.1",
     "rollup": "^2.70.2",
     "vinyl-buffer": "^1.0.1",
     "vinyl-source-stream": "^2.0.0",
     "whatwg-fetch": "^3.6.2"
   },
   "scripts": {
+    "format": "prettier --write \"**/*.{css,scss,js,jsx,json,md,mdx}\"",
+    "lint": "prettier --check \"**/*.{css,scss,js,jsx,json,md,mdx}\"",
+    "lint-fix": "npm run format",
     "test": "jest"
-  }
+  },
+  "browserslist": [
+    "last 4 chrome versions",
+    "last 4 firefox versions",
+    "safari > 14",
+    "ios_saf > 12"
+  ]
 }

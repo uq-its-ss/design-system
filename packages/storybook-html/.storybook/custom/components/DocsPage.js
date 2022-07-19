@@ -4,7 +4,7 @@ import {
   Subtitle,
   Description,
   Stories,
-} from '@storybook/addon-docs/blocks';
+} from '@storybook/addon-docs';
 import Toc from './Toc';
 
 const DocsPage = () => (

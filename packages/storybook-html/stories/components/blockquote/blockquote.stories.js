@@ -21,10 +21,10 @@ export default {
   }
 };
 
-export const blockquoteDefault = () => {
+export const blockquote = () => {
   return blockquoteHTML;
 };
-blockquoteDefault.storyName = 'Default';
+blockquote.storyName = 'Default';
 
 export const blockquoteLight = () => {
   return blockquoteLightHTML;

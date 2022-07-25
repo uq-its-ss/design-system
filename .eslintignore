@@ -1,0 +1,10 @@
+# Dependencies
+/node_modules
+/vendor
+/bin
+
+# Build
+/packages/**/dist
+
+# Linted separately
+/packages/icon/src/ts

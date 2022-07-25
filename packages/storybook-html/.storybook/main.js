@@ -8,6 +8,9 @@ module.exports = {
     "@storybook/addon-a11y",
     "@storybook/addon-essentials"
   ],
+  features: {
+    postcss: false,
+  },
   webpackFinal: async (config, { configType }) => {
     // Export a function. Accept the base config as the only param.
     // `configType` has a value of 'DEVELOPMENT' or 'PRODUCTION'

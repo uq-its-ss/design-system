@@ -1,4 +1,4 @@
-import { useEffect } from '@storybook/client-api';
+import { useEffect } from '@storybook/addons';
 import { MDCCircularProgress } from '@material/circular-progress';
 // import './uq-maps.scss';
 import docs from './uq-maps-3-wayfinding-controls.docs.mdx';

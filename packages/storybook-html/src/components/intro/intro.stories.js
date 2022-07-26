@@ -1,4 +1,4 @@
-import { useEffect } from '@storybook/client-api';
+import { useEffect } from '@storybook/addons';
 
 // import scripts
 import header from '@uqds/header/src/js/header';

@@ -33,6 +33,8 @@
     "msw": "^0.44.2",
     "prettier": "2.7.1",
     "rollup": "^2.70.2",
+    "stylelint": "^14.9.1",
+    "stylelint-config-standard": "^26.0.0",
     "vinyl-buffer": "^1.0.1",
     "vinyl-source-stream": "^2.0.0",
     "whatwg-fetch": "^3.6.2"

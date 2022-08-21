@@ -838,7 +838,7 @@ body.no-scroll {
   transition: background-color .25s,border-color .25s;
   font-weight: 400;
   position: relative;
-  border-bottom: 4px solid core.$uq-purple;
+  border-bottom: 4px solid transparent;
 }
 
 .uq-header a:focus {

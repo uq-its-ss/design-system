@@ -1,4 +1,5 @@
 import { useEffect } from '@storybook/client-api';
+import { withDesign } from "storybook-addon-designs";
 
 // import styles
 import './footer.scss';
@@ -13,6 +14,7 @@ import docs from './footer.docs.mdx';
 
 export default {
   title: 'Components/Footer',
+  decorators: [withDesign],
   parameters: {
     layout: "fullscreen",
     backgrounds: {
@@ -34,5 +36,14 @@ export const footer = () => {
   });
   return footerHTML;
 };
+footer.parameters = {
+  design: {
+    type: "figma",
+    url: "https://www.figma.com/file/Li7SZkmaLgw8ZdiHje2q7x/One-uq-component-library?node-id=3853%3A2028",
+  },
+};
 
 footer.storyName = 'Footer';
+
+
+

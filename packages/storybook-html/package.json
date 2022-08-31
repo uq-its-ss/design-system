@@ -12,8 +12,8 @@
 	},
 	"license": "ISC",
 	"scripts": {
-		"storybook": "start-storybook -s ./public -p 6006",
-		"build-storybook": "build-storybook -c .storybook -s ./public -o .out"
+		"storybook": "start-storybook -p 6006",
+		"build-storybook": "build-storybook -o .out"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.17.0",

@@ -137,7 +137,7 @@ export const basicHeader = () => {
   <header class="uq-header" data-gtm-category="Header">
     <div class="uq-header__container">
       <div class="uq-header__logo" data-gtm-category="Primary header">
-        <a class="logo--large" href="https://www.uq.edu.au/" data-gtm-label="UQ Logo">
+        <a class="logo--large" href="https://www.uq.edu.au" data-gtm-label="UQ Logo">
           <img alt="The University of Queensland" src="https://static.uq.net.au/v15/logos/corporate/uq-logo--reversed.svg">
         </a>
       </div>        
@@ -150,7 +150,7 @@ basicHeader.storyName = 'Header simplified';
 export const searchGlobal = () => {
   return `
     <div class="uq-header__search-container">
-      <form action="https://www.uq.edu.au/search/" method="get" data-gtm-action="Text search" data-gtm-form-action="">
+      <form action="https://www.uq.edu.au/search" method="get" data-gtm-action="Text search" data-gtm-form-action="">
         <fieldset>
           <div class="uq-header__search-query">
             <label for="edit-q" class="visually-hidden uq-header__search-query-label">Search term</label>
@@ -177,7 +177,7 @@ searchGlobal.parameters = {
 export const searchLocal = () => {
   return `
   <div class="uq-header__search-container">
-  <form action="https://www.uq.edu.au/search/" method="get" data-gtm-action="Text search" data-gtm-form-action="">
+  <form action="https://www.uq.edu.au/search" method="get" data-gtm-action="Text search" data-gtm-form-action="">
     <fieldset>
       <div class="uq-header__search-query">
         <label for="edit-q" class="visually-hidden uq-header__search-query-label">Search term</label>
@@ -191,7 +191,7 @@ export const searchLocal = () => {
         <label for="edit-as_sitesearch-off" class="option uq-header__search-label">Search all UQ websites</label>
       </div>
       <div class="uq-header__search-range">
-        <input type="radio" id="edit-as_sitesearch-on" name="as_sitesearch" value="https://future-students.uq.edu.au/" checked="checked" class="form-radio uq-header__search-radio">
+        <input type="radio" id="edit-as_sitesearch-on" name="as_sitesearch" value="https://future-students.uq.edu.au" checked="checked" class="form-radio uq-header__search-radio">
         <label for="edit-as_sitesearch-on" class="option uq-header__search-label">Search this website (future-students.uq.edu.au)</label>
       </div>
     </fieldset>

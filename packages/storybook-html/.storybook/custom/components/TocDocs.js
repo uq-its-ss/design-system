@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { DocsContainer } from '@storybook/addon-docs/blocks';
+import { DocsContainer } from '@storybook/addon-docs';
 import tocbot from 'tocbot';
 
 const tocConfiguration = {

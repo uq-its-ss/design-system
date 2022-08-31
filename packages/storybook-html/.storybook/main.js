@@ -2,11 +2,15 @@ const path = require('path');
 
 module.exports = {
   stories: [
-    '../src/**/*.@(stories|story).@(js|mdx)'
+    "../stories/**/*.@(stories|story).mdx",
+    "../stories/**/*.@(stories|story).@(js|jsx|ts|tsx)"
   ],
   addons: [
     "@storybook/addon-a11y",
     "@storybook/addon-essentials"
+  ],
+  staticDirs: [
+    '../public'
   ],
   features: {
     postcss: false,

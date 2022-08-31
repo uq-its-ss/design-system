@@ -12,6 +12,9 @@ module.exports = {
   staticDirs: [
     '../public'
   ],
+  features: {
+    postcss: false,
+  },
   webpackFinal: async (config, { configType }) => {
     // Export a function. Accept the base config as the only param.
     // `configType` has a value of 'DEVELOPMENT' or 'PRODUCTION'

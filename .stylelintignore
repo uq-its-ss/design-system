@@ -5,3 +5,4 @@
 
 # Build
 /packages/**/dist
+/packages/**/.out/

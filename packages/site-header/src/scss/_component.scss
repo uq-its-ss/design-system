@@ -10,6 +10,7 @@
   font-size: core.$font-size;
   font-weight: core.$font-weight-normal;
   line-height: core.$line-height;
+  border-bottom: 1px solid #e2e2e2;
 
   *, *::before, *::after {
     box-sizing: border-box;

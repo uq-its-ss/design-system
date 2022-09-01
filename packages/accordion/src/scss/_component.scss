@@ -3,9 +3,9 @@
 @use 'global' as *;
 
 // Accordion / Toggle style
-//
+
 // Can be used on either div or ul
-//
+
 // Variants:
 // .uq-accordion--no-bottom-spacing - Removes margin from below accordions for use in menus (see compendium).
 
@@ -70,13 +70,9 @@
       }
     }
 
-    &:focus,
-    &:hover {
-      color: core.$text;
-    }
-
     &:hover,
     &:focus {
+      color: core.$text;
       background-color: $accordion-title-bg-hover;
     }
 
@@ -104,7 +100,6 @@
     font-weight: 400;
     color: #6f6f6f;
     line-height: 1.4;
-  
     // required to Truncate text and add ellipsis
     display: -webkit-box;
     -webkit-line-clamp: 3;

@@ -27,7 +27,7 @@ describe('Alert close behaviour', () => {
     await waitFor(() => {
       expect(el).not.toHaveTextContent('this gets removed on render');
     })
-    expect(screen.getAllByRole('alert')).toHaveLength(1);
+    expect(screen.getAllByRole('alert').length).toBe(1);
     expect(container.body.innerHTML).toMatchSnapshot();
   });
   it('Dismissals can be ignored', async () => {

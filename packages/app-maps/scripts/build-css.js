@@ -10,13 +10,16 @@ sass.render({
 }, (err, result) => {
   if(!err){
     fs.mkdir('./dist/css/', { recursive: true }, function(err) {
+      // eslint-disable-next-line no-console
       console.error(err);
     });
     
     fs.writeFile('./dist/css/app-maps.css', result.css, function(err) {
+      // eslint-disable-next-line no-console
       console.error(err);
     });
   } else {
+    // eslint-disable-next-line no-console
     console.error(err);
   }
 });

@@ -2,9 +2,10 @@
 /node_modules
 /vendor
 /bin
-package.json
-package-lock.json
 
 # Build
 /packages/**/dist
 /packages/**/.out/
+
+# Linted separately
+/packages/icon/src/ts

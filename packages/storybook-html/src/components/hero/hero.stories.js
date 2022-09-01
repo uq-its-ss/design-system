@@ -2,7 +2,7 @@
 import './hero.scss';
 
 // import HTML template strings
-import heroHTML from './hero.html';
+// import heroHTML from './hero.html';
 
 // import Docs
 import docs from './hero.docs.mdx';

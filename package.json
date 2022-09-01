@@ -22,7 +22,7 @@
     "jest-axe": "^6.0.0",
     "jest-environment-jsdom": "^28.1.0",
     "jsdom": "^19.0.0",
-    "lerna": "^4.0.0",
+    "lerna": "^5.5.0",
     "msw": "^0.41.0",
     "rollup": "^2.70.2",
     "vinyl-buffer": "^1.0.1",

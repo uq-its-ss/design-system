@@ -63,10 +63,12 @@ const svgSassFn = `
       }).catch(err => {
         
         if (err.code === 'ENOENT') {
-          // eslint-disable-next-line no-console
+          // @todo eslint solution needs to be reviewed
+      // eslint-disable-next-line no-console
           console.error(CHALK.red(`Error: couldn't find config file '${optimiserConfigPath}'. Optimising with default configuration.`));
         } else if (err.code === 'EISDIR') {
-          // eslint-disable-next-line no-console
+          // @todo eslint solution needs to be reviewed
+      // eslint-disable-next-line no-console
           console.error(CHALK.red(`Error: directory '${optimiserConfigPath}' is not a config file. Optimising with default configuration.`));
         }
 
@@ -74,6 +76,7 @@ const svgSassFn = `
       });
   }).catch(err => {
     // This may be unnecessary as the idea is that the promise doesn't get rejected ever
+    // @todo eslint solution needs to be reviewed
     // eslint-disable-next-line no-console
     console.error(CHALK.red(`Unable to instantiate optimiser: ${err.name} — ${err.message}`));
   });

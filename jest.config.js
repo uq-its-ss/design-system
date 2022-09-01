@@ -11,7 +11,7 @@ module.exports = {
   moduleNameMapper: {
     "^.+\\.css$": "identity-obj-proxy",
     "@uqds/test-utils": "<rootDir>/tests/jest/jest-dom.js",
-    "@uqds/output/(.*)$": "<rootDir>/packages/storybook-html/src/components/$1",
+    "@uqds/output/(.*)$": "<rootDir>/packages/storybook-html/stories/components/$1",
     "@uqds/(.*)$": "<rootDir>/packages/$1"
   },
   transform: {

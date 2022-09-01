@@ -1,0 +1,95 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs';
+import StatusBadge from '../../../.storybook/custom/components/StatusBadge';
+
+# Global header
+
+<StatusBadge.Stable /><StatusBadge.Stable />
+
+## Overview
+
+The headers purpose is to introduce branding and make the site instantly recognizable to those who are already familiar with UQ.
+It also provides a consistent information architecture (navigation structure) for our websites. 
+
+## Default example
+
+### Header interim
+
+The interim header is suitable for a broad range of sites and applications, it includes the following sections:
+
+- The primary section includes the UQ logo, Primary navigation (Study, Research, Partners and community, about) and search using [*UQ Search*](https://www.uq.edu.au/search).
+- The secondary section provides navigation to UQ home, News, Events, Give and contact. 
+- An optional third navigation section is available on mobile when paired with the [Site header component](?path=/docs/components-site-header--site-header-with-subnav), which provides site title and local navigation options. This combines to provide a stacked mobile menu of all three sections (Local, primary and secondary navigation). 
+
+<Canvas withToolbar>
+  <Story height={220} id="components-header--header-interim" />
+</Canvas>
+
+### Header with mega menu
+
+Currently reserved for the UQ Homepage and level one landing pages for Study, Research, Partners & community and about. 
+
+- The primary section includes the UQ logo, Primary navigation (Study, Research, Partners and community, about) with an extended drop down information architecture (mega menu) and search using [*UQ Search*](https://www.uq.edu.au/search).
+- The secondary section provides navigation to UQ home, News, Events, Give and contact. 
+
+<Canvas withToolbar>
+  <Story height={300} id="components-header--header" />
+</Canvas>
+
+## Variant examples
+
+### Header simplified 
+ 
+When implementation of the full header is not possible, a simplified approach using basic elements may be appropriate. 
+UQ purple background combined with the UQ logo make up the most important elements of the header. 
+
+<Story height={120} id="components-header--basic-header" />
+
+### Default search
+The default option is a global search of all UQ. The search feature sends users to results on [*UQ Search*](https://www.uq.edu.au/search). 
+
+> Don't reappropriate the search function for special integrated search
+> functionality within your application e.g. searching for a location on a map,
+> searching for books or articles in a library database.
+
+<Story id="components-header--search-global" />
+
+### Global and local search
+You can optionally provide two radio fields, allowing users to choose to search all UQ sites or just the content on your site.
+
+> *If your application/website isn't indexed by UQ Search, it may impact what results are provided by a restricted search.
+
+<Story height={120} id="components-header--search-local" />
+
+```html
+<div class="uq-header__search-range">
+  <input type="radio" id="edit-as_sitesearch-off" name="as_sitesearch" value="" class="form-radio uq-header__search-radio">
+  <label for="edit-as_sitesearch-off" class="option uq-header__search-label">Search all UQ websites</label>
+</div>
+<div class="uq-header__search-range">
+  <input type="radio" id="edit-as_sitesearch-on" name="as_sitesearch" value="https://future-students.uq.edu.au" checked="checked" class="form-radio uq-header__search-radio">
+  <label for="edit-as_sitesearch-on" class="option uq-header__search-label">Search this website (future-students.uq.edu.au)</label>
+</div>
+```
+
+## When and how to use
+
+It is highly desireable that all websites of the University maintain a consistent digital presence.
+Whenever possible the complete header should be implemented. 
+Optionally pair with the [Site header component](?path=/docs/components-site-header--site-header-with-subnav) to provide a site title and local navigation.
+
+Software as a service (SaaS) applications and templates supplied by third party solutions may make implementation of the header difficult. 
+
+We recommend simplifying the header to basic elements [*Header simplified*](?path=/docs/components-header--basic-header). 
+
+## Accessibility
+
+Every navigation ```<nav>``` includes an aria label, for example: 
+
+```html
+<nav aria-label="primary navigation">
+```
+
+
+## Related
+
+- [Site header](?path=/docs/components-site-header--site-header-with-subnav)

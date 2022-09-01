@@ -1,0 +1,8 @@
+# Dependencies
+/node_modules
+/vendor
+/bin
+
+# Build
+/packages/**/dist
+/packages/**/.out/

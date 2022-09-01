@@ -55,7 +55,6 @@
 		"@uqds/tabs": "^0.0.8-alpha.0",
 		"babel-loader": "^8.2.3",
 		"core-js": "^3.21.0",
-		"fibers": "^4.0.3",
 		"font-awesome": "^4.7.0",
 		"joi-browser": "^13.4.0",
 		"mermaid": "^8.13.10",

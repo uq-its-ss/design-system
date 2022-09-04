@@ -1,25 +1,24 @@
 // import styles
-import './previous-next.scss';
+import "./previous-next.scss";
 
 // import HTML template strings
-import previousNextHTML from './previous-next.html';
+import previousNextHTML from "./previous-next.html";
 
 // documentation
-import docs from './previous-next.docs.mdx';
+import docs from "./previous-next.docs.mdx";
 
 export default {
-  title: 'Components/Previous next',
+  title: "Components/Previous next",
   parameters: {
     docs: {
-      page: docs
+      page: docs,
     },
     layout: "padded",
     previewTabs: {
-      canvas: {hidden: false}
-    }
-  }
+      canvas: { hidden: false },
+    },
+  },
 };
-
 
 export const previousNextInitial = () => {
   return `
@@ -35,17 +34,13 @@ export const previousNextInitial = () => {
   `;
 };
 
-previousNextInitial.storyName = 'Previous next initial';
-
-
+previousNextInitial.storyName = "Previous next initial";
 
 export const previousNextMiddle = () => {
   return previousNextHTML;
 };
 
-previousNextMiddle.storyName = 'Previous next middle';
-
-
+previousNextMiddle.storyName = "Previous next middle";
 
 export const previousNextFinal = () => {
   return `
@@ -61,4 +56,4 @@ export const previousNextFinal = () => {
   `;
 };
 
-previousNextFinal.storyName = 'Previous next final';
+previousNextFinal.storyName = "Previous next final";

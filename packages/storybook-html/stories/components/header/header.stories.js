@@ -1,136 +1,138 @@
-import { useEffect } from '@storybook/addons';
+import { useEffect } from "@storybook/addons";
 
 // import styles
-import './header.scss';
+import "./header.scss";
 
 // import js
-import './slide-menu.js';
+import "./slide-menu.js";
 
 // import scripts
-import headerCreate from '@uqds/header/src/js/header';
+import headerCreate from "@uqds/header/src/js/header";
 
 // import HTML template strings
-import HeaderInterimHTML from './header-interim.html';
-import HeaderHTML from './header.html';
+import HeaderInterimHTML from "./header-interim.html";
+import HeaderHTML from "./header.html";
 
-import docs from './header.docs.mdx';
+import docs from "./header.docs.mdx";
 
 export default {
-  title: 'Components/Header',
+  title: "Components/Header",
   parameters: {
     docs: {
       page: docs,
-      inlineStories: false
+      inlineStories: false,
     },
     layout: "fullscreen",
     backgrounds: {
-      default: 'UQ Neutral 1'
+      default: "UQ Neutral 1",
     },
     previewTabs: {
-      canvas: {hidden: false}
-    }
-  }
+      canvas: { hidden: false },
+    },
+  },
 };
 
 export const HeaderInterim = () => {
   useEffect(() => {
-    const headerElem = document.querySelector('.uq-header');
+    const headerElem = document.querySelector(".uq-header");
     new headerCreate(headerElem);
 
-    document.addEventListener('DOMContentLoaded', function() {
-      const menuLeftElem = document.getElementById('global-mobile-nav');
+    document.addEventListener("DOMContentLoaded", function () {
+      const menuLeftElem = document.getElementById("global-mobile-nav");
 
       const menuLeft = new SlideMenu(menuLeftElem, {
-        position: 'left',
-        submenuLinkAfter: ' ',
-        backLinkBefore: ' ',
+        position: "left",
+        submenuLinkAfter: " ",
+        backLinkBefore: " ",
       });
 
-      this.searchToggle = document.querySelector('.nav-primary__search-toggle');
+      this.searchToggle = document.querySelector(".nav-primary__search-toggle");
 
-      this.searchToggle.addEventListener('click', () => {
+      this.searchToggle.addEventListener("click", () => {
         menuLeft.close();
       });
 
+      var slideMenuBackButtons = document.querySelectorAll(
+        ".slide-menu__backlink, .global-mobile-nav__audience-link"
+      );
 
-      var slideMenuBackButtons = document.querySelectorAll('.slide-menu__backlink, .global-mobile-nav__audience-link');
-      
-      Array.prototype.forEach.call(slideMenuBackButtons, function(el, i){
-          el.addEventListener('click', () => {
-            document.querySelector('.global-mobile-nav').scrollTop = 0;
-          });
+      Array.prototype.forEach.call(slideMenuBackButtons, function (el, i) {
+        el.addEventListener("click", () => {
+          document.querySelector(".global-mobile-nav").scrollTop = 0;
+        });
       });
 
-      // Responsive Resize Close menu and update toggles 
-      window.addEventListener('resize', (event) => {
-      
-      // Target Resize of LG ($screen-lg, 64rem, 1024px). 
-      if (window.innerWidth > 1024) {
-            menuLeft.close(true);
-            //reset the menu toggle after closing. 
-            this.mainNavToggle = document.querySelector('.nav-primary__toggle');
-            this.mainNavToggle.classList.remove('nav-primary__menu-toggle--is-open');
-            this.body = document.querySelector('body');
-            this.body.classList.remove('no-scroll');
-            }
+      // Responsive Resize Close menu and update toggles
+      window.addEventListener("resize", (event) => {
+        // Target Resize of LG ($screen-lg, 64rem, 1024px).
+        if (window.innerWidth > 1024) {
+          menuLeft.close(true);
+          //reset the menu toggle after closing.
+          this.mainNavToggle = document.querySelector(".nav-primary__toggle");
+          this.mainNavToggle.classList.remove(
+            "nav-primary__menu-toggle--is-open"
+          );
+          this.body = document.querySelector("body");
+          this.body.classList.remove("no-scroll");
+        }
       });
     });
-
   });
   return HeaderInterimHTML;
 };
 
-HeaderInterim.storyName = 'Header interim';
+HeaderInterim.storyName = "Header interim";
 
 export const Header = () => {
   useEffect(() => {
-    const headerElem = document.querySelector('.uq-header');
+    const headerElem = document.querySelector(".uq-header");
     new headerCreate(headerElem);
 
-    document.addEventListener('DOMContentLoaded', function() {
-      const menuLeftElem = document.getElementById('global-mobile-nav');
+    document.addEventListener("DOMContentLoaded", function () {
+      const menuLeftElem = document.getElementById("global-mobile-nav");
 
       const menuLeft = new SlideMenu(menuLeftElem, {
-        position: 'left',
-        submenuLinkAfter: ' ',
-        backLinkBefore: ' ',
+        position: "left",
+        submenuLinkAfter: " ",
+        backLinkBefore: " ",
       });
 
-      this.searchToggle = document.querySelector('.nav-primary__search-toggle');
+      this.searchToggle = document.querySelector(".nav-primary__search-toggle");
 
-      this.searchToggle.addEventListener('click', () => {
+      this.searchToggle.addEventListener("click", () => {
         menuLeft.close();
       });
 
+      var slideMenuBackButtons = document.querySelectorAll(
+        ".slide-menu__backlink, .global-mobile-nav__audience-link"
+      );
 
-      var slideMenuBackButtons = document.querySelectorAll('.slide-menu__backlink, .global-mobile-nav__audience-link');
-      
-      Array.prototype.forEach.call(slideMenuBackButtons, function(el, i){
-          el.addEventListener('click', () => {
-            document.querySelector('.global-mobile-nav').scrollTop = 0;
-          });
+      Array.prototype.forEach.call(slideMenuBackButtons, function (el, i) {
+        el.addEventListener("click", () => {
+          document.querySelector(".global-mobile-nav").scrollTop = 0;
+        });
       });
 
-      // Responsive Resize Close menu and update toggles 
-      window.addEventListener('resize', (event) => {
-      
-      // Target Resize of LG ($screen-lg, 64rem, 1024px). 
-      if (window.innerWidth > 1024) {
-            menuLeft.close(true);
-            //reset the menu toggle after closing. 
-            this.mainNavToggle = document.querySelector('.nav-primary__toggle');
-            this.mainNavToggle.classList.remove('nav-primary__menu-toggle--is-open');
-            this.body = document.querySelector('body');
-            this.body.classList.remove('no-scroll');
-            }
+      // Responsive Resize Close menu and update toggles
+      window.addEventListener("resize", (event) => {
+        // Target Resize of LG ($screen-lg, 64rem, 1024px).
+        if (window.innerWidth > 1024) {
+          menuLeft.close(true);
+          //reset the menu toggle after closing.
+          this.mainNavToggle = document.querySelector(".nav-primary__toggle");
+          this.mainNavToggle.classList.remove(
+            "nav-primary__menu-toggle--is-open"
+          );
+          this.body = document.querySelector("body");
+          this.body.classList.remove("no-scroll");
+        }
       });
     });
-
   });
   return HeaderHTML;
 };
 
-Header.storyName = 'Header with mega menu';
+Header.storyName = "Header with mega menu";
 
 export const basicHeader = () => {
   return `
@@ -145,7 +147,7 @@ export const basicHeader = () => {
   </header>
   `;
 };
-basicHeader.storyName = 'Header simplified';
+basicHeader.storyName = "Header simplified";
 
 export const searchGlobal = () => {
   return `
@@ -164,14 +166,14 @@ export const searchGlobal = () => {
     </div>
   `;
 };
-searchGlobal.storyName = 'Default search';
+searchGlobal.storyName = "Default search";
 searchGlobal.parameters = {
   docs: {
-     inlineStories: false
+    inlineStories: false,
   },
   backgrounds: {
-    default: 'UQ purple'
-  } 
+    default: "UQ purple",
+  },
 };
 
 export const searchLocal = () => {
@@ -199,12 +201,12 @@ export const searchLocal = () => {
 </div>
   `;
 };
-searchLocal.storyName = 'Global and local search';
+searchLocal.storyName = "Global and local search";
 searchLocal.parameters = {
   docs: {
-     inlineStories: false
+    inlineStories: false,
   },
   backgrounds: {
-    default: 'UQ purple'
-  } 
+    default: "UQ purple",
+  },
 };

@@ -1,20 +1,20 @@
 // import styles
-import './button.scss';
+import "./button.scss";
 
 // documentation
-import docs from './button.docs.mdx';
+import docs from "./button.docs.mdx";
 
 export default {
-  title: 'Components/Button',
+  title: "Components/Button",
   parameters: {
     docs: {
-      page: docs
+      page: docs,
     },
-    layout: 'padded',
+    layout: "padded",
     previewTabs: {
-      canvas: {hidden: false}
-    }
-  }
+      canvas: { hidden: false },
+    },
+  },
 };
 
 export const primary = () => {
@@ -25,7 +25,7 @@ export const primary = () => {
   `;
 };
 
-primary.storyName = 'Primary (base)';
+primary.storyName = "Primary (base)";
 
 export const secondary = () => {
   return `
@@ -42,14 +42,14 @@ export const secondaryLight = () => {
   `;
 };
 
-secondaryLight.storyName = 'Secondary light';
+secondaryLight.storyName = "Secondary light";
 secondaryLight.parameters = {
   docs: {
-     inlineStories: false
+    inlineStories: false,
   },
   backgrounds: {
-    default: 'Dark'
-  } 
+    default: "Dark",
+  },
 };
 
 export const purple = () => {

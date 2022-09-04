@@ -1,27 +1,27 @@
 // import styles
-import './pagination.scss';
+import "./pagination.scss";
 
 // import HTML template strings
-import paginationHTML from './pagination.html';
-import docs from './pagination.docs.mdx';
+import paginationHTML from "./pagination.html";
+import docs from "./pagination.docs.mdx";
 
 export default {
-  title: 'Components/Pagination',
+  title: "Components/Pagination",
   parameters: {
     docs: {
-      page: docs
+      page: docs,
     },
     previewTabs: {
-      canvas: {hidden: false}
-    }
-  }
+      canvas: { hidden: false },
+    },
+  },
 };
 
 export const pagination = () => {
   return paginationHTML;
 };
 
-pagination.storyName = 'Pagination all';
+pagination.storyName = "Pagination all";
 
 export const paginationFirst = () => {
   return `
@@ -40,7 +40,7 @@ export const paginationFirst = () => {
   `;
 };
 
-paginationFirst.storyName = 'Pagination first';
+paginationFirst.storyName = "Pagination first";
 
 export const paginationMiddle = () => {
   return `
@@ -62,7 +62,7 @@ export const paginationMiddle = () => {
   `;
 };
 
-paginationMiddle.storyName = 'Pagination middle';
+paginationMiddle.storyName = "Pagination middle";
 
 export const paginationLast = () => {
   return `
@@ -81,4 +81,4 @@ export const paginationLast = () => {
   `;
 };
 
-paginationLast.storyName = 'Pagination last';
+paginationLast.storyName = "Pagination last";

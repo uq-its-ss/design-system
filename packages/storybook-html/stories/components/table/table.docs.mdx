@@ -1,11 +1,18 @@
-import { Meta, Story, Canvas } from '@storybook/addon-docs';
-import StatusBadge from '../../../.storybook/custom/components/StatusBadge';
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
 
 # Table
 
-<StatusBadge.Review /><StatusBadge.ReviewDoc />
+<StatusBadge.Review />
+<StatusBadge.ReviewDoc />
 
-<a href="https://github.com/uq-its-ss/design-system/issues" class="uq-button uq-button--text" target="_blank">Check for open issues</a>
+<a
+  href="https://github.com/uq-its-ss/design-system/issues"
+  class="uq-button uq-button--text"
+  target="_blank"
+>
+  Check for open issues
+</a>
 
 ## Overview
 
@@ -17,97 +24,99 @@ When it comes to responsive behaviour in tables, there is no one solution. The s
 
 ### Table scroll
 
-This is the default approach and should be implemented when there is lots of data. In this approach the component table horizontal scroll is triggered when the table width is greater than the table container width helping the user to view data even on smaller viewport devices. 
+This is the default approach and should be implemented when there is lots of data. In this approach the component table horizontal scroll is triggered when the table width is greater than the table container width helping the user to view data even on smaller viewport devices.
 
 To enable scroll feature, the table is wrapped in a container div with class `uq-table__wrapper`.
 
-A shadow feature is added to the sides of the table when it overflows the container. It serves as a visual indication to the user that there is more data to be scrolled to the left or right. 
+A shadow feature is added to the sides of the table when it overflows the container. It serves as a visual indication to the user that there is more data to be scrolled to the left or right.
 For instance when there is more content to the left, a transparent shadow appears to the left side of the table and when there is more content to the right, the shadow appears to the right side of the table.
 
 #### a. Table scroll - Basic tags with minimal classes
 
 <Canvas withToolbar>
-    <Story id="components-table--table" />
+  <Story id="components-table--table" />
 </Canvas>
 
 ```html
 <!-- Table scroll - Basic tags with minimal classes -->
 <div class="uq-table__wrapper">
-    <table class="uq-table">
-        <caption>Types of food and ratings</caption>
-        <thead>
-            <tr>
-                <th>Type of Food</th>
-                <th>Calories</th>
-                <th>Tasty Factor</th>
-                <th>Average Price</th>
-                <th>Rarity</th>
-                <th>Average Rating</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Slice of Pizza</td>
-                <td>450</td>
-                <td>95%</td>
-                <td>$5.00</td>
-                <td>Common</td>
-                <td>8/10</td>
-            </tr>
-            <tr>
-                <td>Hamburger</td>
-                <td>350</td>
-                <td>87%</td>
-                <td>$3.50</td>
-                <td>Common</td>
-                <td>7.5/10</td>
-            </tr>
-        </tbody>
-    </table>
+  <table class="uq-table">
+    <caption>
+      Types of food and ratings
+    </caption>
+    <thead>
+      <tr>
+        <th>Type of Food</th>
+        <th>Calories</th>
+        <th>Tasty Factor</th>
+        <th>Average Price</th>
+        <th>Rarity</th>
+        <th>Average Rating</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Slice of Pizza</td>
+        <td>450</td>
+        <td>95%</td>
+        <td>$5.00</td>
+        <td>Common</td>
+        <td>8/10</td>
+      </tr>
+      <tr>
+        <td>Hamburger</td>
+        <td>350</td>
+        <td>87%</td>
+        <td>$3.50</td>
+        <td>Common</td>
+        <td>7.5/10</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 ```
-
-
 
 #### b. Table scroll - Basic tags with classes
 
 <Canvas withToolbar>
-    <Story id="components-table--table-classes" />
+  <Story id="components-table--table-classes" />
 </Canvas>
 
 ```html
 <!-- Table scroll - Basic tags with classes -->
 <div class="uq-table__wrapper">
   <table class="uq-table">
-      <caption class="uq-table__caption">Types of food and ratings</caption>
-      <thead class="uq-table__head">
-          <tr class="uq-table__row">
-              <th class="uq-table__header">Type of Food</th>
-              <th class="uq-table__header">Calories</th>
-              <th class="uq-table__header">Tasty Factor</th>
-              <th class="uq-table__header">Average Price</th>
-              <th class="uq-table__header">Rarity</th>
-              <th class="uq-table__header">Average Rating</th>
-          </tr>
-      </thead>
-      <tbody class="uq-table__body">
-          <tr class="uq-table__row">
-              <td class="uq-table__cell">Slice of Pizza</td>
-              <td class="uq-table__cell">450</td>
-              <td class="uq-table__cell">95%</td>
-              <td class="uq-table__cell">$5.00</td>
-              <td class="uq-table__cell">Common</td>
-              <td class="uq-table__cell">8/10</td>
-          </tr>
-          <tr class="uq-table__row">
-            <td class="uq-table__cell">Hamburger</td>
-            <td class="uq-table__cell">350</td>
-            <td class="uq-table__cell">87%</td>
-            <td class="uq-table__cell">$3.50</td>
-            <td class="uq-table__cell">Common</td>
-            <td class="uq-table__cell">7.5/10</td>
-          </tr>
-      </tbody>
+    <caption class="uq-table__caption">
+      Types of food and ratings
+    </caption>
+    <thead class="uq-table__head">
+      <tr class="uq-table__row">
+        <th class="uq-table__header">Type of Food</th>
+        <th class="uq-table__header">Calories</th>
+        <th class="uq-table__header">Tasty Factor</th>
+        <th class="uq-table__header">Average Price</th>
+        <th class="uq-table__header">Rarity</th>
+        <th class="uq-table__header">Average Rating</th>
+      </tr>
+    </thead>
+    <tbody class="uq-table__body">
+      <tr class="uq-table__row">
+        <td class="uq-table__cell">Slice of Pizza</td>
+        <td class="uq-table__cell">450</td>
+        <td class="uq-table__cell">95%</td>
+        <td class="uq-table__cell">$5.00</td>
+        <td class="uq-table__cell">Common</td>
+        <td class="uq-table__cell">8/10</td>
+      </tr>
+      <tr class="uq-table__row">
+        <td class="uq-table__cell">Hamburger</td>
+        <td class="uq-table__cell">350</td>
+        <td class="uq-table__cell">87%</td>
+        <td class="uq-table__cell">$3.50</td>
+        <td class="uq-table__cell">Common</td>
+        <td class="uq-table__cell">7.5/10</td>
+      </tr>
+    </tbody>
   </table>
 </div>
 ```
@@ -117,7 +126,7 @@ For instance when there is more content to the left, a transparent shadow appear
 Tables with two headers with unclear header directions needs to define the direction of each header by setting the scope attribute to `col` or `row`.
 
 <Canvas withToolbar>
-    <Story id="components-table--table-multiple-headers" />
+  <Story id="components-table--table-multiple-headers" />
 </Canvas>
 
 ```html
@@ -127,40 +136,42 @@ Tables with two headers with unclear header directions needs to define the direc
 `row` - specifies that the cell is a header for a row. 
 -->
 <div class="uq-table__wrapper">
-    <table class="uq-table">
-        <caption>Types of food and ratings</caption>
-        <thead>
-            <tr>
-                <td></td>
-                <th scope="col">Type of Food</th>
-                <th scope="col">Calories</th>
-                <th scope="col">Tasty Factor</th>
-                <th scope="col">Average Price</th>
-                <th scope="col">Rarity</th>
-                <th scope="col">Average Rating</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th scope="row">001</th>
-                <td>Slice of Pizza</td>
-                <td>450</td>
-                <td>95%</td>
-                <td>$5.00</td>
-                <td>Common</td>
-                <td>8/10</td>
-            </tr>
-            <tr>
-                <th scope="row">002</th>
-                <td>Hamburger</td>
-                <td>350</td>
-                <td>87%</td>
-                <td>$3.50</td>
-                <td>Common</td>
-                <td>7.5/10</td>
-            </tr>
-        </tbody>
-    </table>
+  <table class="uq-table">
+    <caption>
+      Types of food and ratings
+    </caption>
+    <thead>
+      <tr>
+        <td></td>
+        <th scope="col">Type of Food</th>
+        <th scope="col">Calories</th>
+        <th scope="col">Tasty Factor</th>
+        <th scope="col">Average Price</th>
+        <th scope="col">Rarity</th>
+        <th scope="col">Average Rating</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">001</th>
+        <td>Slice of Pizza</td>
+        <td>450</td>
+        <td>95%</td>
+        <td>$5.00</td>
+        <td>Common</td>
+        <td>8/10</td>
+      </tr>
+      <tr>
+        <th scope="row">002</th>
+        <td>Hamburger</td>
+        <td>350</td>
+        <td>87%</td>
+        <td>$3.50</td>
+        <td>Common</td>
+        <td>7.5/10</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 ```
 
@@ -169,7 +180,7 @@ Tables with two headers with unclear header directions needs to define the direc
 Tables with irregular headers have header cells that span multiple columns and/or rows: For these tables, define column and row groups and set the range of the header cells using the `colgroup` and `rowgroup` values of the scope attribute.
 
 <Canvas withToolbar>
-    <Story id="components-table--table-irregular-headers" />
+  <Story id="components-table--table-irregular-headers" />
 </Canvas>
 
 ```html
@@ -179,58 +190,58 @@ Tables with irregular headers have header cells that span multiple columns and/o
 `rowgroup` - specifies that the cell is a header for a group of rows.
 -->
 <div class="uq-table__wrapper">
-    <table class="uq-table">
-        <caption>Types of food and ratings</caption>
-        <col>
-        <colgroup span="2"></colgroup>
-        <colgroup span="2"></colgroup>
-        <thead>
-            <tr>
-                <td rowspan="2"></td>
-                <th colspan="3" scope="colgroup">McDonalds</th>
-                <th colspan="3" scope="colgroup">Hungry Jacks</th>
-            </tr>
-            <tr>
-                <th scope="col">Type of Food</th>
-                <th scope="col">Average Price</th>
-                <th scope="col">Average Rating</th>
-                <th scope="col">Type of Food</th>
-                <th scope="col">Average Price</th>
-                <th scope="col">Average Rating</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th scope="row">001</th>
-                <td>Slice of Pizza</td>
-                <td>$3.00</td>
-                <td>7/10</td>
-                <td>Slice of Pizza</td>
-                <td>$5.00</td>
-                <td>8/10</td>
-            </tr>
-            <tr>
-                <th scope="row">002</th>
-                <td>Hamburger</td>
-                <td>$2.50</td>
-                <td>6.5/10</td>
-                <td>Hamburger</td>
-                <td>$3.50</td>
-                <td>7.5/10</td>
-            </tr>
-        </tbody>
-    </table>
+  <table class="uq-table">
+    <caption>
+      Types of food and ratings
+    </caption>
+    <col />
+    <colgroup span="2"></colgroup>
+    <colgroup span="2"></colgroup>
+    <thead>
+      <tr>
+        <td rowspan="2"></td>
+        <th colspan="3" scope="colgroup">McDonalds</th>
+        <th colspan="3" scope="colgroup">Hungry Jacks</th>
+      </tr>
+      <tr>
+        <th scope="col">Type of Food</th>
+        <th scope="col">Average Price</th>
+        <th scope="col">Average Rating</th>
+        <th scope="col">Type of Food</th>
+        <th scope="col">Average Price</th>
+        <th scope="col">Average Rating</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">001</th>
+        <td>Slice of Pizza</td>
+        <td>$3.00</td>
+        <td>7/10</td>
+        <td>Slice of Pizza</td>
+        <td>$5.00</td>
+        <td>8/10</td>
+      </tr>
+      <tr>
+        <th scope="row">002</th>
+        <td>Hamburger</td>
+        <td>$2.50</td>
+        <td>6.5/10</td>
+        <td>Hamburger</td>
+        <td>$3.50</td>
+        <td>7.5/10</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
-``` 
-
-
+```
 
 #### e. Table scroll - Multi-level headers
 
 Tables with multi-level headers have multiple header cells associated per data cell: For tables that are so complex that header cells can’t be associated in a strictly horizontal or vertical way, use `id` and `headers` attributes to associate header and data cells explicitly.
 
 <Canvas withToolbar>
-    <Story id="components-table--table-multi-level-headers" />
+  <Story id="components-table--table-multi-level-headers" />
 </Canvas>
 
 ```html
@@ -240,118 +251,125 @@ Tables with multi-level headers have multiple header cells associated per data c
 `headers` - specifies the `<td>` cell with a headers attribute that lists the id values of the associated header cells.
 -->
 <div class="uq-table__wrapper">
-    <table class="uq-table">
-        <caption>Types of food and ratings</caption>
-        <col>
-        <colgroup span="2"></colgroup>
-        <colgroup span="2"></colgroup>
-        <thead>
-            <tr>
-                <td rowspan="2"></td>
-                <th id="Mc"colspan="3" scope="colgroup" class="text--center">McDonalds</th>
-                <th id="Hj" colspan="3" scope="colgroup" class="text--center">Hungry Jacks</th>
-            </tr>
-            <tr>
-                <th scope="col">Type of Food</th>
-                <th scope="col">Average Price</th>
-                <th scope="col">Average Rating</th>
-                <th scope="col">Type of Food</th>
-                <th scope="col">Average Price</th>
-                <th scope="col">Average Rating</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th id="au" colspan="7" scope="colgroup">Australia</th>
-            </tr>
-            <tr>
-                <th scope="row" id="001">001</th>
-                <td headers="au Mc 001">Slice of Pizza</td>
-                <td headers="au Mc 001">$3.00</td>
-                <td headers="au Mc 001">7/10</td>
-                <td headers="au Hj 001">Slice of Pizza</td>
-                <td headers="au Hj 001">$4.00</td>
-                <td headers="au Hj 001">8/10</td>
-            </tr>
-            <tr>
-                <th scope="row" id="002">002</th>
-                <td headers="au Mc 002">Hamburger</td>
-                <td headers="au Mc 002">$2.00</td>
-                <td headers="au Mc 002">6.5/10</td>
-                <td headers="au Hj 002">Hamburger</td>
-                <td headers="au Hj 002">$3.00</td>
-                <td headers="au Hj 002">7.5/10</td>
-            </tr>
-            <tr>
-                <th id="nz" colspan="7" scope="colgroup">New Zealand</th>
-            </tr>
-            <tr>
-                <th scope="row" id="003">003</th>
-                <td headers="nz Mc 003">Slice of Pizza</td>
-                <td headers="nz Mc 003">$3.50</td>
-                <td headers="nz Mc 003">7/10</td>
-                <td headers="nz Hj 003">Slice of Pizza</td>
-                <td headers="nz Hj 003">$4.50</td>
-                <td headers="nz Hj 003">9/10</td>
-            </tr>
-            <tr>
-                <th scope="row" id="004">004</th>
-                <td headers="nz Mc 004">Hamburger</td>
-                <td headers="nz Mc 004">$4.50</td>
-                <td headers="nz Mc 004">8/10</td>
-                <td headers="nz Hj 004">Hamburger</td>
-                <td headers="nz Hj 004">$5.50</td>
-                <td headers="nz Hj 004">8/10</td>
-            </tr>
-        </tbody>
-    </table>
+  <table class="uq-table">
+    <caption>
+      Types of food and ratings
+    </caption>
+    <col />
+    <colgroup span="2"></colgroup>
+    <colgroup span="2"></colgroup>
+    <thead>
+      <tr>
+        <td rowspan="2"></td>
+        <th id="Mc" colspan="3" scope="colgroup" class="text--center">
+          McDonalds
+        </th>
+        <th id="Hj" colspan="3" scope="colgroup" class="text--center">
+          Hungry Jacks
+        </th>
+      </tr>
+      <tr>
+        <th scope="col">Type of Food</th>
+        <th scope="col">Average Price</th>
+        <th scope="col">Average Rating</th>
+        <th scope="col">Type of Food</th>
+        <th scope="col">Average Price</th>
+        <th scope="col">Average Rating</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th id="au" colspan="7" scope="colgroup">Australia</th>
+      </tr>
+      <tr>
+        <th scope="row" id="001">001</th>
+        <td headers="au Mc 001">Slice of Pizza</td>
+        <td headers="au Mc 001">$3.00</td>
+        <td headers="au Mc 001">7/10</td>
+        <td headers="au Hj 001">Slice of Pizza</td>
+        <td headers="au Hj 001">$4.00</td>
+        <td headers="au Hj 001">8/10</td>
+      </tr>
+      <tr>
+        <th scope="row" id="002">002</th>
+        <td headers="au Mc 002">Hamburger</td>
+        <td headers="au Mc 002">$2.00</td>
+        <td headers="au Mc 002">6.5/10</td>
+        <td headers="au Hj 002">Hamburger</td>
+        <td headers="au Hj 002">$3.00</td>
+        <td headers="au Hj 002">7.5/10</td>
+      </tr>
+      <tr>
+        <th id="nz" colspan="7" scope="colgroup">New Zealand</th>
+      </tr>
+      <tr>
+        <th scope="row" id="003">003</th>
+        <td headers="nz Mc 003">Slice of Pizza</td>
+        <td headers="nz Mc 003">$3.50</td>
+        <td headers="nz Mc 003">7/10</td>
+        <td headers="nz Hj 003">Slice of Pizza</td>
+        <td headers="nz Hj 003">$4.50</td>
+        <td headers="nz Hj 003">9/10</td>
+      </tr>
+      <tr>
+        <th scope="row" id="004">004</th>
+        <td headers="nz Mc 004">Hamburger</td>
+        <td headers="nz Mc 004">$4.50</td>
+        <td headers="nz Mc 004">8/10</td>
+        <td headers="nz Hj 004">Hamburger</td>
+        <td headers="nz Hj 004">$5.50</td>
+        <td headers="nz Hj 004">8/10</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
-``` 
-
+```
 
 ## Variant examples
 
 ### Table card
 
-In this responsive approach, the component table `tr` is displayed as a grid. At a certain responsive breakpoint, it behaves as folded cards and hides the header `thead`. 
-The data attributes assigned to each `tbody` cell helps in understanding the connection between the call value and its associated header when the header `thead` is hidden. 
+In this responsive approach, the component table `tr` is displayed as a grid. At a certain responsive breakpoint, it behaves as folded cards and hides the header `thead`.
+The data attributes assigned to each `tbody` cell helps in understanding the connection between the call value and its associated header when the header `thead` is hidden.
 
 <Canvas withToolbar>
-    <Story id="components-table--table-card" />
+  <Story id="components-table--table-card" />
 </Canvas>
 
 ```html
 <!-- Table card -->
 <table class="uq-table uq-table--card">
-    <caption>Types of food and ratings</caption>
-    <thead>
-        <tr>
-            <th>Type of Food</th>
-            <th>Calories</th>
-            <th>Tasty Factor</th>
-            <th>Average Price</th>
-            <th>Rarity</th>
-            <th>Average Rating</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td data-title="Type of Food">Slice of Pizza</td>
-            <td data-title="Calories">450</td>
-            <td data-title="Tasty Factor">95%</td>
-            <td data-title="Average Price">$5.00</td>
-            <td data-title="Rarity">Common</td>
-            <td data-title="Average Rating">8/10</td>
-        </tr>
-        <tr>
-            <td data-title="Type of Food">Hamburger</td>
-            <td data-title="Calories">350</td>
-            <td data-title="Tasty Factor">87%</td>
-            <td data-title="Average Price">$3.50</td>
-            <td data-title="Rarity">Common</td>
-            <td data-title="Average Rating">7.5/10</td>
-        </tr>
-    </tbody>
+  <caption>
+    Types of food and ratings
+  </caption>
+  <thead>
+    <tr>
+      <th>Type of Food</th>
+      <th>Calories</th>
+      <th>Tasty Factor</th>
+      <th>Average Price</th>
+      <th>Rarity</th>
+      <th>Average Rating</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-title="Type of Food">Slice of Pizza</td>
+      <td data-title="Calories">450</td>
+      <td data-title="Tasty Factor">95%</td>
+      <td data-title="Average Price">$5.00</td>
+      <td data-title="Rarity">Common</td>
+      <td data-title="Average Rating">8/10</td>
+    </tr>
+    <tr>
+      <td data-title="Type of Food">Hamburger</td>
+      <td data-title="Calories">350</td>
+      <td data-title="Tasty Factor">87%</td>
+      <td data-title="Average Price">$3.50</td>
+      <td data-title="Rarity">Common</td>
+      <td data-title="Average Rating">7.5/10</td>
+    </tr>
+  </tbody>
 </table>
 ```
 
@@ -359,21 +377,17 @@ The data attributes assigned to each `tbody` cell helps in understanding the con
 
 The table card stacks up when it hits screen viewport widths less than 640px.
 
-
-
 ## How and when to use
 
 - Use the table component to let users compare information in rows and columns.
 - Never use the table component to layout content on a page. Instead, use the grid system.
 - Use 'Table scroll' example when there is lots of data, otherwise 'Table card'.
 
-
-
 ## Accessibility
 
 Accessibility in tables can be acheived to an extend by following the considerations below.
 
-- Keep the table structure simple. 
+- Keep the table structure simple.
 - Use right semantical html markups for tables wherever possible. (Example, `<table>`, `<thead>`, `<tfoot>`, `<tbody>`, `<th>`, `<td>`)
 - Though `<thead>`, `<tfoot>`, `<tbody>` makes no difference with assistive technologies like screen readers, they are useful when printing long tables that run over the next page. In such instances, the `<thead>`, `<tfoot>` gets repeated on the next printed page that gives the data context.
 - Use `<caption>` tag which defines a table caption. It must be inserted immediately after the `<table>` tag. By default it is center-aligned above a table.
@@ -383,37 +397,46 @@ Accessibility in tables can be acheived to an extend by following the considerat
 ### Accessibility tags
 
 <div class="uq-table__wrapper">
-    <table class="uq-table">
-        <thead>
-            <tr>
-                <th>Tag</th>
-                <th>Values</th>
-                <th>Description</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td> &lt;caption&gt; </td>
-                <td> &lt;caption&gt; Types of food and ratings &lt;/caption&gt; </td>
-                <td> &lt;caption&gt; element describes a table as its heading</td>
-            </tr>
-            <tr>
-                <td>scope</td>
-                <td>scope="col", scope="row", scope="colgroup"</td>
-                <td>Applied to the header cell (th) to signify if it is a 'row' or 'col' or 'colgroup'</td>
-            </tr>
-            <tr>
-                <td>id</td>
-                <td>id="a1", id="b1"</td>
-                <td>Applied to the header cell (th) to identify the relationship with associated data</td>
-            </tr>
-            <tr>
-                <td>headers</td>
-                <td>headers="a1 b1"</td>
-                <td>Applied to the data cell (td) to identify relationship with header cell</td>
-            </tr>
-        </tbody>
-    </table>
+  <table class="uq-table">
+    <thead>
+      <tr>
+        <th>Tag</th>
+        <th>Values</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td> &lt;caption&gt; </td>
+        <td> &lt;caption&gt; Types of food and ratings &lt;/caption&gt; </td>
+        <td> &lt;caption&gt; element describes a table as its heading</td>
+      </tr>
+      <tr>
+        <td>scope</td>
+        <td>scope="col", scope="row", scope="colgroup"</td>
+        <td>
+          Applied to the header cell (th) to signify if it is a 'row' or 'col'
+          or 'colgroup'
+        </td>
+      </tr>
+      <tr>
+        <td>id</td>
+        <td>id="a1", id="b1"</td>
+        <td>
+          Applied to the header cell (th) to identify the relationship with
+          associated data
+        </td>
+      </tr>
+      <tr>
+        <td>headers</td>
+        <td>headers="a1 b1"</td>
+        <td>
+          Applied to the data cell (td) to identify relationship with header
+          cell
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 
 Reference: <https://www.w3.org/WAI/tutorials/tables/>

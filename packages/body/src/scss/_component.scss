@@ -1,5 +1,5 @@
 @use "@uqds/core/src/scss/global" as core;
-@use 'global' as *;
+@use "global" as *;
 
 $use-encapsulation: false !default;
 
@@ -24,7 +24,9 @@ $use-encapsulation: false !default;
    * normalised or we remove it and make sure our packages are self-contained w/
    * this style rule.
    */
-  *, *::before, *::after {
+  *,
+  *::before,
+  *::after {
     box-sizing: border-box;
   }
 
@@ -37,19 +39,19 @@ $use-encapsulation: false !default;
   .white {
     background-color: core.$uq-white;
   }
-  
+
   .black {
     background-color: core.$uq-black;
   }
-  
+
   .link {
     background-color: core.$link;
   }
-  
+
   .purple {
     background-color: core.$uq-purple;
   }
-  
+
   // Typography
   h1,
   h2,
@@ -61,58 +63,58 @@ $use-encapsulation: false !default;
     line-height: core.$line-height-h;
     color: core.$uq-purple;
   }
-  
+
   h1 {
     margin-top: core.$space-m;
     margin-bottom: core.$space-xl;
     font-size: core.$font-size-xxxl;
     font-family: core.$font-title;
   }
-  
+
   h2 {
     margin-top: core.$space-xl;
     margin-bottom: core.$space-m;
     font-size: core.$font-size-xxl;
   }
-  
+
   h3 {
     margin-top: core.$space-l;
     margin-bottom: core.$space;
     font-size: core.$font-size-xl;
   }
-  
+
   h4 {
     margin-top: core.$space-l;
     margin-bottom: core.$space-m;
     font-size: core.$font-size-l;
   }
-  
+
   h5 {
     margin-top: core.$space-m;
     margin-bottom: core.$space;
     font-size: core.$font-size-m;
   }
-  
+
   h6 {
     margin-top: core.$space-m;
     margin-bottom: core.$space-s;
     font-size: core.$font-size;
   }
-  
+
   p {
     margin-top: core.$space-none;
     margin-bottom: core.$space-m;
   }
-  
+
   b,
   strong {
     font-weight: core.$font-weight-bold;
   }
-  
+
   em {
     font-style: italic;
   }
-  
+
   blockquote {
     margin: core.$space-none core.$space-none core.$space-m;
     padding-left: core.$space-m;
@@ -121,16 +123,16 @@ $use-encapsulation: false !default;
     font-style: italic;
     font-size: core.$font-size-l;
   }
-  
+
   ol,
   ul {
     margin-top: core.$space-none;
     margin-bottom: core.$space-m;
     padding-left: core.$space-m;
-  
+
     li {
       margin-bottom: core.$space;
-  
+
       &:last-child {
         margin-bottom: core.$space-none;
       }
@@ -140,26 +142,26 @@ $use-encapsulation: false !default;
   dl {
     margin-top: core.$space-none;
     margin-bottom: core.$space-none;
-  
+
     dt {
       color: core.$uq-purple;
       font-size: core.$font-size-s;
       text-transform: uppercase;
       font-weight: core.$font-weight-bold;
     }
-  
+
     dd {
       margin-left: core.$space-none;
       margin-bottom: core.$space-m;
       font-size: core.$font-size-m;
     }
   }
-  
+
   a {
     color: core.$link;
     text-decoration: none;
     transition: 0.2s color;
-  
+
     &:hover {
       color: core.$link;
       text-decoration: underline;
@@ -168,12 +170,11 @@ $use-encapsulation: false !default;
 
   // Typography utilities
   .text {
-
     // Text colour
     &--reverse {
       color: core.$uq-white;
     }
-    
+
     &--primary {
       color: core.$uq-purple;
     }
@@ -202,27 +203,27 @@ $use-encapsulation: false !default;
     &--xxxl {
       font-size: core.$font-size-xxl;
     }
-    
+
     &--xxl {
       font-size: core.$font-size-xl;
     }
-    
+
     &--xl {
       font-size: core.$font-size-l;
     }
-    
+
     &--l {
       font-size: core.$font-size-m;
     }
-    
+
     &--m {
       font-size: core.$font-size;
     }
-    
+
     &--s {
       font-size: core.$font-size-s;
     }
-    
+
     &--xs {
       font-size: core.$font-size-xs;
     }
@@ -231,11 +232,11 @@ $use-encapsulation: false !default;
     &--weight-normal {
       font-weight: core.$font-weight-normal;
     }
-  
+
     &--weight-bold {
       font-weight: core.$font-weight-bold;
     }
-  
+
     &--weight-medium {
       font-weight: core.$font-weight-medium;
     }
@@ -244,11 +245,11 @@ $use-encapsulation: false !default;
     &--left {
       text-align: left;
     }
-    
+
     &--right {
       text-align: right;
     }
-    
+
     &--center {
       text-align: center;
     }
@@ -257,15 +258,15 @@ $use-encapsulation: false !default;
     &--uppercase {
       text-transform: uppercase;
     }
-    
+
     &--accent {
       font-family: core.$font-accent;
       font-weight: core.$font-weight-normal;
       font-style: italic;
     }
-  
+
     &--shadow {
-      text-shadow: 0 4px 4px rgba(core.$uq-black, .4)
+      text-shadow: 0 4px 4px rgba(core.$uq-black, 0.4);
     }
   }
 
@@ -364,7 +365,7 @@ $use-encapsulation: false !default;
       }
     }
 
-    &__title-container__right, 
+    &__title-container__right,
     &__navigation-container {
       display: none !important;
     }

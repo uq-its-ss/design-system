@@ -1,26 +1,34 @@
-import './uq-maps.scss';
-import docs from './uq-maps-6-app-info.docs.mdx';
+import "./uq-maps.scss";
+import docs from "./uq-maps-6-app-info.docs.mdx";
 
 export default {
-  title: 'Deliverables/UQ Maps/6 App info drawer',
+  title: "Deliverables/UQ Maps/6 App info drawer",
   parameters: {
-    layout: 'fullscreen',
+    layout: "fullscreen",
     //viewMode: 'story',
     previewTabs: {
-      canvas: {hidden: false}
+      canvas: { hidden: false },
     },
     backgrounds: {
       values: [
-        { name: 'Static map', value: '#D7D1CC url("\/images\/app-maps\/map-sample-bg.jpg") center top / 1920px 969px repeat'},
-        { name: 'Diagonal stripes', value: 'repeating-linear-gradient(45deg, #efedeb, #efedeb 10px, #f7f6f5 10px, #f7f6f5 20px)' }
+        {
+          name: "Static map",
+          value:
+            '#D7D1CC url("/images/app-maps/map-sample-bg.jpg") center top / 1920px 969px repeat',
+        },
+        {
+          name: "Diagonal stripes",
+          value:
+            "repeating-linear-gradient(45deg, #efedeb, #efedeb 10px, #f7f6f5 10px, #f7f6f5 20px)",
+        },
       ],
-      default: 'Static map'
+      default: "Static map",
     },
     docs: {
       page: docs,
-      inlineStories: false
-    }
-  }
+      inlineStories: false,
+    },
+  },
 };
 
 export const closed = () => `

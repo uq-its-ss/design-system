@@ -1,16 +1,24 @@
-import { Meta, Story, Canvas } from '@storybook/addon-docs';
-import StatusBadge from '../../../.storybook/custom/components/StatusBadge';
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
 
 # Button
 
-<StatusBadge.Stable /><StatusBadge.StableDoc />
+<StatusBadge.Stable />
+<StatusBadge.StableDoc />
 
-<a href="https://github.com/uq-its-ss/design-system/issues" class="uq-button uq-button--text" target="_blank">Check for open issues</a>
+<a
+  href="https://github.com/uq-its-ss/design-system/issues"
+  class="uq-button uq-button--text"
+  target="_blank"
+>
+  Check for open issues
+</a>
 
 ## Overview
 
-The button component is used to navigate to a web link or to an anchor name tag on the same page or different page. 
-- The button categories are primary, secondary, secondary-light and purple. 
+The button component is used to navigate to a web link or to an anchor name tag on the same page or different page.
+
+- The button categories are primary, secondary, secondary-light and purple.
 - Each category has it's own variant styles like outline, text and expanded options to be used in different scenarios.
 
 ## Default example
@@ -42,7 +50,9 @@ Secondary button is used to highlight important actions. For example, save butto
 
 ```html
 <button class="uq-button uq-button--secondary">Button</button>
-<button class="uq-button uq-button--secondary uq-button--outline">Button</button>
+<button class="uq-button uq-button--secondary uq-button--outline">
+  Button
+</button>
 <button class="uq-button uq-button--secondary uq-button--text">Button</button>
 ```
 
@@ -55,8 +65,14 @@ Secondary-light button variant is used on dark backgrounds.
 </Canvas>
 
 ```html
-<button class="uq-button uq-button--secondary uq-button--light uq-button--outline">Button</button>
-<button class="uq-button uq-button--secondary uq-button--light uq-button--text">Button</button>
+<button
+  class="uq-button uq-button--secondary uq-button--light uq-button--outline"
+>
+  Button
+</button>
+<button class="uq-button uq-button--secondary uq-button--light uq-button--text">
+  Button
+</button>
 ```
 
 ### Purple
@@ -96,7 +112,7 @@ The button sizes are normal, tiny `uq-button--tiny`, small `uq-button--small` an
 
 <button class="uq-button uq-button--large">Button</button>
 <button class="uq-button uq-button--large uq-button--outline">Button</button>
-<button class="uq-button uq-button--large uq-button--text">Button</button>    
+<button class="uq-button uq-button--large uq-button--text">Button</button>
 ```
 
 ### Expand
@@ -123,24 +139,48 @@ Expand variant of the button `uq-button--expand` would extend the width of the b
       <th className="uqds-table__heading">How/When to use:</th>
     </tr>
     <tr className="uqds-table__row">
-      <td className="uqds-table__item" data-title="Category:">Primary</td>
-      <td className="uqds-table__item" data-title="Styles:">Normal</td>
-      <td className="uqds-table__item" data-title="How/When to use:">Used for the most important button and only once on the webpage.</td>
+      <td className="uqds-table__item" data-title="Category:">
+        Primary
+      </td>
+      <td className="uqds-table__item" data-title="Styles:">
+        Normal
+      </td>
+      <td className="uqds-table__item" data-title="How/When to use:">
+        Used for the most important button and only once on the webpage.
+      </td>
     </tr>
     <tr className="uqds-table__row">
-      <td className="uqds-table__item" data-title="Category:">Secondary</td>
-      <td className="uqds-table__item" data-title="Styles:">Normal</td>
-      <td className="uqds-table__item" data-title="How/When to use:">Used for important actions like save, cancel etc.</td>
+      <td className="uqds-table__item" data-title="Category:">
+        Secondary
+      </td>
+      <td className="uqds-table__item" data-title="Styles:">
+        Normal
+      </td>
+      <td className="uqds-table__item" data-title="How/When to use:">
+        Used for important actions like save, cancel etc.
+      </td>
     </tr>
     <tr className="uqds-table__row">
-      <td className="uqds-table__item" data-title="Category:">Secondary light</td>
-      <td className="uqds-table__item" data-title="Styles:">Normal</td>
-      <td className="uqds-table__item" data-title="How/When to use:">Used on dark backgrounds</td>
+      <td className="uqds-table__item" data-title="Category:">
+        Secondary light
+      </td>
+      <td className="uqds-table__item" data-title="Styles:">
+        Normal
+      </td>
+      <td className="uqds-table__item" data-title="How/When to use:">
+        Used on dark backgrounds
+      </td>
     </tr>
     <tr className="uqds-table__row">
-      <td className="uqds-table__item" data-title="Category:">Purple</td>
-      <td className="uqds-table__item" data-title="Styles:">Normal</td>
-      <td className="uqds-table__item" data-title="How/When to use:">Used in UQ related events and stories</td>
+      <td className="uqds-table__item" data-title="Category:">
+        Purple
+      </td>
+      <td className="uqds-table__item" data-title="Styles:">
+        Normal
+      </td>
+      <td className="uqds-table__item" data-title="How/When to use:">
+        Used in UQ related events and stories
+      </td>
     </tr>
   </tbody>
 </table>
@@ -157,8 +197,6 @@ Hover - Button text is underlined. The background and text color may change depe
 
 Breakpoints have no effect on the button component and visually remains the same.
 
-
 ## Accessibility
 
 Colour contrast test for all buttons showed a WCAG AA Pass.
-

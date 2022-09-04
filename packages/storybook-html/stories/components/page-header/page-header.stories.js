@@ -1,27 +1,27 @@
 // import styles
-import './page-header.scss';
+import "./page-header.scss";
 
 // import HTML template strings
-import pageHeaderHTML from './page-header.html';
+import pageHeaderHTML from "./page-header.html";
 
 // import Docs
-import docs from './page-header.docs.mdx';
+import docs from "./page-header.docs.mdx";
 
 export default {
-  title: 'Components/Page header',
+  title: "Components/Page header",
   parameters: {
     docs: {
-      page: docs
+      page: docs,
     },
     layout: "fullscreen",
     previewTabs: {
-      canvas: {hidden: false}
-    }
-  }
+      canvas: { hidden: false },
+    },
+  },
 };
 
 export const pageHeader = () => {
   return pageHeaderHTML;
 };
 
-pageHeader.storyName = 'All';
+pageHeader.storyName = "All";

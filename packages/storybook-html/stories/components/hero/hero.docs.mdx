@@ -1,11 +1,12 @@
-import { Meta, Story, Canvas } from '@storybook/addon-docs';
-import StatusBadge from '../../../.storybook/custom/components/StatusBadge';
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
 
 <Meta title="Components/Hero/All" />
 
 # Hero
 
-<StatusBadge.Development /><StatusBadge.DraftDoc />
+<StatusBadge.Development />
+<StatusBadge.DraftDoc />
 
 ### Default hero
 
@@ -14,7 +15,7 @@ import StatusBadge from '../../../.storybook/custom/components/StatusBadge';
 </Canvas>
 
 ```html
-<div class="uq-hero">  
+<div class="uq-hero">
   <div class="uq-hero__content">
     <div class="uq-hero__text">
       <h1 class="uq-hero__title">Page title</h1>
@@ -30,13 +31,21 @@ import StatusBadge from '../../../.storybook/custom/components/StatusBadge';
 </Canvas>
 
 ```html
-<div class="uq-hero uq-hero--feature-image">  
+<div class="uq-hero uq-hero--feature-image">
   <div class="uq-hero__image">
     <div class="uq-hero__image--small">
-      <img src="/images/hero/hero-example--small.jpg" alt="" role="presentation" />
+      <img
+        src="/images/hero/hero-example--small.jpg"
+        alt=""
+        role="presentation"
+      />
     </div>
     <div class="uq-hero__image--large">
-      <img src="/images/hero/hero-example--large.jpg" alt="" role="presentation" />
+      <img
+        src="/images/hero/hero-example--large.jpg"
+        alt=""
+        role="presentation"
+      />
     </div>
   </div>
   <div class="uq-hero__content">
@@ -56,18 +65,24 @@ import StatusBadge from '../../../.storybook/custom/components/StatusBadge';
 </Canvas>
 
 ```html
-<div class="uq-hero uq-hero--feature-image uq-hero--large">  
+<div class="uq-hero uq-hero--feature-image uq-hero--large">
   <div class="uq-hero__image">
     <div class="uq-hero__image--small">
-      <img src="/images/hero/hero-example--small.jpg" alt="A postgraduate student using a laptop" />
+      <img
+        src="/images/hero/hero-example--small.jpg"
+        alt="A postgraduate student using a laptop"
+      />
     </div>
     <div class="uq-hero__image--large">
-      <img src="/images/hero/hero-example--large.jpg" alt="A postgraduate student using a laptop" />
+      <img
+        src="/images/hero/hero-example--large.jpg"
+        alt="A postgraduate student using a laptop"
+      />
     </div>
   </div>
   <div class="uq-hero__content">
     <div class="uq-hero__text">
-       <div class="uq-hero__title">Start postgraduate study online</div>
+      <div class="uq-hero__title">Start postgraduate study online</div>
       <p class="uq-hero__subtext">Apply by June 30</p>
       <p><a class="uq-button" href="#">Learn more</a></p>
     </div>

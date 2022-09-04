@@ -1,45 +1,98 @@
-import { Meta, Story, Canvas } from '@storybook/addon-docs';
-import StatusBadge from '../../../.storybook/custom/components/StatusBadge';
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
 
 # Tabs
 
-<StatusBadge.Review /><StatusBadge.ReviewDoc />
+<StatusBadge.Review />
+<StatusBadge.ReviewDoc />
 
-<a href="https://github.com/uq-its-ss/design-system/issues" class="uq-button uq-button--text" target="_blank">Check for open issues</a>
+<a
+  href="https://github.com/uq-its-ss/design-system/issues"
+  class="uq-button uq-button--text"
+  target="_blank"
+>
+  Check for open issues
+</a>
 
 ## Overview
 
-Tabs component are tabs that are aligned together which on interaction allow navigation between groups of content that are related and at the same 
+Tabs component are tabs that are aligned together which on interaction allow navigation between groups of content that are related and at the same
 hierarchical level.
 
 ## Default example
 
-### Default / Outline 
+### Default / Outline
 
 <Canvas withSource="none">
   <Story id="components-tabs--tabs-outline" />
 </Canvas>
 
 ```html
-  <div id="tabsDefaultExample" class="uq-tabs uq-tabs--outline">
-    <div class="uq-tabs__tab-list-wrapper">
-      <div class="uq-tabs__tab-list" role="tablist" aria-label="Tab List">
-        <button class="uq-tabs__tab uq-tabs__tab--active" role="tab" aria-selected="true" aria-controls="tab1-panel" id="tab1">Tab 1</button>
-        <button class="uq-tabs__tab" role="tab" aria-selected="false" aria-controls="tab2-panel" id="tab2" tabindex="-1">Tab 2</button>
-        <button class="uq-tabs__tab" role="tab" aria-selected="false" aria-controls="tab3-panel" id="tab3" tabindex="-1">Tab 3</button>
-        <a class="uq-tabs__link" href="#">Tab link</a>
-      </div>
-    </div>
-    <div class="uq-tabs__tab-panel uq-tabs__tab-panel--active" role="tabpanel" id="tab1-panel" aria-labelledby="tab1" tabindex="0">
-      <p>Tab1 panel text</p>
-    </div>
-    <div class="uq-tabs__tab-panel" role="tabpanel" id="tab2-panel" aria-labelledby="tab2" tabindex="0" hidden="">
-      <p>Tab2 panel text</p>
-    </div>
-    <div class="uq-tabs__tab-panel" role="tabpanel" id="tab3-panel" aria-labelledby="tab3" tabindex="0" hidden="">
-      <p>Tab3 panel text</p>
+<div id="tabsDefaultExample" class="uq-tabs uq-tabs--outline">
+  <div class="uq-tabs__tab-list-wrapper">
+    <div class="uq-tabs__tab-list" role="tablist" aria-label="Tab List">
+      <button
+        class="uq-tabs__tab uq-tabs__tab--active"
+        role="tab"
+        aria-selected="true"
+        aria-controls="tab1-panel"
+        id="tab1"
+      >
+        Tab 1
+      </button>
+      <button
+        class="uq-tabs__tab"
+        role="tab"
+        aria-selected="false"
+        aria-controls="tab2-panel"
+        id="tab2"
+        tabindex="-1"
+      >
+        Tab 2
+      </button>
+      <button
+        class="uq-tabs__tab"
+        role="tab"
+        aria-selected="false"
+        aria-controls="tab3-panel"
+        id="tab3"
+        tabindex="-1"
+      >
+        Tab 3
+      </button>
+      <a class="uq-tabs__link" href="#">Tab link</a>
     </div>
   </div>
+  <div
+    class="uq-tabs__tab-panel uq-tabs__tab-panel--active"
+    role="tabpanel"
+    id="tab1-panel"
+    aria-labelledby="tab1"
+    tabindex="0"
+  >
+    <p>Tab1 panel text</p>
+  </div>
+  <div
+    class="uq-tabs__tab-panel"
+    role="tabpanel"
+    id="tab2-panel"
+    aria-labelledby="tab2"
+    tabindex="0"
+    hidden=""
+  >
+    <p>Tab2 panel text</p>
+  </div>
+  <div
+    class="uq-tabs__tab-panel"
+    role="tabpanel"
+    id="tab3-panel"
+    aria-labelledby="tab3"
+    tabindex="0"
+    hidden=""
+  >
+    <p>Tab3 panel text</p>
+  </div>
+</div>
 ```
 
 ## Variant examples
@@ -51,9 +104,7 @@ hierarchical level.
 </Canvas>
 
 ```html
-  <div class="uq-tabs">
-    ...
-  </div>
+<div class="uq-tabs">...</div>
 ```
 
 ### Lined
@@ -63,9 +114,7 @@ hierarchical level.
 </Canvas>
 
 ```html
-  <div class="uq-tabs uq-tabs--lined">
-    ...
-  </div>
+<div class="uq-tabs uq-tabs--lined">...</div>
 ```
 
 ### With icon
@@ -77,10 +126,18 @@ hierarchical level.
 ```html
 <div class="uq-tabs uq-tabs--outline">
   <div class="uq-tabs__tab-list" role="tablist" aria-label="Tab List">
-    <button class="uq-tabs__tab uq-tabs__tab--active" role="tab" aria-selected="true" aria-controls="tab1-panel" id="tab1">
-        <span class="uq-icon uq-icon--common--search"></span> Tab 1
+    <button
+      class="uq-tabs__tab uq-tabs__tab--active"
+      role="tab"
+      aria-selected="true"
+      aria-controls="tab1-panel"
+      id="tab1"
+    >
+      <span class="uq-icon uq-icon--common--search"></span> Tab 1
     </button>
     ...
+  </div>
+</div>
 ```
 
 ### Full width
@@ -90,9 +147,7 @@ hierarchical level.
 </Canvas>
 
 ```html
-  <div class="uq-tabs uq-tabs--outline uq-tabs--full-width">
-    ...
-  </div>
+<div class="uq-tabs uq-tabs--outline uq-tabs--full-width">...</div>
 ```
 
 ### Small
@@ -102,9 +157,7 @@ hierarchical level.
 </Canvas>
 
 ```html
-  <div class="uq-tabs uq-tabs--outline uq-tabs--small">
-    ...
-  </div>
+<div class="uq-tabs uq-tabs--outline uq-tabs--small">...</div>
 ```
 
 ### Reversed
@@ -114,14 +167,12 @@ hierarchical level.
 </Canvas>
 
 ```html
-  <div class="uq-tabs uq-tabs--outline uq-tabs--reversed">
-    ...
-  </div>
+<div class="uq-tabs uq-tabs--outline uq-tabs--reversed">...</div>
 ```
 
 ## How and when to use
 
-- This tab example is automatically activated and its associated panel is displayed when the tab receives focus. 
+- This tab example is automatically activated and its associated panel is displayed when the tab receives focus.
 - Tabs should only be automatically activated in circumstances where panels can be displayed instantly, i.e., all panel content is present in the DOM.
 - Tabs should appear as a single row above their associated content.
 - Tab labels can include icons and text. And the tab label text should be short.
@@ -130,7 +181,7 @@ hierarchical level.
 - Although label text can wrap to a second line, scrollable tabs confine text to a single row.
 - Don’t resize text labels to fit them onto a single line.
 - Don’t truncate labels unless required.
-<br />
+  <br />
 
 ## Accessibility
 
@@ -141,7 +192,7 @@ hierarchical level.
 - Tab panel active state: `tabindex = "0"`, classname ` uq-tabs__tab-panel--active` is added, `hidden` is removed.
 - Tab panel inactive state: `tabindex = "0"`, classname ` uq-tabs__tab-panel--active` is removed, `hidden` is added.
 - Colour contrast test for the tabs showed a WCAG AA Pass.
-<br />
+  <br />
 
 ## JavaScript reference
 
@@ -154,22 +205,22 @@ Currently, we've only made available a ES module (`@uqds/tabs/src/js/tabs`).
 #### Create object
 
 ```javascript
-import { Tabs } from '@uqds/tabs/src/js/tabs';
+import { Tabs } from "@uqds/tabs/src/js/tabs";
 
 new Tabs([options]);
 ```
 
 #### Parameters
 
-| Name | Type | Attributes | Description |
-| ---- | ---- | ---------- | ----------- |
-| `options` | Object | Optional | Configuration object for the tabs |
+| Name      | Type   | Attributes | Description                       |
+| --------- | ------ | ---------- | --------------------------------- |
+| `options` | Object | Optional   | Configuration object for the tabs |
 
 #### `options` properties
 
-| Name | Type | Attributes | Default | Description |
-| ---- | ---- | ---------- | ------- | ----------- |
-| container | HTMLElement | Optional | | Optional container for tabs and panels. Useful for when you have multiple tab lists on a page. |
-| tabListSelector | String | Optional | `. uq-tabs__tab-list` | Selector string of the tab lists. |
-| tabSelector | String | Optional | `. uq-tabs__tab` | Selector string of the tabs. |
-| tabPanelSelector | String | Optional | `. uq-tabs__tab-panel` | Selector string of the tab panels. |
+| Name             | Type        | Attributes | Default                | Description                                                                                    |
+| ---------------- | ----------- | ---------- | ---------------------- | ---------------------------------------------------------------------------------------------- |
+| container        | HTMLElement | Optional   |                        | Optional container for tabs and panels. Useful for when you have multiple tab lists on a page. |
+| tabListSelector  | String      | Optional   | `. uq-tabs__tab-list`  | Selector string of the tab lists.                                                              |
+| tabSelector      | String      | Optional   | `. uq-tabs__tab`       | Selector string of the tabs.                                                                   |
+| tabPanelSelector | String      | Optional   | `. uq-tabs__tab-panel` | Selector string of the tab panels.                                                             |

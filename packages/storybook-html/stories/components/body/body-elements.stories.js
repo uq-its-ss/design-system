@@ -1,19 +1,19 @@
 // import stylesheet
-import './body.scss';
+import "./body.scss";
 
-import docs from './body-elements.docs.mdx';
+import docs from "./body-elements.docs.mdx";
 
 export default {
-  title: 'Components/Body/Elements',
+  title: "Components/Body/Elements",
   parameters: {
     docs: {
-      page: docs
+      page: docs,
     },
-    layout: 'padded',
+    layout: "padded",
     previewTabs: {
-      canvas: {hidden: false}
-    }
-  }
+      canvas: { hidden: false },
+    },
+  },
 };
 
 export const title = () => {
@@ -45,7 +45,7 @@ export const textBlock = () => {
   `;
 };
 
-textBlock.storyName = 'Text block';
+textBlock.storyName = "Text block";
 
 export const unorderedList = () => {
   return `
@@ -60,9 +60,9 @@ export const unorderedList = () => {
       </ul>
     </div>
   `;
-}
+};
 
-unorderedList.storyName = 'Unordered list';
+unorderedList.storyName = "Unordered list";
 
 export const orderedList = () => {
   return `
@@ -77,9 +77,9 @@ export const orderedList = () => {
       </ol>
     </div>
   `;
-}
+};
 
-orderedList.storyName = 'Ordered list';
+orderedList.storyName = "Ordered list";
 
 export const definitionList = () => {
   return `
@@ -100,9 +100,9 @@ export const definitionList = () => {
       </dl>
     </div>
   `;
-}
+};
 
-definitionList.storyName = 'Definition list';
+definitionList.storyName = "Definition list";
 
 export const horizontalRule = () => {
   return `
@@ -114,4 +114,4 @@ export const horizontalRule = () => {
   `;
 };
 
-horizontalRule.storyName = 'Horizontal rule';
+horizontalRule.storyName = "Horizontal rule";

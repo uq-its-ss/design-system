@@ -1,27 +1,35 @@
-import { useEffect } from '@storybook/addons';
-import { MDCCircularProgress } from '@material/circular-progress';
+import { useEffect } from "@storybook/addons";
+import { MDCCircularProgress } from "@material/circular-progress";
 //import './uq-maps.scss';
-import docs from './uq-maps-2-search-box.docs.mdx';
+import docs from "./uq-maps-2-search-box.docs.mdx";
 
 export default {
-  title: 'Deliverables/UQ Maps/2 Search field',
+  title: "Deliverables/UQ Maps/2 Search field",
   parameters: {
-    layout: 'fullscreen',
+    layout: "fullscreen",
     previewTabs: {
-      canvas: {hidden: false}
+      canvas: { hidden: false },
     },
     backgrounds: {
       values: [
-        { name: 'Static map', value: '#D7D1CC url("\/images\/app-maps\/map-sample-bg.jpg") center top / 1920px 969px repeat'},
-        { name: 'Diagonal stripes', value: 'repeating-linear-gradient(45deg, #efedeb, #efedeb 10px, #f7f6f5 10px, #f7f6f5 20px)' }
+        {
+          name: "Static map",
+          value:
+            '#D7D1CC url("/images/app-maps/map-sample-bg.jpg") center top / 1920px 969px repeat',
+        },
+        {
+          name: "Diagonal stripes",
+          value:
+            "repeating-linear-gradient(45deg, #efedeb, #efedeb 10px, #f7f6f5 10px, #f7f6f5 20px)",
+        },
       ],
-      default: 'Static map'
+      default: "Static map",
     },
     docs: {
       page: docs,
-      inlineStories: false
-    }
-  }
+      inlineStories: false,
+    },
+  },
 };
 
 export const searchField = () => {
@@ -54,7 +62,8 @@ export const searchFieldFocused = () => {
   `;
 };
 
-searchFieldFocused.storyName = "2B Search field on focus or selecting origin/destination";
+searchFieldFocused.storyName =
+  "2B Search field on focus or selecting origin/destination";
 
 export const searchFieldSearching = () => {
   return `
@@ -71,11 +80,13 @@ searchFieldSearching.storyName = "2C Search field with search value";
 
 export const searchFieldWorking = () => {
   useEffect(() => {
-    const circularProgress = new MDCCircularProgress(document.querySelector('#searchProgressIndicator'));
+    const circularProgress = new MDCCircularProgress(
+      document.querySelector("#searchProgressIndicator")
+    );
     circularProgress.determinate = false;
     circularProgress.open();
   });
-  
+
   return `
     <div class="uq-maps__search-field uq-maps__search-field--is-working">
       <button class="uq-maps__search-field__back">Back</button>
@@ -121,4 +132,5 @@ export const searchFieldWorking = () => {
   `;
 };
 
-searchFieldWorking.storyName = "2D Search field with circular progress indicator";
+searchFieldWorking.storyName =
+  "2D Search field with circular progress indicator";

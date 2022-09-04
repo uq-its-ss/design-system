@@ -1,5 +1,5 @@
-'use strict';
+"use strict";
 
-import catalogue from './src/js/_build/_icons';
+import catalogue from "./src/js/_build/_icons";
 
 export default catalogue;

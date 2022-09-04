@@ -1,10 +1,9 @@
-@use '@uqds/core/src/scss/global' as core;
+@use "@uqds/core/src/scss/global" as core;
 @use "@uqds/icon/src/scss/global" as icon-constants;
-@use '@uqds/grid/src/scss/global' as grid;
-@use 'global' as *;
+@use "@uqds/grid/src/scss/global" as grid;
+@use "global" as *;
 
 .uq-header {
-
   background: core.$uq-purple; //linear-gradient(90deg, $uq-purple 0%, 87%, #962A8B 100%);
   display: grid;
   align-items: center;
@@ -16,32 +15,30 @@
 
   @media #{core.$screen-lg-up} {
     grid-template-areas:
-    "secondarynav"
-    "mainheader";
+      "secondarynav"
+      "mainheader";
   }
- 
-  &__container {
 
+  &__container {
     display: grid;
     align-items: center;
     grid-template-columns: 1fr 15fr 1fr;
     grid-area: mainheader;
     grid-template-areas:
-    "menutoggle logo searchtoggle"
-    "mainnav-mobile mainnav-mobile mainnav-mobile";
+      "menutoggle logo searchtoggle"
+      "mainnav-mobile mainnav-mobile mainnav-mobile";
 
     @media #{core.$screen-lg-up} {
       max-width: 73.25rem;
       margin-left: auto;
       margin-right: auto;
-      grid-template-areas:
-        "logo mainnav searchtoggle";
+      grid-template-areas: "logo mainnav searchtoggle";
       padding-left: core.$space;
       padding-right: core.$space;
     }
   }
 
-  &__menu-toggle  {
+  &__menu-toggle {
     grid-area: menutoggle;
 
     @media #{core.$screen-lg-up} {
@@ -88,24 +85,30 @@
     cursor: pointer;
     color: core.$uq-white;
     position: relative;
-    text-indent: -9999px;                 
-    white-space: nowrap;            
+    text-indent: -9999px;
+    white-space: nowrap;
 
     &::before {
       content: "";
-      background-image: url(icon-constants.get-icon("standard--navigation-menu", core.$uq-white));
+      background-image: url(icon-constants.get-icon(
+        "standard--navigation-menu",
+        core.$uq-white
+      ));
       background-repeat: no-repeat;
       width: 1.5rem;
       height: 1.5rem;
       transform: translate(50%, 50%);
       position: absolute;
-      top: .625rem;
+      top: 0.625rem;
       right: core.$space-l;
     }
 
     &--is-open {
       &::before {
-        background-image: url(icon-constants.get-icon("standard--x", core.$uq-white));
+        background-image: url(icon-constants.get-icon(
+          "standard--x",
+          core.$uq-white
+        ));
       }
     }
   }
@@ -117,15 +120,18 @@
 
     &::before {
       content: "";
-      background-image: url(icon-constants.get-icon("standard--search", core.$uq-white));
+      background-image: url(icon-constants.get-icon(
+        "standard--search",
+        core.$uq-white
+      ));
       background-repeat: no-repeat;
       width: 1.5rem;
       height: 1.5rem;
       transform: translate(50%, 50%);
       position: absolute;
-      top: .625rem;
+      top: 0.625rem;
       right: core.$space-l;
-      
+
       @media #{core.$screen-lg-up} {
         top: 0.1rem;
         left: -1rem;
@@ -140,17 +146,17 @@
     }
 
     &--is-open {
-
       &::before {
-        background-image: url(icon-constants.get-icon("standard--x", core.$uq-white));
+        background-image: url(icon-constants.get-icon(
+          "standard--x",
+          core.$uq-white
+        ));
       }
     }
-
   }
 
   &__logo {
     grid-area: logo;
-
 
     & a {
       display: grid;
@@ -180,7 +186,6 @@
   }
 
   &__nav-primary-container {
-    
     @media #{core.$screen-lg-up} {
       padding: 0 0 0 core.$space-xl;
     }
@@ -194,7 +199,7 @@
     justify-content: flex-start;
     align-items: stretch;
     flex-direction: column;
-    
+
     @media #{core.$screen-lg-up} {
       align-items: center;
       flex-direction: row;
@@ -230,7 +235,7 @@
     color: core.$uq-white; //core.$uq-purple;
     text-decoration: none;
     padding: core.$space core.$space-m;
-    transition: background-color .25s,border-color .25s;
+    transition: background-color 0.25s, border-color 0.25s;
     font-weight: 400;
     position: relative;
     border-bottom: 4px solid transparent;
@@ -239,7 +244,6 @@
       color: core.$uq-white;
       text-decoration: none;
     }
-
 
     @media #{core.$screen-lg-up} {
       padding: core.$space-l core.$space-s;
@@ -251,7 +255,10 @@
 
     &::after {
       content: "";
-      background-image: url(icon-constants.get-icon("standard--chevron-down-sml", core.$uq-white));
+      background-image: url(icon-constants.get-icon(
+        "standard--chevron-down-sml",
+        core.$uq-white
+      ));
       background-repeat: no-repeat;
       width: core.$space;
       height: core.$space;
@@ -261,7 +268,7 @@
       right: 1.75rem;
 
       @media #{core.$screen-lg-up} {
-        right: .25rem;
+        right: 0.25rem;
       }
     }
   }
@@ -274,7 +281,6 @@
     padding-left: 0;
 
     & li {
-
       & a {
         padding-left: core.$space-xxl;
         color: core.$uq-purple;
@@ -288,7 +294,7 @@
 
       & li {
         & a {
-          padding-left: core.$space-ul;        
+          padding-left: core.$space-ul;
         }
       }
     }
@@ -316,7 +322,7 @@
     justify-content: flex-start;
     align-items: stretch;
     flex-direction: column;
-    
+
     @media #{core.$screen-lg-up} {
       justify-content: flex-end;
       align-items: center;
@@ -335,7 +341,7 @@
 
     @media #{core.$screen-lg-up} {
       font-size: core.$font-size-s;
-      padding: .625rem core.$space;
+      padding: 0.625rem core.$space;
     }
 
     &:hover {
@@ -344,14 +350,13 @@
   }
 
   &__search {
-
     background: core.$uq-purple;
     position: absolute;
     width: 100%;
     top: 3.95rem;
     z-index: 20;
-    box-shadow: 0 .75rem core.$space-m rgb(24 24 24 / 20%);
-    transition:  max-height .2s ease-in-out, transform .2s ease-in-out;//, visibility .2s ease;
+    box-shadow: 0 0.75rem core.$space-m rgb(24 24 24 / 20%);
+    transition: max-height 0.2s ease-in-out, transform 0.2s ease-in-out; //, visibility .2s ease;
     transform: translateY(-1rem);
     max-height: 0;
     overflow: hidden;
@@ -361,7 +366,7 @@
       top: 8.3rem;
     }
 
-    &--is-open {    
+    &--is-open {
       transform: translateY(0);
       max-height: 50vh;
       visibility: visible;
@@ -369,7 +374,6 @@
   }
 
   &__search-container {
-    
     padding: 0 core.$space-m;
 
     @media #{core.$screen-lg-up} {
@@ -400,7 +404,7 @@
 
   &__search-query-input {
     margin: 0 !important;
-    padding: .75rem core.$space !important;
+    padding: 0.75rem core.$space !important;
   }
 
   &__search-query-button {
@@ -421,7 +425,7 @@
     text-decoration: none;
     text-indent: 0;
     top: calc(50% - 1.375rem);
-    transition: color .2s,background-color .2s,border-color .2s;
+    transition: color 0.2s, background-color 0.2s, border-color 0.2s;
     width: 2.75rem;
 
     &::before {
@@ -433,7 +437,10 @@
       top: core.$space-s;
       left: core.$space-s;
       background-size: 100%;
-      background-image: url(icon-constants.get-icon("standard--search", core.$uq-purple));
+      background-image: url(icon-constants.get-icon(
+        "standard--search",
+        core.$uq-purple
+      ));
     }
   }
 
@@ -453,30 +460,29 @@
   }
 
   &__search-range {
-
     display: inline-block;
 
     & label {
       color: core.$uq-white;
     }
   }
-  
+
   .uq-header__search-radio {
     &:checked {
+      border-color: core.$uq-white;
+
+      &:focus {
         border-color: core.$uq-white;
+      }
 
-        &:focus {
-            border-color: core.$uq-white;
-        }
-
-        &::after {
-            background-color: core.$uq-white;
-        }
+      &::after {
+        background-color: core.$uq-white;
+      }
     }
   }
 
   &__search-label {
-    font-size: .8rem !important;
+    font-size: 0.8rem !important;
     line-height: 1.7 !important;
 
     @media #{core.$screen-lg-up} {
@@ -510,8 +516,8 @@
     padding: core.$space core.$space-xxl core.$space-xl core.$space-xxl;
     background: core.$uq-white;
     box-shadow: 0 0.75rem core.$space-m rgb(24 24 24 / 20%);
-    border-radius: 0 0 .25rem .25rem;
-    
+    border-radius: 0 0 0.25rem 0.25rem;
+
     @media #{core.$screen-xl-up} {
       max-width: 77.25rem;
     }
@@ -556,7 +562,7 @@
       }
     }
   }
-} 
+}
 
 :root {
   --app-height: 100%;
@@ -570,60 +576,60 @@ body.no-scroll {
   }
 }
 
-// Slide mobile menu 
+// Slide mobile menu
 
 .slide-menu {
-  width:100%;
-  max-width:100%;
-  background-color:#FFFFFF;
+  width: 100%;
+  max-width: 100%;
+  background-color: #ffffff;
   height: calc(var(--app-height) - 4.3rem);
-  display:none;
-  box-sizing:border-box;
-  transition:transform .3s ease-in-out;
-  transform:translateX(100%);
-  will-change:transform;
-  z-index:1000;
+  display: none;
+  box-sizing: border-box;
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(100%);
+  will-change: transform;
+  z-index: 1000;
   grid-area: mainnav-mobile;
-  position:fixed;
+  position: fixed;
   top: 4.3rem;
-  right:core.$space-none;
-  overflow-y:auto;
-  overflow-x:hidden;
+  right: core.$space-none;
+  overflow-y: auto;
+  overflow-x: hidden;
   font-size: core.$font-size;
-  color:core.$uq-purple;
+  color: core.$uq-purple;
 
   @media #{core.$screen-lg-up} {
     display: none !important;
   }
 
   .slide-menu__slider {
-    width:100%;
-    transform:translateX(0);
-    transition:transform .3s ease-in-out;
-    will-change:transform;
+    width: 100%;
+    transform: translateX(0);
+    transition: transform 0.3s ease-in-out;
+    will-change: transform;
   }
 
   ul {
-    position:relative;
-    width:100%;
-    margin:core.$space-none;
-    padding-left:core.$space-none;
-    list-style:none; 
+    position: relative;
+    width: 100%;
+    margin: core.$space-none;
+    padding-left: core.$space-none;
+    list-style: none;
     background-color: core.$uq-white;
 
     ul {
-      position:absolute;
-      top:core.$space-none;
-      left:100%;
-      display:none;
+      position: absolute;
+      top: core.$space-none;
+      left: 100%;
+      display: none;
 
       a {
-        padding: .75rem core.$space-m .75rem core.$space-xxl;
+        padding: 0.75rem core.$space-m 0.75rem core.$space-xxl;
       }
     }
 
     a {
-      display:block;
+      display: block;
     }
   }
 
@@ -631,9 +637,8 @@ body.no-scroll {
     margin-bottom: core.$space-none;
 
     &:hover {
-      background-color:#f1f1f1;
+      background-color: #f1f1f1;
     }
-
   }
 
   .slide-menu__control {
@@ -642,16 +647,16 @@ body.no-scroll {
   }
 
   a {
-    cursor:pointer;
-    padding: .75rem core.$space-m;
-    text-decoration:none;
+    cursor: pointer;
+    padding: 0.75rem core.$space-m;
+    text-decoration: none;
     font-size: core.$font-size;
-    color:core.$uq-purple;
+    color: core.$uq-purple;
     position: relative;
 
     &:hover {
-      color:core.$uq-purple;
-      background-color:#f1f1f1;
+      color: core.$uq-purple;
+      background-color: #f1f1f1;
     }
   }
 
@@ -661,7 +666,10 @@ body.no-scroll {
 
     &::before {
       content: "";
-      background-image: url(icon-constants.get-icon("standard--chevron-left-sml", core.$uq-purple));
+      background-image: url(icon-constants.get-icon(
+        "standard--chevron-left-sml",
+        core.$uq-purple
+      ));
       background-repeat: no-repeat;
       width: 1.5rem;
       height: 1.5rem;
@@ -673,10 +681,12 @@ body.no-scroll {
   }
 
   &__decorator {
-  
     &::before {
       content: "";
-      background-image: url(icon-constants.get-icon("standard--chevron-right-sml", core.$uq-purple));
+      background-image: url(icon-constants.get-icon(
+        "standard--chevron-right-sml",
+        core.$uq-purple
+      ));
       background-repeat: no-repeat;
       width: 1.5rem;
       height: 1.5rem;
@@ -689,55 +699,56 @@ body.no-scroll {
 
   /* Controls */
   .controls {
-    display:flex;
-    margin-bottom:core.$space;
+    display: flex;
+    margin-bottom: core.$space;
   }
 
   .btn {
-    padding:.75rem core.$space-m;
-    flex:1 0 auto;
-    font-size:90%;
-    color:core.$uq-purple;
-    background-color:core.$uq-white;
-    text-transform:uppercase;
+    padding: 0.75rem core.$space-m;
+    flex: 1 0 auto;
+    font-size: 90%;
+    color: core.$uq-purple;
+    background-color: core.$uq-white;
+    text-transform: uppercase;
 
-    border:none;
-    cursor:pointer;
-    font-family:inherit;
-    line-height:1;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    line-height: 1;
 
     &:first-of-type {
-      text-align:left;
+      text-align: left;
 
       &:before {
-        content:"⮜ this";
-        margin-right:.5rem;
+        content: "⮜ this";
+        margin-right: 0.5rem;
       }
     }
 
     &:last-of-type {
-      text-align:right;
+      text-align: right;
 
-      &:before {content:"✕";
-        margin-right:.5rem;
+      &:before {
+        content: "✕";
+        margin-right: 0.5rem;
       }
     }
   }
 
   .uq-header__nav-secondary-item {
-    background-color:#48206C;
+    background-color: #48206c;
 
     &:hover {
-      background-color:#48206C;
+      background-color: #48206c;
     }
   }
 
   .uq-header__nav-secondary-link {
-    color:core.$uq-white;
+    color: core.$uq-white;
 
     &:hover {
-      color:core.$uq-white;
-      background-color:#48206C;
+      color: core.$uq-white;
+      background-color: #48206c;
     }
   }
 
@@ -746,29 +757,31 @@ body.no-scroll {
   }
 
   .uq-header__newglobal-nav-item {
-    background-color:core.$uq-purple;
+    background-color: core.$uq-purple;
   }
 
   .uq-header__newglobal-nav-link {
-    color:core.$uq-white;
-    background-color:core.$uq-purple;
+    color: core.$uq-white;
+    background-color: core.$uq-purple;
 
     &:hover {
-      color:core.$uq-white;
-      background-color:core.$uq-purple;
+      color: core.$uq-white;
+      background-color: core.$uq-purple;
     }
   }
 
   .uq-header__newglobal-nav-link .slide-menu__decorator::before {
     content: "";
-    background-image: url(icon-constants.get-icon("standard--chevron-right-sml", core.$uq-white));
+    background-image: url(icon-constants.get-icon(
+      "standard--chevron-right-sml",
+      core.$uq-white
+    ));
   }
 }
 
 /* LOCAL SITE NAVIGATION MODIFIERS */
 
 .global-mobile-nav {
-
   .uq-site-header__title-container {
     margin: 0;
     padding: 1rem 1.5rem;
@@ -778,8 +791,8 @@ body.no-scroll {
     padding: 0;
     font-size: 1rem;
     font-weight: 500;
-    display:block;
-    
+    display: block;
+
     &:hover {
       background: none;
     }
@@ -788,7 +801,6 @@ body.no-scroll {
   &__audience-link {
     font-weight: 500;
   }
-
 }
 
 .uq-site-header__navigation-toggle {
@@ -804,7 +816,6 @@ body.no-scroll {
     @media #{core.$screen-md-up} {
       top: 6.15rem;
     }
-    
   }
 }
 .uq-header {
@@ -831,11 +842,12 @@ body.no-scroll {
   border-bottom: 4px solid #fff;
 }
 
-.uq-header__nav-primary-link, .uq-header__nav-primary-link:focus {
+.uq-header__nav-primary-link,
+.uq-header__nav-primary-link:focus {
   display: block;
   color: #fff;
   text-decoration: none;
-  transition: background-color .25s,border-color .25s;
+  transition: background-color 0.25s, border-color 0.25s;
   font-weight: 400;
   position: relative;
   border-bottom: 4px solid transparent;
@@ -846,10 +858,11 @@ body.no-scroll {
 }
 
 .uq-header__search-container {
-  form, fieldset {
-      border: unset;
-      padding: 0;
-      margin: 0;
+  form,
+  fieldset {
+    border: unset;
+    padding: 0;
+    margin: 0;
   }
 }
 
@@ -868,8 +881,7 @@ body.no-scroll {
   line-height: normal;
 }
 
-
-/* D7 and D9 search fixes */ 
+/* D7 and D9 search fixes */
 .uq-header__search-range {
   display: inline-block;
 }
@@ -881,7 +893,7 @@ body.no-scroll {
   display: inline-block;
   border-radius: 50%;
   background-color: transparent;
-  margin:3px 3px 0 5px;
+  margin: 3px 3px 0 5px;
   position: absolute;
 
   /* Missing form component styles */
@@ -890,12 +902,12 @@ body.no-scroll {
   border: 1px solid #e7e3e0;
   cursor: pointer;
 }
-.uq-header__search-range input[type=radio]+label {
+.uq-header__search-range input[type="radio"] + label {
   margin-bottom: 1rem;
   margin-left: 0.5rem;
   margin-right: 1rem;
-    padding-top: 0.125rem;
-    padding-left: 1.5rem;
+  padding-top: 0.125rem;
+  padding-left: 1.5rem;
 }
 
 .uq-header__search-range label {
@@ -915,7 +927,7 @@ input[type="radio"].uq-header__search-radio:focus {
 }
 
 input[type="radio"].uq-header__search-radio:checked::after {
-  content:"";
+  content: "";
   background-color: core.$uq-white;
   border-radius: 50%;
   content: "";

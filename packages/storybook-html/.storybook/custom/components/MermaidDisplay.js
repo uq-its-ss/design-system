@@ -1,9 +1,8 @@
-import React, {useEffect, useRef} from 'react';
-import { mermaidAPI } from 'mermaid';
-import './MermaidDisplay.scss';
+import React, { useEffect, useRef } from "react";
+import { mermaidAPI } from "mermaid";
+import "./MermaidDisplay.scss";
 
 const MermaidDisplay = ({ graph, svgId }) => {
-
   const outputElem = useRef(null);
 
   useEffect(() => {

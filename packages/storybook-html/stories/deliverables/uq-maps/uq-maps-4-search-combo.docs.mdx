@@ -1,15 +1,16 @@
-import { Meta, Story, Canvas } from '@storybook/addon-docs';
-import StatusBadge from '../../../.storybook/custom/components/StatusBadge';
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
 
 # UQ Maps: search combo menu
+
 <StatusBadge.Development />
 
-Enables the user to search for *and* browse points of interest and categories.
-By design, the first child of this component root is the *search field*.
+Enables the user to search for _and_ browse points of interest and categories.
+By design, the first child of this component root is the _search field_.
 
 ## 4A. Initial state
 
-Visually, it looks identical to a *search field* by itself.
+Visually, it looks identical to a _search field_ by itself.
 
 ### Basic usage
 
@@ -39,7 +40,10 @@ we should show some data-driven POI's/categories instead.
 ### Basic usage
 
 <Canvas withSource="open" withToolbar>
-  <Story height={800} id="deliverables-uq-maps-4-search-combo-menu--searching" />
+  <Story
+    height={800}
+    id="deliverables-uq-maps-4-search-combo-menu--searching"
+  />
 </Canvas>
 
 ## 4D. With search value but no results
@@ -47,7 +51,10 @@ we should show some data-driven POI's/categories instead.
 ### Basic usage
 
 <Canvas withSource="open" withToolbar>
-  <Story height={155} id="deliverables-uq-maps-4-search-combo-menu--searching-no-results" />
+  <Story
+    height={155}
+    id="deliverables-uq-maps-4-search-combo-menu--searching-no-results"
+  />
 </Canvas>
 
 ## 4E. With search value but with search error
@@ -55,7 +62,10 @@ we should show some data-driven POI's/categories instead.
 ### Basic usage
 
 <Canvas withSource="open" withToolbar>
-  <Story height={176} id="deliverables-uq-maps-4-search-combo-menu--searching-error" />
+  <Story
+    height={176}
+    id="deliverables-uq-maps-4-search-combo-menu--searching-error"
+  />
 </Canvas>
 
 ## 4F. With search value AND category item opened
@@ -67,7 +77,10 @@ list items.
 ### Basic usage
 
 <Canvas withSource="open" withToolbar>
-  <Story height={800} id="deliverables-uq-maps-4-search-combo-menu--searching-in-category" />
+  <Story
+    height={800}
+    id="deliverables-uq-maps-4-search-combo-menu--searching-in-category"
+  />
 </Canvas>
 
 ## JavaScript UX enhancements
@@ -76,11 +89,13 @@ list items.
 
 <div class="alert alert--warning" role="alert">
   <div class="alert__message">
-    Note: <strong>there's currently no reliable way to make the search field
-    "sticky"</strong> (remain at the top even when scrolling)—with the first
-    search result initially positioned relative to the search field's
-    height—<strong>using CSS and HTML alone</strong>. Implement a JavaScript
-    solution to this problem to improve the user experience. Watch this space
-    for a working demo.
+    Note:{" "}
+    <strong>
+      there's currently no reliable way to make the search field "sticky"
+    </strong>{" "}
+    (remain at the top even when scrolling)—with the first search result
+    initially positioned relative to the search field's height—
+    <strong>using CSS and HTML alone</strong>. Implement a JavaScript solution to
+    this problem to improve the user experience. Watch this space for a working demo.
   </div>
 </div>

@@ -1,5 +1,5 @@
-@use '@uqds/core/src/scss/global' as core;
-@use 'global' as *;
+@use "@uqds/core/src/scss/global" as core;
+@use "global" as *;
 
 table,
 .uq-table {
@@ -53,12 +53,16 @@ table,
 
 /* Variant: Card */
 .uq-table--card {
-  tr, .table__row {
+  tr,
+  .table__row {
     display: grid;
     grid: auto-flow / repeat(6, 1fr);
   }
-  
-  th, td, .table__header, .table__cell {
+
+  th,
+  td,
+  .table__header,
+  .table__cell {
     margin: core.$space-none -1px -1px core.$space-none;
     word-break: break-word;
   }

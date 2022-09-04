@@ -1,22 +1,22 @@
 // import './uq-maps.scss';
-import docs from './uq-maps-5-slide-drawer.docs.mdx';
+import docs from "./uq-maps-5-slide-drawer.docs.mdx";
 
 export default {
-  title: 'Deliverables/UQ Maps/5 Slide drawer',
+  title: "Deliverables/UQ Maps/5 Slide drawer",
   parameters: {
-    layout: 'fullscreen',
+    layout: "fullscreen",
     //viewMode: 'story',
     previewTabs: {
-      canvas: {hidden: false}
+      canvas: { hidden: false },
     },
     docs: {
       page: docs,
-      inlineStories: false
+      inlineStories: false,
     },
     backgrounds: {
-      default: 'Diagonal stripes'
-    }
-  }
+      default: "Diagonal stripes",
+    },
+  },
 };
 
 export const expanded = () => `

@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /**
  * @file
@@ -12,19 +12,19 @@ class Alerts {
   }
   init() {
     fetch(this.uri)
-      .then(resp => resp.json())
-      .then(json => {
-        this.el.innerHTML = '';
-        Alerts.filter(json.sitewideAlerts).forEach(alert => {
-          const alertEl = document.createElement('div');
+      .then((resp) => resp.json())
+      .then((json) => {
+        this.el.innerHTML = "";
+        Alerts.filter(json.sitewideAlerts).forEach((alert) => {
+          const alertEl = document.createElement("div");
           alertEl.innerHTML = alert.renderedAlert;
           if (alert.dismissible) {
-            const close = alertEl.querySelector('.uq-alert__close');
+            const close = alertEl.querySelector(".uq-alert__close");
             if (close) {
-              close.addEventListener('click', (el) => {
+              close.addEventListener("click", (el) => {
                 window.localStorage.setItem(
                   `alert-dismissed-${alert.uuid}`,
-                  String(Math.round(new Date().getTime() / 1000)),
+                  String(Math.round(new Date().getTime() / 1000))
                 );
                 alertEl.remove();
               });
@@ -32,12 +32,12 @@ class Alerts {
           }
           this.el.appendChild(alertEl);
         });
-      })
+      });
   }
   static filter(alerts) {
-    return alerts.filter(alert => {
+    return alerts.filter((alert) => {
       const dismissedAtTimestamp = Number(
-        window.localStorage.getItem(`alert-dismissed-${alert.uuid}`),
+        window.localStorage.getItem(`alert-dismissed-${alert.uuid}`)
       );
 
       if (dismissedAtTimestamp > alert.dismissalIgnoreBefore) {
@@ -46,13 +46,13 @@ class Alerts {
       if (!alert.showOnPages.length) {
         return true;
       }
-      const href = window.location.href.replace(/\/+$/, '');
+      const href = window.location.href.replace(/\/+$/, "");
       const hrefMatches = (page) => {
         const expression = `${page}`
-          .replace(/\/+$/, '')
-          .replace(new RegExp(`[.\\\\+?\\[^\\]$(){}=!<>|:\\-]`, 'g'), '\\$&')
-          .concat('$');
-        return href.match(new RegExp(expression.replaceAll('*', '.*')));
+          .replace(/\/+$/, "")
+          .replace(new RegExp(`[.\\\\+?\\[^\\]$(){}=!<>|:\\-]`, "g"), "\\$&")
+          .concat("$");
+        return href.match(new RegExp(expression.replaceAll("*", ".*")));
       };
       if (!alert.negateShowOnPages) {
         // Any match will do here.
@@ -60,7 +60,7 @@ class Alerts {
       }
       // None should match here.
       return alert.showOnPages.filter(hrefMatches).length === 0;
-    })
+    });
   }
 }
 

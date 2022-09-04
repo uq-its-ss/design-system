@@ -19,7 +19,7 @@ src/
 ## Add, remove, or modify an icon
 
 1. Add/remove an icon (to/from the `src/images` directory), or modify an
-existing SVG file (please follow above folder convention).
+   existing SVG file (please follow above folder convention).
 2. Then, run the following command from the package root:
 
 ```bash

@@ -1,4 +1,4 @@
-@use '@uqds/core/src/scss/global' as core;
+@use "@uqds/core/src/scss/global" as core;
 
 .uqds-font {
   &--roboto {
@@ -8,7 +8,7 @@
   &--merriweather {
     font-family: core.$merriweather;
   }
-  
+
   &--montserrat {
     font-family: core.$montserrat;
   }
@@ -38,10 +38,10 @@
   }
 
   &--small {
-    font-size: .875rem;
+    font-size: 0.875rem;
   }
 
   &--xsmall {
-    font-size: .75rem;
+    font-size: 0.75rem;
   }
 }

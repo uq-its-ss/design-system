@@ -1,17 +1,16 @@
 // import styles
-import './lists.scss';
+import "./lists.scss";
 
 // import HTML template strings
-import listsHTML from './lists.html';
-
+import listsHTML from "./lists.html";
 
 export default {
-  title: 'Components/Lists',
+  title: "Components/Lists",
   parameters: {
     previewTabs: {
-      canvas: {hidden: false}
-    }
-  }
+      canvas: { hidden: false },
+    },
+  },
 };
 
 export const all = () => {

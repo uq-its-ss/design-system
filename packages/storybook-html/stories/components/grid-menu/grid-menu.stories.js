@@ -1,23 +1,23 @@
 // import styles
-import './grid-menu.scss';
+import "./grid-menu.scss";
 
 // import docs
-import docs from './grid-menu.docs.mdx';
+import docs from "./grid-menu.docs.mdx";
 
 // import HTML template strings
-import gridMenuHTML from './grid-menu.html';
+import gridMenuHTML from "./grid-menu.html";
 
 export default {
-  title: 'Components/Grid menu',
+  title: "Components/Grid menu",
   parameters: {
     docs: {
-      page: docs
+      page: docs,
     },
     layout: "padded",
     previewTabs: {
-      canvas: {hidden: false}
-    }
-  }
+      canvas: { hidden: false },
+    },
+  },
 };
 
 export const gridMenuDefault = () => {
@@ -78,7 +78,7 @@ export const gridMenuDescription = () => {
   `;
 };
 
-gridMenuDescription.storyName = 'With description';
+gridMenuDescription.storyName = "With description";
 
 export const gridMenuDarkText = () => {
   return `
@@ -132,7 +132,7 @@ export const gridMenuDarkText = () => {
   `;
 };
 
-gridMenuDarkText.storyName = 'With dark text';
+gridMenuDarkText.storyName = "With dark text";
 
 export const gridMenuIcons = () => {
   return `
@@ -147,7 +147,7 @@ export const gridMenuIcons = () => {
   `;
 };
 
-gridMenuIcons.storyName = 'With icons';
+gridMenuIcons.storyName = "With icons";
 
 export const gridMenu2Column = () => {
   return `
@@ -162,7 +162,7 @@ export const gridMenu2Column = () => {
   `;
 };
 
-gridMenu2Column.storyName = '2 Column';
+gridMenu2Column.storyName = "2 Column";
 
 export const gridMenu4Column = () => {
   return `
@@ -177,7 +177,7 @@ export const gridMenu4Column = () => {
   `;
 };
 
-gridMenu4Column.storyName = '4 Column';
+gridMenu4Column.storyName = "4 Column";
 
 export const gridMenuEqualisedHeight = () => {
   return `
@@ -192,4 +192,4 @@ export const gridMenuEqualisedHeight = () => {
   `;
 };
 
-gridMenuEqualisedHeight.storyName = 'Equalised height';
+gridMenuEqualisedHeight.storyName = "Equalised height";

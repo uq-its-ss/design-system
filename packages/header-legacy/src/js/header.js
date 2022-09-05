@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /**
  * Header module
@@ -13,33 +13,41 @@ class header {
   }
 
   init() {
-    this.toggle = document.querySelector('.legacy-header__search-toggle-button');
-    this.search = document.querySelector('.legacy-header__search');
-    this.searchInput = document.querySelector('.legacy-header__search-query-input');
-    this.meta = document.querySelector('meta.legacy-header__mq--desktop');
-    this.navigation = document.querySelector('.legacy-header__navigation');
+    this.toggle = document.querySelector(
+      ".legacy-header__search-toggle-button"
+    );
+    this.search = document.querySelector(".legacy-header__search");
+    this.searchInput = document.querySelector(
+      ".legacy-header__search-query-input"
+    );
+    this.meta = document.querySelector("meta.legacy-header__mq--desktop");
+    this.navigation = document.querySelector(".legacy-header__navigation");
 
     if (this.meta == null) {
-      this.meta = document.createElement('meta');
-      this.meta.classList.add('legacy-header__mq--desktop');
+      this.meta = document.createElement("meta");
+      this.meta.classList.add("legacy-header__mq--desktop");
       document.head.appendChild(this.meta);
-    };
+    }
 
-    this.mqLarge = window.getComputedStyle(this.meta).getPropertyValue('font-family');
+    this.mqLarge = window
+      .getComputedStyle(this.meta)
+      .getPropertyValue("font-family");
     this.mqLarge = this.mqLarge.trim().slice(1, -1); // browsers re-quote string style values
     this.mqLargeList = window.matchMedia(this.mqLarge);
 
-    this.toggle.addEventListener('click', () => {
+    this.toggle.addEventListener("click", () => {
       this.handleToggle();
     });
   }
 
   handleToggle() {
-    this.toggle.classList.toggle('legacy-header__search-toggle-button--icon-close');
-    this.search.classList.toggle('legacy-header__search--open');
-    this.navigation.classList.toggle('legacy-header__navigation--open');
+    this.toggle.classList.toggle(
+      "legacy-header__search-toggle-button--icon-close"
+    );
+    this.search.classList.toggle("legacy-header__search--open");
+    this.navigation.classList.toggle("legacy-header__navigation--open");
 
-    if (this.search.classList.contains('legacy-header__search--open')) {
+    if (this.search.classList.contains("legacy-header__search--open")) {
       if (this.mqLargeList.matches) {
         this.searchInput.focus();
       } else {
@@ -49,6 +57,6 @@ class header {
       this.toggle.blur();
     }
   }
-};
+}
 
-export {header as default};
+export { header as default };

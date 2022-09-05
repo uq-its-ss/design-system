@@ -1,4 +1,4 @@
-@use '@uqds/core/src/scss/_global' as core;
+@use "@uqds/core/src/scss/_global" as core;
 
 .uqds-base-layout-grid {
   background: repeating-linear-gradient(
@@ -20,7 +20,7 @@
         lighten(core.$uq-red, 35%) 10px,
         lighten(core.$uq-red, 35%) 20px
       );
-      content: '';
+      content: "";
       position: absolute;
       height: 100%;
       left: core.$space * 0.5;
@@ -33,7 +33,7 @@
       position: relative;
       z-index: 1;
 
-      &:nth-child(n+7) {
+      &:nth-child(n + 7) {
         display: none;
       }
 
@@ -66,11 +66,11 @@
       }
 
       @media #{core.$screen-md-up} {
-        &:nth-child(n+7) {
+        &:nth-child(n + 7) {
           display: flex;
         }
 
-        &:nth-child(n+9) {
+        &:nth-child(n + 9) {
           display: none;
         }
 
@@ -88,7 +88,7 @@
       }
 
       @media #{core.$screen-xl-up} {
-        &:nth-child(n+9) {
+        &:nth-child(n + 9) {
           display: flex;
         }
 

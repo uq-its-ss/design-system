@@ -7,11 +7,13 @@
 ### Installation
 
 With Yarn:
+
 ```shell
 yarn add @uqds/table
 ```
 
 With NPM:
+
 ```shell
 npm i @uqds/table
 ```

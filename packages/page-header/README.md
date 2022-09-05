@@ -7,11 +7,13 @@
 ### Installation
 
 With Yarn:
+
 ```shell
 yarn add @uqds/page-header
 ```
 
 With NPM:
+
 ```shell
 npm i @uqds/page-header
 ```

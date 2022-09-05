@@ -1,18 +1,26 @@
-import { Meta, Story, Canvas } from '@storybook/addon-docs';
-import StatusBadge from '../../../.storybook/custom/components/StatusBadge';
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
 
 # Loading spinner
 
-<StatusBadge.Stable /><StatusBadge.StableDoc />
+<StatusBadge.Stable />
+<StatusBadge.StableDoc />
 
-<a href="https://github.com/uq-its-ss/design-system/issues" class="uq-button uq-button--text" target="_blank">Check for open issues</a>
+<a
+  href="https://github.com/uq-its-ss/design-system/issues"
+  class="uq-button uq-button--text"
+  target="_blank"
+>
+  Check for open issues
+</a>
 
 ## Overview
 
 The loading spinner component is a progress indicator used to provide feedback that data is being processed.
 
 ## Default
-The default component is UQ purple for use on light backgrounds such as white or light-grey. 
+
+The default component is UQ purple for use on light backgrounds such as white or light-grey.
 
 <Canvas withSource="none">
   <Story id="components-loading-spinner--loading-spinner" />
@@ -25,22 +33,29 @@ The default component is UQ purple for use on light backgrounds such as white or
 ```
 
 ## Variants
-The variants can be used in isolation or combined. For example if you would like a light and small loading spinner, add both of the variant classnames to the component. 
+
+The variants can be used in isolation or combined. For example if you would like a light and small loading spinner, add both of the variant classnames to the component.
 
 ### Light
-Changes the colour of the component to white so it can be used on darker backgrounds such as UQ purple. 
+
+Changes the colour of the component to white so it can be used on darker backgrounds such as UQ purple.
 
 <Canvas withSource="none">
   <Story id="components-loading-spinner--loading-spinner-light" />
 </Canvas>
 
 ```html
-<div class="uq-loading-spinner uq-loading-spinner--light" role="alert" aria-live="assertive">
+<div
+  class="uq-loading-spinner uq-loading-spinner--light"
+  role="alert"
+  aria-live="assertive"
+>
   <span>Loading...</span>
 </div>
 ```
 
 ### Small
+
 Reduces the component to half the size of the default.
 
 <Canvas withSource="none">
@@ -48,7 +63,11 @@ Reduces the component to half the size of the default.
 </Canvas>
 
 ```html
-<div class="uq-loading-spinner uq-loading-spinner--small" role="alert" aria-live="assertive">
+<div
+  class="uq-loading-spinner uq-loading-spinner--small"
+  role="alert"
+  aria-live="assertive"
+>
   <span>Loading...</span>
 </div>
 ```

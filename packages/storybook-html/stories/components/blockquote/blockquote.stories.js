@@ -1,46 +1,46 @@
 // import styles
-import './blockquote.scss';
+import "./blockquote.scss";
 
 // import HTML template strings
-import blockquoteHTML from './blockquote.html';
-import blockquoteLightHTML from './blockquote-light.html';
+import blockquoteHTML from "./blockquote.html";
+import blockquoteLightHTML from "./blockquote-light.html";
 
 // documentation
-import docs from './blockquote.docs.mdx';
+import docs from "./blockquote.docs.mdx";
 
 export default {
-  title: 'Components/Blockquote',
+  title: "Components/Blockquote",
   parameters: {
     docs: {
-      page: docs
+      page: docs,
     },
     layout: "padded",
     previewTabs: {
-      canvas: {hidden: false}
-    }
-  }
+      canvas: { hidden: false },
+    },
+  },
 };
 
 export const blockquote = () => {
   return blockquoteHTML;
 };
-blockquote.storyName = 'Default';
+blockquote.storyName = "Default";
 
 export const blockquoteLight = () => {
   return blockquoteLightHTML;
 };
-blockquoteLight.storyName = 'Light';
+blockquoteLight.storyName = "Light";
 blockquoteLight.parameters = {
   docs: {
-     inlineStories: false
+    inlineStories: false,
   },
   backgrounds: {
-    default: 'Purple',
+    default: "Purple",
     values: [
       {
-        name: 'Purple',
-        value: '#51247A',
-      }
+        name: "Purple",
+        value: "#51247A",
+      },
     ],
-  } 
+  },
 };

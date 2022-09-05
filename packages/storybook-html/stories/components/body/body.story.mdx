@@ -1,10 +1,12 @@
-import { Meta, Story, Canvas } from '@storybook/addon-docs';
-import StatusBadge from '../../../.storybook/custom/components/StatusBadge';
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
 
 <Meta title="Components/Body/Body" />
 
 # Body
-<StatusBadge.Review /><StatusBadge.ReviewDoc />
+
+<StatusBadge.Review />
+<StatusBadge.ReviewDoc />
 
 ## Overview
 
@@ -25,10 +27,10 @@ yarn add @uqds/body
 
 ```scss
 // With a namespace (recommended)
-@use '@uqds/body/src/scss/_component' as body;
+@use "@uqds/body/src/scss/_component" as body;
 
 // Without a namespace
-@use '@uqds/body/src/scss/_component' as *;
+@use "@uqds/body/src/scss/_component" as *;
 ```
 
 ## ⚠️ Encapsulating the styles (in Sass) for established projects
@@ -39,7 +41,7 @@ already in place, we recommended importing the stylesheet with encapsulation
 enabled (to avoid selector clashes).
 
 ```scss
-@use '@uqds/body/src/scss/_component' as body with (
+@use "@uqds/body/src/scss/_component" as body with (
   $use-encapsulation: true
 );
 ```
@@ -48,12 +50,15 @@ You can now wrap any amount of HTML content with the `uq` class to apply the
 package stylesheet to a subset of elements. For example:
 
 ```html
-  ...
-  <div class="uq">
-    <h2>I will be styled with <span class="text--weight-medium">this</span> stylesheet.</h2>
-    <p>As will I.</p>
-  </div>
-  ...
+...
+<div class="uq">
+  <h2>
+    I will be styled with
+    <span class="text--weight-medium">this</span> stylesheet.
+  </h2>
+  <p>As will I.</p>
+</div>
+...
 ```
 
 You can also apply the `uq` class to the `<body>` tag to use the styles globally
@@ -64,4 +69,5 @@ to the resulting CSS). Otherwise, by default, this stylesheet will effect the
 ```html
 <body class="uq">
   ...
+</body>
 ```

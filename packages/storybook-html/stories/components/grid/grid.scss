@@ -1,5 +1,5 @@
-@use '@uqds/core/src/scss/_global' as core;
-@use '@uqds/grid/src/scss/_global' as grid;
+@use "@uqds/core/src/scss/_global" as core;
+@use "@uqds/grid/src/scss/_global" as grid;
 
 .uqds-example-grid {
   background: repeating-linear-gradient(
@@ -58,17 +58,17 @@
           background-color: lighten(core.$uq-orange, 35%);
           border-color: core.$uq-orange;
         }
-  
+
         @media #{core.$screen-md-up} {
           background-color: lighten(core.$uq-purple, 45%);
           border-color: core.$uq-purple;
         }
-  
+
         @media #{core.$screen-lg-up} {
           background-color: lighten(core.$uq-green, 45%);
           border-color: core.$uq-green;
         }
-  
+
         @media #{core.$screen-xl-up} {
           background-color: lighten(core.$uq-blue, 40%);
           border-color: core.$uq-blue;

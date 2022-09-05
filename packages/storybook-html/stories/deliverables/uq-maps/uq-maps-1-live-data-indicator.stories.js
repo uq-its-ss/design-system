@@ -1,17 +1,17 @@
 //import './uq-maps.scss';
-import docs from './uq-maps-1-live-data-indicator.docs.mdx';
+import docs from "./uq-maps-1-live-data-indicator.docs.mdx";
 
 export default {
-  title: 'Deliverables/UQ Maps/1 Live data indicator',
+  title: "Deliverables/UQ Maps/1 Live data indicator",
   parameters: {
-    layout: 'centered',
+    layout: "centered",
     previewTabs: {
-      canvas: {hidden: false}
+      canvas: { hidden: false },
     },
     docs: {
       page: docs,
-    }
-  }
+    },
+  },
 };
 
 export const liveDataIndicator = () => {

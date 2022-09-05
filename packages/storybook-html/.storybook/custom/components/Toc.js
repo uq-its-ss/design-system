@@ -1,6 +1,6 @@
-import React from 'react';
-import { H2 } from '@storybook/components';
-import './Toc.scss';
+import React from "react";
+import { H2 } from "@storybook/components";
+import "./Toc.scss";
 
 const Toc = () => {
   return (
@@ -9,6 +9,6 @@ const Toc = () => {
       <div className="js-toc toc uqds-toc__toc"></div>
     </nav>
   );
-}
+};
 
 export default Toc;

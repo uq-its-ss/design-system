@@ -1,17 +1,26 @@
-import { Meta, Story, Canvas } from '@storybook/addon-docs';
-import StatusBadge from '../../../.storybook/custom/components/StatusBadge';
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
 
 # Breadcrumb
-<StatusBadge.Stable /><StatusBadge.StableDoc />
 
-<a href="https://github.com/uq-its-ss/design-system/issues" class="uq-button uq-button--text" target="_blank">Check for open issues</a>
+<StatusBadge.Stable />
+<StatusBadge.StableDoc />
+
+<a
+  href="https://github.com/uq-its-ss/design-system/issues"
+  class="uq-button uq-button--text"
+  target="_blank"
+>
+  Check for open issues
+</a>
 
 ## Overview
 
-Breadcrumbs are a horizontal list of links used to indicate the current page location within the site navigation hierarchy. Page links are separated by a chevron icon which indicates the level of that page relative to the page links beside it. 
+Breadcrumbs are a horizontal list of links used to indicate the current page location within the site navigation hierarchy. Page links are separated by a chevron icon which indicates the level of that page relative to the page links beside it.
 
 ## Default
-Displays a list of links indicating the page levels before the current page. The current page is not included and a chevron icon is displayed between the page levels when there are more than two page levels in the list. 
+
+Displays a list of links indicating the page levels before the current page. The current page is not included and a chevron icon is displayed between the page levels when there are more than two page levels in the list.
 
 <Canvas withSource="none">
   <Story id="components-breadcrumb--breadcrumb" />
@@ -19,35 +28,67 @@ Displays a list of links indicating the page levels before the current page. The
 
 ```html
 <nav aria-label="uq-breadcrumb">
-  <ol class="uq-breadcrumb" itemscope="" itemtype="https://schema.org/BreadcrumbList">
-    <li class="uq-breadcrumb__item uq-breadcrumb__item--home" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+  <ol
+    class="uq-breadcrumb"
+    itemscope=""
+    itemtype="https://schema.org/BreadcrumbList"
+  >
+    <li
+      class="uq-breadcrumb__item uq-breadcrumb__item--home"
+      itemprop="itemListElement"
+      itemscope=""
+      itemtype="https://schema.org/ListItem"
+    >
       <a class="uq-breadcrumb__link uq-breadcrumb__link--home" href="/">Home</a>
-      <meta itemprop="position" content="1">
+      <meta itemprop="position" content="1" />
     </li>
-    <li class="uq-breadcrumb__item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
-      <a class="uq-breadcrumb__link" itemprop="item" href="/information-and-services">Information and services</a>
-      <meta itemprop="position" content="2">
+    <li
+      class="uq-breadcrumb__item"
+      itemprop="itemListElement"
+      itemscope=""
+      itemtype="https://schema.org/ListItem"
+    >
+      <a
+        class="uq-breadcrumb__link"
+        itemprop="item"
+        href="/information-and-services"
+        >Information and services</a
+      >
+      <meta itemprop="position" content="2" />
     </li>
-    <li class="uq-breadcrumb__item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
-      <a class="uq-breadcrumb__link" itemprop="item" href="/information-and-services/internet-and-wifi">Internet and wifi</a>
-      <meta itemprop="position" content="3">
+    <li
+      class="uq-breadcrumb__item"
+      itemprop="itemListElement"
+      itemscope=""
+      itemtype="https://schema.org/ListItem"
+    >
+      <a
+        class="uq-breadcrumb__link"
+        itemprop="item"
+        href="/information-and-services/internet-and-wifi"
+        >Internet and wifi</a
+      >
+      <meta itemprop="position" content="3" />
     </li>
   </ol>
 </nav>
 ```
 
 ### Truncation
-The breadcrumb link text is truncated and ellipsed (...) when the text is longer than a set width. 
+
+The breadcrumb link text is truncated and ellipsed (...) when the text is longer than a set width.
 
 <Canvas withSource="none">
   <Story id="components-breadcrumb--breadcrumb-truncation" />
 </Canvas>
 
 ## How and when to use
-* The breadcrumb component is typically location based to represent the site's navigational hierarchy as opposed to path based to illustrate a navigation trail. 
-* The component displays on a page once a user has navigated away from the home page to provide a navigation path back to the home and parent level pages. 
-* The breadcrumb should not include a link to the current page.
-* Search engines have a limited understanding of content on web pages. By adding schema microdata tags to the breadcrumb component, you can help search engines and other applications better understand the content and display it in a useful and relevant way. For further information on schema, go to https://schema.org/
+
+- The breadcrumb component is typically location based to represent the site's navigational hierarchy as opposed to path based to illustrate a navigation trail.
+- The component displays on a page once a user has navigated away from the home page to provide a navigation path back to the home and parent level pages.
+- The breadcrumb should not include a link to the current page.
+- Search engines have a limited understanding of content on web pages. By adding schema microdata tags to the breadcrumb component, you can help search engines and other applications better understand the content and display it in a useful and relevant way. For further information on schema, go to https://schema.org/
 
 ## Accessibility
-For accessibility add ```aria-label="breadcrumb"``` to the ```nav``` element that wraps the breadcrumb component.
+
+For accessibility add `aria-label="breadcrumb"` to the `nav` element that wraps the breadcrumb component.

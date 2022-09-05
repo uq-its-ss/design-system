@@ -1,4 +1,2 @@
-import siteHeaderNavigation from './site-header-navigation';
-export { 
-    siteHeaderNavigation
-};
+import siteHeaderNavigation from "./site-header-navigation";
+export { siteHeaderNavigation };

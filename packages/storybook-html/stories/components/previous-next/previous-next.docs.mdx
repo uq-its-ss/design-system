@@ -1,16 +1,23 @@
-import { Meta, Story, Canvas } from '@storybook/addon-docs';
-import StatusBadge from '../../../.storybook/custom/components/StatusBadge';
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
 
 # Previous next
 
-<StatusBadge.Review /><StatusBadge.ReviewDoc />
+<StatusBadge.Review />
+<StatusBadge.ReviewDoc />
 
-<a href="https://github.com/uq-its-ss/design-system/issues" class="uq-button uq-button--text" target="_blank">Check for open issues</a>
+<a
+  href="https://github.com/uq-its-ss/design-system/issues"
+  class="uq-button uq-button--text"
+  target="_blank"
+>
+  Check for open issues
+</a>
 
 ## Overview
 
-- The Previous-next component is also a form of pagination. 
-- It provides previous and next buttons (links) to navigate between pages or between tab contents on the same page. 
+- The Previous-next component is also a form of pagination.
+- It provides previous and next buttons (links) to navigate between pages or between tab contents on the same page.
 - They are aligned to the sides of the page or in some instances to the sides of the tab contents.
 
 ## Default example
@@ -24,15 +31,20 @@ An instance when only the next button is visible
 </Canvas>
 
 ```html
-  <div class="uq-previous-next">
-    <div class="uq-previous-next__item uq-previous-next__item--hidden">
-      <a href="#" class="uq-previous-next__link-previous">Enrolment basics <span class="uq-previous-next__description">Previous</span></a>
-    </div>
-
-    <div class="uq-previous-next__item">
-      <a href="#" class="uq-previous-next__link-next">How to enrol <span class="uq-previous-next__description">Next</span></a>
-    </div>
+<div class="uq-previous-next">
+  <div class="uq-previous-next__item uq-previous-next__item--hidden">
+    <a href="#" class="uq-previous-next__link-previous"
+      >Enrolment basics
+      <span class="uq-previous-next__description">Previous</span></a
+    >
   </div>
+
+  <div class="uq-previous-next__item">
+    <a href="#" class="uq-previous-next__link-next"
+      >How to enrol <span class="uq-previous-next__description">Next</span></a
+    >
+  </div>
+</div>
 ```
 
 ### b. Middle instance
@@ -44,15 +56,20 @@ An instance when both the previous and next buttons are visible
 </Canvas>
 
 ```html
-<!-- Previous and Next buttons are visible -->  
+<!-- Previous and Next buttons are visible -->
 <div class="uq-previous-next">
-    <div class="uq-previous-next__item">
-        <a href="#" class="uq-previous-next__link-previous">Enrolment basics <span class="uq-previous-next__description">Previous</span></a>
-    </div>
+  <div class="uq-previous-next__item">
+    <a href="#" class="uq-previous-next__link-previous"
+      >Enrolment basics
+      <span class="uq-previous-next__description">Previous</span></a
+    >
+  </div>
 
-    <div class="uq-previous-next__item">
-        <a href="#" class="uq-previous-next__link-next">How to enrol <span class="uq-previous-next__description">Next</span></a>
-    </div>
+  <div class="uq-previous-next__item">
+    <a href="#" class="uq-previous-next__link-next"
+      >How to enrol <span class="uq-previous-next__description">Next</span></a
+    >
+  </div>
 </div>
 ```
 
@@ -65,15 +82,20 @@ An instance when only the previous button is visible
 </Canvas>
 
 ```html
-  <div class="uq-previous-next">
-    <div class="uq-previous-next__item">
-      <a href="#" class="uq-previous-next__link-previous">Enrolment basics <span class="uq-previous-next__description">Previous</span></a>
-    </div>
-
-    <div class="uq-previous-next__item uq-previous-next__item--hidden">
-      <a href="#" class="uq-previous-next__link-next">How to enrol <span class="uq-previous-next__description">Next</span></a>
-    </div>
+<div class="uq-previous-next">
+  <div class="uq-previous-next__item">
+    <a href="#" class="uq-previous-next__link-previous"
+      >Enrolment basics
+      <span class="uq-previous-next__description">Previous</span></a
+    >
   </div>
+
+  <div class="uq-previous-next__item uq-previous-next__item--hidden">
+    <a href="#" class="uq-previous-next__link-next"
+      >How to enrol <span class="uq-previous-next__description">Next</span></a
+    >
+  </div>
+</div>
 ```
 
 ## How and when to use

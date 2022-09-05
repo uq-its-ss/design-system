@@ -82,4 +82,4 @@ flowchart TB
   class A,R terminal
 `;
 
-export { mobileA, desktopA }
+export { mobileA, desktopA };

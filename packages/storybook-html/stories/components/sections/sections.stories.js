@@ -1,61 +1,61 @@
 // import styles
-import './sections.scss';
+import "./sections.scss";
 
 // import HTML template strings
-import sectionsDefaultHTML from './sections-default.html';
-import sectionsCenteredHTML from './sections-centered.html';
-import sectionsNarrowHTML from './sections-narrow.html';
-import sectionsShadedHTML from './sections-shaded.html';
-import sectionsNoPaddingHTML from './sections-no-padding.html';
-import sectionsLargePaddingHTML from './sections-large-padding.html';
+import sectionsDefaultHTML from "./sections-default.html";
+import sectionsCenteredHTML from "./sections-centered.html";
+import sectionsNarrowHTML from "./sections-narrow.html";
+import sectionsShadedHTML from "./sections-shaded.html";
+import sectionsNoPaddingHTML from "./sections-no-padding.html";
+import sectionsLargePaddingHTML from "./sections-large-padding.html";
 
-import docs from './sections.docs.mdx';
+import docs from "./sections.docs.mdx";
 
 export default {
-  title: 'Layout/Sections',
+  title: "Layout/Sections",
   parameters: {
     docs: {
-      page: docs
+      page: docs,
     },
     layout: "fullscreen",
     previewTabs: {
-      canvas: {hidden: false}
-    }
-  }
+      canvas: { hidden: false },
+    },
+  },
 };
 
 export const sectionsDefault = () => {
   return sectionsDefaultHTML;
 };
 
-sectionsDefault.storyName = 'Default';
+sectionsDefault.storyName = "Default";
 
 export const sectionsCentered = () => {
-  return sectionsCenteredHTML; 
+  return sectionsCenteredHTML;
 };
 
-sectionsCentered.storyName = 'Centered';
+sectionsCentered.storyName = "Centered";
 
 export const sectionsNarrow = () => {
   return sectionsNarrowHTML;
 };
 
-sectionsNarrow.storyName = 'Narrow';
+sectionsNarrow.storyName = "Narrow";
 
 export const sectionsShaded = () => {
   return sectionsShadedHTML;
 };
 
-sectionsShaded.storyName = 'Shaded';
+sectionsShaded.storyName = "Shaded";
 
 export const sectionsNoPadding = () => {
   return sectionsNoPaddingHTML;
 };
 
-sectionsNoPadding.storyName = 'No padding';
+sectionsNoPadding.storyName = "No padding";
 
 export const sectionsLargePadding = () => {
   return sectionsLargePaddingHTML;
 };
 
-sectionsLargePadding.storyName = 'Large padding';
+sectionsLargePadding.storyName = "Large padding";

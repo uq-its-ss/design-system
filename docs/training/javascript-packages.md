@@ -2,7 +2,7 @@
 
 # JavaScript packages
 
-> If you haven't created and published Javascript packages before (e.g. NPM, 
+> If you haven't created and published Javascript packages before (e.g. NPM,
 > Yarn), it may help you to run through the exercises contained in this page.
 
 ## JavaScript packages introductory reading
@@ -34,17 +34,19 @@ in JSON format (`package.json`).
 Verdaccio is a local npm registry proxy that we can use to play with publishing
 packages from the design system.
 
-> **🚨 Before continuing, please [fork][1] (NOT branch) the UQDS monorepo — as 
+> **🚨 Before continuing, please [fork][1] (NOT branch) the UQDS monorepo — as
 > `npx lerna publish` will create tags on the repo.**
 
 ### 1. Set up Verdaccio for local package publication
 
 Install Verdaccio package globally:
+
 ```shell
 $ npm i -g verdaccio
 ```
 
-Run Verdaccio:  
+Run Verdaccio:
+
 ```shell
 $ verdaccio
 ```
@@ -77,7 +79,7 @@ Voila! You have now published the packages to a registry.
 ## Consuming the packages you've published
 
 You can do this step in an existing project or start a new project. Doing as
-little as running `npm init` or as much as using [*Create React App*][3] to
+little as running `npm init` or as much as using [_Create React App_][3] to
 scaffold your new project is up to you.
 
 Firstly, you will need to configure the `registry` setting in an [`.npmrc`][2]

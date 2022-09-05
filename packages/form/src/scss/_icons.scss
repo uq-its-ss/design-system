@@ -1,33 +1,42 @@
 $-icons: (
-  "form-checkbox-check": "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='~~COLOR~~'%3e%3cpath d='M5.6 9.6L2.4 6.4 0 8.8l5.6 5.6L16 4l-2.4-2.4z'%3e%3c/path%3e%3c/svg%3e",
-  "form-chevron-down": "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='~~COLOR~~'%3e%3cpath d='M14.285 5.145l-6 6.167a.41.41 0 01-.598 0L1.715 5.145' fill='none' stroke='~~COLOR~~' stroke-width='.75' stroke-linecap='round' stroke-linejoin='round'%3e%3c/path%3e%3c/svg%3e",
-  "form-error": "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 140 140' width='140' height='140' fill='~~COLOR~~'%3e%3cpath d='M138.42 118.29l-55-110a15 15 0 00-26.84 0l-55 110A15 15 0 0015 140h110a15 15 0 0013.42-21.71zM62.5 50a7.5 7.5 0 0115 0v30a7.5 7.5 0 01-15 0zm7.5 70a10 10 0 1110-10 10 10 0 01-10 10z'%3e%3c/path%3e%3c/svg%3e",
-  "form-success": "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 140 140' width='140' height='140' fill='~~COLOR~~'%3e%3cpath d='M70 0a70 70 0 1070 70A70.08 70.08 0 0070 0zm36 59L66.24 98.74a10 10 0 01-14.15 0L34 80.68a10.013 10.013 0 0114.18-14.14l11 11 32.64-32.67A10.01 10.01 0 01106 59z'%3e%3c/path%3e%3c/svg%3e",
+  "form-checkbox-check":
+    "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='~~COLOR~~'%3e%3cpath d='M5.6 9.6L2.4 6.4 0 8.8l5.6 5.6L16 4l-2.4-2.4z'%3e%3c/path%3e%3c/svg%3e",
+  "form-chevron-down":
+    "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='~~COLOR~~'%3e%3cpath d='M14.285 5.145l-6 6.167a.41.41 0 01-.598 0L1.715 5.145' fill='none' stroke='~~COLOR~~' stroke-width='.75' stroke-linecap='round' stroke-linejoin='round'%3e%3c/path%3e%3c/svg%3e",
+  "form-error":
+    "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 140 140' width='140' height='140' fill='~~COLOR~~'%3e%3cpath d='M138.42 118.29l-55-110a15 15 0 00-26.84 0l-55 110A15 15 0 0015 140h110a15 15 0 0013.42-21.71zM62.5 50a7.5 7.5 0 0115 0v30a7.5 7.5 0 01-15 0zm7.5 70a10 10 0 1110-10 10 10 0 01-10 10z'%3e%3c/path%3e%3c/svg%3e",
+  "form-success":
+    "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 140 140' width='140' height='140' fill='~~COLOR~~'%3e%3cpath d='M70 0a70 70 0 1070 70A70.08 70.08 0 0070 0zm36 59L66.24 98.74a10 10 0 01-14.15 0L34 80.68a10.013 10.013 0 0114.18-14.14l11 11 32.64-32.67A10.01 10.01 0 01106 59z'%3e%3c/path%3e%3c/svg%3e",
 );
 
-  @function -str-replace($string, $search, $replace: '') {
-    $index: str-index($string, $search);
+@function -str-replace($string, $search, $replace: "") {
+  $index: str-index($string, $search);
 
-    @if $index {
-      @return str-slice( $string, 1, $index - 1 ) + $replace + -str-replace( str-slice( $string, $index + str-length( $search ) ), $search, $replace);
-    }
-
-    @return $string;
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace +
+      -str-replace(
+        str-slice($string, $index + str-length($search)),
+        $search,
+        $replace
+      );
   }
 
-  @function get-icon($icon, $color: #2b2b2b) {
-    @if type-of($color) != 'color' and $color != 'none' {
-      @warn 'The requested color - "' + $color + '" - was not recognized as a Sass color value.';
-      @return null;
-    }
+  @return $string;
+}
 
-    @if map-has-key($-icons, $icon) {
-      $icon: map-get($-icons, $icon);
-      $data-uri: -str-replace($icon, '~~COLOR~~', $color);
-
-      @return -str-replace( $data-uri, '#', '%23' );
-    }
-
-    @warn 'The requested icon - "' + $icon + '" - is not defined in the $icons map.';
+@function get-icon($icon, $color: #2b2b2b) {
+  @if type-of($color) != "color" and $color != "none" {
+    @warn 'The requested color - "' + $color + '" - was not recognized as a Sass color value.';
     @return null;
   }
+
+  @if map-has-key($-icons, $icon) {
+    $icon: map-get($-icons, $icon);
+    $data-uri: -str-replace($icon, "~~COLOR~~", $color);
+
+    @return -str-replace($data-uri, "#", "%23");
+  }
+
+  @warn 'The requested icon - "' + $icon + '" - is not defined in the $icons map.';
+  @return null;
+}

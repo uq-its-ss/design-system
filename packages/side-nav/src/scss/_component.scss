@@ -1,6 +1,6 @@
 @use "@uqds/core/src/scss/global" as core;
 @use "@uqds/icon/src/scss/global" as icon-constants;
-@use 'global' as *;
+@use "global" as *;
 
 .uq-side-nav {
   color: core.$text;
@@ -11,7 +11,9 @@
   font-weight: core.$font-weight-normal;
   line-height: core.$line-height;
 
-  *, *::before, *::after {
+  *,
+  *::before,
+  *::after {
     box-sizing: border-box;
   }
 
@@ -31,7 +33,7 @@
       }
     }
   }
-    
+
   &__list {
     border-top: 1px solid $sidenav-list-item-divider;
     display: block;
@@ -51,7 +53,6 @@
       transform: translateY(-($sidenav-list-item-animation-distance));
 
       .uq-side-nav__list-item {
-
         &:last-child {
           border-bottom: none;
         }
@@ -59,7 +60,7 @@
 
       .uq-side-nav__link {
         padding: core.$space core.$space core.$space core.$space-xxl !important;
-  
+
         &:hover,
         &:focus {
           background-color: $sidenav-list-item-active-bg !important;
@@ -104,17 +105,23 @@
         height: 3.5rem;
         padding: core.$space core.$space;
         text-indent: -100vw;
-        background-image: url(icon-constants.get-icon('standard--arrow-down-1', core.$uq-purple));
+        background-image: url(icon-constants.get-icon(
+          "standard--arrow-down-1",
+          core.$uq-purple
+        ));
         background-size: 1.2rem;
         background-position: center center;
         background-repeat: no-repeat;
         overflow: hidden;
       }
 
-      &--open, 
+      &--open,
       &--has-subnav:focus {
         .uq-side-nav__list-item__sub-toggle {
-          background-image: url(icon-constants.get-icon('standard--arrow-up-1', core.$uq-purple));
+          background-image: url(icon-constants.get-icon(
+            "standard--arrow-up-1",
+            core.$uq-purple
+          ));
         }
 
         .uq-side-nav__list--level-2 {
@@ -132,7 +139,6 @@
           background-color: $sidenav-list-item-bg;
         }
       }
-
     }
   }
 }

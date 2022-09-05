@@ -1,13 +1,13 @@
-import docs from './body-utilities.docs.mdx';
+import docs from "./body-utilities.docs.mdx";
 
 export default {
-  title: 'Components/Body/Utilities',
+  title: "Components/Body/Utilities",
   parameters: {
     docs: {
-      page: docs
+      page: docs,
     },
-    layout: 'padded'
-  }
+    layout: "padded",
+  },
 };
 
 export const textColorUtils = () => {
@@ -56,7 +56,7 @@ export const textColorUtils = () => {
   `;
 };
 
-textColorUtils.storyName = 'Text colours';
+textColorUtils.storyName = "Text colours";
 
 export const textSizeUtils = () => {
   return `
@@ -114,7 +114,7 @@ export const textSizeUtils = () => {
   `;
 };
 
-textSizeUtils.storyName = 'Text size';
+textSizeUtils.storyName = "Text size";
 
 export const textWeightUtils = () => {
   return `
@@ -147,7 +147,7 @@ export const textWeightUtils = () => {
   `;
 };
 
-textWeightUtils.storyName = 'Text weight';
+textWeightUtils.storyName = "Text weight";
 
 export const textAlignUtils = () => {
   return `
@@ -159,7 +159,7 @@ export const textAlignUtils = () => {
   `;
 };
 
-textAlignUtils.storyName = 'Text alignment';
+textAlignUtils.storyName = "Text alignment";
 
 export const textPrettyUtils = () => {
   return `
@@ -171,7 +171,7 @@ export const textPrettyUtils = () => {
   `;
 };
 
-textPrettyUtils.storyName = 'Text prettiers';
+textPrettyUtils.storyName = "Text prettiers";
 
 export const backgroundColourUtils = () => {
   return `
@@ -184,7 +184,7 @@ export const backgroundColourUtils = () => {
   `;
 };
 
-backgroundColourUtils.storyName = 'Background colour';
+backgroundColourUtils.storyName = "Background colour";
 
 export const visibilityUtils = () => `
   <div class="text--xl">
@@ -196,4 +196,4 @@ export const visibilityUtils = () => `
   </div>
 `;
 
-visibilityUtils.storyName = 'Visibility';
+visibilityUtils.storyName = "Visibility";

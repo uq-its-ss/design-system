@@ -1,27 +1,35 @@
-import { useEffect } from '@storybook/addons';
-import { MDCCircularProgress } from '@material/circular-progress';
+import { useEffect } from "@storybook/addons";
+import { MDCCircularProgress } from "@material/circular-progress";
 // import './uq-maps.scss';
-import docs from './uq-maps-3-wayfinding-controls.docs.mdx';
+import docs from "./uq-maps-3-wayfinding-controls.docs.mdx";
 
 export default {
-  title: 'Deliverables/UQ Maps/3 Wayfinding controls',
+  title: "Deliverables/UQ Maps/3 Wayfinding controls",
   parameters: {
-    layout: 'fullscreen',
+    layout: "fullscreen",
     previewTabs: {
-      canvas: {hidden: false}
+      canvas: { hidden: false },
     },
     backgrounds: {
       values: [
-        { name: 'Static map', value: '#D7D1CC url("\/images\/app-maps\/map-sample-bg.jpg") center top / 1920px 969px repeat'},
-        { name: 'Diagonal stripes', value: 'repeating-linear-gradient(45deg, #efedeb, #efedeb 10px, #f7f6f5 10px, #f7f6f5 20px)' }
+        {
+          name: "Static map",
+          value:
+            '#D7D1CC url("/images/app-maps/map-sample-bg.jpg") center top / 1920px 969px repeat',
+        },
+        {
+          name: "Diagonal stripes",
+          value:
+            "repeating-linear-gradient(45deg, #efedeb, #efedeb 10px, #f7f6f5 10px, #f7f6f5 20px)",
+        },
       ],
-      default: 'Static map'
+      default: "Static map",
     },
     docs: {
       page: docs,
-      inlineStories: false
-    }
-  }
+      inlineStories: false,
+    },
+  },
 };
 
 export const wayfindingControl = () => `
@@ -48,7 +56,9 @@ wayfindingControl.storyName = "3A Wayfinding controls";
 
 export const wayfindingControlWorking = () => {
   useEffect(() => {
-    const circularProgress = new MDCCircularProgress(document.querySelector('#wayfindingProgressIndicator'));
+    const circularProgress = new MDCCircularProgress(
+      document.querySelector("#wayfindingProgressIndicator")
+    );
     circularProgress.determinate = false;
     circularProgress.open();
   });
@@ -109,4 +119,5 @@ export const wayfindingControlWorking = () => {
   `;
 };
 
-wayfindingControlWorking.storyName = "3B Wayfinding controls with circular progress indicator";
+wayfindingControlWorking.storyName =
+  "3B Wayfinding controls with circular progress indicator";

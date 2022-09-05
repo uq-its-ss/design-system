@@ -1,76 +1,76 @@
-import { useEffect } from '@storybook/addons';
+import { useEffect } from "@storybook/addons";
 
 // import styles
-import '@uqds/accordion/src/scss/_component.scss';
+import "@uqds/accordion/src/scss/_component.scss";
 
 // import scripts
-import accordionCreate from '@uqds/accordion/src/js/accordion';
+import accordionCreate from "@uqds/accordion/src/js/accordion";
 
 // import HTML template strings
-import accordionDivHTML from './accordion-div.html';
-import accordionListHTML from './accordion-list.html';
-import accordionSubtitleHTML from './accordion-subtitle.html';
-import accordionCompactHTML from './accordion-compact.html';
-import accordionDivIsManualHTML from './accordion-div-is-manual.html';
+import accordionDivHTML from "./accordion-div.html";
+import accordionListHTML from "./accordion-list.html";
+import accordionSubtitleHTML from "./accordion-subtitle.html";
+import accordionCompactHTML from "./accordion-compact.html";
+import accordionDivIsManualHTML from "./accordion-div-is-manual.html";
 
 // documentation
-import docs from './accordion.docs.mdx';
+import docs from "./accordion.docs.mdx";
 
 export default {
-  title: 'Components/Accordion',
+  title: "Components/Accordion",
   parameters: {
     docs: {
       page: docs,
-      inlineStories: false
+      inlineStories: false,
     },
     layout: "padded",
     previewTabs: {
-      canvas: {hidden: false}
-    }
-  }
+      canvas: { hidden: false },
+    },
+  },
 };
 
 export const usingDivs = () => {
   useEffect(() => {
-    new accordionCreate(); 
+    new accordionCreate();
   });
   return accordionDivHTML;
 };
 
-usingDivs.storyName = 'Using divs';
+usingDivs.storyName = "Using divs";
 
 export const usingLists = () => {
   useEffect(() => {
-    new accordionCreate(); 
+    new accordionCreate();
   });
   return accordionListHTML;
 };
 
-usingLists.storyName = 'Using lists';
+usingLists.storyName = "Using lists";
 
 export const HasSubtitle = () => {
   useEffect(() => {
-    new accordionCreate(); 
+    new accordionCreate();
   });
   return accordionSubtitleHTML;
 };
 
-HasSubtitle.storyName = 'Subtitle';
+HasSubtitle.storyName = "Subtitle";
 
 export const IsCompact = () => {
   useEffect(() => {
-    new accordionCreate(); 
+    new accordionCreate();
   });
   return accordionCompactHTML;
 };
 
-IsCompact.storyName = 'Compact';
+IsCompact.storyName = "Compact";
 
 export const isManual = () => {
   useEffect(() => {
-    new accordionCreate(); 
+    new accordionCreate();
   });
   return accordionDivIsManualHTML;
 };
 
-isManual.storyName = 'Variant behaviour';
+isManual.storyName = "Variant behaviour";

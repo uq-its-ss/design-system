@@ -1,22 +1,23 @@
-import { Meta, Story } from '@storybook/addon-docs';
-import StatusBadge from '../../../.storybook/custom/components/StatusBadge';
+import { Meta, Story } from "@storybook/addon-docs";
+import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
 
 # Grid
 
-<StatusBadge.Stable /><StatusBadge.StableDoc />
+<StatusBadge.Stable />
+<StatusBadge.StableDoc />
 
 ## Overview
 
-Layouts using our grid are achieved using a combination of `.uq-grid` (*grid
-container*) and `.uq-grid__col` (*grid column*) elements and their modifiers.
+Layouts using our grid are achieved using a combination of `.uq-grid` (_grid
+container_) and `.uq-grid__col` (_grid column_) elements and their modifiers.
 
 > ⚠️ Important: **grid containers should be afforded the entire width of the
-> viewport** (naturally, this doesn't apply to *nested* and *full-width* grids).
+> viewport** (naturally, this doesn't apply to _nested_ and _full-width_ grids).
 
 ## Golden
 
-This grid gives you a *main* content column and a *sidebar* column that stack
-for mobile. Under the hood, is our *6-8-12* grid so you can keep your content
+This grid gives you a _main_ content column and a _sidebar_ column that stack
+for mobile. Under the hood, is our _6-8-12_ grid so you can keep your content
 consistently aligned with the base grid.
 
 <Story height="160" id="layout-grid--golden" />
@@ -40,7 +41,7 @@ See what happens when you add more columns to the same container!
 
 ## Halves
 
-Behaves like *Golden* but has two columns of equal size at larger screen sizes.
+Behaves like _Golden_ but has two columns of equal size at larger screen sizes.
 
 <Story height={85} id="layout-grid--halves" />
 
@@ -55,7 +56,7 @@ Behaves like *Golden* but has two columns of equal size at larger screen sizes.
 
 ## Thirds
 
-Behaves like *Golden* but has three columns of equal size at larger screen
+Behaves like _Golden_ but has three columns of equal size at larger screen
 sizes.
 
 <Story height={85} id="layout-grid--thirds" />
@@ -72,7 +73,7 @@ sizes.
 
 ## Quarters
 
-Behaves like *Golden* but has four columns of equal size at larger screen sizes.
+Behaves like _Golden_ but has four columns of equal size at larger screen sizes.
 
 <Story height={85} id="layout-grid--quarters" />
 
@@ -89,7 +90,7 @@ Behaves like *Golden* but has four columns of equal size at larger screen sizes.
 
 ## Flexible grid
 
-The flexible grid leverages the power of [*CSS Grid Layout*](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout)
+The flexible grid leverages the power of [_CSS Grid Layout_](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout)
 to give you a quick & flexible layout solution. You can use this grid to
 organise your content into columns that stack when browser sizes are smaller.
 Therefore, it makes it an ideal solution for arranging linear material.
@@ -123,15 +124,23 @@ _column-span_ classes give you the freedom to craft layouts to suit different
 screen sizes.
 
 > By default, we add the [specified margins](?path=/docs/layout-layout--base-layout-grid-visualised#specifications-per-breakpoint)
-> to both sides of the column row *and* apply a max-width on XL screens on the
+> to both sides of the column row _and_ apply a max-width on XL screens on the
 > root `.uq-grid` node.
 
 ### Basic how-to
 
 ```html
 <div class="uq-grid">
-  <div class="uq-grid__col uq-grid__col--4 uq-grid__col--md-5 uq-grid__col--xl-8">Content</div>
-  <div class="uq-grid__col uq-grid__col--2 uq-grid__col--md-3 uq-grid__col--xl-4">Content</div>
+  <div
+    class="uq-grid__col uq-grid__col--4 uq-grid__col--md-5 uq-grid__col--xl-8"
+  >
+    Content
+  </div>
+  <div
+    class="uq-grid__col uq-grid__col--2 uq-grid__col--md-3 uq-grid__col--xl-4"
+  >
+    Content
+  </div>
 </div>
 ```
 
@@ -145,8 +154,16 @@ layout with the grid:
 
 ```html
 <div class="uq-grid">
-  <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-5 uq-grid__col--xl-8">Content</div>
-  <div class="uq-grid__col uq-grid__col--6 uq-grid__col--md-3 uq-grid__col--xl-4">Content</div>
+  <div
+    class="uq-grid__col uq-grid__col--6 uq-grid__col--md-5 uq-grid__col--xl-8"
+  >
+    Content
+  </div>
+  <div
+    class="uq-grid__col uq-grid__col--6 uq-grid__col--md-3 uq-grid__col--xl-4"
+  >
+    Content
+  </div>
 </div>
 ```
 
@@ -167,7 +184,7 @@ Create layouts for the smallest screens.
 
 Shift the layout for larger screens.
 
-`uq-grid__col--md-[1—8]`, e.g. `<div class="uq-grid__col uq-grid__col--4 uq-grid__col--md-6">...</div>` 
+`uq-grid__col--md-[1—8]`, e.g. `<div class="uq-grid__col uq-grid__col--4 uq-grid__col--md-6">...</div>`
 
 <Story height={305} id="layout-grid--twelve-eight-six-tablet" />
 
@@ -251,15 +268,11 @@ container (`.uq-grid`) and a full length grid column (`.uq-grid__col`).
 > viewport**.
 
 ```html
-<div class="uq-layout-container">
-  Hello world!
-</div>
+<div class="uq-layout-container">Hello world!</div>
 
 <!-- Equivalent using grid classes -->
 <div class="uq-grid">
-  <div class="uq-grid__col uq-grid__col--6">
-    Hello world!
-  </div>
+  <div class="uq-grid__col uq-grid__col--6">Hello world!</div>
 </div>
 ```
 
@@ -267,7 +280,7 @@ container (`.uq-grid`) and a full length grid column (`.uq-grid__col`).
 
 ## SASS mixins
 
-The `@uqds/grid` package provides [*mixins*](https://sass-lang.com/documentation/at-rules/mixin)
+The `@uqds/grid` package provides [_mixins_](https://sass-lang.com/documentation/at-rules/mixin)
 to help you develop your own CSS rules using Sass such that they align with our
 layout system.
 
@@ -281,9 +294,7 @@ to contain the contents in a grid container fashion.
 
 <!-- ... -->
 
-<div class="my-custom-container">
-  Hello world!
-</div>
+<div class="my-custom-container">Hello world!</div>
 
 <!-- ... -->
 ```
@@ -291,13 +302,13 @@ to contain the contents in a grid container fashion.
 ```scss
 /* custom.scss */
 
-// First, import and declare namespace for the grid mixins file 
-@use '@uqds/grid/src/scss/global' as grid;
+// First, import and declare namespace for the grid mixins file
+@use "@uqds/grid/src/scss/global" as grid;
 
 .my-custom-container {
   // Then, use the mixin like so:
   @include grid.layout-containment;
-  
+
   // ...
 }
 

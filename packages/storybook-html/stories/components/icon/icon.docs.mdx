@@ -1,8 +1,10 @@
-import { Meta, Story, Canvas } from '@storybook/addon-docs';
-import StatusBadge from '../../../.storybook/custom/components/StatusBadge';
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
 
 # Icons
-<StatusBadge.Development /><StatusBadge.DraftDoc />
+
+<StatusBadge.Development />
+<StatusBadge.DraftDoc />
 
 ## List of icons
 
@@ -25,7 +27,9 @@ the following example.
 
 ```html
 <!-- example.html -->
-<span class="uq-icon uq-icon--agriculture-and-environment--agriculture-machine-tractor"></span>
+<span
+  class="uq-icon uq-icon--agriculture-and-environment--agriculture-machine-tractor"
+></span>
 ```
 
 You can choose the icon by customising the class such that:
@@ -35,10 +39,10 @@ categories and icons.
 
 #### Variants
 
-| Modifier class | Description |
-| - | - |
+| Modifier class    | Description                                                                          |
+| ----------------- | ------------------------------------------------------------------------------------ |
 | `.uq-icon--light` | Applies a light color filter to the icon so that it can be used on dark backgrounds. |
-| `.uq-icon--text` | Applies the body text color filter to the icon so that it can be used more subtly. | 
+| `.uq-icon--text`  | Applies the body text color filter to the icon so that it can be used more subtly.   |
 
 ### Sass mixins and functions
 
@@ -55,7 +59,9 @@ provide mixins and a "get" function.
 @include icon-constants.icon-base; // --> .uq-icon {...}
 
 // Include the icons you want
-@include icon-constants.icon("category-name--icon-name"); // --> .uq-icon--category-name--icon-name {...}
+@include icon-constants.icon(
+  "category-name--icon-name"
+); // --> .uq-icon--category-name--icon-name {...}
 ```
 
 You can now use the CSS class in your HTML markup as previously described.
@@ -66,21 +72,24 @@ Get the data URL for a specific icon (and optional set a color for fills and
 strokes).
 
 ##### Returns
+
 URL encoded string.
 
 ##### Parameters
 
-| Name | Type | Attributes | Default | Description |
-| - | - | - | - | - |
-| `$icon` | string | Required | N/A | String format: `{category-name}--{icon-name}`, e.g. `science-and-mathematics--lab-tubes` |
-| `$color` | [Sass colour value](https://sass-lang.com/documentation/values/colors) | Optional | #000 | Setting this will apply a colour value to the returned SVG data string.
+| Name     | Type                                                                   | Attributes | Default | Description                                                                              |
+| -------- | ---------------------------------------------------------------------- | ---------- | ------- | ---------------------------------------------------------------------------------------- |
+| `$icon`  | string                                                                 | Required   | N/A     | String format: `{category-name}--{icon-name}`, e.g. `science-and-mathematics--lab-tubes` |
+| `$color` | [Sass colour value](https://sass-lang.com/documentation/values/colors) | Optional   | #000    | Setting this will apply a colour value to the returned SVG data string.                  |
 
 ```scss
 // example.scss
 @use "@uqds/icon/src/scss/global" as icon-constants;
 
 .your-class {
-  background-image: url(icon-constants.get-icon("agriculture-and-environment--agriculture-machine-tractor"));
+  background-image: url(icon-constants.get-icon(
+    "agriculture-and-environment--agriculture-machine-tractor"
+  ));
 }
 ```
 
@@ -111,7 +120,7 @@ Array list of icons exported as a CommonJS module.
 
 ```js
 // example.js
-import iconCatalog from '@uqds/icon'; // default import
+import iconCatalog from "@uqds/icon"; // default import
 
 console.log(iconCatalog);
 // [

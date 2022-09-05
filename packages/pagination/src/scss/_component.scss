@@ -1,44 +1,43 @@
 /* Pagination */
-@use '@uqds/core/src/scss/global' as core;
-@use 'global' as *;
+@use "@uqds/core/src/scss/global" as core;
+@use "global" as *;
 
 .uq-pagination {
-	display: block;
+  display: block;
 
-	&__item {
-		display: inline-block;
-		list-style: none;
+  &__item {
+    display: inline-block;
+    list-style: none;
 
-		.uq-pagination__link {
-			color: core.$link;
-			font-size: 1rem;
-			font-weight: 300;
-			padding: core.$space-none core.$space-s;
-			text-decoration: none;
+    .uq-pagination__link {
+      color: core.$link;
+      font-size: 1rem;
+      font-weight: 300;
+      padding: core.$space-none core.$space-s;
+      text-decoration: none;
 
-			&:hover {
-				color: core.$link-hover;
-				text-decoration: underline;
-			}
-		}
+      &:hover {
+        color: core.$link-hover;
+        text-decoration: underline;
+      }
+    }
 
-		&--current {
+    &--current {
+      .uq-pagination__link {
+        color: core.$uq-black;
+        font-weight: 500;
 
-			.uq-pagination__link {
-				color: core.$uq-black;
-				font-weight: 500;
+        &:hover {
+          color: core.$uq-black;
+          text-decoration: none;
+        }
+      }
+    }
+  }
 
-				&:hover {
-					color: core.$uq-black;
-					text-decoration: none;
-				}
-			}
-		}
-	}
-
-	&__ellipsis {
-		color: core.$uq-black;
-		display: inline-block;
-		list-style: none;
-	}
+  &__ellipsis {
+    color: core.$uq-black;
+    display: inline-block;
+    list-style: none;
+  }
 }

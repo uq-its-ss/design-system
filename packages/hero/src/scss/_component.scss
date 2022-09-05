@@ -1,11 +1,11 @@
-@use '@uqds/core/src/scss/global' as core;
-@use '@uqds/grid/src/scss/global' as grid;
+@use "@uqds/core/src/scss/global" as core;
+@use "@uqds/grid/src/scss/global" as grid;
 
 // Hero
 
 .uq-hero {
   position: relative;
-  background-color: #51247A;
+  background-color: #51247a;
 
   &__content {
     @include grid.layout-containment;
@@ -15,7 +15,6 @@
     padding-bottom: 3rem;
     position: relative;
     z-index: 2;
-           
 
     @media #{core.$screen-md-up} {
       padding-top: 6.5rem;
@@ -24,9 +23,7 @@
   }
 
   &__text {
-    
     & .uq-hero__title {
-
       color: inherit;
       font-family: core.$montserrat;
       font-size: 2.5rem;
@@ -37,7 +34,7 @@
         font-size: 3rem;
       }
     }
-  
+
     & *:last-child {
       margin-bottom: 0;
     }
@@ -54,7 +51,7 @@
     right: 0;
     bottom: 0;
     z-index: 0;
-  
+
     & picture,
     & img {
       position: absolute;
@@ -64,7 +61,7 @@
       left: 0;
       object-fit: cover;
     }
-  
+
     &::before {
       content: "";
       display: block;
@@ -73,7 +70,11 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(100deg, rgb(81, 36, 122) 36%, transparent 70%);
+      background: linear-gradient(
+        100deg,
+        rgb(81, 36, 122) 36%,
+        transparent 70%
+      );
       mix-blend-mode: normal;
       opacity: 1;
       z-index: 1;
@@ -83,7 +84,7 @@
       @media #{core.$screen-md-up} {
         display: none;
       }
-  
+
       & img {
         position: relative;
         height: auto;
@@ -103,16 +104,18 @@
       min-height: 6rem;
 
       &::before {
-        background: linear-gradient(360deg, rgb(81, 36, 122) 3%, transparent 50%);
+        background: linear-gradient(
+          360deg,
+          rgb(81, 36, 122) 3%,
+          transparent 50%
+        );
       }
     }
   }
 
   &--feature-image {
-
     & .uq-hero__content {
-
-      padding-top: 0; 
+      padding-top: 0;
 
       @media #{core.$screen-md-up} {
         padding-top: 6.5rem;
@@ -124,18 +127,14 @@
         width: 50%;
       }
     }
-   
   }
 
   &--large {
-
     & .uq-hero__content {
       @media #{core.$screen-md-up} {
         padding-top: core.$space-uuuul;
         padding-bottom: core.$space-uuuul;
       }
     }
-
   }
-
 }

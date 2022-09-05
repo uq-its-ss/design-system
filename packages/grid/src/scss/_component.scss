@@ -1,10 +1,10 @@
 @use "@uqds/core/src/scss/global" as core;
-@use 'global' as *;
+@use "global" as *;
 
 /**
  * Grid container (incl. full width modifier class)
  */
-@include grid-row(12, 'xl') {
+@include grid-row(12, "xl") {
   &:not(.uq-grid--full-width) {
     @include layout-containment; // contain the first grid wrapper by default
   }
@@ -16,21 +16,21 @@
   .uq-grid {
     @include layout-nested;
   }
-};
+}
 
 /**
  * Grid columns (spans)
  */
-@include grid-col-span-classes(8, 'md');
+@include grid-col-span-classes(8, "md");
 @include grid-col-span-classes(6);
 
 @media #{core.$screen-md-up} {
-  @include grid-col-span-classes(12, 'xl');
-  @include grid-col-span-classes(8, 'md');
+  @include grid-col-span-classes(12, "xl");
+  @include grid-col-span-classes(8, "md");
 }
 
 @media #{core.$screen-xl-up} {
-  @include grid-col-span-classes(12, 'xl');
+  @include grid-col-span-classes(12, "xl");
 }
 
 /**

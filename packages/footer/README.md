@@ -7,11 +7,13 @@
 ### Installation
 
 With Yarn:
+
 ```shell
 yarn add @uqds/footer
 ```
 
 With NPM:
+
 ```shell
 npm i @uqds/footer
 ```

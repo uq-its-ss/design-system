@@ -1,8 +1,0 @@
-@use '@uqds/core/src/scss/_global' as core;
-@use '@uqds/form/src/scss/_component';
-
-.uqds {
-  &-table__wrapper {
-    margin: core.$space core.$space-none;
-  }
-}

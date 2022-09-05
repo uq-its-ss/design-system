@@ -1,5 +1,5 @@
-@use '@uqds/core/src/scss/global' as core;
-@use 'global' as *;
+@use "@uqds/core/src/scss/global" as core;
+@use "global" as *;
 
 // Lists
 // For listing of content such as node teasers. It can be applied to <ul> and <div> elements alike.
@@ -23,7 +23,7 @@
 
   &__item {
     list-style: none;
-    padding: core.$space-s core.$space-none; //.75rem 0rem
+    padding: core.$space-s core.$space-none; // .75rem 0rem
   }
 
   &--large-spacing {
@@ -52,7 +52,7 @@
 
       &--first {
         border-top: 1px solid $border-color;
-        padding-top: core.$space; //.75rem
+        padding-top: core.$space; // .75rem
       }
 
       &__date {
@@ -86,8 +86,8 @@
   &__item {
     float: left;
     list-style: none;
-    padding: core.$space-none core.$space;//0 .75rem;
-    margin: core.$space-none core.$space-none core.$space core.$space-none; //0 0 .75rem 0
+    padding: core.$space-none core.$space; // 0 .75rem;
+    margin: core.$space-none core.$space-none core.$space core.$space-none; // 0 0 .75rem 0
   }
 
   &--ruled {
@@ -98,7 +98,7 @@
 
     .horizontal-list__item {
       border-right: 1px solid $border-color;
-      padding-right: core.$space; //.75rem;
+      padding-right: core.$space; // .75rem;
 
       &:last-child {
         border: 0;

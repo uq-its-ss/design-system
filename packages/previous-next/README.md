@@ -7,11 +7,13 @@
 ### Installation
 
 With Yarn:
+
 ```shell
 yarn add @uqds/previous-next
 ```
 
 With NPM:
+
 ```shell
 npm i @uqds/previous-next
 ```

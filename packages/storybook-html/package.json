@@ -12,14 +12,13 @@
 	},
 	"license": "ISC",
 	"scripts": {
-		"storybook": "start-storybook -s ./public -p 6006",
-		"build-storybook": "build-storybook -c .storybook -s ./public -o .out"
+		"storybook": "start-storybook -p 6006",
+		"build-storybook": "build-storybook -o .out"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.17.0",
 		"@material/circular-progress": "^8.0.0",
 		"@storybook/addon-a11y": "^6.5.5",
-		"@storybook/addon-docs": "^6.5.5",
 		"@storybook/addon-essentials": "^6.5.5",
 		"@storybook/addons": "^6.5.5",
 		"@storybook/html": "^6.5.5",
@@ -56,7 +55,6 @@
 		"@uqds/tabs": "^0.0.8-alpha.0",
 		"babel-loader": "^8.2.3",
 		"core-js": "^3.21.0",
-		"fibers": "^4.0.3",
 		"font-awesome": "^4.7.0",
 		"joi-browser": "^13.4.0",
 		"mermaid": "^8.13.10",

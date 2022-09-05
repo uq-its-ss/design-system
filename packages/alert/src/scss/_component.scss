@@ -1,7 +1,7 @@
-@use '@uqds/core/src/scss/global' as core;
-@use '@uqds/grid/src/scss/global' as grid;
-@use '@uqds/icon/src/scss/global' as icon;
-@use 'global' as *;
+@use "@uqds/core/src/scss/global" as core;
+@use "@uqds/grid/src/scss/global" as grid;
+@use "@uqds/icon/src/scss/global" as icon;
+@use "global" as *;
 
 .uq-alert {
   background-color: $alert-info-bg-color;
@@ -38,14 +38,17 @@
     margin-left: core.$space-l;
 
     &::before {
-      content: '';
-      background-image: url(icon.get-icon('standard--information-circle', core.$uq-neutral-dark80));
+      content: "";
+      background-image: url(icon.get-icon(
+        "standard--information-circle",
+        core.$uq-neutral-dark80
+      ));
       background-repeat: no-repeat;
       background-size: 1.5rem;
       width: core.$space-m;
       height: core.$space-m;
       position: absolute;
-      top: .85rem;
+      top: 0.85rem;
       left: -(core.$space);
     }
 
@@ -62,7 +65,10 @@
     position: absolute;
     top: core.$space-none;
     right: core.$space-none;
-    background-image: url(icon.get-icon('standard--x', core.$uq-neutral-dark80));
+    background-image: url(icon.get-icon(
+      "standard--x",
+      core.$uq-neutral-dark80
+    ));
     background-repeat: no-repeat;
     background-size: 1rem;
     background-position: center;
@@ -76,21 +82,24 @@
 
     &:hover,
     &:focus {
-      background-image: url(icon.get-icon('standard--x', core.$uq-neutral-dark80));
+      background-image: url(icon.get-icon(
+        "standard--x",
+        core.$uq-neutral-dark80
+      ));
       background-color: transparent;
       border: none;
     }
   }
-
-
-
 
   &--info {
     background-color: $alert-info-bg-color;
 
     .uq-alert__message {
       &::before {
-        background-image: url(icon.get-icon('standard--information-circle', core.$uq-neutral-dark80));
+        background-image: url(icon.get-icon(
+          "standard--information-circle",
+          core.$uq-neutral-dark80
+        ));
       }
     }
   }
@@ -99,7 +108,10 @@
 
     .uq-alert__message {
       &::before {
-        background-image: url(icon.get-icon('standard--check-circle', core.$uq-neutral-dark80));
+        background-image: url(icon.get-icon(
+          "standard--check-circle",
+          core.$uq-neutral-dark80
+        ));
       }
     }
   }
@@ -108,7 +120,10 @@
 
     .uq-alert__message {
       &::before {
-        background-image: url(icon.get-icon('standard--exclamation-circle', core.$uq-neutral-dark80));
+        background-image: url(icon.get-icon(
+          "standard--exclamation-circle",
+          core.$uq-neutral-dark80
+        ));
       }
     }
   }
@@ -117,11 +132,13 @@
 
     .uq-alert__message {
       &::before {
-        background-image: url(icon.get-icon('standard--exclamation-triangle', core.$uq-neutral-dark80));
+        background-image: url(icon.get-icon(
+          "standard--exclamation-triangle",
+          core.$uq-neutral-dark80
+        ));
       }
     }
   }
-
 
   // Global alert
   &--global {
@@ -137,7 +154,8 @@
       line-height: #{core.$line-height}rem;
       font-weight: core.$font-weight-normal;
       margin-left: core.$space-compressed-uuul;
-      padding: core.$space-stretched-s core.$space-m core.$space-stretched-s core.$space-s;
+      padding: core.$space-stretched-s core.$space-m core.$space-stretched-s
+        core.$space-s;
 
       @media #{core.$screen-md-up} {
         font-size: $alert-font-size;
@@ -148,7 +166,7 @@
       }
 
       &::before {
-        content: '';
+        content: "";
         background-size: 1.5rem;
         width: core.$space-m;
         height: core.$space-m;
@@ -157,9 +175,7 @@
         left: -(core.$space-m);
       }
     }
-
   }
-
 
   // Dark variant
   &--dark {
@@ -186,19 +202,21 @@
     }
 
     .uq-alert__close {
-      background-image: url(icon.get-icon('standard--x', core.$uq-white));
+      background-image: url(icon.get-icon("standard--x", core.$uq-white));
 
       &:hover,
       &:focus {
-        background-image: url(icon.get-icon('standard--x', core.$uq-white));
+        background-image: url(icon.get-icon("standard--x", core.$uq-white));
       }
     }
 
     &.uq-alert--info {
-
       .uq-alert__message {
         &::before {
-          background-image: url(icon.get-icon('standard--information-circle', core.$uq-white));
+          background-image: url(icon.get-icon(
+            "standard--information-circle",
+            core.$uq-white
+          ));
         }
       }
     }
@@ -208,7 +226,10 @@
 
       .uq-alert__message {
         &::before {
-          background-image: url(icon.get-icon('standard--check-circle', core.$uq-white));
+          background-image: url(icon.get-icon(
+            "standard--check-circle",
+            core.$uq-white
+          ));
         }
       }
     }
@@ -231,7 +252,10 @@
 
       .uq-alert__message {
         &::before {
-          background-image: url(icon.get-icon('standard--exclamation-triangle', core.$uq-white));
+          background-image: url(icon.get-icon(
+            "standard--exclamation-triangle",
+            core.$uq-white
+          ));
         }
       }
     }

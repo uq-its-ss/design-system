@@ -7,11 +7,13 @@
 ### Installation
 
 With Yarn:
+
 ```shell
 yarn add @uqds/accordion
 ```
 
 With NPM:
+
 ```shell
 npm i @uqds/accordion
 ```

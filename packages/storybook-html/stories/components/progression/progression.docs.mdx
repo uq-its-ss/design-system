@@ -1,0 +1,186 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
+
+# Progression
+
+<StatusBadge.Review />
+<StatusBadge.ReviewDoc />
+
+<a
+  href="https://github.com/uq-its-ss/design-system/issues"
+  class="uq-button uq-button--text"
+  target="_blank"
+>
+  Check for open issues
+</a>
+
+## Overview
+
+The Progression component is a progress indicator helping the user to complete a step by step process.
+
+## Default example
+
+### a. Initial instance
+
+In the initial instance, the component is in it's starting default stage.
+
+<Canvas withSource="none">
+  <Story id="components-progression--progression-initial" />
+</Canvas>
+
+```html
+<ul class="uq-progression">
+  <li class="uq-progression__step is-complete">
+    <div class="uq-progression__step-marker">
+      <a class="uq-progression__link" href="#">
+        <span class="uq-progression__step-number">1</span>
+        <span class="uq-progression__step-label">Step 1</span>
+      </a>
+    </div>
+    <div class="uq-progression__bar">&nbsp;</div>
+  </li>
+  ...
+</ul>
+```
+
+### b. Middle instance
+
+An instance when a step is done partly but not completed.
+
+<Canvas withSource="none">
+  <Story id="components-progression--progression-middle" />
+</Canvas>
+
+```html
+<ul class="uq-progression">
+  <li class="uq-progression__step is-complete">
+    <div class="uq-progression__step-marker">
+      <a class="uq-progression__link" href="#">
+        <span class="uq-progression__step-number">1</span>
+        <span class="uq-progression__step-label">Step 1</span>
+      </a>
+    </div>
+    <div class="uq-progression__bar">&nbsp;</div>
+  </li>
+  <li class="uq-progression__step is-complete">
+    <div class="uq-progression__step-marker">
+      <a class="uq-progression__link" href="#">
+        <span class="uq-progression__step-number">2</span>
+        <span class="uq-progression__step-label">Step 2</span>
+      </a>
+    </div>
+    <div class="uq-progression__bar">
+      <ul class="uq-progression__sub-step">
+        <li class="uq-progression__bar is-complete">&nbsp;</li>
+        <li class="uq-progression__bar is-complete">&nbsp;</li>
+        <li class="uq-progression__bar">&nbsp;</li>
+      </ul>
+    </div>
+  </li>
+  ...
+</ul>
+```
+
+### c. Final instance
+
+The instance when all steps are done and completed.
+
+<Canvas withSource="none">
+  <Story id="components-progression--progression-final" />
+</Canvas>
+
+```html
+<ul class="uq-progression">
+  <li class="uq-progression__step is-complete">
+    <div class="uq-progression__step-marker">
+      <a class="uq-progression__link" href="#">
+        <span class="uq-progression__step-number">1</span>
+        <span class="uq-progression__step-label">Step 1</span>
+      </a>
+    </div>
+    <div class="uq-progression__bar">&nbsp;</div>
+  </li>
+  <li class="uq-progression__step is-complete">
+    <div class="uq-progression__step-marker">
+      <a class="uq-progression__link" href="#">
+        <span class="uq-progression__step-number">2</span>
+        <span class="uq-progression__step-label">Step 2</span>
+      </a>
+    </div>
+    <div class="uq-progression__bar">
+      <ul class="uq-progression__sub-step">
+        <li class="uq-progression__bar is-complete">&nbsp;</li>
+        <li class="uq-progression__bar is-complete">&nbsp;</li>
+        <li class="uq-progression__bar is-complete">&nbsp;</li>
+      </ul>
+    </div>
+  </li>
+  <li class="uq-progression__step is-complete">
+    <div class="uq-progression__step-marker">
+      <a class="uq-progression__link" href="#">
+        <span class="uq-progression__step-number">3</span>
+        <span class="uq-progression__step-label">Step 3</span>
+      </a>
+    </div>
+    <div class="uq-progression__bar">
+      <ul class="uq-progression__sub-step">
+        <li class="uq-progression__bar is-complete">&nbsp;</li>
+        <li class="uq-progression__bar is-complete">&nbsp;</li>
+        <li class="uq-progression__bar is-complete">&nbsp;</li>
+        <li class="uq-progression__bar is-complete">&nbsp;</li>
+        <li class="uq-progression__bar is-complete">&nbsp;</li>
+        <li class="uq-progression__bar is-complete">&nbsp;</li>
+      </ul>
+    </div>
+  </li>
+  <li class="uq-progression__step is-complete">
+    <div class="uq-progression__step-marker">
+      <a class="uq-progression__link" href="#">
+        <span class="uq-progression__step-number">4</span>
+        <span class="uq-progression__step-label">Step 4</span>
+      </a>
+    </div>
+  </li>
+</ul>
+```
+
+## How and when to use
+
+- This component should be used only if the information is to be revealed in a progressive, step by step process.
+
+### Adding sub steps between steps
+
+If there are sub steps between the main steps, follow the example html code below where the ul element class `uq-progression__sub-step` and li child with class `uq-progression__bar` is added.
+
+```html
+<ul class="uq-progression">
+  <li class="uq-progression__step is-complete">
+    <div class="uq-progression__step-marker">
+      <a class="uq-progression__link" href="#">
+        <span class="uq-progression__step-number">1</span>
+        <span class="uq-progression__step-label">Step 1</span>
+      </a>
+    </div>
+    <div class="uq-progression__bar">
+      <ul class="uq-progression__sub-step">
+        <li class="uq-progression__bar is-complete">&nbsp;</li>
+        <li class="uq-progression__bar">&nbsp;</li>
+        ...
+      </ul>
+    </div>
+  </li>
+</ul>
+```
+
+The html code above will display 2 sub steps as 2 li elements with class `uq-progression__bar` is present. The number of sub steps is determined by the number of li class `uq-progression__bar` elements within the parent class `uq-progression__sub-step` element.
+
+Note that adding the class `is-complete` to the child li element denotes that the sub step is done.
+
+### Breakpoints
+
+- The progression hides the step marker label at viewport widths less than 640px.
+
+## Related
+
+- Previous-next component could be used in conjunction with the Progression component.
+- Tabs and accordion components are alternate ways of laying out complex relations.

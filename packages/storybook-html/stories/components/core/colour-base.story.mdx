@@ -1,0 +1,318 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs";
+import "./_colour.scss";
+
+<Meta title="Core/Colour/Base colour palette" />
+
+# Base colour palette
+
+The base colours are used to create all colour variations throughout the design system. Always start with a base colour when you need a colour that is not already defined in the system.
+
+Use variable names over HEX or RGB values to ensure consistency can be maintained.
+
+## UQ brand colours
+
+These are the core brand colours for the University of Queensland. Refer to the brand guidelines for more information about how they are to be used.
+
+### Primary colours
+
+<table className="uqds-table  uqds-table--card uqds-table--colour">
+  <tbody className="uqds-table__body">
+    <tr className="uqds-table__mobile-heading">
+      <th className="uqds-table__heading">Example</th>
+      <th className="uqds-table__heading">Name</th>
+      <th className="uqds-table__heading">Variable</th>
+      <th className="uqds-table__heading">HEX</th>
+      <th className="uqds-table__heading">Usage</th>
+    </tr>
+    <tr className="uqds-table__row">
+      <td className="uqds-table__item">
+        <div className="uqds-colour__palette uqds-colour--purple"></div>
+      </td>
+      <td className="uqds-table__item" data-title="Name:">
+        UQ purple
+      </td>
+      <td className="uqds-table__item" data-title="Variable:">
+        <code>$uq-purple</code>
+      </td>
+      <td className="uqds-table__item" data-title="HEX:">
+        #51247a
+      </td>
+      <td className="uqds-table__item" data-title="Usage:">
+        Purple is UQ’s primary identifying colour
+      </td>
+    </tr>
+    <tr className="uqds-table__row">
+      <td className="uqds-table__item">
+        <div className="uqds-colour__palette uqds-colour--white"></div>
+      </td>
+      <td className="uqds-table__item" data-title="Name:">
+        UQ white
+      </td>
+      <td className="uqds-table__item" data-title="Variable:">
+        <code>$uq-white</code>
+      </td>
+      <td className="uqds-table__item" data-title="HEX:">
+        #ffffff
+      </td>
+      <td className="uqds-table__item" data-title="Usage:">
+        Primary UQ Colour
+      </td>
+    </tr>
+    <tr className="uqds-table__row">
+      <td className="uqds-table__item">
+        <div className="uqds-colour__palette uqds-colour--black"></div>
+      </td>
+      <td className="uqds-table__item" data-title="Name:">
+        UQ black
+      </td>
+      <td className="uqds-table__item" data-title="Variable:">
+        <code>$uq-black</code>
+      </td>
+      <td className="uqds-table__item" data-title="HEX:">
+        #000000
+      </td>
+      <td className="uqds-table__item" data-title="Usage:">
+        Primary UQ Colour
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+### Secondary colours
+
+These secondary colours should always play a supporting role to our primary colour palette. In user interfaces, the secondary are only used where additional colour is needed to present information (e.g. alerts, status, charts, diagrams).
+
+{" "}
+
+<table className="uqds-table uqds-table--card uqds-table--colour">
+  <tbody className="uqds-table__body">
+    <tr className="uqds-table__mobile-heading">
+      <th className="uqds-table__heading">Example</th>
+      <th className="uqds-table__heading">Name</th>
+      <th className="uqds-table__heading">Variable</th>
+      <th className="uqds-table__heading">HEX</th>
+      <th className="uqds-table__heading">Usage</th>
+    </tr>
+    <tr className="uqds-table__row">
+      <td className="uqds-table__item">
+        <div className="uqds-colour__palette uqds-colour--purple-light"></div>
+      </td>
+      <td className="uqds-table__item" data-title="Name:">
+        UQ purple light
+      </td>
+      <td className="uqds-table__item" data-title="Variable:">
+        <code>$uq-purple-light</code>
+      </td>
+      <td className="uqds-table__item" data-title="HEX:">
+        #962a8b
+      </td>
+      <td className="uqds-table__item" data-title="Usage:">
+        Secondary UQ Colour
+      </td>
+    </tr>
+    <tr className="uqds-table__row">
+      <td className="uqds-table__item">
+        <div className="uqds-colour__palette uqds-colour--gold"></div>
+      </td>
+      <td className="uqds-table__item" data-title="Name:">
+        UQ gold
+      </td>
+      <td className="uqds-table__item" data-title="Variable:">
+        <code>$uq-gold</code>
+      </td>
+      <td className="uqds-table__item" data-title="HEX:">
+        #bb9d65
+      </td>
+      <td className="uqds-table__item" data-title="Usage:">
+        Secondary UQ Colour
+      </td>
+    </tr>
+    <tr className="uqds-table__row">
+      <td className="uqds-table__item">
+        <div className="uqds-colour__palette uqds-colour--red"></div>
+      </td>
+      <td className="uqds-table__item" data-title="Name:">
+        UQ red
+      </td>
+      <td className="uqds-table__item" data-title="Variable:">
+        <code>$uq-red</code>
+      </td>
+      <td className="uqds-table__item" data-title="HEX:">
+        #e62645
+      </td>
+      <td className="uqds-table__item" data-title="Usage:">
+        Secondary UQ Colour
+      </td>
+    </tr>
+    <tr className="uqds-table__row">
+      <td className="uqds-table__item">
+        <div className="uqds-colour__palette uqds-colour--orange"></div>
+      </td>
+      <td className="uqds-table__item" data-title="Name:">
+        UQ orange
+      </td>
+      <td className="uqds-table__item" data-title="Variable:">
+        <code>$uq-orange</code>
+      </td>
+      <td className="uqds-table__item" data-title="HEX:">
+        #eb602e
+      </td>
+      <td className="uqds-table__item" data-title="Usage:">
+        Secondary UQ Colour
+      </td>
+    </tr>
+    <tr className="uqds-table__row">
+      <td className="uqds-table__item">
+        <div className="uqds-colour__palette uqds-colour--yellow"></div>
+      </td>
+      <td className="uqds-table__item" data-title="Name:">
+        UQ yellow
+      </td>
+      <td className="uqds-table__item" data-title="Variable:">
+        <code>$uq-yellow</code>
+      </td>
+      <td className="uqds-table__item" data-title="HEX:">
+        #fbb800
+      </td>
+      <td className="uqds-table__item" data-title="Usage:">
+        Secondary UQ Colour
+      </td>
+    </tr>
+    <tr className="uqds-table__row">
+      <td className="uqds-table__item">
+        <div className="uqds-colour__palette uqds-colour--blue"></div>
+      </td>
+      <td className="uqds-table__item" data-title="Name:">
+        UQ blue
+      </td>
+      <td className="uqds-table__item" data-title="Variable:">
+        <code>$uq-blue</code>
+      </td>
+      <td className="uqds-table__item" data-title="HEX:">
+        #4085c6
+      </td>
+      <td className="uqds-table__item" data-title="Usage:">
+        Secondary UQ Colour
+      </td>
+    </tr>
+    <tr className="uqds-table__row">
+      <td className="uqds-table__item">
+        <div className="uqds-colour__palette uqds-colour--aqua"></div>
+      </td>
+      <td className="uqds-table__item" data-title="Name:">
+        UQ aqua
+      </td>
+      <td className="uqds-table__item" data-title="Variable:">
+        <code>$uq-aqua</code>
+      </td>
+      <td className="uqds-table__item" data-title="HEX:">
+        #00a2c7
+      </td>
+      <td className="uqds-table__item" data-title="Usage:">
+        Secondary UQ Colour
+      </td>
+    </tr>
+    <tr className="uqds-table__row">
+      <td className="uqds-table__item">
+        <div className="uqds-colour__palette uqds-colour--green"></div>
+      </td>
+      <td className="uqds-table__item" data-title="Name:">
+        UQ green
+      </td>
+      <td className="uqds-table__item" data-title="Variable:">
+        <code>$uq-green</code>
+      </td>
+      <td className="uqds-table__item" data-title="HEX:">
+        #2ea836
+      </td>
+      <td className="uqds-table__item" data-title="Usage:">
+        Secondary UQ Colour
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+### Neutral tones
+
+Neutral tones can be used as a background colour.
+
+<table className="uqds-table  uqds-table--card uqds-table--colour">
+  <tbody className="uqds-table__body">
+    <tr className="uqds-table__mobile-heading">
+      <th className="uqds-table__heading">Example</th>
+      <th className="uqds-table__heading">Name</th>
+      <th className="uqds-table__heading">Variable</th>
+      <th className="uqds-table__heading">HEX</th>
+      <th className="uqds-table__heading">Usage</th>
+    </tr>
+    <tr className="uqds-table__row">
+      <td className="uqds-table__item">
+        <div className="uqds-colour__palette uqds-colour--neutral"></div>
+      </td>
+      <td className="uqds-table__item" data-title="Name:">
+        UQ neutral
+      </td>
+      <td className="uqds-table__item" data-title="Variable:">
+        <code>$uq-neutral</code>
+      </td>
+      <td className="uqds-table__item" data-title="HEX:">
+        #d7d1cc
+      </td>
+      <td className="uqds-table__item" data-title="Usage:">
+        Neutral tones
+      </td>
+    </tr>
+    <tr className="uqds-table__row">
+      <td className="uqds-table__item">
+        <div className="uqds-colour__palette uqds-colour--darkgrey"></div>
+      </td>
+      <td className="uqds-table__item" data-title="Name:">
+        UQ dark grey
+      </td>
+      <td className="uqds-table__item" data-title="Variable:">
+        <code>$uq-darkgrey</code>
+      </td>
+      <td className="uqds-table__item" data-title="HEX:">
+        #999490
+      </td>
+      <td className="uqds-table__item" data-title="Usage:">
+        Neutral tones
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+## Custom colours
+
+### Link
+
+{" "}
+
+<table className="uqds-table uqds-table--card uqds-table--colour">
+  <tbody className="uqds-table__body">
+    <tr className="uqds-table__mobile-heading">
+      <th className="uqds-table__heading">Example</th>
+      <th className="uqds-table__heading">Name</th>
+      <th className="uqds-table__heading">Variable</th>
+      <th className="uqds-table__heading">HEX</th>
+      <th className="uqds-table__heading">Usage</th>
+    </tr>
+    <tr className="uqds-table__row">
+      <td className="uqds-table__item">
+        <div className="uqds-colour__palette uqds-link-color"></div>
+      </td>
+      <td className="uqds-table__item" data-title="Name:">
+        Link
+      </td>
+      <td className="uqds-table__item" data-title="Variable:">
+        <code>$link</code>
+      </td>
+      <td className="uqds-table__item" data-title="HEX:">
+        #1e72c6
+      </td>
+      <td className="uqds-table__item" data-title="Usage:">
+        Default link colour
+      </td>
+    </tr>
+  </tbody>
+</table>

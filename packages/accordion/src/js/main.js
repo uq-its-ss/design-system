@@ -1,4 +1,2 @@
-import accordion from './accordion';
-export { 
-  accordion
-};
+import accordion from "./accordion";
+export { accordion };

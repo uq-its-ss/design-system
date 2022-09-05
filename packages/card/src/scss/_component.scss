@@ -1,5 +1,5 @@
-@use '@uqds/core/src/scss/global' as core;
-@use 'global' as *;
+@use "@uqds/core/src/scss/global" as core;
+@use "global" as *;
 
 // Card Default
 .uq-card {
@@ -11,10 +11,10 @@
   border: 1px solid core.$uq-neutral-light60;
   border-radius: core.$space-xs;
   color: core.$uq-neutral-dark60;
-  line-height: core.$space-m; 
+  line-height: core.$space-m;
   overflow-wrap: break-word;
   word-wrap: break-word;
-  
+
   // Link that wraps the whole card
   &__link {
     position: absolute;
@@ -23,13 +23,15 @@
     bottom: 0;
     left: 0;
     text-indent: -1000%;
-    box-shadow: 0 core.$space-xs core.$space-xs rgba(core.$uq-neutral-dark80, 0.05);
-    transition: all ease .25s;
+    box-shadow: 0 core.$space-xs core.$space-xs
+      rgba(core.$uq-neutral-dark80, 0.05);
+    transition: all ease 0.25s;
     z-index: 10;
 
     &:hover,
     &:focus {
-      box-shadow: 0 core.$space-s core.$space rgba(core.$uq-neutral-dark80, 0.15);
+      box-shadow: 0 core.$space-s core.$space
+        rgba(core.$uq-neutral-dark80, 0.15);
     }
   }
 
@@ -62,7 +64,7 @@
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-  } 
+  }
   &__content {
     flex-grow: 1;
     padding: core.$space-m;
@@ -78,7 +80,7 @@
     }
   }
 
-  &__body {     
+  &__body {
     p:last-child {
       margin-bottom: core.$space-none;
     }
@@ -107,11 +109,11 @@
       color: core.$uq-purple-light;
       text-transform: uppercase;
       margin: core.$space-none core.$space-none core.$space-s;
-  
+
       @media #{core.$screen-md-up} {
         font-size: core.$font-size;
       }
-  
+
       &--grey {
         font-weight: 400;
         color: core.$uq-neutral-dark60;
@@ -127,12 +129,9 @@
 
 /* Additional style rules */
 .uq-grid {
-
-  // On smaller viewports, Story & Event cards when > 3 renders as lists 
+  // On smaller viewports, Story & Event cards when > 3 renders as lists
   @media #{core.$screen-md-down} {
-
     &__col {
-
       // When there are 3 items
       @include with-count(3) {
         @include card-list-style();
@@ -144,17 +143,15 @@
       }
     }
   }
-  
+
   // Full width cards
   &__col--md-8,
   &__col--xl-12 {
-
     .uq-card {
-
       @media #{core.$screen-md-up} {
         flex-direction: row;
       }
-  
+
       &__image-wrapper {
         min-width: 100%;
         overflow: hidden;
@@ -191,7 +188,7 @@
           @include truncate-card-1col-body-text;
         }
       }
-      
+
       &__actions {
         padding: core.$space-none core.$space-m core.$space-m;
 

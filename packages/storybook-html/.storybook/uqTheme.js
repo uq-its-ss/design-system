@@ -1,20 +1,20 @@
 // uqTheme.js
 
-import { create } from '@storybook/theming/create';
+import { create } from "@storybook/theming/create";
 
 export default create({
-  base: 'light',
+  base: "light",
 
-  colorPrimary: '#51247A',
+  colorPrimary: "#51247A",
 
   // Typography
   fontBase: '"Roboto", "Open Sans", sans-serif',
-  fontCode: 'monospace',
+  fontCode: "monospace",
 
   // Toolbar default and active colors
-  barSelectedColor: '#51247A',
+  barSelectedColor: "#51247A",
 
-  brandTitle: 'UQ Design System',
-  brandUrl: 'https://uq.edu.au',
-  brandImage: 'https://static.uq.net.au/v15/logos/corporate/uq-logo.svg',
+  brandTitle: "UQ Design System",
+  brandUrl: "https://uq.edu.au",
+  brandImage: "https://static.uq.net.au/v15/logos/corporate/uq-logo.svg",
 });

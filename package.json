@@ -55,7 +55,6 @@
     "lint-css": "stylelint \"**/*.{css,scss}\"",
     "lint-fix": "npm run format && npm run lint-js -- --fix && npm run lint-css -- --fix",
     "test": "jest",
-    "prepare": "husky install",
     "update-screenshots": "node scripts/screenshot.js",
     "reg-suit": "reg-suit run",
     "serve-screenshots": "http-server dist -i -p 3001"

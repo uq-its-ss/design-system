@@ -1,0 +1,38 @@
+name: Visual Regression Testing
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+#   strategy:
+#     matrix:
+#       node-version: [8.x, 10.x, 12.x]
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+    - name: Use Node.js v16
+      uses: actions/setup-node@v1
+      with:
+        node-version: "16.x"
+    - name: npm install, build, and test
+      run: |
+        npm install --pure-lockfile
+      env:
+        CI: true
+    - name: workaround for detached HEAD
+      run: |
+        git checkout ${GITHUB_REF#refs/heads/} || git checkout -b ${GITHUB_REF#refs/heads/} && git pull
+    - name: create the current snapshot
+      run: |
+        npm test
+    - name: run reg
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      run: |
+        npm run reg-suit run --test

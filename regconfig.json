@@ -17,7 +17,7 @@
       "privateToken": "$GITHUB_PERSONAL_ACCESS_TOKEN"
     },
     "reg-publish-s3-plugin": {
-      "bucketName": "uq-its-ss-placeholder"
+      "bucketName": "uq-ds-regsuit"
     },
     "reg-keygen-git-hash-plugin": {}
   }

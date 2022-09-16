@@ -18,7 +18,6 @@
     },
     "reg-publish-s3-plugin": {
       "bucketName": "uq-ds-regsuit"
-    },
-    "reg-keygen-git-hash-plugin": {}
+    }
   }
 }

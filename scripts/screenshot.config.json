@@ -1,7 +1,6 @@
 {
   "uris": {
-    "base-colors": "http://localhost:3001/item-base-colors.html",
-    "base-definition-list": "http://localhost:3001/item-base-definition-list.html"
+    "footer":  "http://localhost:6006/iframe.html?id=components-footer--footer&viewMode=story"
   },
   "viewports": {
     "mobile": { "width": 375, "height": 812 },

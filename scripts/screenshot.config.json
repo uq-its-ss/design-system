@@ -3,7 +3,7 @@
     "footer":  "http://localhost:6006/iframe.html?id=components-footer--footer&viewMode=story"
   },
   "viewports": {
-    "mobile": { "width": 375, "height": 812 },
+    "mobile": { "width": 375, "height": 932 },
     "desktop": { "width": 1280, "height": 900 }
   }
 }

@@ -54,6 +54,7 @@ const screenshot = async (browser, viewportName, pageName) => {
 
   await page.screenshot({
     path: `screenshots/${filename}`,
+    fullPage: true,
   });
   await page.close();
 };

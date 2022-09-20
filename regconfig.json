@@ -12,6 +12,9 @@
     "reg-publish-s3-plugin": {
       "bucketName": "uq-ds-regsuit"
     },
-    "reg-keygen-git-hash-plugin": {}
+    "reg-simple-keygen-plugin": {
+      "expectedKey": "444444444",
+      "actualKey": "55555555"
+    }
   }
 }

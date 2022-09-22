@@ -26,7 +26,7 @@
 
     @media #{core.$screen-lg-up} {
       padding: core.$space-m core.$space 0;
-      gap: core.$space-m;
+      gap: core.$space-xxxxxl;
       grid-template-columns: auto auto min-content;
       grid-template-areas:
         "logo nav toggle"
@@ -71,7 +71,7 @@
       -moz-column-count: 3;
       column-count: 3;
       list-style: none;
-      margin-bottom: core.$space;
+      margin-bottom: core.$space-xxxxxl;
       padding: core.$space-none;
       height: 0;
       overflow: hidden;
@@ -83,7 +83,7 @@
         align-content: flex-end;
         align-items: center;
         justify-content: center;
-        gap: core.$space-m;
+        gap: core.$space-xxxxxl;
         margin: core.$space-none;
         height: auto;
         visibility: visible;
@@ -134,8 +134,8 @@
       height: auto;
       visibility: visible;
       overflow: initial;
-      padding-top: core.$space-m;
-      padding-bottom: core.$space;
+      padding-top: core.$space-xxxxxl;
+      padding-bottom: core.$space-xxxxxl;
       width: 100%;
     }
 
@@ -241,7 +241,7 @@
         margin-left: core.$space-s;
         margin-right: form.$form-spacing;
         padding-top: core.$space-xs;
-        padding-left: core.$space-m;
+        padding-left: core.$space-xxxxxl;
         vertical-align: top;
         cursor: pointer;
       }
@@ -271,11 +271,11 @@
 
     &-range {
       display: block;
-      margin-bottom: core.$space;
+      margin-bottom: core.$space-xxxxxl;
 
       @media #{core.$screen-lg-up} {
         display: inline-block;
-        margin-left: core.$space;
+        margin-left: core.$space-xxxxxl;
         line-height: 1.4;
       }
     }
@@ -291,7 +291,7 @@
       margin-bottom: core.$space-s;
 
       @media #{core.$screen-xl-up} {
-        margin-bottom: core.$space-m;
+        margin-bottom: core.$space-xxxxxl;
       }
 
       &-input {

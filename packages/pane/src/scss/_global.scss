@@ -40,12 +40,12 @@ $pane-title-color: core.$uq-purple;
 
   .uq-pane {
     &__content {
-      padding: core.$space-m core.$space-m core.$space core.$space-m; //1.8rem 1.8rem 1rem 1.8rem
+      padding: core.$space-m core.$space-m core.$space core.$space-xxxxxl; //1.8rem 1.8rem 1rem 1.8rem
     }
 
     &__footer {
       background-color: $pane-shaded-bg;
-      padding: core.$space-m; //1.8rem;
+      padding: core.$space-xxxxxl; //1.8rem;
     }
   }
 }

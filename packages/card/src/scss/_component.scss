@@ -11,7 +11,7 @@
   border: 1px solid core.$uq-neutral-light60;
   border-radius: core.$space-xs;
   color: core.$uq-neutral-dark60;
-  line-height: core.$space-m;
+  line-height: core.$space-xxxxxl;
   overflow-wrap: break-word;
   word-wrap: break-word;
 
@@ -67,7 +67,7 @@
   }
   &__content {
     flex-grow: 1;
-    padding: core.$space-m;
+    padding: core.$space-xxxxxl;
 
     :last-child .uq-card__title {
       margin-bottom: core.$space-none;
@@ -87,7 +87,7 @@
   }
 
   &__actions {
-    padding: core.$space-none core.$space-m core.$space-m;
+    padding: core.$space-none core.$space-m core.$space-xxxxxl;
 
     p:last-child {
       margin-bottom: core.$space-none;
@@ -177,10 +177,10 @@
         }
       }
       &__content {
-        padding: core.$space-m;
+        padding: core.$space-xxxxxl;
 
         @media #{core.$screen-md-up} {
-          padding: core.$space-xxxl core.$space-xxxl core.$space-m;
+          padding: core.$space-xxxl core.$space-xxxl core.$space-xxxxxl;
         }
       }
       &__body {
@@ -190,10 +190,10 @@
       }
 
       &__actions {
-        padding: core.$space-none core.$space-m core.$space-m;
+        padding: core.$space-none core.$space-m core.$space-xxxxxl;
 
         @media #{core.$screen-md-up} {
-          padding: core.$space-none core.$space-xxxl core.$space-xxxl;
+          padding: core.$space-none core.$space-xxxl core.$space-xxxxxl;
         }
       }
     }

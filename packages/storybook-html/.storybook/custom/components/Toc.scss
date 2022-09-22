@@ -6,7 +6,7 @@
   box-sizing: border-box;
   background-color: core.$uq-white;
   padding: core.$space-l core.$space-none core.$space-none core.$space-none;
-  margin-bottom: core.$space;
+  margin-bottom: core.$space-xxxxxl;
 
   &__toc {
     font-size: core.$font-size-s;
@@ -53,14 +53,14 @@
       margin-left: -(core.$space);
 
       .toc-list {
-        padding-left: core.$space;
+        padding-left: core.$space-xxxxxl;
       }
 
       a.toc-link {
         display: inline-block;
         margin: core.$space-xs core.$space-none;
-        padding-left: core.$space;
-        padding-right: core.$space;
+        padding-left: core.$space-xxxxxl;
+        padding-right: core.$space-xxxxxl;
         text-decoration: none;
         transition: all 0.125s ease-in;
         color: core.$text;

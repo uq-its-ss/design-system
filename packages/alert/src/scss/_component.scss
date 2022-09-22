@@ -13,7 +13,7 @@
 
     .uq-alert__message {
       &:not(:last-child) {
-        padding-right: core.$space-xxl;
+        padding-right: core.$space-xxxxxl;
       }
     }
   }
@@ -31,11 +31,11 @@
     font-size: $alert-font-size-s;
     font-weight: $alert-font-weight-thin;
     line-height: core.$line-height-h;
-    padding-top: core.$space;
-    padding-bottom: core.$space;
-    padding-left: core.$space;
-    padding-right: core.$space;
-    margin-left: core.$space-l;
+    padding-top: core.$space-xxxxxl;
+    padding-bottom: core.$space-xxxxxl;
+    padding-left: core.$space-xxxxxl;
+    padding-right: core.$space-xxxxxl;
+    margin-left: core.$space-xxxxxl;
 
     &::before {
       content: "";
@@ -45,15 +45,15 @@
       ));
       background-repeat: no-repeat;
       background-size: 1.5rem;
-      width: core.$space-m;
-      height: core.$space-m;
+      width: core.$space-xxxxxl;
+      height: core.$space-xxxxxl;
       position: absolute;
       top: 0.85rem;
       left: -(core.$space);
     }
 
     p {
-      margin-bottom: core.$space;
+      margin-bottom: core.$space-xxxxxl;
 
       &:last-child {
         margin-bottom: core.$space-none;
@@ -74,8 +74,8 @@
     background-position: center;
     background-color: transparent;
     border: none;
-    width: core.$space-xxl;
-    height: core.$space-xxl;
+    width: core.$space-xxxxxl;
+    height: core.$space-xxxxxl;
     text-indent: 999px;
     overflow: hidden;
     cursor: pointer;
@@ -168,8 +168,8 @@
       &::before {
         content: "";
         background-size: 1.5rem;
-        width: core.$space-m;
-        height: core.$space-m;
+        width: core.$space-xxxxxl;
+        height: core.$space-xxxxxl;
         position: absolute;
         top: core.$space-stretched-s;
         left: -(core.$space-m);

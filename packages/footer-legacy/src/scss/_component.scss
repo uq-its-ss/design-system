@@ -40,8 +40,8 @@
     font-style: italic;
     font-weight: core.$font-weight-normal;
     line-height: core.$line-height;
-    margin: core.$space-none core.$space-none core.$space-l;
-    padding: core.$space-none core.$space-none core.$space-l;
+    margin: core.$space-none core.$space-none core.$space-xxxxxl;
+    padding: core.$space-none core.$space-none core.$space-xxxxxl;
 
     @media #{core.$screen-md-up} {
       font-size: core.$font-size-m;
@@ -56,8 +56,8 @@
   &__container {
     @include grid.layout-containment;
     @include grid.grid-col-padding;
-    padding-top: core.$space-xxl;
-    padding-bottom: core.$space-xxl;
+    padding-top: core.$space-xxxxxl;
+    padding-bottom: core.$space-xxxxxl;
   }
 
   &__row {
@@ -139,7 +139,7 @@
     &__list {
       list-style: none;
       margin-top: 0;
-      margin-bottom: core.$space;
+      margin-bottom: core.$space-xxxxxl;
       margin-left: -(core.$space-m);
       margin-right: 0;
       overflow: hidden;
@@ -148,7 +148,7 @@
       > li {
         display: block;
         float: left;
-        margin-left: core.$space-m;
+        margin-left: core.$space-xxxxxl;
 
         > * {
           display: block;
@@ -169,6 +169,6 @@
   }
 
   &--full-width {
-    padding: core.$space-none core.$space;
+    padding: core.$space-none core.$space-xxxxxl;
   }
 }

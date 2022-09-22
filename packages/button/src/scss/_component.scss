@@ -14,7 +14,7 @@
   font-size: core.$font-size;
   font-weight: normal;
   line-height: normal;
-  padding: core.$space-s core.$space-m;
+  padding: core.$space-s core.$space-xxxxxl;
   position: relative;
   text-align: center;
   text-decoration: none;
@@ -184,12 +184,12 @@
 
   &--small {
     font-size: core.$font-size-s;
-    padding: core.$space-s core.$space;
+    padding: core.$space-s core.$space-xxxxxl;
   }
 
   &--large {
     font-size: core.$font-size-m;
-    padding: core.$space core.$space-xl;
+    padding: core.$space core.$space-xxxxxl;
   }
 
   &--expand {

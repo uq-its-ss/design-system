@@ -33,8 +33,8 @@
       margin-left: auto;
       margin-right: auto;
       grid-template-areas: "logo mainnav searchtoggle";
-      padding-left: core.$space;
-      padding-right: core.$space;
+      padding-left: core.$space-xxxxxl;
+      padding-right: core.$space-xxxxxl;
     }
   }
 
@@ -72,7 +72,7 @@
   & .nav-primary__toggle {
     background: none;
     border: none;
-    padding: 1.75rem core.$space-l;
+    padding: 1.75rem core.$space-xxxxxl;
     height: 100%;
 
     @media #{core.$screen-lg-up} {
@@ -100,7 +100,7 @@
       transform: translate(50%, 50%);
       position: absolute;
       top: 0.625rem;
-      right: core.$space-l;
+      right: core.$space-xxxxxl;
     }
 
     &--is-open {
@@ -130,7 +130,7 @@
       transform: translate(50%, 50%);
       position: absolute;
       top: 0.625rem;
-      right: core.$space-l;
+      right: core.$space-xxxxxl;
 
       @media #{core.$screen-lg-up} {
         top: 0.1rem;
@@ -187,7 +187,7 @@
 
   &__nav-primary-container {
     @media #{core.$screen-lg-up} {
-      padding: 0 0 0 core.$space-xl;
+      padding: 0 0 0 core.$space-xxxxxl;
     }
   }
 
@@ -234,7 +234,7 @@
     display: block;
     color: core.$uq-white; //core.$uq-purple;
     text-decoration: none;
-    padding: core.$space core.$space-m;
+    padding: core.$space core.$space-xxxxxl;
     transition: background-color 0.25s, border-color 0.25s;
     font-weight: 400;
     position: relative;
@@ -260,8 +260,8 @@
         core.$uq-white
       ));
       background-repeat: no-repeat;
-      width: core.$space;
-      height: core.$space;
+      width: core.$space-xxxxxl;
+      height: core.$space-xxxxxl;
       transform: translateY(50%);
       position: absolute;
       top: 1.7rem;
@@ -282,7 +282,7 @@
 
     & li {
       & a {
-        padding-left: core.$space-xxl;
+        padding-left: core.$space-xxxxxl;
         color: core.$uq-purple;
       }
     }
@@ -337,11 +337,11 @@
   &__nav-secondary-link {
     display: block;
     color: white;
-    padding: core.$space core.$space-m;
+    padding: core.$space core.$space-xxxxxl;
 
     @media #{core.$screen-lg-up} {
       font-size: core.$font-size-s;
-      padding: 0.625rem core.$space;
+      padding: 0.625rem core.$space-xxxxxl;
     }
 
     &:hover {
@@ -374,11 +374,11 @@
   }
 
   &__search-container {
-    padding: 0 core.$space-m;
+    padding: 0 core.$space-xxxxxl;
 
     @media #{core.$screen-lg-up} {
-      padding-left: core.$space;
-      padding-right: core.$space;
+      padding-left: core.$space-xxxxxl;
+      padding-right: core.$space-xxxxxl;
       max-width: 73.25rem;
       margin-left: auto;
       margin-right: auto;
@@ -393,9 +393,9 @@
     max-width: 100%;
     min-width: 100%;
     border-radius: 5px;
-    background-position: core.$space;
-    padding-top: core.$space;
-    padding-bottom: core.$space;
+    background-position: core.$space-xxxxxl;
+    padding-top: core.$space-xxxxxl;
+    padding-bottom: core.$space-xxxxxl;
   }
 
   &__search-query-label {
@@ -432,8 +432,8 @@
       content: "";
       position: absolute;
       display: block;
-      width: core.$space-m;
-      height: core.$space-m;
+      width: core.$space-xxxxxl;
+      height: core.$space-xxxxxl;
       top: core.$space-s;
       left: core.$space-s;
       background-size: 100%;
@@ -513,7 +513,7 @@
     margin-left: auto;
     margin-right: auto;
 
-    padding: core.$space core.$space-xxl core.$space-xl core.$space-xxl;
+    padding: core.$space core.$space-xxl core.$space-xl core.$space-xxxxxl;
     background: core.$uq-white;
     box-shadow: 0 0.75rem core.$space-m rgb(24 24 24 / 20%);
     border-radius: 0 0 0.25rem 0.25rem;
@@ -541,7 +541,7 @@
     padding-bottom: core.$space-xs;
 
     &:nth-of-type(2) {
-      padding-top: core.$space-xl;
+      padding-top: core.$space-xxxxxl;
     }
   }
 
@@ -624,7 +624,7 @@ body.no-scroll {
       display: none;
 
       a {
-        padding: 0.75rem core.$space-m 0.75rem core.$space-xxl;
+        padding: 0.75rem core.$space-m 0.75rem core.$space-xxxxxl;
       }
     }
 
@@ -648,7 +648,7 @@ body.no-scroll {
 
   a {
     cursor: pointer;
-    padding: 0.75rem core.$space-m;
+    padding: 0.75rem core.$space-xxxxxl;
     text-decoration: none;
     font-size: core.$font-size;
     color: core.$uq-purple;
@@ -662,7 +662,7 @@ body.no-scroll {
 
   & .slide-menu__backlink {
     font-weight: 500;
-    padding-left: core.$space-xxl;
+    padding-left: core.$space-xxxxxl;
 
     &::before {
       content: "";
@@ -700,11 +700,11 @@ body.no-scroll {
   /* Controls */
   .controls {
     display: flex;
-    margin-bottom: core.$space;
+    margin-bottom: core.$space-xxxxxl;
   }
 
   .btn {
-    padding: 0.75rem core.$space-m;
+    padding: 0.75rem core.$space-xxxxxl;
     flex: 1 0 auto;
     font-size: 90%;
     color: core.$uq-purple;

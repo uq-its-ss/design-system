@@ -110,7 +110,7 @@ $-result-icon-spacing: $-icon-spacing;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08), 0 8px 16px rgba(0, 0, 0, 0.16);
     display: flex;
-    margin: core.$space;
+    margin: core.$space-xxxxxl;
     overflow: hidden;
     position: relative;
     transition: height 0.6s;
@@ -248,7 +248,7 @@ $-result-icon-spacing: $-icon-spacing;
 
     align-items: stretch;
     display: flex;
-    margin: core.$space;
+    margin: core.$space-xxxxxl;
     padding: core.$space 0;
     border-radius: 8px;
     background-color: core.$uq-white;
@@ -284,7 +284,7 @@ $-result-icon-spacing: $-icon-spacing;
       background-color: core.$uq-neutral-light80;
       text-align: left;
       outline: 0 none;
-      padding: core.$space-s core.$space;
+      padding: core.$space-s core.$space-xxxxxl;
       transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
         box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
         border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
@@ -339,7 +339,7 @@ $-result-icon-spacing: $-icon-spacing;
       display: flex;
       align-items: center;
       font-size: 0;
-      margin-left: $-icon-button-width + core.$space;
+      margin-left: $-icon-button-width + core.$space-xxxxxl;
       padding: core.$space-s 0;
       white-space: nowrap;
 
@@ -396,7 +396,7 @@ $-result-icon-spacing: $-icon-spacing;
     &__decoration {
       background-image: url(get-icon("ui--wayfinding-deco", core.$uq-green));
       background-repeat: no-repeat;
-      background-position: center core.$space;
+      background-position: center core.$space-xxxxxl;
       background-size: auto 50%;
       flex-grow: 0;
       flex-shrink: 0;
@@ -450,7 +450,7 @@ $-result-icon-spacing: $-icon-spacing;
     background-color: core.$uq-white;
     border-radius: 8px;
     height: auto;
-    margin: core.$space;
+    margin: core.$space-xxxxxl;
     transition: height 0.6s;
 
     > .uq-maps__search-field,
@@ -494,7 +494,7 @@ $-result-icon-spacing: $-icon-spacing;
           display: flex;
           justify-content: flex-start;
           min-height: 3rem + core.$space-s * 2;
-          padding: core.$space-s core.$space-m;
+          padding: core.$space-s core.$space-xxxxxl;
           width: 100%;
 
           &:hover {
@@ -597,7 +597,7 @@ $-result-icon-spacing: $-icon-spacing;
           }
 
           > a {
-            padding-right: core.$space-xxxxl;
+            padding-right: core.$space-xxxxxl;
           }
         }
       }
@@ -605,7 +605,7 @@ $-result-icon-spacing: $-icon-spacing;
 
     &__no-results {
       display: none;
-      margin: core.$space-l core.$space;
+      margin: core.$space-l core.$space-xxxxxl;
       text-align: center;
     }
 
@@ -619,7 +619,7 @@ $-result-icon-spacing: $-icon-spacing;
 
       > .uq-maps__search-field,
       > .uq-maps__wayfinding-controls {
-        margin: core.$space;
+        margin: core.$space-xxxxxl;
       }
 
       .uq-maps__search__no-results {
@@ -707,10 +707,10 @@ $-result-icon-spacing: $-icon-spacing;
     height: 100%;
     overflow-y: auto;
     overflow-x: hidden;
-    padding: core.$space-l core.$space-m core.$space-xxl;
+    padding: core.$space-l core.$space-m core.$space-xxxxxl;
 
     &__menu-bar {
-      margin-bottom: core.$space-m;
+      margin-bottom: core.$space-xxxxxl;
 
       &__close {
         @extend %uq-maps__icon-button;
@@ -749,7 +749,7 @@ $-result-icon-spacing: $-icon-spacing;
       height: calc(
         100% - #{$actions-allowance + $-icon-button-height + core.$space-m * 2}
       );
-      margin-bottom: core.$space-m;
+      margin-bottom: core.$space-xxxxxl;
       overflow-y: auto;
       overflow-x: hidden;
       scrollbar-width: none; // FF only for now
@@ -785,7 +785,7 @@ $-result-icon-spacing: $-icon-spacing;
     cursor: pointer;
     height: $icon-size;
     width: $icon-size;
-    margin: core.$space;
+    margin: core.$space-xxxxxl;
     overflow: hidden;
     text-indent: -9999px;
   }

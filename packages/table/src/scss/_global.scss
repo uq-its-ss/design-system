@@ -90,7 +90,7 @@
   font-weight: core.$font-weight-bold;
   text-align: left;
   display: table-caption;
-  padding-bottom: core.$space;
+  padding-bottom: core.$space-xxxxxl;
   background-color: core.$uq-white;
 }
 @mixin table-head {
@@ -105,12 +105,12 @@
   display: table-row;
 }
 @mixin table-cell {
-  padding: core.$space-s core.$space;
+  padding: core.$space-s core.$space-xxxxxl;
   border: 1px solid core.$uq-neutral;
   text-align: left;
 }
 @mixin table-header {
-  padding: core.$space-s core.$space;
+  padding: core.$space-s core.$space-xxxxxl;
   color: core.$uq-purple;
   text-align: left;
   border: 1px solid core.$uq-neutral;

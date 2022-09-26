@@ -13,8 +13,8 @@
       "bucketName": "uq-ds-regsuit"
     },
     "reg-simple-keygen-plugin": {
-      "expectedKey": "444444444",
-      "actualKey": "55555555"
+      "expectedKey": "55555555",
+      "actualKey": "666666666"
     }
   }
 }

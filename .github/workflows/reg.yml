@@ -21,8 +21,7 @@ jobs:
         node-version: "16.x"
     - name: npm install, build, and test
       run: |
-        npm ci
-        npx lerna bootstrap
+        npm install --pure-lockfile
       env:
         CI: true
     - name: workaround for detached HEAD
@@ -31,7 +30,9 @@ jobs:
     - name: Install Playwright
       run: npx playwright install --with-deps
     - name: Build Storybook
-      run: npx build-storybook --quiet
+      run: |
+        npm i
+        npx build-storybook --quiet
       working-directory: packages/storybook-html/
     - name: Serve Storybook and run tests
       run: |

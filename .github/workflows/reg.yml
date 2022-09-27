@@ -27,10 +27,15 @@ jobs:
     - name: workaround for detached HEAD
       run: |
         git checkout ${GITHUB_REF#refs/heads/} || git checkout -b ${GITHUB_REF#refs/heads/} && git pull
+    - name: Install Playwright
+      run: npx playwright install --with-deps
     - name: Build Storybook
+      run: yarn build-storybook --quiet
+    - name: Serve Storybook and run tests
       run: |
-        npm run storybook --quiet
-      working-directory: packages/storybook-html
+        npx concurrently -k -s first -n "SB,TEST" -c "magenta,blue" \
+          "npx http-server storybook-static --port 6006 --silent" \
+          "npx wait-on tcp:6006 && yarn test-storybook"
     - name: create the current snapshot
       run: |
         npm run update-screenshots

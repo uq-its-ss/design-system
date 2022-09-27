@@ -31,7 +31,7 @@ jobs:
       run: npx playwright install --with-deps
     - name: Build Storybook
       run: npx build-storybook --quiet
-      working-directory: packages/storybook-html
+      working-directory: packages/storybook-html/
     - name: Serve Storybook and run tests
       run: |
         npx concurrently -k -s first -n "SB,TEST" -c "magenta,blue" \

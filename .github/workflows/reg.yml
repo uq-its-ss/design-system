@@ -22,6 +22,8 @@ jobs:
     - name: npm install, build, and test
       run: |
         npm install --pure-lockfile
+        npx lerna clean --yes
+        npx lerna bootstrap
       env:
         CI: true
     - name: workaround for detached HEAD
@@ -31,8 +33,6 @@ jobs:
       run: npx playwright install --with-deps
     - name: Build Storybook
       run: |
-        npx lerna clean
-        npx lerna bootstrap
         npm run build-storybook --quiet
       working-directory: packages/storybook-html/
     - name: Serve Storybook and run tests

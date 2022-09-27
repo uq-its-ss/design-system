@@ -24,6 +24,9 @@ jobs:
         npm install --pure-lockfile
       env:
         CI: true
+    - name: lerna bootstrap
+      run: |
+        npx lerna bootstrap
     - name: workaround for detached HEAD
       run: |
         git checkout ${GITHUB_REF#refs/heads/} || git checkout -b ${GITHUB_REF#refs/heads/} && git pull

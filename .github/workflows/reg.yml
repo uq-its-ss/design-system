@@ -22,7 +22,6 @@ jobs:
     - name: npm install, build, and test
       run: |
         npm install --pure-lockfile
-        npx lerna clean --yes
         npx lerna bootstrap
       env:
         CI: true

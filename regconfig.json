@@ -9,12 +9,15 @@
     }
   },
   "plugins": {
+    "reg-notify-github-with-api-plugin": {
+      "githubUrl": "https://api.github.com/graphql",
+      "owner": "uq-its-ss",
+      "repository": "design-system",
+      "privateToken": "$UQDS_PERSONAL_ACCESS_TOKEN"
+    },
     "reg-publish-s3-plugin": {
       "bucketName": "uq-ds-regsuit"
     },
-    "reg-simple-keygen-plugin": {
-      "expectedKey": "55555555",
-      "actualKey": "666666666"
-    }
+    "reg-keygen-git-hash-plugin": {}
   }
 }

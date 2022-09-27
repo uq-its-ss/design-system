@@ -37,7 +37,6 @@
     "reg-keygen-git-hash-plugin": "^0.12.1",
     "reg-notify-github-with-api-plugin": "^0.12.1",
     "reg-publish-s3-plugin": "^0.12.1",
-    "reg-simple-keygen-plugin": "^0.12.1",
     "reg-suit": "^0.12.1",
     "rollup": "^2.70.2",
     "stylelint": "^14.9.1",
@@ -59,7 +58,7 @@
     "test": "jest",
     "update-screenshots": "node scripts/screenshot.js",
     "reg-suit": "reg-suit run",
-    "serve-screenshots": "http-server dist -i -p 3001"
+    "serve-screenshots": "http-server dist -i -p 6006"
   },
   "browserslist": [
     "last 4 chrome versions",

@@ -25,7 +25,6 @@
 		"@storybook/theming": "^6.5.10",
 		"@uqds/accordion": "^0.0.8-alpha.0",
 		"@uqds/alert": "^0.0.11-alpha.0",
-		"@uqds/app-maps": "^0.0.10-alpha.0",
 		"@uqds/blockquote": "^0.0.8-alpha.0",
 		"@uqds/body": "^0.0.10-alpha.0",
 		"@uqds/breadcrumb": "^0.0.8-alpha.0",

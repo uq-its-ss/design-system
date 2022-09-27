@@ -31,6 +31,7 @@ jobs:
       run: npx playwright install --with-deps
     - name: Build Storybook
       run: |
+        npm install --pure-lockfile
         npm run build-storybook --quiet
       working-directory: packages/storybook-html/
     - name: Serve Storybook and run tests

@@ -21,12 +21,10 @@ jobs:
         node-version: "16.x"
     - name: npm install, build, and test
       run: |
-        npm install --pure-lockfile
+        npm ci
+        npx lerna bootstrap
       env:
         CI: true
-    - name: lerna bootstrap
-      run: |
-        npx lerna bootstrap
     - name: workaround for detached HEAD
       run: |
         git checkout ${GITHUB_REF#refs/heads/} || git checkout -b ${GITHUB_REF#refs/heads/} && git pull

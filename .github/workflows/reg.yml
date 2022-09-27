@@ -31,8 +31,7 @@ jobs:
       run: npx playwright install --with-deps
     - name: Build Storybook
       run: |
-        npm i
-        npx build-storybook --quiet
+        npm build-storybook --quiet
       working-directory: packages/storybook-html/
     - name: Serve Storybook and run tests
       run: |

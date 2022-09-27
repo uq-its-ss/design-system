@@ -22,7 +22,7 @@ jobs:
     - name: npm install, build, and test
       run: |
         npm install --pure-lockfile
-        npx lerna bootstrap
+        npx lerna bootstrap --ci
       env:
         CI: true
     - name: workaround for detached HEAD

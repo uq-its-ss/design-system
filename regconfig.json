@@ -13,7 +13,7 @@
       "githubUrl": "https://api.github.com/graphql",
       "owner": "uq-its-ss",
       "repository": "design-system",
-      "privateToken": "$UQDS_PERSONAL_ACCESS_TOKEN"
+      "privateToken": "${{ secrets.UQDS_PERSONAL_ACCESS_TOKEN }}"
     },
     "reg-publish-s3-plugin": {
       "bucketName": "uq-ds-regsuit"

@@ -15,10 +15,10 @@ jobs:
     - uses: actions/checkout@v3
       with:
         fetch-depth: 0
-    - name: Use Node.js v14
+    - name: Use Node.js v16
       uses: actions/setup-node@v3
       with:
-        node-version: "14.x"
+        node-version: "16.x"
     - name: npm install, build, and test
       run: |
         npm install --pure-lockfile
@@ -38,12 +38,11 @@ jobs:
       run: |
         npx concurrently -k -s first -n "SB,TEST" -c "magenta,blue" \
           "npx http-server storybook-static --port 6006 --silent" \
-          "npx wait-on tcp:6006 && npm run update-screenshots"
 #          "npx wait-on tcp:6006 && npm run test-storybook"
       working-directory: packages/storybook-html/
     - name: create the current snapshot
       run: |
-        npm run update-screenshots
+        npx wait-on tcp:6006 && npm run test-storybook
     - name: run visual regression
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}

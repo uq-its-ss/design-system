@@ -14,7 +14,7 @@
 	"scripts": {
 		"storybook": "start-storybook -p 6006",
 		"build-storybook": "build-storybook",
-		"update-screenshots": "node scripts/screenshot.js",
+		"update-screenshots": "node ../../scripts/screenshot.js",
 		"test-storybook": "test-storybook"
 	},
 	"devDependencies": {

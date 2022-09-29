@@ -40,8 +40,6 @@ jobs:
         "npx http-server storybook-static --port 6006 --silent" \
         "npx wait-on tcp:6006 && npm run test-storybook --maxWorkers=2"
       working-directory: packages/storybook-html/
-      run: |
-        npm run test-storybook
     - name: create the current snapshot
       run: |
         npm run test-storybook

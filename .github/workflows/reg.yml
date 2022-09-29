@@ -42,7 +42,7 @@ jobs:
       working-directory: packages/storybook-html/
     - name: create the current snapshot
       run: |
-        npm run test-storybook
+        npm run update-screenshots
     - name: run visual regression
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}

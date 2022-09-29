@@ -41,7 +41,7 @@ jobs:
 #          "npx wait-on tcp:6006 && npm run test-storybook"
       working-directory: packages/storybook-html/
       run: |
-        npx wait-on tcp:6006 && npm run test-storybook
+        npm run test-storybook
     - name: create the current snapshot
       run: |
         npx wait-on tcp:6006 && npm run test-storybook

@@ -36,7 +36,7 @@ jobs:
       working-directory: packages/storybook-html/
     - name: Serve Storybook and run tests
       run: |
-        "concurrently -k -s first -n \"SB,TEST\" -c \"magenta,blue\" \"yarn build-storybook --quiet && npx http-server storybook-static --port 6006 --silent\" \"wait-on tcp:6006 && npm run test-storybook --maxWorkers=2\""
+        "concurrently -k -s first -n \"SB,TEST\" -c \"magenta,blue\" \"yarnnpm run build-storybook --quiet && npx http-server storybook-static --port 6006 --silent\" \"wait-on tcp:6006 && npm run test-storybook --maxWorkers=2\""
       working-directory: packages/storybook-html/
       run: |
         npm run test-storybook

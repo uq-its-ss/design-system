@@ -37,6 +37,7 @@ module.exports = {
           "tests/jest/msw/*.js",
           "packages/storybook-html/stories/**/*.stories.js",
           "packages/storybook-html/stories/**/examples/*.js",
+          "packages/storybook-html/scripts/*.js",
           "packages/**/gulpfile.js",
           "packages/**/build-icons.js",
           "packages/**/build-css.js",

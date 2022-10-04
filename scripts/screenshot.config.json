@@ -1,6 +1,6 @@
 {
   "uris": {
-    "footer": "http://localhost:6006/"
+    "footer": "http://localhost:6006/?path=/docs/components-footer--footer"
   },
   "viewports": {
     "mobile": { "width": 375, "height": 932 },

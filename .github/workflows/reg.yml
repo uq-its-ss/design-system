@@ -40,9 +40,6 @@ jobs:
         "npx http-server storybook-static --port 6006 --silent" \
         "npx wait-on tcp:6006 && npm run update-screenshots"
       working-directory: packages/storybook-html/
-    - name: create the current snapshot
-      run: |
-        npm run update-screenshots
     - name: run visual regression
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}

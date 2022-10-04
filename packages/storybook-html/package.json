@@ -57,6 +57,7 @@
 		"@uqds/table": "^0.0.8-alpha.0",
 		"@uqds/tabs": "^0.0.8-alpha.0",
 		"babel-loader": "^8.2.3",
+		"cli-progress": "^3.11.2",
 		"core-js": "^3.21.0",
 		"font-awesome": "^4.7.0",
 		"joi-browser": "^13.4.0",

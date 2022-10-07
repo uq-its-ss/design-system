@@ -13,7 +13,7 @@
 	"license": "ISC",
 	"scripts": {
 		"storybook": "start-storybook -p 6006",
-		"build-storybook": "build-storybook -o .out"
+		"build-storybook": "build-storybook -o .out",
 	},
 	"devDependencies": {
 		"@babel/core": "^7.17.0",
@@ -22,6 +22,7 @@
 		"@storybook/addon-essentials": "^6.5.10",
 		"@storybook/addons": "^6.5.10",
 		"@storybook/html": "^6.5.10",
+		"@storybook/test-runner": "^0.7.2",
 		"@storybook/theming": "^6.5.10",
 		"@uqds/accordion": "^0.0.12-alpha.0",
 		"@uqds/alert": "^0.0.12-alpha.0",

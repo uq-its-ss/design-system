@@ -57,7 +57,7 @@
     "test": "jest",
     "update-screenshots": "node scripts/screenshot.js",
     "reg-suit": "reg-suit run",
-    "serve-screenshots": "http-server dist -i -p 3001"
+    "serve-screenshots": "http-server dist -i -p 6006"
   },
   "browserslist": [
     "last 4 chrome versions",

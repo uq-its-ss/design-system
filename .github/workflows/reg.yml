@@ -38,7 +38,7 @@ jobs:
       run: |
         npx concurrently -k -s first -n "SB,UPDATE" -c "magenta,blue" \
         "npx http-server storybook-static --port 6006" \
-        "npx wait-on tcp:6006 && cd packages/storybook-html/ && npm run update-screenshots"
+        "npx wait-on tcp:6006 && cd ../.. && npm run update-screenshots"
       working-directory: packages/storybook-html/
     - name: run visual regression
       env:

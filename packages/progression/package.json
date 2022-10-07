@@ -1,6 +1,6 @@
 {
   "name": "@uqds/progression",
-  "version": "0.0.8-alpha.0",
+  "version": "0.0.12-alpha.0",
   "description": "Progression component",
   "keywords": [
     "uqds",
@@ -41,6 +41,6 @@
     "url": "https://github.com/uqds/design-system/issues"
   },
   "dependencies": {
-    "@uqds/core": "^0.0.8-alpha.0"
+    "@uqds/core": "^0.0.12-alpha.0"
   }
 }

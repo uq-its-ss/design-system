@@ -15,7 +15,7 @@
 		"storybook": "start-storybook -p 6006",
 		"build-storybook": "build-storybook",
 		"test-storybook": "test-storybook",
-		"update-screenshots": "node scripts/screenshot.js"
+		"update-screenshots": "node ../../scripts/screenshot.js"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.17.0",
@@ -57,12 +57,10 @@
 		"@uqds/table": "^0.0.8-alpha.0",
 		"@uqds/tabs": "^0.0.8-alpha.0",
 		"babel-loader": "^8.2.3",
-		"cli-progress": "^3.11.2",
 		"core-js": "^3.21.0",
 		"font-awesome": "^4.7.0",
 		"joi-browser": "^13.4.0",
 		"mermaid": "^8.13.10",
-		"puppeteer": "^17.1.3",
 		"sass": "^1.49.7",
 		"sass-loader": "^8.0.2",
 		"tocbot": "^4.18.0",

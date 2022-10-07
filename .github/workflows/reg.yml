@@ -1,0 +1,49 @@
+name: Visual Regression Testing
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+#   strategy:
+#     matrix:
+#       node-version: [8.x, 10.x, 12.x]
+
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+    - name: Use Node.js v16
+      uses: actions/setup-node@v3
+      with:
+        node-version: "16.x"
+    - name: npm install, build, and test
+      run: |
+        npm install --pure-lockfile
+        npx lerna bootstrap --no-ci
+      env:
+        CI: true
+    - name: workaround for detached HEAD
+      run: |
+        git checkout ${GITHUB_REF#refs/heads/} || git checkout -b ${GITHUB_REF#refs/heads/} && git pull
+    - name: Install Playwright
+      run: npx playwright install --with-deps
+    - name: Build Storybook
+      run: |
+        npm run build-storybook --quiet
+      working-directory: packages/storybook-html/
+    - name: Serve Storybook and run tests
+      run: |
+        npx concurrently -k -s first -n "SB,UPDATE" -c "magenta,blue" \
+        "npx http-server storybook-static --port 6006" \
+        "npx wait-on tcp:6006 && cd ../.. && npm run update-screenshots"
+      working-directory: packages/storybook-html/
+    - name: run visual regression
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        UQDS_PERSONAL_ACCESS_TOKEN: ${{ secrets.UQDS_PERSONAL_ACCESS_TOKEN }}
+      run: |
+        npm run reg-suit run --update-screenshots

@@ -41,6 +41,7 @@ module.exports = {
           "packages/**/build-icons.js",
           "packages/**/build-css.js",
           "gulpfile.js",
+          "scripts/*.js",
         ],
       },
     ],

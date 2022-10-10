@@ -61,49 +61,44 @@ $use-encapsulation: false !default;
   h6 {
     font-weight: core.$font-weight-bold;
     line-height: core.$line-height-h;
+    margin-bottom: core.$space-none;
     color: core.$uq-purple;
   }
 
   h1 {
-    margin-top: core.$space-m;
-    margin-bottom: core.$space-xl;
+    margin-top: core.$space-xl;
     font-size: core.$font-size-xxxl;
     font-family: core.$font-title;
   }
 
   h2 {
-    margin-top: core.$space-xl;
-    margin-bottom: core.$space-m;
+    margin-top: core.$space-l;
     font-size: core.$font-size-xxl;
   }
 
   h3 {
-    margin-top: core.$space-l;
-    margin-bottom: core.$space;
+    margin-top: core.$space-m;
     font-size: core.$font-size-xl;
   }
 
   h4 {
-    margin-top: core.$space-l;
-    margin-bottom: core.$space-m;
+    margin-top: core.$space;
     font-size: core.$font-size-l;
   }
 
   h5 {
-    margin-top: core.$space-m;
-    margin-bottom: core.$space;
+    margin-top: core.$space;
     font-size: core.$font-size-m;
   }
 
   h6 {
-    margin-top: core.$space-m;
-    margin-bottom: core.$space-s;
+    margin-top: core.$space;
     font-size: core.$font-size;
   }
 
   p {
-    margin-top: core.$space-none;
-    margin-bottom: core.$space-m;
+    margin-top: core.$space-m;
+    margin-bottom: core.$space-none;
   }
 
   b,

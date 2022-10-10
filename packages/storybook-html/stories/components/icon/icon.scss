@@ -5,12 +5,12 @@
 .uqds-icon {
   &-list {
     display: grid;
-    grid-gap: core.$space;
+    grid-gap: core.$space-uuuuul;
     grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
 
     &__item {
       border-radius: 8px;
-      padding: core.$space;
+      padding: core.$space-uuuuul;
       text-align: center;
       background-color: core.$uq-neutral-light80;
 

@@ -41,7 +41,7 @@
   }
 
   &__subtext {
-    margin-bottom: core.$space-m;
+    margin-bottom: core.$space-uuuuul;
   }
 
   &__image {
@@ -132,8 +132,8 @@
   &--large {
     & .uq-hero__content {
       @media #{core.$screen-md-up} {
-        padding-top: core.$space-uuuul;
-        padding-bottom: core.$space-uuuul;
+        padding-top: core.$space-uuuuul;
+        padding-bottom: core.$space-uuuuul;
       }
     }
   }

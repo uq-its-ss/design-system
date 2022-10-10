@@ -22,7 +22,7 @@ $pane-title-color: core.$uq-purple;
 }
 
 @mixin pane-vertical-spacing {
-  margin: core.$space-l core.$space-none;
+  margin: core.$space-uuuuul core.$space-none;
 }
 
 @mixin pane-dark-tint {
@@ -40,12 +40,12 @@ $pane-title-color: core.$uq-purple;
 
   .uq-pane {
     &__content {
-      padding: core.$space-m core.$space-m core.$space core.$space-m; //1.8rem 1.8rem 1rem 1.8rem
+      padding: core.$space-uuuuul core.$space-uuuuul core.$space-uuuuul core.$space-uuuuul; //1.8rem 1.8rem 1rem 1.8rem
     }
 
     &__footer {
       background-color: $pane-shaded-bg;
-      padding: core.$space-m; //1.8rem;
+      padding: core.$space-uuuuul; //1.8rem;
     }
   }
 }

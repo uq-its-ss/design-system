@@ -65,45 +65,45 @@ $use-encapsulation: false !default;
   }
 
   h1 {
-    margin-top: core.$space-m;
-    margin-bottom: core.$space-xl;
+    margin-top: core.$space-uuuuul;
+    margin-bottom: core.$space-uuuuul;
     font-size: core.$font-size-xxxl;
     font-family: core.$font-title;
   }
 
   h2 {
-    margin-top: core.$space-xl;
-    margin-bottom: core.$space-m;
+    margin-top: core.$space-uuuuul;
+    margin-bottom: core.$space-uuuuul;
     font-size: core.$font-size-xxl;
   }
 
   h3 {
-    margin-top: core.$space-l;
-    margin-bottom: core.$space;
+    margin-top: core.$space-uuuuul;
+    margin-bottom: core.$space-uuuuul;
     font-size: core.$font-size-xl;
   }
 
   h4 {
-    margin-top: core.$space-l;
-    margin-bottom: core.$space-m;
+    margin-top: core.$space-uuuuul;
+    margin-bottom: core.$space-uuuuul;
     font-size: core.$font-size-l;
   }
 
   h5 {
-    margin-top: core.$space-m;
-    margin-bottom: core.$space;
+    margin-top: core.$space-uuuuul;
+    margin-bottom: core.$space-uuuuul;
     font-size: core.$font-size-m;
   }
 
   h6 {
-    margin-top: core.$space-m;
+    margin-top: core.$space-uuuuul;
     margin-bottom: core.$space-s;
     font-size: core.$font-size;
   }
 
   p {
     margin-top: core.$space-none;
-    margin-bottom: core.$space-m;
+    margin-bottom: core.$space-uuuuul;
   }
 
   b,
@@ -116,8 +116,8 @@ $use-encapsulation: false !default;
   }
 
   blockquote {
-    margin: core.$space-none core.$space-none core.$space-m;
-    padding-left: core.$space-m;
+    margin: core.$space-none core.$space-none core.$space-uuuuul;
+    padding-left: core.$space-uuuuul;
     border-left: 6px solid core.$text;
     font-family: core.$font-accent;
     font-style: italic;
@@ -127,11 +127,11 @@ $use-encapsulation: false !default;
   ol,
   ul {
     margin-top: core.$space-none;
-    margin-bottom: core.$space-m;
-    padding-left: core.$space-m;
+    margin-bottom: core.$space-uuuuul;
+    padding-left: core.$space-uuuuul;
 
     li {
-      margin-bottom: core.$space;
+      margin-bottom: core.$space-uuuuul;
 
       &:last-child {
         margin-bottom: core.$space-none;
@@ -152,7 +152,7 @@ $use-encapsulation: false !default;
 
     dd {
       margin-left: core.$space-none;
-      margin-bottom: core.$space-m;
+      margin-bottom: core.$space-uuuuul;
       font-size: core.$font-size-m;
     }
   }

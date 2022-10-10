@@ -28,12 +28,12 @@
   &__link {
     display: inline;
     margin-left: auto;
-    padding: core.$space-none core.$space-m;
+    padding: core.$space-none core.$space-uuuuul;
     align-self: center;
     white-space: nowrap;
 
     @media #{core.$screen-md-up} {
-      padding: core.$space-none core.$space-l;
+      padding: core.$space-none core.$space-uuuuul;
     }
   }
 
@@ -41,7 +41,7 @@
   &__tab {
     position: relative;
     flex: 0 1 auto;
-    padding: core.$space core.$space-m;
+    padding: core.$space-uuuuul core.$space-uuuuul;
     margin-right: core.$space-xs;
     font-size: core.$font-size;
     font-weight: core.$font-weight-thin;
@@ -55,7 +55,7 @@
     cursor: pointer;
 
     @media #{core.$screen-md-up} {
-      padding: core.$space-m core.$space-l;
+      padding: core.$space-uuuuul core.$space-uuuuul;
       margin-right: core.$space-xs;
       font-size: core.$font-size-m;
     }
@@ -95,13 +95,13 @@
 
   // tab panel
   &__tab-panel {
-    padding: core.$space core.$space-m;
+    padding: core.$space-uuuuul core.$space-uuuuul;
     font-size: core.$font-size;
     color: core.$uq-neutral-dark80;
     background-color: core.$uq-white;
 
     @media #{core.$screen-md-up} {
-      padding: core.$space-m core.$space-l;
+      padding: core.$space-uuuuul core.$space-uuuuul;
     }
   }
 
@@ -172,17 +172,17 @@
   // Small variant
   &.uq-tabs--small {
     .uq-tabs__tab {
-      padding: core.$space-s core.$space;
+      padding: core.$space-s core.$space-uuuuul;
 
       @media #{core.$screen-md-up} {
-        padding: core.$space core.$space-m;
+        padding: core.$space-uuuuul core.$space-uuuuul;
       }
     }
     .uq-tabs__tab-panel {
-      padding: core.$space-s core.$space;
+      padding: core.$space-s core.$space-uuuuul;
 
       @media #{core.$screen-md-up} {
-        padding: core.$space core.$space-m;
+        padding: core.$space-uuuuul core.$space-uuuuul;
       }
     }
   }

@@ -5,8 +5,8 @@
 .uqds-toc {
   box-sizing: border-box;
   background-color: core.$uq-white;
-  padding: core.$space-l core.$space-none core.$space-none core.$space-none;
-  margin-bottom: core.$space;
+  padding: core.$space-uuuuul core.$space-none core.$space-none core.$space-none;
+  margin-bottom: core.$space-uuuuul;
 
   &__toc {
     font-size: core.$font-size-s;
@@ -46,21 +46,21 @@
     position: fixed;
     top: 0;
     right: 0;
-    padding-top: core.$space-ul;
+    padding-top: core.$space-uuuuul;
     height: 100%;
 
     &__toc {
       margin-left: -(core.$space);
 
       .toc-list {
-        padding-left: core.$space;
+        padding-left: core.$space-uuuuul;
       }
 
       a.toc-link {
         display: inline-block;
         margin: core.$space-xs core.$space-none;
-        padding-left: core.$space;
-        padding-right: core.$space;
+        padding-left: core.$space-uuuuul;
+        padding-right: core.$space-uuuuul;
         text-decoration: none;
         transition: all 0.125s ease-in;
         color: core.$text;

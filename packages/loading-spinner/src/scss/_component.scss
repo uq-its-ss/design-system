@@ -5,10 +5,10 @@
   color: core.$uq-purple;
   background-color: transparent;
   border-radius: 50%;
-  height: core.$space-xxl;
+  height: core.$space-uuuuul;
   padding: core.$space-xs;
   overflow: hidden;
-  width: core.$space-xxl;
+  width: core.$space-uuuuul;
   -webkit-mask-image: linear-gradient(transparent 50%, #000 0),
     linear-gradient(90deg, transparent 50%, #000 0);
   mask-image: linear-gradient(transparent 50%, #000 0),
@@ -44,8 +44,8 @@
   }
 
   &--small {
-    height: core.$space-m;
-    width: core.$space-m;
+    height: core.$space-uuuuul;
+    width: core.$space-uuuuul;
     padding: core.$space-compressed-xs;
 
     &::before {

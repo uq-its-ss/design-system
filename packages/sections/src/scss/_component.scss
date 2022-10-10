@@ -16,8 +16,8 @@
 // .uq-section--padding-bottom-large - adds large bottom padding
 
 .uq-section {
-  padding-top: core.$space-xxxl; // 3.5rem
-  padding-bottom: core.$space-xxxl; // 3.5rem
+  padding-top: core.$space-uuuuul; // 3.5rem
+  padding-bottom: core.$space-uuuuul; // 3.5rem
   overflow: hidden;
 
   &__container {
@@ -36,12 +36,12 @@
 
   // Padding top large
   &--padding-top-large {
-    padding-top: core.$space-uuul; // 5.5rem
+    padding-top: core.$space-uuuuul; // 5.5rem
   }
 
   // Paddiing bottom large
   &--padding-bottom-large {
-    padding-bottom: core.$space-uuul; // 5.5rem
+    padding-bottom: core.$space-uuuuul; // 5.5rem
   }
 
   // Padding top none

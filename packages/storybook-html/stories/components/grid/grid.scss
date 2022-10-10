@@ -9,7 +9,7 @@
     core.$uq-neutral-light80 10px,
     core.$uq-neutral-light80 20px
   );
-  padding: core.$space-m 0;
+  padding: core.$space-uuuuul 0;
   overflow: visible;
 
   &--wrap-content {
@@ -24,8 +24,8 @@
   }
 
   &--full-width {
-    padding-left: core.$space-uuul;
-    padding-right: core.$space-uuul;
+    padding-left: core.$space-uuuuul;
+    padding-right: core.$space-uuuuul;
   }
 
   &__highlight {
@@ -77,7 +77,7 @@
     }
 
     + .uq-grid {
-      margin-top: core.$space;
+      margin-top: core.$space-uuuuul;
     }
   }
 

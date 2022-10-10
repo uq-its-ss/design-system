@@ -38,7 +38,7 @@
     }
 
     @media #{core.$screen-lg-up} {
-      padding: core.$space core.$space 0 core.$space;
+      padding: core.$space-uuuuul core.$space-uuuuul 0 core.$space-uuuuul;
     }
   }
 
@@ -63,7 +63,7 @@
     cursor: pointer;
     height: 1.5rem;
     margin-bottom: core.$space-none;
-    margin-left: core.$space;
+    margin-left: core.$space-uuuuul;
     margin-right: core.$space-none;
     overflow: hidden;
     padding: core.$space-none;
@@ -129,7 +129,7 @@
       // border-bottom: 1px solid $nav-dropdown-divider;
       color: core.$uq-purple;
       display: block;
-      padding: core.$space core.$space;
+      padding: core.$space-uuuuul core.$space-uuuuul;
       text-decoration: none;
       transition: background-color 0.25s, border-color 0.25s;
 
@@ -217,7 +217,7 @@
 
         a {
           // border-bottom: 1px solid $nav-dropdown-divider;
-          padding-left: core.$space-xxl;
+          padding-left: core.$space-uuuuul;
           padding-top: 0.75rem;
           padding-bottom: 0;
 
@@ -228,7 +228,7 @@
           }
 
           @media #{core.$screen-lg-up} {
-            padding-left: core.$space-m;
+            padding-left: core.$space-uuuuul;
           }
         }
       }
@@ -260,7 +260,7 @@
         &--has-subnav {
           > a {
             @media #{core.$screen-lg-up} {
-              padding-right: core.$space-l;
+              padding-right: core.$space-uuuuul;
             }
           }
         }
@@ -289,8 +289,8 @@
       top: 0;
       right: 0;
       display: block;
-      width: core.$space-xxl;
-      padding: core.$space-compressed-xxxl core.$space-m;
+      width: core.$space-uuuuul;
+      padding: core.$space-compressed-xxxl core.$space-uuuuul;
       border: 0;
       border-left: 1px solid $nav-dropdown-divider;
       text-indent: -100vw;
@@ -298,7 +298,7 @@
         "standard--chevron-down-sml",
         core.$uq-purple
       ));
-      background-size: core.$space;
+      background-size: core.$space-uuuuul;
       background-position: center center;
       background-repeat: no-repeat;
       background-color: transparent;
@@ -306,7 +306,7 @@
       cursor: pointer;
 
       @media #{core.$screen-md-up} {
-        width: core.$space-l;
+        width: core.$space-uuuuul;
         padding: core.$space-compressed-xxxl core.$space-m
           core.$space-compressed-xxxl core.$space-s;
       }
@@ -353,15 +353,15 @@
   top: 0;
   right: 0;
   display: block;
-  width: core.$space-xl;
-  padding: core.$space-compressed-xxxl core.$space;
+  width: core.$space-uuuuul;
+  padding: core.$space-compressed-xxxl core.$space-uuuuul;
   border: 0;
   text-indent: -100vw;
   background-image: url(icon-constants.get-icon(
     "standard--chevron-down-sml",
     core.$uq-purple
   ));
-  background-size: core.$space;
+  background-size: core.$space-uuuuul;
   background-position: center center;
   background-repeat: no-repeat;
   background-color: transparent;

@@ -3,12 +3,11 @@ const cliProgress = require("cli-progress");
 const config = require("./screenshot.config.json");
 
 // Remove these selectors in all scenarios.
-const globalRemoveSelectors = ["#__bs_notify__", ".visual-regression-remove"];
+const globalRemoveSelectors = [".visual-regression-remove"];
 
 // Hide these selectors in all scenarios.
 const globalHideSelectors = [
   "iframe[src*='youtube']",
-  "img[src*='picsum']",
   ".visual-regression-hide",
 ];
 

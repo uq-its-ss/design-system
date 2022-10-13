@@ -77,7 +77,7 @@
 
   // if sub-title exists reduce margin to pull it close to title
   &__title + &__sub-title {
-    margin-top: -(core.$space);
+    margin-top: -(core.$space-m);
   }
 }
 

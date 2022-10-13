@@ -22,7 +22,7 @@
 
     a.toc-link {
       color: core.$link;
-      text-indent: -(core.$space);
+      text-indent: -(core.$space-m);
 
       &::before {
         width: 0;
@@ -50,7 +50,7 @@
     height: 100%;
 
     &__toc {
-      margin-left: -(core.$space);
+      margin-left: -(core.$space-m);
 
       .toc-list {
         padding-left: core.$space-m;

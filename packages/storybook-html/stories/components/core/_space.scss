@@ -2,8 +2,8 @@
 
 .uqds-space {
   background-color: rgba($uq-black, 0.75);
-  width: $space;
-  height: $space;
+  width: $space-m;
+  height: $space-m;
 }
 
 .uqds-space-xs {
@@ -73,7 +73,7 @@
 }
 
 .uqds-container-space {
-  padding: $space;
+  padding: $space-m;
 }
 
 .uqds-container-space-lg {
@@ -92,7 +92,7 @@
 
 /* Stacked */
 .uqds-container .uqds-stacked-space {
-  margin-top: $space;
+  margin-top: $space-m;
 }
 
 .uqds-container .uqds-stacked-space-xs {
@@ -105,7 +105,7 @@
 
 /* inlinec */
 .uqds-container .uqds-inline-space {
-  margin-right: $space;
+  margin-right: $space-m;
   display: inline;
 }
 

@@ -11,7 +11,7 @@
 
 .uq-accordion {
   list-style: none;
-  margin-bottom: core.$space-m;
+  margin-bottom: core.$space-l;
   padding: core.$space-none;
 
   // Accordion item.
@@ -42,7 +42,7 @@
     font-weight: 400;
     line-height: core.$line-height-h;
     margin: core.$space-none;
-    padding: core.$space core.$space-xxxl core.$space core.$space;
+    padding: core.$space-m core.$space-xxxxl core.$space-m core.$space-m;
     position: relative;
     text-align: left;
     text-decoration: none;
@@ -50,7 +50,7 @@
     width: 100%;
 
     @media #{core.$screen-md-up} {
-      padding: core.$space core.$space-ul core.$space core.$space-m;
+      padding: core.$space-m core.$space-uul core.$space-m core.$space-l;
     }
 
     // Closed state.
@@ -61,15 +61,15 @@
         core.$uq-purple
       ));
       background-repeat: no-repeat;
-      width: core.$space-m;
-      height: core.$space-m;
+      width: core.$space-l;
+      height: core.$space-l;
       transform: translateY(50%);
       position: absolute;
       top: core.$space-s;
-      right: core.$space;
+      right: core.$space-m;
 
       @media #{core.$screen-md-up} {
-        right: core.$space-m;
+        right: core.$space-l;
       }
     }
 
@@ -120,10 +120,10 @@
     transition: height 200ms ease;
 
     &-wrapper {
-      padding: core.$space;
+      padding: core.$space-m;
 
       @media #{core.$screen-md-up} {
-        padding: core.$space-m;
+        padding: core.$space-l;
       }
     }
 
@@ -154,21 +154,21 @@
   &--compact {
     & .uq-accordion__toggle {
       font-size: core.$font-size;
-      padding: core.$space-s core.$space-xxxl core.$space-s core.$space;
+      padding: core.$space-s core.$space-xxxxl core.$space-s core.$space-m;
     }
 
     & .uq-accordion__toggle::before {
-      width: core.$space;
-      height: core.$space;
+      width: core.$space-m;
+      height: core.$space-m;
       top: core.$space-xs;
-      right: core.$space;
+      right: core.$space-m;
     }
 
     & .uq-accordion__toggle--active::before {
-      width: core.$space;
-      height: core.$space;
+      width: core.$space-m;
+      height: core.$space-m;
       top: core.$space-xs;
-      right: core.$space;
+      right: core.$space-m;
     }
   }
 }

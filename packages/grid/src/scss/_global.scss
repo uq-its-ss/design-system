@@ -7,16 +7,16 @@ $schema: (
   "base": (
     6,
     core.$space,
-    core.$space-m,
+    core.$space-l,
   ),
   "md": (
     8,
-    core.$space-m,
-    core.$space-xxxxl,
+    core.$space-l,
+    core.$space-ul,
   ),
   "xl": (
     12,
-    core.$space-l,
+    core.$space-xl,
     9.375rem,
   ),
 ) !default;

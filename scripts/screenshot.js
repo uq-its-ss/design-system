@@ -9,7 +9,7 @@ const globalRemoveSelectors = [".visual-regression-remove"];
 const globalHideSelectors = [
   "iframe[src*='youtube']",
   ".visual-regression-hide",
-  "Test"
+  "Test",
 ];
 
 const removeSelectors = async (page) => {

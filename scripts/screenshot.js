@@ -3,13 +3,25 @@ const cliProgress = require("cli-progress");
 const config = require("./screenshot.config.json");
 
 // Add Stop Animation rules
-const css = "*, *::before, *::after { -moz-transition: none !important; transition: none !important; -moz-animation: none !important; animation: none !important; }";
+const globalAddCss = ["head"]
 
-const addCss = async (page) => {
-  const htmlDiv = document.createElement('div');
-  htmlDiv.innerHTML = '<p>foo</p><style>' + css + '</style>';
-  document.getElementsByTagName('head')[0].appendChild(htmlDiv.childNodes[1]);
+const addCss= async (page) => {
+  return Promise.all(
+    globalAddCss.map(async (selector) => {
+      await page.evaluate((sel) => {
+        document.head.appendChild(Object.assign(document.createElement("style"), {textContent: `
+        *, *::before, *::after { 
+            -moz-transition: none !important;
+            transition: none !important;
+            -moz-animation: none !important;
+            animation: none !important; }
+      `
+    }));
+      }, selector);
+    })
+  );
 };
+
 // Remove these selectors in all scenarios.
 const globalRemoveSelectors = [".visual-regression-remove"];
 
@@ -57,7 +69,7 @@ const screenshot = async (browser, viewportName, pageName) => {
     setTimeout(() => res(), 2000);
   });
 
-  if (css.length > 0) await addCss(page);
+  if (globalAddCss.length > 0) await addCss(page);
   if (globalHideSelectors.length > 0) await hideSelectors(page);
   if (globalRemoveSelectors.length > 0) await removeSelectors(page);
 

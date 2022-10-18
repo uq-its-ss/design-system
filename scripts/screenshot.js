@@ -3,24 +3,30 @@ const cliProgress = require("cli-progress");
 const config = require("./screenshot.config.json");
 
 // Add Stop Animation rules
-const globalAddCss = ["head"]
+const globalAddCss = ["head"];
 
-const addCss= async (page) => {
+const addCss = async (page) => {
   return Promise.all(
     globalAddCss.map(async (selector) => {
       await page.evaluate((sel) => {
-        document.head.appendChild(Object.assign(document.createElement("style"), {textContent: `
+        document.head.appendChild(
+          Object.assign(document.createElement("style"), {
+            textContent: `
         *, *::before, *::after { 
             -moz-transition: none !important;
             transition: none !important;
             -moz-animation: none !important;
             animation: none !important; }
-      `
-    }));
+      `,
+          })
+        );
       }, selector);
     })
   );
 };
+
+// Stop these animations
+const globalStopAnimations = [".visual-regression-remove"];
 
 // Remove these selectors in all scenarios.
 const globalRemoveSelectors = [".visual-regression-remove"];
@@ -31,6 +37,22 @@ const globalHideSelectors = [
   ".visual-regression-hide",
   "Test",
 ];
+
+const stopAnimations = async (page) => {
+  return Promise.all(
+    globalStopAnimations.map(async (selector) => {
+      await page.evaluate((sel) => {
+        document.querySelectorAll(sel).forEach((s) => {
+          s.style.cssText = "-moz-transition: none !important;";
+          s.style.cssText = "transition: none !important;";
+          s.style.cssText = "-moz-animation: none !important;";
+          s.style.cssText = "animation: none !important;";
+          s.classList.add("__86d");
+        });
+      }, selector);
+    })
+  );
+};
 
 const removeSelectors = async (page) => {
   return Promise.all(
@@ -70,6 +92,7 @@ const screenshot = async (browser, viewportName, pageName) => {
   });
 
   if (globalAddCss.length > 0) await addCss(page);
+  if (globalStopAnimations.length > 0) await stopAnimations(page);
   if (globalHideSelectors.length > 0) await hideSelectors(page);
   if (globalRemoveSelectors.length > 0) await removeSelectors(page);
 

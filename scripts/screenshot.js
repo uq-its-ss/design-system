@@ -2,28 +2,8 @@ const puppeteer = require("puppeteer");
 const cliProgress = require("cli-progress");
 const config = require("./screenshot.config.json");
 
-// Add Stop Animation rules
+// Add custom css overrides
 const globalCustomCss = ["head"];
-
-const addCustomCss = async (page) => {
-  return Promise.all(
-    globalCustomCss.map(async (selector) => {
-      await page.evaluate((sel) => {
-        document.head.appendChild(
-          Object.assign(document.createElement("style"), {
-            textContent: `
-        *, *::before, *::after { 
-            -moz-transition: none !important;
-            transition: none !important;
-            -moz-animation: none !important;
-            animation: none !important; }
-      `,
-          })
-        );
-      }, selector);
-    })
-  );
-};
 
 // Remove these selectors in all scenarios.
 const globalRemoveSelectors = [".visual-regression-remove"];
@@ -33,6 +13,26 @@ const globalHideSelectors = [
   "iframe[src*='youtube']",
   ".visual-regression-hide",
 ];
+
+const addCustomCss = async (page) => {
+  return Promise.all(
+    globalCustomCss.map(async (selector) => {
+      await page.evaluate(() => {
+        document.head.appendChild(
+          Object.assign(document.createElement("style"), {
+            textContent: `
+              *, *::before, *::after { 
+                  -moz-transition: none !important;
+                  transition: none !important;
+                  -moz-animation: none !important;
+                  animation: none !important; }
+              `,
+          })
+        );
+      }, selector);
+    })
+  );
+};
 
 const removeSelectors = async (page) => {
   return Promise.all(

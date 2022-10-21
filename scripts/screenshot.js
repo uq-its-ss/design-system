@@ -2,9 +2,6 @@ const puppeteer = require("puppeteer");
 const cliProgress = require("cli-progress");
 const config = require("./screenshot.config.json");
 
-// Add custom css overrides
-const globalCustomCss = ["head"];
-
 // Remove these selectors in all scenarios.
 const globalRemoveSelectors = [".visual-regression-remove"];
 
@@ -13,26 +10,6 @@ const globalHideSelectors = [
   "iframe[src*='youtube']",
   ".visual-regression-hide",
 ];
-
-const addCustomCss = async (page) => {
-  return Promise.all(
-    globalCustomCss.map(async (selector) => {
-      await page.evaluate(() => {
-        document.head.appendChild(
-          Object.assign(document.createElement("style"), {
-            textContent: `
-              *, *::before, *::after { 
-                  -moz-transition: none !important;
-                  transition: none !important;
-                  -moz-animation: none !important;
-                  animation: none !important; }
-              `,
-          })
-        );
-      }, selector);
-    })
-  );
-};
 
 const removeSelectors = async (page) => {
   return Promise.all(
@@ -66,12 +43,19 @@ const screenshot = async (browser, viewportName, pageName) => {
   const uri = config.uris[pageName];
   await page.setViewport(viewport);
   await page.goto(uri, { waitUntil: "load", timeout: 0 });
+  // Custom CSS
+  await page.addStyleTag({
+    content: `*, *::before, *::after { 
+    -moz-transition: none !important;
+    transition: none !important;
+    -moz-animation: none !important;
+    animation: none !important; }`,
+  });
   // Give it 2 seconds for images etc to load and animations to fire.
   await new Promise((res) => {
     setTimeout(() => res(), 2000);
   });
 
-  if (globalCustomCss.length > 0) await addCustomCss(page);
   if (globalHideSelectors.length > 0) await hideSelectors(page);
   if (globalRemoveSelectors.length > 0) await removeSelectors(page);
 

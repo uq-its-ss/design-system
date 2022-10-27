@@ -223,12 +223,6 @@
   /* FOOTER */
   &__footer {
     grid-area: FooterTerms;
-
-    @media #{core.$screen-xl-up} {
-      & :last-child {
-        justify-content: flex-end;
-      }
-    }
   }
 
   &__footer-list {
@@ -452,9 +446,10 @@
     }
     @media #{core.$screen-xl-up} {
       grid-template-areas:
-        "FooterNavigation FooterNavigation"
-        "FooterSocial FooterSocial"
-        "FooterOrg FooterTerms";
+        "FooterNavigation"
+        "FooterSocial"
+        "FooterOrg"
+        "FooterTerms";
       row-gap: core.$space-l;
       padding: core.$space-l core.$space core.$space-xl;
     }

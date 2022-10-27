@@ -238,7 +238,7 @@
     list-style-type: none;
     margin: core.$space-none;
     padding: core.$space-none;
-    font-size: core.$font-size-s;
+    font-size: core.$font-size-xs;
 
     @media #{core.$screen-lg-up} {
       display: flex;

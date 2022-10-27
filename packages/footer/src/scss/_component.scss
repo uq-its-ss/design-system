@@ -238,7 +238,7 @@
     list-style-type: none;
     margin: core.$space-none;
     padding: core.$space-none;
-    font-size: core.$font-size-xs;
+    font-size: core.$font-size-s;
 
     @media #{core.$screen-lg-up} {
       display: flex;
@@ -452,9 +452,9 @@
     }
     @media #{core.$screen-xl-up} {
       grid-template-areas:
-        "FooterNavigation FooterNavigation"
-        "FooterSocial FooterSocial"
-        "FooterOrg FooterTerms";
+        "FooterNavigation FooterNavigation FooterNavigation FooterNavigation FooterNavigation"
+        "FooterSocial FooterSocial FooterSocial FooterSocial FooterSocial"
+        "FooterOrg FooterOrg FooterOrg FooterTerms FooterTerms";
       row-gap: core.$space-l;
       padding: core.$space-l core.$space core.$space-xl;
     }

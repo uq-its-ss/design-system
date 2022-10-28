@@ -23,8 +23,8 @@
       content: "";
       position: absolute;
       height: 100%;
-      left: core.$space * 0.5;
-      right: core.$space * 0.5;
+      left: core.$space-m * 0.5;
+      right: core.$space-m * 0.5;
       z-index: 0;
     }
 
@@ -101,15 +101,15 @@
 
     @media #{core.$screen-md-up} {
       &::before {
-        left: core.$space-m * 0.5;
-        right: core.$space-m * 0.5;
+        left: core.$space-l * 0.5;
+        right: core.$space-l * 0.5;
       }
     }
 
     @media #{core.$screen-xl-up} {
       &::before {
-        left: core.$space-l * 0.5;
-        right: core.$space-l * 0.5;
+        left: core.$space-xl * 0.5;
+        right: core.$space-xl * 0.5;
       }
     }
   }

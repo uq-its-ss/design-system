@@ -43,6 +43,14 @@ const screenshot = async (browser, viewportName, pageName) => {
   const uri = config.uris[pageName];
   await page.setViewport(viewport);
   await page.goto(uri, { waitUntil: "load", timeout: 0 });
+  // Custom CSS
+  await page.addStyleTag({
+    content: `*, *::before, *::after { 
+    -moz-transition: none !important;
+    transition: none !important;
+    -moz-animation: none !important;
+    animation: none !important; }`,
+  });
   // Give it 2 seconds for images etc to load and animations to fire.
   await new Promise((res) => {
     setTimeout(() => res(), 2000);

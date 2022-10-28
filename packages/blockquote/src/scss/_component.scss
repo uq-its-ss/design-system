@@ -5,10 +5,10 @@
   color: core.$uq-purple;
   font-style: italic;
   height: auto;
-  margin-left: core.$space-l;
-  padding: core.$space core.$space-m;
+  margin-left: core.$space-xl;
+  padding: core.$space-m core.$space-l;
   position: relative;
-  width: calc(100% - #{core.$space-l});
+  width: calc(100% - #{core.$space-xl});
 
   &::before {
     background-color: core.$uq-purple;

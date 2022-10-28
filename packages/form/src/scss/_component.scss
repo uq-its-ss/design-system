@@ -74,7 +74,7 @@ $use-encapsulation: false !default;
         display: inline-flex;
         font-size: core.$font-size;
         line-height: core.$line-height;
-        margin-bottom: core.$space-m;
+        margin-bottom: core.$space-l;
 
         input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]),
         select,
@@ -84,8 +84,8 @@ $use-encapsulation: false !default;
         + textarea {
           max-width: none;
           min-width: 200px;
-          margin-left: core.$space;
-          margin-right: core.$space-m;
+          margin-left: core.$space-m;
+          margin-right: core.$space-l;
           width: auto;
         }
 
@@ -131,11 +131,11 @@ $use-encapsulation: false !default;
         font-size: core.$font-size;
         font-weight: core.$font-weight-normal;
         line-height: $form-checkbox-size;
-        margin-bottom: core.$space;
+        margin-bottom: core.$space-m;
         margin-left: core.$space-s;
         margin-right: $form-spacing;
         padding-top: core.$space-xs;
-        padding-left: core.$space-m;
+        padding-left: core.$space-l;
         vertical-align: top;
       }
 
@@ -171,7 +171,7 @@ $use-encapsulation: false !default;
     font-size: $form-text-size;
     color: $form-text-color;
     line-height: core.$line-height-ui;
-    margin-bottom: core.$space-m;
+    margin-bottom: core.$space-l;
 
     &:focus {
       border-color: $form-border-color-focus;
@@ -216,13 +216,13 @@ $use-encapsulation: false !default;
     }
 
     &.uq-input--large {
-      padding: 1.15625rem core.$space-m;
+      padding: 1.15625rem core.$space-l;
       border-radius: core.$space-xs;
     }
 
     + .uq-error-message,
     + .uq-success-message {
-      margin-top: -(core.$space-m);
+      margin-top: -(core.$space-l);
       border-radius: 0 0 $form-border-radius $form-border-radius;
     }
   }
@@ -292,11 +292,11 @@ $use-encapsulation: false !default;
       font-size: core.$font-size;
       font-weight: core.$font-weight-normal;
       line-height: core.$line-height-h;
-      margin-bottom: core.$space;
+      margin-bottom: core.$space-m;
       margin-left: core.$space-s;
       margin-right: $form-spacing;
       padding-top: core.$space-compressed-xs;
-      padding-left: core.$space-m;
+      padding-left: core.$space-l;
       vertical-align: top;
     }
 
@@ -423,25 +423,25 @@ $use-encapsulation: false !default;
     background-color: lighten(core.$alert-light, 10%);
     border: 1px solid core.$alert;
     border-left-width: core.$space-xs;
-    padding: core.$space;
-    margin-bottom: core.$space-m;
+    padding: core.$space-m;
+    margin-bottom: core.$space-l;
 
     &__title {
       color: core.$text;
       font-size: core.$font-size-m;
       font-weight: core.$font-weight-bold;
       line-height: core.$line-height-h;
-      margin: core.$space-none core.$space-none core.$space core.$space-none;
+      margin: core.$space-none core.$space-none core.$space-m core.$space-none;
     }
 
     &_body {
       color: core.$text;
-      font-size: core.$space;
+      font-size: core.$space-m;
     }
 
     &__list {
       color: core.$text;
-      font-size: core.$space;
+      font-size: core.$space-m;
       margin: core.$space-none;
 
       &__item {
@@ -469,9 +469,9 @@ $use-encapsulation: false !default;
     font-style: normal;
     font-weight: core.$font-weight-normal;
     line-height: core.$line-height;
-    margin-bottom: core.$space-m;
-    padding: calc(#{core.$space-s} - 1px) core.$space core.$space-s
-      core.$space-xxl;
+    margin-bottom: core.$space-l;
+    padding: calc(#{core.$space-s} - 1px) core.$space-m core.$space-s
+      core.$space-xxxl;
     position: relative;
 
     &::before {
@@ -481,7 +481,7 @@ $use-encapsulation: false !default;
       background-repeat: no-repeat;
       background-size: contain;
       height: core.$space-compressed-xl;
-      left: core.$space;
+      left: core.$space-m;
       margin-right: core.$space-s;
       margin-top: calc(#{- (core.$space-compressed-xl) * 0.5} - 1px);
       position: absolute;

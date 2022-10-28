@@ -53,7 +53,7 @@ body {
   &-h4,
   &-h5,
   &-h6 {
-    margin: core-global.$space-xxl 0 0 !important;
+    margin: core-global.$space-xxxl 0 0 !important;
     font-weight: 500 !important;
     padding-bottom: 0 !important;
     border-bottom: 0 !important;
@@ -84,7 +84,7 @@ body {
 
 /* Getting started alert */
 .uqds-alert {
-  margin-left: core-global.$space-l !important; /* override storybook default on div */
+  margin-left: core-global.$space-xl !important; /* override storybook default on div */
 
   .uq-alert__title {
     /* restore original alert title styles overridden by heading styles above */

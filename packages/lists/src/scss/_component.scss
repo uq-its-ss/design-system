@@ -14,7 +14,7 @@
 %vertical-list,
 .vertical-list {
   list-style-type: none;
-  margin-bottom: core.$space;
+  margin-bottom: core.$space-m;
   padding: core.$space-none;
 
   &__title {
@@ -28,7 +28,7 @@
 
   &--large-spacing {
     .vertical-list__item {
-      padding: core.$space-l core.$space-none;
+      padding: core.$space-xl core.$space-none;
 
       &__date {
         font-size: 90%;
@@ -39,12 +39,12 @@
   &--ruled {
     .vertical-list__title {
       border-top: 2px solid $border-color;
-      padding-top: core.$space-l;
+      padding-top: core.$space-xl;
     }
 
     .vertical-list__item {
       border-bottom: 1px solid $border-color;
-      padding-top: core.$space; //.75rem
+      padding-top: core.$space-m; //.75rem
 
       &:first-child {
         padding-top: core.$space-none;
@@ -52,7 +52,7 @@
 
       &--first {
         border-top: 1px solid $border-color;
-        padding-top: core.$space; // .75rem
+        padding-top: core.$space-m; // .75rem
       }
 
       &__date {
@@ -64,7 +64,7 @@
     .vertical-list__item {
       background: $pane-shaded-bg;
       margin-bottom: core.$space-s;
-      padding: core.$space-m;
+      padding: core.$space-l;
 
       &__date {
         font-size: 90%;
@@ -77,7 +77,7 @@
   display: inline-block;
   list-style-type: none;
   padding: core.$space-none;
-  margin-bottom: core.$space;
+  margin-bottom: core.$space-m;
 
   &__title {
     font-size: $h3-font-size;
@@ -86,19 +86,19 @@
   &__item {
     float: left;
     list-style: none;
-    padding: core.$space-none core.$space; // 0 .75rem;
-    margin: core.$space-none core.$space-none core.$space core.$space-none; // 0 0 .75rem 0
+    padding: core.$space-none core.$space-m; // 0 .75rem;
+    margin: core.$space-none core.$space-none core.$space-m core.$space-none; // 0 0 .75rem 0
   }
 
   &--ruled {
     .horizontal-list__title {
       border-top: 2px solid $border-color;
-      padding-top: core.$space-l;
+      padding-top: core.$space-xl;
     }
 
     .horizontal-list__item {
       border-right: 1px solid $border-color;
-      padding-right: core.$space; // .75rem;
+      padding-right: core.$space-m; // .75rem;
 
       &:last-child {
         border: 0;

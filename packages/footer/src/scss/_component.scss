@@ -452,9 +452,9 @@
     }
     @media #{core.$screen-xl-up} {
       grid-template-areas:
-        "FooterNavigation FooterNavigation"
-        "FooterSocial FooterSocial"
-        "FooterOrg FooterTerms";
+        "FooterNavigation FooterNavigation FooterNavigation FooterNavigation FooterNavigation"
+        "FooterSocial FooterSocial FooterSocial FooterSocial FooterSocial"
+        "FooterOrg FooterOrg FooterOrg FooterTerms FooterTerms";
       row-gap: core.$space-xl;
       padding: core.$space-xl core.$space-m core.$space-xxl;
     }

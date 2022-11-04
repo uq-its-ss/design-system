@@ -34,9 +34,13 @@ Use JavaScript to initialize the component to ensure it will work as expected.
 
 ```js
 // Initialise Main Navigation
-  const navElem = document.getElementById("jsNav"); if (navElem) { new uq.siteHeaderNavigation(navElem, "uq-site-header__navigation"); }  
+const navElem = document.getElementById("jsNav");
+if (navElem) {
+  new uq.siteHeaderNavigation(navElem, "uq-site-header__navigation");
+}
 ```
-Slider mobile menu 
+
+Slider mobile menu
 
 ```js
     <script>
@@ -56,7 +60,7 @@ Slider mobile menu
         });
 
         var slideMenuBackButtons = document.querySelectorAll('.slide-menu__backlink, .global-mobile-nav__audience-link');
-                
+
         Array.prototype.forEach.call(slideMenuBackButtons, function(el, i){
             el.addEventListener('click', () => {
               document.querySelector('.global-mobile-nav').scrollTop = 0;

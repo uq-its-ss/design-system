@@ -5,7 +5,7 @@
 
 # Build
 /packages/**/dist
-/packages/**/.out/
+/packages/**/storybook-static/
 
 # Linted separately
 /packages/icon/src/ts

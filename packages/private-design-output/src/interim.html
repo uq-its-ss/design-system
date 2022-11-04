@@ -633,8 +633,7 @@
       const headerElem = document.querySelector('.uq-header');
       new uq.header(headerElem);
       // Initialise Main Navigation
-      const navElem = document.getElementById("jsNav");
-      new uq.siteHeaderNavigation(navElem, "uq-site-header__navigation");
+      const navElem = document.getElementById("jsNav"); if (navElem) { new uq.siteHeaderNavigation(navElem, "uq-site-header__navigation"); }
       // Initialise accordions
       new uq.accordion();
 

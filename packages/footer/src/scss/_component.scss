@@ -31,7 +31,7 @@
 
   &__acknowledgement {
     max-width: 73.25rem;
-    padding: core.$space-l core.$space-m;
+    padding: core.$space-xl core.$space-l;
     color: #d4c8de;
     font-weight: 400;
     font-size: core.$font-size;
@@ -43,13 +43,13 @@
     flex-wrap: wrap;
 
     @media #{core.$screen-xl-up} {
-      padding: core.$space-l core.$space;
+      padding: core.$space-xl core.$space-m;
     }
   }
 
   &__acknowledgement-flag {
     width: 2.25rem;
-    height: core.$space-m;
+    height: core.$space-l;
 
     &:first-child {
       margin-right: core.$space-s;
@@ -57,13 +57,13 @@
   }
 
   &__acknowledgement-text {
-    margin-top: core.$space;
+    margin-top: core.$space-m;
     flex-basis: 100%;
 
     @media #{core.$screen-xl-up} {
       flex-basis: auto;
       margin-top: core.$space-none;
-      padding-left: core.$space-m;
+      padding-left: core.$space-l;
     }
   }
 
@@ -121,7 +121,7 @@
 
   &__navigation-link {
     display: block;
-    padding: core.$space core.$space-m;
+    padding: core.$space-m core.$space-l;
     color: core.$uq-white;
 
     &:hover {
@@ -130,7 +130,7 @@
     }
 
     @media #{core.$screen-lg-up} {
-      padding: core.$space core.$space-none core.$space-none;
+      padding: core.$space-m core.$space-none core.$space-none;
       font-weight: 500;
     }
   }
@@ -150,7 +150,7 @@
 
     @media #{core.$screen-lg-up} {
       grid-template-columns: repeat(5, 1fr);
-      grid-gap: core.$space;
+      grid-gap: core.$space-m;
     }
 
     @media #{core.$screen-xl-up} {
@@ -176,7 +176,7 @@
         padding: core.$space-s core.$space-none core.$space-none;
 
         &:first-of-type {
-          padding: core.$space core.$space-none core.$space-none;
+          padding: core.$space-m core.$space-none core.$space-none;
         }
       }
     }
@@ -201,12 +201,12 @@
       core.$uq-white
     ));
     background-repeat: no-repeat;
-    width: core.$space-m;
-    height: core.$space-m;
+    width: core.$space-l;
+    height: core.$space-l;
     transform: translateY(50%);
     position: absolute;
     top: core.$space-xs;
-    right: core.$space-m;
+    right: core.$space-l;
 
     @media #{core.$screen-lg-up} {
       background-image: none;
@@ -255,7 +255,7 @@
   }
 
   &__footer-item {
-    padding-right: core.$space;
+    padding-right: core.$space-m;
   }
 
   /* CONTACT */
@@ -274,7 +274,7 @@
     }
   }
   &__contact-login {
-    margin-top: core.$space-xl;
+    margin-top: core.$space-xxl;
     font-size: core.$font-size-s;
 
     @media #{core.$screen-lg-up} {
@@ -303,8 +303,8 @@
     &::before {
       content: "";
       display: inline-block;
-      height: core.$space-l;
-      width: core.$space-l;
+      height: core.$space-xl;
+      width: core.$space-xl;
       background-repeat: no-repeat;
       background-position: center;
       background-size: 100%;
@@ -392,7 +392,7 @@
 
   &--mobile {
     display: block;
-    min-width: calc(100% + core.$space-xxl);
+    min-width: calc(100% + core.$space-xxxl);
     margin-left: -1.5rem;
     margin-right: -1.5rem;
 
@@ -413,7 +413,7 @@
         background-color: core.$uq-purple;
         color: core.$uq-white;
         font-size: core.$font-size;
-        padding-left: core.$space-m;
+        padding-left: core.$space-l;
 
         &:hover {
           color: #d4c8de;
@@ -438,8 +438,8 @@
       "FooterSocial"
       "FooterOrg"
       "FooterTerms";
-    row-gap: core.$space-xl;
-    padding: core.$space-none core.$space-m core.$space-xl;
+    row-gap: core.$space-xxl;
+    padding: core.$space-none core.$space-l core.$space-xxl;
 
     max-width: 73.25rem;
     width: 100%; /* may not be needed but forces it to take up space when empty */
@@ -447,16 +447,16 @@
     margin-right: auto;
 
     @media #{core.$screen-lg-up} {
-      row-gap: core.$space-l;
-      padding-top: core.$space-l;
+      row-gap: core.$space-xl;
+      padding-top: core.$space-xl;
     }
     @media #{core.$screen-xl-up} {
       grid-template-areas:
-        "FooterNavigation FooterNavigation"
-        "FooterSocial FooterSocial"
-        "FooterOrg FooterTerms";
-      row-gap: core.$space-l;
-      padding: core.$space-l core.$space core.$space-xl;
+        "FooterNavigation FooterNavigation FooterNavigation FooterNavigation FooterNavigation"
+        "FooterSocial FooterSocial FooterSocial FooterSocial FooterSocial"
+        "FooterOrg FooterOrg FooterOrg FooterTerms FooterTerms";
+      row-gap: core.$space-xl;
+      padding: core.$space-xl core.$space-m core.$space-xxl;
     }
   }
 }

@@ -5,4 +5,4 @@
 
 # Build
 /packages/**/dist
-/packages/**/.out/
+/packages/**/storybook-static/

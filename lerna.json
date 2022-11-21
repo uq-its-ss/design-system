@@ -1,5 +1,5 @@
 {
-  "version": "0.0.11-alpha.0",
+  "version": "independent",
   "npmClient": "npm",
   "packages": ["packages/*"]
 }

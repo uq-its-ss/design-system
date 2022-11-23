@@ -1,12 +1,12 @@
-@use '@uqds/core/src/scss/_global' as core;
-@use 'tocbot/src/scss/tocbot';
+@use "@uqds/core/src/scss/_global" as core;
+@use "tocbot/src/scss/tocbot";
 
 // tocbot style overrides
 .uqds-toc {
   box-sizing: border-box;
   background-color: core.$uq-white;
-  padding: core.$space-l core.$space-none core.$space-none core.$space-none;
-  margin-bottom: core.$space;
+  padding: core.$space-xl core.$space-none core.$space-none core.$space-none;
+  margin-bottom: core.$space-m;
 
   &__toc {
     font-size: core.$font-size-s;
@@ -22,12 +22,12 @@
 
     a.toc-link {
       color: core.$link;
-      text-indent: -(core.$space);
-    
+      text-indent: -(core.$space-m);
+
       &::before {
         width: 0;
       }
-    
+
       &:hover,
       &:focus {
         color: core.$link-hover;
@@ -46,38 +46,38 @@
     position: fixed;
     top: 0;
     right: 0;
-    padding-top: core.$space-ul;
+    padding-top: core.$space-uul;
     height: 100%;
 
     &__toc {
-      margin-left: -(core.$space);
+      margin-left: -(core.$space-m);
 
       .toc-list {
-        padding-left: core.$space;
+        padding-left: core.$space-m;
       }
 
       a.toc-link {
         display: inline-block;
         margin: core.$space-xs core.$space-none;
-        padding-left: core.$space;
-        padding-right: core.$space;
+        padding-left: core.$space-m;
+        padding-right: core.$space-m;
         text-decoration: none;
         transition: all 0.125s ease-in;
         color: core.$text;
-    
+
         &::before {
           width: core.$space-xs;
         }
-    
+
         &:hover,
         &:focus {
           color: core.$text;
         }
       }
-    
+
       .is-active-link {
         font-weight: core.$font-weight-bold;
-    
+
         &::before {
           background-color: core.$uq-purple;
         }

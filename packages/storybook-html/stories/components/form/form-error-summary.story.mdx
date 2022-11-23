@@ -1,0 +1,77 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
+
+<Meta
+  title="Components/Form/Error summary"
+  parameters={{ previewTabs: { canvas: { hidden: false } } }}
+/>
+
+# Error summary
+
+<StatusBadge.Development />
+
+## What should go into an error summary?
+
+| Component element                        | Purpose                                                                                                                                                      |
+| ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Title                                    | Quickly informs the user of the action that has failed and the state of the form, e.g. "Your form could not be submitted, some form fields need correction". |
+| List of inline validation errors present | Read by the user and screen readers for an overview of form errors. Enables the user to skip directly to the fields that need correction.                    |
+
+export const ErrorSummary = () => {
+  return `
+    <div class="uq-grid uq-grid--golden uq-grid--full-width">
+      <div class="uq-grid__col">
+        <div id="errorSummary" role="alert" class="uq-error-summary">
+          <div class="uq-error-summary__body">
+            <h2 class="uq-error-summary__title">Your form could not be submitted</h2>
+            <ul class="uq-error-summary__list">
+              <li class="uq-error-summary__list__item"><a href="#password">Your password is shorter than eight characters</a></li>
+              <li class="uq-error-summary__list__item"><a href="#password">Your password does not contain a digit or allowed special character</a></li>
+              <li class="uq-error-summary__list__item"><a href="#confirmPassword">Confirm your new password by re-entering it</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+};
+
+<Story name="Error summary">{ErrorSummary.bind({})}</Story>
+
+## Accessibility requirements
+
+Using `role="alert"` on an element implies `aria-live="assertive"` as well as
+`aria-atomic="true"` (W3C, "[Alert Example](https://www.w3.org/TR/wai-aria-practices-1.1/examples/alert/alert.html.)",
+2019). So if we want screen readers to read aloud error summaries in full, they
+should be injected into an element with this specialised role active.
+
+## Basic setup
+
+```html
+<!-- Before error insertion -->
+<div id="errorSummary" role="alert"></div>
+
+<!-- After error insertion -->
+<div id="errorSummary" role="alert" class="uq-error-summary">
+  <h2 class="uq-error-summary__title">There is a problem</h2>
+  <div class="uq-error-summary__body">
+    <ul class="uq-error-summary__list">
+      <li class="uq-error-summary__list-item">
+        <!-- links should go to respective controls -->
+        <a href="#mobile">Enter a valid mobile number</a>
+      </li>
+      <li class="uq-error-summary__list-item">
+        <a href="#favouriteRed">You need to select a favourite</a>
+      </li>
+      <li class="uq-error-summary__list-item">
+        <a href="#terms">You need to agree to the terms of service</a>
+      </li>
+    </ul>
+  </div>
+</div>
+```
+
+## Related
+
+- [Form controls](/?path=/docs/components-form-controls--input-text)
+- [Form validation](/?path=/docs/patterns-form-validation--primary)

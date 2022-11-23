@@ -1,0 +1,54 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
+
+<Meta title="Components/Pagination/Pagination states" />
+
+# Pagination
+
+<StatusBadge.Review />
+<StatusBadge.DraftDoc />
+
+Pagination, also known as paging, is the process of dividing a document into discrete pages, either electronic pages or printed pages.
+
+## Pagination states
+
+The Pagination component used here has various states and has display variants based on which page it displays. For instance, if the component is displaying the first page of a series of pages, the links 'first' and 'prev' are removed.
+If the component is displaying the last page, the links 'last' and 'next' are removed. See the instances below and its html code.
+
+### Pagination first
+
+<Canvas withSource="none">
+  <Story id="components-pagination--pagination-first" />
+</Canvas>
+
+### Pagination middle
+
+<Canvas withSource="none">
+  <Story id="components-pagination--pagination-middle" />
+</Canvas>
+
+### Pagination last
+
+<Canvas withSource="none">
+  <Story id="components-pagination--pagination-last" />
+</Canvas>
+
+#### The table below list's the classname's of the pagination component and what it does.
+
+| Classname                                              | Description                                                                           | Result                                                                                                                                  |
+| ------------------------------------------------------ | ------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| pagination                                             | Applied to the parent element                                                         | -                                                                                                                                       |
+| pagination\_\_item                                     | Applied to all the child elements except the ellipsis                                 | On clicked goes to the relevant page                                                                                                    |
+| pagination\_\_ellipsis                                 | Applied to the child element to denote there is more                                  | -                                                                                                                                       |
+| pagination\_\_ellipsis pagination\_\_ellipsis--left    | Applied to the child element to denote there is more to the left                      | -                                                                                                                                       |
+| pagination\_\_ellipsis pagination\_\_ellipsis--right   | Applied to the child element to denote there is more to the right                     | -                                                                                                                                       |
+| pagination\_\_item--go-first                           | Applied to the child element that takes you to the first page                         | On clicked goes to first page                                                                                                           |
+| pagination\_\_item--go-last                            | Applied to the child element that takes you to the last page                          | On clicked goes to last page                                                                                                            |
+| pagination\_\_item--go-previous                        | Applied to the child element that takes you to the previous page                      | On clicked goes to previous page                                                                                                        |
+| pagination\_\_item--go-next                            | Applied to the child element that takes you to the next page                          | On clicked goes to next page                                                                                                            |
+| pagination\_\_item--first                              | Applied to the child element that denotes the first page                              | -                                                                                                                                       |
+| pagination\_\_item--last                               | Applied to the child element that denotes the last page                               | -                                                                                                                                       |
+| pagination\_\_item--current                            | Applied to the child element that denotes the current page                            | -                                                                                                                                       |
+| pagination\_\_item--first, pagination\_\_item--current | Applied together to the child element that denotes the first page as the current page | Child elements with class 'pagination\_\_item--go-first', 'pagination\_\_item--go-previous', 'pagination\_\_ellipsis--left' are removed |
+| pagination\_\_item--last, pagination\_\_item--current  | Applied together to the child element that denotes the last page as the current page  | Child elements with class 'pagination\_\_item--go-last', 'pagination\_\_item--go-next', 'pagination\_\_ellipsis--right' are removed     |
+| pagination\_\_link                                     | Applied to the child element of the child element pagination\_\_item                  | -                                                                                                                                       |

@@ -1,6 +1,6 @@
-@use '@uqds/core/src/scss/global' as core;
+@use "@uqds/core/src/scss/global" as core;
 @use "@uqds/icon/src/scss/global" as icon-constants;
-@import 'global';
+@import "global";
 
 // Breadcrumb
 .uq-breadcrumb {
@@ -14,10 +14,12 @@
   margin: core.$space-none;
   padding: core.$space-none;
 
-  *, *::before, *::after {
+  *,
+  *::before,
+  *::after {
     box-sizing: border-box;
   }
-  
+
   // Breadcrumb item
   &__item {
     display: inline;
@@ -25,17 +27,20 @@
     margin: core.$space-none;
 
     &::before {
-      content: '';
+      content: "";
       margin: core.$space-xs core.$space-s;
       padding: core.$space-s core.$space-s;
-      background-image: url(icon-constants.get-icon('standard--arrow-right-1', core.$uq-neutral-dark60));
+      background-image: url(icon-constants.get-icon(
+        "standard--arrow-right-1",
+        core.$uq-neutral-dark60
+      ));
       background-repeat: no-repeat;
       float: left;
     }
 
     &:first-child {
       &::before {
-        content: '';
+        content: "";
         display: none;
       }
     }

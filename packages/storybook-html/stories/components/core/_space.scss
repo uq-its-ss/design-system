@@ -1,0 +1,120 @@
+@use "@uqds/core/src/scss/global" as *;
+
+.uqds-space {
+  background-color: rgba($uq-black, 0.75);
+  width: $space-m;
+  height: $space-m;
+}
+
+.uqds-space-xs {
+  width: $space-xs;
+  height: $space-xs;
+}
+
+.uqds-space-sm {
+  width: $space-s;
+  height: $space-s;
+}
+
+.uqds-space-md {
+  width: $space-m;
+  height: $space-m;
+}
+
+.uqds-space-lg {
+  width: $space-l;
+  height: $space-l;
+}
+
+.uqds-space-xl {
+  width: $space-xl;
+  height: $space-xl;
+}
+
+.uqds-space-xxl {
+  width: $space-xxl;
+  height: $space-xxl;
+}
+
+.uqds-space-xxxl {
+  width: $space-xxxl;
+  height: $space-xxxl;
+}
+
+.uqds-space-xxxxl {
+  width: $space-xxxxl;
+  height: $space-xxxxl;
+}
+
+.uqds-space-ul {
+  width: $space-ul;
+  height: $space-ul;
+}
+
+.uqds-space-uul {
+  width: $space-uul;
+  height: $space-uul;
+}
+
+.uqds-space-uuul {
+  width: $space-uuul;
+  height: $space-uuul;
+}
+
+.uqds-space-uuuul {
+  width: $space-uuuul;
+  height: $space-uuuul;
+}
+
+/* Container example */
+.uqds-container {
+  background-color: rgba($uq-black, 0.75);
+  display: inline-block;
+}
+
+.uqds-container-space {
+  padding: $space-m;
+}
+
+.uqds-container-space-lg {
+  padding: $space-l;
+}
+
+/* compressed container */
+.uqds-compressed-space-lg {
+  padding: $space-compressed-l $space-l;
+}
+
+/* Stretched container */
+.uqds-stretched-space {
+  padding: $space-stretched $space-m;
+}
+
+/* Stacked */
+.uqds-container .uqds-stacked-space {
+  margin-top: $space-m;
+}
+
+.uqds-container .uqds-stacked-space-xs {
+  margin-top: $space-xs;
+}
+
+.uqds-container .uqds-stacked-space-lg {
+  margin-top: $space-l;
+}
+
+/* inlinec */
+.uqds-container .uqds-inline-space {
+  margin-right: $space-m;
+  display: inline;
+}
+
+.uqds-container .uqds-inline-space-xs {
+  margin-right: $space-xs;
+  display: inline;
+}
+
+.uqds-container .uqds-inline-space-lg {
+  margin-right: $space-l;
+  display: inline;
+}

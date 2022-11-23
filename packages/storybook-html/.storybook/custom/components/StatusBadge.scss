@@ -1,4 +1,4 @@
-@use '@uqds/core/src/scss/_global' as core;
+@use "@uqds/core/src/scss/_global" as core;
 
 .uqds-status-badge {
   box-sizing: border-box;
@@ -10,8 +10,8 @@
   font-size: core.$font-size-s;
   line-height: core.$line-height-ui;
   margin-left: -(core.$space-xs);
-  margin-right: core.$space;
-  padding: core.$space-s core.$space;
+  margin-right: core.$space-m;
+  padding: core.$space-s core.$space-m;
   vertical-align: baseline;
 
   // Status tags for Documentation
@@ -51,8 +51,8 @@
     display: inline-block;
     font-size: core.$font-size-s;
     line-height: core.$line-height-ui;
-    margin-bottom: core.$space-m;
-    margin-right: core.$space-m;
+    margin-bottom: core.$space-l;
+    margin-right: core.$space-l;
     white-space: nowrap;
     vertical-align: baseline;
   }

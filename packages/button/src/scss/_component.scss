@@ -1,5 +1,5 @@
-@use '@uqds/core/src/scss/global' as core;
-@use 'global' as *;
+@use "@uqds/core/src/scss/global" as core;
+@use "global" as *;
 
 /* button Default */
 .uq-button {
@@ -14,17 +14,20 @@
   font-size: core.$font-size;
   font-weight: normal;
   line-height: normal;
-  padding: core.$space-s core.$space-m;
+  padding: core.$space-s core.$space-l;
   position: relative;
   text-align: center;
   text-decoration: none;
   transition: all 300ms ease-out;
-  
-  *, *::before, *::after {
+
+  *,
+  *::before,
+  *::after {
     box-sizing: border-box;
   }
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     background-color: $button-bg-hover-color;
     border-color: $button-border-hover-color;
     color: $button-hover-color;
@@ -36,7 +39,8 @@
     border-color: $button-bg-color;
     color: $button-bg-color;
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       background-color: $button-bg-hover-color;
       border-color: $button-bg-hover-color;
       color: $button-color;
@@ -48,7 +52,8 @@
     border-color: transparent;
     color: $button-bg-color;
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       background-color: transparent;
       border-color: transparent;
       color: $button-bg-hover-color;
@@ -61,7 +66,8 @@
     border-color: $button-secondary-border-color;
     color: $button-secondary-color;
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       background-color: $button-secondary-bg-hover-color;
       border-color: $button-secondary-border-hover-color;
       color: $button-secondary-hover-color;
@@ -72,7 +78,8 @@
       border-color: $button-secondary-bg-color;
       color: $button-secondary-color;
 
-      &:hover, &:focus {
+      &:hover,
+      &:focus {
         background-color: $button-secondary-bg-hover-color;
         border-color: $button-secondary-bg-hover-color;
         color: $button-secondary-color;
@@ -81,7 +88,8 @@
       &.uq-button--light {
         color: $button-secondary-bg-color;
 
-        &:hover, &:focus {
+        &:hover,
+        &:focus {
           color: $button-secondary-color;
         }
       }
@@ -91,8 +99,9 @@
       background-color: transparent;
       border-color: transparent;
       color: $button-secondary-color;
-  
-      &:hover, &:focus {
+
+      &:hover,
+      &:focus {
         background-color: transparent;
         border-color: transparent;
         color: $button-secondary-hover-color;
@@ -101,7 +110,8 @@
       &.uq-button--light {
         color: $button-secondary-bg-color;
 
-        &:hover, &:focus {
+        &:hover,
+        &:focus {
           color: $button-secondary-bg-hover-color;
         }
       }
@@ -114,7 +124,8 @@
     border-color: $button-purple-border-color;
     color: $button-purple-color;
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       background-color: $button-purple-bg-hover-color;
       border-color: $button-purple-border-hover-color;
       color: $button-purple-hover-color;
@@ -125,7 +136,8 @@
       border-color: $button-purple-bg-color;
       color: $button-purple-bg-color;
 
-      &:hover, &:focus {
+      &:hover,
+      &:focus {
         background-color: $button-purple-bg-hover-color;
         border-color: $button-purple-bg-hover-color;
         color: $button-purple-color;
@@ -134,7 +146,8 @@
       &.uq-button--light {
         color: $button-purple-bg-color;
 
-        &:hover, &:focus {
+        &:hover,
+        &:focus {
           color: $button-purple-color;
         }
       }
@@ -144,8 +157,9 @@
       background-color: transparent;
       border-color: transparent;
       color: $button-purple-bg-color;
-  
-      &:hover, &:focus {
+
+      &:hover,
+      &:focus {
         background-color: transparent;
         border-color: transparent;
         color: $button-purple-bg-hover-color;
@@ -154,7 +168,8 @@
       &.uq-button--light {
         color: $button-purple-bg-color;
 
-        &:hover, &:focus {
+        &:hover,
+        &:focus {
           color: $button-purple-bg-hover-color;
         }
       }
@@ -169,12 +184,12 @@
 
   &--small {
     font-size: core.$font-size-s;
-    padding: core.$space-s core.$space;
+    padding: core.$space-s core.$space-m;
   }
 
   &--large {
     font-size: core.$font-size-m;
-    padding: core.$space core.$space-xl;
+    padding: core.$space-m core.$space-xxl;
   }
 
   &--expand {

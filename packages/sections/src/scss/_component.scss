@@ -1,7 +1,7 @@
 // Main component stylesheet
-@use '@uqds/core/src/scss/global' as core;
-@use '@uqds/grid/src/scss/global' as grid;
-@use 'global' as *;
+@use "@uqds/core/src/scss/global" as core;
+@use "@uqds/grid/src/scss/global" as grid;
+@use "global" as *;
 
 // Section
 // Used to contain content and provide padding, background, and width options.
@@ -16,8 +16,8 @@
 // .uq-section--padding-bottom-large - adds large bottom padding
 
 .uq-section {
-  padding-top: core.$space-xxxl; // 3.5rem
-  padding-bottom: core.$space-xxxl; // 3.5rem
+  padding-top: core.$space-xxxxl; // 3.5rem
+  padding-bottom: core.$space-xxxxl; // 3.5rem
   overflow: hidden;
 
   &__container {
@@ -33,15 +33,15 @@
   &__title {
     margin-top: core.$space-none;
   }
-  
+
   // Padding top large
   &--padding-top-large {
-    padding-top: core.$space-uuul; // 5.5rem
+    padding-top: core.$space-uuuul; // 5.5rem
   }
 
   // Paddiing bottom large
   &--padding-bottom-large {
-    padding-bottom: core.$space-uuul; // 5.5rem
+    padding-bottom: core.$space-uuuul; // 5.5rem
   }
 
   // Padding top none
@@ -61,16 +61,16 @@
 
   // Centers section header and content
   &--centered {
-    .uq-section__header, 
-    .uq-section__content{
+    .uq-section__header,
+    .uq-section__content {
       text-align: center;
     }
   }
 
   // Narrows the section header and content
   &--narrow {
-    .uq-section__header, 
-    .uq-section__content{
+    .uq-section__header,
+    .uq-section__content {
       @media #{core.$screen-xl-up} {
         @include grid.grid-col-padding;
         @include grid.grid-col-offset(2.25, 12);

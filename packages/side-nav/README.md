@@ -7,11 +7,13 @@
 ### Installation
 
 With Yarn:
+
 ```shell
 yarn add @uqds/side-nav
 ```
 
 With NPM:
+
 ```shell
 npm i @uqds/side-nav
 ```

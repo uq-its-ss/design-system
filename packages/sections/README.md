@@ -7,11 +7,13 @@
 ### Installation
 
 With Yarn:
+
 ```shell
 yarn add @uqds/sections
 ```
 
 With NPM:
+
 ```shell
 npm i @uqds/sections
 ```

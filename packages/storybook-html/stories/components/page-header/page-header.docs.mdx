@@ -1,0 +1,90 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
+
+<Meta title="Components/Page header/All" />
+
+# Page header
+
+<StatusBadge.Deprecated />
+
+The Page header component is used to display the page title or the breadcrumbs or a combination of both.
+The default background color is set to light grey to distinguish it from the page contents.
+
+<Canvas withSource="none">
+  <Story id="components-page-header--page-header" />
+</Canvas>
+
+### Page header default
+
+```html
+<div class="page__header">
+  <div class="uq-grid">
+    <div class="uq-grid__col uq-grid__col--6">
+      <h1 class="page__title">Page title</h1>
+    </div>
+  </div>
+</div>
+```
+
+### Page header default + Breadcrumb
+
+```html
+<div class="page__header">
+  <div class="uq-grid">
+    <div class="uq-grid__col uq-grid__col--6">
+      <h1 class="page__title">Page title</h1>
+
+      <ol
+        class="breadcrumb-trail"
+        itemscope=""
+        itemtype="https://schema.org/BreadcrumbList"
+      >
+        <li
+          class="breadcrumb breadcrumb--home"
+          itemprop="itemListElement"
+          itemscope=""
+          itemtype="https://schema.org/ListItem"
+        >
+          <a
+            title="Home"
+            href="/"
+            class="breadcrumb__link breadcrumb__link--home"
+          >
+            <span class="icon icon-uq-home"></span>
+          </a>
+          <meta itemprop="position" content="1" />
+        </li>
+        <li
+          class="breadcrumb"
+          itemprop="itemListElement"
+          itemscope=""
+          itemtype="https://schema.org/ListItem"
+        >
+          <a
+            class="breadcrumb__link"
+            itemprop="item"
+            href="/information-and-services"
+            >Information and services</a
+          >
+          <meta itemprop="position" content="2" />
+        </li>
+        <li
+          class="breadcrumb"
+          itemprop="itemListElement"
+          itemscope=""
+          itemtype="https://schema.org/ListItem"
+        >
+          <a
+            class="breadcrumb__link"
+            itemprop="item"
+            href="/information-and-services/human-resources"
+            title=""
+            >Human resources</a
+          >
+          <meta itemprop="position" content="3" />
+        </li>
+      </ol>
+    </div>
+  </div>
+</div>
+```

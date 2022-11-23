@@ -1,0 +1,101 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
+
+# UQ Maps: search combo menu
+
+<StatusBadge.Development />
+
+Enables the user to search for _and_ browse points of interest and categories.
+By design, the first child of this component root is the _search field_.
+
+## 4A. Initial state
+
+Visually, it looks identical to a _search field_ by itself.
+
+### Basic usage
+
+<Canvas withSource="open" withToolbar>
+  <Story height={100} id="deliverables-uq-maps-4-search-combo-menu--initial" />
+</Canvas>
+
+## 4B. On focus or selecting origin/destination
+
+When the focus is on the search field, the search combo box expands to fill the
+available height and width of its parent container—on mobile, this should be the
+full screen. Meanwhile, the search field should not have changed position on the
+screen at all.
+
+### Basic usage
+
+Some POI and/or category items should be suggested before the user enters any
+text. The following example shows an alphabetical list of categories. However,
+we should show some data-driven POI's/categories instead.
+
+<Canvas withSource="open" withToolbar>
+  <Story height={800} id="deliverables-uq-maps-4-search-combo-menu--focused" />
+</Canvas>
+
+## 4C. With search value
+
+### Basic usage
+
+<Canvas withSource="open" withToolbar>
+  <Story
+    height={800}
+    id="deliverables-uq-maps-4-search-combo-menu--searching"
+  />
+</Canvas>
+
+## 4D. With search value but no results
+
+### Basic usage
+
+<Canvas withSource="open" withToolbar>
+  <Story
+    height={155}
+    id="deliverables-uq-maps-4-search-combo-menu--searching-no-results"
+  />
+</Canvas>
+
+## 4E. With search value but with search error
+
+### Basic usage
+
+<Canvas withSource="open" withToolbar>
+  <Story
+    height={176}
+    id="deliverables-uq-maps-4-search-combo-menu--searching-error"
+  />
+</Canvas>
+
+## 4F. With search value AND category item opened
+
+The search term is retained as is within the search field. Introduce a "view
+all on map" clickable list item and category title above the actual category
+list items.
+
+### Basic usage
+
+<Canvas withSource="open" withToolbar>
+  <Story
+    height={800}
+    id="deliverables-uq-maps-4-search-combo-menu--searching-in-category"
+  />
+</Canvas>
+
+## JavaScript UX enhancements
+
+### Sticky search field
+
+<div class="alert alert--warning" role="alert">
+  <div class="alert__message">
+    Note:{" "}
+    <strong>
+      there's currently no reliable way to make the search field "sticky"
+    </strong>{" "}
+    (remain at the top even when scrolling)—with the first search result
+    initially positioned relative to the search field's height—
+    <strong>using CSS and HTML alone</strong>. Implement a JavaScript solution to
+    this problem to improve the user experience. Watch this space for a working demo.
+  </div>
+</div>

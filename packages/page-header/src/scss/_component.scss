@@ -1,15 +1,15 @@
-@use '@uqds/core/src/scss/_global' as core;
-@use 'global' as *;
+@use "@uqds/core/src/scss/_global" as core;
+@use "global" as *;
 
 // Page Header: Block of background colour with padding around content ususally the page title along with the breadcrumb.
 
 .page {
   &__header {
-    padding: core.$space-m; //1.8rem;
-    margin-bottom: core.$space-m;
+    padding: core.$space-l; //1.8rem;
+    margin-bottom: core.$space-l;
     background: $page-header-shaded-bg;
   }
-  
+
   &__title {
     font-size: core.$font-size-xxxl;
   }

@@ -1,51 +1,51 @@
-@use '@uqds/core/src/scss/_global' as core;
+@use "@uqds/core/src/scss/_global" as core;
 
 $pane-border: core.$uq-neutral-light60; //eee;
 $pane-shaded-bg: core.$uq-neutral-light80; //f5f5f5;
 $pane-title-color: core.$uq-purple;
 
 @mixin pane-shaded {
-    background: $pane-shaded-bg;
-  }
-  
-  @mixin pane-white {
-    background: core.$uq-white;
-  }
-  
-  @mixin pane-outline {
-    border: 2px solid $pane-border;
-  }
-  
-  @mixin pane-ruled {
-    border-bottom: 2px solid $pane-border;
-    border-top: 2px solid $pane-border;
-  }
-  
-  @mixin pane-vertical-spacing {
-    margin: core.$space-l core.$space-none;
-  }
-  
-  @mixin pane-dark-tint {
+  background: $pane-shaded-bg;
+}
+
+@mixin pane-white {
+  background: core.$uq-white;
+}
+
+@mixin pane-outline {
+  border: 2px solid $pane-border;
+}
+
+@mixin pane-ruled {
+  border-bottom: 2px solid $pane-border;
+  border-top: 2px solid $pane-border;
+}
+
+@mixin pane-vertical-spacing {
+  margin: core.$space-xl core.$space-none;
+}
+
+@mixin pane-dark-tint {
+  @extend %light-palette;
+  background-color: core.$uq-black;
+  background-color: rgba(core.$uq-black, 0.65);
+
+  .uq-pane__title {
     @extend %light-palette;
-    background-color: core.$uq-black;
-    background-color: rgba(core.$uq-black, .65);
-  
-    .uq-pane__title {
-        @extend %light-palette;
+  }
+}
+
+@mixin pane-has-footer {
+  padding: core.$space-none;
+
+  .uq-pane {
+    &__content {
+      padding: core.$space-l core.$space-l core.$space-m core.$space-l; //1.8rem 1.8rem 1rem 1.8rem
+    }
+
+    &__footer {
+      background-color: $pane-shaded-bg;
+      padding: core.$space-l; //1.8rem;
     }
   }
-  
-  @mixin pane-has-footer {
-    padding: core.$space-none;
-  
-    .uq-pane {
-        &__content {
-            padding: core.$space-m core.$space-m core.$space core.$space-m; //1.8rem 1.8rem 1rem 1.8rem
-        }
-  
-        &__footer {
-            background-color: $pane-shaded-bg;
-            padding: core.$space-m; //1.8rem;
-        }
-    }
-  }
+}

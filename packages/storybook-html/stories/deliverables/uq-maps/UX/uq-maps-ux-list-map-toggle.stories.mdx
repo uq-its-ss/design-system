@@ -1,0 +1,125 @@
+import { Meta } from "@storybook/addon-docs";
+import MermaidDisplay from "../../../../.storybook/custom/components/MermaidDisplay";
+import { mobileA, desktopA } from "./uq-maps-ux-list-map-toggle.mermaid";
+
+<Meta title="Deliverables/UQ Maps/UX models/Browsing POI's using list & map views" />
+
+# Browsing POI's using list & map views
+
+## Goal: browsing POIs _within a category_ using list & map views
+
+E.g. as a student, I want to decide what to purchase for lunch on the St. Lucia
+campus
+
+### Mobile task flow
+
+Emboldened paths represent the proposed flow to achieve the above goal. Related
+component examples are indicated using the 🧩 icon.
+
+<div className="uq-grid uq-grid--full-width">
+  <div className="uq-grid__col uq-grid__col--6 uq-grid__col--md-8 uq-grid__col--xl-9">
+    <MermaidDisplay graph={mobileA} svgId="flow1" />
+  </div>
+  <div className="uq-grid__col uq-grid__col--6 uq-grid__col--md-8 uq-grid__col--xl-3">
+    <table className="uq-table">
+      <tbody>
+        <thead>
+          <tr>
+            <th>* Comments/details</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <b>
+                This flow can be started with any map state. Thoughtout this
+                flow, the marker state of the map will be altered, and therefore
+                take the place of the START map state (changes indicated by
+                🗺🔄).
+              </b>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              The search query doesn't get modified upon selection of a search
+              result. This behaviour is experimental and might feel "weird" at
+              first.
+            </td>
+          </tr>
+          <tr>
+            <td>
+              To keep things consistent, for categories where all entries appear
+              the same in the list (e.g. "Bike racks"), we should give those
+              entries more useful names. E.g. "Bike racks - Forgan Smith
+              North-Entrance."
+            </td>
+          </tr>
+          <tr>
+            <td>
+              When a user selects "View all in map" within a category, not only
+              are the POI markers visible but there should also be a details
+              panel open with the title of the category displayed.
+            </td>
+          </tr>
+          <tr>
+            <td>
+              When a user selects a POI marker, there should be a details panel
+              open which enables a user to navigate to/from POI, view more
+              details, and share the POI location.
+            </td>
+          </tr>
+        </tbody>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+### Desktop/laptop task flow
+
+Emboldened paths represent the proposed flow to achieve the above goal.
+
+<div className="uq-grid uq-grid--full-width">
+  <div className="uq-grid__col uq-grid__col--6 uq-grid__col--md-8 uq-grid__col--xl-9">
+    <MermaidDisplay graph={desktopA} svgId="flow2" />
+  </div>
+  <div className="uq-grid__col uq-grid__col--6 uq-grid__col--md-8 uq-grid__col--xl-3">
+    <table className="uq-table">
+      <tbody>
+        <thead>
+          <tr>
+            <th>* Comments/details</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <b>
+                This flow can be started with any map state. Thoughtout this
+                flow, the marker state of the map will be altered, and therefore
+                take the place of the START map state (changes indicated by
+                🗺🔄).
+              </b>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              There are currently no desktop specific component, or layout
+              examples yet. However, a lot can be inferred by using the
+              mobile-centric examples. The biggest difference between the mobile
+              and desktop experiences is that the search field/results are
+              displayed side-by-side with the map.
+            </td>
+          </tr>
+          <tr>
+            <td>
+              On desktop, if the user selects a category list item from a list
+              of search results, the category POIs should be highlighted on the
+              always visible map. Therefore, a "view all on map" option does not
+              apply at this viewport size.
+            </td>
+          </tr>
+        </tbody>
+      </tbody>
+    </table>
+  </div>
+</div>

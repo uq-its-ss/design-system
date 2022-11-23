@@ -1,7 +1,7 @@
 @use "@uqds/core/src/scss/global" as core;
 @use "@uqds/grid/src/scss/global" as grid;
 @use "@uqds/icon/src/scss/global" as icon-constants;
-@use 'global' as *;
+@use "global" as *;
 
 .uq-site-header {
   color: core.$text;
@@ -10,8 +10,11 @@
   font-size: core.$font-size;
   font-weight: core.$font-weight-normal;
   line-height: core.$line-height;
+  border-bottom: 1px solid #e2e2e2;
 
-  *, *::before, *::after {
+  *,
+  *::before,
+  *::after {
     box-sizing: border-box;
   }
 
@@ -26,7 +29,7 @@
     flex-wrap: wrap;
     float: none;
     justify-content: space-between;
-    padding: .75rem core.$space-m;
+    padding: 0.75rem core.$space-compressed-xl;
     position: relative;
 
     &__right {
@@ -35,7 +38,7 @@
     }
 
     @media #{core.$screen-lg-up} {
-      padding: core.$space core.$space 0 core.$space;
+      padding: core.$space-m core.$space-m 0 core.$space-m;
     }
   }
 
@@ -45,7 +48,7 @@
     font-weight: $title-font-weight;
     margin: core.$space-none;
     text-decoration: none;
-  
+
     &:hover,
     &:focus {
       color: core.$uq-purple;
@@ -60,7 +63,7 @@
     cursor: pointer;
     height: 1.5rem;
     margin-bottom: core.$space-none;
-    margin-left: core.$space;
+    margin-left: core.$space-m;
     margin-right: core.$space-none;
     overflow: hidden;
     padding: core.$space-none;
@@ -79,9 +82,12 @@
     }
 
     &::before {
-      background-image: url(icon-constants.get-icon('standard--navigation-menu', core.$uq-purple));
+      background-image: url(icon-constants.get-icon(
+        "standard--navigation-menu",
+        core.$uq-purple
+      ));
       background-size: 100%;
-      content: '';
+      content: "";
       display: block;
       height: 1.5rem;
       left: 0;
@@ -92,7 +98,10 @@
 
     &--close {
       &::before {
-        background-image: url(icon-constants.get-icon('standard--close', core.$uq-purple));
+        background-image: url(icon-constants.get-icon(
+          "standard--close",
+          core.$uq-purple
+        ));
       }
     }
 
@@ -108,7 +117,7 @@
     position: relative;
 
     @media #{core.$screen-lg-up} {
-      //@include grid.layout-containment;
+      // @include grid.layout-containment;
       margin-left: auto;
       margin-right: auto;
       max-width: 73.25rem;
@@ -117,33 +126,33 @@
 
   &__navigation {
     a {
-      //border-bottom: 1px solid $nav-dropdown-divider;
+      // border-bottom: 1px solid $nav-dropdown-divider;
       color: core.$uq-purple;
       display: block;
-      padding: core.$space core.$space;
+      padding: core.$space-m core.$space-m;
       text-decoration: none;
-      transition: background-color .25s, border-color .25s;
+      transition: background-color 0.25s, border-color 0.25s;
 
       &:hover,
       &:focus {
-        //background-color: $nav-primary-active-bg;
+        // background-color: $nav-primary-active-bg;
         text-decoration: underline;
 
         @media #{core.$screen-lg-up} {
           outline: 0 none;
           text-decoration: none;
-          //border-color: $nav-primary-active-bg;
+          // border-color: $nav-primary-active-bg;
         }
       }
 
       @media #{core.$screen-lg-up} {
-        //border-bottom: 4px solid #fff;
+        // border-bottom: 4px solid #fff;
       }
     }
-    
+
     &__list-link {
       border-bottom: 4px solid transparent;
-    }  
+    }
 
     &__list {
       list-style-type: none;
@@ -156,7 +165,7 @@
 
         @media #{core.$screen-lg-up} {
           display: flex;
-    
+
           > li {
             display: inline-block;
           }
@@ -165,7 +174,7 @@
         &.uq-site-header__navigation__list--open {
           display: block;
           border-top: 1px solid $nav-dropdown-divider;
-    
+
           @media #{core.$screen-lg-up} {
             border-top: 0 none;
           }
@@ -184,12 +193,13 @@
         transform: translateY(-($nav-dropdown-animation-distance));
         box-shadow: 0 0.75rem 1.5rem rgb(24 24 24 / 20%);
         border-radius: 0 0 0.25rem 0.25rem;
-    
+
         @media #{core.$screen-lg-up} {
           position: absolute;
           width: $nav-dropdown-width;
-          transition: opacity .2s ease, transform .2s ease, visibility 0.2s ease;
-          padding: .5rem 0 1.5rem 0;
+          transition: opacity 0.2s ease, transform 0.2s ease,
+            visibility 0.2s ease;
+          padding: 0.5rem 0 1.5rem 0;
         }
 
         &.uq-site-header__navigation__list--open {
@@ -206,19 +216,19 @@
         }
 
         a {
-          //border-bottom: 1px solid $nav-dropdown-divider;
-          padding-left: core.$space-xxl;
-          padding-top: .75rem;
+          // border-bottom: 1px solid $nav-dropdown-divider;
+          padding-left: core.$space-xxxl;
+          padding-top: 0.75rem;
           padding-bottom: 0;
-    
+
           &:hover,
           &:focus {
             // background-color: $nav-dropdown-active-bg;
             text-decoration: underline;
           }
-    
+
           @media #{core.$screen-lg-up} {
-            padding-left: core.$space-m;
+            padding-left: core.$space-l;
           }
         }
       }
@@ -229,14 +239,20 @@
 
         &--open {
           > a {
-            //background-color: $nav-primary-active-bg;
+            // background-color: $nav-primary-active-bg;
           }
-  
+
           .uq-site-header__navigation__sub-toggle {
-            background-image: url(icon-constants.get-icon("standard--chevron-up-sml", core.$uq-purple));
+            background-image: url(icon-constants.get-icon(
+              "standard--chevron-up-sml",
+              core.$uq-purple
+            ));
 
             @media #{core.$screen-lg-up} {
-              background-image: url(icon-constants.get-icon("standard--chevron-down-sml", core.$uq-purple));
+              background-image: url(icon-constants.get-icon(
+                "standard--chevron-down-sml",
+                core.$uq-purple
+              ));
             }
           }
         }
@@ -244,7 +260,7 @@
         &--has-subnav {
           > a {
             @media #{core.$screen-lg-up} {
-              padding-right: core.$space-l;
+              padding-right: core.$space-xl;
             }
           }
         }
@@ -259,13 +275,12 @@
             }
           }
         }
-        
+
         &:hover {
           & .uq-site-header__navigation__list-link {
             border-bottom: 4px solid core.$uq-purple;
           }
         }
-
       }
     }
 
@@ -274,13 +289,16 @@
       top: 0;
       right: 0;
       display: block;
-      width: core.$space-xxl;
-      padding: core.$space-compressed-xxxl core.$space-m;
+      width: core.$space-xxxl;
+      padding: core.$space-compressed-xxxl core.$space-l;
       border: 0;
       border-left: 1px solid $nav-dropdown-divider;
       text-indent: -100vw;
-      background-image: url(icon-constants.get-icon("standard--chevron-down-sml", core.$uq-purple));
-      background-size: core.$space;
+      background-image: url(icon-constants.get-icon(
+        "standard--chevron-down-sml",
+        core.$uq-purple
+      ));
+      background-size: core.$space-m;
       background-position: center center;
       background-repeat: no-repeat;
       background-color: transparent;
@@ -288,10 +306,11 @@
       cursor: pointer;
 
       @media #{core.$screen-md-up} {
-        width: core.$space-l;
-        padding: core.$space-compressed-xxxl core.$space-m core.$space-compressed-xxxl core.$space-s;
+        width: core.$space-xl;
+        padding: core.$space-compressed-xxxl core.$space-l
+          core.$space-compressed-xxxl core.$space-s;
       }
-  
+
       @media #{core.$screen-lg-up} {
         border-left: 0;
 
@@ -302,17 +321,16 @@
     }
 
     // @media #{core.$screen-lg-up} {
-    //   margin: core.$space-none calc(#{nth(grid.$schema-md, 2) * 0.5} - #{core.$space-m});
+    //   margin: core.$space-none calc(#{nth(grid.$schema-md, 2) * 0.5} - #{core.$space-l});
     // }
 
     // @media #{core.$screen-xl-up} {
-    //   margin: core.$space-none calc(#{nth(grid.$schema-xl, 2) * 0.5} - #{core.$space-m});
+    //   margin: core.$space-none calc(#{nth(grid.$schema-xl, 2) * 0.5} - #{core.$space-l});
     // }
   }
 
   &--no-site-title {
     .uq-site-header__title-container {
-
       justify-content: flex-end;
 
       @media #{core.$screen-lg-up} {
@@ -323,29 +341,32 @@
   }
 }
 
-
-// Temp fix for Button bug in menus 
+// Temp fix for Button bug in menus - to be fully integrated
 .uq-site-header__navigation__sub-toggle {
   display: none;
 }
 
-.uq-site-header__navigation__list-item--has-subnav .uq-site-header__navigation__list-link::after {
-content:'';
-position: absolute;
-top: 0;
-right: 0;
-display: block;
-width: core.$space-xl;
-padding: core.$space-compressed-xxxl core.$space;
-border: 0;
-text-indent: -100vw;
-background-image: url(icon-constants.get-icon("standard--chevron-down-sml", core.$uq-purple));
-background-size: core.$space;
-background-position: center center;
-background-repeat: no-repeat;
-background-color: transparent;
-overflow: hidden;
-cursor: pointer;
+.uq-site-header__navigation__list-item--has-subnav
+  .uq-site-header__navigation__list-link::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  width: core.$space-xxl;
+  padding: core.$space-compressed-xxxl core.$space-m;
+  border: 0;
+  text-indent: -100vw;
+  background-image: url(icon-constants.get-icon(
+    "standard--chevron-down-sml",
+    core.$uq-purple
+  ));
+  background-size: core.$space-m;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  overflow: hidden;
+  cursor: pointer;
 }
 
 .uq-site-header__navigation .uq-site-header__navigation__list-link:focus {

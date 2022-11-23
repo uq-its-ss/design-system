@@ -1,8 +1,8 @@
-@use '@uqds/core/src/scss/global' as core;
-@use 'global' as *;
+@use "@uqds/core/src/scss/global" as core;
+@use "global" as *;
 
 // Panes: Blocks of colour with padding around content.
-//
+
 // Variants:
 // .uq-pane--shaded - Adds grey background.
 // .uq-pane--white - Adds white background.
@@ -11,7 +11,7 @@
 // .uq-pane--vertical-spacing - Adds top and bottom margin to offset panes inline with other content.
 // .uq-pane--dark-tint - Adds semi-transparent black background.
 // .uq-pane--has-footer - Minor adjustments to markup allow a shaded footer to be added within pane.
-//
+
 // .uq-pane-grid--shaded - Adds grey background to all child panes.
 // .uq-pane-grid--white - Adds white background to all child panes.
 // .uq-pane-grid--outline - Adds thin border on all sides to all child panes.
@@ -21,8 +21,8 @@
 
 %pane,
 .uq-pane {
-  padding: core.$space-m; //1.8rem;
-  margin-bottom: core.$space-m; //1.5rem;
+  padding: core.$space-l; // 1.8rem;
+  margin-bottom: core.$space-l; // 1.5rem;
 
   &--shaded {
     @include pane-shaded;
@@ -77,7 +77,7 @@
 
   // if sub-title exists reduce margin to pull it close to title
   &__title + &__sub-title {
-    margin-top: -(core.$space);
+    margin-top: -(core.$space-m);
   }
 }
 
@@ -128,7 +128,7 @@
 
     .uq-pane__footer {
       background-color: core.$uq-black;
-      background-color: rgba(core.$uq-black, .3);
+      background-color: rgba(core.$uq-black, 0.3);
     }
   }
 }

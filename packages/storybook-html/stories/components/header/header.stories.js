@@ -1,4 +1,5 @@
 import { useEffect } from "@storybook/addons";
+import { config } from "storybook-addon-designs";
 
 // import styles
 import "./header.scss";
@@ -80,6 +81,20 @@ export const HeaderInterim = () => {
   });
   return HeaderInterimHTML;
 };
+HeaderInterim.parameters = {
+  design: config([
+    {
+      name: "Desktop",
+      type: "figma",
+      url: "https://www.figma.com/file/Li7SZkmaLgw8ZdiHje2q7x/One-uq-component-library?node-id=3853%3A2229&t=6wVnOG9FYXS4fXI8-4",
+    },
+    {
+      name: "Mobile",
+      type: "figma",
+      url: "https://www.figma.com/file/Li7SZkmaLgw8ZdiHje2q7x/One-uq-component-library?node-id=3853%3A2232&t=6wVnOG9FYXS4fXI8-4",
+    },
+  ]),
+};
 
 HeaderInterim.storyName = "Header interim";
 
@@ -130,6 +145,13 @@ export const Header = () => {
     });
   });
   return HeaderHTML;
+};
+Header.parameters = {
+  design:  config({
+    type: "figma",
+    url: "https://www.figma.com/file/Li7SZkmaLgw8ZdiHje2q7x/One-uq-component-library?node-id=3853%3A2229&t=6wVnOG9FYXS4fXI8-4",
+    allowFullscreen: true,
+  }),
 };
 
 Header.storyName = "Header with mega menu";

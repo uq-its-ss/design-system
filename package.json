@@ -33,7 +33,7 @@
     "lerna": "^6.4.0",
     "msw": "^0.44.2",
     "prettier": "2.7.1",
-    "puppeteer": "^17.1.3",
+    "puppeteer": "^19.5.2",
     "reg-keygen-git-hash-plugin": "^0.12.1",
     "reg-notify-github-with-api-plugin": "^0.12.1",
     "reg-publish-s3-plugin": "^0.12.1",

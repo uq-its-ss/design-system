@@ -40,7 +40,7 @@ $icon-text-filter: core.$filter-text;
 @mixin icon($name) {
   .uq-icon--#{$name} {
     &::before {
-      background-image: url(get-icon('#{$name}'));
+      background-image: url(get-icon("#{$name}"));
     }
   }
 }

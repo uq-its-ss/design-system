@@ -88,7 +88,7 @@
     -webkit-animation-timing-function: linear;
     animation-timing-function: linear;
   }
-  to {
+  100% {
     transform: rotate(7turn);
   }
 }
@@ -126,7 +126,7 @@
     -webkit-animation-timing-function: linear;
     animation-timing-function: linear;
   }
-  to {
+  100% {
     transform: rotate(7turn);
   }
 }
@@ -147,7 +147,7 @@
   64.71% {
     border-bottom-color: currentColor;
   }
-  to {
+  100% {
     border-left-color: currentColor;
     border-bottom-color: currentColor;
     transform: rotate(225deg);
@@ -170,7 +170,7 @@
   64.71% {
     border-bottom-color: currentColor;
   }
-  to {
+  100% {
     border-left-color: currentColor;
     border-bottom-color: currentColor;
     transform: rotate(225deg);

@@ -63,7 +63,7 @@
         n("object" == typeof self && self) ||
         n("object" == typeof e && e) ||
         Function("return this")();
-    }.call(this, n(32)));
+    }).call(this, n(32));
   },
   function (t, e) {
     t.exports = function (t) {

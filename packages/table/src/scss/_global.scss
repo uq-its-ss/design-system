@@ -42,9 +42,9 @@
       core.$uq-white,
       rgba(255, 255, 255, 0)
     ),
-    linear-gradient(right, core.$uq-white, rgba(255, 255, 255, 0)),
-    linear-gradient(left, core.$uq-neutral, rgba(195, 195, 197, 0)),
-    linear-gradient(right, core.$uq-neutral, rgba(195, 195, 197, 0));
+    linear-gradient(to left, core.$uq-white, rgba(255, 255, 255, 0)),
+    linear-gradient(to right, core.$uq-neutral, rgba(195, 195, 197, 0)),
+    linear-gradient(to left, core.$uq-neutral, rgba(195, 195, 197, 0));
   background-position: 0 0, 100% 0, 0 0, 100% 0;
   background-repeat: no-repeat;
   background-color: core.$uq-white;

@@ -243,7 +243,7 @@
     @media #{core.$screen-lg-up} {
       display: flex;
       flex-wrap: wrap;
-      justify-content: start;
+      justify-content: flex-start;
       flex-direction: row;
       margin: core.$space-none;
       padding: core.$space-none;

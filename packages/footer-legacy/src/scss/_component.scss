@@ -36,7 +36,7 @@
     border-bottom: 1px solid rgba(core.$uq-white, 0.3);
     color: $site-footer-color;
     font-family: core.$merriweather;
-    font-size: core.$font-size;
+    font-size: core.$font-size-m;
     font-style: italic;
     font-weight: core.$font-weight-normal;
     line-height: core.$line-height;
@@ -44,7 +44,7 @@
     padding: core.$space-none core.$space-none core.$space-xl;
 
     @media #{core.$screen-md-up} {
-      font-size: core.$font-size-m;
+      font-size: core.$font-size-l;
     }
 
     &__link {

@@ -189,7 +189,7 @@
     &-title {
       color: core.$uq-white;
       font-family: core.$merriweather;
-      font-size: core.$font-size;
+      font-size: core.$font-size-m;
       font-style: italic;
       font-weight: core.$font-weight-normal;
       margin-bottom: form.$form-spacing;
@@ -203,7 +203,7 @@
       }
 
       @media #{core.$screen-xl-up} {
-        font-size: core.$font-size-l;
+        font-size: core.$font-size-xl;
       }
     }
 
@@ -303,7 +303,7 @@
         border-radius: 2px;
         box-shadow: none;
         font-family: sans-serif;
-        font-size: core.$font-size;
+        font-size: core.$font-size-m;
         line-height: 1;
         color: core.$uq-neutral-dark80;
         height: auto;
@@ -322,7 +322,7 @@
         border: 2px solid transparent;
         color: core.$uq-purple;
         display: inline-block;
-        font-size: core.$font-size;
+        font-size: core.$font-size-m;
         height: 2.75rem;
         line-height: core.$line-height;
         margin-bottom: core.$space-none;
@@ -370,7 +370,7 @@
         z-index: 3;
         cursor: pointer;
         outline-offset: -2px;
-        font-size: core.$font-size;
+        font-size: core.$font-size-m;
       }
     }
   }

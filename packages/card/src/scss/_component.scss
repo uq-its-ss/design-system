@@ -95,12 +95,12 @@
   }
 
   &__title {
-    font-size: core.$font-size-l;
+    font-size: core.$font-size-xl;
     color: core.$uq-neutral-dark80;
     margin: core.$space-none core.$space-none core.$space-s;
 
     @media #{core.$screen-md-up} {
-      font-size: core.$font-size-xl;
+      font-size: core.$font-size-xxl;
     }
 
     &-super {
@@ -111,7 +111,7 @@
       margin: core.$space-none core.$space-none core.$space-s;
 
       @media #{core.$screen-md-up} {
-        font-size: core.$font-size;
+        font-size: core.$font-size-m;
       }
 
       &--grey {

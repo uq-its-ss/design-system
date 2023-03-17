@@ -644,6 +644,10 @@ export default [
     category: "other",
   },
   {
+    name: "peer-assessed",
+    category: "other",
+  },
+  {
     name: "phone-action-information",
     category: "other",
   },

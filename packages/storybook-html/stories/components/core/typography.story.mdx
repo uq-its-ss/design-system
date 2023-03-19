@@ -30,11 +30,6 @@ export const Fonts = () => `
       <td>For headings and paragraph text</td>
     </tr>
     <tr>
-      <td><div class="uqds-font uqds-font--merriweather uqds-font--italic">Merriweather</div></td>
-      <td><div class="uqds-font uqds-font--merriweather uqds-font--italic">Regular (400) Italic</div></td>
-      <td>For blockquotes and testimonials</td>
-    </tr>
-    <tr>
       <td><div class="uqds-font uqds-font--montserrat uqds-font--500">Montserrat</div></td>
       <td><div class="uqds-font uqds-font--montserrat uqds-font--500">Medium (500)</div></td>
       <td>For the main page heading</td>
@@ -56,11 +51,6 @@ Copy the HTML or CSS below and paste it into your project to load design system 
   rel="stylesheet"
   type="text/css"
   href="https://static.uq.net.au/v15/fonts/Roboto/roboto.css"
-/>
-<link
-  rel="stylesheet"
-  type="text/css"
-  href="https://static.uq.net.au/v15/fonts/Merriweather/merriweather.css"
 />
 <link
   rel="stylesheet"
@@ -87,12 +77,6 @@ find any of the fonts in the list.
 
 ```css
 font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
-```
-
-**Merriweather**
-
-```css
-font-family: Merriweather, Georgia, serif;
 ```
 
 **Montserrat**
@@ -320,7 +304,7 @@ export const Styles = () => `
     </tr>
     <tr className="uqds-table__row">
       <td className="uqds-table__item">Blockquote</td>
-      <td className="uqds-table__item" data-title="Font:">Merriweather</td>
+      <td className="uqds-table__item" data-title="Font:">Roboto</td>
       <td className="uqds-table__item" data-title="Weight:">Regular italic, 400</td>
       <td className="uqds-table__item" data-title="Size:">$font-size-l</td>
       <td className="uqds-table__item" data-title="Line-height:">1.5</td>

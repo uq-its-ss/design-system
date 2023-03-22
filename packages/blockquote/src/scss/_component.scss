@@ -3,6 +3,10 @@
 .blockquote {
   border: none;
   color: core.$uq-purple;
+  font-family: core.$font-body;
+  font-size: core.$font-size;
+  font-weight: core.$font-weight-normal;
+  line-height: core.$line-height;
   font-style: italic;
   height: auto;
   margin-left: core.$space-xl;
@@ -44,6 +48,7 @@
     font-size: core.$font-size-l;
     font-weight: 300;
     line-height: 1.4;
+    margin: core.$space-none core.$space-none  core.$space-l;
     margin-left: core.$space-none;
     padding-left: core.$space-none;
     border-left: none;

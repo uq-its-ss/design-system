@@ -34,7 +34,7 @@
     padding: core.$space-xl core.$space-l;
     color: #d4c8de;
     font-weight: 400;
-    font-size: core.$font-size;
+    font-size: core.$font-size-m;
     line-height: 1.5;
     margin: auto;
 
@@ -114,7 +114,7 @@
 
   &__navigation-title {
     color: #d4c8de;
-    font-size: core.$font-size;
+    font-size: core.$font-size-m;
     font-weight: 500;
     margin: core.$space-none;
   }
@@ -298,7 +298,7 @@
   }
 
   &__meta-icons {
-    font-size: core.$font-size-xl;
+    font-size: core.$font-size-xxl;
 
     &::before {
       content: "";
@@ -412,7 +412,7 @@
       &__toggle {
         background-color: core.$uq-purple;
         color: core.$uq-white;
-        font-size: core.$font-size;
+        font-size: core.$font-size-m;
         padding-left: core.$space-l;
 
         &:hover {

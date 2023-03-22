@@ -30,11 +30,6 @@ export const Fonts = () => `
       <td>For headings and paragraph text</td>
     </tr>
     <tr>
-      <td><div class="uqds-font uqds-font--merriweather uqds-font--italic">Merriweather</div></td>
-      <td><div class="uqds-font uqds-font--merriweather uqds-font--italic">Regular (400) Italic</div></td>
-      <td>For blockquotes and testimonials</td>
-    </tr>
-    <tr>
       <td><div class="uqds-font uqds-font--montserrat uqds-font--500">Montserrat</div></td>
       <td><div class="uqds-font uqds-font--montserrat uqds-font--500">Medium (500)</div></td>
       <td>For the main page heading</td>
@@ -60,11 +55,6 @@ Copy the HTML or CSS below and paste it into your project to load design system 
 <link
   rel="stylesheet"
   type="text/css"
-  href="https://static.uq.net.au/v15/fonts/Merriweather/merriweather.css"
-/>
-<link
-  rel="stylesheet"
-  type="text/css"
   href="https://static.uq.net.au/v15/fonts/Montserrat/montserrat.css"
 />
 ```
@@ -73,7 +63,6 @@ Copy the HTML or CSS below and paste it into your project to load design system 
 
 ```css
 @import url("https://static.uq.net.au/v15/fonts/Roboto/roboto.css");
-@import url("https://static.uq.net.au/v15/fonts/Merriweather/merriweather.css");
 @import url("https://static.uq.net.au/v15/fonts/Montserrat/montserrat.css");
 ```
 
@@ -87,12 +76,6 @@ find any of the fonts in the list.
 
 ```css
 font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
-```
-
-**Merriweather**
-
-```css
-font-family: Merriweather, Georgia, serif;
 ```
 
 **Montserrat**
@@ -141,32 +124,32 @@ export const Sizes = () => `
     <tr>
       <td>16</td>
       <td>1</td>
-      <td><code>$font-size</code></td>
+      <td><code>$font-size-m</code></td>
     </tr>
     <tr>
       <td>18</td>
       <td>1.125</td>
-      <td><code>$font-size-m</code></td>
+      <td><code>$font-size-l</code></td>
     </tr>
     <tr>
       <td>20</td>
       <td>1.25</td>
-      <td><code>$font-size-l</code></td>
+      <td><code>$font-size-xl</code></td>
     </tr>
     <tr>
       <td>24</td>
       <td>1.5</td>
-      <td><code>$font-size-xl</code></td>
+      <td><code>$font-size-xxl</code></td>
     </tr>
     <tr>
       <td>32</td>
       <td>2</td>
-      <td><code>$font-size-xxl</code></td>
+      <td><code>$font-size-xxxl</code></td>
     </tr>
     <tr>
       <td>40</td>
       <td>2.5</td>
-      <td><code>$font-size-xxxl</code></td>
+      <td><code>$font-size-xxxxl</code></td>
     </tr>
   </tbody>
 </table>
@@ -196,7 +179,7 @@ export const Styles = () => `
       <td className="uqds-table__item">H1</td>
       <td className="uqds-table__item" data-title="Font:">Montserrat</td>
       <td className="uqds-table__item" data-title="Weight:">Medium, 500</td>
-      <td className="uqds-table__item" data-title="Size:">$font-size-xxxl</td>
+      <td className="uqds-table__item" data-title="Size:">$font-size-xxxxl</td>
       <td className="uqds-table__item" data-title="Line-height:">1.4</td> 
       <td className="uqds-table__item" data-title="Colour:">$uq-purple</td>
       <td className="uqds-table__item" data-title="Example"><h1>This is a H1 heading</h1></td> 
@@ -205,7 +188,7 @@ export const Styles = () => `
       <td className="uqds-table__item">H2</td>
       <td className="uqds-table__item" data-title="Font:">Roboto</td>
       <td className="uqds-table__item" data-title="Weight:">Medium, 500</td>
-      <td className="uqds-table__item" data-title="Size:">$font-size-xxl</td>
+      <td className="uqds-table__item" data-title="Size:">$font-size-xxxl</td>
       <td className="uqds-table__item" data-title="Line-height:">1.4</td>
       <td className="uqds-table__item" data-title="Colour:">$uq-purple</td>
       <td className="uqds-table__item" data-title="Example"><h2>This is a H2 heading</h2></td> 
@@ -214,7 +197,7 @@ export const Styles = () => `
       <td className="uqds-table__item">H3</td>
       <td className="uqds-table__item" data-title="Font:">Roboto</td>
       <td className="uqds-table__item" data-title="Weight:">Medium, 500</td>
-      <td className="uqds-table__item" data-title="Size:">$font-size-xl</td>
+      <td className="uqds-table__item" data-title="Size:">$font-size-xxl</td>
       <td className="uqds-table__item" data-title="Line-height:">1.4</td>
       <td className="uqds-table__item" data-title="Colour:">$uq-purple</td>
       <td className="uqds-table__item" data-title="Example"><h3>This is a H3 heading</h3></td> 
@@ -223,7 +206,7 @@ export const Styles = () => `
       <td className="uqds-table__item">H4</td>
       <td className="uqds-table__item" data-title="Font:">Roboto</td>
       <td className="uqds-table__item" data-title="Weight:">Medium, 500</td>
-      <td className="uqds-table__item" data-title="Size:">$font-size-l</td>
+      <td className="uqds-table__item" data-title="Size:">$font-size-xl</td>
       <td className="uqds-table__item" data-title="Line-height:">1.4</td>
       <td className="uqds-table__item" data-title="Colour:">$uq-purple</td>
       <td className="uqds-table__item" data-title="Example"><h4>This is a H4 heading</h4></td> 
@@ -232,7 +215,7 @@ export const Styles = () => `
       <td className="uqds-table__item">H5</td>
       <td className="uqds-table__item" data-title="Font:">Roboto</td>
       <td className="uqds-table__item" data-title="Weight:">Medium, 500</td>
-      <td className="uqds-table__item" data-title="Size:">$font-size-m</td>
+      <td className="uqds-table__item" data-title="Size:">$font-size-l</td>
       <td className="uqds-table__item" data-title="Line-height:">1.4</td>
       <td className="uqds-table__item" data-title="Colour:">$uq-purple</td>
       <td className="uqds-table__item" data-title="Example"><h5>This is a H5 heading</h5></td> 
@@ -241,7 +224,7 @@ export const Styles = () => `
       <td className="uqds-table__item">H6</td>
       <td className="uqds-table__item" data-title="Font:">Roboto</td>
       <td className="uqds-table__item" data-title="Weight:">Medium, 500</td>
-      <td className="uqds-table__item" data-title="Size:">$font-size</td>
+      <td className="uqds-table__item" data-title="Size:">$font-size-m</td>
       <td className="uqds-table__item" data-title="Line-height:">1.4</td>
       <td className="uqds-table__item" data-title="Colour:">$uq-purple</td>
       <td className="uqds-table__item" data-title="Example"><h6>This is a H6 heading</h6></td> 
@@ -259,7 +242,7 @@ export const Styles = () => `
       <td className="uqds-table__item">Paragraph</td>
       <td className="uqds-table__item" data-title="Font:">Roboto</td>
       <td className="uqds-table__item" data-title="Weight:">Regular, 400</td>
-      <td className="uqds-table__item" data-title="Size:">$font-size</td>
+      <td className="uqds-table__item" data-title="Size:">$font-size-m</td>
       <td className="uqds-table__item" data-title="Line-height:">1.5</td>
       <td className="uqds-table__item" data-title="Colour:">$text</td>
       <td className="uqds-table__item" data-title="Example"><p>This is paragraph text</p></td> 
@@ -286,7 +269,7 @@ export const Styles = () => `
       <td className="uqds-table__item">Link</td>
       <td className="uqds-table__item" data-title="Font:">Roboto</td>
       <td className="uqds-table__item" data-title="Weight:">Regular, 400</td>
-      <td className="uqds-table__item" data-title="Size:">$font-size</td>
+      <td className="uqds-table__item" data-title="Size:">$font-size-m</td>
       <td className="uqds-table__item" data-title="Line-height:">1.5</td>
       <td className="uqds-table__item" data-title="Colour:">$link</td>
       <td className="uqds-table__item" data-title="Example"><a href="">This is a link</a></td> 
@@ -295,7 +278,7 @@ export const Styles = () => `
       <td className="uqds-table__item">Ordered list</td>
       <td className="uqds-table__item" data-title="Font:">Roboto</td>
       <td className="uqds-table__item" data-title="Weight:">Regular, 400</td>
-      <td className="uqds-table__item" data-title="Size:">$font-size</td>
+      <td className="uqds-table__item" data-title="Size:">$font-size-m</td>
       <td className="uqds-table__item" data-title="Line-height:">1.5</td>
       <td className="uqds-table__item" data-title="Colour:">$text</td>
       <td className="uqds-table__item" data-title="Example"><ol><li>This is an ordered list item</li></ol></td> 
@@ -304,7 +287,7 @@ export const Styles = () => `
       <td className="uqds-table__item">Unordered list</td>
       <td className="uqds-table__item" data-title="Font:">Roboto</td>
       <td className="uqds-table__item" data-title="Weight:">Regular, 400</td>
-      <td className="uqds-table__item" data-title="Size:">$font-size</td>
+      <td className="uqds-table__item" data-title="Size:">$font-size-m</td>
       <td className="uqds-table__item" data-title="Line-height:">1.5</td>
       <td className="uqds-table__item" data-title="Colour:">$text</td>
       <td className="uqds-table__item" data-title="Example"><ul><li>This is an unordered list item</li></ul></td> 
@@ -320,7 +303,7 @@ export const Styles = () => `
     </tr>
     <tr className="uqds-table__row">
       <td className="uqds-table__item">Blockquote</td>
-      <td className="uqds-table__item" data-title="Font:">Merriweather</td>
+      <td className="uqds-table__item" data-title="Font:">Roboto</td>
       <td className="uqds-table__item" data-title="Weight:">Regular italic, 400</td>
       <td className="uqds-table__item" data-title="Size:">$font-size-l</td>
       <td className="uqds-table__item" data-title="Line-height:">1.5</td>

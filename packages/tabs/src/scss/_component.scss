@@ -43,7 +43,7 @@
     flex: 0 1 auto;
     padding: core.$space-m core.$space-l;
     margin-right: core.$space-xs;
-    font-size: core.$font-size;
+    font-size: core.$font-size-m;
     font-weight: core.$font-weight-thin;
     color: core.$uq-neutral-dark80;
     background-color: core.$uq-white;
@@ -57,7 +57,7 @@
     @media #{core.$screen-md-up} {
       padding: core.$space-l core.$space-xl;
       margin-right: core.$space-xs;
-      font-size: core.$font-size-m;
+      font-size: core.$font-size-l;
     }
 
     &:last-child {
@@ -96,7 +96,7 @@
   // tab panel
   &__tab-panel {
     padding: core.$space-m core.$space-l;
-    font-size: core.$font-size;
+    font-size: core.$font-size-m;
     color: core.$uq-neutral-dark80;
     background-color: core.$uq-white;
 

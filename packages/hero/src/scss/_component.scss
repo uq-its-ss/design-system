@@ -6,6 +6,10 @@
 .uq-hero {
   position: relative;
   background-color: #51247a;
+  font-family: core.$font-body;
+  font-size: core.$font-size;
+  font-weight: core.$font-weight-normal;
+  line-height: core.$line-height;
 
   &__content {
     @include grid.layout-containment;

@@ -211,3 +211,15 @@
 .height-non-equalised .uq-card {
   height: auto;
 }
+
+// This should be replaced with a component specfic class or removed and documented as a body package dependancy for usage with cards. 
+.text--link {
+  color: core.$link;
+  text-decoration: none;
+  transition: 0.2s color;
+
+  &:hover {
+    color: core.$link;
+    text-decoration: underline;
+  }
+}

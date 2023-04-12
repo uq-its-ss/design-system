@@ -4,6 +4,7 @@ import { useEffect } from "@storybook/addons";
 import header from "@uqds/header/src/js/header";
 import accordion from "@uqds/accordion/src/js/accordion";
 import siteHeaderNavigation from "@uqds/site-header/src/js/site-header-navigation";
+import breadcrumbCreate from "@uqds/breadcrumb/src/js/breadcrumb";
 
 // import HTML template strings
 import kitchenSinkHTML from "./kitchen-sink.html";
@@ -30,6 +31,9 @@ export const kitchenSink = () => {
 
     const headerkitch = document.querySelector(".uq-header");
     new header(headerkitch);
+
+    const breadcrumb = document.querySelector(".uq-breadcrumb");
+    new breadcrumbCreate(breadcrumb);
 
     document.addEventListener("DOMContentLoaded", function () {
       const menuLeftElem = document.getElementById("global-mobile-nav");

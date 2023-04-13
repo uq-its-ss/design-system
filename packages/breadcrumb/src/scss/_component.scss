@@ -27,7 +27,7 @@
   &__item {
     background-image: url(icon.get-icon(
       "standard--chevron-left-sml",
-      core.$uq-neutral-dark80
+      core.$uq-neutral-dark40
     ));
     background-position: left 0.2rem center;
     padding: 0 0 0 1.5rem;
@@ -53,7 +53,7 @@
       display: flex;   
       background-image: url(icon.get-icon(
         "standard--chevron-right-sml",
-        core.$uq-neutral-dark80
+        core.$uq-neutral-dark40
       ));
 
       &:first-of-type {
@@ -75,7 +75,7 @@
   }
 
   &__expand {
-    cursor: pointer;
+    cursor: w;
   }
 
   // Breadcrumb link
@@ -83,12 +83,12 @@
     text-decoration: underline;
     color: core.$uq-neutral-dark40;
     max-width: 9rem;
-    white-space: nowrap;
+    white-space: wrap;
     overflow: hidden;
     text-overflow: ellipsis;
 
-    &:hover {
-
+    @media #{core.$screen-md-up} {
+      white-space: nowrap;
     }
   }
   

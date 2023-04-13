@@ -32,8 +32,12 @@ export const kitchenSink = () => {
     const headerkitch = document.querySelector(".uq-header");
     new header(headerkitch);
 
-    const breadcrumb = document.querySelector(".uq-breadcrumb");
-    new breadcrumbCreate(breadcrumb);
+    const breadcrumb1 = document.querySelector(".uq-breadcrumb--1");
+    const breadcrumb2 = document.querySelector(".uq-breadcrumb--2");
+    const breadcrumb3 = document.querySelector(".uq-breadcrumb--3");
+    new breadcrumbCreate(breadcrumb1);
+    new breadcrumbCreate(breadcrumb2);
+    new breadcrumbCreate(breadcrumb3);
 
     document.addEventListener("DOMContentLoaded", function () {
       const menuLeftElem = document.getElementById("global-mobile-nav");

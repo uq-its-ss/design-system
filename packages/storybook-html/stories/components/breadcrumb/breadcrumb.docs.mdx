@@ -28,22 +28,63 @@ Displays a list of links indicating the page levels before the current page. The
 
 ```html
 <nav class="uq-breadcrumb" aria-label="breadcrumb">
-  <ol class="uq-breadcrumb__list" itemscope="" itemtype="https://schema.org/BreadcrumbList">
-    <li class="uq-breadcrumb__item uq-breadcrumb__item--home" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
-      <a class="uq-breadcrumb__link uq-breadcrumb__link--home" title="Home" href="/">Home</a>
-      <meta itemprop="position" content="1">
+  <ol
+    class="uq-breadcrumb__list"
+    itemscope=""
+    itemtype="https://schema.org/BreadcrumbList"
+  >
+    <li
+      class="uq-breadcrumb__item uq-breadcrumb__item--home"
+      itemprop="itemListElement"
+      itemscope=""
+      itemtype="https://schema.org/ListItem"
+    >
+      <a
+        class="uq-breadcrumb__link uq-breadcrumb__link--home"
+        title="Home"
+        href="/"
+        >Home</a
+      >
+      <meta itemprop="position" content="1" />
     </li>
-    <li class="uq-breadcrumb__item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
-      <a class="uq-breadcrumb__link" itemprop="item" title="Level one" href="/level-one">Level one</a>
-      <meta itemprop="position" content="2">
+    <li
+      class="uq-breadcrumb__item"
+      itemprop="itemListElement"
+      itemscope=""
+      itemtype="https://schema.org/ListItem"
+    >
+      <a
+        class="uq-breadcrumb__link"
+        itemprop="item"
+        title="Level one"
+        href="/level-one"
+        >Level one</a
+      >
+      <meta itemprop="position" content="2" />
     </li>
-    <li class="uq-breadcrumb__item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
-      <a class="uq-breadcrumb__link" itemprop="item" title="Level two" href="/level-one/level-two">Level two</a>
-      <meta itemprop="position" content="3">
+    <li
+      class="uq-breadcrumb__item"
+      itemprop="itemListElement"
+      itemscope=""
+      itemtype="https://schema.org/ListItem"
+    >
+      <a
+        class="uq-breadcrumb__link"
+        itemprop="item"
+        title="Level two"
+        href="/level-one/level-two"
+        >Level two</a
+      >
+      <meta itemprop="position" content="3" />
     </li>
-    <li class="uq-breadcrumb__item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+    <li
+      class="uq-breadcrumb__item"
+      itemprop="itemListElement"
+      itemscope=""
+      itemtype="https://schema.org/ListItem"
+    >
       Current page
-      <meta itemprop="position" content="4">
+      <meta itemprop="position" content="4" />
     </li>
   </ol>
 </nav>

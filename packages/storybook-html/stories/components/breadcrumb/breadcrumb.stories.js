@@ -32,8 +32,6 @@ export const breadcrumb = () => {
   return breadcrumbHTML;
 };
 
-
-
 breadcrumb.storyName = "Default";
 
 export const breadcrumbTruncation = () => {

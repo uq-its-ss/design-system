@@ -4,7 +4,6 @@
 
 // Breadcrumb
 .uq-breadcrumb {
-
   padding: 1rem;
 
   @media #{core.$screen-lg-up} {
@@ -21,7 +20,6 @@
     display: flex;
     flex-wrap: wrap;
   }
-
 
   // Breadcrumb item
   &__item {
@@ -47,10 +45,9 @@
         }
       }
     }
-    
 
     @media #{core.$screen-md-up} {
-      display: flex;   
+      display: flex;
       background-image: url(icon.get-icon(
         "standard--chevron-right-sml",
         core.$uq-neutral-dark40
@@ -66,11 +63,10 @@
           max-width: none;
         }
       }
-      
     }
 
     &--hidden {
-     display: none;
+      display: none;
     }
   }
 
@@ -91,5 +87,4 @@
       white-space: nowrap;
     }
   }
-  
 }

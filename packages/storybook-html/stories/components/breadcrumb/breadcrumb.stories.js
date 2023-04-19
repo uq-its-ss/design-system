@@ -44,8 +44,8 @@ export const breadcrumbTruncation = () => {
   return `
 <nav class="uq-breadcrumb uq-breadcrumb--truncated" aria-label="breadcrumb">
       <ol class="uq-breadcrumb__list" itemscope="" itemtype="https://schema.org/BreadcrumbList">
-        <li class="uq-breadcrumb__item uq-breadcrumb__item--home" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
-          <a class="uq-breadcrumb__link uq-breadcrumb__link--home" title="Home" href="/">Home</a>
+        <li class="uq-breadcrumb__item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+          <a class="uq-breadcrumb__link" title="Home" href="/">Home</a>
           <meta itemprop="position" content="1">
         </li>
         <li class="uq-breadcrumb__item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">

@@ -26,31 +26,31 @@ class Breadcrumb {
       return;
     }
    
-    this.createBreadcrumbLink();
+    this.createExpandCrumb();
 
     // add expand crumb after the home crumb
     this.firstCrumb.parentNode.insertBefore(this.expandCrumb, this.firstCrumb.nextSibling);
 
     // hide the crumbs in between
-    this.toggleExpand(this.hiddenCrumbs);
+    this.toggleExpand();
 
     // add event listener to expand crumb to toggle show/hide
-    this.expandCrumb.firstChild.addEventListener('click', () => this.toggleExpand(this.hiddenCrumbs));
+    this.expandCrumb.firstChild.addEventListener('click', () => this.toggleExpand());
     
   }
   
     /**
    * Create the expanded breadcrumb link.
    */
-    createBreadcrumbLink() {
+    createExpandCrumb() {
       this.expandCrumb = document.createElement("li");
       this.expandCrumb.classList.add("uq-breadcrumb__item", "uq-breadcrumb__expand", "uq-breadcrumb__item--hidden");
       this.expandCrumb.innerHTML = '<a class="uq-breadcrumb__link">...</a>';
       
     }
 
-    toggleExpand(hiddenCrumbs) {
-      hiddenCrumbs.forEach((crumb) => {
+    toggleExpand() {
+      this.hiddenCrumbs.forEach((crumb) => {
         crumb.classList.toggle("uq-breadcrumb__item--hidden");
       });
       this.expandCrumb.classList.toggle("uq-breadcrumb__item--hidden");

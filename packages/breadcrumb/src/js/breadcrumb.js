@@ -15,6 +15,8 @@ class Breadcrumb {
     this.expandCrumb = {};
     this.firstCrumb = this.crumbs[0];
 
+    this.init();
+
   }
 
   init() {
@@ -27,7 +29,7 @@ class Breadcrumb {
     this.createBreadcrumbLink();
 
     // add expand crumb after the home crumb
-    firstCrumb.parentNode.insertBefore(this.expandCrumb, firstCrumb.nextSibling);
+    this.firstCrumb.parentNode.insertBefore(this.expandCrumb, this.firstCrumb.nextSibling);
 
     // hide the crumbs in between
     this.toggleExpand(this.hiddenCrumbs);

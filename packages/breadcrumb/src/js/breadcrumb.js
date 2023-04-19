@@ -13,11 +13,11 @@ class Breadcrumb {
     this.crumbs = Array.from(this.breadcrumbs);
     this.hiddenCrumbs = this.crumbs.slice(1, this.crumbs.length - 3);
     this.expandCrumb = {};
-    
-    this.init(el);
+    this.firstCrumb = this.crumbs[0];
+
   }
 
-  init(el) {
+  init() {
 
     // truncate if more than 4 options
     if (this.crumbs.length <= 4) {
@@ -27,7 +27,6 @@ class Breadcrumb {
     this.createBreadcrumbLink();
 
     // add expand crumb after the home crumb
-    var firstCrumb = this.crumbs[0];
     firstCrumb.parentNode.insertBefore(this.expandCrumb, firstCrumb.nextSibling);
 
     // hide the crumbs in between
@@ -54,8 +53,6 @@ class Breadcrumb {
       });
       this.expandCrumb.classList.toggle("uq-breadcrumb__item--hidden");
     }
-
-
 }
 
 export default Breadcrumb;

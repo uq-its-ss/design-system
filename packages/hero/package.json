@@ -41,6 +41,8 @@
   },
   "dependencies": {
     "@uqds/core": "^1.0.0",
+    "@uqds/button": "^0.0.13-alpha.0",
     "@uqds/grid": "^0.0.13-alpha.0"
+
   }
 }

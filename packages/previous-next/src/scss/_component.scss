@@ -4,6 +4,11 @@
 @use "global" as *;
 
 .uq-previous-next {
+  font-family: core.$font-body;
+  font-size: core.$font-size;
+  font-weight: core.$font-weight-normal;
+  line-height: core.$line-height;
+
   &__item {
     width: 100%;
     float: left;

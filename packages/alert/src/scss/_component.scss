@@ -6,6 +6,10 @@
 .uq-alert {
   background-color: $alert-info-bg-color;
   color: $alert-text-color;
+  font-family: core.$font-body;
+  font-size: core.$font-size;
+  font-weight: core.$font-weight-normal;
+  line-height: core.$line-height;
   position: relative;
 
   &__container {
@@ -54,6 +58,7 @@
 
     p {
       margin-bottom: core.$space-m;
+      margin-top: core.$space-none;
 
       &:last-child {
         margin-bottom: core.$space-none;

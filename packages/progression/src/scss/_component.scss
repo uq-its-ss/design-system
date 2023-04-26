@@ -4,6 +4,10 @@
 
 .uq-progression {
   display: flex;
+  font-family: core.$font-body;
+  font-size: core.$font-size;
+  font-weight: core.$font-weight-normal;
+  line-height: core.$line-height;
   list-style: none;
   margin: 0 1.5rem;
   padding: 0 0 2rem;

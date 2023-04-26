@@ -6,6 +6,10 @@
 .uq-footer {
   background: core.$uq-purple;
   box-sizing: border-box;
+  font-family: core.$font-body;
+  font-size: core.$font-size;
+  font-weight: core.$font-weight-normal;
+  line-height: core.$line-height;
   color: #d4c8de;
 
   &__reconciliation {
@@ -27,6 +31,10 @@
         ),
         url("https://static.uq.net.au/v15/images/rap/brisbane-river-artwork.png");
     }
+  }
+
+  a {
+    text-decoration: none;
   }
 
   &__acknowledgement {
@@ -256,6 +264,7 @@
 
   &__footer-item {
     padding-right: core.$space-m;
+    margin-bottom: core.$space-m;
   }
 
   /* CONTACT */

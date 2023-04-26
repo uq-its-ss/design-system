@@ -6,6 +6,10 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  font-family: core.$font-body;
+  font-size: core.$font-size;
+  font-weight: core.$font-weight-normal;
+  line-height: core.$line-height;
   height: 100%;
   background-color: core.$uq-white;
   border: 1px solid core.$uq-neutral-light60;
@@ -81,6 +85,9 @@
   }
 
   &__body {
+    p {
+      margin-top: 0;
+    }
     p:last-child {
       margin-bottom: core.$space-none;
     }
@@ -203,4 +210,16 @@
 // Set height of card to not equalise
 .height-non-equalised .uq-card {
   height: auto;
+}
+
+// This should be replaced with a component specfic class or removed and documented as a body package dependancy for usage with cards.
+.text--link {
+  color: core.$link;
+  text-decoration: none;
+  transition: 0.2s color;
+
+  &:hover {
+    color: core.$link;
+    text-decoration: underline;
+  }
 }

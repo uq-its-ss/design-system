@@ -27,19 +27,19 @@ Displays a list of links indicating the page levels before the current page. The
 </Canvas>
 
 ```html
-<nav aria-label="uq-breadcrumb">
+<nav class="uq-breadcrumb" aria-label="breadcrumb">
   <ol
-    class="uq-breadcrumb"
+    class="uq-breadcrumb__list"
     itemscope=""
     itemtype="https://schema.org/BreadcrumbList"
   >
     <li
-      class="uq-breadcrumb__item uq-breadcrumb__item--home"
+      class="uq-breadcrumb__item"
       itemprop="itemListElement"
       itemscope=""
       itemtype="https://schema.org/ListItem"
     >
-      <a class="uq-breadcrumb__link uq-breadcrumb__link--home" href="/">Home</a>
+      <a class="uq-breadcrumb__link" title="Home" href="/">Home</a>
       <meta itemprop="position" content="1" />
     </li>
     <li
@@ -51,8 +51,9 @@ Displays a list of links indicating the page levels before the current page. The
       <a
         class="uq-breadcrumb__link"
         itemprop="item"
-        href="/information-and-services"
-        >Information and services</a
+        title="Level one"
+        href="/level-one"
+        >Level one</a
       >
       <meta itemprop="position" content="2" />
     </li>
@@ -65,10 +66,20 @@ Displays a list of links indicating the page levels before the current page. The
       <a
         class="uq-breadcrumb__link"
         itemprop="item"
-        href="/information-and-services/internet-and-wifi"
-        >Internet and wifi</a
+        title="Level two"
+        href="/level-one/level-two"
+        >Level two</a
       >
       <meta itemprop="position" content="3" />
+    </li>
+    <li
+      class="uq-breadcrumb__item"
+      itemprop="itemListElement"
+      itemscope=""
+      itemtype="https://schema.org/ListItem"
+    >
+      Current page
+      <meta itemprop="position" content="4" />
     </li>
   </ol>
 </nav>
@@ -76,7 +87,7 @@ Displays a list of links indicating the page levels before the current page. The
 
 ### Truncation
 
-The breadcrumb link text is truncated and ellipsed (...) when the text is longer than a set width.
+The breadcrumb link text is truncated and ellipsed (...) when the text is longer than a set width, with the current page being the exception. Additionally, a maximum of 4 breadcrumbs will be shown. When exceeding this - the home, parent and current page will be shown with the others collapsed behind an expand button.
 
 <Canvas withSource="none">
   <Story id="components-breadcrumb--breadcrumb-truncation" />

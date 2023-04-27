@@ -1,64 +1,84 @@
 @use "@uqds/core/src/scss/global" as core;
-@use "@uqds/icon/src/scss/global" as icon-constants;
+@use "@uqds/icon/src/scss/global" as icon;
 @import "global";
 
 // Breadcrumb
 .uq-breadcrumb {
-  box-sizing: border-box;
-  font-family: core.$font-body;
-  font-size: core.$font-size-m;
-  font-weight: core.$font-weight-normal; // will set font-weight to 400 like the FS version Is currently
-  line-height: core.$line-height;
-  color: $breadcrumb-link;
-  list-style: none;
-  margin: core.$space-none;
-  padding: core.$space-none;
+  padding: 1rem;
 
-  *,
-  *::before,
-  *::after {
-    box-sizing: border-box;
+  // Breadcrumb item
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
   }
 
   // Breadcrumb item
   &__item {
-    display: inline;
-    float: left;
-    margin: core.$space-none;
+    background-image: url(icon.get-icon(
+      "standard--chevron-left-sml",
+      core.$uq-neutral-dark40
+    ));
+    background-position: left 0.2rem center;
+    padding: 0 0 0 1.5rem;
+    margin: 0;
+    font-size: core.$font-size-s;
+    color: core.$uq-neutral-dark40;
+    background-repeat: no-repeat;
+    background-size: 1rem;
+    display: none;
+    min-width: 0; // overflow hidden fix for flexbox
 
-    &::before {
-      content: "";
-      margin: core.$space-xs core.$space-s;
-      padding: core.$space-s core.$space-s;
-      background-image: url(icon-constants.get-icon(
-        "standard--arrow-right-1",
-        core.$uq-neutral-dark60
-      ));
-      background-repeat: no-repeat;
-      float: left;
+    &:nth-last-child(2) {
+      display: flex;
     }
 
-    &:first-child {
-      &::before {
-        content: "";
-        display: none;
+    @media #{core.$screen-md-up} {
+      display: flex;
+      min-width: auto;
+      background-image: url(icon.get-icon(
+        "standard--chevron-right-sml",
+        core.$uq-neutral-dark40
+      ));
+
+      &:first-of-type {
+        background: none;
+        padding-left: 0;
+      }
+
+      &:last-of-type {
+        .uq-breadcrumb__link {
+          max-width: none;
+        }
       }
     }
+
+    &--hidden {
+      display: none;
+    }
+  }
+
+  &__expand {
+    cursor: pointer;
   }
 
   // Breadcrumb link
   &__link {
-    color: $breadcrumb-link;
-    text-decoration: none;
-    max-width: 260px;
+    text-decoration: underline;
+    color: core.$uq-neutral-dark40;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    display: inline-block;
+    max-width: none;
+
+    @media #{core.$screen-md-up} {
+      max-width: 9rem;
+    }
 
     &:hover {
-      color: $breadcrumb-link;
-      text-decoration: underline;
+      color: core.$uq-neutral-dark40;
     }
   }
 }

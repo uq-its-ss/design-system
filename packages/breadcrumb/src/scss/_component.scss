@@ -6,12 +6,6 @@
 .uq-breadcrumb {
   padding: 1rem;
 
-  @media #{core.$screen-lg-up} {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 73.25rem;
-  }
-
   // Breadcrumb item
   &__list {
     margin: 0;
@@ -35,19 +29,15 @@
     background-repeat: no-repeat;
     background-size: 1rem;
     display: none;
+    min-width: 0; // overflow hidden fix for flexbox
 
     &:nth-last-child(2) {
       display: flex;
-
-      @media #{core.$screen-md-down} {
-        .uq-breadcrumb__link {
-          max-width: none;
-        }
-      }
     }
 
     @media #{core.$screen-md-up} {
       display: flex;
+      min-width: auto;
       background-image: url(icon.get-icon(
         "standard--chevron-right-sml",
         core.$uq-neutral-dark40
@@ -78,13 +68,18 @@
   &__link {
     text-decoration: underline;
     color: core.$uq-neutral-dark40;
-    max-width: 9rem;
-    white-space: wrap;
+    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    max-width: none;
 
     @media #{core.$screen-md-up} {
-      white-space: nowrap;
+      max-width: 9rem;
+    }
+
+    &:hover {
+      color: core.$uq-neutral-dark40;
     }
   }
+
 }

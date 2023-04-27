@@ -35,7 +35,6 @@ export const kitchenSink = () => {
     const breadcrumb = document.querySelector(".uq-breadcrumb");
     new breadcrumbCreate(breadcrumb);
 
-
     document.addEventListener("DOMContentLoaded", function () {
       const menuLeftElem = document.getElementById("global-mobile-nav");
 

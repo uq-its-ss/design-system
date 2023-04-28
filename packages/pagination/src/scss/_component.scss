@@ -4,6 +4,10 @@
 
 .uq-pagination {
   display: block;
+  font-family: core.$font-body;
+  font-size: core.$font-size-m;
+  font-weight: core.$font-weight-normal;
+  line-height: core.$line-height;
 
   &__item {
     display: inline-block;

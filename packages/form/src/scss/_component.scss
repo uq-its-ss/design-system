@@ -443,6 +443,7 @@ $use-encapsulation: false !default;
       color: core.$text;
       font-size: core.$space-m;
       margin: core.$space-none;
+      padding-left: core.$space-l;
 
       &__item {
         margin-bottom: core.$space-xs;

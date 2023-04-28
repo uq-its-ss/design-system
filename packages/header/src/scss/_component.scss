@@ -284,6 +284,11 @@
       & a {
         padding-left: core.$space-xxxl;
         color: core.$uq-purple;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
 
@@ -295,6 +300,10 @@
       & li {
         & a {
           padding-left: core.$space-uul;
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
         }
       }
     }
@@ -338,6 +347,7 @@
     display: block;
     color: white;
     padding: core.$space-m core.$space-l;
+    text-decoration: none;
 
     @media #{core.$screen-lg-up} {
       font-size: core.$font-size-s;
@@ -346,6 +356,7 @@
 
     &:hover {
       color: #d4c8de;
+      text-decoration: underline;
     }
   }
 
@@ -558,6 +569,7 @@
           display: inline-block;
           padding-top: core.$space-s;
           color: core.$uq-purple;
+          text-decoration: none;
         }
       }
     }

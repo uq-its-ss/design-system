@@ -14,7 +14,7 @@
 %vertical-list,
 .vertical-list {
   font-family: core.$font-body;
-  font-size: core.$font-size;
+  font-size: core.$font-size-m;
   font-weight: core.$font-weight-normal;
   line-height: core.$line-height;
   list-style-type: none;
@@ -80,7 +80,7 @@
 .horizontal-list {
   display: inline-block;
   font-family: core.$font-body;
-  font-size: core.$font-size;
+  font-size: core.$font-size-m;
   font-weight: core.$font-weight-normal;
   line-height: core.$line-height;
   list-style-type: none;

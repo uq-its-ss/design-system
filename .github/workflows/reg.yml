@@ -25,10 +25,6 @@ jobs:
         npx lerna bootstrap --no-ci
       env:
         CI: true
-    - name: workaround for detached HEAD
-      # Workaround for Detached HEAD https://github.com/reg-viz/reg-suit#workaround-for-detached-head
-      run: |
-        git checkout ${GITHUB_REF#refs/heads/} || git checkout -b ${GITHUB_REF#refs/heads/} && git pull
     - name: Install Playwright
       run: npx playwright install --with-deps
     - name: Build Storybook

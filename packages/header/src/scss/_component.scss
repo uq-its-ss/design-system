@@ -62,7 +62,7 @@
       @media #{core.$screen-lg-up} {
         display: block;
         font-family: core.$roboto;
-        font-size: core.$font-size;
+        font-size: core.$font-size-m;
         text-align: right;
         width: 3.2rem;
       }
@@ -425,7 +425,7 @@
     border: 2px solid transparent;
     color: core.$uq-purple;
     display: inline-block;
-    font-size: core.$font-size;
+    font-size: core.$font-size-m;
     height: 2.75rem;
     line-height: 1.5;
     margin-bottom: 0;
@@ -467,7 +467,7 @@
     z-index: 3;
     cursor: pointer;
     outline-offset: -2px;
-    font-size: core.$font-size;
+    font-size: core.$font-size-m;
   }
 
   &__search-range {
@@ -607,7 +607,7 @@ body.no-scroll {
   right: core.$space-none;
   overflow-y: auto;
   overflow-x: hidden;
-  font-size: core.$font-size;
+  font-size: core.$font-size-m;
   color: core.$uq-purple;
 
   @media #{core.$screen-lg-up} {
@@ -662,7 +662,7 @@ body.no-scroll {
     cursor: pointer;
     padding: 0.75rem core.$space-l;
     text-decoration: none;
-    font-size: core.$font-size;
+    font-size: core.$font-size-m;
     color: core.$uq-purple;
     position: relative;
 

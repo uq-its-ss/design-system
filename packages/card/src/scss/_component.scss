@@ -7,7 +7,7 @@
   display: flex;
   flex-direction: column;
   font-family: core.$font-body;
-  font-size: core.$font-size;
+  font-size: core.$font-size-m;
   font-weight: core.$font-weight-normal;
   line-height: core.$line-height;
   height: 100%;
@@ -118,7 +118,7 @@
       margin: core.$space-none core.$space-none core.$space-s;
 
       @media #{core.$screen-md-up} {
-        font-size: core.$font-size;
+        font-size: core.$font-size-m;
       }
 
       &--grey {

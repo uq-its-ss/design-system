@@ -72,7 +72,7 @@ $use-encapsulation: false !default;
       &--inline {
         align-items: center;
         display: inline-flex;
-        font-size: core.$font-size;
+        font-size: core.$font-size-m;
         line-height: core.$line-height;
         margin-bottom: core.$space-l;
 
@@ -128,7 +128,7 @@ $use-encapsulation: false !default;
     input[type="checkbox"] {
       + *:not(input):not(select):not(textarea) {
         display: inline-block;
-        font-size: core.$font-size;
+        font-size: core.$font-size-m;
         font-weight: core.$font-weight-normal;
         line-height: $form-checkbox-size;
         margin-bottom: core.$space-m;
@@ -289,7 +289,7 @@ $use-encapsulation: false !default;
 
     + label {
       display: inline-block;
-      font-size: core.$font-size;
+      font-size: core.$font-size-m;
       font-weight: core.$font-weight-normal;
       line-height: core.$line-height-h;
       margin-bottom: core.$space-m;
@@ -466,7 +466,7 @@ $use-encapsulation: false !default;
   .uq-success-message {
     color: core.$uq-white;
     display: block;
-    font-size: core.$font-size;
+    font-size: core.$font-size-m;
     font-style: normal;
     font-weight: core.$font-weight-normal;
     line-height: core.$line-height;

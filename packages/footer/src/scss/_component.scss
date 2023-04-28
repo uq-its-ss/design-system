@@ -7,7 +7,7 @@
   background: core.$uq-purple;
   box-sizing: border-box;
   font-family: core.$font-body;
-  font-size: core.$font-size;
+  font-size: core.$font-size-m;
   font-weight: core.$font-weight-normal;
   line-height: core.$line-height;
   color: #d4c8de;
@@ -42,7 +42,7 @@
     padding: core.$space-xl core.$space-l;
     color: #d4c8de;
     font-weight: 400;
-    font-size: core.$font-size;
+    font-size: core.$font-size-m;
     line-height: 1.5;
     margin: auto;
 
@@ -122,7 +122,7 @@
 
   &__navigation-title {
     color: #d4c8de;
-    font-size: core.$font-size;
+    font-size: core.$font-size-m;
     font-weight: 500;
     margin: core.$space-none;
   }
@@ -421,7 +421,7 @@
       &__toggle {
         background-color: core.$uq-purple;
         color: core.$uq-white;
-        font-size: core.$font-size;
+        font-size: core.$font-size-m;
         padding-left: core.$space-l;
 
         &:hover {

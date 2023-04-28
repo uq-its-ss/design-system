@@ -98,7 +98,7 @@ $use-encapsulation: false !default;
   h6 {
     margin-top: core.$space-l;
     margin-bottom: core.$space-s;
-    font-size: core.$font-size;
+    font-size: core.$font-size-m;
   }
 
   p {
@@ -217,7 +217,7 @@ $use-encapsulation: false !default;
     }
 
     &--m {
-      font-size: core.$font-size;
+      font-size: core.$font-size-m;
     }
 
     &--s {

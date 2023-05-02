@@ -16,11 +16,8 @@ import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
 
 ## Overview
 
-Breadcrumbs are a horizontal list of links used to indicate the current page location within the site navigation hierarchy. Page links are separated by a chevron icon which indicates the level of that page relative to the page links beside it.
-
+Breadcrumbs are a horizontal list of links used to indicate the current page location within the information architecture (the first level always being the UQ homepage). Page links are separated by a chevron icon which indicates the level of that page relative to the page links beside it. Breadcrumbs are truncated and ellipsed (...) when the text is longer than a set width, however the current page crumb is not linked and always listed in full. UQ homepage is the base 
 ## Default
-
-Displays a list of links indicating the page levels before the current page.
 
 <Canvas withSource="none" withToolbar>
   <Story id="components-breadcrumb--breadcrumb" />
@@ -87,7 +84,7 @@ Displays a list of links indicating the page levels before the current page.
 
 ### Truncation
 
-Breadcrumb link text is truncated and ellipsed (...) when the text is longer than a set width, with the current page being the exception. Additionally, a maximum of 4 breadcrumbs will be shown. When exceeding this - the home, parent, parent's parent and current page will be shown with the others collapsed behind an expand button.
+When exceeding 4 breadcrumbs - the current page, parent, parent's parent and home crumbs will be shown with the additional crumbs collapsed behind an expand link. The full breadcrumb trail can then be viewed by clicking the expand crumb. *Note: only expand functionality is included, and cannot be collapsed again without a page refresh.*
 
 <Canvas withSource="none" withToolbar>
   <Story id="components-breadcrumb--breadcrumb-truncation" />
@@ -95,7 +92,7 @@ Breadcrumb link text is truncated and ellipsed (...) when the text is longer tha
 
 ## How and when to use
 
-- The breadcrumb component is typically location based to represent the site's navigational hierarchy as opposed to path based to illustrate a navigation trail.
+- The breadcrumb reflects the information architecture of a page, not a historical navigation trail.
 - The component displays on a page once a user has navigated away from the home page to provide a navigation path back to the home and parent level pages.
 - The breadcrumb lists the current page however this should not be linked.
 - Search engines have a limited understanding of content on web pages. By adding schema microdata tags to the breadcrumb component, you can help search engines and other applications better understand the content and display it in a useful and relevant way. For further information on schema, go to https://schema.org/

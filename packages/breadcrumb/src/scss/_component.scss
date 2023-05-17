@@ -4,9 +4,8 @@
 
 // Breadcrumb
 .uq-breadcrumb {
-  padding: 1rem;
 
-  // Breadcrumb item
+  // Breadcrumb list
   &__list {
     margin: 0;
     padding: 0;
@@ -29,19 +28,21 @@
     background-repeat: no-repeat;
     background-size: 1rem;
     display: none;
-    min-width: 0; // overflow hidden fix for flexbox
 
     &:nth-last-child(2) {
-      display: flex;
+      display: inline-block;
     }
 
     @media #{core.$screen-md-up} {
-      display: flex;
-      min-width: auto;
+      display: inline-block;
       background-image: url(icon.get-icon(
         "standard--chevron-right-sml",
         core.$uq-neutral-dark40
       ));
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 9rem;
 
       &:first-of-type {
         background: none;
@@ -49,9 +50,8 @@
       }
 
       &:last-of-type {
-        .uq-breadcrumb__link {
-          max-width: none;
-        }
+        flex: 1;
+        max-width: none;
       }
     }
 
@@ -60,25 +60,30 @@
     }
   }
 
-  &__expand {
-    cursor: pointer;
-  }
-
   // Breadcrumb link
   &__link {
     text-decoration: underline;
     color: core.$uq-neutral-dark40;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: none;
-
-    @media #{core.$screen-md-up} {
-      max-width: 9rem;
-    }
-
+  
     &:hover {
       color: core.$uq-neutral-dark40;
+    }
+  }
+
+  // Expand link
+  &__expand {
+    cursor: pointer;
+  }
+
+
+  &--expanded {
+    & .uq-breadcrumb__item { 
+      &:last-of-type {
+        white-space: normal;
+        text-overflow: unset;
+        overflow: visible;
+        flex: auto;
+      }
     }
   }
 }

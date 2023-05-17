@@ -8,6 +8,7 @@
 class Breadcrumb {
   constructor(el) {
     // The breadcrumb trail.
+    this.breadcrumb = el;
     this.breadcrumbs = el.querySelectorAll(".uq-breadcrumb__item");
     this.crumbs = Array.from(this.breadcrumbs);
     this.hiddenCrumbs = this.crumbs.slice(1, this.crumbs.length - 3);
@@ -32,7 +33,9 @@ class Breadcrumb {
     );
 
     // hide the crumbs in between
-    this.toggleExpand();
+    this.hiddenCrumbs.forEach((crumb) => {
+      crumb.classList.toggle("uq-breadcrumb__item--hidden");
+    });
 
     // add event listener to expand crumb to toggle show/hide
     this.expandCrumb.firstChild.addEventListener("click", () =>
@@ -47,17 +50,19 @@ class Breadcrumb {
     this.expandCrumb = document.createElement("li");
     this.expandCrumb.classList.add(
       "uq-breadcrumb__item",
-      "uq-breadcrumb__expand",
-      "uq-breadcrumb__item--hidden"
+      "uq-breadcrumb__expand"
     );
     this.expandCrumb.innerHTML = '<a class="uq-breadcrumb__link">...</a>';
   }
 
   toggleExpand() {
+    this.breadcrumb.classList.toggle("uq-breadcrumb--expanded");
+    this.expandCrumb.classList.toggle("uq-breadcrumb__item--hidden");
     this.hiddenCrumbs.forEach((crumb) => {
       crumb.classList.toggle("uq-breadcrumb__item--hidden");
     });
-    this.expandCrumb.classList.toggle("uq-breadcrumb__item--hidden");
+    
+    
   }
 }
 

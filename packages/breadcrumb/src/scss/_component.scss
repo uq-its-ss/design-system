@@ -12,6 +12,7 @@
     list-style: none;
     display: flex;
     flex-wrap: wrap;
+    gap: 2px 0;
   }
 
   // Breadcrumb item
@@ -78,8 +79,8 @@
 
   &--expanded {
     @media #{core.$screen-md-up} {
+
       & .uq-breadcrumb__item { 
-        margin-bottom: 2px;
 
         &:last-of-type {
           white-space: normal;

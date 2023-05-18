@@ -71,7 +71,7 @@ export const breadcrumbTruncation = () => {
           <meta itemprop="position" content="8">
         </li>
         <li class="uq-breadcrumb__item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
-          Welcome to the Kitchen Sink page
+          Welcome to the Kitchen Sink page and a really long super long extra longy long title that is definately going to stretch
           <meta itemprop="position" content="9">
         </li>
       </ol>

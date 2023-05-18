@@ -11,7 +11,7 @@
     padding: 0;
     list-style: none;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: 2px 0;
   }
 
@@ -29,6 +29,9 @@
     background-repeat: no-repeat;
     background-size: 1rem;
     display: none;
+    flex: 0 1 auto;
+
+    // min-width: 0; // overflow hidden fix for flexbox
 
     &:nth-last-child(2) {
       display: inline-block;
@@ -44,15 +47,18 @@
       overflow: hidden;
       text-overflow: ellipsis;
       max-width: 9rem;
-
+      
       &:first-of-type {
         background: none;
         padding-left: 0;
       }
 
       &:last-of-type {
-        flex: 1;
         max-width: none;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;    
+
       }
     }
 
@@ -65,7 +71,7 @@
   &__link {
     text-decoration: underline;
     color: core.$uq-neutral-dark40;
-  
+
     &:hover {
       color: core.$uq-neutral-dark40;
     }
@@ -78,16 +84,17 @@
 
 
   &--expanded {
-    @media #{core.$screen-md-up} {
 
-      & .uq-breadcrumb__item { 
+    .uq-breadcrumb__list {
+       flex-wrap: wrap;
+    }
 
-        &:last-of-type {
-          white-space: normal;
-          text-overflow: unset;
-          overflow: visible;
-          flex: auto;
-        }
+    & .uq-breadcrumb__item { 
+      &:last-of-type {
+        white-space: normal;
+        text-overflow: unset;
+        overflow: visible;
+        flex: auto;
       }
     }
   }

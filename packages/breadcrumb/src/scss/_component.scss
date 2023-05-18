@@ -77,12 +77,16 @@
 
 
   &--expanded {
-    & .uq-breadcrumb__item { 
-      &:last-of-type {
-        white-space: normal;
-        text-overflow: unset;
-        overflow: visible;
-        flex: auto;
+    @media #{core.$screen-md-up} {
+      & .uq-breadcrumb__item { 
+        margin-bottom: 2px;
+
+        &:last-of-type {
+          white-space: normal;
+          text-overflow: unset;
+          overflow: visible;
+          flex: auto;
+        }
       }
     }
   }

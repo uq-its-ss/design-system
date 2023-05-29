@@ -11,7 +11,7 @@ Go to the [UQ Design System](https://design-system.uq.edu.au/) website for infor
 - UQ styles, components, patterns and examples
 - how to contribute.
 
----  
+---
 
 ## GitHub documentation
 

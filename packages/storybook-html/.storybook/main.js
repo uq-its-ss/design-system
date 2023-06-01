@@ -70,6 +70,10 @@ module.exports = {
           },
         },
       ],
+    },
+    {
+      test: /\.twig$/,
+      use: "twig-loader",
     });
 
     /* 

@@ -39,42 +39,44 @@ module.exports = {
       Add Sass/SCSS file import support
       ---------------------------------
     */
-    config.module.rules.push({
-      test: /\.s[ac]ss$/i,
-      use: [
-        // Creates `style` nodes from JS strings
-        "style-loader",
-        // Translates CSS into CommonJS
-        {
-          loader: "css-loader",
-          options: {
-            url: true,
-          },
-        },
-        // Compiles Sass to CSS
-        {
-          loader: "sass-loader",
-          options: {
-            // Prefer 'dart-sass' as it supports Sass Modules
-            implementation: require("sass"),
-            sourceMap: true,
-            sassOptions: {
-              outputStyle:
-                configType == "PRODUCTION" ? "compressed" : "expanded",
-              // TODO: we should implement `glob` here:
-              includePaths: [
-                "node_modules/@uqds/app-maps/node_modules",
-                "node_modules",
-              ],
+    config.module.rules.push(
+      {
+        test: /\.s[ac]ss$/i,
+        use: [
+          // Creates `style` nodes from JS strings
+          "style-loader",
+          // Translates CSS into CommonJS
+          {
+            loader: "css-loader",
+            options: {
+              url: true,
             },
           },
-        },
-      ],
-    },
-    {
-      test: /\.twig$/,
-      use: "twig-loader",
-    });
+          // Compiles Sass to CSS
+          {
+            loader: "sass-loader",
+            options: {
+              // Prefer 'dart-sass' as it supports Sass Modules
+              implementation: require("sass"),
+              sourceMap: true,
+              sassOptions: {
+                outputStyle:
+                  configType == "PRODUCTION" ? "compressed" : "expanded",
+                // TODO: we should implement `glob` here:
+                includePaths: [
+                  "node_modules/@uqds/app-maps/node_modules",
+                  "node_modules",
+                ],
+              },
+            },
+          },
+        ],
+      },
+      {
+        test: /\.twig$/,
+        use: "twig-loader",
+      }
+    );
 
     /* 
       From v6 migration

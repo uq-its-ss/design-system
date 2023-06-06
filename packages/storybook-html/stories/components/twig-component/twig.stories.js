@@ -15,20 +15,13 @@ export default {
 };
 
 const Template = ({ text, variants }) =>
-twigbutton({
-  text,
-  variants,
-});
+  twigbutton({
+    text,
+    variants,
+  });
 
 export const twigbtn = Template.bind({});
 twigbtn.args = {
-text: "It works party time",
-variants: "uq-button--large",
-};
-
-export const usingDivs = () => {
-  useEffect(() => {
-    new accordionCreate();
-  });
-  return accordionDivHTML;
+  text: "It works party time",
+  variants: "uq-button--large",
 };

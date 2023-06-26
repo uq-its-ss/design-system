@@ -1,0 +1,16 @@
+<nav class="uq-breadcrumb" aria-label="breadcrumb" data-gtm-category="Breadcrumb">
+  {% spaceless %}
+      <ol class="uq-breadcrumb__list">
+        {% set carry = [] %}
+        {% for crumb in breadcrumb %}
+            <li class="uq-breadcrumb__item">
+              <a class="uq-breadcrumb__link" title="{{ crumb.text }}" data-gtm-label="{% if carry %}{{ carry|join(' > ') }} > {% endif %}{{ crumb.text|striptags }}" href="{{ crumb.url }}">{{ crumb.text }}</a>
+            </li>
+            {% set carry = carry|merge([crumb.text|striptags]) %}
+        {% endfor %}
+        <li class="uq-breadcrumb__item">
+          {{ current_page|default("Current page") }}
+        </li>
+      </ol> 
+  {% endspaceless %}
+</nav>

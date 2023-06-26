@@ -1147,4 +1147,8 @@ export default [
     name: "road-sign-turn-right-1",
     category: "transport",
   },
+  {
+    name: "stop-sign",
+    category: "transport",
+  },
 ];

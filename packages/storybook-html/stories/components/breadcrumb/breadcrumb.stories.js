@@ -20,8 +20,6 @@ export default {
   },
 };
 
-
-
 export const breadcrumb = () => {
   useEffect(() => {
     const breadcrumbElem = document.querySelector(".uq-breadcrumb");
@@ -31,37 +29,37 @@ export const breadcrumb = () => {
   return breadcrumbTwig({
     breadcrumbs: [
       {
-        "text": "Home",
-        "url": "https://www.uq.edu.au/"
+        text: "Home",
+        url: "https://www.uq.edu.au/",
       },
       {
-        "text": "Study",
-        "url": "/study"
+        text: "Study",
+        url: "/study",
       },
       {
-        "text": "Level two",
-        "url": "/study/level-two"
+        text: "Level two",
+        url: "/study/level-two",
       },
       {
-        "text": "A really long title for an example of it running over two lines",
-        "url": "/study/lorem-ipsum/long"
+        text: "A really long title for an example of it running over two lines",
+        url: "/study/lorem-ipsum/long",
       },
       {
-        "text": "Super-duper extra long page title as an example",
-        "url": "/study/lorem-ipsum/long"
+        text: "Super-duper extra long page title as an example",
+        url: "/study/lorem-ipsum/long",
       },
       {
-        "text": "How many words do to make this run over two lines",
-        "url": "/study/lorem-ipsum/long/how"
+        text: "How many words do to make this run over two lines",
+        url: "/study/lorem-ipsum/long/how",
       },
       {
-        "text": "Another long page title that is long for no reason with words and things",
-        "url": "/study/lorem-ipsum/long/how/another-long"
+        text: "Another long page title that is long for no reason with words and things",
+        url: "/study/lorem-ipsum/long/how/another-long",
       },
       {
-        "text": "Current page"
-      }
-    ] 
+        text: "Current page",
+      },
+    ],
   });
 };
 
@@ -100,9 +98,8 @@ export const breadcrumb = () => {
 //     {
 //       "text": "Current page"
 //     }
-//   ] 
+//   ]
 // };
-
 
 /* 
 export const breadcrumb = () => {

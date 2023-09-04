@@ -4,7 +4,6 @@
 
 // Breadcrumb
 .uq-breadcrumb {
-  padding: 1rem;
 
   // Breadcrumb item
   &__list {
@@ -13,6 +12,7 @@
     list-style: none;
     display: flex;
     flex-wrap: wrap;
+    grid-gap: 2px 0;
   }
 
   // Breadcrumb item

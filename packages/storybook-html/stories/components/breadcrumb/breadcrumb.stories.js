@@ -24,7 +24,6 @@ export const breadcrumb = () => {
   useEffect(() => {
     const breadcrumbElem = document.querySelector(".uq-breadcrumb");
     new breadcrumbCreate(breadcrumbElem);
-    
   });
   return breadcrumbTwig({
     breadcrumbs: [

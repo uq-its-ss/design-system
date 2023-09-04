@@ -1,19 +1,29 @@
-
-
-    <nav class="uq-breadcrumb" aria-label="breadcrumb" data-gtm-category="Breadcrumb">
-      {% spaceless %}
-        <ol class="uq-breadcrumb__list">
-          {% set carry = [] %}
-          {% for crumb in breadcrumbs %}
-            <li class="uq-breadcrumb__item">
-              {% if crumb.url %}
-                <a class="uq-breadcrumb__link" title="{{ crumb.text }}" data-gtm-label="{% if carry %}{{ carry|join(' > ') }} > {% endif %}{{ crumb.text|striptags }}" href="{{ crumb.url }}">{{ crumb.text }}</a>
-              {% else %}
-                {{ crumb.text }}
-              {% endif %}
-            </li>
-            {% set carry = carry|merge([crumb.text|striptags]) %}
-          {% endfor %}
-        </ol>
-      {% endspaceless %}
-    </nav>
+{#
+/**
+ * @file
+ * Default theme implementation for a breadcrumb trail.
+ *
+ * Available variables:
+ * - breadcrumb: array of crumbs
+ *
+ * @ingroup themeable
+ */
+#}
+    
+<nav class="uq-breadcrumb" aria-label="breadcrumb" data-gtm-category="Breadcrumb">
+  {% spaceless %}
+    <ol class="uq-breadcrumb__list">
+      {% set carry = [] %}
+      {% for crumb in breadcrumbs %}
+        <li class="uq-breadcrumb__item">
+          {% if crumb.url %}
+            <a class="uq-breadcrumb__link" title="{{ crumb.text }}" data-gtm-label="{% if carry %}{{ carry|join(' > ') }} > {% endif %}{{ crumb.text|striptags }}" href="{{ crumb.url }}">{{ crumb.text }}</a>
+          {% else %}
+            {{ crumb.text }}
+          {% endif %}
+        </li>
+        {% set carry = carry|merge([crumb.text|striptags]) %}
+      {% endfor %}
+    </ol>
+  {% endspaceless %}
+</nav>

@@ -1,4 +1,4 @@
-import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import { Meta, Story, Canvas, Source } from "@storybook/addon-docs";
 import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
 
 # Breadcrumb
@@ -25,60 +25,58 @@ Breadcrumbs are a horizontal list of links used to indicate the current page loc
 </Canvas>
 
 ```html
-<nav class="uq-breadcrumb" aria-label="breadcrumb">
-  <ol
-    class="uq-breadcrumb__list"
-    itemscope=""
-    itemtype="https://schema.org/BreadcrumbList"
-  >
-    <li
-      class="uq-breadcrumb__item"
-      itemprop="itemListElement"
-      itemscope=""
-      itemtype="https://schema.org/ListItem"
-    >
-      <a class="uq-breadcrumb__link" title="Home" href="/">Home</a>
-      <meta itemprop="position" content="1" />
-    </li>
-    <li
-      class="uq-breadcrumb__item"
-      itemprop="itemListElement"
-      itemscope=""
-      itemtype="https://schema.org/ListItem"
-    >
+<nav
+  class="uq-breadcrumb"
+  aria-label="breadcrumb"
+  data-gtm-category="Breadcrumb"
+>
+  <ol class="uq-breadcrumb__list">
+    <li class="uq-breadcrumb__item">
       <a
         class="uq-breadcrumb__link"
-        itemprop="item"
-        title="Level one"
-        href="/level-one"
-        >Level one</a
+        title="Home"
+        data-gtm-label="Home"
+        href="https://www.uq.edu.au/"
+        >Home</a
       >
-      <meta itemprop="position" content="2" />
     </li>
-    <li
-      class="uq-breadcrumb__item"
-      itemprop="itemListElement"
-      itemscope=""
-      itemtype="https://schema.org/ListItem"
-    >
+    <li class="uq-breadcrumb__item">
       <a
         class="uq-breadcrumb__link"
-        itemprop="item"
-        title="Level two"
-        href="/level-one/level-two"
-        >Level two</a
+        title="Study"
+        data-gtm-label="Home > Study"
+        href="/"
+        >Study</a
       >
-      <meta itemprop="position" content="3" />
     </li>
-    <li
-      class="uq-breadcrumb__item"
-      itemprop="itemListElement"
-      itemscope=""
-      itemtype="https://schema.org/ListItem"
-    >
-      Current page
-      <meta itemprop="position" content="4" />
+    <li class="uq-breadcrumb__item">
+      <a
+        class="uq-breadcrumb__link"
+        title="Study options"
+        data-gtm-label="Home > Study > Study options"
+        href="/study-options"
+        >Study options</a
+      >
     </li>
+    <li class="uq-breadcrumb__item">
+      <a
+        class="uq-breadcrumb__link"
+        title="Find a program"
+        data-gtm-label="Home > Study > Study options > Find a program"
+        href="/study-options/programs"
+        >Find a program</a
+      >
+    </li>
+    <li class="uq-breadcrumb__item">
+      <a
+        class="uq-breadcrumb__link"
+        title="Bachelors of Computer Science / Business Management"
+        data-gtm-label="Home > Study > Study options > Find a program > Bachelors of Computer Science / Business Management"
+        href="/study-options/programs/bachelors-computer-science-business-management-2463"
+        >Bachelors of Computer Science / Business Management</a
+      >
+    </li>
+    <li class="uq-breadcrumb__item">Entry requirements</li>
   </ol>
 </nav>
 ```
@@ -92,7 +90,6 @@ When exceeding 4 breadcrumbs - the current page, parent, parent's parent and hom
 - The breadcrumb reflects the information architecture of a page, not a historical navigation trail.
 - The component displays on a page once a user has navigated away from the home page to provide a navigation path back to the home and parent level pages.
 - The breadcrumb lists the current page however this should not be linked.
-- Search engines have a limited understanding of content on web pages. By adding schema microdata tags to the breadcrumb component, you can help search engines and other applications better understand the content and display it in a useful and relevant way. For further information on schema, go to https://schema.org/
 
 ## Accessibility
 

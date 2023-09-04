@@ -33,30 +33,22 @@ export const breadcrumb = () => {
       },
       {
         text: "Study",
-        url: "/study",
+        url: "/",
       },
       {
-        text: "Level two",
-        url: "/study/level-two",
+        text: "Study options",
+        url: "/study-options",
       },
       {
-        text: "A really long title for an example of it running over two lines",
-        url: "/study/lorem-ipsum/long",
+        text: "Find a program",
+        url: "/study-options/programs",
       },
       {
-        text: "Super-duper extra long page title as an example",
-        url: "/study/lorem-ipsum/long",
+        text: "Bachelors of Computer Science / Business Management",
+        url: "/study-options/programs/bachelors-computer-science-business-management-2463",
       },
       {
-        text: "How many words do to make this run over two lines",
-        url: "/study/lorem-ipsum/long/how",
-      },
-      {
-        text: "Another long page title that is long for no reason with words and things",
-        url: "/study/lorem-ipsum/long/how/another-long",
-      },
-      {
-        text: "Current page",
+        text: "Entry requirements",
       },
     ],
   });

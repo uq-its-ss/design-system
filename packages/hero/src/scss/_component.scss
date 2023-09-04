@@ -8,7 +8,7 @@
   background-color: #51247a;
   font-family: core.$font-body;
   font-size: core.$font-size-m;
-  font-weight: core.$font-weight-normal;
+  font-weight: core.$font-weight-medium;
   line-height: core.$line-height;
 
   &__content {
@@ -30,12 +30,12 @@
     & .uq-hero__title {
       color: inherit;
       font-family: core.$montserrat;
-      font-size: 2.5rem;
+      font-size: core.$font-size-xxxl;
       margin-top: 0;
       margin-bottom: core.$space-s;
 
       @media #{core.$screen-md-up} {
-        font-size: 3rem;
+        font-size: core.$font-size-xxxxl;
       }
     }
 

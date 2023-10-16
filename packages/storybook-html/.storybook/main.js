@@ -71,7 +71,7 @@ module.exports = {
         },
       ],
     });
-    
+
     /* 
       Add Twig file import support
       ---------------------------------
@@ -80,7 +80,7 @@ module.exports = {
       test: /\.twig$/,
       use: "twig-loader",
     });
-  
+
     /* 
       From v6 migration
       -----------------

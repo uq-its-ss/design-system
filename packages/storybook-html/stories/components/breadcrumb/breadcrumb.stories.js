@@ -1,6 +1,6 @@
 // documentation
 import docs from "./breadcrumb.docs.mdx";
-import breadcrumbTwig from "./breadcrumb.twig";
+import breadcrumbTwig from "./breadcrumb.html.twig";
 import { useEffect } from "@storybook/addons";
 
 // import styles

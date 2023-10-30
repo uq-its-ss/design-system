@@ -7,4 +7,4 @@ package-lock.json
 
 # Build
 /packages/**/dist
-/packages/**/storybook-static/
+/packages/**/storybook-static/ 

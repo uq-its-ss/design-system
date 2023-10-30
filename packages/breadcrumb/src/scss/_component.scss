@@ -4,7 +4,6 @@
 
 // Breadcrumb
 .uq-breadcrumb {
-  padding: 1rem;
 
   // Breadcrumb item
   &__list {
@@ -13,6 +12,7 @@
     list-style: none;
     display: flex;
     flex-wrap: wrap;
+    grid-gap: 2px 0;
   }
 
   // Breadcrumb item
@@ -79,6 +79,17 @@
 
     &:hover {
       color: core.$uq-neutral-dark40;
+    }
+  }
+
+  &__container {
+    border-bottom: 1px solid #e2e2e2;
+
+    & .uq-breadcrumb {
+      padding: 1rem;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 73.25rem;
     }
   }
 }

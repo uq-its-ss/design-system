@@ -15,7 +15,7 @@ Go to the [UQ Design System](https://design-system.uq.edu.au/) website for infor
 
 ## GitHub documentation
 
-This contains information only relevent to working in the repository. Documentation about designing and developing user interfaces is on the [UQ Design System](https://design-system.uq.edu.au/) website.
+This contains information only relevent to working in the repository. Documentation about designing and developing user interfaces is on the [UQ Design System](https://design-system.uq.edu.au) website.
 
 Contents:
 

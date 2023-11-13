@@ -6,7 +6,10 @@
 @use "_partials/colour-constants" as *;
 @use "_partials/text-constants" as *;
 
-// Placeholder styles
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
 // Provide an overlay over backgrounds to darken, lighten an image to provide
 // better visual contrast for content.

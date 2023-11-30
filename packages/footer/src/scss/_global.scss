@@ -1,6 +1,0 @@
-@use "@uqds/core/src/scss/global" as core;
-
-// Variables, functions, and mixins
-$site-footer-color: mix(core.$uq-white, core.$uq-purple, 75%);
-$site-footer-link-color: core.$uq-white;
-$site-footer-font-size: 0.875rem;

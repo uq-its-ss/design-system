@@ -1,3 +1,0 @@
-# Accessibility requirements
-
-[TODO]

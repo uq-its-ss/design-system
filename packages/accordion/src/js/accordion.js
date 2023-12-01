@@ -189,9 +189,10 @@ class accordion {
       }
     }
 
-    const accordions = document.querySelectorAll(`.${this.className}`);
+    const accordions = document.querySelectorAll(`.${this.className}:not([data-accordion-init]`);
 
     accordions.forEach((el) => {
+      el.dataset.accordionInit = '';
       const togglers = el.querySelectorAll(`.${this.className}__toggle`);
 
       togglers.forEach((el) => {
@@ -201,7 +202,7 @@ class accordion {
 
     // wrap contents of uq-accordion__content in a wrapper to apply padding and prevent animation jump
     const accordionContents = document.querySelectorAll(
-      `.${this.className}__content`
+      `.${this.className}:not([data-accordion-init] .${this.className}__content`
     );
     const accordionName = this.className;
 

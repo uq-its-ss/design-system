@@ -26,7 +26,8 @@ class accordion {
 
   /**
    * Method to replace jQuery's .next() method.
-   * See: https://gomakethings.com/finding-the-next-and-previous-sibling-elements-that-match-a-selector-with-vanilla-js/
+   * See:
+   * https://gomakethings.com/finding-the-next-and-previous-sibling-elements-that-match-a-selector-with-vanilla-js/
    * @static
    * @param {HTMLElement} el - HTML element.
    * @param {String} selector - CSS selector string.
@@ -189,10 +190,12 @@ class accordion {
       }
     }
 
-    const accordions = document.querySelectorAll(`.${this.className}:not([data-accordion-init]`);
+    const accordions = document.querySelectorAll(
+      `.${this.className}:not([data-accordion-init]`
+    );
 
     accordions.forEach((el) => {
-      el.dataset.accordionInit = '';
+      el.dataset.accordionInit = "";
       const togglers = el.querySelectorAll(`.${this.className}__toggle`);
 
       togglers.forEach((el) => {
@@ -206,14 +209,9 @@ class accordion {
     );
     const accordionName = this.className;
 
-    accordionContents.forEach(function (accordionContent) {
+    accordionContents.forEach((accordionContent) => {
       let innerContent = accordionContent.innerHTML;
-      accordionContent.innerHTML = "";
-      let contentWrapper =
-        `<div class ="` +
-        accordionName +
-        `__content-wrapper">${innerContent}</div>`;
-      accordionContent.innerHTML = contentWrapper;
+      accordionContent.innerHTML = `<div class ="${accordionName}__content-wrapper">${innerContent}</div>`;
     });
   }
 }

@@ -40,39 +40,25 @@ export const breadcrumbTruncation = () => {
     new breadcrumbCreate(breadcrumbTrunc);
   });
   return `
-<nav class="uq-breadcrumb uq-breadcrumb--truncated" aria-label="breadcrumb">
-      <ol class="uq-breadcrumb__list" itemscope="" itemtype="https://schema.org/BreadcrumbList">
-        <li class="uq-breadcrumb__item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+<nav class="uq-breadcrumb" aria-label="breadcrumb">
+      <ol class="uq-breadcrumb__list">
+        <li class="uq-breadcrumb__item">
           <a class="uq-breadcrumb__link" title="Home" href="/">Home</a>
-          <meta itemprop="position" content="1">
         </li>
-        <li class="uq-breadcrumb__item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
-          <a class="uq-breadcrumb__link" itemprop="item" title="Level one" href="/information-and-services">Level one</a>
-          <meta itemprop="position" content="2">
+        <li class="uq-breadcrumb__item">
+          <a class="uq-breadcrumb__link" title="Level one" href="/information-and-services">Level one</a>
         </li>
-        <li class="uq-breadcrumb__item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
-          <a class="uq-breadcrumb__link" itemprop="item" title="Level two" href="/information-and-services/internet-and-wifi">Level two</a>
-          <meta itemprop="position" content="3">
+        <li class="uq-breadcrumb__item">
+          <a class="uq-breadcrumb__link" title="Level two" href="/information-and-services/internet-and-wifi">Level two</a>
         </li>
-        <li class="uq-breadcrumb__item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
-          <a class="uq-breadcrumb__link" itemprop="item" title="A really long page title" href="#">A really long page title</a>
-          <meta itemprop="position" content="5">
+        <li class="uq-breadcrumb__item">
+          <a class="uq-breadcrumb__link" title="Bachelor of Business with a Major in Management or Finance" href="#">Bachelor of Business with a Major in Management or Finance</a>
         </li>
-        <li class="uq-breadcrumb__item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
-          <a class="uq-breadcrumb__link" itemprop="item" title="Another really long title" href="#">Another really long title</a>
-          <meta itemprop="position" content="6">
+        <li class="uq-breadcrumb__item">
+          <a class="uq-breadcrumb__link" title="Major Leadership and Management Science" href="#">Major Leadership and Management Science</a>
         </li>
-        <li class="uq-breadcrumb__item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
-          <a class="uq-breadcrumb__link" itemprop="item" title="Bachelor of Business with a Major in Management or Finance" href="#">Bachelor of Business with a Major in Management or Finance</a>
-          <meta itemprop="position" content="7">
-        </li>
-        <li class="uq-breadcrumb__item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
-          <a class="uq-breadcrumb__link" itemprop="item" title="Major Leadership and Management Science" href="#">Major Leadership and Management Science</a>
-          <meta itemprop="position" content="8">
-        </li>
-        <li class="uq-breadcrumb__item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
-          Welcome to the Kitchen Sink page
-          <meta itemprop="position" content="9">
+        <li class="uq-breadcrumb__item">
+          Current page
         </li>
       </ol>
     </nav>

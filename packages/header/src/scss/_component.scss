@@ -235,7 +235,9 @@
     color: core.$uq-white; //core.$uq-purple;
     text-decoration: none;
     padding: core.$space-m core.$space-l;
-    transition: background-color 0.25s, border-color 0.25s;
+    transition:
+      background-color 0.25s,
+      border-color 0.25s;
     font-weight: 400;
     position: relative;
     border-bottom: 4px solid transparent;
@@ -367,7 +369,9 @@
     top: 3.95rem;
     z-index: 20;
     box-shadow: 0 0.75rem core.$space-l rgb(24 24 24 / 20%);
-    transition: max-height 0.2s ease-in-out, transform 0.2s ease-in-out; //, visibility .2s ease;
+    transition:
+      max-height 0.2s ease-in-out,
+      transform 0.2s ease-in-out; //, visibility .2s ease;
     transform: translateY(-1rem);
     max-height: 0;
     overflow: hidden;
@@ -436,7 +440,10 @@
     text-decoration: none;
     text-indent: 0;
     top: calc(50% - 1.375rem);
-    transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+    transition:
+      color 0.2s,
+      background-color 0.2s,
+      border-color 0.2s;
     width: 2.75rem;
 
     &::before {
@@ -859,7 +866,9 @@ body.no-scroll {
   display: block;
   color: #fff;
   text-decoration: none;
-  transition: background-color 0.25s, border-color 0.25s;
+  transition:
+    background-color 0.25s,
+    border-color 0.25s;
   font-weight: 400;
   position: relative;
   border-bottom: 4px solid transparent;

@@ -57,7 +57,7 @@ wayfindingControl.storyName = "3A Wayfinding controls";
 export const wayfindingControlWorking = () => {
   useEffect(() => {
     const circularProgress = new MDCCircularProgress(
-      document.querySelector("#wayfindingProgressIndicator")
+      document.querySelector("#wayfindingProgressIndicator"),
     );
     circularProgress.determinate = false;
     circularProgress.open();

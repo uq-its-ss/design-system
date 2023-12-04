@@ -28,7 +28,7 @@ class Breadcrumb {
     // add expand crumb after the home crumb
     this.firstCrumb.parentNode.insertBefore(
       this.expandCrumb,
-      this.firstCrumb.nextSibling
+      this.firstCrumb.nextSibling,
     );
 
     // hide the crumbs in between
@@ -36,7 +36,7 @@ class Breadcrumb {
 
     // add event listener to expand crumb to toggle show/hide
     this.expandCrumb.firstChild.addEventListener("click", () =>
-      this.toggleExpand()
+      this.toggleExpand(),
     );
   }
 
@@ -48,7 +48,7 @@ class Breadcrumb {
     this.expandCrumb.classList.add(
       "uq-breadcrumb__item",
       "uq-breadcrumb__expand",
-      "uq-breadcrumb__item--hidden"
+      "uq-breadcrumb__item--hidden",
     );
     this.expandCrumb.innerHTML = '<a class="uq-breadcrumb__link">...</a>';
   }

@@ -108,7 +108,9 @@ $-result-icon-spacing: $-icon-spacing;
     align-items: center;
     background-color: core.$uq-white;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08), 0 8px 16px rgba(0, 0, 0, 0.16);
+    box-shadow:
+      0 4px 8px rgba(0, 0, 0, 0.08),
+      0 8px 16px rgba(0, 0, 0, 0.16);
     display: flex;
     margin: core.$space-m;
     overflow: hidden;
@@ -252,7 +254,8 @@ $-result-icon-spacing: $-icon-spacing;
     padding: core.$space-m 0;
     border-radius: 8px;
     background-color: core.$uq-white;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08),
+    box-shadow:
+      0px 4px 8px rgba(0, 0, 0, 0.08),
       0px 8px 16px rgba(0, 0, 0, 0.16);
     overflow: hidden;
     position: relative;
@@ -285,7 +288,8 @@ $-result-icon-spacing: $-icon-spacing;
       text-align: left;
       outline: 0 none;
       padding: core.$space-s core.$space-m;
-      transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+      transition:
+        background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
         box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
         border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
       user-select: none;
@@ -741,10 +745,18 @@ $-result-icon-spacing: $-icon-spacing;
           core.$uq-neutral-light80,
           rgba(core.$uq-neutral-light80, 0)
         );
-      background-position: 0 0, 0 100%, 0 0, 0 100%;
+      background-position:
+        0 0,
+        0 100%,
+        0 0,
+        0 100%;
       background-repeat: no-repeat;
       background-color: core.$uq-white;
-      background-size: 100% 4rem, 100% 4rem, 100% 1rem, 100% 1rem;
+      background-size:
+        100% 4rem,
+        100% 4rem,
+        100% 1rem,
+        100% 1rem;
       background-attachment: local, local, scroll, scroll;
       height: calc(
         100% - #{$actions-allowance + $-icon-button-height + core.$space-l * 2}

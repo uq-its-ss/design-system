@@ -28,7 +28,7 @@ const iconsByCat = iconCatalog.reduce(
 
     return acc;
   },
-  { categories: [], icons: [] }
+  { categories: [], icons: [] },
 );
 
 export default {

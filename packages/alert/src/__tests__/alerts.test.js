@@ -36,7 +36,7 @@ describe("Alert close behaviour", () => {
     // Dismissed one hour before the time in the fixture.
     window.localStorage.setItem(
       `alert-dismissed-8da600f4-0a64-4df5-8bc5-a410d7496a26`,
-      String(1652937962 - 3600)
+      String(1652937962 - 3600),
     );
     const container = renderFromString(headerMarkup);
     new Alerts(container.querySelector(".uq-alerts-global-container"));
@@ -61,7 +61,7 @@ describe("Alert default behaviour", () => {
       expect(alerts).toHaveLength(2);
     });
     expect(alerts[0]).toHaveTextContent(
-      "You're doing a great job. Keep it up!"
+      "You're doing a great job. Keep it up!",
     );
     expect(alerts[1]).toHaveTextContent("Danger!");
     expect(container.body.innerHTML).toMatchSnapshot();
@@ -77,7 +77,7 @@ describe("Alert default behaviour", () => {
       expect(alerts).toHaveLength(2);
     });
     expect(alerts[0]).toHaveTextContent(
-      "You're doing a great job. Keep it up!"
+      "You're doing a great job. Keep it up!",
     );
     fireEvent.click(getByRole(alerts[0], "button", { name: "Close" }));
     await waitFor(() => {
@@ -87,9 +87,9 @@ describe("Alert default behaviour", () => {
     expect(
       parseInt(
         window.localStorage.getItem(
-          `alert-dismissed-8da600f4-0a64-4df5-8bc5-a410d7496a26`
-        )
-      )
+          `alert-dismissed-8da600f4-0a64-4df5-8bc5-a410d7496a26`,
+        ),
+      ),
     ).toBeGreaterThanOrEqual(now);
   });
   it("Should match on partial URIs", async () => {

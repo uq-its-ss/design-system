@@ -36,6 +36,23 @@ Currently reserved for the UQ Homepage and level one landing pages for Study, Re
   <Story height={300} id="components-header--header" />
 </Canvas>
 
+### Usage
+
+Use JavaScript to initialize the component to ensure it will work as expected.
+
+```js
+// Initialise header
+const headerElem = document.querySelector(".uq-header");
+new uq.header(headerElem);
+
+const appHeight = () => {
+  const doc = document.documentElement;
+  doc.style.setProperty("--app-height", `${window.innerHeight}px`);
+};
+window.addEventListener("resize", appHeight);
+appHeight();
+```
+
 ## Variant examples
 
 ### Header simplified

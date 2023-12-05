@@ -13,27 +13,21 @@ class accordion {
    * default: "accordion").
    */
   constructor(className) {
-    if (!className) {
-      className = "uq-accordion";
-    } else {
-      className = className;
-    }
-
-    this.className = className;
-
+    this.className = className || "uq-accordion";
     this.init();
   }
 
   /**
    * Method to replace jQuery's .next() method.
-   * See: https://gomakethings.com/finding-the-next-and-previous-sibling-elements-that-match-a-selector-with-vanilla-js/
+   * See:
+   * https://gomakethings.com/finding-the-next-and-previous-sibling-elements-that-match-a-selector-with-vanilla-js/
    * @static
    * @param {HTMLElement} el - HTML element.
    * @param {String} selector - CSS selector string.
    */
   static getNextSibling(el, selector) {
     // Get the next sibling element
-    var sibling = el.nextElementSibling;
+    let sibling = el.nextElementSibling;
 
     // If there's no selector, return the first sibling
     if (!selector) {
@@ -58,7 +52,7 @@ class accordion {
    */
   static getPrevSibling(el, selector) {
     // Get the next sibling element
-    var sibling = el.previousElementSibling;
+    let sibling = el.previousElementSibling;
 
     // If there's no selector, return the first sibling
     if (!selector) {
@@ -123,15 +117,15 @@ class accordion {
    * @param {HTMLElement[]} togglers - List of 'toggler' elements.
    */
   slideUpOthers(el, togglers) {
-    for (let i = 0; i < togglers.length; i++) {
-      if (togglers[i] !== el) {
-        if (
-          togglers[i].classList.contains(`${this.className}__toggle--active`)
-        ) {
-          this.slideContentUp(togglers[i]);
-        }
-      }
-    }
+    Array.from(togglers)
+      .filter(
+        (toggler) =>
+          toggler !== el &&
+          toggler.classList.contains(`${this.className}__toggle--active`)
+      )
+      .forEach((toggler) => {
+        this.slideContentUp(toggler);
+      });
   }
 
   /**
@@ -145,18 +139,18 @@ class accordion {
       const toggle = e.target.closest(`.${this.className}__toggle`);
       if (toggle.classList.contains(`${this.className}__toggle--active`)) {
         this.slideContentUp(toggle);
-      } else {
-        if (
-          toggle
-            .closest(`.${this.className}`)
-            .classList.contains(`${this.className}--is-manual`)
-        ) {
-          this.slideContentDown(toggle);
-        } else {
-          this.slideContentDown(toggle);
-          this.slideUpOthers(toggle, togglers);
-        }
+        return;
       }
+      if (
+        toggle
+          .closest(`.${this.className}`)
+          .classList.contains(`${this.className}--is-manual`)
+      ) {
+        this.slideContentDown(toggle);
+        return;
+      }
+      this.slideContentDown(toggle);
+      this.slideUpOthers(toggle, togglers);
     };
   }
 
@@ -189,9 +183,17 @@ class accordion {
       }
     }
 
-    const accordions = document.querySelectorAll(`.${this.className}`);
+    const accordions = document.querySelectorAll(
+      `.${this.className}:not([data-accordion-init])`
+    );
+
+    // wrap contents of uq-accordion__content in a wrapper to apply padding and prevent animation jump
+    const accordionContents = document.querySelectorAll(
+      `.${this.className}:not([data-accordion-init]) .${this.className}__content`
+    );
 
     accordions.forEach((el) => {
+      el.dataset.accordionInit = "";
       const togglers = el.querySelectorAll(`.${this.className}__toggle`);
 
       togglers.forEach((el) => {
@@ -199,20 +201,8 @@ class accordion {
       });
     });
 
-    // wrap contents of uq-accordion__content in a wrapper to apply padding and prevent animation jump
-    const accordionContents = document.querySelectorAll(
-      `.${this.className}__content`,
-    );
-    const accordionName = this.className;
-
-    accordionContents.forEach(function (accordionContent) {
-      let innerContent = accordionContent.innerHTML;
-      accordionContent.innerHTML = "";
-      let contentWrapper =
-        `<div class ="` +
-        accordionName +
-        `__content-wrapper">${innerContent}</div>`;
-      accordionContent.innerHTML = contentWrapper;
+    accordionContents.forEach((accordionContent) => {
+      accordionContent.innerHTML = `<div class ="${this.className}__content-wrapper">${accordionContent.innerHTML}</div>`;
     });
   }
 }

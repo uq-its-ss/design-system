@@ -44,7 +44,7 @@
         </div>
         <ul>
           <li data-gtm-category="Main navigation">
-            <a class="slide-menu__control" href="#" data-gtm-label="Study">Study</a>
+            <a class="global-mobile-nav__audience-link slide-menu__control" href="#" data-gtm-label="Study">Study</a>
             <ul>
               <li>
                 <a href="/study" data-gtm-label="Study > Study">Study</a>
@@ -88,7 +88,7 @@
             </ul>
           </li>
           <li data-gtm-category="Main navigation">
-            <a class="slide-menu__control" href="/admissions" aria-haspopup="true" aria-expanded="false" data-gtm-label="Admissions">Admissions</a>
+            <a class="global-mobile-nav__audience-link slide-menu__control" href="/admissions" aria-haspopup="true" aria-expanded="false" data-gtm-label="Admissions">Admissions</a>
             <ul>
               <li>
                 <a href="/admissions" data-gtm-label="Admissions > Admissions">Admissions</a>
@@ -120,7 +120,7 @@
             </ul>
           </li>
           <li data-gtm-category="Main navigation">
-            <a class="slide-menu__control" href="/university-life" aria-haspopup="true" aria-expanded="false" data-gtm-label="University life">University life</a>
+            <a class="global-mobile-nav__audience-link slide-menu__control" href="/university-life" aria-haspopup="true" aria-expanded="false" data-gtm-label="University life">University life</a>
             <ul>
               <li>
                 <a href="/university-life" data-gtm-label="University life > University life">University life</a>
@@ -631,8 +631,7 @@
       const headerElem = document.querySelector('.uq-header');
       new uq.header(headerElem);
       // Initialise Main Navigation
-      const navElem = document.getElementById("jsNav");
-      new uq.siteHeaderNavigation(navElem, "uq-site-header__navigation");
+      const navElem = document.getElementById("jsNav"); if (navElem) { new uq.siteHeaderNavigation(navElem, "uq-site-header__navigation"); }
       // Initialise accordions
       new uq.accordion();
 

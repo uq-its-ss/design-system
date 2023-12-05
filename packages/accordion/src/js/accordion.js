@@ -121,7 +121,7 @@ class accordion {
       .filter(
         (toggler) =>
           toggler !== el &&
-          toggler.classList.contains(`${this.className}__toggle--active`)
+          toggler.classList.contains(`${this.className}__toggle--active`),
       )
       .forEach((toggler) => {
         this.slideContentUp(toggler);
@@ -184,12 +184,12 @@ class accordion {
     }
 
     const accordions = document.querySelectorAll(
-      `.${this.className}:not([data-accordion-init])`
+      `.${this.className}:not([data-accordion-init])`,
     );
 
     // wrap contents of uq-accordion__content in a wrapper to apply padding and prevent animation jump
     const accordionContents = document.querySelectorAll(
-      `.${this.className}:not([data-accordion-init]) .${this.className}__content`
+      `.${this.className}:not([data-accordion-init]) .${this.className}__content`,
     );
 
     accordions.forEach((el) => {

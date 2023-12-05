@@ -16,7 +16,7 @@ describe("Accordion behaviour", () => {
       })
       .closest(".uq-accordion__content");
     expect(
-      container.querySelector(".uq-accordion__content-wrapper")
+      container.querySelector(".uq-accordion__content-wrapper"),
     ).toBeInTheDocument();
     await waitFor(() => {
       expect(accordion1).toHaveAttribute("aria-hidden", "false");

@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/uq-its-ss/design-system#readme",
   "license": "ISC",
-  "main": "lib/accordion.js",
+  "main": "src/js/accordion.js",
   "directories": {
     "lib": "src"
   },

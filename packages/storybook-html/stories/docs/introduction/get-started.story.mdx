@@ -11,9 +11,9 @@ import { Meta, Story, Canvas } from "@storybook/addon-docs";
     <p>
       <strong>
         The Design system is in active use in current projects at UQ.
-      </strong>{" "}
+      </strong>
       Our NPM packages are currently restricted to ITS-ADS staff with AWS tools
-      access. If you have access, please refer to the{" "}
+      access. If you have access, please refer to the
       <a href="https://confluence.its.uq.edu.au/confluence/x/0DwDCw">
         environment setup instructions
       </a>
@@ -30,9 +30,9 @@ There are a few ways to get started with the UQ Design System. Which method you 
 Here are the ways you can start using the UQ Design System right now;
 
 - If you have prior experience with npm and Sass, [use the npm CLI to install components](#using-npm-to-install-components-into-your-project).
-- If you don't have previous experience with npm or Sass, please [contact us at ADS-UI][2] for further options.
-- Designers can go straight to the docs to view working examples. Also, check out the [Future Students Design System][3] (Figma project).
-- If you would like a walkthrough of the docs for your analysis needs, please [contact us][2] for a tour.
+- If you don't have previous experience with npm or Sass, please [contact us at ADS-UI](/?path=/docs/introduction-overview--page#contacts-and-community) for further options.
+- Designers can go straight to the docs to view working examples. Also, check out the [Future Students Design System](https://www.figma.com/file/Li7SZkmaLgw8ZdiHje2q7x/Future-Students-Design-System?node-id=1691%3A0) (Figma project).
+- If you would like a walkthrough of the docs for your analysis needs, please [contact us](/?path=/docs/introduction-overview--page#contacts-and-community) for a tour.
 
 ## Reading the docs
 
@@ -45,7 +45,7 @@ It's where we provide:
 
 ## Using npm to install components into your project
 
-Our NPM packages are currently restricted to ITS-ADS staff with AWS tools access. If you have access, please refer to the [environment setup instructions][1].
+Our NPM packages are currently restricted to ITS-ADS staff with AWS tools access. If you have access, please refer to the [environment setup instructions](https://confluence.its.uq.edu.au/confluence/x/0DwDCw).
 
 Design System packages are scoped under `@uqds`.
 
@@ -69,9 +69,9 @@ result in any compiled CSS by itself when processed. The `@uqds/core` package is
 an example of a package that only contains non-emitting code. You can use this
 file wherever you need reference variables, functions, and mixins within your
 own Sass stylesheets. **Our `.scss` files are written for the [primary
-implementation of Sass (Dart Sass)][6]**.
+implementation of Sass (Dart Sass)][https://sass-lang.com/dart-sass]**.
 
-We recommend using namespaces when importing the non-emitting [modules][5] into
+We recommend using namespaces when importing the non-emitting [modules][https://sass-lang.com/documentation/at-rules/use] into
 your Sass files. For example,
 
 ```scss
@@ -102,7 +102,7 @@ safely imported without a namespace into Sass files. For example,
 You can also use emitting code in your JavaScript projects. With a bundler like
 Webpack (with `sass-loader`) or Rollup (with `rollup-plugin-scss`), you can import
 it as a module. The following example uses the ES6 import syntax. Just remember
-to [choose Dart Sass (`sass`) as the preprocessor (as opposed to `node-sass`)][7].
+to [choose Dart Sass (`sass`) as the preprocessor (as opposed to `node-sass`)](https://webpack.js.org/loaders/sass-loader/#implementation).
 
 ```javascript
 // module.js
@@ -146,11 +146,3 @@ Instructions coming soon after we get our house in order.
 | @uqds/tabs          | Core             | --JS--                                                                                          |
 
 \* '--JS--' denotes that a package contains a JavaScript library.
-
-[1]: https://confluence.its.uq.edu.au/confluence/x/0DwDCw
-[2]: /?path=/docs/introduction-overview--page#contacts-and-community
-[3]: https://www.figma.com/file/Li7SZkmaLgw8ZdiHje2q7x/Future-Students-Design-System?node-id=1691%3A0
-[4]: https://registry.npmjs.org
-[5]: https://sass-lang.com/documentation/at-rules/use
-[6]: https://sass-lang.com/dart-sass
-[7]: https://webpack.js.org/loaders/sass-loader/#implementation

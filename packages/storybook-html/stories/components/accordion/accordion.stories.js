@@ -81,7 +81,7 @@ export const withHeadings = (args) => {
   });
   return `<div class="uq-accordion" aria-label="Accordion button group" role="presentation">
     <div class="uq-accordion__item">
-    <button class="uq-accordion__toggle" aria-controls="content-1" aria-expanded="false" id="accordion-title-1"><${args.tag}>Title 1</${args.tag}</button>
+    <button class="uq-accordion__toggle" aria-controls="content-1" aria-expanded="false" id="accordion-title-1"><${args.tag}>Title 1</${args.tag}></button>
     <div class="uq-accordion__content" role="region" aria-hidden="true" id="content-1" aria-labelledby="accordion-title-1">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor eros dui, vitae iaculis leo ornare eget. Etiam tristique lobortis ligula non mattis. Ut dapibus libero neque, vel tincidunt nunc tempus eget.</p>
     </div>

@@ -53,6 +53,10 @@
     transition: all ease 0.2s;
     width: 100%;
 
+    & > * {
+      margin: 0;
+    }
+
     @media #{core.$screen-md-up} {
       padding: core.$space-m core.$space-uul core.$space-m core.$space-l;
     }

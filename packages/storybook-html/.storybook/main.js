@@ -5,11 +5,19 @@ module.exports = {
     "../stories/**/*.@(stories|story).mdx",
     "../stories/**/*.@(stories|story).@(js|jsx|ts|tsx)",
   ],
-  addons: ["@storybook/addon-a11y", "@storybook/addon-essentials"],
+
+  addons: [
+    "@storybook/addon-a11y",
+    "@storybook/addon-essentials",
+    "@storybook/addon-mdx-gfm"
+  ],
+
   staticDirs: ["../public"],
+
   features: {
     postcss: false,
   },
+
   webpackFinal: async (config, { configType }) => {
     // Export a function. Accept the base config as the only param.
     // `configType` has a value of 'DEVELOPMENT' or 'PRODUCTION'
@@ -87,4 +95,13 @@ module.exports = {
     // Return the altered config
     return config;
   },
+
+  framework: {
+    name: "@storybook/html-webpack5",
+    options: {}
+  },
+
+  docs: {
+    autodocs: true
+  }
 };

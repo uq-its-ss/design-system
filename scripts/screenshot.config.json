@@ -57,7 +57,6 @@
     "components-blockquote--blockquote": "http://localhost:6006/iframe.html?id=components-blockquote--blockquote",
     "components-blockquote--blockquote-light": "http://localhost:6006/iframe.html?id=components-blockquote--blockquote-light",
     "components-breadcrumb--breadcrumb": "http://localhost:6006/iframe.html?id=components-breadcrumb--breadcrumb",
-    "components-breadcrumb--breadcrumb-truncation": "http://localhost:6006/iframe.html?id=components-breadcrumb--breadcrumb-truncation",
     "components-button--primary": "http://localhost:6006/iframe.html?id=components-button--primary",
     "components-button--secondary": "http://localhost:6006/iframe.html?id=components-button--secondary",
     "components-button--secondary-light": "http://localhost:6006/iframe.html?id=components-button--secondary-light",

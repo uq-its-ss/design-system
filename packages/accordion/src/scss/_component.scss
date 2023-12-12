@@ -43,7 +43,7 @@
     display: inline-block;
     font-family: core.$font-body;
     font-size: core.$font-size-xl;
-    font-weight: 400;
+    font-weight: 500;
     line-height: core.$line-height-h;
     margin: core.$space-none;
     padding: core.$space-m core.$space-xxxxl core.$space-m core.$space-m;
@@ -55,6 +55,9 @@
 
     & > * {
       margin: 0;
+      color: core.$text;
+      font-size: core.$font-size-xl;
+      font-weight: 500;
     }
 
     @media #{core.$screen-md-up} {
@@ -65,15 +68,13 @@
     &::before {
       content: "";
       background-image: url(icon-constants.get-icon(
-        "standard--arrow-down-1",
+        "standard--chevron-down",
         core.$uq-purple
       ));
       background-repeat: no-repeat;
       width: core.$space-l;
       height: core.$space-l;
-      transform: translateY(50%);
       position: absolute;
-      top: core.$space-s;
       right: core.$space-m;
 
       @media #{core.$screen-md-up} {
@@ -98,7 +99,7 @@
       // Open state.
       &::before {
         background-image: url(icon-constants.get-icon(
-          "standard--arrow-up-1",
+          "standard--chevron-down",
           core.$uq-purple
         ));
       }
@@ -128,10 +129,10 @@
     transition: height 200ms ease;
 
     &-wrapper {
-      padding: core.$space-m;
+      padding: core.$space-none core.$space-m core.$space-m;
 
       @media #{core.$screen-md-up} {
-        padding: core.$space-l;
+        padding: core.$space-none core.$space-l core.$space-l;
       }
     }
 
@@ -168,20 +169,24 @@
     & .uq-accordion__toggle::before {
       width: core.$space-m;
       height: core.$space-m;
-      top: core.$space-xs;
       right: core.$space-m;
     }
 
     & .uq-accordion__toggle--active::before {
       width: core.$space-m;
       height: core.$space-m;
-      top: core.$space-xs;
       right: core.$space-m;
+    }
+
+    & .uq-accordion__content-wrapper {
+      @media #{core.$screen-md-up} {
+        padding: core.$space-none core.$space-m core.$space-m;
+      }
     }
   }
 }
 
-// Overrides for when displayed within wysiwyg fields.
+// Overrides for when displayed within wysiwyg fields. (Drupal?)
 .cke_editable {
   .uq-accordion__content {
     border: 1px dashed $accordion-editor-outline;

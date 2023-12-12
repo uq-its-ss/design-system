@@ -19,25 +19,25 @@ const config = {
     getAbsolutePath("@storybook/addon-essentials"),
     getAbsolutePath("@storybook/addon-interactions"),
     {
-			name: getAbsolutePath("@storybook/addon-styling-webpack"),
-			options: {
-				rules: [
-					{
-						test: /\.s?css$/,
-						use: [
-							'style-loader',
-							'css-loader',
-							{
-								loader: 'sass-loader',
-								options: {
-									implementation: require.resolve('sass'),
-								},
-							},
-						],
-					},
-				],
-			},
-		},
+      name: getAbsolutePath("@storybook/addon-styling-webpack"),
+      options: {
+        rules: [
+          {
+            test: /\.s?css$/,
+            use: [
+              "style-loader",
+              "css-loader",
+              {
+                loader: "sass-loader",
+                options: {
+                  implementation: require.resolve("sass"),
+                },
+              },
+            ],
+          },
+        ],
+      },
+    },
   ],
   framework: {
     name: getAbsolutePath("@storybook/html-webpack5"),

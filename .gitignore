@@ -6,6 +6,9 @@ dist
 # Packages
 packages/*/package-lock.json
 
+## Storybook
+storybook-static/
+
 # Regression Tests
 screenshots/*.png
 

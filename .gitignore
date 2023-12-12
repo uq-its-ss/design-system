@@ -1,0 +1,22 @@
+# Design system
+node_modules/
+*.log
+dist
+
+# Packages
+packages/*/package-lock.json
+
+# Regression Tests
+screenshots/*.png
+
+# IDE Specific
+.vscode
+
+# OS Specific
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db

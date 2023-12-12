@@ -1,0 +1,28 @@
+{
+    "name": "storybook",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "directories": {
+        "test": "test"
+    },
+    "scripts": {
+        "storybook": "storybook dev -p 6006",
+        "build-storybook": "storybook build"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@storybook/addon-essentials": "^7.6.4",
+        "@storybook/addon-interactions": "^7.6.4",
+        "@storybook/addon-links": "^7.6.4",
+        "@storybook/blocks": "^7.6.4",
+        "@storybook/html": "^7.6.4",
+        "@storybook/html-webpack5": "^7.6.4",
+        "@storybook/test": "^7.6.4",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "storybook": "^7.6.4"
+    }
+}

@@ -1,4 +1,4 @@
-import './button.css';
+import './button.scss';
 
 export const createButton = ({
   primary = false,

@@ -27,7 +27,5 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "devDependencies": {
-    "lerna": "^6.5.1"
-  }
+  "devDependencies": {}
 }

@@ -23,15 +23,18 @@
   "workspaces": [
     "packages/*"
   ],
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "devDependencies": {
-    "lerna": "^6.5.1"
+    "lerna": "^6.5.1",
+    "vite": "^5.0.8"
   },
-  "engines" : {
-    "node" : ">=20.10.0",
-    "npm" : ">=10.2.5"
+  "engines": {
+    "node": ">=20.10.0",
+    "npm": ">=10.2.5"
   }
 }

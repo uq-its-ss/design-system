@@ -21,7 +21,8 @@
   "author": "",
   "license": "ISC",
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "storybook-html/*"
   ],
   "main": "index.js",
   "scripts": {

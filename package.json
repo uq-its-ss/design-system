@@ -22,7 +22,7 @@
   "license": "ISC",
   "workspaces": [
     "packages/*",
-    "storybook-html/*"
+    "storybook-html"
   ],
   "main": "index.html",
   "scripts": {

@@ -1,7 +1,5 @@
 @use "@uqds/core/src/scss/global" as core;
 
-$card-shaded-bg: core.$uq-neutral-light80;
-
 // Truncate card body text
 @mixin truncate-card-1col-body-text {
   white-space: normal;

@@ -12,10 +12,87 @@
   @return mix(black, $color, $percentage);
 }
 
-// UQ Primary palette
-$uq-purple: #51247a;
-$uq-black: #000;
+// UQ Brand colours
+
+// Base
+$uq-black: #19151C;
 $uq-white: #fff;
+
+// Purple
+$purple-50: #EEE9F2;
+$purple-100: #DCD3E4;
+$purple-200: #B9A7CA;
+$purple-300: #977CAF;
+$purple-400: #745095;
+$purple-500: #51247A;
+$purple-600: #462266;
+$purple-650: #40205D;
+$purple-700: #3A1F53;
+$purple-800: #2F1D3F;
+$purple-900: #231A2C;
+
+// Grey
+$grey-50: #F3F3F4;
+$grey-100: #E8E8E8;
+$grey-200: #DCDCDD;
+$grey-300: #D1D0D2;
+$grey-400: #BAB9BB;
+$grey-500: #A3A1A4;
+$grey-600: #8C8A8D;
+$grey-700: #757377;
+$grey-800: #5E5B60;
+$grey-900: #3B383E;
+
+// Error
+$error-50: #FBEAEA;
+$error-100: #F7D4D4;
+$error-200: #EFA9A9;
+$error-300: #E67F7F;
+$error-400: #DE5454;
+$error-500: #D62929;
+$error-600: #C32727;
+$error-700: #9D2424;
+$error-800: #772020;
+$error-900: #511D1D;
+
+// Success
+$success-50: #EDF6ED;
+$success-100: #DBEDDC;
+$success-200: #B7DCB8;
+$success-300: #92CA95;
+$success-400: #6EB971;
+$success-500: #4AA74E;
+$success-600: #459949;
+$success-700: #3B7C3E;
+$success-800: #315F33;
+$success-900: #274328;
+
+// Warning
+$warning-50: #FEF8E8;
+$warning-100: #FDF1D2;
+$warning-200: #FCE3A5;
+$warning-300: #FAD678;
+$warning-400: #F9C84B;
+$warning-500: #F7BA1E;
+$warning-600: #E1AA1D;
+$warning-700: #B4891C;
+$warning-800: #87691B;
+$warning-900: #5B491A;
+
+// Utility
+$utility-50: #E7F0FA;
+$utility-100: #CFE2F5;
+$utility-200: #9EC5EB;
+$utility-300: #6EA7E1;
+$utility-400: #3D8AD7;
+$utility-500: #0D6DCD;
+$utility-600: #0E65BB;
+$utility-700: #105497;
+$utility-800: #124373;
+$utility-900: #15324E;
+
+$uq-purple: #51247a;
+
 
 // UQ Secondary palette
 $uq-purple-light: #962a8b;

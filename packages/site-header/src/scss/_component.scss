@@ -173,7 +173,7 @@
 
         &.uq-site-header__navigation__list--open {
           display: block;
-          border-top: 1px solid $nav-dropdown-divider;
+          border-top: 1px solid core.$grey-200;
 
           @media #{core.$screen-lg-up} {
             border-top: 0 none;
@@ -292,7 +292,7 @@
       width: core.$space-xxxl;
       padding: core.$space-compressed-xxxl core.$space-l;
       border: 0;
-      border-left: 1px solid $nav-dropdown-divider;
+      border-left: 1px solid core.$grey-200;
       text-indent: -100vw;
       background-image: url(icon-constants.get-icon(
         "standard--chevron-down-sml",

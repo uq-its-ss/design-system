@@ -35,14 +35,14 @@
   }
 
   &__list {
-    border-top: 1px solid $sidenav-list-item-divider;
+    border-top: 1px solid core.$grey-200;
     display: block;
     list-style-type: none;
     margin: core.$space-none;
     padding: core.$space-none;
 
     &--level-2 {
-      background-color: $sidenav-list-item-bg;
+      background-color: core.$grey-50;
       display: block;
       visibility: hidden;
       position: relative;
@@ -50,7 +50,7 @@
       left: 0;
       width: 100%;
       opacity: 0;
-      transform: translateY(-($sidenav-list-item-animation-distance));
+      transform: translateY(-(core.$space-s));
 
       .uq-side-nav__list-item {
         &:last-child {
@@ -63,13 +63,13 @@
 
         &:hover,
         &:focus {
-          background-color: $sidenav-list-item-active-bg !important;
+          background-color: core.$grey-200 !important;
         }
       }
     }
 
     &-item {
-      border-bottom: 1px solid $sidenav-list-item-divider;
+      border-bottom: 1px solid core.$grey-200;
       display: block;
       margin: core.$space-none;
       padding: core.$space-none;
@@ -136,7 +136,7 @@
       &--active,
       &:focus {
         .uq-side-nav__link {
-          background-color: $sidenav-list-item-bg;
+          background-color: core.$grey-50;
         }
       }
     }

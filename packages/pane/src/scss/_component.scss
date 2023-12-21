@@ -56,20 +56,19 @@
     @include pane-has-footer;
     &.uq-pane--shaded {
       .uq-pane__footer {
-        background-color: darken($pane-shaded-bg, 5%);
+        background-color: core.$grey-200;
       }
     }
 
     &.uq-pane--dark-tint {
       .uq-pane__footer {
-        background-color: core.$uq-black;
-        background-color: rgba(core.$uq-black, 0.3);
+        background-color: core.$grey-900;
       }
     }
   }
 
   &__title {
-    color: $pane-title-color;
+    color: core.$uq-purple;
     font-size: 1.275rem;
     font-weight: 400;
 
@@ -97,7 +96,7 @@
     }
 
     .uq-pane__footer {
-      background-color: darken($pane-shaded-bg, 5%);
+      background-color: core.$grey-200;
     }
   }
 
@@ -131,8 +130,7 @@
     }
 
     .uq-pane__footer {
-      background-color: core.$uq-black;
-      background-color: rgba(core.$uq-black, 0.3);
+      background-color: core.$grey-900;
     }
   }
 }

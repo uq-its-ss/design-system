@@ -27,15 +27,13 @@
     bottom: 0;
     left: 0;
     text-indent: -1000%;
-    box-shadow: 0 core.$space-xs core.$space-xs
-      rgba(core.$grey-900, 0.05);
+    box-shadow: 0 core.$space-xs core.$space-xs rgba(core.$grey-900, 0.05);
     transition: all ease 0.25s;
     z-index: 10;
 
     &:hover,
     &:focus {
-      box-shadow: 0 core.$space-s core.$space-m
-        rgba(core.$grey-900, 0.15);
+      box-shadow: 0 core.$space-s core.$space-m rgba(core.$grey-900, 0.15);
     }
   }
 

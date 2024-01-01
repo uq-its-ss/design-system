@@ -26,7 +26,7 @@
     font-size: core.$font-size-l;
     font-weight: core.$font-weight-medium;
     line-height: core.$line-height-h;
-    color: core.$grey-900;;
+    color: core.$grey-900;
     margin: core.$space-none core.$space-none core.$space-s;
   }
 
@@ -241,14 +241,14 @@
 
     &.uq-alert--warning {
       background-color: core.$warning-500;
-      color: core.$grey-900;;
+      color: core.$grey-900;
 
       .uq-alert__title {
-        color: core.$grey-900;;
+        color: core.$grey-900;
       }
 
       a {
-        color: core.$grey-900;;
+        color: core.$grey-900;
       }
     }
 

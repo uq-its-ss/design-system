@@ -12,15 +12,15 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@storybook/addon-essentials": "^7.6.4",
-    "@storybook/addon-interactions": "^7.6.4",
-    "@storybook/addon-links": "^7.6.4",
-    "@storybook/blocks": "^7.6.4",
-    "@storybook/html": "^7.6.4",
-    "@storybook/html-vite": "^7.6.4",
-    "@storybook/test": "^7.6.4",
+    "@storybook/addon-essentials": "^7.6.7",
+    "@storybook/addon-interactions": "^7.6.7",
+    "@storybook/addon-links": "^7.6.7",
+    "@storybook/blocks": "^7.6.7",
+    "@storybook/html": "^7.6.7",
+    "@storybook/html-vite": "^7.6.7",
+    "@storybook/test": "^7.6.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "storybook": "^7.6.4"
+    "storybook": "^7.6.7"
   }
 }

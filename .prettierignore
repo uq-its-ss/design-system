@@ -1,0 +1,12 @@
+# Ignore artifacts:
+
+# Dependencies
+/node_modules
+/vendor
+/bin
+package.json
+package-lock.json
+
+# Build
+/packages/**/dist
+/storybook-html/storybook-static/

@@ -1,14 +1,46 @@
-@use "@uqds/core/src/scss/global" as *;
+@use "@uqds/core/src/scss/global" as core;
+
+.uqds-colour__swatches {
+  display: flex;
+  gap: core.$space-m;
+  flex-wrap: nowrap; 
+  align-items: stretch;
+  justify-content: space-evenly;
+
+  & .uqds-colour__palette {
+    flex: 1 1 15%;
+    
+    @media #{core.$screen-lg-up} {
+      padding: 5rem 0 1rem 0;
+    }
+
+
+    & span {
+      visibility: hidden;
+
+      @media #{core.$screen-lg-up} {
+        font-size: core.$font-size-xs;
+        visibility: visible;
+        padding-left: 1rem;
+      }
+      
+    }
+  }
+
+  
+
+}
 
 /* colour table custom */
 .uqds-colour__palette {
   width: 100%;
   border-radius: 0.25rem;
-  padding: $space-m;
+  padding: core.$space-m;
+  font-size: core.$font-size-xs !important;
 }
 
 .uqds-colour__palette--large {
-  padding: $space-xl;
+  padding: core.$space-xl;
 }
 
 /* Colour table custom sizing */
@@ -43,194 +75,240 @@
 
 /* colour styles */
 
+
 /* UQ Primary palette */
+.uqds-colour--purple-50 {
+  background-color: core.$purple-50;
+
+}
+
+.uqds-colour--purple-100 {
+  background-color: core.$purple-100;
+}
+
+.uqds-colour--purple-200 {
+  background-color: core.$purple-200;
+}
+
+.uqds-colour--purple-300 {
+  background-color: core.$purple-300;
+  color: core.$uq-white;
+}
+
+.uqds-colour--purple-400 {
+  background-color: core.$purple-400;
+  color: core.$uq-white;
+}
+
+.uqds-colour--purple-500,
 .uqds-colour--purple {
-  background-color: $uq-purple;
+  background-color: core.$uq-purple;
+  color: core.$uq-white;
+}
+
+.uqds-colour--purple-600 {
+  background-color: core.$purple-600;
+  color: core.$uq-white;
+}
+
+.uqds-colour--purple-700 {
+  background-color: core.$purple-700;
+  color: core.$uq-white;
+}
+
+.uqds-colour--purple-800 {
+  background-color: core.$purple-800;
+  color: core.$uq-white;
+}
+
+.uqds-colour--purple-900 {
+  background-color: core.$purple-900;
+  color: core.$uq-white;
 }
 
 .uqds-text-color--purple {
-  color: $uq-purple;
+  color: core.$uq-purple;
 }
 
 .uqds-colour--black {
-  background-color: $uq-black;
+  background-color: core.$uq-black;
 }
 
 .uqds-colour--white {
-  background-color: $uq-white;
+  background-color: core.$uq-white;
   border: 1px solid #eeeeee;
 }
 
 .uqds-text-color--white {
-  color: $uq-white;
+  color: core.$uq-white;
 }
 
 /* UQ secondary palette */
 .uqds-colour--purple-light {
-  background-color: $uq-purple-light;
+  background-color: core.$uq-purple-light;
 }
 
 .uqds-colour--neutral {
-  background-color: $uq-neutral;
+  background-color: core.$uq-neutral;
 }
 
 .uqds-colour--darkgrey {
-  background-color: $uq-darkgrey;
+  background-color: core.$uq-darkgrey;
 }
 
 .uqds-colour--gold {
-  background-color: $uq-gold;
+  background-color: core.$uq-gold;
 }
 
 .uqds-colour--red {
-  background-color: $uq-red;
+  background-color: core.$uq-red;
 }
 
 .uqds-colour--orange {
-  background-color: $uq-orange;
+  background-color: core.$uq-orange;
 }
 
 .uqds-colour--yellow {
-  background-color: $uq-yellow;
+  background-color: core.$uq-yellow;
 }
 
 .uqds-colour--blue {
-  background-color: $uq-blue;
+  background-color: core.$uq-blue;
 }
 
 .uqds-colour--aqua {
-  background-color: $uq-aqua;
+  background-color: core.$uq-aqua;
 }
 
 .uqds-colour--green {
-  background-color: $uq-green;
+  background-color: core.$uq-green;
 }
 
 /* UQ purple gradient */
 .uqds-purple-gradient {
-  background: $uq-purple-gradient;
+  background: core.$uq-purple-gradient;
 }
 
 /* Neutral tints */
 .uqds-neutral-light20 {
-  background-color: $uq-neutral-light20;
+  background-color: core.$uq-neutral-light20;
 }
 
 .uqds-neutral-light40 {
-  background-color: $uq-neutral-light40;
+  background-color: core.$uq-neutral-light40;
 }
 
 .uqds-neutral-light60 {
-  background-color: $uq-neutral-light60;
+  background-color: core.$uq-neutral-light60;
 }
 
 .uqds-neutral-light80 {
-  background-color: $uq-neutral-light80;
+  background-color: core.$uq-neutral-light80;
 }
 
 /* Neutral shades */
 .uqds-neutral-dark20 {
-  background-color: $uq-neutral-dark20;
+  background-color: core.$uq-neutral-dark20;
 }
 
 .uqds-neutral-dark40 {
-  background-color: $uq-neutral-dark40;
+  background-color: core.$uq-neutral-dark40;
 }
 
 .uqds-text-color--grey {
-  color: $uq-neutral-dark40;
+  color: core.$uq-neutral-dark40;
 }
 
 .uqds-neutral-dark60 {
-  background-color: $uq-neutral-dark60;
+  background-color: core.$uq-neutral-dark60;
 }
 
 .uqds-neutral-dark80 {
-  background-color: $uq-neutral-dark80;
+  background-color: core.$uq-neutral-dark80;
 }
 
 /* Darkgrey tints */
 .uqds-darkgrey-light20 {
-  background-color: $uq-darkgrey-light20;
+  background-color: core.$uq-darkgrey-light20;
 }
 
 .uqds-darkgrey-light40 {
-  background-color: $uq-darkgrey-light40;
+  background-color: core.$uq-darkgrey-light40;
 }
 
 .uqds-darkgrey-light60 {
-  background-color: $uq-darkgrey-light60;
+  background-color: core.$uq-darkgrey-light60;
 }
 
 .uqds-darkgrey-light80 {
-  background-color: $uq-darkgrey-light80;
+  background-color: core.$uq-darkgrey-light80;
 }
 
 /* Red shades */
 .uqds-red-dark10 {
-  background-color: $uq-red-dark10;
+  background-color: core.$uq-red-dark10;
 }
 
 .uqds-red-dark20 {
-  background-color: $uq-red-dark20;
+  background-color: core.$uq-red-dark20;
 }
 
 /* Green shades */
 .uqds-green-dark10 {
-  background-color: $uq-green-dark10;
+  background-color: core.$uq-green-dark10;
 }
 
 /* Links */
 .uqds-link-color {
-  background-color: $link;
+  background-color: core.$link;
 }
 
 .uqds-link-active-color {
-  background-color: $link-active;
+  background-color: core.$link-active;
 }
 
 .uqds-link-hover-color {
-  background-color: $link-hover;
+  background-color: core.$link-hover;
 }
 
 /* Text */
 .uqds-text-bgcolor {
-  background-color: $text;
+  background-color: core.$text;
 }
 
 .uqds-text-color {
-  color: $text;
+  color: core.$text;
 }
 
 /* Alerts */
 .uqds-colour--info {
-  background-color: $info-light;
+  background-color: core.$info-light;
 }
 
 .uqds-colour--success {
-  background-color: $success-light;
+  background-color: core.$success-light;
 }
 
 .uqds-colour--warning {
-  background-color: $warning-light;
+  background-color: core.$warning-light;
 }
 
 .uqds-colour--alert {
-  background-color: $alert-light;
+  background-color: core.$alert-light;
 }
 
 .uqds-colour--info-dark {
-  background-color: $info;
+  background-color: core.$info;
 }
 
 .uqds-colour--success-dark {
-  background-color: $success;
+  background-color: core.$success;
 }
 
 .uqds-colour--warning-dark {
-  background-color: $warning;
+  background-color: core.$warning;
 }
 
 .uqds-colour--alert-dark {
-  background-color: $alert;
+  background-color: core.$alert;
 }

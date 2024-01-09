@@ -1,0 +1,11 @@
+# Dependencies
+/node_modules
+/vendor
+/bin
+
+# Build
+/packages/**/dist
+/storybook-html/storybook-static/
+
+# Linted separately
+/packages/icon/src/ts

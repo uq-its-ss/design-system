@@ -3,29 +3,22 @@
 .uqds-colour__swatches {
   display: flex;
   gap: core.$space-m;
-  flex-wrap: nowrap; 
-  align-items: stretch;
-  justify-content: space-evenly;
+  flex-flow: column wrap;
+  justify-content: left;
+
+  @media #{core.$screen-lg-up} {
+    flex-flow: row nowrap;  
+  }
+
 
   & .uqds-colour__palette {
     flex: 1 1 15%;
     
     @media #{core.$screen-lg-up} {
       padding: 5rem 0 1rem 1rem;      
+    }      
     }
-
-
-    & span {
-      visibility: hidden;
-
-      @media #{core.$screen-lg-up} {
-        font-size: core.$font-size-xs;
-        visibility: visible;
-        padding-left: 1rem;
-      }
-      
-    }
-  }
+  
 }
 
 /* colour table custom */
@@ -37,7 +30,7 @@
 }
 
 .uqds-colour__palette--large {
-  padding: core.$space-xl;
+ // padding: core.$space-xl;
 }
 
 /* Colour table custom sizing */
@@ -74,122 +67,323 @@
 
 
 /* UQ Primary palette */
+
+
+/* UQ Purple palette */
 .uqds-colour--purple-50 {
   background-color: core.$purple-50;
-
-  @media #{core.$screen-lg-up} {
-    &::after {
-      content: 'purple-50';
-    }
-  }
-
 }
 
 .uqds-colour--purple-100 {
   background-color: core.$purple-100;
-  @media #{core.$screen-lg-up} {
-    &::after {
-      content: 'purple-100';
-    }
-  }
 }
 
 .uqds-colour--purple-200 {
   background-color: core.$purple-200;
-  @media #{core.$screen-lg-up} {
-    &::after {
-      content: 'purple-200';
-    }
-  }
 }
 
 .uqds-colour--purple-300 {
   background-color: core.$purple-300;
   color: core.$uq-white;
-  @media #{core.$screen-lg-up} {
-    &::after {
-      content: 'purple-300';
-    }
-  }
 }
 
 .uqds-colour--purple-400 {
   background-color: core.$purple-400;
   color: core.$uq-white;
-  @media #{core.$screen-lg-up} {
-    &::after {
-      content: 'purple-400';
-    }
-  }
 }
 
 .uqds-colour--purple-500,
 .uqds-colour--purple {
   background-color: core.$uq-purple;
   color: core.$uq-white;
-  @media #{core.$screen-lg-up} {
-    &::after {
-      content: 'purple-500';
-    }
-  }
 }
 
 .uqds-colour--purple-600 {
   background-color: core.$purple-600;
   color: core.$uq-white;
-  @media #{core.$screen-lg-up} {
-    &::after {
-      content: 'purple-600';
-    }
-  }
+}
+
+.uqds-colour--purple-650 {
+  background-color: core.$purple-650;
+  color: core.$uq-white;
 }
 
 .uqds-colour--purple-700 {
   background-color: core.$purple-700;
   color: core.$uq-white;
-  @media #{core.$screen-lg-up} {
-    &::after {
-      content: 'purple-700';
-    }
-  }
 }
 
 .uqds-colour--purple-800 {
   background-color: core.$purple-800;
   color: core.$uq-white;
-  @media #{core.$screen-lg-up} {
-    &::after {
-      content: 'purple-800';
-    }
-  }
 }
 
 .uqds-colour--purple-900 {
   background-color: core.$purple-900;
   color: core.$uq-white;
-  @media #{core.$screen-lg-up} {
-    &::after {
-      content: 'purple-900';
-    }
-  }
 }
 
 .uqds-text-color--purple {
   color: core.$uq-purple;
 }
 
+/* Black */
 .uqds-colour--black {
   background-color: core.$uq-black;
+  color: white;
 }
 
+/* White */
 .uqds-colour--white {
   background-color: core.$uq-white;
   border: 1px solid #eeeeee;
 }
 
+/* Grey */
+.uqds-colour--grey-50 {
+  background-color: core.$grey-50;
+}
+
+.uqds-colour--grey-100 {
+  background-color: core.$grey-100;
+}
+
+.uqds-colour--grey-200 {
+  background-color: core.$grey-200;
+}
+
+.uqds-colour--grey-300 {
+  background-color: core.$grey-300;
+}
+
+.uqds-colour--grey-400 {
+  background-color: core.$grey-400;
+}
+
+.uqds-colour--grey-500 {
+  background-color: core.$grey-500;
+  color: core.$uq-white;
+}
+
+.uqds-colour--grey-600 {
+  background-color: core.$grey-600;
+  color: core.$uq-white;
+}
+
+.uqds-colour--grey-700 {
+  background-color: core.$grey-700;
+  color: core.$uq-white;
+}
+
+.uqds-colour--grey-800 {
+  background-color: core.$grey-800;
+  color: core.$uq-white;
+}
+
+.uqds-colour--grey-900 {
+  background-color: core.$grey-900;
+  color: core.$uq-white;
+}
+
+/* Error */
+.uqds-colour--error-50 {
+  background-color: core.$error-50;
+}
+
+.uqds-colour--error-100 {
+  background-color: core.$error-100;
+}
+
+.uqds-colour--error-200 {
+  background-color: core.$error-200;
+}
+
+.uqds-colour--error-300 {
+  background-color: core.$error-300;
+  color: core.$uq-white;
+}
+
+.uqds-colour--error-400 {
+  background-color: core.$error-400;
+  color: core.$uq-white;
+}
+
+.uqds-colour--error-500 {
+  background-color: core.$error-500;
+  color: core.$uq-white;
+}
+
+.uqds-colour--error-600 {
+  background-color: core.$error-600;
+  color: core.$uq-white;
+}
+
+.uqds-colour--error-700 {
+  background-color: core.$error-700;
+  color: core.$uq-white;
+}
+
+.uqds-colour--error-800 {
+  background-color: core.$error-800;
+  color: core.$uq-white;
+}
+
+.uqds-colour--error-900 {
+  background-color: core.$error-900;
+  color: core.$uq-white;
+}
+
+/* Success */
+.uqds-colour--success-50 {
+  background-color: core.$success-50;
+}
+
+.uqds-colour--success-100 {
+  background-color: core.$success-100;
+}
+
+.uqds-colour--success-200 {
+  background-color: core.$success-200;
+}
+
+.uqds-colour--success-300 {
+  background-color: core.$success-300;
+  color: core.$uq-white;
+}
+
+.uqds-colour--success-400 {
+  background-color: core.$success-400;
+  color: core.$uq-white;
+}
+
+.uqds-colour--success-500 {
+  background-color: core.$success-500;
+  color: core.$uq-white;
+}
+
+.uqds-colour--success-600 {
+  background-color: core.$success-600;
+  color: core.$uq-white;
+}
+
+.uqds-colour--success-700 {
+  background-color: core.$success-700;
+  color: core.$uq-white;
+}
+
+.uqds-colour--success-800 {
+  background-color: core.$success-800;
+  color: core.$uq-white;
+}
+
+.uqds-colour--success-900 {
+  background-color: core.$success-900;
+  color: core.$uq-white;
+}
+
+/* Warning */
+.uqds-colour--warning-50 {
+  background-color: core.$warning-50;
+}
+
+.uqds-colour--warning-100 {
+  background-color: core.$warning-100;
+}
+
+.uqds-colour--warning-200 {
+  background-color: core.$warning-200;
+}
+
+.uqds-colour--warning-300 {
+  background-color: core.$warning-300;
+  color: core.$uq-white;
+}
+
+.uqds-colour--warning-400 {
+  background-color: core.$warning-400;
+  color: core.$uq-white;
+}
+
+.uqds-colour--warning-500 {
+  background-color: core.$warning-500;
+  color: core.$uq-white;
+}
+
+.uqds-colour--warning-600 {
+  background-color: core.$warning-600;
+  color: core.$uq-white;
+}
+
+.uqds-colour--warning-700 {
+  background-color: core.$warning-700;
+  color: core.$uq-white;
+}
+
+.uqds-colour--warning-800 {
+  background-color: core.$warning-800;
+  color: core.$uq-white;
+}
+
+.uqds-colour--warning-900 {
+  background-color: core.$warning-900;
+  color: core.$uq-white;
+}
+
+/* Utility */
+.uqds-colour--utility-50 {
+  background-color: core.$utility-50;
+}
+
+.uqds-colour--utility-100 {
+  background-color: core.$utility-100;
+}
+
+.uqds-colour--utility-200 {
+  background-color: core.$utility-200;
+}
+
+.uqds-colour--utility-300 {
+  background-color: core.$utility-300;
+  color: core.$uq-white;
+}
+
+.uqds-colour--utility-400 {
+  background-color: core.$utility-400;
+  color: core.$uq-white;
+}
+
+.uqds-colour--utility-500 {
+  background-color: core.$utility-500;
+  color: core.$uq-white;
+}
+
+.uqds-colour--utility-600 {
+  background-color: core.$utility-600;
+  color: core.$uq-white;
+}
+
+.uqds-colour--utility-700 {
+  background-color: core.$utility-700;
+  color: core.$uq-white;
+}
+
+.uqds-colour--utility-800 {
+  background-color: core.$utility-800;
+  color: core.$uq-white;
+}
+
+.uqds-colour--utility-900 {
+  background-color: core.$utility-900;
+  color: core.$uq-white;
+}
+
+
 .uqds-text-color--white {
   color: core.$uq-white;
 }
+
+
+
 
 /* UQ secondary palette */
 .uqds-colour--purple-light {
@@ -235,6 +429,7 @@
 /* UQ purple gradient */
 .uqds-purple-gradient {
   background: core.$uq-purple-gradient;
+  color: white;
 }
 
 /* Neutral tints */

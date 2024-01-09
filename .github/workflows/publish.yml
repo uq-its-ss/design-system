@@ -1,0 +1,53 @@
+name: Publish
+
+on:
+  push:
+    branches:
+      - master
+      - releases
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "⬇️ Checkout"
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: "🟢 Install NodeJS"
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+
+      - name: "📦️ Install dependencies"
+        run: npm install
+
+      - name: "📂 Bootstrap Lerna"
+        run: lerna bootstrap
+
+      - name: "🔐 Authenticate to NPM"
+        run: |
+          echo "@uqds:registry=http://registry.npmjs.org/" > .npmrc
+          echo "registry=http://registry.npmjs.org/" >> .npmrc
+          echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> .npmrc
+          npm whoami
+        env:
+          NPM_TOKEN: ${{ secrets.UQDS_PERSONAL_ACCESS_TOKEN }}
+
+      - name: "✨ Version and publish"
+        env:
+          GH_TOKEN: ${{ secrets.UQDS_PERSONAL_ACCESS_TOKEN }}
+        run: |
+          git config user.name "${{ github.actor }}"
+          git config user.email "${{ github.actor}}@users.noreply.github.com"
+          
+          if [ ${{ github.base_ref }} = master ]; then
+            npx lerna version --conventional-commits --conventional-prerelease --preid alpha --yes --no-verify-access
+          else
+            npx lerna version --conventional-commits --conventional-graduate --yes --no-verify-access
+          fi
+          
+          npx lerna publish from-git --yes
+
+

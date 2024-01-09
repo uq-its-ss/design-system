@@ -11,7 +11,7 @@
     flex: 1 1 15%;
     
     @media #{core.$screen-lg-up} {
-      padding: 5rem 0 1rem 0;
+      padding: 5rem 0 1rem 1rem;      
     }
 
 
@@ -26,9 +26,6 @@
       
     }
   }
-
-  
-
 }
 
 /* colour table custom */
@@ -80,50 +77,101 @@
 .uqds-colour--purple-50 {
   background-color: core.$purple-50;
 
+  @media #{core.$screen-lg-up} {
+    &::after {
+      content: 'purple-50';
+    }
+  }
+
 }
 
 .uqds-colour--purple-100 {
   background-color: core.$purple-100;
+  @media #{core.$screen-lg-up} {
+    &::after {
+      content: 'purple-100';
+    }
+  }
 }
 
 .uqds-colour--purple-200 {
   background-color: core.$purple-200;
+  @media #{core.$screen-lg-up} {
+    &::after {
+      content: 'purple-200';
+    }
+  }
 }
 
 .uqds-colour--purple-300 {
   background-color: core.$purple-300;
   color: core.$uq-white;
+  @media #{core.$screen-lg-up} {
+    &::after {
+      content: 'purple-300';
+    }
+  }
 }
 
 .uqds-colour--purple-400 {
   background-color: core.$purple-400;
   color: core.$uq-white;
+  @media #{core.$screen-lg-up} {
+    &::after {
+      content: 'purple-400';
+    }
+  }
 }
 
 .uqds-colour--purple-500,
 .uqds-colour--purple {
   background-color: core.$uq-purple;
   color: core.$uq-white;
+  @media #{core.$screen-lg-up} {
+    &::after {
+      content: 'purple-500';
+    }
+  }
 }
 
 .uqds-colour--purple-600 {
   background-color: core.$purple-600;
   color: core.$uq-white;
+  @media #{core.$screen-lg-up} {
+    &::after {
+      content: 'purple-600';
+    }
+  }
 }
 
 .uqds-colour--purple-700 {
   background-color: core.$purple-700;
   color: core.$uq-white;
+  @media #{core.$screen-lg-up} {
+    &::after {
+      content: 'purple-700';
+    }
+  }
 }
 
 .uqds-colour--purple-800 {
   background-color: core.$purple-800;
   color: core.$uq-white;
+  @media #{core.$screen-lg-up} {
+    &::after {
+      content: 'purple-800';
+    }
+  }
 }
 
 .uqds-colour--purple-900 {
   background-color: core.$purple-900;
   color: core.$uq-white;
+  @media #{core.$screen-lg-up} {
+    &::after {
+      content: 'purple-900';
+    }
+  }
 }
 
 .uqds-text-color--purple {

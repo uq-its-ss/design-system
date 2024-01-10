@@ -145,8 +145,8 @@ $uq-purple-gradient: linear-gradient(
 $text: $grey-900;
 
 // Link Blue
-$link: #1e72c6;
-$link-hover: #005ea5;
+$link: $utility-500;
+$link-hover: $utility-600;
 $link-active: $link-hover;
 
 // Alerts and Status - Dark

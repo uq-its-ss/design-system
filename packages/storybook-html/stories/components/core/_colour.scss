@@ -2,7 +2,6 @@
 
 .uqds-colour__swatches {
   display: flex;
-  gap: core.$space-m;
   flex-flow: column wrap;
   justify-content: left;
 
@@ -13,6 +12,7 @@
 
   & .uqds-colour__palette {
     flex: 1 1 15%;
+    border-radius: 0;
     
     @media #{core.$screen-lg-up} {
       padding: 5rem 0 1rem 1rem;      

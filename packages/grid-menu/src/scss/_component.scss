@@ -65,14 +65,14 @@
 
     &:hover {
       background-color: core.$link;
-      color: core.$uq-white;
+      color: core.$white;
       text-decoration: none;
 
       &::after {
         content: "";
         background-image: url(icon-constants.get-icon(
           "standard--arrow-right-1",
-          core.$uq-white
+          core.$white
         ));
         background-repeat: no-repeat;
         background-size: 1.4rem 1.4rem;
@@ -82,7 +82,7 @@
       .uq-grid-menu__link,
       .uq-grid-menu__title,
       .uq-grid-menu__description {
-        color: core.$uq-white;
+        color: core.$white;
         text-decoration: none;
       }
 
@@ -162,11 +162,11 @@
 
       &:hover {
         background-color: core.$link;
-        color: core.$uq-white;
+        color: core.$white;
 
         .uq-grid-menu__description {
           background-color: core.$link;
-          color: core.$uq-white;
+          color: core.$white;
         }
       }
     }
@@ -177,7 +177,7 @@
 .section--background-image {
   .uq-grid-menu {
     &__link {
-      border-color: rgba(core.$uq-white, 0.4);
+      border-color: rgba(core.$white, 0.4);
     }
   }
 }

@@ -4,7 +4,7 @@
 // tocbot style overrides
 .uqds-toc {
   box-sizing: border-box;
-  background-color: core.$uq-white;
+  background-color: core.$white;
   padding: core.$space-xl core.$space-none core.$space-none core.$space-none;
   margin-bottom: core.$space-m;
 
@@ -79,7 +79,7 @@
         font-weight: core.$font-weight-bold;
 
         &::before {
-          background-color: core.$uq-purple;
+          background-color: core.$purple;
         }
       }
     }

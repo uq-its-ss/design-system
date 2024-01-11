@@ -44,7 +44,7 @@ $-result-icon-spacing: $-icon-spacing;
     // letter-spacing: 0.5px;
 
     a {
-      color: core.$uq-purple;
+      color: core.$purple;
       text-decoration: none;
 
       &:hover {
@@ -80,11 +80,11 @@ $-result-icon-spacing: $-icon-spacing;
     width: $-icon-button-width;
 
     &:hover {
-      background-color: rgba(core.$uq-black, 0.04);
+      background-color: rgba(core.$black, 0.04);
     }
 
     &:active {
-      background-color: rgba(core.$uq-black, 0.07);
+      background-color: rgba(core.$black, 0.07);
     }
 
     &:focus {
@@ -106,7 +106,7 @@ $-result-icon-spacing: $-icon-spacing;
     $-input-height: $-icon-button-height + core.$space-s;
 
     align-items: center;
-    background-color: core.$uq-white;
+    background-color: core.$white;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08), 0 8px 16px rgba(0, 0, 0, 0.16);
     display: flex;
@@ -166,7 +166,7 @@ $-result-icon-spacing: $-icon-spacing;
       &:hover {
         background-image: url(get-icon(
           "ui--arrow-left",
-          darken(core.$uq-purple, 10%)
+          darken(core.$purple, 10%)
         ));
       }
     }
@@ -178,7 +178,7 @@ $-result-icon-spacing: $-icon-spacing;
       &:hover {
         background-image: url(get-icon(
           "ui--close",
-          darken(core.$uq-purple, 10%)
+          darken(core.$purple, 10%)
         ));
       }
     }
@@ -200,7 +200,7 @@ $-result-icon-spacing: $-icon-spacing;
       }
 
       .mdc-circular-progress {
-        @include mdc-circular-progress-mixins.color(core.$uq-purple);
+        @include mdc-circular-progress-mixins.color(core.$purple);
         flex-grow: 0;
         flex-shrink: 0;
       }
@@ -251,7 +251,7 @@ $-result-icon-spacing: $-icon-spacing;
     margin: core.$space-m;
     padding: core.$space-m 0;
     border-radius: 8px;
-    background-color: core.$uq-white;
+    background-color: core.$white;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08),
       0px 8px 16px rgba(0, 0, 0, 0.16);
     overflow: hidden;
@@ -319,7 +319,7 @@ $-result-icon-spacing: $-icon-spacing;
       &:hover {
         background-image: url(get-icon(
           "ui--arrow-left",
-          darken(core.$uq-purple, 10%)
+          darken(core.$purple, 10%)
         ));
       }
     }
@@ -330,7 +330,7 @@ $-result-icon-spacing: $-icon-spacing;
       &:hover {
         background-image: url(get-icon(
           "ui--swap",
-          darken(core.$uq-purple, 10%)
+          darken(core.$purple, 10%)
         ));
       }
     }
@@ -394,7 +394,7 @@ $-result-icon-spacing: $-icon-spacing;
     }
 
     &__decoration {
-      background-image: url(get-icon("ui--wayfinding-deco", core.$uq-green));
+      background-image: url(get-icon("ui--wayfinding-deco", core.$green));
       background-repeat: no-repeat;
       background-position: center core.$space-m;
       background-size: auto 50%;
@@ -422,7 +422,7 @@ $-result-icon-spacing: $-icon-spacing;
       }
 
       .mdc-circular-progress {
-        @include mdc-circular-progress-mixins.color(core.$uq-green);
+        @include mdc-circular-progress-mixins.color(core.$green);
         flex-grow: 0;
         flex-shrink: 0;
       }
@@ -447,7 +447,7 @@ $-result-icon-spacing: $-icon-spacing;
     @extend %uq-maps__box-sizing;
     @extend %uq-maps__primary-text;
 
-    background-color: core.$uq-white;
+    background-color: core.$white;
     border-radius: 8px;
     height: auto;
     margin: core.$space-m;
@@ -459,7 +459,7 @@ $-result-icon-spacing: $-icon-spacing;
     }
 
     &__category-title {
-      color: core.$uq-purple;
+      color: core.$purple;
       font-size: core.$font-size-xxs;
       font-weight: core.$font-weight-bold;
       text-transform: uppercase;
@@ -467,7 +467,7 @@ $-result-icon-spacing: $-icon-spacing;
       margin: core.$space-m core.$space-l 0 (core.$space-l + $-icon-spacing);
 
       &::before {
-        background-image: url(get-icon("ui--nav-right", core.$uq-purple));
+        background-image: url(get-icon("ui--nav-right", core.$purple));
         content: "";
         display: inline-block;
         height: core.$font-size-xxs;
@@ -540,7 +540,7 @@ $-result-icon-spacing: $-icon-spacing;
           position: relative;
 
           > a {
-            color: core.$uq-purple;
+            color: core.$purple;
           }
 
           &::before {
@@ -548,7 +548,7 @@ $-result-icon-spacing: $-icon-spacing;
             left: core.$space-l + $-result-icon-spacing;
             top: 50%;
             margin-top: -($-result-icon-height * 0.5);
-            background-image: url(get-icon("ui--map-pin", core.$uq-purple));
+            background-image: url(get-icon("ui--map-pin", core.$purple));
             background-position: center;
             background-repeat: no-repeat;
             background-size: $-result-icon-height $-result-icon-width;
@@ -669,23 +669,21 @@ $-result-icon-spacing: $-icon-spacing;
     }
 
     &--blue {
-      color: core.$uq-blue;
+      color: core.$blue;
     }
 
     &--green {
-      color: core.$uq-green;
+      color: core.$green;
     }
 
     &--yellow {
-      color: core.$uq-yellow;
+      color: core.$yellow;
     }
 
-    &--orange {
-      color: core.$uq-orange;
-    }
+
 
     &--red {
-      color: core.$uq-red;
+      color: core.$red;
     }
 
     &--grey {
@@ -703,7 +701,7 @@ $-result-icon-spacing: $-icon-spacing;
     @extend %uq-maps__box-sizing;
     @extend %uq-maps__primary-text;
 
-    background-color: core.$uq-white;
+    background-color: core.$white;
     height: 100%;
     overflow-y: auto;
     overflow-x: hidden;
@@ -727,10 +725,10 @@ $-result-icon-spacing: $-icon-spacing;
     &__main {
       background-image: linear-gradient(
           to bottom,
-          core.$uq-white,
-          rgba(core.$uq-white, 0)
+          core.$white,
+          rgba(core.$white, 0)
         ),
-        linear-gradient(to top, core.$uq-white, rgba(core.$uq-white, 0)),
+        linear-gradient(to top, core.$white, rgba(core.$white, 0)),
         linear-gradient(
           to bottom,
           core.$uq-neutral-light80,
@@ -743,7 +741,7 @@ $-result-icon-spacing: $-icon-spacing;
         );
       background-position: 0 0, 0 100%, 0 0, 0 100%;
       background-repeat: no-repeat;
-      background-color: core.$uq-white;
+      background-color: core.$white;
       background-size: 100% 4rem, 100% 4rem, 100% 1rem, 100% 1rem;
       background-attachment: local, local, scroll, scroll;
       height: calc(

@@ -57,7 +57,7 @@
   &__step-number {
     background-color: core.$grey-600;
     border-radius: 50%;
-    color: core.$uq-white;
+    color: core.$white;
     display: block;
     height: 1.875rem;
     line-height: 1.875rem;
@@ -88,8 +88,8 @@
 
   &__bar {
     background-color: core.$grey-500;
-    border-right: 1px solid core.$uq-white;
-    border-left: 1px solid core.$uq-white;
+    border-right: 1px solid core.$white;
+    border-left: 1px solid core.$white;
     display: flex;
     flex: 1;
     height: 10px;
@@ -124,7 +124,7 @@
   .uq-progression__link .uq-progression__step-number,
   .uq-progression__bar {
     background-color: core.$success-500;
-    color: core.$uq-white;
+    color: core.$white;
   }
 
   .uq-progression__step .uq-progression__link:hover,
@@ -137,10 +137,10 @@
 .uq-progression__bar {
   .uq-progression__bar {
     background-color: core.$grey-300;
-    color: core.$uq-white;
+    color: core.$white;
   }
   .is-complete {
     background-color: core.$success-500 !important;
-    color: core.$uq-white;
+    color: core.$white;
   }
 }

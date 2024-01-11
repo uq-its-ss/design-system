@@ -2,7 +2,7 @@
 
 .blockquote {
   border: none;
-  color: core.$uq-purple;
+  color: core.$purple;
   font-family: core.$font-body;
   font-size: core.$font-size-m;
   font-weight: core.$font-weight-normal;
@@ -15,7 +15,7 @@
   width: calc(100% - #{core.$space-xl});
 
   &::before {
-    background-color: core.$uq-purple;
+    background-color: core.$purple;
     content: "";
     height: 100%;
     left: 0;
@@ -25,17 +25,17 @@
   }
 
   &--light {
-    color: core.$uq-white;
+    color: core.$white;
 
     &::before {
-      background-color: core.$uq-white;
+      background-color: core.$white;
     }
 
     .blockquote__link,
     .blockquote__link:link,
     .blockquote__link:visited,
     .blockquote__link:active {
-      color: core.$uq-white;
+      color: core.$white;
       text-decoration: underline;
     }
     .blockquote__link:hover {

@@ -162,7 +162,7 @@ $use-encapsulation: false !default;
   input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]),
   select,
   textarea {
-    background-color: core.$uq-white;
+    background-color: core.$white;
     max-width: 100%;
     min-width: 100%;
     padding: ($form-spacing - core.$space-xs) $form-spacing;
@@ -464,7 +464,7 @@ $use-encapsulation: false !default;
 
   .uq-error-message,
   .uq-success-message {
-    color: core.$uq-white;
+    color: core.$white;
     display: block;
     font-size: core.$font-size-m;
     font-style: normal;
@@ -497,7 +497,7 @@ $use-encapsulation: false !default;
     &::before {
       background-image: url(icon.get-icon(
         "standard--exclamation-triangle",
-        core.$uq-white
+        core.$white
       ));
     }
   }
@@ -508,7 +508,7 @@ $use-encapsulation: false !default;
     &::before {
       background-image: url(icon.get-icon(
         "standard--check-circle",
-        core.$uq-white
+        core.$white
       ));
     }
   }

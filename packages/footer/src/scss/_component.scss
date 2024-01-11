@@ -4,7 +4,7 @@
 @use "global" as *;
 
 .uq-footer {
-  background: core.$uq-purple;
+  background: core.$purple;
   box-sizing: border-box;
   font-family: core.$font-body;
   font-size: core.$font-size-m;
@@ -13,7 +13,7 @@
   color: #d4c8de;
 
   &__reconciliation {
-    background: core.$uq-black;
+    background: core.$black;
     background-image: linear-gradient(
         0deg,
         #48206c 45.31%,
@@ -79,7 +79,7 @@
     font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
-    color: core.$uq-white;
+    color: core.$white;
 
     &:hover {
       text-decoration: underline;
@@ -130,7 +130,7 @@
   &__navigation-link {
     display: block;
     padding: core.$space-m core.$space-l;
-    color: core.$uq-white;
+    color: core.$white;
 
     &:hover {
       color: #d4c8de;
@@ -191,7 +191,7 @@
 
     .uq-footer__navigation-link {
       @media #{core.$screen-lg-up} {
-        color: core.$uq-white;
+        color: core.$white;
         padding: core.$space-none;
         font-weight: normal;
 
@@ -206,7 +206,7 @@
     content: "";
     background-image: url(icon-constants.get-icon(
       "standard--chevron-down-sml",
-      core.$uq-white
+      core.$white
     ));
     background-repeat: no-repeat;
     width: core.$space-l;
@@ -224,7 +224,7 @@
   .uq-accordion__toggle--active::before {
     background-image: url(icon-constants.get-icon(
       "standard--chevron-up-sml",
-      core.$uq-white
+      core.$white
     ));
   }
 
@@ -324,7 +324,7 @@
     &--facebook::before {
       background-image: url(icon-constants.get-icon(
         "social--social-facebook-circle",
-        core.$uq-white
+        core.$white
       ));
     }
     &--facebook:hover::before {
@@ -338,7 +338,7 @@
     &--linkedin::before {
       background-image: url(icon-constants.get-icon(
         "social--social-linkedin-circle",
-        core.$uq-white
+        core.$white
       ));
     }
     &--linkedin:hover::before {
@@ -352,7 +352,7 @@
     &--twitter::before {
       background-image: url(icon-constants.get-icon(
         "social--social-twitter-circle",
-        core.$uq-white
+        core.$white
       ));
     }
     &--twitter:hover::before {
@@ -366,7 +366,7 @@
     &--youtube::before {
       background-image: url(icon-constants.get-icon(
         "social--social-you-tube-circle",
-        core.$uq-white
+        core.$white
       ));
     }
     &--youtube:hover::before {
@@ -380,7 +380,7 @@
     &--instagram::before {
       background-image: url(icon-constants.get-icon(
         "social--social-instagram2-circle",
-        core.$uq-white
+        core.$white
       ));
     }
     &--instagram:hover::before {
@@ -419,8 +419,8 @@
       }
 
       &__toggle {
-        background-color: core.$uq-purple;
-        color: core.$uq-white;
+        background-color: core.$purple;
+        color: core.$white;
         font-size: core.$font-size-m;
         padding-left: core.$space-l;
 

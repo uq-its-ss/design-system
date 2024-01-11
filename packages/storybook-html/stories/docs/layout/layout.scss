@@ -15,10 +15,10 @@
     &::before {
       background: repeating-linear-gradient(
         45deg,
-        lighten(core.$uq-red, 30%),
-        lighten(core.$uq-red, 30%) 10px,
-        lighten(core.$uq-red, 35%) 10px,
-        lighten(core.$uq-red, 35%) 20px
+        lighten(core.$red, 30%),
+        lighten(core.$red, 30%) 10px,
+        lighten(core.$red, 35%) 10px,
+        lighten(core.$red, 35%) 20px
       );
       content: "";
       position: absolute;
@@ -38,8 +38,8 @@
       }
 
       > span {
-        background-color: lighten(core.$uq-aqua, 45%);
-        border: 1px solid core.$uq-aqua;
+        background-color: lighten(core.$blue, 45%);
+        border: 1px solid core.$blue;
         display: flex;
         flex-direction: column;
         height: 100%;
@@ -53,15 +53,15 @@
 
       @media #{core.$screen-xs-up} {
         > span {
-          background-color: lighten(core.$uq-yellow, 35%);
-          border-color: core.$uq-yellow;
+          background-color: lighten(core.$yellow, 35%);
+          border-color: core.$yellow;
         }
       }
 
       @media #{core.$screen-sm-up} {
         > span {
-          background-color: lighten(core.$uq-orange, 35%);
-          border-color: core.$uq-orange;
+          background-color: lighten(core.$red, 35%);
+          border-color: core.$red;
         }
       }
 
@@ -75,15 +75,15 @@
         }
 
         > span {
-          background-color: lighten(core.$uq-purple, 50%);
-          border-color: core.$uq-purple;
+          background-color: lighten(core.$purple, 50%);
+          border-color: core.$purple;
         }
       }
 
       @media #{core.$screen-lg-up} {
         > span {
-          background-color: lighten(core.$uq-green, 45%);
-          border-color: core.$uq-green;
+          background-color: lighten(core.$green, 45%);
+          border-color: core.$green;
         }
       }
 
@@ -93,8 +93,8 @@
         }
 
         > span {
-          background-color: lighten(core.$uq-blue, 40%);
-          border-color: core.$uq-blue;
+          background-color: lighten(core.$blue, 40%);
+          border-color: core.$blue;
         }
       }
     }

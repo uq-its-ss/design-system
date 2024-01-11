@@ -30,21 +30,21 @@
 
   // Status tags for components
   &--stable {
-    background-color: core.$success-light;
+    background-color: core.$success-50;
   }
 
   &--development,
   &--experiment {
-    background-color: core.$alert-light;
+    background-color: core.$error-50;
   }
 
   &--review {
-    background-color: core.$warning-light;
+    background-color: core.$warning-50;
   }
 
   &--deprecated {
-    color: core.$uq-white;
-    background-color: core.$uq-red-dark20;
+    color: core.$white;
+    background-color: core.$error-700;
   }
 
   &-addendum {

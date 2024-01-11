@@ -20,7 +20,7 @@
 
   // Accordion item.
   &__item {
-    background: core.$uq-white;
+    background: core.$white;
     border: 1px solid core.$grey-200;
     border-radius: 2px;
     margin-bottom: core.$space-s;
@@ -34,7 +34,7 @@
   &__toggle {
     -moz-appearance: none;
     -webkit-appearance: none;
-    background: core.$uq-white;
+    background: core.$white;
     border-radius: 0;
     border-style: solid;
     border-width: 0;
@@ -94,7 +94,7 @@
 
     // Active toggle.
     &--active {
-      background: core.$uq-white;
+      background: core.$white;
 
       // Open state.
       &::before {
@@ -106,7 +106,7 @@
 
       &:hover,
       &:focus {
-        background-color: core.$uq-white;
+        background-color: core.$white;
       }
     }
   }

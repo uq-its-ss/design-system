@@ -7,47 +7,47 @@
       linear,
       0% 50%,
       100% 50%,
-      color-stop(0%, core.$uq-white),
+      color-stop(0%, core.$white),
       color-stop(100%, rgba(255, 255, 255, 0))
     ),
-    -webkit-gradient(linear, 100% 50%, 0% 50%, color-stop(0%, core.$uq-white), color-stop(100%, rgba(255, 255, 255, 0))),
+    -webkit-gradient(linear, 100% 50%, 0% 50%, color-stop(0%, core.$white), color-stop(100%, rgba(255, 255, 255, 0))),
     -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, core.$grey-500), color-stop(100%, rgba(195, 195, 197, 0))),
     -webkit-gradient(linear, 100% 50%, 0% 50%, color-stop(0%, core.$grey-500), color-stop(100%, rgba(195, 195, 197, 0)));
   background-image: -webkit-linear-gradient(
       left,
-      core.$uq-white,
+      core.$white,
       rgba(255, 255, 255, 0)
     ),
-    -webkit-linear-gradient(right, core.$uq-white, rgba(255, 255, 255, 0)),
+    -webkit-linear-gradient(right, core.$white, rgba(255, 255, 255, 0)),
     -webkit-linear-gradient(left, core.$grey-300 rgba(195, 195, 197, 0)),
     -webkit-linear-gradient(right, core.$grey-300 rgba(195, 195, 197, 0));
   background-image: -moz-linear-gradient(
       left,
-      core.$uq-white,
+      core.$white,
       rgba(255, 255, 255, 0)
     ),
-    -moz-linear-gradient(right, core.$uq-white, rgba(255, 255, 255, 0)),
+    -moz-linear-gradient(right, core.$white, rgba(255, 255, 255, 0)),
     -moz-linear-gradient(left, core.$grey-300 rgba(195, 195, 197, 0)),
     -moz-linear-gradient(right, core.$grey-300 rgba(195, 195, 197, 0));
   background-image: -o-linear-gradient(
       left,
-      core.$uq-white,
+      core.$white,
       rgba(255, 255, 255, 0)
     ),
-    -o-linear-gradient(right, core.$uq-white, rgba(255, 255, 255, 0)),
+    -o-linear-gradient(right, core.$white, rgba(255, 255, 255, 0)),
     -o-linear-gradient(left, core.$grey-300 rgba(195, 195, 197, 0)),
     -o-linear-gradient(right, core.$grey-300 rgba(195, 195, 197, 0));
   background-image: linear-gradient(
       left,
-      core.$uq-white,
+      core.$white,
       rgba(255, 255, 255, 0)
     ),
-    linear-gradient(to left, core.$uq-white, rgba(255, 255, 255, 0)),
+    linear-gradient(to left, core.$white, rgba(255, 255, 255, 0)),
     linear-gradient(to right, core.$grey-300 rgba(195, 195, 197, 0)),
     linear-gradient(to left, core.$grey-300 rgba(195, 195, 197, 0));
   background-position: 0 0, 100% 0, 0 0, 100% 0;
   background-repeat: no-repeat;
-  background-color: core.$uq-white;
+  background-color: core.$white;
   background-size: 4em 100%, 4em 100%, 1em 100%, 1em 100%;
   background-attachment: local, local, scroll, scroll;
 
@@ -59,7 +59,7 @@
 
   &::-webkit-scrollbar-thumb {
     border-radius: 0.5rem;
-    border: 1px solid core.$uq-white;
+    border: 1px solid core.$white;
     background-color: core.$grey-500;
   }
 }
@@ -91,7 +91,7 @@
   text-align: left;
   display: table-caption;
   padding-bottom: core.$space-m;
-  background-color: core.$uq-white;
+  background-color: core.$white;
 }
 @mixin table-head {
   display: table-header-group;
@@ -111,7 +111,7 @@
 }
 @mixin table-header {
   padding: core.$space-s core.$space-m;
-  color: core.$uq-purple;
+  color: core.$purple;
   text-align: left;
   border: 1px solid core.$grey-200;
   font-weight: core.$font-weight-bold;

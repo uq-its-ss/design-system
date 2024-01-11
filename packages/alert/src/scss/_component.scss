@@ -185,7 +185,7 @@
   // Dark variant
   &--dark {
     background-color: core.$utility-500;
-    color: core.$uq-white;
+    color: core.$white;
 
     a {
       color: inherit;
@@ -203,15 +203,15 @@
     }
 
     .uq-alert__title {
-      color: core.$uq-white;
+      color: core.$white;
     }
 
     .uq-alert__close {
-      background-image: url(icon.get-icon("standard--x", core.$uq-white));
+      background-image: url(icon.get-icon("standard--x", core.$white));
 
       &:hover,
       &:focus {
-        background-image: url(icon.get-icon("standard--x", core.$uq-white));
+        background-image: url(icon.get-icon("standard--x", core.$white));
       }
     }
 
@@ -220,7 +220,7 @@
         &::before {
           background-image: url(icon.get-icon(
             "standard--information-circle",
-            core.$uq-white
+            core.$white
           ));
         }
       }
@@ -233,7 +233,7 @@
         &::before {
           background-image: url(icon.get-icon(
             "standard--check-circle",
-            core.$uq-white
+            core.$white
           ));
         }
       }
@@ -259,7 +259,7 @@
         &::before {
           background-image: url(icon.get-icon(
             "standard--exclamation-triangle",
-            core.$uq-white
+            core.$white
           ));
         }
       }

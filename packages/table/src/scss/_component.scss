@@ -88,7 +88,7 @@ table,
 
       &::before {
         content: attr(data-title);
-        color: core.$uq-purple;
+        color: core.$purple;
         font-weight: core.$font-weight-bold;
         display: block;
       }

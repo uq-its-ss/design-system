@@ -15,19 +15,8 @@
 // UQ Brand colours
 
 // Base
-$uq-black: #19151c;
-$uq-white: #fff;
-
-// Brand
-$uq-purple: #51247a;
-$uq-purple-light: #962a8b;
-$uq-gold: #bb9d65;
-$uq-red: #e62645;
-$uq-orange: #eb602b;
-$uq-yellow: #fbb800;
-$uq-blue: #4085c6;
-$uq-aqua: #00a2c7;
-$uq-green: #2ea836;
+$black: #19151c;
+$white: #fff;
 
 // Purple
 $purple-50: #eee9f2;
@@ -102,18 +91,29 @@ $utility-700: #105497;
 $utility-800: #124373;
 $utility-900: #15324e;
 
+
+// Colour shorthands
+$purple: $purple-500;
+$purple-light: #962a8b;
+$red: $error-500;
+$orange: #eb602b;
+$yellow: $warning-500;
+$blue: $utility-500;
+$aqua: #00a2c7;
+$green: $success-500;;
+
 // UQ Neutral palette
 $uq-neutral: #d7d1cc;
 $uq-darkgrey: #999490;
 
 // UQ Primary - Darken
-$uq-purple-dark10: darken($uq-purple, 10%); // #371853
+$uq-purple-dark10: darken($purple, 10%); // #371853
 
 // UQ Secondary - Darken
-$uq-red-dark10: darken($uq-red, 10%); // #c31632
-$uq-red-dark20: darken($uq-red, 20%); // #951126
+$uq-red-dark10: darken($red, 10%); // #c31632
+$uq-red-dark20: darken($red, 20%); // #951126
 
-$uq-green-dark10: darken($uq-green, 10%); // #238029
+$uq-green-dark10: darken($green, 10%); // #238029
 
 // UQ Neutral - Tint
 $uq-neutral-light20: tint($uq-neutral, 20%); // #dfdad6;
@@ -134,11 +134,11 @@ $uq-darkgrey-light60: tint($uq-neutral, 60%); // #d6d4d3;
 $uq-darkgrey-light80: tint($uq-neutral, 80%); // #ebeae9;
 
 // UQ Purple gradient
-$uq-purple-gradient: linear-gradient(
+$purple-gradient: linear-gradient(
   90deg,
-  $uq-purple 0%,
+  $purple 0%,
   87%,
-  $uq-purple-light 100%
+  $purple-light 100%
 );
 
 // Default text, Content
@@ -152,24 +152,24 @@ $link-active: $link-hover;
 // Alerts and Status - Dark
 $info: #0d6dcd;
 $success: $uq-green-dark10;
-$warning: $uq-yellow;
+$warning: $yellow;
 $alert: $uq-red-dark20;
 
 // Alerts and Status - Light
 $info-light: lighten($info, 50%); // #e8f1fb
-$success-light: lighten($uq-green, 50%); // dff6e0
-$warning-light: lighten($uq-yellow, 40%); // fff0c8
-$alert-light: lighten($uq-red, 40%); // fbdde2
+$success-light: lighten($green, 50%); // dff6e0
+$warning-light: lighten($yellow, 40%); // fff0c8
+$alert-light: lighten($red, 40%); // fbdde2
 
 // Palettes
 $light-palette-color: $uq-neutral-light80;
-$light-palette-border-color: rgba($uq-white, 0.4);
-$light-palette-link-color: $uq-white;
-$light-palette-bg: $uq-white;
+$light-palette-border-color: rgba($white, 0.4);
+$light-palette-link-color: $white;
+$light-palette-bg: $white;
 
 $dark-palette-color: $uq-neutral-dark80;
-$dark-palette-border-color: rgba($uq-black, 0.1);
-$dark-palette-link-color: lighten($uq-purple, 10%);
+$dark-palette-border-color: rgba($black, 0.1);
+$dark-palette-link-color: lighten($purple, 10%);
 $dark-palette-bg: $uq-neutral-dark60;
 
 // Overlays

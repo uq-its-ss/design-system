@@ -1,6 +1,6 @@
 {
   "name": "@uqds/pagination",
-  "version": "0.0.14-alpha.0",
+  "version": "0.0.15-alpha.0",
   "description": "Pagination component",
   "keywords": [
     "uqds",
@@ -41,6 +41,6 @@
     "url": "https://github.com/uq-its-ss/design-system/issues"
   },
   "dependencies": {
-    "@uqds/core": "^1.1.0"
+    "@uqds/core": "^1.1.1"
   }
 }

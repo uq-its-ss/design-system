@@ -281,7 +281,7 @@ $-result-icon-spacing: $-icon-spacing;
       margin: 0 0 0 core.$space-s;
       border: 0 none;
       border-radius: 8px;
-      background-color: core.$uq-neutral-light80;
+      background-color: core.$grey-50;
       text-align: left;
       outline: 0 none;
       padding: core.$space-s core.$space-m;
@@ -292,7 +292,7 @@ $-result-icon-spacing: $-icon-spacing;
       flex-grow: 1;
 
       &:hover {
-        background-color: core.$uq-neutral-light60;
+        background-color: core.$grey-100;
       }
 
       &:focus {
@@ -348,7 +348,7 @@ $-result-icon-spacing: $-icon-spacing;
         border-radius: 4px;
         position: relative;
         display: inline-block;
-        border: 1px solid core.$uq-neutral;
+        border: 1px solid core.$grey-300;
         cursor: pointer;
         height: 1.25rem;
         width: 1.25rem;
@@ -498,7 +498,7 @@ $-result-icon-spacing: $-icon-spacing;
           width: 100%;
 
           &:hover {
-            background-color: core.$uq-neutral-light80;
+            background-color: core.$grey-50;
             text-decoration: none;
           }
 
@@ -571,7 +571,7 @@ $-result-icon-spacing: $-icon-spacing;
             margin-top: -($height * 0.5);
             background-image: url(get-icon(
               "ui--chevron-right",
-              core.$uq-neutral
+              core.$grey-500
             ));
             background-position: center;
             background-repeat: no-repeat;
@@ -585,7 +585,7 @@ $-result-icon-spacing: $-icon-spacing;
             &::after {
               background-image: url(get-icon(
                 "ui--chevron-right",
-                core.$uq-neutral-dark20
+                core.$grey-500
               ));
             }
           }
@@ -680,14 +680,12 @@ $-result-icon-spacing: $-icon-spacing;
       color: core.$yellow;
     }
 
-
-
     &--red {
       color: core.$red;
     }
 
     &--grey {
-      color: core.$uq-neutral;
+      color: core.$grey-500;
     }
   }
 
@@ -731,13 +729,13 @@ $-result-icon-spacing: $-icon-spacing;
         linear-gradient(to top, core.$white, rgba(core.$white, 0)),
         linear-gradient(
           to bottom,
-          core.$uq-neutral-light80,
-          rgba(core.$uq-neutral-light80, 0)
+          core.$grey-50,
+          rgba(core.$grey-50, 0)
         ),
         linear-gradient(
           to top,
-          core.$uq-neutral-light80,
-          rgba(core.$uq-neutral-light80, 0)
+          core.$grey-50,
+          rgba(core.$grey-50, 0)
         );
       background-position: 0 0, 0 100%, 0 0, 0 100%;
       background-repeat: no-repeat;

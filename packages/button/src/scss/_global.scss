@@ -1,26 +1,3 @@
 // Variables, functions, and mixins
 
 @use "@uqds/core/src/scss/global" as core;
-
-$button-font: core.$roboto !default;
-
-$button-color: core.$white !default;
-$button-hover-color: core.$white !default;
-$button-bg-color: core.$link !default;
-$button-bg-hover-color: core.$link-active !default;
-$button-border-color: core.$link !default;
-$button-border-hover-color: core.$link-active !default;
-
-$button-secondary-color: core.$uq-neutral-dark80 !default; // 2b2b2b;
-$button-secondary-hover-color: core.$black !default;
-$button-secondary-bg-color: core.$uq-neutral !default; // d7d1cc;
-$button-secondary-bg-hover-color: core.$uq-neutral-dark20 !default; // bdb0a5;
-$button-secondary-border-color: core.$uq-neutral !default; // d7d1cc;
-$button-secondary-border-hover-color: core.$uq-neutral-dark20 !default; // bdb0a5;
-
-$button-purple-color: core.$white !default;
-$button-purple-hover-color: core.$white !default;
-$button-purple-bg-color: core.$purple !default;
-$button-purple-bg-hover-color: core.$purple-600 !default;
-$button-purple-border-color: core.$purple !default;
-$button-purple-border-hover-color: core.$purple-600 !default;

@@ -12,7 +12,7 @@
       border-radius: 8px;
       padding: core.$space-m;
       text-align: center;
-      background-color: core.$uq-neutral-light80;
+      background-color: core.$grey-50;
 
       &__icon {
         margin-bottom: core.$space-s;
@@ -27,7 +27,7 @@
       }
 
       &__label {
-        border-top: 1px solid core.$uq-neutral;
+        border-top: 1px solid core.$grey-300;
         padding-top: core.$space-s;
         color: core.$uq-neutral-dark40;
         line-height: 1;

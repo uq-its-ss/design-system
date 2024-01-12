@@ -4,10 +4,10 @@
 .uqds-example-grid {
   background: repeating-linear-gradient(
     45deg,
-    core.$uq-neutral-light60,
-    core.$uq-neutral-light60 10px,
-    core.$uq-neutral-light80 10px,
-    core.$uq-neutral-light80 20px
+    core.$grey-100,
+    core.$grey-100 10px,
+    core.$grey-50 10px,
+    core.$grey-50 20px
   );
   padding: core.$space-l 0;
   overflow: visible;

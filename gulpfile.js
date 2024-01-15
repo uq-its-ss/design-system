@@ -50,10 +50,6 @@ function exportExample() {
 }
 
 // Bundle Javascript modules
-/**
- * TODO: Babel presets/targets need setting if clients have browser support
- * issues
- */
 function bundleJS() {
   if (!fs.existsSync(`${process.cwd()}/src/js/main.js`)) {
     return new Promise((resolve) => {
@@ -76,6 +72,24 @@ function bundleJS() {
     .pipe(dest("./dist/js"));
 }
 
+function bundleMjs() {
+  if (!fs.existsSync(`${process.cwd()}/src/js/main.js`)) {
+    return new Promise((resolve) => {
+      resolve();
+    });
+  }
+  return rollup({
+    input: "./src/js/main.js",
+    output: {
+      format: "esm",
+    },
+    plugins: [nodeResolve(), cjs(), babel()],
+  })
+    .pipe(source("index.js"))
+    .pipe(buffer())
+    .pipe(dest("./dist/mjs"));
+}
+
 exports.compileSCSS = compileSCSS;
 //exports.exportFontFiles = exportFontFiles;
 exports.exportImages = exportImages;
@@ -91,4 +105,4 @@ exports.default = parallel(
   bundleMjs
 );
 
-exports.prepare = parallel(compileSCSS, bundleJS);
+exports.prepare = parallel(compileSCSS, bundleJS, bundleMjs);

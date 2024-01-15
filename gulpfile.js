@@ -1,6 +1,6 @@
 const { src, dest, parallel } = require("gulp");
 const sass = require("gulp-dart-sass");
-const babel = require("gulp-babel");
+const babel = require("@rollup/plugin-babel");
 const uglify = require("gulp-uglify");
 const rename = require("gulp-rename");
 const rollup = require("@rollup/stream");
@@ -66,16 +66,10 @@ function bundleJS() {
       format: "iife",
       name: "uq",
     },
-    plugins: [nodeResolve(), cjs()],
+    plugins: [nodeResolve(), cjs(), babel()],
   })
     .pipe(source("uqds.js"))
     .pipe(buffer())
-    .pipe(
-      babel({
-        presets: ["@babel/preset-env"],
-        plugins: ["@babel/plugin-proposal-class-properties"],
-      })
-    )
     .pipe(dest("./dist/js"))
     .pipe(rename("uqds.min.js"))
     .pipe(uglify())

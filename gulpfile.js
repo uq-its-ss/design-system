@@ -76,6 +76,24 @@ function bundleJS() {
     .pipe(dest("./dist/js"));
 }
 
+function bundleMjs() {
+  if (!fs.existsSync(`${process.cwd()}/src/js/main.js`)) {
+    return new Promise((resolve) => {
+      resolve();
+    });
+  }
+  return rollup({
+    input: "./src/js/main.js",
+    output: {
+      format: "esm",
+    },
+    plugins: [nodeResolve(), cjs(), babel()],
+  })
+    .pipe(source("index.js"))
+    .pipe(buffer())
+    .pipe(dest("./dist/mjs"));
+}
+
 exports.compileSCSS = compileSCSS;
 //exports.exportFontFiles = exportFontFiles;
 exports.exportImages = exportImages;
@@ -87,7 +105,8 @@ exports.default = parallel(
   exportImages,
   exportFavicon,
   exportExample,
-  bundleJS
+  bundleJS,
+  bundleMjs,
 );
 
-exports.prepare = parallel(compileSCSS, bundleJS);
+exports.prepare = parallel(compileSCSS, bundleJS, bundleMjs);

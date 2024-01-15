@@ -7,9 +7,6 @@ on:
   pull_request: {}
 jobs:
   main:
-    strategy:
-      matrix:
-        node: [16]
     runs-on: ubuntu-latest
     steps:
       - name: 🛑 Cancel Previous Runs
@@ -21,7 +18,7 @@ jobs:
       - name: ⎔ Setup node
         uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node }}
+          node-version: 18
 
       - name: 📥 Download deps
         uses: bahmutov/npm-install@v1

@@ -87,7 +87,8 @@ exports.default = parallel(
   exportImages,
   exportFavicon,
   exportExample,
-  bundleJS
+  bundleJS,
+  bundleMjs
 );
 
 exports.prepare = parallel(compileSCSS, bundleJS);

@@ -49,7 +49,7 @@ const breadcrumb = require("@uqds/breadcrumb");
 Example usage:
 
 ```js
-new breadcrumb(document.querySelector('.uq-breadcrumb'));
+new breadcrumb(document.querySelector(".uq-breadcrumb"));
 ```
 
 ---

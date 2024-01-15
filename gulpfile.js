@@ -106,7 +106,7 @@ exports.default = parallel(
   exportFavicon,
   exportExample,
   bundleJS,
-  bundleMjs,
+  bundleMjs
 );
 
 exports.prepare = parallel(compileSCSS, bundleJS, bundleMjs);

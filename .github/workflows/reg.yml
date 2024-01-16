@@ -11,39 +11,37 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Use Node.js v18
+      - name: Use Node 18
         uses: actions/setup-node@v3
         with:
           node-version: 18
 
-      - name: npm install, build, and test
+      - name: Install deps and build
         run: |
-          npm install --pure-lockfile
+          npm ci
           npx lerna bootstrap --no-ci
-        env:
-          CI: true
 
-      - name: workaround for detached HEAD
+      - name: Workaround for detached HEAD
         # Workaround for Detached HEAD https://github.com/reg-viz/reg-suit#workaround-for-detached-head
         run: |
           git checkout ${GITHUB_REF#refs/heads/} || git checkout -b ${GITHUB_REF#refs/heads/} && git pull
-
-      - name: Install Playwright
-        run: npx playwright install --with-deps
 
       - name: Build Storybook
         run: |
           npm run build-storybook --quiet
         working-directory: packages/storybook-html/
 
-      - name: Serve Storybook and run tests
+      - name: Serve Storybook
         run: |
-          npx concurrently -k -s first -n "SB,UPDATE" -c "magenta,blue" \
-          "npx http-server storybook-static --port 6006 --silent" \
-          "npx wait-on tcp:6006 && cd ../.. && npm run update-screenshots"
+          npx http-server storybook-static --port 6006 --silent &
         working-directory: packages/storybook-html/
 
-      - name: run visual regression
+      - name: Create screenshots
+        run: |
+          npx wait-on tcp:6006
+          npm run update-screenshots
+
+      - name: Run visual regression
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}

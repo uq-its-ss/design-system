@@ -70,10 +70,7 @@
     position: absolute;
     top: core.$space-none;
     right: core.$space-none;
-    background-image: url(icon.get-icon(
-      "standard--x",
-      core.$text
-    ));
+    background-image: url(icon.get-icon("standard--x", core.$text));
     background-repeat: no-repeat;
     background-size: 1rem;
     background-position: center;
@@ -87,10 +84,7 @@
 
     &:hover,
     &:focus {
-      background-image: url(icon.get-icon(
-        "standard--x",
-        core.$text
-      ));
+      background-image: url(icon.get-icon("standard--x", core.$text));
       background-color: transparent;
       border: none;
     }

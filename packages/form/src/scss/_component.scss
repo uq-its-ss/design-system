@@ -200,8 +200,7 @@ $use-encapsulation: false !default;
 
       &:focus {
         border-color: core.$link;
-        box-shadow: 0 2px 0 0 core.$link,
-          0 0 0 1px core.$link inset;
+        box-shadow: 0 2px 0 0 core.$link, 0 0 0 1px core.$link inset;
       }
     }
 
@@ -361,10 +360,7 @@ $use-encapsulation: false !default;
       background-color: core.$link;
 
       &::after {
-        background-image: url(icon.get-icon(
-          "standard--check",
-          core.$white
-        ));
+        background-image: url(icon.get-icon("standard--check", core.$white));
         padding: 0px;
       }
     }

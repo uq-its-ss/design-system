@@ -117,7 +117,7 @@
   // Dark text variant.
   &--dark-text {
     .uq-grid-menu__link {
-      color: core.$dark-palette-color;
+      color: core.$text;
     }
 
     .uq-grid-menu__icon {
@@ -141,11 +141,11 @@
       @extend %light-palette;
 
       &:hover {
-        background-color: core.$light-palette-link-color;
+        background-color: core.$white;
         color: core.$link;
 
         .uq-grid-menu__description {
-          background-color: core.$light-palette-link-color;
+          background-color: core.$white;
           color: core.$link;
         }
       }

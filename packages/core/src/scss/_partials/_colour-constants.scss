@@ -100,21 +100,6 @@ $yellow: $warning-500;
 $blue: $utility-500;
 $green: $success-500;
 
-// UQ Neutral palette
-$neutral: #d7d1cc;
-$darkgrey: #999490;
-
-// UQ Neutral - Shade
-
-$uq-neutral-dark40: shade($neutral, 40%); // #817d7a;
-$uq-neutral-dark60: shade($neutral, 60%); // #565452;
-$uq-neutral-dark80: shade($neutral, 80%); // #2b2a29;
-
-// UQ Darkgrey - Tint
-$uq-darkgrey-light20: tint($neutral, 20%); // #ada9a6;
-$uq-darkgrey-light40: tint($neutral, 40%); // #c2bfbc;
-$uq-darkgrey-light60: tint($neutral, 60%); // #d6d4d3;
-$uq-darkgrey-light80: tint($neutral, 80%); // #ebeae9;
 
 // UQ Purple gradient
 $purple-gradient: linear-gradient(
@@ -132,31 +117,6 @@ $link: $utility-500;
 $link-hover: $utility-600;
 $link-active: $utility-600;
 
-// Alerts and Status - Dark
-$info: #0d6dcd;
-$success: $success-500;
-$warning: $warning-500;
-$alert: $error-500;
-
-// Alerts and Status - Light
-$info-light: lighten($info, 50%); // #e8f1fb
-$success-light: lighten($green, 50%); // dff6e0
-$warning-light: lighten($yellow, 40%); // fff0c8
-$alert-light: lighten($red, 40%); // fbdde2
-
-// Palettes
-$light-palette-color: $grey-50;
-$light-palette-border-color: rgba($white, 0.4);
-$light-palette-link-color: $white;
-$light-palette-bg: $white;
-
-$dark-palette-color: $uq-neutral-dark80;
-$dark-palette-border-color: rgba($black, 0.1);
-$dark-palette-link-color: lighten($purple, 10%);
-$dark-palette-bg: $uq-neutral-dark60;
-
-// Overlays
-$dark-tint-bg: $uq-neutral-dark60;
 
 // Filters from #000000
 $filter-text: invert(0%) sepia(72%) saturate(588%) hue-rotate(348deg)

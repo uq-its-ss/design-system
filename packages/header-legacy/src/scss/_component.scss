@@ -218,7 +218,7 @@
       border-radius: 50%;
       appearance: none;
       display: inline-block;
-      border: form.$form-checkbox-border-width solid form.$form-border-color;
+      border: form.$form-checkbox-border-width solid core.$white;
       cursor: pointer;
       height: form.$form-checkbox-size;
       width: form.$form-checkbox-size;
@@ -226,8 +226,8 @@
       position: absolute;
 
       &:focus {
-        border-color: form.$form-focus-color;
-        box-shadow: 0 0 0 1px form.$form-focus-color;
+        border-color: core.$link;
+        box-shadow: 0 0 0 1px core.$link;
         outline: none;
       }
 
@@ -263,8 +263,8 @@
         }
 
         &:focus {
-          border-color: form.$form-focus-color;
-          box-shadow: 0 0 0 1px form.$form-focus-color;
+          border-color: core.$link;
+          box-shadow: 0 0 0 1px core.$link;
         }
       }
     }
@@ -305,7 +305,7 @@
         font-family: sans-serif;
         font-size: core.$font-size-m;
         line-height: 1;
-        color: core.$uq-neutral-dark80;
+        color: core.$text;
         height: auto;
         outline: none;
 

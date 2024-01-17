@@ -427,33 +427,33 @@
 
 /* Alerts */
 .uqds-colour--info {
-  background-color: core.$info-light;
+  background-color: core.$utility-50;
 }
 
 .uqds-colour--success {
-  background-color: core.$success-light;
+  background-color: core.$success-50;
 }
 
 .uqds-colour--warning {
-  background-color: core.$warning-light;
+  background-color: core.$warning-50;
 }
 
 .uqds-colour--alert {
-  background-color: core.$alert-light;
+  background-color: core.$error-50;
 }
 
 .uqds-colour--info-dark {
-  background-color: core.$info;
+  background-color: core.$utility-500;
 }
 
 .uqds-colour--success-dark {
-  background-color: core.$success;
+  background-color: core.$success-500;
 }
 
 .uqds-colour--warning-dark {
-  background-color: core.$warning;
+  background-color: core.$warning-500;
 }
 
 .uqds-colour--alert-dark {
-  background-color: core.$alert;
+  background-color: core.$error-500;
 }

@@ -31,12 +31,12 @@
       border: none;
       border-bottom: 1px solid core.$grey-200;
       box-shadow: 0 core.$space-xs core.$space-xs
-        rgba(core.$uq-neutral-dark80, 0);
+        rgba(core.$grey-900, 0);
 
       &:hover,
       &:focus {
         box-shadow: 0 core.$space-s core.$space-s
-          rgba(core.$uq-neutral-dark80, 0.1);
+          rgba(core.$grey-900, 0.1);
       }
 
       .uq-card__image__wrapper {

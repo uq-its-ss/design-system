@@ -46,7 +46,7 @@ table,
   tr,
   .uq-table__row {
     &:nth-child(even) {
-      background: rgba(core.$uq-neutral, 0.1);
+      background: core.$grey-50;
     }
   }
 }

@@ -45,7 +45,7 @@
       content: "";
       background-image: url(icon.get-icon(
         "standard--information-circle",
-        core.$uq-neutral-dark80
+        core.$text
       ));
       background-repeat: no-repeat;
       background-size: 1.5rem;
@@ -72,7 +72,7 @@
     right: core.$space-none;
     background-image: url(icon.get-icon(
       "standard--x",
-      core.$uq-neutral-dark80
+      core.$text
     ));
     background-repeat: no-repeat;
     background-size: 1rem;
@@ -89,7 +89,7 @@
     &:focus {
       background-image: url(icon.get-icon(
         "standard--x",
-        core.$uq-neutral-dark80
+        core.$text
       ));
       background-color: transparent;
       border: none;
@@ -103,7 +103,7 @@
       &::before {
         background-image: url(icon.get-icon(
           "standard--information-circle",
-          core.$uq-neutral-dark80
+          core.$text
         ));
       }
     }
@@ -115,7 +115,7 @@
       &::before {
         background-image: url(icon.get-icon(
           "standard--check-circle",
-          core.$uq-neutral-dark80
+          core.$text
         ));
       }
     }
@@ -127,7 +127,7 @@
       &::before {
         background-image: url(icon.get-icon(
           "standard--exclamation-circle",
-          core.$uq-neutral-dark80
+          core.$text
         ));
       }
     }
@@ -139,7 +139,7 @@
       &::before {
         background-image: url(icon.get-icon(
           "standard--exclamation-triangle",
-          core.$uq-neutral-dark80
+          core.$text
         ));
       }
     }

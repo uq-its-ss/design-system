@@ -16,15 +16,15 @@
 
   // Status tags for Documentation
   &--draftDoc {
-    border: 2px solid core.$alert-light;
+    border: 2px solid core.$error-50;
     background-color: transparent;
   }
   &--reviewDoc {
-    border: 2px solid core.$warning-light;
+    border: 2px solid core.$warning-50;
     background-color: transparent;
   }
   &--stableDoc {
-    border: 2px solid core.$success-light;
+    border: 2px solid core.$success-50;
     background-color: transparent;
   }
 

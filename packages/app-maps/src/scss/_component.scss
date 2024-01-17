@@ -54,7 +54,7 @@ $-result-icon-spacing: $-icon-spacing;
   }
 
   &__secondary-text {
-    color: core.$uq-neutral-dark40;
+    color: core.$grey-700;
     font-size: core.$font-size-xs;
   }
 
@@ -368,8 +368,8 @@ $-result-icon-spacing: $-icon-spacing;
         }
 
         &:checked {
-          background-color: core.$uq-neutral-dark60;
-          border-color: core.$uq-neutral-dark60;
+          background-color: core.$link;
+          border-color: core.$link;
 
           &::after {
             background-image: url(get-icon("ui--check", #fff));

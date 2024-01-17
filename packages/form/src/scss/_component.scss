@@ -111,7 +111,7 @@ $use-encapsulation: false !default;
       }
 
       &--success {
-        color: core.$success;
+        color: core.$success-500;
       }
     }
 
@@ -211,8 +211,8 @@ $use-encapsulation: false !default;
     }
 
     &.uq-input--success {
-      border-color: core.$success;
-      box-shadow: 0 2px 0 0 core.$success;
+      border-color: core.$success-500;
+      box-shadow: 0 2px 0 0 core.$success-500;
     }
 
     &.uq-input--large {
@@ -503,7 +503,7 @@ $use-encapsulation: false !default;
   }
 
   .uq-success-message {
-    background-color: core.$success;
+    background-color: core.$success-500;
 
     &::before {
       background-image: url(icon.get-icon(

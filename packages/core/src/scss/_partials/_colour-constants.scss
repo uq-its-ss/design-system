@@ -1,16 +1,5 @@
-/* Variants of brand colours created via below SASS functions
-   Primary, Secondary colour : Lighten/Darken (% increments of 10)
-   Neutral colour : Tint/Shade (% increments of 20)
+/* Variants of brand colours
 */
-
-// Function to Tint a color
-@function tint($color, $percentage) {
-  @return mix(white, $color, $percentage);
-}
-// Function to Shade a color
-@function shade($color, $percentage) {
-  @return mix(black, $color, $percentage);
-}
 
 // UQ Brand colours
 

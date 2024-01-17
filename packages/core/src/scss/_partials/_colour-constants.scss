@@ -25,7 +25,7 @@ $purple-200: #b9a7ca;
 $purple-300: #977caf;
 $purple-400: #745095;
 $purple-500: #51247a;
-$purple-600: #4B2271;
+$purple-600: #4b2271;
 $purple-650: #40205d;
 $purple-700: #3a1f53;
 $purple-800: #2f1d3f;
@@ -91,7 +91,6 @@ $utility-700: #105497;
 $utility-800: #124373;
 $utility-900: #15324e;
 
-
 // Colour shorthands
 $purple: $purple-500;
 $purple-light: #962a8b;
@@ -102,12 +101,7 @@ $green: $success-500;
 
 
 // UQ Purple gradient
-$purple-gradient: linear-gradient(
-  90deg,
-  $purple 0%,
-  87%,
-  $purple-light 100%
-);
+$purple-gradient: linear-gradient(90deg, $purple 0%, 87%, $purple-light 100%);
 
 // Default text, Content
 $text: $grey-900;

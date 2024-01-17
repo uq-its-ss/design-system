@@ -37,11 +37,7 @@
     -o-linear-gradient(right, core.$white, rgba(255, 255, 255, 0)),
     -o-linear-gradient(left, core.$grey-300 rgba(195, 195, 197, 0)),
     -o-linear-gradient(right, core.$grey-300 rgba(195, 195, 197, 0));
-  background-image: linear-gradient(
-      left,
-      core.$white,
-      rgba(255, 255, 255, 0)
-    ),
+  background-image: linear-gradient(left, core.$white, rgba(255, 255, 255, 0)),
     linear-gradient(to left, core.$white, rgba(255, 255, 255, 0)),
     linear-gradient(to right, core.$grey-300 rgba(195, 195, 197, 0)),
     linear-gradient(to left, core.$grey-300 rgba(195, 195, 197, 0));

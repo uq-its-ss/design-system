@@ -176,10 +176,7 @@ $-result-icon-spacing: $-icon-spacing;
       margin-right: core.$space-s;
 
       &:hover {
-        background-image: url(get-icon(
-          "ui--close",
-          darken(core.$purple, 10%)
-        ));
+        background-image: url(get-icon("ui--close", darken(core.$purple, 10%)));
       }
     }
 
@@ -328,10 +325,7 @@ $-result-icon-spacing: $-icon-spacing;
       background-image: url(get-icon("ui--swap"));
 
       &:hover {
-        background-image: url(get-icon(
-          "ui--swap",
-          darken(core.$purple, 10%)
-        ));
+        background-image: url(get-icon("ui--swap", darken(core.$purple, 10%)));
       }
     }
 

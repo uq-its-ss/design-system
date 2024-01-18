@@ -1,0 +1,16 @@
+@use "@uqds/core/src/scss/global" as core;
+@use "global" as *;
+
+:root {
+  --container-max-width: #{$container-max-width};
+  --layout-gap: #{core.$space-xl};
+  --section-gap: #{core.$space-uul};
+}
+
+// Resize custom properties for tablet/mobile.
+@media #{core.$screen-lg-down} {
+  :root {
+    --layout-gap: #{core.$space-l};
+    --section-gap: #{core.$space-xl};
+  }
+}

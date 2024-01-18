@@ -12,7 +12,7 @@ import sectionsLargePaddingHTML from "./sections-large-padding.html";
 import docs from "./sections.docs.mdx";
 
 export default {
-  title: "Layout/Sections",
+  title: "Components/Sections",
   parameters: {
     docs: {
       page: docs,

@@ -1,5 +1,12 @@
 {
   "uris": {
+    "layout-card-grid--one-per-row": "http://localhost:6006/iframe.html?id=layout-card-grid--one-per-row",
+    "layout-card-grid--two-per-row": "http://localhost:6006/iframe.html?id=layout-card-grid--two-per-row",
+    "layout-card-grid--three-per-row": "http://localhost:6006/iframe.html?id=layout-card-grid--three-per-row",
+    "layout-card-grid--four-per-row": "http://localhost:6006/iframe.html?id=layout-card-grid--four-per-row",
+    "layout-container--container": "http://localhost:6006/iframe.html?id=layout-container--container",
+    "layout-sections--sections": "http://localhost:6006/iframe.html?id=layout-sections--sections",
+    "layout-page-layouts-sidebar--sidebar": "http://localhost:6006/iframe.html?id=layout-page-layouts-sidebar--sidebar",
     "deprecated-grid--golden": "http://localhost:6006/iframe.html?id=deprecated-grid--golden",
     "deprecated-grid--halves": "http://localhost:6006/iframe.html?id=deprecated-grid--halves",
     "deprecated-grid--thirds": "http://localhost:6006/iframe.html?id=deprecated-grid--thirds",

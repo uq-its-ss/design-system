@@ -49,7 +49,7 @@ export const parameters = {
           ["Applying colour", "Base colour palette"],
         ],
         "Layout",
-        ["Layout system", "Grid"],
+        ["Container", "Sections", "Page layouts", "Card grid"],
         "Components",
         ["Body", ["Body", "Elements", "Utilities"]],
         "Patterns",

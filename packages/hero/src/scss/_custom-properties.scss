@@ -1,0 +1,17 @@
+@use "@uqds/core/src/scss/global" as core;
+
+:root {
+  --font-size-ul: #{core.$font-size-ul};
+  --brand-purple-gradient: linear-gradient(
+    91deg,
+    #{core.$uq-purple} 68.75%,
+    #{core.$uq-purple-light} 101.54%
+  );
+}
+
+// Resize custom properties for tablet/mobile.
+@media #{core.$screen-lg-down} {
+  :root {
+    --font-size-ul: 30px;
+  }
+}

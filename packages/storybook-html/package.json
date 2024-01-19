@@ -66,5 +66,8 @@
     "typescript": "^3.8.2",
     "underscore": "^1.13.2",
     "zxcvbn": "^4.4.2"
+  },
+  "dependencies": {
+    "classnames": "^2.5.1"
   }
 }

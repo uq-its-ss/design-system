@@ -8,84 +8,72 @@ import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
 <StatusBadge.Development />
 <StatusBadge.DraftDoc />
 
-### Default hero
+## Overview
 
-<Canvas withSource="none" withToolbar>
-  <Story id="components-hero--default-hero" height={300} />
+The `.uq-hero` element provides the hero for homepage and level 1 and 2 landing
+pages.
+
+### How-to
+
+There are 4 elements within the hero.
+
+- Title: `h1.uq-hero__title`
+- Description: `.uq-hero__description` (it is optional include a `p` tag within the description)
+- Button (optional): `.uq-hero__button .uq-button.uq-button--purple`
+- Image: `.uq-hero__image`
+
+There are 2 size variations - small (default) and large (use the `.uq-hero--large` modifier class).
+
+There are 2 color variations - purple (default) and white (use the `.uq-hero--light` modifier class).
+
+<Canvas withSource="none">
+  <Story id="components-hero--hero" />
 </Canvas>
 
 ```html
-<div class="uq-hero">
-  <div class="uq-hero__content">
-    <div class="uq-hero__text">
-      <h1 class="uq-hero__title">Page title</h1>
-    </div>
-  </div>
-</div>
-```
-
-### Feature image hero
-
-<Canvas withSource="none" withToolbar>
-  <Story id="components-hero--feature-hero" height={505} />
-</Canvas>
-
-```html
-<div class="uq-hero uq-hero--feature-image">
+<div class="uq-hero uq-hero--light uq-hero--large">
   <div class="uq-hero__image">
-    <div class="uq-hero__image--small">
-      <img
-        src="/images/hero/hero-example--small.jpg"
-        alt=""
-        role="presentation"
-      />
-    </div>
-    <div class="uq-hero__image--large">
-      <img
-        src="/images/hero/hero-example--large.jpg"
-        alt=""
-        role="presentation"
-      />
-    </div>
+    <img src="/images/hero/hero-example-1.jpg" alt="" role="presentation" />
   </div>
-  <div class="uq-hero__content">
-    <div class="uq-hero__text">
-      <div class="uq-hero__title">Start postgraduate study online</div>
-      <p class="uq-hero__subtext">Apply by June 30</p>
-      <p><a class="uq-button" href="#">Learn more</a></p>
+  <div class="uq-container">
+    <div class="uq-hero__content">
+      <h1 class="uq-hero__title">Title</h1>
+      <div class="uq-hero__description">
+        <p>Description</p>
+      </div>
+      <div class="uq-hero__button">
+        <a class="uq-button uq-button--purple" href="#">Button text</a>
+      </div>
     </div>
   </div>
 </div>
 ```
 
-### Large variant
+### Examples
 
-<Canvas withSource="none" withToolbar>
-  <Story id="components-hero--large-hero" height={600} />
+#### Home
+
+The homepage hero use the `.uq-hero--light` and `.uq-hero--large` modifier classes
+and includes a purple button.
+
+<Canvas>
+  <Story id="components-hero--home" />
 </Canvas>
 
-```html
-<div class="uq-hero uq-hero--feature-image uq-hero--large">
-  <div class="uq-hero__image">
-    <div class="uq-hero__image--small">
-      <img
-        src="/images/hero/hero-example--small.jpg"
-        alt="A postgraduate student using a laptop"
-      />
-    </div>
-    <div class="uq-hero__image--large">
-      <img
-        src="/images/hero/hero-example--large.jpg"
-        alt="A postgraduate student using a laptop"
-      />
-    </div>
-  </div>
-  <div class="uq-hero__content">
-    <div class="uq-hero__text">
-      <div class="uq-hero__title">Start postgraduate study online</div>
-      <p class="uq-hero__subtext">Apply by June 30</p>
-      <p><a class="uq-button" href="#">Learn more</a></p>
-    </div>
-  </div>
-</div>
-```
+#### Level 1
+
+Level 1 pages use the `.uq-hero--light` modifier class. Level 1 and 2 pages do not
+include a button.
+
+<Canvas>
+  <Story id="components-hero--level-1" />
+</Canvas>
+
+#### Level 2
+
+Level 2 pages don't use any modifier classes. Level 1 and 2 pages do not
+include a button.
+
+<Canvas>
+  <Story id="components-hero--level-2" />
+</Canvas>

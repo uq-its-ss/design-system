@@ -1,90 +1,121 @@
-// import styles
-import "./hero.scss";
-
-// import HTML template strings
-// import heroHTML from './hero.html';
-
-// import Docs
 import docs from "./hero.docs.mdx";
+import "../../../../layout/src/scss/main.scss";
+import "../../../../hero/src/scss/main.scss";
+import classNames from "classnames";
 
 export default {
   title: "Components/Hero",
   parameters: {
+    layout: "fullscreen",
     docs: {
       page: docs,
-      inlineStories: false,
     },
-    layout: "fullscreen",
     previewTabs: {
       canvas: { hidden: false },
     },
   },
+  argTypes: {
+    light: {
+      control: "boolean",
+    },
+    large: {
+      control: "boolean",
+    },
+    title: {
+      control: "text",
+    },
+    description: {
+      control: "text",
+    },
+    button: {
+      control: "text",
+    },
+    image: {
+      control: "select",
+      options: [
+        "hero-example-1.jpg",
+        "hero-example-2.jpg",
+        "hero-example-3.jpg",
+        "hero-example-4.jpg",
+      ],
+    },
+  },
 };
 
-export const DefaultHero = () => {
-  return `
-  <div class="uq-hero">  
+export const Hero = {
+  name: "Hero",
+  args: {
+    light: true,
+    large: true,
+    title: "Title",
+    description: "Description",
+    button: "Button",
+    image: "hero-example-2.jpg",
+  },
+  render: ({ light, large, title, description, button, image }) => `
+<div class="${classNames("uq-hero", {
+    "uq-hero--light": light,
+    "uq-hero--large": large,
+  })}">
+  <div class="uq-hero__image">
+    <img src="/images/hero/${image}" alt="" role="presentation" />
+  </div>
+  <div class="uq-container">
     <div class="uq-hero__content">
-      <div class="uq-hero__text">
-        <h1 class="uq-hero__title">Page title</h1>
+      <h1 class="uq-hero__title">${title}</h1>
+      <div class="uq-hero__description">
+        <p>${description}</p>
       </div>
+      ${
+        button && light
+          ? `<div class="uq-hero__button">
+        <a class="uq-button uq-button--purple" href="#">${button}</a>
+      </div>`
+          : ""
+      }
     </div>
   </div>
-  `;
+</div>`,
 };
 
-DefaultHero.storyName = "Default hero";
-
-export const FeatureHero = () => {
-  return `
-<div class="uq-hero uq-hero--feature-image">  
-  <div class="uq-hero__image">
-    <div class="uq-hero__image--small">
-      <img src="/images/hero/hero-example--small.jpg" alt="" role="presentation" />
-    </div>
-    <div class="uq-hero__image--large">
-      <img src="/images/hero/hero-example--large.jpg" alt="" role="presentation" />
-    </div>
-  </div>
-  <div class="uq-hero__content">
-    <div class="uq-hero__text">
-      <div class="uq-hero__title">Start postgraduate study online</div>
-      <p class="uq-hero__subtext">Apply by June 30</p>
-      <p><a class="uq-button" href="#">Learn more</a></p>
-    </div>
-  </div>
-</div>
-  `;
+export const Home = {
+  name: "Home",
+  args: {
+    light: true,
+    large: true,
+    title: "Master the unknown",
+    description:
+      "Reduced fees and online study available across many of our postgraduate degrees.",
+    button: "Explore programs",
+    image: "hero-example-1.jpg",
+  },
+  render: Hero.render,
 };
 
-FeatureHero.storyName = "Feature image hero";
-
-export const LargeHero = () => {
-  return `
-<div class="uq-hero uq-hero--feature-image uq-hero--large">  
-  <div class="uq-hero__image">
-    <div class="uq-hero__image--small">
-      <img src="/images/hero/hero-example--small.jpg" alt="" role="presentation" />
-    </div>
-    <div class="uq-hero__image--large">
-      <img src="/images/hero/hero-example--large.jpg" alt="" role="presentation" />
-    </div>
-  </div>
-  <div class="uq-hero__content">
-    <div class="uq-hero__text">
-      <div class="uq-hero__title">Start postgraduate study online</div>
-      <p class="uq-hero__subtext">Apply by June 30</p>
-      <p><a class="uq-button" href="#">Learn more</a></p>
-    </div>
-  </div>
-</div>
-  `;
+export const Level1 = {
+  name: "Level 1",
+  args: {
+    light: true,
+    large: false,
+    title: "About",
+    description:
+      "Reduced fees and online study available across many of our postgraduate degrees.",
+    button: "",
+    image: "hero-example-3.jpg",
+  },
+  render: Hero.render,
 };
 
-LargeHero.storyName = "Large variant";
-
-// export const hero = () => {
-//   return heroHTML;
-// };
-
-// hero.storyName = 'All';
+export const Level2 = {
+  name: "Level 2",
+  args: {
+    light: false,
+    large: false,
+    title: "Events",
+    description:
+      "Events for the UQ community, including the public, industry, researchers, staff and students.",
+    button: "",
+    image: "hero-example-4.jpg",
+  },
+  render: Hero.render,
+};

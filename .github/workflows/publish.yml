@@ -43,7 +43,7 @@ jobs:
           git config user.name "${{ github.actor }}"
           git config user.email "${{ github.actor}}@users.noreply.github.com"
           
-          if [ "${{ github.base_ref }}" = "releases" ]; then
+          if [ "${{ github.ref_name }}" = "releases" ]; then
             npx lerna version --conventional-commits --conventional-graduate --yes
           else
             npx lerna version --conventional-commits --conventional-prerelease --preid alpha --yes

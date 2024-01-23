@@ -24,7 +24,7 @@ jobs:
         run: npm install
 
       - name: "📂 Bootstrap Lerna"
-        run: lerna bootstrap
+        run: ./node_modules/.bin/lerna bootstrap --no-ci
 
       - name: "🔐 Authenticate to NPM"
         run: |
@@ -44,7 +44,7 @@ jobs:
           git config user.email "${{ github.actor}}@users.noreply.github.com"
           
           if [ ${{ github.base_ref }} = master ]; then
-            npx lerna version --conventional-commits --conventional-prerelease --preid alpha --yes --no-verify-access
+            ./node_modules/.bin/lerna version --conventional-commits --conventional-prerelease --preid alpha --yes --no-verify-access
           else
-            npx lerna version --conventional-commits --conventional-graduate --yes --no-verify-access
+            ./node_modules/.bin/lerna version --conventional-commits --conventional-graduate --yes --no-verify-access
           fi

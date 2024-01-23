@@ -1,5 +1,16 @@
 {
   "version": "independent",
   "npmClient": "npm",
-  "packages": ["packages/*"]
+  "packages": ["packages/*"],
+  "command": {
+    "publish": {
+      "conventionalCommits": true,
+      "allowBranch": ["master", "releases"]
+    },
+    "version": {
+      "conventionalCommits": true,
+      "allowBranch": ["master", "releases"],
+      "message": "chore(release): publish [skip ci]"
+    }
+  }
 }

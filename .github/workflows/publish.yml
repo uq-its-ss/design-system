@@ -50,13 +50,13 @@ jobs:
         if: ${{ github.ref_name == 'releases' }}
         with:
           secret: ${{ github.UQDS_PERSONAL_ACCESS_TOKEN }}
-          approvers: bcrunk,uqnm
+          approvers: uqds-admin
           minimum-approvals: 1
           issue-title: 'Approve new release ✅'
           issue-body: >
             Please approve or deny the release of a new release.
             [View the workflow output](https://github.com/uq-its-ss/design-system/actions/runs/${{ github.run_number }}) to confirm the version is as expected.
-            
+
           exclude-workflow-initiator-as-approver: false
 
       - name: "✨ Publish stable"

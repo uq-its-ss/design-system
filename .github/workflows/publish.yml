@@ -48,7 +48,3 @@ jobs:
           else
             npx lerna version --conventional-commits --conventional-graduate --yes --no-verify-access
           fi
-          
-          npx lerna publish from-git --yes
-
-

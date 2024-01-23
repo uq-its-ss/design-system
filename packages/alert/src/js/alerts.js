@@ -24,7 +24,7 @@ class Alerts {
               close.addEventListener("click", (el) => {
                 window.localStorage.setItem(
                   `alert-dismissed-${alert.uuid}`,
-                  String(Math.round(new Date().getTime() / 1000))
+                  String(Math.round(new Date().getTime() / 1000)),
                 );
                 alertEl.remove();
               });
@@ -37,7 +37,7 @@ class Alerts {
   static filter(alerts) {
     return alerts.filter((alert) => {
       const dismissedAtTimestamp = Number(
-        window.localStorage.getItem(`alert-dismissed-${alert.uuid}`)
+        window.localStorage.getItem(`alert-dismissed-${alert.uuid}`),
       );
 
       if (dismissedAtTimestamp > alert.dismissalIgnoreBefore) {

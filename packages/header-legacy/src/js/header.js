@@ -14,11 +14,11 @@ class header {
 
   init() {
     this.toggle = document.querySelector(
-      ".legacy-header__search-toggle-button"
+      ".legacy-header__search-toggle-button",
     );
     this.search = document.querySelector(".legacy-header__search");
     this.searchInput = document.querySelector(
-      ".legacy-header__search-query-input"
+      ".legacy-header__search-query-input",
     );
     this.meta = document.querySelector("meta.legacy-header__mq--desktop");
     this.navigation = document.querySelector(".legacy-header__navigation");
@@ -42,7 +42,7 @@ class header {
 
   handleToggle() {
     this.toggle.classList.toggle(
-      "legacy-header__search-toggle-button--icon-close"
+      "legacy-header__search-toggle-button--icon-close",
     );
     this.search.classList.toggle("legacy-header__search--open");
     this.navigation.classList.toggle("legacy-header__navigation--open");

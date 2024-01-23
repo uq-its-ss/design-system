@@ -30,10 +30,10 @@ class MainNavigation {
     const subNavItems = this.nav.querySelectorAll(`.${this.subNavClass}`);
     const subNavLinks = this.nav.querySelectorAll(`.${this.subNavClass} > a`);
     const subNavL2Items = this.nav.querySelectorAll(
-      `.${this.level2Class} .${this.subNavClass}`
+      `.${this.level2Class} .${this.subNavClass}`,
     );
     const subNavL2Links = this.nav.querySelectorAll(
-      `.${this.level2Class} .${this.subNavClass} > a`
+      `.${this.level2Class} .${this.subNavClass} > a`,
     );
     const navLinks = this.nav.querySelectorAll("li > a");
     const subNavToggles = this.nav.querySelectorAll(`.${this.subToggleClass}`);

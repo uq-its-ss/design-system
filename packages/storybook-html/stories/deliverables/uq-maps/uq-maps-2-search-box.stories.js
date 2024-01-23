@@ -81,7 +81,7 @@ searchFieldSearching.storyName = "2C Search field with search value";
 export const searchFieldWorking = () => {
   useEffect(() => {
     const circularProgress = new MDCCircularProgress(
-      document.querySelector("#searchProgressIndicator")
+      document.querySelector("#searchProgressIndicator"),
     );
     circularProgress.determinate = false;
     circularProgress.open();

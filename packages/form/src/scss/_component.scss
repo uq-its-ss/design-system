@@ -200,7 +200,8 @@ $use-encapsulation: false !default;
 
       &:focus {
         border-color: $form-border-color-focus;
-        box-shadow: 0 2px 0 0 $form-border-color-focus,
+        box-shadow:
+          0 2px 0 0 $form-border-color-focus,
           0 0 0 1px $form-border-color-focus inset;
       }
     }

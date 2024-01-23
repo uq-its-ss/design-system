@@ -64,16 +64,16 @@ const svgSassFn = `
           // eslint-disable-next-line no-console
           console.error(
             CHALK.red(
-              `Error: couldn't find config file '${optimiserConfigPath}'. Optimising with default configuration.`
-            )
+              `Error: couldn't find config file '${optimiserConfigPath}'. Optimising with default configuration.`,
+            ),
           );
         } else if (err.code === "EISDIR") {
           // @todo eslint solution needs to be reviewed
           // eslint-disable-next-line no-console
           console.error(
             CHALK.red(
-              `Error: directory '${optimiserConfigPath}' is not a config file. Optimising with default configuration.`
-            )
+              `Error: directory '${optimiserConfigPath}' is not a config file. Optimising with default configuration.`,
+            ),
           );
         }
 
@@ -84,7 +84,9 @@ const svgSassFn = `
     // @todo eslint solution needs to be reviewed
     // eslint-disable-next-line no-console
     console.error(
-      CHALK.red(`Unable to instantiate optimiser: ${err.name} — ${err.message}`)
+      CHALK.red(
+        `Unable to instantiate optimiser: ${err.name} — ${err.message}`,
+      ),
     );
   });
 
@@ -118,7 +120,7 @@ const svgSassFn = `
             await FS.writeFile(`${dir}/${filename}.svg`, svg.data).catch(
               (err) => {
                 throw err;
-              }
+              },
             );
 
             // Create data URI's for Sass module
@@ -152,11 +154,11 @@ const svgSassFn = `
               // Replace all fill and stroke attributes except when value is explicitly set to `none`.
               svg = svg.replace(
                 /fill="(?!none")[^"]+"/g,
-                `fill="${colorPlaceholder}"`
+                `fill="${colorPlaceholder}"`,
               );
               svg = svg.replace(
                 /stroke="(?!none")[^"]+"/g,
-                `stroke="${colorPlaceholder}"`
+                `stroke="${colorPlaceholder}"`,
               );
 
               // Convert data to URI string
@@ -171,8 +173,8 @@ const svgSassFn = `
             } else {
               resolve("");
             }
-          })
-      )
+          }),
+      ),
     );
 
     for (let i = 0; i < svgStringsArr.length; i++) {

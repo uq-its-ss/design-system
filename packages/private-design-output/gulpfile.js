@@ -19,7 +19,7 @@ function compileSCSS() {
       sass({
         includePaths: scssPaths,
         outputStyle: "compressed",
-      }).on("error", sass.logError)
+      }).on("error", sass.logError),
     )
     .pipe(dest("./dist/css"));
 }
@@ -70,7 +70,7 @@ function bundleJS() {
       babel({
         presets: ["@babel/preset-env"],
         plugins: ["@babel/plugin-proposal-class-properties"],
-      })
+      }),
     )
     .pipe(dest("./dist/js"))
     .pipe(rename("uqds.min.js"))
@@ -93,5 +93,5 @@ exports.default = parallel(
   exportFavicon,
   exportHtml,
   exportSlidmenu,
-  bundleJS
+  bundleJS,
 );

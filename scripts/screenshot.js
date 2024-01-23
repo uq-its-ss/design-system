@@ -20,7 +20,7 @@ const removeSelectors = async (page) => {
           s.classList.add("__86d");
         });
       }, selector);
-    })
+    }),
   );
 };
 
@@ -32,7 +32,7 @@ const hideSelectors = async (page) => {
           s.style.visibility = "hidden";
         });
       }, selector);
-    })
+    }),
   );
 };
 
@@ -116,8 +116,8 @@ const main = async () => {
             .then((browser) => {
               doProcess(browser, chunk, 0, resolve);
             });
-        })
-    )
+        }),
+    ),
   );
   bar.stop();
 };

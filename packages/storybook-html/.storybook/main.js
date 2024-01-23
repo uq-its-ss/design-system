@@ -81,7 +81,7 @@ module.exports = {
     config.resolve.alias["core-js/modules"] = path.resolve(
       __dirname,
       "..",
-      "node_modules/core-js/modules"
+      "node_modules/core-js/modules",
     );
 
     // Return the altered config

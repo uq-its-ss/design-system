@@ -21,7 +21,7 @@ function compileSCSS() {
       sass({
         includePaths: scssPaths,
         outputStyle: "compressed",
-      }).on("error", sass.logError)
+      }).on("error", sass.logError),
     )
     .pipe(dest("./dist/css"));
 }
@@ -36,7 +36,7 @@ function exportFontFiles() {
 
 function exportImages() {
   return src(["./node_modules/@uqds/blockquote/src/images/**"]).pipe(
-    dest("./dist/images")
+    dest("./dist/images"),
   );
 }
 
@@ -74,7 +74,7 @@ function bundleJS() {
       babel({
         presets: ["@babel/preset-env"],
         plugins: ["@babel/plugin-proposal-class-properties"],
-      })
+      }),
     )
     .pipe(dest("./dist/js"))
     .pipe(rename("uqds.min.js"))
@@ -93,7 +93,7 @@ exports.default = parallel(
   exportImages,
   exportFavicon,
   exportExample,
-  bundleJS
+  bundleJS,
 );
 
 exports.prepare = parallel(compileSCSS, bundleJS);

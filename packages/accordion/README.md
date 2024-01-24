@@ -15,7 +15,7 @@ yarn add @uqds/accordion
 With NPM:
 
 ```shell
-npm i @uqds/accordion
+npm i -S @uqds/accordion
 ```
 
 ---

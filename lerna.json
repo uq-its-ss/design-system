@@ -3,6 +3,9 @@
   "npmClient": "npm",
   "packages": ["packages/*"],
   "command": {
+    "bootstrap": {
+      "npmClientArgs": ["--no-package-lock"]
+    },
     "publish": {
       "conventionalCommits": true,
       "allowBranch": ["master", "releases"]

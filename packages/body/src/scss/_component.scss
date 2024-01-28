@@ -171,20 +171,8 @@ $use-encapsulation: false !default;
   // Typography utilities
   .text {
     // Text colour
-    &--reverse {
-      color: core.$white;
-    }
-
-    &--primary {
+    &--purple {
       color: core.$purple;
-    }
-
-    &--purple-light {
-      color: core.$purple-light;
-    }
-
-    &--black {
-      color: core.$black;
     }
 
     &--white {

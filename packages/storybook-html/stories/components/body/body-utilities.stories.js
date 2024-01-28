@@ -22,16 +22,6 @@ export const textColorUtils = () => {
   </thead>
   <tbody>
   <tr>
-    <td><div class="uqds-body__text-utility text--black">Text black</div></td>
-    <td><code>text--black</code></td>
-    <td>use cases or scenarios to be defined</td>
-  </tr>
-  <tr>
-    <td><div class="uqds-body__text-utility black text--reverse">Text reverse</div></td>
-    <td><code>text--reverse</code></td>
-    <td>Future students reverse brand colour</td>
-  </tr>
-  <tr>
     <td><div class="uqds-body__text-utility black text--white">Text white</div></td>
     <td><code>text--white</code></td>
     <td>For use on dark backgrounds</td>
@@ -39,11 +29,6 @@ export const textColorUtils = () => {
   <tr>
     <td><div class="uqds-body__text-utility text--primary">Text primary</div></td>
     <td><code>text--primary</code></td>
-    <td>use cases or scenarios to be defined</td>
-  </tr>
-  <tr>
-    <td><div class="uqds-body__text-utility text--purple-light">Text purple light</div></td>
-    <td><code>text--purple-light</code></td>
     <td>use cases or scenarios to be defined</td>
   </tr>
   <tr>

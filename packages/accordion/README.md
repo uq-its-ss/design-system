@@ -18,7 +18,7 @@ With NPM:
 npm i -S @uqds/accordion
 ```
 
-Installing an alpha version
+Installing an alpha version. NPM won't install alpha versions unless you explicity ask for it with `--tag`
 
 ```shell
 npm i -S @uqds/accordion@latest --tag=alpha

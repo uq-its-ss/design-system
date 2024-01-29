@@ -14,6 +14,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
+          token: ${{ secrets.UQDS_PERSONAL_ACCESS_TOKEN }}
 
       - name: "🟢 Install NodeJS"
         uses: actions/setup-node@v3

@@ -38,7 +38,7 @@ jobs:
       - name: "🧐 Version dry run"
         if: ${{ github.ref_name == 'releases' }}
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.UQDS_PERSONAL_ACCESS_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
           git config user.name "${{ github.actor }}"
@@ -49,7 +49,7 @@ jobs:
         name: "⌛️ Wait for approval"
         if: ${{ github.ref_name == 'releases' }}
         with:
-          secret: ${{ github.GITHUB_TOKEN }}
+          secret: ${{ github.UQDS_PERSONAL_ACCESS_TOKEN }}
           approvers: uqds-admin
           minimum-approvals: 1
           issue-title: 'Approve new release ✅'
@@ -62,7 +62,7 @@ jobs:
       - name: "✨ Publish stable"
         if: ${{ github.ref_name == 'releases' }}
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.UQDS_PERSONAL_ACCESS_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
           git config user.name "${{ github.actor }}"
@@ -72,7 +72,7 @@ jobs:
       - name: "🐣 Publish alpha"
         if: ${{ github.ref_name == 'master' }}
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.UQDS_PERSONAL_ACCESS_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
           git config user.name "${{ github.actor }}"

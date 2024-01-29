@@ -2,7 +2,6 @@ packages/*/package-lock.json
 node_modules
 dist
 .sass-cache
-.npmrc
 .DS_Store
 Thumbs.db
 npm-debug.log

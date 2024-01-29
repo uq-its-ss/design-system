@@ -18,6 +18,12 @@ With NPM:
 npm i -S @uqds/accordion
 ```
 
+Installing an alpha version
+
+```shell
+npm i -S @uqds/accordion@latest --tag=alpha
+```
+
 ---
 
 ## Dependency graph

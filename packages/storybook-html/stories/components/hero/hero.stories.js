@@ -37,6 +37,8 @@ export default {
         "hero-example-2.jpg",
         "hero-example-3.jpg",
         "hero-example-4.jpg",
+        "hero-example-5.jpg",
+        "hero-example-6.jpg",
       ],
     },
   },
@@ -67,9 +69,9 @@ export const Hero = {
         <p>${description}</p>
       </div>
       ${
-        button && light
+        button
           ? `<div class="uq-hero__button">
-        <a class="uq-button uq-button--purple" href="#">${button}</a>
+        <a class="${classNames('uq-button', { 'uq-button--purple' : light })}" href="#">${button}</a>
       </div>`
           : ""
       }

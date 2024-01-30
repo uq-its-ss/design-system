@@ -24,7 +24,7 @@ Accordions can be implemented using `<div>` or `<ul>` lists.
 
 Use divs if there is a significant amount of content to be displayed.
 
-<Canvas withSource="none">
+<Canvas sourceState="none">
   <Story height={300} id="components-accordion--using-divs" />
 </Canvas>
 
@@ -61,7 +61,7 @@ Use divs if there is a significant amount of content to be displayed.
 
 Use lists if there is less content and when the semantics of a list serves better with assistive technologies like screen readers.
 
-<Canvas withSource="none">
+<Canvas sourceState="none">
   <Story height={300} id="components-accordion--using-lists" />
 </Canvas>
 
@@ -110,7 +110,7 @@ new uq.accordion();
 
 The subtitle allows for a secondary context. Typically the primary title should provide enough information.
 
-<Canvas withSource="none">
+<Canvas sourceState="none">
   <Story height={300} id="components-accordion--has-subtitle" />
 </Canvas>
 
@@ -154,7 +154,7 @@ The subtitle allows for a secondary context. Typically the primary title should 
 
 A smaller more compact version. Used as a support class for more complex interfaces mixing components. For general content use the standard size accordion.
 
-<Canvas withSource="none">
+<Canvas sourceState="none">
   <Story height={200} id="components-accordion--is-compact" />
 </Canvas>
 
@@ -202,7 +202,7 @@ By default, users can expand and collapse one accordion at a time. When a user e
 
 Alternate behaviour is to allow users to expand and collapse any number of accordions at a time. When a user expands one accordion then clicks on another, the previously expanded accordion remains expanded and the user will need to manually collapse it. This is useful if users need to view the contents of multiple accordions at a time. To enable this behaviour, add the classname `uq-accordion--is-manual` to the `<div>` or `<ul>` as shown below.
 
-<Canvas withSource="none">
+<Canvas sourceState="none">
   <Story height={300} id="components-accordion--is-manual" />
 </Canvas>
 

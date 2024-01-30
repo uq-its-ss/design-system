@@ -3,7 +3,7 @@ import DocsHeader from "./custom/components/DocsHeader";
 import DocsPage from "./custom/components/DocsPage";
 import "./preview.scss";
 
-export const parameters = {
+const preview = {
   layout: "centered",
   viewMode: "docs", // There's a bug, reproducable upon first-load of Storybook, where viewMode is ignored
   previewTabs: {
@@ -61,3 +61,4 @@ export const parameters = {
     },
   },
 };
+export default preview;

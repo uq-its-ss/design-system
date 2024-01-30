@@ -5,7 +5,7 @@
   background: core.$uq-purple-dark;
   @media #{core.$screen-lg-up} {
     position: relative;
-    padding: 64px 0;
+    padding: var(--hero-spacing) 0;
   }
 
   & .uq-container {
@@ -19,22 +19,40 @@
 }
 
 .uq-hero__image {
-  aspect-ratio: 1.8 / 1;
+  display: flex;
 
   @media #{core.$screen-lg-up} {
     position: absolute;
     z-index: 1;
-    right: 0;
+    left: 0;
     top: 0;
-    width: calc(50% + 40px);
+    width: 100%;
     height: 100%;
   }
 
-  & img {
+  &::before {
+    @media #{core.$screen-lg-up} {
+      content: "";
+      width: calc(50% - #{core.$space-xxxl});
+      flex-shrink: 1;
+    }
+  }
+
+  & img,
+  & picture {
     object-fit: cover;
+    // The hero image uses this standard aspect ratio so it is always the
+    // same size.
+    aspect-ratio: var(--hero-aspect-ratio);
+    // On tablet/mobile the image size is based off the width of the page.
     width: 100%;
-    height: 100%;
-    display: block;
+
+    @media #{core.$screen-lg-up} {
+      // On desktop the image size is based off the height of the hero.
+      width: auto;
+      height: 100%;
+      flex-shrink: 0;
+    }
   }
 }
 
@@ -111,5 +129,15 @@
 .uq-hero--large {
   @media #{core.$screen-lg-up} {
     padding: 140px 0;
+  }
+
+  & .uq-hero__image {
+    & img,
+    & picture {
+      @media #{core.$screen-lg-up} {
+        // We use a larger aspect ratio for the large hero on desktop only.
+        aspect-ratio: var(--hero-large-aspect-ratio);
+      }
+    }
   }
 }

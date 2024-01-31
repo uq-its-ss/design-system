@@ -60,6 +60,10 @@
     "reg-suit": "reg-suit run",
     "serve-screenshots": "http-server dist -i -p 6006"
   },
+  "engines" : {
+    "node" : ">=18",
+    "npm" : ">=9"
+  },
   "browserslist": [
     "last 4 chrome versions",
     "last 4 firefox versions",

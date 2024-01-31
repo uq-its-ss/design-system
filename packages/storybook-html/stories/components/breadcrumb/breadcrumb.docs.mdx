@@ -23,7 +23,7 @@ Breadcrumbs are a horizontal list of links used to indicate the current page loc
 </Canvas>
 
 ```html
-<nav class="uq-breadcrumb" aria-label="breadcrumb">
+<nav class="uq-breadcrumb" aria-label="Breadcrumb">
   <ol class="uq-breadcrumb__list">
     <li class="uq-breadcrumb__item">
       <a class="uq-breadcrumb__link" title="Home" href="/">Home</a>
@@ -69,6 +69,20 @@ Breadcrumbs are a horizontal list of links used to indicate the current page loc
 
 When exceeding 4 breadcrumbs - the current page, parent, parent's parent and home crumbs will be shown with the additional crumbs collapsed behind an expand link. The full breadcrumb trail can then be viewed by clicking the expand crumb. _Note: only expand functionality is included, and cannot be collapsed again without a page refresh._
 
+### Wrapper
+
+Wrap the `nav.uq-breadcrumb` element in a `div.uq-breadcrumb__container` element when including in the page layout. This provides correct padding, container width and the bottom border.
+
+```html
+<div class="uq-breadcrumb__container">
+  <nav class="uq-breadcrumb" aria-label="Breadcrumb">
+    <li class="uq-breadcrumb__item">
+      <a class="uq-breadcrumb__link" title="Home" href="/">Home</a>
+    </li>
+  </nav>
+</div>
+```
+
 ## How and when to use
 
 - The breadcrumb reflects the information architecture of a page, not a historical navigation trail.
@@ -77,4 +91,4 @@ When exceeding 4 breadcrumbs - the current page, parent, parent's parent and hom
 
 ## Accessibility
 
-For accessibility add `aria-label="breadcrumb"` to the `nav` element that wraps the breadcrumb component.
+For accessibility add `aria-label="Breadcrumb"` to the `nav` element that wraps the breadcrumb component.

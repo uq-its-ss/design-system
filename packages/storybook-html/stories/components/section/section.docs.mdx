@@ -1,0 +1,61 @@
+import { Story, Canvas } from "@storybook/addon-docs";
+import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
+import { Section } from "./section.stories";
+
+# Section
+
+<StatusBadge.Development />
+<StatusBadge.DraftDoc />
+
+## Overview
+
+The `.uq-section` component is a simple wrapper to use around other components.
+
+It provides a uniform heading and description and can be used around card grids,
+panes and image panels.
+
+### How-to
+
+Use the `.uq-section` element anywhere you need to provide a h2 heading and
+description to introduce another set of components.
+
+Implement the markup structure below for the header.
+
+<Canvas withSource="none">
+  <Story id="components-section--section" />
+</Canvas>
+
+```html
+<div class="uq-section">
+  <div class="uq-section__header">
+    <h2 class="uq-section__title">Title</h2>
+    <div class="uq-section__description">
+      <p>Description</p>
+    </div>
+  </div>
+  <!-- Section content markup -->
+</div>
+```
+
+### Examples
+
+#### Section with Card grid
+
+<Canvas withSource="none">
+  <div class="uq-section">
+    <div class="uq-section__header">
+      <h2 class="uq-section__title">Title</h2>
+      <div class="uq-section__description">
+        <p>Description</p>
+      </div>
+    </div>
+    <div class="uq-card-grid uq-card-grid--target-3x">
+      <div class="uqds-layout-demo-card"></div>
+      <div class="uqds-layout-demo-card"></div>
+      <div class="uqds-layout-demo-card"></div>
+      <div class="uqds-layout-demo-card"></div>
+      <div class="uqds-layout-demo-card"></div>
+      <div class="uqds-layout-demo-card"></div>
+    </div>
+  </div>
+</Canvas>

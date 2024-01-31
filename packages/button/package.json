@@ -1,6 +1,6 @@
 {
   "name": "@uqds/button",
-  "version": "0.0.15-alpha.0",
+  "version": "0.0.15-alpha.1",
   "description": "The button component package",
   "keywords": [
     "uqds",
@@ -40,6 +40,6 @@
     "url": "https://github.com/uq-its-ss/design-system/issues"
   },
   "dependencies": {
-    "@uqds/core": "^1.1.1"
+    "@uqds/core": "^1.1.2-alpha.0"
   }
 }

@@ -19,6 +19,10 @@ $purple-650: #40205d;
 $purple-700: #3a1f53;
 $purple-800: #2f1d3f;
 $purple-900: #231a2c;
+$purple-light: #962a8b;
+
+// UQ Purple gradient
+$purple-gradient: linear-gradient(90deg, $purple 0%, 87%, $purple-light 100%);
 
 // Grey
 $grey-50: #f3f3f4;
@@ -82,19 +86,13 @@ $utility-900: #15324e;
 
 // Colour shorthands
 $purple: $purple-500;
-$purple-light: #962a8b;
 $red: $error-500;
 $yellow: $warning-500;
 $blue: $utility-500;
 $green: $success-500;
 
-// UQ Purple gradient
-$purple-gradient: linear-gradient(90deg, $purple 0%, 87%, $purple-light 100%);
-
-// Default text, Content
+// Text shorthands
 $text: $grey-900;
-
-// Link Blue
 $link: $utility-500;
 $link-hover: $utility-600;
 $link-active: $utility-600;

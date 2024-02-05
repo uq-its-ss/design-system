@@ -10,14 +10,14 @@ export default {
     layout: "fullscreen",
     previewTabs: {
       canvas: { hidden: false },
-      'storybook/docs/panel': { hidden: true, }
+      "storybook/docs/panel": { hidden: true },
     },
-    viewMode: 'story',
+    viewMode: "story",
   },
   argTypes: {
     showGrid: {
       control: "boolean",
-    }
+    },
   },
   args: {
     showGrid: false,
@@ -26,7 +26,7 @@ export default {
 
 export const Home = {
   render: ({ showGrid }) => `
-<div class="${classNames({ "uqds-layout-demo-bg": showGrid } )}">
+<div class="${classNames({ "uqds-layout-demo-bg": showGrid })}">
   ${Header()}
   ${breadcrumb()}
   <div class="uq-sections">
@@ -60,4 +60,4 @@ export const Home = {
   </div>
   ${footer()}
 </div>`,
-}
+};

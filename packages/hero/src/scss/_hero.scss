@@ -3,9 +3,15 @@
 
 .uq-hero {
   background: core.$uq-purple-dark;
+
   @media #{core.$screen-lg-up} {
     position: relative;
+    // On desktop the we set a min height and top/bottom padding.
+    // This will ensure heros expand in height when there is too much text.
     padding: var(--hero-spacing) 0;
+    min-height: var(--hero-min-height);
+    display: flex;
+    align-items: center;
   }
 
   & .uq-container {
@@ -52,6 +58,9 @@
       width: auto;
       height: 100%;
       flex-shrink: 0;
+      // Set a max width which will ensure the image doesn't get too wide for
+      // heros that container a large amount of text.
+      max-width: var(--hero-image-max-width);
     }
   }
 }
@@ -85,7 +94,6 @@
 }
 
 .uq-hero__title {
-  font-size: var(--font-size-ul);
   color: core.$uq-white;
 }
 
@@ -128,16 +136,17 @@
 
 .uq-hero--large {
   @media #{core.$screen-lg-up} {
-    padding: 140px 0;
+    min-height: var(--hero-large-min-height);
   }
 
   & .uq-hero__image {
     & img,
     & picture {
-      @media #{core.$screen-lg-up} {
-        // We use a larger aspect ratio for the large hero on desktop only.
-        aspect-ratio: var(--hero-large-aspect-ratio);
-      }
+      aspect-ratio: var(--hero-large-aspect-ratio);
     }
+  }
+
+  & .uq-hero__title {
+    font-size: var(--font-size-ul);
   }
 }

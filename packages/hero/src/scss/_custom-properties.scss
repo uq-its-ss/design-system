@@ -9,11 +9,16 @@
     #{core.$uq-purple-light} 101.54%
   );
 
-  --hero-spacing: #{core.$space-ul};
+  --hero-spacing: #{core.$space-uul};
   --hero-basic-spacing: #{core.$space-uuul};
 
   --hero-aspect-ratio: 2.35 / 1;
   --hero-large-aspect-ratio: 3 / 2;
+
+  --hero-min-height: 336px;
+  --hero-large-min-height: 500px;
+
+  --hero-image-max-width: 790px;
 }
 
 // Resize custom properties for tablet/mobile.

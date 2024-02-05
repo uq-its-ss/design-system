@@ -1,11 +1,5 @@
-// Main component stylesheet
 @use "@uqds/core/src/scss/global" as core;
-@use "@uqds/grid/src/scss/global" as grid;
 @use "global" as *;
-
-.uq-section {
-
-}
 
 .uq-section__header {
   margin-bottom: core.$space-l;
@@ -15,4 +9,9 @@
   margin: 0 0 core.$space-m;
   color: core.$uq-black;
   font-size: core.$font-size-xxxl;
+}
+
+.uq-section--shaded {
+  background: $section-shaded-bg;
+  padding: var(--layout-gap);
 }

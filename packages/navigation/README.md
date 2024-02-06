@@ -1,6 +1,6 @@
-# `@uqds/side-nav`
+# `@uqds/navigation`
 
-> side nav component
+> Navigation components
 
 ## Usage
 
@@ -9,13 +9,27 @@
 With Yarn:
 
 ```shell
-yarn add @uqds/side-nav
+yarn add @uqds/navigation
 ```
 
 With NPM:
 
 ```shell
-npm i @uqds/side-nav
+npm i @uqds/navigation
+```
+
+### CSS
+
+Sass:
+
+```scss
+@import "@uqds/navigation/src/scss/main.scss";
+```
+
+Postcss:
+
+```css
+@import "@uqds/navigation";
 ```
 
 ---
@@ -23,7 +37,7 @@ npm i @uqds/side-nav
 ## Dependency graph
 
 ```shell
-@uqds/side-nav
+@uqds/navigation
 ├─ @uqds/core
 └─ @uqds/icon
    └─ @uqds/core

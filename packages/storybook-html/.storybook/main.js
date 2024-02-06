@@ -9,6 +9,7 @@ module.exports = {
   staticDirs: ["../public"],
   features: {
     postcss: false,
+    previewMdx2: false,
   },
   webpackFinal: async (config, { configType }) => {
     // Export a function. Accept the base config as the only param.
@@ -64,25 +65,15 @@ module.exports = {
               // TODO: we should implement `glob` here:
               includePaths: [
                 "node_modules/@uqds/app-maps/node_modules",
+                "../../node_modules/@uqds/app-maps/node_modules",
                 "node_modules",
+                "../../node_modules",
               ],
             },
           },
         },
       ],
     });
-
-    /* 
-      From v6 migration
-      -----------------
-    */
-    // Temporary workaround: https://github.com/storybookjs/storybook/issues/11255#issuecomment-673899817
-    // Due to breaking change during Storybook v5.3 to v6.0 migration
-    config.resolve.alias["core-js/modules"] = path.resolve(
-      __dirname,
-      "..",
-      "node_modules/core-js/modules"
-    );
 
     // Return the altered config
     return config;

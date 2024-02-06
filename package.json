@@ -1,6 +1,28 @@
 {
-  "name": "root",
+  "name": "@uqds/design-system",
+  "version": "1.0.0",
   "private": true,
+  "description": "The University of Queensland Design System",
+  "keywords": [
+    "uqds",
+    "uq",
+    "University of Queensland",
+    "design system",
+    "scss",
+    "sass",
+    "css",
+    "js"
+  ],
+  "homepage": "https://design-system.uq.edu.au",
+  "bugs": {
+    "url": "https://github.com/uq-its-ss/design-system/issues"
+  },
+  "repository": "https://github.com/uq-its-ss/design-system/",
+  "author": "",
+  "license": "ISC",
+  "workspaces": [
+    "./packages/*"
+  ],
   "devDependencies": {
     "@babel/core": "^7.20.12",
     "@babel/eslint-parser": "^7.19.1",
@@ -31,7 +53,7 @@
     "jest-axe": "^7.0.0",
     "jest-environment-jsdom": "^29.4.1",
     "jsdom": "^21.1.0",
-    "lerna": "^6.4.1",
+    "lerna": "^6.6.2",
     "msw": "^1.0.0",
     "prettier": "2.8.3",
     "puppeteer": "^19.5.2",

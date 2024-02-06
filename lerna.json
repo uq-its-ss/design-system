@@ -1,7 +1,7 @@
 {
   "version": "independent",
   "npmClient": "npm",
-  "packages": ["packages/*"],
+  "useWorkspaces": true,
   "command": {
     "bootstrap": {
       "npmClientArgs": ["--no-package-lock"]

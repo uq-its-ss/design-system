@@ -1,0 +1,108 @@
+@use "@uqds/core/src/scss/global" as core;
+@use "@uqds/icon/src/scss/global" as icon;
+@use "global" as *;
+
+.uq-sr-only {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
+}
+
+.uq-local-nav {
+  max-width: var(--local-nav-max-width);
+
+  & ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.uq-local-nav__menu-item {
+  margin: 0;
+
+  & a {
+    display: block;
+    color: core.$uq-black;
+    padding-block: core.$space-m;
+    padding-inline-start: core.$space-xl;
+    border-bottom: 1px solid var(--local-nav-border);
+
+    &:hover {
+      text-decoration: none;
+      background-color: var(--local-nav-active-background);
+    }
+
+    &:focus-visible {
+      outline: 4px solid var(--local-nav-focus);
+      outline-offset: -3px;
+    }
+  }
+}
+
+.uq-local-nav--is-current {
+  border-left: 4px solid core.$uq-purple;
+  margin-top: -1px;
+
+  & > a {
+    border-top: 1px solid var(--local-nav-border);
+  }
+
+  &.uq-local-nav__menu-item > a {
+    padding-inline: calc(#{core.$space-xl} - 4px) 0;
+  }
+}
+
+.uq-local-nav--is-active {
+  & > a {
+    background-color: var(--local-nav-active-background);
+    font-weight: core.$font-weight-medium;
+  }
+}
+
+.uq-local-nav--has-children {
+  & > a {
+    background-image: url(icon.get-icon(
+      "standard--chevron-down-sml",
+      core.$uq-black
+    ));
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-position: right center;
+    padding-inline-end: core.$space-l;
+  }
+}
+
+.uq-local-nav__grandparent,
+.uq-local-nav__parent {
+  font-weight: core.$font-weight-medium;
+
+  & a {
+    background-image: url(icon.get-icon(
+      "standard--chevron-left",
+      core.$uq-purple
+    ));
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-position: left center;
+  }
+}
+
+.uq-local-nav__grandparent {
+  & a {
+    border-color: var(--local-nav-grandparent-border);
+  }
+}
+
+.uq-local-nav__child {
+  & a {
+    padding-inline: core.$space-xxl;
+  }
+}

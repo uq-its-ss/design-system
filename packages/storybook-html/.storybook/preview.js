@@ -51,7 +51,7 @@ export const parameters = {
         "Layout",
         ["Layout system", "Grid"],
         "Components",
-        ["Body", ["Body", "Elements", "Utilities"]],
+        ["Body", ["Body", "Elements", "Utilities"], "Navigation"],
         "Patterns",
         "Gallery & Examples",
         "Deliverables",

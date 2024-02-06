@@ -1,0 +1,13 @@
+@use "@uqds/core/src/scss/global" as core;
+@use "global" as *;
+
+:root {
+  // @todo replace this once the new layout package is in.
+  --local-nav-max-width: 261px;
+
+  // @todo replace these with colour vars once the new colour work is in.
+  --local-nav-border: #dcdcdd;
+  --local-nav-grandparent-border: #3b383e;
+  --local-nav-active-background: #f3f3f4;
+  --local-nav-focus: #0d6dcd;
+}

@@ -1,6 +1,10 @@
 {
   "name": "@uqds/core",
+<<<<<<< HEAD
   "version": "1.1.1",
+=======
+  "version": "1.1.2-alpha.0",
+>>>>>>> 8f7404617a56d5ac2318f7dfb99d1494a417e211
   "description": "The core package that all component packages depend on",
   "keywords": [
     "uqds",

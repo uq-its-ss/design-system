@@ -1,0 +1,79 @@
+name: Publish
+
+on:
+  push:
+    branches:
+      - master
+      - releases
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "⬇️ Checkout"
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.UQDS_PERSONAL_ACCESS_TOKEN }}
+
+      - name: "🟢 Install NodeJS"
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: "📦️ Install dependencies"
+        run: npm install
+
+      - name: "📂 Bootstrap Lerna"
+        run: npx lerna bootstrap --no-ci
+
+      - name: "🔐 Authenticate to NPM"
+        run: |
+          echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
+          npm whoami
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: "🧐 Version dry run"
+        if: ${{ github.ref_name == 'releases' }}
+        env:
+          GH_TOKEN: ${{ secrets.UQDS_PERSONAL_ACCESS_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          git config user.name "${{ github.actor }}"
+          git config user.email "${{ github.actor}}@users.noreply.github.com"          
+          npx lerna version --conventional-commits --conventional-graduate --yes --no-git-tag-version --no-push || true
+
+      - uses: trstringer/manual-approval@v1
+        name: "⌛️ Wait for approval"
+        if: ${{ github.ref_name == 'releases' }}
+        with:
+          secret: ${{ github.UQDS_PERSONAL_ACCESS_TOKEN }}
+          approvers: uqds-admin
+          minimum-approvals: 1
+          issue-title: 'Approve new release ✅'
+          issue-body: >
+            Please approve or deny the release of a new release.
+            [View the workflow output](https://github.com/uq-its-ss/design-system/actions/runs/${{ github.run_number }}) to confirm the version is as expected.
+
+          exclude-workflow-initiator-as-approver: false
+
+      - name: "✨ Publish stable"
+        if: ${{ github.ref_name == 'releases' }}
+        env:
+          GH_TOKEN: ${{ secrets.UQDS_PERSONAL_ACCESS_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          git config user.name "${{ github.actor }}"
+          git config user.email "${{ github.actor}}@users.noreply.github.com"
+          npx lerna publish --conventional-commits --conventional-graduate --yes
+
+      - name: "🐣 Publish alpha"
+        if: ${{ github.ref_name == 'master' }}
+        env:
+          GH_TOKEN: ${{ secrets.UQDS_PERSONAL_ACCESS_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          git config user.name "${{ github.actor }}"
+          git config user.email "${{ github.actor}}@users.noreply.github.com"
+          npx lerna publish --conventional-commits --conventional-prerelease --yes

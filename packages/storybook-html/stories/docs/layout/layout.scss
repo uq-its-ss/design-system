@@ -38,8 +38,8 @@
       }
 
       > span {
-        background-color: lighten(core.$blue, 45%);
-        border: 1px solid core.$blue;
+        background-color: lighten(core.$utility-500, 45%);
+        border: 1px solid core.$utility-500;
         display: flex;
         flex-direction: column;
         height: 100%;
@@ -93,8 +93,8 @@
         }
 
         > span {
-          background-color: lighten(core.$blue, 40%);
-          border-color: core.$blue;
+          background-color: lighten(core.$utility-500, 40%);
+          border-color: core.$utility-500;
         }
       }
     }

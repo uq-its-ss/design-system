@@ -36,8 +36,8 @@
   .uq-grid {
     &__col {
       > span {
-        background-color: lighten(core.$blue, 45%);
-        border: 1px solid core.$blue;
+        background-color: lighten(core.$utility-500, 45%);
+        border: 1px solid core.$utility-500;
         display: block;
         height: 100%;
         font-size: core.$font-size-xs;
@@ -70,8 +70,8 @@
         }
 
         @media #{core.$screen-xl-up} {
-          background-color: lighten(core.$blue, 40%);
-          border-color: core.$blue;
+          background-color: lighten(core.$utility-500, 40%);
+          border-color: core.$utility-500;
         }
       }
     }

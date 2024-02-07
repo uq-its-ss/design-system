@@ -1,10 +1,6 @@
 {
   "name": "@uqds/progression",
-<<<<<<< HEAD
-  "version": "0.0.15-alpha.0",
-=======
   "version": "0.0.15-alpha.1",
->>>>>>> 8f7404617a56d5ac2318f7dfb99d1494a417e211
   "description": "Progression component",
   "keywords": [
     "uqds",
@@ -45,10 +41,6 @@
     "url": "https://github.com/uqds/design-system/issues"
   },
   "dependencies": {
-<<<<<<< HEAD
-    "@uqds/core": "^1.1.1"
-=======
     "@uqds/core": "^1.1.2-alpha.0"
->>>>>>> 8f7404617a56d5ac2318f7dfb99d1494a417e211
   }
 }

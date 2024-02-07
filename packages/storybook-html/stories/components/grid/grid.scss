@@ -65,8 +65,8 @@
         }
 
         @media #{core.$screen-lg-up} {
-          background-color: lighten(core.$green, 45%);
-          border-color: core.$green;
+          background-color: lighten(core.$success-500, 45%);
+          border-color: core.$success-500;
         }
 
         @media #{core.$screen-xl-up} {

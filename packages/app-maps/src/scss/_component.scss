@@ -388,7 +388,7 @@ $-result-icon-spacing: $-icon-spacing;
     }
 
     &__decoration {
-      background-image: url(get-icon("ui--wayfinding-deco", core.$green));
+      background-image: url(get-icon("ui--wayfinding-deco", core.$success-500));
       background-repeat: no-repeat;
       background-position: center core.$space-m;
       background-size: auto 50%;
@@ -416,7 +416,7 @@ $-result-icon-spacing: $-icon-spacing;
       }
 
       .mdc-circular-progress {
-        @include mdc-circular-progress-mixins.color(core.$green);
+        @include mdc-circular-progress-mixins.color(core.$success-500);
         flex-grow: 0;
         flex-shrink: 0;
       }
@@ -667,7 +667,7 @@ $-result-icon-spacing: $-icon-spacing;
     }
 
     &--green {
-      color: core.$green;
+      color: core.$success-500;
     }
 
     &--yellow {

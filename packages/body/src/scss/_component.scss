@@ -180,7 +180,7 @@ $use-encapsulation: false !default;
     }
 
     &--error {
-      color: core.$red;
+      color: core.$error-500;
     }
 
     // Text size

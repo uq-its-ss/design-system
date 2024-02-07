@@ -15,10 +15,10 @@
     &::before {
       background: repeating-linear-gradient(
         45deg,
-        lighten(core.$red, 30%),
-        lighten(core.$red, 30%) 10px,
-        lighten(core.$red, 35%) 10px,
-        lighten(core.$red, 35%) 20px
+        lighten(core.$error-500, 30%),
+        lighten(core.$error-500, 30%) 10px,
+        lighten(core.$error-500, 35%) 10px,
+        lighten(core.$error-500, 35%) 20px
       );
       content: "";
       position: absolute;
@@ -60,8 +60,8 @@
 
       @media #{core.$screen-sm-up} {
         > span {
-          background-color: lighten(core.$red, 35%);
-          border-color: core.$red;
+          background-color: lighten(core.$error-500, 35%);
+          border-color: core.$error-500;
         }
       }
 

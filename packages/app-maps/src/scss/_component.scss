@@ -675,7 +675,7 @@ $-result-icon-spacing: $-icon-spacing;
     }
 
     &--red {
-      color: core.$red;
+      color: core.$error-500;
     }
 
     &--grey {

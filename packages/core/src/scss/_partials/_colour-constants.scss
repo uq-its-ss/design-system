@@ -22,7 +22,12 @@ $purple-900: #231a2c;
 $purple-light: #962a8b;
 
 // UQ Purple gradient
-$purple-gradient: linear-gradient(90deg, $purple-500 0%, 87%, $purple-light 100%);
+$purple-gradient: linear-gradient(
+  90deg,
+  $purple-500 0%,
+  87%,
+  $purple-light 100%
+);
 
 // Grey
 $grey-50: #f3f3f4;

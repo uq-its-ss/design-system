@@ -50,8 +50,8 @@
         }
 
         @media #{core.$screen-xs-up} {
-          background-color: lighten(core.$yellow, 35%);
-          border-color: core.$yellow;
+          background-color: lighten(core.$warning-500, 35%);
+          border-color: core.$warning-500;
         }
 
         @media #{core.$screen-sm-up} {

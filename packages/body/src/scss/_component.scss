@@ -49,7 +49,7 @@ $use-encapsulation: false !default;
   }
 
   .purple {
-    background-color: core.$purple;
+    background-color: core.$purple-500;
   }
 
   // Typography
@@ -144,7 +144,7 @@ $use-encapsulation: false !default;
     margin-bottom: core.$space-none;
 
     dt {
-      color: core.$purple;
+      color: core.$purple-500;
       font-size: core.$font-size-s;
       text-transform: uppercase;
       font-weight: core.$font-weight-bold;
@@ -172,7 +172,7 @@ $use-encapsulation: false !default;
   .text {
     // Text colour
     &--purple {
-      color: core.$purple;
+      color: core.$purple-500;
     }
 
     &--white {

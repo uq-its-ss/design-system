@@ -4,7 +4,7 @@
 
 .uq-side-nav {
   color: core.$text;
-  border-top: core.$space-xs solid core.$purple;
+  border-top: core.$space-xs solid core.$purple-500;
   box-sizing: border-box;
   font-family: core.$font-body;
   font-size: core.$font-size-m;
@@ -23,12 +23,12 @@
 
     &-link {
       font-size: core.$font-size-xl;
-      color: core.$purple;
+      color: core.$purple-500;
       text-decoration: none;
 
       &:hover,
       &:focus {
-        color: core.$purple;
+        color: core.$purple-500;
         text-decoration: underline;
       }
     }
@@ -107,7 +107,7 @@
         text-indent: -100vw;
         background-image: url(icon-constants.get-icon(
           "standard--arrow-down-1",
-          core.$purple
+          core.$purple-500
         ));
         background-size: 1.2rem;
         background-position: center center;
@@ -120,7 +120,7 @@
         .uq-side-nav__list-item__sub-toggle {
           background-image: url(icon-constants.get-icon(
             "standard--arrow-up-1",
-            core.$purple
+            core.$purple-500
           ));
         }
 

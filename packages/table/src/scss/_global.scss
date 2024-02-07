@@ -107,7 +107,7 @@
 }
 @mixin table-header {
   padding: core.$space-s core.$space-m;
-  color: core.$purple;
+  color: core.$purple-500;
   text-align: left;
   border: 1px solid core.$grey-200;
   font-weight: core.$font-weight-bold;

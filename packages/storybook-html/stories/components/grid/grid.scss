@@ -60,8 +60,8 @@
         }
 
         @media #{core.$screen-md-up} {
-          background-color: lighten(core.$purple, 45%);
-          border-color: core.$purple;
+          background-color: lighten(core.$purple-500, 45%);
+          border-color: core.$purple-500;
         }
 
         @media #{core.$screen-lg-up} {

@@ -65,7 +65,7 @@
     }
 
     &--active {
-      color: core.$purple;
+      color: core.$purple-500;
       background-color: core.$white;
       font-weight: core.$font-weight-bold;
 
@@ -155,7 +155,7 @@
         }
 
         &::before {
-          background-color: core.$purple;
+          background-color: core.$purple-500;
           display: block;
         }
       }

@@ -44,7 +44,7 @@ $-result-icon-spacing: $-icon-spacing;
     // letter-spacing: 0.5px;
 
     a {
-      color: core.$purple;
+      color: core.$purple-500;
       text-decoration: none;
 
       &:hover {
@@ -166,7 +166,7 @@ $-result-icon-spacing: $-icon-spacing;
       &:hover {
         background-image: url(get-icon(
           "ui--arrow-left",
-          darken(core.$purple, 10%)
+          darken(core.$purple-500, 10%)
         ));
       }
     }
@@ -176,7 +176,7 @@ $-result-icon-spacing: $-icon-spacing;
       margin-right: core.$space-s;
 
       &:hover {
-        background-image: url(get-icon("ui--close", darken(core.$purple, 10%)));
+        background-image: url(get-icon("ui--close", darken(core.$purple-500, 10%)));
       }
     }
 
@@ -197,7 +197,7 @@ $-result-icon-spacing: $-icon-spacing;
       }
 
       .mdc-circular-progress {
-        @include mdc-circular-progress-mixins.color(core.$purple);
+        @include mdc-circular-progress-mixins.color(core.$purple-500);
         flex-grow: 0;
         flex-shrink: 0;
       }
@@ -316,7 +316,7 @@ $-result-icon-spacing: $-icon-spacing;
       &:hover {
         background-image: url(get-icon(
           "ui--arrow-left",
-          darken(core.$purple, 10%)
+          darken(core.$purple-500, 10%)
         ));
       }
     }
@@ -325,7 +325,7 @@ $-result-icon-spacing: $-icon-spacing;
       background-image: url(get-icon("ui--swap"));
 
       &:hover {
-        background-image: url(get-icon("ui--swap", darken(core.$purple, 10%)));
+        background-image: url(get-icon("ui--swap", darken(core.$purple-500, 10%)));
       }
     }
 
@@ -453,7 +453,7 @@ $-result-icon-spacing: $-icon-spacing;
     }
 
     &__category-title {
-      color: core.$purple;
+      color: core.$purple-500;
       font-size: core.$font-size-xxs;
       font-weight: core.$font-weight-bold;
       text-transform: uppercase;
@@ -461,7 +461,7 @@ $-result-icon-spacing: $-icon-spacing;
       margin: core.$space-m core.$space-l 0 (core.$space-l + $-icon-spacing);
 
       &::before {
-        background-image: url(get-icon("ui--nav-right", core.$purple));
+        background-image: url(get-icon("ui--nav-right", core.$purple-500));
         content: "";
         display: inline-block;
         height: core.$font-size-xxs;
@@ -534,7 +534,7 @@ $-result-icon-spacing: $-icon-spacing;
           position: relative;
 
           > a {
-            color: core.$purple;
+            color: core.$purple-500;
           }
 
           &::before {
@@ -542,7 +542,7 @@ $-result-icon-spacing: $-icon-spacing;
             left: core.$space-l + $-result-icon-spacing;
             top: 50%;
             margin-top: -($-result-icon-height * 0.5);
-            background-image: url(get-icon("ui--map-pin", core.$purple));
+            background-image: url(get-icon("ui--map-pin", core.$purple-500));
             background-position: center;
             background-repeat: no-repeat;
             background-size: $-result-icon-height $-result-icon-width;

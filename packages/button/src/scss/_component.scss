@@ -121,8 +121,8 @@
 
   /* button purple */
   &--purple {
-    background-color: core.$purple;
-    border-color: core.$purple;
+    background-color: core.$purple-500;
+    border-color: core.$purple-500;
     color: core.$white;
 
     &:hover,
@@ -134,8 +134,8 @@
 
     &.uq-button--outline {
       background-color: transparent;
-      border-color: core.$purple;
-      color: core.$purple;
+      border-color: core.$purple-500;
+      color: core.$purple-500;
 
       &:hover,
       &:focus {
@@ -145,7 +145,7 @@
       }
 
       &.uq-button--light {
-        color: core.$purple;
+        color: core.$purple-500;
 
         &:hover,
         &:focus {
@@ -167,7 +167,7 @@
       }
 
       &.uq-button--light {
-        color: core.$purple;
+        color: core.$purple-500;
 
         &:hover,
         &:focus {

@@ -2,7 +2,7 @@
 @use "global" as *;
 
 .uq-loading-spinner {
-  color: core.$purple;
+  color: core.$purple-500;
   background-color: transparent;
   border-radius: 50%;
   height: core.$space-xxxl;
@@ -21,7 +21,7 @@
   &::before {
     background-color: transparent;
     border: core.$space-xs solid transparent;
-    border-top-color: core.$purple;
+    border-top-color: core.$purple-500;
     border-radius: 50%;
     box-sizing: border-box;
     content: "";

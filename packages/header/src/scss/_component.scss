@@ -4,7 +4,7 @@
 @use "global" as *;
 
 .uq-header {
-  background: core.$purple; //linear-gradient(90deg, $uq-purple 0%, 87%, #962A8B 100%);
+  background: core.$purple-500; //linear-gradient(90deg, $uq-purple 0%, 87%, #962A8B 100%);
   display: grid;
   align-items: center;
   grid-template-columns: auto;
@@ -232,7 +232,7 @@
 
   &__nav-primary-link {
     display: block;
-    color: core.$white; //core.$purple;
+    color: core.$white; //core.$purple-500;
     text-decoration: none;
     padding: core.$space-m core.$space-l;
     transition: background-color 0.25s, border-color 0.25s;
@@ -283,7 +283,7 @@
     & li {
       & a {
         padding-left: core.$space-xxxl;
-        color: core.$purple;
+        color: core.$purple-500;
         text-decoration: none;
 
         &:hover {
@@ -361,7 +361,7 @@
   }
 
   &__search {
-    background: core.$purple;
+    background: core.$purple-500;
     position: absolute;
     width: 100%;
     top: 3.95rem;
@@ -423,7 +423,7 @@
     background-color: core.$white;
     border-radius: 5px;
     border: 2px solid transparent;
-    color: core.$purple;
+    color: core.$purple-500;
     display: inline-block;
     font-size: core.$font-size-m;
     height: 2.75rem;
@@ -450,7 +450,7 @@
       background-size: 100%;
       background-image: url(icon-constants.get-icon(
         "standard--search",
-        core.$purple
+        core.$purple-500
       ));
     }
   }
@@ -542,11 +542,11 @@
   .megamenu__overview-link {
     display: block;
     padding: core.$space-m core.$space-none;
-    color: core.$purple;
+    color: core.$purple-500;
   }
 
   .megamenu__heading {
-    color: core.$purple;
+    color: core.$purple-500;
     font-weight: 500;
     padding-top: core.$space-xs;
     padding-bottom: core.$space-xs;
@@ -568,7 +568,7 @@
         & a {
           display: inline-block;
           padding-top: core.$space-s;
-          color: core.$purple;
+          color: core.$purple-500;
           text-decoration: none;
         }
       }
@@ -608,7 +608,7 @@ body.no-scroll {
   overflow-y: auto;
   overflow-x: hidden;
   font-size: core.$font-size-m;
-  color: core.$purple;
+  color: core.$purple-500;
 
   @media #{core.$screen-lg-up} {
     display: none !important;
@@ -663,11 +663,11 @@ body.no-scroll {
     padding: 0.75rem core.$space-l;
     text-decoration: none;
     font-size: core.$font-size-m;
-    color: core.$purple;
+    color: core.$purple-500;
     position: relative;
 
     &:hover {
-      color: core.$purple;
+      color: core.$purple-500;
       background-color: #f1f1f1;
     }
   }
@@ -680,7 +680,7 @@ body.no-scroll {
       content: "";
       background-image: url(icon-constants.get-icon(
         "standard--chevron-left-sml",
-        core.$purple
+        core.$purple-500
       ));
       background-repeat: no-repeat;
       width: 1.5rem;
@@ -697,7 +697,7 @@ body.no-scroll {
       content: "";
       background-image: url(icon-constants.get-icon(
         "standard--chevron-right-sml",
-        core.$purple
+        core.$purple-500
       ));
       background-repeat: no-repeat;
       width: 1.5rem;
@@ -719,7 +719,7 @@ body.no-scroll {
     padding: 0.75rem core.$space-l;
     flex: 1 0 auto;
     font-size: 90%;
-    color: core.$purple;
+    color: core.$purple-500;
     background-color: core.$white;
     text-transform: uppercase;
 
@@ -769,16 +769,16 @@ body.no-scroll {
   }
 
   .uq-header__newglobal-nav-item {
-    background-color: core.$purple;
+    background-color: core.$purple-500;
   }
 
   .uq-header__newglobal-nav-link {
     color: core.$white;
-    background-color: core.$purple;
+    background-color: core.$purple-500;
 
     &:hover {
       color: core.$white;
-      background-color: core.$purple;
+      background-color: core.$purple-500;
     }
   }
 

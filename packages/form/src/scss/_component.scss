@@ -231,7 +231,7 @@ $use-encapsulation: false !default;
     -webkit-appearance: none;
     background-image: url(icon.get-icon(
       "standard--chevron-down-sml",
-      core.$purple
+      core.$purple-500
     ));
     background-repeat: no-repeat;
     background-position: right core.$space-xs center;

@@ -4,7 +4,7 @@
 @use "global" as *;
 
 .uq-footer {
-  background: core.$purple;
+  background: core.$purple-500;
   box-sizing: border-box;
   font-family: core.$font-body;
   font-size: core.$font-size-m;
@@ -419,7 +419,7 @@
       }
 
       &__toggle {
-        background-color: core.$purple;
+        background-color: core.$purple-500;
         color: core.$white;
         font-size: core.$font-size-m;
         padding-left: core.$space-l;

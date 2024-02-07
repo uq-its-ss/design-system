@@ -14,7 +14,7 @@ For example, we can use the function as follows:
 @use "icons" as *;
 
 select {
-  background-image: url(get-icon("form-chevron-down", core.$purple));
+  background-image: url(get-icon("form-chevron-down", core.$purple-500));
 }
 
 // where `form-chevron-down` is a key in the generated icon map.

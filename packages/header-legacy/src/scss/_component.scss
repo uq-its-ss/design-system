@@ -5,7 +5,7 @@
 @use "global" as *;
 
 .legacy-header {
-  background: core.$purple;
+  background: core.$purple-500;
   background: core.$purple-gradient;
   box-sizing: border-box;
   font-family: core.$font-body;
@@ -320,7 +320,7 @@
         background-color: core.$white;
         border-radius: 5px;
         border: 2px solid transparent;
-        color: core.$purple;
+        color: core.$purple-500;
         display: inline-block;
         font-size: core.$font-size-m;
         height: 2.75rem;
@@ -338,8 +338,8 @@
 
         &:hover {
           background-color: core.$white;
-          border-color: core.$purple;
-          color: core.$purple;
+          border-color: core.$purple-500;
+          color: core.$purple-500;
         }
 
         &::before {
@@ -353,7 +353,7 @@
           background-size: 100%;
           background-image: url(icon-constants.get-icon(
             "standard--search",
-            core.$purple
+            core.$purple-500
           ));
         }
       }

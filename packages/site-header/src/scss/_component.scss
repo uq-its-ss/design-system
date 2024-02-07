@@ -43,7 +43,7 @@
   }
 
   &__title {
-    color: core.$purple;
+    color: core.$purple-500;
     font-size: $title-font-size;
     font-weight: $title-font-weight;
     margin: core.$space-none;
@@ -51,7 +51,7 @@
 
     &:hover,
     &:focus {
-      color: core.$purple;
+      color: core.$purple-500;
       text-decoration: none;
     }
   }
@@ -59,7 +59,7 @@
   &__navigation-toggle {
     background-color: core.$white;
     border: 0 none;
-    color: core.$purple;
+    color: core.$purple-500;
     cursor: pointer;
     height: 1.5rem;
     margin-bottom: core.$space-none;
@@ -73,7 +73,7 @@
 
     &:hover {
       background-color: core.$white;
-      color: core.$purple;
+      color: core.$purple-500;
     }
 
     &:focus {
@@ -84,7 +84,7 @@
     &::before {
       background-image: url(icon-constants.get-icon(
         "standard--navigation-menu",
-        core.$purple
+        core.$purple-500
       ));
       background-size: 100%;
       content: "";
@@ -100,7 +100,7 @@
       &::before {
         background-image: url(icon-constants.get-icon(
           "standard--close",
-          core.$purple
+          core.$purple-500
         ));
       }
     }
@@ -127,7 +127,7 @@
   &__navigation {
     a {
       // border-bottom: 1px solid $nav-dropdown-divider;
-      color: core.$purple;
+      color: core.$purple-500;
       display: block;
       padding: core.$space-m core.$space-m;
       text-decoration: none;
@@ -245,13 +245,13 @@
           .uq-site-header__navigation__sub-toggle {
             background-image: url(icon-constants.get-icon(
               "standard--chevron-up-sml",
-              core.$purple
+              core.$purple-500
             ));
 
             @media #{core.$screen-lg-up} {
               background-image: url(icon-constants.get-icon(
                 "standard--chevron-down-sml",
-                core.$purple
+                core.$purple-500
               ));
             }
           }
@@ -267,18 +267,18 @@
 
         &--active {
           > a {
-            border-left: 2px solid core.$purple;
+            border-left: 2px solid core.$purple-500;
 
             @media #{core.$screen-lg-up} {
               border-left: 0 none;
-              border-bottom: 4px solid core.$purple;
+              border-bottom: 4px solid core.$purple-500;
             }
           }
         }
 
         &:hover {
           & .uq-site-header__navigation__list-link {
-            border-bottom: 4px solid core.$purple;
+            border-bottom: 4px solid core.$purple-500;
           }
         }
       }
@@ -296,7 +296,7 @@
       text-indent: -100vw;
       background-image: url(icon-constants.get-icon(
         "standard--chevron-down-sml",
-        core.$purple
+        core.$purple-500
       ));
       background-size: core.$space-m;
       background-position: center center;
@@ -359,7 +359,7 @@
   text-indent: -100vw;
   background-image: url(icon-constants.get-icon(
     "standard--chevron-down-sml",
-    core.$purple
+    core.$purple-500
   ));
   background-size: core.$space-m;
   background-position: center center;

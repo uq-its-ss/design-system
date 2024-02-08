@@ -25,6 +25,7 @@
     "@storybook/addon-essentials": "^7.6.12",
     "@storybook/addon-mdx-gfm": "^7.6.12",
     "@storybook/addons": "^7.6.12",
+    "@storybook/blocks": "^7.6.13",
     "@storybook/html": "^7.6.12",
     "@storybook/html-webpack5": "^7.6.12",
     "@storybook/test-runner": "^0.9.2",

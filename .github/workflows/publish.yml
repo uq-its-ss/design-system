@@ -13,6 +13,7 @@ jobs:
       - name: "⬇️ Checkout"
         uses: actions/checkout@v3
         with:
+          persist-credentials: false
           fetch-depth: 0
           token: ${{ secrets.UQDS_PERSONAL_ACCESS_TOKEN }}
 

@@ -1,6 +1,11 @@
 name: Visual Regression Testing and preview environment
 
-on: [push]
+on:
+  push:
+    branches:
+      - 'master'
+      - 'beta'
+  pull_request: {}
 
 jobs:
   build:
@@ -62,6 +67,7 @@ jobs:
       - name: Add link to storybook preview in comments
         uses: marocchino/sticky-pull-request-comment@v2
         with:
+          GITHUB_TOKEN: ${{ secrets.UQDS_PERSONAL_ACCESS_TOKEN }}
           header: preview
           message: |
             Storybook preview https://uq-ds-regsuit.s3.amazonaws.com/storybook-preview/${{ github.run_id }}/index.html

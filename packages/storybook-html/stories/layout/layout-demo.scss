@@ -1,0 +1,36 @@
+@use "@uqds/core/src/scss/_global" as core;
+
+.uqds-layout-demo-bg {
+  background: repeating-linear-gradient(
+    45deg,
+    core.$uq-neutral-light60,
+    core.$uq-neutral-light60 10px,
+    core.$uq-neutral-light80 10px,
+    core.$uq-neutral-light80 20px
+  );
+
+  & .uq-container {
+    background: rgba(core.$uq-red, 20%);
+  }
+
+  & .uq-card-grid {
+    background: repeating-linear-gradient(
+      45deg,
+      lighten(core.$uq-green, 30%),
+      lighten(core.$uq-green, 30%) 10px,
+      lighten(core.$uq-green, 35%) 10px,
+      lighten(core.$uq-green, 35%) 20px
+    );
+  }
+}
+
+.uqds-layout-demo-card,
+.uqds-layout-demo-el {
+  background-color: lighten(core.$uq-blue, 40%);
+  border: 1px solid core.$uq-blue;
+  height: 150px;
+}
+
+.uqds-layout-demo-card {
+  height: 300px;
+}

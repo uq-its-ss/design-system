@@ -9,11 +9,11 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
+    if: ${{ ! startsWith(github.event.head_commit.message, 'chore(release):Publish') }}
     steps:
       - name: "⬇️ Checkout"
         uses: actions/checkout@v3
         with:
-          persist-credentials: false
           fetch-depth: 0
           token: ${{ secrets.UQDS_PERSONAL_ACCESS_TOKEN }}
 

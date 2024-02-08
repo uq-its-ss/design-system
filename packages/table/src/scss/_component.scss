@@ -46,7 +46,7 @@ table,
   tr,
   .uq-table__row {
     &:nth-child(even) {
-      background: rgba(core.$uq-neutral, 0.1);
+      background: core.$grey-50;
     }
   }
 }
@@ -88,7 +88,7 @@ table,
 
       &::before {
         content: attr(data-title);
-        color: core.$uq-purple;
+        color: core.$purple-500;
         font-weight: core.$font-weight-bold;
         display: block;
       }

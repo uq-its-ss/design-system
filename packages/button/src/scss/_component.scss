@@ -3,14 +3,14 @@
 
 /* button Default */
 .uq-button {
-  background-color: $button-bg-color;
-  border: 2px solid $button-border-color;
+  background-color: core.$link;
+  border: 2px solid core.$link;
   border-radius: core.$space-xs;
   box-sizing: border-box;
-  color: $button-color;
+  color: core.$white;
   cursor: pointer;
   display: inline-block;
-  font-family: $button-font;
+  font-family: core.$roboto;
   font-size: core.$font-size-m;
   font-weight: normal;
   line-height: normal;
@@ -28,69 +28,70 @@
 
   &:hover,
   &:focus {
-    background-color: $button-bg-hover-color;
-    border-color: $button-border-hover-color;
-    color: $button-hover-color;
+    background-color: core.$link-active;
+    border-color: core.$link-active;
+    color: core.$white;
     text-decoration: underline;
   }
 
   &.uq-button--outline {
     background-color: transparent;
-    border-color: $button-bg-color;
-    color: $button-bg-color;
+    border-color: core.$link;
+    color: core.$link;
 
     &:hover,
     &:focus {
-      background-color: $button-bg-hover-color;
-      border-color: $button-bg-hover-color;
-      color: $button-color;
+      background-color: core.$link-active;
+      border-color: core.$link-active;
+      color: core.$white;
     }
   }
 
   &.uq-button--text {
     background-color: transparent;
     border-color: transparent;
-    color: $button-bg-color;
+    color: core.$link;
 
     &:hover,
     &:focus {
       background-color: transparent;
       border-color: transparent;
-      color: $button-bg-hover-color;
+      color: core.$link-active;
     }
   }
 
   /* button secondary */
   &--secondary {
-    background-color: $button-secondary-bg-color;
-    border-color: $button-secondary-border-color;
-    color: $button-secondary-color;
+    background-color: core.$grey-300;
+    border-color: core.$grey-300;
+    color: core.$text;
 
     &:hover,
     &:focus {
-      background-color: $button-secondary-bg-hover-color;
-      border-color: $button-secondary-border-hover-color;
-      color: $button-secondary-hover-color;
+      background-color: core.$grey-300;
+      border-color: core.$grey-300;
+      color: core.$text;
     }
 
     &.uq-button--outline {
       background-color: transparent;
-      border-color: $button-secondary-bg-color;
-      color: $button-secondary-color;
+      border-color: core.$grey-300;
+      color: core.$text;
 
       &:hover,
       &:focus {
-        background-color: $button-secondary-bg-hover-color;
-        border-color: $button-secondary-bg-hover-color;
-        color: $button-secondary-color;
+        background-color: core.$grey-500;
+        border-color: core.$grey-500;
+        color: core.$text;
       }
 
       &.uq-button--light {
-        color: $button-secondary-bg-color;
+        color: core.$grey-500;
+        border-color: core.$grey-500;
 
         &:hover,
         &:focus {
-          color: $button-secondary-color;
+          color: core.$text;
         }
       }
     }
@@ -98,21 +99,21 @@
     &.uq-button--text {
       background-color: transparent;
       border-color: transparent;
-      color: $button-secondary-color;
+      color: core.$text;
 
       &:hover,
       &:focus {
         background-color: transparent;
         border-color: transparent;
-        color: $button-secondary-hover-color;
+        color: core.$text;
       }
 
       &.uq-button--light {
-        color: $button-secondary-bg-color;
+        color: core.$grey-500;
 
         &:hover,
         &:focus {
-          color: $button-secondary-bg-hover-color;
+          color: core.$grey-500;
         }
       }
     }
@@ -120,35 +121,35 @@
 
   /* button purple */
   &--purple {
-    background-color: $button-purple-bg-color;
-    border-color: $button-purple-border-color;
-    color: $button-purple-color;
+    background-color: core.$purple-500;
+    border-color: core.$purple-500;
+    color: core.$white;
 
     &:hover,
     &:focus {
-      background-color: $button-purple-bg-hover-color;
-      border-color: $button-purple-border-hover-color;
-      color: $button-purple-hover-color;
+      background-color: core.$purple-600;
+      border-color: core.$purple-600;
+      color: core.$white;
     }
 
     &.uq-button--outline {
       background-color: transparent;
-      border-color: $button-purple-bg-color;
-      color: $button-purple-bg-color;
+      border-color: core.$purple-500;
+      color: core.$purple-500;
 
       &:hover,
       &:focus {
-        background-color: $button-purple-bg-hover-color;
-        border-color: $button-purple-bg-hover-color;
-        color: $button-purple-color;
+        background-color: core.$purple-600;
+        border-color: core.$purple-600;
+        color: core.$white;
       }
 
       &.uq-button--light {
-        color: $button-purple-bg-color;
+        color: core.$purple-500;
 
         &:hover,
         &:focus {
-          color: $button-purple-color;
+          color: core.$white;
         }
       }
     }
@@ -156,21 +157,21 @@
     &.uq-button--text {
       background-color: transparent;
       border-color: transparent;
-      color: $button-purple-bg-color;
+      color: core.$purple-500;
 
       &:hover,
       &:focus {
         background-color: transparent;
         border-color: transparent;
-        color: $button-purple-bg-hover-color;
+        color: core.$purple-600;
       }
 
       &.uq-button--light {
-        color: $button-purple-bg-color;
+        color: core.$purple-500;
 
         &:hover,
         &:focus {
-          color: $button-purple-bg-hover-color;
+          color: core.$purple-600;
         }
       }
     }

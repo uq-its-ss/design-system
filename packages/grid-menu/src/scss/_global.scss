@@ -1,11 +1,6 @@
 // Variables, functions, and mixins
 @use "@uqds/core/src/scss/global" as core;
 
-$linked-list-color: core.$link;
-$linked-list-color-hover: core.$uq-white;
-$linked-list-desc: core.$uq-neutral-dark80;
-$linked-list-border: core.$uq-neutral-light60;
-
 // Two column layout.
 @mixin grid-menu-2-column {
   @media only screen and #{core.$screen-md-up} {

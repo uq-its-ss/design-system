@@ -1,106 +1,99 @@
-/* Variants of brand colours created via below SASS functions
-   Primary, Secondary colour : Lighten/Darken (% increments of 10)
-   Neutral colour : Tint/Shade (% increments of 20)
+/* Variants of brand colours
 */
 
-// Function to Tint a color
-@function tint($color, $percentage) {
-  @return mix(white, $color, $percentage);
-}
-// Function to Shade a color
-@function shade($color, $percentage) {
-  @return mix(black, $color, $percentage);
-}
+// UQ Brand colours
 
-// UQ Primary palette
-$uq-purple: #51247a;
-$uq-black: #000;
-$uq-white: #fff;
+// Base
+$black: #19151c;
+$white: #fff;
 
-// UQ Secondary palette
-$uq-purple-light: #962a8b;
-$uq-purple-dark: #48206c;
-$uq-gold: #bb9d65;
-$uq-red: #e62645;
-$uq-orange: #eb602b;
-$uq-yellow: #fbb800;
-$uq-blue: #4085c6;
-$uq-aqua: #00a2c7;
-$uq-green: #2ea836;
-
-// UQ Neutral palette
-$uq-neutral: #d7d1cc;
-$uq-darkgrey: #999490;
-
-// UQ Primary - Darken
-$uq-purple-dark10: darken($uq-purple, 10%); // #371853
-$uq-purple-650: #40205d;
-
-// UQ Secondary - Darken
-$uq-red-dark10: darken($uq-red, 10%); // #c31632
-$uq-red-dark20: darken($uq-red, 20%); // #951126
-
-$uq-green-dark10: darken($uq-green, 10%); // #238029
-
-// UQ Neutral - Tint
-$uq-neutral-light20: tint($uq-neutral, 20%); // #dfdad6;
-$uq-neutral-light40: tint($uq-neutral, 40%); // #e7e3e0;
-$uq-neutral-light60: tint($uq-neutral, 60%); // #efedeb;
-$uq-neutral-light80: tint($uq-neutral, 80%); // #f7f6f5;
-
-// UQ Neutral - Shade
-$uq-neutral-dark20: shade($uq-neutral, 20%); // #aca7a3;
-$uq-neutral-dark40: shade($uq-neutral, 40%); // #817d7a;
-$uq-neutral-dark60: shade($uq-neutral, 60%); // #565452;
-$uq-neutral-dark80: shade($uq-neutral, 80%); // #2b2a29;
-
-// UQ Darkgrey - Tint
-$uq-darkgrey-light20: tint($uq-neutral, 20%); // #ada9a6;
-$uq-darkgrey-light40: tint($uq-neutral, 40%); // #c2bfbc;
-$uq-darkgrey-light60: tint($uq-neutral, 60%); // #d6d4d3;
-$uq-darkgrey-light80: tint($uq-neutral, 80%); // #ebeae9;
+// Purple
+$purple-50: #eee9f2;
+$purple-100: #dcd3e4;
+$purple-200: #b9a7ca;
+$purple-300: #977caf;
+$purple-400: #745095;
+$purple-500: #51247a;
+$purple-600: #4b2271;
+$purple-650: #40205d;
+$purple-700: #3a1f53;
+$purple-800: #2f1d3f;
+$purple-900: #231a2c;
+$purple-light: #962a8b;
 
 // UQ Purple gradient
-$uq-purple-gradient: linear-gradient(
+$purple-gradient: linear-gradient(
   90deg,
-  $uq-purple 0%,
+  $purple-500 0%,
   87%,
-  $uq-purple-light 100%
+  $purple-light 100%
 );
 
-// Default text, Content
-$text: $uq-neutral-dark80;
+// Grey
+$grey-50: #f3f3f4;
+$grey-100: #e8e8e8;
+$grey-200: #dcdcdd;
+$grey-300: #d1d0d2;
+$grey-400: #bab9bb;
+$grey-500: #a3a1a4;
+$grey-600: #8c8a8d;
+$grey-700: #757377;
+$grey-800: #5e5b60;
+$grey-900: #3b383e;
 
-// Link Blue
-$link: #1e72c6;
-$link-hover: #005ea5;
-$link-active: $link-hover;
+// Error
+$error-50: #fbeaea;
+$error-100: #f7d4d4;
+$error-200: #efa9a9;
+$error-300: #e67f7f;
+$error-400: #de5454;
+$error-500: #d62929;
+$error-600: #c32727;
+$error-700: #9d2424;
+$error-800: #772020;
+$error-900: #511d1d;
 
-// Alerts and Status - Dark
-$info: #0d6dcd;
-$success: $uq-green-dark10;
-$warning: $uq-yellow;
-$alert: $uq-red-dark20;
+// Success
+$success-50: #edf6ed;
+$success-100: #dbeddc;
+$success-200: #b7dcb8;
+$success-300: #92ca95;
+$success-400: #6eb971;
+$success-500: #4aa74e;
+$success-600: #459949;
+$success-700: #3b7c3e;
+$success-800: #315f33;
+$success-900: #274328;
 
-// Alerts and Status - Light
-$info-light: lighten($info, 50%); // #e8f1fb
-$success-light: lighten($uq-green, 50%); // dff6e0
-$warning-light: lighten($uq-yellow, 40%); // fff0c8
-$alert-light: lighten($uq-red, 40%); // fbdde2
+// Warning
+$warning-50: #fef8e8;
+$warning-100: #fdf1d2;
+$warning-200: #fce3a5;
+$warning-300: #fad678;
+$warning-400: #f9c84b;
+$warning-500: #f7ba1e;
+$warning-600: #e1aa1d;
+$warning-700: #b4891c;
+$warning-800: #87691b;
+$warning-900: #5b491a;
 
-// Palettes
-$light-palette-color: $uq-neutral-light80;
-$light-palette-border-color: rgba($uq-white, 0.4);
-$light-palette-link-color: $uq-white;
-$light-palette-bg: $uq-white;
+// Utility
+$utility-50: #e7f0fa;
+$utility-100: #cfe2f5;
+$utility-200: #9ec5eb;
+$utility-300: #6ea7e1;
+$utility-400: #3d8ad7;
+$utility-500: #0d6dcd;
+$utility-600: #0e65bb;
+$utility-700: #105497;
+$utility-800: #124373;
+$utility-900: #15324e;
 
-$dark-palette-color: $uq-neutral-dark80;
-$dark-palette-border-color: rgba($uq-black, 0.1);
-$dark-palette-link-color: lighten($uq-purple, 10%);
-$dark-palette-bg: $uq-neutral-dark60;
-
-// Overlays
-$dark-tint-bg: $uq-neutral-dark60;
+// Text shorthands
+$text: $grey-900;
+$link: $utility-500;
+$link-hover: $utility-600;
+$link-active: $utility-600;
 
 // Filters from #000000
 $filter-text: invert(0%) sepia(72%) saturate(588%) hue-rotate(348deg)

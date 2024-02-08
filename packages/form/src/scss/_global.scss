@@ -1,28 +1,15 @@
 @use "@uqds/core/src/scss/global" as core;
 
-$form-border-color-focus: core.$link;
-$form-border-color: core.$uq-neutral-light40;
 $form-border-radius: 2px;
 $form-border-width: 1px;
-$form-color-error: core.$alert;
-$form-color-success: core.$success;
 $form-description-size: core.$font-size-xs;
 $form-element-height: core.$space-xxl;
-$form-focus-color: core.$link;
 $form-label-size: core.$font-size-s;
-$form-placeholder-color: core.$uq-neutral-dark40;
 $form-spacing: core.$space-m;
-$form-text-color: core.$text;
-$form-text-disabled-color: core.$uq-neutral-dark20;
 $form-text-size: core.$font-size-m;
-
-// Select
-$form-select-icon: core.$uq-purple;
-$form-select-icon-disabled: $form-border-color;
 
 // Checkbox/Radio buttons
 $form-checkbox-border-radius: 4px;
 $form-checkbox-border-width: 1px;
-$form-checkbox-check-color: core.$uq-white;
 $form-checkbox-size: 20px;
 $form-checkbox-check-size: 16px;

@@ -7,7 +7,7 @@
   &__header {
     padding: core.$space-l; //1.8rem;
     margin-bottom: core.$space-l;
-    background: $page-header-shaded-bg;
+    background: core.$grey-50;
   }
 
   &__title {

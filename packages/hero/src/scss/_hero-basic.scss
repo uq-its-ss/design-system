@@ -2,7 +2,7 @@
 @use "@uqds/grid/src/scss/global" as grid;
 
 .uq-hero-basic {
-  background: core.$uq-purple-dark;
+  background: core.$purple-600;
   position: relative;
 }
 
@@ -27,11 +27,11 @@
 .uq-hero-basic__content {
   position: relative;
   z-index: 2;
-  color: core.$uq-white;
+  color: core.$white;
   padding: var(--hero-basic-spacing) 0;
 
   & a {
-    color: core.$uq-white;
+    color: core.$white;
   }
 }
 
@@ -46,7 +46,7 @@
 
 .uq-hero-basic__title {
   font-size: var(--font-size-ul);
-  color: core.$uq-white;
+  color: core.$white;
   margin: 0;
 }
 

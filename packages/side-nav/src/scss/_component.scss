@@ -4,7 +4,7 @@
 
 .uq-side-nav {
   color: core.$text;
-  border-top: core.$space-xs solid core.$uq-purple;
+  border-top: core.$space-xs solid core.$purple-500;
   box-sizing: border-box;
   font-family: core.$font-body;
   font-size: core.$font-size-m;
@@ -23,26 +23,26 @@
 
     &-link {
       font-size: core.$font-size-xl;
-      color: core.$uq-purple;
+      color: core.$purple-500;
       text-decoration: none;
 
       &:hover,
       &:focus {
-        color: core.$uq-purple;
+        color: core.$purple-500;
         text-decoration: underline;
       }
     }
   }
 
   &__list {
-    border-top: 1px solid $sidenav-list-item-divider;
+    border-top: 1px solid core.$grey-200;
     display: block;
     list-style-type: none;
     margin: core.$space-none;
     padding: core.$space-none;
 
     &--level-2 {
-      background-color: $sidenav-list-item-bg;
+      background-color: core.$grey-50;
       display: block;
       visibility: hidden;
       position: relative;
@@ -50,7 +50,7 @@
       left: 0;
       width: 100%;
       opacity: 0;
-      transform: translateY(-($sidenav-list-item-animation-distance));
+      transform: translateY(-(core.$space-s));
 
       .uq-side-nav__list-item {
         &:last-child {
@@ -63,13 +63,13 @@
 
         &:hover,
         &:focus {
-          background-color: $sidenav-list-item-active-bg !important;
+          background-color: core.$grey-200 !important;
         }
       }
     }
 
     &-item {
-      border-bottom: 1px solid $sidenav-list-item-divider;
+      border-bottom: 1px solid core.$grey-200;
       display: block;
       margin: core.$space-none;
       padding: core.$space-none;
@@ -107,7 +107,7 @@
         text-indent: -100vw;
         background-image: url(icon-constants.get-icon(
           "standard--arrow-down-1",
-          core.$uq-purple
+          core.$purple-500
         ));
         background-size: 1.2rem;
         background-position: center center;
@@ -120,7 +120,7 @@
         .uq-side-nav__list-item__sub-toggle {
           background-image: url(icon-constants.get-icon(
             "standard--arrow-up-1",
-            core.$uq-purple
+            core.$purple-500
           ));
         }
 
@@ -136,7 +136,7 @@
       &--active,
       &:focus {
         .uq-side-nav__link {
-          background-color: $sidenav-list-item-bg;
+          background-color: core.$grey-50;
         }
       }
     }

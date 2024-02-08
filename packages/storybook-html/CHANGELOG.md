@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.1.0-alpha.1](https://github.com/uq-its-ss/design-system/compare/storybook-html@0.1.0-alpha.0...storybook-html@0.1.0-alpha.1) (2024-02-08)
+
+### Features
+
+- [ITSADSSD-53164] [ITSADSSD-53165] New @uqds/layout package ([#452](https://github.com/uq-its-ss/design-system/issues/452)) ([66564a6](https://github.com/uq-its-ss/design-system/commit/66564a6dd7a220a33ef8f1b0d1bf0bd6a7bb53b7))
+
+# [0.1.0-alpha.0](https://github.com/uq-its-ss/design-system/compare/storybook-html@0.0.15-alpha.5...storybook-html@0.1.0-alpha.0) (2024-02-08)
+
+### Features
+
+- update colour variable names to align with new colour suite and iterated through components to reflect. Itsadssd 53487 color ([#445](https://github.com/uq-its-ss/design-system/issues/445)) ([b03d1b9](https://github.com/uq-its-ss/design-system/commit/b03d1b9a7944f4552750706b276405b0988abf90))
+
 ## [0.0.15-alpha.5](https://github.com/uq-its-ss/design-system/compare/storybook-html@0.0.15-alpha.4...storybook-html@0.0.15-alpha.5) (2024-01-31)
 
 **Note:** Version bump only for package storybook-html

@@ -5,8 +5,8 @@
 @use "global" as *;
 
 .legacy-header {
-  background: core.$uq-purple;
-  background: core.$uq-purple-gradient;
+  background: core.$purple-500;
+  background: core.$purple-gradient;
   box-sizing: border-box;
   font-family: core.$font-body;
   font-weight: core.$font-weight-thin;
@@ -110,14 +110,14 @@
     }
 
     &-link {
-      color: core.$uq-white;
+      color: core.$white;
       font-size: core.$font-size-s;
       font-weight: core.$font-weight-thin;
       text-decoration: none;
 
       &:hover,
       &:focus {
-        color: core.$uq-white;
+        color: core.$white;
         text-decoration: underline;
       }
     }
@@ -171,7 +171,7 @@
           background-size: 100%;
           background-image: url(icon-constants.get-icon(
             "standard--search",
-            core.$uq-white
+            core.$white
           ));
         }
 
@@ -179,7 +179,7 @@
           &::before {
             background-image: url(icon-constants.get-icon(
               "standard--close",
-              core.$uq-white
+              core.$white
             ));
           }
         }
@@ -187,7 +187,7 @@
     }
 
     &-title {
-      color: core.$uq-white;
+      color: core.$white;
       font-family: core.$roboto;
       font-size: core.$font-size-m;
       font-style: italic;
@@ -214,11 +214,11 @@
     }
 
     input[type="radio"] {
-      color: core.$uq-white;
+      color: core.$white;
       border-radius: 50%;
       appearance: none;
       display: inline-block;
-      border: form.$form-checkbox-border-width solid form.$form-border-color;
+      border: form.$form-checkbox-border-width solid core.$white;
       cursor: pointer;
       height: form.$form-checkbox-size;
       width: form.$form-checkbox-size;
@@ -226,13 +226,13 @@
       position: absolute;
 
       &:focus {
-        border-color: form.$form-focus-color;
-        box-shadow: 0 0 0 1px form.$form-focus-color;
+        border-color: core.$link;
+        box-shadow: 0 0 0 1px core.$link;
         outline: none;
       }
 
       + label {
-        color: core.$uq-white;
+        color: core.$white;
         display: inline-block;
         font-size: core.$font-size-s;
         font-weight: core.$font-weight-normal;
@@ -248,11 +248,11 @@
 
       &:checked {
         border-width: 0.125rem;
-        border-color: core.$uq-white;
+        border-color: core.$white;
 
         &::after {
           border-radius: 50%;
-          background-color: core.$uq-white;
+          background-color: core.$white;
           content: "";
           display: block;
           position: absolute;
@@ -263,8 +263,8 @@
         }
 
         &:focus {
-          border-color: form.$form-focus-color;
-          box-shadow: 0 0 0 1px form.$form-focus-color;
+          border-color: core.$link;
+          box-shadow: 0 0 0 1px core.$link;
         }
       }
     }
@@ -286,7 +286,7 @@
       max-width: 100%;
       min-width: 100%;
       border-radius: 2px;
-      background-color: core.$uq-white;
+      background-color: core.$white;
       background-position: 1rem;
       margin-bottom: core.$space-s;
 
@@ -305,7 +305,7 @@
         font-family: sans-serif;
         font-size: core.$font-size-m;
         line-height: 1;
-        color: core.$uq-neutral-dark80;
+        color: core.$text;
         height: auto;
         outline: none;
 
@@ -317,10 +317,10 @@
 
       &-button {
         background-clip: padding-box;
-        background-color: core.$uq-white;
+        background-color: core.$white;
         border-radius: 5px;
         border: 2px solid transparent;
-        color: core.$uq-purple;
+        color: core.$purple-500;
         display: inline-block;
         font-size: core.$font-size-m;
         height: 2.75rem;
@@ -337,9 +337,9 @@
         width: 2.75rem;
 
         &:hover {
-          background-color: core.$uq-white;
-          border-color: core.$uq-purple;
-          color: core.$uq-purple;
+          background-color: core.$white;
+          border-color: core.$purple-500;
+          color: core.$purple-500;
         }
 
         &::before {
@@ -353,7 +353,7 @@
           background-size: 100%;
           background-image: url(icon-constants.get-icon(
             "standard--search",
-            core.$uq-purple
+            core.$purple-500
           ));
         }
       }

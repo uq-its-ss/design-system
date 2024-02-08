@@ -41,8 +41,8 @@
   }
 
   &__link {
-    border-bottom: 1px solid $linked-list-border;
-    color: $linked-list-color;
+    border-bottom: 1px solid core.$grey-200;
+    color: core.$link;
     display: block;
     font-size: 1.375rem;
     font-weight: 400;
@@ -65,14 +65,14 @@
 
     &:hover {
       background-color: core.$link;
-      color: $linked-list-color-hover;
+      color: core.$white;
       text-decoration: none;
 
       &::after {
         content: "";
         background-image: url(icon-constants.get-icon(
           "standard--arrow-right-1",
-          core.$uq-white
+          core.$white
         ));
         background-repeat: no-repeat;
         background-size: 1.4rem 1.4rem;
@@ -82,7 +82,7 @@
       .uq-grid-menu__link,
       .uq-grid-menu__title,
       .uq-grid-menu__description {
-        color: $linked-list-color-hover;
+        color: core.$white;
         text-decoration: none;
       }
 
@@ -100,7 +100,7 @@
   }
 
   &__description {
-    color: $linked-list-desc;
+    color: core.$grey-700;
     display: block;
     font-size: 0.8rem;
     font-weight: 300;
@@ -117,7 +117,7 @@
   // Dark text variant.
   &--dark-text {
     .uq-grid-menu__link {
-      color: core.$dark-palette-color;
+      color: core.$text;
     }
 
     .uq-grid-menu__icon {
@@ -141,11 +141,11 @@
       @extend %light-palette;
 
       &:hover {
-        background-color: core.$light-palette-link-color;
+        background-color: core.$white;
         color: core.$link;
 
         .uq-grid-menu__description {
-          background-color: core.$light-palette-link-color;
+          background-color: core.$white;
           color: core.$link;
         }
       }
@@ -162,11 +162,11 @@
 
       &:hover {
         background-color: core.$link;
-        color: core.$uq-white;
+        color: core.$white;
 
         .uq-grid-menu__description {
           background-color: core.$link;
-          color: core.$uq-white;
+          color: core.$white;
         }
       }
     }
@@ -177,7 +177,7 @@
 .section--background-image {
   .uq-grid-menu {
     &__link {
-      border-color: rgba(core.$uq-white, 0.4);
+      border-color: rgba(core.$white, 0.4);
     }
   }
 }

@@ -2,7 +2,7 @@
 @use "@uqds/grid/src/scss/global" as grid;
 
 .uq-hero {
-  background: core.$uq-purple-dark;
+  background: core.$purple-600;
 
   @media #{core.$screen-lg-up} {
     position: relative;
@@ -67,7 +67,7 @@
 
 .uq-hero__content {
   position: relative;
-  background: core.$uq-purple;
+  background: core.$purple-500;
   box-shadow: 0 3px 24px 0 rgba(#181818, 0.1);
   padding: var(--layout-gap);
   margin-bottom: 8px;
@@ -89,23 +89,23 @@
     height: 8px;
     width: 100%;
     border-radius: 0 0 4px 4px;
-    background: core.$uq-purple-650;
+    background: core.$purple-650;
   }
 }
 
 .uq-hero__title {
-  color: core.$uq-white;
+  color: core.$white;
 }
 
 .uq-hero__description {
   margin-top: core.$space-m;
   font-size: core.$font-size-l;
-  color: core.$uq-white;
+  color: core.$white;
 }
 
 .uq-hero__description,
 .uq-hero__description * {
-  color: core.$uq-white;
+  color: core.$white;
   font-size: core.$font-size-l;
 }
 
@@ -117,7 +117,7 @@
   background: unset;
 
   & .uq-hero__content {
-    background: core.$uq-white;
+    background: core.$white;
 
     &::after {
       background: var(--brand-purple-gradient);
@@ -125,7 +125,7 @@
   }
 
   & .uq-hero__title {
-    color: core.$uq-purple;
+    color: core.$purple-500;
   }
 
   & .uq-hero__description,

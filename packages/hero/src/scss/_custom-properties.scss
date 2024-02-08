@@ -3,12 +3,6 @@
 :root {
   --font-size-ul: #{core.$font-size-ul};
 
-  --brand-purple-gradient: linear-gradient(
-    91deg,
-    #{core.$uq-purple} 68.75%,
-    #{core.$uq-purple-light} 101.54%
-  );
-
   --hero-spacing: #{core.$space-uul};
   --hero-basic-spacing: #{core.$space-uuul};
 

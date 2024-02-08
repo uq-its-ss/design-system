@@ -120,7 +120,7 @@
     background: core.$white;
 
     &::after {
-      background: var(--brand-purple-gradient);
+      background: core.$purple-gradient;
     }
   }
 

@@ -12,10 +12,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
           ref: ${{ github.event.pull_request.branch}}
+
+      - name: Git info
+        run: |
+          git branch
+          git status
 
       - name: Use Node 18
         uses: actions/setup-node@v3

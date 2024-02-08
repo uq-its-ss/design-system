@@ -13,7 +13,7 @@
     "version": {
       "conventionalCommits": true,
       "allowBranch": ["master", "releases"],
-      "message": "chore(release): publish"
+      "message": "chore(release):Publish"
     }
   }
 }

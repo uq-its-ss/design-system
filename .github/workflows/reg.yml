@@ -29,7 +29,7 @@ jobs:
       - name: Workaround for detached HEAD
         # Workaround for Detached HEAD https://github.com/reg-viz/reg-suit#workaround-for-detached-head
         run: |
-          git checkout ${GITHUB_REF#refs/heads/} || git checkout -b ${GITHUB_REF#refs/heads/} && git pull
+          git checkout "${GITHUB_REF:11}"
 
       - name: Build Storybook
         run: |

@@ -22,7 +22,7 @@
   padding: core.$space-none;
 
   &__title {
-    font-size: $h3-font-size;
+    font-size: core.$font-size-xxl;
   }
 
   &__item {
@@ -42,12 +42,12 @@
 
   &--ruled {
     .vertical-list__title {
-      border-top: 2px solid $border-color;
+      border-top: 2px solid core.$grey-200;
       padding-top: core.$space-xl;
     }
 
     .vertical-list__item {
-      border-bottom: 1px solid $border-color;
+      border-bottom: 1px solid core.$grey-200;
       padding-top: core.$space-m; //.75rem
 
       &:first-child {
@@ -55,7 +55,7 @@
       }
 
       &--first {
-        border-top: 1px solid $border-color;
+        border-top: 1px solid core.$grey-200;
         padding-top: core.$space-m; // .75rem
       }
 
@@ -66,7 +66,7 @@
   }
   &--shaded {
     .vertical-list__item {
-      background: $pane-shaded-bg;
+      background: core.$grey-50;
       margin-bottom: core.$space-s;
       padding: core.$space-l;
 
@@ -88,7 +88,7 @@
   margin-bottom: core.$space-m;
 
   &__title {
-    font-size: $h3-font-size;
+    font-size: core.$font-size-xxl;
   }
 
   &__item {
@@ -100,12 +100,12 @@
 
   &--ruled {
     .horizontal-list__title {
-      border-top: 2px solid $border-color;
+      border-top: 2px solid core.$grey-200;
       padding-top: core.$space-xl;
     }
 
     .horizontal-list__item {
-      border-right: 1px solid $border-color;
+      border-right: 1px solid core.$grey-200;
       padding-right: core.$space-m; // .75rem;
 
       &:last-child {

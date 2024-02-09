@@ -1,7 +1,7 @@
 @use "@uqds/core/src/scss/global" as *;
 
 .uqds-space {
-  background-color: rgba($uq-black, 0.75);
+  background-color: rgba($black, 0.75);
   width: $space-m;
   height: $space-m;
 }
@@ -73,7 +73,7 @@
 
 /* Container example */
 .uqds-container {
-  background-color: rgba($uq-black, 0.75);
+  background-color: rgba($black, 0.75);
   display: inline-block;
 }
 

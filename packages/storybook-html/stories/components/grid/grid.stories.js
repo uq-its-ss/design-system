@@ -4,7 +4,7 @@ import "./grid.scss";
 import docs from "./grid.docs.mdx";
 
 export default {
-  title: "Layout/Grid",
+  title: "Deprecated/Grid",
   parameters: {
     docs: {
       page: docs,

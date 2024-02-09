@@ -21,6 +21,7 @@ jobs:
         run: |
           git branch
           git status
+          echo "event info branch ${{ github.event.pull_request.branch}}"
 
       - name: Use Node 18
         uses: actions/setup-node@v3

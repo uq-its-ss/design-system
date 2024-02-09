@@ -8,7 +8,7 @@
   @media #{core.$screen-lg-up} {
     display: grid;
     gap: 0;
-    grid-template-columns: 261px minmax(32px, 80px) minmax(667px, 1fr);
+    grid-template-columns: var(--sidebar-layout-sidebar-width) minmax(32px, 80px) minmax(667px, 1fr);
   }
 }
 

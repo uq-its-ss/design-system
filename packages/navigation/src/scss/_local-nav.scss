@@ -16,7 +16,7 @@
 }
 
 .uq-local-nav {
-  max-width: var(--local-nav-max-width);
+  max-width: var(--sidebar-layout-sidebar-width);
 
   & ul {
     list-style: none;
@@ -30,7 +30,7 @@
 
   & a {
     display: block;
-    color: core.$uq-black;
+    color: core.$black;
     padding-block: core.$space-m;
     padding-inline-start: core.$space-xl;
     border-bottom: 1px solid var(--local-nav-border);
@@ -48,7 +48,7 @@
 }
 
 .uq-local-nav--is-current {
-  border-left: 4px solid core.$uq-purple;
+  border-left: 4px solid core.$purple-500;
   margin-top: -1px;
 
   & > a {
@@ -71,7 +71,7 @@
   & > a {
     background-image: url(icon.get-icon(
       "standard--chevron-down-sml",
-      core.$uq-black
+      core.$black
     ));
     background-repeat: no-repeat;
     background-size: 24px;
@@ -87,7 +87,7 @@
   & a {
     background-image: url(icon.get-icon(
       "standard--chevron-left",
-      core.$uq-purple
+      core.$purple-500
     ));
     background-repeat: no-repeat;
     background-size: 24px;

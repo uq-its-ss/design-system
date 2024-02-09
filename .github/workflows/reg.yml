@@ -17,12 +17,6 @@ jobs:
           fetch-depth: 0
           ref: ${{ github.event.pull_request.head.ref}}
 
-      - name: Git info
-        run: |
-          git branch
-          git status
-          echo "event info branch ${{ github.event.pull_request.head.ref}}
-
       - name: Use Node 18
         uses: actions/setup-node@v3
         with:

@@ -1,6 +1,4 @@
-import TocDocs from "./custom/components/TocDocs";
-import DocsHeader from "./custom/components/DocsHeader";
-import DocsPage from "./custom/components/DocsPage";
+// import DocsHeader from "./custom/components/DocsHeader";
 import "./preview.scss";
 
 export const parameters = {
@@ -11,9 +9,8 @@ export const parameters = {
     canvas: { hidden: true },
   },
   docs: {
-    components: { h1: DocsHeader },
-    container: TocDocs,
-    page: DocsPage,
+    toc: true, // 👈 Enables the table of contents
+  //  components: { h1: DocsHeader },
   },
   backgrounds: {
     values: [

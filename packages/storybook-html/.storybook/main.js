@@ -3,6 +3,7 @@ import { dirname, join } from "path";
 /** @type { import('@storybook/html-webpack5').StorybookConfig } */
 const config = {
   stories: [
+    "../stories/**/*.mdx",
     "../stories/**/*.@(stories|story).mdx",
     "../stories/**/*.@(stories|story).@(js|jsx|ts|tsx)",
   ],
@@ -55,10 +56,6 @@ const config = {
     name: getAbsolutePath("@storybook/html-webpack5"),
     options: {}
   },
-
-  docs: {
-    autodocs: true
-  }
 };
 
 /**
@@ -68,5 +65,7 @@ const config = {
 function getAbsolutePath(value) {
   return dirname(require.resolve(join(value, "package.json")));
 }
+
+
 
 export default config;

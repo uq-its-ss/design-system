@@ -20,7 +20,6 @@ export default {
   title: "Components/Accordion",
   parameters: {
     docs: {
-      page: docs,
       inlineStories: false,
     },
     layout: "padded",

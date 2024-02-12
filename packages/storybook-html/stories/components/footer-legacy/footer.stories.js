@@ -4,7 +4,7 @@ import "./footer.scss";
 // import HTML template strings
 import footerHTML from "./footer.html";
 
-import docs from "./footer.docs.mdx";
+import docs from "./footer.mdx";
 
 export default {
   title: "Legacy/Footer",

@@ -7,7 +7,7 @@ import loadingSpinnerLightHTML from "./loading-spinner-light.html";
 import loadingSpinnerSmallHTML from "./loading-spinner-small.html";
 
 // documentation
-import docs from "./loading-spinner.docs.mdx";
+import docs from "./loading-spinner.mdx";
 
 export default {
   title: "Components/Loading spinner",

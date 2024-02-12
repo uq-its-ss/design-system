@@ -10,7 +10,7 @@ import tableMultiLevelHeadersHTML from "./table-multi-level-headers.html";
 import tableCardHTML from "./table-card.html";
 
 // documentation
-import docs from "./table.docs.mdx";
+import docs from "./table.mdx";
 
 export default {
   title: "Components/Table",

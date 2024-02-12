@@ -7,7 +7,7 @@ import "./alert.scss";
 import Alerts from "@uqds/alert/src/js/alerts";
 
 // documentation
-import docs from "./alert.docs.mdx";
+import docs from "./alert.mdx";
 
 export default {
   title: "Components/Alert",

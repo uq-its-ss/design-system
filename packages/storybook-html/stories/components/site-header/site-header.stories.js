@@ -10,7 +10,7 @@ import siteHeaderNav from "@uqds/site-header/src/js/site-header-navigation";
 import siteHeaderWithSubnavHTML from "./site-header-with-subnav.html";
 import siteHeaderWithoutSubnavHTML from "./site-header-without-subnav.html";
 
-import docs from "./site-header.docs.mdx";
+import docs from "./site-header.mdx";
 
 export default {
   title: "Components/Site header",

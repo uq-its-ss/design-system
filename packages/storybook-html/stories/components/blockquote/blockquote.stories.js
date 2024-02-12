@@ -6,7 +6,7 @@ import blockquoteHTML from "./blockquote.html";
 import blockquoteLightHTML from "./blockquote-light.html";
 
 // documentation
-import docs from "./blockquote.docs.mdx";
+import docs from "./blockquote.mdx";
 
 export default {
   title: "Components/Blockquote",

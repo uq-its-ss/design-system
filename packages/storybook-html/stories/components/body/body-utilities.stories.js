@@ -1,4 +1,4 @@
-import docs from "./body-utilities.docs.mdx";
+import docs from "./body-utilities.mdx";
 
 export default {
   title: "Components/Body/Utilities",

@@ -9,7 +9,7 @@ import sectionsShadedHTML from "./sections-shaded.html";
 import sectionsNoPaddingHTML from "./sections-no-padding.html";
 import sectionsLargePaddingHTML from "./sections-large-padding.html";
 
-import docs from "./sections.docs.mdx";
+import docs from "./sections.mdx";
 
 export default {
   title: "Layout/Sections",

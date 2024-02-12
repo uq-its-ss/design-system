@@ -1,7 +1,7 @@
 // import stylesheet
 import "./body.scss";
 
-import docs from "./body-elements.docs.mdx";
+import docs from "./body-elements.mdx";
 
 export default {
   title: "Components/Body/Elements",

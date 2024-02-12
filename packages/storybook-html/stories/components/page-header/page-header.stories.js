@@ -5,7 +5,7 @@ import "./page-header.scss";
 import pageHeaderHTML from "./page-header.html";
 
 // import Docs
-import docs from "./page-header.docs.mdx";
+import docs from "./page-header.mdx";
 
 export default {
   title: "Components/Page header",

@@ -1,5 +1,5 @@
 // import './uq-maps.scss';
-import docs from "./uq-maps-4-search-combo.docs.mdx";
+import docs from "./uq-maps-4-search-combo.mdx";
 
 export default {
   title: "Deliverables/UQ Maps/4 Search combo menu",

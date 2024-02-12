@@ -10,7 +10,7 @@ import breadcrumbHTML from "./breadcrumb.html";
 import breadcrumbCreate from "@uqds/breadcrumb/src/js/breadcrumb";
 
 // documentation
-import docs from "./breadcrumb.docs.mdx";
+import docs from "./breadcrumb.mdx";
 
 export default {
   title: "Components/Breadcrumb",

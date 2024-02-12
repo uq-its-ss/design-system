@@ -1,5 +1,5 @@
 import "./form.scss";
-import docs from "./form-controls.docs.mdx";
+import docs from "./form-controls.mdx";
 
 export default {
   title: "Components/Form/Controls",

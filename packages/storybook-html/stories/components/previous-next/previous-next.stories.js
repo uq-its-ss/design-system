@@ -5,7 +5,7 @@ import "./previous-next.scss";
 import previousNextHTML from "./previous-next.html";
 
 // documentation
-import docs from "./previous-next.docs.mdx";
+import docs from "./previous-next.mdx";
 
 export default {
   title: "Components/Previous next",

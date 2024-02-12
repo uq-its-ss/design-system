@@ -7,7 +7,7 @@ import "./tabs.scss";
 import { Tabs } from "@uqds/tabs/src/js/tabs";
 
 // documentation
-import docs from "./tabs.docs.mdx";
+import docs from "./tabs.mdx";
 
 export default {
   title: "Components/Tabs",

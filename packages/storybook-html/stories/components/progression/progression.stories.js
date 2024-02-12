@@ -5,7 +5,7 @@ import "./progression.scss";
 import progressionHTML from "./progression.html";
 
 // documentation
-import docs from "./progression.docs.mdx";
+import docs from "./progression.mdx";
 
 export default {
   title: "Components/Progression",

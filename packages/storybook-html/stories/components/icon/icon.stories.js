@@ -1,5 +1,5 @@
 import iconCatalog from "@uqds/icon";
-import docs from "./icon.docs.mdx";
+import docs from "./icon.mdx";
 import "./icon.scss";
 
 /**

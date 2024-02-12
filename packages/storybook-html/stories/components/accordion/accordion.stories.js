@@ -14,7 +14,7 @@ import accordionCompactHTML from "./accordion-compact.html";
 import accordionDivIsManualHTML from "./accordion-div-is-manual.html";
 
 // documentation
-import docs from "./accordion.docs.mdx";
+import docs from "./accordion.mdx";
 
 export default {
   title: "Components/Accordion",

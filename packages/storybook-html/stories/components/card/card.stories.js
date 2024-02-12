@@ -2,7 +2,7 @@
 import "./card.scss";
 
 // import documentation
-import docs from "./card.docs.mdx";
+import docs from "./card.mdx";
 
 export default {
   title: "Components/Cards",

@@ -11,7 +11,7 @@ import siteHeaderHTML from "../../components/site-header/site-header-with-subnav
 import breadcrumbHTML from "../../components/breadcrumb/breadcrumb.html";
 import footerHTML from "../../components/footer/footer.html";
 
-import docs from "./basic-page.docs.mdx";
+import docs from "./basic-page.mdx";
 
 export default {
   title: "Patterns/Basic page",

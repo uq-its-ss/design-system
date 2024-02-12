@@ -2,7 +2,7 @@
 import "./button.scss";
 
 // documentation
-import docs from "./button.docs.mdx";
+import docs from "./button.mdx";
 
 export default {
   title: "Components/Button",

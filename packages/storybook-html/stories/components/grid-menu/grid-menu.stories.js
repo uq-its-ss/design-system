@@ -2,7 +2,7 @@
 import "./grid-menu.scss";
 
 // import docs
-import docs from "./grid-menu.docs.mdx";
+import docs from "./grid-menu.mdx";
 
 // import HTML template strings
 import gridMenuHTML from "./grid-menu.html";

@@ -5,7 +5,7 @@ import "./hero.scss";
 // import heroHTML from './hero.html';
 
 // import Docs
-import docs from "./hero.docs.mdx";
+import docs from "./hero.mdx";
 
 export default {
   title: "Components/Hero",

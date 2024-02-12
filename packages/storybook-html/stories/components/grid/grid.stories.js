@@ -1,7 +1,7 @@
 // import stylesheet
 import "./grid.scss";
 
-import docs from "./grid.docs.mdx";
+import docs from "./grid.mdx";
 
 export default {
   title: "Layout/Grid",

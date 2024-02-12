@@ -1,5 +1,5 @@
 // import './uq-maps.scss';
-import docs from "./uq-maps-5-slide-drawer.docs.mdx";
+import docs from "./uq-maps-5-slide-drawer.mdx";
 
 export default {
   title: "Deliverables/UQ Maps/5 Slide drawer",

@@ -16,286 +16,302 @@ The `.uq-local-nav` element provides local navigation for desktop.
 
 ### How-to
 
-#### Parents and Grandparents
+#### Grandparents and Parents
 
-A page can have multiple `.uq-local-nav__grandparent` (Grandparent) elements,
-but only one `.uq-local-nav__parent` (Parent) element.
+A page can have multiple `.uq-local-nav__grandparent` elements,
+but only one `.uq-local-nav__parent` element.
 
 <Canvas withSource="none">
   <nav className="uq-local-nav" aria-label="Local navigation">
-    <div className="uq-local-nav__menu-item uq-local-nav__grandparent">
-      <a href="#">
+    <div className="uq-local-nav__grandparent">
+      <a className="uq-local-nav__link" href="#">
         <span className="uq-sr-only">Back to </span>UQ home
       </a>
     </div>
-    <div className="uq-local-nav__menu-item uq-local-nav__grandparent">
-      <a href="#">
+    <div className="uq-local-nav__grandparent">
+      <a className="uq-local-nav__link" href="#">
         <span className="uq-sr-only">Back to </span>Research
       </a>
     </div>
-    <div className="uq-local-nav__menu-item uq-local-nav__grandparent">
-      <a href="#">
+    <div className="uq-local-nav__grandparent">
+      <a className="uq-local-nav__link" href="#">
         <span className="uq-sr-only">Back to </span>Research capabilities and
         initiatives
       </a>
     </div>
-    <div className="uq-local-nav__menu-item uq-local-nav__parent">
-      <a href="#">
+    <div className="uq-local-nav__parent">
+      <a className="uq-local-nav__link" href="#">
         <span className="uq-sr-only">Back to </span>Energy network
       </a>
     </div>
   </nav>
 </Canvas>
 
+<!-- prettier-ignore-start -->
 ```html
 <nav class="uq-local-nav" aria-label="Local navigation">
-  <div class="uq-local-nav__menu-item uq-local-nav__grandparent">
-    <a href="#"><span class="uq-sr-only">Back to </span>UQ home</a>
+  <div class="uq-local-nav__grandparent">
+    <a class="uq-local-nav__link" href="#"><span class="uq-sr-only">Back to </span>UQ home</a>
   </div>
-  <div class="uq-local-nav__menu-item uq-local-nav__grandparent">
-    <a href="#"><span class="uq-sr-only">Back to </span>Research</a>
+  <div class="uq-local-nav__grandparent">
+    <a class="uq-local-nav__link" href="#"><span class="uq-sr-only">Back to </span>Research</a>
   </div>
-  <div class="uq-local-nav__menu-item uq-local-nav__grandparent">
-    <a href="#"
-      ><span class="uq-sr-only">Back to </span>Research capabilities and
-      initiatives</a
-    >
+  <div class="uq-local-nav__grandparent">
+    <a class="uq-local-nav__link" href="#"><span class="uq-sr-only">Back to </span>Research capabilities and initiatives</a>
   </div>
-  <div class="uq-local-nav__menu-item uq-local-nav__parent">
-    <a href="#"><span class="uq-sr-only">Back to </span>Energy network</a>
+  <div class="uq-local-nav__parent">
+    <a class="uq-local-nav__link" href="#"><span class="uq-sr-only">Back to </span>Energy network</a>
   </div>
 </nav>
 ```
+<!-- prettier-ignore-end-->
 
-#### Menu links
+#### Children
 
-After the Parent element, use the following standard `ul`/`li` menu structure.
+After the Parent element, the `ul.uq-local-nav__children` element holds all `li.uq-local-nav__child` Child elements.
 
-The active menu item is marked with `.uq-local-nav--is-active` on the `li` element, and
-for accessibility the active `a` element is marked with `aria-current="page"`
+The current Child is marked with `.uq-local-nav--current-child`.
 
-The current menu section (which can also be the active menu item) is marked with
-`.uq-local-nav--is-current` on the `li` element.
+Child elements that have their own children are marked with `.uq-local-nav--has-children`.
 
-Menu items that have children are marked with `.uq-local-nav--has-children` on
-the `li` element.
+The active link is marked with `.uq-local-nav--active-link` on the `a` element, and
+for accessibility the active `a` element is also marked with `aria-current="page"`
 
 <Canvas withSource="none">
   <nav className="uq-local-nav" aria-label="Local navigation">
-    <div className="uq-local-nav__menu-item uq-local-nav__grandparent">
-      <a href="#">
+    <div className="uq-local-nav__grandparent">
+      <a className="uq-local-nav__link" href="#">
         <span className="uq-sr-only">Back to </span>UQ home
       </a>
     </div>
-    <div className="uq-local-nav__menu-item uq-local-nav__parent">
-      <a href="#">
+    <div className="uq-local-nav__parent">
+      <a className="uq-local-nav__link" href="#">
         <span className="uq-sr-only">Back to </span>Research
       </a>
     </div>
-    <ul className="uq-local-nav__menu">
-      <li className="uq-local-nav__menu-item uq-local-nav--is-current uq-local-nav--is-active">
-        <a href="#" aria-current="page">
+    <ul className="uq-local-nav__children">
+      <li className="uq-local-nav__child uq-local-nav--current-child">
+        <a
+          className="uq-local-nav__link uq-local-nav--active-link"
+          href="#"
+          aria-current="page"
+        >
           Research impact
         </a>
       </li>
-      <li className="uq-local-nav__menu-item uq-local-nav--has-children">
-        <a href="#">Research capabilities and initiatives</a>
+      <li className="uq-local-nav__child uq-local-nav--has-children">
+        <a className="uq-local-nav__link" href="#">
+          Research capabilities and initiatives
+        </a>
       </li>
-      <li className="uq-local-nav__menu-item">
-        <a href="#">Ethics and integrity</a>
+      <li className="">
+        <a className="uq-local-nav__link" href="#">
+          Ethics and integrity
+        </a>
       </li>
     </ul>
   </nav>
 </Canvas>
 
+<!-- prettier-ignore-start -->
 ```html
 <nav class="uq-local-nav" aria-label="Local navigation">
-  <div class="uq-local-nav__menu-item uq-local-nav__grandparent">
-    <a href="#"><span class="uq-sr-only">Back to </span>UQ home</a>
+  <div class="uq-local-nav__grandparent">
+    <a class="uq-local-nav__link" href="#"><span class="uq-sr-only">Back to </span>UQ home</a>
   </div>
-  <div class="uq-local-nav__menu-item uq-local-nav__parent">
-    <a href="#"><span class="uq-sr-only">Back to </span>Research</a>
+  <div class="uq-local-nav__parent">
+    <a class="uq-local-nav__link" href="#"><span class="uq-sr-only">Back to </span>Research</a>
   </div>
-  <ul class="uq-local-nav__menu">
-    <li
-      class="uq-local-nav__menu-item uq-local-nav--is-current uq-local-nav--is-active"
-    >
-      <a href="#" aria-current="page">Research impact</a>
+  <ul class="uq-local-nav__children">
+    <li class="uq-local-nav__child uq-local-nav--current-child">
+      <a class="uq-local-nav__link uq-local-nav--active-link" href="#" aria-current="page">Research impact</a>
     </li>
-    <li class="uq-local-nav__menu-item uq-local-nav--has-children">
-      <a href="#">Research capabilities and initiatives</a>
+    <li class="uq-local-nav__child uq-local-nav--has-children">
+      <a class="uq-local-nav__link" href="#">Research capabilities and initiatives</a>
     </li>
-    <li class="uq-local-nav__menu-item">
-      <a href="#">Ethics and integrity</a>
+    <li class="uq-local-nav__child">
+      <a class="uq-local-nav__link" href="#">Ethics and integrity</a>
     </li>
   </ul>
 </nav>
 ```
+<!-- prettier-ignore-end-->
 
-#### Expanded sections
+#### Grandchildren
 
-The `ul` / `li` menu structure is only ever two levels deep.
+When a Child element that has children is the active link, it's children are shown
+within the `ul.uq-local-nav__grandchildren` element.
 
-A `ul.uq-local-nav__child-menu` element should be used for the second level.
-
-Child menu items have both `.uq-local-nav__menu-item.uq-local-nav__child` classes
-
-The current section menu item is marked with `.uq-local-nav--is-current` on the
-first level `li` element.
+The Grandchildren use a `li.uq-local-nav__grandchild` element.
 
 <Canvas withSource="none">
   <nav className="uq-local-nav" aria-label="Local navigation">
-    <div className="uq-local-nav__menu-item uq-local-nav__grandparent">
-      <a href="#">
+    <div className="uq-local-nav__grandparent">
+      <a className="uq-local-nav__link" href="#">
         <span className="uq-sr-only">Back to </span>UQ home
       </a>
     </div>
-    <div className="uq-local-nav__menu-item uq-local-nav__parent">
-      <a href="#">
+    <div className="uq-local-nav__parent">
+      <a className="uq-local-nav__link" href="#">
         <span className="uq-sr-only">Back to </span>Research
       </a>
     </div>
-    <ul className="uq-local-nav__menu">
-      <li className="uq-local-nav__menu-item">
-        <a href="#">Research impact</a>
+    <ul className="uq-local-nav__children">
+      <li className="uq-local-nav__child">
+        <a className="uq-local-nav__link" href="#">
+          Research impact
+        </a>
       </li>
-      <li className="uq-local-nav__menu-item uq-local-nav--has-children uq-local-nav--is-current">
-        <a href="#">Research capabilities and initiatives</a>
-        <ul className="uq-local-nav__child-menu">
-          <li className="uq-local-nav__menu-item uq-local-nav__child uq-local-nav--has-children">
-            <a href="#">Energy network</a>
+      <li className="uq-local-nav__child uq-local-nav--has-children uq-local-nav--current-child">
+        <a
+          className="uq-local-nav__link uq-local-nav--active-link"
+          href="#"
+          aria-current="page"
+        >
+          Research capabilities and initiatives
+        </a>
+        <ul className="uq-local-nav__grandchildren">
+          <li className="uq-local-nav__grandchild uq-local-nav--has-children">
+            <a className="uq-local-nav__link" href="#">
+              Energy network
+            </a>
           </li>
-          <li className="uq-local-nav__menu-item uq-local-nav__child uq-local-nav--is-active">
-            <a href="#" aria-current="page">
+          <li className="uq-local-nav__grandchild">
+            <a className="uq-local-nav__link" href="#">
               Other networks
             </a>
           </li>
         </ul>
       </li>
-      <li className="uq-local-nav__menu-item">
-        <a href="#">Ethics and integrity</a>
+      <li className="uq-local-nav__child">
+        <a className="uq-local-nav__link" href="#">
+          Ethics and integrity
+        </a>
       </li>
     </ul>
   </nav>
 </Canvas>
 
+<!-- prettier-ignore-start -->
 ```html
 <nav class="uq-local-nav" aria-label="Local navigation">
-  <div class="uq-local-nav__menu-item uq-local-nav__grandparent">
-    <a href="#"><span class="uq-sr-only">Back to </span>UQ home</a>
+  <div class="uq-local-nav__grandparent">
+    <a class="uq-local-nav__link" href="#"><span class="uq-sr-only">Back to </span>UQ home</a>
   </div>
-  <div class="uq-local-nav__menu-item uq-local-nav__parent">
-    <a href="#"><span class="uq-sr-only">Back to </span>Research</a>
+  <div class="uq-local-nav__parent">
+    <a class="uq-local-nav__link" href="#"><span class="uq-sr-only">Back to </span>Research</a>
   </div>
-  <ul class="uq-local-nav__menu">
-    <li class="uq-local-nav__menu-item">
-      <a href="#">Research impact</a>
+  <ul class="uq-local-nav__children">
+    <li class="uq-local-nav__child">
+      <a class="uq-local-nav__link" href="#">Research impact</a>
     </li>
-    <li
-      class="uq-local-nav__menu-item uq-local-nav--has-children uq-local-nav--is-current"
-    >
-      <a href="#" aria-current="page">Research capabilities and initiatives</a>
-      <ul class="uq-local-nav__child-menu">
-        <li
-          class="uq-local-nav__menu-item uq-local-nav__child uq-local-nav--has-children"
-        >
-          <a href="#">Energy network</a>
+    <li class="uq-local-nav__child uq-local-nav--has-children uq-local-nav--current-child">
+      <a class="uq-local-nav__link uq-local-nav--active-link" href="#" aria-current="page">Research capabilities and initiatives</a>
+      <ul class="uq-local-nav__grandchildren">
+        <li class="uq-local-nav__grandchild uq-local-nav--has-children">
+          <a class="uq-local-nav__link" href="#">Energy network</a>
         </li>
-        <li
-          class="uq-local-nav__menu-item uq-local-nav__child uq-local-nav--is-active"
-        >
-          <a href="#" aria-current="page">Other networks</a>
+        <li class="uq-local-nav__grandchild">
+          <a class="uq-local-nav__link" href="#">Other networks</a>
         </li>
       </ul>
     </li>
-    <li class="uq-local-nav__menu-item">
-      <a href="#">Ethics and integrity</a>
+    <li class="uq-local-nav__child">
+      <a class="uq-local-nav__link" href="#">Ethics and integrity</a>
     </li>
   </ul>
 </nav>
 ```
+<!-- prettier-ignore-end-->
 
-If a second level link has children, it should be expanded using a new menu
-and an additional Grandparent link.
+When a Grandchild becomes the active link, only its siblings and children are
+shown and a new Parent and Grandparent element are added.
 
 <Canvas withSource="none">
   <nav className="uq-local-nav" aria-label="Local navigation">
-    <div className="uq-local-nav__menu-item uq-local-nav__grandparent">
-      <a href="#">
+    <div className="uq-local-nav__grandparent">
+      <a className="uq-local-nav__link" href="#">
         <span className="uq-sr-only">Back to </span>UQ home
       </a>
     </div>
-    <div className="uq-local-nav__menu-item uq-local-nav__grandparent">
-      <a href="#">
+    <div className="uq-local-nav__grandparent">
+      <a className="uq-local-nav__link" href="#">
         <span className="uq-sr-only">Back to </span>Research
       </a>
     </div>
-    <div className="uq-local-nav__menu-item uq-local-nav__parent">
-      <a href="#">
+    <div className="uq-local-nav__parent">
+      <a className="uq-local-nav__link" href="#">
         <span className="uq-sr-only">Back to </span>Research capabilities and
         initiatives
       </a>
     </div>
-    <ul className="uq-local-nav__menu">
-      <li className="uq-local-nav__menu-item uq-local-nav--has-children uq-local-nav--is-current uq-local-nav--is-active">
-        <a href="#" aria-current="page">
+    <ul className="uq-local-nav__children">
+      <li className="uq-local-nav__child uq-local-nav--has-children uq-local-nav--current-child">
+        <a
+          className="uq-local-nav__link uq-local-nav--active-link"
+          href="#"
+          aria-current="page"
+        >
           Energy network
         </a>
-        <ul className="uq-local-nav__child-menu">
-          <li className="uq-local-nav__menu-item uq-local-nav__child uq-local-nav--has-children">
-            <a href="#">Partner with us</a>
+        <ul className="uq-local-nav__grandchildren">
+          <li className="uq-local-nav__grandchild uq-local-nav__child uq-local-nav--has-children">
+            <a className="uq-local-nav__link" href="#">
+              Partner with us
+            </a>
           </li>
-          <li className="uq-local-nav__menu-item uq-local-nav__child">
-            <a href="#">Research</a>
+          <li className="uq-local-nav__grandchild uq-local-nav__child">
+            <a className="uq-local-nav__link" href="#">
+              Research
+            </a>
           </li>
-          <li className="uq-local-nav__menu-item uq-local-nav__child">
-            <a href="#">Our people</a>
+          <li className="uq-local-nav__grandchild uq-local-nav__child">
+            <a className="uq-local-nav__link" href="#">
+              Our people
+            </a>
           </li>
         </ul>
       </li>
-      <li className="uq-local-nav__menu-item">
-        <a href="#">Other networks</a>
+      <li className="uq-local-nav__child">
+        <a className="uq-local-nav__link" href="#">
+          Other networks
+        </a>
       </li>
     </ul>
   </nav>
 </Canvas>
 
+<!-- prettier-ignore-start -->
 ```html
 <nav class="uq-local-nav" aria-label="Local navigation">
-  <div class="uq-local-nav__menu-item uq-local-nav__grandparent">
-    <a href="#"><span class="uq-sr-only">Back to </span>UQ home</a>
+  <div class="uq-local-nav__grandparent">
+    <a class="uq-local-nav__link" href="#"><span class="uq-sr-only">Back to </span>UQ home</a>
   </div>
-  <div class="uq-local-nav__menu-item uq-local-nav__grandparent">
-    <a href="#"><span class="uq-sr-only">Back to </span>Research</a>
+  <div class="uq-local-nav__grandparent">
+    <a class="uq-local-nav__link" href="#"><span class="uq-sr-only">Back to </span>Research</a>
   </div>
-  <div class="uq-local-nav__menu-item uq-local-nav__parent">
-    <a href="#"
-      ><span class="uq-sr-only">Back to </span>Research capabilities and
-      initiatives</a
-    >
+  <div class="uq-local-nav__parent">
+    <a class="uq-local-nav__link" href="#"><span class="uq-sr-only">Back to </span>Research capabilities and initiatives</a>
   </div>
-  <ul class="uq-local-nav__menu">
-    <li
-      class="uq-local-nav__menu-item uq-local-nav--has-children uq-local-nav--is-current uq-local-nav--is-active"
-    >
-      <a href="#" aria-current="page">Energy network</a>
-      <ul class="uq-local-nav__child-menu">
-        <li
-          class="uq-local-nav__menu-item uq-local-nav__child uq-local-nav--has-children"
-        >
-          <a href="#">Partner with us</a>
+  <ul class="uq-local-nav__children">
+    <li class="uq-local-nav__child uq-local-nav--has-children uq-local-nav--current-page">
+      <a class="uq-local-nav__link uq-local-nav--active-link" href="#" aria-current="page">Energy network</a>
+      <ul class="uq-local-nav__grandchildren">
+        <li class="uq-local-nav__grandchild uq-local-nav__child uq-local-nav--has-children">
+          <a class="uq-local-nav__link" href="#">Partner with us</a>
         </li>
-        <li class="uq-local-nav__menu-item uq-local-nav__child">
-          <a href="#">Research</a>
+        <li class="uq-local-nav__grandchild uq-local-nav__child">
+          <a class="uq-local-nav__link" href="#">Research</a>
         </li>
-        <li class="uq-local-nav__menu-item uq-local-nav__child">
-          <a href="#">Our people</a>
+        <li class="uq-local-nav__grandchild uq-local-nav__child">
+          <a class="uq-local-nav__link" href="#">Our people</a>
         </li>
       </ul>
     </li>
-    <li class="uq-local-nav__menu-item">
-      <a href="#">Other networks</a>
+    <li class="uq-local-nav__child">
+      <a class="uq-local-nav__link" href="#">Other networks</a>
     </li>
   </ul>
 </nav>
 ```
+<!-- prettier-ignore-end-->

@@ -7,10 +7,10 @@ import docs from "./card.mdx";
 export default {
   title: "Components/Cards",
   parameters: {
-    layout: "fullscreen",
     docs: {
       page: docs,
     },
+    layout: "fullscreen",
     previewTabs: {
       canvas: { hidden: false },
     },

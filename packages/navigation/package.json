@@ -1,7 +1,7 @@
 {
-  "name": "@uqds/layout",
-  "version": "1.0.0-alpha.2",
-  "description": "Grid CSS",
+  "name": "@uqds/navigation",
+  "version": "0.0.0-alpha.1",
+  "description": "Navigation components",
   "keywords": [
     "uqds",
     "uq",
@@ -10,7 +10,8 @@
     "scss",
     "sass",
     "css",
-    "grid"
+    "nav",
+    "navigation"
   ],
   "publishConfig": {
     "access": "public"
@@ -41,6 +42,7 @@
     "url": "https://github.com/uq-its-ss/design-system/issues"
   },
   "dependencies": {
-    "@uqds/core": "^1.1.1"
+    "@uqds/core": "^1.1.2-alpha.0",
+    "@uqds/icon": "^0.0.15-alpha.1"
   }
 }

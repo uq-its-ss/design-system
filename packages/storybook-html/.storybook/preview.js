@@ -46,7 +46,7 @@ export const parameters = {
           ["Applying colour", "Base colour palette"],
         ],
         "Layout",
-        ["Layout system", "Grid"],
+        ["Layout system", "Grid", "Sections",],
         "Components",
         ["Body", ["Body", "Elements", "Utilities"]],
         "Patterns",

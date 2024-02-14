@@ -1,5 +1,5 @@
+import { Meta, Story, } from '@storybook/blocks';
 import "./layout.scss";
-import { Meta, Story } from '@storybook/blocks';
 
 <Meta
   title="Layout/Layout system"
@@ -60,7 +60,6 @@ the entire viewport width. The layout system is currently 1-dimensional
 
 > Pixel units (px) provided are based on the default rem unit analogue of 16px.
 
-export const BaseLayoutGrid = () => `
   <div class="uqds-base-layout-grid">
     <div class="uq-grid">
       <div class="uq-grid__col uq-grid__col--1 uq-grid__col--md-1 uq-grid__col--xl-1"><span>Col<br/>&larr;&rarr;</span></div>
@@ -77,11 +76,6 @@ export const BaseLayoutGrid = () => `
       <div class="uq-grid__col uq-grid__col--xl-1"><span>Col<br/>&larr;&rarr;</span></div>
     </div>
   </div>
-`;
-
-<Story height={300} name="Base layout grid visualised">
-  {BaseLayoutGrid.bind({})}
-</Story>
 
 ## Designing with the base grid (for UI mockups)
 

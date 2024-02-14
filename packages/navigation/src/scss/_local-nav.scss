@@ -24,15 +24,16 @@
   color: core.$black;
   padding-block: core.$space-m;
   padding-inline-start: core.$space-xl;
-  border-bottom: 1px solid var(--local-nav-border);
+  border-bottom: 1px solid core.$grey-200;
 
   &:hover {
     text-decoration: none;
-    background-color: var(--local-nav-active-background);
+    color: core.$black;
+    background-color: core.$grey-50;
   }
 
   &:focus-visible {
-    outline: 4px solid var(--local-nav-focus);
+    outline: 4px solid core.$utility-500;
     outline-offset: -3px;
   }
 }
@@ -54,7 +55,7 @@
 
 .uq-local-nav__grandparent {
   & .uq-local-nav__link {
-    border-color: var(--local-nav-grandparent-border);
+    border-color: core.$grey-900;
   }
 }
 
@@ -94,12 +95,12 @@
   margin-top: -1px;
 
   & > .uq-local-nav__link {
-    border-top: 1px solid var(--local-nav-border);
+    border-top: 1px solid core.$grey-200;
     padding-inline: calc(#{core.$space-xl} - 4px) 0;
   }
 }
 
 .uq-local-nav--active-link {
-  background-color: var(--local-nav-active-background);
+  background-color: core.$grey-50;
   font-weight: core.$font-weight-medium;
 }

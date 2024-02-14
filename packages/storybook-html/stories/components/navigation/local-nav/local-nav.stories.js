@@ -18,8 +18,8 @@ export const LocalNav = {
   name: "Local nav",
   render: () => `
 <nav class="uq-local-nav" aria-label="Local navigation">
-  <div class="uq-local-nav__grandparent"><a class="uq-local-nav__link" href="#"><span class="uq-sr-only">Back to </span>UQ home</a></div>
-  <div class="uq-local-nav__parent"><a class="uq-local-nav__link" href="#"><span class="uq-sr-only">Back to </span>Research</a></div>
+  <div class="uq-local-nav__grandparent"><a class="uq-local-nav__link" href="#" aria-label="Back to UQ home">UQ home</a></div>
+  <div class="uq-local-nav__parent"><a class="uq-local-nav__link" href="#" aria-label="Back to Research">Research</a></div>
   <ul class="uq-local-nav__children">
     <li class="uq-local-nav__child"><a class="uq-local-nav__link" href="#">Research impact</a></li>
     <li class="uq-local-nav__child uq-local-nav--has-children uq-local-nav--current-child">

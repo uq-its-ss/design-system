@@ -1,9 +1,2 @@
 @use "@uqds/core/src/scss/global" as core;
 @use "global" as *;
-
-:root {
-  --local-nav-border: #{core.$grey-200};
-  --local-nav-grandparent-border: #{core.$grey-900};
-  --local-nav-active-background: #{core.$grey-50};
-  --local-nav-focus: #{core.$utility-500};
-}

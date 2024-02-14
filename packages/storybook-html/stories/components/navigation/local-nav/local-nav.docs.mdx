@@ -21,27 +21,29 @@ The `.uq-local-nav` element provides local navigation for desktop.
 A page can have multiple `.uq-local-nav__grandparent` elements,
 but only one `.uq-local-nav__parent` element.
 
+Use a `aria-label="Back to..."` attribute to help screen readers translate the
+back chevron.
+
 <Canvas withSource="none">
   <nav className="uq-local-nav" aria-label="Local navigation">
     <div className="uq-local-nav__grandparent">
-      <a className="uq-local-nav__link" href="#">
-        <span className="uq-sr-only">Back to </span>UQ home
+      <a className="uq-local-nav__link" href="#" aria-label="Back to UQ home">
+        UQ home
       </a>
     </div>
     <div className="uq-local-nav__grandparent">
-      <a className="uq-local-nav__link" href="#">
-        <span className="uq-sr-only">Back to </span>Research
+      <a className="uq-local-nav__link" href="#" aria-label="Back to Research">
+        Research
       </a>
     </div>
     <div className="uq-local-nav__grandparent">
-      <a className="uq-local-nav__link" href="#">
-        <span className="uq-sr-only">Back to </span>Research capabilities and
-        initiatives
+      <a className="uq-local-nav__link" href="#" aria-label="Back to Research capabilities and initiatives">
+        Research capabilities and initiatives
       </a>
     </div>
     <div className="uq-local-nav__parent">
-      <a className="uq-local-nav__link" href="#">
-        <span className="uq-sr-only">Back to </span>Energy network
+      <a className="uq-local-nav__link" href="#" aria-label="Back to Energy network">
+        Energy network
       </a>
     </div>
   </nav>
@@ -51,16 +53,16 @@ but only one `.uq-local-nav__parent` element.
 ```html
 <nav class="uq-local-nav" aria-label="Local navigation">
   <div class="uq-local-nav__grandparent">
-    <a class="uq-local-nav__link" href="#"><span class="uq-sr-only">Back to </span>UQ home</a>
+    <a class="uq-local-nav__link" href="#" aria-label="Back to UQ home">UQ home</a>
   </div>
   <div class="uq-local-nav__grandparent">
-    <a class="uq-local-nav__link" href="#"><span class="uq-sr-only">Back to </span>Research</a>
+    <a class="uq-local-nav__link" href="#" aria-label="Back to Research">Research</a>
   </div>
   <div class="uq-local-nav__grandparent">
-    <a class="uq-local-nav__link" href="#"><span class="uq-sr-only">Back to </span>Research capabilities and initiatives</a>
+    <a class="uq-local-nav__link" href="#" aria-label="Back to Research capabilities and initiatives">Research capabilities and initiatives</a>
   </div>
   <div class="uq-local-nav__parent">
-    <a class="uq-local-nav__link" href="#"><span class="uq-sr-only">Back to </span>Energy network</a>
+    <a class="uq-local-nav__link" href="#" aria-label="Back to Energy network">Energy network</a>
   </div>
 </nav>
 ```
@@ -80,13 +82,13 @@ for accessibility the active `a` element is also marked with `aria-current="page
 <Canvas withSource="none">
   <nav className="uq-local-nav" aria-label="Local navigation">
     <div className="uq-local-nav__grandparent">
-      <a className="uq-local-nav__link" href="#">
-        <span className="uq-sr-only">Back to </span>UQ home
+      <a className="uq-local-nav__link" href="#" aria-label="Back to UQ home">
+        UQ home
       </a>
     </div>
     <div className="uq-local-nav__parent">
-      <a className="uq-local-nav__link" href="#">
-        <span className="uq-sr-only">Back to </span>Research
+      <a className="uq-local-nav__link" href="#" aria-label="Back to Research">
+        Research
       </a>
     </div>
     <ul className="uq-local-nav__children">
@@ -117,10 +119,10 @@ for accessibility the active `a` element is also marked with `aria-current="page
 ```html
 <nav class="uq-local-nav" aria-label="Local navigation">
   <div class="uq-local-nav__grandparent">
-    <a class="uq-local-nav__link" href="#"><span class="uq-sr-only">Back to </span>UQ home</a>
+    <a class="uq-local-nav__link" href="#" aria-label="Back to UQ home">UQ home</a>
   </div>
   <div class="uq-local-nav__parent">
-    <a class="uq-local-nav__link" href="#"><span class="uq-sr-only">Back to </span>Research</a>
+    <a class="uq-local-nav__link" href="#" aria-label="Back to Research">Research</a>
   </div>
   <ul class="uq-local-nav__children">
     <li class="uq-local-nav__child uq-local-nav--current-child">
@@ -147,13 +149,13 @@ The Grandchildren use a `li.uq-local-nav__grandchild` element.
 <Canvas withSource="none">
   <nav className="uq-local-nav" aria-label="Local navigation">
     <div className="uq-local-nav__grandparent">
-      <a className="uq-local-nav__link" href="#">
-        <span className="uq-sr-only">Back to </span>UQ home
+      <a className="uq-local-nav__link" href="#" aria-label="Back to UQ home">
+        UQ home
       </a>
     </div>
     <div className="uq-local-nav__parent">
-      <a className="uq-local-nav__link" href="#">
-        <span className="uq-sr-only">Back to </span>Research
+      <a className="uq-local-nav__link" href="#" aria-label="Back to Research">
+        Research
       </a>
     </div>
     <ul className="uq-local-nav__children">
@@ -196,10 +198,10 @@ The Grandchildren use a `li.uq-local-nav__grandchild` element.
 ```html
 <nav class="uq-local-nav" aria-label="Local navigation">
   <div class="uq-local-nav__grandparent">
-    <a class="uq-local-nav__link" href="#"><span class="uq-sr-only">Back to </span>UQ home</a>
+    <a class="uq-local-nav__link" href="#" aria-label="Back to UQ home">UQ home</a>
   </div>
   <div class="uq-local-nav__parent">
-    <a class="uq-local-nav__link" href="#"><span class="uq-sr-only">Back to </span>Research</a>
+    <a class="uq-local-nav__link" href="#" aria-label="Back to Research">Research</a>
   </div>
   <ul class="uq-local-nav__children">
     <li class="uq-local-nav__child">
@@ -230,19 +232,18 @@ shown and a new Parent and Grandparent element are added.
 <Canvas withSource="none">
   <nav className="uq-local-nav" aria-label="Local navigation">
     <div className="uq-local-nav__grandparent">
-      <a className="uq-local-nav__link" href="#">
-        <span className="uq-sr-only">Back to </span>UQ home
+      <a className="uq-local-nav__link" href="#" aria-label="Back to UQ home">
+        UQ home
       </a>
     </div>
     <div className="uq-local-nav__grandparent">
-      <a className="uq-local-nav__link" href="#">
-        <span className="uq-sr-only">Back to </span>Research
+      <a className="uq-local-nav__link" href="#" aria-label="Back to Research">
+        Research
       </a>
     </div>
     <div className="uq-local-nav__parent">
-      <a className="uq-local-nav__link" href="#">
-        <span className="uq-sr-only">Back to </span>Research capabilities and
-        initiatives
+      <a className="uq-local-nav__link" href="#" aria-label="Back to Research capabilities and initiatives">
+        Research capabilities and initiatives
       </a>
     </div>
     <ul className="uq-local-nav__children">
@@ -285,13 +286,13 @@ shown and a new Parent and Grandparent element are added.
 ```html
 <nav class="uq-local-nav" aria-label="Local navigation">
   <div class="uq-local-nav__grandparent">
-    <a class="uq-local-nav__link" href="#"><span class="uq-sr-only">Back to </span>UQ home</a>
+    <a class="uq-local-nav__link" href="#" aria-label="Back to UQ home">UQ home</a>
   </div>
   <div class="uq-local-nav__grandparent">
-    <a class="uq-local-nav__link" href="#"><span class="uq-sr-only">Back to </span>Research</a>
+    <a class="uq-local-nav__link" href="#" aria-label="Back to Research">Research</a>
   </div>
   <div class="uq-local-nav__parent">
-    <a class="uq-local-nav__link" href="#"><span class="uq-sr-only">Back to </span>Research capabilities and initiatives</a>
+    <a class="uq-local-nav__link" href="#" aria-label="Back to Research capabilities and initiatives">Research capabilities and initiatives</a>
   </div>
   <ul class="uq-local-nav__children">
     <li class="uq-local-nav__child uq-local-nav--has-children uq-local-nav--current-page">

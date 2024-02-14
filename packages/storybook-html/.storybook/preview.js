@@ -44,7 +44,7 @@ export const parameters = {
         "Layout",
         ["Container", "Sections", "Page layouts", "Card grid"],
         "Components",
-        ["Body", ["Body", "Elements", "Utilities"]],
+        ["Body", ["Body", "Elements", "Utilities"], "Navigation"],
         "Patterns",
         "Gallery & Examples",
         "Deliverables",

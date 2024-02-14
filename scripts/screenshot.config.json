@@ -42,6 +42,7 @@
     "components-body-utilities--text-pretty-utils": "http://localhost:6006/iframe.html?id=components-body-utilities--text-pretty-utils",
     "components-body-utilities--background-colour-utils": "http://localhost:6006/iframe.html?id=components-body-utilities--background-colour-utils",
     "components-body-utilities--visibility-utils": "http://localhost:6006/iframe.html?id=components-body-utilities--visibility-utils",
+    "components-navigation-local-nav--local-nav": "http://localhost:6006/iframe.html?id=components-navigation-local-nav--local-nav",
     "components-accordion--using-divs": "http://localhost:6006/iframe.html?id=components-accordion--using-divs",
     "components-accordion--using-listsr": "http://localhost:6006/iframe.html?id=components-accordion--using-lists",
     "components-accordion--has-subtitle": "http://localhost:6006/iframe.html?id=components-accordion--has-subtitle",

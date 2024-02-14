@@ -1,0 +1,106 @@
+@use "@uqds/core/src/scss/global" as core;
+@use "@uqds/icon/src/scss/global" as icon;
+@use "global" as *;
+
+.uq-sr-only {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
+}
+
+.uq-local-nav {
+  max-width: var(--sidebar-layout-sidebar-width);
+}
+
+.uq-local-nav__link {
+  display: block;
+  color: core.$black;
+  padding-block: core.$space-m;
+  padding-inline-start: core.$space-xl;
+  border-bottom: 1px solid core.$grey-200;
+
+  &:hover {
+    text-decoration: none;
+    color: core.$black;
+    background-color: core.$grey-50;
+  }
+
+  &:focus-visible {
+    outline: 4px solid core.$utility-500;
+    outline-offset: -3px;
+  }
+}
+
+.uq-local-nav__grandparent,
+.uq-local-nav__parent {
+  font-weight: core.$font-weight-medium;
+
+  & .uq-local-nav__link {
+    background-image: url(icon.get-icon(
+      "standard--chevron-left",
+      core.$purple-500
+    ));
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-position: left center;
+  }
+}
+
+.uq-local-nav__grandparent {
+  & .uq-local-nav__link {
+    border-color: core.$grey-900;
+  }
+}
+
+.uq-local-nav__children,
+.uq-local-nav__grandchildren {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.uq-local-nav--has-children {
+  & > .uq-local-nav__link {
+    background-image: url(icon.get-icon(
+      "standard--chevron-down-sml",
+      core.$black
+    ));
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-position: right center;
+    padding-inline-end: core.$space-l;
+  }
+}
+
+.uq-local-nav__child,
+.uq-local-nav__grandchild {
+  margin-bottom: 0;
+}
+
+.uq-local-nav__grandchild {
+  & .uq-local-nav__link {
+    padding-inline: core.$space-xxl;
+  }
+}
+
+.uq-local-nav--current-child {
+  border-left: 4px solid core.$purple-500;
+  margin-top: -1px;
+
+  & > .uq-local-nav__link {
+    border-top: 1px solid core.$grey-200;
+    padding-inline: calc(#{core.$space-xl} - 4px) 0;
+  }
+}
+
+.uq-local-nav--active-link {
+  background-color: core.$grey-50;
+  font-weight: core.$font-weight-medium;
+}

@@ -5,6 +5,8 @@
   --container-max-width: #{$container-max-width};
   --layout-gap: #{core.$space-xl};
   --section-gap: 6rem;
+
+  --sidebar-layout-sidebar-width: 261px;
 }
 
 // Resize custom properties for tablet/mobile.

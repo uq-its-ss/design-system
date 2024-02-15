@@ -50,7 +50,7 @@ export const Level2 = {
                 <div class="uqds-layout-demo-card"></div>
               </div>
             </div>
-            <div class="uq-section">
+            <div class="uq-section uq-section--shaded">
               <div class="uq-section__header">
                 <h2 class="uq-section__title">Title</h2>
                 <div class="uq-section__description">

@@ -7,11 +7,11 @@
 
 .uq-section__title {
   margin: 0 0 core.$space-m;
-  color: core.$uq-black;
+  color: core.$black;
   font-size: core.$font-size-xxxl;
 }
 
 .uq-section--shaded {
-  background: $section-shaded-bg;
+  background: core.$grey-50;
   padding: var(--layout-gap);
 }

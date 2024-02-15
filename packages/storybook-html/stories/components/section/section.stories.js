@@ -74,13 +74,13 @@ export const Container = {
     <div class="uq-section__header">
       ${title ? `<h2 class="uq-section__title">${title}</h2>` : ""}
       ${
-      description
+        description
           ? `
       <div class="uq-section__description">
         <p>${description}</p>
       </div>`
           : ""
-  }
+      }
     </div>
     ${content}
   </div>
@@ -95,5 +95,5 @@ export const ShadedContainer = {
     content: "",
     shaded: true,
   },
-  render: Container.render
+  render: Container.render,
 };

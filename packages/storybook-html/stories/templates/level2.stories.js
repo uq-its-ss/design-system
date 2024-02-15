@@ -3,6 +3,7 @@ import { Header } from "../components/header/header.stories";
 import { footer } from "../components/footer/footer.stories";
 import { breadcrumb } from "../components/breadcrumb/breadcrumb.stories";
 import { Level2 as Hero } from "../components/hero/hero.stories";
+import { LocalNav } from "../components/navigation/local-nav/local-nav.stories";
 
 export default {
   title: "Templates/Level 2",
@@ -34,7 +35,7 @@ export const Level2 = {
     <div class="uq-container">
       <div class="uq-sidebar-layout">
         <div class="uq-sidebar-layout__sidebar">
-          <div class="uqds-layout-demo-el"></div> 
+          ${LocalNav.render()}
         </div>
         <div class="uq-sidebar-layout__main">
           <div class="uq-sections">

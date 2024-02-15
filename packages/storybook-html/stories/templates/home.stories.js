@@ -63,6 +63,16 @@ export const Home = {
         <div class="uqds-layout-demo-el"></div> 
       </div>
     </div>
+    <div class="uq-section">
+      <div class="uq-container">
+        <div class="uq-card-grid uq-card-grid--target-4x">
+          <div class="uqds-layout-demo-card"></div>
+          <div class="uqds-layout-demo-card"></div>
+          <div class="uqds-layout-demo-card"></div>
+          <div class="uqds-layout-demo-card"></div>
+        </div>
+      </div>
+    </div>
     <div class="uq-section uq-section--shaded">
       <div class="uq-container">
         <div class="uq-section__header">
@@ -75,16 +85,6 @@ export const Home = {
           <div class="uqds-layout-demo-card"></div>
           <div class="uqds-layout-demo-card"></div>
           <div class="uqds-layout-demo-card"></div>  
-        </div>
-      </div>
-    </div>
-    <div class="uq-section">
-      <div class="uq-container">
-        <div class="uq-card-grid uq-card-grid--target-4x">
-          <div class="uqds-layout-demo-card"></div>
-          <div class="uqds-layout-demo-card"></div>
-          <div class="uqds-layout-demo-card"></div>
-          <div class="uqds-layout-demo-card"></div>
         </div>
       </div>
     </div>

@@ -3,3 +3,11 @@
   flex-direction: column;
   gap: var(--section-gap);
 }
+
+.uq-sections + .uq-footer {
+  margin-top: var(--section-gap);
+}
+
+.uq-sections:has(.uq-section--shaded:last-child) + .uq-footer {
+  margin-top: 0;
+}

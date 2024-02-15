@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/breadcrumb@1.1.0-alpha.0...@uqds/breadcrumb@2.0.0-alpha.0) (2024-02-14)
+
+### Features
+
+- [ITSADSSD-53175] New hero component ([#453](https://github.com/uq-its-ss/design-system/issues/453)) ([85c7a7e](https://github.com/uq-its-ss/design-system/commit/85c7a7ef5edd83dc196ae5546beae6094b6c390f))
+
+### BREAKING CHANGES
+
+- The .uq-hero component has been completely redesigned.
+
+- feat: new colour variables
+
+- feat: added hero-basic component
+
+- docs: added hero documentation in storybook
+
+- fix: add new wrapper class for breadcrumbs
+
+- chore: fix format and qa feedback
+
+- chore: update gradient
+
+- Updated Regression screens
+
 # [1.1.0-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/breadcrumb@1.0.1-alpha.0...@uqds/breadcrumb@1.1.0-alpha.0) (2024-02-08)
 
 ### Features

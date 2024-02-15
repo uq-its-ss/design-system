@@ -1,0 +1,87 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
+
+<Meta title="Components/Hero/All" />
+
+# Hero basic
+
+<StatusBadge.Development />
+<StatusBadge.DraftDoc />
+
+## Overview
+
+The `.uq-hero-basic` element provides an alternative hero.
+
+### How-to
+
+There are 4 elements within the basic hero.
+
+- Title with "eyebrow heading": `h1.uq-hero-base__title` and `h1.uq-hero-basic__title .uq-hero-basic__eyebrow`
+- Back button: `.uq-hero-basic__back`
+- Tabs: `.uq-hero-basic__tabs .uq-tabs`
+- Image: `.uq-hero-basic__image`
+
+There are no size or colour variations for the basic hero component.
+
+<Canvas withSource="none">
+  <Story id="components-hero-basic--hero-basic" />
+</Canvas>
+
+```html
+<div class="uq-hero-basic">
+  <div class="uq-hero-basic__image">
+    <img
+      src="/images/hero/hero-basic-example-1.jpg"
+      alt=""
+      role="presentation"
+    />
+  </div>
+  <div class="uq-container">
+    <div class="uq-hero-basic__content">
+      <h1 class="uq-hero-basic__title">
+        <div class="uq-hero-basic__eyebrow">Eyebrow</div>
+        Title
+      </h1>
+      <div class="uq-hero-basic__back">
+        <a href="#">
+          <span
+            class="uq-icon uq-icon--common--chevron-left uq-icon--light"
+          ></span
+          >Back link
+        </a>
+      </div>
+    </div>
+    <div class="uq-hero-basic__tabs">
+      <div class="uq-tabs">
+        <div class="uq-tabs__tab-list-wrapper">
+          <div class="uq-tabs__tab-list" role="tablist" aria-label="Tab List">
+            <a class="uq-tabs__tab uq-tabs__tab--active">Tab 1</a>
+            <a class="uq-tabs__tab">Tab 2</a>
+            <a class="uq-tabs__tab">Tab 3</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+### Examples
+
+#### Basic
+
+<Canvas>
+  <Story id="components-hero-basic--basic" />
+</Canvas>
+
+#### Program
+
+<Canvas>
+  <Story id="components-hero-basic--program" />
+</Canvas>
+
+#### Plan
+
+<Canvas>
+  <Story id="components-hero-basic--plan" />
+</Canvas>

@@ -4,7 +4,6 @@ import { dirname, join } from "path";
 const config = {
   stories: [
     "../stories/**/*.mdx",
-    "../stories/**/*.@(stories|story).mdx",
     "../stories/**/*.@(stories|story).@(js|jsx|ts|tsx)",
   ],
 
@@ -49,8 +48,6 @@ const config = {
     postcss: false,
     previewMdx2: false,
   },
-
-
 
   framework: {
     name: getAbsolutePath("@storybook/html-webpack5"),

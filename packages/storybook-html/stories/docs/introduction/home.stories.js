@@ -6,10 +6,10 @@ export default {
   parameters: {
     layout: "fullscreen",
     viewMode: "story",
-    tags: [''],
+    tags: [""],
     docs: {
       toc: false, // 👈 Enables the table of contents
-      autodocs: 'false',
+      autodocs: "false",
     },
     previewTabs: {
       "storybook/docs/panel": { hidden: true },
@@ -18,14 +18,16 @@ export default {
   },
 };
 
-export const HomePage = () => {
-  return HomePageHTML;
-};
+export const HomePage = {
+  render: () => {
+    return HomePageHTML;
+  },
 
-HomePage.storyName = "Overview";
+  name: "Overview",
 
-HomePage.parameters = {
-  docs: {
-    page: null,
+  parameters: {
+    docs: {
+      page: null,
+    },
   },
 };

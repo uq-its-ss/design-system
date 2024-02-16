@@ -36,11 +36,13 @@ export const header = () => {
   return headerHTML;
 };
 
-export const headerNoLocalSearch = () => {
-  useEffect(() => {
-    new headerCreate();
-  });
-  return headerNoLocalSearchHTML;
-};
+export const headerNoLocalSearch = {
+  render: () => {
+    useEffect(() => {
+      new headerCreate();
+    });
+    return headerNoLocalSearchHTML;
+  },
 
-headerNoLocalSearch.storyName = "Header with global search only";
+  name: "Header with global search only",
+};

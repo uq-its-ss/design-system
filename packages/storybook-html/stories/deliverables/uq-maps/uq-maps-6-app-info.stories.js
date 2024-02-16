@@ -31,37 +31,41 @@ export default {
   },
 };
 
-export const closed = () => `
-  <!-- Demo height of 400px -->
-  <div style="height:400px; position:relative">
-    <!-- Position the badge -->
-    <div style="position:absolute; bottom:0; left:0">
-      <button class="uq-maps__badge">See app info</button>
-    </div>
-  </div>
-`;
-
-closed.storyName = "6A Closed";
-
-export const open = () => `
-  <!-- Demo height of 400px -->
-  <div style="height:400px">
-    <div class="uq-maps__drawer">
-      <div class="uq-maps__drawer__menu-bar">
-        <button class="uq-maps__drawer__menu-bar__close">Close</button>
-      </div>
-      <div class="uq-maps__drawer__main">
-        UQMaps
-        <div class="uq-maps__drawer__main__details-block">
-          Version: XX.XX.XX<br/>
-          Mobile app version: XX.XX.XX
-        </div>
-        <div class="uq-maps__drawer__main__details-block">
-          <a href="https://www.uq.edu.au/terms-of-use/">Privacy & Terms of use</a>
-        </div>
+export const closed = {
+  render: () => `
+    <!-- Demo height of 400px -->
+    <div style="height:400px; position:relative">
+      <!-- Position the badge -->
+      <div style="position:absolute; bottom:0; left:0">
+        <button class="uq-maps__badge">See app info</button>
       </div>
     </div>
-  </div>
-`;
+  `,
 
-open.storyName = "6B Open";
+  name: "6A Closed",
+};
+
+export const open = {
+  render: () => `
+    <!-- Demo height of 400px -->
+    <div style="height:400px">
+      <div class="uq-maps__drawer">
+        <div class="uq-maps__drawer__menu-bar">
+          <button class="uq-maps__drawer__menu-bar__close">Close</button>
+        </div>
+        <div class="uq-maps__drawer__main">
+          UQMaps
+          <div class="uq-maps__drawer__main__details-block">
+            Version: XX.XX.XX<br/>
+            Mobile app version: XX.XX.XX
+          </div>
+          <div class="uq-maps__drawer__main__details-block">
+            <a href="https://www.uq.edu.au/terms-of-use/">Privacy & Terms of use</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  `,
+
+  name: "6B Open",
+};

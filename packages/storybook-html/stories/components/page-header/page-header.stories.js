@@ -20,8 +20,10 @@ export default {
   },
 };
 
-export const pageHeader = () => {
-  return pageHeaderHTML;
-};
+export const pageHeader = {
+  render: () => {
+    return pageHeaderHTML;
+  },
 
-pageHeader.storyName = "All";
+  name: "All",
+};

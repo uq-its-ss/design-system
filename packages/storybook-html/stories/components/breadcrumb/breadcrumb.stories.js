@@ -24,12 +24,14 @@ export default {
   },
 };
 
-export const breadcrumb = () => {
-  useEffect(() => {
-    const breadcrumbDefault = document.querySelector(".uq-breadcrumb");
-    new breadcrumbCreate(breadcrumbDefault);
-  });
-  return breadcrumbHTML;
-};
+export const breadcrumb = {
+  render: () => {
+    useEffect(() => {
+      const breadcrumbDefault = document.querySelector(".uq-breadcrumb");
+      new breadcrumbCreate(breadcrumbDefault);
+    });
+    return breadcrumbHTML;
+  },
 
-breadcrumb.storyName = "Default";
+  name: "Default",
+};

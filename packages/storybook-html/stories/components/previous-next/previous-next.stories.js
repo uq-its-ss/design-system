@@ -20,40 +20,46 @@ export default {
   },
 };
 
-export const previousNextInitial = () => {
-  return `
-    <div class="uq-previous-next">
-      <div class="uq-previous-next__item uq-previous-next__item--hidden">
-        <a href="#" class="uq-previous-next__link-previous">Enrolment basics <span class="uq-previous-next__description">Previous</span></a>
-      </div>
+export const previousNextInitial = {
+  render: () => {
+    return `
+      <div class="uq-previous-next">
+        <div class="uq-previous-next__item uq-previous-next__item--hidden">
+          <a href="#" class="uq-previous-next__link-previous">Enrolment basics <span class="uq-previous-next__description">Previous</span></a>
+        </div>
 
-      <div class="uq-previous-next__item">
-        <a href="#" class="uq-previous-next__link-next">How to enrol <span class="uq-previous-next__description">Next</span></a>
+        <div class="uq-previous-next__item">
+          <a href="#" class="uq-previous-next__link-next">How to enrol <span class="uq-previous-next__description">Next</span></a>
+        </div>
       </div>
-    </div>
-  `;
+    `;
+  },
+
+  name: "Previous next initial",
 };
 
-previousNextInitial.storyName = "Previous next initial";
+export const previousNextMiddle = {
+  render: () => {
+    return previousNextHTML;
+  },
 
-export const previousNextMiddle = () => {
-  return previousNextHTML;
+  name: "Previous next middle",
 };
 
-previousNextMiddle.storyName = "Previous next middle";
+export const previousNextFinal = {
+  render: () => {
+    return `
+      <div class="uq-previous-next">
+        <div class="uq-previous-next__item">
+          <a href="#" class="uq-previous-next__link-previous">Enrolment basics <span class="uq-previous-next__description">Previous</span></a>
+        </div>
 
-export const previousNextFinal = () => {
-  return `
-    <div class="uq-previous-next">
-      <div class="uq-previous-next__item">
-        <a href="#" class="uq-previous-next__link-previous">Enrolment basics <span class="uq-previous-next__description">Previous</span></a>
+        <div class="uq-previous-next__item uq-previous-next__item--hidden">
+          <a href="#" class="uq-previous-next__link-next">How to enrol <span class="uq-previous-next__description">Next</span></a>
+        </div>
       </div>
+    `;
+  },
 
-      <div class="uq-previous-next__item uq-previous-next__item--hidden">
-        <a href="#" class="uq-previous-next__link-next">How to enrol <span class="uq-previous-next__description">Next</span></a>
-      </div>
-    </div>
-  `;
+  name: "Previous next final",
 };
-
-previousNextFinal.storyName = "Previous next final";

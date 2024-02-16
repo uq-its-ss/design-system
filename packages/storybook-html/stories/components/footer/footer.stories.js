@@ -28,11 +28,13 @@ export default {
   },
 };
 
-export const footer = () => {
-  useEffect(() => {
-    new accordionCreate();
-  });
-  return footerHTML;
-};
+export const footer = {
+  render: () => {
+    useEffect(() => {
+      new accordionCreate();
+    });
+    return footerHTML;
+  },
 
-footer.storyName = "Footer";
+  name: "Footer",
+};

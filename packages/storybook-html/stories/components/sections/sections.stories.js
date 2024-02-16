@@ -24,38 +24,50 @@ export default {
   },
 };
 
-export const sectionsDefault = () => {
-  return sectionsDefaultHTML;
+export const sectionsDefault = {
+  render: () => {
+    return sectionsDefaultHTML;
+  },
+
+  name: "Default",
 };
 
-sectionsDefault.storyName = "Default";
+export const sectionsCentered = {
+  render: () => {
+    return sectionsCenteredHTML;
+  },
 
-export const sectionsCentered = () => {
-  return sectionsCenteredHTML;
+  name: "Centered",
 };
 
-sectionsCentered.storyName = "Centered";
+export const sectionsNarrow = {
+  render: () => {
+    return sectionsNarrowHTML;
+  },
 
-export const sectionsNarrow = () => {
-  return sectionsNarrowHTML;
+  name: "Narrow",
 };
 
-sectionsNarrow.storyName = "Narrow";
+export const sectionsShaded = {
+  render: () => {
+    return sectionsShadedHTML;
+  },
 
-export const sectionsShaded = () => {
-  return sectionsShadedHTML;
+  name: "Shaded",
 };
 
-sectionsShaded.storyName = "Shaded";
+export const sectionsNoPadding = {
+  render: () => {
+    return sectionsNoPaddingHTML;
+  },
 
-export const sectionsNoPadding = () => {
-  return sectionsNoPaddingHTML;
+  name: "No padding",
 };
 
-sectionsNoPadding.storyName = "No padding";
+export const sectionsLargePadding = {
+  render: () => {
+    return sectionsLargePaddingHTML;
+  },
 
-export const sectionsLargePadding = () => {
-  return sectionsLargePaddingHTML;
+  name: "Large padding",
 };
-
-sectionsLargePadding.storyName = "Large padding";

@@ -17,15 +17,17 @@ export default {
   },
 };
 
-export const primary = () => {
-  return `
-    <button class="uq-button">Button</button>
-    <button class="uq-button uq-button--outline">Button</button>
-    <button class="uq-button uq-button--text">Button</button>
-  `;
-};
+export const primary = {
+  render: () => {
+    return `
+      <button class="uq-button">Button</button>
+      <button class="uq-button uq-button--outline">Button</button>
+      <button class="uq-button uq-button--text">Button</button>
+    `;
+  },
 
-primary.storyName = "Primary (base)";
+  name: "Primary (base)",
+};
 
 export const secondary = () => {
   return `
@@ -35,20 +37,23 @@ export const secondary = () => {
   `;
 };
 
-export const secondaryLight = () => {
-  return `
-    <button class="uq-button uq-button--secondary uq-button--outline uq-button--light">Button</button>
-    <button class="uq-button uq-button--secondary uq-button--text uq-button--light">Button</button>
-  `;
-};
-
-secondaryLight.storyName = "Secondary light";
-secondaryLight.parameters = {
-  docs: {
-    inlineStories: false,
+export const secondaryLight = {
+  render: () => {
+    return `
+      <button class="uq-button uq-button--secondary uq-button--outline uq-button--light">Button</button>
+      <button class="uq-button uq-button--secondary uq-button--text uq-button--light">Button</button>
+    `;
   },
-  backgrounds: {
-    default: "Dark",
+
+  name: "Secondary light",
+
+  parameters: {
+    docs: {
+      inlineStories: false,
+    },
+    backgrounds: {
+      default: "Dark",
+    },
   },
 };
 

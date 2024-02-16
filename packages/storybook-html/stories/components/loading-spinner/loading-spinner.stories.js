@@ -22,34 +22,41 @@ export default {
   },
 };
 
-export const loadingSpinner = () => {
-  return loadingSpinnerHTML;
-};
-
-loadingSpinner.storyName = "Default";
-
-export const loadingSpinnerLight = () => {
-  return loadingSpinnerLightHTML;
-};
-
-loadingSpinnerLight.storyName = "Light";
-loadingSpinnerLight.parameters = {
-  docs: {
-    inlineStories: false,
+export const loadingSpinner = {
+  render: () => {
+    return loadingSpinnerHTML;
   },
-  backgrounds: {
-    default: "Purple",
-    values: [
-      {
-        name: "Purple",
-        value: "#51247A",
-      },
-    ],
+
+  name: "Default",
+};
+
+export const loadingSpinnerLight = {
+  render: () => {
+    return loadingSpinnerLightHTML;
+  },
+
+  name: "Light",
+
+  parameters: {
+    docs: {
+      inlineStories: false,
+    },
+    backgrounds: {
+      default: "Purple",
+      values: [
+        {
+          name: "Purple",
+          value: "#51247A",
+        },
+      ],
+    },
   },
 };
 
-export const loadingSpinnerSmall = () => {
-  return loadingSpinnerSmallHTML;
-};
+export const loadingSpinnerSmall = {
+  render: () => {
+    return loadingSpinnerSmallHTML;
+  },
 
-loadingSpinnerSmall.storyName = "Small";
+  name: "Small",
+};

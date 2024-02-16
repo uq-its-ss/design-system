@@ -26,22 +26,26 @@ export default {
   },
 };
 
-export const siteHeaderWithSubnav = () => {
-  useEffect(() => {
-    var navElem = document.getElementById("jsNav");
-    new siteHeaderNav(navElem, "uq-site-header__navigation");
-  });
-  return siteHeaderWithSubnavHTML;
+export const siteHeaderWithSubnav = {
+  render: () => {
+    useEffect(() => {
+      var navElem = document.getElementById("jsNav");
+      new siteHeaderNav(navElem, "uq-site-header__navigation");
+    });
+    return siteHeaderWithSubnavHTML;
+  },
+
+  name: "With sub-navigation",
 };
 
-siteHeaderWithSubnav.storyName = "With sub-navigation";
+export const siteHeaderWithoutSubnav = {
+  render: () => {
+    useEffect(() => {
+      var navElem = document.getElementById("jsNav");
+      new siteHeaderNav(navElem, "uq-site-header__navigation");
+    });
+    return siteHeaderWithoutSubnavHTML;
+  },
 
-export const siteHeaderWithoutSubnav = () => {
-  useEffect(() => {
-    var navElem = document.getElementById("jsNav");
-    new siteHeaderNav(navElem, "uq-site-header__navigation");
-  });
-  return siteHeaderWithoutSubnavHTML;
+  name: "Without sub-navigation",
 };
-
-siteHeaderWithoutSubnav.storyName = "Without sub-navigation";

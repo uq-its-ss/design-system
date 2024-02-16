@@ -21,26 +21,33 @@ export default {
   },
 };
 
-export const blockquote = () => {
-  return blockquoteHTML;
-};
-blockquote.storyName = "Default";
-
-export const blockquoteLight = () => {
-  return blockquoteLightHTML;
-};
-blockquoteLight.storyName = "Light";
-blockquoteLight.parameters = {
-  docs: {
-    inlineStories: false,
+export const blockquote = {
+  render: () => {
+    return blockquoteHTML;
   },
-  backgrounds: {
-    default: "Purple",
-    values: [
-      {
-        name: "Purple",
-        value: "#51247A",
-      },
-    ],
+
+  name: "Default",
+};
+
+export const blockquoteLight = {
+  render: () => {
+    return blockquoteLightHTML;
+  },
+
+  name: "Light",
+
+  parameters: {
+    docs: {
+      inlineStories: false,
+    },
+    backgrounds: {
+      default: "Purple",
+      values: [
+        {
+          name: "Purple",
+          value: "#51247A",
+        },
+      ],
+    },
   },
 };

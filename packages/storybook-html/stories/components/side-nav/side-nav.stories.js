@@ -20,14 +20,18 @@ export default {
   },
 };
 
-export const sideNavSingleLevel = () => {
-  return sideNavSingleLevelHTML;
+export const sideNavSingleLevel = {
+  render: () => {
+    return sideNavSingleLevelHTML;
+  },
+
+  name: "Side nav single-level",
 };
 
-sideNavSingleLevel.storyName = "Side nav single-level";
+export const sideNavMultiLevel = {
+  render: () => {
+    return sideNavMultiLevelHTML;
+  },
 
-export const sideNavMultiLevel = () => {
-  return sideNavMultiLevelHTML;
+  name: "Side nav multi-level",
 };
-
-sideNavMultiLevel.storyName = "Side nav multi-level";

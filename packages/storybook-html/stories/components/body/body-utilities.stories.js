@@ -6,7 +6,8 @@ export default {
   },
 };
 
-export const textColorUtils = () => {
+export const textColorUtils = {
+render: () => {
   return `
 <table>
   <thead>
@@ -35,9 +36,7 @@ export const textColorUtils = () => {
   </tbody>
 </table>
   `;
-};
-
-textColorUtils.storyName = "Text colours";
+},
 
   name: "Text colours",
 };

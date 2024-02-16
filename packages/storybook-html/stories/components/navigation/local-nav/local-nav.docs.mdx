@@ -1,5 +1,8 @@
-import { Story, Canvas } from "@storybook/addon-docs";
+import { Meta, Story, Canvas } from '@storybook/blocks';
 import StatusBadge from "../../../../.storybook/custom/components/StatusBadge";
+import * as LocalNavStories from './local-nav.stories';
+
+<Meta of={LocalNavStories} />
 
 # Local nav
 
@@ -57,7 +60,7 @@ back chevron.
   </nav>
 </Canvas>
 
-<!-- prettier-ignore-start -->
+
 ```html
 <nav class="uq-local-nav" aria-label="Local navigation">
   <div class="uq-local-nav__grandparent">
@@ -74,7 +77,7 @@ back chevron.
   </div>
 </nav>
 ```
-<!-- prettier-ignore-end-->
+
 
 #### Children
 
@@ -123,7 +126,7 @@ for accessibility the active `a` element is also marked with `aria-current="page
   </nav>
 </Canvas>
 
-<!-- prettier-ignore-start -->
+
 ```html
 <nav class="uq-local-nav" aria-label="Local navigation">
   <div class="uq-local-nav__grandparent">
@@ -145,7 +148,7 @@ for accessibility the active `a` element is also marked with `aria-current="page
   </ul>
 </nav>
 ```
-<!-- prettier-ignore-end-->
+
 
 #### Grandchildren
 
@@ -202,7 +205,7 @@ The Grandchildren use a `li.uq-local-nav__grandchild` element.
   </nav>
 </Canvas>
 
-<!-- prettier-ignore-start -->
+
 ```html
 <nav class="uq-local-nav" aria-label="Local navigation">
   <div class="uq-local-nav__grandparent">
@@ -232,7 +235,7 @@ The Grandchildren use a `li.uq-local-nav__grandchild` element.
   </ul>
 </nav>
 ```
-<!-- prettier-ignore-end-->
+
 
 When a Grandchild becomes the active link, only its siblings and children are
 shown and a new Parent and Grandparent element are added.
@@ -294,7 +297,6 @@ shown and a new Parent and Grandparent element are added.
   </nav>
 </Canvas>
 
-<!-- prettier-ignore-start -->
 ```html
 <nav class="uq-local-nav" aria-label="Local navigation">
   <div class="uq-local-nav__grandparent">
@@ -327,4 +329,3 @@ shown and a new Parent and Grandparent element are added.
   </ul>
 </nav>
 ```
-<!-- prettier-ignore-end-->

@@ -1,12 +1,8 @@
-import docs from "./local-nav.docs.mdx";
 import "../../../../../navigation/src/scss/main.scss";
 
 export default {
   title: "Components/Navigation/Local nav",
   parameters: {
-    docs: {
-      page: docs,
-    },
     layout: "fullscreen",
     previewTabs: {
       canvas: { hidden: false },

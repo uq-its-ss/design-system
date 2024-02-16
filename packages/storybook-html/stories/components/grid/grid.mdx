@@ -24,9 +24,7 @@ This grid gives you a *main* content column and a *sidebar* column that stack
 for mobile. Under the hood, is our *6-8-12* grid so you can keep your content
 consistently aligned with the base grid.
 
-{/* <Story height="160" id="layout-grid--golden" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
-
-<Story height="160" id="layout-grid--golden" />
+<Story height="160" id="deprecated-grid--golden" />
 
 ### How-to
 
@@ -51,7 +49,7 @@ Behaves like *Golden* but has two columns of equal size at larger screen sizes.
 
 {/* <Story height={85} id="layout-grid--halves" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
 
-<Story height={85} id="layout-grid--halves" />
+<Story height={85} id="deprecated-grid--halves" />
 
 ### How-to
 
@@ -67,9 +65,7 @@ Behaves like *Golden* but has two columns of equal size at larger screen sizes.
 Behaves like *Golden* but has three columns of equal size at larger screen
 sizes.
 
-{/* <Story height={85} id="layout-grid--thirds" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
-
-<Story height={85} id="layout-grid--thirds" />
+<Story height={85} id="deprecated-grid--thirds" />
 
 ### How-to
 
@@ -87,7 +83,7 @@ Behaves like *Golden* but has four columns of equal size at larger screen sizes.
 
 {/* <Story height={85} id="layout-grid--quarters" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
 
-<Story height={85} id="layout-grid--quarters" />
+<Story height={85} id="deprecated-grid--quarters" />
 
 ### How-to
 
@@ -107,9 +103,7 @@ to give you a quick & flexible layout solution. You can use this grid to
 organise your content into columns that stack when browser sizes are smaller.
 Therefore, it makes it an ideal solution for arranging linear material.
 
-{/* <Story height={175} id="layout-grid--flexible-1" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
-
-<Story height={175} id="layout-grid--flexible-1" />
+<Story height={175} id="deprecated-grid--flexible-1" />
 
 ### How-to
 
@@ -125,9 +119,7 @@ modifier) like the following.
 </div>
 ```
 
-{/* <Story height={85} id="layout-grid--flexible-2" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
-
-<Story height={85} id="layout-grid--flexible-2" />
+<Story height={85} id="deprecated-grid--flexible-2" />
 
 Pay attention to what the grid does when the screens get very small.
 
@@ -160,9 +152,7 @@ screen sizes.
 </div>
 ```
 
-{/* <Story height={200} id="layout-grid--twelve-eight-six-example-1" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
-
-<Story height={200} id="layout-grid--twelve-eight-six-example-1" />
+<Story height={200} id="deprecated-grid--twelve-eight-six-example-1" />
 
 ### Stacking columns for smaller screens
 
@@ -188,9 +178,7 @@ layout with the grid:
 The difference between this example and the one before is that the two columns
 take up the whole available width for the smallest screens.
 
-{/* <Story height={200} id="layout-grid--twelve-eight-six-example-2" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
-
-<Story height={200} id="layout-grid--twelve-eight-six-example-2" />
+<Story height={200} id="deprecated-grid--twelve-eight-six-example-2" />
 
 ### The 6-column grid column-span classes (designed for *mobile* displays)
 
@@ -198,9 +186,7 @@ Create layouts for the smallest screens.
 
 `uq-grid__col--[1—6]`, e.g. `<div class="uq-grid__col uq-grid__col--4">...</div>`
 
-{/* <Story height={265} id="layout-grid--twelve-eight-six-mobile" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
-
-<Story height={265} id="layout-grid--twelve-eight-six-mobile" />
+<Story height={265} id="deprecated-grid--twelve-eight-six-mobile" />
 
 ### The 8-column grid column-span classes (designed for *tablet* displays)
 
@@ -208,9 +194,7 @@ Shift the layout for larger screens.
 
 `uq-grid__col--md-[1—8]`, e.g. `<div class="uq-grid__col uq-grid__col--4 uq-grid__col--md-6">...</div>`
 
-{/* <Story height={305} id="layout-grid--twelve-eight-six-tablet" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
-
-<Story height={305} id="layout-grid--twelve-eight-six-tablet" />
+<Story height={305} id="deprecated-grid--twelve-eight-six-tablet" />
 
 ### The 12-column grid column-span classes (designed for *desktop/laptop* displays)
 
@@ -218,9 +202,7 @@ Shift the layout for the largest screens.
 
 `uq-grid__col--xl-[1—12]`, e.g. `<div class="uq-grid__col uq-grid__col--4 uq-grid__col--md-6 uq-grid__col--xl-8">...</div>`
 
-{/* <Story height={430} id="layout-grid--twelve-eight-six-desktop" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
-
-<Story height={430} id="layout-grid--twelve-eight-six-desktop" />
+<Story height={430} id="deprecated-grid--twelve-eight-six-desktop" />
 
 ## Nesting grids
 
@@ -228,9 +210,7 @@ You can nest grids, i.e. place another grid container within a grid column, to
 create nested layouts. However, columns can become too narrow if you nest too
 deeply or use small column spans.
 
-{/* <Story height={125} id="layout-grid--twelve-eight-six-nested" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
-
-<Story height={125} id="layout-grid--twelve-eight-six-nested" />
+<Story height={125} id="deprecated-grid--twelve-eight-six-nested" />
 
 ### Example using the 6-8-12 grid
 
@@ -268,9 +248,7 @@ still followed.
 </div>
 ```
 
-{/* <Story height={85} id="layout-grid--twelve-eight-six-full-width" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
-
-<Story height={85} id="layout-grid--twelve-eight-six-full-width" />
+<Story height={85} id="deprecated-grid--twelve-eight-six-full-width" />
 
 #### Example: flexible grid
 
@@ -287,9 +265,7 @@ still followed.
 </div>
 ```
 
-{/* <Story height={145} id="layout-grid--flexible-full-width" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
-
-<Story height={145} id="layout-grid--flexible-full-width" />
+<Story height={145} id="deprecated-grid--flexible-full-width" />
 
 ## Alternative layout container
 
@@ -308,9 +284,7 @@ container (`.uq-grid`) and a full length grid column (`.uq-grid__col`).
 </div>
 ```
 
-{/* <Story height={85} id="layout-grid--layout-container" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
-
-<Story height={85} id="layout-grid--layout-container" />
+<Story height={85} id="deprecated-grid--layout-container" />
 
 ## SASS mixins
 

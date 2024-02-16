@@ -1,0 +1,25 @@
+@use "@uqds/core/src/scss/global" as core;
+
+:root {
+  --font-size-ul: #{core.$font-size-ul};
+
+  --hero-spacing: #{core.$space-uul};
+  --hero-basic-spacing: #{core.$space-uuul};
+
+  --hero-aspect-ratio: 2.35 / 1;
+  --hero-large-aspect-ratio: 3 / 2;
+
+  --hero-min-height: 336px;
+  --hero-large-min-height: 500px;
+
+  --hero-image-max-width: 790px;
+}
+
+// Resize custom properties for tablet/mobile.
+@media #{core.$screen-lg-down} {
+  :root {
+    --font-size-ul: 30px;
+
+    --hero-basic-spacing: #{core.$space-xl};
+  }
+}

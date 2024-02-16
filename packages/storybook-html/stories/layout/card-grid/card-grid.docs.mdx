@@ -1,0 +1,75 @@
+import { Story, Canvas } from "@storybook/addon-docs";
+import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
+
+# Card grid
+
+<StatusBadge.Development />
+<StatusBadge.DraftDoc />
+
+## Overview
+
+The `.uq-card-grid` component is the preferred way to layout `.uq-card`
+components. The markup structure is considerably simplified and easy to use.
+
+The component uses container queries to ensure cards are displayed correctly at
+all screen sizes, based on a target number of cards per row.
+
+### How-to
+
+Wrap elements directly in a `.uq-card-grid` element and choose a
+target cards per row modifier class.
+
+The child element should be a `.uq-card` or `.ud-pane` however any element that
+does not implement its own margins will work.
+
+```html
+<div class="uq-card-grid uq-card-grid--target-3x">
+  <div class="uq-card"></div>
+  <div class="uq-card"></div>
+  <div class="uq-card"></div>
+  <div class="uq-card"></div>
+</div>
+```
+
+### One per row
+
+In this target size, cards will display full width at all times.
+
+Modifier class: `.uq-card-grid--target-1x`
+
+<Canvas withSource="none">
+  <Story id="layout-card-grid--one-per-row" />
+</Canvas>
+
+### Two per row
+
+Cards will typically display two per row except on some mobile devices.
+
+Modifier class: `.uq-card-grid--target-2x`
+
+<Canvas withSource="none">
+  <Story id="layout-card-grid--two-per-row" />
+</Canvas>
+
+### Three per row
+
+Cards will display three per row on most screen sizes, two per row on smaller
+devices and one per row on mobile devices.
+
+Modifier class: `.uq-card-grid--target-3x`
+
+<Canvas withSource="none">
+  <Story id="layout-card-grid--three-per-row" />
+</Canvas>
+
+### Four per row
+
+Cards will only display at four per row on large screens in a full width
+container. Otherwise they will display a three or two per row, and one per row
+on mobile devices.
+
+Modifier class: `.uq-card-grid--target-4x`
+
+<Canvas withSource="none">
+  <Story id="layout-card-grid--four-per-row" />
+</Canvas>

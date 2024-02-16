@@ -4,7 +4,7 @@
 @use "global" as *;
 
 .uq-header {
-  background: core.$uq-purple; //linear-gradient(90deg, $uq-purple 0%, 87%, #962A8B 100%);
+  background: core.$purple-500; //linear-gradient(90deg, $uq-purple 0%, 87%, #962A8B 100%);
   display: grid;
   align-items: center;
   grid-template-columns: auto;
@@ -50,7 +50,7 @@
     grid-area: searchtoggle;
     height: 100%;
     text-align: right;
-    color: core.$uq-white;
+    color: core.$white;
 
     @media #{core.$screen-lg-up} {
       height: auto;
@@ -83,7 +83,7 @@
 
   & .nav-primary__menu-toggle {
     cursor: pointer;
-    color: core.$uq-white;
+    color: core.$white;
     position: relative;
     text-indent: -9999px;
     white-space: nowrap;
@@ -92,7 +92,7 @@
       content: "";
       background-image: url(icon-constants.get-icon(
         "standard--navigation-menu",
-        core.$uq-white
+        core.$white
       ));
       background-repeat: no-repeat;
       width: 1.5rem;
@@ -107,7 +107,7 @@
       &::before {
         background-image: url(icon-constants.get-icon(
           "standard--x",
-          core.$uq-white
+          core.$white
         ));
       }
     }
@@ -115,14 +115,14 @@
 
   & .nav-primary__search-toggle {
     cursor: pointer;
-    color: core.$uq-white;
+    color: core.$white;
     position: relative;
 
     &::before {
       content: "";
       background-image: url(icon-constants.get-icon(
         "standard--search",
-        core.$uq-white
+        core.$white
       ));
       background-repeat: no-repeat;
       width: 1.5rem;
@@ -149,7 +149,7 @@
       &::before {
         background-image: url(icon-constants.get-icon(
           "standard--x",
-          core.$uq-white
+          core.$white
         ));
       }
     }
@@ -232,7 +232,7 @@
 
   &__nav-primary-link {
     display: block;
-    color: core.$uq-white; //core.$uq-purple;
+    color: core.$white; //core.$purple-500;
     text-decoration: none;
     padding: core.$space-m core.$space-l;
     transition: background-color 0.25s, border-color 0.25s;
@@ -241,7 +241,7 @@
     border-bottom: 4px solid transparent;
 
     &:hover {
-      color: core.$uq-white;
+      color: core.$white;
       text-decoration: none;
     }
 
@@ -257,7 +257,7 @@
       content: "";
       background-image: url(icon-constants.get-icon(
         "standard--chevron-down-sml",
-        core.$uq-white
+        core.$white
       ));
       background-repeat: no-repeat;
       width: core.$space-m;
@@ -275,7 +275,7 @@
 
   .mega-menu {
     display: none;
-    background-color: core.$uq-white;
+    background-color: core.$white;
     list-style-type: none;
     margin: 0;
     padding-left: 0;
@@ -283,7 +283,7 @@
     & li {
       & a {
         padding-left: core.$space-xxxl;
-        color: core.$uq-purple;
+        color: core.$purple-500;
         text-decoration: none;
 
         &:hover {
@@ -361,7 +361,7 @@
   }
 
   &__search {
-    background: core.$uq-purple;
+    background: core.$purple-500;
     position: absolute;
     width: 100%;
     top: 3.95rem;
@@ -410,7 +410,7 @@
   }
 
   &__search-query-label {
-    color: core.$uq-white;
+    color: core.$white;
   }
 
   &__search-query-input {
@@ -420,10 +420,10 @@
 
   &__search-query-button {
     background-clip: padding-box;
-    background-color: core.$uq-white;
+    background-color: core.$white;
     border-radius: 5px;
     border: 2px solid transparent;
-    color: core.$uq-purple;
+    color: core.$purple-500;
     display: inline-block;
     font-size: core.$font-size-m;
     height: 2.75rem;
@@ -450,7 +450,7 @@
       background-size: 100%;
       background-image: url(icon-constants.get-icon(
         "standard--search",
-        core.$uq-purple
+        core.$purple-500
       ));
     }
   }
@@ -474,20 +474,20 @@
     display: inline-block;
 
     & label {
-      color: core.$uq-white;
+      color: core.$white;
     }
   }
 
   .uq-header__search-radio {
     &:checked {
-      border-color: core.$uq-white;
+      border-color: core.$white;
 
       &:focus {
-        border-color: core.$uq-white;
+        border-color: core.$white;
       }
 
       &::after {
-        background-color: core.$uq-white;
+        background-color: core.$white;
       }
     }
   }
@@ -525,7 +525,7 @@
     margin-right: auto;
 
     padding: core.$space-m core.$space-xxxl core.$space-xxl core.$space-xxxl;
-    background: core.$uq-white;
+    background: core.$white;
     box-shadow: 0 0.75rem core.$space-l rgb(24 24 24 / 20%);
     border-radius: 0 0 0.25rem 0.25rem;
 
@@ -542,11 +542,11 @@
   .megamenu__overview-link {
     display: block;
     padding: core.$space-m core.$space-none;
-    color: core.$uq-purple;
+    color: core.$purple-500;
   }
 
   .megamenu__heading {
-    color: core.$uq-purple;
+    color: core.$purple-500;
     font-weight: 500;
     padding-top: core.$space-xs;
     padding-bottom: core.$space-xs;
@@ -568,7 +568,7 @@
         & a {
           display: inline-block;
           padding-top: core.$space-s;
-          color: core.$uq-purple;
+          color: core.$purple-500;
           text-decoration: none;
         }
       }
@@ -608,7 +608,7 @@ body.no-scroll {
   overflow-y: auto;
   overflow-x: hidden;
   font-size: core.$font-size-m;
-  color: core.$uq-purple;
+  color: core.$purple-500;
 
   @media #{core.$screen-lg-up} {
     display: none !important;
@@ -627,7 +627,7 @@ body.no-scroll {
     margin: core.$space-none;
     padding-left: core.$space-none;
     list-style: none;
-    background-color: core.$uq-white;
+    background-color: core.$white;
 
     ul {
       position: absolute;
@@ -663,11 +663,11 @@ body.no-scroll {
     padding: 0.75rem core.$space-l;
     text-decoration: none;
     font-size: core.$font-size-m;
-    color: core.$uq-purple;
+    color: core.$purple-500;
     position: relative;
 
     &:hover {
-      color: core.$uq-purple;
+      color: core.$purple-500;
       background-color: #f1f1f1;
     }
   }
@@ -680,7 +680,7 @@ body.no-scroll {
       content: "";
       background-image: url(icon-constants.get-icon(
         "standard--chevron-left-sml",
-        core.$uq-purple
+        core.$purple-500
       ));
       background-repeat: no-repeat;
       width: 1.5rem;
@@ -697,7 +697,7 @@ body.no-scroll {
       content: "";
       background-image: url(icon-constants.get-icon(
         "standard--chevron-right-sml",
-        core.$uq-purple
+        core.$purple-500
       ));
       background-repeat: no-repeat;
       width: 1.5rem;
@@ -719,8 +719,8 @@ body.no-scroll {
     padding: 0.75rem core.$space-l;
     flex: 1 0 auto;
     font-size: 90%;
-    color: core.$uq-purple;
-    background-color: core.$uq-white;
+    color: core.$purple-500;
+    background-color: core.$white;
     text-transform: uppercase;
 
     border: none;
@@ -756,10 +756,10 @@ body.no-scroll {
   }
 
   .uq-header__nav-secondary-link {
-    color: core.$uq-white;
+    color: core.$white;
 
     &:hover {
-      color: core.$uq-white;
+      color: core.$white;
       background-color: #48206c;
     }
   }
@@ -769,16 +769,16 @@ body.no-scroll {
   }
 
   .uq-header__newglobal-nav-item {
-    background-color: core.$uq-purple;
+    background-color: core.$purple-500;
   }
 
   .uq-header__newglobal-nav-link {
-    color: core.$uq-white;
-    background-color: core.$uq-purple;
+    color: core.$white;
+    background-color: core.$purple-500;
 
     &:hover {
-      color: core.$uq-white;
-      background-color: core.$uq-purple;
+      color: core.$white;
+      background-color: core.$purple-500;
     }
   }
 
@@ -786,7 +786,7 @@ body.no-scroll {
     content: "";
     background-image: url(icon-constants.get-icon(
       "standard--chevron-right-sml",
-      core.$uq-white
+      core.$white
     ));
   }
 }
@@ -923,24 +923,24 @@ body.no-scroll {
 }
 
 .uq-header__search-range label {
-  color: core.$uq-white;
+  color: core.$white;
   font-weight: 400;
   display: inline-block;
   vertical-align: top;
 }
 
 input[type="radio"].uq-header__search-radio:checked {
-  border-color: core.$uq-white;
+  border-color: core.$white;
   border-width: 2px;
 }
 
 input[type="radio"].uq-header__search-radio:focus {
-  border-color: core.$uq-white;
+  border-color: core.$white;
 }
 
 input[type="radio"].uq-header__search-radio:checked::after {
   content: "";
-  background-color: core.$uq-white;
+  background-color: core.$white;
   border-radius: 50%;
   content: "";
   display: block;

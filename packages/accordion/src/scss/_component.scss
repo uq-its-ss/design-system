@@ -20,8 +20,8 @@
 
   // Accordion item.
   &__item {
-    background: $accordion-content-bg;
-    border: 1px solid $accordion-border-color;
+    background: core.$white;
+    border: 1px solid core.$grey-200;
     border-radius: 2px;
     margin-bottom: core.$space-s;
 
@@ -34,7 +34,7 @@
   &__toggle {
     -moz-appearance: none;
     -webkit-appearance: none;
-    background: $accordion-content-bg;
+    background: core.$white;
     border-radius: 0;
     border-style: solid;
     border-width: 0;
@@ -69,7 +69,7 @@
       content: "";
       background-image: url(icon-constants.get-icon(
         "standard--chevron-down",
-        core.$uq-purple
+        core.$purple-500
       ));
       background-repeat: no-repeat;
       width: core.$space-l;
@@ -85,7 +85,7 @@
     &:hover,
     &:focus {
       color: core.$text;
-      background-color: $accordion-title-bg-hover;
+      background-color: core.$grey-50;
     }
 
     &:focus {
@@ -94,19 +94,19 @@
 
     // Active toggle.
     &--active {
-      background: $accordion-content-bg;
+      background: core.$white;
 
       // Open state.
       &::before {
         background-image: url(icon-constants.get-icon(
           "standard--chevron-down",
-          core.$uq-purple
+          core.$purple-500
         ));
       }
 
       &:hover,
       &:focus {
-        background-color: $accordion-content-bg;
+        background-color: core.$white;
       }
     }
   }
@@ -189,7 +189,7 @@
 // Overrides for when displayed within wysiwyg fields. (Drupal?)
 .cke_editable {
   .uq-accordion__content {
-    border: 1px dashed $accordion-editor-outline;
+    border: 1px dashed core.$utility-500;
     display: block !important;
   }
 }

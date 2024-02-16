@@ -1,0 +1,46 @@
+{
+  "name": "@uqds/layout",
+  "version": "1.0.0-alpha.3",
+  "description": "Grid CSS",
+  "keywords": [
+    "uqds",
+    "uq",
+    "University of Queensland",
+    "design system",
+    "scss",
+    "sass",
+    "css",
+    "grid"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": {
+    "name": "University of Queensland",
+    "email": "webservices@uq.edu.au",
+    "url": "https://uq.edu.au"
+  },
+  "homepage": "https://github.com/uq-its-ss/design-system#readme",
+  "license": "ISC",
+  "directories": {
+    "lib": "src"
+  },
+  "files": [
+    "src/*",
+    "dist/*"
+  ],
+  "style": "dist/css/main.css",
+  "scripts": {
+    "prepare": "gulp -f ../../gulpfile.js --cwd=. prepare"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uq-its-ss/design-system.git"
+  },
+  "bugs": {
+    "url": "https://github.com/uq-its-ss/design-system/issues"
+  },
+  "dependencies": {
+    "@uqds/core": "^1.2.0-alpha.0"
+  }
+}

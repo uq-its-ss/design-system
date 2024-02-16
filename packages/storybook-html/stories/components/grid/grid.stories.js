@@ -2,7 +2,7 @@
 import "./grid.scss";
 
 export default {
-  title: "Layout/Grid",
+  title: "Deprecated/Grid",
   parameters: {
     layout: "fullscreen",
     previewTabs: {

@@ -1,6 +1,6 @@
 {
   "name": "storybook-html",
-  "version": "0.0.15-alpha.5",
+  "version": "1.0.0-alpha.0",
   "description": "Storybook for HTML instance for uqds component development",
   "private": true,
   "main": "index.js",
@@ -79,5 +79,8 @@
     "typescript": "^3.8.2",
     "underscore": "^1.13.2",
     "zxcvbn": "^4.4.2"
+  },
+  "dependencies": {
+    "classnames": "^2.5.1"
   }
 }

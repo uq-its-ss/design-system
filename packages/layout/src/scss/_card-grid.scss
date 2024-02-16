@@ -1,0 +1,49 @@
+@use "@uqds/core/src/scss/global" as core;
+@use "global" as *;
+
+.uq-card-grid {
+  display: grid;
+  gap: var(--layout-gap);
+  grid-template-columns: repeat(12, 1fr);
+  container-type: inline-size;
+
+  & > * {
+    grid-column: auto / span 12;
+  }
+}
+
+.uq-card-grid--target-2x {
+  & > * {
+    @container (width > #{$card-grid-container-sm}) {
+      grid-column: auto / span 6;
+    }
+  }
+}
+
+.uq-card-grid--target-3x {
+  & > * {
+    @container (width > #{$card-grid-container-sm}) {
+      grid-column: auto / span 6;
+    }
+
+    @container (width > #{$card-grid-container-md}) {
+      grid-column: auto / span 4;
+    }
+  }
+}
+
+.uq-card-grid--target-4x {
+  & > * {
+    @container (width > #{$card-grid-container-sm}) {
+      grid-column: auto / span 6;
+    }
+
+    @container (width > #{$card-grid-container-md}) {
+      grid-column: auto / span 4;
+    }
+
+    @container (width > #{$card-grid-container-lg}) {
+      grid-column: auto / span 3;
+    }
+  }
+}

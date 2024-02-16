@@ -16,35 +16,35 @@
 
   // Status tags for Documentation
   &--draftDoc {
-    border: 2px solid core.$alert-light;
+    border: 2px solid core.$error-50;
     background-color: transparent;
   }
   &--reviewDoc {
-    border: 2px solid core.$warning-light;
+    border: 2px solid core.$warning-50;
     background-color: transparent;
   }
   &--stableDoc {
-    border: 2px solid core.$success-light;
+    border: 2px solid core.$success-50;
     background-color: transparent;
   }
 
   // Status tags for components
   &--stable {
-    background-color: core.$success-light;
+    background-color: core.$success-50;
   }
 
   &--development,
   &--experiment {
-    background-color: core.$alert-light;
+    background-color: core.$error-50;
   }
 
   &--review {
-    background-color: core.$warning-light;
+    background-color: core.$warning-50;
   }
 
   &--deprecated {
-    color: core.$uq-white;
-    background-color: core.$uq-red-dark20;
+    color: core.$white;
+    background-color: core.$error-700;
   }
 
   &-addendum {

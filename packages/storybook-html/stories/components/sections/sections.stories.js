@@ -10,7 +10,7 @@ import sectionsNoPaddingHTML from "./sections-no-padding.html";
 import sectionsLargePaddingHTML from "./sections-large-padding.html";
 
 export default {
-  title: "Layout/Sections",
+  title: "Components/Sections",
   parameters: {
     layout: "fullscreen",
     previewTabs: {

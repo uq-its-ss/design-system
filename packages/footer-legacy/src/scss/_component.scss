@@ -3,7 +3,7 @@
 @use "global" as *;
 
 .legacy-footer {
-  background: core.$uq-purple-gradient;
+  background: core.$purple-gradient;
   box-sizing: border-box;
   color: $site-footer-color;
   font-family: core.$font-body;
@@ -33,7 +33,7 @@
   }
 
   &__acknowledgement {
-    border-bottom: 1px solid rgba(core.$uq-white, 0.3);
+    border-bottom: 1px solid rgba(core.$white, 0.3);
     color: $site-footer-color;
     font-family: core.$roboto;
     font-size: core.$font-size-m;

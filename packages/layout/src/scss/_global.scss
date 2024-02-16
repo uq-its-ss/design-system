@@ -1,0 +1,9 @@
+@use "@uqds/core/src/scss/global" as core;
+
+// The container max-width includes the desktop page gutters.
+$container-max-width: 32px + 1140px + 32px;
+
+// Container query sizes for card-grid.
+$card-grid-container-sm: 460px;
+$card-grid-container-md: 667px;
+$card-grid-container-lg: 799px;

@@ -58,7 +58,7 @@
     &::before {
       content: url(icon-constants.get-icon(
         "standard--arrow-left-1",
-        core.$uq-neutral
+        core.$grey-300
       ));
       width: 3rem;
       display: inline-block;
@@ -79,7 +79,7 @@
     &::after {
       content: url(icon-constants.get-icon(
         "standard--arrow-right-1",
-        core.$uq-neutral
+        core.$grey-300
       ));
       width: 3rem;
       display: inline-block;

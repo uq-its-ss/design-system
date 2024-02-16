@@ -1,12 +1,8 @@
 import "./form.scss";
-import docs from "./form-controls.mdx";
 
 export default {
   title: "Components/Form/Controls",
   parameters: {
-    docs: {
-      page: docs,
-    },
     previewTabs: {
       canvas: {
         hidden: false,

@@ -13,15 +13,9 @@ import accordionSubtitleHTML from "./accordion-subtitle.html";
 import accordionCompactHTML from "./accordion-compact.html";
 import accordionDivIsManualHTML from "./accordion-div-is-manual.html";
 
-// documentation
-import docs from "./accordion.mdx";
-
 export default {
   title: "Components/Accordion",
   parameters: {
-    docs: {
-      inlineStories: false,
-    },
     layout: "padded",
     previewTabs: {
       canvas: { hidden: false },

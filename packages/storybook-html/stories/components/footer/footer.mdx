@@ -1,9 +1,13 @@
 import { Meta, Story, Canvas } from '@storybook/blocks';
 import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
+import * as FooterStories from './footer.stories';
+
+<Meta of={FooterStories} />
 
 # Global footer
 
 <StatusBadge.Development />
+
 <StatusBadge.DraftDoc />
 
 ## Overview
@@ -12,15 +16,17 @@ The footer purpose is to provide a consistent brand, user experience and satisfy
 
 The footer consists of five main sections.
 
-- Reconciliation statement
-- Additional support and contact navigation
-- Social media links
-- Organisational details
-- Terms and conditions
+*   Reconciliation statement
+*   Additional support and contact navigation
+*   Social media links
+*   Organisational details
+*   Terms and conditions
 
 ## Default example
 
 <Canvas withToolbar>
+  {/* <Story height={339} id="components-footer--footer" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
+
   <Story height={339} id="components-footer--footer" />
 </Canvas>
 
@@ -32,6 +38,6 @@ Software as a service (SaaS) applications and templates supplied by third party 
 
 When implementation of the full footer is not possible, a simplified approach using basic elements may be appropriate. UQ purple background combined with elements of the footer.
 
-- &copy; copyright
-- ABN
-- CRICOS code
+*   © copyright
+*   ABN
+*   CRICOS code

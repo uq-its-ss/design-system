@@ -1,15 +1,9 @@
 // import styles
 import "./button.scss";
 
-// documentation
-import docs from "./button.mdx";
-
 export default {
   title: "Components/Button",
   parameters: {
-    docs: {
-      page: docs,
-    },
     layout: "padded",
     previewTabs: {
       canvas: { hidden: false },

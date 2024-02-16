@@ -6,15 +6,9 @@ import "./tabs.scss";
 // import scripts
 import { Tabs } from "@uqds/tabs/src/js/tabs";
 
-// documentation
-import docs from "./tabs.mdx";
-
 export default {
   title: "Components/Tabs",
   parameters: {
-    docs: {
-      page: docs,
-    },
     layout: "padded",
     previewTabs: {
       canvas: { hidden: false },

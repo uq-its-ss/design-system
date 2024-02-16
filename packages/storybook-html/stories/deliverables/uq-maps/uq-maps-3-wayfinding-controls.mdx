@@ -1,5 +1,8 @@
 import { Meta, Story, Canvas } from '@storybook/blocks';
 import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
+import * as UqMaps3WayfindingControlsStories from './uq-maps-3-wayfinding-controls.stories';
+
+<Meta of={UqMaps3WayfindingControlsStories} />
 
 # UQ Maps: wayfinding controls
 
@@ -16,10 +19,9 @@ Use the HTML markup provided in the example below to apply the styles from the
 provided CSS.
 
 <Canvas withSource="open" withToolbar>
-  <Story
-    height={240}
-    id="deliverables-uq-maps-3-wayfinding-controls--wayfinding-control"
-  />
+  {/* <Story height={240} id="deliverables-uq-maps-3-wayfinding-controls--wayfinding-control" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
+
+  <Story height={240} id="deliverables-uq-maps-3-wayfinding-controls--wayfinding-control" />
 </Canvas>
 
 ## 3B. With circular progress indicator
@@ -28,15 +30,15 @@ provided CSS.
 
 Using the same HTML markup as above, except we're applying the `uq-maps__wayfinding-controls--is-working`
 class to the container instead. We also have to add in some extra markup and
-scripted behaviour for the [_Material Design_][1] progress indicator. Please see example
+scripted behaviour for the [*Material Design*][1] progress indicator. Please see example
 code.
 
 <Canvas withSource="open" withToolbar>
-  <Story
-    height={240}
-    id="deliverables-uq-maps-3-wayfinding-controls--wayfinding-control-working"
-  />
+  {/* <Story height={240} id="deliverables-uq-maps-3-wayfinding-controls--wayfinding-control-working" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
+
+  <Story height={240} id="deliverables-uq-maps-3-wayfinding-controls--wayfinding-control-working" />
 </Canvas>
 
 [1]: https://material.io/components/progress-indicators#circular-progress-indicators
+
 [2]: https://material.io/develop/web/components/progress-indicator

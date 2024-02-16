@@ -4,15 +4,9 @@ import "./previous-next.scss";
 // import HTML template strings
 import previousNextHTML from "./previous-next.html";
 
-// documentation
-import docs from "./previous-next.mdx";
-
 export default {
   title: "Components/Previous next",
   parameters: {
-    docs: {
-      page: docs,
-    },
     layout: "padded",
     previewTabs: {
       canvas: { hidden: false },

@@ -1,15 +1,9 @@
 // import stylesheet
 import "./grid.scss";
 
-import docs from "./grid.mdx";
-
 export default {
   title: "Layout/Grid",
   parameters: {
-    docs: {
-      page: docs,
-      inlineStories: false,
-    },
     layout: "fullscreen",
     previewTabs: {
       canvas: { hidden: false },

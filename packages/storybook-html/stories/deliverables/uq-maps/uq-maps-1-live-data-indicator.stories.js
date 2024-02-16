@@ -1,5 +1,4 @@
 //import './uq-maps.scss';
-import docs from "./uq-maps-1-live-data-indicator.mdx";
 
 export default {
   title: "Deliverables/UQ Maps/1 Live data indicator",
@@ -7,9 +6,6 @@ export default {
     layout: "centered",
     previewTabs: {
       canvas: { hidden: false },
-    },
-    docs: {
-      page: docs,
     },
   },
 };

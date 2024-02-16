@@ -1,16 +1,16 @@
 import { Meta, Story, Canvas } from '@storybook/blocks';
 import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
+import * as ProgressionStories from './progression.stories';
+
+<Meta of={ProgressionStories} />
 
 # Progression
 
 <StatusBadge.Review />
+
 <StatusBadge.ReviewDoc />
 
-<a
-  href="https://github.com/uq-its-ss/design-system/issues"
-  class="uq-button uq-button--text"
-  target="_blank"
->
+<a href="https://github.com/uq-its-ss/design-system/issues" class="uq-button uq-button--text" target="_blank">
   Check for open issues
 </a>
 
@@ -25,6 +25,8 @@ The Progression component is a progress indicator helping the user to complete a
 In the initial instance, the component is in it's starting default stage.
 
 <Canvas sourceState="hidden">
+  {/* <Story id="components-progression--progression-initial" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
+
   <Story id="components-progression--progression-initial" />
 </Canvas>
 
@@ -48,6 +50,8 @@ In the initial instance, the component is in it's starting default stage.
 An instance when a step is done partly but not completed.
 
 <Canvas sourceState="hidden">
+  {/* <Story id="components-progression--progression-middle" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
+
   <Story id="components-progression--progression-middle" />
 </Canvas>
 
@@ -86,6 +90,8 @@ An instance when a step is done partly but not completed.
 The instance when all steps are done and completed.
 
 <Canvas sourceState="hidden">
+  {/* <Story id="components-progression--progression-final" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
+
   <Story id="components-progression--progression-final" />
 </Canvas>
 
@@ -146,7 +152,7 @@ The instance when all steps are done and completed.
 
 ## How and when to use
 
-- This component should be used only if the information is to be revealed in a progressive, step by step process.
+*   This component should be used only if the information is to be revealed in a progressive, step by step process.
 
 ### Adding sub steps between steps
 
@@ -178,9 +184,9 @@ Note that adding the class `is-complete` to the child li element denotes that th
 
 ### Breakpoints
 
-- The progression hides the step marker label at viewport widths less than 640px.
+*   The progression hides the step marker label at viewport widths less than 640px.
 
 ## Related
 
-- Previous-next component could be used in conjunction with the Progression component.
-- Tabs and accordion components are alternate ways of laying out complex relations.
+*   Previous-next component could be used in conjunction with the Progression component.
+*   Tabs and accordion components are alternate ways of laying out complex relations.

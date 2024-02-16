@@ -7,10 +7,6 @@ export default {
     layout: "fullscreen",
     viewMode: "story",
     tags: [""],
-    docs: {
-      toc: false, // 👈 Enables the table of contents
-      autodocs: "false",
-    },
     previewTabs: {
       "storybook/docs/panel": { hidden: true },
       canvas: { hidden: false },
@@ -24,10 +20,4 @@ export const HomePage = {
   },
 
   name: "Overview",
-
-  parameters: {
-    docs: {
-      page: null,
-    },
-  },
 };

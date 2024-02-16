@@ -1,16 +1,16 @@
 import { Meta, Story, Canvas } from '@storybook/blocks';
 import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
+import * as ButtonStories from './button.stories';
+
+<Meta of={ButtonStories} />
 
 # Button
 
 <StatusBadge.Stable />
+
 <StatusBadge.StableDoc />
 
-<a
-  href="https://github.com/uq-its-ss/design-system/issues"
-  class="uq-button uq-button--text"
-  target="_blank"
->
+<a href="https://github.com/uq-its-ss/design-system/issues" class="uq-button uq-button--text" target="_blank">
   Check for open issues
 </a>
 
@@ -18,8 +18,8 @@ import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
 
 The button component is used to navigate to a web link or to an anchor name tag on the same page or different page.
 
-- The button categories are primary, secondary, secondary-light and purple.
-- Each category has it's own variant styles like outline, text and expanded options to be used in different scenarios.
+*   The button categories are primary, secondary, secondary-light and purple.
+*   Each category has it's own variant styles like outline, text and expanded options to be used in different scenarios.
 
 ## Default example
 
@@ -29,6 +29,8 @@ Primary buttons are used for primary actions on a webpage. For example, submit b
 It should only appear once on a webpage.
 
 <Canvas sourceState="hidden">
+  {/* <Story id="components-button--primary" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
+
   <Story id="components-button--primary" />
 </Canvas>
 
@@ -45,6 +47,8 @@ It should only appear once on a webpage.
 Secondary button is used to highlight important actions. For example, save button on a form.
 
 <Canvas sourceState="hidden">
+  {/* <Story id="components-button--secondary" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
+
   <Story id="components-button--secondary" />
 </Canvas>
 
@@ -61,6 +65,8 @@ Secondary button is used to highlight important actions. For example, save butto
 Secondary-light button variant is used on dark backgrounds.
 
 <Canvas sourceState="hidden">
+  {/* <Story height="70px" id="components-button--secondary-light" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
+
   <Story height="70px" id="components-button--secondary-light" />
 </Canvas>
 
@@ -80,6 +86,8 @@ Secondary-light button variant is used on dark backgrounds.
 Purple button uses UQ's brand primary color, purple. It needs to be used sparingly.
 
 <Canvas sourceState="hidden">
+  {/* <Story id="components-button--purple" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
+
   <Story id="components-button--purple" />
 </Canvas>
 
@@ -94,6 +102,8 @@ Purple button uses UQ's brand primary color, purple. It needs to be used sparing
 The button sizes are normal, tiny `uq-button--tiny`, small `uq-button--small` and large `uq-button--large`
 
 <Canvas sourceState="hidden">
+  {/* <Story id="components-button--size" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
+
   <Story id="components-button--size" />
 </Canvas>
 
@@ -120,6 +130,8 @@ The button sizes are normal, tiny `uq-button--tiny`, small `uq-button--small` an
 Expand variant of the button `uq-button--expand` would extend the width of the button to full width of its parent container.
 
 <Canvas sourceState="hidden">
+  {/* <Story id="components-button--expand" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
+
   <Story id="components-button--expand" />
 </Canvas>
 
@@ -138,46 +150,58 @@ Expand variant of the button `uq-button--expand` would extend the width of the b
       <th className="uqds-table__heading">Style</th>
       <th className="uqds-table__heading">How/When to use:</th>
     </tr>
+
     <tr className="uqds-table__row">
       <td className="uqds-table__item" data-title="Category:">
         Primary
       </td>
+
       <td className="uqds-table__item" data-title="Styles:">
         Normal
       </td>
+
       <td className="uqds-table__item" data-title="How/When to use:">
         Used for the most important button and only once on the webpage.
       </td>
     </tr>
+
     <tr className="uqds-table__row">
       <td className="uqds-table__item" data-title="Category:">
         Secondary
       </td>
+
       <td className="uqds-table__item" data-title="Styles:">
         Normal
       </td>
+
       <td className="uqds-table__item" data-title="How/When to use:">
         Used for important actions like save, cancel etc.
       </td>
     </tr>
+
     <tr className="uqds-table__row">
       <td className="uqds-table__item" data-title="Category:">
         Secondary light
       </td>
+
       <td className="uqds-table__item" data-title="Styles:">
         Normal
       </td>
+
       <td className="uqds-table__item" data-title="How/When to use:">
         Used on dark backgrounds
       </td>
     </tr>
+
     <tr className="uqds-table__row">
       <td className="uqds-table__item" data-title="Category:">
         Purple
       </td>
+
       <td className="uqds-table__item" data-title="Styles:">
         Normal
       </td>
+
       <td className="uqds-table__item" data-title="How/When to use:">
         Used in UQ related events and stories
       </td>
@@ -185,8 +209,8 @@ Expand variant of the button `uq-button--expand` would extend the width of the b
   </tbody>
 </table>
 
-- Outline & text style - Used as a tertiary button to signify their lesser prominence from the normal style.
-- Expand style - Used with design discretion when layout demands.
+*   Outline & text style - Used as a tertiary button to signify their lesser prominence from the normal style.
+*   Expand style - Used with design discretion when layout demands.
 
 ### States
 

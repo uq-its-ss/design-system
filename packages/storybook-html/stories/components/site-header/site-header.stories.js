@@ -10,15 +10,9 @@ import siteHeaderNav from "@uqds/site-header/src/js/site-header-navigation";
 import siteHeaderWithSubnavHTML from "./site-header-with-subnav.html";
 import siteHeaderWithoutSubnavHTML from "./site-header-without-subnav.html";
 
-import docs from "./site-header.mdx";
-
 export default {
   title: "Components/Site header",
   parameters: {
-    docs: {
-      page: docs,
-      inlineStories: false,
-    },
     layout: "fullscreen",
     previewTabs: {
       canvas: { hidden: false },

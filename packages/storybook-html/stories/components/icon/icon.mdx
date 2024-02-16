@@ -1,12 +1,18 @@
 import { Meta, Story, Canvas } from '@storybook/blocks';
 import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
+import * as IconStories from './icon.stories';
+
+<Meta of={IconStories} />
 
 # Icons
 
 <StatusBadge.Development />
+
 <StatusBadge.DraftDoc />
 
 ## List of icons
+
+{/* <Story id="components-icon--icon" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
 
 <Story id="components-icon--icon" />
 
@@ -23,7 +29,7 @@ If you've loaded the built CSS file or the `@uqds/icon/src/scss/_component.scss`
 module into your project, you'll be able to use all the icons in a manner like
 the following example.
 
-<span className="uq-icon uq-icon--agriculture-and-environment--agriculture-machine-tractor"></span>
+<span className="uq-icon uq-icon--agriculture-and-environment--agriculture-machine-tractor" />
 
 ```html
 <!-- example.html -->
@@ -46,7 +52,7 @@ categories and icons.
 
 ### Sass mixins and functions
 
-To include _just the icons that you need_ (and therefore, reduce file size), we
+To include *just the icons that you need* (and therefore, reduce file size), we
 provide mixins and a "get" function.
 
 #### Generate specific icon classes using mixins
@@ -95,7 +101,7 @@ URL encoded string.
 
 Here's an example using the `$color` parameter.
 
-<span className="uqds-icon--green-example"></span>
+<span className="uqds-icon--green-example" />
 
 ```scss
 // example.scss

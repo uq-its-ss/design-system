@@ -1,16 +1,16 @@
 import { Meta, Story, Canvas } from '@storybook/blocks';
 import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
+import * as BreadcrumbStories from './breadcrumb.stories';
+
+<Meta of={BreadcrumbStories} />
 
 # Breadcrumb
 
 <StatusBadge.Stable />
+
 <StatusBadge.StableDoc />
 
-<a
-  href="https://github.com/uq-its-ss/design-system/issues"
-  class="uq-button uq-button--text"
-  target="_blank"
->
+<a href="https://github.com/uq-its-ss/design-system/issues" class="uq-button uq-button--text" target="_blank">
   Check for open issues
 </a>
 
@@ -19,6 +19,8 @@ import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
 Breadcrumbs are a horizontal list of links used to indicate the current page location within the information architecture (the first level always being the UQ homepage). Page links are separated by a chevron icon which indicates the level of that page relative to the page links beside it. Breadcrumbs are truncated and ellipsed (...) when the text is longer than a set width, however the current page crumb is not linked and always listed in full. UQ homepage is the base.
 
 <Canvas sourceState="hidden" withToolbar>
+  {/* <Story id="components-breadcrumb--breadcrumb" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
+
   <Story id="components-breadcrumb--breadcrumb" />
 </Canvas>
 
@@ -67,7 +69,7 @@ Breadcrumbs are a horizontal list of links used to indicate the current page loc
 
 ### Truncation
 
-When exceeding 4 breadcrumbs - the current page, parent, parent's parent and home crumbs will be shown with the additional crumbs collapsed behind an expand link. The full breadcrumb trail can then be viewed by clicking the expand crumb. _Note: only expand functionality is included, and cannot be collapsed again without a page refresh._
+When exceeding 4 breadcrumbs - the current page, parent, parent's parent and home crumbs will be shown with the additional crumbs collapsed behind an expand link. The full breadcrumb trail can then be viewed by clicking the expand crumb. *Note: only expand functionality is included, and cannot be collapsed again without a page refresh.*
 
 ### Wrapper
 
@@ -85,9 +87,9 @@ Wrap the `nav.uq-breadcrumb` element in a `div.uq-breadcrumb__container` element
 
 ## How and when to use
 
-- The breadcrumb reflects the information architecture of a page, not a historical navigation trail.
-- The component displays on a page once a user has navigated away from the home page to provide a navigation path back to the home and parent level pages.
-- The breadcrumb lists the current page however this should not be linked.
+*   The breadcrumb reflects the information architecture of a page, not a historical navigation trail.
+*   The component displays on a page once a user has navigated away from the home page to provide a navigation path back to the home and parent level pages.
+*   The breadcrumb lists the current page however this should not be linked.
 
 ## Accessibility
 

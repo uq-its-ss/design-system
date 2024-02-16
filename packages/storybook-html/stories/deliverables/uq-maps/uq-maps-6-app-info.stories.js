@@ -1,5 +1,4 @@
 import "./uq-maps.scss";
-import docs from "./uq-maps-6-app-info.mdx";
 
 export default {
   title: "Deliverables/UQ Maps/6 App info drawer",
@@ -23,10 +22,6 @@ export default {
         },
       ],
       default: "Static map",
-    },
-    docs: {
-      page: docs,
-      inlineStories: false,
     },
   },
 };

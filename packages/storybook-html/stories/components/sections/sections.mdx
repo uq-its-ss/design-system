@@ -1,9 +1,13 @@
 import { Meta, Story, Canvas } from '@storybook/blocks';
 import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
+import * as SectionsStories from './sections.stories';
+
+<Meta of={SectionsStories} />
 
 # Sections
 
 <StatusBadge.Stable />
+
 <StatusBadge.StableDoc />
 
 ## Overview
@@ -15,6 +19,8 @@ Sections are a layout style that wrap content in a white or grey background with
 The default section displays left-aligned content, medium top and bottom padding, on a white background contained to the page width.
 
 <Canvas sourceState="hidden">
+  {/* <Story id="layout-sections--sections-default" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
+
   <Story id="layout-sections--sections-default" />
 </Canvas>
 
@@ -40,6 +46,8 @@ The variants can be used in isolation or combined. For example if you would like
 Add class `uq-section--centered` to centre-align the content.
 
 <Canvas sourceState="hidden">
+  {/* <Story id="layout-sections--sections-centered" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
+
   <Story id="layout-sections--sections-centered" />
 </Canvas>
 
@@ -61,6 +69,8 @@ Add class `uq-section--centered` to centre-align the content.
 Add class `uq-section--narrow` to contain the content to a narrow container.
 
 <Canvas sourceState="hidden">
+  {/* <Story id="layout-sections--sections-narrow" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
+
   <Story id="layout-sections--sections-narrow" />
 </Canvas>
 
@@ -82,6 +92,8 @@ Add class `uq-section--narrow` to contain the content to a narrow container.
 Add class `uq-section--shaded` to apply a light-grey background to the section.
 
 <Canvas sourceState="hidden">
+  {/* <Story id="layout-sections--sections-shaded" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
+
   <Story id="layout-sections--sections-shaded" />
 </Canvas>
 
@@ -104,17 +116,19 @@ Default sections have medium top and bottom padding. The following variants prov
 
 **Top padding:** Set the amount of padding at the top of the section:
 
-- No top padding - `uq-section--padding-top-none`
-- Large top padding - `uq-section--padding-top-large`
+*   No top padding - `uq-section--padding-top-none`
+*   Large top padding - `uq-section--padding-top-large`
 
 **Bottom padding:** Set the amount of padding at the bottom of the section:
 
-- No bottom padding - `uq-section--padding-bottom-none`
-- Large bottom padding - `uq-section--padding-bottom-large`
+*   No bottom padding - `uq-section--padding-bottom-none`
+*   Large bottom padding - `uq-section--padding-bottom-large`
 
 #### No padding
 
 <Canvas sourceState="hidden">
+  {/* <Story id="layout-sections--sections-no-padding" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
+
   <Story id="layout-sections--sections-no-padding" />
 </Canvas>
 
@@ -137,6 +151,8 @@ Default sections have medium top and bottom padding. The following variants prov
 #### Large padding
 
 <Canvas sourceState="hidden">
+  {/* <Story id="layout-sections--sections-large-padding" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
+
   <Story id="layout-sections--sections-large-padding" />
 </Canvas>
 

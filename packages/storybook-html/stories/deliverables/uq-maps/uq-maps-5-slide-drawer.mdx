@@ -1,5 +1,8 @@
 import { Meta, Story, Canvas } from '@storybook/blocks';
 import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
+import * as UqMaps5SlideDrawerStories from './uq-maps-5-slide-drawer.stories';
+
+<Meta of={UqMaps5SlideDrawerStories} />
 
 # UQ Maps: slide drawer
 
@@ -13,5 +16,7 @@ this should be the entire screen.
 ### Basic usage
 
 <Canvas withSource="open" withToolbar>
+  {/* <Story height={600} id="deliverables-uq-maps-5-slide-drawer--expanded" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
+
   <Story height={600} id="deliverables-uq-maps-5-slide-drawer--expanded" />
 </Canvas>

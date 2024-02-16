@@ -1,7 +1,5 @@
 import { useEffect } from "@storybook/addons";
 import { MDCCircularProgress } from "@material/circular-progress";
-//import './uq-maps.scss';
-import docs from "./uq-maps-2-search-box.mdx";
 
 export default {
   title: "Deliverables/UQ Maps/2 Search field",
@@ -24,10 +22,6 @@ export default {
         },
       ],
       default: "Static map",
-    },
-    docs: {
-      page: docs,
-      inlineStories: false,
     },
   },
 };

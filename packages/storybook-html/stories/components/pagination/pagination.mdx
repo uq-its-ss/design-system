@@ -1,11 +1,13 @@
 import { Meta, Story, Canvas } from '@storybook/blocks';
 import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
+import * as PaginationStories from './pagination.stories';
 
-<Meta title="Components/Pagination/Pagination states" />
+<Meta of={PaginationStories} />
 
 # Pagination
 
 <StatusBadge.Review />
+
 <StatusBadge.DraftDoc />
 
 Pagination, also known as paging, is the process of dividing a document into discrete pages, either electronic pages or printed pages.
@@ -18,18 +20,24 @@ If the component is displaying the last page, the links 'last' and 'next' are re
 ### Pagination first
 
 <Canvas sourceState="hidden">
+  {/* <Story id="components-pagination--pagination-first" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
+
   <Story id="components-pagination--pagination-first" />
 </Canvas>
 
 ### Pagination middle
 
 <Canvas sourceState="hidden">
+  {/* <Story id="components-pagination--pagination-middle" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
+
   <Story id="components-pagination--pagination-middle" />
 </Canvas>
 
 ### Pagination last
 
 <Canvas sourceState="hidden">
+  {/* <Story id="components-pagination--pagination-last" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
+
   <Story id="components-pagination--pagination-last" />
 </Canvas>
 

@@ -1,9 +1,13 @@
 import { Meta, Story, Canvas } from '@storybook/blocks';
 import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
+import * as FormControlsStories from './form-controls.stories';
+
+<Meta of={FormControlsStories} />
 
 # Form
 
 <StatusBadge.Development />
+
 <StatusBadge.DraftDoc />
 
 ## Overview
@@ -11,11 +15,11 @@ import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
 Forms allow users to interact with your website or web
 application by providing some information. For example,
 
-- entering login details
-- setting a new password
-- selecting search filters
-- customising site preferences
-- and more.
+*   entering login details
+*   setting a new password
+*   selecting search filters
+*   customising site preferences
+*   and more.
 
 ## Accessibility requirements
 
@@ -28,7 +32,7 @@ of both in the basic setup per control.
 ### Inline validation feedback is announced and associated with a control
 
 Creating an excellent form-filling experience, for the most part, involves using
-effective [_form validation_][2] practices where it is helpful. And, as part of
+effective [*form validation*][2] practices where it is helpful. And, as part of
 good client-side form validation, we should display useful inline feedback to guide users when
 the need arises. So then, **how do we ensure that this feedback is also
 accessible?** On the client-side, we can implement form validation in two ways:
@@ -43,7 +47,7 @@ associate the feedback with the affected control using the `aria-describedby`
 attribute. In our code examples, we'll be demonstrating the usage of
 `aria-live="polite"`, `aria-invalid`, and `aria-describedby` attributes.
 
----
+***
 
 You can also review your form with [this checklist by the A11Y project][6] if
 you are unsure that you comply with Web Content Accessibility Guidelines (WCAG)
@@ -56,7 +60,9 @@ recommendations and examples.
 
 Input for freestyle text entry. Use when asking for open-ended, single-line
 answers from your users. E.g. "first name", "street address". For multi-line
-answers, consider using a _text area_.
+answers, consider using a *text area*.
+
+{/* <Story id="components-form-controls--input-text" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
 
 <Story id="components-form-controls--input-text" />
 
@@ -89,6 +95,8 @@ answers, consider using a _text area_.
 
 #### Error feedback
 
+{/* <Story id="components-form-controls--input-text-error" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
+
 <Story id="components-form-controls--input-text-error" />
 
 ```html
@@ -114,6 +122,8 @@ Success feedback on an individual form field should be used selectively and only
 when a user truly requires extra guidance. E.g. where there are strict
 formatting or unique value requirements.
 
+{/* <Story id="components-form-controls--input-text-success" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
+
 <Story id="components-form-controls--input-text-success" />
 
 ```html
@@ -135,6 +145,8 @@ formatting or unique value requirements.
 #### Inline label and input field
 
 Useful for contextual menus e.g. filter search results based on keywords.
+
+{/* <Story id="components-form-controls--input-text-inline" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
 
 <Story id="components-form-controls--input-text-inline" />
 
@@ -164,6 +176,8 @@ panels. For search fields, consider setting `type="search"`.
 > Note: there's still an expectation that there's an associated label whether
 > visually hidden or not.
 
+{/* <Story id="components-form-controls--input-text-large" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
+
 <Story id="components-form-controls--input-text-large" />
 
 Apply the `input--large` class name to the `input` element like so:
@@ -183,6 +197,8 @@ Apply the `input--large` class name to the `input` element like so:
 The select field, used to choose a single option from a list. If multiple
 options can be selected at the same time, consider using multiple checkboxes
 instead.
+
+{/* <Story id="components-form-controls--select" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
 
 <Story id="components-form-controls--select" />
 
@@ -218,6 +234,8 @@ instead.
 
 #### Error feedback
 
+{/* <Story id="components-form-controls--select-error" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
+
 <Story id="components-form-controls--select-error" />
 
 ```html
@@ -242,6 +260,8 @@ instead.
 ```
 
 #### Inline label and select
+
+{/* <Story id="components-form-controls--select-inline" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
 
 <Story id="components-form-controls--select-inline" />
 
@@ -279,6 +299,8 @@ Apply the `label--inline` class name to the `label` element like so:
 Use to provided users with multiple yes or no options. For example, accepting
 terms and conditions and opting into communications.
 
+{/* <Story id="components-form-controls--checkbox" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
+
 <Story id="components-form-controls--checkbox" />
 
 #### Basic setup
@@ -310,6 +332,8 @@ terms and conditions and opting into communications.
 
 #### Error feedback
 
+{/* <Story id="components-form-controls--checkbox-error" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
+
 <Story id="components-form-controls--checkbox-error" />
 
 ```html
@@ -335,7 +359,9 @@ terms and conditions and opting into communications.
 ### Radio buttons
 
 Use to provide users with up to three, mutually exclusive options. If you have
-more than three options, please consider a _select_ control instead.
+more than three options, please consider a *select* control instead.
+
+{/* <Story id="components-form-controls--radio" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
 
 <Story id="components-form-controls--radio" />
 
@@ -389,6 +415,8 @@ Use a `fieldset` and `legend` to group and label your radio options.
 
 #### Error feedback
 
+{/* <Story id="components-form-controls--radio-error" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
+
 <Story id="components-form-controls--radio-error" />
 
 ```html
@@ -422,13 +450,19 @@ Use a `fieldset` and `legend` to group and label your radio options.
 
 ### Text area
 
+{/* <Story id="components-form-controls--text-area" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
+
 <Story id="components-form-controls--text-area" />
 
 ### Number input
 
+{/* <Story id="components-form-controls--input-number" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
+
 <Story id="components-form-controls--input-number" />
 
 ### Password input
+
+{/* <Story id="components-form-controls--input-password" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
 
 <Story id="components-form-controls--input-password" />
 
@@ -484,13 +518,19 @@ better when used within search filters and other discrete content controls.
 
 ## Related
 
-- [Error summary][7]
-- [Form validation][1]
+*   [Error summary][7]
+*   [Form validation][1]
 
 [1]: /?path=/docs/patterns-form-validation--primary
+
 [2]: https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation
+
 [3]: https://developer.mozilla.org/en-US/docs/Learn/Forms/HTML5_input_types
+
 [4]: https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions
+
 [5]: https://www.w3.org/WAI/tutorials/forms/labels/
+
 [6]: https://www.a11yproject.com/checklist/#forms
+
 [7]: /?path=/docs/components-form-error-summary--error-summary

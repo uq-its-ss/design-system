@@ -1,16 +1,20 @@
 import { Meta, Story, Canvas } from '@storybook/blocks';
 import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
+import * as HeroStories from './hero.stories';
 
-<Meta title="Components/Hero/All" />
+<Meta of={HeroStories} />
 
 # Hero
 
 <StatusBadge.Development />
+
 <StatusBadge.DraftDoc />
 
 ### Default hero
 
 <Canvas sourceState="hidden" withToolbar>
+  {/* <Story id="components-hero--default-hero" height={300} /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
+
   <Story id="components-hero--default-hero" height={300} />
 </Canvas>
 
@@ -27,6 +31,8 @@ import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
 ### Feature image hero
 
 <Canvas sourceState="hidden" withToolbar>
+  {/* <Story id="components-hero--feature-hero" height={505} /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
+
   <Story id="components-hero--feature-hero" height={505} />
 </Canvas>
 
@@ -61,6 +67,8 @@ import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
 ### Large variant
 
 <Canvas sourceState="hidden" withToolbar>
+  {/* <Story id="components-hero--large-hero" height={600} /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
+
   <Story id="components-hero--large-hero" height={600} />
 </Canvas>
 

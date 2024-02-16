@@ -1,7 +1,8 @@
 import { Meta, Story, Canvas } from '@storybook/blocks';
 import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
+import * as PageHeaderStories from './page-header.stories';
 
-<Meta title="Components/Page header/All" />
+<Meta of={PageHeaderStories} />
 
 # Page header
 
@@ -11,6 +12,8 @@ The Page header component is used to display the page title or the breadcrumbs o
 The default background color is set to light grey to distinguish it from the page contents.
 
 <Canvas sourceState="hidden">
+  {/* <Story id="components-page-header--page-header" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
+
   <Story id="components-page-header--page-header" />
 </Canvas>
 

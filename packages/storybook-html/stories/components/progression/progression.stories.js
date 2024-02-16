@@ -4,16 +4,9 @@ import "./progression.scss";
 // import HTML template strings
 import progressionHTML from "./progression.html";
 
-// documentation
-import docs from "./progression.mdx";
-
 export default {
   title: "Components/Progression",
   parameters: {
-    docs: {
-      page: docs,
-      inlineStories: false,
-    },
     previewTabs: {
       canvas: { hidden: false },
     },

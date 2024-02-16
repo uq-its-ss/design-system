@@ -8,8 +8,8 @@ import { Meta, Story, Preview } from '@storybook/blocks';
 
 The goal of the browser support plan is to ensure the accessibility of content, no matter how the user is choosing to access it. The focus of the browser support plan is to:
 
-- Outline a framework for managing lists of supported browsers;
-- Provide best-practice development advice and testing protocols to help ensure websites and web applications can support listed browsers.
+*   Outline a framework for managing lists of supported browsers;
+*   Provide best-practice development advice and testing protocols to help ensure websites and web applications can support listed browsers.
 
 ## Support levels
 
@@ -21,40 +21,40 @@ Typically expected to cover only the **latest version** of browsers. Users of th
 
 We define technology layers as:
 
-- Content
-- Presentation
-- Behaviour
+*   Content
+*   Presentation
+*   Behaviour
 
 Browsers covered by full support:
 
-- Chrome
-- Internet Explorer
-- Safari
-- Firefox
-- Edge
+*   Chrome
+*   Internet Explorer
+*   Safari
+*   Firefox
+*   Edge
 
 ### Reduced support
 
 Reduced support is reserved for less-capable browsers ( **versions 2 - 3 years old** ) that persist in usage statistics.
 
-- Visually essential content and navigation should have little to no degradation (especially when used to convey crucial interface elements)
-- Basic styling elements should degrade gracefully
-- Scripts should reduce functionality when needed.
+*   Visually essential content and navigation should have little to no degradation (especially when used to convey crucial interface elements)
+*   Basic styling elements should degrade gracefully
+*   Scripts should reduce functionality when needed.
 
 Browsers covered by reduced support:
 
-- Chrome
-- Internet Explorer
-- Safari
-- Firefox
-- Edge
+*   Chrome
+*   Internet Explorer
+*   Safari
+*   Firefox
+*   Edge
 
 ### Unspecified support
 
 Unspecified covers anything not in Full or Reduced support.
 
-- Aim for the best possible graceful degradation.
-- Where possible and time permitting, identified content and presentational issues should be addressed.
+*   Aim for the best possible graceful degradation.
+*   Where possible and time permitting, identified content and presentational issues should be addressed.
 
 There is no requirement to develop for browsers where the software developer has stopped providing technical support or security updates, Users in these instances should be directed to discontinue their usage and seek technical support in upgrading browsers. Upgrade messages may be the most appropriate solution where users have out of date browsers and auto-update disabled.
 
@@ -62,10 +62,10 @@ There is no requirement to develop for browsers where the software developer has
 
 Analytics identifies the following operating systems as statistically significant and should be used in combination with browsers to test page compliance.
 
-- Windows
-- Macintosh (Mac OS)
-- iOS
-- Android
+*   Windows
+*   Macintosh (Mac OS)
+*   iOS
+*   Android
 
 Refer to the following section for more detailed information on operating system versions [UQ statistics](#UQ-statistics)
 
@@ -77,20 +77,20 @@ If a solution requires significant backward compatibility, there should be discu
 
 Where graceful degradation does not provide an acceptable solution it may be possible to use modern techniques:
 
-- CSS preprocessors
-- polyfills
-- alerts/upgrade messages or modals
-- Alternative ways to consume the information
+*   CSS preprocessors
+*   polyfills
+*   alerts/upgrade messages or modals
+*   Alternative ways to consume the information
 
 ### Audience
 
 Every site has an audience and you should investigate yours to see whether it has particular characteristics that you need to be aware of. Do you have existing data for the browsers and devices that your audience has been using already? If so, analyse it to see if you can identify any patterns in usage, or any combinations of:
 
-- operating system
-- browser
-- browser version
-- screen size/resolution
-- mobile device
+*   operating system
+*   browser
+*   browser version
+*   screen size/resolution
+*   mobile device
 
 This data may sometimes support the case for de-prioritising or justifying certain development work.
 
@@ -120,23 +120,23 @@ What you'll need to check depends on your site and content.
 
 A small, low value page or template, should at minimum have been tested against the following.
 
-- A Windows operating system based browser from “Full Support” list, i.e. Chrome Browser (latest Version).
-- Windows operating system (Version 7 or Latest).
+*   A Windows operating system based browser from “Full Support” list, i.e. Chrome Browser (latest Version).
+*   Windows operating system (Version 7 or Latest).
 
 Ideally this will be compared to at least one other browser and operating system combination from the “Full Support” list.
 
 Aim to cover as many browser and operating systems as you can. Pages should also pass other University standards.
 
-- Markup Validation
-- Accessibility
+*   Markup Validation
+*   Accessibility
 
 #### Focus on
 
-- ** Base Functionality:** Are links, dialogs, menus available as required
-- ** User Interface:** Does the appearance match the specification
-- ** Graceful Degradation:** Does the experience adjust between desktop and mobile browsers
-- ** Responsiveness:** Does the site adjust in mobile browsers based on criteria such as resolution, rotation, and location
-- ** Performance:** Does the site load within a suitable time frame, whilst allowing for network connection speed
+*   \*\* Base Functionality:\*\* Are links, dialogs, menus available as required
+*   \*\* User Interface:\*\* Does the appearance match the specification
+*   \*\* Graceful Degradation:\*\* Does the experience adjust between desktop and mobile browsers
+*   \*\* Responsiveness:\*\* Does the site adjust in mobile browsers based on criteria such as resolution, rotation, and location
+*   \*\* Performance:\*\* Does the site load within a suitable time frame, whilst allowing for network connection speed
 
 ### Recommended testing
 
@@ -144,6 +144,7 @@ All listed browsers should be tested on at least one operating system or emulati
 
 <table>
   <caption>Browser & OS</caption>
+
   <thead>
     <tr>
       <th>Windows</th>
@@ -152,6 +153,7 @@ All listed browsers should be tested on at least one operating system or emulati
       <th>Android</th>
     </tr>
   </thead>
+
   <tbody>
     <tr>
       <td>Chrome</td>
@@ -159,24 +161,28 @@ All listed browsers should be tested on at least one operating system or emulati
       <td>Chrome</td>
       <td>Chrome</td>
     </tr>
+
     <tr>
       <td>Internet Explorer</td>
       <td>N/A</td>
       <td>N/A</td>
       <td>N/A</td>
     </tr>
+
     <tr>
       <td>N/A</td>
       <td>Safari</td>
       <td>Safari</td>
       <td>N/A</td>
     </tr>
+
     <tr>
       <td>Firefox</td>
       <td>Firefox</td>
       <td>N/A</td>
       <td>N/A</td>
     </tr>
+
     <tr>
       <td>Edge</td>
       <td>N/A</td>
@@ -190,6 +196,7 @@ Versions of operating systems can also introduce variations in the rendering of 
 
 <table>
   <caption>Browser & OS Version</caption>
+
   <thead>
     <tr>
       <th>Windows 10</th>
@@ -198,6 +205,7 @@ Versions of operating systems can also introduce variations in the rendering of 
       <th>Windows XP</th>
     </tr>
   </thead>
+
   <tbody>
     <tr>
       <td>Chrome</td>
@@ -232,15 +240,18 @@ Analytics: https://uq.edu.au | 01 Mar 2016 - 07 Mar 2017 (Sessions)
 
 <table>
   <caption>Browser & OS</caption>
+
   <thead>
     <tr>
-      <th></th>
+      <th />
+
       <th>Windows</th>
       <th>Macintosh</th>
       <th>iOS</th>
       <th>Android</th>
     </tr>
   </thead>
+
   <tbody>
     <tr>
       <th>Chrome</th>
@@ -249,6 +260,7 @@ Analytics: https://uq.edu.au | 01 Mar 2016 - 07 Mar 2017 (Sessions)
       <td>31,251</td>
       <td>251,165</td>
     </tr>
+
     <tr>
       <th>Internet Explorer</th>
       <td>1,011,160</td>
@@ -256,6 +268,7 @@ Analytics: https://uq.edu.au | 01 Mar 2016 - 07 Mar 2017 (Sessions)
       <td>N/A</td>
       <td>N/A</td>
     </tr>
+
     <tr>
       <th>Safari</th>
       <td>N/A</td>
@@ -263,6 +276,7 @@ Analytics: https://uq.edu.au | 01 Mar 2016 - 07 Mar 2017 (Sessions)
       <td>452,158</td>
       <td>N/A</td>
     </tr>
+
     <tr>
       <th>Firefox</th>
       <td>700,796</td>
@@ -270,6 +284,7 @@ Analytics: https://uq.edu.au | 01 Mar 2016 - 07 Mar 2017 (Sessions)
       <td>N/A</td>
       <td>N/A</td>
     </tr>
+
     <tr>
       <th>Edge</th>
       <td>N/A</td>
@@ -280,7 +295,7 @@ Analytics: https://uq.edu.au | 01 Mar 2016 - 07 Mar 2017 (Sessions)
   </tbody>
 </table>
 
-> **_Notes:_**
+> ***Notes:***
 > 24 Operating systems and 92 Browsers are identified in the statistics, Stats past the ones displayed are not of a volume to warrant inclusion.
 > N/A indicates combination is not available or not listed in the stats.
 
@@ -288,15 +303,18 @@ Analytics: https://uq.edu.au | 01 Mar 2016 - 07 Mar 2017 (Sessions)
 
 <table>
   <caption>Browser & OS</caption>
+
   <thead>
     <tr>
-      <th></th>
+      <th />
+
       <th>Windows 10</th>
       <th>Windows 7</th>
       <th>Windows 8.1</th>
       <th>Windows XP</th>
     </tr>
   </thead>
+
   <tbody>
     <tr>
       <th>Chrome</th>
@@ -310,13 +328,13 @@ Analytics: https://uq.edu.au | 01 Mar 2016 - 07 Mar 2017 (Sessions)
 
 ## References
 
-- Queensland Government Browser Support List (2012-2014 Audit)
-- Gov.UK Browser Support Standards
-- 31 Ways to Spend Less Time on Manual Cross–Browser
+*   Queensland Government Browser Support List (2012-2014 Audit)
+*   Gov.UK Browser Support Standards
+*   31 Ways to Spend Less Time on Manual Cross–Browser
 
 ### Additional notes
 
-Microsoft will end technical support and security updates for older versions of Internet Explorer 
+Microsoft will end technical support and security updates for older versions of Internet Explorer
 [http://www.news.com.au/technology/online/security/microsoft-will-end-technical-support-and-security-updates-for-older-versions-of-internet-explorer/news-story/52896819a4236fa5f8b00de0f508527d](http://www.news.com.au/technology/online/security/microsoft-will-end-technical-support-and-security-updates-for-older-versions-of-internet-explorer/news-story/52896819a4236fa5f8b00de0f508527d)
 
 Microsoft has provided Enterprise Mode for IE 11 to allow users to run the browser in compatibility mode when they visit a site that works with older versions of IE. It is also possible to give users the ability to enable Enterprise Mode from the Tools menu in the browser.

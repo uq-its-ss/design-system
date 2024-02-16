@@ -1,9 +1,13 @@
 import { Meta, Story, Canvas } from '@storybook/blocks';
 import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
+import * as SideNavStories from './side-nav.stories';
+
+<Meta of={SideNavStories} />
 
 # Side nav
 
 <StatusBadge.Development />
+
 <StatusBadge.DraftDoc />
 
 ## Overview
@@ -15,6 +19,8 @@ A vertical list of links for site navigation typically placed next to the body c
 ### Single-level
 
 <Canvas sourceState="hidden">
+  {/* <Story id="components-side-nav--side-nav-single-level" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
+
   <Story id="components-side-nav--side-nav-single-level" />
 </Canvas>
 
@@ -46,6 +52,8 @@ A vertical list of links for site navigation typically placed next to the body c
 ### Multi-level
 
 <Canvas sourceState="hidden">
+  {/* <Story id="components-side-nav--side-nav-multi-level" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
+
   <Story id="components-side-nav--side-nav-multi-level" />
 </Canvas>
 
@@ -89,8 +97,8 @@ A vertical list of links for site navigation typically placed next to the body c
 
 ## When and how to use
 
-- Use when there is related links to the webpage content.
-- Use a grid layout to place the side nav component next to the webpage content.
+*   Use when there is related links to the webpage content.
+*   Use a grid layout to place the side nav component next to the webpage content.
 
 ## Accessibility
 

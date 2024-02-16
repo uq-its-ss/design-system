@@ -5,15 +5,9 @@ import "./blockquote.scss";
 import blockquoteHTML from "./blockquote.html";
 import blockquoteLightHTML from "./blockquote-light.html";
 
-// documentation
-import docs from "./blockquote.mdx";
-
 export default {
   title: "Components/Blockquote",
   parameters: {
-    docs: {
-      page: docs,
-    },
     layout: "padded",
     previewTabs: {
       canvas: { hidden: false },

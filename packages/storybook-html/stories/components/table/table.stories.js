@@ -9,15 +9,9 @@ import tableIrregularHeadersHTML from "./table-irregular-headers.html";
 import tableMultiLevelHeadersHTML from "./table-multi-level-headers.html";
 import tableCardHTML from "./table-card.html";
 
-// documentation
-import docs from "./table.mdx";
-
 export default {
   title: "Components/Table",
   parameters: {
-    docs: {
-      page: docs,
-    },
     layout: "padded",
   },
   previewTabs: {

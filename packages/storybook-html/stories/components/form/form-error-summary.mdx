@@ -1,10 +1,8 @@
 import { Meta, Story, Canvas } from '@storybook/blocks';
 import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
+import * as FormErrorSummaryStories from './form-error-summary.stories';
 
-<Meta
-  title="Components/Form/Error summary"
-  parameters={{ previewTabs: { canvas: { hidden: false } } }}
-/>
+<Meta of={FormErrorSummaryStories} />
 
 # Error summary
 
@@ -36,13 +34,13 @@ export const ErrorSummary = () => {
   `;
 };
 
-<Story name="Error summary">{ErrorSummary.bind({})}</Story>
+<Story of={FormErrorSummaryStories.ErrorSummary_} />
 
 ## Accessibility requirements
 
 Using `role="alert"` on an element implies `aria-live="assertive"` as well as
 `aria-atomic="true"` (W3C, "[Alert Example](https://www.w3.org/TR/wai-aria-practices-1.1/examples/alert/alert.html.)",
-2019). So if we want screen readers to read aloud error summaries in full, they
+2019\). So if we want screen readers to read aloud error summaries in full, they
 should be injected into an element with this specialised role active.
 
 ## Basic setup
@@ -73,5 +71,5 @@ should be injected into an element with this specialised role active.
 
 ## Related
 
-- [Form controls](/?path=/docs/components-form-controls--input-text)
-- [Form validation](/?path=/docs/patterns-form-validation--primary)
+*   [Form controls](/?path=/docs/components-form-controls--input-text)
+*   [Form validation](/?path=/docs/patterns-form-validation--primary)

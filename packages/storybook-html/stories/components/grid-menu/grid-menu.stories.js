@@ -1,18 +1,12 @@
 // import styles
 import "./grid-menu.scss";
 
-// import docs
-import docs from "./grid-menu.mdx";
-
 // import HTML template strings
 import gridMenuHTML from "./grid-menu.html";
 
 export default {
   title: "Components/Grid menu",
   parameters: {
-    docs: {
-      page: docs,
-    },
     layout: "padded",
     previewTabs: {
       canvas: { hidden: false },

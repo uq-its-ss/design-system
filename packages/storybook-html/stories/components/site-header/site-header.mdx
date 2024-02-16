@@ -1,16 +1,16 @@
 import { Meta, Story, Canvas } from '@storybook/blocks';
 import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
+import * as SiteHeaderStories from './site-header.stories';
+
+<Meta of={SiteHeaderStories} />
 
 # Site header
 
 <StatusBadge.Stable />
+
 <StatusBadge.StableDoc />
 
-<a
-  href="https://github.com/uq-its-ss/design-system/issues"
-  class="uq-button uq-button--text"
-  target="_blank"
->
+<a href="https://github.com/uq-its-ss/design-system/issues" class="uq-button uq-button--text" target="_blank">
   Check for open issues
 </a>
 
@@ -25,6 +25,8 @@ The site header component is comprised of the site title, the site navigation, a
 A site header with a site title, a site utility, and a two-level site navigation.
 
 <Canvas withToolbar>
+  {/* <Story height={505} id="components-site-header--site-header-with-subnav" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
+
   <Story height={505} id="components-site-header--site-header-with-subnav" />
 </Canvas>
 
@@ -76,6 +78,8 @@ Slider mobile menu
 A site header with site title and a one-level site navigation.
 
 <Canvas withToolbar>
+  {/* <Story height={200} id="components-site-header--site-header-without-subnav" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
+
   <Story height={200} id="components-site-header--site-header-without-subnav" />
 </Canvas>
 
@@ -109,9 +113,9 @@ The component includes a small space for secondary actions. This section is not 
 
 **Examples include:**
 
-- Future Students dropdown for domestic and international.
-- UQ Maps, expand to fill whole screen
-- UQ researchers shortlist
+*   Future Students dropdown for domestic and international.
+*   UQ Maps, expand to fill whole screen
+*   UQ researchers shortlist
 
 ## Accessibility
 

@@ -9,14 +9,9 @@ import sectionsShadedHTML from "./sections-shaded.html";
 import sectionsNoPaddingHTML from "./sections-no-padding.html";
 import sectionsLargePaddingHTML from "./sections-large-padding.html";
 
-import docs from "./sections.mdx";
-
 export default {
   title: "Layout/Sections",
   parameters: {
-    docs: {
-      page: docs,
-    },
     layout: "fullscreen",
     previewTabs: {
       canvas: { hidden: false },

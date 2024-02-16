@@ -1,16 +1,16 @@
 import { Meta, Story, Canvas } from '@storybook/blocks';
 import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
+import * as AlertStories from './alert.stories';
+
+<Meta of={AlertStories} />
 
 # Alert
 
 <StatusBadge.Review />
+
 <StatusBadge.ReviewDoc />
 
-<a
-  href="https://github.com/uq-its-ss/design-system/issues"
-  class="uq-button uq-button--text"
-  target="_blank"
->
+<a href="https://github.com/uq-its-ss/design-system/issues" class="uq-button uq-button--text" target="_blank">
   Check for open issues
 </a>
 
@@ -25,6 +25,8 @@ Page alerts are light variants of alerts that are used locally on pages along wi
 ### Info (Default example)
 
 <Canvas sourceState="hidden">
+  {/* <Story id="components-alert--alert-info" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
+
   <Story id="components-alert--alert-info" />
 </Canvas>
 
@@ -42,6 +44,8 @@ Page alerts are light variants of alerts that are used locally on pages along wi
 ### Success
 
 <Canvas sourceState="hidden">
+  {/* <Story id="components-alert--alert-success" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
+
   <Story id="components-alert--alert-success" />
 </Canvas>
 
@@ -59,6 +63,8 @@ Page alerts are light variants of alerts that are used locally on pages along wi
 ### Warning
 
 <Canvas sourceState="hidden">
+  {/* <Story id="components-alert--alert-warning" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
+
   <Story id="components-alert--alert-warning" />
 </Canvas>
 
@@ -76,6 +82,8 @@ Page alerts are light variants of alerts that are used locally on pages along wi
 ### Error
 
 <Canvas sourceState="hidden">
+  {/* <Story id="components-alert--alert-error" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
+
   <Story id="components-alert--alert-error" />
 </Canvas>
 
@@ -93,6 +101,8 @@ Page alerts are light variants of alerts that are used locally on pages along wi
 ### with Link
 
 <Canvas sourceState="hidden">
+  {/* <Story id="components-alert--alert-with-link" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
+
   <Story id="components-alert--alert-with-link" />
 </Canvas>
 
@@ -111,6 +121,8 @@ Page alerts are light variants of alerts that are used locally on pages along wi
 ### with Button
 
 <Canvas sourceState="hidden">
+  {/* <Story id="components-alert--alert-with-button" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
+
   <Story id="components-alert--alert-with-button" />
 </Canvas>
 
@@ -129,6 +141,8 @@ Page alerts are light variants of alerts that are used locally on pages along wi
 ### with Title
 
 <Canvas sourceState="hidden">
+  {/* <Story id="components-alert--alert-with-title" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
+
   <Story id="components-alert--alert-with-title" />
 </Canvas>
 
@@ -152,6 +166,8 @@ Global alerts are darker variants of alerts that are used to convey a globally i
 ### Info global
 
 <Canvas sourceState="hidden">
+  {/* <Story id="components-alert--info-global" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
+
   <Story id="components-alert--info-global" />
 </Canvas>
 
@@ -176,6 +192,8 @@ Global alerts are darker variants of alerts that are used to convey a globally i
 ### Success global
 
 <Canvas sourceState="hidden">
+  {/* <Story id="components-alert--success-global" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
+
   <Story id="components-alert--success-global" />
 </Canvas>
 
@@ -200,6 +218,8 @@ Global alerts are darker variants of alerts that are used to convey a globally i
 ### Warning global
 
 <Canvas sourceState="hidden">
+  {/* <Story id="components-alert--warning-global" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
+
   <Story id="components-alert--warning-global" />
 </Canvas>
 
@@ -223,6 +243,8 @@ Global alerts are darker variants of alerts that are used to convey a globally i
 ### Error global
 
 <Canvas sourceState="hidden">
+  {/* <Story id="components-alert--error-global" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
+
   <Story id="components-alert--error-global" />
 </Canvas>
 
@@ -246,6 +268,8 @@ Global alerts are darker variants of alerts that are used to convey a globally i
 ### Info global (no title, no dismiss)
 
 <Canvas sourceState="hidden">
+  {/* <Story id="components-alert--info-global-no-title-or-dismiss" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
+
   <Story id="components-alert--info-global-no-title-or-dismiss" />
 </Canvas>
 
@@ -270,6 +294,8 @@ Global alerts are darker variants of alerts that are used to convey a globally i
 ### Warning global (no title, no dismiss)
 
 <Canvas sourceState="hidden">
+  {/* <Story id="components-alert--warning-global-no-title-or-dismiss" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
+
   <Story id="components-alert--warning-global-no-title-or-dismiss" />
 </Canvas>
 
@@ -294,6 +320,8 @@ Global alerts are darker variants of alerts that are used to convey a globally i
 ### Loaded from an external API
 
 <Canvas sourceState="hidden">
+  {/* <Story id="components-alert--loaded-from-external-uri" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
+
   <Story id="components-alert--loaded-from-external-uri" />
 </Canvas>
 
@@ -317,59 +345,75 @@ new Alerts(document.getElementById("global-alerts-container"));
       <th className="uqds-table__heading">Variables</th>
       <th className="uqds-table__heading">Usage</th>
     </tr>
+
     <tr className="uqds-table__row">
       <td className="uqds-table__item">
-        <div className="uqds-colour__palette uqds-colour--info"></div>
+        <div className="uqds-colour__palette uqds-colour--info" />
       </td>
+
       <td className="uqds-table__item" data-title="Name:">
         Info (default)
       </td>
+
       <td className="uqds-table__item" data-title="Variable:">
         <code>$uq-alert</code> <code>$uq-alert--info</code>
       </td>
+
       <td className="uqds-table__item" data-title="Usage:">
         • Info message (Important but neither positive nor negative) <br />•
         Used on page or in page components
       </td>
     </tr>
+
     <tr className="uqds-table__row">
       <td className="uqds-table__item">
-        <div className="uqds-colour__palette uqds-colour--success"></div>
+        <div className="uqds-colour__palette uqds-colour--success" />
       </td>
+
       <td className="uqds-table__item" data-title="Name:">
         Success
       </td>
+
       <td className="uqds-table__item" data-title="Variable:">
         <code>$uq-alert--success</code>
       </td>
+
       <td className="uqds-table__item" data-title="Usage:">
         • Success message <br />• Used on page or in page components
       </td>
     </tr>
+
     <tr className="uqds-table__row">
       <td className="uqds-table__item">
-        <div className="uqds-colour__palette uqds-colour--warning"></div>
+        <div className="uqds-colour__palette uqds-colour--warning" />
       </td>
+
       <td className="uqds-table__item" data-title="Name:">
         Warning
       </td>
+
       <td className="uqds-table__item" data-title="Variable:">
         <code>$uq-alert--warning</code>
       </td>
+
       <td className="uqds-table__item" data-title="Usage:">
         • Warning message <br />• Used on page or in page components
       </td>
     </tr>
+
     <tr className="uqds-table__row">
       <td className="uqds-table__item">
-        <div className="uqds-colour__palette uqds-colour--alert"></div>
+        <div className="uqds-colour__palette uqds-colour--alert" />
       </td>
+
       <td className="uqds-table__item" data-title="Name:">
         Error
       </td>
+
       <td className="uqds-table__item" data-title="Variable:">
         <code>$uq-alert--error</code>
       </td>
+
       <td className="uqds-table__item" data-title="Usage:">
         • Error message <br />• Used on page or in page components
       </td>
@@ -387,66 +431,82 @@ new Alerts(document.getElementById("global-alerts-container"));
       <th className="uqds-table__heading">Variables</th>
       <th className="uqds-table__heading">Usage</th>
     </tr>
+
     <tr className="uqds-table__row">
       <td className="uqds-table__item">
-        <div className="uqds-colour__palette uqds-colour--info-dark"></div>
+        <div className="uqds-colour__palette uqds-colour--info-dark" />
       </td>
+
       <td className="uqds-table__item" data-title="Name:">
         Global info
       </td>
+
       <td className="uqds-table__item" data-title="Variable:">
         <code>$uq-alert--global</code> <code>$uq-alert--info</code>{" "}
         <code>$uq-alert--dark</code>
       </td>
+
       <td className="uqds-table__item" data-title="Usage:">
         • Global info message (neither positive nor negative) <br />
         • Used as a global message towards the top of the page <br />• Dismissable
       </td>
     </tr>
+
     <tr className="uqds-table__row">
       <td className="uqds-table__item">
-        <div className="uqds-colour__palette uqds-colour--success-dark"></div>
+        <div className="uqds-colour__palette uqds-colour--success-dark" />
       </td>
+
       <td className="uqds-table__item" data-title="Name:">
         Global success
       </td>
+
       <td className="uqds-table__item" data-title="Variable:">
         <code>$uq-alert--global</code> <code>$uq-alert--success</code>{" "}
         <code>$uq-alert--dark</code>
       </td>
+
       <td className="uqds-table__item" data-title="Usage:">
         • Global success message <br />
         • Used as a global message towards the top of the page <br />• Dismissable
       </td>
     </tr>
+
     <tr className="uqds-table__row">
       <td className="uqds-table__item">
-        <div className="uqds-colour__palette uqds-colour--warning-dark"></div>
+        <div className="uqds-colour__palette uqds-colour--warning-dark" />
       </td>
+
       <td className="uqds-table__item" data-title="Name:">
         Global warning
       </td>
+
       <td className="uqds-table__item" data-title="Variable:">
         <code>$uq-alert--global</code> <code>$uq-alert--warning</code>{" "}
         <code>$uq-alert--dark</code>
       </td>
+
       <td className="uqds-table__item" data-title="Usage:">
         • Global warning message <br />
         • Used as a global message towards the top of the page <br />• Cannot be
         dismissed
       </td>
     </tr>
+
     <tr className="uqds-table__row">
       <td className="uqds-table__item">
-        <div className="uqds-colour__palette uqds-colour--alert-dark"></div>
+        <div className="uqds-colour__palette uqds-colour--alert-dark" />
       </td>
+
       <td className="uqds-table__item" data-title="Name:">
         Global error
       </td>
+
       <td className="uqds-table__item" data-title="Variable:">
         <code>$uq-alert--global</code> <code>$uq-alert--error</code>{" "}
         <code>$uq-alert--dark</code>
       </td>
+
       <td className="uqds-table__item" data-title="Usage:">
         • Global error message <br />
         • Used as a global message towards the top of the page <br />• Cannot be

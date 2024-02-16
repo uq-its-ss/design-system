@@ -13,15 +13,9 @@ import headerCreate from "@uqds/header/src/js/header";
 import HeaderInterimHTML from "./header-interim.html";
 import HeaderHTML from "./header.html";
 
-import docs from "./header.mdx";
-
 export default {
   title: "Components/Header",
   parameters: {
-    docs: {
-      page: docs,
-      inlineStories: false,
-    },
     layout: "fullscreen",
     backgrounds: {
       default: "UQ Neutral 1",

@@ -1,11 +1,7 @@
-import docs from "./body-utilities.mdx";
 
 export default {
   title: "Components/Body/Utilities",
   parameters: {
-    docs: {
-      page: docs,
-    },
     layout: "padded",
   },
 };

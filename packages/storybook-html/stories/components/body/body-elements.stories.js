@@ -1,14 +1,9 @@
 // import stylesheet
 import "./body.scss";
 
-import docs from "./body-elements.mdx";
-
 export default {
   title: "Components/Body/Elements",
   parameters: {
-    docs: {
-      page: docs,
-    },
     layout: "padded",
     previewTabs: {
       canvas: { hidden: false },

@@ -1,5 +1,4 @@
 // import './uq-maps.scss';
-import docs from "./uq-maps-5-slide-drawer.mdx";
 
 export default {
   title: "Deliverables/UQ Maps/5 Slide drawer",
@@ -8,10 +7,6 @@ export default {
     //viewMode: 'story',
     previewTabs: {
       canvas: { hidden: false },
-    },
-    docs: {
-      page: docs,
-      inlineStories: false,
     },
     backgrounds: {
       default: "Diagonal stripes",

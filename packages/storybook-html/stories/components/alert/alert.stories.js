@@ -6,15 +6,9 @@ import "./alert.scss";
 // import scripts
 import Alerts from "@uqds/alert/src/js/alerts";
 
-// documentation
-import docs from "./alert.mdx";
-
 export default {
   title: "Components/Alert",
   parameters: {
-    docs: {
-      page: docs,
-    },
     layout: "padded",
     previewTabs: {
       canvas: { hidden: false },

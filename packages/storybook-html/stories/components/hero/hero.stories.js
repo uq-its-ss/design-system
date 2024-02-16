@@ -4,16 +4,9 @@ import "./hero.scss";
 // import HTML template strings
 // import heroHTML from './hero.html';
 
-// import Docs
-import docs from "./hero.mdx";
-
 export default {
   title: "Components/Hero",
   parameters: {
-    docs: {
-      page: docs,
-      inlineStories: false,
-    },
     layout: "fullscreen",
     previewTabs: {
       canvas: { hidden: false },

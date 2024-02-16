@@ -10,15 +10,9 @@ import headerCreate from "@uqds/header-legacy/src/js/header";
 import headerHTML from "./header.html";
 import headerNoLocalSearchHTML from "./header_no-local-search.html";
 
-import docs from "./header.mdx";
-
 export default {
   title: "Legacy/Header",
   parameters: {
-    docs: {
-      page: docs,
-      inlineStories: false,
-    },
     layout: "fullscreen",
     backgrounds: {
       default: "UQ Neutral 1",

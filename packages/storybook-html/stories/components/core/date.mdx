@@ -10,14 +10,15 @@ Display data such as date & time in a consistent and user-friendly way. Present 
 
 These date formats are designed for
 
-- The current date and time
-- A date and time setting, such as an alarm or event reminder
-- A date and time when an object was created, sent, edited, or otherwise acted upon
+*   The current date and time
+*   A date and time setting, such as an alarm or event reminder
+*   A date and time when an object was created, sent, edited, or otherwise acted upon
 
 ## Basic displays
 
 <table>
   <caption>Basic date displays</caption>
+
   <thead>
     <tr>
       <th>Example</th>
@@ -25,125 +26,157 @@ These date formats are designed for
       <th>Usage</th>
     </tr>
   </thead>
+
   <tbody>
     <tr>
       <td>
         10:00AM <br />
         2:30PM
       </td>
+
       <td>
         <code>hh:mmAM/PM</code>
       </td>
+
       <td>
         For time, use uppercase AM or PM without periods, <br />
         <strong>Do not</strong> separate from time with a space. <br />
         <strong>Do not</strong> use 24 hour time format.
       </td>
     </tr>
+
     <tr>
       <td>11:51AM</td>
+
       <td>
         <code>hh:mmAM/PM</code>
       </td>
+
       <td>
         If a timestamp is within the current day, it’s generally{" "}
         <strong>unnecessary</strong> to show either “today”, the day or date.{" "}
+
         <br />
+
         Only display the time in “hh:mmAM/PM” format
       </td>
     </tr>
+
     <tr>
       <td>14 Jul</td>
+
       <td>
         <code>DD MMM</code>
       </td>
+
       <td>
         If the day is in the past or future within the current calendar year,
         display the abbreviated date.
       </td>
     </tr>
+
     <tr>
       <td>14 Jul 2012</td>
+
       <td>
         <code>DD MMM YYYY</code>
       </td>
+
       <td>
         If the day is in the past or future outside of the current calendar
         year, display the abbreviated date and year.
       </td>
     </tr>
+
     <tr>
       <td>
         8:00AM – 12:30PM <br />6 Jan – 2 Feb
       </td>
+
       <td>
         <code>hh:mmAM/PM – hh:mmAM/PM</code> <br />
         <code>DD MMM – DD MMM</code>
       </td>
+
       <td>
         If the date is a range of time, separate with an en-dash without a space
         on either side.
       </td>
     </tr>
+
     <tr>
       <td>
         4 – 31 Jan 2015 <br />
         12 Feb– 16 Dec 2015 <br />6 Dec 2013 – 2 Jan 2014
       </td>
+
       <td>
         <code>DD – DD MMM YYYY</code> <br />
         <code>DD MMM – DD MMM YYYY</code> <br />
         <code>DD MMM YYYY – DD MMM YYYY</code>
       </td>
+
       <td>
         If both dates in a range start and end in the current year, omit the
         year. Otherwise, show the year on both the start and end.
       </td>
     </tr>
+
     <tr>
       <td>
         4 Jan – 31 Jan 2015, <br />
         9:00 – 12:00PM
       </td>
+
       <td>
         <code>DD MMM – DD MMM YYYY, hh:mm – hh:mmAM/PM</code>
       </td>
+
       <td>
         If there is a time range in addition to the date range, display the date
         range first.
       </td>
     </tr>
+
     <tr>
       <td>8:00 – 10:30AM</td>
+
       <td>
         <code>hh:mm – hh:mmAM/PM</code>
       </td>
+
       <td>
         When a range shares a common AM/PM, append only on the end of the range.
       </td>
     </tr>
+
     <tr>
       <td>
         6 January <br />
         All day
       </td>
+
       <td>
         <code>DD MMMM</code> <br />
         <code>All day</code>
       </td>
+
       <td>
         When a date range spans an entire day, time will not be displayed.
       </td>
     </tr>
+
     <tr>
       <td>
         AEST+10:00 <br />
         AEST-5:00
       </td>
+
       <td>
         <code>TZD+hh:mm</code> <br />
         <code>TZD-hh:mm</code>
       </td>
+
       <td>When listing the time zone, drop the leading 0 for single digits.</td>
     </tr>
   </tbody>
@@ -157,33 +190,40 @@ Relative language may not always be appropriate, e.g. current date in a clock ap
 
 <table>
   <caption>Relative language and approximate time</caption>
+
   <thead>
     <tr>
       <th>Example</th>
       <th>Usage</th>
     </tr>
   </thead>
+
   <tbody>
     <tr>
       <td>Today</td>
       <td>If the date is today</td>
     </tr>
+
     <tr>
       <td>
         Yesterday <br />
         Tomorrow
       </td>
+
       <td>
         If the day is <strong>yesterday or tomorrow</strong>, use those terms.
       </td>
     </tr>
+
     <tr>
       <td>Tuesday</td>
+
       <td>
         If the day is in the <strong>future and within a week</strong>, display
         the unabbreviated day of the week.
       </td>
     </tr>
+
     <tr>
       <td>
         In 5 minutes <br />
@@ -191,22 +231,25 @@ Relative language may not always be appropriate, e.g. current date in a clock ap
         3 days ago <br />
         1 min ago <br />
       </td>
+
       <td>
         If absolute time isn’t necessary for specificity or comparison, display
         approximate relative times. <br />
         <strong>Don’t combine units (e.g. “1 hour 32 minutes ago”). Instead, round
-          down to the most recent largest unit (e.g. “1 hour ago”)</strong>.
+        down to the most recent largest unit (e.g. “1 hour ago”)</strong>.
         <strong>Don’t display relative time which exceeds more than 1 week</strong>.
       </td>
     </tr>
   </tbody>
 </table>
+
 ## Be modular
 
 Depending on the context, show either date or time, or both date and time.
 
 <table>
   <caption>Date and time</caption>
+
   <thead>
     <tr>
       <th>Example</th>
@@ -214,50 +257,65 @@ Depending on the context, show either date or time, or both date and time.
       <th>Usage</th>
     </tr>
   </thead>
+
   <tbody>
     <tr>
       <td>10 Jan 8:00AM</td>
+
       <td>
         <code>DD MMM hh:mmAM/PM</code>
       </td>
+
       <td>Typically, future settings should append time to a day or date.</td>
     </tr>
+
     <tr>
       <td>5 January 2015 7:16AM</td>
+
       <td>
         <code>DD MMMM YYYY hh:mmAM/PM</code>
       </td>
+
       <td>
         When a past time is necessary, such as a news article date, display both
         date and time.
       </td>
     </tr>
+
     <tr>
       <td>Mon 10 Jan 8:00AM</td>
+
       <td>
         <code>DDD DD MMM hh:mmAM/PM</code>
       </td>
+
       <td>
         When the day of week may be necessary, such as an event, display the
         abbreviated day separated by a comma.
       </td>
     </tr>
+
     <tr>
       <td>3 Jan 1997</td>
+
       <td>
         <code>DD MMM hh:mmAM/PM</code>
       </td>
+
       <td>When it’s an event in the distant past, omit the time.</td>
     </tr>
+
     <tr>
       <td>
         0:30 <br />
         2:14 <br />
         1:01:05 <br />
       </td>
+
       <td>
         <code>hh:mm:ss</code>
       </td>
+
       <td>
         Use HH:MM:SS to show the duration of a recording, like audio or video.
         If hours or seconds don’t apply, then omit them. There is no need to
@@ -273,6 +331,7 @@ Depending on the context, show either date or time, or both date and time.
 
 <table>
   <caption>Date and time</caption>
+
   <thead>
     <tr>
       <th>Example</th>
@@ -280,17 +339,21 @@ Depending on the context, show either date or time, or both date and time.
       <th>Usage</th>
     </tr>
   </thead>
+
   <tbody>
     <tr>
       <td>
         Jan 6, Feb 7, Mar 8, Apr 9, May 10, Jun 11, Jul 12, Aug 13, Sep 14, Oct
         15, Nov 16, Dec 17
       </td>
+
       <td>
         <code>MMM DD</code>
       </td>
+
       <td>Always abbreviate months, with single or double digit dates.</td>
     </tr>
+
     <tr>
       <td>
         Mon 8:00AM <br />
@@ -301,21 +364,26 @@ Depending on the context, show either date or time, or both date and time.
         Sat 1:00PM <br />
         Sun 2:00PM
       </td>
+
       <td>
         <code>DDD hh:mmAM/PM</code>
       </td>
+
       <td>Abbreviate days of the week when combined with a time.</td>
     </tr>
+
     <tr>
       <td>
         8 AM <br />
         2 hr 32 min ago <br />
         3/12/12 <br />
       </td>
+
       <td>
         <code>hhAM/PM</code>
         <code>DD/MM/YY</code>
       </td>
+
       <td>
         If real estate is limited (such as with timestamps, labels on graphs,
         durations, etc.) abbreviate units, using numerical versions and/or by

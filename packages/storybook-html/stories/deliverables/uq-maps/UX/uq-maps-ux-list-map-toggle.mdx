@@ -6,7 +6,7 @@ import { mobileA, desktopA } from "./uq-maps-ux-list-map-toggle.mermaid";
 
 # Browsing POI's using list & map views
 
-## Goal: browsing POIs _within a category_ using list & map views
+## Goal: browsing POIs *within a category* using list & map views
 
 E.g. as a student, I want to decide what to purchase for lunch on the St. Lucia
 campus
@@ -20,14 +20,16 @@ component examples are indicated using the 🧩 icon.
   <div className="uq-grid__col uq-grid__col--6 uq-grid__col--md-8 uq-grid__col--xl-9">
     <MermaidDisplay graph={mobileA} svgId="flow1" />
   </div>
+
   <div className="uq-grid__col uq-grid__col--6 uq-grid__col--md-8 uq-grid__col--xl-3">
     <table className="uq-table">
       <tbody>
         <thead>
           <tr>
-            <th>* Comments/details</th>
+            <th>\* Comments/details</th>
           </tr>
         </thead>
+
         <tbody>
           <tr>
             <td>
@@ -39,6 +41,7 @@ component examples are indicated using the 🧩 icon.
               </b>
             </td>
           </tr>
+
           <tr>
             <td>
               The search query doesn't get modified upon selection of a search
@@ -46,6 +49,7 @@ component examples are indicated using the 🧩 icon.
               first.
             </td>
           </tr>
+
           <tr>
             <td>
               To keep things consistent, for categories where all entries appear
@@ -54,6 +58,7 @@ component examples are indicated using the 🧩 icon.
               North-Entrance."
             </td>
           </tr>
+
           <tr>
             <td>
               When a user selects "View all in map" within a category, not only
@@ -61,6 +66,7 @@ component examples are indicated using the 🧩 icon.
               panel open with the title of the category displayed.
             </td>
           </tr>
+
           <tr>
             <td>
               When a user selects a POI marker, there should be a details panel
@@ -82,14 +88,16 @@ Emboldened paths represent the proposed flow to achieve the above goal.
   <div className="uq-grid__col uq-grid__col--6 uq-grid__col--md-8 uq-grid__col--xl-9">
     <MermaidDisplay graph={desktopA} svgId="flow2" />
   </div>
+
   <div className="uq-grid__col uq-grid__col--6 uq-grid__col--md-8 uq-grid__col--xl-3">
     <table className="uq-table">
       <tbody>
         <thead>
           <tr>
-            <th>* Comments/details</th>
+            <th>\* Comments/details</th>
           </tr>
         </thead>
+
         <tbody>
           <tr>
             <td>
@@ -101,6 +109,7 @@ Emboldened paths represent the proposed flow to achieve the above goal.
               </b>
             </td>
           </tr>
+
           <tr>
             <td>
               There are currently no desktop specific component, or layout
@@ -110,6 +119,7 @@ Emboldened paths represent the proposed flow to achieve the above goal.
               displayed side-by-side with the map.
             </td>
           </tr>
+
           <tr>
             <td>
               On desktop, if the user selects a category list item from a list

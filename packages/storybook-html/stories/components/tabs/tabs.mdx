@@ -1,16 +1,16 @@
 import { Meta, Story, Canvas } from '@storybook/blocks';
 import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
+import * as TabsStories from './tabs.stories';
+
+<Meta of={TabsStories} />
 
 # Tabs
 
 <StatusBadge.Review />
+
 <StatusBadge.ReviewDoc />
 
-<a
-  href="https://github.com/uq-its-ss/design-system/issues"
-  class="uq-button uq-button--text"
-  target="_blank"
->
+<a href="https://github.com/uq-its-ss/design-system/issues" class="uq-button uq-button--text" target="_blank">
   Check for open issues
 </a>
 
@@ -24,6 +24,8 @@ hierarchical level.
 ### Default / Outline
 
 <Canvas sourceState="hidden">
+  {/* <Story id="components-tabs--tabs-outline" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
+
   <Story id="components-tabs--tabs-outline" />
 </Canvas>
 
@@ -100,6 +102,8 @@ hierarchical level.
 ### Minimal
 
 <Canvas sourceState="hidden">
+  {/* <Story id="components-tabs--tabs-minimal" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
+
   <Story id="components-tabs--tabs-minimal" />
 </Canvas>
 
@@ -110,6 +114,8 @@ hierarchical level.
 ### Lined
 
 <Canvas sourceState="hidden">
+  {/* <Story id="components-tabs--tabs-lined" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
+
   <Story id="components-tabs--tabs-lined" />
 </Canvas>
 
@@ -120,6 +126,8 @@ hierarchical level.
 ### With icon
 
 <Canvas sourceState="hidden">
+  {/* <Story id="components-tabs--tabs-with-icon" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
+
   <Story id="components-tabs--tabs-with-icon" />
 </Canvas>
 
@@ -143,6 +151,8 @@ hierarchical level.
 ### Full width
 
 <Canvas sourceState="hidden">
+  {/* <Story id="components-tabs--tabs-full-width" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
+
   <Story id="components-tabs--tabs-full-width" />
 </Canvas>
 
@@ -153,6 +163,8 @@ hierarchical level.
 ### Small
 
 <Canvas sourceState="hidden">
+  {/* <Story id="components-tabs--tabs-small" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
+
   <Story id="components-tabs--tabs-small" />
 </Canvas>
 
@@ -163,6 +175,8 @@ hierarchical level.
 ### Reversed
 
 <Canvas sourceState="hidden">
+  {/* <Story id="components-tabs--tabs-reversed" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
+
   <Story id="components-tabs--tabs-reversed" />
 </Canvas>
 
@@ -172,27 +186,27 @@ hierarchical level.
 
 ## How and when to use
 
-- This tab example is automatically activated and its associated panel is displayed when the tab receives focus.
-- Tabs should only be automatically activated in circumstances where panels can be displayed instantly, i.e., all panel content is present in the DOM.
-- Tabs should appear as a single row above their associated content.
-- Tab labels can include icons and text. And the tab label text should be short.
-- Don’t use tabs for moving through sequential content that needs to be read in a particular order.
-- Don’t mix tabs that contain only text, with tabs that contain only icons. Use either all text labels, all icon labels, or both, across all labels.
-- Although label text can wrap to a second line, scrollable tabs confine text to a single row.
-- Don’t resize text labels to fit them onto a single line.
-- Don’t truncate labels unless required.
-  <br />
+*   This tab example is automatically activated and its associated panel is displayed when the tab receives focus.
+*   Tabs should only be automatically activated in circumstances where panels can be displayed instantly, i.e., all panel content is present in the DOM.
+*   Tabs should appear as a single row above their associated content.
+*   Tab labels can include icons and text. And the tab label text should be short.
+*   Don’t use tabs for moving through sequential content that needs to be read in a particular order.
+*   Don’t mix tabs that contain only text, with tabs that contain only icons. Use either all text labels, all icon labels, or both, across all labels.
+*   Although label text can wrap to a second line, scrollable tabs confine text to a single row.
+*   Don’t resize text labels to fit them onto a single line.
+*   Don’t truncate labels unless required.
+    <br />
 
 ## Accessibility
 
-- When the user tabs through the tabs, it receives focus and automatically opens its related tab panel.
-- The WAI-ARIA roles used are `[role="tablist"]` for the tab list, `[role="tab"]` for the individual tab items and `[role="tabpanel"]` for the tab panels.
-- Tab active state: `tabindex = "0"`, classname ` uq-tabs__tab--active` is added, `aria-selected = "true"`.
-- Tab inactive state: `tabindex = "-1"`, classname ` uq-tabs__tab--active` is removed, `aria-selected = "false"`.
-- Tab panel active state: `tabindex = "0"`, classname ` uq-tabs__tab-panel--active` is added, `hidden` is removed.
-- Tab panel inactive state: `tabindex = "0"`, classname ` uq-tabs__tab-panel--active` is removed, `hidden` is added.
-- Colour contrast test for the tabs showed a WCAG AA Pass.
-  <br />
+*   When the user tabs through the tabs, it receives focus and automatically opens its related tab panel.
+*   The WAI-ARIA roles used are `[role="tablist"]` for the tab list, `[role="tab"]` for the individual tab items and `[role="tabpanel"]` for the tab panels.
+*   Tab active state: `tabindex = "0"`, classname ` uq-tabs__tab--active` is added, `aria-selected = "true"`.
+*   Tab inactive state: `tabindex = "-1"`, classname ` uq-tabs__tab--active` is removed, `aria-selected = "false"`.
+*   Tab panel active state: `tabindex = "0"`, classname ` uq-tabs__tab-panel--active` is added, `hidden` is removed.
+*   Tab panel inactive state: `tabindex = "0"`, classname ` uq-tabs__tab-panel--active` is removed, `hidden` is added.
+*   Colour contrast test for the tabs showed a WCAG AA Pass.
+    <br />
 
 ## JavaScript reference
 

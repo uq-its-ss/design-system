@@ -5,14 +5,9 @@ import "./side-nav.scss";
 import sideNavSingleLevelHTML from "./side-nav.html";
 import sideNavMultiLevelHTML from "./side-nav-multi-level.html";
 
-import docs from "./side-nav.mdx";
-
 export default {
   title: "Components/Side nav",
   parameters: {
-    docs: {
-      page: docs,
-    },
     layout: "padded",
     previewTabs: {
       canvas: { hidden: false },

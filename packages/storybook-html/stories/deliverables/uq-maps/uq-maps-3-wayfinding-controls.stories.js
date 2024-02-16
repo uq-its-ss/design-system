@@ -1,7 +1,5 @@
 import { useEffect } from "@storybook/addons";
 import { MDCCircularProgress } from "@material/circular-progress";
-// import './uq-maps.scss';
-import docs from "./uq-maps-3-wayfinding-controls.mdx";
 
 export default {
   title: "Deliverables/UQ Maps/3 Wayfinding controls",
@@ -24,10 +22,6 @@ export default {
         },
       ],
       default: "Static map",
-    },
-    docs: {
-      page: docs,
-      inlineStories: false,
     },
   },
 };

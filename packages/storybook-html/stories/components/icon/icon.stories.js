@@ -1,5 +1,4 @@
 import iconCatalog from "@uqds/icon";
-import docs from "./icon.mdx";
 import "./icon.scss";
 
 /**
@@ -34,9 +33,6 @@ const iconsByCat = iconCatalog.reduce(
 export default {
   title: "Components/Icon",
   parameters: {
-    docs: {
-      page: docs,
-    },
     layout: "padded",
     previewTabs: {
       canvas: { hidden: false },

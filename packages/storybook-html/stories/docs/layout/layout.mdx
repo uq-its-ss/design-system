@@ -10,8 +10,8 @@ import "./layout.scss";
 
 Our responsive layout system defines the way you should organise content and UI
 components on different screen sizes. The primary elements of our layout system
-are _columns_, _margins_, and _gutters_ (the schema). Our unit of measurement is
-the [_rem_](https://www.w3schools.com/cssref/css_units.asp). If this sounds a
+are *columns*, *margins*, and *gutters* (the schema). Our unit of measurement is
+the [*rem*](https://www.w3schools.com/cssref/css_units.asp). If this sounds a
 bit too abstract, we've got you covered with a couple of basic ways to layout
 your pages.
 
@@ -23,19 +23,19 @@ documentation.
 
 | Name                                                                | Description                                                                                                                                         |
 | ------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Golden](/?path=/docs/layout-grid--golden#golden)                   | Inspired by [_The Golden Ratio_](https://www.canva.com/learn/what-is-the-golden-ratio/). A preset to give you a layout that is pleasing to the eye. |
+| [Golden](/?path=/docs/layout-grid--golden#golden)                   | Inspired by [*The Golden Ratio*](https://www.canva.com/learn/what-is-the-golden-ratio/). A preset to give you a layout that is pleasing to the eye. |
 | [Halves](/?path=/docs/layout-grid--halves#halves)                   | A two-column grid.                                                                                                                                  |
 | [Thirds](/?path=/docs/layout-grid--thirds#thirds)                   | A three-column grid.                                                                                                                                |
 | [Quarters](/?path=/docs/layout-grid--quarters#quarters)             | A four-column grid.                                                                                                                                 |
 | [Flexible grid](/?path=/docs/layout-grid--flexible-1#flexible-grid) | Auto-sizing column grid.                                                                                                                            |
-| Scrolling grid                                                      | [TODO] A grid that scrolls horizontally on mobile. Useful for holding cards.                                                                        |
+| Scrolling grid                                                      | \[TODO] A grid that scrolls horizontally on mobile. Useful for holding cards.                                                                        |
 | [6-8-12](/?path=/docs/layout-grid--twelve-eight-six#6-8-12-grid)    | Advanced. The most flexible option. This is an implementation of our base grid (see below).                                                         |
 
 Secondly, we have our **`@uqds/sections`** package; CSS classes that work to
 combine layout and typography. Great for laying out discrete blocks of content,
 e.g. pull quotes, calls to action, landing page sections etc.
 
----
+***
 
 If you are a designer or just curious about our layout system, please keep
 reading.
@@ -52,38 +52,38 @@ the entire viewport width. The layout system is currently 1-dimensional
 | Name(s)                 | Mockups | Viewport range                    | Columns | Min. left/right margins | Gutters        |
 | ----------------------- | ------- | --------------------------------- | ------- | ----------------------- | -------------- |
 | **\* (mobile)**         | ✓       | 0—25.9375rem **(~0—415px )**      | 6       | 1.5rem (~24px)          | 1rem (~16px)   |
-| _Deprecated: XS_        |         | 26—33.9375rem **(~416—543px)**    | ''      | ''                      | ''             |
-| _Deprecated: SM_        |         | 34—37.4375rem **(~544—599px)**    | ''      | ''                      | ''             |
+| *Deprecated: XS*        |         | 26—33.9375rem **(~416—543px)**    | ''      | ''                      | ''             |
+| *Deprecated: SM*        |         | 34—37.4375rem **(~544—599px)**    | ''      | ''                      | ''             |
 | **MD (tablet)**         | ✓       | 37.5—63.9375rem **(~600—1023px)** | 8       | 4rem (~64px)            | 1.5rem (~24px) |
-| _Deprecated: LG_        |         | 64—74.9375rem **(~1024—1199px)**  | ''      | ''                      | ''             |
+| *Deprecated: LG*        |         | 64—74.9375rem **(~1024—1199px)**  | ''      | ''                      | ''             |
 | **XL (desktop/laptop)** | ✓       | 75rem—∞ **(~1200px—∞)**           | 12      | 9.375rem (~150px)       | 2rem (~32px)   |
 
 > Pixel units (px) provided are based on the default rem unit analogue of 16px.
 
-  <div class="uqds-base-layout-grid">
-    <div class="uq-grid">
-      <div class="uq-grid__col uq-grid__col--1 uq-grid__col--md-1 uq-grid__col--xl-1"><span>Col<br/>&larr;&rarr;</span></div>
-      <div class="uq-grid__col uq-grid__col--1 uq-grid__col--md-1 uq-grid__col--xl-1"><span>Col<br/>&larr;&rarr;</span></div>
-      <div class="uq-grid__col uq-grid__col--1 uq-grid__col--md-1 uq-grid__col--xl-1"><span>Col<br/>&larr;&rarr;</span></div>
-      <div class="uq-grid__col uq-grid__col--1 uq-grid__col--md-1 uq-grid__col--xl-1"><span>Col<br/>&larr;&rarr;</span></div>
-      <div class="uq-grid__col uq-grid__col--1 uq-grid__col--md-1 uq-grid__col--xl-1"><span>Col<br/>&larr;&rarr;</span></div>
-      <div class="uq-grid__col uq-grid__col--1 uq-grid__col--md-1 uq-grid__col--xl-1"><span>Col<br/>&larr;&rarr;</span></div>
-      <div class="uq-grid__col uq-grid__col--md-1 uq-grid__col--xl-1"><span>Col<br/>&larr;&rarr;</span></div>
-      <div class="uq-grid__col uq-grid__col--md-1 uq-grid__col--xl-1"><span>Col<br/>&larr;&rarr;</span></div>
-      <div class="uq-grid__col uq-grid__col--xl-1"><span>Col<br/>&larr;&rarr;</span></div>
-      <div class="uq-grid__col uq-grid__col--xl-1"><span>Col<br/>&larr;&rarr;</span></div>
-      <div class="uq-grid__col uq-grid__col--xl-1"><span>Col<br/>&larr;&rarr;</span></div>
-      <div class="uq-grid__col uq-grid__col--xl-1"><span>Col<br/>&larr;&rarr;</span></div>
-    </div>
+<div class="uqds-base-layout-grid">
+  <div class="uq-grid">
+    <div class="uq-grid__col uq-grid__col--1 uq-grid__col--md-1 uq-grid__col--xl-1"><span>Col<br />←→</span></div>
+    <div class="uq-grid__col uq-grid__col--1 uq-grid__col--md-1 uq-grid__col--xl-1"><span>Col<br />←→</span></div>
+    <div class="uq-grid__col uq-grid__col--1 uq-grid__col--md-1 uq-grid__col--xl-1"><span>Col<br />←→</span></div>
+    <div class="uq-grid__col uq-grid__col--1 uq-grid__col--md-1 uq-grid__col--xl-1"><span>Col<br />←→</span></div>
+    <div class="uq-grid__col uq-grid__col--1 uq-grid__col--md-1 uq-grid__col--xl-1"><span>Col<br />←→</span></div>
+    <div class="uq-grid__col uq-grid__col--1 uq-grid__col--md-1 uq-grid__col--xl-1"><span>Col<br />←→</span></div>
+    <div class="uq-grid__col uq-grid__col--md-1 uq-grid__col--xl-1"><span>Col<br />←→</span></div>
+    <div class="uq-grid__col uq-grid__col--md-1 uq-grid__col--xl-1"><span>Col<br />←→</span></div>
+    <div class="uq-grid__col uq-grid__col--xl-1"><span>Col<br />←→</span></div>
+    <div class="uq-grid__col uq-grid__col--xl-1"><span>Col<br />←→</span></div>
+    <div class="uq-grid__col uq-grid__col--xl-1"><span>Col<br />←→</span></div>
+    <div class="uq-grid__col uq-grid__col--xl-1"><span>Col<br />←→</span></div>
   </div>
+</div>
 
 ## Designing with the base grid (for UI mockups)
 
 Designers should prepare mockups for our three major viewport ranges\*:
 
-- mobile: using a 375px width artboard,
-- tablet: using a 768px width artboard,
-- and desktop/laptop: using a 1440px artboard.
+*   mobile: using a 375px width artboard,
+*   tablet: using a 768px width artboard,
+*   and desktop/laptop: using a 1440px artboard.
 
 > \* Because we are picking just three discrete sizes as standard, as we are
 > implementing the UI elements, we must test the responsiveness in the browser.

@@ -1,9 +1,13 @@
 import { Meta, Story, Canvas } from '@storybook/blocks';
 import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
+import * as HeaderStories from './header.stories';
+
+<Meta of={HeaderStories} />
 
 # Global header
 
 <StatusBadge.Deprecated />
+
 <StatusBadge.StableDoc />
 
 ## Overview
@@ -15,13 +19,15 @@ quickly identify and trust UQ websites.
 ## With global search only
 
 Provides the UQ strapline, global links, and a general UQ site search feature
-using [_UQ Search_](https://www.uq.edu.au/search).
+using [*UQ Search*](https://www.uq.edu.au/search).
 
 > Don't reappropriate the search function for special integrated search
 > functionality within your application e.g. searching for a location on a map,
 > searching for books or articles in a library database.
 
 <Canvas sourceState="hidden" withToolbar>
+  {/* <Story height={220} id="legacy-header--header-no-local-search" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
+
   <Story height={220} id="legacy-header--header-no-local-search" />
 </Canvas>
 
@@ -151,13 +157,15 @@ using [_UQ Search_](https://www.uq.edu.au/search).
 ## With global and site search
 
 Provides the UQ strapline, global links, and a site search feature using
-[_UQ Search_](https://www.uq.edu.au/search). Two radio options are included to
+[*UQ Search*](https://www.uq.edu.au/search). Two radio options are included to
 allow users to choose to search all UQ sites or just the content on your site\*.
 
 > \*If your application/website isn't indexed by UQ Search, please opt
 > to use the global header **with global search only**.
 
 <Canvas sourceState="hidden" withToolbar>
+  {/* <Story height={220} id="legacy-header--header" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
+
   <Story height={220} id="legacy-header--header" />
 </Canvas>
 

@@ -1,16 +1,16 @@
 import { Meta, Story, Canvas } from '@storybook/blocks';
 import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
+import * as AccordionStories from './accordion.stories';
+
+<Meta of={AccordionStories} />
 
 # Accordion
 
 <StatusBadge.Stable />
+
 <StatusBadge.StableDoc />
 
-<a
-  href="https://github.com/uq-its-ss/design-system/issues"
-  class="uq-button uq-button--text"
-  target="_blank"
->
+<a href="https://github.com/uq-its-ss/design-system/issues" class="uq-button uq-button--text" target="_blank">
   Check for open issues
 </a>
 
@@ -25,6 +25,8 @@ Accordions can be implemented using `<div>` or `<ul>` lists.
 Use divs if there is a significant amount of content to be displayed.
 
 <Canvas withToolbar>
+  {/* <Story height={300} id="components-accordion--using-divs" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
+
   <Story height={300} id="components-accordion--using-divs" />
 </Canvas>
 
@@ -62,6 +64,8 @@ Use divs if there is a significant amount of content to be displayed.
 Use lists if there is less content and when the semantics of a list serves better with assistive technologies like screen readers.
 
 <Canvas withToolbar>
+  {/* <Story height={300} id="components-accordion--using-lists" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
+
   <Story height={300} id="components-accordion--using-lists" />
 </Canvas>
 
@@ -111,6 +115,8 @@ new uq.accordion();
 The subtitle allows for a secondary context. Typically the primary title should provide enough information.
 
 <Canvas withToolbar>
+  {/* <Story height={300} id="components-accordion--has-subtitle" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
+
   <Story height={300} id="components-accordion--has-subtitle" />
 </Canvas>
 
@@ -155,6 +161,8 @@ The subtitle allows for a secondary context. Typically the primary title should 
 A smaller more compact version. Used as a support class for more complex interfaces mixing components. For general content use the standard size accordion.
 
 <Canvas withToolbar>
+  {/* <Story height={200} id="components-accordion--is-compact" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
+
   <Story height={200} id="components-accordion--is-compact" />
 </Canvas>
 
@@ -203,6 +211,8 @@ By default, users can expand and collapse one accordion at a time. When a user e
 Alternate behaviour is to allow users to expand and collapse any number of accordions at a time. When a user expands one accordion then clicks on another, the previously expanded accordion remains expanded and the user will need to manually collapse it. This is useful if users need to view the contents of multiple accordions at a time. To enable this behaviour, add the classname `uq-accordion--is-manual` to the `<div>` or `<ul>` as shown below.
 
 <Canvas withToolbar>
+  {/* <Story height={300} id="components-accordion--is-manual" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
+
   <Story height={300} id="components-accordion--is-manual" />
 </Canvas>
 
@@ -244,9 +254,9 @@ Accordions are suitable when users only need to view a few key pieces of content
 
 ## Accessibility
 
-- The title of each accordion item is contained in a button element.
-- If the accordion content panel associated with an accordion title is visible, the button element has aria-expanded set to true. If the content panel is not visible, aria-expanded is set to false.
-- The accordion button element has aria-controls set to the ID of the element containing the accordion content panel.
-- Optionally, each element that serves as a container for panel content has `role="region"` and `aria-labelledby` with a value that refers to the button that controls display of the panel.
-  - Avoid using role region in circumstances that create landmark region proliferation, e.g., in an accordion that contains more than approximately 6 panels that can be expanded at the same time.
-  - Role region is especially helpful to the perception of structure by screen reader users when panels contain heading elements or a nested accordion.
+*   The title of each accordion item is contained in a button element.
+*   If the accordion content panel associated with an accordion title is visible, the button element has aria-expanded set to true. If the content panel is not visible, aria-expanded is set to false.
+*   The accordion button element has aria-controls set to the ID of the element containing the accordion content panel.
+*   Optionally, each element that serves as a container for panel content has `role="region"` and `aria-labelledby` with a value that refers to the button that controls display of the panel.
+    *   Avoid using role region in circumstances that create landmark region proliferation, e.g., in an accordion that contains more than approximately 6 panels that can be expanded at the same time.
+    *   Role region is especially helpful to the perception of structure by screen reader users when panels contain heading elements or a nested accordion.

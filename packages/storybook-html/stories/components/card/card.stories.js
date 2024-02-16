@@ -1,15 +1,9 @@
 // import styles
 import "./card.scss";
 
-// import documentation
-import docs from "./card.mdx";
-
 export default {
   title: "Components/Cards",
   parameters: {
-    docs: {
-      page: docs,
-    },
     layout: "fullscreen",
     previewTabs: {
       canvas: { hidden: false },

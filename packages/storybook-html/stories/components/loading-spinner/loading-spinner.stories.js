@@ -6,15 +6,9 @@ import loadingSpinnerHTML from "./loading-spinner.html";
 import loadingSpinnerLightHTML from "./loading-spinner-light.html";
 import loadingSpinnerSmallHTML from "./loading-spinner-small.html";
 
-// documentation
-import docs from "./loading-spinner.mdx";
-
 export default {
   title: "Components/Loading spinner",
   parameters: {
-    docs: {
-      page: docs,
-    },
     layout: "padded",
     previewTabs: {
       canvas: { hidden: false },

@@ -9,18 +9,12 @@ import accordionCreate from "@uqds/accordion/src/js/accordion";
 // import HTML template strings
 import footerHTML from "./footer.html";
 
-import docs from "./footer.mdx";
-
 export default {
   title: "Components/Footer",
   parameters: {
     layout: "fullscreen",
     backgrounds: {
       default: "UQ Neutral 1",
-    },
-    docs: {
-      page: docs,
-      inlineStories: false,
     },
     previewTabs: {
       canvas: { hidden: false },

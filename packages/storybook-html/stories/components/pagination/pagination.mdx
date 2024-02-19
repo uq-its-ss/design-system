@@ -1,6 +1,6 @@
-import { Meta, Story, Canvas } from '@storybook/blocks';
+import { Meta, Story, Canvas } from "@storybook/blocks";
 import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
-import * as PaginationStories from './pagination.stories';
+import * as PaginationStories from "./pagination.stories";
 
 <Meta of={PaginationStories} />
 
@@ -20,19 +20,19 @@ If the component is displaying the last page, the links 'last' and 'next' are re
 ### Pagination first
 
 <Canvas sourceState="hidden">
-  <Story of={PaginationStories.paginationFirst} /> 
+  <Story of={PaginationStories.paginationFirst} />
 </Canvas>
 
 ### Pagination middle
 
 <Canvas sourceState="hidden">
-  <Story of={PaginationStories.paginationMiddle} /> 
+  <Story of={PaginationStories.paginationMiddle} />
 </Canvas>
 
 ### Pagination last
 
 <Canvas sourceState="hidden">
-  <Story of={PaginationStories.paginationLast} /> 
+  <Story of={PaginationStories.paginationLast} />
 </Canvas>
 
 #### The table below list's the classname's of the pagination component and what it does.

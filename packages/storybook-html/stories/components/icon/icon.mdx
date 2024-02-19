@@ -1,6 +1,6 @@
-import { Meta, Story, Canvas } from '@storybook/blocks';
+import { Meta, Story, Canvas } from "@storybook/blocks";
 import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
-import * as IconStories from './icon.stories';
+import * as IconStories from "./icon.stories";
 
 <Meta of={IconStories} />
 
@@ -12,7 +12,9 @@ import * as IconStories from './icon.stories';
 
 ## List of icons
 
-  <Story of={IconStories.icon} /> 
+{" "}
+
+<Story of={IconStories.icon} />{" "}
 
 ## Usage
 
@@ -50,7 +52,7 @@ categories and icons.
 
 ### Sass mixins and functions
 
-To include *just the icons that you need* (and therefore, reduce file size), we
+To include _just the icons that you need_ (and therefore, reduce file size), we
 provide mixins and a "get" function.
 
 #### Generate specific icon classes using mixins

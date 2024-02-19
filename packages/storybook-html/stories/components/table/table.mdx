@@ -1,6 +1,6 @@
-import { Meta, Story, Canvas } from '@storybook/blocks';
+import { Meta, Story, Canvas } from "@storybook/blocks";
 import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
-import * as TableStories from './table.stories';
+import * as TableStories from "./table.stories";
 
 <Meta of={TableStories} />
 
@@ -10,7 +10,11 @@ import * as TableStories from './table.stories';
 
 <StatusBadge.ReviewDoc />
 
-<a href="https://github.com/uq-its-ss/design-system/issues" class="uq-button uq-button--text" target="_blank">
+<a
+  href="https://github.com/uq-its-ss/design-system/issues"
+  class="uq-button uq-button--text"
+  target="_blank"
+>
   Check for open issues
 </a>
 
@@ -34,7 +38,7 @@ For instance when there is more content to the left, a transparent shadow appear
 #### a. Table scroll - Basic tags with minimal classes
 
 <Canvas withToolbar>
-  <Story of={TableStories.table} /> 
+  <Story of={TableStories.table} />
 </Canvas>
 
 ```html
@@ -79,7 +83,7 @@ For instance when there is more content to the left, a transparent shadow appear
 #### b. Table scroll - Basic tags with classes
 
 <Canvas withToolbar>
-  <Story of={TableStories.tableClasses} /> 
+  <Story of={TableStories.tableClasses} />
 </Canvas>
 
 ```html
@@ -126,7 +130,7 @@ For instance when there is more content to the left, a transparent shadow appear
 Tables with two headers with unclear header directions needs to define the direction of each header by setting the scope attribute to `col` or `row`.
 
 <Canvas withToolbar>
-  <Story of={TableStories.tableMultipleHeaders} /> 
+  <Story of={TableStories.tableMultipleHeaders} />
 </Canvas>
 
 ```html
@@ -180,7 +184,7 @@ Tables with two headers with unclear header directions needs to define the direc
 Tables with irregular headers have header cells that span multiple columns and/or rows: For these tables, define column and row groups and set the range of the header cells using the `colgroup` and `rowgroup` values of the scope attribute.
 
 <Canvas withToolbar>
-  <Story of={TableStories.tableIrregularHeaders} /> 
+  <Story of={TableStories.tableIrregularHeaders} />
 </Canvas>
 
 ```html
@@ -241,7 +245,7 @@ Tables with irregular headers have header cells that span multiple columns and/o
 Tables with multi-level headers have multiple header cells associated per data cell: For tables that are so complex that header cells can’t be associated in a strictly horizontal or vertical way, use `id` and `headers` attributes to associate header and data cells explicitly.
 
 <Canvas withToolbar>
-  <Story of={TableStories.tableMultiLevelHeaders} /> 
+  <Story of={TableStories.tableMultiLevelHeaders} />
 </Canvas>
 
 ```html
@@ -333,7 +337,7 @@ In this responsive approach, the component table `tr` is displayed as a grid. At
 The data attributes assigned to each `tbody` cell helps in understanding the connection between the call value and its associated header when the header `thead` is hidden.
 
 <Canvas withToolbar>
-  <Story of={TableStories.tableCard} /> 
+  <Story of={TableStories.tableCard} />
 </Canvas>
 
 ```html
@@ -379,20 +383,20 @@ The table card stacks up when it hits screen viewport widths less than 640px.
 
 ## How and when to use
 
-*   Use the table component to let users compare information in rows and columns.
-*   Never use the table component to layout content on a page. Instead, use the grid system.
-*   Use 'Table scroll' example when there is lots of data, otherwise 'Table card'.
+- Use the table component to let users compare information in rows and columns.
+- Never use the table component to layout content on a page. Instead, use the grid system.
+- Use 'Table scroll' example when there is lots of data, otherwise 'Table card'.
 
 ## Accessibility
 
 Accessibility in tables can be acheived to an extend by following the considerations below.
 
-*   Keep the table structure simple.
-*   Use right semantical html markups for tables wherever possible. (Example, `<table>`, `<thead>`, `<tfoot>`, `<tbody>`, `<th>`, `<td>`)
-*   Though `<thead>`, `<tfoot>`, `<tbody>` makes no difference with assistive technologies like screen readers, they are useful when printing long tables that run over the next page. In such instances, the `<thead>`, `<tfoot>` gets repeated on the next printed page that gives the data context.
-*   Use `<caption>` tag which defines a table caption. It must be inserted immediately after the `<table>` tag. By default it is center-aligned above a table.
-*   Basic tables will have one header row and/or one header column. Header cells must be marked up with `<th>` and data cells with `<td>` to make tables accessible.
-*   For complex tables, split data to keep it simple or else user's using assistive technologies like screen readers will find it difficult to interpret data relationships.
+- Keep the table structure simple.
+- Use right semantical html markups for tables wherever possible. (Example, `<table>`, `<thead>`, `<tfoot>`, `<tbody>`, `<th>`, `<td>`)
+- Though `<thead>`, `<tfoot>`, `<tbody>` makes no difference with assistive technologies like screen readers, they are useful when printing long tables that run over the next page. In such instances, the `<thead>`, `<tfoot>` gets repeated on the next printed page that gives the data context.
+- Use `<caption>` tag which defines a table caption. It must be inserted immediately after the `<table>` tag. By default it is center-aligned above a table.
+- Basic tables will have one header row and/or one header column. Header cells must be marked up with `<th>` and data cells with `<td>` to make tables accessible.
+- For complex tables, split data to keep it simple or else user's using assistive technologies like screen readers will find it difficult to interpret data relationships.
 
 ### Accessibility tags
 
@@ -443,6 +447,7 @@ Accessibility in tables can be acheived to an extend by following the considerat
         </td>
       </tr>
     </tbody>
+
   </table>
 </div>
 

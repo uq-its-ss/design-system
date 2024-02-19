@@ -1,6 +1,6 @@
-import { Meta, Story, Canvas } from '@storybook/blocks';
+import { Meta, Story, Canvas } from "@storybook/blocks";
 import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
-import * as UqMaps4SearchComboStories from './uq-maps-4-search-combo.stories';
+import * as UqMaps4SearchComboStories from "./uq-maps-4-search-combo.stories";
 
 <Meta of={UqMaps4SearchComboStories} />
 
@@ -8,17 +8,17 @@ import * as UqMaps4SearchComboStories from './uq-maps-4-search-combo.stories';
 
 <StatusBadge.Development />
 
-Enables the user to search for *and* browse points of interest and categories.
-By design, the first child of this component root is the *search field*.
+Enables the user to search for _and_ browse points of interest and categories.
+By design, the first child of this component root is the _search field_.
 
 ## 4A. Initial state
 
-Visually, it looks identical to a *search field* by itself.
+Visually, it looks identical to a _search field_ by itself.
 
 ### Basic usage
 
-<Canvas sourceState='hidden' withToolbar>
-  <Story of={UqMaps4SearchComboStories.initial} /> 
+<Canvas sourceState="hidden" withToolbar>
+  <Story of={UqMaps4SearchComboStories.initial} />
 </Canvas>
 
 ## 4B. On focus or selecting origin/destination
@@ -34,32 +34,32 @@ Some POI and/or category items should be suggested before the user enters any
 text. The following example shows an alphabetical list of categories. However,
 we should show some data-driven POI's/categories instead.
 
-<Canvas sourceState='hidden' withToolbar>
-  <Story of={UqMaps4SearchComboStories.focused} /> 
+<Canvas sourceState="hidden" withToolbar>
+  <Story of={UqMaps4SearchComboStories.focused} />
 </Canvas>
 
 ## 4C. With search value
 
 ### Basic usage
 
-<Canvas sourceState='hidden' withToolbar>
-  <Story of={UqMaps4SearchComboStories.searching} /> 
+<Canvas sourceState="hidden" withToolbar>
+  <Story of={UqMaps4SearchComboStories.searching} />
 </Canvas>
 
 ## 4D. With search value but no results
 
 ### Basic usage
 
-<Canvas sourceState='hidden' withToolbar>
-  <Story of={UqMaps4SearchComboStories.searchingNoResults} /> 
+<Canvas sourceState="hidden" withToolbar>
+  <Story of={UqMaps4SearchComboStories.searchingNoResults} />
 </Canvas>
 
 ## 4E. With search value but with search error
 
 ### Basic usage
 
-<Canvas sourceState='hidden' withToolbar>
-  <Story of={UqMaps4SearchComboStories.searchingError} /> 
+<Canvas sourceState="hidden" withToolbar>
+  <Story of={UqMaps4SearchComboStories.searchingError} />
 </Canvas>
 
 ## 4F. With search value AND category item opened
@@ -70,8 +70,8 @@ list items.
 
 ### Basic usage
 
-<Canvas sourceState='hidden' withToolbar>
-  <Story of={UqMaps4SearchComboStories.searchingInCategory} /> 
+<Canvas sourceState="hidden" withToolbar>
+  <Story of={UqMaps4SearchComboStories.searchingInCategory} />
 </Canvas>
 
 ## JavaScript UX enhancements
@@ -90,5 +90,6 @@ list items.
     initially positioned relative to the search field's height—
     <strong>using CSS and HTML alone</strong>. Implement a JavaScript solution to
     this problem to improve the user experience. Watch this space for a working demo.
+
   </div>
 </div>

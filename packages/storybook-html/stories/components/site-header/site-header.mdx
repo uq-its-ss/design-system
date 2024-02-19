@@ -1,6 +1,6 @@
-import { Meta, Story, Canvas } from '@storybook/blocks';
+import { Meta, Story, Canvas } from "@storybook/blocks";
 import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
-import * as SiteHeaderStories from './site-header.stories';
+import * as SiteHeaderStories from "./site-header.stories";
 
 <Meta of={SiteHeaderStories} />
 
@@ -10,7 +10,11 @@ import * as SiteHeaderStories from './site-header.stories';
 
 <StatusBadge.StableDoc />
 
-<a href="https://github.com/uq-its-ss/design-system/issues" class="uq-button uq-button--text" target="_blank">
+<a
+  href="https://github.com/uq-its-ss/design-system/issues"
+  class="uq-button uq-button--text"
+  target="_blank"
+>
   Check for open issues
 </a>
 
@@ -25,7 +29,7 @@ The site header component is comprised of the site title, the site navigation, a
 A site header with a site title, a site utility, and a two-level site navigation.
 
 <Canvas withToolbar>
-  <Story of={SiteHeaderStories.siteHeaderWithSubnav} /> 
+  <Story of={SiteHeaderStories.siteHeaderWithSubnav} />
 </Canvas>
 
 #### Usage
@@ -76,7 +80,7 @@ Slider mobile menu
 A site header with site title and a one-level site navigation.
 
 <Canvas withToolbar>
-  <Story of={SiteHeaderStories.siteHeaderWithoutSubnav} /> 
+  <Story of={SiteHeaderStories.siteHeaderWithoutSubnav} />
 </Canvas>
 
 ## Variants
@@ -109,9 +113,9 @@ The component includes a small space for secondary actions. This section is not 
 
 **Examples include:**
 
-*   Future Students dropdown for domestic and international.
-*   UQ Maps, expand to fill whole screen
-*   UQ researchers shortlist
+- Future Students dropdown for domestic and international.
+- UQ Maps, expand to fill whole screen
+- UQ researchers shortlist
 
 ## Accessibility
 

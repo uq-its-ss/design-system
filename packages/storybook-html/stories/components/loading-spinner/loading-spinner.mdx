@@ -1,6 +1,6 @@
-import { Meta, Story, Canvas } from '@storybook/blocks';
+import { Meta, Story, Canvas } from "@storybook/blocks";
 import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
-import * as LoadingSpinnerStories from './loading-spinner.stories';
+import * as LoadingSpinnerStories from "./loading-spinner.stories";
 
 <Meta of={LoadingSpinnerStories} />
 
@@ -10,7 +10,11 @@ import * as LoadingSpinnerStories from './loading-spinner.stories';
 
 <StatusBadge.StableDoc />
 
-<a href="https://github.com/uq-its-ss/design-system/issues" class="uq-button uq-button--text" target="_blank">
+<a
+  href="https://github.com/uq-its-ss/design-system/issues"
+  class="uq-button uq-button--text"
+  target="_blank"
+>
   Check for open issues
 </a>
 
@@ -23,7 +27,7 @@ The loading spinner component is a progress indicator used to provide feedback t
 The default component is UQ purple for use on light backgrounds such as white or light-grey.
 
 <Canvas sourceState="hidden">
-  <Story of={LoadingSpinnerStories.loadingSpinner} /> 
+  <Story of={LoadingSpinnerStories.loadingSpinner} />
 </Canvas>
 
 ```html
@@ -41,7 +45,7 @@ The variants can be used in isolation or combined. For example if you would like
 Changes the colour of the component to white so it can be used on darker backgrounds such as UQ purple.
 
 <Canvas sourceState="hidden">
-  <Story of={LoadingSpinnerStories.loadingSpinnerLight} /> 
+  <Story of={LoadingSpinnerStories.loadingSpinnerLight} />
 </Canvas>
 
 ```html
@@ -59,7 +63,7 @@ Changes the colour of the component to white so it can be used on darker backgro
 Reduces the component to half the size of the default.
 
 <Canvas sourceState="hidden">
-  <Story of={LoadingSpinnerStories.loadingSpinnerSmall} /> 
+  <Story of={LoadingSpinnerStories.loadingSpinnerSmall} />
 </Canvas>
 
 ```html

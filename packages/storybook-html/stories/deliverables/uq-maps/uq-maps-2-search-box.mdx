@@ -1,6 +1,6 @@
-import { Meta, Story, Canvas } from '@storybook/blocks';
+import { Meta, Story, Canvas } from "@storybook/blocks";
 import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
-import * as UqMaps2SearchBoxStories from './uq-maps-2-search-box.stories';
+import * as UqMaps2SearchBoxStories from "./uq-maps-2-search-box.stories";
 
 <Meta of={UqMaps2SearchBoxStories} />
 
@@ -17,8 +17,8 @@ Enables the user to search for points of interest and categories.
 Use the HTML markup provided in the example below to apply the styles from the
 provided CSS.
 
-<Canvas sourceState='hidden'>
-  <Story of={UqMaps2SearchBoxStories.searchField} /> 
+<Canvas sourceState="hidden">
+  <Story of={UqMaps2SearchBoxStories.searchField} />
 </Canvas>
 
 ## 2B. On focus or selecting origin/destination
@@ -32,8 +32,8 @@ an origin or destination in wayfinding mode.
 Using the same HTML markup as above, also apply the `uq-maps__search-field--is-focused`
 class to the container.
 
-<Canvas sourceState='hidden'>
-  <Story of={UqMaps2SearchBoxStories.searchFieldFocused} /> 
+<Canvas sourceState="hidden">
+  <Story of={UqMaps2SearchBoxStories.searchFieldFocused} />
 </Canvas>
 
 ## 2C. With search value
@@ -45,8 +45,8 @@ What the search field looks like when there has been text entered.
 Using the same HTML markup as above, except we're applying the `uq-maps__search-field--is-searching`
 class to the container instead.
 
-<Canvas sourceState='hidden'>
-  <Story of={UqMaps2SearchBoxStories.searchFieldSearching} /> 
+<Canvas sourceState="hidden">
+  <Story of={UqMaps2SearchBoxStories.searchFieldSearching} />
 </Canvas>
 
 ## 2D. With circular progression indicator
@@ -57,13 +57,12 @@ What the search field looks like when the app is working on a search query.
 
 Using the same HTML markup as above and also applying the `uq-maps__search-field--is-working`
 class to the container instead. We also have to add in some extra markup and
-scripted behaviour for the [*Material Design*][1] progress indicator. Please see
+scripted behaviour for the [_Material Design_][1] progress indicator. Please see
 example code.
 
-<Canvas sourceState='hidden'>
-  <Story of={UqMaps2SearchBoxStories.searchFieldWorking} /> 
+<Canvas sourceState="hidden">
+  <Story of={UqMaps2SearchBoxStories.searchFieldWorking} />
 </Canvas>
 
 [1]: https://material.io/components/progress-indicators#circular-progress-indicators
-
 [2]: https://material.io/develop/web/components/progress-indicator

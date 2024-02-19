@@ -1,7 +1,7 @@
-import { Meta, Story, Canvas } from '@storybook/blocks';
+import { Meta, Story, Canvas } from "@storybook/blocks";
 import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
-import * as BlockquoteStories from './blockquote.stories';
-import { background } from '@storybook/theming';
+import * as BlockquoteStories from "./blockquote.stories";
+import { background } from "@storybook/theming";
 
 <Meta of={BlockquoteStories} />
 
@@ -11,7 +11,11 @@ import { background } from '@storybook/theming';
 
 <StatusBadge.StableDoc />
 
-<a href="https://github.com/uq-its-ss/design-system/issues" class="uq-button uq-button--text" target="_blank">
+<a
+  href="https://github.com/uq-its-ss/design-system/issues"
+  class="uq-button uq-button--text"
+  target="_blank"
+>
   Check for open issues
 </a>
 
@@ -77,9 +81,9 @@ Changes the colour of the blockquote text to white so it can be used on darker b
 
 ## How and when to use
 
-*   The quoted content is contained in the `blockquote` element. The author and source are placed outside that element so they do not become a part of the quoted content.
-*   If referencing the source of the quote, the source title should be placed in a `cite` element. This element should only contain the title of the source, not the author as the author is not considered the source according to the specifcations of the `cite` element.
-*   The use of the blockquote element indicates the text is a quotation from another source. It should not be used for visual styling of other content.
+- The quoted content is contained in the `blockquote` element. The author and source are placed outside that element so they do not become a part of the quoted content.
+- If referencing the source of the quote, the source title should be placed in a `cite` element. This element should only contain the title of the source, not the author as the author is not considered the source according to the specifcations of the `cite` element.
+- The use of the blockquote element indicates the text is a quotation from another source. It should not be used for visual styling of other content.
 
 ## Accessibility
 

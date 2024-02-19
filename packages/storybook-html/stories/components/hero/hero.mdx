@@ -1,6 +1,6 @@
-import { Meta, Story, Canvas } from '@storybook/blocks';
+import { Meta, Story, Canvas } from "@storybook/blocks";
 import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
-import * as HeroStories from './hero.stories';
+import * as HeroStories from "./hero.stories";
 
 <Meta of={HeroStories} />
 
@@ -28,8 +28,8 @@ There are 2 size variations - small (default) and large (use the `.uq-hero--larg
 
 There are 2 color variations - purple (default) and white (use the `.uq-hero--light` modifier class).
 
-<Canvas sourceState='hidden'>
-  <Story of={HeroStories.Hero} />  
+<Canvas sourceState="hidden">
+  <Story of={HeroStories.Hero} />
 </Canvas>
 
 ```html
@@ -59,7 +59,7 @@ The homepage hero use the `.uq-hero--light` and `.uq-hero--large` modifier class
 and includes a purple button.
 
 <Canvas>
-<Story of={HeroStories.Home} />  
+  <Story of={HeroStories.Home} />
 </Canvas>
 
 #### Level 1
@@ -68,7 +68,7 @@ Level 1 pages use the `.uq-hero--light` modifier class. Level 1 and 2 pages do n
 include a button.
 
 <Canvas>
-  <Story of={HeroStories.Level1} /> 
+  <Story of={HeroStories.Level1} />
 </Canvas>
 
 #### Level 2
@@ -77,5 +77,5 @@ Level 2 pages don't use any modifier classes. Level 1 and 2 pages do not
 include a button.
 
 <Canvas>
-  <Story of={HeroStories.Level2} /> 
+  <Story of={HeroStories.Level2} />
 </Canvas>

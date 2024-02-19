@@ -51,7 +51,7 @@ const config = {
 
   framework: {
     name: getAbsolutePath("@storybook/html-webpack5"),
-    options: {}
+    options: {},
   },
 };
 
@@ -62,7 +62,5 @@ const config = {
 function getAbsolutePath(value) {
   return dirname(require.resolve(join(value, "package.json")));
 }
-
-
 
 export default config;

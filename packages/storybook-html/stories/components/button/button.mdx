@@ -1,6 +1,6 @@
-import { Meta, Story, Canvas } from '@storybook/blocks';
+import { Meta, Story, Canvas } from "@storybook/blocks";
 import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
-import * as ButtonStories from './button.stories';
+import * as ButtonStories from "./button.stories";
 
 <Meta of={ButtonStories} />
 
@@ -10,7 +10,11 @@ import * as ButtonStories from './button.stories';
 
 <StatusBadge.StableDoc />
 
-<a href="https://github.com/uq-its-ss/design-system/issues" class="uq-button uq-button--text" target="_blank">
+<a
+  href="https://github.com/uq-its-ss/design-system/issues"
+  class="uq-button uq-button--text"
+  target="_blank"
+>
   Check for open issues
 </a>
 
@@ -18,8 +22,8 @@ import * as ButtonStories from './button.stories';
 
 The button component is used to navigate to a web link or to an anchor name tag on the same page or different page.
 
-*   The button categories are primary, secondary, secondary-light and purple.
-*   Each category has it's own variant styles like outline, text and expanded options to be used in different scenarios.
+- The button categories are primary, secondary, secondary-light and purple.
+- Each category has it's own variant styles like outline, text and expanded options to be used in different scenarios.
 
 ## Default example
 
@@ -29,7 +33,7 @@ Primary buttons are used for primary actions on a webpage. For example, submit b
 It should only appear once on a webpage.
 
 <Canvas sourceState="hidden">
-<Story of={ButtonStories.primary} />
+  <Story of={ButtonStories.primary} />
 </Canvas>
 
 ```html
@@ -194,11 +198,12 @@ Expand variant of the button `uq-button--expand` would extend the width of the b
         Used in UQ related events and stories
       </td>
     </tr>
+
   </tbody>
 </table>
 
-*   Outline & text style - Used as a tertiary button to signify their lesser prominence from the normal style.
-*   Expand style - Used with design discretion when layout demands.
+- Outline & text style - Used as a tertiary button to signify their lesser prominence from the normal style.
+- Expand style - Used with design discretion when layout demands.
 
 ### States
 

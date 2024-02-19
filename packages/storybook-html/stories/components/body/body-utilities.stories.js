@@ -1,4 +1,3 @@
-
 export default {
   title: "Components/Body/Utilities",
   parameters: {
@@ -7,8 +6,8 @@ export default {
 };
 
 export const textColorUtils = {
-render: () => {
-  return `
+  render: () => {
+    return `
 <table>
   <thead>
   <tr>
@@ -36,7 +35,7 @@ render: () => {
   </tbody>
 </table>
   `;
-},
+  },
 
   name: "Text colours",
 };

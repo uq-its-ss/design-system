@@ -24,7 +24,6 @@ export const blockquote = {
 };
 
 export const blockquoteLight = {
-
   parameters: {
     backgrounds: {
       default: "Purple",

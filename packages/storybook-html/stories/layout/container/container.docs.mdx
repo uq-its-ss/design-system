@@ -1,6 +1,6 @@
-import { Meta, Story, Canvas } from '@storybook/blocks';
+import { Meta, Story, Canvas } from "@storybook/blocks";
 import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
-import * as ContainerStories from './container.stories';
+import * as ContainerStories from "./container.stories";
 
 <Meta of={ContainerStories} />
 
@@ -24,8 +24,8 @@ The `.uq-container` element can be used anywhere, for example nested within othe
 It must not be a descendant of other `.uq-container` elements or elements that use
 `@include layout-containment`.
 
-<Canvas sourceState='hidden'>
-  <Story of={ContainerStories.Container} /> 
+<Canvas sourceState="hidden">
+  <Story of={ContainerStories.Container} />
 </Canvas>
 
 ```html

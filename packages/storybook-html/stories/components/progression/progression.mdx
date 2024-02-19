@@ -25,9 +25,7 @@ The Progression component is a progress indicator helping the user to complete a
 In the initial instance, the component is in it's starting default stage.
 
 <Canvas sourceState="hidden">
-  {/* <Story id="components-progression--progression-initial" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
-
-  <Story id="components-progression--progression-initial" />
+  <Story of={ProgressionStories.progressionInitial} /> 
 </Canvas>
 
 ```html
@@ -50,9 +48,7 @@ In the initial instance, the component is in it's starting default stage.
 An instance when a step is done partly but not completed.
 
 <Canvas sourceState="hidden">
-  {/* <Story id="components-progression--progression-middle" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
-
-  <Story id="components-progression--progression-middle" />
+  <Story of={ProgressionStories.progressionMiddle} /> 
 </Canvas>
 
 ```html
@@ -90,9 +86,7 @@ An instance when a step is done partly but not completed.
 The instance when all steps are done and completed.
 
 <Canvas sourceState="hidden">
-  {/* <Story id="components-progression--progression-final" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
-
-  <Story id="components-progression--progression-final" />
+  <Story of={ProgressionStories.progressionFinal} /> 
 </Canvas>
 
 ```html

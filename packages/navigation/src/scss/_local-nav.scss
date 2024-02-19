@@ -53,19 +53,6 @@
   padding: 0;
 }
 
-.uq-local-nav--has-children {
-  & > .uq-local-nav__link {
-    background-image: url(icon.get-icon(
-      "standard--chevron-down-sml",
-      core.$black
-    ));
-    background-repeat: no-repeat;
-    background-size: 24px;
-    background-position: right center;
-    padding-inline-end: core.$space-l;
-  }
-}
-
 .uq-local-nav__child,
 .uq-local-nav__grandchild {
   margin-bottom: 0;
@@ -90,4 +77,21 @@
 .uq-local-nav--active-link {
   background-color: core.$grey-50;
   font-weight: core.$font-weight-medium;
+}
+
+.uq-local-nav--has-children {
+  & .uq-local-nav__link {
+    background-image: url(icon.get-icon(
+      "standard--chevron-down-sml",
+      core.$black
+    ));
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-position: right center;
+    padding-inline-end: core.$space-l;
+  }
+
+  & .uq-local-nav--active-link {
+    background-image: none;
+  }
 }

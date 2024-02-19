@@ -1,6 +1,8 @@
-import { Story, Canvas } from "@storybook/addon-docs";
+import { Meta, Story, Canvas } from '@storybook/blocks';
 import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
-import { Section } from "./section.stories";
+import * as SectionStories from './section.stories';
+
+<Meta of={SectionStories} />
 
 # Section
 
@@ -24,8 +26,8 @@ section spacing between each section.
 
 Implement the markup structure below for the header.
 
-<Canvas withSource="none">
-  <Story id="components-section--section" />
+<Canvas sourceState='hidden'>
+  <Story of={SectionStories.Section} /> 
 </Canvas>
 
 ```html
@@ -46,8 +48,8 @@ A section with a grey background.
 
 Modifier class: `.uq-section--shaded`
 
-<Canvas withSource="none">
-  <Story id="components-section--shaded" />
+<Canvas sourceState='hidden'>
+  <Story of={SectionStories.Shaded} /> 
 </Canvas>
 
 ### With container
@@ -55,8 +57,8 @@ Modifier class: `.uq-section--shaded`
 Sections can also implement a `.uq-container` element within their markup so the
 section can run edge-to-edge.
 
-<Canvas withSource="none">
-  <Story id="components-section--container" />
+<Canvas sourceState='hidden'>
+  <Story of={SectionStories.Container} /> 
 </Canvas>
 
 ### Shaded with container
@@ -65,15 +67,15 @@ For shaded sections that go edge-to-edge.
 
 Modifier class: `.uq-section--shaded`
 
-<Canvas withSource="none">
-  <Story id="components-section--shaded-container" />
+<Canvas sourceState='hidden'>
+  <Story of={SectionStories.ShadedContainer} /> 
 </Canvas>
 
 ### Examples
 
 #### Section with Card grid
 
-<Canvas withSource="none">
+<Canvas sourceState='hidden'>
   <div class="uq-section">
     <div class="uq-container">
       <div class="uq-section__header">

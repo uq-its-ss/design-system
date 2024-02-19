@@ -19,9 +19,20 @@ export default {
 
 export const primary = () => {
   return `
-    <button class="uq-button">Button</button>
-    <button class="uq-button uq-button--outline">Button</button>
-    <button class="uq-button uq-button--text">Button</button>
+  <div class="uq-section uq-section--centered">
+    <div class="uq-section__container">
+      <div class="uq-section__content">
+        <button class="uq-button">Button</button>
+    </div>
+    </div>
+  </div>
+  <div class="uq-section uq-section--centered" style="background-color: #3b383e;">
+    <div class="uq-section__container">
+      <div class="uq-section__content">
+      <button class="uq-button">Button</button>
+    </div>
+    </div>
+  </div>
   `;
 };
 
@@ -29,28 +40,45 @@ primary.storyName = "Primary (base)";
 
 export const secondary = () => {
   return `
+  <div class="uq-section uq-section--centered">
+  <div class="uq-section__container">
+    <div class="uq-section__content">
+      <button class="uq-button uq-button--secondary">Button</button>
+  </div>
+  </div>
+</div>
+<div class="uq-section uq-section--centered" style="background-color: #3b383e;">
+  <div class="uq-section__container">
+    <div class="uq-section__content">
     <button class="uq-button uq-button--secondary">Button</button>
-    <button class="uq-button uq-button--secondary uq-button--outline">Button</button>
-    <button class="uq-button uq-button--secondary uq-button--text">Button</button>
+  </div>
+  </div>
+</div>
   `;
 };
 
-export const secondaryLight = () => {
+export const tertiary = () => {
   return `
-    <button class="uq-button uq-button--secondary uq-button--outline uq-button--light">Button</button>
-    <button class="uq-button uq-button--secondary uq-button--text uq-button--light">Button</button>
+  <div class="uq-section uq-section--centered">
+  <div class="uq-section__container">
+    <div class="uq-section__content">
+      <button class="uq-button uq-button--tertiary">Button</button>
+  </div>
+  </div>
+</div>
+<div class="uq-section uq-section--centered" style="background-color: #3b383e;">
+  <div class="uq-section__container">
+    <div class="uq-section__content">
+    <button class="uq-button uq-button--tertiary">Button</button>
+  </div>
+  </div>
+</div>
   `;
 };
 
-secondaryLight.storyName = "Secondary light";
-secondaryLight.parameters = {
-  docs: {
-    inlineStories: false,
-  },
-  backgrounds: {
-    default: "Dark",
-  },
-};
+tertiary.storyName = "Tertiary";
+
+
 
 export const purple = () => {
   return `

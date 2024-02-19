@@ -42,7 +42,7 @@
 
   /* button secondary */
   &--secondary {
-    background-color: transparent;
+    background-color: core.$white;
     border-color: core.$purple-500;
     color: core.$purple-500;
 
@@ -56,8 +56,8 @@
 
   /* button purple */
   &--tertiary {
-    background-color: transparent;
-    border-color: transparent;
+    background-color: core.$white;
+    border-color: core.$white;
     color: core.$purple-500;
     text-decoration: underline;
 

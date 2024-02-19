@@ -24,16 +24,8 @@ export const blockquote = {
 };
 
 export const blockquoteLight = {
-  render: () => {
-    return blockquoteLightHTML;
-  },
-
-  name: "Light",
 
   parameters: {
-    docs: {
-      inlineStories: false,
-    },
     backgrounds: {
       default: "Purple",
       values: [
@@ -44,4 +36,10 @@ export const blockquoteLight = {
       ],
     },
   },
+
+  render: () => {
+    return blockquoteLightHTML;
+  },
+
+  name: "Light",
 };

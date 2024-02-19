@@ -1,6 +1,7 @@
 import { Meta, Story, Canvas } from '@storybook/blocks';
 import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
 import * as BlockquoteStories from './blockquote.stories';
+import { background } from '@storybook/theming';
 
 <Meta of={BlockquoteStories} />
 
@@ -23,9 +24,7 @@ The blockquote component is used for quoting a passage of text or speech, the au
 Displays the blockquote text, author, and source in purple text for use on light backgrounds such as white or light-grey.
 
 <Canvas>
-  {/* <Story height={170} id="components-blockquote--blockquote" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
-
-  <Story height={170} id="components-blockquote--blockquote" />
+  <Story of={BlockquoteStories.blockquote} />
 </Canvas>
 
 ```html
@@ -54,9 +53,7 @@ Displays the blockquote text, author, and source in purple text for use on light
 Changes the colour of the blockquote text to white so it can be used on darker backgrounds such as UQ purple.
 
 <Canvas>
-  {/* <Story height={170} id="components-blockquote--blockquote-light" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
-
-  <Story height={170} id="components-blockquote--blockquote-light" />
+  <Story of={BlockquoteStories.blockquoteLight} />
 </Canvas>
 
 ```html

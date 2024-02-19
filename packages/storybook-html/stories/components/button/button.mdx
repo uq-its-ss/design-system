@@ -29,9 +29,7 @@ Primary buttons are used for primary actions on a webpage. For example, submit b
 It should only appear once on a webpage.
 
 <Canvas sourceState="hidden">
-  {/* <Story id="components-button--primary" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
-
-  <Story id="components-button--primary" />
+<Story of={ButtonStories.primary} />
 </Canvas>
 
 ```html
@@ -47,9 +45,7 @@ It should only appear once on a webpage.
 Secondary button is used to highlight important actions. For example, save button on a form.
 
 <Canvas sourceState="hidden">
-  {/* <Story id="components-button--secondary" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
-
-  <Story id="components-button--secondary" />
+  <Story of={ButtonStories.secondary} />
 </Canvas>
 
 ```html
@@ -65,9 +61,7 @@ Secondary button is used to highlight important actions. For example, save butto
 Secondary-light button variant is used on dark backgrounds.
 
 <Canvas sourceState="hidden">
-  {/* <Story height="70px" id="components-button--secondary-light" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
-
-  <Story height="70px" id="components-button--secondary-light" />
+  <Story of={ButtonStories.secondaryLight} />
 </Canvas>
 
 ```html
@@ -86,9 +80,7 @@ Secondary-light button variant is used on dark backgrounds.
 Purple button uses UQ's brand primary color, purple. It needs to be used sparingly.
 
 <Canvas sourceState="hidden">
-  {/* <Story id="components-button--purple" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
-
-  <Story id="components-button--purple" />
+  <Story of={ButtonStories.purple} />
 </Canvas>
 
 ```html
@@ -102,9 +94,7 @@ Purple button uses UQ's brand primary color, purple. It needs to be used sparing
 The button sizes are normal, tiny `uq-button--tiny`, small `uq-button--small` and large `uq-button--large`
 
 <Canvas sourceState="hidden">
-  {/* <Story id="components-button--size" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
-
-  <Story id="components-button--size" />
+  <Story of={ButtonStories.size} />
 </Canvas>
 
 ```html
@@ -130,9 +120,7 @@ The button sizes are normal, tiny `uq-button--tiny`, small `uq-button--small` an
 Expand variant of the button `uq-button--expand` would extend the width of the button to full width of its parent container.
 
 <Canvas sourceState="hidden">
-  {/* <Story id="components-button--expand" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
-
-  <Story id="components-button--expand" />
+  <Story of={ButtonStories.expand} />
 </Canvas>
 
 ```html

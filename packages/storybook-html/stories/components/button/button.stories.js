@@ -23,12 +23,16 @@ export const primary = {
   name: "Primary (base)",
 };
 
-export const secondary = () => {
-  return `
-    <button class="uq-button uq-button--secondary">Button</button>
-    <button class="uq-button uq-button--secondary uq-button--outline">Button</button>
-    <button class="uq-button uq-button--secondary uq-button--text">Button</button>
-  `;
+export const secondary = {
+  render: () => {
+    return `
+      <button class="uq-button uq-button--secondary">Button</button>
+      <button class="uq-button uq-button--secondary uq-button--outline">Button</button>
+      <button class="uq-button uq-button--secondary uq-button--text">Button</button>
+    `;
+  },
+
+  name: "Secondary",
 };
 
 export const secondaryLight = {

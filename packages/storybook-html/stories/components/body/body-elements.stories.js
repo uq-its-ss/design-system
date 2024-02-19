@@ -11,15 +11,20 @@ export default {
   },
 };
 
-export const title = () => {
-  return `
-    <div class="uqds-body__container">
-      <h1>Heading level 1 (h1)</h1>
-    </div>
-  `;
+export const title = {
+  render: () => {
+    return `
+      <div class="uqds-body__container">
+        <h1>Heading level 1 (h1)</h1>
+      </div>
+    `;
+  },
+  
+  name: "Title",
 };
 
-export const header = () => {
+export const header = {
+  render: () => {
   return `
     <div class="uqds-body__container">
       <h2>Heading level 2 (h2)</h2>
@@ -29,6 +34,9 @@ export const header = () => {
       <h6>Heading level 6 (h6)</h6>
     </div>
   `;
+  },
+
+  name: "Header",
 };
 
 export const textBlock = {

@@ -1,4 +1,3 @@
-import docs from "./card-grid.docs.mdx";
 import "../layout-demo.scss";
 import "../../../../layout/src/scss/main.scss";
 
@@ -6,9 +5,6 @@ export default {
   title: "Layout/Card grid",
   parameters: {
     layout: "fullscreen",
-    docs: {
-      page: docs,
-    },
     previewTabs: {
       canvas: { hidden: false },
     },

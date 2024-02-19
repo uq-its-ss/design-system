@@ -1,5 +1,8 @@
-import { Story, Canvas } from "@storybook/addon-docs";
+import { Meta, Story, Canvas } from '@storybook/blocks';
 import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
+import * as CardGridStories from './card-grid.stories';
+
+<Meta of={CardGridStories} />
 
 # Card grid
 
@@ -38,7 +41,7 @@ In this target size, cards will display full width at all times.
 Modifier class: `.uq-card-grid--target-1x`
 
 <Canvas sourceState='hidden'>
-  <Story id="layout-card-grid--one-per-row" />
+  <Story of={CardGridStories.OnePerRow} /> 
 </Canvas>
 
 ### Two per row
@@ -48,7 +51,7 @@ Cards will typically display two per row except on some mobile devices.
 Modifier class: `.uq-card-grid--target-2x`
 
 <Canvas sourceState='hidden'>
-  <Story id="layout-card-grid--two-per-row" />
+  <Story of={CardGridStories.TwoPerRow} />
 </Canvas>
 
 ### Three per row
@@ -59,7 +62,7 @@ devices and one per row on mobile devices.
 Modifier class: `.uq-card-grid--target-3x`
 
 <Canvas sourceState='hidden'>
-  <Story id="layout-card-grid--three-per-row" />
+  <Story of={CardGridStories.ThreePerRow} />
 </Canvas>
 
 ### Four per row
@@ -71,5 +74,5 @@ on mobile devices.
 Modifier class: `.uq-card-grid--target-4x`
 
 <Canvas sourceState='hidden'>
-  <Story id="layout-card-grid--four-per-row" />
+  <Story of={CardGridStories.FourPerRow} />
 </Canvas>

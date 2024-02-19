@@ -25,9 +25,7 @@ The site header component is comprised of the site title, the site navigation, a
 A site header with a site title, a site utility, and a two-level site navigation.
 
 <Canvas withToolbar>
-  {/* <Story height={505} id="components-site-header--site-header-with-subnav" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
-
-  <Story height={505} id="components-site-header--site-header-with-subnav" />
+  <Story of={SiteHeaderStories.siteHeaderWithSubnav} /> 
 </Canvas>
 
 #### Usage
@@ -78,9 +76,7 @@ Slider mobile menu
 A site header with site title and a one-level site navigation.
 
 <Canvas withToolbar>
-  {/* <Story height={200} id="components-site-header--site-header-without-subnav" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
-
-  <Story height={200} id="components-site-header--site-header-without-subnav" />
+  <Story of={SiteHeaderStories.siteHeaderWithoutSubnav} /> 
 </Canvas>
 
 ## Variants

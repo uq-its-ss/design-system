@@ -17,10 +17,8 @@ Visually, it looks identical to a *search field* by itself.
 
 ### Basic usage
 
-<Canvas withSource="open" withToolbar>
-  {/* <Story height={100} id="deliverables-uq-maps-4-search-combo-menu--initial" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
-
-  <Story height={100} id="deliverables-uq-maps-4-search-combo-menu--initial" />
+<Canvas sourceState='hidden' withToolbar>
+  <Story of={UqMaps4SearchComboStories.initial} /> 
 </Canvas>
 
 ## 4B. On focus or selecting origin/destination
@@ -36,40 +34,32 @@ Some POI and/or category items should be suggested before the user enters any
 text. The following example shows an alphabetical list of categories. However,
 we should show some data-driven POI's/categories instead.
 
-<Canvas withSource="open" withToolbar>
-  {/* <Story height={800} id="deliverables-uq-maps-4-search-combo-menu--focused" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
-
-  <Story height={800} id="deliverables-uq-maps-4-search-combo-menu--focused" />
+<Canvas sourceState='hidden' withToolbar>
+  <Story of={UqMaps4SearchComboStories.focused} /> 
 </Canvas>
 
 ## 4C. With search value
 
 ### Basic usage
 
-<Canvas withSource="open" withToolbar>
-  {/* <Story height={800} id="deliverables-uq-maps-4-search-combo-menu--searching" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
-
-  <Story height={800} id="deliverables-uq-maps-4-search-combo-menu--searching" />
+<Canvas sourceState='hidden' withToolbar>
+  <Story of={UqMaps4SearchComboStories.searching} /> 
 </Canvas>
 
 ## 4D. With search value but no results
 
 ### Basic usage
 
-<Canvas withSource="open" withToolbar>
-  {/* <Story height={155} id="deliverables-uq-maps-4-search-combo-menu--searching-no-results" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
-
-  <Story height={155} id="deliverables-uq-maps-4-search-combo-menu--searching-no-results" />
+<Canvas sourceState='hidden' withToolbar>
+  <Story of={UqMaps4SearchComboStories.searchingNoResults} /> 
 </Canvas>
 
 ## 4E. With search value but with search error
 
 ### Basic usage
 
-<Canvas withSource="open" withToolbar>
-  {/* <Story height={176} id="deliverables-uq-maps-4-search-combo-menu--searching-error" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
-
-  <Story height={176} id="deliverables-uq-maps-4-search-combo-menu--searching-error" />
+<Canvas sourceState='hidden' withToolbar>
+  <Story of={UqMaps4SearchComboStories.searchingError} /> 
 </Canvas>
 
 ## 4F. With search value AND category item opened
@@ -80,10 +70,8 @@ list items.
 
 ### Basic usage
 
-<Canvas withSource="open" withToolbar>
-  {/* <Story height={800} id="deliverables-uq-maps-4-search-combo-menu--searching-in-category" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
-
-  <Story height={800} id="deliverables-uq-maps-4-search-combo-menu--searching-in-category" />
+<Canvas sourceState='hidden' withToolbar>
+  <Story of={UqMaps4SearchComboStories.searchingInCategory} /> 
 </Canvas>
 
 ## JavaScript UX enhancements

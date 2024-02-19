@@ -9,7 +9,5 @@ import * as BasicPageStories from './basic-page.stories';
 <StatusBadge.DraftDoc />
 
 <Canvas sourceState="hidden" withToolbar>
-  {/* <Story height={1080} id="patterns-basic-page--basic-page" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
-
-  <Story height={1080} id="patterns-basic-page--basic-page" />
+  <Story of={BasicPageStories.basicPage} />
 </Canvas>

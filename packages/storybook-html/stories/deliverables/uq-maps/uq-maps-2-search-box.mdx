@@ -17,10 +17,8 @@ Enables the user to search for points of interest and categories.
 Use the HTML markup provided in the example below to apply the styles from the
 provided CSS.
 
-<Canvas withSource="open">
-  {/* <Story height={120} id="deliverables-uq-maps-2-search-field--search-field" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
-
-  <Story height={120} id="deliverables-uq-maps-2-search-field--search-field" />
+<Canvas sourceState='hidden'>
+  <Story of={UqMaps2SearchBoxStories.searchField} /> 
 </Canvas>
 
 ## 2B. On focus or selecting origin/destination
@@ -34,10 +32,8 @@ an origin or destination in wayfinding mode.
 Using the same HTML markup as above, also apply the `uq-maps__search-field--is-focused`
 class to the container.
 
-<Canvas withSource="open">
-  {/* <Story height={200} id="deliverables-uq-maps-2-search-field--search-field-focused" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
-
-  <Story height={200} id="deliverables-uq-maps-2-search-field--search-field-focused" />
+<Canvas sourceState='hidden'>
+  <Story of={UqMaps2SearchBoxStories.searchFieldFocused} /> 
 </Canvas>
 
 ## 2C. With search value
@@ -49,10 +45,8 @@ What the search field looks like when there has been text entered.
 Using the same HTML markup as above, except we're applying the `uq-maps__search-field--is-searching`
 class to the container instead.
 
-<Canvas withSource="open">
-  {/* <Story height={120} id="deliverables-uq-maps-2-search-field--search-field-searching" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
-
-  <Story height={120} id="deliverables-uq-maps-2-search-field--search-field-searching" />
+<Canvas sourceState='hidden'>
+  <Story of={UqMaps2SearchBoxStories.searchFieldSearching} /> 
 </Canvas>
 
 ## 2D. With circular progression indicator
@@ -66,10 +60,8 @@ class to the container instead. We also have to add in some extra markup and
 scripted behaviour for the [*Material Design*][1] progress indicator. Please see
 example code.
 
-<Canvas withSource="open">
-  {/* <Story height={120} id="deliverables-uq-maps-2-search-field--search-field-working" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
-
-  <Story height={120} id="deliverables-uq-maps-2-search-field--search-field-working" />
+<Canvas sourceState='hidden'>
+  <Story of={UqMaps2SearchBoxStories.searchFieldWorking} /> 
 </Canvas>
 
 [1]: https://material.io/components/progress-indicators#circular-progress-indicators

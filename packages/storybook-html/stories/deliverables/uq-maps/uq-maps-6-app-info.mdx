@@ -16,18 +16,14 @@ Implements the *slide drawer* and *badge* to display app info.
 
 #### Basic usage
 
-<Canvas withSource="open" withToolbar>
-  {/* <Story height={400} id="deliverables-uq-maps-6-app-info-drawer--closed" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
-
-  <Story height={400} id="deliverables-uq-maps-6-app-info-drawer--closed" />
+<Canvas sourceState='hidden' withToolbar>
+  <Story of={UqMaps6AppInfoStories.closed} /> 
 </Canvas>
 
 ### 6B. Open
 
 #### Basic usage
 
-<Canvas withSource="open" withToolbar>
-  {/* <Story height={400} id="deliverables-uq-maps-6-app-info-drawer--open" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
-
-  <Story height={400} id="deliverables-uq-maps-6-app-info-drawer--open" />
+<Canvas sourceState='hidden' withToolbar>
+  <Story of={UqMaps6AppInfoStories.open} />
 </Canvas>

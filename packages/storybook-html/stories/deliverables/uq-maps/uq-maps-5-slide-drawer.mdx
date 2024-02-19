@@ -15,8 +15,6 @@ this should be the entire screen.
 
 ### Basic usage
 
-<Canvas withSource="open" withToolbar>
-  {/* <Story height={600} id="deliverables-uq-maps-5-slide-drawer--expanded" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
-
-  <Story height={600} id="deliverables-uq-maps-5-slide-drawer--expanded" />
+<Canvas sourceState='hidden' withToolbar>
+  <Story of={UqMaps5SlideDrawerStories.expanded} /> 
 </Canvas>

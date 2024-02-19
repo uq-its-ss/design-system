@@ -10,16 +10,12 @@ import * as UqMaps1LiveDataIndicatorStories from './uq-maps-1-live-data-indicato
 
 ## Default
 
-<Canvas withSource="open">
-  {/* <Story id="deliverables-uq-maps-1-live-data-indicator--live-data-indicator" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
-
-  <Story id="deliverables-uq-maps-1-live-data-indicator--live-data-indicator" />
+<Canvas sourceState='hidden'>
+  <Story of={UqMaps1LiveDataIndicatorStories.liveDataIndicator} /> 
 </Canvas>
 
 ## Preset color variants
 
-<Canvas withSource="open">
-  {/* <Story id="deliverables-uq-maps-1-live-data-indicator--live-data-indicator-variants" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
-
-  <Story id="deliverables-uq-maps-1-live-data-indicator--live-data-indicator-variants" />
+<Canvas sourceState='hidden'>
+  <Story of={UqMaps1LiveDataIndicatorStories.liveDataIndicatorVariants} /> 
 </Canvas>

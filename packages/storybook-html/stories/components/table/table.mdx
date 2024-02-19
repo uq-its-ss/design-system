@@ -34,9 +34,7 @@ For instance when there is more content to the left, a transparent shadow appear
 #### a. Table scroll - Basic tags with minimal classes
 
 <Canvas withToolbar>
-  {/* <Story id="components-table--table" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
-
-  <Story id="components-table--table" />
+  <Story of={TableStories.table} /> 
 </Canvas>
 
 ```html
@@ -81,9 +79,7 @@ For instance when there is more content to the left, a transparent shadow appear
 #### b. Table scroll - Basic tags with classes
 
 <Canvas withToolbar>
-  {/* <Story id="components-table--table-classes" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
-
-  <Story id="components-table--table-classes" />
+  <Story of={TableStories.tableClasses} /> 
 </Canvas>
 
 ```html
@@ -130,9 +126,7 @@ For instance when there is more content to the left, a transparent shadow appear
 Tables with two headers with unclear header directions needs to define the direction of each header by setting the scope attribute to `col` or `row`.
 
 <Canvas withToolbar>
-  {/* <Story id="components-table--table-multiple-headers" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
-
-  <Story id="components-table--table-multiple-headers" />
+  <Story of={TableStories.tableMultipleHeaders} /> 
 </Canvas>
 
 ```html
@@ -186,9 +180,7 @@ Tables with two headers with unclear header directions needs to define the direc
 Tables with irregular headers have header cells that span multiple columns and/or rows: For these tables, define column and row groups and set the range of the header cells using the `colgroup` and `rowgroup` values of the scope attribute.
 
 <Canvas withToolbar>
-  {/* <Story id="components-table--table-irregular-headers" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
-
-  <Story id="components-table--table-irregular-headers" />
+  <Story of={TableStories.tableIrregularHeaders} /> 
 </Canvas>
 
 ```html
@@ -249,9 +241,7 @@ Tables with irregular headers have header cells that span multiple columns and/o
 Tables with multi-level headers have multiple header cells associated per data cell: For tables that are so complex that header cells can’t be associated in a strictly horizontal or vertical way, use `id` and `headers` attributes to associate header and data cells explicitly.
 
 <Canvas withToolbar>
-  {/* <Story id="components-table--table-multi-level-headers" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
-
-  <Story id="components-table--table-multi-level-headers" />
+  <Story of={TableStories.tableMultiLevelHeaders} /> 
 </Canvas>
 
 ```html
@@ -343,9 +333,7 @@ In this responsive approach, the component table `tr` is displayed as a grid. At
 The data attributes assigned to each `tbody` cell helps in understanding the connection between the call value and its associated header when the header `thead` is hidden.
 
 <Canvas withToolbar>
-  {/* <Story id="components-table--table-card" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
-
-  <Story id="components-table--table-card" />
+  <Story of={TableStories.tableCard} /> 
 </Canvas>
 
 ```html

@@ -18,10 +18,8 @@ location.
 Use the HTML markup provided in the example below to apply the styles from the
 provided CSS.
 
-<Canvas withSource="open" withToolbar>
-  {/* <Story height={240} id="deliverables-uq-maps-3-wayfinding-controls--wayfinding-control" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
-
-  <Story height={240} id="deliverables-uq-maps-3-wayfinding-controls--wayfinding-control" />
+<Canvas sourceState='hidden' withToolbar>
+  <Story of={UqMaps3WayfindingControlsStories.wayfindingControl} /> 
 </Canvas>
 
 ## 3B. With circular progress indicator
@@ -33,10 +31,8 @@ class to the container instead. We also have to add in some extra markup and
 scripted behaviour for the [*Material Design*][1] progress indicator. Please see example
 code.
 
-<Canvas withSource="open" withToolbar>
-  {/* <Story height={240} id="deliverables-uq-maps-3-wayfinding-controls--wayfinding-control-working" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
-
-  <Story height={240} id="deliverables-uq-maps-3-wayfinding-controls--wayfinding-control-working" />
+<Canvas sourceState='hidden' withToolbar>
+  <Story of={UqMaps3WayfindingControlsStories.wayfindingControlWorking} /> 
 </Canvas>
 
 [1]: https://material.io/components/progress-indicators#circular-progress-indicators

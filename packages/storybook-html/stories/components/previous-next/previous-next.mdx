@@ -27,9 +27,7 @@ import * as PreviousNextStories from './previous-next.stories';
 An instance when only the next button is visible
 
 <Canvas sourceState="hidden">
-  {/* <Story id="components-previous-next--previous-next-initial" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
-
-  <Story id="components-previous-next--previous-next-initial" />
+  <Story of={PreviousNextStories.previousNextInitial} /> 
 </Canvas>
 
 ```html
@@ -54,9 +52,7 @@ An instance when only the next button is visible
 An instance when both the previous and next buttons are visible
 
 <Canvas sourceState="hidden">
-  {/* <Story id="components-previous-next--previous-next-middle" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
-
-  <Story id="components-previous-next--previous-next-middle" />
+  <Story of={PreviousNextStories.previousNextMiddle} /> 
 </Canvas>
 
 ```html
@@ -82,9 +78,7 @@ An instance when both the previous and next buttons are visible
 An instance when only the previous button is visible
 
 <Canvas sourceState="hidden">
-  {/* <Story id="components-previous-next--previous-next-final" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
-
-  <Story id="components-previous-next--previous-next-final" />
+  <Story of={PreviousNextStories.previousNextFinal} /> 
 </Canvas>
 
 ```html

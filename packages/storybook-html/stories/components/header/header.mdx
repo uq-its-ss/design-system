@@ -26,9 +26,7 @@ The interim header is suitable for a broad range of sites and applications, it i
 *   An optional third navigation section is available on mobile when paired with the [Site header component](?path=/docs/components-site-header--site-header-with-subnav), which provides site title and local navigation options. This combines to provide a stacked mobile menu of all three sections (Local, primary and secondary navigation).
 
 <Canvas withToolbar>
-  {/* <Story height={220} id="components-header--header-interim" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
-
-  <Story height={220} id="components-header--header-interim" />
+  <Story of={HeaderStories.HeaderInterim} /> 
 </Canvas>
 
 ### Header with mega menu
@@ -38,10 +36,8 @@ Currently reserved for the UQ Homepage and level one landing pages for Study, Re
 *   The primary section includes the UQ logo, Primary navigation (Study, Research, Partners and community, about) with an extended drop down information architecture (mega menu) and search using [*UQ Search*](https://www.uq.edu.au/search).
 *   The secondary section provides navigation to UQ home, News, Events, Give and contact.
 
-<Canvas withToolbar>
-  {/* <Story height={300} id="components-header--header" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
-
-  <Story height={300} id="components-header--header" />
+<Canvas withToolbar >
+  <Story height='300px' of={HeaderStories.Header} />
 </Canvas>
 
 ### Usage
@@ -68,9 +64,7 @@ appHeight();
 When implementation of the full header is not possible, a simplified approach using basic elements may be appropriate.
 UQ purple background combined with the UQ logo make up the most important elements of the header.
 
-{/* <Story height={120} id="components-header--basic-header" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
-
-<Story height={120} id="components-header--basic-header" />
+  <Story of={HeaderStories.basicHeader} />
 
 ### Default search
 
@@ -80,9 +74,7 @@ The default option is a global search of all UQ. The search feature sends users 
 > functionality within your application e.g. searching for a location on a map,
 > searching for books or articles in a library database.
 
-{/* <Story id="components-header--search-global" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
-
-<Story id="components-header--search-global" />
+  <Story of={HeaderStories.searchGlobal} />
 
 ### Global and local search
 
@@ -90,9 +82,7 @@ You can optionally provide two radio fields, allowing users to choose to search 
 
 > \*If your application/website isn't indexed by UQ Search, it may impact what results are provided by a restricted search.
 
-{/* <Story height={120} id="components-header--search-local" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
-
-<Story height={120} id="components-header--search-local" />
+  <Story of={HeaderStories.searchLocal} />
 
 ```html
 <div class="uq-header__search-range">

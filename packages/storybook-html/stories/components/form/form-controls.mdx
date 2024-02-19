@@ -62,9 +62,7 @@ Input for freestyle text entry. Use when asking for open-ended, single-line
 answers from your users. E.g. "first name", "street address". For multi-line
 answers, consider using a *text area*.
 
-{/* <Story id="components-form-controls--input-text" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
-
-<Story id="components-form-controls--input-text" />
+  <Story of={FormControlsStories.inputText} />
 
 #### Basic setup
 
@@ -95,9 +93,7 @@ answers, consider using a *text area*.
 
 #### Error feedback
 
-{/* <Story id="components-form-controls--input-text-error" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
-
-<Story id="components-form-controls--input-text-error" />
+  <Story of={FormControlsStories.inputTextError} />
 
 ```html
 <form>
@@ -122,9 +118,7 @@ Success feedback on an individual form field should be used selectively and only
 when a user truly requires extra guidance. E.g. where there are strict
 formatting or unique value requirements.
 
-{/* <Story id="components-form-controls--input-text-success" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
-
-<Story id="components-form-controls--input-text-success" />
+  <Story of={FormControlsStories.inputTextSuccess} />
 
 ```html
 <form>
@@ -146,9 +140,7 @@ formatting or unique value requirements.
 
 Useful for contextual menus e.g. filter search results based on keywords.
 
-{/* <Story id="components-form-controls--input-text-inline" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
-
-<Story id="components-form-controls--input-text-inline" />
+  <Story of={FormControlsStories.inputTextInline} />
 
 Apply the `label--inline` class name to the `label` element like so:
 
@@ -176,9 +168,7 @@ panels. For search fields, consider setting `type="search"`.
 > Note: there's still an expectation that there's an associated label whether
 > visually hidden or not.
 
-{/* <Story id="components-form-controls--input-text-large" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
-
-<Story id="components-form-controls--input-text-large" />
+  <Story of={FormControlsStories.inputTextLarge} />
 
 Apply the `input--large` class name to the `input` element like so:
 
@@ -198,9 +188,7 @@ The select field, used to choose a single option from a list. If multiple
 options can be selected at the same time, consider using multiple checkboxes
 instead.
 
-{/* <Story id="components-form-controls--select" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
-
-<Story id="components-form-controls--select" />
+  <Story of={FormControlsStories.select} />
 
 #### Basic setup
 
@@ -234,9 +222,7 @@ instead.
 
 #### Error feedback
 
-{/* <Story id="components-form-controls--select-error" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
-
-<Story id="components-form-controls--select-error" />
+  <Story of={FormControlsStories.selectError} />
 
 ```html
 <form>
@@ -261,9 +247,7 @@ instead.
 
 #### Inline label and select
 
-{/* <Story id="components-form-controls--select-inline" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
-
-<Story id="components-form-controls--select-inline" />
+  <Story of={FormControlsStories.selectInline} />
 
 Apply the `label--inline` class name to the `label` element like so:
 
@@ -299,9 +283,7 @@ Apply the `label--inline` class name to the `label` element like so:
 Use to provided users with multiple yes or no options. For example, accepting
 terms and conditions and opting into communications.
 
-{/* <Story id="components-form-controls--checkbox" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
-
-<Story id="components-form-controls--checkbox" />
+  <Story of={FormControlsStories.checkbox} />
 
 #### Basic setup
 
@@ -332,9 +314,7 @@ terms and conditions and opting into communications.
 
 #### Error feedback
 
-{/* <Story id="components-form-controls--checkbox-error" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
-
-<Story id="components-form-controls--checkbox-error" />
+  <Story of={FormControlsStories.checkboxError} />
 
 ```html
 <form>
@@ -361,9 +341,7 @@ terms and conditions and opting into communications.
 Use to provide users with up to three, mutually exclusive options. If you have
 more than three options, please consider a *select* control instead.
 
-{/* <Story id="components-form-controls--radio" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
-
-<Story id="components-form-controls--radio" />
+  <Story of={FormControlsStories.radio} />
 
 #### Basic setup
 
@@ -415,9 +393,7 @@ Use a `fieldset` and `legend` to group and label your radio options.
 
 #### Error feedback
 
-{/* <Story id="components-form-controls--radio-error" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
-
-<Story id="components-form-controls--radio-error" />
+  <Story of={FormControlsStories.radioError} />
 
 ```html
 <form>
@@ -450,21 +426,15 @@ Use a `fieldset` and `legend` to group and label your radio options.
 
 ### Text area
 
-{/* <Story id="components-form-controls--text-area" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
-
-<Story id="components-form-controls--text-area" />
+  <Story of={FormControlsStories.textArea} />
 
 ### Number input
 
-{/* <Story id="components-form-controls--input-number" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
-
-<Story id="components-form-controls--input-number" />
+  <Story of={FormControlsStories.inputNumber} />
 
 ### Password input
 
-{/* <Story id="components-form-controls--input-password" /> is deprecated, please migrate it to <Story of={referenceToStory} /> see: https://storybook.js.org/migration-guides/7.0 */}
-
-<Story id="components-form-controls--input-password" />
+  <Story of={FormControlsStories.inputPassword} />
 
 ### File input
 

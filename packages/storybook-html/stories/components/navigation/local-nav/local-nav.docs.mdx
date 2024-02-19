@@ -13,8 +13,8 @@ import * as LocalNavStories from './local-nav.stories';
 
 The `.uq-local-nav` element provides local navigation for desktop.
 
-<Canvas withSource="none">
-  <Story id="components-navigation-local-nav--local-nav" />
+<Canvas sourceState='hidden'>
+  <Story of={LocalNavStories.LocalNav} /> 
 </Canvas>
 
 ### How-to
@@ -27,7 +27,7 @@ but only one `.uq-local-nav__parent` element.
 Use a `aria-label="Back to..."` attribute to help screen readers translate the
 back chevron.
 
-<Canvas withSource="none">
+<Canvas sourceState='hidden'>
   <nav className="uq-local-nav" aria-label="Local navigation">
     <div className="uq-local-nav__grandparent">
       <a className="uq-local-nav__link" href="#" aria-label="Back to UQ home">
@@ -90,7 +90,7 @@ Child elements that have their own children are marked with `.uq-local-nav--has-
 The active link is marked with `.uq-local-nav--active-link` on the `a` element, and
 for accessibility the active `a` element is also marked with `aria-current="page"`
 
-<Canvas withSource="none">
+<Canvas sourceState='hidden'>
   <nav className="uq-local-nav" aria-label="Local navigation">
     <div className="uq-local-nav__grandparent">
       <a className="uq-local-nav__link" href="#" aria-label="Back to UQ home">
@@ -157,7 +157,7 @@ within the `ul.uq-local-nav__grandchildren` element.
 
 The Grandchildren use a `li.uq-local-nav__grandchild` element.
 
-<Canvas withSource="none">
+<Canvas sourceState='hidden'>
   <nav className="uq-local-nav" aria-label="Local navigation">
     <div className="uq-local-nav__grandparent">
       <a className="uq-local-nav__link" href="#" aria-label="Back to UQ home">
@@ -240,7 +240,7 @@ The Grandchildren use a `li.uq-local-nav__grandchild` element.
 When a Grandchild becomes the active link, only its siblings and children are
 shown and a new Parent and Grandparent element are added.
 
-<Canvas withSource="none">
+<Canvas sourceState='hidden'>
   <nav className="uq-local-nav" aria-label="Local navigation">
     <div className="uq-local-nav__grandparent">
       <a className="uq-local-nav__link" href="#" aria-label="Back to UQ home">

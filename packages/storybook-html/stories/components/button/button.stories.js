@@ -93,7 +93,6 @@ export const tertiary = () => {
   `;
 };
 
-
 tertiary.parameters = {
   docs: {
     source: {
@@ -103,7 +102,6 @@ tertiary.parameters = {
     },
   },
 };
-
 
 export const expand = () => {
   return `

@@ -1,7 +1,8 @@
 @use "@uqds/core/src/scss/global" as core;
 
 :root {
-  --font-size-ul: #{core.$font-size-ul};
+  --hero-font-size-ul: #{core.$font-size-ul};
+  --hero-font-size-xxxxl: #{core.$font-size-xxxxl};
 
   --hero-spacing: #{core.$space-uul};
   --hero-basic-spacing: #{core.$space-uuul};
@@ -18,7 +19,8 @@
 // Resize custom properties for tablet/mobile.
 @media #{core.$screen-lg-down} {
   :root {
-    --font-size-ul: 30px;
+    --hero-font-size-ul: 30px;
+    --hero-font-size-xxxxl: 30px;
 
     --hero-basic-spacing: #{core.$space-xl};
   }

@@ -25,9 +25,6 @@ jobs:
       - name: "📦️ Install dependencies"
         run: npm install
 
-      - name: "📂 Bootstrap Lerna"
-        run: npx lerna bootstrap --no-ci
-
       - name: "🔐 Authenticate to NPM"
         run: |
           echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc

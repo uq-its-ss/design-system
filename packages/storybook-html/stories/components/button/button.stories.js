@@ -36,7 +36,15 @@ export const primary = () => {
   `;
 };
 
-primary.storyName = "Primary (base)";
+primary.parameters = {
+  docs: {
+    source: {
+      code: '<button class="uq-button">Button</button>',
+      language: "html",
+      type: "auto",
+    },
+  },
+};
 
 export const secondary = () => {
   return `
@@ -55,6 +63,15 @@ export const secondary = () => {
   </div>
 </div>
   `;
+};
+secondary.parameters = {
+  docs: {
+    source: {
+      code: '<button class="uq-button uq-button--secondary">Button</button>',
+      language: "html",
+      type: "auto",
+    },
+  },
 };
 
 export const tertiary = () => {
@@ -76,7 +93,16 @@ export const tertiary = () => {
   `;
 };
 
-tertiary.storyName = "Tertiary";
+
+tertiary.parameters = {
+  docs: {
+    source: {
+      code: '<button class="uq-button uq-button--tertiary">Button</button>',
+      language: "html",
+      type: "auto",
+    },
+  },
+};
 
 
 export const expand = () => {

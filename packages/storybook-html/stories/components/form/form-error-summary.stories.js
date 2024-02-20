@@ -1,5 +1,3 @@
-import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
-
 const ErrorSummary = () => {
   return `
     <div class="uq-grid uq-grid--golden uq-grid--full-width">

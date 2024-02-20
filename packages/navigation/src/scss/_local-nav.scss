@@ -80,7 +80,7 @@
 }
 
 .uq-local-nav--has-children {
-  & .uq-local-nav__link {
+  & > .uq-local-nav__link {
     background-image: url(icon.get-icon(
       "standard--chevron-down-sml",
       core.$black
@@ -91,7 +91,7 @@
     padding-inline-end: core.$space-l;
   }
 
-  & .uq-local-nav--active-link {
+  & > .uq-local-nav--active-link {
     background-image: none;
   }
 }

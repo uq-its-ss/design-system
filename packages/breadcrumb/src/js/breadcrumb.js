@@ -50,7 +50,8 @@ class breadcrumb {
       "uq-breadcrumb__expand",
       "uq-breadcrumb__item--hidden"
     );
-    this.expandCrumb.innerHTML = '<a class="uq-breadcrumb__link" title="Expand all breadcrumbs">...</a>';
+    this.expandCrumb.innerHTML =
+      '<a class="uq-breadcrumb__link" title="Expand all breadcrumbs">...</a>';
   }
 
   toggleExpand() {

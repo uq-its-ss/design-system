@@ -18,8 +18,8 @@
 
 .uq-breadcrumb__item {
   background-image: url(icon.get-icon(
-          "standard--chevron-left-sml",
-          core.$grey-700
+    "standard--chevron-left-sml",
+    core.$grey-700
   ));
   background-position: left 0.2rem center;
   padding: 0 0 0 1.5rem;
@@ -39,8 +39,8 @@
     display: flex;
     min-width: auto;
     background-image: url(icon.get-icon(
-            "standard--chevron-right-sml",
-            core.$grey-700
+      "standard--chevron-right-sml",
+      core.$grey-700
     ));
 
     &:first-of-type {

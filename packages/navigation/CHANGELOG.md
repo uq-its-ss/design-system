@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-alpha.3](https://github.com/uq-its-ss/design-system/compare/@uqds/navigation@1.0.0-alpha.2...@uqds/navigation@1.0.0-alpha.3) (2024-02-21)
+
+### Bug Fixes
+
+- Layout custom property fixes + local nav child selector fix ([#482](https://github.com/uq-its-ss/design-system/issues/482)) ([e71f8b8](https://github.com/uq-its-ss/design-system/commit/e71f8b8866ecafde5c10667dd16f7d96dfb73678))
+
 # [1.0.0-alpha.2](https://github.com/uq-its-ss/design-system/compare/@uqds/navigation@1.0.0-alpha.1...@uqds/navigation@1.0.0-alpha.2) (2024-02-19)
 
 ### Bug Fixes

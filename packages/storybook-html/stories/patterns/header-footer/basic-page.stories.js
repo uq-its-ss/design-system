@@ -8,7 +8,7 @@ import siteHeaderNavigation from "@uqds/site-header/src/js/site-header-navigatio
 // import HTML template strings
 import headerHTML from "../../components/header/header-interim.html";
 import siteHeaderHTML from "../../components/site-header/site-header-with-subnav.html";
-import breadcrumbHTML from "../../components/breadcrumb/breadcrumb.html";
+import { Breadcrumb } from "../../components/breadcrumb/breadcrumb.stories";
 import footerHTML from "../../components/footer/footer.html";
 
 import docs from "./basic-page.docs.mdx";
@@ -82,9 +82,7 @@ export const basicPage = () => {
   return `
     ${headerHTML}
     ${siteHeaderHTML}
-    <div class="uq-breadcrumb__container">
-      ${breadcrumbHTML}
-    </div>
+    ${Breadcrumb.render()}
     <div class="uq-grid">
       <div class="uq-grid__col uq-grid__col--6">
         <h1>Heading level 1 (h1)</h1>

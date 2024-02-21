@@ -60,7 +60,7 @@ export const Hero = {
     "uq-hero--large": large,
   })}">
   <div class="uq-hero__image">
-    <img src="/images/hero/${image}" alt="" role="presentation" />
+    <img src="images/hero/${image}" alt="" role="presentation" />
   </div>
   <div class="uq-container">
     <div class="uq-hero__content">

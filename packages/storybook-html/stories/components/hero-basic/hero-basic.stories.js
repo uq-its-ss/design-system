@@ -54,7 +54,7 @@ export const HeroBasic = {
     image !== "none"
       ? `
   <div class="uq-hero-basic__image">
-    <img src="/images/hero/${image}" alt="" role="presentation" />
+    <img src="images/hero/${image}" alt="" role="presentation" />
   </div>`
       : ""
   }

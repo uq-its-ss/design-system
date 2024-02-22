@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-alpha.4](https://github.com/uq-its-ss/design-system/compare/storybook-html@1.0.0-alpha.3...storybook-html@1.0.0-alpha.4) (2024-02-22)
+
+### Bug Fixes
+
+- small title typo ([#488](https://github.com/uq-its-ss/design-system/issues/488)) ([5b336ab](https://github.com/uq-its-ss/design-system/commit/5b336ab4b60f83276e7adf373ee02279e35fa9e3))
+
 # [1.0.0-alpha.3](https://github.com/uq-its-ss/design-system/compare/storybook-html@1.0.0-alpha.2...storybook-html@1.0.0-alpha.3) (2024-02-22)
 
 ### Bug Fixes

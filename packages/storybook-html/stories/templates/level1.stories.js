@@ -27,8 +27,8 @@ export default {
 export const Level1 = {
   render: ({ showGrid }) => `
 <div class="${classNames({ "uqds-layout-demo-bg": showGrid })}">
-  ${Header()}
-  ${Breadcrumb()}
+  ${Header.render()}
+  ${Breadcrumb.render()}
   <div class="uq-sections">
     ${Hero.render(Hero.args)}
     <div class="uq-container">
@@ -58,6 +58,6 @@ export const Level1 = {
       </div>
     </div>
   </div>
-  ${footer()}
+  ${footer.render()}
 </div>`,
 };

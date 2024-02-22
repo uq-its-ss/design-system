@@ -27,8 +27,8 @@ export default {
 export const Home = {
   render: ({ showGrid }) => `
 <div class="${classNames({ "uqds-layout-demo-bg": showGrid })}">
-  ${Header()}
-  ${Breadcrumb()}
+  ${Header.render()}
+  ${Breadcrumb.render()}
   <div class="uq-sections">
     ${Hero.render(Hero.args)}
     <div class="uq-section">
@@ -89,6 +89,6 @@ export const Home = {
       </div>
     </div>
   </div>
-  ${footer()}
+  ${footer.render()}
 </div>`,
 };

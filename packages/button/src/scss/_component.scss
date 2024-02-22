@@ -26,7 +26,7 @@
     box-sizing: border-box;
   }
 
-  &:hover {  
+  &:hover {
     background-color: core.$white;
     border-color: core.$purple-500;
     color: core.$purple-500;
@@ -39,7 +39,6 @@
   //   outline-color: Highlight;
   //   outline-color: -webkit-focus-ring-color;
   // }
-
 
   /* button secondary */
   &--secondary {
@@ -68,7 +67,6 @@
       border-color: core.$purple-500;
       color: core.$white;
     }
-
   }
 
   /* button sizes */

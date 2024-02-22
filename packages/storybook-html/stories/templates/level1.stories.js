@@ -1,7 +1,7 @@
 import classNames from "classnames";
 import { Header } from "../components/header/header.stories";
 import { footer } from "../components/footer/footer.stories";
-import { breadcrumb } from "../components/breadcrumb/breadcrumb.stories";
+import { Breadcrumb } from "../components/breadcrumb/breadcrumb.stories";
 import { Level1 as Hero } from "../components/hero/hero.stories";
 
 export default {
@@ -28,7 +28,7 @@ export const Level1 = {
   render: ({ showGrid }) => `
 <div class="${classNames({ "uqds-layout-demo-bg": showGrid })}">
   ${Header()}
-  ${breadcrumb()}
+  ${Breadcrumb()}
   <div class="uq-sections">
     ${Hero.render(Hero.args)}
     <div class="uq-container">

@@ -1,4 +1,5 @@
-import "../../../../breadcrumb/src/scss/main.scss";
+// import styles
+import "./breadcrumb.scss";
 import { breadcrumb } from "../../../../breadcrumb/src/js/main";
 
 export default {

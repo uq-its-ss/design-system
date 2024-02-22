@@ -1,5 +1,5 @@
 import "../layout-demo.scss";
-import "../../../../layout/src/scss/main.scss";
+import "@uqds/layout/src/scss/main.scss";
 
 export default {
   title: "Layout/Container",

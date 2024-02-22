@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import "../../../../sections/src/scss/main.scss";
+import "@uqds/sections/src/scss/main.scss";
 
 export default {
   title: "Components/Section",

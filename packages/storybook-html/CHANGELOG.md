@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-alpha.3](https://github.com/uq-its-ss/design-system/compare/storybook-html@1.0.0-alpha.2...storybook-html@1.0.0-alpha.3) (2024-02-22)
+
+### Bug Fixes
+
+- Updates to breadcrumbs ([#485](https://github.com/uq-its-ss/design-system/issues/485)) ([a088556](https://github.com/uq-its-ss/design-system/commit/a088556ae4e3fa97ac3c58af30c0974e0a009e7f))
+
 # [1.0.0-alpha.2](https://github.com/uq-its-ss/design-system/compare/storybook-html@1.0.0-alpha.1...storybook-html@1.0.0-alpha.2) (2024-02-21)
 
 **Note:** Version bump only for package storybook-html

@@ -95,6 +95,7 @@
 
 .uq-hero__title {
   color: core.$white;
+  font-size: var(--hero-font-size-xxxxl);
 }
 
 .uq-hero__description {
@@ -147,6 +148,6 @@
   }
 
   & .uq-hero__title {
-    font-size: var(--font-size-ul);
+    font-size: var(--hero-font-size-ul);
   }
 }

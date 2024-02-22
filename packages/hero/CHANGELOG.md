@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-alpha.1](https://github.com/uq-its-ss/design-system/compare/@uqds/hero@1.0.0-alpha.0...@uqds/hero@1.0.0-alpha.1) (2024-02-21)
+
+### Bug Fixes
+
+- Hero font size fixes ([#483](https://github.com/uq-its-ss/design-system/issues/483)) ([12ae3b4](https://github.com/uq-its-ss/design-system/commit/12ae3b4ff734cfc3ca84419629604453e970a142))
+
 # [1.0.0-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/hero@0.1.0-alpha.0...@uqds/hero@1.0.0-alpha.0) (2024-02-14)
 
 ### Features

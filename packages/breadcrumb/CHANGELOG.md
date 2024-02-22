@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0-alpha.1](https://github.com/uq-its-ss/design-system/compare/@uqds/breadcrumb@2.0.0-alpha.0...@uqds/breadcrumb@2.0.0-alpha.1) (2024-02-22)
+
+### Bug Fixes
+
+- Updates to breadcrumbs ([#485](https://github.com/uq-its-ss/design-system/issues/485)) ([a088556](https://github.com/uq-its-ss/design-system/commit/a088556ae4e3fa97ac3c58af30c0974e0a009e7f))
+
 # [2.0.0-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/breadcrumb@1.1.0-alpha.0...@uqds/breadcrumb@2.0.0-alpha.0) (2024-02-14)
 
 ### Features

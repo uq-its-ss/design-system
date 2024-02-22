@@ -3,12 +3,26 @@
 
 .uq-section__header {
   margin-bottom: core.$space-l;
+
+  &:only-child {
+    margin-bottom: 0;
+  }
 }
 
 .uq-section__title {
   margin: 0 0 core.$space-m;
   color: core.$black;
   font-size: core.$font-size-xxxl;
+}
+
+.uq-section__description {
+  & p,
+  & ul,
+  & ol {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .uq-section--shaded {

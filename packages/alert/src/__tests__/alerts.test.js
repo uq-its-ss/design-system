@@ -1,7 +1,8 @@
-import { renderFromString } from "@uqds/test-utils";
-import headerMarkup from "../__tests__/fixtures/markup.html";
+import { renderFromString } from "../../../../tests/jest/jest-dom";
 import Alerts from "../js/alerts.js";
 import { waitFor, screen, fireEvent, getByRole } from "@testing-library/dom";
+
+const headerMarkup = `<div class="uq-alerts-global-container" data-uri="http://localhost:3000/api/v1/alerts.json">this gets removed on render</div>`
 
 describe("Alert close behaviour", () => {
   afterAll(() => {
@@ -9,6 +10,7 @@ describe("Alert close behaviour", () => {
       .filter((key) => key.includes("alert-dismissed"))
       .forEach((key) => window.localStorage.removeItem(key));
   });
+
   it("Should be removed on close", async () => {
     const container = renderFromString(headerMarkup);
     new Alerts(container.querySelector(".uq-alerts-global-container"));
@@ -22,6 +24,7 @@ describe("Alert close behaviour", () => {
       expect(alerts[0]).not.toBeInTheDocument();
     });
   });
+
   it("Removal should persist", async () => {
     const container = renderFromString(headerMarkup);
     const el = container.querySelector(".uq-alerts-global-container");
@@ -32,6 +35,7 @@ describe("Alert close behaviour", () => {
     expect(screen.getAllByRole("alert").length).toBe(1);
     expect(container.body.innerHTML).toMatchSnapshot();
   });
+
   it("Dismissals can be ignored", async () => {
     // Dismissed one hour before the time in the fixture.
     window.localStorage.setItem(
@@ -45,12 +49,14 @@ describe("Alert close behaviour", () => {
     });
   });
 });
+
 describe("Alert default behaviour", () => {
   beforeEach(() => {
     Object.keys(window.localStorage)
       .filter((key) => key.includes("alert-dismissed"))
       .forEach((key) => window.localStorage.removeItem(key));
   });
+
   it("Should load from json", async () => {
     const container = renderFromString(headerMarkup);
     new Alerts(container.querySelector(".uq-alerts-global-container"));
@@ -66,6 +72,7 @@ describe("Alert default behaviour", () => {
     expect(alerts[1]).toHaveTextContent("Danger!");
     expect(container.body.innerHTML).toMatchSnapshot();
   });
+
   it("Should be removed on close", async () => {
     const now = Math.round(new Date().getTime() / 1000);
     const container = renderFromString(headerMarkup);
@@ -92,13 +99,10 @@ describe("Alert default behaviour", () => {
       )
     ).toBeGreaterThanOrEqual(now);
   });
+
   it("Should match on partial URIs", async () => {
+    window.location = new URL('http://localhost:3000/stuff/i-wish-i-had-known');
     const container = renderFromString(headerMarkup);
-    Object.defineProperty(window, "location", {
-      value: {
-        href: "http://127.0.0.1:8080/stuff/i-wish-i-had-known",
-      },
-    });
     new Alerts(container.querySelector(".uq-alerts-global-container"));
     await waitFor(() => {
       // Should filter out the negated version.
@@ -106,13 +110,10 @@ describe("Alert default behaviour", () => {
     });
     expect(container).toMatchSnapshot();
   });
+
   it("Should not match on child pages", async () => {
+    window.location = new URL('http://uq.edu.au/stuff/i-wish-i-had-known');
     const container = renderFromString(headerMarkup);
-    Object.defineProperty(window, "location", {
-      value: {
-        href: "https://www.uq.edu.au/stuff/i-wish-i-had-known",
-      },
-    });
     new Alerts(container.querySelector(".uq-alerts-global-container"));
     await waitFor(() => {
       // Should filter out the negated version.

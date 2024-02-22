@@ -18,7 +18,7 @@
   position: relative;
   text-align: center;
   text-decoration: none;
-  transition: all 300ms ease-out;
+  transition: background-color 300ms ease-out, color 300ms ease-out, border 300ms ease-out;
 
   *,
   *::before,
@@ -31,6 +31,7 @@
     border-color: core.$purple-500;
     color: core.$purple-500;
     text-decoration: underline;
+    font-weight: core.$font-weight-normal;
   }
 
   // TODO: UPDATE FOCUS STYLES

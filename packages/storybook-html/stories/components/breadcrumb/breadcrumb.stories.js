@@ -1,6 +1,5 @@
 import "../../../../breadcrumb/src/scss/main.scss";
 import { breadcrumb } from "../../../../breadcrumb/src/js/main";
-import docs from "./breadcrumb.docs.mdx";
 
 export default {
   title: "Components/Breadcrumb",

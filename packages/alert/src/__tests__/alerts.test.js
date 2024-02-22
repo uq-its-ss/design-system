@@ -2,7 +2,7 @@ import { renderFromString } from "../../../../tests/jest/jest-dom";
 import Alerts from "../js/alerts.js";
 import { waitFor, screen, fireEvent, getByRole } from "@testing-library/dom";
 
-const headerMarkup = `<div class="uq-alerts-global-container" data-uri="http://localhost:3000/api/v1/alerts.json">this gets removed on render</div>`
+const headerMarkup = `<div class="uq-alerts-global-container" data-uri="http://localhost:3000/api/v1/alerts.json">this gets removed on render</div>`;
 
 describe("Alert close behaviour", () => {
   afterAll(() => {
@@ -101,7 +101,7 @@ describe("Alert default behaviour", () => {
   });
 
   it("Should match on partial URIs", async () => {
-    window.location = new URL('http://localhost:3000/stuff/i-wish-i-had-known');
+    window.location = new URL("http://localhost:3000/stuff/i-wish-i-had-known");
     const container = renderFromString(headerMarkup);
     new Alerts(container.querySelector(".uq-alerts-global-container"));
     await waitFor(() => {
@@ -112,7 +112,7 @@ describe("Alert default behaviour", () => {
   });
 
   it("Should not match on child pages", async () => {
-    window.location = new URL('http://uq.edu.au/stuff/i-wish-i-had-known');
+    window.location = new URL("http://uq.edu.au/stuff/i-wish-i-had-known");
     const container = renderFromString(headerMarkup);
     new Alerts(container.querySelector(".uq-alerts-global-container"));
     await waitFor(() => {

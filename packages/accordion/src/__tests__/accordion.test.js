@@ -25,7 +25,7 @@ const accordionMarkup = `
         </div>
     </div>
 </div>
-`
+`;
 
 describe("Accordion behaviour", () => {
   it("Should expand and collapse", async () => {

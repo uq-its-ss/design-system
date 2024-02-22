@@ -1,18 +1,18 @@
-import '@testing-library/jest-dom/vitest'
-import { server } from './tests/msw/server'
+import "@testing-library/jest-dom/vitest";
+import { server } from "./tests/msw/server";
 
 beforeEach(() => {
   document.body.innerHTML = "";
 });
 
 beforeAll(() => {
-  server.listen()
-})
+  server.listen();
+});
 
 afterEach(() => {
-  server.resetHandlers()
-})
+  server.resetHandlers();
+});
 
 afterAll(() => {
-  server.close()
-})
+  server.close();
+});

@@ -5,7 +5,7 @@
  * @file Handles interaction behaviour for the breadcrumb.
  */
 
-class Breadcrumb {
+class breadcrumb {
   constructor(el) {
     // The breadcrumb trail.
     this.breadcrumbs = el.querySelectorAll(".uq-breadcrumb__item");
@@ -50,7 +50,8 @@ class Breadcrumb {
       "uq-breadcrumb__expand",
       "uq-breadcrumb__item--hidden"
     );
-    this.expandCrumb.innerHTML = '<a class="uq-breadcrumb__link">...</a>';
+    this.expandCrumb.innerHTML =
+      '<a class="uq-breadcrumb__link" title="Expand all breadcrumbs">...</a>';
   }
 
   toggleExpand() {
@@ -61,4 +62,4 @@ class Breadcrumb {
   }
 }
 
-export default Breadcrumb;
+export default breadcrumb;

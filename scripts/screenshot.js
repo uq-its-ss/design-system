@@ -53,7 +53,7 @@ const screenshot = async (browser, viewportName, pageName) => {
   });
   // Give it 2 seconds for images etc to load and animations to fire.
   await new Promise((res) => {
-    setTimeout(() => res(), 2000);
+    setTimeout(() => res(), 5000);
   });
 
   if (globalHideSelectors.length > 0) await hideSelectors(page);

@@ -10,7 +10,7 @@ import breadcrumbCreate from "@uqds/breadcrumb/src/js/breadcrumb";
 import kitchenSinkHTML from "./kitchen-sink.html";
 
 export default {
-  title: "Gallery & Examples/Kitchen sink",
+  title: "Patterns/Kitchen sink",
   parameters: {
     layout: "fullscreen",
     viewMode: "story",

@@ -5,7 +5,7 @@ import "./footer.scss";
 import footerHTML from "./footer.html";
 
 export default {
-  title: "Legacy/Footer",
+  title: "Deprecated/Footer",
   parameters: {
     layout: "fullscreen",
     backgrounds: {

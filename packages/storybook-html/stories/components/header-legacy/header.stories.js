@@ -11,7 +11,7 @@ import headerHTML from "./header.html";
 import headerNoLocalSearchHTML from "./header_no-local-search.html";
 
 export default {
-  title: "Legacy/Header",
+  title: "Deprecated/Header",
   parameters: {
     layout: "fullscreen",
     backgrounds: {

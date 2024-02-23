@@ -16,6 +16,10 @@
 
 .uq-sidebar-layout__sidebar {
   grid-column: 1 / span 1;
+
+  @media #{core.$screen-lg-down} {
+    display: none;
+  }
 }
 
 .uq-sidebar-layout__main {

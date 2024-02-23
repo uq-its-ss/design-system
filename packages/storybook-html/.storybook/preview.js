@@ -25,7 +25,7 @@ const preview = {
           "Components",
           ["Body", ["Body", "Elements", "Utilities"], "Navigation"],
           "Patterns",
-          ["Kitchen sink", "Basic page",],
+          ["Kitchen sink", "Basic page"],
           "Templates",
           "Deliverables",
           ["UQ Maps", ["Overview", "UX models"]],

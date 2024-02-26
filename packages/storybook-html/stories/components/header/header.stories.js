@@ -176,9 +176,6 @@ export const searchGlobal = {
   name: "Default search",
 
   parameters: {
-    docs: {
-      inlineStories: false,
-    },
     backgrounds: {
       default: "UQ purple",
     },

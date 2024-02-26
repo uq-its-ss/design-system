@@ -3,7 +3,7 @@
 @use "global" as *;
 
 .uq-side-nav {
-  color: core.$text;
+  color: core.$grey-900;
   border-top: core.$space-xs solid core.$purple-500;
   box-sizing: border-box;
   font-family: core.$font-body;
@@ -78,7 +78,7 @@
       .uq-side-nav__link {
         display: block;
         padding: core.$space-m core.$space-l;
-        color: core.$text;
+        color: core.$grey-900;
         text-decoration: none;
 
         &:hover,

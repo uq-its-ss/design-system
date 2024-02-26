@@ -28,11 +28,11 @@
 
     &--current {
       .uq-pagination__link {
-        color: core.$text;
+        color: core.$grey-900;
         font-weight: 500;
 
         &:hover {
-          color: core.$text;
+          color: core.$grey-900;
           text-decoration: none;
         }
       }
@@ -40,7 +40,7 @@
   }
 
   &__ellipsis {
-    color: core.$text;
+    color: core.$grey-900;
     display: inline-block;
     list-style: none;
   }

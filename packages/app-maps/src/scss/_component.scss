@@ -36,7 +36,7 @@ $-result-icon-spacing: $-icon-spacing;
   }
 
   &__primary-text {
-    color: core.$text;
+    color: core.$grey-900;
     font-family: core.$font-body;
     font-size: core.$font-size-s;
     font-weight: core.$font-weight-normal;
@@ -301,7 +301,7 @@ $-result-icon-spacing: $-icon-spacing;
       }
 
       &--placeholder {
-        color: rgba(core.$text, 0.72);
+        color: rgba(core.$grey-900, 0.72);
       }
     }
 
@@ -490,7 +490,7 @@ $-result-icon-spacing: $-icon-spacing;
 
         > a {
           align-items: center;
-          color: core.$text;
+          color: core.$grey-900;
           display: flex;
           justify-content: flex-start;
           min-height: 3rem + core.$space-s * 2;
@@ -749,7 +749,7 @@ $-result-icon-spacing: $-icon-spacing;
       &__details-block {
         @extend %uq-maps__secondary-text;
 
-        color: core.$text;
+        color: core.$grey-900;
         display: block;
         margin-top: core.$space-s;
       }

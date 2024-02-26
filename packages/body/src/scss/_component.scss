@@ -4,7 +4,7 @@
 $use-encapsulation: false !default;
 
 @mixin -text-primer {
-  color: core.$text;
+  color: core.$grey-900;
   font-size: 1rem;
   font-family: core.$font-body;
   font-weight: 400;
@@ -118,7 +118,7 @@ $use-encapsulation: false !default;
   blockquote {
     margin: core.$space-none core.$space-none core.$space-l;
     padding-left: core.$space-l;
-    border-left: 6px solid core.$text;
+    border-left: 6px solid core.$grey-900;
     font-family: core.$font-accent;
     font-style: italic;
     font-size: core.$font-size-xl;
@@ -400,12 +400,12 @@ $use-encapsulation: false !default;
 
   // Footer
   .legacy-footer {
-    color: core.$text !important;
+    color: core.$grey-900 !important;
     background: none !important;
 
     a,
     .legacy-footer__sub-title {
-      color: core.$text !important;
+      color: core.$grey-900 !important;
     }
 
     &__container {
@@ -413,7 +413,7 @@ $use-encapsulation: false !default;
     }
 
     &__acknowledgement {
-      color: core.$text !important;
+      color: core.$grey-900 !important;
       padding-bottom: 0 !important;
       margin-bottom: 1rem !important;
       font-size: 14px !important;

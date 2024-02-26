@@ -64,25 +64,25 @@
   &--secondary {
     background-color: core.$grey-300;
     border-color: core.$grey-300;
-    color: core.$text;
+    color: core.$grey-900;
 
     &:hover,
     &:focus {
       background-color: core.$grey-300;
       border-color: core.$grey-300;
-      color: core.$text;
+      color: core.$grey-900;
     }
 
     &.uq-button--outline {
       background-color: transparent;
       border-color: core.$grey-300;
-      color: core.$text;
+      color: core.$grey-900;
 
       &:hover,
       &:focus {
         background-color: core.$grey-500;
         border-color: core.$grey-500;
-        color: core.$text;
+        color: core.$grey-900;
       }
 
       &.uq-button--light {
@@ -91,7 +91,7 @@
 
         &:hover,
         &:focus {
-          color: core.$text;
+          color: core.$grey-900;
         }
       }
     }
@@ -99,13 +99,13 @@
     &.uq-button--text {
       background-color: transparent;
       border-color: transparent;
-      color: core.$text;
+      color: core.$grey-900;
 
       &:hover,
       &:focus {
         background-color: transparent;
         border-color: transparent;
-        color: core.$text;
+        color: core.$grey-900;
       }
 
       &.uq-button--light {

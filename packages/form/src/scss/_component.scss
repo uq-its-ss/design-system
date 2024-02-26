@@ -44,7 +44,7 @@ $use-encapsulation: false !default;
 
   label,
   legend {
-    color: core.$text;
+    color: core.$grey-900;
     display: block;
     font-size: $form-label-size;
     font-weight: core.$font-weight-bold;
@@ -169,7 +169,7 @@ $use-encapsulation: false !default;
     border: $form-border-width solid core.$grey-300;
     border-radius: $form-border-radius;
     font-size: $form-text-size;
-    color: core.$text;
+    color: core.$grey-900;
     line-height: core.$line-height-ui;
     margin-bottom: core.$space-l;
 
@@ -423,7 +423,7 @@ $use-encapsulation: false !default;
     margin-bottom: core.$space-l;
 
     &__title {
-      color: core.$text;
+      color: core.$grey-900;
       font-size: core.$font-size-l;
       font-weight: core.$font-weight-bold;
       line-height: core.$line-height-h;
@@ -431,12 +431,12 @@ $use-encapsulation: false !default;
     }
 
     &_body {
-      color: core.$text;
+      color: core.$grey-900;
       font-size: core.$space-m;
     }
 
     &__list {
-      color: core.$text;
+      color: core.$grey-900;
       font-size: core.$space-m;
       margin: core.$space-none;
       padding-left: core.$space-l;

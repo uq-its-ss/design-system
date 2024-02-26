@@ -63,7 +63,7 @@
         padding-right: core.$space-m;
         text-decoration: none;
         transition: all 0.125s ease-in;
-        color: core.$text;
+        color: core.$grey-900;
 
         &::before {
           width: core.$space-xs;
@@ -71,7 +71,7 @@
 
         &:hover,
         &:focus {
-          color: core.$text;
+          color: core.$grey-900;
         }
       }
 

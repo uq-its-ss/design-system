@@ -157,16 +157,48 @@ $use-encapsulation: false !default;
     }
   }
 
+  // BASIC IMPLEMENTATION
   a {
-    color: core.$link;
-    text-decoration: none;
-    transition: 0.2s color;
+    color: core.$purple-500;
+    font-weight: core.$font-weight-medium;
+    text-decoration: underline;
+    transition: all 200ms ease-out;
+    //padding: 0 2px; 
+    // caution: this will add padding to all links so we may need to go through and explicitly remove padding from everything
 
     &:hover {
-      color: core.$link;
-      text-decoration: underline;
+      color: core.$white;
+      background-color: core.$purple-500;
+      color: core.$white;     
     }
   }
+  
+  // a {
+  //   color: core.$purple-500;
+  //   font-weight: core.$font-weight-medium;
+  //   text-decoration: underline;
+  //   transition: all 200ms ease-out;
+  //   display: inline-block;
+  //   position: relative;
+
+  //   &:hover {
+  //     color: core.$white;
+  //     //font-weight: core.$font-weight-normal;
+
+  //     &::before {
+  //       content: " ";
+  //       display: inline-block;
+  //       height: 100%;
+  //       width: calc(100% + 6px);
+  //       background-color: core.$purple-500;
+  //       color: core.$white;
+  //       position: absolute;
+  //       z-index: -1;
+  //       left: -3px;
+  //     }
+  //   }
+  // }
+
 
   // Typography utilities
   .text {

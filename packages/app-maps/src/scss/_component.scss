@@ -88,7 +88,7 @@ $-result-icon-spacing: $-icon-spacing;
     }
 
     &:focus {
-      box-shadow: 0 0 0 2px core.$link;
+      box-shadow: 0 0 0 2px core.$utility-500;
       outline: 0 none;
     }
   }
@@ -296,7 +296,7 @@ $-result-icon-spacing: $-icon-spacing;
       }
 
       &:focus {
-        box-shadow: 0 0 0 2px core.$link;
+        box-shadow: 0 0 0 2px core.$utility-500;
         outline: 0 none;
       }
 
@@ -368,8 +368,8 @@ $-result-icon-spacing: $-icon-spacing;
         }
 
         &:checked {
-          background-color: core.$link;
-          border-color: core.$link;
+          background-color: core.$utility-500;
+          border-color: core.$utility-500;
 
           &::after {
             background-image: url(get-icon("ui--check", #fff));
@@ -386,8 +386,8 @@ $-result-icon-spacing: $-icon-spacing;
         }
 
         &:focus {
-          border-color: core.$link;
-          box-shadow: 0 0 0 1px core.$link;
+          border-color: core.$utility-500;
+          box-shadow: 0 0 0 1px core.$utility-500;
           outline: none;
         }
       }
@@ -504,7 +504,7 @@ $-result-icon-spacing: $-icon-spacing;
 
           &:focus {
             outline: 0 none;
-            box-shadow: 2px 0 0 0 core.$link inset;
+            box-shadow: 2px 0 0 0 core.$utility-500 inset;
           }
         }
 
@@ -592,7 +592,7 @@ $-result-icon-spacing: $-icon-spacing;
 
           &:focus-within {
             &::after {
-              background-image: url(get-icon("ui--chevron-right", core.$link));
+              background-image: url(get-icon("ui--chevron-right", core.$utility-500));
             }
           }
 

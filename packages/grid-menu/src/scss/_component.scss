@@ -42,7 +42,7 @@
 
   &__link {
     border-bottom: 1px solid core.$grey-200;
-    color: core.$link;
+    color: core.$utility-500;
     display: block;
     font-size: 1.375rem;
     font-weight: 400;
@@ -64,7 +64,7 @@
     }
 
     &:hover {
-      background-color: core.$link;
+      background-color: core.$utility-500;
       color: core.$white;
       text-decoration: none;
 
@@ -142,11 +142,11 @@
 
       &:hover {
         background-color: core.$white;
-        color: core.$link;
+        color: core.$utility-500;
 
         .uq-grid-menu__description {
           background-color: core.$white;
-          color: core.$link;
+          color: core.$utility-500;
         }
       }
     }
@@ -161,11 +161,11 @@
       @extend %dark-palette;
 
       &:hover {
-        background-color: core.$link;
+        background-color: core.$utility-500;
         color: core.$white;
 
         .uq-grid-menu__description {
-          background-color: core.$link;
+          background-color: core.$utility-500;
           color: core.$white;
         }
       }

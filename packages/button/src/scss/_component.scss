@@ -3,8 +3,8 @@
 
 /* button Default */
 .uq-button {
-  background-color: core.$link;
-  border: 2px solid core.$link;
+  background-color: core.$utility-500;
+  border: 2px solid core.$utility-500;
   border-radius: core.$space-xs;
   box-sizing: border-box;
   color: core.$white;
@@ -36,8 +36,8 @@
 
   &.uq-button--outline {
     background-color: transparent;
-    border-color: core.$link;
-    color: core.$link;
+    border-color: core.$utility-500;
+    color: core.$utility-500;
 
     &:hover,
     &:focus {
@@ -50,7 +50,7 @@
   &.uq-button--text {
     background-color: transparent;
     border-color: transparent;
-    color: core.$link;
+    color: core.$utility-500;
 
     &:hover,
     &:focus {

@@ -212,12 +212,12 @@
 
 // This should be replaced with a component specfic class or removed and documented as a body package dependancy for usage with cards.
 .text--link {
-  color: core.$link;
+  color: core.$utility-500;
   text-decoration: none;
   transition: 0.2s color;
 
   &:hover {
-    color: core.$link;
+    color: core.$utility-500;
     text-decoration: underline;
   }
 }

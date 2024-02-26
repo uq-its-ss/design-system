@@ -77,7 +77,7 @@
     }
 
     &:focus {
-      outline: 2px solid core.$link;
+      outline: 2px solid core.$utility-500;
       outline-offset: 0;
     }
 
@@ -370,6 +370,6 @@
 }
 
 .uq-site-header__navigation .uq-site-header__navigation__list-link:focus {
-  outline: 2px solid core.$link;
+  outline: 2px solid core.$utility-500;
   outline-offset: 0;
 }

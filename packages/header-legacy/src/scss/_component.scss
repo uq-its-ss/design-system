@@ -226,8 +226,8 @@
       position: absolute;
 
       &:focus {
-        border-color: core.$link;
-        box-shadow: 0 0 0 1px core.$link;
+        border-color: core.$utility-500;
+        box-shadow: 0 0 0 1px core.$utility-500;
         outline: none;
       }
 
@@ -263,8 +263,8 @@
         }
 
         &:focus {
-          border-color: core.$link;
-          box-shadow: 0 0 0 1px core.$link;
+          border-color: core.$utility-500;
+          box-shadow: 0 0 0 1px core.$utility-500;
         }
       }
     }
@@ -310,7 +310,7 @@
         outline: none;
 
         &:focus {
-          border-color: core.$link;
+          border-color: core.$utility-500;
           outline: none;
         }
       }

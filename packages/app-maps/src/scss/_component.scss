@@ -592,7 +592,10 @@ $-result-icon-spacing: $-icon-spacing;
 
           &:focus-within {
             &::after {
-              background-image: url(get-icon("ui--chevron-right", core.$utility-500));
+              background-image: url(get-icon(
+                "ui--chevron-right",
+                core.$utility-500
+              ));
             }
           }
 

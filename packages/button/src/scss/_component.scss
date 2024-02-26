@@ -28,8 +28,8 @@
 
   &:hover,
   &:focus {
-    background-color: core.$link-active;
-    border-color: core.$link-active;
+    background-color: core.$utility-600;
+    border-color: core.$utility-600;
     color: core.$white;
     text-decoration: underline;
   }
@@ -41,8 +41,8 @@
 
     &:hover,
     &:focus {
-      background-color: core.$link-active;
-      border-color: core.$link-active;
+      background-color: core.$utility-600;
+      border-color: core.$utility-600;
       color: core.$white;
     }
   }
@@ -56,7 +56,7 @@
     &:focus {
       background-color: transparent;
       border-color: transparent;
-      color: core.$link-active;
+      color: core.$utility-600;
     }
   }
 

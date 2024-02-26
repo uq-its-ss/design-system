@@ -1,3 +1,5 @@
+import "./form.scss";
+
 const ErrorSummary = () => {
   return `
     <div class="uq-grid uq-grid--golden uq-grid--full-width">

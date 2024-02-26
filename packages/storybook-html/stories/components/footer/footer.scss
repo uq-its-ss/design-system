@@ -1,1 +1,3 @@
-@use "@uqds/footer/src/scss/_component";
+// if accordion is callled after footer it breaks the styles
+@use "@uqds/accordion/src/scss/_component" as *;
+@use "@uqds/footer/src/scss/_component" as  *;

@@ -1,6 +1,7 @@
 import { Meta, Story, Canvas } from "@storybook/blocks";
 import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
 import * as HeaderStories from "./header.stories";
+import { background } from "@storybook/theming";
 
 <Meta of={HeaderStories} />
 
@@ -78,7 +79,7 @@ The default option is a global search of all UQ. The search feature sends users 
 
 {" "}
 
-<Story of={HeaderStories.searchGlobal} />
+<Story of={HeaderStories.searchGlobal} parameters={{background={ default: "UQ purple" } }} />
 
 ### Global and local search
 

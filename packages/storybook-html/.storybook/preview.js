@@ -13,6 +13,22 @@ const preview = {
         date: /Date$/i,
       },
     },
+    backgrounds: {
+      values: [
+        { name: "Dark", value: "#000000" },
+        { name: "UQ purple", value: "#51247a" },
+        { name: "UQ Neutral 1", value: "#D7D1CC" },
+        {
+          name: "UQ gradient",
+          value: "linear-gradient(90deg, #51247A 0%, 87%, #962A8B 100%)",
+        },
+        {
+          name: "Diagonal stripes",
+          value:
+            "repeating-linear-gradient(45deg, #efedeb, #efedeb 10px, #f7f6f5 10px, #f7f6f5 20px)",
+        },
+      ],
+    },
     options: {
       storySort: {
         order: [

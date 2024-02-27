@@ -22,9 +22,9 @@ jobs:
           npm ci
           npx lerna bootstrap --no-ci
         env:
-          AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET_PRODUCTION }}
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_PRODUCTION_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_PRODUCTION_KEY }}
+          AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET_STAGING }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_STAGING_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_STAGING_KEY }}
           SOURCE_DIR: 'packages/storybook-html/storybook-static'
           DEST_DIR: /
 

@@ -1,4 +1,4 @@
-//import './uq-maps.scss';
+import "./uq-maps.scss";
 
 export default {
   title: "Deliverables/UQ Maps/1 Live data indicator",

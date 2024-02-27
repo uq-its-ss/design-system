@@ -1,5 +1,6 @@
 import "@uqds/layout/src/scss/main.scss";
 import "@uqds/hero/src/scss/main.scss";
+import "@uqds/tabs/src/scss/main.scss";
 import classNames from "classnames";
 
 export default {

@@ -29,7 +29,7 @@ export const Level2 = {
   render: ({ showGrid }) => `
 <div class="${classNames({ "uqds-layout-demo-bg": showGrid })}">
   ${Header()}
-  ${Breadcrumb()}
+  ${Breadcrumb.render()}
   <div class="uq-sections">
     ${Hero.render(Hero.args)}
     <div class="uq-container">

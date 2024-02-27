@@ -61,7 +61,7 @@ export const Shaded = {
 };
 
 export const Container = {
-  name: "Eith container",
+  name: "With container",
   args: {
     title: "Title",
     description: "Description",

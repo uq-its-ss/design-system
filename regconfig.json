@@ -16,7 +16,7 @@
       "privateToken": "$UQDS_PERSONAL_ACCESS_TOKEN"
     },
     "reg-publish-s3-plugin": {
-      "bucketName": "uq-ds-regsuit"
+      "bucketName": "$AWS_S3_BUCKET_TOOLS"
     },
     "reg-keygen-git-hash-plugin": {}
   }

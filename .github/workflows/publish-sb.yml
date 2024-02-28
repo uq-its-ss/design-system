@@ -1,4 +1,4 @@
-name: Build and Deploy Storybook
+name: Publish Storybook
 on:
   push:
     branches:
@@ -41,11 +41,10 @@ jobs:
         if: ${{ github.ref_name == 'releases' }}
         uses: jakejarvis/s3-sync-action@master
         with:
-           args: --acl public-read --follow-symlinks --delete
+           args: --follow-symlinks --delete
         env:
           AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET_PRODUCTION }}
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_PRODUCTION_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_PRODUCTION_KEY }}
           SOURCE_DIR: 'packages/storybook-html/storybook-static'
-          DEST_DIR: /
 

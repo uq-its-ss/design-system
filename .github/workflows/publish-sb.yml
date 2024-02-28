@@ -32,9 +32,9 @@ jobs:
         with:
           args: --acl public-read --follow-symlinks
         env:
-          AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET_TOOLS }}
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET_PRODUCTION }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_PRODUCTION_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_PRODUCTION_KEY }}
           SOURCE_DIR: 'packages/storybook-html/storybook-static'
           DEST_DIR: storybook-preview/test
 

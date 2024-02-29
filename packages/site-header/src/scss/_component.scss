@@ -53,6 +53,7 @@
     &:focus {
       color: core.$purple-500;
       text-decoration: none;
+      background-color: transparent;
     }
   }
 
@@ -74,6 +75,7 @@
     &:hover {
       background-color: core.$white;
       color: core.$purple-500;
+      background-color: transparent;
     }
 
     &:focus {
@@ -137,6 +139,7 @@
       &:focus {
         // background-color: $nav-primary-active-bg;
         text-decoration: underline;
+        background-color: transparent;
 
         @media #{core.$screen-lg-up} {
           outline: 0 none;

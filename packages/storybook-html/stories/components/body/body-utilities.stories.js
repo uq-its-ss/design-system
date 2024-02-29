@@ -1,3 +1,6 @@
+// import stylesheet
+import "./body.scss";
+
 export default {
   title: "Components/Body/Utilities",
   parameters: {

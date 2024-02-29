@@ -167,10 +167,10 @@ export const backgroundColourUtils = {
   render: () => {
     return `
       <div class="uqds-body__bg-color-utility__container">
-        <div class="uqds-body__bg-color-utility purple text--reverse">.purple</div>
+        <div class="uqds-body__bg-color-utility purple text--white">.purple</div>
         <div class="uqds-body__bg-color-utility white">.white</div>
-        <div class="uqds-body__bg-color-utility black text--reverse">.black</div>
-        <div class="uqds-body__bg-color-utility link text--reverse">.link</div>
+        <div class="uqds-body__bg-color-utility black text--white">.black</div>
+        <div class="uqds-body__bg-color-utility link text--white">.link</div>
       </div>
     `;
   },

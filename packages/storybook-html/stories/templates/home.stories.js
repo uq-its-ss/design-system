@@ -4,6 +4,9 @@ import { footer } from "../components/footer/footer.stories";
 import { Breadcrumb } from "../components/breadcrumb/breadcrumb.stories";
 import { Home as Hero } from "../components/hero/hero.stories";
 
+//import styles
+import "../layout/layout-demo.scss";
+
 export default {
   title: "Templates/Home",
   parameters: {

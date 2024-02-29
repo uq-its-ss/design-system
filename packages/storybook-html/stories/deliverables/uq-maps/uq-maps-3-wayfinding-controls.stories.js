@@ -1,6 +1,9 @@
 import { useEffect } from "@storybook/addons";
 import { MDCCircularProgress } from "@material/circular-progress";
 
+//import scss
+import "./uq-maps.scss";
+
 export default {
   title: "Deliverables/UQ Maps/3 Wayfinding controls",
   parameters: {

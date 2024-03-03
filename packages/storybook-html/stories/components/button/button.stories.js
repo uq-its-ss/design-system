@@ -19,20 +19,12 @@ export default {
 
 export const primary = () => {
   return `
-  <div class="uq-section uq-section--centered">
-    <div class="uq-section__container">
-      <div class="uq-section__content">
+    <div class="uq-section text--center" style="padding: 3rem;">
+          <button class="uq-button">Button</button>
+    </div>
+    <div class="uq-section text--center" style="background-color: #3a1f53; padding: 3rem;">
         <button class="uq-button">Button</button>
     </div>
-    </div>
-  </div>
-  <div class="uq-section uq-section--centered" style="background-color: #3a1f53;">
-    <div class="uq-section__container">
-      <div class="uq-section__content">
-      <button class="uq-button">Button</button>
-    </div>
-    </div>
-  </div>
   `;
 };
 
@@ -48,20 +40,12 @@ primary.parameters = {
 
 export const secondary = () => {
   return `
-  <div class="uq-section uq-section--centered">
-  <div class="uq-section__container">
-    <div class="uq-section__content">
+    <div class="uq-section text--center" style="padding: 3rem;">
+        <button class="uq-button uq-button--secondary">Button</button>
+    </div>
+    <div class="uq-section text--center" style="background-color: #3a1f53; padding: 3rem;">
       <button class="uq-button uq-button--secondary">Button</button>
-  </div>
-  </div>
-</div>
-<div class="uq-section uq-section--centered" style="background-color: #3a1f53;">
-  <div class="uq-section__container">
-    <div class="uq-section__content">
-    <button class="uq-button uq-button--secondary">Button</button>
-  </div>
-  </div>
-</div>
+    </div>
   `;
 };
 secondary.parameters = {
@@ -76,20 +60,12 @@ secondary.parameters = {
 
 export const tertiary = () => {
   return `
-  <div class="uq-section uq-section--centered">
-  <div class="uq-section__container">
-    <div class="uq-section__content">
-    <button class="uq-button uq-button--tertiary">Button</button> 
-  </div>
-  </div>
-</div>
-<div class="uq-section uq-section--centered" style="background-color: #3a1f53;">
-  <div class="uq-section__container">
-    <div class="uq-section__content">
-    <button class="uq-button uq-button--tertiary">Button</button>
-  </div>
-  </div>
-</div>
+    <div class="uq-section text--center" style="padding: 3rem;">
+      <button class="uq-button uq-button--tertiary">Button</button> 
+    </div>
+    <div class="uq-section text--center" style="background-color: #3a1f53; padding: 3rem;">
+      <button class="uq-button uq-button--tertiary">Button</button> 
+    </div>
   `;
 };
 

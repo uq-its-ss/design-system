@@ -3,19 +3,23 @@
 .uq-sidebar-layout {
   display: flex;
   flex-direction: column;
-  gap: var(--section-gap);
+  gap: var(--layout-section-gap);
 
   @media #{core.$screen-lg-up} {
     display: grid;
     gap: 0;
     grid-template-columns:
-      var(--sidebar-layout-sidebar-width) minmax(32px, 80px)
+      var(--layout-sidebar-width) minmax(32px, 80px)
       minmax(667px, 1fr);
   }
 }
 
 .uq-sidebar-layout__sidebar {
   grid-column: 1 / span 1;
+
+  @media #{core.$screen-lg-down} {
+    display: none;
+  }
 }
 
 .uq-sidebar-layout__main {

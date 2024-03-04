@@ -868,43 +868,27 @@ export default [
     category: "science-and-mathematics",
   },
   {
-    name: "email",
+    name: "social-email",
     category: "social",
   },
   {
-    name: "facebook",
+    name: "social-facebook",
     category: "social",
   },
   {
-    name: "linkedin",
+    name: "social-instagram",
     category: "social",
   },
   {
-    name: "social-email-circle",
+    name: "social-linkedin",
     category: "social",
   },
   {
-    name: "social-facebook-circle",
+    name: "social-x-twitter",
     category: "social",
   },
   {
-    name: "social-instagram2-circle",
-    category: "social",
-  },
-  {
-    name: "social-linkedin-circle",
-    category: "social",
-  },
-  {
-    name: "social-twitter-circle",
-    category: "social",
-  },
-  {
-    name: "social-you-tube-circle",
-    category: "social",
-  },
-  {
-    name: "twitter",
+    name: "social-you-tube",
     category: "social",
   },
   {

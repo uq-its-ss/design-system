@@ -323,13 +323,13 @@
     /* Facebook icon */
     &--facebook::before {
       background-image: url(icon-constants.get-icon(
-        "social--social-facebook-circle",
+        "social--social-facebook",
         core.$white
       ));
     }
     &--facebook:hover::before {
       background-image: url(icon-constants.get-icon(
-        "social--social-facebook-circle",
+        "social--social-facebook",
         #d4c8de
       ));
     }
@@ -337,13 +337,13 @@
     /* Linkedin icon */
     &--linkedin::before {
       background-image: url(icon-constants.get-icon(
-        "social--social-linkedin-circle",
+        "social--social-linkedin",
         core.$white
       ));
     }
     &--linkedin:hover::before {
       background-image: url(icon-constants.get-icon(
-        "social--social-linkedin-circle",
+        "social--social-linkedin",
         #d4c8de
       ));
     }
@@ -351,13 +351,13 @@
     /* Twitter icon */
     &--twitter::before {
       background-image: url(icon-constants.get-icon(
-        "social--social-twitter-circle",
+        "social--social-x-twitter",
         core.$white
       ));
     }
     &--twitter:hover::before {
       background-image: url(icon-constants.get-icon(
-        "social--social-twitter-circle",
+        "social--social-x-twitter",
         #d4c8de
       ));
     }
@@ -365,13 +365,13 @@
     /* Youtube icon */
     &--youtube::before {
       background-image: url(icon-constants.get-icon(
-        "social--social-you-tube-circle",
+        "social--social-you-tube",
         core.$white
       ));
     }
     &--youtube:hover::before {
       background-image: url(icon-constants.get-icon(
-        "social--social-you-tube-circle",
+        "social--social-you-tube",
         #d4c8de
       ));
     }
@@ -379,13 +379,13 @@
     /* Instagram icon */
     &--instagram::before {
       background-image: url(icon-constants.get-icon(
-        "social--social-instagram2-circle",
+        "social--social-instagram",
         core.$white
       ));
     }
     &--instagram:hover::before {
       background-image: url(icon-constants.get-icon(
-        "social--social-instagram2-circle",
+        "social--social-instagram",
         #d4c8de
       ));
     }

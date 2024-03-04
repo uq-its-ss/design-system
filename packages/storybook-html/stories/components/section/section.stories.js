@@ -3,12 +3,6 @@ import "@uqds/sections/src/scss/main.scss";
 
 export default {
   title: "Components/Section",
-  parameters: {
-    layout: "fullscreen",
-    previewTabs: {
-      canvas: { hidden: false },
-    },
-  },
   argTypes: {
     title: {
       control: "text",

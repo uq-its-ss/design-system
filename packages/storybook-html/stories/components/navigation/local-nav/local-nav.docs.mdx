@@ -13,7 +13,7 @@ import * as LocalNavStories from "./local-nav.stories";
 
 The `.uq-local-nav` element provides local navigation for desktop.
 
-<Canvas sourceState="hidden">
+<Canvas>
   <Story of={LocalNavStories.LocalNav} />
 </Canvas>
 
@@ -27,7 +27,7 @@ but only one `.uq-local-nav__parent` element.
 Use a `aria-label="Back to..."` attribute to help screen readers translate the
 back chevron.
 
-<Canvas sourceState="hidden">
+<Canvas>
   <nav className="uq-local-nav" aria-label="Local navigation">
     <div className="uq-local-nav__grandparent">
       <a className="uq-local-nav__link" href="#" aria-label="Back to UQ home">
@@ -60,34 +60,6 @@ back chevron.
   </nav>
 </Canvas>
 
-```html
-<nav class="uq-local-nav" aria-label="Local navigation">
-  <div class="uq-local-nav__grandparent">
-    <a class="uq-local-nav__link" href="#" aria-label="Back to UQ home"
-      >UQ home</a
-    >
-  </div>
-  <div class="uq-local-nav__grandparent">
-    <a class="uq-local-nav__link" href="#" aria-label="Back to Research"
-      >Research</a
-    >
-  </div>
-  <div class="uq-local-nav__grandparent">
-    <a
-      class="uq-local-nav__link"
-      href="#"
-      aria-label="Back to Research capabilities and initiatives"
-      >Research capabilities and initiatives</a
-    >
-  </div>
-  <div class="uq-local-nav__parent">
-    <a class="uq-local-nav__link" href="#" aria-label="Back to Energy network"
-      >Energy network</a
-    >
-  </div>
-</nav>
-```
-
 #### Children
 
 After the Parent element, the `ul.uq-local-nav__children` element holds all `li.uq-local-nav__child` Child elements.
@@ -99,7 +71,7 @@ Child elements that have their own children are marked with `.uq-local-nav--has-
 The active link is marked with `.uq-local-nav--active-link` on the `a` element, and
 for accessibility the active `a` element is also marked with `aria-current="page"`
 
-<Canvas sourceState="hidden">
+<Canvas>
   <nav className="uq-local-nav" aria-label="Local navigation">
     <div className="uq-local-nav__grandparent">
       <a className="uq-local-nav__link" href="#" aria-label="Back to UQ home">
@@ -135,39 +107,6 @@ for accessibility the active `a` element is also marked with `aria-current="page
   </nav>
 </Canvas>
 
-```html
-<nav class="uq-local-nav" aria-label="Local navigation">
-  <div class="uq-local-nav__grandparent">
-    <a class="uq-local-nav__link" href="#" aria-label="Back to UQ home"
-      >UQ home</a
-    >
-  </div>
-  <div class="uq-local-nav__parent">
-    <a class="uq-local-nav__link" href="#" aria-label="Back to Research"
-      >Research</a
-    >
-  </div>
-  <ul class="uq-local-nav__children">
-    <li class="uq-local-nav__child uq-local-nav--current-child">
-      <a
-        class="uq-local-nav__link uq-local-nav--active-link"
-        href="#"
-        aria-current="page"
-        >Research impact</a
-      >
-    </li>
-    <li class="uq-local-nav__child uq-local-nav--has-children">
-      <a class="uq-local-nav__link" href="#"
-        >Research capabilities and initiatives</a
-      >
-    </li>
-    <li class="uq-local-nav__child">
-      <a class="uq-local-nav__link" href="#">Ethics and integrity</a>
-    </li>
-  </ul>
-</nav>
-```
-
 #### Grandchildren
 
 When a Child element that has children is the active link, it's children are shown
@@ -175,7 +114,7 @@ within the `ul.uq-local-nav__grandchildren` element.
 
 The Grandchildren use a `li.uq-local-nav__grandchild` element.
 
-<Canvas sourceState="hidden">
+<Canvas>
   <nav className="uq-local-nav" aria-label="Local navigation">
     <div className="uq-local-nav__grandparent">
       <a className="uq-local-nav__link" href="#" aria-label="Back to UQ home">
@@ -223,51 +162,10 @@ The Grandchildren use a `li.uq-local-nav__grandchild` element.
   </nav>
 </Canvas>
 
-```html
-<nav class="uq-local-nav" aria-label="Local navigation">
-  <div class="uq-local-nav__grandparent">
-    <a class="uq-local-nav__link" href="#" aria-label="Back to UQ home"
-      >UQ home</a
-    >
-  </div>
-  <div class="uq-local-nav__parent">
-    <a class="uq-local-nav__link" href="#" aria-label="Back to Research"
-      >Research</a
-    >
-  </div>
-  <ul class="uq-local-nav__children">
-    <li class="uq-local-nav__child">
-      <a class="uq-local-nav__link" href="#">Research impact</a>
-    </li>
-    <li
-      class="uq-local-nav__child uq-local-nav--has-children uq-local-nav--current-child"
-    >
-      <a
-        class="uq-local-nav__link uq-local-nav--active-link"
-        href="#"
-        aria-current="page"
-        >Research capabilities and initiatives</a
-      >
-      <ul class="uq-local-nav__grandchildren">
-        <li class="uq-local-nav__grandchild uq-local-nav--has-children">
-          <a class="uq-local-nav__link" href="#">Energy network</a>
-        </li>
-        <li class="uq-local-nav__grandchild">
-          <a class="uq-local-nav__link" href="#">Other networks</a>
-        </li>
-      </ul>
-    </li>
-    <li class="uq-local-nav__child">
-      <a class="uq-local-nav__link" href="#">Ethics and integrity</a>
-    </li>
-  </ul>
-</nav>
-```
-
 When a Grandchild becomes the active link, only its siblings and children are
 shown and a new Parent and Grandparent element are added.
 
-<Canvas sourceState="hidden">
+<Canvas>
   <nav className="uq-local-nav" aria-label="Local navigation">
     <div className="uq-local-nav__grandparent">
       <a className="uq-local-nav__link" href="#" aria-label="Back to UQ home">
@@ -323,54 +221,3 @@ shown and a new Parent and Grandparent element are added.
     </ul>
   </nav>
 </Canvas>
-
-```html
-<nav class="uq-local-nav" aria-label="Local navigation">
-  <div class="uq-local-nav__grandparent">
-    <a class="uq-local-nav__link" href="#" aria-label="Back to UQ home"
-      >UQ home</a
-    >
-  </div>
-  <div class="uq-local-nav__grandparent">
-    <a class="uq-local-nav__link" href="#" aria-label="Back to Research"
-      >Research</a
-    >
-  </div>
-  <div class="uq-local-nav__parent">
-    <a
-      class="uq-local-nav__link"
-      href="#"
-      aria-label="Back to Research capabilities and initiatives"
-      >Research capabilities and initiatives</a
-    >
-  </div>
-  <ul class="uq-local-nav__children">
-    <li
-      class="uq-local-nav__child uq-local-nav--has-children uq-local-nav--current-page"
-    >
-      <a
-        class="uq-local-nav__link uq-local-nav--active-link"
-        href="#"
-        aria-current="page"
-        >Energy network</a
-      >
-      <ul class="uq-local-nav__grandchildren">
-        <li
-          class="uq-local-nav__grandchild uq-local-nav__child uq-local-nav--has-children"
-        >
-          <a class="uq-local-nav__link" href="#">Partner with us</a>
-        </li>
-        <li class="uq-local-nav__grandchild uq-local-nav__child">
-          <a class="uq-local-nav__link" href="#">Research</a>
-        </li>
-        <li class="uq-local-nav__grandchild uq-local-nav__child">
-          <a class="uq-local-nav__link" href="#">Our people</a>
-        </li>
-      </ul>
-    </li>
-    <li class="uq-local-nav__child">
-      <a class="uq-local-nav__link" href="#">Other networks</a>
-    </li>
-  </ul>
-</nav>
-```

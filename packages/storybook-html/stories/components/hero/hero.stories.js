@@ -7,9 +7,6 @@ export default {
   title: "Components/Hero",
   parameters: {
     layout: "fullscreen",
-    previewTabs: {
-      canvas: { hidden: false },
-    },
   },
   argTypes: {
     light: {
@@ -39,18 +36,6 @@ export default {
       ],
     },
   },
-};
-
-export const Hero = {
-  name: "Hero",
-  args: {
-    light: true,
-    large: true,
-    title: "Title",
-    description: "Description",
-    button: "Button",
-    image: "hero-example-2.jpg",
-  },
   render: ({ light, large, title, description, button, image }) => `
 <div class="${classNames("uq-hero", {
     "uq-hero--light": light,
@@ -79,6 +64,18 @@ export const Hero = {
 </div>`,
 };
 
+export const Hero = {
+  name: "Hero",
+  args: {
+    light: true,
+    large: true,
+    title: "Title",
+    description: "Description",
+    button: "Button",
+    image: "hero-example-2.jpg",
+  },
+};
+
 export const Home = {
   name: "Home",
   args: {
@@ -90,7 +87,6 @@ export const Home = {
     button: "Explore programs",
     image: "hero-example-1.jpg",
   },
-  render: Hero.render,
 };
 
 export const Level1 = {
@@ -104,7 +100,6 @@ export const Level1 = {
     button: "",
     image: "hero-example-3.jpg",
   },
-  render: Hero.render,
 };
 
 export const Level2 = {
@@ -118,5 +113,4 @@ export const Level2 = {
     button: "",
     image: "hero-example-4.jpg",
   },
-  render: Hero.render,
 };

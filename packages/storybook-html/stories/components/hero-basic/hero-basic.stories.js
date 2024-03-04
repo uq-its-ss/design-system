@@ -1,16 +1,13 @@
+import classNames from "classnames";
 import "@uqds/layout/src/scss/main.scss";
 import "@uqds/hero/src/scss/main.scss";
 import "@uqds/tabs/src/scss/main.scss";
 import "@uqds/icon/src/scss/main.scss";
-import classNames from "classnames";
 
 export default {
   title: "Components/Hero basic",
   parameters: {
     layout: "fullscreen",
-    previewTabs: {
-      canvas: { hidden: false },
-    },
   },
   argTypes: {
     eyebrow: {
@@ -34,17 +31,6 @@ export default {
     tabs: {
       control: "array",
     },
-  },
-};
-
-export const HeroBasic = {
-  name: "Hero basic",
-  args: {
-    eyebrow: "Eyebrow",
-    title: "Title",
-    back: "Back link",
-    image: "hero-basic-example-1.jpg",
-    tabs: ["Tab 1", "Tab 2", "Tab 3"],
   },
   render: ({ eyebrow, title, back, image, tabs }) => `
 <div class="uq-hero-basic">
@@ -104,6 +90,17 @@ export const HeroBasic = {
 </div>`,
 };
 
+export const HeroBasic = {
+  name: "Hero basic",
+  args: {
+    eyebrow: "Eyebrow",
+    title: "Title",
+    back: "Back link",
+    image: "hero-basic-example-1.jpg",
+    tabs: ["Tab 1", "Tab 2", "Tab 3"],
+  },
+};
+
 export const Basic = {
   name: "Basic",
   args: {
@@ -113,7 +110,6 @@ export const Basic = {
     image: "none",
     tabs: [],
   },
-  render: HeroBasic.render,
 };
 
 export const Program = {
@@ -125,7 +121,6 @@ export const Program = {
     image: "hero-basic-example-3.jpg",
     tabs: ["Overview", "Majors", "Fees and scholarships", "How to apply"],
   },
-  render: HeroBasic.render,
 };
 
 export const Plan = {
@@ -137,5 +132,4 @@ export const Plan = {
     image: "hero-basic-example-2.jpg",
     tabs: ["Overview", "Study details"],
   },
-  render: HeroBasic.render,
 };

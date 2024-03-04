@@ -22,14 +22,16 @@
   },
   "homepage": "https://github.com/uq-its-ss/design-system#readme",
   "license": "ISC",
-  "main": "src/js/accordion.js",
-  "directories": {
-    "lib": "src"
+  "main": "dist/js/uqds.js",
+  "module": "dist/mjs/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/mjs/index.js",
+      "require": "./dist/js/uqds.js"
+    },
+    "./src/*": "./src/*.js"
   },
-  "files": [
-    "src/*",
-    "dist/*"
-  ],
+  "style": "dist/css/main.css",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/uq-its-ss/design-system.git"

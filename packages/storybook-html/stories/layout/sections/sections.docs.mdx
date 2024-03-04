@@ -1,5 +1,8 @@
-import { Story, Canvas } from "@storybook/addon-docs";
+import { Meta, Story, Canvas } from "@storybook/blocks";
 import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
+import * as SectionsStories from "./sections.stories";
+
+<Meta of={SectionsStories} />
 
 # Sections
 
@@ -20,8 +23,8 @@ own `margin` property.
 
 `.uq-sections` elements can be safely nested within each other as needed.
 
-<Canvas withSource="none">
-  <Story id="layout-sections--sections" />
+<Canvas sourceState="hidden">
+  <Story of={SectionsStories.Sections} />
 </Canvas>
 
 ```html

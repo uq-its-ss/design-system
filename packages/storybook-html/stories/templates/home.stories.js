@@ -4,6 +4,9 @@ import { footer } from "../components/footer/footer.stories";
 import { Breadcrumb } from "../components/breadcrumb/breadcrumb.stories";
 import { Home as Hero } from "../components/hero/hero.stories";
 
+//import styles
+import "../layout/layout-demo.scss";
+
 export default {
   title: "Templates/Home",
   parameters: {
@@ -27,7 +30,7 @@ export default {
 export const Home = {
   render: ({ showGrid }) => `
 <div class="${classNames({ "uqds-layout-demo-bg": showGrid })}">
-  ${Header()}
+  ${Header.render()}
   ${Breadcrumb.render()}
   <div class="uq-sections">
     ${Hero.render(Hero.args)}
@@ -89,6 +92,6 @@ export const Home = {
       </div>
     </div>
   </div>
-  ${footer()}
+  ${footer.render()}
 </div>`,
 };

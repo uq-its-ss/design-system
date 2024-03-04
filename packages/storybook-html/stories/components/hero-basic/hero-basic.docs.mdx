@@ -1,7 +1,8 @@
-import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import { Meta, Story, Canvas } from "@storybook/blocks";
 import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
+import * as HeroBasicStories from "./hero-basic.stories";
 
-<Meta title="Components/Hero/All" />
+<Meta of={HeroBasicStories} />
 
 # Hero basic
 
@@ -23,8 +24,8 @@ There are 4 elements within the basic hero.
 
 There are no size or colour variations for the basic hero component.
 
-<Canvas withSource="none">
-  <Story id="components-hero-basic--hero-basic" />
+<Canvas sourceState="hidden">
+  <Story of={HeroBasicStories.HeroBasic} />
 </Canvas>
 
 ```html
@@ -71,17 +72,17 @@ There are no size or colour variations for the basic hero component.
 #### Basic
 
 <Canvas>
-  <Story id="components-hero-basic--basic" />
+  <Story of={HeroBasicStories.Basic} />
 </Canvas>
 
 #### Program
 
 <Canvas>
-  <Story id="components-hero-basic--program" />
+  <Story of={HeroBasicStories.Program} />
 </Canvas>
 
 #### Plan
 
 <Canvas>
-  <Story id="components-hero-basic--plan" />
+  <Story of={HeroBasicStories.Plan} />
 </Canvas>

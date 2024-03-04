@@ -1,15 +1,12 @@
-import docs from "./hero.docs.mdx";
-import "../../../../layout/src/scss/main.scss";
-import "../../../../hero/src/scss/main.scss";
+import "@uqds/layout/src/scss/main.scss";
+import "@uqds/hero/src/scss/main.scss";
+import "@uqds/button/src/scss/main.scss";
 import classNames from "classnames";
 
 export default {
   title: "Components/Hero",
   parameters: {
     layout: "fullscreen",
-    docs: {
-      page: docs,
-    },
     previewTabs: {
       canvas: { hidden: false },
     },

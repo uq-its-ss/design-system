@@ -13,16 +13,9 @@ import accordionSubtitleHTML from "./accordion-subtitle.html";
 import accordionCompactHTML from "./accordion-compact.html";
 import accordionDivIsManualHTML from "./accordion-div-is-manual.html";
 
-// documentation
-import docs from "./accordion.docs.mdx";
-
 export default {
   title: "Components/Accordion",
   parameters: {
-    docs: {
-      page: docs,
-      inlineStories: false,
-    },
     layout: "padded",
     previewTabs: {
       canvas: { hidden: false },
@@ -30,71 +23,83 @@ export default {
   },
 };
 
-export const usingDivs = () => {
-  useEffect(() => {
-    new accordionCreate();
-  });
-  return accordionDivHTML;
+export const usingDivs = {
+  render: () => {
+    useEffect(() => {
+      new accordionCreate();
+    });
+    return accordionDivHTML;
+  },
+
+  name: "Using divs",
 };
 
-usingDivs.storyName = "Using divs";
+export const usingLists = {
+  render: () => {
+    useEffect(() => {
+      new accordionCreate();
+    });
+    return accordionListHTML;
+  },
 
-export const usingLists = () => {
-  useEffect(() => {
-    new accordionCreate();
-  });
-  return accordionListHTML;
+  name: "Using lists",
 };
 
-usingLists.storyName = "Using lists";
+export const HasSubtitle = {
+  render: () => {
+    useEffect(() => {
+      new accordionCreate();
+    });
+    return accordionSubtitleHTML;
+  },
 
-export const HasSubtitle = () => {
-  useEffect(() => {
-    new accordionCreate();
-  });
-  return accordionSubtitleHTML;
+  name: "Subtitle",
 };
 
-HasSubtitle.storyName = "Subtitle";
+export const IsCompact = {
+  render: () => {
+    useEffect(() => {
+      new accordionCreate();
+    });
+    return accordionCompactHTML;
+  },
 
-export const IsCompact = () => {
-  useEffect(() => {
-    new accordionCreate();
-  });
-  return accordionCompactHTML;
+  name: "Compact",
 };
 
-IsCompact.storyName = "Compact";
+export const isManual = {
+  render: () => {
+    useEffect(() => {
+      new accordionCreate();
+    });
+    return accordionDivIsManualHTML;
+  },
 
-export const isManual = () => {
-  useEffect(() => {
-    new accordionCreate();
-  });
-  return accordionDivIsManualHTML;
+  name: "Variant behaviour",
 };
 
-isManual.storyName = "Variant behaviour";
+export const withHeadings = {
+  render: (args) => {
+    useEffect(() => {
+      new accordionCreate();
+    });
+    return `<div class="uq-accordion" aria-label="Accordion button group" role="presentation">
+      <div class="uq-accordion__item">
+      <button class="uq-accordion__toggle" aria-controls="content-1" aria-expanded="false" id="accordion-title-1"><${args.tag}>Title 1</${args.tag}></button>
+      <div class="uq-accordion__content" role="region" aria-hidden="true" id="content-1" aria-labelledby="accordion-title-1">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor eros dui, vitae iaculis leo ornare eget. Etiam tristique lobortis ligula non mattis. Ut dapibus libero neque, vel tincidunt nunc tempus eget.</p>
+      </div>
+      </div>`;
+  },
 
-export const withHeadings = (args) => {
-  useEffect(() => {
-    new accordionCreate();
-  });
-  return `<div class="uq-accordion" aria-label="Accordion button group" role="presentation">
-    <div class="uq-accordion__item">
-    <button class="uq-accordion__toggle" aria-controls="content-1" aria-expanded="false" id="accordion-title-1"><${args.tag}>Title 1</${args.tag}></button>
-    <div class="uq-accordion__content" role="region" aria-hidden="true" id="content-1" aria-labelledby="accordion-title-1">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor eros dui, vitae iaculis leo ornare eget. Etiam tristique lobortis ligula non mattis. Ut dapibus libero neque, vel tincidunt nunc tempus eget.</p>
-    </div>
-    </div>`;
-};
+  args: {
+    tag: "span",
+  },
 
-withHeadings.args = {
-  tag: "span",
-};
-
-withHeadings.argTypes = {
-  tag: {
-    options: ["span", "h2", "h3", "h4", "h5"],
-    control: { type: "select" },
+  argTypes: {
+    tag: {
+      options: ["span", "h2", "h3", "h4", "h5"],
+      control: { type: "select" },
+    },
   },
 };

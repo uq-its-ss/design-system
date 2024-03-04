@@ -1,15 +1,9 @@
 // import styles
 import "./button.scss";
 
-// documentation
-import docs from "./button.docs.mdx";
-
 export default {
   title: "Components/Button",
   parameters: {
-    docs: {
-      page: docs,
-    },
     layout: "padded",
     previewTabs: {
       canvas: { hidden: false },
@@ -17,38 +11,47 @@ export default {
   },
 };
 
-export const primary = () => {
-  return `
-    <button class="uq-button">Button</button>
-    <button class="uq-button uq-button--outline">Button</button>
-    <button class="uq-button uq-button--text">Button</button>
-  `;
-};
-
-primary.storyName = "Primary (base)";
-
-export const secondary = () => {
-  return `
-    <button class="uq-button uq-button--secondary">Button</button>
-    <button class="uq-button uq-button--secondary uq-button--outline">Button</button>
-    <button class="uq-button uq-button--secondary uq-button--text">Button</button>
-  `;
-};
-
-export const secondaryLight = () => {
-  return `
-    <button class="uq-button uq-button--secondary uq-button--outline uq-button--light">Button</button>
-    <button class="uq-button uq-button--secondary uq-button--text uq-button--light">Button</button>
-  `;
-};
-
-secondaryLight.storyName = "Secondary light";
-secondaryLight.parameters = {
-  docs: {
-    inlineStories: false,
+export const primary = {
+  render: () => {
+    return `
+      <button class="uq-button">Button</button>
+      <button class="uq-button uq-button--outline">Button</button>
+      <button class="uq-button uq-button--text">Button</button>
+    `;
   },
-  backgrounds: {
-    default: "Dark",
+
+  name: "Primary (base)",
+};
+
+export const secondary = {
+  render: () => {
+    return `
+      <button class="uq-button uq-button--secondary">Button</button>
+      <button class="uq-button uq-button--secondary uq-button--outline">Button</button>
+      <button class="uq-button uq-button--secondary uq-button--text">Button</button>
+    `;
+  },
+
+  name: "Secondary",
+};
+
+export const secondaryLight = {
+  render: () => {
+    return `
+      <button class="uq-button uq-button--secondary uq-button--outline uq-button--light">Button</button>
+      <button class="uq-button uq-button--secondary uq-button--text uq-button--light">Button</button>
+    `;
+  },
+
+  name: "Secondary light",
+
+  parameters: {
+    docs: {
+      inlineStories: false,
+    },
+    backgrounds: {
+      default: "Dark",
+    },
   },
 };
 

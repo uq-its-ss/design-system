@@ -1,14 +1,10 @@
-import docs from "./sidebar.docs.mdx";
 import "../../layout-demo.scss";
-import "../../../../../layout/src/scss/main.scss";
+import "@uqds/layout/src/scss/main.scss";
 
 export default {
   title: "Layout/Page layouts/Sidebar",
   parameters: {
     layout: "fullscreen",
-    docs: {
-      page: docs,
-    },
     previewTabs: {
       canvas: { hidden: false },
     },

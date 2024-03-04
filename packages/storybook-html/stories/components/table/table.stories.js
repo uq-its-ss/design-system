@@ -9,15 +9,9 @@ import tableIrregularHeadersHTML from "./table-irregular-headers.html";
 import tableMultiLevelHeadersHTML from "./table-multi-level-headers.html";
 import tableCardHTML from "./table-card.html";
 
-// documentation
-import docs from "./table.docs.mdx";
-
 export default {
   title: "Components/Table",
   parameters: {
-    docs: {
-      page: docs,
-    },
     layout: "padded",
   },
   previewTabs: {
@@ -25,32 +19,50 @@ export default {
   },
 };
 
-export const table = () => {
-  return tableHTML;
-};
-table.storyName = "Table scroll with minimal classes";
+export const table = {
+  render: () => {
+    return tableHTML;
+  },
 
-export const tableClasses = () => {
-  return tableClassesHTML;
+  name: "Table scroll with minimal classes",
 };
-tableClasses.storyName = "Table scroll with classes";
 
-export const tableMultipleHeaders = () => {
-  return tableMultipleHeadersHTML;
-};
-tableMultipleHeaders.storyName = "Table scroll with multiple headers";
+export const tableClasses = {
+  render: () => {
+    return tableClassesHTML;
+  },
 
-export const tableIrregularHeaders = () => {
-  return tableIrregularHeadersHTML;
+  name: "Table scroll with classes",
 };
-tableIrregularHeaders.storyName = "Table scroll with irregular headers";
 
-export const tableMultiLevelHeaders = () => {
-  return tableMultiLevelHeadersHTML;
-};
-tableMultiLevelHeaders.storyName = "Table scroll with multi-level headers";
+export const tableMultipleHeaders = {
+  render: () => {
+    return tableMultipleHeadersHTML;
+  },
 
-export const tableCard = () => {
-  return tableCardHTML;
+  name: "Table scroll with multiple headers",
 };
-tableCard.storyName = "Table card";
+
+export const tableIrregularHeaders = {
+  render: () => {
+    return tableIrregularHeadersHTML;
+  },
+
+  name: "Table scroll with irregular headers",
+};
+
+export const tableMultiLevelHeaders = {
+  render: () => {
+    return tableMultiLevelHeadersHTML;
+  },
+
+  name: "Table scroll with multi-level headers",
+};
+
+export const tableCard = {
+  render: () => {
+    return tableCardHTML;
+  },
+
+  name: "Table card",
+};

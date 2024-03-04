@@ -1,15 +1,13 @@
-import docs from "./hero-basic.docs.mdx";
-import "../../../../layout/src/scss/main.scss";
-import "../../../../hero/src/scss/main.scss";
+import "@uqds/layout/src/scss/main.scss";
+import "@uqds/hero/src/scss/main.scss";
+import "@uqds/tabs/src/scss/main.scss";
+import "@uqds/icon/src/scss/main.scss";
 import classNames from "classnames";
 
 export default {
   title: "Components/Hero basic",
   parameters: {
     layout: "fullscreen",
-    docs: {
-      page: docs,
-    },
     previewTabs: {
       canvas: { hidden: false },
     },

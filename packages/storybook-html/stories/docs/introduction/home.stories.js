@@ -6,6 +6,7 @@ export default {
   parameters: {
     layout: "fullscreen",
     viewMode: "story",
+    tags: [""],
     previewTabs: {
       "storybook/docs/panel": { hidden: true },
       canvas: { hidden: false },
@@ -13,14 +14,10 @@ export default {
   },
 };
 
-export const HomePage = () => {
-  return HomePageHTML;
-};
-
-HomePage.storyName = "Overview";
-
-HomePage.parameters = {
-  docs: {
-    page: null,
+export const HomePage = {
+  render: () => {
+    return HomePageHTML;
   },
+
+  name: "Overview",
 };

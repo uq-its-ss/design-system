@@ -20,8 +20,4 @@ export const renderFromString = (string) => {
   return document;
 };
 
-beforeEach(() => {
-  document.body.innerHTML = "";
-});
-
 export default renderFromFile;

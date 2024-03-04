@@ -1,0 +1,29 @@
+import { Meta, Story, Canvas } from "@storybook/blocks";
+import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
+import * as UqMaps6AppInfoStories from "./uq-maps-6-app-info.stories";
+
+<Meta of={UqMaps6AppInfoStories} />
+
+# UQ Maps: app info drawer
+
+<StatusBadge.Development />
+
+Implements the _slide drawer_ and _badge_ to display app info.
+
+## Mobile
+
+### 6A. Closed
+
+#### Basic usage
+
+<Canvas sourceState="hidden" withToolbar>
+  <Story of={UqMaps6AppInfoStories.closed} />
+</Canvas>
+
+### 6B. Open
+
+#### Basic usage
+
+<Canvas sourceState="hidden" withToolbar>
+  <Story of={UqMaps6AppInfoStories.open} />
+</Canvas>

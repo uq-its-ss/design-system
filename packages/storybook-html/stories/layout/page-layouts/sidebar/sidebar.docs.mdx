@@ -1,5 +1,8 @@
-import { Story, Canvas } from "@storybook/addon-docs";
+import { Meta, Story, Canvas } from "@storybook/blocks";
 import StatusBadge from "../../../../.storybook/custom/components/StatusBadge";
+import * as SidebarStories from "./sidebar.stories";
+
+<Meta of={SidebarStories} />
 
 # Sidebar layout
 
@@ -21,8 +24,8 @@ Then implement the component as per the HTML example below.
 the `.uq-sections` element should be used within `.uq-sidebar-layout__main` to
 provide correct **section spacing**.
 
-<Canvas withSource="none">
-  <Story id="layout-page-layouts-sidebar--sidebar" />
+<Canvas sourceState="hidden">
+  <Story of={SidebarStories.Sidebar} />
 </Canvas>
 
 ```html
@@ -40,7 +43,7 @@ provide correct **section spacing**.
 
 #### Sidebar layout with sections and card grids
 
-<Canvas withSource="none">
+<Canvas sourceState="hidden">
   <div class="uqds-layout-demo-bg">
     <div class="uq-container">
       <div class="uq-sidebar-layout">

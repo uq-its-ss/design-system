@@ -1,0 +1,81 @@
+import { Meta, Story, Canvas } from "@storybook/blocks";
+import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
+import * as HeroStories from "./hero.stories";
+
+<Meta of={HeroStories} />
+
+# Hero
+
+<StatusBadge.Development />
+
+<StatusBadge.DraftDoc />
+
+## Overview
+
+The `.uq-hero` element provides the hero for homepage and level 1 and 2 landing
+pages.
+
+### How-to
+
+There are 4 elements within the hero.
+
+- Title: `h1.uq-hero__title`
+- Description: `.uq-hero__description` (it is optional include a `p` tag within the description)
+- Button (optional): `.uq-hero__button .uq-button.uq-button--purple`
+- Image: `.uq-hero__image`
+
+There are 2 size variations - small (default) and large (use the `.uq-hero--large` modifier class).
+
+There are 2 color variations - purple (default) and white (use the `.uq-hero--light` modifier class).
+
+<Canvas sourceState="hidden">
+  <Story of={HeroStories.Hero} />
+</Canvas>
+
+```html
+<div class="uq-hero uq-hero--light uq-hero--large">
+  <div class="uq-hero__image">
+    <img src="/images/hero/hero-example-1.jpg" alt="" role="presentation" />
+  </div>
+  <div class="uq-container">
+    <div class="uq-hero__content">
+      <h1 class="uq-hero__title">Title</h1>
+      <div class="uq-hero__description">
+        <p>Description</p>
+      </div>
+      <div class="uq-hero__button">
+        <a class="uq-button uq-button--purple" href="#">Button text</a>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+### Examples
+
+#### Home
+
+The homepage hero use the `.uq-hero--light` and `.uq-hero--large` modifier classes
+and includes a purple button.
+
+<Canvas>
+  <Story of={HeroStories.Home} />
+</Canvas>
+
+#### Level 1
+
+Level 1 pages use the `.uq-hero--light` modifier class. Level 1 and 2 pages do not
+include a button.
+
+<Canvas>
+  <Story of={HeroStories.Level1} />
+</Canvas>
+
+#### Level 2
+
+Level 2 pages don't use any modifier classes. Level 1 and 2 pages do not
+include a button.
+
+<Canvas>
+  <Story of={HeroStories.Level2} />
+</Canvas>

@@ -1,13 +1,9 @@
 import classNames from "classnames";
-import docs from "./section.docs.mdx";
-import "../../../../sections/src/scss/main.scss";
+import "@uqds/sections/src/scss/main.scss";
 
 export default {
   title: "Components/Section",
   parameters: {
-    docs: {
-      page: docs,
-    },
     layout: "fullscreen",
     previewTabs: {
       canvas: { hidden: false },

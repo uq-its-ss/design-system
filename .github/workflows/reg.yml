@@ -25,7 +25,6 @@ jobs:
       - name: Install deps and build
         run: |
           npm ci
-          npx lerna bootstrap --no-ci
 
       - name: Build Storybook
         run: |

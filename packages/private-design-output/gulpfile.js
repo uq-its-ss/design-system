@@ -26,12 +26,12 @@ exports.default = parallel(
   exportImages,
   exportFavicon,
   exportHtml,
-  exportSlidemenu,
+  exportSlidemenu
 );
 
 exports.prepare = parallel(
   exportImages,
   exportFavicon,
   exportHtml,
-  exportSlidemenu,
-)
+  exportSlidemenu
+);

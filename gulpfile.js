@@ -62,11 +62,7 @@ function bundleJS() {
       format: "iife",
       name: "uq",
     },
-    plugins: [
-      nodeResolve(),
-      cjs(),
-      babel()
-    ],
+    plugins: [nodeResolve(), cjs(), babel()],
   })
     .pipe(source("uqds.js"))
     .pipe(buffer())

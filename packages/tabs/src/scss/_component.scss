@@ -53,11 +53,18 @@
     text-align: center;
     white-space: nowrap;
     cursor: pointer;
+    text-decoration: none;
 
     @media #{core.$screen-md-up} {
       padding: core.$space-l core.$space-xl;
       margin-right: core.$space-xs;
       font-size: core.$font-size-l;
+    }
+
+    &:hover {
+      color: core.$grey-900;
+      background-color: core.$white;
+      text-decoration: underline;
     }
 
     &:last-child {
@@ -68,6 +75,7 @@
       color: core.$purple-500;
       background-color: core.$white;
       font-weight: core.$font-weight-bold;
+
 
       &::before {
         position: absolute;

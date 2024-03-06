@@ -33,6 +33,7 @@
 
     &:hover,
     &:focus {
+      background-color: transparent;
       box-shadow: 0 core.$space-s core.$space-m rgba(core.$grey-900, 0.15);
     }
   }
@@ -212,12 +213,13 @@
 
 // This should be replaced with a component specfic class or removed and documented as a body package dependancy for usage with cards.
 .text--link {
-  color: core.$utility-500;
+  color: core.$purple-500;
   text-decoration: none;
   transition: 0.2s color;
 
   &:hover {
-    color: core.$utility-500;
+    background-color: core.$purple-500;
+    color: core.$white;
     text-decoration: underline;
   }
 }

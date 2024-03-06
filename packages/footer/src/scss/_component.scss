@@ -351,13 +351,13 @@
     /* Twitter icon */
     &--twitter::before {
       background-image: url(icon-constants.get-icon(
-        "social--social-x-twitter",
+        "social--social-x-twitter-circle",
         core.$white
       ));
     }
     &--twitter:hover::before {
       background-image: url(icon-constants.get-icon(
-        "social--social-x-twitter",
+        "social--social-x-twitter-circle",
         #d4c8de
       ));
     }

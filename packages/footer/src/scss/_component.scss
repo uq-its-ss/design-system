@@ -323,13 +323,13 @@
     /* Facebook icon */
     &--facebook::before {
       background-image: url(icon-constants.get-icon(
-        "social--social-facebook",
+        "social--social-facebook-circle",
         core.$white
       ));
     }
     &--facebook:hover::before {
       background-image: url(icon-constants.get-icon(
-        "social--social-facebook",
+        "social--social-facebook-circle",
         #d4c8de
       ));
     }
@@ -337,13 +337,13 @@
     /* Linkedin icon */
     &--linkedin::before {
       background-image: url(icon-constants.get-icon(
-        "social--social-linkedin",
+        "social--social-linkedin-circle",
         core.$white
       ));
     }
     &--linkedin:hover::before {
       background-image: url(icon-constants.get-icon(
-        "social--social-linkedin",
+        "social--social-linkedin-circle",
         #d4c8de
       ));
     }
@@ -365,13 +365,13 @@
     /* Youtube icon */
     &--youtube::before {
       background-image: url(icon-constants.get-icon(
-        "social--social-you-tube",
+        "social--social-you-tube-circle",
         core.$white
       ));
     }
     &--youtube:hover::before {
       background-image: url(icon-constants.get-icon(
-        "social--social-you-tube",
+        "social--social-you-tube-circle",
         #d4c8de
       ));
     }
@@ -379,13 +379,13 @@
     /* Instagram icon */
     &--instagram::before {
       background-image: url(icon-constants.get-icon(
-        "social--social-instagram",
+        "social--social-instagram2-circle",
         core.$white
       ));
     }
     &--instagram:hover::before {
       background-image: url(icon-constants.get-icon(
-        "social--social-instagram",
+        "social--social-instagram2-circle",
         #d4c8de
       ));
     }

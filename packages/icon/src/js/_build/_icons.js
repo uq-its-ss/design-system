@@ -868,19 +868,19 @@ export default [
     category: "science-and-mathematics",
   },
   {
-    name: "social-email",
+    name: "social-email-circle",
     category: "social",
   },
   {
-    name: "social-facebook",
+    name: "social-facebook-circle",
     category: "social",
   },
   {
-    name: "social-instagram",
+    name: "social-instagram2-circle",
     category: "social",
   },
   {
-    name: "social-linkedin",
+    name: "social-linkedin-circle",
     category: "social",
   },
   {
@@ -888,7 +888,7 @@ export default [
     category: "social",
   },
   {
-    name: "social-you-tube",
+    name: "social-you-tube-circle",
     category: "social",
   },
   {

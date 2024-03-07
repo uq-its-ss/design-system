@@ -80,9 +80,11 @@
         padding: core.$space-m core.$space-l;
         color: core.$grey-900;
         text-decoration: none;
+        font-weight: core.$font-weight-normal;
 
         &:hover,
         &:focus {
+          background-color: transparent;
           text-decoration: underline;
         }
       }
@@ -91,6 +93,14 @@
         &--active {
           .uq-side-nav__link {
             font-weight: core.$font-weight-medium;
+          }
+        }
+      }
+
+      &--open {
+        & >.uq-side-nav__link {
+          &:hover {
+            background-color: core.$grey-50;
           }
         }
       }

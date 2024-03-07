@@ -36,6 +36,18 @@ export default {
       ],
     },
   },
+};
+
+export const Hero = {
+  name: "Hero",
+  args: {
+    light: true,
+    large: true,
+    title: "Title",
+    description: "Description",
+    button: "Button",
+    image: "hero-example-2.jpg",
+  },
   render: ({ light, large, title, description, button, image }) => `
 <div class="${classNames("uq-hero", {
     "uq-hero--light": light,
@@ -51,32 +63,21 @@ export default {
         <p>${description}</p>
       </div>
       ${
-        button
+      button
           ? `<div class="uq-hero__button">
         <a class="${classNames("uq-button", {
-          "uq-button--purple": light,
-        })}" href="#">${button}</a>
+            "uq-button--purple": light,
+          })}" href="#">${button}</a>
       </div>`
           : ""
-      }
+  }
     </div>
   </div>
 </div>`,
 };
 
-export const Hero = {
-  name: "Hero",
-  args: {
-    light: true,
-    large: true,
-    title: "Title",
-    description: "Description",
-    button: "Button",
-    image: "hero-example-2.jpg",
-  },
-};
-
 export const Home = {
+  ...Hero,
   name: "Home",
   args: {
     light: true,
@@ -90,6 +91,7 @@ export const Home = {
 };
 
 export const Level1 = {
+  ...Hero,
   name: "Level 1",
   args: {
     light: true,
@@ -103,6 +105,7 @@ export const Level1 = {
 };
 
 export const Level2 = {
+  ...Hero,
   name: "Level 2",
   args: {
     light: false,

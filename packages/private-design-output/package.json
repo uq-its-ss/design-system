@@ -25,6 +25,9 @@
     "node": ">=13.2.0"
   },
   "engineStrict": true,
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  },
   "dependencies": {
     "@uqds/accordion": "^1.1.0-alpha.1",
     "@uqds/alert": "^1.2.0-alpha.1",

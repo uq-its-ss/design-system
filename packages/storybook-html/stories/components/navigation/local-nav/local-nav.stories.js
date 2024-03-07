@@ -1,3 +1,4 @@
+import "@uqds/layout/src/scss/main.scss";
 import "@uqds/navigation/src/scss/main.scss";
 
 export default {

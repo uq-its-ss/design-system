@@ -63,14 +63,14 @@ export const Hero = {
         <p>${description}</p>
       </div>
       ${
-      button
+        button
           ? `<div class="uq-hero__button">
         <a class="${classNames("uq-button", {
-            "uq-button--purple": light,
-          })}" href="#">${button}</a>
+          "uq-button--purple": light,
+        })}" href="#">${button}</a>
       </div>`
           : ""
-  }
+      }
     </div>
   </div>
 </div>`,

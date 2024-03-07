@@ -46,25 +46,25 @@ export const HeroBasic = {
   render: ({ eyebrow, title, back, image, tabs }) => `
 <div class="uq-hero-basic">
   ${
-      image !== "none"
-          ? `
+    image !== "none"
+      ? `
   <div class="uq-hero-basic__image">
     <img src="/images/hero/${image}" alt="" role="presentation" />
   </div>`
-          : ""
+      : ""
   }
   <div class="uq-container">
     <div class="uq-hero-basic__content">
       <h1 class="uq-hero-basic__title">
         ${
-      eyebrow
-          ? `<span class="uq-hero-basic__eyebrow">${eyebrow}</span>`
-          : ""
-  }
+          eyebrow
+            ? `<span class="uq-hero-basic__eyebrow">${eyebrow}</span>`
+            : ""
+        }
         ${title}
       </h1>
       ${
-      back
+        back
           ? `
       <div class="uq-hero-basic__back">
         <a href="#">
@@ -72,21 +72,21 @@ export const HeroBasic = {
         </a>
       </div>`
           : ""
-  }
+      }
     </div>
     ${
       tabs && !!tabs.length
-          ? `
+        ? `
     <div class="uq-hero-basic__tabs">
       <div class="uq-tabs">
         <div class="uq-tabs__tab-list-wrapper">
           <div class="uq-tabs__tab-list" role="tablist" aria-label="Tab List">
             ${tabs
               .map(
-                  (name, index) => `
+                (name, index) => `
             <a class="${classNames("uq-tabs__tab", {
-                    "uq-tabs__tab--active": index === 0,
-                  })}">
+              "uq-tabs__tab--active": index === 0,
+            })}">
               ${name}
             </a>`
               )
@@ -96,8 +96,8 @@ export const HeroBasic = {
       </div>
     </div>
   </div>`
-          : ""
-  }
+        : ""
+    }
 </div>`,
 };
 

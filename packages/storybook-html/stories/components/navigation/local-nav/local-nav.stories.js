@@ -1,13 +1,8 @@
+import "@uqds/layout/src/scss/main.scss";
 import "@uqds/navigation/src/scss/main.scss";
 
 export default {
   title: "Components/Navigation/Local nav",
-  parameters: {
-    layout: "fullscreen",
-    previewTabs: {
-      canvas: { hidden: false },
-    },
-  },
 };
 
 export const LocalNav = {

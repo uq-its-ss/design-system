@@ -1,13 +1,10 @@
-import "../../layout-demo.scss";
 import "@uqds/layout/src/scss/main.scss";
+import "../../layout-demo.scss";
 
 export default {
   title: "Layout/Page layouts/Sidebar",
   parameters: {
     layout: "fullscreen",
-    previewTabs: {
-      canvas: { hidden: false },
-    },
   },
 };
 

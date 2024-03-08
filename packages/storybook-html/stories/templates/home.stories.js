@@ -3,8 +3,7 @@ import { Header } from "../components/header/header.stories";
 import { footer } from "../components/footer/footer.stories";
 import { Breadcrumb } from "../components/breadcrumb/breadcrumb.stories";
 import { Home as Hero } from "../components/hero/hero.stories";
-
-//import styles
+import "@uqds/layout/src/scss/main.scss";
 import "../layout/layout-demo.scss";
 
 export default {

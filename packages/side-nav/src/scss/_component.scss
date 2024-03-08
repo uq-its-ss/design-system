@@ -98,7 +98,7 @@
       }
 
       &--open {
-        & >.uq-side-nav__link {
+        & > .uq-side-nav__link {
           &:hover {
             background-color: core.$grey-50;
           }

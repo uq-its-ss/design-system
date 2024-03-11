@@ -1,9 +1,11 @@
+@use "_build/icons-emit";
 @use "@uqds/core/src/scss/global" as core;
 @use "@uqds/body/src/scss/global" as body;
 @use "@material/circular-progress/mdc-circular-progress";
 @use "@material/circular-progress/mixins" as mdc-circular-progress-mixins;
 @use "global" as *;
-@use "icons" as *;
+
+@include icon-base;
 
 $-icon-width: 1.75rem;
 $-icon-height: $-icon-width;

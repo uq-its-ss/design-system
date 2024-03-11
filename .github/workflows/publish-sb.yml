@@ -8,20 +8,18 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout 🛎️
+      - name: "⬇️ Checkout repo"
         uses: actions/checkout@v4
 
-      - name: Use Node 18
+      - name: "⎔ Setup node 18"
         uses: actions/setup-node@v3
         with:
           node-version: 18
 
-      - name: Install deps and build
-        run: |
-          npm ci
-          npx lerna bootstrap --no-ci
+      - name: "📦️ Install dependencies and build"
+        run: npm install
 
-      - name: Build Storybook
+      - name: "Build Storybook"
         run: |
           npm run build-storybook
         working-directory: packages/storybook-html/

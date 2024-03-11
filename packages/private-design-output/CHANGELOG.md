@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.15-alpha.12](https://github.com/uq-its-ss/design-system/compare/private-design-output@0.0.15-alpha.11...private-design-output@0.0.15-alpha.12) (2024-03-08)
+
+### Bug Fixes
+
+- Storybook 7 Tweaks ([#500](https://github.com/uq-its-ss/design-system/issues/500)) ([c326282](https://github.com/uq-its-ss/design-system/commit/c32628230f63775c1e9212a9f8c272d4a88c520a))
+
 ## [0.0.15-alpha.11](https://github.com/uq-its-ss/design-system/compare/private-design-output@0.0.15-alpha.10...private-design-output@0.0.15-alpha.11) (2024-03-07)
 
 **Note:** Version bump only for package private-design-output

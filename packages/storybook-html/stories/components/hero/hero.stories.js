@@ -7,9 +7,6 @@ export default {
   title: "Components/Hero",
   parameters: {
     layout: "fullscreen",
-    previewTabs: {
-      canvas: { hidden: false },
-    },
   },
   argTypes: {
     light: {
@@ -80,6 +77,7 @@ export const Hero = {
 };
 
 export const Home = {
+  ...Hero,
   name: "Home",
   args: {
     light: true,
@@ -90,10 +88,10 @@ export const Home = {
     button: "Explore programs",
     image: "hero-example-1.jpg",
   },
-  render: Hero.render,
 };
 
 export const Level1 = {
+  ...Hero,
   name: "Level 1",
   args: {
     light: true,
@@ -104,10 +102,10 @@ export const Level1 = {
     button: "",
     image: "hero-example-3.jpg",
   },
-  render: Hero.render,
 };
 
 export const Level2 = {
+  ...Hero,
   name: "Level 2",
   args: {
     light: false,
@@ -118,5 +116,4 @@ export const Level2 = {
     button: "",
     image: "hero-example-4.jpg",
   },
-  render: Hero.render,
 };

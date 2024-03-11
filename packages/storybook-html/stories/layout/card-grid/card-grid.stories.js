@@ -1,23 +1,33 @@
-import "../layout-demo.scss";
 import "@uqds/layout/src/scss/main.scss";
+import "../layout-demo.scss";
 
 export default {
   title: "Layout/Card grid",
   parameters: {
     layout: "fullscreen",
-    previewTabs: {
-      canvas: { hidden: false },
+  },
+  argTypes: {
+    target: {
+      control: "select",
+      options: ["1x", "2x", "3x", "4x"],
+    },
+    children: {
+      control: "string",
     },
   },
 };
 
 export const OnePerRow = {
   name: "One per row",
-  render: () => `
+  args: {
+    target: "1x",
+    children: `<div class="uqds-layout-demo-card"></div>`,
+  },
+  render: ({ target, children }) => `
 <div class="uqds-layout-demo-bg">
   <div class="uq-container">
-    <div class="uq-card-grid uq-card-grid--target-1x">
-      <div class="uqds-layout-demo-card"></div>
+    <div class="uq-card-grid uq-card-grid--target-${target}">
+      ${children}
     </div>
   </div>
 </div>
@@ -25,43 +35,37 @@ export const OnePerRow = {
 };
 
 export const TwoPerRow = {
+  ...OnePerRow,
   name: "Two per row",
-  render: () => `
-<div class="uqds-layout-demo-bg">
-  <div class="uq-container">
-    <div class="uq-card-grid uq-card-grid--target-2x">
-      <div class="uqds-layout-demo-card"></div>
-      <div class="uqds-layout-demo-card"></div>
-    </div>
-  </div>
-</div>`,
+  args: {
+    target: "2x",
+    children: `
+<div class="uqds-layout-demo-card"></div>
+<div class="uqds-layout-demo-card"></div>`,
+  },
 };
 
 export const ThreePerRow = {
+  ...OnePerRow,
   name: "Three per row",
-  render: () => `
-<div class="uqds-layout-demo-bg">
-  <div class="uq-container">
-    <div class="uq-card-grid uq-card-grid--target-3x">
-      <div class="uqds-layout-demo-card"></div>
-      <div class="uqds-layout-demo-card"></div>
-      <div class="uqds-layout-demo-card"></div>
-    </div>
-  </div>
-</div>`,
+  args: {
+    target: "3x",
+    children: `
+<div class="uqds-layout-demo-card"></div>
+<div class="uqds-layout-demo-card"></div>
+<div class="uqds-layout-demo-card"></div>`,
+  },
 };
 
 export const FourPerRow = {
+  ...OnePerRow,
   name: "Four per row",
-  render: () => `
-<div class="uqds-layout-demo-bg">
-  <div class="uq-container">
-    <div class="uq-card-grid uq-card-grid--target-4x">
-      <div class="uqds-layout-demo-card"></div>
-      <div class="uqds-layout-demo-card"></div>
-      <div class="uqds-layout-demo-card"></div>
-      <div class="uqds-layout-demo-card"></div>
-    </div>
-  </div>
-</div>`,
+  args: {
+    target: "4x",
+    children: `
+<div class="uqds-layout-demo-card"></div>
+<div class="uqds-layout-demo-card"></div>
+<div class="uqds-layout-demo-card"></div>
+<div class="uqds-layout-demo-card"></div>`,
+  },
 };

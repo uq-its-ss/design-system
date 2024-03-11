@@ -11,16 +11,16 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ ! startsWith(github.event.head_commit.message, 'chore(release):Publish') }}
     steps:
-      - name: "⬇️ Checkout"
-        uses: actions/checkout@v3
+      - name: "⬇️ Checkout repo"
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
           token: ${{ secrets.UQDS_PERSONAL_ACCESS_TOKEN }}
 
-      - name: "🟢 Install NodeJS"
+      - name: "⎔ Setup node 18"
         uses: actions/setup-node@v3
         with:
-          node-version: '18'
+          node-version: 18
 
       - name: "📦️ Install dependencies"
         run: npm install
@@ -42,8 +42,8 @@ jobs:
           git config user.email "${{ github.actor}}@users.noreply.github.com"          
           npx lerna version --conventional-commits --conventional-graduate --yes --no-git-tag-version --no-push || true
 
-      - uses: trstringer/manual-approval@v1
-        name: "⌛️ Wait for approval"
+      - name: "⌛️ Wait for approval"
+        uses: trstringer/manual-approval@v1
         if: ${{ github.ref_name == 'releases' }}
         with:
           secret: ${{ github.UQDS_PERSONAL_ACCESS_TOKEN }}

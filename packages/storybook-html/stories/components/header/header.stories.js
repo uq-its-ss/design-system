@@ -27,6 +27,14 @@ export default {
 };
 
 export const HeaderInterim = {
+  parameters: {
+    design: {
+      allowFullscreen: true,
+      name: "Figma",
+      type: "figma",
+      url: "https://www.figma.com/file/Li7SZkmaLgw8ZdiHje2q7x/One-UQ-component-library?type=design&node-id=3850-1973&mode=design&t=8G1CIvJ297Ruw5u5-4",
+    },
+  },
   render: () => {
     useEffect(() => {
       const headerElem = document.querySelector(".uq-header");
@@ -82,6 +90,14 @@ export const HeaderInterim = {
 };
 
 export const Header = {
+  parameters: {
+    design: {
+      allowFullscreen: true,
+      name: "Figma",
+      type: "figma",
+      url: "https://www.figma.com/file/Li7SZkmaLgw8ZdiHje2q7x/One-UQ-component-library?type=design&node-id=3849-1521&mode=design&t=8G1CIvJ297Ruw5u5-4",
+    },
+  },
   render: () => {
     useEffect(() => {
       const headerElem = document.querySelector(".uq-header");

@@ -1,0 +1,58 @@
+import { Meta } from "@storybook/blocks";
+
+<Meta title="Core/Breakpoints" />
+
+# Breakpoints
+
+Based on current display trends (as well as standard practice of covering mobile
+& tablet devices to desktop/laptop screens), our _mobile-first_ breakpoints are:
+
+- tablet: 37.5rem (~600px),
+- and desktop/laptop: 74rem (~1200px).
+
+Full details, including Sass variables as follows:
+
+| Name(s)                 | Constant variable | Default constant     | Media query string variables                            | Default viewport width ranges                                                                      |
+| ----------------------- | ----------------- | -------------------- | ------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| **\* (mobile)**         | N/A               | N/A                  | N/A                                                     | 0—∞                                                                                                |
+| _Deprecated: XS_        | $screen-xs        | 26rem **(~416px)**   | $screen-xs-up,<br />$screen-xs-down,<br />$screen-xs-sm | 26rem—∞ **(~416px—∞)**,<br />0—25.9375rem **(~0—415px)**,<br />26—33.9375rem **(~416—543px)**      |
+| _Deprecated: SM_        | $screen-sm        | 34rem **(~544px)**   | $screen-sm-up,<br />$screen-sm-down,<br />$screen-sm-md | 34rem—∞ **(~544px—∞)**,<br />0—33.9375rem **(~0—543px)**,<br />34—37.4375rem **(~544—599px)**      |
+| **MD (tablet)**         | $screen-md        | 37.5rem **(~600px)** | $screen-md-up,<br />$screen-md-down,<br />$screen-md-lg | 37.5rem—∞ **(~600px—∞)**,<br />0—37.4375rem **(~0—599px)**,<br />37.5—63.9375rem **(~600—1023px)** |
+| _Deprecated: LG_        | $screen-lg        | 64rem **(~1024px)**  | $screen-lg-up,<br />$screen-lg-down,<br />$screen-lg-xl | 64rem—∞ **(~1024px—∞)**,<br />0—63.9375rem **(~0—1023px)**,<br />64—74.9375rem **(~1024—1199px)**  |
+| **XL (desktop/laptop)** | $screen-xl        | 75rem **(~1200px)**  | $screen-xl-up,<br />$screen-xl-down                     | 75rem—∞ **(~1200px—∞)**,<br />0—74.9375rem **(~0—1199px)**                                         |
+
+_Pixel units (px) provided are based on the default rem unit analogue of 16px._
+
+## Usage
+
+We recommend using the breakpoints in a _mobile-first_ pattern. The general idea
+is that you set styles for the smallest screens first (e.g. mobile phones) and
+then making the modifications that you need for larger screens. Here's an
+example:
+
+```scss
+/* example.scss */
+
+@use "@uqds/core/src/scss/_global" as core;
+
+.example-class {
+  // Target the zero (mobile) breakpoint & up
+  font-size: core.$font-size-s;
+  padding: core.$space-m;
+  text-align: center;
+}
+
+@media #{core.$screen-md-up} {
+  .example-class {
+    // Target the MD (tablet) breakpoint & up
+    font-size: core.$font-size-m;
+  }
+}
+
+@media #{core.$screen-xl-up} {
+  .example-class {
+    // Target the XL (desktop) breakpoint & up
+    font-size: core.$font-size-l;
+  }
+}
+```

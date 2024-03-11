@@ -1,0 +1,40 @@
+import { Meta, Story, Canvas } from "@storybook/blocks";
+import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
+import * as SectionsStories from "./sections.stories";
+
+<Meta of={SectionsStories} />
+
+# Sections
+
+<StatusBadge.Development />
+<StatusBadge.DraftDoc />
+
+## Overview
+
+The `.uq-sections` component provides correct **section spacing** between sections by using
+a responsive `96px` and `48px` gap for desktop and tablet/mobile respectively.
+
+### How-to
+
+Use the `.uq-sections` element anywhere you need to provide **section spacing**.
+
+Any child element will be spaced correctly providing it does not implement its
+own `margin` property.
+
+`.uq-sections` elements can be safely nested within each other as needed.
+
+<Canvas>
+  <Story of={SectionsStories.Sections} />
+</Canvas>
+
+```html
+<div class="uq-sections">
+  <div class="uq-section"></div>
+  <div class="uq-section"></div>
+  <div class="uq-section"></div>
+</div>
+```
+
+### Examples
+
+@todo

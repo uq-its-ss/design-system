@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-alpha.2](https://github.com/uq-its-ss/design-system/compare/@uqds/hero@1.0.0-alpha.1...@uqds/hero@1.0.0-alpha.2) (2024-03-08)
+
+### Bug Fixes
+
+- Storybook 7 Tweaks ([#500](https://github.com/uq-its-ss/design-system/issues/500)) ([c326282](https://github.com/uq-its-ss/design-system/commit/c32628230f63775c1e9212a9f8c272d4a88c520a))
+
 # [1.0.0-alpha.1](https://github.com/uq-its-ss/design-system/compare/@uqds/hero@1.0.0-alpha.0...@uqds/hero@1.0.0-alpha.1) (2024-02-21)
 
 ### Bug Fixes

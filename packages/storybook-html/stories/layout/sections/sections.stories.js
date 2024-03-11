@@ -1,17 +1,10 @@
-import docs from "./sections.docs.mdx";
+import "@uqds/layout/src/scss/main.scss";
 import "../layout-demo.scss";
-import "../../../../layout/src/scss/main.scss";
 
 export default {
   title: "Layout/Sections",
   parameters: {
     layout: "fullscreen",
-    docs: {
-      page: docs,
-    },
-    previewTabs: {
-      canvas: { hidden: false },
-    },
   },
 };
 

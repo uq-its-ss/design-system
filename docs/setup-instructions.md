@@ -6,14 +6,8 @@
 
 ---
 
-1. Install dependencies
+1. Install dependencies and setup monorepo packages (using npm workspaces)
 
 ```shell
 $ npm i
-```
-
-2. Set up package dependencies w/ Lerna
-
-```shell
-$ npx lerna bootstrap
 ```

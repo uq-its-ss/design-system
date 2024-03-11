@@ -10,15 +10,9 @@ import headerCreate from "@uqds/header-legacy/src/js/header";
 import headerHTML from "./header.html";
 import headerNoLocalSearchHTML from "./header_no-local-search.html";
 
-import docs from "./header.docs.mdx";
-
 export default {
-  title: "Legacy/Header",
+  title: "Deprecated/Header",
   parameters: {
-    docs: {
-      page: docs,
-      inlineStories: false,
-    },
     layout: "fullscreen",
     backgrounds: {
       default: "UQ Neutral 1",
@@ -36,11 +30,13 @@ export const header = () => {
   return headerHTML;
 };
 
-export const headerNoLocalSearch = () => {
-  useEffect(() => {
-    new headerCreate();
-  });
-  return headerNoLocalSearchHTML;
-};
+export const headerNoLocalSearch = {
+  render: () => {
+    useEffect(() => {
+      new headerCreate();
+    });
+    return headerNoLocalSearchHTML;
+  },
 
-headerNoLocalSearch.storyName = "Header with global search only";
+  name: "Header with global search only",
+};

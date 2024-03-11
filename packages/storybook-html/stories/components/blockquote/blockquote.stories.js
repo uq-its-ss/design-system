@@ -5,15 +5,9 @@ import "./blockquote.scss";
 import blockquoteHTML from "./blockquote.html";
 import blockquoteLightHTML from "./blockquote-light.html";
 
-// documentation
-import docs from "./blockquote.docs.mdx";
-
 export default {
   title: "Components/Blockquote",
   parameters: {
-    docs: {
-      page: docs,
-    },
     layout: "padded",
     previewTabs: {
       canvas: { hidden: false },
@@ -21,26 +15,30 @@ export default {
   },
 };
 
-export const blockquote = () => {
-  return blockquoteHTML;
-};
-blockquote.storyName = "Default";
+export const blockquote = {
+  render: () => {
+    return blockquoteHTML;
+  },
 
-export const blockquoteLight = () => {
-  return blockquoteLightHTML;
+  name: "Default",
 };
-blockquoteLight.storyName = "Light";
-blockquoteLight.parameters = {
-  docs: {
-    inlineStories: false,
+
+export const blockquoteLight = {
+  parameters: {
+    backgrounds: {
+      default: "Purple",
+      values: [
+        {
+          name: "Purple",
+          value: "#51247A",
+        },
+      ],
+    },
   },
-  backgrounds: {
-    default: "Purple",
-    values: [
-      {
-        name: "Purple",
-        value: "#51247A",
-      },
-    ],
+
+  render: () => {
+    return blockquoteLightHTML;
   },
+
+  name: "Light",
 };

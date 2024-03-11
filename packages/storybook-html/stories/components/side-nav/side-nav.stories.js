@@ -5,14 +5,9 @@ import "./side-nav.scss";
 import sideNavSingleLevelHTML from "./side-nav.html";
 import sideNavMultiLevelHTML from "./side-nav-multi-level.html";
 
-import docs from "./side-nav.docs.mdx";
-
 export default {
   title: "Components/Side nav",
   parameters: {
-    docs: {
-      page: docs,
-    },
     layout: "padded",
     previewTabs: {
       canvas: { hidden: false },
@@ -20,14 +15,18 @@ export default {
   },
 };
 
-export const sideNavSingleLevel = () => {
-  return sideNavSingleLevelHTML;
+export const sideNavSingleLevel = {
+  render: () => {
+    return sideNavSingleLevelHTML;
+  },
+
+  name: "Side nav single-level",
 };
 
-sideNavSingleLevel.storyName = "Side nav single-level";
+export const sideNavMultiLevel = {
+  render: () => {
+    return sideNavMultiLevelHTML;
+  },
 
-export const sideNavMultiLevel = () => {
-  return sideNavMultiLevelHTML;
+  name: "Side nav multi-level",
 };
-
-sideNavMultiLevel.storyName = "Side nav multi-level";

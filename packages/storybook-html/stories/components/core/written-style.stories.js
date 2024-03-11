@@ -13,14 +13,16 @@ export default {
   },
 };
 
-export const WrittenStyle = () => {
-  return WrittenStyleHTML;
-};
+export const WrittenStyle = {
+  render: () => {
+    return WrittenStyleHTML;
+  },
 
-WrittenStyle.storyName = "Written style guide";
+  name: "Written style guide",
 
-WrittenStyle.parameters = {
-  docs: {
-    page: null,
+  parameters: {
+    docs: {
+      page: null,
+    },
   },
 };

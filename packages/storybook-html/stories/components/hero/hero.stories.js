@@ -1,18 +1,12 @@
-import docs from "./hero.docs.mdx";
-import "../../../../layout/src/scss/main.scss";
-import "../../../../hero/src/scss/main.scss";
+import "@uqds/layout/src/scss/main.scss";
+import "@uqds/hero/src/scss/main.scss";
+import "@uqds/button/src/scss/main.scss";
 import classNames from "classnames";
 
 export default {
   title: "Components/Hero",
   parameters: {
     layout: "fullscreen",
-    docs: {
-      page: docs,
-    },
-    previewTabs: {
-      canvas: { hidden: false },
-    },
   },
   argTypes: {
     light: {
@@ -83,6 +77,7 @@ export const Hero = {
 };
 
 export const Home = {
+  ...Hero,
   name: "Home",
   args: {
     light: true,
@@ -93,10 +88,10 @@ export const Home = {
     button: "Explore programs",
     image: "hero-example-1.jpg",
   },
-  render: Hero.render,
 };
 
 export const Level1 = {
+  ...Hero,
   name: "Level 1",
   args: {
     light: true,
@@ -107,10 +102,10 @@ export const Level1 = {
     button: "",
     image: "hero-example-3.jpg",
   },
-  render: Hero.render,
 };
 
 export const Level2 = {
+  ...Hero,
   name: "Level 2",
   args: {
     light: false,
@@ -121,5 +116,4 @@ export const Level2 = {
     button: "",
     image: "hero-example-4.jpg",
   },
-  render: Hero.render,
 };

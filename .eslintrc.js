@@ -34,7 +34,9 @@ module.exports = {
         devDependencies: [
           "packages/**/src/__tests__/*.test.js",
           "tests/jest/*.js",
-          "tests/jest/msw/*.js",
+          "tests/msw/*.js",
+          "vitest.*.mjs",
+          "vitest.*.js",
           "packages/storybook-html/stories/**/*.stories.js",
           "packages/storybook-html/stories/**/examples/*.js",
           "packages/**/gulpfile.js",

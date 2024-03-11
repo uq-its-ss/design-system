@@ -28,7 +28,7 @@ export const footer = {
       allowFullscreen: true,
       name: "Figma",
       type: "figma",
-      url: "https://www.figma.com/file/Li7SZkmaLgw8ZdiHje2q7x/One-UQ-component-library?type=design&node-id=3853-2229&mode=design&t=8G1CIvJ297Ruw5u5-4",
+      url: "https://www.figma.com/file/Li7SZkmaLgw8ZdiHje2q7x/One-UQ-component-library?type=design&node-id=6599-5138&mode=design&t=1ihpAR7SlIXznVw1-4",
     },
   },
   render: () => {

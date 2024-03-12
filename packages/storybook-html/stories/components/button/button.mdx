@@ -1,0 +1,86 @@
+import { Meta, Story, Canvas } from "@storybook/blocks";
+import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
+import * as ButtonStories from "./button.stories";
+
+<Meta of={ButtonStories} />
+
+# Button
+
+<StatusBadge.Stable />
+
+<StatusBadge.StableDoc />
+
+<a href="https://github.com/uq-its-ss/design-system/issues" target="_blank">
+  Check for open issues
+</a>
+
+## Overview
+
+The button component is used to make common actions more obvious and help users more easily perform them.
+
+### Default
+
+The default button style used for the primary action on a page, eg. a submit button on a form. This should generally only be used once per view.
+
+<Canvas>
+  <Story id="components-button--primary" width={300} />
+</Canvas>
+
+### Secondary
+
+A button style used alongside the default primary button to highlight an important action, eg. a save button on a form.
+
+<Canvas>
+  <Story id="components-button--secondary" />
+</Canvas>
+
+### Tertiary
+
+A demphasied button style used for tertiary actions on a page, eg a Cancel button on a form.
+
+<Canvas>
+  <Story id="components-button--tertiary" />
+</Canvas>
+
+### Size
+
+The button sizes are normal, tiny `uq-button--tiny`, small `uq-button--small` and large `uq-button--large`
+
+<Canvas sourceState="hidden">
+  <Story of={ButtonStories.size} />
+</Canvas>
+
+```html
+<button class="uq-button">Button</button>
+
+<button class="uq-button uq-button--tiny">Button</button>
+
+<button class="uq-button uq-button--small">Button</button>
+
+<button class="uq-button uq-button--large">Button</button>
+```
+
+### Expand
+
+Expand variant of the button `uq-button--expand` would extend the width of the button to full width of its parent container.
+
+<Canvas sourceState="hidden">
+  <Story of={ButtonStories.expand} />
+</Canvas>
+
+```html
+<button class="uq-button uq-button--expand">Button</button>
+```
+
+### States
+
+Default - Button text is not underlined. <br />
+Hover - Button text is underlined. The background and text color may change depending on the variant.
+
+### Breakpoints
+
+Breakpoints have no effect on the button component and visually remains the same.
+
+## Accessibility
+
+Colour contrast test for all buttons showed a WCAG AA Pass.

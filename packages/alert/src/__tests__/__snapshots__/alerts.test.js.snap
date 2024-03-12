@@ -1,7 +1,7 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Alert close behaviour Removal should persist 1`] = `
-"<div><div class="uq-alerts-global-container" data-uri="/api/v1/alerts.json"><div><div class="sitewide-alert alert alert-info uq-alert uq-alert--info uq-alert--dark uq-alert--global" data-uuid="b714845c-c022-4b7e-98ea-998789abc0aa" role="alert">
+exports[`Alert close behaviour > Removal should persist 1`] = `
+"<div><div class="uq-alerts-global-container" data-uri="http://localhost:3000/api/v1/alerts.json"><div><div class="sitewide-alert alert alert-info uq-alert uq-alert--info uq-alert--dark uq-alert--global" data-uuid="b714845c-c022-4b7e-98ea-998789abc0aa" role="alert">
   <div class="uq-alert__container">
     <div class="uq-alert__message">
       <h3 class="uq-alert__title visually-hidden">Squirrels lose on campus</h3><div class="field field-message field-type-text-long field-label-hidden">
@@ -11,12 +11,11 @@ exports[`Alert close behaviour Removal should persist 1`] = `
 </div>
       </div>
 </div>
-</div></div>
-</div>"
+</div></div></div>"
 `;
 
-exports[`Alert default behaviour Should be removed on close 1`] = `
-"<div><div class="uq-alerts-global-container" data-uri="/api/v1/alerts.json"><div><div class="sitewide-alert alert alert-info uq-alert uq-alert--info uq-alert--dark uq-alert--global" data-uuid="b714845c-c022-4b7e-98ea-998789abc0aa" role="alert">
+exports[`Alert default behaviour > Should be removed on close 1`] = `
+"<div><div class="uq-alerts-global-container" data-uri="http://localhost:3000/api/v1/alerts.json"><div><div class="sitewide-alert alert alert-info uq-alert uq-alert--info uq-alert--dark uq-alert--global" data-uuid="b714845c-c022-4b7e-98ea-998789abc0aa" role="alert">
   <div class="uq-alert__container">
     <div class="uq-alert__message">
       <h3 class="uq-alert__title visually-hidden">Squirrels lose on campus</h3><div class="field field-message field-type-text-long field-label-hidden">
@@ -26,12 +25,11 @@ exports[`Alert default behaviour Should be removed on close 1`] = `
 </div>
       </div>
 </div>
-</div></div>
-</div>"
+</div></div></div>"
 `;
 
-exports[`Alert default behaviour Should load from json 1`] = `
-"<div><div class="uq-alerts-global-container" data-uri="/api/v1/alerts.json"><div><div class="sitewide-alert alert alert-warning uq-alert uq-alert--warning uq-alert--dark uq-alert--global" data-uuid="8da600f4-0a64-4df5-8bc5-a410d7496a26" role="alert">
+exports[`Alert default behaviour > Should load from json 1`] = `
+"<div><div class="uq-alerts-global-container" data-uri="http://localhost:3000/api/v1/alerts.json"><div><div class="sitewide-alert alert alert-warning uq-alert uq-alert--warning uq-alert--dark uq-alert--global" data-uuid="8da600f4-0a64-4df5-8bc5-a410d7496a26" role="alert">
   <div class="uq-alert__container">
     <div class="uq-alert__message">
       <h3 class="uq-alert__title visually-hidden">Go you</h3><div class="field field-message field-type-text-long field-label-hidden">
@@ -52,22 +50,21 @@ exports[`Alert default behaviour Should load from json 1`] = `
 </div>
       </div>
 </div>
-</div></div>
-</div>"
+</div></div></div>"
 `;
 
-exports[`Alert default behaviour Should match on partial URIs 1`] = `
+exports[`Alert default behaviour > Should match on partial URIs 1`] = `
 Document {
-  "elementsFromPoint": [Function],
+  "defaultView": [Object],
   "location": Location {
     "assign": [Function],
     "hash": "",
-    "host": "localhost",
+    "host": "localhost:3000",
     "hostname": "localhost",
-    "href": "http://localhost/",
-    "origin": "http://localhost",
+    "href": "http://localhost:3000/",
+    "origin": "http://localhost:3000",
     "pathname": "/",
-    "port": "",
+    "port": "3000",
     "protocol": "http:",
     "reload": [Function],
     "replace": [Function],
@@ -77,18 +74,18 @@ Document {
 }
 `;
 
-exports[`Alert default behaviour Should not match on child pages 1`] = `
+exports[`Alert default behaviour > Should not match on child pages 1`] = `
 Document {
-  "elementsFromPoint": [Function],
+  "defaultView": [Object],
   "location": Location {
     "assign": [Function],
     "hash": "",
-    "host": "localhost",
+    "host": "localhost:3000",
     "hostname": "localhost",
-    "href": "http://localhost/",
-    "origin": "http://localhost",
+    "href": "http://localhost:3000/",
+    "origin": "http://localhost:3000",
     "pathname": "/",
-    "port": "",
+    "port": "3000",
     "protocol": "http:",
     "reload": [Function],
     "replace": [Function],

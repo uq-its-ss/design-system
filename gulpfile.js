@@ -12,7 +12,7 @@ const fs = require("fs");
 const path = require("path");
 
 // SCSS include paths
-const scssPaths = ["node_modules", "node_modules/@uqds"];
+const scssPaths = ["../../node_modules", "node_modules", "node_modules/@uqds"];
 
 // Build and export SCSS
 function compileSCSS() {

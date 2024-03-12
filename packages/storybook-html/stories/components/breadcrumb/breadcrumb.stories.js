@@ -1,13 +1,10 @@
-import "../../../../breadcrumb/src/scss/main.scss";
-import { breadcrumb } from "../../../../breadcrumb/src/js/main";
-import docs from "./breadcrumb.docs.mdx";
+import { breadcrumb } from "@uqds/breadcrumb/src/js/main";
+import "@uqds/layout/src/scss/main.scss";
+import "@uqds/breadcrumb/src/scss/main.scss";
 
 export default {
   title: "Components/Breadcrumb",
   parameters: {
-    docs: {
-      page: docs,
-    },
     previewTabs: {
       canvas: { hidden: false },
     },
@@ -42,7 +39,6 @@ export const Breadcrumb = {
     </nav>
   </div>
 </div>`,
-  // We need SB 7 to be able to run this inside docs.
   play: ({ canvasElement }) => {
     const breadcrumbs = canvasElement.querySelector(".uq-breadcrumb");
     if (breadcrumbs) new breadcrumb(breadcrumbs);

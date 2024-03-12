@@ -1,0 +1,37 @@
+import { Meta, Story, Canvas } from "@storybook/blocks";
+import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
+import * as ContainerStories from "./container.stories";
+
+<Meta of={ContainerStories} />
+
+# Container
+
+<StatusBadge.Development />
+<StatusBadge.DraftDoc />
+
+## Overview
+
+The `.uq-container` component provides the **page container** by:
+
+- Centering horizontally,
+- using the `1140px` max-width,
+- and adding responsive `32px` and `24px` page gutters for desktop and tablet/mobile respectively.
+
+### How-to
+
+The `.uq-container` element can be used anywhere, for example nested within other components.
+
+It must not be a descendant of other `.uq-container` elements or elements that use
+`@include layout-containment`.
+
+<Canvas>
+  <Story of={ContainerStories.Container} />
+</Canvas>
+
+```html
+<div class="uq-container"></div>
+```
+
+### Examples
+
+@todo

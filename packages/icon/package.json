@@ -1,6 +1,6 @@
 {
   "name": "@uqds/icon",
-  "version": "0.0.15-alpha.2",
+  "version": "0.0.15-alpha.3",
   "description": "Icon component",
   "keywords": [
     "uqds",
@@ -63,7 +63,7 @@
     "gulp": "^4.0.2",
     "mini-svg-data-uri": "^1.4.3",
     "prettier": "^2.5.1",
-    "svgdom": "^0.1.10",
+    "svgdom": "0.1.14",
     "svgo": "^2.8.0",
     "typescript": "^4.5.5"
   }

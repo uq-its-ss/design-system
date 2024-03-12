@@ -3,6 +3,8 @@ import { Header } from "../components/header/header.stories";
 import { footer } from "../components/footer/footer.stories";
 import { Breadcrumb } from "../components/breadcrumb/breadcrumb.stories";
 import { Level1 as Hero } from "../components/hero/hero.stories";
+import "@uqds/layout/src/scss/main.scss";
+import "../layout/layout-demo.scss";
 
 export default {
   title: "Templates/Level 1",
@@ -27,7 +29,7 @@ export default {
 export const Level1 = {
   render: ({ showGrid }) => `
 <div class="${classNames({ "uqds-layout-demo-bg": showGrid })}">
-  ${Header()}
+  ${Header.render()}
   ${Breadcrumb.render()}
   <div class="uq-sections">
     ${Hero.render(Hero.args)}
@@ -58,6 +60,6 @@ export const Level1 = {
       </div>
     </div>
   </div>
-  ${footer()}
+  ${footer.render()}
 </div>`,
 };

@@ -1,0 +1,138 @@
+import { Meta, Story, Canvas } from "@storybook/blocks";
+import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
+import * as IconStories from "./icon.stories";
+
+<Meta of={IconStories} />
+
+# Icons
+
+<StatusBadge.Development />
+
+<StatusBadge.DraftDoc />
+
+## List of icons
+
+<Story of={IconStories.icon} />
+
+## Usage
+
+> ⚠️ Before using the SCSS `_component.scss` file to load the icons, I would
+> first consider whether or not you need the entire list of icons for your
+> application. If you're using the Sass modules, you'll have the option to be
+> leaner when importing the icons you need via mixins.
+
+### CSS classes
+
+If you've loaded the built CSS file or the `@uqds/icon/src/scss/_component.scss`
+module into your project, you'll be able to use all the icons in a manner like
+the following example.
+
+<span className="uq-icon uq-icon--agriculture-and-environment--agriculture-machine-tractor" />
+
+```html
+<!-- example.html -->
+<span
+  class="uq-icon uq-icon--agriculture-and-environment--agriculture-machine-tractor"
+></span>
+```
+
+You can choose the icon by customising the class such that:
+`class="uq-icon uq-icon--{category-name}--{icon-name}`. Refer to
+[list of icons](/?path=/docs/components-icon--icon#list-of-icons) for names of
+categories and icons.
+
+#### Variants
+
+| Modifier class    | Description                                                                          |
+| ----------------- | ------------------------------------------------------------------------------------ |
+| `.uq-icon--light` | Applies a light color filter to the icon so that it can be used on dark backgrounds. |
+| `.uq-icon--text`  | Applies the body text color filter to the icon so that it can be used more subtly.   |
+
+### Sass mixins and functions
+
+To include _just the icons that you need_ (and therefore, reduce file size), we
+provide mixins and a "get" function.
+
+#### Generate specific icon classes using mixins
+
+```scss
+// example.scss
+@use "@uqds/icon/src/scss/global" as icon-constants;
+
+// Include the base class
+@include icon-constants.icon-base; // --> .uq-icon {...}
+
+// Include the icons you want
+@include icon-constants.icon(
+  "category-name--icon-name"
+); // --> .uq-icon--category-name--icon-name {...}
+```
+
+You can now use the CSS class in your HTML markup as previously described.
+
+#### `get-icon($icon[, $color])`
+
+Get the data URL for a specific icon (and optional set a color for fills and
+strokes).
+
+##### Returns
+
+URL encoded string.
+
+##### Parameters
+
+| Name     | Type                                                                   | Attributes | Default | Description                                                                              |
+| -------- | ---------------------------------------------------------------------- | ---------- | ------- | ---------------------------------------------------------------------------------------- |
+| `$icon`  | string                                                                 | Required   | N/A     | String format: `{category-name}--{icon-name}`, e.g. `science-and-mathematics--lab-tubes` |
+| `$color` | [Sass colour value](https://sass-lang.com/documentation/values/colors) | Optional   | #000    | Setting this will apply a colour value to the returned SVG data string.                  |
+
+```scss
+// example.scss
+@use "@uqds/icon/src/scss/global" as icon-constants;
+
+.your-class {
+  background-image: url(icon-constants.get-icon(
+    "agriculture-and-environment--agriculture-machine-tractor"
+  ));
+}
+```
+
+Here's an example using the `$color` parameter.
+
+<span className="uqds-icon--green-example" />
+
+```scss
+// example.scss
+@use "@uqds/core/src/scss/global" as core;
+@use "@uqds/icon/src/scss/global" as icon-constants;
+
+.your-class {
+  ...
+  background-image: url(icon-constants.get-icon("agriculture-and-environment--agriculture-machine-tractor", core.$success-500));
+  ...
+}
+```
+
+### SVG files
+
+You can find a set of normalised & optimised SVG files in the `dist/images`
+folder.
+
+## JavaScript reference
+
+Array list of icons exported as a CommonJS module.
+
+```js
+// example.js
+import iconCatalog from "@uqds/icon"; // default import
+
+console.log(iconCatalog);
+// [
+//   {category: "agriculture-and-environment", name: "agriculture-machine-harvester-1"}
+//   {category: "agriculture-and-environment", name: "agriculture-machine-plow-2"}
+//   {category: "agriculture-and-environment", name: "agriculture-machine-tractor"}
+//   {category: "agriculture-and-environment", name: "ecology-globe-hand"}
+//   {category: "agriculture-and-environment", name: "ecology-globe-nature"}
+//   ...
+// ]
+```

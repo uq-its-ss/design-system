@@ -1,0 +1,78 @@
+import { Meta, Story, Canvas } from "@storybook/blocks";
+import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
+import * as BreadcrumbStories from "./breadcrumb.stories";
+
+<Meta of={BreadcrumbStories} />
+
+# Breadcrumb
+
+<StatusBadge.Stable />
+
+<StatusBadge.StableDoc />
+
+<a
+  href="https://github.com/uq-its-ss/design-system/issues"
+  class="uq-button uq-button--text"
+  target="_blank"
+>
+  Check for open issues
+</a>
+
+## Overview
+
+Breadcrumbs are a horizontal list of links used to indicate the current page location within the information architecture (the first level always being the UQ homepage). Page links are separated by a chevron icon which indicates the level of that page relative to the page links beside it. Breadcrumbs are truncated and ellipsed (...) when the text is longer than a set width, however the current page crumb is not linked and always listed in full. UQ homepage is the base.
+
+<Canvas>
+  <Story of={BreadcrumbStories.Breadcrumb} autoplay />
+</Canvas>
+
+### Truncation
+
+Any link title longer then 144px will be truncated using a text-overflow ellipsis.
+
+Additionally, when exceeding 4 breadcrumbs - the current page, parent, and first grandparent and UQ home breadcrumbs will be shown with any additional breadcrumbs collapsed behind an expand link. The full breadcrumb trail can then be viewed by clicking the expand crumb. _Note: only expand functionality is included, and cannot be collapsed again without a page refresh._
+
+This functionality is provided by the `breadcrumb` js class and is implemented as below.
+
+```js
+import { breadcrumb } from "@uqds/breadcrumb";
+
+new breadcrumb(document.querySelector(".uq-breadcrumb"));
+```
+
+### Wrapper
+
+Wrap the `nav.uq-breadcrumb` element in a `.uq-breadcrumbs` and `.uq-container` element when including in the page layout. This provides correct padding, container width and the bottom border.
+
+```html
+<div class="uq-breadcrumbs">
+  <div class="uq-container">
+    <nav class="uq-breadcrumb" aria-label="Breadcrumb">
+      <ol class="uq-breadcrumb__list">
+        <li class="uq-breadcrumb__item">
+          <a class="uq-breadcrumb__link" title="Home" href="/">UQ home</a>
+        </li>
+        <li class="uq-breadcrumb__item">
+          <a
+            class="uq-breadcrumb__link"
+            title="Level one"
+            href="/information-and-services"
+            >Level one</a
+          >
+        </li>
+        <li class="uq-breadcrumb__item">Current page</li>
+      </ol>
+    </nav>
+  </div>
+</div>
+```
+
+## How and when to use
+
+- The breadcrumb reflects the information architecture of a page, not a historical navigation trail.
+- The component displays on a page once a user has navigated away from the home page to provide a navigation path back to the home and parent level pages.
+- The breadcrumb lists the current page however this should not be linked.
+
+## Accessibility
+
+For accessibility add `aria-label="Breadcrumb"` to the `nav` element that wraps the breadcrumb component.

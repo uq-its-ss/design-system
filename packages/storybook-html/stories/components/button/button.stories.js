@@ -11,15 +11,17 @@ export default {
   },
 };
 
-export const primary = () => {
-  return `
-    <div class="uq-section text--center" style="padding: 3rem;">
+export const primary = {
+  render: () => {
+    return `
+      <div class="uq-section text--center" style="padding: 3rem;">
+            <button class="uq-button">Button</button>
+      </div>
+      <div class="uq-section text--center" style="background-color: #3a1f53; padding: 3rem;">
           <button class="uq-button">Button</button>
-    </div>
-    <div class="uq-section text--center" style="background-color: #3a1f53; padding: 3rem;">
-        <button class="uq-button">Button</button>
-    </div>
-  `;
+      </div>
+    `;
+  },
 };
 
 primary.parameters = {
@@ -32,15 +34,17 @@ primary.parameters = {
   },
 };
 
-export const secondary = () => {
-  return `
-    <div class="uq-section text--center" style="padding: 3rem;">
+export const secondary = {
+  render: () => {
+    return `
+      <div class="uq-section text--center" style="padding: 3rem;">
+          <button class="uq-button uq-button--secondary">Button</button>
+      </div>
+      <div class="uq-section text--center" style="background-color: #3a1f53; padding: 3rem;">
         <button class="uq-button uq-button--secondary">Button</button>
-    </div>
-    <div class="uq-section text--center" style="background-color: #3a1f53; padding: 3rem;">
-      <button class="uq-button uq-button--secondary">Button</button>
-    </div>
-  `;
+      </div>
+    `;
+  },
 };
 secondary.parameters = {
   docs: {
@@ -52,15 +56,17 @@ secondary.parameters = {
   },
 };
 
-export const tertiary = () => {
-  return `
-    <div class="uq-section text--center" style="padding: 3rem;">
-      <button class="uq-button uq-button--tertiary">Button</button> 
-    </div>
-    <div class="uq-section text--center" style="background-color: #3a1f53; padding: 3rem;">
-      <button class="uq-button uq-button--tertiary">Button</button> 
-    </div>
-  `;
+export const tertiary = {
+  render: () => {
+    return `
+      <div class="uq-section text--center" style="padding: 3rem;">
+        <button class="uq-button uq-button--tertiary">Button</button> 
+      </div>
+      <div class="uq-section text--center" style="background-color: #3a1f53; padding: 3rem;">
+        <button class="uq-button uq-button--tertiary">Button</button> 
+      </div>
+    `;
+  },
 };
 
 tertiary.parameters = {
@@ -73,20 +79,24 @@ tertiary.parameters = {
   },
 };
 
-export const expand = () => {
-  return `
-    <button class="uq-button uq-button--expand">Button</button>
-  `;
+export const expand = {
+  render: () => {
+    return `
+      <button class="uq-button uq-button--expand">Button</button>
+    `;
+  },
 };
 
-export const size = () => {
-  return `
-    <button class="uq-button">uq-button</button>
-    <br/><br/>
-    <button class="uq-button uq-button--tiny">uq-button--tiny</button>
-    <br/><br/>
-    <button class="uq-button uq-button--small">uq-button--small</button>
-    <br/><br/>
-    <button class="uq-button uq-button--large">uq-button--large</button>
-  `;
+export const size = {
+  render: () => {
+    return `
+      <button class="uq-button">uq-button</button>
+      <br/><br/>
+      <button class="uq-button uq-button--tiny">uq-button--tiny</button>
+      <br/><br/>
+      <button class="uq-button uq-button--small">uq-button--small</button>
+      <br/><br/>
+      <button class="uq-button uq-button--large">uq-button--large</button>
+    `;
+  },
 };

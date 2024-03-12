@@ -10,88 +10,37 @@ import * as ButtonStories from "./button.stories";
 
 <StatusBadge.StableDoc />
 
-<a
-  href="https://github.com/uq-its-ss/design-system/issues"
-  class="uq-button uq-button--text"
-  target="_blank"
->
+<a href="https://github.com/uq-its-ss/design-system/issues" target="_blank">
   Check for open issues
 </a>
 
 ## Overview
 
-The button component is used to navigate to a web link or to an anchor name tag on the same page or different page.
+The button component is used to make common actions more obvious and help users more easily perform them.
 
-- The button categories are primary, secondary, secondary-light and purple.
-- Each category has it's own variant styles like outline, text and expanded options to be used in different scenarios.
+### Default
 
-## Default example
-
-### Primary
-
-Primary buttons are used for primary actions on a webpage. For example, submit button on a form or other critical actions in a user workflow.
-It should only appear once on a webpage.
+The default button style used for the primary action on a page, eg. a submit button on a form. This should generally only be used once per view.
 
 <Canvas sourceState="hidden">
   <Story of={ButtonStories.primary} />
 </Canvas>
 
-```html
-<button class="uq-button">Button</button>
-<button class="uq-button uq-button--outline">Button</button>
-<button class="uq-button uq-button--text">Button</button>
-```
-
-## Variant examples
-
 ### Secondary
 
-Secondary button is used to highlight important actions. For example, save button on a form.
+A button style used alongside the default primary button to highlight an important action, eg. a save button on a form.
 
 <Canvas sourceState="hidden">
   <Story of={ButtonStories.secondary} />
 </Canvas>
 
-```html
-<button class="uq-button uq-button--secondary">Button</button>
-<button class="uq-button uq-button--secondary uq-button--outline">
-  Button
-</button>
-<button class="uq-button uq-button--secondary uq-button--text">Button</button>
-```
+### Tertiary
 
-### Secondary-light
-
-Secondary-light button variant is used on dark backgrounds.
+A demphasied button style used for tertiary actions on a page, eg a Cancel button on a form.
 
 <Canvas sourceState="hidden">
-  <Story of={ButtonStories.secondaryLight} />
+  <Story of={ButtonStories.tertiary} />
 </Canvas>
-
-```html
-<button
-  class="uq-button uq-button--secondary uq-button--light uq-button--outline"
->
-  Button
-</button>
-<button class="uq-button uq-button--secondary uq-button--light uq-button--text">
-  Button
-</button>
-```
-
-### Purple
-
-Purple button uses UQ's brand primary color, purple. It needs to be used sparingly.
-
-<Canvas sourceState="hidden">
-  <Story of={ButtonStories.purple} />
-</Canvas>
-
-```html
-<button class="uq-button uq-button--purple">Button</button>
-<button class="uq-button uq-button--purple uq-button--outline">Button</button>
-<button class="uq-button uq-button--purple uq-button--text">Button</button>
-```
 
 ### Size
 
@@ -103,20 +52,12 @@ The button sizes are normal, tiny `uq-button--tiny`, small `uq-button--small` an
 
 ```html
 <button class="uq-button">Button</button>
-<button class="uq-button uq-button--outline">Button</button>
-<button class="uq-button uq-button--text">Button</button>
 
 <button class="uq-button uq-button--tiny">Button</button>
-<button class="uq-button uq-button--tiny uq-button--outline">Button</button>
-<button class="uq-button uq-button--tiny uq-button--text">Button</button>
 
 <button class="uq-button uq-button--small">Button</button>
-<button class="uq-button uq-button--small uq-button--outline">Button</button>
-<button class="uq-button uq-button--small uq-button--text">Button</button>
 
 <button class="uq-button uq-button--large">Button</button>
-<button class="uq-button uq-button--large uq-button--outline">Button</button>
-<button class="uq-button uq-button--large uq-button--text">Button</button>
 ```
 
 ### Expand
@@ -129,81 +70,7 @@ Expand variant of the button `uq-button--expand` would extend the width of the b
 
 ```html
 <button class="uq-button uq-button--expand">Button</button>
-<button class="uq-button uq-button--expand uq-button--outline">Button</button>
-<button class="uq-button uq-button--expand uq-button--text">Button</button>
 ```
-
-## How and when to use
-
-<table className="uqds-table  uqds-table--card uqds-table--colour">
-  <tbody className="uqds-table__body">
-    <tr className="uqds-table__mobile-heading">
-      <th className="uqds-table__heading">Category</th>
-      <th className="uqds-table__heading">Style</th>
-      <th className="uqds-table__heading">How/When to use:</th>
-    </tr>
-
-    <tr className="uqds-table__row">
-      <td className="uqds-table__item" data-title="Category:">
-        Primary
-      </td>
-
-      <td className="uqds-table__item" data-title="Styles:">
-        Normal
-      </td>
-
-      <td className="uqds-table__item" data-title="How/When to use:">
-        Used for the most important button and only once on the webpage.
-      </td>
-    </tr>
-
-    <tr className="uqds-table__row">
-      <td className="uqds-table__item" data-title="Category:">
-        Secondary
-      </td>
-
-      <td className="uqds-table__item" data-title="Styles:">
-        Normal
-      </td>
-
-      <td className="uqds-table__item" data-title="How/When to use:">
-        Used for important actions like save, cancel etc.
-      </td>
-    </tr>
-
-    <tr className="uqds-table__row">
-      <td className="uqds-table__item" data-title="Category:">
-        Secondary light
-      </td>
-
-      <td className="uqds-table__item" data-title="Styles:">
-        Normal
-      </td>
-
-      <td className="uqds-table__item" data-title="How/When to use:">
-        Used on dark backgrounds
-      </td>
-    </tr>
-
-    <tr className="uqds-table__row">
-      <td className="uqds-table__item" data-title="Category:">
-        Purple
-      </td>
-
-      <td className="uqds-table__item" data-title="Styles:">
-        Normal
-      </td>
-
-      <td className="uqds-table__item" data-title="How/When to use:">
-        Used in UQ related events and stories
-      </td>
-    </tr>
-
-  </tbody>
-</table>
-
-- Outline & text style - Used as a tertiary button to signify their lesser prominence from the normal style.
-- Expand style - Used with design discretion when layout demands.
 
 ### States
 

@@ -9,11 +9,9 @@ export default {
     title: "text",
     href: "text",
     description: "text",
-    topLabel: "text",
-    bottomLabel: "text",
     variant: {
       control: "select",
-      options: ["text", "image", "icon", "icon-only", "news", "story", "event"],
+      options: ["text", "image", "icon", "icon-nav"],
     },
     image: {
       control: "select",
@@ -114,39 +112,9 @@ export const IconNav = {
   ...Card,
   args: {
     variant: "icon-nav",
+    title: "Research",
+    description:
+      "Our research is creating change and making an impact on the world’s biggest challenges.",
     icon: "science-and-mathematics--science-molecule",
-  },
-};
-
-export const News = {
-  ...Card,
-  args: {
-    topLabel: "News",
-    bottomLabel: "20 September 2023",
-    variant: "news",
-    image:
-      "https://design-system.ads-staging.aws.uq.edu.au/images/card/card-example-herston-campus.jpg",
-  },
-};
-
-export const Story = {
-  ...Card,
-  args: {
-    topLabel: "Uni life",
-    bottomLabel: "3 minute read time",
-    variant: "story",
-    image:
-      "https://design-system.ads-staging.aws.uq.edu.au/images/card/card-example-herston-campus.jpg",
-  },
-};
-
-export const Event = {
-  ...Card,
-  args: {
-    topLabel: "24 January 2024",
-    bottomLabel: "St Lucia",
-    variant: "event",
-    image:
-      "https://design-system.ads-staging.aws.uq.edu.au/images/card/card-example-herston-campus.jpg",
   },
 };

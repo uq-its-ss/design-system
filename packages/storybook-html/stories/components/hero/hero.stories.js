@@ -4,7 +4,7 @@ import "@uqds/button/src/scss/main.scss";
 import classNames from "classnames";
 
 export default {
-  title: "Components/Hero",
+  title: "Components/Heros/Hero",
   parameters: {
     layout: "fullscreen",
   },

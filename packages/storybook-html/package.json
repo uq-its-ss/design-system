@@ -12,6 +12,7 @@
   },
   "license": "ISC",
   "scripts": {
+    "start": "npm run storybook",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },

@@ -1,0 +1,121 @@
+@use "@uqds/core/src/scss/global" as core;
+@use "@uqds/icon/src/scss/global" as icon;
+
+.uq-card {
+  border-radius: var(--card-border-radius);
+  border: var(--card-border);
+  background: var(--card-background);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  &:has(a:hover) {
+    background: core.$grey-50;
+  }
+
+  &:has(a:focus-visible) {
+    outline: 4px solid core.$utility-500;
+    outline-offset: -1px;
+  }
+}
+
+.uq-card__content {
+  flex-grow: 1;
+  padding: core.$space-l core.$space-l 3 * core.$space-l;
+  background-image: url(icon.get-icon(
+    "standard--arrow-right",
+    core.$purple-500
+  ));
+  background-size: 24px;
+  background-position: bottom core.$space-l left core.$space-l;
+  background-repeat: no-repeat;
+}
+
+%uq-card__title,
+.uq-card__title {
+  margin: 0;
+  color: core.$black;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+
+  & a {
+    color: core.$black;
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.uq-card__description {
+  margin-top: core.$space-s;
+}
+
+.uq-card__image {
+  aspect-ratio: 1.5 / 1;
+  position: relative;
+  flex-shrink: 0;
+
+  & img,
+  & picture {
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    position: absolute;
+    object-fit: cover;
+  }
+}
+
+.uq-card__icon {
+  margin-bottom: core.$space-s;
+
+  & .uq-icon::before {
+    height: 56px;
+    width: 56px;
+  }
+}
+
+.uq-card--text {
+  & .uq-card__image,
+  & .uq-card__icon {
+    display: none;
+  }
+}
+
+.uq-card--image {
+  & .uq-card__icon {
+    display: none;
+  }
+}
+
+.uq-card--icon,
+.uq-card--icon-nav {
+  & .uq-card__image {
+    display: none;
+  }
+}
+
+.uq-card--icon-nav {
+  @media #{core.$screen-md-down} {
+    & .uq-card__content {
+      padding-bottom: core.$space-ul;
+    }
+
+    & .uq-card__description {
+      display: none;
+    }
+
+    .uq-card__icon .uq-icon::before {
+      height: 40px;
+      width: 40px;
+    }
+  }
+}

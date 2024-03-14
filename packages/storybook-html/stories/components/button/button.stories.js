@@ -1,55 +1,64 @@
-import { createButton } from './button';
+import { createButton } from "./button";
 
 export default {
-  title: 'Components/Button',
+  title: "Components/Button",
   render: ({ label, ...args }) => {
     // You can either use a function to create DOM elements or use a plain html string!
     // return `<div>${label}</div>`;
     return createButton({ label, ...args });
   },
   argTypes: {
-    label: { control: 'text' },
+    label: { control: "text" },
     style: {
-      control: { type: 'radio' },
-      options: {Primary:'',Secondary:'uq-button--secondary', Tertiary:'uq-button--tertiary'},
+      control: { type: "radio" },
+      options: {
+        Primary: "",
+        Secondary: "uq-button--secondary",
+        Tertiary: "uq-button--tertiary",
+      },
       //options: ['small', 'medium', 'large'],
     },
     size: {
-      control: { type: 'inline-radio' },
-      options: {default:'', tiny:'uq-button--tiny', small:'uq-button--small', large:'uq-button--large'},
+      control: { type: "inline-radio" },
+      options: {
+        default: "",
+        tiny: "uq-button--tiny",
+        small: "uq-button--small",
+        large: "uq-button--large",
+      },
       //options: ['small', 'medium', 'large'],
     },
-    expand: { control: 'boolean' },
+    expand: { control: "boolean" },
   },
 };
 
 export const Primary = {
   args: {
-    label: 'Button',
-    style: '',
-    size:'',
-    expand:false,
+    label: "Button",
+    style: "",
+    size: "",
+    expand: false,
   },
 };
 
 export const Secondary = {
   args: {
-    label: 'Secondary',
-    style: 'uq-button--secondary',
+    label: "Secondary",
+    style: "uq-button--secondary",
   },
 };
 
 export const Tertiary = {
   args: {
-    label: 'Tertiary',
-    style: 'uq-button--tertiary',
+    label: "Tertiary",
+    style: "uq-button--tertiary",
   },
 };
 
 export const Size = {
   args: {
     buttons: [{ ...createButton.Primary }, { ...createButton.Secondary }],
-    orientation: 'horizontal',
+    orientation: "horizontal",
   },
   render: () => {
     return `
@@ -64,6 +73,6 @@ export const Size = {
 export const Expanded = {
   args: {
     expand: true,
-    label: 'Button',
+    label: "Button",
   },
 };

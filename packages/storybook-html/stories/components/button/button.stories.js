@@ -1,94 +1,78 @@
-// import styles
-import "./button.scss";
+import { createButton } from "./button";
 
 export default {
   title: "Components/Button",
-  parameters: {
-    layout: "padded",
-    previewTabs: {
-      canvas: { hidden: false },
+  render: ({ label, ...args }) => {
+    // You can either use a function to create DOM elements or use a plain html string!
+    // return `<div>${label}</div>`;
+    return createButton({ label, ...args });
+  },
+  argTypes: {
+    label: { control: "text" },
+    style: {
+      control: { type: "radio" },
+      options: {
+        Primary: "",
+        Secondary: "uq-button--secondary",
+        Tertiary: "uq-button--tertiary",
+      },
+      //options: ['small', 'medium', 'large'],
     },
+    size: {
+      control: { type: "inline-radio" },
+      options: {
+        default: "",
+        tiny: "uq-button--tiny",
+        small: "uq-button--small",
+        large: "uq-button--large",
+      },
+      //options: ['small', 'medium', 'large'],
+    },
+    expand: { control: "boolean" },
   },
 };
 
-export const primary = {
+export const Primary = {
+  args: {
+    label: "Button",
+    style: "",
+    size: "",
+    expand: false,
+  },
+};
+
+export const Secondary = {
+  args: {
+    label: "Secondary",
+    style: "uq-button--secondary",
+  },
+};
+
+export const Tertiary = {
+  args: {
+    label: "Tertiary",
+    style: "uq-button--tertiary",
+  },
+};
+
+export const Size = {
+  args: {
+    buttons: [{ ...createButton.Primary }, { ...createButton.Secondary }],
+    orientation: "horizontal",
+  },
   render: () => {
     return `
-      <button class="uq-button">Button</button>
-      <button class="uq-button uq-button--outline">Button</button>
-      <button class="uq-button uq-button--text">Button</button>
+    <button type="button" class="uq-button uq-button--tiny">Tiny</button>
+    <button type="button" class="uq-button uq-button--small">Small</button>
+    <button type="button" class="uq-button">Default</button>
+    <button type="button" class="uq-button uq-button--large">Large</button>
     `;
   },
-
-  name: "Primary (base)",
 };
 
-export const secondary = {
-  render: () => {
-    return `
-      <button class="uq-button uq-button--secondary">Button</button>
-      <button class="uq-button uq-button--secondary uq-button--outline">Button</button>
-      <button class="uq-button uq-button--secondary uq-button--text">Button</button>
-    `;
+export const Expanded = {
+  args: {
+    expand: true,
+    label: "Button",
   },
-
-  name: "Secondary",
-};
-
-export const secondaryLight = {
-  render: () => {
-    return `
-      <button class="uq-button uq-button--secondary uq-button--outline uq-button--light">Button</button>
-      <button class="uq-button uq-button--secondary uq-button--text uq-button--light">Button</button>
-    `;
-  },
-
-  name: "Secondary light",
-
-  parameters: {
-    docs: {
-      inlineStories: false,
-    },
-    backgrounds: {
-      default: "Dark",
-    },
-  },
-};
-
-export const purple = () => {
-  return `
-    <button class="uq-button uq-button--purple">Button</button>
-    <button class="uq-button uq-button--purple uq-button--outline">Button</button>
-    <button class="uq-button uq-button--purple uq-button--text">Button</button>
-  `;
-};
-
-export const expand = () => {
-  return `
-    <button class="uq-button uq-button--expand">Button</button>
-    <br/><br/>
-    <button class="uq-button uq-button--expand uq-button--outline">Button</button>
-    <br/><br/>
-    <button class="uq-button uq-button--expand uq-button--text">Button</button>
-  `;
-};
-
-export const size = () => {
-  return `
-    <button class="uq-button">Button</button>
-    <button class="uq-button uq-button--outline">Button</button>
-    <button class="uq-button uq-button--text">Button</button>
-    <br/><br/>
-    <button class="uq-button uq-button--tiny">Button</button>
-    <button class="uq-button uq-button--tiny uq-button--outline">Button</button>
-    <button class="uq-button uq-button--tiny uq-button--text">Button</button>
-    <br/><br/>
-    <button class="uq-button uq-button--small">Button</button>
-    <button class="uq-button uq-button--small uq-button--outline">Button</button>
-    <button class="uq-button uq-button--small uq-button--text">Button</button>
-    <br/><br/>
-    <button class="uq-button uq-button--large">Button</button>
-    <button class="uq-button uq-button--large uq-button--outline">Button</button>
-    <button class="uq-button uq-button--large uq-button--text">Button</button>    
-  `;
 };

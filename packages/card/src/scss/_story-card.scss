@@ -6,17 +6,26 @@
 
   @media #{core.$screen-md-down} {
     border-radius: 0;
-    border: 0;
-    border-bottom: var(--card-border);
+    border-inline-width: 0;
+    border-top-width: 0;
     display: flex;
     flex-direction: row-reverse;
-    align-items: flex-start;
+    align-items: center;
     gap: core.$space-m;
     padding-bottom: core.$space-m;
+    background-color: transparent;
+
+    &:hover {
+      background-color: transparent;
+    }
   }
 }
 
 .uq-story-card__content {
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
   padding: core.$space-l;
 
   @media #{core.$screen-md-down} {
@@ -28,7 +37,6 @@
   @extend %uq-card__title;
 
   @media #{core.$screen-md-down} {
-    font-size: 22px;
     -webkit-line-clamp: 3;
   }
 }
@@ -52,7 +60,8 @@
 }
 
 .uq-story-card__bottom-label {
-  margin-top: core.$space-l;
+  padding-top: core.$space-l;
+  margin-top: auto;
 
   @media #{core.$screen-md-down} {
     margin-top: core.$space-s;

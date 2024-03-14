@@ -1,7 +1,11 @@
 @use "@uqds/core/src/scss/global" as core;
 
 :root {
-  --card-border-radius: 4px;
-  --card-border: 1px solid #{core.$grey-200};
-  --card-background: core.$white;
+  --card-title-font-size: 24px;
+}
+
+@media #{core.$screen-md-down} {
+  :root {
+    --card-title-font-size: 22px;
+  }
 }

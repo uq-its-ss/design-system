@@ -2,33 +2,49 @@
 @use "@uqds/icon/src/scss/global" as icon;
 
 .uq-card {
-  border-radius: var(--card-border-radius);
-  border: var(--card-border);
-  background: var(--card-background);
   position: relative;
   display: flex;
   flex-direction: column;
-
-  &:has(a:hover) {
-    background: core.$grey-50;
-  }
+  border-radius: 4px;
+  border: 1px solid #{core.$grey-200};
+  background: core.$white;
 
   &:has(a:focus-visible) {
     outline: 4px solid core.$utility-500;
     outline-offset: -1px;
   }
+
+  &:hover {
+    background: core.$grey-50;
+
+    & .uq-card__content::after {
+      left: calc(#{core.$space-l} + 8px);
+    }
+  }
 }
 
 .uq-card__content {
-  flex-grow: 1;
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
   padding: core.$space-l core.$space-l 3 * core.$space-l;
-  background-image: url(icon.get-icon(
-    "standard--arrow-right",
-    core.$purple-500
-  ));
-  background-size: 24px;
-  background-position: bottom core.$space-l left core.$space-l;
-  background-repeat: no-repeat;
+
+  &::after {
+    content: "";
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    background-image: url(icon.get-icon(
+      "standard--arrow-right",
+      core.$purple-500
+    ));
+    background-size: 24px;
+    bottom: core.$space-l;
+    left: core.$space-l;
+    background-repeat: no-repeat;
+    transition: left 300ms ease-in-out;
+  }
 }
 
 %uq-card__title,
@@ -39,6 +55,7 @@
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 4;
   overflow: hidden;
+  font-size: var(--card-title-font-size);
 
   & a {
     color: core.$black;
@@ -106,11 +123,35 @@
 .uq-card--icon-nav {
   @media #{core.$screen-md-down} {
     & .uq-card__content {
-      padding-bottom: core.$space-ul;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      padding-bottom: core.$space-l;
+      padding-right: 3 * core.$space-l;
+
+      &::after {
+        top: 50%;
+        margin-top: -12px;
+        bottom: unset;
+        left: unset;
+        right: core.$space-l;
+        transition: right 300ms ease-in-out;
+      }
+    }
+
+    &:hover {
+      .uq-card__content::after {
+        left: unset;
+        right: calc(#{core.$space-l} - 8px);
+      }
     }
 
     & .uq-card__description {
       display: none;
+    }
+
+    & .uq-card__icon {
+      margin: 0 core.$space-m 0 0;
     }
 
     .uq-card__icon .uq-icon::before {

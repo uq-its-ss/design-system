@@ -2,6 +2,14 @@
 
 .uq-pane {
   height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.uq-pane__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .uq-pane__title {
@@ -14,6 +22,7 @@
 }
 
 .uq-pane__image {
+  flex-shrink: 0;
   aspect-ratio: 1.5 / 1;
   margin-bottom: core.$space-l;
   position: relative;
@@ -38,7 +47,8 @@
 }
 
 .uq-pane__actions {
-  margin-top: core.$space-l;
+  padding-top: core.$space-l;
+  margin-top: auto;
   display: flex;
   flex-direction: column;
   align-items: start;

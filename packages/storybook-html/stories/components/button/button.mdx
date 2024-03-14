@@ -1,4 +1,4 @@
-import { Meta, Story, Canvas } from "@storybook/blocks";
+import { Meta, Story, Canvas, Controls} from "@storybook/blocks";
 import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
 import * as ButtonStories from "./button.stories";
 
@@ -23,15 +23,17 @@ The button component is used to make common actions more obvious and help users 
 The default button style used for the primary action on a page, eg. a submit button on a form. This should generally only be used once per view.
 
 <Canvas sourceState="hidden">
-  <Story of={ButtonStories.primary} />
+  <Story of={ButtonStories.Primary} />
 </Canvas>
+
+<Controls of={ButtonStories.Primary} />
 
 ### Secondary
 
 A button style used alongside the default primary button to highlight an important action, eg. a save button on a form.
 
 <Canvas sourceState="hidden">
-  <Story of={ButtonStories.secondary} />
+  <Story of={ButtonStories.Secondary} />
 </Canvas>
 
 ### Tertiary
@@ -39,7 +41,7 @@ A button style used alongside the default primary button to highlight an importa
 A demphasied button style used for tertiary actions on a page, eg a Cancel button on a form.
 
 <Canvas sourceState="hidden">
-  <Story of={ButtonStories.tertiary} />
+  <Story of={ButtonStories.Tertiary} />
 </Canvas>
 
 ### Size
@@ -47,7 +49,7 @@ A demphasied button style used for tertiary actions on a page, eg a Cancel butto
 The button sizes are normal, tiny `uq-button--tiny`, small `uq-button--small` and large `uq-button--large`
 
 <Canvas sourceState="hidden">
-  <Story of={ButtonStories.size} />
+  <Story of={ButtonStories.Size} />
 </Canvas>
 
 ```html
@@ -65,7 +67,7 @@ The button sizes are normal, tiny `uq-button--tiny`, small `uq-button--small` an
 Expand variant of the button `uq-button--expand` would extend the width of the button to full width of its parent container.
 
 <Canvas sourceState="hidden">
-  <Story of={ButtonStories.expand} />
+  <Story of={ButtonStories.Expanded} />
 </Canvas>
 
 ```html

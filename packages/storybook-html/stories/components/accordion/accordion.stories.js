@@ -24,7 +24,7 @@ export const usingDivs = {
   render: () => {
     return accordionDivHTML;
   },
-  play: ({ canvasElement }) => {
+  play: () => {
     new accordion();
   },
   name: "Using divs",
@@ -34,7 +34,7 @@ export const usingLists = {
   render: () => {
     return accordionListHTML;
   },
-  play: ({ canvasElement }) => {
+  play: () => {
     new accordion();
   },
   name: "Using lists",
@@ -44,7 +44,7 @@ export const HasSubtitle = {
   render: () => {
     return accordionSubtitleHTML;
   },
-  play: ({ canvasElement }) => {
+  play: () => {
     new accordion();
   },
   name: "Subtitle",
@@ -54,7 +54,7 @@ export const IsCompact = {
   render: () => {
     return accordionCompactHTML;
   },
-  play: ({ canvasElement }) => {
+  play: () => {
     new accordion();
   },
   name: "Compact",
@@ -64,7 +64,7 @@ export const isManual = {
   render: () => {
     return accordionDivIsManualHTML;
   },
-    play: ({ canvasElement }) => {
+    play: () => {
       new accordion();
   },
 
@@ -80,7 +80,7 @@ export const withHeadings = {
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor eros dui, vitae iaculis leo ornare eget. Etiam tristique lobortis ligula non mattis. Ut dapibus libero neque, vel tincidunt nunc tempus eget.</p>
       </div>
       </div>`,
-      play: ({ canvasElement }) => {
+      play: () => {
         new accordion();
   },
   args: {

@@ -1,10 +1,8 @@
-import { useEffect } from "@storybook/addons";
+// import scripts
+import { Alerts } from "@uqds/alert/src/js/main";
 
 // import styles
 import "./alert.scss";
-
-// import scripts
-import Alerts from "@uqds/alert/src/js/alerts";
 
 export default {
   title: "Components/Alert",
@@ -227,15 +225,14 @@ export const warningGlobalNoTitleOrDismiss = {
 };
 
 export const loadedFromExternalUri = {
-  render: () => {
-    useEffect(() => {
-      new Alerts(document.getElementById("global-alerts-container"));
-    });
-    return `
+  render: () => `
     <div id="global-alerts-container" data-uri="/api/v1/alerts.json">
     </div>
-    `;
-  },
+    `,
+    play: ({ canvasElement }) => {
+      const alert = canvasElement.querySelector("#global-alerts-container");
+      if (alert) new Alerts(alert);
+    },
 
   name: "Loaded via an API end-point",
 };

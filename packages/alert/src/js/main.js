@@ -1,2 +1,2 @@
-import Alert from "./alerts";
-export { Alert };
+import Alerts from "./alerts";
+export { Alerts };

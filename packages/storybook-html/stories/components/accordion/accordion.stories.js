@@ -1,10 +1,7 @@
-import { useEffect } from "@storybook/addons";
-
+// import scripts
+import { accordion } from "@uqds/accordion/src/js/main";
 // import styles
 import "@uqds/accordion/src/scss/_component.scss";
-
-// import scripts
-import accordionCreate from "@uqds/accordion/src/js/accordion";
 
 // import HTML template strings
 import accordionDivHTML from "./accordion-div.html";
@@ -25,73 +22,67 @@ export default {
 
 export const usingDivs = {
   render: () => {
-    useEffect(() => {
-      new accordionCreate();
-    });
     return accordionDivHTML;
   },
-
+  play: ({ canvasElement }) => {
+    new accordion();
+  },
   name: "Using divs",
 };
 
 export const usingLists = {
   render: () => {
-    useEffect(() => {
-      new accordionCreate();
-    });
     return accordionListHTML;
   },
-
+  play: ({ canvasElement }) => {
+    new accordion();
+  },
   name: "Using lists",
 };
 
 export const HasSubtitle = {
   render: () => {
-    useEffect(() => {
-      new accordionCreate();
-    });
     return accordionSubtitleHTML;
   },
-
+  play: ({ canvasElement }) => {
+    new accordion();
+  },
   name: "Subtitle",
 };
 
 export const IsCompact = {
   render: () => {
-    useEffect(() => {
-      new accordionCreate();
-    });
     return accordionCompactHTML;
   },
-
+  play: ({ canvasElement }) => {
+    new accordion();
+  },
   name: "Compact",
 };
 
 export const isManual = {
   render: () => {
-    useEffect(() => {
-      new accordionCreate();
-    });
     return accordionDivIsManualHTML;
+  },
+    play: ({ canvasElement }) => {
+      new accordion();
   },
 
   name: "Variant behaviour",
 };
 
 export const withHeadings = {
-  render: (args) => {
-    useEffect(() => {
-      new accordionCreate();
-    });
-    return `<div class="uq-accordion" aria-label="Accordion button group" role="presentation">
+  render: (args) =>
+      `<div class="uq-accordion" aria-label="Accordion button group" role="presentation">
       <div class="uq-accordion__item">
       <button class="uq-accordion__toggle" aria-controls="content-1" aria-expanded="false" id="accordion-title-1"><${args.tag}>Title 1</${args.tag}></button>
       <div class="uq-accordion__content" role="region" aria-hidden="true" id="content-1" aria-labelledby="accordion-title-1">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor eros dui, vitae iaculis leo ornare eget. Etiam tristique lobortis ligula non mattis. Ut dapibus libero neque, vel tincidunt nunc tempus eget.</p>
       </div>
-      </div>`;
+      </div>`,
+      play: ({ canvasElement }) => {
+        new accordion();
   },
-
   args: {
     tag: "span",
   },

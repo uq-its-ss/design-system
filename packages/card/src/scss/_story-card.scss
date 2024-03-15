@@ -84,3 +84,10 @@
     color: core.$purple-500;
   }
 }
+
+.uq-story-card--event,
+.uq-story-card--story {
+  .uq-story-card__description {
+    display: none;
+  }
+}

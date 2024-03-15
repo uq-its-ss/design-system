@@ -43,7 +43,7 @@
     bottom: core.$space-l;
     left: core.$space-l;
     background-repeat: no-repeat;
-    transition: left 300ms ease-in-out;
+    transition: left 200ms ease-in-out;
   }
 }
 
@@ -135,7 +135,7 @@
         bottom: unset;
         left: unset;
         right: core.$space-l;
-        transition: right 300ms ease-in-out;
+        transition: right 200ms ease-in-out;
       }
     }
 

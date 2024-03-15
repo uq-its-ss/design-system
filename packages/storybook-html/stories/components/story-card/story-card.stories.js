@@ -37,6 +37,7 @@ export default {
 export const StoryCard = {
   args: {
     variant: "story",
+    description: "",
   },
   render: ({
     variant,
@@ -85,5 +86,6 @@ export const EventCard = {
     topLabel: "24 January 2024",
     bottomLabel: "St Lucia",
     variant: "event",
+    description: "",
   },
 };

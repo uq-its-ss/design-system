@@ -1,5 +1,3 @@
-import { useEffect } from "@storybook/addons";
-
 // import styles
 import "./tabs.scss";
 
@@ -18,9 +16,6 @@ export default {
 
 export const tabsOutline = {
   render: () => {
-    useEffect(() => {
-      new Tabs({ container: document.getElementById("tabsDefaultExample") });
-    });
     return `
     <div id="tabsDefaultExample" class="uq-tabs uq-tabs--outline">
       <div class="uq-tabs__tab-list-wrapper">
@@ -43,15 +38,16 @@ export const tabsOutline = {
     </div>
     `;
   },
+  play: ({ canvasElement }) => {
+    const tabs = { container: canvasElement.querySelector("#tabsDefaultExample")};
+    if (tabs) new Tabs(tabs);
+  },
 
   name: "Default / Outline",
 };
 
 export const tabsMinimal = {
   render: () => {
-    useEffect(() => {
-      new Tabs({ container: document.getElementById("tabsMinimalExample") });
-    });
     return `
     <div id="tabsMinimalExample" class="uq-tabs">
       <div class="uq-tabs__tab-list-wrapper">
@@ -73,15 +69,16 @@ export const tabsMinimal = {
     </div>
     `;
   },
+  play: ({ canvasElement }) => {
+    const tabs = { container: canvasElement.querySelector("#tabsMinimalExample")};
+    if (tabs) new Tabs(tabs);
+  },
 
   name: "Minimal",
 };
 
 export const tabsLined = {
   render: () => {
-    useEffect(() => {
-      new Tabs({ container: document.getElementById("tabsLinedExample") });
-    });
     return `
     <div id="tabsLinedExample" class="uq-tabs uq-tabs--lined">
       <div class="uq-tabs__tab-list-wrapper">
@@ -103,15 +100,16 @@ export const tabsLined = {
     </div>
     `;
   },
+  play: ({ canvasElement }) => {
+    const tabs = { container: canvasElement.querySelector("#tabsLinedExample")};
+    if (tabs) new Tabs(tabs);
+  },
 
   name: "Lined",
 };
 
 export const tabsWithIcon = {
   render: () => {
-    useEffect(() => {
-      new Tabs({ container: document.getElementById("tabsWithIconExample") });
-    });
     return `
     <div id="tabsWithIconExample" class="uq-tabs uq-tabs--outline">
       <div class="uq-tabs__tab-list-wrapper">
@@ -139,15 +137,16 @@ export const tabsWithIcon = {
     </div>
     `;
   },
+  play: ({ canvasElement }) => {
+    const tabs = { container: canvasElement.querySelector("#tabsWithIconExample")};
+    if (tabs) new Tabs(tabs);
+  },
 
   name: "With icon",
 };
 
 export const tabsFullWidth = {
   render: () => {
-    useEffect(() => {
-      new Tabs({ container: document.getElementById("tabsFullWidthExample") });
-    });
     return `
     <div id="tabsFullWidthExample" class="uq-tabs uq-tabs--outline uq-tabs--full-width">
       <div class="uq-tabs__tab-list-wrapper">
@@ -169,15 +168,16 @@ export const tabsFullWidth = {
     </div>
     `;
   },
+  play: ({ canvasElement }) => {
+    const tabs = { container: canvasElement.querySelector("#tabsFullWidthExample")};
+    if (tabs) new Tabs(tabs);
+  },
 
   name: "Full width",
 };
 
 export const tabsSmall = {
   render: () => {
-    useEffect(() => {
-      new Tabs({ container: document.getElementById("tabsSmallExample") });
-    });
     return `
     <div id="tabsSmallExample" class="uq-tabs uq-tabs--outline uq-tabs--small">
       <div class="uq-tabs__tab-list-wrapper">
@@ -199,15 +199,16 @@ export const tabsSmall = {
     </div>
     `;
   },
+  play: ({ canvasElement }) => {
+    const tabs = { container: canvasElement.querySelector("#tabsSmallExample")};
+    if (tabs) new Tabs(tabs);
+  },
 
   name: "Small",
 };
 
 export const tabsReversed = {
   render: () => {
-    useEffect(() => {
-      new Tabs({ container: document.getElementById("tabsReversedExample") });
-    });
     return `
     <div id="tabsReversedExample" class="uq-tabs uq-tabs--outline uq-tabs--reversed">
       <div class="uq-tabs__tab-list-wrapper">
@@ -228,6 +229,10 @@ export const tabsReversed = {
       </div>
     </div>
     `;
+  },
+  play: ({ canvasElement }) => {
+    const tabs = { container: canvasElement.querySelector("#tabsReversedExample")};
+    if (tabs) new Tabs(tabs);
   },
 
   name: "Reversed",

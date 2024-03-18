@@ -1,10 +1,8 @@
-import { useEffect } from "@storybook/addons";
-
 // import styles
 import "./site-header.scss";
 
 // import scripts
-import siteHeaderNav from "@uqds/site-header/src/js/site-header-navigation";
+import siteHeaderNavigation from "@uqds/site-header/src/js/site-header-navigation";
 
 // import HTML template strings
 import siteHeaderWithSubnavHTML from "./site-header-with-subnav.html";
@@ -22,11 +20,11 @@ export default {
 
 export const siteHeaderWithSubnav = {
   render: () => {
-    useEffect(() => {
-      var navElem = document.getElementById("jsNav");
-      new siteHeaderNav(navElem, "uq-site-header__navigation");
-    });
     return siteHeaderWithSubnavHTML;
+  },
+  play: ({ canvasElement }) => {
+    const navElem  = canvasElement.querySelector("#jsNav");
+    if (navElem) new siteHeaderNavigation(navElem, "uq-site-header__navigation");
   },
 
   name: "With sub-navigation",
@@ -34,11 +32,11 @@ export const siteHeaderWithSubnav = {
 
 export const siteHeaderWithoutSubnav = {
   render: () => {
-    useEffect(() => {
-      var navElem = document.getElementById("jsNav");
-      new siteHeaderNav(navElem, "uq-site-header__navigation");
-    });
     return siteHeaderWithoutSubnavHTML;
+  },
+  play: ({ canvasElement }) => {
+    const navElem  = canvasElement.querySelector("#jsNav");
+    if (navElem) new siteHeaderNavigation(navElem, "uq-site-header__navigation");
   },
 
   name: "Without sub-navigation",

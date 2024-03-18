@@ -1,9 +1,5 @@
 import { Meta, Story, Canvas } from "@storybook/blocks";
-import { useEffect } from "@storybook/addons";
 import baddestForm from "./form-errors-kitchen-sink.html";
-import passwordResetHTML from "./examples/password-reset.html";
-import passwordResetInit from "./examples/password-reset.es6";
-import "./examples/password-reset.scss";
 import * as FormValidationStories from "./form-validation.stories";
 
 <Meta of={FormValidationStories} />
@@ -25,11 +21,9 @@ validation.
 Display an error summary _above/before_ the form when the user submits the form
 (_on submit_).
 
-export const BadFormExample = () => {
-  return baddestForm;
-};
-
-<Story of={FormValidationStories.EmptyFormSubmitExample} />
+<Canvas sourceState="hidden" withToolbar>
+<Story of={FormValidationStories.EmptyFormSubmitExample} autoplay />
+</Canvas>
 
 ---
 
@@ -126,15 +120,8 @@ different types of instantaneously feedback types and usage examples.
 
 ## Example: password reset form
 
-export const PasswordForm = () => {
-  useEffect(() => {
-    var init = new passwordResetInit();
-  });
-  return passwordResetHTML;
-};
-
 <Canvas sourceState="hidden" withToolbar>
-  <Story of={FormValidationStories.PasswordForm_} />
+  <Story of={FormValidationStories.PasswordForm_} autoplay />
 </Canvas>
 
 ## Glossary

@@ -1,18 +1,24 @@
-import { useEffect } from "@storybook/addons";
 import baddestForm from "./form-errors-kitchen-sink.html";
 import passwordResetHTML from "./examples/password-reset.html";
+
+// import scripts
 import passwordResetInit from "./examples/password-reset.es6";
+
 import "./examples/password-reset.scss";
 
-const BadFormExample = () => {
-  return baddestForm;
+const BadFormExample = {
+  render: () => {
+    return baddestForm;
+  },
 };
 
-const PasswordForm = () => {
-  useEffect(() => {
-    var init = new passwordResetInit();
-  });
-  return passwordResetHTML;
+const PasswordForm = {
+  render: () => {
+    return passwordResetHTML;
+  },
+  play: () => { 
+    new passwordResetInit();
+  },
 };
 
 export default {
@@ -28,12 +34,23 @@ export default {
 };
 
 export const EmptyFormSubmitExample = {
-  render: BadFormExample.bind({}),
+  render: () => {
+    return `
+      ${BadFormExample.render()}
+    `;
+  },
   name: "Empty form submit example",
 };
 
 export const PasswordForm_ = {
-  render: PasswordForm.bind({}),
+  render: () => {
+    return `
+      ${PasswordForm.render()}
+    `;
+  },
+  play: () => { 
+    new passwordResetInit();
+  },
   name: "Password form",
   inline: false,
   height: 600,

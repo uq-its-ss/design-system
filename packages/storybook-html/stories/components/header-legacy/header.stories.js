@@ -1,5 +1,3 @@
-import { useEffect } from "@storybook/addons";
-
 // import styles
 import "./header.scss";
 
@@ -23,19 +21,21 @@ export default {
   },
 };
 
-export const header = () => {
-  useEffect(() => {
+export const header = {
+  render: () => {
+    return headerHTML;
+  },
+  play: () => {
     new headerCreate();
-  });
-  return headerHTML;
+  },
 };
 
 export const headerNoLocalSearch = {
   render: () => {
-    useEffect(() => {
-      new headerCreate();
-    });
     return headerNoLocalSearchHTML;
+  },
+  play: () => {
+    new headerCreate();
   },
 
   name: "Header with global search only",

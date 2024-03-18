@@ -1,4 +1,3 @@
-import { useEffect } from "@storybook/addons";
 import { MDCCircularProgress } from "@material/circular-progress";
 
 //import scss
@@ -55,14 +54,6 @@ export const wayfindingControl = {
 
 export const wayfindingControlWorking = {
   render: () => {
-    useEffect(() => {
-      const circularProgress = new MDCCircularProgress(
-        document.querySelector("#wayfindingProgressIndicator")
-      );
-      circularProgress.determinate = false;
-      circularProgress.open();
-    });
-
     return `
       <div class="uq-maps__wayfinding-controls uq-maps__wayfinding-controls--is-working">
         <div class="uq-maps__wayfinding-controls__main">
@@ -118,6 +109,14 @@ export const wayfindingControlWorking = {
       </div>
     `;
   },
-
+  play: ({ canvasElement }) => {
+    const circularProgress = canvasElement.querySelector("#wayfindingProgressIndicator");
+    if (circularProgress) {
+      const circleProgress = new MDCCircularProgress(circularProgress);
+      circleProgress.determinate = false;
+      circleProgress.open();
+    }
+  },
+  
   name: "3B Wayfinding controls with circular progress indicator",
 };

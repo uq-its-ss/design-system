@@ -229,10 +229,10 @@ export const loadedFromExternalUri = {
     <div id="global-alerts-container" data-uri="/api/v1/alerts.json">
     </div>
     `,
-    play: ({ canvasElement }) => {
-      const alert = canvasElement.querySelector("#global-alerts-container");
-      if (alert) new Alerts(alert);
-    },
+  play: ({ canvasElement }) => {
+    const alert = canvasElement.querySelector("#global-alerts-container");
+    if (alert) new Alerts(alert);
+  },
 
   name: "Loaded via an API end-point",
 };

@@ -16,7 +16,7 @@ const PasswordForm = {
   render: () => {
     return passwordResetHTML;
   },
-  play: () => { 
+  play: () => {
     new passwordResetInit();
   },
 };
@@ -48,7 +48,7 @@ export const PasswordForm_ = {
       ${PasswordForm.render()}
     `;
   },
-  play: () => { 
+  play: () => {
     new passwordResetInit();
   },
   name: "Password form",

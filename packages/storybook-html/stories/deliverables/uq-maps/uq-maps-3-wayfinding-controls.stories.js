@@ -110,13 +110,15 @@ export const wayfindingControlWorking = {
     `;
   },
   play: ({ canvasElement }) => {
-    const circularProgress = canvasElement.querySelector("#wayfindingProgressIndicator");
+    const circularProgress = canvasElement.querySelector(
+      "#wayfindingProgressIndicator"
+    );
     if (circularProgress) {
       const circleProgress = new MDCCircularProgress(circularProgress);
       circleProgress.determinate = false;
       circleProgress.open();
     }
   },
-  
+
   name: "3B Wayfinding controls with circular progress indicator",
 };

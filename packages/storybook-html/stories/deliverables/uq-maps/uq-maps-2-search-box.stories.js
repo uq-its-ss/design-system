@@ -126,7 +126,9 @@ export const searchFieldWorking = {
     `;
   },
   play: ({ canvasElement }) => {
-    const circularProgress = canvasElement.querySelector("#searchProgressIndicator");
+    const circularProgress = canvasElement.querySelector(
+      "#searchProgressIndicator"
+    );
     if (circularProgress) {
       const circleProgress = new MDCCircularProgress(circularProgress);
       circleProgress.determinate = false;

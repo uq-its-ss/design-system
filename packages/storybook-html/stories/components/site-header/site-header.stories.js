@@ -23,8 +23,9 @@ export const siteHeaderWithSubnav = {
     return siteHeaderWithSubnavHTML;
   },
   play: ({ canvasElement }) => {
-    const navElem  = canvasElement.querySelector("#jsNav");
-    if (navElem) new siteHeaderNavigation(navElem, "uq-site-header__navigation");
+    const navElem = canvasElement.querySelector("#jsNav");
+    if (navElem)
+      new siteHeaderNavigation(navElem, "uq-site-header__navigation");
   },
 
   name: "With sub-navigation",
@@ -35,8 +36,9 @@ export const siteHeaderWithoutSubnav = {
     return siteHeaderWithoutSubnavHTML;
   },
   play: ({ canvasElement }) => {
-    const navElem  = canvasElement.querySelector("#jsNav");
-    if (navElem) new siteHeaderNavigation(navElem, "uq-site-header__navigation");
+    const navElem = canvasElement.querySelector("#jsNav");
+    if (navElem)
+      new siteHeaderNavigation(navElem, "uq-site-header__navigation");
   },
 
   name: "Without sub-navigation",

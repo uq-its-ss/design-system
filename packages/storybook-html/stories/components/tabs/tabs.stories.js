@@ -39,7 +39,9 @@ export const tabsOutline = {
     `;
   },
   play: ({ canvasElement }) => {
-    const tabs = { container: canvasElement.querySelector("#tabsDefaultExample")};
+    const tabs = {
+      container: canvasElement.querySelector("#tabsDefaultExample"),
+    };
     if (tabs) new Tabs(tabs);
   },
 
@@ -70,7 +72,9 @@ export const tabsMinimal = {
     `;
   },
   play: ({ canvasElement }) => {
-    const tabs = { container: canvasElement.querySelector("#tabsMinimalExample")};
+    const tabs = {
+      container: canvasElement.querySelector("#tabsMinimalExample"),
+    };
     if (tabs) new Tabs(tabs);
   },
 
@@ -101,7 +105,9 @@ export const tabsLined = {
     `;
   },
   play: ({ canvasElement }) => {
-    const tabs = { container: canvasElement.querySelector("#tabsLinedExample")};
+    const tabs = {
+      container: canvasElement.querySelector("#tabsLinedExample"),
+    };
     if (tabs) new Tabs(tabs);
   },
 
@@ -138,7 +144,9 @@ export const tabsWithIcon = {
     `;
   },
   play: ({ canvasElement }) => {
-    const tabs = { container: canvasElement.querySelector("#tabsWithIconExample")};
+    const tabs = {
+      container: canvasElement.querySelector("#tabsWithIconExample"),
+    };
     if (tabs) new Tabs(tabs);
   },
 
@@ -169,7 +177,9 @@ export const tabsFullWidth = {
     `;
   },
   play: ({ canvasElement }) => {
-    const tabs = { container: canvasElement.querySelector("#tabsFullWidthExample")};
+    const tabs = {
+      container: canvasElement.querySelector("#tabsFullWidthExample"),
+    };
     if (tabs) new Tabs(tabs);
   },
 
@@ -200,7 +210,9 @@ export const tabsSmall = {
     `;
   },
   play: ({ canvasElement }) => {
-    const tabs = { container: canvasElement.querySelector("#tabsSmallExample")};
+    const tabs = {
+      container: canvasElement.querySelector("#tabsSmallExample"),
+    };
     if (tabs) new Tabs(tabs);
   },
 
@@ -231,7 +243,9 @@ export const tabsReversed = {
     `;
   },
   play: ({ canvasElement }) => {
-    const tabs = { container: canvasElement.querySelector("#tabsReversedExample")};
+    const tabs = {
+      container: canvasElement.querySelector("#tabsReversedExample"),
+    };
     if (tabs) new Tabs(tabs);
   },
 

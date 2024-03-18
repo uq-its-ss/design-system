@@ -5,7 +5,7 @@ import siteHeaderNavigation from "@uqds/site-header/src/js/site-header-navigatio
 import { breadcrumb } from "@uqds/breadcrumb/src/js/main";
 
 // import HTML template strings
-import { Header } from "../../components/header/header.stories";
+import { HeaderInterim } from "../../components/header/header.stories";
 import { siteHeaderWithSubnav } from "../../components/site-header/site-header.stories";
 import { Breadcrumb } from "../../components/breadcrumb/breadcrumb.stories";
 import { footer } from "../../components/footer/footer.stories";
@@ -23,7 +23,7 @@ export default {
 export const basicPage = {
   render: () => {
     return `
-    ${Header.render()}
+    ${HeaderInterim.render()}
       ${siteHeaderWithSubnav.render()}
       ${Breadcrumb.render()}
       <div class="uq-grid">

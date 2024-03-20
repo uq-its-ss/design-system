@@ -900,11 +900,27 @@ export default [
     category: "social",
   },
   {
+    name: "social-wechat-circle",
+    category: "social",
+  },
+  {
+    name: "social-weebo-circle",
+    category: "social",
+  },
+  {
     name: "social-x-twitter-circle",
     category: "social",
   },
   {
+    name: "social-x",
+    category: "social",
+  },
+  {
     name: "social-you-tube-circle",
+    category: "social",
+  },
+  {
+    name: "social-youku-circle",
     category: "social",
   },
   {

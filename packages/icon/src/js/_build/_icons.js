@@ -908,15 +908,15 @@ export default [
     category: "social",
   },
   {
+    name: "social-x",
+    category: "social",
+  },
+  {
     name: "social-you-tube-circle",
     category: "social",
   },
   {
     name: "social-youku-circle",
-    category: "social",
-  },
-  {
-    name: "twitter",
     category: "social",
   },
   {

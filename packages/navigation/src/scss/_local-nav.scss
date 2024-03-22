@@ -12,9 +12,10 @@
   padding-block: core.$space-m;
   padding-inline-start: core.$space-xl;
   border-bottom: 1px solid core.$grey-200;
+  text-decoration: none;
+  font-weight: core.$font-weight-normal;
 
   &:hover {
-    text-decoration: none;
     color: core.$black;
     background-color: core.$grey-50;
   }
@@ -27,7 +28,6 @@
 
 .uq-local-nav__grandparent,
 .uq-local-nav__parent {
-  font-weight: core.$font-weight-medium;
 
   & .uq-local-nav__link {
     background-image: url(icon.get-icon(
@@ -37,6 +37,7 @@
     background-repeat: no-repeat;
     background-size: 24px;
     background-position: left center;
+    font-weight: core.$font-weight-medium;
   }
 }
 

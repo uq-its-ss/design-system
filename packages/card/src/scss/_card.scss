@@ -18,32 +18,34 @@
     background: core.$grey-50;
 
     & .uq-card__content::after {
-      left: calc(#{core.$space-l} + 8px);
+      left: 8px;
     }
   }
 }
 
 .uq-card__content {
   flex: 1;
-  position: relative;
   display: flex;
   flex-direction: column;
-  padding: core.$space-l core.$space-l 3 * core.$space-l;
+  padding: core.$space-l;
 
   &::after {
     content: "";
-    position: absolute;
     height: 24px;
     width: 24px;
+    margin-top: auto;
+    padding-top: core.$space-l;
+    position: relative;
+    box-sizing: content-box;
     background-image: url(icon.get-icon(
       "standard--arrow-right",
       core.$purple-500
     ));
+    background-position: right bottom;
     background-size: 24px;
-    bottom: core.$space-l;
-    left: core.$space-l;
     background-repeat: no-repeat;
     transition: left 200ms ease-in-out;
+    left: 0;
   }
 }
 
@@ -126,23 +128,11 @@
       display: flex;
       align-items: center;
       flex-direction: row;
-      padding-bottom: core.$space-l;
-      padding-right: 3 * core.$space-l;
 
       &::after {
-        top: 50%;
-        margin-top: -12px;
-        bottom: unset;
-        left: unset;
-        right: core.$space-l;
-        transition: right 200ms ease-in-out;
-      }
-    }
-
-    &:hover {
-      .uq-card__content::after {
-        left: unset;
-        right: calc(#{core.$space-l} - 8px);
+        padding-top: 0;
+        margin-top: 0;
+        margin-left: auto;
       }
     }
 

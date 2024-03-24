@@ -1,18 +1,21 @@
+import { layoutDecorator } from "../../../lib/decorators";
 import "@uqds/layout/src/scss/main.scss";
-import "../layout-demo.scss";
 
 export default {
   title: "Layout/Container",
   parameters: {
     layout: "fullscreen",
   },
+  args: {
+    children: `<div class="uqds-layout-demo-el"></div>`,
+  },
+  decorators: [layoutDecorator],
 };
 
 export const Container = {
-  render: () => `
-<div class="uqds-layout-demo-bg">
-  <div class="uq-container">
-    <div class="uqds-layout-demo-el"></div>  
-  </div>
-</div>`,
+  render: ({ children }) => `
+<div class="uq-container">
+  ${children}
+</div>
+`,
 };

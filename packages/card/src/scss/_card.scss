@@ -1,0 +1,152 @@
+@use "@uqds/core/src/scss/global" as core;
+@use "@uqds/icon/src/scss/global" as icon;
+
+.uq-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  border: 1px solid #{core.$grey-200};
+  background: core.$white;
+
+  &:has(a:focus-visible) {
+    outline: 4px solid core.$utility-500;
+    outline-offset: -1px;
+  }
+
+  &:hover {
+    background: core.$grey-50;
+
+    & .uq-card__content::after {
+      left: 8px;
+    }
+  }
+}
+
+.uq-card__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: core.$space-l;
+
+  &::after {
+    content: "";
+    height: 24px;
+    width: 24px;
+    margin-top: auto;
+    padding-top: core.$space-l;
+    position: relative;
+    box-sizing: content-box;
+    background-image: url(icon.get-icon(
+      "standard--arrow-right",
+      core.$purple-500
+    ));
+    background-position: right bottom;
+    background-size: 24px;
+    background-repeat: no-repeat;
+    transition: left 200ms ease-in-out;
+    left: 0;
+  }
+}
+
+%uq-card__title,
+.uq-card__title {
+  margin: 0;
+  color: core.$black;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+  font-size: var(--card-title-font-size);
+
+  & a {
+    color: core.$black;
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.uq-card__description {
+  margin-top: core.$space-s;
+}
+
+.uq-card__image {
+  aspect-ratio: 1.5 / 1;
+  position: relative;
+  flex-shrink: 0;
+
+  & img,
+  & picture {
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    position: absolute;
+    object-fit: cover;
+  }
+}
+
+.uq-card__icon {
+  margin-bottom: core.$space-s;
+
+  & .uq-icon::before {
+    height: 56px;
+    width: 56px;
+  }
+}
+
+.uq-card--text {
+  & .uq-card__image,
+  & .uq-card__icon {
+    display: none;
+  }
+}
+
+.uq-card--image {
+  & .uq-card__icon {
+    display: none;
+  }
+}
+
+.uq-card--icon,
+.uq-card--icon-nav {
+  & .uq-card__image {
+    display: none;
+  }
+}
+
+.uq-card--icon-nav {
+  @media #{core.$screen-md-down} {
+    & .uq-card__content {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+
+      &::after {
+        padding-top: 0;
+        margin-top: 0;
+        margin-left: auto;
+      }
+    }
+
+    & .uq-card__description {
+      display: none;
+    }
+
+    & .uq-card__icon {
+      margin: 0 core.$space-m 0 0;
+    }
+
+    .uq-card__icon .uq-icon::before {
+      height: 40px;
+      width: 40px;
+    }
+  }
+}

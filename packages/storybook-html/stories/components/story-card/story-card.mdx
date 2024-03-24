@@ -1,0 +1,36 @@
+import { Meta, Story, Canvas } from "@storybook/blocks";
+import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
+import * as StoryCardStories from "./story-card.stories";
+
+<Meta of={StoryCardStories} />
+
+# StoryCard
+
+<StatusBadge.Development />
+<StatusBadge.DraftDoc />
+
+## Overview
+
+<Canvas>
+  <Story of={StoryCardStories.StoryCard} />
+</Canvas>
+
+## Variants
+
+### Story
+
+<Canvas>
+  <Story of={StoryCardStories.StoryCard} />
+</Canvas>
+
+### News
+
+<Canvas>
+  <Story of={StoryCardStories.NewsCard} />
+</Canvas>
+
+### Event
+
+<Canvas>
+  <Story of={StoryCardStories.EventCard} />
+</Canvas>

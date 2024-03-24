@@ -19,60 +19,31 @@ all screen sizes, based on a target number of cards per row.
 
 ### How-to
 
-Wrap elements directly in a `.uq-card-grid` element and choose a
-target cards per row modifier class.
+Wrap elements directly in a `.uq-card-grid` element and choose one of the
+target cards per row modifier classes below.
 
-The child element should be a `.uq-card` or `.ud-pane` however any element that
-does not implement its own margins will work.
+- `.uq-card-grid--target-1x`
+- `.uq-card-grid--target-2x`
+- `.uq-card-grid--target-3x`
+- `.uq-card-grid--target-4x`
 
-```html
-<div class="uq-card-grid uq-card-grid--target-3x">
-  <div class="uq-card"></div>
-  <div class="uq-card"></div>
-  <div class="uq-card"></div>
-  <div class="uq-card"></div>
-</div>
-```
-
-### One per row
-
-In this target size, cards will display full width at all times.
-
-Modifier class: `.uq-card-grid--target-1x`
+The child elements should be a `.uq-card` or `.uq-pane` to ensure that the
+height of cards on each row is uniform.
 
 <Canvas>
-  <Story of={CardGridStories.OnePerRow} />
+  <Story of={CardGridStories.CardGrid} />
 </Canvas>
 
-### Two per row
+## Examples
 
-Cards will typically display two per row except on some mobile devices.
-
-Modifier class: `.uq-card-grid--target-2x`
+### With Cards
 
 <Canvas>
-  <Story of={CardGridStories.TwoPerRow} />
+  <Story of={CardGridStories.CardsExample} />
 </Canvas>
 
-### Three per row
-
-Cards will display three per row on most screen sizes, two per row on smaller
-devices and one per row on mobile devices.
-
-Modifier class: `.uq-card-grid--target-3x`
+### With Panes
 
 <Canvas>
-  <Story of={CardGridStories.ThreePerRow} />
-</Canvas>
-
-### Four per row
-
-Cards will only display at four per row on large screens in a full width
-container. Otherwise they will display a three or two per row, and one per row
-on mobile devices.
-
-Modifier class: `.uq-card-grid--target-4x`
-
-<Canvas>
-  <Story of={CardGridStories.FourPerRow} />
+  <Story of={CardGridStories.PanesExample} />
 </Canvas>

@@ -1,0 +1,54 @@
+import { Meta, Story, Canvas } from "@storybook/blocks";
+import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
+import * as PaneStories from "./pane.stories";
+
+<Meta of={PaneStories} />
+
+# Pane
+
+<StatusBadge.Development />
+<StatusBadge.DraftDoc />
+
+## Overview
+
+<Canvas>
+  <Story of={PaneStories.Pane} />
+</Canvas>
+
+## Variants
+
+### Text
+
+<Canvas>
+  <Story of={PaneStories.Text} />
+</Canvas>
+
+### Text Shaded
+
+<Canvas>
+  <Story of={PaneStories.TextShaded} />
+</Canvas>
+
+### Image
+
+<Canvas>
+  <Story of={PaneStories.Image} />
+</Canvas>
+
+### Icon
+
+<Canvas>
+  <Story of={PaneStories.Icon} />
+</Canvas>
+
+### Icon Large
+
+<Canvas>
+  <Story of={PaneStories.IconLarge} />
+</Canvas>
+
+### Icon Shaded
+
+<Canvas>
+  <Story of={PaneStories.IconShaded} />
+</Canvas>

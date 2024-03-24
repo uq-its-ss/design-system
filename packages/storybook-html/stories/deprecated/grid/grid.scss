@@ -1,5 +1,5 @@
-@use "@uqds/core/src/scss/_global" as core;
-@use "@uqds/grid/src/scss/_global" as grid;
+@use "../../../../../node_modules/@uqds/core/src/scss/global" as core;
+@use "../../../../../node_modules/@uqds/grid/src/scss/global" as grid;
 
 .uqds-example-grid {
   background: repeating-linear-gradient(

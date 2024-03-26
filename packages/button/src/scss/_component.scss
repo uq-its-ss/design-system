@@ -3,8 +3,8 @@
 
 /* button Default */
 .uq-button {
-  background-color: core.$link;
-  border: 2px solid core.$link;
+  background-color: core.$utility-500;
+  border: 2px solid core.$utility-500;
   border-radius: core.$space-xs;
   box-sizing: border-box;
   color: core.$white;
@@ -19,6 +19,7 @@
   text-align: center;
   text-decoration: none;
   transition: all 300ms ease-out;
+  letter-spacing: core.$letter-spacing;
 
   *,
   *::before,
@@ -28,21 +29,21 @@
 
   &:hover,
   &:focus {
-    background-color: core.$link-active;
-    border-color: core.$link-active;
+    background-color: core.$utility-600;
+    border-color: core.$utility-600;
     color: core.$white;
     text-decoration: underline;
   }
 
   &.uq-button--outline {
     background-color: transparent;
-    border-color: core.$link;
-    color: core.$link;
+    border-color: core.$utility-500;
+    color: core.$utility-500;
 
     &:hover,
     &:focus {
-      background-color: core.$link-active;
-      border-color: core.$link-active;
+      background-color: core.$utility-600;
+      border-color: core.$utility-600;
       color: core.$white;
     }
   }
@@ -50,13 +51,13 @@
   &.uq-button--text {
     background-color: transparent;
     border-color: transparent;
-    color: core.$link;
+    color: core.$utility-500;
 
     &:hover,
     &:focus {
       background-color: transparent;
       border-color: transparent;
-      color: core.$link-active;
+      color: core.$utility-600;
     }
   }
 
@@ -64,25 +65,25 @@
   &--secondary {
     background-color: core.$grey-300;
     border-color: core.$grey-300;
-    color: core.$text;
+    color: core.$grey-900;
 
     &:hover,
     &:focus {
       background-color: core.$grey-300;
       border-color: core.$grey-300;
-      color: core.$text;
+      color: core.$grey-900;
     }
 
     &.uq-button--outline {
       background-color: transparent;
       border-color: core.$grey-300;
-      color: core.$text;
+      color: core.$grey-900;
 
       &:hover,
       &:focus {
         background-color: core.$grey-500;
         border-color: core.$grey-500;
-        color: core.$text;
+        color: core.$grey-900;
       }
 
       &.uq-button--light {
@@ -91,7 +92,7 @@
 
         &:hover,
         &:focus {
-          color: core.$text;
+          color: core.$grey-900;
         }
       }
     }
@@ -99,13 +100,13 @@
     &.uq-button--text {
       background-color: transparent;
       border-color: transparent;
-      color: core.$text;
+      color: core.$grey-900;
 
       &:hover,
       &:focus {
         background-color: transparent;
         border-color: transparent;
-        color: core.$text;
+        color: core.$grey-900;
       }
 
       &.uq-button--light {

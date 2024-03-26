@@ -38,7 +38,7 @@
     border-radius: 0;
     border-style: solid;
     border-width: 0;
-    color: core.$text;
+    color: core.$grey-900;
     cursor: pointer;
     display: inline-block;
     font-family: core.$font-body;
@@ -55,7 +55,7 @@
 
     & > * {
       margin: 0;
-      color: core.$text;
+      color: core.$grey-900;
       font-size: core.$font-size-xl;
       font-weight: 500;
     }
@@ -84,7 +84,7 @@
 
     &:hover,
     &:focus {
-      color: core.$text;
+      color: core.$grey-900;
       background-color: core.$grey-50;
     }
 

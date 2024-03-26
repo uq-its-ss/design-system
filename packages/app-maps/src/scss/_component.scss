@@ -36,7 +36,7 @@ $-result-icon-spacing: $-icon-spacing;
   }
 
   &__primary-text {
-    color: core.$text;
+    color: core.$grey-900;
     font-family: core.$font-body;
     font-size: core.$font-size-s;
     font-weight: core.$font-weight-normal;
@@ -88,7 +88,7 @@ $-result-icon-spacing: $-icon-spacing;
     }
 
     &:focus {
-      box-shadow: 0 0 0 2px core.$link;
+      box-shadow: 0 0 0 2px core.$utility-500;
       outline: 0 none;
     }
   }
@@ -296,12 +296,12 @@ $-result-icon-spacing: $-icon-spacing;
       }
 
       &:focus {
-        box-shadow: 0 0 0 2px core.$link;
+        box-shadow: 0 0 0 2px core.$utility-500;
         outline: 0 none;
       }
 
       &--placeholder {
-        color: rgba(core.$text, 0.72);
+        color: rgba(core.$grey-900, 0.72);
       }
     }
 
@@ -368,8 +368,8 @@ $-result-icon-spacing: $-icon-spacing;
         }
 
         &:checked {
-          background-color: core.$link;
-          border-color: core.$link;
+          background-color: core.$utility-500;
+          border-color: core.$utility-500;
 
           &::after {
             background-image: url(get-icon("ui--check", #fff));
@@ -386,8 +386,8 @@ $-result-icon-spacing: $-icon-spacing;
         }
 
         &:focus {
-          border-color: core.$link;
-          box-shadow: 0 0 0 1px core.$link;
+          border-color: core.$utility-500;
+          box-shadow: 0 0 0 1px core.$utility-500;
           outline: none;
         }
       }
@@ -490,7 +490,7 @@ $-result-icon-spacing: $-icon-spacing;
 
         > a {
           align-items: center;
-          color: core.$text;
+          color: core.$grey-900;
           display: flex;
           justify-content: flex-start;
           min-height: 3rem + core.$space-s * 2;
@@ -504,7 +504,7 @@ $-result-icon-spacing: $-icon-spacing;
 
           &:focus {
             outline: 0 none;
-            box-shadow: 2px 0 0 0 core.$link inset;
+            box-shadow: 2px 0 0 0 core.$utility-500 inset;
           }
         }
 
@@ -592,7 +592,10 @@ $-result-icon-spacing: $-icon-spacing;
 
           &:focus-within {
             &::after {
-              background-image: url(get-icon("ui--chevron-right", core.$link));
+              background-image: url(get-icon(
+                "ui--chevron-right",
+                core.$utility-500
+              ));
             }
           }
 
@@ -749,7 +752,7 @@ $-result-icon-spacing: $-icon-spacing;
       &__details-block {
         @extend %uq-maps__secondary-text;
 
-        color: core.$text;
+        color: core.$grey-900;
         display: block;
         margin-top: core.$space-s;
       }

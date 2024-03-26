@@ -44,7 +44,7 @@ $use-encapsulation: false !default;
 
   label,
   legend {
-    color: core.$text;
+    color: core.$grey-900;
     display: block;
     font-size: $form-label-size;
     font-weight: core.$font-weight-bold;
@@ -169,13 +169,13 @@ $use-encapsulation: false !default;
     border: $form-border-width solid core.$grey-300;
     border-radius: $form-border-radius;
     font-size: $form-text-size;
-    color: core.$text;
+    color: core.$grey-900;
     line-height: core.$line-height-ui;
     margin-bottom: core.$space-l;
 
     &:focus {
-      border-color: core.$link;
-      box-shadow: 0 0 0 1px core.$link inset;
+      border-color: core.$utility-500;
+      box-shadow: 0 0 0 1px core.$utility-500 inset;
       outline: none;
     }
 
@@ -199,8 +199,9 @@ $use-encapsulation: false !default;
       border-radius: $form-border-radius;
 
       &:focus {
-        border-color: core.$link;
-        box-shadow: 0 2px 0 0 core.$link, 0 0 0 1px core.$link inset;
+        border-color: core.$utility-500;
+        box-shadow: 0 2px 0 0 core.$utility-500,
+          0 0 0 1px core.$utility-500 inset;
       }
     }
 
@@ -243,7 +244,7 @@ $use-encapsulation: false !default;
     &:focus {
       background-image: url(icon.get-icon(
         "standard--chevron-down-sml",
-        core.$link
+        core.$utility-500
       ));
     }
 
@@ -281,8 +282,8 @@ $use-encapsulation: false !default;
     position: absolute;
 
     &:focus {
-      border-color: core.$link;
-      box-shadow: 0 0 0 1px core.$link;
+      border-color: core.$utility-500;
+      box-shadow: 0 0 0 1px core.$utility-500;
       outline: none;
     }
 
@@ -300,11 +301,11 @@ $use-encapsulation: false !default;
     }
 
     &:checked {
-      border-color: core.$link;
+      border-color: core.$utility-500;
 
       &:focus {
-        border-color: core.$link;
-        box-shadow: 0 0 0 1px core.$link;
+        border-color: core.$utility-500;
+        box-shadow: 0 0 0 1px core.$utility-500;
       }
     }
 
@@ -312,16 +313,16 @@ $use-encapsulation: false !default;
       border-color: core.$error-500;
 
       &:focus {
-        border-color: core.$link;
-        box-shadow: 0 0 0 1px core.$link;
+        border-color: core.$utility-500;
+        box-shadow: 0 0 0 1px core.$utility-500;
       }
 
       &:checked {
         border-color: core.$error-500;
 
         &:focus {
-          border-color: core.$link;
-          box-shadow: 0 0 0 1px core.$link;
+          border-color: core.$utility-500;
+          box-shadow: 0 0 0 1px core.$utility-500;
         }
       }
     }
@@ -357,7 +358,7 @@ $use-encapsulation: false !default;
     }
 
     &:checked {
-      background-color: core.$link;
+      background-color: core.$utility-500;
 
       &::after {
         background-image: url(icon.get-icon("standard--check", core.$white));
@@ -380,7 +381,7 @@ $use-encapsulation: false !default;
 
       &::after {
         border-radius: 50%;
-        background-color: core.$link;
+        background-color: core.$utility-500;
         content: "";
         display: block;
         position: absolute;
@@ -423,7 +424,7 @@ $use-encapsulation: false !default;
     margin-bottom: core.$space-l;
 
     &__title {
-      color: core.$text;
+      color: core.$grey-900;
       font-size: core.$font-size-l;
       font-weight: core.$font-weight-bold;
       line-height: core.$line-height-h;
@@ -431,12 +432,12 @@ $use-encapsulation: false !default;
     }
 
     &_body {
-      color: core.$text;
+      color: core.$grey-900;
       font-size: core.$space-m;
     }
 
     &__list {
-      color: core.$text;
+      color: core.$grey-900;
       font-size: core.$space-m;
       margin: core.$space-none;
       padding-left: core.$space-l;

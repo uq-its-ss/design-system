@@ -31,14 +31,15 @@
   }
 
   a {
-    color: core.$link;
+    color: core.$utility-500;
     font-size: 1.7rem;
     font-weight: 400;
     line-height: 1.2;
     text-decoration: none;
 
     &:hover {
-      color: core.$link-hover;
+      background-color: transparent;
+      color: core.$utility-600;
       text-decoration: none;
 
       &::before {

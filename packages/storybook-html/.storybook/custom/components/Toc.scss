@@ -21,7 +21,7 @@
     }
 
     a.toc-link {
-      color: core.$link;
+      color: core.$utility-500;
       text-indent: -(core.$space-m);
 
       &::before {
@@ -30,7 +30,7 @@
 
       &:hover,
       &:focus {
-        color: core.$link-hover;
+        color: core.$utility-600;
       }
     }
 
@@ -63,7 +63,7 @@
         padding-right: core.$space-m;
         text-decoration: none;
         transition: all 0.125s ease-in;
-        color: core.$text;
+        color: core.$grey-900;
 
         &::before {
           width: core.$space-xs;
@@ -71,7 +71,7 @@
 
         &:hover,
         &:focus {
-          color: core.$text;
+          color: core.$grey-900;
         }
       }
 

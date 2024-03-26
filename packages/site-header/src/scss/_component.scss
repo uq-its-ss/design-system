@@ -4,7 +4,7 @@
 @use "global" as *;
 
 .uq-site-header {
-  color: core.$text;
+  color: core.$grey-900;
   box-sizing: border-box;
   font-family: core.$font-body;
   font-size: core.$font-size-m;
@@ -53,6 +53,7 @@
     &:focus {
       color: core.$purple-500;
       text-decoration: none;
+      background-color: transparent;
     }
   }
 
@@ -74,10 +75,11 @@
     &:hover {
       background-color: core.$white;
       color: core.$purple-500;
+      background-color: transparent;
     }
 
     &:focus {
-      outline: 2px solid core.$link;
+      outline: 2px solid core.$utility-500;
       outline-offset: 0;
     }
 
@@ -137,6 +139,7 @@
       &:focus {
         // background-color: $nav-primary-active-bg;
         text-decoration: underline;
+        background-color: transparent;
 
         @media #{core.$screen-lg-up} {
           outline: 0 none;
@@ -370,6 +373,6 @@
 }
 
 .uq-site-header__navigation .uq-site-header__navigation__list-link:focus {
-  outline: 2px solid core.$link;
+  outline: 2px solid core.$utility-500;
   outline-offset: 0;
 }

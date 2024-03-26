@@ -14,7 +14,7 @@
   background-color: core.$white;
   border: 1px solid core.$grey-200;
   border-radius: core.$space-xs;
-  color: core.$text;
+  color: core.$grey-900;
   line-height: core.$space-l;
   overflow-wrap: break-word;
   word-wrap: break-word;
@@ -33,6 +33,7 @@
 
     &:hover,
     &:focus {
+      background-color: transparent;
       box-shadow: 0 core.$space-s core.$space-m rgba(core.$grey-900, 0.15);
     }
   }
@@ -212,12 +213,13 @@
 
 // This should be replaced with a component specfic class or removed and documented as a body package dependancy for usage with cards.
 .text--link {
-  color: core.$link;
+  color: core.$purple-500;
   text-decoration: none;
   transition: 0.2s color;
 
   &:hover {
-    color: core.$link;
+    background-color: core.$purple-500;
+    color: core.$white;
     text-decoration: underline;
   }
 }

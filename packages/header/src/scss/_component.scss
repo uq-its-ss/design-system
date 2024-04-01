@@ -543,6 +543,13 @@
     display: block;
     padding: core.$space-m core.$space-none;
     color: core.$purple-500;
+    font-weight: core.$font-weight-normal;
+    text-decoration: none;
+    
+    &:hover {
+      background-color: transparent;
+      text-decoration: underline;
+    }
   }
 
   .megamenu__heading {
@@ -570,6 +577,12 @@
           padding-top: core.$space-s;
           color: core.$purple-500;
           text-decoration: none;
+          font-weight: core.$font-weight-normal;
+
+          &:hover {
+            background-color: transparent;
+            text-decoration: underline;
+          }
         }
       }
     }

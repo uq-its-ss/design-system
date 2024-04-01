@@ -63,7 +63,7 @@ export const DefaultCardWithLink = {
               </div>
             </div>
             <div class="uq-card__actions">
-              <a class="text--link" href="#">Learn more</a>
+              <a href="#">Learn more</a>
             </div>
           </div>
         </div>
@@ -140,7 +140,7 @@ export const DefaultCardNoImage = {
               </div>
             </div>
             <div class="uq-card__actions">
-              <a class="text--link" href="#">Learn more</a>
+              <a href="#">Learn more</a>
             </div>
           </div>
         </div>
@@ -154,7 +154,7 @@ export const DefaultCardNoImage = {
               </div>
             </div>
             <div class="uq-card__actions">
-              <a class="text--link" href="#">Learn more</a>
+              <a href="#">Learn more</a>
             </div>
           </div>
         </div>
@@ -209,7 +209,7 @@ export const DefaultCardNoImageShaded = {
               </div>
             </div>
             <div class="uq-card__actions">
-              <a class="text--link" href="#">Learn more</a>
+              <a href="#">Learn more</a>
             </div>
           </div>
         </div>
@@ -223,7 +223,7 @@ export const DefaultCardNoImageShaded = {
               </div>
             </div>
             <div class="uq-card__actions">
-              <a class="text--link" href="#">Learn more</a>
+              <a href="#">Learn more</a>
             </div>
           </div>
         </div>
@@ -377,7 +377,7 @@ export const DefaultCardImage = {
               </div>
             </div>
             <div class="uq-card__actions">
-              <a class="text--link" href="#">Learn more</a>
+              <a href="#">Learn more</a>
             </div>
           </div>
         </div>
@@ -396,7 +396,7 @@ export const DefaultCardImage = {
               </div>
             </div>
             <div class="uq-card__actions">
-              <a class="text--link" href="#">Learn more</a>
+              <a href="#">Learn more</a>
             </div>
           </div>
         </div>
@@ -481,7 +481,7 @@ export const DefaultCard1Col = {
               </div>
             </div>
             <div class="uq-card__actions">
-              <a class="text--link" href="#">Learn more</a>
+              <a href="#">Learn more</a>
             </div>
           </div>
         </div>
@@ -514,7 +514,7 @@ export const DefaultCard2Col = {
               </div>
             </div>
             <div class="uq-card__actions">
-              <a class="text--link" href="#">Learn more</a>
+              <a href="#">Learn more</a>
             </div>
           </div>
         </div>
@@ -536,7 +536,7 @@ export const DefaultCard2Col = {
               </div>
             </div>
             <div class="uq-card__actions">
-              <a class="text--link" href="#">Learn more</a>
+              <a href="#">Learn more</a>
             </div>
           </div>
         </div>
@@ -569,7 +569,7 @@ export const DefaultCard3Col = {
               </div>
             </div>
             <div class="uq-card__actions">
-              <a class="text--link" href="#">Learn more</a>
+              <a href="#">Learn more</a>
             </div>
           </div>
         </div>
@@ -591,7 +591,7 @@ export const DefaultCard3Col = {
               </div>
             </div>
             <div class="uq-card__actions">
-              <a class="text--link" href="#">Learn more</a>
+              <a href="#">Learn more</a>
             </div>
           </div>
         </div>
@@ -613,7 +613,7 @@ export const DefaultCard3Col = {
               </div>
             </div>
             <div class="uq-card__actions">
-              <a class="text--link" href="#">Learn more</a>
+              <a href="#">Learn more</a>
             </div>
           </div>
         </div>
@@ -646,7 +646,7 @@ export const DefaultCard4Col = {
               </div>
             </div>
             <div class="uq-card__actions">
-              <a class="text--link" href="#">Learn more</a>
+              <a href="#">Learn more</a>
             </div>
           </div>
         </div>
@@ -668,7 +668,7 @@ export const DefaultCard4Col = {
               </div>
             </div>
             <div class="uq-card__actions">
-              <a class="text--link" href="#">Learn more</a>
+              <a href="#">Learn more</a>
             </div>
           </div>
         </div>
@@ -690,7 +690,7 @@ export const DefaultCard4Col = {
               </div>
             </div>
             <div class="uq-card__actions">
-              <a class="text--link" href="#">Learn more</a>
+              <a href="#">Learn more</a>
             </div>
           </div>
         </div>
@@ -712,7 +712,7 @@ export const DefaultCard4Col = {
               </div>
             </div>
             <div class="uq-card__actions">
-              <a class="text--link" href="#">Learn more</a>
+              <a href="#">Learn more</a>
             </div>
           </div>
         </div>

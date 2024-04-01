@@ -5,7 +5,7 @@ import "@uqds/tabs/src/scss/main.scss";
 import "@uqds/icon/src/scss/main.scss";
 
 export default {
-  title: "Components/Hero basic",
+  title: "Components/Heros/Hero basic",
   parameters: {
     layout: "fullscreen",
   },

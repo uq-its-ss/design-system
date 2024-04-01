@@ -6,7 +6,7 @@ import sideNavSingleLevelHTML from "./side-nav.html";
 import sideNavMultiLevelHTML from "./side-nav-multi-level.html";
 
 export default {
-  title: "Components/Side nav",
+  title: "Deprecated/Side nav",
   parameters: {
     layout: "padded",
     previewTabs: {

@@ -944,6 +944,10 @@ export default [
     category: "standard",
   },
   {
+    name: "arrow-right",
+    category: "standard",
+  },
+  {
     name: "arrow-up-1",
     category: "standard",
   },

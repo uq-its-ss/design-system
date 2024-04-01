@@ -67,7 +67,7 @@ export const Container = {
         description
           ? `
       <div class="uq-section__description">
-        <p>${description}</p>
+        ${description}
       </div>`
           : ""
       }

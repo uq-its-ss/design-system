@@ -4,7 +4,7 @@ import "@uqds/button/src/scss/main.scss";
 import classNames from "classnames";
 
 export default {
-  title: "Components/Hero",
+  title: "Components/Heros/Hero",
   parameters: {
     layout: "fullscreen",
   },
@@ -27,12 +27,12 @@ export default {
     image: {
       control: "select",
       options: [
-        "hero-example-1.jpg",
-        "hero-example-2.jpg",
-        "hero-example-3.jpg",
-        "hero-example-4.jpg",
-        "hero-example-5.jpg",
-        "hero-example-6.jpg",
+        "/images/hero/hero-example-1.jpg",
+        "/images/hero/hero-example-2.jpg",
+        "/images/hero/hero-example-3.jpg",
+        "/images/hero/hero-example-4.jpg",
+        "/images/hero/hero-example-5.jpg",
+        "/images/hero/hero-example-6.jpg",
       ],
     },
   },
@@ -46,7 +46,7 @@ export const Hero = {
     title: "Title",
     description: "Description",
     button: "Button",
-    image: "hero-example-2.jpg",
+    image: "/images/hero/hero-example-2.jpg",
   },
   render: ({ light, large, title, description, button, image }) => `
 <div class="${classNames("uq-hero", {
@@ -54,7 +54,7 @@ export const Hero = {
     "uq-hero--large": large,
   })}">
   <div class="uq-hero__image">
-    <img src="/images/hero/${image}" alt="" role="presentation" />
+    <img src="${image}" alt="" role="presentation" />
   </div>
   <div class="uq-container">
     <div class="uq-hero__content">
@@ -86,7 +86,7 @@ export const Home = {
     description:
       "Reduced fees and online study available across many of our postgraduate degrees.",
     button: "Explore programs",
-    image: "hero-example-1.jpg",
+    image: "/images/hero/hero-example-1.jpg",
   },
 };
 
@@ -100,7 +100,7 @@ export const Level1 = {
     description:
       "Reduced fees and online study available across many of our postgraduate degrees.",
     button: "",
-    image: "hero-example-3.jpg",
+    image: "/images/hero/hero-example-3.jpg",
   },
 };
 
@@ -114,6 +114,6 @@ export const Level2 = {
     description:
       "Events for the UQ community, including the public, industry, researchers, staff and students.",
     button: "",
-    image: "hero-example-4.jpg",
+    image: "/images/hero/hero-example-4.jpg",
   },
 };

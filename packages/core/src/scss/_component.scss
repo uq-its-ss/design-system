@@ -8,5 +8,9 @@ html {
   color: $grey-900;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* global setting for letter-spacing. implemented via wildcard to avoid form elements not inheriting the style */
+* {
   letter-spacing: $letter-spacing;
 }

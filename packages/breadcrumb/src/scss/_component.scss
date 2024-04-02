@@ -50,7 +50,8 @@
 
     &:last-of-type {
       .uq-breadcrumb__link {
-        max-width: none;
+        max-width: 650px;
+        text-decoration: none;
       }
     }
   }

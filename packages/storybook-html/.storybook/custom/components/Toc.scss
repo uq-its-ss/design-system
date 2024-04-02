@@ -2,40 +2,35 @@
 @use "tocbot/src/scss/tocbot";
 
 // tocbot style overrides
-.uqds-toc {
-  box-sizing: border-box;
-  background-color: core.$white;
-  padding: core.$space-xl core.$space-none core.$space-none core.$space-none;
-  margin-bottom: core.$space-m;
+.toc-wrapper {
+    
+  .toc-list {
 
-  &__toc {
-    font-size: core.$font-size-s;
-    margin-left: -(core.$space-s);
+    .toc-list-item {
 
-    .toc-list {
-      padding-left: core.$space-s;
+      a.toc-link {
 
-      &-item {
-        margin: core.$space-xs core.$space-none;
+        &::before {
+          width: 0;
+        }
+
+        &:hover,
+        &:focus {
+          background-color: transparent;
+          text-decoration: underline;
+        }
       }
     }
 
-    a.toc-link {
-      color: core.$utility-500;
-      text-indent: -(core.$space-m);
+    .toc-list-item.is-active-li {
 
       &::before {
-        width: 0;
+        border-left: solid 2px core.$purple-500;
       }
 
-      &:hover,
-      &:focus {
-        color: core.$utility-600;
+      & > a {
+        color: core.$purple-500;
       }
-    }
-
-    .is-active-link {
-      font-weight: core.$font-weight-normal;
     }
   }
 }

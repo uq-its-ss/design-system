@@ -3,10 +3,10 @@ import { DocsContainer } from "@storybook/blocks";
 import tocbot from "tocbot";
 
 const tocConfiguration = {
-  tocSelector: ".js-toc",
+  tocSelector: ".toc-wrapper",
   contentSelector: ".sbdocs-content",
   headingSelector:
-    "h2.sbdocs-h2, h3.sbdocs-h3, h4.sbdocs-h4, h5.sbdocs-h5, h6.sbdocs-h6",
+    "h2, h3, h4, h5, h6",
 };
 
 const TocDocs = (props) => {

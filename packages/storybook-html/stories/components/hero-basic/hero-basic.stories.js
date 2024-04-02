@@ -1,16 +1,13 @@
+import classNames from "classnames";
 import "@uqds/layout/src/scss/main.scss";
 import "@uqds/hero/src/scss/main.scss";
 import "@uqds/tabs/src/scss/main.scss";
 import "@uqds/icon/src/scss/main.scss";
-import classNames from "classnames";
 
 export default {
-  title: "Components/Hero basic",
+  title: "Components/Heros/Hero basic",
   parameters: {
     layout: "fullscreen",
-    previewTabs: {
-      canvas: { hidden: false },
-    },
   },
   argTypes: {
     eyebrow: {
@@ -105,6 +102,7 @@ export const HeroBasic = {
 };
 
 export const Basic = {
+  ...HeroBasic,
   name: "Basic",
   args: {
     eyebrow: "Step 1 of 8",
@@ -113,10 +111,10 @@ export const Basic = {
     image: "none",
     tabs: [],
   },
-  render: HeroBasic.render,
 };
 
 export const Program = {
+  ...HeroBasic,
   name: "Home",
   args: {
     eyebrow: "Bachelors of",
@@ -125,10 +123,10 @@ export const Program = {
     image: "hero-basic-example-3.jpg",
     tabs: ["Overview", "Majors", "Fees and scholarships", "How to apply"],
   },
-  render: HeroBasic.render,
 };
 
 export const Plan = {
+  ...HeroBasic,
   name: "Plan",
   args: {
     eyebrow: "Major",
@@ -137,5 +135,4 @@ export const Plan = {
     image: "hero-basic-example-2.jpg",
     tabs: ["Overview", "Study details"],
   },
-  render: HeroBasic.render,
 };

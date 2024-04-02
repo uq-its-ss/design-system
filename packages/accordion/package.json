@@ -1,6 +1,6 @@
 {
   "name": "@uqds/accordion",
-  "version": "1.1.0-alpha.1",
+  "version": "1.1.0-alpha.4",
   "description": "Accordion component",
   "keywords": [
     "uqds",
@@ -22,14 +22,17 @@
   },
   "homepage": "https://github.com/uq-its-ss/design-system#readme",
   "license": "ISC",
-  "main": "src/js/accordion.js",
-  "directories": {
-    "lib": "src"
+  "main": "dist/js/uqds.js",
+  "module": "dist/mjs/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/mjs/index.js",
+      "require": "./dist/js/uqds.js"
+    },
+    "./src/js/*": "./src/js/*.js",
+    "./src/scss/*": "./src/scss/*"
   },
-  "files": [
-    "src/*",
-    "dist/*"
-  ],
+  "style": "dist/css/main.css",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/uq-its-ss/design-system.git"
@@ -43,7 +46,7 @@
   },
   "dependencies": {
     "@uqds/core": "^1.2.0-alpha.0",
-    "@uqds/icon": "^0.0.15-alpha.2"
+    "@uqds/icon": "^0.0.15-alpha.4"
   },
   "devDependencies": {
     "@testing-library/dom": "^9.3.3",

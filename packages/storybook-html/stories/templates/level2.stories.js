@@ -4,16 +4,13 @@ import { footer } from "../components/footer/footer.stories";
 import { Breadcrumb } from "../components/breadcrumb/breadcrumb.stories";
 import { Level2 as Hero } from "../components/hero/hero.stories";
 import { LocalNav } from "../components/navigation/local-nav/local-nav.stories";
+import "@uqds/layout/src/scss/main.scss";
 
 export default {
   title: "Templates/Level 2",
   parameters: {
     layout: "fullscreen",
-    previewTabs: {
-      canvas: { hidden: false },
-      "storybook/docs/panel": { hidden: true },
-    },
-    viewMode: "story",
+    options: { showPanel: false },
   },
   argTypes: {
     showGrid: {

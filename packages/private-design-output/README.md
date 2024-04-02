@@ -22,15 +22,5 @@ cd [path to repo...]/design-system/packages/private-design-output
 From this directory, you can run all the tasks:
 
 ```bash
-gulp
-```
-
-Or, you can run individual tasks:
-
-```bash
-gulp compileSCSS
-gulp exportFontFiles
-gulp exportImages
-gulp exportKitchenSink
-gulp bundleJS
+npm run prepare
 ```

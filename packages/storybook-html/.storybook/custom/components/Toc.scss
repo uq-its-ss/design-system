@@ -3,13 +3,9 @@
 
 // tocbot style overrides
 .toc-wrapper {
-    
   .toc-list {
-
     .toc-list-item {
-
       a.toc-link {
-
         &::before {
           width: 0;
         }
@@ -23,7 +19,6 @@
     }
 
     .toc-list-item.is-active-li {
-
       &::before {
         border-left: solid 2px core.$purple-500;
       }

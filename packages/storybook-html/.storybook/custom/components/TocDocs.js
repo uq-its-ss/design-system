@@ -5,8 +5,7 @@ import tocbot from "tocbot";
 const tocConfiguration = {
   tocSelector: ".toc-wrapper",
   contentSelector: ".sbdocs-content",
-  headingSelector:
-    "h2, h3, h4, h5, h6",
+  headingSelector: "h2, h3, h4, h5, h6",
 };
 
 const TocDocs = (props) => {

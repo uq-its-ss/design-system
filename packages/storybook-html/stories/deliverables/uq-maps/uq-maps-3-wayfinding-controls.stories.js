@@ -57,7 +57,7 @@ export const wayfindingControlWorking = {
   render: () => {
     useEffect(() => {
       const circularProgress = new MDCCircularProgress(
-        document.querySelector("#wayfindingProgressIndicator")
+        document.querySelector("#wayfindingProgressIndicator"),
       );
       circularProgress.determinate = false;
       circularProgress.open();

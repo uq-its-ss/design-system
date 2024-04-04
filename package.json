@@ -52,7 +52,7 @@
     "jsdom": "^24.0.0",
     "lerna": "^6.6.2",
     "msw": "^2.2.1",
-    "prettier": "2.8.3",
+    "prettier": "3.2.5",
     "puppeteer": "^19.5.2",
     "reg-keygen-git-hash-plugin": "^0.12.1",
     "reg-notify-github-with-api-plugin": "^0.12.1",

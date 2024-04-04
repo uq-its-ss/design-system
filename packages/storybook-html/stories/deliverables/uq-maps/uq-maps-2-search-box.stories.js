@@ -84,7 +84,7 @@ export const searchFieldWorking = {
   render: () => {
     useEffect(() => {
       const circularProgress = new MDCCircularProgress(
-        document.querySelector("#searchProgressIndicator")
+        document.querySelector("#searchProgressIndicator"),
       );
       circularProgress.determinate = false;
       circularProgress.open();

@@ -128,7 +128,10 @@
     height: 0;
     overflow: hidden;
     visibility: hidden;
-    transition: height 0.25s, padding-top 0.25s, padding-bottom 0.25s;
+    transition:
+      height 0.25s,
+      padding-top 0.25s,
+      padding-bottom 0.25s;
 
     &--open {
       height: auto;
@@ -333,7 +336,10 @@
         text-decoration: none;
         text-indent: 0;
         top: calc(50% - 1.375rem);
-        transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+        transition:
+          color 0.2s,
+          background-color 0.2s,
+          border-color 0.2s;
         width: 2.75rem;
 
         &:hover {

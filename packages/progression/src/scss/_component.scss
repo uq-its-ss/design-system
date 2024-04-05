@@ -73,7 +73,7 @@
   &__step-label {
     display: none;
     @media (min-width: 640px) {
-      color: core.$text;
+      color: core.$grey-900;
       display: block;
       line-height: 1.2;
       position: absolute;

@@ -1,0 +1,225 @@
+@use "@uqds/core/src/scss/global" as core;
+@use "global" as *;
+
+// Card Default
+.uq-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  font-family: core.$font-body;
+  font-size: core.$font-size-m;
+  font-weight: core.$font-weight-normal;
+  line-height: core.$line-height;
+  height: 100%;
+  background-color: core.$white;
+  border: 1px solid core.$grey-200;
+  border-radius: core.$space-xs;
+  color: core.$grey-900;
+  line-height: core.$space-l;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+
+  // Link that wraps the whole card
+  &__link {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-indent: -1000%;
+    box-shadow: 0 core.$space-xs core.$space-xs rgba(core.$grey-900, 0.05);
+    transition: all ease 0.25s;
+    z-index: 10;
+
+    &:hover,
+    &:focus {
+      background-color: transparent;
+      box-shadow: 0 core.$space-s core.$space-m rgba(core.$grey-900, 0.15);
+    }
+  }
+
+  &__image-wrapper {
+    max-height: 190px;
+    overflow: hidden;
+
+    @media #{core.$screen-md-up} {
+      max-height: 15rem;
+    }
+  }
+  &__image {
+    position: relative;
+    padding-bottom: 70%;
+    overflow: hidden;
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      transform: translate(-50%, -50%);
+      -o-object-fit: cover;
+      object-fit: cover;
+      z-index: 0;
+    }
+  }
+
+  &__content-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  &__content {
+    flex-grow: 1;
+    padding: core.$space-l;
+
+    :last-child .uq-card__title {
+      margin-bottom: core.$space-none;
+    }
+  }
+
+  &__header {
+    :last-child {
+      margin: core.$space-none core.$space-none core.$space-s;
+    }
+  }
+
+  &__body {
+    p {
+      margin-top: 0;
+    }
+    p:last-child {
+      margin-bottom: core.$space-none;
+    }
+  }
+
+  &__actions {
+    padding: core.$space-none core.$space-l core.$space-l;
+
+    p:last-child {
+      margin-bottom: core.$space-none;
+    }
+  }
+
+  &__title {
+    font-size: core.$font-size-xl;
+    color: core.$grey-900;
+    margin: core.$space-none core.$space-none core.$space-s;
+
+    @media #{core.$screen-md-up} {
+      font-size: core.$font-size-xxl;
+    }
+
+    &-super {
+      font-size: core.$font-size-s;
+      font-weight: 500;
+      color: core.$purple-light;
+      text-transform: uppercase;
+      margin: core.$space-none core.$space-none core.$space-s;
+
+      @media #{core.$screen-md-up} {
+        font-size: core.$font-size-m;
+      }
+
+      &--grey {
+        font-weight: 400;
+        color: core.$grey-800;
+      }
+    }
+  }
+
+  // Shaded
+  &--shaded {
+    background-color: core.$grey-50;
+  }
+}
+
+/* Additional style rules */
+.uq-grid {
+  // On smaller viewports, Story & Event cards when > 3 renders as lists
+  @media #{core.$screen-md-down} {
+    &__col {
+      // When there are 3 items
+      @include with-count(3) {
+        @include card-list-style();
+      }
+
+      // When there are 4 items
+      @include with-count(4) {
+        @include card-list-style();
+      }
+    }
+  }
+
+  // Full width cards
+  &__col--md-8,
+  &__col--xl-12 {
+    .uq-card {
+      @media #{core.$screen-md-up} {
+        flex-direction: row;
+      }
+
+      &__image-wrapper {
+        min-width: 100%;
+        overflow: hidden;
+
+        @media #{core.$screen-md-up} {
+          min-width: 50%;
+          max-height: 100%;
+        }
+      }
+      &__image {
+        padding-bottom: 70%;
+
+        @media #{core.$screen-md-up} {
+          min-height: 100%;
+          padding-bottom: 0%;
+        }
+      }
+      &__content-wrapper {
+        min-width: 100%;
+
+        @media #{core.$screen-md-up} {
+          min-width: 50%;
+        }
+      }
+      &__content {
+        padding: core.$space-l;
+
+        @media #{core.$screen-md-up} {
+          padding: core.$space-xxxxl core.$space-xxxxl core.$space-l;
+        }
+      }
+      &__body {
+        p {
+          @include truncate-card-1col-body-text;
+        }
+      }
+
+      &__actions {
+        padding: core.$space-none core.$space-l core.$space-l;
+
+        @media #{core.$screen-md-up} {
+          padding: core.$space-none core.$space-xxxxl core.$space-xxxxl;
+        }
+      }
+    }
+  }
+}
+
+// Set height of card to not equalise
+.height-non-equalised .uq-card {
+  height: auto;
+}
+
+// This should be replaced with a component specfic class or removed and documented as a body package dependancy for usage with cards.
+.text--link {
+  color: core.$purple-500;
+  text-decoration: none;
+  transition: 0.2s color;
+
+  &:hover {
+    background-color: core.$purple-500;
+    color: core.$white;
+    text-decoration: underline;
+  }
+}

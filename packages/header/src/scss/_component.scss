@@ -348,6 +348,7 @@
     color: white;
     padding: core.$space-m core.$space-l;
     text-decoration: none;
+    font-weight: core.$font-weight-normal;
 
     @media #{core.$screen-lg-up} {
       font-size: core.$font-size-s;
@@ -356,6 +357,8 @@
 
     &:hover {
       color: #d4c8de;
+      text-decoration: underline;
+      background-color: transparent;
       text-decoration: underline;
     }
   }
@@ -543,6 +546,13 @@
     display: block;
     padding: core.$space-m core.$space-none;
     color: core.$purple-500;
+    font-weight: core.$font-weight-normal;
+    text-decoration: none;
+
+    &:hover {
+      background-color: transparent;
+      text-decoration: underline;
+    }
   }
 
   .megamenu__heading {
@@ -570,6 +580,12 @@
           padding-top: core.$space-s;
           color: core.$purple-500;
           text-decoration: none;
+          font-weight: core.$font-weight-normal;
+
+          &:hover {
+            background-color: transparent;
+            text-decoration: underline;
+          }
         }
       }
     }
@@ -765,7 +781,7 @@ body.no-scroll {
   }
 
   .uq-header__newglobal-nav-parent {
-    font-weight: 500;
+    font-weight: core.$font-weight-medium;
   }
 
   .uq-header__newglobal-nav-item {

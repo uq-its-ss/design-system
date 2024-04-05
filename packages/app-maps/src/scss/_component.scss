@@ -1,9 +1,11 @@
+@use "_build/icons-emit";
 @use "@uqds/core/src/scss/global" as core;
 @use "@uqds/body/src/scss/global" as body;
 @use "@material/circular-progress/mdc-circular-progress";
 @use "@material/circular-progress/mixins" as mdc-circular-progress-mixins;
 @use "global" as *;
-@use "icons" as *;
+
+@include icon-base;
 
 $-icon-width: 1.75rem;
 $-icon-height: $-icon-width;
@@ -124,7 +126,7 @@ $-result-icon-spacing: $-icon-spacing;
       @extend %uq-maps__primary-text;
 
       appearance: none;
-      background-image: url(get-icon("ui--search"));
+      background-image: url(get-icon("ui--search", core.$purple-500));
       background-position: core.$space-s +
         ($-icon-button-width - $-icon-button-icon-width) * 0.5 center;
       background-color: transparent;
@@ -160,7 +162,7 @@ $-result-icon-spacing: $-icon-spacing;
     }
 
     &__back {
-      background-image: url(get-icon("ui--arrow-left"));
+      background-image: url(get-icon("ui--arrow-left", core.$purple-500));
       margin-left: core.$space-s;
 
       &:hover {
@@ -172,7 +174,7 @@ $-result-icon-spacing: $-icon-spacing;
     }
 
     &__clear {
-      background-image: url(get-icon("ui--close"));
+      background-image: url(get-icon("ui--close", core.$purple-500));
       margin-right: core.$space-s;
 
       &:hover {
@@ -314,7 +316,7 @@ $-result-icon-spacing: $-icon-spacing;
     }
 
     &__back {
-      background-image: url(get-icon("ui--arrow-left"));
+      background-image: url(get-icon("ui--arrow-left", core.$purple-500));
 
       &:hover {
         background-image: url(get-icon(
@@ -325,7 +327,7 @@ $-result-icon-spacing: $-icon-spacing;
     }
 
     &__swap {
-      background-image: url(get-icon("ui--swap"));
+      background-image: url(get-icon("ui--swap", core.$purple-500));
 
       &:hover {
         background-image: url(get-icon(
@@ -372,7 +374,7 @@ $-result-icon-spacing: $-icon-spacing;
           border-color: core.$utility-500;
 
           &::after {
-            background-image: url(get-icon("ui--check", #fff));
+            background-image: url(get-icon("ui--check", core.$white));
           }
         }
 
@@ -714,7 +716,7 @@ $-result-icon-spacing: $-icon-spacing;
       &__close {
         @extend %uq-maps__icon-button;
 
-        background-image: url(get-icon("ui--arrow-down"));
+        background-image: url(get-icon("ui--arrow-down", core.$purple-500));
       }
     }
 
@@ -767,7 +769,7 @@ $-result-icon-spacing: $-icon-spacing;
     $icon-size: 1.75rem;
 
     appearance: none;
-    background-image: url(get-icon("logo--uq-shield"));
+    background-image: url(get-icon("logo--uq-shield", core.$purple-500));
     background-size: $icon-size;
     background-color: transparent;
     background-repeat: no-repeat;

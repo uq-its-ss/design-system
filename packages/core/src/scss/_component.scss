@@ -5,7 +5,12 @@ html {
   font-family: $font-body;
   font-weight: $font-weight-normal;
   line-height: $line-height;
-  color: $text;
+  color: $grey-900;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* global setting for letter-spacing. implemented via wildcard to avoid form elements not inheriting the style */
+* {
+  letter-spacing: $letter-spacing;
 }

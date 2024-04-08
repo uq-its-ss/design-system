@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-alpha.12](https://github.com/uq-its-ss/design-system/compare/storybook-html@1.0.0-alpha.11...storybook-html@1.0.0-alpha.12) (2024-04-08)
+
+### Bug Fixes
+
+- truncate last breadcrumb link to approx 65 characters ([#508](https://github.com/uq-its-ss/design-system/issues/508)) ([a3664f1](https://github.com/uq-its-ss/design-system/commit/a3664f119b507dcad6b42904b9f36f54e1a93b24))
+
 # [1.0.0-alpha.11](https://github.com/uq-its-ss/design-system/compare/storybook-html@1.0.0-alpha.10...storybook-html@1.0.0-alpha.11) (2024-04-08)
 
 ### Features

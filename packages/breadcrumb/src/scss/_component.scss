@@ -72,12 +72,14 @@
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: none;
+  font-weight: core.$font-weight-normal;
 
   @media #{core.$screen-md-up} {
     max-width: 9rem;
   }
 
   &:hover {
+    background-color: transparent;
     color: core.$grey-700;
   }
 }

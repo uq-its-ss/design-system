@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-alpha.13](https://github.com/uq-its-ss/design-system/compare/storybook-html@1.0.0-alpha.12...storybook-html@1.0.0-alpha.13) (2024-04-08)
+
+### Bug Fixes
+
+- ITADDSD-53170: Further card fixes ([#509](https://github.com/uq-its-ss/design-system/issues/509)) ([01a9852](https://github.com/uq-its-ss/design-system/commit/01a9852d521dbf8c11bb705557bb26638f1540e7))
+
 # [1.0.0-alpha.12](https://github.com/uq-its-ss/design-system/compare/storybook-html@1.0.0-alpha.11...storybook-html@1.0.0-alpha.12) (2024-04-08)
 
 ### Bug Fixes

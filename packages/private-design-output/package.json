@@ -1,6 +1,6 @@
 {
   "name": "private-design-output",
-  "version": "0.0.15-alpha.14",
+  "version": "0.0.15-alpha.15",
   "description": "Render style kits for UQ clients",
   "private": true,
   "author": {
@@ -34,7 +34,7 @@
     "@uqds/blockquote": "^0.1.0-alpha.1",
     "@uqds/body": "^0.1.0-alpha.1",
     "@uqds/breadcrumb": "^2.0.0-alpha.6",
-    "@uqds/button": "^0.1.0-alpha.2",
+    "@uqds/button": "^0.1.0-alpha.3",
     "@uqds/card": "^0.1.0-alpha.2",
     "@uqds/core": "^1.2.0-alpha.1",
     "@uqds/footer": "^1.2.0-alpha.5",
@@ -44,7 +44,7 @@
     "@uqds/grid-menu": "^0.1.0-alpha.3",
     "@uqds/header": "^1.2.0-alpha.4",
     "@uqds/header-legacy": "^0.1.0-alpha.3",
-    "@uqds/hero": "^1.0.0-alpha.3",
+    "@uqds/hero": "^1.0.0-alpha.4",
     "@uqds/icon": "^0.0.15-alpha.5",
     "@uqds/layout": "^1.0.0-alpha.8",
     "@uqds/lists": "^0.1.0-alpha.1",

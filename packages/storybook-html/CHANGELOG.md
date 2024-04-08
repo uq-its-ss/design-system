@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-alpha.11](https://github.com/uq-its-ss/design-system/compare/storybook-html@1.0.0-alpha.10...storybook-html@1.0.0-alpha.11) (2024-04-08)
+
+### Features
+
+- [ITSADSSD-54515] Button style updates ([#481](https://github.com/uq-its-ss/design-system/issues/481)) ([0501bc8](https://github.com/uq-its-ss/design-system/commit/0501bc8f5109b5331d359c38189cae147da7805d))
+
 # [1.0.0-alpha.10](https://github.com/uq-its-ss/design-system/compare/storybook-html@1.0.0-alpha.9...storybook-html@1.0.0-alpha.10) (2024-04-05)
 
 ### Bug Fixes

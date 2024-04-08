@@ -1,5 +1,6 @@
 @use "@uqds/core/src/scss/global" as core;
 @use "@uqds/icon/src/scss/global" as icon;
+@use "@uqds/layout/src/scss/global" as layout;
 
 .uq-card {
   position: relative;
@@ -14,7 +15,7 @@
     outline-offset: -1px;
   }
 
-  &:hover {
+  &:has(a:hover) {
     background: core.$grey-50;
 
     & .uq-card__content::after {
@@ -31,12 +32,10 @@
 
   &::after {
     content: "";
-    height: 24px;
+    height: calc(24px + core.$space-l);
     width: 24px;
     margin-top: auto;
-    padding-top: core.$space-l;
     position: relative;
-    box-sizing: content-box;
     background-image: url(icon.get-icon(
       "standard--arrow-right",
       core.$purple-500
@@ -49,7 +48,6 @@
   }
 }
 
-%uq-card__title,
 .uq-card__title {
   margin: 0;
   color: core.$black;
@@ -61,6 +59,7 @@
 
   & a {
     color: core.$black;
+    text-decoration: none;
 
     &::after {
       content: "";
@@ -73,6 +72,8 @@
     }
 
     &:hover {
+      color: core.$black;
+      text-decoration: underline;
       background-color: transparent;
     }
   }
@@ -134,7 +135,7 @@
       flex-direction: row;
 
       &::after {
-        padding-top: 0;
+        height: 24px;
         margin-top: 0;
         margin-left: auto;
       }
@@ -151,6 +152,27 @@
     .uq-card__icon .uq-icon::before {
       height: 40px;
       width: 40px;
+    }
+  }
+}
+
+.uq-card-grid--target-1x {
+  @container (width > #{layout.$card-grid-container-md}) {
+    & .uq-card {
+      display: flex;
+      flex-direction: row-reverse;
+      gap: var(--layout-gap);
+      align-items: center;
+    }
+
+    & .uq-card__image {
+      width: 50%;
+      height: 100%;
+    }
+
+    & .uq-card__content {
+      width: 50%;
+      padding-inline: core.$space-l 0;
     }
   }
 }

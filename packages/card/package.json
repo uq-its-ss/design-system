@@ -29,6 +29,7 @@
     "src/*",
     "dist/*"
   ],
+  "style": "dist/css/main.css",
   "scripts": {
     "prepare": "gulp -f ../../gulpfile.js --cwd=. prepare"
   },
@@ -41,6 +42,7 @@
   },
   "dependencies": {
     "@uqds/core": "^1.2.0-alpha.1",
-    "@uqds/icon": "^0.0.15-alpha.5"
+    "@uqds/icon": "^0.0.15-alpha.5",
+    "@uqds/layout": "^1.0.0-alpha.7"
   }
 }

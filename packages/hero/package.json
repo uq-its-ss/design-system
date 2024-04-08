@@ -1,6 +1,6 @@
 {
   "name": "@uqds/hero",
-  "version": "1.0.0-alpha.2",
+  "version": "1.0.0-alpha.3",
   "description": "Hero component",
   "keywords": [
     "uqds",
@@ -41,8 +41,8 @@
     "url": "https://github.com/uq-its-ss/design-system/issues"
   },
   "dependencies": {
-    "@uqds/button": "^0.1.0-alpha.1",
-    "@uqds/core": "^1.2.0-alpha.0",
-    "@uqds/grid": "^0.0.15-alpha.2"
+    "@uqds/button": "^0.1.0-alpha.2",
+    "@uqds/core": "^1.2.0-alpha.1",
+    "@uqds/grid": "^0.0.15-alpha.3"
   }
 }

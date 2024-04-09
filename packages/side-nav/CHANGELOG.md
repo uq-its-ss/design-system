@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.1.0-alpha.4](https://github.com/uq-its-ss/design-system/compare/@uqds/side-nav@0.1.0-alpha.3...@uqds/side-nav@0.1.0-alpha.4) (2024-04-08)
+
+**Note:** Version bump only for package @uqds/side-nav
+
+# [0.1.0-alpha.3](https://github.com/uq-its-ss/design-system/compare/@uqds/side-nav@0.1.0-alpha.2...@uqds/side-nav@0.1.0-alpha.3) (2024-04-05)
+
+### Bug Fixes
+
+- ITSADSSD-54682 Typography updates ([#489](https://github.com/uq-its-ss/design-system/issues/489)) ([70e842a](https://github.com/uq-its-ss/design-system/commit/70e842a1552cddc9c63452ae63bae91b380f420b))
+
 # [0.1.0-alpha.2](https://github.com/uq-its-ss/design-system/compare/@uqds/side-nav@0.1.0-alpha.1...@uqds/side-nav@0.1.0-alpha.2) (2024-04-01)
 
 **Note:** Version bump only for package @uqds/side-nav

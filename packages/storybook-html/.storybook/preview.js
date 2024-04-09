@@ -1,9 +1,16 @@
+import TocDocs from "./custom/components/TocDocs";
+import DocsHeader from "./custom/components/DocsHeader";
+import DocsPage from "./custom/components/DocsPage";
+
 import "./preview.scss";
 
 /** @type { import('@storybook/html').Preview } */
 const preview = {
   parameters: {
     docs: {
+      components: { h1: DocsHeader },
+      container: TocDocs,
+      page: DocsPage,
       toc: true, // 👈 Enables the table of contents
     },
     actions: { argTypesRegex: "^on[A-Z].*" },

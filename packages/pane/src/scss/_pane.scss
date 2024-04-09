@@ -1,4 +1,5 @@
 @use "@uqds/core/src/scss/global" as core;
+@use "@uqds/layout/src/scss/global" as layout;
 
 .uq-pane {
   height: 100%;
@@ -102,5 +103,26 @@
 
   & .uq-pane__content {
     padding: core.$space-l;
+  }
+}
+
+.uq-card-grid--target-1x {
+  @container (width > #{layout.$card-grid-container-md}) {
+    & .uq-pane {
+      display: flex;
+      flex-direction: row-reverse;
+      gap: var(--layout-gap);
+      align-items: center;
+    }
+
+    & .uq-pane__image {
+      width: 50%;
+      height: 100%;
+      margin: 0;
+    }
+
+    & .uq-pane__content {
+      width: 50%;
+    }
   }
 }

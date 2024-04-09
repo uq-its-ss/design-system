@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0-alpha.8](https://github.com/uq-its-ss/design-system/compare/@uqds/breadcrumb@2.0.0-alpha.7...@uqds/breadcrumb@2.0.0-alpha.8) (2024-04-08)
+
+**Note:** Version bump only for package @uqds/breadcrumb
+
+# [2.0.0-alpha.7](https://github.com/uq-its-ss/design-system/compare/@uqds/breadcrumb@2.0.0-alpha.6...@uqds/breadcrumb@2.0.0-alpha.7) (2024-04-08)
+
+### Bug Fixes
+
+- truncate last breadcrumb link to approx 65 characters ([#508](https://github.com/uq-its-ss/design-system/issues/508)) ([a3664f1](https://github.com/uq-its-ss/design-system/commit/a3664f119b507dcad6b42904b9f36f54e1a93b24))
+
+# [2.0.0-alpha.6](https://github.com/uq-its-ss/design-system/compare/@uqds/breadcrumb@2.0.0-alpha.5...@uqds/breadcrumb@2.0.0-alpha.6) (2024-04-05)
+
+### Bug Fixes
+
+- ITSADSSD-54682 Typography updates ([#489](https://github.com/uq-its-ss/design-system/issues/489)) ([70e842a](https://github.com/uq-its-ss/design-system/commit/70e842a1552cddc9c63452ae63bae91b380f420b))
+
 # [2.0.0-alpha.5](https://github.com/uq-its-ss/design-system/compare/@uqds/breadcrumb@2.0.0-alpha.4...@uqds/breadcrumb@2.0.0-alpha.5) (2024-04-01)
 
 **Note:** Version bump only for package @uqds/breadcrumb

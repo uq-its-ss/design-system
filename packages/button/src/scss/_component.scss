@@ -3,8 +3,8 @@
 
 /* button Default */
 .uq-button {
-  background-color: core.$link;
-  border: 2px solid core.$link;
+  background-color: core.$purple-500;
+  border: 2px solid core.$purple-500;
   border-radius: core.$space-xs;
   box-sizing: border-box;
   color: core.$white;
@@ -12,13 +12,14 @@
   display: inline-block;
   font-family: core.$roboto;
   font-size: core.$font-size-m;
-  font-weight: normal;
-  line-height: normal;
-  padding: core.$space-s core.$space-l;
+  font-weight: core.$font-weight-medium;
+  line-height: core.$line-height-ui;
+  padding: core.$space-m core.$space-l;
   position: relative;
   text-align: center;
   text-decoration: none;
-  transition: all 300ms ease-out;
+  transition: background-color 200ms ease-out, color 200ms ease-out,
+    border 200ms ease-out;
 
   *,
   *::before,
@@ -26,154 +27,39 @@
     box-sizing: border-box;
   }
 
-  &:hover,
-  &:focus {
-    background-color: core.$link-active;
-    border-color: core.$link-active;
-    color: core.$white;
+  &:hover {
+    background-color: core.$white;
+    border-color: core.$purple-500;
+    color: core.$purple-500;
     text-decoration: underline;
-  }
-
-  &.uq-button--outline {
-    background-color: transparent;
-    border-color: core.$link;
-    color: core.$link;
-
-    &:hover,
-    &:focus {
-      background-color: core.$link-active;
-      border-color: core.$link-active;
-      color: core.$white;
-    }
-  }
-
-  &.uq-button--text {
-    background-color: transparent;
-    border-color: transparent;
-    color: core.$link;
-
-    &:hover,
-    &:focus {
-      background-color: transparent;
-      border-color: transparent;
-      color: core.$link-active;
-    }
   }
 
   /* button secondary */
   &--secondary {
-    background-color: core.$grey-300;
-    border-color: core.$grey-300;
-    color: core.$text;
+    background-color: core.$white;
+    border-color: core.$purple-500;
+    color: core.$purple-500;
 
     &:hover,
     &:focus {
-      background-color: core.$grey-300;
-      border-color: core.$grey-300;
-      color: core.$text;
-    }
-
-    &.uq-button--outline {
-      background-color: transparent;
-      border-color: core.$grey-300;
-      color: core.$text;
-
-      &:hover,
-      &:focus {
-        background-color: core.$grey-500;
-        border-color: core.$grey-500;
-        color: core.$text;
-      }
-
-      &.uq-button--light {
-        color: core.$grey-500;
-        border-color: core.$grey-500;
-
-        &:hover,
-        &:focus {
-          color: core.$text;
-        }
-      }
-    }
-
-    &.uq-button--text {
-      background-color: transparent;
-      border-color: transparent;
-      color: core.$text;
-
-      &:hover,
-      &:focus {
-        background-color: transparent;
-        border-color: transparent;
-        color: core.$text;
-      }
-
-      &.uq-button--light {
-        color: core.$grey-500;
-
-        &:hover,
-        &:focus {
-          color: core.$grey-500;
-        }
-      }
+      background-color: core.$purple-500;
+      border-color: core.$purple-500;
+      color: core.$white;
     }
   }
 
   /* button purple */
-  &--purple {
-    background-color: core.$purple-500;
-    border-color: core.$purple-500;
-    color: core.$white;
+  &--tertiary {
+    background-color: core.$white;
+    border-color: core.$white;
+    color: core.$purple-500;
+    text-decoration: underline;
 
     &:hover,
     &:focus {
-      background-color: core.$purple-600;
-      border-color: core.$purple-600;
-      color: core.$white;
-    }
-
-    &.uq-button--outline {
-      background-color: transparent;
+      background-color: core.$purple-500;
       border-color: core.$purple-500;
-      color: core.$purple-500;
-
-      &:hover,
-      &:focus {
-        background-color: core.$purple-600;
-        border-color: core.$purple-600;
-        color: core.$white;
-      }
-
-      &.uq-button--light {
-        color: core.$purple-500;
-
-        &:hover,
-        &:focus {
-          color: core.$white;
-        }
-      }
-    }
-
-    &.uq-button--text {
-      background-color: transparent;
-      border-color: transparent;
-      color: core.$purple-500;
-
-      &:hover,
-      &:focus {
-        background-color: transparent;
-        border-color: transparent;
-        color: core.$purple-600;
-      }
-
-      &.uq-button--light {
-        color: core.$purple-500;
-
-        &:hover,
-        &:focus {
-          color: core.$purple-600;
-        }
-      }
+      color: core.$white;
     }
   }
 

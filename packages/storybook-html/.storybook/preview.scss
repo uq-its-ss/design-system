@@ -90,7 +90,7 @@ body {
 
   .uq-alert__title {
     /* restore original alert title styles overridden by heading styles above */
-    color: core.$text !important;
+    color: core.$grey-900 !important;
     font-weight: 500 !important;
     font-size: core.$font-size-m !important;
     margin: 0 0 core.$space-s !important;

@@ -1,6 +1,6 @@
 {
   "name": "@uqds/icon",
-  "version": "0.0.15-alpha.4",
+  "version": "0.0.15-alpha.6",
   "description": "Icon component",
   "keywords": [
     "uqds",
@@ -32,6 +32,7 @@
     "src/js/*",
     "src/scss/*"
   ],
+  "style": "dist/css/main.css",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/uq-its-ss/design-system.git"
@@ -49,7 +50,7 @@
     "url": "https://github.com/uq-its-ss/design-system/issues"
   },
   "dependencies": {
-    "@uqds/core": "^1.2.0-alpha.0"
+    "@uqds/core": "^1.2.0-alpha.1"
   },
   "devDependencies": {
     "@svgdotjs/svg.js": "^3.1.2",

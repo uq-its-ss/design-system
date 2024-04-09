@@ -33,7 +33,7 @@ export const Breadcrumb = {
           <a class="uq-breadcrumb__link" title="Major Leadership and Management Science" href="#">Major Leadership and Management Science</a>
         </li>
         <li class="uq-breadcrumb__item">
-          Current page
+          <a class="uq-breadcrumb__link" title="Current page" href="#">Current page</a>
         </li>
       </ol>
     </nav>

@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-alpha.7](https://github.com/uq-its-ss/design-system/compare/@uqds/navigation@1.0.0-alpha.6...@uqds/navigation@1.0.0-alpha.7) (2024-04-08)
+
+**Note:** Version bump only for package @uqds/navigation
+
 # [1.0.0-alpha.6](https://github.com/uq-its-ss/design-system/compare/@uqds/navigation@1.0.0-alpha.5...@uqds/navigation@1.0.0-alpha.6) (2024-04-05)
 
 ### Bug Fixes

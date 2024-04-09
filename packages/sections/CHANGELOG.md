@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.1.0-alpha.4](https://github.com/uq-its-ss/design-system/compare/@uqds/sections@0.1.0-alpha.3...@uqds/sections@0.1.0-alpha.4) (2024-04-08)
+
+### Bug Fixes
+
+- ITADDSD-53170: Further card fixes ([#509](https://github.com/uq-its-ss/design-system/issues/509)) ([01a9852](https://github.com/uq-its-ss/design-system/commit/01a9852d521dbf8c11bb705557bb26638f1540e7))
+
 # [0.1.0-alpha.3](https://github.com/uq-its-ss/design-system/compare/@uqds/sections@0.1.0-alpha.2...@uqds/sections@0.1.0-alpha.3) (2024-04-05)
 
 **Note:** Version bump only for package @uqds/sections

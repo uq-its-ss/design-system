@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-alpha.13](https://github.com/uq-its-ss/design-system/compare/storybook-html@1.0.0-alpha.12...storybook-html@1.0.0-alpha.13) (2024-04-08)
+
+### Bug Fixes
+
+- ITADDSD-53170: Further card fixes ([#509](https://github.com/uq-its-ss/design-system/issues/509)) ([01a9852](https://github.com/uq-its-ss/design-system/commit/01a9852d521dbf8c11bb705557bb26638f1540e7))
+
+# [1.0.0-alpha.12](https://github.com/uq-its-ss/design-system/compare/storybook-html@1.0.0-alpha.11...storybook-html@1.0.0-alpha.12) (2024-04-08)
+
+### Bug Fixes
+
+- truncate last breadcrumb link to approx 65 characters ([#508](https://github.com/uq-its-ss/design-system/issues/508)) ([a3664f1](https://github.com/uq-its-ss/design-system/commit/a3664f119b507dcad6b42904b9f36f54e1a93b24))
+
+# [1.0.0-alpha.11](https://github.com/uq-its-ss/design-system/compare/storybook-html@1.0.0-alpha.10...storybook-html@1.0.0-alpha.11) (2024-04-08)
+
+### Features
+
+- [ITSADSSD-54515] Button style updates ([#481](https://github.com/uq-its-ss/design-system/issues/481)) ([0501bc8](https://github.com/uq-its-ss/design-system/commit/0501bc8f5109b5331d359c38189cae147da7805d))
+
 # [1.0.0-alpha.10](https://github.com/uq-its-ss/design-system/compare/storybook-html@1.0.0-alpha.9...storybook-html@1.0.0-alpha.10) (2024-04-05)
 
 ### Bug Fixes

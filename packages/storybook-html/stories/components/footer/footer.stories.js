@@ -1,10 +1,8 @@
-import { useEffect } from "@storybook/addons";
+// import scripts
+import { accordion } from "@uqds/accordion/src/js/main";
 
 // import styles
 import "./footer.scss";
-
-// import scripts
-import accordionCreate from "@uqds/accordion/src/js/accordion";
 
 // import HTML template strings
 import footerHTML from "./footer.html";
@@ -24,10 +22,10 @@ export default {
 
 export const footer = {
   render: () => {
-    useEffect(() => {
-      new accordionCreate();
-    });
     return footerHTML;
+  },
+  play: () => {
+    new accordion();
   },
 
   name: "Footer",

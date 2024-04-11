@@ -896,10 +896,6 @@ export default [
     category: "social",
   },
   {
-    name: "social-twitter-circle",
-    category: "social",
-  },
-  {
     name: "social-wechat-circle",
     category: "social",
   },
@@ -920,11 +916,11 @@ export default [
     category: "social",
   },
   {
-    name: "social-youku-circle",
+    name: "social-you-tube-circle",
     category: "social",
   },
   {
-    name: "twitter",
+    name: "social-youku-circle",
     category: "social",
   },
   {

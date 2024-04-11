@@ -2,6 +2,7 @@ import { storyRenderer } from "../../../lib/storyRenderer";
 import { layoutDecorator } from "../../../lib/decorators";
 import * as CardStories from "../../components/card/card.stories";
 import * as PaneStories from "../../components/pane/pane.stories";
+import * as StoryCardStories from "../../components/story-card/story-card.stories";
 import "@uqds/layout/src/scss/main.scss";
 
 const {
@@ -15,6 +16,7 @@ const {
   IconShaded: PaneIcon,
   IconLarge: PaneIconLarge,
 } = storyRenderer(PaneStories);
+const { NewsCard, EventCard, StoryCard } = storyRenderer(StoryCardStories);
 
 export default {
   title: "Layout/Card grid",
@@ -176,6 +178,64 @@ export const PanesExample = {
         description: descString2,
       })}
        ${PaneTextShaded({
+         title: titleString1,
+         description: descString3,
+       })}
+    </div>
+  </div>
+</div>
+`,
+};
+
+export const StoryCardExample = {
+  render: () => `
+<div class="uq-container">
+  <div class="uq-sections">
+    <div class="uq-card-grid uq-card-grid--target-1x">
+      ${EventCard({
+        title: titleString3,
+        description: descString1,
+        image: imageUrl1,
+      })}
+    </div>
+    <div class="uq-card-grid uq-card-grid--target-2x">
+      ${StoryCard({
+        title: titleString2,
+        description: descString3,
+      })}
+      ${StoryCard({
+        title: titleString1,
+        description: descString2,
+      })}
+    </div>
+    <div class="uq-card-grid uq-card-grid--target-3x">
+      ${NewsCard({
+        title: titleString3,
+        description: descString1,
+      })}
+      ${NewsCard({
+        title: titleString2,
+        description: descString2,
+      })}
+      ${NewsCard({
+        title: titleString1,
+        description: descString3,
+      })}
+    </div>
+    <div class="uq-card-grid uq-card-grid--target-4x">
+      ${EventCard({
+        title: titleString1,
+        description: descString3,
+      })}
+      ${EventCard({
+        title: titleString2,
+        description: descString1,
+      })}
+      ${EventCard({
+        title: titleString3,
+        description: descString2,
+      })}
+       ${EventCard({
          title: titleString1,
          description: descString3,
        })}

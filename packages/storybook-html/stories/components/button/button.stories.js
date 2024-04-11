@@ -32,7 +32,7 @@ export default {
   },
 };
 
-export const Primary = {
+export const button = {
   args: {
     label: "Button",
     style: "",
@@ -41,21 +41,21 @@ export const Primary = {
   },
 };
 
-export const Secondary = {
+export const buttonSecondary = {
   args: {
     label: "Secondary",
     style: "uq-button--secondary",
   },
 };
 
-export const Tertiary = {
+export const buttonTertiary = {
   args: {
     label: "Tertiary",
     style: "uq-button--tertiary",
   },
 };
 
-export const Size = {
+export const buttonSize = {
   args: {
     buttons: [{ ...createButton.Primary }, { ...createButton.Secondary }],
     orientation: "horizontal",
@@ -70,7 +70,7 @@ export const Size = {
   },
 };
 
-export const Expanded = {
+export const buttonExpanded = {
   args: {
     expand: true,
     label: "Button",

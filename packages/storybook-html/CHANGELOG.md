@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-alpha.15](https://github.com/uq-its-ss/design-system/compare/storybook-html@1.0.0-alpha.14...storybook-html@1.0.0-alpha.15) (2024-04-11)
+
+### Bug Fixes
+
+- feat: updated twitter labels and GTM to X ([#503](https://github.com/uq-its-ss/design-system/issues/503)) ([bf388d8](https://github.com/uq-its-ss/design-system/commit/bf388d8b8ad59aac315547e840607d78a763c7d2))
+
 # [1.0.0-alpha.14](https://github.com/uq-its-ss/design-system/compare/storybook-html@1.0.0-alpha.13...storybook-html@1.0.0-alpha.14) (2024-04-10)
 
 **Note:** Version bump only for package storybook-html

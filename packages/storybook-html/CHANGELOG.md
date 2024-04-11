@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-alpha.17](https://github.com/uq-its-ss/design-system/compare/storybook-html@1.0.0-alpha.16...storybook-html@1.0.0-alpha.17) (2024-04-11)
+
+### Bug Fixes
+
+- Itsadssd 55219 remove storybook addons ([#507](https://github.com/uq-its-ss/design-system/issues/507)) ([b56b2f5](https://github.com/uq-its-ss/design-system/commit/b56b2f5e559708a4bea1edc67b933e44b56b03e2))
+
 # [1.0.0-alpha.16](https://github.com/uq-its-ss/design-system/compare/storybook-html@1.0.0-alpha.15...storybook-html@1.0.0-alpha.16) (2024-04-11)
 
 **Note:** Version bump only for package storybook-html

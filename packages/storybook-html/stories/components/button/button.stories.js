@@ -84,10 +84,10 @@ export const buttonIcon = {
   },
   render: () => {
     return `
-    <button type="button" class="uq-button uq-button--tiny"><span class="icon icon--close icon--light"></span> Tiny</button>
-    <button type="button" class="uq-button uq-button--small"><span class="icon icon--close icon--light"></span> Small</button>
-    <button type="button" class="uq-button"><span class="icon icon--close icon--light"></span> Default</button>
-    <button type="button" class="uq-button uq-button--large"><span class="icon icon--close icon--light"></span> Large</button>
+    <button type="button" class="uq-button uq-button--tiny"><span class="uq-icon uq-icon--standard--close uq-icon--light"></span> Tiny</button>
+    <button type="button" class="uq-button uq-button--small"><span class="uq-icon uq-icon--standard--close uq-icon--light""></span> Small</button>
+    <button type="button" class="uq-button"><span class="uq-icon uq-icon--standard--close uq-icon--light""></span> Default</button>
+    <button type="button" class="uq-button uq-button--large"><span class="uq-icon uq-icon--standard--close uq-icon--light""></span> Large</button>
     `;
   },
 };

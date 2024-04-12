@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0-alpha.7](https://github.com/uq-its-ss/design-system/compare/@uqds/alert@1.2.0-alpha.6...@uqds/alert@1.2.0-alpha.7) (2024-04-11)
+
+### Bug Fixes
+
+- Itsadssd 55219 remove storybook addons ([#507](https://github.com/uq-its-ss/design-system/issues/507)) ([b56b2f5](https://github.com/uq-its-ss/design-system/commit/b56b2f5e559708a4bea1edc67b933e44b56b03e2))
+
+# [1.2.0-alpha.6](https://github.com/uq-its-ss/design-system/compare/@uqds/alert@1.2.0-alpha.5...@uqds/alert@1.2.0-alpha.6) (2024-04-10)
+
+**Note:** Version bump only for package @uqds/alert
+
 # [1.2.0-alpha.5](https://github.com/uq-its-ss/design-system/compare/@uqds/alert@1.2.0-alpha.4...@uqds/alert@1.2.0-alpha.5) (2024-04-08)
 
 **Note:** Version bump only for package @uqds/alert

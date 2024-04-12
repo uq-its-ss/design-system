@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.15-alpha.21](https://github.com/uq-its-ss/design-system/compare/private-design-output@0.0.15-alpha.20...private-design-output@0.0.15-alpha.21) (2024-04-11)
+
+**Note:** Version bump only for package private-design-output
+
+## [0.0.15-alpha.20](https://github.com/uq-its-ss/design-system/compare/private-design-output@0.0.15-alpha.19...private-design-output@0.0.15-alpha.20) (2024-04-11)
+
+**Note:** Version bump only for package private-design-output
+
+## [0.0.15-alpha.19](https://github.com/uq-its-ss/design-system/compare/private-design-output@0.0.15-alpha.18...private-design-output@0.0.15-alpha.19) (2024-04-11)
+
+### Bug Fixes
+
+- feat: updated twitter labels and GTM to X ([#503](https://github.com/uq-its-ss/design-system/issues/503)) ([bf388d8](https://github.com/uq-its-ss/design-system/commit/bf388d8b8ad59aac315547e840607d78a763c7d2))
+
+## [0.0.15-alpha.18](https://github.com/uq-its-ss/design-system/compare/private-design-output@0.0.15-alpha.17...private-design-output@0.0.15-alpha.18) (2024-04-10)
+
+**Note:** Version bump only for package private-design-output
+
 ## [0.0.15-alpha.17](https://github.com/uq-its-ss/design-system/compare/private-design-output@0.0.15-alpha.16...private-design-output@0.0.15-alpha.17) (2024-04-08)
 
 **Note:** Version bump only for package private-design-output

@@ -1,4 +1,3 @@
-import { useEffect } from "@storybook/addons";
 import { MDCCircularProgress } from "@material/circular-progress";
 
 //import scss
@@ -82,14 +81,6 @@ export const searchFieldSearching = {
 
 export const searchFieldWorking = {
   render: () => {
-    useEffect(() => {
-      const circularProgress = new MDCCircularProgress(
-        document.querySelector("#searchProgressIndicator")
-      );
-      circularProgress.determinate = false;
-      circularProgress.open();
-    });
-
     return `
       <div class="uq-maps__search-field uq-maps__search-field--is-working">
         <button class="uq-maps__search-field__back">Back</button>
@@ -133,6 +124,16 @@ export const searchFieldWorking = {
         </div>
       </div>
     `;
+  },
+  play: ({ canvasElement }) => {
+    const circularProgress = canvasElement.querySelector(
+      "#searchProgressIndicator"
+    );
+    if (circularProgress) {
+      const circleProgress = new MDCCircularProgress(circularProgress);
+      circleProgress.determinate = false;
+      circleProgress.open();
+    }
   },
 
   name: "2D Search field with circular progress indicator",

@@ -19,7 +19,7 @@ Use the HTML markup provided in the example below to apply the styles from the
 provided CSS.
 
 <Canvas sourceState="hidden" withToolbar>
-  <Story of={UqMaps3WayfindingControlsStories.wayfindingControl} />
+  <Story of={UqMaps3WayfindingControlsStories.wayfindingControl} autoplay />
 </Canvas>
 
 ## 3B. With circular progress indicator
@@ -32,7 +32,10 @@ scripted behaviour for the [_Material Design_][1] progress indicator. Please see
 code.
 
 <Canvas sourceState="hidden" withToolbar>
-  <Story of={UqMaps3WayfindingControlsStories.wayfindingControlWorking} />
+  <Story
+    of={UqMaps3WayfindingControlsStories.wayfindingControlWorking}
+    autoplay
+  />
 </Canvas>
 
 [1]: https://material.io/components/progress-indicators#circular-progress-indicators

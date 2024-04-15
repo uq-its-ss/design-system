@@ -31,11 +31,8 @@ export const HeaderInterim = {
   play: ({ canvasElement }) => {
     const headerElem = canvasElement.querySelector(".uq-header");
     if (headerElem) new header(headerElem);
-    console.log("PRE DOM LOADED");
 
-    console.log("DOM LOADED");
     const menuLeftElem = document.getElementById("global-mobile-nav");
-
     const menuLeft = new SlideMenu(menuLeftElem, {
       position: "left",
       submenuLinkAfter: " ",
@@ -43,7 +40,6 @@ export const HeaderInterim = {
     });
 
     const searchToggle = document.querySelector(".nav-primary__search-toggle");
-
     searchToggle.addEventListener("click", () => {
       menuLeft.close();
     });

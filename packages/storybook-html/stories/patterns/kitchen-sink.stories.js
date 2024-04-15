@@ -1,4 +1,3 @@
-
 // import scripts
 import { header } from "@uqds/header/src/js/main";
 import { accordion } from "@uqds/accordion/src/js/main";

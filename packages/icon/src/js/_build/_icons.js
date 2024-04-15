@@ -896,7 +896,19 @@ export default [
     category: "social",
   },
   {
-    name: "social-twitter-circle",
+    name: "social-wechat-circle",
+    category: "social",
+  },
+  {
+    name: "social-weebo-circle",
+    category: "social",
+  },
+  {
+    name: "social-x-twitter-circle",
+    category: "social",
+  },
+  {
+    name: "social-x",
     category: "social",
   },
   {
@@ -904,7 +916,7 @@ export default [
     category: "social",
   },
   {
-    name: "twitter",
+    name: "social-youku-circle",
     category: "social",
   },
   {
@@ -925,6 +937,10 @@ export default [
   },
   {
     name: "arrow-right-1",
+    category: "standard",
+  },
+  {
+    name: "arrow-right",
     category: "standard",
   },
   {

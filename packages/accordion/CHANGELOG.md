@@ -3,6 +3,38 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0-alpha.7](https://github.com/uq-its-ss/design-system/compare/@uqds/accordion@1.1.0-alpha.6...@uqds/accordion@1.1.0-alpha.7) (2024-04-10)
+
+**Note:** Version bump only for package @uqds/accordion
+
+# [1.1.0-alpha.6](https://github.com/uq-its-ss/design-system/compare/@uqds/accordion@1.1.0-alpha.5...@uqds/accordion@1.1.0-alpha.6) (2024-04-08)
+
+**Note:** Version bump only for package @uqds/accordion
+
+# [1.1.0-alpha.5](https://github.com/uq-its-ss/design-system/compare/@uqds/accordion@1.1.0-alpha.4...@uqds/accordion@1.1.0-alpha.5) (2024-04-05)
+
+### Bug Fixes
+
+- ITSADSSD-54682 Typography updates ([#489](https://github.com/uq-its-ss/design-system/issues/489)) ([70e842a](https://github.com/uq-its-ss/design-system/commit/70e842a1552cddc9c63452ae63bae91b380f420b))
+
+# [1.1.0-alpha.4](https://github.com/uq-its-ss/design-system/compare/@uqds/accordion@1.1.0-alpha.3...@uqds/accordion@1.1.0-alpha.4) (2024-04-01)
+
+**Note:** Version bump only for package @uqds/accordion
+
+# [1.1.0-alpha.3](https://github.com/uq-its-ss/design-system/compare/@uqds/accordion@1.1.0-alpha.2...@uqds/accordion@1.1.0-alpha.3) (2024-03-08)
+
+### Bug Fixes
+
+- Storybook 7 Tweaks ([#500](https://github.com/uq-its-ss/design-system/issues/500)) ([c326282](https://github.com/uq-its-ss/design-system/commit/c32628230f63775c1e9212a9f8c272d4a88c520a))
+
+# [1.1.0-alpha.2](https://github.com/uq-its-ss/design-system/compare/@uqds/accordion@1.1.0-alpha.1...@uqds/accordion@1.1.0-alpha.2) (2024-03-07)
+
+**Note:** Version bump only for package @uqds/accordion
+
+# [1.1.0-alpha.1](https://github.com/uq-its-ss/design-system/compare/@uqds/accordion@1.1.0-alpha.0...@uqds/accordion@1.1.0-alpha.1) (2024-03-04)
+
+**Note:** Version bump only for package @uqds/accordion
+
 # [1.1.0-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/accordion@1.0.1-alpha.2...@uqds/accordion@1.1.0-alpha.0) (2024-02-08)
 
 ### Features

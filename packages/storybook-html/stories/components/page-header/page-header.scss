@@ -1,1 +1,2 @@
-@import "@uqds/page-header/src/scss/_component";
+@use "@uqds/page-header/src/scss/_component" as *;
+@use "@uqds/breadcrumb/src/scss/_component" as *;

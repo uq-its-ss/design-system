@@ -1,6 +1,6 @@
 {
   "name": "@uqds/breadcrumb",
-  "version": "2.0.0-alpha.0",
+  "version": "2.0.0-alpha.9",
   "description": "Breadcrumb component",
   "keywords": [
     "uqds",
@@ -35,7 +35,9 @@
     ".": {
       "import": "./dist/mjs/index.js",
       "require": "./dist/js/uqds.js"
-    }
+    },
+    "./src/js/*": "./src/js/*.js",
+    "./src/scss/*": "./src/scss/*"
   },
   "style": "dist/css/main.css",
   "scripts": {
@@ -49,7 +51,7 @@
     "url": "https://github.com/uq-its-ss/design-system/issues"
   },
   "dependencies": {
-    "@uqds/core": "^1.2.0-alpha.0",
-    "@uqds/icon": "^0.0.15-alpha.2"
+    "@uqds/core": "^1.2.0-alpha.1",
+    "@uqds/icon": "^0.0.15-alpha.7"
   }
 }

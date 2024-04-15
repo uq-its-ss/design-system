@@ -1,5 +1,3 @@
-import { useEffect } from "@storybook/addons";
-
 // import styles
 import "./header.scss";
 
@@ -7,21 +5,15 @@ import "./header.scss";
 import "./slide-menu.js";
 
 // import scripts
-import headerCreate from "@uqds/header/src/js/header";
+import { header } from "@uqds/header/src/js/main";
 
 // import HTML template strings
 import HeaderInterimHTML from "./header-interim.html";
 import HeaderHTML from "./header.html";
 
-import docs from "./header.docs.mdx";
-
 export default {
   title: "Components/Header",
   parameters: {
-    docs: {
-      page: docs,
-      inlineStories: false,
-    },
     layout: "fullscreen",
     backgrounds: {
       default: "UQ Neutral 1",
@@ -32,10 +24,13 @@ export default {
   },
 };
 
-export const HeaderInterim = () => {
-  useEffect(() => {
-    const headerElem = document.querySelector(".uq-header");
-    new headerCreate(headerElem);
+export const HeaderInterim = {
+  render: () => {
+    return HeaderInterimHTML;
+  },
+  play: ({ canvasElement }) => {
+    const headerElem = canvasElement.querySelector(".uq-header");
+    if (headerElem) new header(headerElem);
 
     document.addEventListener("DOMContentLoaded", function () {
       const menuLeftElem = document.getElementById("global-mobile-nav");
@@ -77,16 +72,18 @@ export const HeaderInterim = () => {
         }
       });
     });
-  });
-  return HeaderInterimHTML;
+  },
+
+  name: "Header interim",
 };
 
-HeaderInterim.storyName = "Header interim";
-
-export const Header = () => {
-  useEffect(() => {
-    const headerElem = document.querySelector(".uq-header");
-    new headerCreate(headerElem);
+export const Header = {
+  render: () => {
+    return HeaderHTML;
+  },
+  play: ({ canvasElement }) => {
+    const headerElem = canvasElement.querySelector(".uq-header");
+    if (headerElem) new header(headerElem);
 
     document.addEventListener("DOMContentLoaded", function () {
       const menuLeftElem = document.getElementById("global-mobile-nav");
@@ -128,85 +125,92 @@ export const Header = () => {
         }
       });
     });
-  });
-  return HeaderHTML;
+  },
+
+  name: "Header with mega menu",
 };
 
-Header.storyName = "Header with mega menu";
+export const basicHeader = {
+  render: () => {
+    return `
+    <header class="uq-header" data-gtm-category="Header">
+      <div class="uq-header__container">
+        <div class="uq-header__logo" data-gtm-category="Primary header">
+          <a class="logo--large" href="https://www.uq.edu.au" data-gtm-label="UQ Logo">
+            <img alt="The University of Queensland" src="https://static.uq.net.au/v15/logos/corporate/uq-logo--reversed.svg">
+          </a>
+        </div>        
+      </div>
+    </header>
+    `;
+  },
 
-export const basicHeader = () => {
-  return `
-  <header class="uq-header" data-gtm-category="Header">
-    <div class="uq-header__container">
-      <div class="uq-header__logo" data-gtm-category="Primary header">
-        <a class="logo--large" href="https://www.uq.edu.au" data-gtm-label="UQ Logo">
-          <img alt="The University of Queensland" src="https://static.uq.net.au/v15/logos/corporate/uq-logo--reversed.svg">
-        </a>
-      </div>        
-    </div>
-  </header>
-  `;
+  name: "Header simplified",
 };
-basicHeader.storyName = "Header simplified";
 
-export const searchGlobal = () => {
-  return `
+export const searchGlobal = {
+  render: () => {
+    return `
+      <div class="uq-header__search-container">
+        <form action="https://www.uq.edu.au/search" method="get" data-gtm-action="Text search" data-gtm-form-action="">
+          <fieldset>
+            <div class="uq-header__search-query">
+              <label for="edit-q" class="visually-hidden uq-header__search-query-label">Search term</label>
+              <input type="text" id="edit-q" name="q" value="" maxlength="128" placeholder="Search by keyword" class="uq-header__search-query-input" data-gtm-trigger="change" data-gtm-form-search="">
+              <span class="uq-header__search-query-button">
+                <input type="submit" name="op" value="Search" class="uq-header__search-query-submit" data-gtm-trigger="click">
+              </span>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    `;
+  },
+
+  name: "Default search",
+
+  parameters: {
+    backgrounds: {
+      default: "UQ purple",
+    },
+  },
+};
+
+export const searchLocal = {
+  render: () => {
+    return `
     <div class="uq-header__search-container">
-      <form action="https://www.uq.edu.au/search" method="get" data-gtm-action="Text search" data-gtm-form-action="">
-        <fieldset>
-          <div class="uq-header__search-query">
-            <label for="edit-q" class="visually-hidden uq-header__search-query-label">Search term</label>
-            <input type="text" id="edit-q" name="q" value="" maxlength="128" placeholder="Search by keyword" class="uq-header__search-query-input" data-gtm-trigger="change" data-gtm-form-search="">
-            <span class="uq-header__search-query-button">
-              <input type="submit" name="op" value="Search" class="uq-header__search-query-submit" data-gtm-trigger="click">
-            </span>
-          </div>
-        </fieldset>
-      </form>
-    </div>
-  `;
-};
-searchGlobal.storyName = "Default search";
-searchGlobal.parameters = {
-  docs: {
-    inlineStories: false,
+    <form action="https://www.uq.edu.au/search" method="get" data-gtm-action="Text search" data-gtm-form-action="">
+      <fieldset>
+        <div class="uq-header__search-query">
+          <label for="edit-q" class="visually-hidden uq-header__search-query-label">Search term</label>
+          <input type="text" id="edit-q" name="q" value="" maxlength="128" placeholder="Search by keyword" class="uq-header__search-query-input" data-gtm-trigger="change" data-gtm-form-search="">
+          <span class="uq-header__search-query-button">
+            <input type="submit" name="op" value="Search" class="uq-header__search-query-submit" data-gtm-trigger="click">
+          </span>
+        </div>
+        <div class="uq-header__search-range">
+          <input type="radio" id="edit-as_sitesearch-off" name="as_sitesearch" value="" class="form-radio uq-header__search-radio">
+          <label for="edit-as_sitesearch-off" class="option uq-header__search-label">Search all UQ websites</label>
+        </div>
+        <div class="uq-header__search-range">
+          <input type="radio" id="edit-as_sitesearch-on" name="as_sitesearch" value="https://future-students.uq.edu.au" checked="checked" class="form-radio uq-header__search-radio">
+          <label for="edit-as_sitesearch-on" class="option uq-header__search-label">Search this website (future-students.uq.edu.au)</label>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+    `;
   },
-  backgrounds: {
-    default: "UQ purple",
-  },
-};
 
-export const searchLocal = () => {
-  return `
-  <div class="uq-header__search-container">
-  <form action="https://www.uq.edu.au/search" method="get" data-gtm-action="Text search" data-gtm-form-action="">
-    <fieldset>
-      <div class="uq-header__search-query">
-        <label for="edit-q" class="visually-hidden uq-header__search-query-label">Search term</label>
-        <input type="text" id="edit-q" name="q" value="" maxlength="128" placeholder="Search by keyword" class="uq-header__search-query-input" data-gtm-trigger="change" data-gtm-form-search="">
-        <span class="uq-header__search-query-button">
-          <input type="submit" name="op" value="Search" class="uq-header__search-query-submit" data-gtm-trigger="click">
-        </span>
-      </div>
-      <div class="uq-header__search-range">
-        <input type="radio" id="edit-as_sitesearch-off" name="as_sitesearch" value="" class="form-radio uq-header__search-radio">
-        <label for="edit-as_sitesearch-off" class="option uq-header__search-label">Search all UQ websites</label>
-      </div>
-      <div class="uq-header__search-range">
-        <input type="radio" id="edit-as_sitesearch-on" name="as_sitesearch" value="https://future-students.uq.edu.au" checked="checked" class="form-radio uq-header__search-radio">
-        <label for="edit-as_sitesearch-on" class="option uq-header__search-label">Search this website (future-students.uq.edu.au)</label>
-      </div>
-    </fieldset>
-  </form>
-</div>
-  `;
-};
-searchLocal.storyName = "Global and local search";
-searchLocal.parameters = {
-  docs: {
-    inlineStories: false,
-  },
-  backgrounds: {
-    default: "UQ purple",
+  name: "Global and local search",
+
+  parameters: {
+    docs: {
+      inlineStories: false,
+    },
+    backgrounds: {
+      default: "UQ purple",
+    },
   },
 };

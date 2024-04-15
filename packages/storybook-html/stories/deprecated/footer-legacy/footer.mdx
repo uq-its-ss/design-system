@@ -1,0 +1,126 @@
+import { Meta, Story, Canvas } from "@storybook/blocks";
+import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
+import * as FooterStories from "./footer.stories";
+
+<Meta of={FooterStories} />
+
+# Global footer
+
+<StatusBadge.Deprecated />
+
+<StatusBadge.DraftDoc />
+
+## Overview
+
+The global footer provides a consistent branding and navigational element across all UQ pages. It contains supplementary information such as copyright, ABN details, contact and emergency information, links to other pages within the website, and the Reconciliation statement.
+
+## Default example
+
+<Canvas sourceState="hidden" withToolbar>
+  <Story of={FooterStories.footer} />
+</Canvas>
+
+```html
+<footer class="legacy-footer">
+  <div class="legacy-footer__container">
+    <div class="legacy-footer__acknowledgement">
+      UQ acknowledges the Traditional Owners and their custodianship of the
+      lands on which UQ is situated. —
+      <a
+        href="https://about.uq.edu.au/reconciliation"
+        class="legacy-footer__acknowledgement__link"
+        >Reconciliation statement</a
+      >
+    </div>
+    <div class="legacy-footer__row">
+      <div class="legacy-footer__column">
+        <div class="legacy-footer__copyright">
+          © The University of Queensland
+        </div>
+        <div class="legacy-footer__contact">
+          Enquiries:
+          <a
+            href="tel:+61733651111"
+            class="legacy-footer__link footer__enquiries-phone"
+            ><span itemprop="telephone">+61 7 3365 1111</span></a
+          >
+          &nbsp; | &nbsp;
+          <a
+            href="https://uq.edu.au/contacts"
+            class="legacy-footer__link footer__contacts-link"
+            >Contact directory</a
+          >
+        </div>
+        <div class="legacy-footer__meta">
+          <abbr title="Australian Business Number">ABN</abbr>: 63 942 912 684
+          &nbsp; | &nbsp;
+          <abbr
+            title="Commonwealth Register of Institutions and Courses for Overseas Students"
+            >CRICOS</abbr
+          >
+          Provider No:
+          <a
+            class="legacy-footer__link cricos__link"
+            href="https://www.uq.edu.au/about/cricos-link"
+            rel="external"
+            >00025B</a
+          >
+        </div>
+      </div>
+      <div class="legacy-footer__column">
+        <div class="legacy-footer__emergency-contact legacy-footer__aside">
+          <strong class="legacy-footer__sub-title">Emergency</strong><br />
+          Phone:
+          <a
+            href="tel:+61733653333"
+            class="legacy-footer__link footer__emergency-phone"
+            >3365 3333</a
+          >
+        </div>
+      </div>
+    </div>
+    <div class="legacy-footer__footer">
+      <div class="legacy-footer__row">
+        <div class="legacy-footer__column">
+          <div class="legacy-footer__footer-menu">
+            <ul class="legacy-footer__footer-menu__list">
+              <li class="legacy-footer__footer-menu__item">
+                <a
+                  href="https://www.uq.edu.au/terms-of-use/"
+                  rel="external"
+                  class="legacy-footer__footer-menu__link"
+                  >Privacy &amp; Terms of use</a
+                >
+              </li>
+              <li class="legacy-footer__footer-menu__item">
+                <a
+                  href="https://www.uq.edu.au/rti/"
+                  rel="external"
+                  class="legacy-footer__footer-menu__link"
+                  >Right to Information</a
+                >
+              </li>
+              <li class="legacy-footer__footer-menu__item">
+                <a
+                  href="https://uq.edu.au/accessibility/"
+                  rel="external"
+                  class="legacy-footer__footer-menu__link"
+                  >Accessibility</a
+                >
+              </li>
+              <li class="legacy-footer__footer-menu__item">
+                <a
+                  href="https://its.uq.edu.au/feedback?r=https://uq.edu.au"
+                  rel="external"
+                  class="legacy-footer__footer-menu__link"
+                  >Feedback</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+```

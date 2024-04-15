@@ -38,10 +38,6 @@
       grid-column: auto / span 6;
     }
 
-    @container (width > #{$card-grid-container-md}) {
-      grid-column: auto / span 4;
-    }
-
     @container (width > #{$card-grid-container-lg}) {
       grid-column: auto / span 3;
     }

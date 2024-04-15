@@ -1,4 +1,4 @@
-@use "@uqds/core/src/scss/_global" as core-global;
+@use "@uqds/core/src/scss/_global" as core;
 @use "@uqds/body/src/scss/_component" as body;
 @use "@uqds/grid/src/scss/_component" as grid;
 
@@ -10,7 +10,7 @@ body {
 }
 
 .sbdocs.sbdocs-wrapper {
-  @media only screen and (min-width: #{core-global.$screen-md + 16.5rem}) {
+  @media only screen and (min-width: #{core.$screen-md + 16.5rem}) {
     padding-right: 14rem;
   }
 }
@@ -23,31 +23,31 @@ body {
 .sbdocs {
   &-h1,
   &-title {
-    font-size: core-global.$font-size-xxxl !important;
-    margin: 0 0 core-global.$space-s !important;
+    font-size: core.$font-size-xxxl !important;
+    margin: 0 0 core.$space-s !important;
     font-weight: 500 !important;
-    color: core-global.$purple-500 !important;
+    color: core.$purple-500 !important;
     font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   }
 
   &-h2 {
-    font-size: core-global.$font-size-xxxl !important;
+    font-size: core.$font-size-xxxl !important;
   }
 
   &-h3 {
-    font-size: core-global.$font-size-xxl !important;
+    font-size: core.$font-size-xxl !important;
   }
 
   &-h4 {
-    font-size: core-global.$font-size-xl !important;
+    font-size: core.$font-size-xl !important;
   }
 
   &-h5 {
-    font-size: core-global.$font-size-l !important;
+    font-size: core.$font-size-l !important;
   }
 
   &-h6 {
-    font-size: core-global.$font-size-m !important;
+    font-size: core.$font-size-m !important;
   }
 
   &-h2,
@@ -55,11 +55,11 @@ body {
   &-h4,
   &-h5,
   &-h6 {
-    margin: core-global.$space-xxxl 0 0 !important;
+    margin: core.$space-xxxl 0 0 !important;
     font-weight: 500 !important;
     padding-bottom: 0 !important;
     border-bottom: 0 !important;
-    color: core-global.$purple-500 !important;
+    color: core.$purple-500 !important;
     font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   }
 
@@ -86,14 +86,14 @@ body {
 
 /* Getting started alert */
 .uqds-alert {
-  margin-left: core-global.$space-xl !important; /* override storybook default on div */
+  margin-left: core.$space-xl !important; /* override storybook default on div */
 
   .uq-alert__title {
     /* restore original alert title styles overridden by heading styles above */
-    color: core-global.$text !important;
+    color: core.$grey-900 !important;
     font-weight: 500 !important;
-    font-size: core-global.$font-size-m !important;
-    margin: 0 0 core-global.$space-s !important;
+    font-size: core.$font-size-m !important;
+    margin: 0 0 core.$space-s !important;
   }
 }
 
@@ -152,7 +152,6 @@ body {
     align-items: stretch;
     grid-template-columns: 1fr;
     row-gap: 8px;
-    border: none; /* override storybook default */
     border: 1px solid #f1f1f1;
     border-radius: 0.25rem;
     box-shadow: 0 0.25rem 0.5rem rgba(24, 24, 24, 0.05);
@@ -172,4 +171,47 @@ body {
     color: rgb(111, 111, 111);
     font-size: 0.875rem;
   }
+}
+
+.uqds-card-preview,
+// Add this hack because the decorator isn't being added on first load.
+#storybook-root > .uq-card,
+#storybook-root > .uq-story-card,
+#storybook-root > .uq-pane {
+  max-width: 360px;
+
+  @media #{core.$screen-md-down} {
+    max-width: none;
+  }
+}
+
+.uqds-layout-preview {
+  background: repeating-linear-gradient(
+    45deg,
+    core.$grey-100,
+    core.$grey-100 10px,
+    core.$grey-50 10px,
+    core.$grey-50 20px
+  );
+
+  & .uq-container {
+    background: rgba(core.$error-700, 20%);
+  }
+
+  & .uq-card-grid {
+    background: repeating-linear-gradient(
+      45deg,
+      lighten(core.$success-500, 30%),
+      lighten(core.$success-500, 30%) 10px,
+      lighten(core.$success-500, 35%) 10px,
+      lighten(core.$success-500, 35%) 20px
+    );
+  }
+}
+
+.uqds-layout-demo-card,
+.uqds-layout-demo-el {
+  background-color: lighten(core.$utility-500, 40%);
+  border: 1px solid core.$utility-500;
+  height: 220px;
 }

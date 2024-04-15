@@ -1,19 +1,16 @@
 import classNames from "classnames";
 import { Header } from "../components/header/header.stories";
 import { footer } from "../components/footer/footer.stories";
-import { breadcrumb } from "../components/breadcrumb/breadcrumb.stories";
+import { Breadcrumb } from "../components/breadcrumb/breadcrumb.stories";
 import { Level2 as Hero } from "../components/hero/hero.stories";
 import { LocalNav } from "../components/navigation/local-nav/local-nav.stories";
+import "@uqds/layout/src/scss/main.scss";
 
 export default {
   title: "Templates/Level 2",
   parameters: {
     layout: "fullscreen",
-    previewTabs: {
-      canvas: { hidden: false },
-      "storybook/docs/panel": { hidden: true },
-    },
-    viewMode: "story",
+    options: { showPanel: false },
   },
   argTypes: {
     showGrid: {
@@ -28,8 +25,8 @@ export default {
 export const Level2 = {
   render: ({ showGrid }) => `
 <div class="${classNames({ "uqds-layout-demo-bg": showGrid })}">
-  ${Header()}
-  ${breadcrumb()}
+  ${Header.render()}
+  ${Breadcrumb.render()}
   <div class="uq-sections">
     ${Hero.render(Hero.args)}
     <div class="uq-container">
@@ -84,6 +81,6 @@ export const Level2 = {
       </div>
     </div>
   </div>
-  ${footer()}
+  ${footer.render()}
 </div>`,
 };

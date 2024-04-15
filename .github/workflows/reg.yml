@@ -11,33 +11,31 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repo
+      - name: "⬇️ Checkout repo"
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
           ref: ${{ github.event.pull_request.head.ref || github.ref}}
 
-      - name: Use Node 18
+      - name: "⎔ Setup node 18"
         uses: actions/setup-node@v3
         with:
           node-version: 18
 
-      - name: Install deps and build
-        run: |
-          npm ci
-          npx lerna bootstrap --no-ci
+      - name: "📦️ Install dependencies"
+        run: npm install
 
-      - name: Build Storybook
+      - name: "Build Storybook"
         run: |
           npm run build-storybook
         working-directory: packages/storybook-html/
 
-      - name: Serve Storybook
+      - name: "Serve Storybook"
         run: |
           npx http-server storybook-static --port 6006 &
         working-directory: packages/storybook-html/
 
-      - name: Create screenshots
+      - name: "Create screenshots"
         run: |
           npm run update-screenshots
 
@@ -49,18 +47,18 @@ jobs:
         run: |
           npm run reg-suit run --update-screenshots
 
-      - name: Sync to preview environment
+      - name: "Sync to preview environment"
         uses: jakejarvis/s3-sync-action@master
         with:
           args: --acl public-read --follow-symlinks
         env:
-          AWS_S3_BUCKET: uq-ds-regsuit
+          AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET_TOOLS }}
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           SOURCE_DIR: 'packages/storybook-html/storybook-static'
           DEST_DIR: storybook-preview/${{ github.run_id }}
 
-      - name: Add link to storybook preview in comments
+      - name: "Add link to storybook preview in comments"
         uses: marocchino/sticky-pull-request-comment@v2
         with:
           GITHUB_TOKEN: ${{ secrets.UQDS_PERSONAL_ACCESS_TOKEN }}

@@ -1,0 +1,49 @@
+import { Meta, Story, Canvas } from "@storybook/blocks";
+import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
+import * as CardGridStories from "./card-grid.stories";
+
+<Meta of={CardGridStories} />
+
+# Card grid
+
+<StatusBadge.Development />
+<StatusBadge.DraftDoc />
+
+## Overview
+
+The `.uq-card-grid` component is the preferred way to layout `.uq-card`
+components. The markup structure is considerably simplified and easy to use.
+
+The component uses container queries to ensure cards are displayed correctly at
+all screen sizes, based on a target number of cards per row.
+
+### How-to
+
+Wrap elements directly in a `.uq-card-grid` element and choose one of the
+target cards per row modifier classes below.
+
+- `.uq-card-grid--target-1x`
+- `.uq-card-grid--target-2x`
+- `.uq-card-grid--target-3x`
+- `.uq-card-grid--target-4x`
+
+The child elements should be a `.uq-card` or `.uq-pane` to ensure that the
+height of cards on each row is uniform.
+
+<Canvas>
+  <Story of={CardGridStories.CardGrid} />
+</Canvas>
+
+## Examples
+
+### With Cards
+
+<Canvas>
+  <Story of={CardGridStories.CardsExample} />
+</Canvas>
+
+### With Panes
+
+<Canvas>
+  <Story of={CardGridStories.PanesExample} />
+</Canvas>

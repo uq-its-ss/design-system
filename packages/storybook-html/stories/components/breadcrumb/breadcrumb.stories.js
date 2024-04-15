@@ -1,35 +1,46 @@
-import { useEffect } from "@storybook/addons";
-
-// import styles
-import "./breadcrumb.scss";
-
-// import HTML template strings
-import breadcrumbHTML from "./breadcrumb.html";
-
-// import scripts
-import breadcrumbCreate from "@uqds/breadcrumb/src/js/breadcrumb";
-
-// documentation
-import docs from "./breadcrumb.docs.mdx";
+import { breadcrumb } from "@uqds/breadcrumb/src/js/main";
+import "@uqds/layout/src/scss/main.scss";
+import "@uqds/breadcrumb/src/scss/main.scss";
 
 export default {
   title: "Components/Breadcrumb",
   parameters: {
-    docs: {
-      page: docs,
-    },
     previewTabs: {
       canvas: { hidden: false },
     },
   },
 };
 
-export const breadcrumb = () => {
-  useEffect(() => {
-    const breadcrumbDefault = document.querySelector(".uq-breadcrumb");
-    new breadcrumbCreate(breadcrumbDefault);
-  });
-  return breadcrumbHTML;
+export const Breadcrumb = {
+  render: () => `
+<div class="uq-breadcrumbs">
+  <div class="uq-container">
+    <nav class="uq-breadcrumb" aria-label="Breadcrumb">
+      <ol class="uq-breadcrumb__list">
+        <li class="uq-breadcrumb__item">
+          <a class="uq-breadcrumb__link" title="UQ home" href="https://uq.edu.au/">UQ home</a>
+        </li>
+        <li class="uq-breadcrumb__item">
+          <a class="uq-breadcrumb__link" title="Level one" href="/information-and-services">Level one</a>
+        </li>
+        <li class="uq-breadcrumb__item">
+          <a class="uq-breadcrumb__link" title="Level two" href="/information-and-services/internet-and-wifi">Level two</a>
+        </li>
+        <li class="uq-breadcrumb__item">
+          <a class="uq-breadcrumb__link" title="Bachelor of Business with a Major in Management or Finance" href="#">Bachelor of Business with a Major in Management or Finance</a>
+        </li>
+        <li class="uq-breadcrumb__item">
+          <a class="uq-breadcrumb__link" title="Major Leadership and Management Science" href="#">Major Leadership and Management Science</a>
+        </li>
+        <li class="uq-breadcrumb__item">
+          <a class="uq-breadcrumb__link" title="Current page" href="#">Current page</a>
+        </li>
+      </ol>
+    </nav>
+  </div>
+</div>`,
+  play: ({ canvasElement }) => {
+    const breadcrumbs = canvasElement.querySelector(".uq-breadcrumb");
+    if (breadcrumbs) new breadcrumb(breadcrumbs);
+  },
 };
-
-breadcrumb.storyName = "Default";

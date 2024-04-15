@@ -1,18 +1,8 @@
 import classNames from "classnames";
-import docs from "./section.docs.mdx";
-import "../../../../sections/src/scss/main.scss";
+import "@uqds/sections/src/scss/main.scss";
 
 export default {
   title: "Components/Section",
-  parameters: {
-    docs: {
-      page: docs,
-    },
-    layout: "fullscreen",
-    previewTabs: {
-      canvas: { hidden: false },
-    },
-  },
   argTypes: {
     title: {
       control: "text",
@@ -51,17 +41,17 @@ export const Section = {
 };
 
 export const Shaded = {
+  ...Section,
   args: {
     title: "Title",
     description: "Description",
     content: "",
     shaded: true,
   },
-  render: Section.render,
 };
 
 export const Container = {
-  name: "Eith container",
+  name: "With container",
   args: {
     title: "Title",
     description: "Description",
@@ -77,7 +67,7 @@ export const Container = {
         description
           ? `
       <div class="uq-section__description">
-        <p>${description}</p>
+        ${description}
       </div>`
           : ""
       }
@@ -88,12 +78,11 @@ export const Container = {
 };
 
 export const ShadedContainer = {
-  name: "Shaded with container",
+  ...Container,
   args: {
     title: "Title",
     description: "Description",
     content: "",
     shaded: true,
   },
-  render: Container.render,
 };

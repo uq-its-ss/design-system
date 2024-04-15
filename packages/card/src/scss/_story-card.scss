@@ -1,0 +1,124 @@
+@use "@uqds/core/src/scss/global" as core;
+@use "@uqds/layout/src/scss/global" as layout;
+@use "card";
+
+.uq-story-card {
+  @extend .uq-card;
+}
+
+.uq-story-card__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: core.$space-l;
+}
+
+.uq-story-card__title {
+  @extend .uq-card__title;
+}
+
+.uq-story-card__description {
+  @extend .uq-card__description;
+}
+
+.uq-story-card__top-label {
+  margin-bottom: core.$space-xs;
+  color: core.$grey-700;
+  font-weight: core.$font-weight-medium;
+}
+
+.uq-story-card__bottom-label {
+  padding-top: core.$space-l;
+  margin-top: auto;
+}
+
+.uq-story-card__image {
+  @extend .uq-card__image;
+}
+
+.uq-story-card--event {
+  & .uq-story-card__top-label {
+    color: core.$purple-500;
+  }
+}
+
+.uq-story-card--event,
+.uq-story-card--story {
+  .uq-story-card__description {
+    display: none;
+  }
+}
+
+.uq-card-grid:not(.uq-card-grid--target-1x) {
+  @media #{core.$screen-md-down} {
+    & .uq-story-card {
+      border-radius: 0;
+      border-inline-width: 0;
+      border-top-width: 0;
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      gap: core.$space-m;
+      padding-bottom: core.$space-m;
+      background-color: transparent;
+
+      &:hover {
+        background-color: transparent;
+      }
+    }
+
+    .uq-story-card__content {
+      padding: 0;
+    }
+
+    & .uq-story-card__image {
+      width: 120px;
+      height: 100px;
+      aspect-ratio: unset;
+      flex-shrink: 0;
+    }
+
+    .uq-story-card__title {
+      -webkit-line-clamp: 3;
+    }
+
+    .uq-story-card__description {
+      display: none;
+    }
+
+    .uq-story-card__top-label {
+      margin-bottom: 0;
+    }
+
+    .uq-story-card__bottom-label {
+      padding-top: core.$space-s;
+    }
+  }
+}
+
+.uq-card-grid--target-1x {
+  & .uq-story-card {
+    & .uq-story-card__description {
+      display: block;
+    }
+  }
+
+  @container (width > #{layout.$card-grid-container-md}) {
+    & .uq-story-card {
+      display: flex;
+      flex-direction: row-reverse;
+      gap: var(--layout-gap);
+      align-items: center;
+    }
+
+    & .uq-story-card__image {
+      width: 50%;
+      height: 100%;
+    }
+
+    & .uq-story-card__content {
+      width: 50%;
+      padding-inline: core.$space-l 0;
+    }
+  }
+}

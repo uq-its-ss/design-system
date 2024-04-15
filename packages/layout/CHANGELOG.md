@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-alpha.9](https://github.com/uq-its-ss/design-system/compare/@uqds/layout@1.0.0-alpha.8...@uqds/layout@1.0.0-alpha.9) (2024-04-08)
+
+### Bug Fixes
+
+- ITADDSD-53170: Further card fixes ([#509](https://github.com/uq-its-ss/design-system/issues/509)) ([01a9852](https://github.com/uq-its-ss/design-system/commit/01a9852d521dbf8c11bb705557bb26638f1540e7))
+
+# [1.0.0-alpha.8](https://github.com/uq-its-ss/design-system/compare/@uqds/layout@1.0.0-alpha.7...@uqds/layout@1.0.0-alpha.8) (2024-04-05)
+
+**Note:** Version bump only for package @uqds/layout
+
+# [1.0.0-alpha.7](https://github.com/uq-its-ss/design-system/compare/@uqds/layout@1.0.0-alpha.6...@uqds/layout@1.0.0-alpha.7) (2024-04-01)
+
+**Note:** Version bump only for package @uqds/layout
+
+# [1.0.0-alpha.6](https://github.com/uq-its-ss/design-system/compare/@uqds/layout@1.0.0-alpha.5...@uqds/layout@1.0.0-alpha.6) (2024-02-23)
+
+### Bug Fixes
+
+- Local nav + Section QA fixes ([#487](https://github.com/uq-its-ss/design-system/issues/487)) ([2f3d2a3](https://github.com/uq-its-ss/design-system/commit/2f3d2a3baa19ac1cd4b6ceb1f19e972d1ae8890d))
+
 # [1.0.0-alpha.5](https://github.com/uq-its-ss/design-system/compare/@uqds/layout@1.0.0-alpha.4...@uqds/layout@1.0.0-alpha.5) (2024-02-21)
 
 ### Bug Fixes

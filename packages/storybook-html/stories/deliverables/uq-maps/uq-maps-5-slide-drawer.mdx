@@ -1,0 +1,20 @@
+import { Meta, Story, Canvas } from "@storybook/blocks";
+import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
+import * as UqMaps5SlideDrawerStories from "./uq-maps-5-slide-drawer.stories";
+
+<Meta of={UqMaps5SlideDrawerStories} />
+
+# UQ Maps: slide drawer
+
+<StatusBadge.Development />
+
+## 5A. Expanded
+
+Should take up all available height and width of its parent container—on mobile,
+this should be the entire screen.
+
+### Basic usage
+
+<Canvas sourceState="hidden" withToolbar>
+  <Story of={UqMaps5SlideDrawerStories.expanded} />
+</Canvas>

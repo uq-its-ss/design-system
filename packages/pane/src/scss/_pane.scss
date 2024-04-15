@@ -1,0 +1,128 @@
+@use "@uqds/core/src/scss/global" as core;
+@use "@uqds/layout/src/scss/global" as layout;
+
+.uq-pane {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.uq-pane__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.uq-pane__title {
+  margin: 0;
+  color: core.$black;
+}
+
+.uq-pane__description {
+  margin-top: core.$space-s;
+}
+
+.uq-pane__image {
+  flex-shrink: 0;
+  aspect-ratio: 1.5 / 1;
+  margin-bottom: core.$space-l;
+  position: relative;
+
+  & img,
+  & picture {
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    position: absolute;
+    object-fit: cover;
+  }
+}
+
+.uq-pane__icon {
+  margin-bottom: core.$space-s;
+
+  & .uq-icon::before {
+    height: 56px;
+    width: 56px;
+  }
+}
+
+.uq-pane__actions {
+  padding-top: core.$space-l;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: core.$space-m;
+}
+
+.uq-pane--text,
+.uq-pane--text-shaded {
+  & .uq-pane__image,
+  & .uq-pane__icon {
+    display: none;
+  }
+}
+
+.uq-pane--image {
+  & .uq-pane__icon {
+    display: none;
+  }
+}
+
+.uq-pane--icon,
+.uq-pane--icon-large,
+.uq-pane--icon-shaded {
+  & .uq-pane__image {
+    display: none;
+  }
+}
+
+.uq-pane--icon-large {
+  & .uq-pane__icon {
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    background: core.$grey-50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: core.$space-m;
+
+    & .uq-icon::before {
+      width: 72px;
+      height: 72px;
+    }
+  }
+}
+
+.uq-pane--text-shaded,
+.uq-pane--icon-shaded {
+  background: core.$grey-50;
+  border-radius: 4px;
+
+  & .uq-pane__content {
+    padding: core.$space-l;
+  }
+}
+
+.uq-card-grid--target-1x {
+  @container (width > #{layout.$card-grid-container-md}) {
+    & .uq-pane {
+      display: flex;
+      flex-direction: row-reverse;
+      gap: var(--layout-gap);
+      align-items: center;
+    }
+
+    & .uq-pane__image {
+      width: 50%;
+      height: 100%;
+      margin: 0;
+    }
+
+    & .uq-pane__content {
+      width: 50%;
+    }
+  }
+}

@@ -18,7 +18,7 @@ export default {
     image: {
       control: "select",
       options: [
-        "https://design-system.ads-staging.aws.uq.edu.au/images/card/card-example-herston-campus.jpg",
+        "images/card/card-example-herston-campus.jpg",
       ],
     },
   },
@@ -29,7 +29,7 @@ export default {
     topLabel: "Uni life",
     bottomLabel: "3 minute read time",
     image:
-      "https://design-system.ads-staging.aws.uq.edu.au/images/card/card-example-herston-campus.jpg",
+      "images/card/card-example-herston-campus.jpg",
     href: "",
   },
 };

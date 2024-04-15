@@ -16,7 +16,7 @@ export default {
     image: {
       control: "select",
       options: [
-        "https://design-system.ads-staging.aws.uq.edu.au/images/card/card-example-herston-campus.jpg",
+        "images/card/card-example-herston-campus.jpg",
       ],
     },
     icon: {
@@ -46,7 +46,7 @@ export const Card = {
   args: {
     variant: "image",
     image:
-      "https://design-system.ads-staging.aws.uq.edu.au/images/card/card-example-herston-campus.jpg",
+      "images/card/card-example-herston-campus.jpg",
   },
   render: ({
     variant,

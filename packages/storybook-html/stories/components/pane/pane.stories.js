@@ -21,9 +21,7 @@ export default {
     },
     image: {
       control: "select",
-      options: [
-        "images/card/card-example-herston-campus.jpg",
-      ],
+      options: ["images/card/card-example-herston-campus.jpg"],
     },
     icon: {
       control: "select",
@@ -48,8 +46,7 @@ export default {
 export const Pane = {
   args: {
     variant: "image",
-    image:
-      "images/card/card-example-herston-campus.jpg",
+    image: "images/card/card-example-herston-campus.jpg",
     icon: "",
     links: `<a href="#">This is a link</a><a href="#">This is another link</a>`,
   },
@@ -81,8 +78,7 @@ export const Image = {
   ...Pane,
   args: {
     variant: "image",
-    image:
-      "images/card/card-example-herston-campus.jpg",
+    image: "images/card/card-example-herston-campus.jpg",
   },
 };
 

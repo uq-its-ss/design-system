@@ -15,9 +15,7 @@ export default {
     },
     image: {
       control: "select",
-      options: [
-        "images/card/card-example-herston-campus.jpg",
-      ],
+      options: ["images/card/card-example-herston-campus.jpg"],
     },
     icon: {
       control: "select",
@@ -45,8 +43,7 @@ export default {
 export const Card = {
   args: {
     variant: "image",
-    image:
-      "images/card/card-example-herston-campus.jpg",
+    image: "images/card/card-example-herston-campus.jpg",
   },
   render: ({
     variant,

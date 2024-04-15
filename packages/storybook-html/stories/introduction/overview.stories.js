@@ -25,8 +25,7 @@ export const Overview = {
     title: "Design System",
     button: "",
     description: "Styles, components, patterns and standards.",
-    image:
-      "images/hero/hero-home.jpg",
+    image: "images/hero/hero-home.jpg",
     light: false,
   })}
   ${Section({

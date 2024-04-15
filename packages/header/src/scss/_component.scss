@@ -236,7 +236,7 @@
     text-decoration: none;
     padding: core.$space-m core.$space-l;
     transition: background-color 0.25s, border-color 0.25s;
-    font-weight: 400;
+    font-weight: core.$font-weight-normal;
     position: relative;
     border-bottom: 4px solid transparent;
 
@@ -557,7 +557,7 @@
 
   .megamenu__heading {
     color: core.$purple-500;
-    font-weight: 500;
+    font-weight: core.$font-weight-medium;
     padding-top: core.$space-xs;
     padding-bottom: core.$space-xs;
 
@@ -672,6 +672,7 @@ body.no-scroll {
   .slide-menu__control {
     padding-top: 1rem;
     padding-bottom: 1rem;
+    font-weight: core.$font-weight-medium;
   }
 
   a {
@@ -681,6 +682,7 @@ body.no-scroll {
     font-size: core.$font-size-m;
     color: core.$purple-500;
     position: relative;
+    font-weight: core.$font-weight-normal;
 
     &:hover {
       color: core.$purple-500;
@@ -689,7 +691,7 @@ body.no-scroll {
   }
 
   & .slide-menu__backlink {
-    font-weight: 500;
+    font-weight: core.$font-weight-medium;
     padding-left: core.$space-xxxl;
 
     &::before {
@@ -827,7 +829,7 @@ body.no-scroll {
   }
 
   &__audience-link {
-    font-weight: 500;
+    font-weight: core.$font-weight-medium;
   }
 }
 
@@ -876,7 +878,7 @@ body.no-scroll {
   color: #fff;
   text-decoration: none;
   transition: background-color 0.25s, border-color 0.25s;
-  font-weight: 400;
+  font-weight: core.$font-weight-normal;
   position: relative;
   border-bottom: 4px solid transparent;
 }
@@ -940,7 +942,7 @@ body.no-scroll {
 
 .uq-header__search-range label {
   color: core.$white;
-  font-weight: 400;
+  font-weight: core.$font-weight-normal;
   display: inline-block;
   vertical-align: top;
 }

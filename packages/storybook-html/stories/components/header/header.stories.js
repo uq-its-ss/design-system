@@ -65,14 +65,11 @@ export const HeaderInterim = {
         menuLeft.close(true);
         //reset the menu toggle after closing.
         const mainNavToggle = document.querySelector(".nav-primary__toggle");
-        mainNavToggle.classList.remove(
-          "nav-primary__menu-toggle--is-open"
-        );
+        mainNavToggle.classList.remove("nav-primary__menu-toggle--is-open");
         const body = document.querySelector("body");
         body.classList.remove("no-scroll");
       }
     });
-
   },
 
   name: "Header interim",
@@ -117,9 +114,7 @@ export const Header = {
         menuLeft.close(true);
         //reset the menu toggle after closing.
         const mainNavToggle = document.querySelector(".nav-primary__toggle");
-        mainNavToggle.classList.remove(
-          "nav-primary__menu-toggle--is-open"
-        );
+        mainNavToggle.classList.remove("nav-primary__menu-toggle--is-open");
         const body = document.querySelector("body");
         body.classList.remove("no-scroll");
       }

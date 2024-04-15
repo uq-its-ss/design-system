@@ -12,8 +12,10 @@ import { Hero } from "../components/hero/hero.stories";
 import { infoGlobal } from "../components/alert/alert.stories";
 import { alertInfo } from "../components/alert/alert.stories";
 import { usingDivs } from "../components/accordion/accordion.stories";
-import { primary } from "../components/button/button.stories";
+import { buttonSize } from "../components/button/button.stories";
+import { gridMenuDescription } from "../components/grid-menu/grid-menu.stories";
 import { Card } from "../components/card/card.stories";
+import { TextShaded } from "../components/pane/pane.stories";
 import { footer } from "../components/footer/footer.stories";
 import "@uqds/layout/src/scss/main.scss";
 
@@ -65,7 +67,7 @@ export const kitchen = {
         </ul>
         <hr>
 
-        ${primary.render()}
+        ${buttonSize.render()}
 
         <h2>Accordion</h2>
         ${usingDivs.render()}
@@ -75,6 +77,16 @@ export const kitchen = {
         ${Card.render(Card.args)}
         ${Card.render(Card.args)}
         ${Card.render(Card.args)}
+        </div>
+
+        <h2>Grid Menu</h2>
+        ${gridMenuDescription.render()}
+
+        <h2>Pane grid</h2>
+        <div class="uq-card-grid uq-card-grid--target-3x">
+        ${TextShaded.render(TextShaded.args)}
+        ${TextShaded.render(TextShaded.args)}
+        ${TextShaded.render(TextShaded.args)}
         </div>
       </div>
     </div>

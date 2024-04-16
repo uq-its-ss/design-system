@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-alpha.19](https://github.com/uq-its-ss/design-system/compare/storybook-html@1.0.0-alpha.18...storybook-html@1.0.0-alpha.19) (2024-04-16)
+
+### Bug Fixes
+
+- closing div for uq-contianer in wrong location ([#514](https://github.com/uq-its-ss/design-system/issues/514)) ([d246301](https://github.com/uq-its-ss/design-system/commit/d246301f1dea1e80ce7bd9f941f59639912cb202))
+
 # [1.0.0-alpha.18](https://github.com/uq-its-ss/design-system/compare/storybook-html@1.0.0-alpha.17...storybook-html@1.0.0-alpha.18) (2024-04-11)
 
 **Note:** Version bump only for package storybook-html

@@ -7,7 +7,7 @@ import { breadcrumb } from "@uqds/breadcrumb/src/js/main";
 // import HTML template strings
 import { Header } from "../components/header/header.stories";
 import { Breadcrumb } from "../components/breadcrumb/breadcrumb.stories";
-import { Hero } from "../components/hero/hero.stories";
+import { Basic } from "../components/hero-basic/hero-basic.stories";
 import { infoGlobal } from "../components/alert/alert.stories";
 import { alertInfo } from "../components/alert/alert.stories";
 import { usingDivs } from "../components/accordion/accordion.stories";
@@ -35,7 +35,7 @@ export const kitchen = {
     ${Breadcrumb.render()}
     ${infoGlobal.render()}
     <div class="uq-sections">
-      ${Hero.render(Hero.args)}
+      ${Basic.render(Basic.args)}
       <div class="uq-container">
         ${alertInfo.render()}
         <!-- Typography -->

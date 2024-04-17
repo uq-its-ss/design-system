@@ -908,7 +908,7 @@ export default [
     category: "social",
   },
   {
-    name: "social-x",
+    name: "social-x-twitter",
     category: "social",
   },
   {

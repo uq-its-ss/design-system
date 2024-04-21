@@ -30,27 +30,30 @@ export const HeaderInterim = {
   },
   play: ({ canvasElement }) => {
     const headerElem = canvasElement.querySelector(".uq-header");
-    if (headerElem) new header(headerElem);
+    if (!headerElem) {
+      return;
+    }
+    new header(headerElem);
 
-    const menuLeftElem = document.getElementById("global-mobile-nav");
+    const menuLeftElem = headerElem.querySelector("#global-mobile-nav");
     const menuLeft = new SlideMenu(menuLeftElem, {
       position: "left",
       submenuLinkAfter: " ",
       backLinkBefore: " ",
     });
 
-    const searchToggle = document.querySelector(".nav-primary__search-toggle");
+    const searchToggle = headerElem.querySelector(".nav-primary__search-toggle");
     searchToggle.addEventListener("click", () => {
       menuLeft.close();
     });
 
-    var slideMenuBackButtons = document.querySelectorAll(
+    var slideMenuBackButtons = headerElem.querySelectorAll(
       ".slide-menu__backlink, .global-mobile-nav__audience-link"
     );
 
     Array.prototype.forEach.call(slideMenuBackButtons, function (el, i) {
       el.addEventListener("click", () => {
-        document.querySelector(".global-mobile-nav").scrollTop = 0;
+        menuLeftElem.scrollTop = 0;
       });
     });
 
@@ -60,7 +63,7 @@ export const HeaderInterim = {
       if (window.innerWidth > 1024) {
         menuLeft.close(true);
         //reset the menu toggle after closing.
-        const mainNavToggle = document.querySelector(".nav-primary__toggle");
+        const mainNavToggle = headerElem.querySelector(".nav-primary__toggle");
         mainNavToggle.classList.remove("nav-primary__menu-toggle--is-open");
         const body = document.querySelector("body");
         body.classList.remove("no-scroll");
@@ -77,29 +80,30 @@ export const Header = {
   },
   play: ({ canvasElement }) => {
     const headerElem = canvasElement.querySelector(".uq-header");
-    if (headerElem) new header(headerElem);
+    if (!headerElem) {
+      return;
+    }
+    new header(headerElem);
 
-    const menuLeftElem = document.getElementById("global-mobile-nav");
-
+    const menuLeftElem = headerElem.querySelector("#global-mobile-nav");
     const menuLeft = new SlideMenu(menuLeftElem, {
       position: "left",
       submenuLinkAfter: " ",
       backLinkBefore: " ",
     });
 
-    const searchToggle = document.querySelector(".nav-primary__search-toggle");
-
+    const searchToggle = headerElem.querySelector(".nav-primary__search-toggle");
     searchToggle.addEventListener("click", () => {
       menuLeft.close();
     });
 
-    var slideMenuBackButtons = document.querySelectorAll(
+    var slideMenuBackButtons = headerElem.querySelectorAll(
       ".slide-menu__backlink, .global-mobile-nav__audience-link"
     );
 
     Array.prototype.forEach.call(slideMenuBackButtons, function (el, i) {
       el.addEventListener("click", () => {
-        document.querySelector(".global-mobile-nav").scrollTop = 0;
+        menuLeftElem.scrollTop = 0;
       });
     });
 
@@ -109,7 +113,7 @@ export const Header = {
       if (window.innerWidth > 1024) {
         menuLeft.close(true);
         //reset the menu toggle after closing.
-        const mainNavToggle = document.querySelector(".nav-primary__toggle");
+        const mainNavToggle = headerElem.querySelector(".nav-primary__toggle");
         mainNavToggle.classList.remove("nav-primary__menu-toggle--is-open");
         const body = document.querySelector("body");
         body.classList.remove("no-scroll");

@@ -42,7 +42,9 @@ export const HeaderInterim = {
       backLinkBefore: " ",
     });
 
-    const searchToggle = headerElem.querySelector(".nav-primary__search-toggle");
+    const searchToggle = headerElem.querySelector(
+      ".nav-primary__search-toggle"
+    );
     searchToggle.addEventListener("click", () => {
       menuLeft.close();
     });
@@ -92,7 +94,9 @@ export const Header = {
       backLinkBefore: " ",
     });
 
-    const searchToggle = headerElem.querySelector(".nav-primary__search-toggle");
+    const searchToggle = headerElem.querySelector(
+      ".nav-primary__search-toggle"
+    );
     searchToggle.addEventListener("click", () => {
       menuLeft.close();
     });

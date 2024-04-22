@@ -520,10 +520,9 @@ $use-encapsulation: false !default;
 // D7 overrides and hacks
 .instafilta {
   & .instafilta__input {
-    padding: .75rem 1rem .75rem 1.75rem !important;
+    padding: 0.75rem 1rem 0.75rem 1.75rem !important;
   }
 }
-
 
 @if $use-encapsulation {
   .uq {

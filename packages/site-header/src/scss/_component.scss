@@ -386,17 +386,17 @@
 .uq-site-header__navigation__list-link:hover,
 .uq-site-header__navigation__sub-toggle {
   /* override for bless css in D7 sites.*/
-  color: core.$uq-purple !important;
+  color: core.$purple-500 !important;
   background-color: transparent !important;
 }
 
 .uq-site-header__navigation a {
   /* override for bless css in D7 sites.*/
-  color: core.$uq-purple !important;
+  color: core.$purple-500 !important;
 }
 
 .uq-site-header__nav-secondary-link {
   @media #{core.$screen-lg-up} {
-    line-height: 1.5;
+    line-height: core.$line-height;
   }
 }

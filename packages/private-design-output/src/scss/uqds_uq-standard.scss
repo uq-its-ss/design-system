@@ -1,4 +1,5 @@
-@use "footer/src/scss/component" as uq-footer;
-@use "header/src/scss/component" as uq-header;
-@use "form/src/scss/component" as form;
-@use "site-header/src/scss/component" as site-header;
+@use "@uqds/footer/src/scss/main" as uq-footer;
+@use "@uqds/header/src/scss/main" as uq-header;
+@use "@uqds/form/src/scss/main" as form;
+@use "@uqds/site-header/src/scss/main" as site-header;
+

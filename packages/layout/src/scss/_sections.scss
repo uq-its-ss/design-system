@@ -1,0 +1,10 @@
+.uq-sections {
+  display: flex;
+  flex-direction: column;
+  gap: var(--layout-section-gap);
+  padding-bottom: var(--layout-section-gap);
+
+  & .uq-sections {
+    padding-bottom: 0;
+  }
+}

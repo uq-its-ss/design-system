@@ -1,15 +1,14 @@
-import { useEffect } from "@storybook/addons";
-
 // import scripts
-import header from "@uqds/header/src/js/header";
-import accordion from "@uqds/accordion/src/js/accordion";
+import { header } from "@uqds/header/src/js/main";
+import { accordion } from "@uqds/accordion/src/js/main";
 import siteHeaderNavigation from "@uqds/site-header/src/js/site-header-navigation";
+import { breadcrumb } from "@uqds/breadcrumb/src/js/main";
 
 // import HTML template strings
 import kitchenSinkHTML from "./kitchen-sink.html";
 
 export default {
-  title: "Gallery & Examples/Kitchen sink",
+  title: "Patterns/Kitchen sink",
   parameters: {
     layout: "fullscreen",
     viewMode: "story",
@@ -20,16 +19,26 @@ export default {
   },
 };
 
-export const kitchenSink = () => {
-  useEffect(() => {
-    new accordion();
+export const kitchenSink = {
+  render: () => {
+    return kitchenSinkHTML;
+  },
+  play: ({ canvasElement }) => {
+    // Initialise Header
+    const headerElem = canvasElement.querySelector(".uq-header");
+    if (headerElem) new header(headerElem);
 
     // Initialise Main Navigation
-    const navElem = document.getElementById("jsNav");
-    new siteHeaderNavigation(navElem, "uq-site-header__navigation");
+    const navElem = canvasElement.querySelector("#jsNav");
+    if (navElem)
+      new siteHeaderNavigation(navElem, "uq-site-header__navigation");
 
-    const headerkitch = document.querySelector(".uq-header");
-    new header(headerkitch);
+    // Initialise Breadcrumb
+    const breadcrumbs = canvasElement.querySelector(".uq-breadcrumb");
+    if (breadcrumbs) new breadcrumb(breadcrumbs);
+
+    // Initialise accordion
+    new accordion();
 
     document.addEventListener("DOMContentLoaded", function () {
       const menuLeftElem = document.getElementById("global-mobile-nav");
@@ -71,14 +80,7 @@ export const kitchenSink = () => {
         }
       });
     });
-  });
-  return kitchenSinkHTML;
-};
-
-kitchenSink.storyName = "Kitchen sink";
-
-kitchenSink.parameters = {
-  docs: {
-    page: null,
   },
+
+  name: "Kitchen sink",
 };

@@ -4,7 +4,7 @@
 $use-encapsulation: false !default;
 
 @mixin -text-primer {
-  color: core.$text;
+  color: core.$grey-900;
   font-size: 1rem;
   font-family: core.$font-body;
   font-weight: 400;
@@ -13,7 +13,7 @@ $use-encapsulation: false !default;
 
 @mixin -body-styles {
   font-size: 100%;
-  background: core.$uq-white;
+  background: core.$white;
   margin: core.$space-none;
   padding: core.$space-none;
 }
@@ -37,19 +37,19 @@ $use-encapsulation: false !default;
 
   // Background colour utilities
   .white {
-    background-color: core.$uq-white;
+    background-color: core.$white;
   }
 
   .black {
-    background-color: core.$uq-black;
+    background-color: core.$black;
   }
 
   .link {
-    background-color: core.$link;
+    background-color: core.$utility-500;
   }
 
   .purple {
-    background-color: core.$uq-purple;
+    background-color: core.$purple-500;
   }
 
   // Typography
@@ -61,44 +61,44 @@ $use-encapsulation: false !default;
   h6 {
     font-weight: core.$font-weight-bold;
     line-height: core.$line-height-h;
-    color: core.$uq-purple;
+    color: core.$grey-900;
   }
 
   h1 {
     margin-top: core.$space-l;
     margin-bottom: core.$space-xxl;
-    font-size: core.$font-size-xxxl;
+    font-size: core.$font-size-xxxxl;
     font-family: core.$font-title;
   }
 
   h2 {
     margin-top: core.$space-xxl;
     margin-bottom: core.$space-l;
-    font-size: core.$font-size-xxl;
+    font-size: core.$font-size-xxxl;
   }
 
   h3 {
     margin-top: core.$space-xl;
     margin-bottom: core.$space-m;
-    font-size: core.$font-size-xl;
+    font-size: core.$font-size-xxl;
   }
 
   h4 {
     margin-top: core.$space-xl;
     margin-bottom: core.$space-l;
-    font-size: core.$font-size-l;
+    font-size: core.$font-size-xl;
   }
 
   h5 {
     margin-top: core.$space-l;
     margin-bottom: core.$space-m;
-    font-size: core.$font-size-m;
+    font-size: core.$font-size-l;
   }
 
   h6 {
     margin-top: core.$space-l;
     margin-bottom: core.$space-s;
-    font-size: core.$font-size;
+    font-size: core.$font-size-m;
   }
 
   p {
@@ -118,10 +118,10 @@ $use-encapsulation: false !default;
   blockquote {
     margin: core.$space-none core.$space-none core.$space-l;
     padding-left: core.$space-l;
-    border-left: 6px solid core.$text;
+    border-left: 6px solid core.$grey-900;
     font-family: core.$font-accent;
     font-style: italic;
-    font-size: core.$font-size-l;
+    font-size: core.$font-size-xl;
   }
 
   ol,
@@ -144,7 +144,7 @@ $use-encapsulation: false !default;
     margin-bottom: core.$space-none;
 
     dt {
-      color: core.$uq-purple;
+      color: core.$purple-500;
       font-size: core.$font-size-s;
       text-transform: uppercase;
       font-weight: core.$font-weight-bold;
@@ -153,71 +153,61 @@ $use-encapsulation: false !default;
     dd {
       margin-left: core.$space-none;
       margin-bottom: core.$space-l;
-      font-size: core.$font-size-m;
+      font-size: core.$font-size-l;
     }
   }
 
   a {
-    color: core.$link;
-    text-decoration: none;
-    transition: 0.2s color;
+    color: core.$purple-500;
+    font-weight: core.$font-weight-medium;
+    text-decoration: underline;
+    transition: all 200ms ease-out;
+    display: inline-block;
 
     &:hover {
-      color: core.$link;
-      text-decoration: underline;
+      color: core.$white;
+      background-color: core.$purple-500;
     }
   }
 
   // Typography utilities
   .text {
     // Text colour
-    &--reverse {
-      color: core.$uq-white;
-    }
-
-    &--primary {
-      color: core.$uq-purple;
-    }
-
-    &--purple-light {
-      color: core.$uq-purple-light;
-    }
-
-    &--black {
-      color: core.$uq-black;
+    &--purple {
+      color: core.$purple-500;
     }
 
     &--white {
-      color: core.$uq-white;
+      color: core.$white;
     }
 
     &--error {
-      color: core.$alert;
+      color: core.$error-500;
     }
 
     // Text size
     &--xxxxl {
-      font-size: core.$font-size-xxxl;
+      font-size: core.$font-size-xxxxl;
     }
 
     &--xxxl {
-      font-size: core.$font-size-xxl;
+      font-size: core.$font-size-xxxl;
     }
 
     &--xxl {
-      font-size: core.$font-size-xl;
+      font-size: core.$font-size-xxl;
     }
 
     &--xl {
-      font-size: core.$font-size-l;
+      font-size: core.$font-size-xl;
     }
 
     &--l {
-      font-size: core.$font-size-m;
+      font-size: core.$font-size-l;
     }
 
     &--m {
-      font-size: core.$font-size;
+      font-size: core.$font-size-m;
     }
 
     &--s {
@@ -266,7 +256,7 @@ $use-encapsulation: false !default;
     }
 
     &--shadow {
-      text-shadow: 0 4px 4px rgba(core.$uq-black, 0.4);
+      text-shadow: 0 4px 4px rgba(core.$black, 0.4);
     }
   }
 
@@ -380,12 +370,12 @@ $use-encapsulation: false !default;
 
   // Footer
   .legacy-footer {
-    color: core.$text !important;
+    color: core.$grey-900 !important;
     background: none !important;
 
     a,
     .legacy-footer__sub-title {
-      color: core.$text !important;
+      color: core.$grey-900 !important;
     }
 
     &__container {
@@ -393,7 +383,7 @@ $use-encapsulation: false !default;
     }
 
     &__acknowledgement {
-      color: core.$text !important;
+      color: core.$grey-900 !important;
       padding-bottom: 0 !important;
       margin-bottom: 1rem !important;
       font-size: 14px !important;

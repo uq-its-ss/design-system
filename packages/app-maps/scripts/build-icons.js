@@ -23,30 +23,30 @@ let icons = "$-icons: (\n";
 
 // Define Sass functions to use the icons list
 const svgSassFn = `
-  @function -str-replace($string, $search, $replace: '') {
+  @function -str-replace($string, $search, $replace: "") {
     $index: str-index($string, $search);
 
     @if $index {
-      @return str-slice( $string, 1, $index - 1 ) + $replace + -str-replace( str-slice( $string, $index + str-length( $search ) ), $search, $replace);
+      @return str-slice( $string, 1, $index - 1 ) + $replace + -str-replace( str-slice( $string, $index + str-length($search)), $search, $replace);
     }
 
     @return $string;
   }
 
   @function get-icon($icon, $color: #51247a) {
-    @if type-of($color) != 'color' and $color != 'none' {
-      @warn 'The requested color - "' + $color + '" - was not recognized as a Sass color value.';
+    @if type-of($color) != "color" and $color != "none" {
+      @warn "The requested color - \\"" + $color + "\\" - was not recognized as a Sass color value.";
       @return null;
     }
 
     @if map-has-key($-icons, $icon) {
       $icon: map-get($-icons, $icon);
-      $data-uri: -str-replace($icon, '${colorPlaceholder}', $color);
+      $data-uri: -str-replace($icon, "${colorPlaceholder}", $color);
 
-      @return -str-replace( $data-uri, '#', '%23' );
+      @return -str-replace( $data-uri, "#", "%23" );
     }
 
-    @warn 'The requested icon - "' + $icon + '" - is not defined in the $icons map.';
+    @warn "The requested icon - \\"" + $icon + "\\" - is not defined in the $icons map.";
     @return null;
   }\n`;
 

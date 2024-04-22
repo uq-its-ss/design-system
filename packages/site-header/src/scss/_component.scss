@@ -4,10 +4,10 @@
 @use "global" as *;
 
 .uq-site-header {
-  color: core.$text;
+  color: core.$grey-900;
   box-sizing: border-box;
   font-family: core.$font-body;
-  font-size: core.$font-size;
+  font-size: core.$font-size-m;
   font-weight: core.$font-weight-normal;
   line-height: core.$line-height;
   border-bottom: 1px solid #e2e2e2;
@@ -43,7 +43,7 @@
   }
 
   &__title {
-    color: core.$uq-purple;
+    color: core.$purple-500;
     font-size: $title-font-size;
     font-weight: $title-font-weight;
     margin: core.$space-none;
@@ -51,15 +51,16 @@
 
     &:hover,
     &:focus {
-      color: core.$uq-purple;
+      color: core.$purple-500;
       text-decoration: none;
+      background-color: transparent;
     }
   }
 
   &__navigation-toggle {
-    background-color: core.$uq-white;
+    background-color: core.$white;
     border: 0 none;
-    color: core.$uq-purple;
+    color: core.$purple-500;
     cursor: pointer;
     height: 1.5rem;
     margin-bottom: core.$space-none;
@@ -72,19 +73,20 @@
     width: 1.5rem;
 
     &:hover {
-      background-color: core.$uq-white;
-      color: core.$uq-purple;
+      background-color: core.$white;
+      color: core.$purple-500;
+      background-color: transparent;
     }
 
     &:focus {
-      outline: 2px solid core.$link;
+      outline: 2px solid core.$utility-500;
       outline-offset: 0;
     }
 
     &::before {
       background-image: url(icon-constants.get-icon(
         "standard--navigation-menu",
-        core.$uq-purple
+        core.$purple-500
       ));
       background-size: 100%;
       content: "";
@@ -100,7 +102,7 @@
       &::before {
         background-image: url(icon-constants.get-icon(
           "standard--close",
-          core.$uq-purple
+          core.$purple-500
         ));
       }
     }
@@ -127,7 +129,7 @@
   &__navigation {
     a {
       // border-bottom: 1px solid $nav-dropdown-divider;
-      color: core.$uq-purple;
+      color: core.$purple-500;
       display: block;
       padding: core.$space-m core.$space-m;
       text-decoration: none;
@@ -137,6 +139,7 @@
       &:focus {
         // background-color: $nav-primary-active-bg;
         text-decoration: underline;
+        background-color: transparent;
 
         @media #{core.$screen-lg-up} {
           outline: 0 none;
@@ -173,7 +176,7 @@
 
         &.uq-site-header__navigation__list--open {
           display: block;
-          border-top: 1px solid $nav-dropdown-divider;
+          border-top: 1px solid core.$grey-200;
 
           @media #{core.$screen-lg-up} {
             border-top: 0 none;
@@ -245,13 +248,13 @@
           .uq-site-header__navigation__sub-toggle {
             background-image: url(icon-constants.get-icon(
               "standard--chevron-up-sml",
-              core.$uq-purple
+              core.$purple-500
             ));
 
             @media #{core.$screen-lg-up} {
               background-image: url(icon-constants.get-icon(
                 "standard--chevron-down-sml",
-                core.$uq-purple
+                core.$purple-500
               ));
             }
           }
@@ -267,18 +270,18 @@
 
         &--active {
           > a {
-            border-left: 2px solid core.$uq-purple;
+            border-left: 2px solid core.$purple-500;
 
             @media #{core.$screen-lg-up} {
               border-left: 0 none;
-              border-bottom: 4px solid core.$uq-purple;
+              border-bottom: 4px solid core.$purple-500;
             }
           }
         }
 
         &:hover {
           & .uq-site-header__navigation__list-link {
-            border-bottom: 4px solid core.$uq-purple;
+            border-bottom: 4px solid core.$purple-500;
           }
         }
       }
@@ -292,11 +295,11 @@
       width: core.$space-xxxl;
       padding: core.$space-compressed-xxxl core.$space-l;
       border: 0;
-      border-left: 1px solid $nav-dropdown-divider;
+      border-left: 1px solid core.$grey-200;
       text-indent: -100vw;
       background-image: url(icon-constants.get-icon(
         "standard--chevron-down-sml",
-        core.$uq-purple
+        core.$purple-500
       ));
       background-size: core.$space-m;
       background-position: center center;
@@ -359,7 +362,7 @@
   text-indent: -100vw;
   background-image: url(icon-constants.get-icon(
     "standard--chevron-down-sml",
-    core.$uq-purple
+    core.$purple-500
   ));
   background-size: core.$space-m;
   background-position: center center;
@@ -370,7 +373,7 @@
 }
 
 .uq-site-header__navigation .uq-site-header__navigation__list-link:focus {
-  outline: 2px solid core.$link;
+  outline: 2px solid core.$utility-500;
   outline-offset: 0;
 }
 

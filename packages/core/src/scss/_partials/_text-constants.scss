@@ -1,21 +1,21 @@
 // font family
 $roboto: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$merriweather: "Merriweather", Georgia, serif;
 $montserrat: "Montserrat", Helvetica, Arial, sans-serif;
 $courier: "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
 
 $font-body: $roboto;
 $font-title: $montserrat;
-$font-accent: $merriweather;
+$font-accent: $roboto;
 $font-monospace: $courier;
 
 // font sizes
-$font-size-xxxl: 2.5rem; /* 40px - H1 */
-$font-size-xxl: 2rem; /* 32px - H2 */
-$font-size-xl: 1.5rem; /* 24px - H3 */
-$font-size-l: 1.25rem; /* 20px - H4 */
-$font-size-m: 1.125rem; /* 18px - H5 */
-$font-size: 1rem; /* 16px - Body, H6 */
+$font-size-ul: 3rem; /* 48px */
+$font-size-xxxxl: 2.5rem; /* 40px - H1 */
+$font-size-xxxl: 2rem; /* 32px - H2 */
+$font-size-xxl: 1.5rem; /* 24px - H3 */
+$font-size-xl: 1.25rem; /* 20px - H4 */
+$font-size-l: 1.125rem; /* 18px - H5 */
+$font-size-m: 1rem; /* 16px - Body, H6 */
 $font-size-s: 0.875rem; /* 14px - Sub */
 $font-size-xs: 0.75rem; /* 12px - Small */
 $font-size-xxs: 0.625rem; /* 10px - Small uppercase */
@@ -27,6 +27,9 @@ $font-weight-medium: 500;
 $font-weight-bold: $font-weight-medium;
 
 // line heights
-$line-height: 1.5;
-$line-height-h: 1.4;
+$line-height: 1.6;
+$line-height-h: 1.2;
 $line-height-ui: 1;
+
+// 1% letter spacing
+$letter-spacing: 0.01rem;

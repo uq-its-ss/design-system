@@ -43,21 +43,28 @@
     flex: 0 1 auto;
     padding: core.$space-m core.$space-l;
     margin-right: core.$space-xs;
-    font-size: core.$font-size;
+    font-size: core.$font-size-m;
     font-weight: core.$font-weight-thin;
-    color: core.$uq-neutral-dark80;
-    background-color: core.$uq-white;
+    color: core.$grey-900;
+    background-color: core.$white;
     border-radius: core.$space-xs core.$space-xs core.$space-none
       core.$space-none;
     border: none;
     text-align: center;
     white-space: nowrap;
     cursor: pointer;
+    text-decoration: none;
 
     @media #{core.$screen-md-up} {
       padding: core.$space-l core.$space-xl;
       margin-right: core.$space-xs;
-      font-size: core.$font-size-m;
+      font-size: core.$font-size-l;
+    }
+
+    &:hover {
+      color: core.$grey-900;
+      background-color: core.$white;
+      text-decoration: underline;
     }
 
     &:last-child {
@@ -65,8 +72,8 @@
     }
 
     &--active {
-      color: core.$uq-purple;
-      background-color: core.$uq-white;
+      color: core.$purple-500;
+      background-color: core.$white;
       font-weight: core.$font-weight-bold;
 
       &::before {
@@ -75,7 +82,7 @@
         left: 0;
         width: 100%;
         height: 2px;
-        background-color: core.$uq-white;
+        background-color: core.$white;
         content: "";
         display: none;
       }
@@ -96,9 +103,9 @@
   // tab panel
   &__tab-panel {
     padding: core.$space-m core.$space-l;
-    font-size: core.$font-size;
-    color: core.$uq-neutral-dark80;
-    background-color: core.$uq-white;
+    font-size: core.$font-size-m;
+    color: core.$grey-900;
+    background-color: core.$white;
 
     @media #{core.$screen-md-up} {
       padding: core.$space-l core.$space-xl;
@@ -108,27 +115,27 @@
   // Default / Outline variant
   &.uq-tabs--outline {
     .uq-tabs__tab-list {
-      border-bottom: 1px solid $tab-border-color;
+      border-bottom: 1px solid core.$grey-200;
     }
 
     .uq-tabs__tab {
-      background-color: core.$uq-white;
-      border: 1px solid $tab-border-color;
+      background-color: core.$white;
+      border: 1px solid core.$grey-200;
       margin-bottom: -1px;
 
       &:hover,
       &:focus,
       &:active {
-        background-color: core.$uq-white;
+        background-color: core.$white;
       }
 
       &--active {
-        background-color: core.$uq-white;
+        background-color: core.$white;
 
         &:hover,
         &:focus,
         &:active {
-          background-color: core.$uq-white;
+          background-color: core.$white;
         }
 
         &::before {
@@ -141,21 +148,21 @@
   // Lined variant
   &.uq-tabs--lined {
     .uq-tabs__tab-list {
-      border-bottom: 1px solid $tab-border-color;
+      border-bottom: 1px solid core.$grey-200;
     }
 
     .uq-tabs__tab {
       &--active {
-        background-color: core.$uq-white;
+        background-color: core.$white;
 
         &:hover,
         &:focus,
         &:active {
-          background-color: core.$uq-white;
+          background-color: core.$white;
         }
 
         &::before {
-          background-color: core.$uq-purple;
+          background-color: core.$purple-500;
           display: block;
         }
       }

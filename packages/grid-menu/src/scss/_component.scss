@@ -5,6 +5,10 @@
 .uq-grid-menu {
   box-sizing: border-box;
   display: grid;
+  font-family: core.$font-body;
+  font-size: core.$font-size-m;
+  font-weight: core.$font-weight-normal;
+  line-height: core.$line-height;
   list-style: none;
   gap: core.$space-none;
   margin: 0;
@@ -37,8 +41,8 @@
   }
 
   &__link {
-    border-bottom: 1px solid $linked-list-border;
-    color: $linked-list-color;
+    border-bottom: 1px solid core.$grey-200;
+    color: core.$utility-500;
     display: block;
     font-size: 1.375rem;
     font-weight: 400;
@@ -46,6 +50,7 @@
     padding: core.$space-m core.$space-xl core.$space-m core.$space-m;
     position: relative;
     height: 100%;
+    text-decoration: none;
 
     &::after {
       content: "";
@@ -59,15 +64,15 @@
     }
 
     &:hover {
-      background-color: core.$link;
-      color: $linked-list-color-hover;
+      background-color: core.$utility-500;
+      color: core.$white;
       text-decoration: none;
 
       &::after {
         content: "";
         background-image: url(icon-constants.get-icon(
           "standard--arrow-right-1",
-          core.$uq-white
+          core.$white
         ));
         background-repeat: no-repeat;
         background-size: 1.4rem 1.4rem;
@@ -77,7 +82,7 @@
       .uq-grid-menu__link,
       .uq-grid-menu__title,
       .uq-grid-menu__description {
-        color: $linked-list-color-hover;
+        color: core.$white;
         text-decoration: none;
       }
 
@@ -95,7 +100,7 @@
   }
 
   &__description {
-    color: $linked-list-desc;
+    color: core.$grey-700;
     display: block;
     font-size: 0.8rem;
     font-weight: 300;
@@ -112,7 +117,7 @@
   // Dark text variant.
   &--dark-text {
     .uq-grid-menu__link {
-      color: core.$dark-palette-color;
+      color: core.$grey-900;
     }
 
     .uq-grid-menu__icon {
@@ -136,12 +141,12 @@
       @extend %light-palette;
 
       &:hover {
-        background-color: core.$light-palette-link-color;
-        color: core.$link;
+        background-color: core.$white;
+        color: core.$utility-500;
 
         .uq-grid-menu__description {
-          background-color: core.$light-palette-link-color;
-          color: core.$link;
+          background-color: core.$white;
+          color: core.$utility-500;
         }
       }
     }
@@ -156,12 +161,12 @@
       @extend %dark-palette;
 
       &:hover {
-        background-color: core.$link;
-        color: core.$uq-white;
+        background-color: core.$utility-500;
+        color: core.$white;
 
         .uq-grid-menu__description {
-          background-color: core.$link;
-          color: core.$uq-white;
+          background-color: core.$utility-500;
+          color: core.$white;
         }
       }
     }
@@ -172,7 +177,7 @@
 .section--background-image {
   .uq-grid-menu {
     &__link {
-      border-color: rgba(core.$uq-white, 0.4);
+      border-color: rgba(core.$white, 0.4);
     }
   }
 }

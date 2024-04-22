@@ -7,29 +7,24 @@ on:
   pull_request: {}
 jobs:
   main:
-    strategy:
-      matrix:
-        node: [16]
     runs-on: ubuntu-latest
     steps:
-      - name: 🛑 Cancel Previous Runs
-        uses: styfle/cancel-workflow-action@0.9.0
+      - name: "🛑 Cancel Previous Runs"
+        uses: styfle/cancel-workflow-action@0.11.0
 
-      - name: ⬇️ Checkout repo
-        uses: actions/checkout@v2
+      - name: "⬇️ Checkout repo"
+        uses: actions/checkout@v4
 
-      - name: ⎔ Setup node
-        uses: actions/setup-node@v2
+      - name: "⎔ Setup node 18"
+        uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node }}
+          node-version: 18
 
-      - name: 📥 Download deps
-        uses: bahmutov/npm-install@v1
-        with:
-          useLockFile: false
+      - name: "📦️ Install dependencies"
+        run: npm install
 
-      - name: 🧹 Linting
+      - name: "🧹 Linting"
         run: npm run lint
 
-      - name: ✅ Tests
+      - name: "✅ Tests"
         run: npm run test

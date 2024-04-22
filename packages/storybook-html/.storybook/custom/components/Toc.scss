@@ -2,40 +2,30 @@
 @use "tocbot/src/scss/tocbot";
 
 // tocbot style overrides
-.uqds-toc {
-  box-sizing: border-box;
-  background-color: core.$uq-white;
-  padding: core.$space-xl core.$space-none core.$space-none core.$space-none;
-  margin-bottom: core.$space-m;
+.toc-wrapper {
+  .toc-list {
+    .toc-list-item {
+      a.toc-link {
+        &::before {
+          width: 0;
+        }
 
-  &__toc {
-    font-size: core.$font-size-s;
-    margin-left: -(core.$space-s);
-
-    .toc-list {
-      padding-left: core.$space-s;
-
-      &-item {
-        margin: core.$space-xs core.$space-none;
+        &:hover,
+        &:focus {
+          background-color: transparent;
+          text-decoration: underline;
+        }
       }
     }
 
-    a.toc-link {
-      color: core.$link;
-      text-indent: -(core.$space-m);
-
+    .toc-list-item.is-active-li {
       &::before {
-        width: 0;
+        border-left: solid 2px core.$purple-500;
       }
 
-      &:hover,
-      &:focus {
-        color: core.$link-hover;
+      & > a {
+        color: core.$purple-500;
       }
-    }
-
-    .is-active-link {
-      font-weight: core.$font-weight-normal;
     }
   }
 }
@@ -63,7 +53,7 @@
         padding-right: core.$space-m;
         text-decoration: none;
         transition: all 0.125s ease-in;
-        color: core.$text;
+        color: core.$grey-900;
 
         &::before {
           width: core.$space-xs;
@@ -71,7 +61,7 @@
 
         &:hover,
         &:focus {
-          color: core.$text;
+          color: core.$grey-900;
         }
       }
 
@@ -79,7 +69,7 @@
         font-weight: core.$font-weight-bold;
 
         &::before {
-          background-color: core.$uq-purple;
+          background-color: core.$purple-500;
         }
       }
     }

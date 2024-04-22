@@ -1,0 +1,57 @@
+import { Meta, Story, Canvas } from "@storybook/blocks";
+import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
+import * as BodyElementsStories from "./body-elements.stories";
+
+<Meta of={BodyElementsStories} />
+
+# Body elements
+
+<StatusBadge.Review />
+
+<StatusBadge.DraftDoc />
+
+## Title
+
+<Canvas>
+  <Story of={BodyElementsStories.title} />
+</Canvas>
+
+## Header
+
+<Canvas>
+  <Story of={BodyElementsStories.header} />
+</Canvas>
+
+## Text block
+
+<Canvas>
+  <Story of={BodyElementsStories.textBlock} />
+</Canvas>
+
+## Unordered list (`<ul>`)
+
+<Canvas>
+  <Story of={BodyElementsStories.unorderedList} />
+</Canvas>
+
+## Ordered list (`<ol>`)
+
+<Canvas>
+  <Story of={BodyElementsStories.orderedList} />
+</Canvas>
+
+## Definition list (`<dl>`)
+
+<Canvas>
+  <Story of={BodyElementsStories.definitionList} />
+</Canvas>
+
+## Horizontal rule (`<hr/>`)
+
+<Canvas>
+  <Story of={BodyElementsStories.horizontalRule} />
+</Canvas>
+
+## Video
+
+Coming soon

@@ -3,11 +3,11 @@
 @use "global" as *;
 
 .uq-side-nav {
-  color: core.$text;
-  border-top: core.$space-xs solid core.$uq-purple;
+  color: core.$grey-900;
+  border-top: core.$space-xs solid core.$purple-500;
   box-sizing: border-box;
   font-family: core.$font-body;
-  font-size: core.$font-size;
+  font-size: core.$font-size-m;
   font-weight: core.$font-weight-normal;
   line-height: core.$line-height;
 
@@ -22,27 +22,27 @@
     padding: core.$space-m core.$space-l;
 
     &-link {
-      font-size: core.$font-size-l;
-      color: core.$uq-purple;
+      font-size: core.$font-size-xl;
+      color: core.$purple-500;
       text-decoration: none;
 
       &:hover,
       &:focus {
-        color: core.$uq-purple;
+        color: core.$purple-500;
         text-decoration: underline;
       }
     }
   }
 
   &__list {
-    border-top: 1px solid $sidenav-list-item-divider;
+    border-top: 1px solid core.$grey-200;
     display: block;
     list-style-type: none;
     margin: core.$space-none;
     padding: core.$space-none;
 
     &--level-2 {
-      background-color: $sidenav-list-item-bg;
+      background-color: core.$grey-50;
       display: block;
       visibility: hidden;
       position: relative;
@@ -50,7 +50,7 @@
       left: 0;
       width: 100%;
       opacity: 0;
-      transform: translateY(-($sidenav-list-item-animation-distance));
+      transform: translateY(-(core.$space-s));
 
       .uq-side-nav__list-item {
         &:last-child {
@@ -63,13 +63,13 @@
 
         &:hover,
         &:focus {
-          background-color: $sidenav-list-item-active-bg !important;
+          background-color: core.$grey-200 !important;
         }
       }
     }
 
     &-item {
-      border-bottom: 1px solid $sidenav-list-item-divider;
+      border-bottom: 1px solid core.$grey-200;
       display: block;
       margin: core.$space-none;
       padding: core.$space-none;
@@ -78,11 +78,13 @@
       .uq-side-nav__link {
         display: block;
         padding: core.$space-m core.$space-l;
-        color: core.$text;
+        color: core.$grey-900;
         text-decoration: none;
+        font-weight: core.$font-weight-normal;
 
         &:hover,
         &:focus {
+          background-color: transparent;
           text-decoration: underline;
         }
       }
@@ -91,6 +93,14 @@
         &--active {
           .uq-side-nav__link {
             font-weight: core.$font-weight-medium;
+          }
+        }
+      }
+
+      &--open {
+        & > .uq-side-nav__link {
+          &:hover {
+            background-color: core.$grey-50;
           }
         }
       }
@@ -107,7 +117,7 @@
         text-indent: -100vw;
         background-image: url(icon-constants.get-icon(
           "standard--arrow-down-1",
-          core.$uq-purple
+          core.$purple-500
         ));
         background-size: 1.2rem;
         background-position: center center;
@@ -120,7 +130,7 @@
         .uq-side-nav__list-item__sub-toggle {
           background-image: url(icon-constants.get-icon(
             "standard--arrow-up-1",
-            core.$uq-purple
+            core.$purple-500
           ));
         }
 
@@ -136,7 +146,7 @@
       &--active,
       &:focus {
         .uq-side-nav__link {
-          background-color: $sidenav-list-item-bg;
+          background-color: core.$grey-50;
         }
       }
     }

@@ -171,6 +171,7 @@
 @include icon("other--network-users");
 @include icon("other--notes-edit");
 @include icon("other--paralympics-swimming");
+@include icon("other--peer-assessed");
 @include icon("other--phone-action-information");
 @include icon("other--profile-user-cash-message");
 @include icon("other--railroad-train-1");
@@ -233,14 +234,18 @@
 @include icon("social--social-facebook-circle");
 @include icon("social--social-instagram2-circle");
 @include icon("social--social-linkedin-circle");
-@include icon("social--social-twitter-circle");
+@include icon("social--social-wechat-circle");
+@include icon("social--social-weebo-circle");
+@include icon("social--social-x-twitter-circle");
+@include icon("social--social-x");
 @include icon("social--social-you-tube-circle");
-@include icon("social--twitter");
+@include icon("social--social-youku-circle");
 @include icon("standard--add");
 @include icon("standard--adjustment-schemes");
 @include icon("standard--arrow-down-1");
 @include icon("standard--arrow-left-1");
 @include icon("standard--arrow-right-1");
+@include icon("standard--arrow-right");
 @include icon("standard--arrow-up-1");
 @include icon("standard--arrow-up");
 @include icon("standard--bubble-square-question");
@@ -296,3 +301,4 @@
 @include icon("student-services--study-desk");
 @include icon("student-services--transportation-ticket-bus-transfer-1");
 @include icon("transport--road-sign-turn-right-1");
+@include icon("transport--stop-sign");

@@ -12,7 +12,7 @@
       border-radius: 8px;
       padding: core.$space-m;
       text-align: center;
-      background-color: core.$uq-neutral-light80;
+      background-color: core.$grey-50;
 
       &__icon {
         margin-bottom: core.$space-s;
@@ -27,9 +27,9 @@
       }
 
       &__label {
-        border-top: 1px solid core.$uq-neutral;
+        border-top: 1px solid core.$grey-300;
         padding-top: core.$space-s;
-        color: core.$uq-neutral-dark40;
+        color: core.$grey-700;
         line-height: 1;
       }
     }
@@ -51,7 +51,7 @@
       background-size: 100%;
       background-image: url(icon-constants.get-icon(
         "agriculture-and-environment--agriculture-machine-tractor",
-        core.$uq-green
+        core.$success-500
       ));
     }
   }

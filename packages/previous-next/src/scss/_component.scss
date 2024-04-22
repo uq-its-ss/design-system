@@ -4,6 +4,11 @@
 @use "global" as *;
 
 .uq-previous-next {
+  font-family: core.$font-body;
+  font-size: core.$font-size-m;
+  font-weight: core.$font-weight-normal;
+  line-height: core.$line-height;
+
   &__item {
     width: 100%;
     float: left;
@@ -26,14 +31,15 @@
   }
 
   a {
-    color: core.$link;
+    color: core.$utility-500;
     font-size: 1.7rem;
     font-weight: 400;
     line-height: 1.2;
     text-decoration: none;
 
     &:hover {
-      color: core.$link-hover;
+      background-color: transparent;
+      color: core.$utility-600;
       text-decoration: none;
 
       &::before {
@@ -53,7 +59,7 @@
     &::before {
       content: url(icon-constants.get-icon(
         "standard--arrow-left-1",
-        core.$uq-neutral
+        core.$grey-300
       ));
       width: 3rem;
       display: inline-block;
@@ -74,7 +80,7 @@
     &::after {
       content: url(icon-constants.get-icon(
         "standard--arrow-right-1",
-        core.$uq-neutral
+        core.$grey-300
       ));
       width: 3rem;
       display: inline-block;

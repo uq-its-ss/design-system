@@ -10,14 +10,18 @@
 // .uq-accordion--no-bottom-spacing - Removes margin from below accordions for use in menus (see compendium).
 
 .uq-accordion {
+  font-family: core.$font-body;
+  font-size: core.$font-size-m;
+  font-weight: core.$font-weight-normal;
+  line-height: core.$line-height;
   list-style: none;
   margin-bottom: core.$space-l;
   padding: core.$space-none;
 
   // Accordion item.
   &__item {
-    background: $accordion-content-bg;
-    border: 1px solid $accordion-border-color;
+    background: core.$white;
+    border: 1px solid core.$grey-200;
     border-radius: 2px;
     margin-bottom: core.$space-s;
 
@@ -30,16 +34,16 @@
   &__toggle {
     -moz-appearance: none;
     -webkit-appearance: none;
-    background: $accordion-content-bg;
+    background: core.$white;
     border-radius: 0;
     border-style: solid;
     border-width: 0;
-    color: core.$text;
+    color: core.$grey-900;
     cursor: pointer;
     display: inline-block;
     font-family: core.$font-body;
-    font-size: core.$font-size-l;
-    font-weight: 400;
+    font-size: core.$font-size-xl;
+    font-weight: 500;
     line-height: core.$line-height-h;
     margin: core.$space-none;
     padding: core.$space-m core.$space-xxxxl core.$space-m core.$space-m;
@@ -49,6 +53,13 @@
     transition: all ease 0.2s;
     width: 100%;
 
+    & > * {
+      margin: 0;
+      color: core.$grey-900;
+      font-size: core.$font-size-xl;
+      font-weight: 500;
+    }
+
     @media #{core.$screen-md-up} {
       padding: core.$space-m core.$space-uul core.$space-m core.$space-l;
     }
@@ -57,15 +68,13 @@
     &::before {
       content: "";
       background-image: url(icon-constants.get-icon(
-        "standard--arrow-down-1",
-        core.$uq-purple
+        "standard--chevron-down",
+        core.$purple-500
       ));
       background-repeat: no-repeat;
       width: core.$space-l;
       height: core.$space-l;
-      transform: translateY(50%);
       position: absolute;
-      top: core.$space-s;
       right: core.$space-m;
 
       @media #{core.$screen-md-up} {
@@ -75,8 +84,8 @@
 
     &:hover,
     &:focus {
-      color: core.$text;
-      background-color: $accordion-title-bg-hover;
+      color: core.$grey-900;
+      background-color: core.$grey-50;
     }
 
     &:focus {
@@ -85,19 +94,19 @@
 
     // Active toggle.
     &--active {
-      background: $accordion-content-bg;
+      background: core.$white;
 
       // Open state.
       &::before {
         background-image: url(icon-constants.get-icon(
-          "standard--arrow-up-1",
-          core.$uq-purple
+          "standard--chevron-down",
+          core.$purple-500
         ));
       }
 
       &:hover,
       &:focus {
-        background-color: $accordion-content-bg;
+        background-color: core.$white;
       }
     }
   }
@@ -120,10 +129,10 @@
     transition: height 200ms ease;
 
     &-wrapper {
-      padding: core.$space-m;
+      padding: core.$space-none core.$space-m core.$space-m;
 
       @media #{core.$screen-md-up} {
-        padding: core.$space-l;
+        padding: core.$space-none core.$space-l core.$space-l;
       }
     }
 
@@ -153,30 +162,34 @@
   // Compact Modifier, reduces size for use in mixed components.
   &--compact {
     & .uq-accordion__toggle {
-      font-size: core.$font-size;
+      font-size: core.$font-size-m;
       padding: core.$space-s core.$space-xxxxl core.$space-s core.$space-m;
     }
 
     & .uq-accordion__toggle::before {
       width: core.$space-m;
       height: core.$space-m;
-      top: core.$space-xs;
       right: core.$space-m;
     }
 
     & .uq-accordion__toggle--active::before {
       width: core.$space-m;
       height: core.$space-m;
-      top: core.$space-xs;
       right: core.$space-m;
+    }
+
+    & .uq-accordion__content-wrapper {
+      @media #{core.$screen-md-up} {
+        padding: core.$space-none core.$space-m core.$space-m;
+      }
     }
   }
 }
 
-// Overrides for when displayed within wysiwyg fields.
+// Overrides for when displayed within wysiwyg fields. (Drupal?)
 .cke_editable {
   .uq-accordion__content {
-    border: 1px dashed $accordion-editor-outline;
+    border: 1px dashed core.$utility-500;
     display: block !important;
   }
 }

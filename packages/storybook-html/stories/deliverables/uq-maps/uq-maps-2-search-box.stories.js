@@ -1,7 +1,7 @@
-import { useEffect } from "@storybook/addons";
 import { MDCCircularProgress } from "@material/circular-progress";
-//import './uq-maps.scss';
-import docs from "./uq-maps-2-search-box.docs.mdx";
+
+//import scss
+import "./uq-maps.scss";
 
 export default {
   title: "Deliverables/UQ Maps/2 Search field",
@@ -25,112 +25,116 @@ export default {
       ],
       default: "Static map",
     },
-    docs: {
-      page: docs,
-      inlineStories: false,
-    },
   },
 };
 
-export const searchField = () => {
-  return `
-    <div class="uq-maps__search-field">
-      <button class="uq-maps__search-field__back">Back</button>
-      <label for="search" class="uq-maps__search-field__label">Search</label>
-      <input type="text" id="search" class="uq-maps__search-field__input" placeholder="Search" autocomplete="off" />
-      <button class="uq-maps__search-field__clear">Clear</button>
-    </div>
-  `;
+export const searchField = {
+  render: () => {
+    return `
+      <div class="uq-maps__search-field">
+        <button class="uq-maps__search-field__back">Back</button>
+        <label for="search" class="uq-maps__search-field__label">Search</label>
+        <input type="text" id="search" class="uq-maps__search-field__input" placeholder="Search" autocomplete="off" />
+        <button class="uq-maps__search-field__clear">Clear</button>
+      </div>
+    `;
+  },
+
+  name: "2A Search field (initial)",
 };
 
-searchField.storyName = "2A Search field (initial)";
+export const searchFieldFocused = {
+  render: () => {
+    return `
+      <div class="uq-maps__search-field uq-maps__search-field--is-focused">
+        <button class="uq-maps__search-field__back">Back</button>
+        <label for="search" class="uq-maps__search-field__label">Search</label>
+        <input type="text" class="uq-maps__search-field__input" placeholder="Search" autocomplete="off" />
+        <button class="uq-maps__search-field__clear">Clear</button>
+      </div>
+      <div class="uq-maps__search-field uq-maps__search-field--is-focused">
+        <button class="uq-maps__search-field__back">Back</button>
+        <label for="search" class="uq-maps__search-field__label">Search or click on map</label>
+        <input type="text" class="uq-maps__search-field__input" placeholder="Search or click on map" autocomplete="off" />
+        <button class="uq-maps__search-field__clear">Clear</button>
+      </div>
+    `;
+  },
 
-export const searchFieldFocused = () => {
-  return `
-    <div class="uq-maps__search-field uq-maps__search-field--is-focused">
-      <button class="uq-maps__search-field__back">Back</button>
-      <label for="search" class="uq-maps__search-field__label">Search</label>
-      <input type="text" class="uq-maps__search-field__input" placeholder="Search" autocomplete="off" />
-      <button class="uq-maps__search-field__clear">Clear</button>
-    </div>
-    <div class="uq-maps__search-field uq-maps__search-field--is-focused">
-      <button class="uq-maps__search-field__back">Back</button>
-      <label for="search" class="uq-maps__search-field__label">Search or click on map</label>
-      <input type="text" class="uq-maps__search-field__input" placeholder="Search or click on map" autocomplete="off" />
-      <button class="uq-maps__search-field__clear">Clear</button>
-    </div>
-  `;
+  name: "2B Search field on focus or selecting origin/destination",
 };
 
-searchFieldFocused.storyName =
-  "2B Search field on focus or selecting origin/destination";
+export const searchFieldSearching = {
+  render: () => {
+    return `
+      <div class="uq-maps__search-field uq-maps__search-field--is-searching">
+        <button class="uq-maps__search-field__back">Back</button>
+        <label for="search" class="uq-maps__search-field__label">Search</label>
+        <input type="text" class="uq-maps__search-field__input" placeholder="Search" value="Bagels" autocomplete="off" />
+        <button class="uq-maps__search-field__clear">Clear</button>
+      </div>
+    `;
+  },
 
-export const searchFieldSearching = () => {
-  return `
-    <div class="uq-maps__search-field uq-maps__search-field--is-searching">
-      <button class="uq-maps__search-field__back">Back</button>
-      <label for="search" class="uq-maps__search-field__label">Search</label>
-      <input type="text" class="uq-maps__search-field__input" placeholder="Search" value="Bagels" autocomplete="off" />
-      <button class="uq-maps__search-field__clear">Clear</button>
-    </div>
-  `;
+  name: "2C Search field with search value",
 };
 
-searchFieldSearching.storyName = "2C Search field with search value";
+export const searchFieldWorking = {
+  render: () => {
+    return `
+      <div class="uq-maps__search-field uq-maps__search-field--is-working">
+        <button class="uq-maps__search-field__back">Back</button>
+        <label for="search" class="uq-maps__search-field__label">Search</label>
+        <input type="text" id="search" class="uq-maps__search-field__input" placeholder="Search" value="Bagels" autocomplete="off" />
+        <button class="uq-maps__search-field__clear">Clear</button>
+        <div class="uq-maps__search-field__progress-indicator">
 
-export const searchFieldWorking = () => {
-  useEffect(() => {
-    const circularProgress = new MDCCircularProgress(
-      document.querySelector("#searchProgressIndicator")
-    );
-    circularProgress.determinate = false;
-    circularProgress.open();
-  });
+          <!-- START MDC circular-progress component -->
 
-  return `
-    <div class="uq-maps__search-field uq-maps__search-field--is-working">
-      <button class="uq-maps__search-field__back">Back</button>
-      <label for="search" class="uq-maps__search-field__label">Search</label>
-      <input type="text" id="search" class="uq-maps__search-field__input" placeholder="Search" value="Bagels" autocomplete="off" />
-      <button class="uq-maps__search-field__clear">Clear</button>
-      <div class="uq-maps__search-field__progress-indicator">
-
-        <!-- START MDC circular-progress component -->
-
-        <div id="searchProgressIndicator" class="mdc-circular-progress" style="width:1.75rem;height:1.75rem;" role="progressbar" aria-label="Please wait" aria-valuemin="0" aria-valuemax="1">
-          <div class="mdc-circular-progress__determinate-container">
-            <svg class="mdc-circular-progress__determinate-circle-graphic" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-              <circle class="mdc-circular-progress__determinate-track" cx="16" cy="16" r="12.5" stroke-width="1.33"/>
-              <circle class="mdc-circular-progress__determinate-circle" cx="16" cy="16" r="12.5" stroke-dasharray="78.54" stroke-dashoffset="78.54" stroke-width="3"/>
-            </svg>
-          </div>
-          <div class="mdc-circular-progress__indeterminate-container">
-            <div class="mdc-circular-progress__spinner-layer">
-              <div class="mdc-circular-progress__circle-clipper mdc-circular-progress__circle-left">
-                <svg class="mdc-circular-progress__indeterminate-circle-graphic" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="16" cy="16" r="12.5" stroke-dasharray="78.54" stroke-dashoffset="39.27" stroke-width="1.33"/>
-                </svg>
-              </div>
-              <div class="mdc-circular-progress__gap-patch">
-                <svg class="mdc-circular-progress__indeterminate-circle-graphic" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="16" cy="16" r="12.5" stroke-dasharray="78.54" stroke-dashoffset="39.27" stroke-width="1"/>
-                </svg>
-              </div>
-              <div class="mdc-circular-progress__circle-clipper mdc-circular-progress__circle-right">
-                <svg class="mdc-circular-progress__indeterminate-circle-graphic" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="16" cy="16" r="12.5" stroke-dasharray="78.54" stroke-dashoffset="39.27" stroke-width="1.33"/>
-                </svg>
+          <div id="searchProgressIndicator" class="mdc-circular-progress" style="width:1.75rem;height:1.75rem;" role="progressbar" aria-label="Please wait" aria-valuemin="0" aria-valuemax="1">
+            <div class="mdc-circular-progress__determinate-container">
+              <svg class="mdc-circular-progress__determinate-circle-graphic" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                <circle class="mdc-circular-progress__determinate-track" cx="16" cy="16" r="12.5" stroke-width="1.33"/>
+                <circle class="mdc-circular-progress__determinate-circle" cx="16" cy="16" r="12.5" stroke-dasharray="78.54" stroke-dashoffset="78.54" stroke-width="3"/>
+              </svg>
+            </div>
+            <div class="mdc-circular-progress__indeterminate-container">
+              <div class="mdc-circular-progress__spinner-layer">
+                <div class="mdc-circular-progress__circle-clipper mdc-circular-progress__circle-left">
+                  <svg class="mdc-circular-progress__indeterminate-circle-graphic" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="16" cy="16" r="12.5" stroke-dasharray="78.54" stroke-dashoffset="39.27" stroke-width="1.33"/>
+                  </svg>
+                </div>
+                <div class="mdc-circular-progress__gap-patch">
+                  <svg class="mdc-circular-progress__indeterminate-circle-graphic" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="16" cy="16" r="12.5" stroke-dasharray="78.54" stroke-dashoffset="39.27" stroke-width="1"/>
+                  </svg>
+                </div>
+                <div class="mdc-circular-progress__circle-clipper mdc-circular-progress__circle-right">
+                  <svg class="mdc-circular-progress__indeterminate-circle-graphic" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="16" cy="16" r="12.5" stroke-dasharray="78.54" stroke-dashoffset="39.27" stroke-width="1.33"/>
+                  </svg>
+                </div>
               </div>
             </div>
           </div>
+
+          <!-- END MDC circular-progress component -->
+
         </div>
-
-        <!-- END MDC circular-progress component -->
-
       </div>
-    </div>
-  `;
-};
+    `;
+  },
+  play: ({ canvasElement }) => {
+    const circularProgress = canvasElement.querySelector(
+      "#searchProgressIndicator"
+    );
+    if (circularProgress) {
+      const circleProgress = new MDCCircularProgress(circularProgress);
+      circleProgress.determinate = false;
+      circleProgress.open();
+    }
+  },
 
-searchFieldWorking.storyName =
-  "2D Search field with circular progress indicator";
+  name: "2D Search field with circular progress indicator",
+};

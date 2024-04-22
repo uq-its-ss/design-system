@@ -1,24 +1,20 @@
 @use "@uqds/core/src/scss/_global" as core;
 
-$pane-border: core.$uq-neutral-light60; //eee;
-$pane-shaded-bg: core.$uq-neutral-light80; //f5f5f5;
-$pane-title-color: core.$uq-purple;
-
 @mixin pane-shaded {
-  background: $pane-shaded-bg;
+  background: core.$grey-50;
 }
 
 @mixin pane-white {
-  background: core.$uq-white;
+  background: core.$white;
 }
 
 @mixin pane-outline {
-  border: 2px solid $pane-border;
+  border: 2px solid core.$grey-200;
 }
 
 @mixin pane-ruled {
-  border-bottom: 2px solid $pane-border;
-  border-top: 2px solid $pane-border;
+  border-bottom: 2px solid core.$grey-200;
+  border-top: 2px solid core.$grey-200;
 }
 
 @mixin pane-vertical-spacing {
@@ -27,8 +23,7 @@ $pane-title-color: core.$uq-purple;
 
 @mixin pane-dark-tint {
   @extend %light-palette;
-  background-color: core.$uq-black;
-  background-color: rgba(core.$uq-black, 0.65);
+  background-color: core.$grey-800;
 
   .uq-pane__title {
     @extend %light-palette;
@@ -44,7 +39,7 @@ $pane-title-color: core.$uq-purple;
     }
 
     &__footer {
-      background-color: $pane-shaded-bg;
+      background-color: core.$grey-50;
       padding: core.$space-l; //1.8rem;
     }
   }

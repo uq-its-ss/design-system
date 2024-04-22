@@ -1,0 +1,13 @@
+import { Meta, Story, Canvas } from "@storybook/blocks";
+import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
+import * as BasicPageStories from "./basic-page.stories";
+
+<Meta of={BasicPageStories} />
+
+# Basic page
+
+<StatusBadge.DraftDoc />
+
+<Canvas sourceState="hidden" withToolbar>
+  <Story of={BasicPageStories.basicPage} autoplay />
+</Canvas>

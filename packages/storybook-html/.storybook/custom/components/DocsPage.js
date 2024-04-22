@@ -1,5 +1,5 @@
 import React from "react";
-import { Title, Subtitle, Description, Stories } from "@storybook/addon-docs";
+import { Title, Subtitle, Description, Stories } from "@storybook/blocks";
 import Toc from "./Toc";
 
 const DocsPage = () => (

@@ -6,8 +6,6 @@
 @use "_partials/colour-constants" as *;
 @use "_partials/text-constants" as *;
 
-// Placeholder styles
-
 // Provide an overlay over backgrounds to darken, lighten an image to provide
 // better visual contrast for content.
 // Can be used as extensions on components that accommodate overlaid content.
@@ -35,11 +33,11 @@
 // Dark tint layer provides a black tint
 %dark-tint {
   @extend %tint;
-  background-color: $dark-tint-bg;
+  background-color: $grey-900;
 
   &::before {
     @extend %tint-overlay;
-    background: $uq-black;
+    background: $black;
   }
 }
 
@@ -49,7 +47,7 @@
 
   &::before {
     @extend %tint-overlay;
-    background: $uq-white;
+    background: $white;
   }
 }
 
@@ -64,37 +62,37 @@
 
 // Light
 %light-palette {
-  border-color: $light-palette-border-color;
-  color: $light-palette-color;
+  border-color: $grey-200;
+  color: $grey-50;
 
   a {
-    color: $light-palette-link-color;
+    color: $white;
     font-weight: $font-weight-normal;
 
     &:hover {
-      color: darken($light-palette-link-color, 10%);
+      color: $grey-50;
     }
   }
 }
 
 %light-palette-bg {
-  background-color: $light-palette-bg;
+  background-color: $white;
 }
 
 // Dark
 %dark-palette {
-  border-color: $dark-palette-border-color;
-  color: $dark-palette-color;
+  border-color: $grey-50;
+  color: $grey-900;
 
   a {
-    color: $dark-palette-link-color;
+    color: $utility-500;
 
     &:hover {
-      color: darken($dark-palette-link-color, 10%);
+      color: $utility-600;
     }
   }
 }
 
 %dark-palette-bg {
-  background-color: $dark-palette-bg;
+  background-color: $grey-700;
 }

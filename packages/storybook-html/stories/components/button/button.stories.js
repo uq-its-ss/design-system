@@ -1,91 +1,93 @@
-// import styles
-import "./button.scss";
-
-// documentation
-import docs from "./button.docs.mdx";
+import { createButton } from "./button";
 
 export default {
   title: "Components/Button",
-  parameters: {
-    docs: {
-      page: docs,
+  render: ({ label, ...args }) => {
+    // You can either use a function to create DOM elements or use a plain html string!
+    // return `<div>${label}</div>`;
+    return createButton({ label, ...args });
+  },
+  argTypes: {
+    label: { control: "text" },
+    style: {
+      control: { type: "radio" },
+      options: {
+        Primary: "",
+        Secondary: "uq-button--secondary",
+        Tertiary: "uq-button--tertiary",
+      },
+      //options: ['small', 'medium', 'large'],
     },
-    layout: "padded",
-    previewTabs: {
-      canvas: { hidden: false },
+    size: {
+      control: { type: "inline-radio" },
+      options: {
+        default: "",
+        tiny: "uq-button--tiny",
+        small: "uq-button--small",
+        large: "uq-button--large",
+      },
+      //options: ['small', 'medium', 'large'],
     },
+    expand: { control: "boolean" },
   },
 };
 
-export const primary = () => {
-  return `
-    <button class="uq-button">Button</button>
-    <button class="uq-button uq-button--outline">Button</button>
-    <button class="uq-button uq-button--text">Button</button>
-  `;
-};
-
-primary.storyName = "Primary (base)";
-
-export const secondary = () => {
-  return `
-    <button class="uq-button uq-button--secondary">Button</button>
-    <button class="uq-button uq-button--secondary uq-button--outline">Button</button>
-    <button class="uq-button uq-button--secondary uq-button--text">Button</button>
-  `;
-};
-
-export const secondaryLight = () => {
-  return `
-    <button class="uq-button uq-button--secondary uq-button--outline uq-button--light">Button</button>
-    <button class="uq-button uq-button--secondary uq-button--text uq-button--light">Button</button>
-  `;
-};
-
-secondaryLight.storyName = "Secondary light";
-secondaryLight.parameters = {
-  docs: {
-    inlineStories: false,
-  },
-  backgrounds: {
-    default: "Dark",
+export const button = {
+  args: {
+    label: "Button",
+    style: "",
+    size: "",
+    expand: false,
   },
 };
 
-export const purple = () => {
-  return `
-    <button class="uq-button uq-button--purple">Button</button>
-    <button class="uq-button uq-button--purple uq-button--outline">Button</button>
-    <button class="uq-button uq-button--purple uq-button--text">Button</button>
-  `;
+export const buttonSecondary = {
+  args: {
+    label: "Secondary",
+    style: "uq-button--secondary",
+  },
 };
 
-export const expand = () => {
-  return `
-    <button class="uq-button uq-button--expand">Button</button>
-    <br/><br/>
-    <button class="uq-button uq-button--expand uq-button--outline">Button</button>
-    <br/><br/>
-    <button class="uq-button uq-button--expand uq-button--text">Button</button>
-  `;
+export const buttonTertiary = {
+  args: {
+    label: "Tertiary",
+    style: "uq-button--tertiary",
+  },
 };
 
-export const size = () => {
-  return `
-    <button class="uq-button">Button</button>
-    <button class="uq-button uq-button--outline">Button</button>
-    <button class="uq-button uq-button--text">Button</button>
-    <br/><br/>
-    <button class="uq-button uq-button--tiny">Button</button>
-    <button class="uq-button uq-button--tiny uq-button--outline">Button</button>
-    <button class="uq-button uq-button--tiny uq-button--text">Button</button>
-    <br/><br/>
-    <button class="uq-button uq-button--small">Button</button>
-    <button class="uq-button uq-button--small uq-button--outline">Button</button>
-    <button class="uq-button uq-button--small uq-button--text">Button</button>
-    <br/><br/>
-    <button class="uq-button uq-button--large">Button</button>
-    <button class="uq-button uq-button--large uq-button--outline">Button</button>
-    <button class="uq-button uq-button--large uq-button--text">Button</button>    
-  `;
+export const buttonSize = {
+  args: {
+    buttons: [{ ...createButton.Primary }, { ...createButton.Secondary }],
+    orientation: "horizontal",
+  },
+  render: () => {
+    return `
+    <button type="button" class="uq-button uq-button--tiny">Tiny</button>
+    <button type="button" class="uq-button uq-button--small">Small</button>
+    <button type="button" class="uq-button">Default</button>
+    <button type="button" class="uq-button uq-button--large">Large</button>
+    `;
+  },
+};
+
+export const buttonExpanded = {
+  args: {
+    expand: true,
+    label: "Button",
+  },
+};
+
+export const buttonIcon = {
+  args: {
+    buttons: [{ ...createButton.Primary }, { ...createButton.Secondary }],
+    orientation: "horizontal",
+  },
+  render: () => {
+    return `
+    <button type="button" class="uq-button uq-button--tiny"><span class="uq-icon uq-icon--standard--close uq-icon--light"></span> Tiny</button>
+    <button type="button" class="uq-button uq-button--small"><span class="uq-icon uq-icon--standard--close uq-icon--light""></span> Small</button>
+    <button type="button" class="uq-button"><span class="uq-icon uq-icon--standard--close uq-icon--light""></span> Default</button>
+    <button type="button" class="uq-button uq-button--large"><span class="uq-icon uq-icon--standard--close uq-icon--light""></span> Large</button>
+    `;
+  },
 };

@@ -1,49 +1,46 @@
-// import styles
-import "./breadcrumb.scss";
-
-// import HTML template strings
-import breadcrumbHTML from "./breadcrumb.html";
-
-// documentation
-import docs from "./breadcrumb.docs.mdx";
+import { breadcrumb } from "@uqds/breadcrumb/src/js/main";
+import "@uqds/layout/src/scss/main.scss";
+import "@uqds/breadcrumb/src/scss/main.scss";
 
 export default {
   title: "Components/Breadcrumb",
   parameters: {
-    docs: {
-      page: docs,
-    },
     previewTabs: {
       canvas: { hidden: false },
     },
   },
 };
 
-export const breadcrumb = () => {
-  return breadcrumbHTML;
+export const Breadcrumb = {
+  render: () => `
+<div class="uq-breadcrumbs">
+  <div class="uq-container">
+    <nav class="uq-breadcrumb" aria-label="Breadcrumb">
+      <ol class="uq-breadcrumb__list">
+        <li class="uq-breadcrumb__item">
+          <a class="uq-breadcrumb__link" title="UQ home" href="https://uq.edu.au/">UQ home</a>
+        </li>
+        <li class="uq-breadcrumb__item">
+          <a class="uq-breadcrumb__link" title="Level one" href="/information-and-services">Level one</a>
+        </li>
+        <li class="uq-breadcrumb__item">
+          <a class="uq-breadcrumb__link" title="Level two" href="/information-and-services/internet-and-wifi">Level two</a>
+        </li>
+        <li class="uq-breadcrumb__item">
+          <a class="uq-breadcrumb__link" title="Bachelor of Business with a Major in Management or Finance" href="#">Bachelor of Business with a Major in Management or Finance</a>
+        </li>
+        <li class="uq-breadcrumb__item">
+          <a class="uq-breadcrumb__link" title="Major Leadership and Management Science" href="#">Major Leadership and Management Science</a>
+        </li>
+        <li class="uq-breadcrumb__item">
+          <a class="uq-breadcrumb__link" title="Current page" href="#">Current page</a>
+        </li>
+      </ol>
+    </nav>
+  </div>
+</div>`,
+  play: ({ canvasElement }) => {
+    const breadcrumbs = canvasElement.querySelector(".uq-breadcrumb");
+    if (breadcrumbs) new breadcrumb(breadcrumbs);
+  },
 };
-
-breadcrumb.storyName = "Default";
-
-export const breadcrumbTruncation = () => {
-  return `
-  <nav aria-label="breadcrumb">
-    <ol class="uq-breadcrumb" itemscope="" itemtype="https://schema.org/BreadcrumbList">
-      <li class="uq-breadcrumb__item uq-breadcrumb__item--home" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
-        <a class="uq-breadcrumb__link uq-breadcrumb__link--home" href="/">Home</a>
-        <meta itemprop="position" content="1">
-      </li>
-      <li class="uq-breadcrumb__item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
-        <a class="uq-breadcrumb__link" itemprop="item" href="/information-and-services">Information and services</a>
-        <meta itemprop="position" content="2">
-      </li>
-      <li class="uq-breadcrumb__item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
-        <a class="uq-breadcrumb__link" itemprop="item" href="/information-and-services/accessing-it-systems-and-software-remotely">Accessing IT systems and software remotely</a>
-        <meta itemprop="position" content="3">
-      </li>
-    </ol>
-  </nav>
-  `;
-};
-
-breadcrumbTruncation.storyName = "Truncation";

@@ -1,0 +1,48 @@
+{
+  "name": "@uqds/navigation",
+  "version": "1.0.0-alpha.8",
+  "description": "Navigation components",
+  "keywords": [
+    "uqds",
+    "uq",
+    "University of Queensland",
+    "design system",
+    "scss",
+    "sass",
+    "css",
+    "nav",
+    "navigation"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": {
+    "name": "University of Queensland",
+    "email": "webservices@uq.edu.au",
+    "url": "https://uq.edu.au"
+  },
+  "homepage": "https://github.com/uq-its-ss/design-system#readme",
+  "license": "ISC",
+  "directories": {
+    "lib": "src"
+  },
+  "files": [
+    "src/*",
+    "dist/*"
+  ],
+  "style": "dist/css/main.css",
+  "scripts": {
+    "prepare": "gulp -f ../../gulpfile.js --cwd=. prepare"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uq-its-ss/design-system.git"
+  },
+  "bugs": {
+    "url": "https://github.com/uq-its-ss/design-system/issues"
+  },
+  "dependencies": {
+    "@uqds/core": "^1.2.0-alpha.1",
+    "@uqds/icon": "^0.0.15-alpha.7"
+  }
+}

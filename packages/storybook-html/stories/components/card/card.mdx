@@ -1,0 +1,43 @@
+import { Meta, Story, Canvas } from "@storybook/blocks";
+import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
+import * as CardStories from "./card.stories";
+
+<Meta of={CardStories} />
+
+# Card
+
+<StatusBadge.Development />
+<StatusBadge.DraftDoc />
+[Check for open issues](https://github.com/uq-its-ss/design-system/issues)
+
+## Overview
+
+<Canvas>
+  <Story of={CardStories.Card} />
+</Canvas>
+
+## Variants
+
+### Text
+
+<Canvas>
+  <Story of={CardStories.Text} />
+</Canvas>
+
+### Image
+
+<Canvas>
+  <Story of={CardStories.Image} />
+</Canvas>
+
+### Icon
+
+<Canvas>
+  <Story of={CardStories.Icon} />
+</Canvas>
+
+### Icon nav
+
+<Canvas>
+  <Story of={CardStories.IconNav} />
+</Canvas>

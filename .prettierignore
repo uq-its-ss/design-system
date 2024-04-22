@@ -8,3 +8,7 @@ package-lock.json
 # Build
 /packages/**/dist
 /packages/**/storybook-static/
+
+# MDX files that have formatting issues
+# @see https://github.com/melanieseltzer/mdx2-rendering-bugs-reproduction/blob/47f402b136f7603016cb7e186086cd25515b2fba/stories/Heading.stories.mdx
+/packages/storybook-html/stories/components/navigation/local-nav/local-nav.mdx

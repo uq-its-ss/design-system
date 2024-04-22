@@ -1,15 +1,11 @@
-import { useEffect } from "@storybook/addons";
+// import scripts
+import { accordion } from "@uqds/accordion/src/js/main";
 
 // import styles
 import "./footer.scss";
 
-// import scripts
-import accordionCreate from "@uqds/accordion/src/js/accordion";
-
 // import HTML template strings
 import footerHTML from "./footer.html";
-
-import docs from "./footer.docs.mdx";
 
 export default {
   title: "Components/Footer",
@@ -18,21 +14,19 @@ export default {
     backgrounds: {
       default: "UQ Neutral 1",
     },
-    docs: {
-      page: docs,
-      inlineStories: false,
-    },
     previewTabs: {
       canvas: { hidden: false },
     },
   },
 };
 
-export const footer = () => {
-  useEffect(() => {
-    new accordionCreate();
-  });
-  return footerHTML;
-};
+export const footer = {
+  render: () => {
+    return footerHTML;
+  },
+  play: () => {
+    new accordion();
+  },
 
-footer.storyName = "Footer";
+  name: "Footer",
+};

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.1.0-alpha.2](https://github.com/uq-its-ss/design-system/compare/@uqds/body@0.1.0-alpha.1...@uqds/body@0.1.0-alpha.2) (2024-04-23)
+
+### Features
+
+- specify transition properties on links to not interfere with other elements (mainly header) ([#516](https://github.com/uq-its-ss/design-system/issues/516)) ([8e3102b](https://github.com/uq-its-ss/design-system/commit/8e3102bb7d8e85ca8887227953fbe6724c6bd533))
+
 # [0.1.0-alpha.1](https://github.com/uq-its-ss/design-system/compare/@uqds/body@0.1.0-alpha.0...@uqds/body@0.1.0-alpha.1) (2024-04-05)
 
 ### Bug Fixes

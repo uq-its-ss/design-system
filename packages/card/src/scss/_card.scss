@@ -136,8 +136,11 @@
 
       &::after {
         height: 24px;
+        width: calc(24px + #{core.$space-m});
         margin-top: 0;
         margin-left: auto;
+        padding-left: core.$space-m;
+        flex-shrink: 0;
       }
     }
 

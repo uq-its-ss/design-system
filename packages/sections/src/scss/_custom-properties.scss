@@ -1,0 +1,12 @@
+@use "@uqds/core/src/scss/global" as core;
+
+:root {
+  --section-font-size-xxxl: #{core.$font-size-xxxl};
+}
+
+// Resize custom properties for tablet/mobile.
+@media #{core.$screen-md-down} {
+  :root {
+    --section-font-size-xxxl: #{core.$font-size-xxl};
+  }
+}

@@ -1,6 +1,6 @@
 {
   "name": "@uqds/card",
-  "version": "0.1.0-alpha.5",
+  "version": "0.1.0-alpha.6",
   "description": "Card components",
   "keywords": [
     "uqds",
@@ -42,7 +42,7 @@
   },
   "dependencies": {
     "@uqds/core": "^1.2.0-alpha.1",
-    "@uqds/icon": "^0.0.15-alpha.8",
+    "@uqds/icon": "^0.0.15-alpha.9",
     "@uqds/layout": "^1.0.0-alpha.9"
   }
 }

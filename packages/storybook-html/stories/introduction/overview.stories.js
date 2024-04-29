@@ -25,8 +25,7 @@ export const Overview = {
     title: "Design System",
     button: "",
     description: "Styles, components, patterns and standards.",
-    image:
-      "https://design-system.ads-staging.aws.uq.edu.au/images/hero/hero-home.jpg",
+    image: "images/hero/hero-home.jpg",
     light: false,
   })}
   ${Section({

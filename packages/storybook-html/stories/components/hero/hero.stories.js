@@ -27,12 +27,12 @@ export default {
     image: {
       control: "select",
       options: [
-        "/images/hero/hero-example-1.jpg",
-        "/images/hero/hero-example-2.jpg",
-        "/images/hero/hero-example-3.jpg",
-        "/images/hero/hero-example-4.jpg",
-        "/images/hero/hero-example-5.jpg",
-        "/images/hero/hero-example-6.jpg",
+        "images/hero/hero-example-1.jpg",
+        "images/hero/hero-example-2.jpg",
+        "images/hero/hero-example-3.jpg",
+        "images/hero/hero-example-4.jpg",
+        "images/hero/hero-example-5.jpg",
+        "images/hero/hero-example-6.jpg",
       ],
     },
   },
@@ -46,7 +46,7 @@ export const Hero = {
     title: "Title",
     description: "Description",
     button: "Button",
-    image: "/images/hero/hero-example-2.jpg",
+    image: "images/hero/hero-example-2.jpg",
   },
   render: ({ light, large, title, description, button, image }) => `
 <div class="${classNames("uq-hero", {
@@ -86,7 +86,7 @@ export const Home = {
     description:
       "Reduced fees and online study available across many of our postgraduate degrees.",
     button: "Explore programs",
-    image: "/images/hero/hero-example-1.jpg",
+    image: "images/hero/hero-example-1.jpg",
   },
 };
 
@@ -100,7 +100,7 @@ export const Level1 = {
     description:
       "Reduced fees and online study available across many of our postgraduate degrees.",
     button: "",
-    image: "/images/hero/hero-example-3.jpg",
+    image: "images/hero/hero-example-3.jpg",
   },
 };
 
@@ -114,6 +114,6 @@ export const Level2 = {
     description:
       "Events for the UQ community, including the public, industry, researchers, staff and students.",
     button: "",
-    image: "/images/hero/hero-example-4.jpg",
+    image: "images/hero/hero-example-4.jpg",
   },
 };

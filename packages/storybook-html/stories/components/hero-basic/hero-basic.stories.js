@@ -23,9 +23,9 @@ export default {
       control: "select",
       options: [
         "none",
-        "hero-basic-example-1.jpg",
-        "hero-basic-example-2.jpg",
-        "hero-basic-example-3.jpg",
+        "images/hero/hero-basic-example-1.jpg",
+        "images/hero/hero-basic-example-2.jpg",
+        "images/hero/hero-basic-example-3.jpg",
       ],
     },
     tabs: {
@@ -40,7 +40,7 @@ export const HeroBasic = {
     eyebrow: "Eyebrow",
     title: "Title",
     back: "Back link",
-    image: "hero-basic-example-1.jpg",
+    image: "images/hero/hero-basic-example-1.jpg",
     tabs: ["Tab 1", "Tab 2", "Tab 3"],
   },
   render: ({ eyebrow, title, back, image, tabs }) => `
@@ -49,7 +49,7 @@ export const HeroBasic = {
     image !== "none"
       ? `
   <div class="uq-hero-basic__image">
-    <img src="/images/hero/${image}" alt="" role="presentation" />
+    <img src="${image}" alt="" role="presentation" />
   </div>`
       : ""
   }
@@ -120,7 +120,7 @@ export const Program = {
     eyebrow: "Bachelors of",
     title: "Agribusiness / Agricultural Science",
     back: "",
-    image: "hero-basic-example-3.jpg",
+    image: "images/hero/hero-basic-example-3.jpg",
     tabs: ["Overview", "Majors", "Fees and scholarships", "How to apply"],
   },
 };
@@ -132,7 +132,7 @@ export const Plan = {
     eyebrow: "Major",
     title: "Medical Biotechnology",
     back: "Bachelor of Biotechnology",
-    image: "hero-basic-example-2.jpg",
+    image: "images/hero/hero-basic-example-2.jpg",
     tabs: ["Overview", "Study details"],
   },
 };

@@ -17,9 +17,7 @@ export default {
     },
     image: {
       control: "select",
-      options: [
-        "https://design-system.ads-staging.aws.uq.edu.au/images/card/card-example-herston-campus.jpg",
-      ],
+      options: ["images/card/card-example-herston-campus.jpg"],
     },
   },
   args: {
@@ -28,8 +26,7 @@ export default {
       "The University of Queensland is honouring a learning scientist who is leading by example to inspire and teach future teachers.",
     topLabel: "Uni life",
     bottomLabel: "3 minute read time",
-    image:
-      "https://design-system.ads-staging.aws.uq.edu.au/images/card/card-example-herston-campus.jpg",
+    image: "images/card/card-example-herston-campus.jpg",
     href: "",
   },
 };

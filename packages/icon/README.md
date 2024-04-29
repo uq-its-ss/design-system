@@ -1,6 +1,6 @@
 # `@uqds/icon`
 
-> Icon component.
+> Icon component
 
 ## Usage
 

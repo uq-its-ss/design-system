@@ -1,6 +1,6 @@
 # @uqds/card
 
-> Card components.
+> Card components
 
 ## Usage
 

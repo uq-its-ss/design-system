@@ -1,6 +1,6 @@
 # `@uqds/sections`
 
-> Sections component.
+> Sections component
 
 ## Usage
 

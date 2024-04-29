@@ -1,6 +1,6 @@
 # `@uqds/pane`
 
-> Pane component
+> Pane component.
 
 ## Usage
 

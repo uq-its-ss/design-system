@@ -94,10 +94,10 @@ export const HeroBasic = {
           </div>
         </div>
       </div>
-    </div>
-  </div>`
+    </div>`
         : ""
     }
+  </div>
 </div>`,
 };
 

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.1.0-alpha.5](https://github.com/uq-its-ss/design-system/compare/@uqds/sections@0.1.0-alpha.4...@uqds/sections@0.1.0-alpha.5) (2024-04-29)
+
+### Bug Fixes
+
+- add font size var for section and update filenames for section scss ([#518](https://github.com/uq-its-ss/design-system/issues/518)) ([e69c393](https://github.com/uq-its-ss/design-system/commit/e69c3934af37912bd04fa327e4f9b1aee94a7fef))
+
 # [0.1.0-alpha.4](https://github.com/uq-its-ss/design-system/compare/@uqds/sections@0.1.0-alpha.3...@uqds/sections@0.1.0-alpha.4) (2024-04-08)
 
 ### Bug Fixes

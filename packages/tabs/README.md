@@ -1,6 +1,6 @@
 # `@uqds/tabs`
 
-> Tabs component.
+> Tabs component
 
 ## Usage
 

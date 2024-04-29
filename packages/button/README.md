@@ -1,6 +1,6 @@
 # `@uqds/button`
 
-> Button component
+> Button component.
 
 ## Usage
 

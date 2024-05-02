@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-alpha.11](https://github.com/uq-its-ss/design-system/compare/@uqds/navigation@1.0.0-alpha.10...@uqds/navigation@1.0.0-alpha.11) (2024-04-29)
+
+**Note:** Version bump only for package @uqds/navigation
+
+# [1.0.0-alpha.10](https://github.com/uq-its-ss/design-system/compare/@uqds/navigation@1.0.0-alpha.9...@uqds/navigation@1.0.0-alpha.10) (2024-04-29)
+
+**Note:** Version bump only for package @uqds/navigation
+
+# [1.0.0-alpha.9](https://github.com/uq-its-ss/design-system/compare/@uqds/navigation@1.0.0-alpha.8...@uqds/navigation@1.0.0-alpha.9) (2024-04-29)
+
+**Note:** Version bump only for package @uqds/navigation
+
 # [1.0.0-alpha.8](https://github.com/uq-its-ss/design-system/compare/@uqds/navigation@1.0.0-alpha.7...@uqds/navigation@1.0.0-alpha.8) (2024-04-10)
 
 **Note:** Version bump only for package @uqds/navigation

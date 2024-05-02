@@ -12,7 +12,7 @@
 .uq-section__title {
   margin: 0 0 core.$space-m;
   color: core.$black;
-  font-size: core.$font-size-xxxl;
+  font-size: var(--section-font-size-xxxl);
 }
 
 .uq-section__description {

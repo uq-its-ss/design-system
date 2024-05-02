@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0-alpha.10](https://github.com/uq-its-ss/design-system/compare/@uqds/alert@1.2.0-alpha.9...@uqds/alert@1.2.0-alpha.10) (2024-04-29)
+
+**Note:** Version bump only for package @uqds/alert
+
+# [1.2.0-alpha.9](https://github.com/uq-its-ss/design-system/compare/@uqds/alert@1.2.0-alpha.8...@uqds/alert@1.2.0-alpha.9) (2024-04-29)
+
+**Note:** Version bump only for package @uqds/alert
+
+# [1.2.0-alpha.8](https://github.com/uq-its-ss/design-system/compare/@uqds/alert@1.2.0-alpha.7...@uqds/alert@1.2.0-alpha.8) (2024-04-29)
+
+**Note:** Version bump only for package @uqds/alert
+
 # [1.2.0-alpha.7](https://github.com/uq-its-ss/design-system/compare/@uqds/alert@1.2.0-alpha.6...@uqds/alert@1.2.0-alpha.7) (2024-04-11)
 
 ### Bug Fixes

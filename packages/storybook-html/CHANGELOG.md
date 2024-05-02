@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-alpha.25](https://github.com/uq-its-ss/design-system/compare/storybook-html@1.0.0-alpha.24...storybook-html@1.0.0-alpha.25) (2024-05-02)
+
+### Bug Fixes
+
+- Itsadssd 55603 slide menu fix ([#513](https://github.com/uq-its-ss/design-system/issues/513)) ([ea81535](https://github.com/uq-its-ss/design-system/commit/ea81535a16ab5d2374ef1cba60f12a1d96b88199))
+
 # [1.0.0-alpha.24](https://github.com/uq-its-ss/design-system/compare/storybook-html@1.0.0-alpha.23...storybook-html@1.0.0-alpha.24) (2024-04-29)
 
 **Note:** Version bump only for package storybook-html

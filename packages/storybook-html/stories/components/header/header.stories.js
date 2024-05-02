@@ -30,10 +30,6 @@ export const HeaderInterim = {
   },
   play: ({ canvasElement }) => {
     const headerElem = canvasElement.querySelector(".uq-header");
-    if (!headerElem) {
-      return;
-    }
-    new header(headerElem);
 
     const menuLeftElem = headerElem.querySelector("#global-mobile-nav");
     const menuLeft = new SlideMenu(menuLeftElem, {
@@ -82,10 +78,6 @@ export const Header = {
   },
   play: ({ canvasElement }) => {
     const headerElem = canvasElement.querySelector(".uq-header");
-    if (!headerElem) {
-      return;
-    }
-    new header(headerElem);
 
     const menuLeftElem = headerElem.querySelector("#global-mobile-nav");
     const menuLeft = new SlideMenu(menuLeftElem, {

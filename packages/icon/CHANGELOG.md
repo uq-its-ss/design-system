@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.16](https://github.com/uq-its-ss/design-system/compare/@uqds/icon@0.0.15-alpha.10...@uqds/icon@0.0.16) (2024-05-03)
+
+**Note:** Version bump only for package @uqds/icon
+
+## [0.0.15](https://github.com/uq-its-ss/design-system/compare/@uqds/icon@0.0.15-alpha.10...@uqds/icon@0.0.15) (2024-05-03)
+
+**Note:** Version bump only for package @uqds/icon
+
 ## [0.0.15-alpha.10](https://github.com/uq-its-ss/design-system/compare/@uqds/icon@0.0.15-alpha.9...@uqds/icon@0.0.15-alpha.10) (2024-04-29)
 
 **Note:** Version bump only for package @uqds/icon

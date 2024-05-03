@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.1](https://github.com/uq-its-ss/design-system/compare/@uqds/sections@0.1.0-alpha.7...@uqds/sections@0.1.1) (2024-05-03)
+
+**Note:** Version bump only for package @uqds/sections
+
+# [0.1.0](https://github.com/uq-its-ss/design-system/compare/@uqds/sections@0.1.0-alpha.7...@uqds/sections@0.1.0) (2024-05-03)
+
+**Note:** Version bump only for package @uqds/sections
+
 # [0.1.0-alpha.7](https://github.com/uq-its-ss/design-system/compare/@uqds/sections@0.1.0-alpha.6...@uqds/sections@0.1.0-alpha.7) (2024-04-29)
 
 **Note:** Version bump only for package @uqds/sections

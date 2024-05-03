@@ -1,6 +1,6 @@
 {
   "name": "@uqds/body",
-  "version": "0.1.0-alpha.4",
+  "version": "0.1.1",
   "description": "Basic styles for HTML elements",
   "keywords": [
     "uqds",
@@ -40,6 +40,6 @@
     "url": "https://github.com/uq-its-ss/design-system/issues"
   },
   "dependencies": {
-    "@uqds/core": "^1.2.0-alpha.1"
+    "@uqds/core": "^1.2.1"
   }
 }

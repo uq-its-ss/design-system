@@ -46,7 +46,7 @@ jobs:
         uses: trstringer/manual-approval@v1
         if: ${{ github.ref_name == 'releases' }}
         with:
-          secret: ${{ github.UQDS_PERSONAL_ACCESS_TOKEN }}
+          secret: ${{ secrets.UQDS_PERSONAL_ACCESS_TOKEN }}
           approvers: uqds-admin
           minimum-approvals: 1
           issue-title: 'Approve new release ✅'

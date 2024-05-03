@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.2-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/breadcrumb@2.0.0-alpha.12...@uqds/breadcrumb@2.0.2-alpha.0) (2024-05-03)
+
+**Note:** Version bump only for package @uqds/breadcrumb
+
 ## [2.0.1](https://github.com/uq-its-ss/design-system/compare/@uqds/breadcrumb@2.0.0-alpha.12...@uqds/breadcrumb@2.0.1) (2024-05-03)
 
 **Note:** Version bump only for package @uqds/breadcrumb

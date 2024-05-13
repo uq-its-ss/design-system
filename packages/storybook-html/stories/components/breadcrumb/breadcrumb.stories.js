@@ -37,9 +37,6 @@ export const Breadcrumb = {
         </li>
       </ol>
     </nav>
-    <div>
-      <div>asdfasdfasd sdf </div>
-    </div>
   </div>
 </div>`,
   play: ({ canvasElement }) => {

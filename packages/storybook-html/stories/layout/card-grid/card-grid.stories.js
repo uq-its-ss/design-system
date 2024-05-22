@@ -74,7 +74,6 @@ const imageUrl3 =
 
 export const CardsExample = {
   render: () => `
-<div class="uq-container">
   <div class="uq-section">
     <div class="uq-card-grid uq-card-grid--target-1x">
       ${CardImage({
@@ -134,13 +133,11 @@ export const CardsExample = {
       })}
     </div>
   </div>
-</div>
 `,
 };
 
 export const PanesExample = {
   render: () => `
-<div class="uq-container">
   <div class="uq-section">
     <div class="uq-card-grid uq-card-grid--target-1x">
       ${PaneImage({
@@ -198,13 +195,11 @@ export const PanesExample = {
        })}
     </div>
   </div>
-</div>
 `,
 };
 
 export const StoryCardExample = {
   render: () => `
-<div class="uq-container">
   <div class="uq-section">
     <div class="uq-card-grid uq-card-grid--target-1x">
       ${EventCard({
@@ -262,6 +257,5 @@ export const StoryCardExample = {
        })}
     </div>
   </div>
-</div>
 `,
 };

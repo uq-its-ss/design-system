@@ -23,9 +23,7 @@ export const Sidebar = {
       <div class="uqds-layout-demo-el"></div> 
     </div>
     <div class="uq-sidebar-layout__main">
-      <div class="uq-sections">
-        <div class="uqds-layout-demo-el"></div> 
-      </div>
+      <div class="uqds-layout-demo-el"></div> 
     </div>
   </div>
 </div>
@@ -40,9 +38,7 @@ export const LocalNavExample = {
       ${LocalNav()}
     </div>
     <div class="uq-sidebar-layout__main">
-      <div class="uq-sections">
-        ${CardsExample()}
-      </div>
+      ${CardsExample()}
     </div>
   </div>
 </div>

@@ -2,7 +2,7 @@
 
 :root {
   --section-font-size-xxxl: #{core.$font-size-xxxl};
-  --section-gap: 6rem;
+  --section-spacing: 6rem;
   --section-padding: #{core.$space-xl};
 }
 
@@ -14,7 +14,7 @@
 
 @media #{core.$screen-lg-down} {
   :root {
-    --section-gap: #{core.$space-uul};
+    --section-spacing: #{core.$space-uul};
     --section-padding: #{core.$space-l};
   }
 }

@@ -1,6 +1,10 @@
 @use "@uqds/core/src/scss/global" as core;
 @use "global" as *;
 
+.uq-section {
+  margin-bottom: var(--section-gap);
+}
+
 .uq-section__header {
   margin-bottom: core.$space-l;
 
@@ -25,7 +29,11 @@
   }
 }
 
+.uq-section--no-margin {
+  margin-bottom: 0;
+}
+
 .uq-section--shaded {
   background: core.$grey-50;
-  padding: var(--layout-gap);
+  padding: var(--section-padding);
 }

@@ -2,11 +2,19 @@
 
 :root {
   --section-font-size-xxxl: #{core.$font-size-xxxl};
+  --section-gap: 6rem;
+  --section-padding: #{core.$space-xl};
 }
 
-// Resize custom properties for tablet/mobile.
 @media #{core.$screen-md-down} {
   :root {
     --section-font-size-xxxl: #{core.$font-size-xxl};
+  }
+}
+
+@media #{core.$screen-lg-down} {
+  :root {
+    --section-gap: #{core.$space-uul};
+    --section-padding: #{core.$space-l};
   }
 }

@@ -4,6 +4,7 @@ import * as CardStories from "../../components/card/card.stories";
 import * as PaneStories from "../../components/pane/pane.stories";
 import * as StoryCardStories from "../../components/story-card/story-card.stories";
 import "@uqds/layout/src/scss/main.scss";
+import "@uqds/sections/src/scss/main.scss";
 
 const {
   Image: CardImage,
@@ -20,35 +21,37 @@ const { NewsCard, EventCard, StoryCard } = storyRenderer(StoryCardStories);
 
 export default {
   title: "Layout/Card grid",
-  parameters: {
-    layout: "fullscreen",
+  argTypes: {
+    target: {
+      control: "select",
+      options: ["1x", "2x", "3x", "4x"],
+    },
   },
 };
 
 export const CardGrid = {
   decorators: [layoutDecorator],
-  render: ({ target, children }) => `
-<div class="uq-container">
-  <div class="uq-sections">
-    <div class="uq-card-grid uq-card-grid--target-1x">
-      <div class="uqds-layout-demo-card"></div>
-    </div>
-    <div class="uq-card-grid uq-card-grid--target-2x">
-      <div class="uqds-layout-demo-card"></div>
-      <div class="uqds-layout-demo-card"></div>
-    </div>
-    <div class="uq-card-grid uq-card-grid--target-3x">
-      <div class="uqds-layout-demo-card"></div>
-      <div class="uqds-layout-demo-card"></div>
-      <div class="uqds-layout-demo-card"></div>
-    </div>
-    <div class="uq-card-grid uq-card-grid--target-4x">
-      <div class="uqds-layout-demo-card"></div>
-      <div class="uqds-layout-demo-card"></div>
-      <div class="uqds-layout-demo-card"></div>
-      <div class="uqds-layout-demo-card"></div>
-    </div>
-  </div>
+  args: {
+    target: "3x",
+  },
+  render: ({ target }) => `
+<div class="uq-card-grid uq-card-grid--target-${target}">
+  ${target === "1x" ? `<div class="uqds-layout-demo-card"></div>` : ""}
+  ${
+    target === "2x"
+      ? `<div class="uqds-layout-demo-card"></div><div class="uqds-layout-demo-card"></div>`
+      : ""
+  }
+  ${
+    target === "3x"
+      ? `<div class="uqds-layout-demo-card"></div><div class="uqds-layout-demo-card"></div><div class="uqds-layout-demo-card"></div>`
+      : ""
+  }
+  ${
+    target === "4x"
+      ? `<div class="uqds-layout-demo-card"></div><div class="uqds-layout-demo-card"></div><div class="uqds-layout-demo-card"></div><div class="uqds-layout-demo-card"></div>`
+      : ""
+  }
 </div>
 `,
 };
@@ -72,7 +75,7 @@ const imageUrl3 =
 export const CardsExample = {
   render: () => `
 <div class="uq-container">
-  <div class="uq-sections">
+  <div class="uq-section">
     <div class="uq-card-grid uq-card-grid--target-1x">
       ${CardImage({
         title: titleString2,
@@ -80,6 +83,8 @@ export const CardsExample = {
         image: imageUrl2,
       })}
     </div>
+  </div>
+  <div class="uq-section">
     <div class="uq-card-grid uq-card-grid--target-2x">
       ${CardImage({
         title: titleString3,
@@ -92,6 +97,8 @@ export const CardsExample = {
         image: imageUrl3,
       })}
     </div>
+  </div>
+  <div class="uq-section">
     <div class="uq-card-grid uq-card-grid--target-3x">
       ${CardText({
         title: titleString1,
@@ -106,6 +113,8 @@ export const CardsExample = {
         description: descString1,
       })}
     </div>
+  </div>
+  <div class="uq-section">
     <div class="uq-card-grid uq-card-grid--target-4x">
       ${CardIcon({
         title: titleString3,
@@ -132,7 +141,7 @@ export const CardsExample = {
 export const PanesExample = {
   render: () => `
 <div class="uq-container">
-  <div class="uq-sections">
+  <div class="uq-section">
     <div class="uq-card-grid uq-card-grid--target-1x">
       ${PaneImage({
         title: titleString3,
@@ -140,6 +149,8 @@ export const PanesExample = {
         image: imageUrl1,
       })}
     </div>
+  </div>
+  <div class="uq-section">
     <div class="uq-card-grid uq-card-grid--target-2x">
       ${PaneIconLarge({
         title: titleString2,
@@ -150,6 +161,8 @@ export const PanesExample = {
         description: descString2,
       })}
     </div>
+  </div>
+  <div class="uq-section">
     <div class="uq-card-grid uq-card-grid--target-3x">
       ${PaneIcon({
         title: titleString3,
@@ -164,6 +177,8 @@ export const PanesExample = {
         description: descString3,
       })}
     </div>
+  </div>
+  <div class="uq-section">
     <div class="uq-card-grid uq-card-grid--target-4x">
       ${PaneTextShaded({
         title: titleString1,
@@ -190,7 +205,7 @@ export const PanesExample = {
 export const StoryCardExample = {
   render: () => `
 <div class="uq-container">
-  <div class="uq-sections">
+  <div class="uq-section">
     <div class="uq-card-grid uq-card-grid--target-1x">
       ${EventCard({
         title: titleString3,
@@ -198,6 +213,8 @@ export const StoryCardExample = {
         image: imageUrl1,
       })}
     </div>
+  </div>
+  <div class="uq-section">
     <div class="uq-card-grid uq-card-grid--target-2x">
       ${StoryCard({
         title: titleString2,
@@ -208,6 +225,8 @@ export const StoryCardExample = {
         description: descString2,
       })}
     </div>
+  </div>
+  <div class="uq-section">
     <div class="uq-card-grid uq-card-grid--target-3x">
       ${NewsCard({
         title: titleString3,
@@ -222,6 +241,8 @@ export const StoryCardExample = {
         description: descString3,
       })}
     </div>
+  </div>
+  <div class="uq-section">
     <div class="uq-card-grid uq-card-grid--target-4x">
       ${EventCard({
         title: titleString1,

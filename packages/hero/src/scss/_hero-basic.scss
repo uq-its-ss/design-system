@@ -3,6 +3,7 @@
 
 .uq-hero-basic {
   background: core.$purple-600;
+  margin-bottom: var(--hero-gap);
   position: relative;
 }
 
@@ -66,4 +67,8 @@
   position: relative;
   z-index: 2;
   padding-top: core.$space-m;
+}
+
+.uq-hero-basic--no-margin {
+  margin-bottom: 0;
 }

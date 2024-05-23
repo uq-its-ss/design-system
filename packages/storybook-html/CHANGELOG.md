@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.2-alpha.5](https://github.com/uq-its-ss/design-system/compare/storybook-html@1.0.2-alpha.4...storybook-html@1.0.2-alpha.5) (2024-05-23)
+
+### Bug Fixes
+
+- further spacing fixes ([#534](https://github.com/uq-its-ss/design-system/issues/534)) ([6ead71a](https://github.com/uq-its-ss/design-system/commit/6ead71adf2c69a9f500a4f4ee2ca54feca6e4983))
+
 ## [1.0.2-alpha.4](https://github.com/uq-its-ss/design-system/compare/storybook-html@1.0.2-alpha.3...storybook-html@1.0.2-alpha.4) (2024-05-22)
 
 ### Bug Fixes

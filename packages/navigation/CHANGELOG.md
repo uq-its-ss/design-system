@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.2-alpha.1](https://github.com/uq-its-ss/design-system/compare/@uqds/navigation@1.0.2-alpha.0...@uqds/navigation@1.0.2-alpha.1) (2024-05-23)
+
+### Bug Fixes
+
+- further spacing fixes ([#534](https://github.com/uq-its-ss/design-system/issues/534)) ([6ead71a](https://github.com/uq-its-ss/design-system/commit/6ead71adf2c69a9f500a4f4ee2ca54feca6e4983))
+
 ## [1.0.2-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/navigation@1.0.0-alpha.11...@uqds/navigation@1.0.2-alpha.0) (2024-05-03)
 
 **Note:** Version bump only for package @uqds/navigation

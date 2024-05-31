@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.2-alpha.2](https://github.com/uq-its-ss/design-system/compare/@uqds/sections@0.1.2-alpha.1...@uqds/sections@0.1.2-alpha.2) (2024-05-23)
+
+### Bug Fixes
+
+- further spacing fixes ([#534](https://github.com/uq-its-ss/design-system/issues/534)) ([6ead71a](https://github.com/uq-its-ss/design-system/commit/6ead71adf2c69a9f500a4f4ee2ca54feca6e4983))
+
+## [0.1.2-alpha.1](https://github.com/uq-its-ss/design-system/compare/@uqds/sections@0.1.2-alpha.0...@uqds/sections@0.1.2-alpha.1) (2024-05-22)
+
+### Bug Fixes
+
+- Spacing fixes ([#533](https://github.com/uq-its-ss/design-system/issues/533)) ([909b898](https://github.com/uq-its-ss/design-system/commit/909b8986be507d3b2c0df969c5563bbc2fe67348))
+
 ## [0.1.2-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/sections@0.1.0-alpha.7...@uqds/sections@0.1.2-alpha.0) (2024-05-03)
 
 **Note:** Version bump only for package @uqds/sections

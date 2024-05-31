@@ -13,6 +13,9 @@ export default {
     shaded: {
       control: "boolean",
     },
+    noMargin: {
+      control: "boolean",
+    },
   },
 };
 
@@ -22,9 +25,13 @@ export const Section = {
     description: "Description",
     content: "",
     shaded: false,
+    noMargin: false,
   },
-  render: ({ title, description, content, shaded }) => `
-<section class="${classNames("uq-section", { "uq-section--shaded": shaded })}">
+  render: ({ title, description, content, shaded, noMargin }) => `
+<section class="${classNames("uq-section", {
+    "uq-section--shaded": shaded,
+    "uq-section--no-margin": noMargin,
+  })}">
   <div class="uq-section__header">
     ${title ? `<h2 class="uq-section__title">${title}</h2>` : ""}
     ${
@@ -43,9 +50,7 @@ export const Section = {
 export const Shaded = {
   ...Section,
   args: {
-    title: "Title",
-    description: "Description",
-    content: "",
+    ...Section.args,
     shaded: true,
   },
 };
@@ -80,9 +85,15 @@ export const Container = {
 export const ShadedContainer = {
   ...Container,
   args: {
-    title: "Title",
-    description: "Description",
-    content: "",
+    ...Container.args,
     shaded: true,
+  },
+};
+
+export const NoMargin = {
+  ...Section,
+  args: {
+    ...Section.args,
+    noMargin: true,
   },
 };

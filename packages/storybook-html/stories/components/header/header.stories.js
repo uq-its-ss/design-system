@@ -150,7 +150,7 @@ export const searchGlobal = {
               <label for="edit-q" class="visually-hidden uq-header__search-query-label">Search term</label>
               <input type="text" id="edit-q" name="q" value="" maxlength="128" placeholder="Search by keyword" class="uq-header__search-query-input" data-gtm-trigger="change" data-gtm-form-search="">
               <span class="uq-header__search-query-button">
-                <input type="submit" name="op" value="Search" class="uq-header__search-query-submit" data-gtm-trigger="click">
+                <input type="submit" value="Search" class="uq-header__search-query-submit" data-gtm-trigger="click">
               </span>
             </div>
           </fieldset>
@@ -178,7 +178,7 @@ export const searchLocal = {
           <label for="edit-q" class="visually-hidden uq-header__search-query-label">Search term</label>
           <input type="text" id="edit-q" name="q" value="" maxlength="128" placeholder="Search by keyword" class="uq-header__search-query-input" data-gtm-trigger="change" data-gtm-form-search="">
           <span class="uq-header__search-query-button">
-            <input type="submit" name="op" value="Search" class="uq-header__search-query-submit" data-gtm-trigger="click">
+            <input type="submit" value="Search" class="uq-header__search-query-submit" data-gtm-trigger="click">
           </span>
         </div>
         <div class="uq-header__search-range">

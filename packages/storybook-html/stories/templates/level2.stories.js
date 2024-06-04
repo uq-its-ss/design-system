@@ -2,9 +2,12 @@ import classNames from "classnames";
 import { Header } from "../components/header/header.stories";
 import { footer } from "../components/footer/footer.stories";
 import { Breadcrumb } from "../components/breadcrumb/breadcrumb.stories";
-import { Level2 as Hero } from "../components/hero/hero.stories";
-import { LocalNav } from "../components/navigation/local-nav/local-nav.stories";
-import "@uqds/layout/src/scss/main.scss";
+import * as HeroStories from "../components/hero/hero.stories";
+import * as SidebarStories from "../layout/page-layouts/sidebar/sidebar.stories";
+import { storyRenderer } from "../../lib/storyRenderer";
+
+const { Level2: Level2Hero } = storyRenderer(HeroStories);
+const { LocalNavExample } = storyRenderer(SidebarStories);
 
 export default {
   title: "Templates/Level 2",
@@ -27,60 +30,8 @@ export const Level2 = {
 <div class="${classNames({ "uqds-layout-demo-bg": showGrid })}">
   ${Header.render()}
   ${Breadcrumb.render()}
-  <div class="uq-sections">
-    ${Hero.render(Hero.args)}
-    <div class="uq-container">
-      <div class="uq-sidebar-layout">
-        <div class="uq-sidebar-layout__sidebar">
-          ${LocalNav.render()}
-        </div>
-        <div class="uq-sidebar-layout__main">
-          <div class="uq-sections">
-            <div class="uq-section">
-              <div class="uq-section__header">
-                <h2 class="uq-section__title">Title</h2>
-                <div class="uq-section__description">
-                  <p>Description</p>
-                </div>
-              </div>
-              <div class="uq-card-grid uq-card-grid--target-1x">
-                <div class="uqds-layout-demo-card"></div>
-                <div class="uqds-layout-demo-card"></div>
-              </div>
-            </div>
-            <div class="uq-section uq-section--shaded">
-              <div class="uq-section__header">
-                <h2 class="uq-section__title">Title</h2>
-                <div class="uq-section__description">
-                  <p>Description</p>
-                </div>
-              </div>
-              <div class="uq-card-grid uq-card-grid--target-2x">
-                <div class="uqds-layout-demo-card"></div>
-                <div class="uqds-layout-demo-card"></div>
-              </div>
-            </div>
-            <div class="uq-section">
-              <div class="uq-section__header">
-                <h2 class="uq-section__title">Title</h2>
-                <div class="uq-section__description">
-                  <p>Description</p>
-                </div>
-              </div>
-              <div class="uq-card-grid uq-card-grid--target-3x">
-                <div class="uqds-layout-demo-card"></div>
-                <div class="uqds-layout-demo-card"></div>
-                <div class="uqds-layout-demo-card"></div>
-                <div class="uqds-layout-demo-card"></div>
-                <div class="uqds-layout-demo-card"></div>
-                <div class="uqds-layout-demo-card"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  ${Level2Hero()}
+  ${LocalNavExample()}  
   ${footer.render()}
 </div>`,
 };

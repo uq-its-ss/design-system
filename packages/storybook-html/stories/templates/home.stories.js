@@ -8,6 +8,7 @@ import * as SectionStories from "../components/section/section.stories";
 import * as CardStories from "../components/card/card.stories";
 import * as StoryCardStories from "../components/story-card/story-card.stories";
 import "@uqds/layout/src/scss/main.scss";
+import "@uqds/sections/src/scss/main.scss";
 
 const { Header } = storyRenderer(HeaderStories);
 const { footer } = storyRenderer(FooterStories);
@@ -38,12 +39,12 @@ export const Home = {
 <div class="${classNames({ "uqds-layout-demo-bg": showGrid })}">
   ${Header()}
   ${Breadcrumb()}
-  <div class="uq-sections">
     ${Hero()}
     ${Section({
       title: "",
       description: "",
       content: `
+<div class="uq-section">
 <div class="uq-card-grid uq-card-grid--target-4x">
   ${CardIconNav({
     title: "Study",
@@ -69,12 +70,14 @@ export const Home = {
     icon: "architecture-and-planning--school-building",
   })}
 </div>
+</div>
       `,
     })}
     ${Section({
       title: "",
       description: "",
       content: `
+<div class="uq-section">
 <div class="uq-card-grid uq-card-grid--target-3x">
   ${CardImage({
     title: "Our campuses",
@@ -97,12 +100,14 @@ export const Home = {
       "https://www.uq.edu.au/sites/default/files/styles/card_image/public/2023-12/brand-imagery-two-students_0.jpg",
   })}
 </div>
+</div>
       `,
     })}
     ${Section({
       title: "News",
       description: `<a href="#">See more news</a>`,
       content: `
+<div class="uq-section">
 <div class="uq-card-grid uq-card-grid--target-3x">
   ${NewsCard({
     title: "Lifelike lab-grown skin developed from human stem cells",
@@ -123,9 +128,9 @@ export const Home = {
       "https://www.uq.edu.au/sites/default/files/styles/card_image/public/2024-03/seafisher-pen%20OPTIMISED.jpg",
   })}
 </div>
+</div>
       `,
     })}
-  </div>
   ${footer()}
 </div>`,
 };

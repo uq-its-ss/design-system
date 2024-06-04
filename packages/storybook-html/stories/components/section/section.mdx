@@ -11,18 +11,18 @@ import * as SectionStories from "./section.stories";
 
 ## Overview
 
-The `.uq-section` component is a simple wrapper to use around other components.
+The `.uq-section` component is a wrapper to use around other components.
 
-It provides a uniform heading and description and can be used around card grids,
-panes and image panels.
+It provides correct **section spacing** between sections by using
+a responsive `96px` and `48px` `margin-bottom` for desktop and tablet/mobile respectively.
+
+Additionally, it provides a uniform heading and description and can be used
+around card grids and panes.
 
 ### How-to
 
-Use the `.uq-section` element to provide a h2 heading and
+Use the `.uq-section__header` element to provide a h2 heading and
 description to introduce another set of components.
-
-Sections should be placed inside a `.uq-sections` element to provide uniform
-section spacing between each section.
 
 Implement the markup structure below for the header.
 
@@ -71,27 +71,12 @@ Modifier class: `.uq-section--shaded`
   <Story of={SectionStories.ShadedContainer} />
 </Canvas>
 
-## Examples
+### No margin
 
-### Section with Card grid
+In cases where bottom margin is not desired.
+
+Modifier class: `.uq-section--no-margin`
 
 <Canvas>
-  <div class="uq-section">
-    <div class="uq-container">
-      <div class="uq-section__header">
-        <h2 class="uq-section__title">Title</h2>
-        <div class="uq-section__description">
-          <p>Description</p>
-        </div>
-      </div>
-      <div class="uq-card-grid uq-card-grid--target-3x">
-        <div class="uqds-layout-demo-card"></div>
-        <div class="uqds-layout-demo-card"></div>
-        <div class="uqds-layout-demo-card"></div>
-        <div class="uqds-layout-demo-card"></div>
-        <div class="uqds-layout-demo-card"></div>
-        <div class="uqds-layout-demo-card"></div>
-      </div>
-    </div>
-  </div>
+  <Story of={SectionStories.NoMargin} />
 </Canvas>

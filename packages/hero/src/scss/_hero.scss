@@ -3,6 +3,7 @@
 
 .uq-hero {
   background: core.$purple-600;
+  margin-bottom: var(--hero-gap);
 
   @media #{core.$screen-lg-up} {
     position: relative;
@@ -150,4 +151,8 @@
   & .uq-hero__title {
     font-size: var(--hero-font-size-ul);
   }
+}
+
+.uq-hero--no-margin {
+  margin-bottom: 0;
 }

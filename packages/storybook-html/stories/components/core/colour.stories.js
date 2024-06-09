@@ -58,8 +58,8 @@ export const brand = {
 };
 
 export const text = {
-    render: () => {
-      return `
+  render: () => {
+    return `
         <table class="uqds-table uqds-table--card uqds-table--colour">
             <tbody class="uqds-table__body">
                 <tr class="uqds-table__mobile-heading">
@@ -99,13 +99,13 @@ export const text = {
             </tbody>
         </table>
       `;
-    },
-    name: "Text",
+  },
+  name: "Text",
 };
 
-  export const link = {
-    render: () => {
-      return `
+export const link = {
+  render: () => {
+    return `
 <table class="uqds-table uqds-table--card uqds-table--colour">
             <tbody class="uqds-table__body">
                 <tr class="uqds-table__mobile-heading">
@@ -145,13 +145,13 @@ export const text = {
             </tbody>
         </table>
       `;
-    },
-    name: "Link",
+  },
+  name: "Link",
 };
 
-  export const neutral = {
-    render: () => {
-      return `
+export const neutral = {
+  render: () => {
+    return `
         <table class="uqds-table uqds-table--card uqds-table--colour">
             <tbody class="uqds-table__body">
                 <tr class="uqds-table__mobile-heading">
@@ -233,13 +233,13 @@ export const text = {
             </tbody>
         </table>
       `;
-    },
-    name: "Neutral",
+  },
+  name: "Neutral",
 };
 
 export const status = {
-    render: () => {
-      return `
+  render: () => {
+    return `
         <table class="uqds-table uqds-table--card uqds-table--colour">
             <tbody class="uqds-table__body">
                 <tr class="uqds-table__mobile-heading">
@@ -363,13 +363,13 @@ export const status = {
             </tbody>
         </table>
       `;
-    },
-    name: "Status",
+  },
+  name: "Status",
 };
 
 export const purple = {
-    render: () => {
-      return `
+  render: () => {
+    return `
         <div class="uqds-colour__swatches">
             <div class="uqds-colour__palette uqds-colour--purple-50">purple-50</div>
             <div class="uqds-colour__palette uqds-colour--purple-100">purple-100</div>
@@ -384,13 +384,13 @@ export const purple = {
             <div class="uqds-colour__palette uqds-colour--purple-900">purple-900</div>
         </div>
       `;
-    },
-    name: "Purple",
+  },
+  name: "Purple",
 };
 
 export const grey = {
-    render: () => {
-      return `
+  render: () => {
+    return `
         <div class="uqds-colour__swatches">
             <div class="uqds-colour__palette uqds-colour--grey-50">grey-50</div>
             <div class="uqds-colour__palette uqds-colour--grey-100">grey-100</div>
@@ -405,25 +405,25 @@ export const grey = {
             <div class="uqds-colour__palette uqds-colour--grey-900">grey-900</div>
         </div>
       `;
-    },
-    name: "Grey",
+  },
+  name: "Grey",
 };
 
 export const blackandwhite = {
-    render: () => {
-      return `
+  render: () => {
+    return `
         <div class="uqds-colour__swatches">
             <div class="uqds-colour__palette uqds-colour--black">black</div>
             <div class="uqds-colour__palette uqds-colour--white">white</div>
         </div>
       `;
-    },
-    name: "Bacl and White",
+  },
+  name: "Bacl and White",
 };
 
 export const utility = {
-    render: () => {
-      return `
+  render: () => {
+    return `
         <div class="uqds-colour__swatches">
             <div class="uqds-colour__palette uqds-colour--utility-50">utility-50</div>
             <div class="uqds-colour__palette uqds-colour--utility-100">utility-100</div>
@@ -437,13 +437,13 @@ export const utility = {
             <div class="uqds-colour__palette uqds-colour--utility-900">utility-900</div>
         </div>
       `;
-    },
-    name: "Utility",
+  },
+  name: "Utility",
 };
 
 export const error = {
-    render: () => {
-      return `
+  render: () => {
+    return `
         <div class="uqds-colour__swatches">
             <div class="uqds-colour__palette uqds-colour--error-50">error-50</div>
             <div class="uqds-colour__palette uqds-colour--error-100">error-100</div>
@@ -457,13 +457,13 @@ export const error = {
             <div class="uqds-colour__palette uqds-colour--error-900">error-900</div>
         </div>
       `;
-    },
-    name: "Error",
+  },
+  name: "Error",
 };
 
 export const warning = {
-    render: () => {
-      return `
+  render: () => {
+    return `
         <div class="uqds-colour__swatches">
             <div class="uqds-colour__palette uqds-colour--warning-50">warning-50</div>
             <div class="uqds-colour__palette uqds-colour--warning-100">warning-100</div>
@@ -477,13 +477,13 @@ export const warning = {
             <div class="uqds-colour__palette uqds-colour--warning-900">warning-900</div>
         </div>
       `;
-    },
-    name: "Warning",
+  },
+  name: "Warning",
 };
 
 export const success = {
-    render: () => {
-      return `
+  render: () => {
+    return `
         <div class="uqds-colour__swatches">
             <div class="uqds-colour__palette uqds-colour--success-50">success-50</div>
             <div class="uqds-colour__palette uqds-colour--success-100">success-100</div>
@@ -497,6 +497,6 @@ export const success = {
             <div class="uqds-colour__palette uqds-colour--success-900">success-900</div>
         </div>
       `;
-    },
-    name: "Sucess",
+  },
+  name: "Sucess",
 };

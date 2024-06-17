@@ -1,0 +1,58 @@
+import { Meta, Story, Preview } from "@storybook/blocks";
+
+<Meta title="Core/Standards/Analytics" />
+
+# Analytics
+
+UQ websites are use Google Analytics 4 (GA 4) and should be configured by installing the global Google Tag Manager container.
+
+##  Global Google Tag Manager (GTM) container
+
+Paste this code as high in the `<head>` of the page as possible:
+
+```html
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NC7M38Q');</script>
+<!-- End Google Tag Manager -->
+```
+
+Paste this code immediately after the opening `<body>` tag:
+
+```html
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NC7M38Q"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+```
+
+## Data tracking 
+
+Requests for custom data layers and event variables should be emailed to, <a href="mailto:customer-analytics@uq.edu.au">Customer Analytics (customer-analytics@uq.edu.au)</a>
+
+### Global Property 
+
+- If a site has the GTM code onsite then we'll be able to track/collect data.
+- We're using the GTM container as a catch all - as this data (views, users etc) feeds into our source property in GA4.
+- All UQ sites will then be available in that global property - uq.edu.au (global) 317095700.
+- This account is only accessible by admins, and ITS teams.
+
+### Subproperties
+- We only create a subproperty if required for reporting or by request of a team as there are additional costs in doing so.
+- Subproperties are a filter of the global data in it's own siloed account so it's easier to manage users and access for different parts of the business.
+- The general rule of thumb is if a site has over 1000 users/month or by request we'll create a subproperty for that need.
+- If a site doesn't have it's own property, and has the GTM code it will still be available in the global account.
+ 
+### Property Filtering
+- For the creation of a subproperty we set up a filter for that site using the page URL.
+- Whenever there is a change to the domain, hostname or URL it can impact the data coming through to that subproperty.
+- If it's not updated it'll continue to be collected in the global account, just not in the property where most stakeholders and users will have access to report. 
+
+##  Accessing Google Analytics
+
+A guide for users is on the staff website [https://staff.uq.edu.au/information-and-services/information-technology/web-publishing/website-analytics-and-seo/google-analytics](https://staff.uq.edu.au/information-and-services/information-technology/web-publishing/website-analytics-and-seo/google-analytics)
+
+

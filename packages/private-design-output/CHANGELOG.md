@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.17-alpha.5](https://github.com/uq-its-ss/design-system/compare/private-design-output@0.0.17-alpha.4...private-design-output@0.0.17-alpha.5) (2024-06-18)
+
+### Bug Fixes
+
+- Removing OP var from search ([#535](https://github.com/uq-its-ss/design-system/issues/535)) ([023e55c](https://github.com/uq-its-ss/design-system/commit/023e55cf7ef0f457b22984ffaf3d00b6724131b7))
+
 ## [0.0.17-alpha.4](https://github.com/uq-its-ss/design-system/compare/private-design-output@0.0.17-alpha.3...private-design-output@0.0.17-alpha.4) (2024-05-23)
 
 **Note:** Version bump only for package private-design-output

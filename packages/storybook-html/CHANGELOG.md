@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.2-alpha.8](https://github.com/uq-its-ss/design-system/compare/storybook-html@1.0.2-alpha.7...storybook-html@1.0.2-alpha.8) (2024-06-18)
+
+### Bug Fixes
+
+- Colour doco updates ([#532](https://github.com/uq-its-ss/design-system/issues/532)) ([52cae6d](https://github.com/uq-its-ss/design-system/commit/52cae6d2d79f9e2b154e65fb36bce246e4582416))
+
 ## [1.0.2-alpha.7](https://github.com/uq-its-ss/design-system/compare/storybook-html@1.0.2-alpha.6...storybook-html@1.0.2-alpha.7) (2024-06-18)
 
 **Note:** Version bump only for package storybook-html

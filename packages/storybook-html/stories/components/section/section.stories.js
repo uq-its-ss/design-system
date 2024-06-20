@@ -32,13 +32,24 @@ export const Section = {
     shaded: false,
     noMargin: false,
   },
-  render: ({ title, headingElement, description, content, shaded, noMargin }) => `
+  render: ({
+    title,
+    headingElement,
+    description,
+    content,
+    shaded,
+    noMargin,
+  }) => `
 <section class="${classNames("uq-section", {
     "uq-section--shaded": shaded,
     "uq-section--no-margin": noMargin,
   })}">
   <div class="uq-section__header">
-    ${title ? `<${headingElement} class="uq-section__title">${title}</${headingElement}>` : ""}
+    ${
+      title
+        ? `<${headingElement} class="uq-section__title">${title}</${headingElement}>`
+        : ""
+    }
     ${
       description
         ? `
@@ -73,7 +84,11 @@ export const Container = {
 <section class="${classNames("uq-section", { "uq-section--shaded": shaded })}">
   <div class="uq-container">
     <div class="uq-section__header">
-      ${title ? `<${headingElement} class="uq-section__title">${title}</${headingElement}>` : ""}
+      ${
+        title
+          ? `<${headingElement} class="uq-section__title">${title}</${headingElement}>`
+          : ""
+      }
       ${
         description
           ? `

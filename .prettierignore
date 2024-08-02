@@ -12,3 +12,4 @@ package-lock.json
 # MDX files that have formatting issues
 # @see https://github.com/melanieseltzer/mdx2-rendering-bugs-reproduction/blob/47f402b136f7603016cb7e186086cd25515b2fba/stories/Heading.stories.mdx
 /packages/storybook-html/stories/components/navigation/local-nav/local-nav.mdx
+/packages/storybook-html/stories/components/core/colour.mdx

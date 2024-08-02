@@ -2,7 +2,7 @@
 import "./_colour.scss";
 
 export default {
-  title: "Components/Colour",
+  title: "Core/Colour",
   parameters: {
     layout: "padded",
     previewTabs: {
@@ -418,7 +418,7 @@ export const blackandwhite = {
         </div>
       `;
   },
-  name: "Bacl and White",
+  name: "Black and white",
 };
 
 export const utility = {
@@ -500,3 +500,4 @@ export const success = {
   },
   name: "Sucess",
 };
+

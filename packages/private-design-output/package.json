@@ -1,6 +1,6 @@
 {
   "name": "private-design-output",
-  "version": "0.0.17-alpha.6",
+  "version": "0.0.17-alpha.7",
   "description": "Render style kits for UQ clients",
   "private": true,
   "author": {
@@ -35,7 +35,7 @@
     "@uqds/body": "^0.1.2-alpha.0",
     "@uqds/breadcrumb": "^2.0.2-alpha.1",
     "@uqds/button": "^0.1.2-alpha.0",
-    "@uqds/card": "^0.1.2-alpha.2",
+    "@uqds/card": "^0.1.2-alpha.3",
     "@uqds/core": "^1.2.2-alpha.0",
     "@uqds/footer": "^1.2.2-alpha.0",
     "@uqds/footer-legacy": "^0.1.2-alpha.0",

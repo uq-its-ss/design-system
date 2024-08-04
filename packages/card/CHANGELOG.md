@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.2-alpha.3](https://github.com/uq-its-ss/design-system/compare/@uqds/card@0.1.2-alpha.2...@uqds/card@0.1.2-alpha.3) (2024-08-04)
+
+### Bug Fixes
+
+- updated heading levels for cards and sections ([#537](https://github.com/uq-its-ss/design-system/issues/537)) ([4ef7163](https://github.com/uq-its-ss/design-system/commit/4ef7163277dd5c92c48ede1ae6bf16f77a597983))
+
 ## [0.1.2-alpha.2](https://github.com/uq-its-ss/design-system/compare/@uqds/card@0.1.2-alpha.1...@uqds/card@0.1.2-alpha.2) (2024-05-22)
 
 **Note:** Version bump only for package @uqds/card

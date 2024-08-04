@@ -7,6 +7,10 @@ export default {
   decorators: [cardDecorator],
   argTypes: {
     title: "text",
+    headingElement: {
+      options: ["h2", "h3", "h4", "h5", "h6"],
+      control: "select",
+    },
     href: "text",
     description: "text",
     variant: {
@@ -32,6 +36,7 @@ export default {
   },
   args: {
     title: "How does ATAR work and what does it mean?",
+    headingElement: "h3",
     description:
       "The University of Queensland is honouring a learning scientist who is leading by example to inspire and teach future teachers.",
     topLabel: "",
@@ -53,6 +58,7 @@ export const Card = {
     image,
     icon,
     title,
+    headingElement,
     href,
     topLabel,
     description,
@@ -71,7 +77,7 @@ export const Card = {
         : ""
     }
     ${topLabel ? `<div class="uq-card__top-label">${topLabel}</div>` : ""}
-    <h3 class="uq-card__title"><a href="${href}">${title}</a></h3>
+    <${headingElement} class="uq-card__title"><a href="${href}">${title}</a></${headingElement}>
     ${
       description
         ? `<div class="uq-card__description">${description}</div>`

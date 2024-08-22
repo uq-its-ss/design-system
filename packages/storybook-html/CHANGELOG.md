@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.2-alpha.9](https://github.com/uq-its-ss/design-system/compare/storybook-html@1.0.2-alpha.8...storybook-html@1.0.2-alpha.9) (2024-08-04)
+
+### Bug Fixes
+
+- updated heading levels for cards and sections ([#537](https://github.com/uq-its-ss/design-system/issues/537)) ([4ef7163](https://github.com/uq-its-ss/design-system/commit/4ef7163277dd5c92c48ede1ae6bf16f77a597983))
+
 ## [1.0.2-alpha.8](https://github.com/uq-its-ss/design-system/compare/storybook-html@1.0.2-alpha.7...storybook-html@1.0.2-alpha.8) (2024-06-18)
 
 ### Bug Fixes

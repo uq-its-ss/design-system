@@ -303,7 +303,7 @@ export const scaleOutcome = {
                     <code>#d1d0d2</code>
                 </td>
                 <td class="uqds-table__item" data-title="Usage:">
-                    secondary Priority
+                    tertiary Priority
                 </td>
                 </tr>
 
@@ -318,7 +318,7 @@ export const scaleOutcome = {
                     <code>#e8e8e8</code>
                 </td>
                 <td class="uqds-table__item" data-title="Usage:">
-                    secondary Priority
+                    tertiary Priority
                 </td>
                 </tr>
 
@@ -333,7 +333,7 @@ export const scaleOutcome = {
                     <code>#f3f3f4</code>
                 </td>
                 <td class="uqds-table__item" data-title="Usage:">
-                    secondary Priority
+                    tertiary Priority
                 </td>
                 </tr>
 

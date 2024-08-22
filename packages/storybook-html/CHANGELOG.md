@@ -3,6 +3,102 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.2-alpha.9](https://github.com/uq-its-ss/design-system/compare/storybook-html@1.0.2-alpha.8...storybook-html@1.0.2-alpha.9) (2024-08-04)
+
+### Bug Fixes
+
+- updated heading levels for cards and sections ([#537](https://github.com/uq-its-ss/design-system/issues/537)) ([4ef7163](https://github.com/uq-its-ss/design-system/commit/4ef7163277dd5c92c48ede1ae6bf16f77a597983))
+
+## [1.0.2-alpha.8](https://github.com/uq-its-ss/design-system/compare/storybook-html@1.0.2-alpha.7...storybook-html@1.0.2-alpha.8) (2024-06-18)
+
+### Bug Fixes
+
+- Colour doco updates ([#532](https://github.com/uq-its-ss/design-system/issues/532)) ([52cae6d](https://github.com/uq-its-ss/design-system/commit/52cae6d2d79f9e2b154e65fb36bce246e4582416))
+
+## [1.0.2-alpha.7](https://github.com/uq-its-ss/design-system/compare/storybook-html@1.0.2-alpha.6...storybook-html@1.0.2-alpha.7) (2024-06-18)
+
+**Note:** Version bump only for package storybook-html
+
+## [1.0.2-alpha.6](https://github.com/uq-its-ss/design-system/compare/storybook-html@1.0.2-alpha.5...storybook-html@1.0.2-alpha.6) (2024-06-18)
+
+### Bug Fixes
+
+- Removing OP var from search ([#535](https://github.com/uq-its-ss/design-system/issues/535)) ([023e55c](https://github.com/uq-its-ss/design-system/commit/023e55cf7ef0f457b22984ffaf3d00b6724131b7))
+
+## [1.0.2-alpha.5](https://github.com/uq-its-ss/design-system/compare/storybook-html@1.0.2-alpha.4...storybook-html@1.0.2-alpha.5) (2024-05-23)
+
+### Bug Fixes
+
+- further spacing fixes ([#534](https://github.com/uq-its-ss/design-system/issues/534)) ([6ead71a](https://github.com/uq-its-ss/design-system/commit/6ead71adf2c69a9f500a4f4ee2ca54feca6e4983))
+
+## [1.0.2-alpha.4](https://github.com/uq-its-ss/design-system/compare/storybook-html@1.0.2-alpha.3...storybook-html@1.0.2-alpha.4) (2024-05-22)
+
+### Bug Fixes
+
+- Spacing fixes ([#533](https://github.com/uq-its-ss/design-system/issues/533)) ([909b898](https://github.com/uq-its-ss/design-system/commit/909b8986be507d3b2c0df969c5563bbc2fe67348))
+
+## [1.0.2-alpha.3](https://github.com/uq-its-ss/design-system/compare/storybook-html@1.0.2-alpha.2...storybook-html@1.0.2-alpha.3) (2024-05-13)
+
+**Note:** Version bump only for package storybook-html
+
+## [1.0.2-alpha.2](https://github.com/uq-its-ss/design-system/compare/storybook-html@1.0.2-alpha.1...storybook-html@1.0.2-alpha.2) (2024-05-13)
+
+### Bug Fixes
+
+- add variant for uq-container to include flex capabilities. this … ([#528](https://github.com/uq-its-ss/design-system/issues/528)) ([d9ab3f3](https://github.com/uq-its-ss/design-system/commit/d9ab3f3dfc8ac0d8a32e5ddba3b4d1382c717b5d))
+
+## [1.0.2-alpha.1](https://github.com/uq-its-ss/design-system/compare/storybook-html@1.0.2-alpha.0...storybook-html@1.0.2-alpha.1) (2024-05-08)
+
+**Note:** Version bump only for package storybook-html
+
+## [1.0.2-alpha.0](https://github.com/uq-its-ss/design-system/compare/storybook-html@1.0.0-alpha.26...storybook-html@1.0.2-alpha.0) (2024-05-03)
+
+**Note:** Version bump only for package storybook-html
+
+## [1.0.1](https://github.com/uq-its-ss/design-system/compare/storybook-html@1.0.0-alpha.26...storybook-html@1.0.1) (2024-05-03)
+
+**Note:** Version bump only for package storybook-html
+
+# [1.0.0](https://github.com/uq-its-ss/design-system/compare/storybook-html@1.0.0-alpha.26...storybook-html@1.0.0) (2024-05-03)
+
+**Note:** Version bump only for package storybook-html
+
+# [1.0.0-alpha.26](https://github.com/uq-its-ss/design-system/compare/storybook-html@1.0.0-alpha.25...storybook-html@1.0.0-alpha.26) (2024-05-02)
+
+**Note:** Version bump only for package storybook-html
+
+# [1.0.0-alpha.25](https://github.com/uq-its-ss/design-system/compare/storybook-html@1.0.0-alpha.24...storybook-html@1.0.0-alpha.25) (2024-05-02)
+
+### Bug Fixes
+
+- Itsadssd 55603 slide menu fix ([#513](https://github.com/uq-its-ss/design-system/issues/513)) ([ea81535](https://github.com/uq-its-ss/design-system/commit/ea81535a16ab5d2374ef1cba60f12a1d96b88199))
+
+# [1.0.0-alpha.24](https://github.com/uq-its-ss/design-system/compare/storybook-html@1.0.0-alpha.23...storybook-html@1.0.0-alpha.24) (2024-04-29)
+
+**Note:** Version bump only for package storybook-html
+
+# [1.0.0-alpha.23](https://github.com/uq-its-ss/design-system/compare/storybook-html@1.0.0-alpha.22...storybook-html@1.0.0-alpha.23) (2024-04-29)
+
+**Note:** Version bump only for package storybook-html
+
+# [1.0.0-alpha.22](https://github.com/uq-its-ss/design-system/compare/storybook-html@1.0.0-alpha.21...storybook-html@1.0.0-alpha.22) (2024-04-29)
+
+**Note:** Version bump only for package storybook-html
+
+# [1.0.0-alpha.21](https://github.com/uq-its-ss/design-system/compare/storybook-html@1.0.0-alpha.20...storybook-html@1.0.0-alpha.21) (2024-04-29)
+
+**Note:** Version bump only for package storybook-html
+
+# [1.0.0-alpha.20](https://github.com/uq-its-ss/design-system/compare/storybook-html@1.0.0-alpha.19...storybook-html@1.0.0-alpha.20) (2024-04-23)
+
+**Note:** Version bump only for package storybook-html
+
+# [1.0.0-alpha.19](https://github.com/uq-its-ss/design-system/compare/storybook-html@1.0.0-alpha.18...storybook-html@1.0.0-alpha.19) (2024-04-16)
+
+### Bug Fixes
+
+- closing div for uq-contianer in wrong location ([#514](https://github.com/uq-its-ss/design-system/issues/514)) ([d246301](https://github.com/uq-its-ss/design-system/commit/d246301f1dea1e80ce7bd9f941f59639912cb202))
+
 # [1.0.0-alpha.18](https://github.com/uq-its-ss/design-system/compare/storybook-html@1.0.0-alpha.17...storybook-html@1.0.0-alpha.18) (2024-04-11)
 
 **Note:** Version bump only for package storybook-html

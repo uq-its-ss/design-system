@@ -3,6 +3,36 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.2-alpha.1](https://github.com/uq-its-ss/design-system/compare/@uqds/site-header@1.2.2-alpha.0...@uqds/site-header@1.2.2-alpha.1) (2024-05-08)
+
+### Bug Fixes
+
+- reduce site header font weight for drop down menus to normal ([#525](https://github.com/uq-its-ss/design-system/issues/525)) ([a331fe5](https://github.com/uq-its-ss/design-system/commit/a331fe5a6b1b72736fe58f6b5166d8e2c51a3c01))
+
+## [1.2.2-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/site-header@1.2.0-alpha.8...@uqds/site-header@1.2.2-alpha.0) (2024-05-03)
+
+**Note:** Version bump only for package @uqds/site-header
+
+## [1.2.1](https://github.com/uq-its-ss/design-system/compare/@uqds/site-header@1.2.0-alpha.8...@uqds/site-header@1.2.1) (2024-05-03)
+
+**Note:** Version bump only for package @uqds/site-header
+
+# [1.2.0](https://github.com/uq-its-ss/design-system/compare/@uqds/site-header@1.2.0-alpha.8...@uqds/site-header@1.2.0) (2024-05-03)
+
+**Note:** Version bump only for package @uqds/site-header
+
+# [1.2.0-alpha.8](https://github.com/uq-its-ss/design-system/compare/@uqds/site-header@1.2.0-alpha.7...@uqds/site-header@1.2.0-alpha.8) (2024-04-29)
+
+**Note:** Version bump only for package @uqds/site-header
+
+# [1.2.0-alpha.7](https://github.com/uq-its-ss/design-system/compare/@uqds/site-header@1.2.0-alpha.6...@uqds/site-header@1.2.0-alpha.7) (2024-04-29)
+
+**Note:** Version bump only for package @uqds/site-header
+
+# [1.2.0-alpha.6](https://github.com/uq-its-ss/design-system/compare/@uqds/site-header@1.2.0-alpha.5...@uqds/site-header@1.2.0-alpha.6) (2024-04-29)
+
+**Note:** Version bump only for package @uqds/site-header
+
 # [1.2.0-alpha.5](https://github.com/uq-its-ss/design-system/compare/@uqds/site-header@1.2.0-alpha.4...@uqds/site-header@1.2.0-alpha.5) (2024-04-10)
 
 **Note:** Version bump only for package @uqds/site-header

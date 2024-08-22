@@ -1,6 +1,6 @@
 {
   "name": "@uqds/breadcrumb",
-  "version": "2.0.0-alpha.9",
+  "version": "2.0.2-alpha.1",
   "description": "Breadcrumb component",
   "keywords": [
     "uqds",
@@ -51,7 +51,7 @@
     "url": "https://github.com/uq-its-ss/design-system/issues"
   },
   "dependencies": {
-    "@uqds/core": "^1.2.0-alpha.1",
-    "@uqds/icon": "^0.0.15-alpha.7"
+    "@uqds/core": "^1.2.2-alpha.0",
+    "@uqds/icon": "^0.0.17-alpha.0"
   }
 }

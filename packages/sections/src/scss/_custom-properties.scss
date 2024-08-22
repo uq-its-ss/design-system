@@ -1,0 +1,20 @@
+@use "@uqds/core/src/scss/global" as core;
+
+:root {
+  --section-font-size-xxxl: #{core.$font-size-xxxl};
+  --section-spacing: 6rem;
+  --section-padding: #{core.$space-xl};
+}
+
+@media #{core.$screen-md-down} {
+  :root {
+    --section-font-size-xxxl: #{core.$font-size-xxl};
+  }
+}
+
+@media #{core.$screen-lg-down} {
+  :root {
+    --section-spacing: #{core.$space-uul};
+    --section-padding: #{core.$space-l};
+  }
+}

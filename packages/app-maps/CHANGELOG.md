@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.2-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/app-maps@0.1.0-alpha.5...@uqds/app-maps@0.1.2-alpha.0) (2024-05-03)
+
+**Note:** Version bump only for package @uqds/app-maps
+
+## [0.1.1](https://github.com/uq-its-ss/design-system/compare/@uqds/app-maps@0.1.0-alpha.5...@uqds/app-maps@0.1.1) (2024-05-03)
+
+**Note:** Version bump only for package @uqds/app-maps
+
+# [0.1.0](https://github.com/uq-its-ss/design-system/compare/@uqds/app-maps@0.1.0-alpha.5...@uqds/app-maps@0.1.0) (2024-05-03)
+
+**Note:** Version bump only for package @uqds/app-maps
+
+# [0.1.0-alpha.5](https://github.com/uq-its-ss/design-system/compare/@uqds/app-maps@0.1.0-alpha.4...@uqds/app-maps@0.1.0-alpha.5) (2024-04-29)
+
+**Note:** Version bump only for package @uqds/app-maps
+
+# [0.1.0-alpha.4](https://github.com/uq-its-ss/design-system/compare/@uqds/app-maps@0.1.0-alpha.3...@uqds/app-maps@0.1.0-alpha.4) (2024-04-29)
+
+**Note:** Version bump only for package @uqds/app-maps
+
+# [0.1.0-alpha.3](https://github.com/uq-its-ss/design-system/compare/@uqds/app-maps@0.1.0-alpha.2...@uqds/app-maps@0.1.0-alpha.3) (2024-04-23)
+
+**Note:** Version bump only for package @uqds/app-maps
+
 # [0.1.0-alpha.2](https://github.com/uq-its-ss/design-system/compare/@uqds/app-maps@0.1.0-alpha.1...@uqds/app-maps@0.1.0-alpha.2) (2024-04-05)
 
 ### Bug Fixes

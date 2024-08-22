@@ -57,7 +57,7 @@ export const buttonTertiary = {
 
 export const buttonSize = {
   args: {
-    buttons: [{ ...createButton.Primary }, { ...createButton.Secondary }],
+    buttons: [{ ...createButton.button }, { ...createButton.buttonSecondary }],
     orientation: "horizontal",
   },
   render: () => {
@@ -79,7 +79,7 @@ export const buttonExpanded = {
 
 export const buttonIcon = {
   args: {
-    buttons: [{ ...createButton.Primary }, { ...createButton.Secondary }],
+    buttons: [{ ...createButton.button }, { ...createButton.buttonSecondary }],
     orientation: "horizontal",
   },
   render: () => {

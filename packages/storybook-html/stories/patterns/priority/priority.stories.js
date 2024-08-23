@@ -12,8 +12,8 @@ export default {
 };
 
 export const scaleMonochrome = {
-    render: () => {
-      return `
+  render: () => {
+    return `
           <div class="uqds-colour__swatches">
             <div class="uqds-colour__palette uqds-colour--grey-600">Priority 1<br /> grey-600</div>
             <div class="uqds-colour__palette uqds-colour--grey-500">Priority 2<br /> grey-500</div> 
@@ -23,13 +23,13 @@ export const scaleMonochrome = {
             <div class="uqds-colour__palette uqds-colour--grey-100">Priority 6<br /> grey-100</div>
           </div>
         `;
-    },
-    name: "Monochrome scale",
+  },
+  name: "Monochrome scale",
 };
 
 export const scaleRisk = {
-    render: () => {
-      return `
+  render: () => {
+    return `
           <div class="uqds-colour__swatches">
           <div class="uqds-colour__palette uqds-colour--error-500">At risk<br /> Error-500</div>  
           <div class="uqds-colour__palette uqds-colour--warning-500">Weak<br /> warning-500</div>  
@@ -39,13 +39,13 @@ export const scaleRisk = {
           <div class="uqds-colour__palette uqds-colour--grey-50">Another level<br /> grey-50</div>      
           </div>
         `;
-    },
-    name: "Risk scale",
+  },
+  name: "Risk scale",
 };
 
 export const scaleOutcome = {
-    render: () => {
-      return `
+  render: () => {
+    return `
           <div class="uqds-colour__swatches">
           <div class="uqds-colour__palette uqds-colour--error-500">Group 1<br /> Error-500</div>  
           <div class="uqds-colour__palette uqds-colour--error-200">Group 1<br /> Error-200</div>  
@@ -55,13 +55,13 @@ export const scaleOutcome = {
           <div class="uqds-colour__palette uqds-colour--success-50">Group 3<br /> success-50</div>
           </div>
         `;
-    },
-    name: "Outcome scale",
+  },
+  name: "Outcome scale",
 };
 
-    export const auditFinding = {
-        render: () => {
-          return `
+export const auditFinding = {
+  render: () => {
+    return `
     <table class="uqds-table uqds-table--card uqds-table--colour">
                 <tbody class="uqds-table__body">
                     <tr class="uqds-table__mobile-heading">
@@ -135,13 +135,13 @@ export const scaleOutcome = {
                 </tbody>
             </table>
             `;
-        },
-        name: "Audit finding",
-      };
+  },
+  name: "Audit finding",
+};
 
-  export const actionPriority = {
-    render: () => {
-      return `
+export const actionPriority = {
+  render: () => {
+    return `
 <table class="uqds-table uqds-table--card uqds-table--colour">
             <tbody class="uqds-table__body">
                 <tr class="uqds-table__mobile-heading">
@@ -230,14 +230,13 @@ export const scaleOutcome = {
             </tbody>
         </table>
         `;
-    },
-    name: "Action priority",
-  };
+  },
+  name: "Action priority",
+};
 
-
-  export const reportingRating = {
-    render: () => {
-      return `
+export const reportingRating = {
+  render: () => {
+    return `
         <table class="uqds-table uqds-table--card uqds-table--colour">
             <tbody class="uqds-table__body">
                 <tr class="uqds-table__mobile-heading">
@@ -341,6 +340,6 @@ export const scaleOutcome = {
             </tbody>
         </table>
         `;
-    },
-    name: "Reporting Rating",
-  };
+  },
+  name: "Reporting Rating",
+};

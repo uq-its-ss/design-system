@@ -500,4 +500,3 @@ export const success = {
   },
   name: "Sucess",
 };
-

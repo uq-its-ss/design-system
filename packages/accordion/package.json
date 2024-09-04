@@ -1,6 +1,6 @@
 {
   "name": "@uqds/accordion",
-  "version": "1.1.3",
+  "version": "1.1.4-alpha.0",
   "description": "Accordion component",
   "keywords": [
     "uqds",
@@ -45,8 +45,8 @@
     "url": "https://github.com/uq-its-ss/design-system/issues"
   },
   "dependencies": {
-    "@uqds/core": "^1.2.3",
-    "@uqds/icon": "^0.0.18"
+    "@uqds/core": "^1.2.4-alpha.0",
+    "@uqds/icon": "^0.0.19-alpha.0"
   },
   "devDependencies": {
     "@testing-library/dom": "^9.3.3",

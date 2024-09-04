@@ -1,6 +1,6 @@
 {
   "name": "@uqds/tabs",
-  "version": "0.1.3",
+  "version": "0.1.4-alpha.0",
   "description": "The tabs component package",
   "keywords": [
     "uqds",
@@ -51,6 +51,6 @@
     "url": "https://github.com/uq-its-ss/design-system/issues"
   },
   "dependencies": {
-    "@uqds/core": "^1.2.3"
+    "@uqds/core": "^1.2.4-alpha.0"
   }
 }

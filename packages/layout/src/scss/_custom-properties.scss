@@ -4,8 +4,6 @@
 :root {
   --layout-container-max-width: #{$container-max-width};
   --layout-gap: #{core.$space-xl};
-  --layout-section-gap: 6rem;
-
   --layout-sidebar-width: 261px;
 }
 
@@ -13,6 +11,5 @@
 @media #{core.$screen-lg-down} {
   :root {
     --layout-gap: #{core.$space-l};
-    --layout-section-gap: #{core.$space-uul};
   }
 }

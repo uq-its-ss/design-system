@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.3](https://github.com/uq-its-ss/design-system/compare/@uqds/footer@1.2.2-alpha.0...@uqds/footer@1.2.3) (2024-09-04)
+
+**Note:** Version bump only for package @uqds/footer
+
+## [1.2.2](https://github.com/uq-its-ss/design-system/compare/@uqds/footer@1.2.2-alpha.0...@uqds/footer@1.2.2) (2024-09-04)
+
+**Note:** Version bump only for package @uqds/footer
+
 ## [1.2.2-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/footer@1.2.0-alpha.10...@uqds/footer@1.2.2-alpha.0) (2024-05-03)
 
 **Note:** Version bump only for package @uqds/footer

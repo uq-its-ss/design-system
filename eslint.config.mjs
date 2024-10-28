@@ -6,8 +6,8 @@ import eslintConfigPrettier from "eslint-config-prettier";
 import babelParser from "@babel/eslint-parser";
 import jestDom from "eslint-plugin-jest-dom";
 import testingLibrary from "eslint-plugin-testing-library";
-import unusedImports from "eslint-plugin-unused-imports";
 import importPlugin from "eslint-plugin-import";
+import unusedImports from "eslint-plugin-unused-imports";
 
 export default [
   { files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"] },
@@ -31,8 +31,8 @@ export default [
     plugins: {
       ...jestDom.configs["flat/recommended"],
       ...testingLibrary.configs["flat/dom"],
+      ...importPlugin.configs.recommended,
       ...unusedImports,
-      ...importPlugin.flatConfigs.recommended,
     },
     rules: {
       "jest-dom/prefer-checked": "error",

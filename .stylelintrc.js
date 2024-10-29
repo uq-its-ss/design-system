@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ["stylelint-config-standard-scss"],
+  extends: ["stylelint-config-standard-scss", "stylelint-config-prettier-scss"],
   rules: {
     "function-no-unknown": [
       true,
@@ -48,6 +48,8 @@ module.exports = {
     "font-family-name-quotes": null,
     "selector-pseudo-element-colon-notation": null,
     "no-empty-source": null,
+    "media-feature-range-notation": null,
+    "scss/load-no-partial-leading-underscore": null,
   },
   plugins: ["stylelint-scss"],
 };

@@ -40,14 +40,14 @@ export const HeaderInterim = {
     });
 
     const searchToggle = headerElem.querySelector(
-      ".nav-primary__search-toggle"
+      ".nav-primary__search-toggle",
     );
     searchToggle.addEventListener("click", () => {
       menuLeft.close();
     });
 
     var slideMenuBackButtons = headerElem.querySelectorAll(
-      ".slide-menu__backlink, .global-mobile-nav__audience-link"
+      ".slide-menu__backlink, .global-mobile-nav__audience-link",
     );
 
     Array.prototype.forEach.call(slideMenuBackButtons, function (el, i) {
@@ -89,14 +89,14 @@ export const Header = {
     });
 
     const searchToggle = headerElem.querySelector(
-      ".nav-primary__search-toggle"
+      ".nav-primary__search-toggle",
     );
     searchToggle.addEventListener("click", () => {
       menuLeft.close();
     });
 
     var slideMenuBackButtons = headerElem.querySelectorAll(
-      ".slide-menu__backlink, .global-mobile-nav__audience-link"
+      ".slide-menu__backlink, .global-mobile-nav__audience-link",
     );
 
     Array.prototype.forEach.call(slideMenuBackButtons, function (el, i) {

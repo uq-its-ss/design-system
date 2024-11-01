@@ -49,7 +49,7 @@
     "@uqds/icon": "^0.0.19-alpha.0"
   },
   "devDependencies": {
-    "@testing-library/dom": "^9.3.3",
-    "gulp": "^4.0.2"
+    "@testing-library/dom": "^10.4.0",
+    "gulp": "^5.0.0"
   }
 }

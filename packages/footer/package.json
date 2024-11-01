@@ -43,6 +43,6 @@
     "@uqds/icon": "^0.0.19-alpha.0"
   },
   "devDependencies": {
-    "gulp": "^4.0.2"
+    "gulp": "^5.0.0"
   }
 }

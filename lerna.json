@@ -1,7 +1,6 @@
 {
   "version": "independent",
   "npmClient": "npm",
-  "useWorkspaces": true,
   "command": {
     "bootstrap": {
       "npmClientArgs": ["--no-package-lock"]
@@ -15,5 +14,6 @@
       "allowBranch": ["master", "releases"],
       "message": "chore(release):Publish"
     }
-  }
+  },
+  "$schema": "node_modules/lerna/schemas/lerna-schema.json"
 }

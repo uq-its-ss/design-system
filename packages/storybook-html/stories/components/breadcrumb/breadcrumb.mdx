@@ -13,11 +13,13 @@ issues](https://github.com/uq-its-ss/design-system/issues)
 
 Breadcrumbs are a horizontal list of links used to indicate the current page location within the information architecture (the first level always being the UQ homepage). Page links are separated by a chevron icon which indicates the level of that page relative to the page links beside it. Breadcrumbs are truncated and ellipsed (...) when the text is longer than a set width, however the current page crumb is not linked and always listed in full. UQ homepage is the base.
 
-<Canvas of={BreadcrumbStories.Breadcrumb}
+<Canvas
+  of={BreadcrumbStories.Breadcrumb}
   story={{
-     autoplay : true,
+    autoplay: true,
   }}
-withToolbar={true}  />
+  withToolbar={true}
+/>
 
 ### Truncation
 

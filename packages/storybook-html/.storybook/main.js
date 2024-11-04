@@ -40,7 +40,7 @@ const config = {
       },
     },
     getAbsolutePath("@storybook/addon-mdx-gfm"),
-    getAbsolutePath("@storybook/addon-webpack5-compiler-babel")
+    getAbsolutePath("@storybook/addon-webpack5-compiler-babel"),
   ],
 
   staticDirs: ["../public"],

@@ -19,9 +19,12 @@ The site header component is comprised of the site title, the site navigation, a
 
 A site header with a site title, a site utility, and a two-level site navigation.
 
-<Canvas withToolbar>
-  <Story of={SiteHeaderStories.siteHeaderWithSubnav} autoplay />
-</Canvas>
+<Canvas 
+of={SiteHeaderStories.siteHeaderWithSubnav} 
+  story={{
+     autoplay : true,
+  }}
+withToolbar={true}  />
 
 #### Usage
 
@@ -70,9 +73,12 @@ Slider mobile menu
 
 A site header with site title and a one-level site navigation.
 
-<Canvas withToolbar>
-  <Story of={SiteHeaderStories.siteHeaderWithoutSubnav} autoplay />
-</Canvas>
+<Canvas 
+of={SiteHeaderStories.siteHeaderWithoutSubnav} 
+  story={{
+     autoplay : true,
+  }}
+withToolbar={true}  />
 
 ## Variants
 

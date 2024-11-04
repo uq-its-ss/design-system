@@ -19,9 +19,7 @@ Page alerts are light variants of alerts that are used locally on pages along wi
 
 ### Info (Default example)
 
-<Canvas>
-  <Story of={AlertStories.alertInfo} />
-</Canvas>
+<Canvas of={AlertStories.alertInfo} />
 
 ```html
 <div class="uq-alert uq-alert--info" role="alert">
@@ -36,9 +34,7 @@ Page alerts are light variants of alerts that are used locally on pages along wi
 
 ### Success
 
-<Canvas>
-  <Story of={AlertStories.alertSuccess} />
-</Canvas>
+<Canvas of={AlertStories.alertSuccess} />
 
 ```html
 <div class="uq-alert uq-alert--success" role="alert">
@@ -53,9 +49,7 @@ Page alerts are light variants of alerts that are used locally on pages along wi
 
 ### Warning
 
-<Canvas>
-  <Story of={AlertStories.alertWarning} />
-</Canvas>
+<Canvas of={AlertStories.alertWarning} />
 
 ```html
 <div class="uq-alert uq-alert--warning" role="alert">
@@ -70,9 +64,7 @@ Page alerts are light variants of alerts that are used locally on pages along wi
 
 ### Error
 
-<Canvas>
-  <Story of={AlertStories.alertError} />
-</Canvas>
+<Canvas of={AlertStories.alertError} />
 
 ```html
 <div class="uq-alert uq-alert--error" role="alert">
@@ -87,9 +79,7 @@ Page alerts are light variants of alerts that are used locally on pages along wi
 
 ### with Link
 
-<Canvas>
-  <Story of={AlertStories.alertWithLink} />
-</Canvas>
+<Canvas of={AlertStories.alertWithLink} />
 
 ```html
 <div class="uq-alert" role="alert">
@@ -105,9 +95,7 @@ Page alerts are light variants of alerts that are used locally on pages along wi
 
 ### with Button
 
-<Canvas>
-  <Story of={AlertStories.alertWithButton} />
-</Canvas>
+<Canvas of={AlertStories.alertWithButton} />
 
 ```html
 <div class="uq-alert" role="alert">
@@ -123,9 +111,7 @@ Page alerts are light variants of alerts that are used locally on pages along wi
 
 ### with Title
 
-<Canvas>
-  <Story of={AlertStories.alertWithTitle} />
-</Canvas>
+<Canvas of={AlertStories.alertWithTitle} />
 
 ```html
 <div class="uq-alert" role="alert">
@@ -146,9 +132,7 @@ Global alerts are darker variants of alerts that are used to convey a globally i
 
 ### Info global
 
-<Canvas>
-  <Story of={AlertStories.infoGlobal} />
-</Canvas>
+<Canvas of={AlertStories.infoGlobal} />
 
 ```html
 <div
@@ -170,9 +154,7 @@ Global alerts are darker variants of alerts that are used to convey a globally i
 
 ### Success global
 
-<Canvas>
-  <Story of={AlertStories.successGlobal} />
-</Canvas>
+<Canvas of={AlertStories.successGlobal} />
 
 ```html
 <div
@@ -194,9 +176,7 @@ Global alerts are darker variants of alerts that are used to convey a globally i
 
 ### Warning global
 
-<Canvas>
-  <Story of={AlertStories.warningGlobal} />
-</Canvas>
+<Canvas of={AlertStories.warningGlobal} />
 
 ```html
 <div
@@ -217,9 +197,7 @@ Global alerts are darker variants of alerts that are used to convey a globally i
 
 ### Error global
 
-<Canvas>
-  <Story of={AlertStories.errorGlobal} />
-</Canvas>
+<Canvas of={AlertStories.errorGlobal} />
 
 ```html
 <div
@@ -240,9 +218,7 @@ Global alerts are darker variants of alerts that are used to convey a globally i
 
 ### Info global (no title, no dismiss)
 
-<Canvas>
-  <Story of={AlertStories.infoGlobalNoTitleOrDismiss} />
-</Canvas>
+<Canvas of={AlertStories.infoGlobalNoTitleOrDismiss} />
 
 ```html
 <div
@@ -264,9 +240,7 @@ Global alerts are darker variants of alerts that are used to convey a globally i
 
 ### Warning global (no title, no dismiss)
 
-<Canvas>
-  <Story of={AlertStories.warningGlobalNoTitleOrDismiss} />
-</Canvas>
+<Canvas of={AlertStories.warningGlobalNoTitleOrDismiss} />
 
 ```html
 <div
@@ -288,9 +262,12 @@ Global alerts are darker variants of alerts that are used to convey a globally i
 
 ### Loaded from an external API
 
-<Canvas>
-  <Story of={AlertStories.loadedFromExternalUri} autoplay />
-</Canvas>
+<Canvas of={AlertStories.loadedFromExternalUri} 
+  story={{
+     autoplay : true,
+  }}
+withToolbar={true}  
+/>
 
 ```html
 <div id="global-alerts-container" data-uri="/api/v1/alerts.json"></div>

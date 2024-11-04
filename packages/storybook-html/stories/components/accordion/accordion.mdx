@@ -24,9 +24,12 @@ Accordions can be implemented using `<div>` or `<ul>` lists.
 
 Use divs if there is a significant amount of content to be displayed.
 
-<Canvas>
-  <Story of={AccordionStories.usingDivs} autoplay />
-</Canvas>
+<Canvas
+  of={AccordionStories.usingDivs}
+  story={{
+     autoplay : true,
+  }}
+/>
 
 ```html
 <div class="uq-accordion" aria-label="Accordion button group">
@@ -61,9 +64,15 @@ Use divs if there is a significant amount of content to be displayed.
 
 Use lists if there is less content and when the semantics of a list serves better with assistive technologies like screen readers.
 
-<Canvas>
-  <Story of={AccordionStories.usingLists} autoplay />
-</Canvas>
+
+  <Canvas 
+  of={AccordionStories.usingLists}
+    story={{
+     autoplay : true,
+  }}
+withToolbar={true}  
+  />
+
 
 ```html
 <ul class="uq-accordion" aria-label="Accordion button group">
@@ -110,9 +119,13 @@ new uq.accordion();
 
 The subtitle allows for a secondary context. Typically the primary title should provide enough information.
 
-<Canvas>
-  <Story of={AccordionStories.HasSubtitle} autoplay />
-</Canvas>
+
+  <Canvas of={AccordionStories.HasSubtitle}
+    story={{
+     autoplay : true,
+  }}
+withToolbar={true}  />
+
 
 ```html
 <div
@@ -154,9 +167,13 @@ The subtitle allows for a secondary context. Typically the primary title should 
 
 A smaller more compact version. Used as a support class for more complex interfaces mixing components. For general content use the standard size accordion.
 
-<Canvas>
-  <Story of={AccordionStories.IsCompact} autoplay />
-</Canvas>
+
+  <Canvas of={AccordionStories.IsCompact}
+    story={{
+     autoplay : true,
+  }}
+withToolbar={true}  />
+
 
 ```html
 <div
@@ -202,9 +219,14 @@ By default, users can expand and collapse one accordion at a time. When a user e
 
 Alternate behaviour is to allow users to expand and collapse any number of accordions at a time. When a user expands one accordion then clicks on another, the previously expanded accordion remains expanded and the user will need to manually collapse it. This is useful if users need to view the contents of multiple accordions at a time. To enable this behaviour, add the classname `uq-accordion--is-manual` to the `<div>` or `<ul>` as shown below.
 
-<Canvas>
-  <Story of={AccordionStories.isManual} autoplay />
-</Canvas>
+
+  <Canvas of={AccordionStories.isManual} 
+    story={{
+     autoplay : true,
+  }}
+withToolbar={true}  
+/>
+
 
 ```html
 <div

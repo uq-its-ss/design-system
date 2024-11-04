@@ -28,9 +28,10 @@ For instance when there is more content to the left, a transparent shadow appear
 
 #### a. Table scroll - Basic tags with minimal classes
 
-<Canvas withToolbar>
-  <Story of={TableStories.table} />
-</Canvas>
+<Canvas
+of={TableStories.table} 
+withToolbar={true}  
+/>
 
 ```html
 <!-- Table scroll - Basic tags with minimal classes -->
@@ -73,9 +74,10 @@ For instance when there is more content to the left, a transparent shadow appear
 
 #### b. Table scroll - Basic tags with classes
 
-<Canvas withToolbar>
-  <Story of={TableStories.tableClasses} />
-</Canvas>
+<Canvas 
+of={TableStories.tableClasses} 
+withToolbar={true}  
+/>
 
 ```html
 <!-- Table scroll - Basic tags with classes -->
@@ -120,9 +122,10 @@ For instance when there is more content to the left, a transparent shadow appear
 
 Tables with two headers with unclear header directions needs to define the direction of each header by setting the scope attribute to `col` or `row`.
 
-<Canvas withToolbar>
-  <Story of={TableStories.tableMultipleHeaders} />
-</Canvas>
+<Canvas
+of={TableStories.tableMultipleHeaders}
+withToolbar={true}  
+/>
 
 ```html
 <!-- Table scroll - Multiple headers -->
@@ -174,9 +177,10 @@ Tables with two headers with unclear header directions needs to define the direc
 
 Tables with irregular headers have header cells that span multiple columns and/or rows: For these tables, define column and row groups and set the range of the header cells using the `colgroup` and `rowgroup` values of the scope attribute.
 
-<Canvas withToolbar>
-  <Story of={TableStories.tableIrregularHeaders} />
-</Canvas>
+<Canvas 
+of={TableStories.tableIrregularHeaders}
+withToolbar={true}  
+/>
 
 ```html
 <!-- Table scroll - Irregular headers -->
@@ -235,9 +239,10 @@ Tables with irregular headers have header cells that span multiple columns and/o
 
 Tables with multi-level headers have multiple header cells associated per data cell: For tables that are so complex that header cells can’t be associated in a strictly horizontal or vertical way, use `id` and `headers` attributes to associate header and data cells explicitly.
 
-<Canvas withToolbar>
-  <Story of={TableStories.tableMultiLevelHeaders} />
-</Canvas>
+<Canvas
+of={TableStories.tableMultiLevelHeaders} 
+withToolbar={true}  
+/>
 
 ```html
 <!-- Table scroll - Multi-level headers -->
@@ -327,9 +332,9 @@ Tables with multi-level headers have multiple header cells associated per data c
 In this responsive approach, the component table `tr` is displayed as a grid. At a certain responsive breakpoint, it behaves as folded cards and hides the header `thead`.
 The data attributes assigned to each `tbody` cell helps in understanding the connection between the call value and its associated header when the header `thead` is hidden.
 
-<Canvas withToolbar>
-  <Story of={TableStories.tableCard} />
-</Canvas>
+<Canvas of={TableStories.tableCard} 
+withToolbar={true}  
+/>
 
 ```html
 <!-- Table card -->

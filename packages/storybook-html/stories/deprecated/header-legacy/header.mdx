@@ -25,9 +25,10 @@ using [_UQ Search_](https://www.uq.edu.au/search).
 > functionality within your application e.g. searching for a location on a map,
 > searching for books or articles in a library database.
 
-<Canvas sourceState="hidden" withToolbar>
-  <Story of={HeaderStories.headerNoLocalSearch} autoplay />
-</Canvas>
+<Canvas of={HeaderStories.headerNoLocalSearch} 
+story={{
+     autoplay : true,
+  }} />
 
 ```html
 <header class="legacy-header">
@@ -160,9 +161,10 @@ allow users to choose to search all UQ sites or just the content on your site\*.
 > \*If your application/website isn't indexed by UQ Search, please opt
 > to use the global header **with global search only**.
 
-<Canvas sourceState="hidden" withToolbar>
-  <Story of={HeaderStories.header} autoplay />
-</Canvas>
+<Canvas of={HeaderStories.header} 
+story={{
+     autoplay : true,
+  }} />
 
 ```html
 <header class="legacy-header">

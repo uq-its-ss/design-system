@@ -22,9 +22,7 @@ The button component is used to make common actions more obvious and help users 
 
 The default button style used for the primary action on a page, eg. a submit button on a form. This should generally only be used once per view.
 
-<Canvas sourceState="hidden">
-  <Story of={ButtonStories.button} />
-</Canvas>
+<Canvas of={ButtonStories.button} />
 
 <Controls of={ButtonStories.button} />
 
@@ -32,25 +30,19 @@ The default button style used for the primary action on a page, eg. a submit but
 
 A button style used alongside the default primary button to highlight an important action, eg. a save button on a form.
 
-<Canvas sourceState="hidden">
-  <Story of={ButtonStories.buttonSecondary} />
-</Canvas>
+<Canvas of={ButtonStories.buttonSecondary} />
 
 ### Tertiary
 
 A demphasied button style used for tertiary actions on a page, eg a Cancel button on a form.
 
-<Canvas sourceState="hidden">
-  <Story of={ButtonStories.buttonTertiary} />
-</Canvas>
+<Canvas of={ButtonStories.buttonTertiary} />
 
 ### Size
 
 The button sizes are normal, tiny `uq-button--tiny`, small `uq-button--small` and large `uq-button--large`
 
-<Canvas sourceState="hidden">
-  <Story of={ButtonStories.buttonSize} />
-</Canvas>
+<Canvas of={ButtonStories.buttonSize} />
 
 ```html
 <button class="uq-button">Button</button>
@@ -66,9 +58,7 @@ The button sizes are normal, tiny `uq-button--tiny`, small `uq-button--small` an
 
 Expand variant of the button `uq-button--expand` would extend the width of the button to full width of its parent container.
 
-<Canvas sourceState="hidden">
-  <Story of={ButtonStories.buttonExpanded} />
-</Canvas>
+<Canvas of={ButtonStories.buttonExpanded} />
 
 ```html
 <button class="uq-button uq-button--expand">Button</button>

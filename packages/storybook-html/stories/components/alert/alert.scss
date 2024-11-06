@@ -1,2 +1,2 @@
-@import "@uqds/alert/src/scss/_component";
-@import "@uqds/button/src/scss/_component";
+@use "@uqds/alert/src/scss/_component"as alert;
+@use "@uqds/button/src/scss/_component" as button;

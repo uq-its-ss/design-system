@@ -1,5 +1,5 @@
 @use "@uqds/core/src/scss/_global" as core;
-@use "../../../../../node_modules/tocbot/src/scss/tocbot";
+@use "../../../../../node_modules/tocbot/src/scss/tocbot" as *;
 
 // tocbot style overrides
 .toc-wrapper {

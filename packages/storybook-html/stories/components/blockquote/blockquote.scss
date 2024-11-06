@@ -1,4 +1,4 @@
-@import "@uqds/blockquote/src/scss/_component";
+@use "@uqds/blockquote/src/scss/_component" as blockquote;
 
 // Please don't apply random global styles here. You will affect other stories.
 // If you must style a story, please consider scoping to ensure no style

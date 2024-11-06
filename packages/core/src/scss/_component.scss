@@ -1,4 +1,4 @@
-@import "_global";
+@use "_global" as *;
 
 html {
   font-size: 100%; /* 16px in most browsers */

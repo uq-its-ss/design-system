@@ -1,6 +1,6 @@
-import { OptimizeOptions } from "svgo";
+import { Config } from "svgo";
 
-export const svgoOptions: OptimizeOptions = {
+export const svgoOptions: Config = {
     // multipass: true,
     // full: true,
 
@@ -15,7 +15,7 @@ export const svgoOptions: OptimizeOptions = {
         "inlineStyles",
         "minifyStyles",
         "convertStyleToAttrs",
-        "cleanupIDs",
+        "cleanupIds",
         // "prefixIds",
         // "removeRasterImages",
         "removeUselessDefs",

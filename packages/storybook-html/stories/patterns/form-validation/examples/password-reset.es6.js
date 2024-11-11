@@ -21,13 +21,13 @@ var passwordResetValidation = (function () {
     this.confirmPasswordLabel = document.getElementById("confirmPasswordLabel");
     this.confirmPasswordError = document.getElementById("confirmPasswordError");
     this.passwordStrengthMeterText = document.getElementById(
-      "passwordStrengthMeterText"
+      "passwordStrengthMeterText",
     );
     this.passwordStrengthMeterTextTemplate = document.getElementById(
-      "passwordStrengthMeterTextTemplate"
+      "passwordStrengthMeterTextTemplate",
     );
     this.passwordStrengthMeter = document.getElementById(
-      "passwordStrengthMeter"
+      "passwordStrengthMeter",
     );
 
     if (passwordStrengthMeter) {
@@ -131,7 +131,7 @@ var passwordResetValidation = (function () {
   }
 
   passwordResetValidation.prototype.setChoosePasswordFormErrors = function (
-    joiResult
+    joiResult,
   ) {
     // empty the error object
     this.choosePasswordFormErrors = {};
@@ -164,7 +164,7 @@ var passwordResetValidation = (function () {
     key,
     labelElem,
     inputElem,
-    errorElem
+    errorElem,
   ) {
     return (e) => {
       // update the form state
@@ -173,7 +173,7 @@ var passwordResetValidation = (function () {
         this.choosePasswordFormState,
         {
           abortEarly: false,
-        }
+        },
       );
 
       // map to error object
@@ -188,7 +188,7 @@ var passwordResetValidation = (function () {
     // clear all
     while (this.passwordStrengthMeterText.firstChild) {
       this.passwordStrengthMeterText.removeChild(
-        this.passwordStrengthMeterText.firstChild
+        this.passwordStrengthMeterText.firstChild,
       );
     }
     for (var i = 0; i < 5; i++) {
@@ -196,14 +196,14 @@ var passwordResetValidation = (function () {
     }
     this.passwordStrengthMeter.setAttribute(
       "class",
-      "story-password-strength-meter-indicator"
+      "story-password-strength-meter-indicator",
     );
 
     // check for criteria issues and password strength
     if (e.target.value.length > 0) {
       var clonedNode = this.passwordStrengthMeterTextTemplate.cloneNode(true);
       var clonedNodeScoreElem = clonedNode.querySelector(
-        ".story-password-strength-meter-text-rating"
+        ".story-password-strength-meter-text-rating",
       );
 
       // display basic password criteria issues
@@ -224,10 +224,10 @@ var passwordResetValidation = (function () {
         if (clonedNodeScoreElem) {
           clonedNode.insertBefore(
             document.createTextNode("Your password is "),
-            clonedNodeScoreElem
+            clonedNodeScoreElem,
           );
           clonedNodeScoreElem.appendChild(
-            document.createTextNode(this.strengthTerms[result.score])
+            document.createTextNode(this.strengthTerms[result.score]),
           );
           if (result.score <= 2) {
             if (result.feedback.warning && result.feedback.warning !== "") {
@@ -235,10 +235,10 @@ var passwordResetValidation = (function () {
               var warning = document.createElement("div");
               warning.setAttribute(
                 "class",
-                "story-password-strength-meter-warning"
+                "story-password-strength-meter-warning",
               );
               warning.appendChild(
-                document.createTextNode(result.feedback.warning)
+                document.createTextNode(result.feedback.warning),
               );
               clonedNode.appendChild(warning);
             }
@@ -249,11 +249,11 @@ var passwordResetValidation = (function () {
               var suggestions = document.createElement("ul");
               suggestions.setAttribute(
                 "class",
-                "story-password-strength-meter-suggestions"
+                "story-password-strength-meter-suggestions",
               );
               for (var k = 0; k < result.feedback.suggestions.length; k++) {
                 var suggestion = document.createTextNode(
-                    result.feedback.suggestions[k]
+                    result.feedback.suggestions[k],
                   ),
                   suggestionElem = document.createElement("li");
                 suggestionElem.appendChild(suggestion);
@@ -266,7 +266,7 @@ var passwordResetValidation = (function () {
               var count = 0;
               sequences.setAttribute(
                 "class",
-                "story-password-strength-meter-sequences"
+                "story-password-strength-meter-sequences",
               );
               for (var l = 0; l < result.sequence.length; l++) {
                 var sequence,
@@ -280,23 +280,23 @@ var passwordResetValidation = (function () {
                       case "passwords":
                         sequence = document.createTextNode(
                           "Password contains a commonly used word or phrase: " +
-                            obfuscatedToken
+                            obfuscatedToken,
                         );
                         break;
                       case "female_names":
                         sequence = document.createTextNode(
-                          "Password contains a name: " + obfuscatedToken
+                          "Password contains a name: " + obfuscatedToken,
                         );
                         break;
                       case "male_names":
                         sequence = document.createTextNode(
-                          "Password contains a name: " + obfuscatedToken
+                          "Password contains a name: " + obfuscatedToken,
                         );
                         break;
                       default:
                         sequence = document.createTextNode(
                           "Password contains a common word or phrase: " +
-                            obfuscatedToken
+                            obfuscatedToken,
                         );
                     }
                     count++;
@@ -306,7 +306,7 @@ var passwordResetValidation = (function () {
                   case "sequence":
                     sequence = document.createTextNode(
                       "Password contains a sequence of characters: " +
-                        obfuscatedToken
+                        obfuscatedToken,
                     );
                     count++;
                     sequenceElem.appendChild(sequence);
@@ -315,7 +315,7 @@ var passwordResetValidation = (function () {
                   case "repeat":
                     sequence = document.createTextNode(
                       "Password contains a repeated word, phrase, or sequence of characters: " +
-                        obfuscatedToken
+                        obfuscatedToken,
                     );
                     count++;
                     sequenceElem.appendChild(sequence);
@@ -330,21 +330,21 @@ var passwordResetValidation = (function () {
             if (result.score <= 1) {
               clonedNode.setAttribute(
                 "class",
-                "story-password-strength-meter-text story-password-strength-meter-text--fail"
+                "story-password-strength-meter-text story-password-strength-meter-text--fail",
               );
               this.passwordStrengthMeter.setAttribute(
                 "class",
-                "story-password-strength-meter-indicator story-password-strength-meter-indicator--fail"
+                "story-password-strength-meter-indicator story-password-strength-meter-indicator--fail",
               );
             }
           } else {
             clonedNode.setAttribute(
               "class",
-              "story-password-strength-meter-text story-password-strength-meter-text--strong"
+              "story-password-strength-meter-text story-password-strength-meter-text--strong",
             );
             this.passwordStrengthMeter.setAttribute(
               "class",
-              "story-password-strength-meter-indicator story-password-strength-meter-indicator--strong"
+              "story-password-strength-meter-indicator story-password-strength-meter-indicator--strong",
             );
           }
           clonedNode.removeAttribute("id");
@@ -367,7 +367,7 @@ var passwordResetValidation = (function () {
     errorKey,
     labelElem,
     inputElem,
-    errorElem
+    errorElem,
   ) {
     if (_.has(this.choosePasswordFormErrors, errorKey)) {
       // set error state
@@ -478,7 +478,7 @@ var passwordResetValidation = (function () {
       this.choosePasswordFormState,
       {
         abortEarly: false,
-      }
+      },
     );
     this.setChoosePasswordFormErrors(initErrorResults);
     this.passwordInput.addEventListener(
@@ -490,9 +490,9 @@ var passwordResetValidation = (function () {
           "password",
           this.passwordLabel,
           this.passwordInput,
-          this.passwordError
+          this.passwordError,
         )(e);
-      }, 1200)
+      }, 1200),
     );
     this.confirmPasswordInput.addEventListener(
       "change",
@@ -500,8 +500,8 @@ var passwordResetValidation = (function () {
         "confirmPassword",
         this.confirmPasswordLabel,
         this.confirmPasswordInput,
-        this.confirmPasswordError
-      )
+        this.confirmPasswordError,
+      ),
     );
     this.form.addEventListener("submit", this.handleChoosePasswordSubmit());
   };

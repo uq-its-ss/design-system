@@ -133,7 +133,9 @@
       display: block;
       padding: core.$space-m core.$space-m;
       text-decoration: none;
-      transition: background-color 0.25s, border-color 0.25s;
+      transition:
+        background-color 0.25s,
+        border-color 0.25s;
 
       &:hover,
       &:focus {
@@ -200,7 +202,9 @@
         @media #{core.$screen-lg-up} {
           position: absolute;
           width: $nav-dropdown-width;
-          transition: opacity 0.2s ease, transform 0.2s ease,
+          transition:
+            opacity 0.2s ease,
+            transform 0.2s ease,
             visibility 0.2s ease;
           padding: 0.5rem 0 1.5rem 0;
         }

@@ -1,6 +1,6 @@
 {
   "name": "@uqds/header-legacy",
-  "version": "0.1.2-alpha.0",
+  "version": "0.1.4-alpha.0",
   "description": "Header component",
   "private": true,
   "keywords": [
@@ -35,8 +35,8 @@
     "url": "https://github.com/uq-its-ss/design-system/issues"
   },
   "dependencies": {
-    "@uqds/core": "^1.2.2-alpha.0",
-    "@uqds/grid": "^0.0.17-alpha.0",
-    "@uqds/icon": "^0.0.17-alpha.0"
+    "@uqds/core": "^1.2.4-alpha.0",
+    "@uqds/grid": "^0.0.19-alpha.0",
+    "@uqds/icon": "^0.0.19-alpha.0"
   }
 }

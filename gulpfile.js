@@ -21,7 +21,7 @@ function compileSCSS() {
       sass({
         includePaths: scssPaths,
         outputStyle: "compressed",
-      }).on("error", sass.logError)
+      }).on("error", sass.logError),
     )
     .pipe(dest("./dist/css"));
 }
@@ -36,7 +36,7 @@ function exportFontFiles() {
 
 function exportImages() {
   return src(["./node_modules/@uqds/blockquote/src/images/**"]).pipe(
-    dest("./dist/images")
+    dest("./dist/images"),
   );
 }
 
@@ -102,7 +102,7 @@ exports.default = parallel(
   exportFavicon,
   exportExample,
   bundleJS,
-  bundleMjs
+  bundleMjs,
 );
 
 exports.prepare = parallel(compileSCSS, bundleJS, bundleMjs);

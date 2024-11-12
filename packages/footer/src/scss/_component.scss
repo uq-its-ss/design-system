@@ -55,16 +55,6 @@
     }
   }
 
-  &__acknowledgement-text {
-    margin-top: core.$space-m;
-    flex-basis: 100%;
-
-    @media #{core.$screen-xl-up} {
-      flex-basis: auto;
-      margin-top: core.$space-none;
-    }
-  }
-
   &__link {
     font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-style: normal;

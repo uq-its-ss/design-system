@@ -14,7 +14,7 @@ yarn add @uqds/acknowledgement-statement
 
 With NPM:
 
-```shell
+````shell
 npm i @uqds/acknowledgement-statement
 
 ---
@@ -24,4 +24,4 @@ npm i @uqds/acknowledgement-statement
 ```shell
 @uqds/acknowledgement-statement
 ├─ @uqds/core
-```
+````

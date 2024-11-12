@@ -16,11 +16,12 @@ import * as AcknowledgementStatementStories from "./acknowledgement-statement.st
 
 ## Overview
 
-The button component is used to make common actions more obvious and help users more easily perform them.
+Cultural and reconciliation statements are used to acknowledge the traditional owners of the land and the importance of reconciliation.
+These statements are used to show respect and recognition of the traditional owners of the land and the importance of reconciliation.
 
 ### Reconciliation
 
-The default button style used for the primary action on a page, eg. a submit button on a form. This should generally only be used once per view.
+Reconciliation statement persistent across all UQ Footers
 
 <Canvas sourceState="hidden">
   <Story of={AcknowledgementStatementStories.reconciliationStatement} />
@@ -28,22 +29,25 @@ The default button style used for the primary action on a page, eg. a submit but
 
 ### Cultural Advise
 
-A button style used alongside the default primary button to highlight an important action, eg. a save button on a form.
+Cultural statement persistent across all library pages
 
 <Canvas sourceState="hidden">
   <Story of={AcknowledgementStatementStories.culturalAdvise} />
 </Canvas>
 
-
 ### States
 
-Default - Button text is not underlined. <br />
-Hover - Button text is underlined. The background and text color may change depending on the variant.
+- Cultural statement persistent across all library pages
+- Not an alert - specific component for specific use case
+- Not dismissible
+- Recommended character limit 100 desktop 62 mobile
+- Include link to further content
+- Link text should be descriptive about destination page
+- Only link text should be hyperlinked
+- Use same pattern background and behaviour as reconciliation statement so that it can be a ‘reusable pattern’
 
 ### Breakpoints
 
-Breakpoints have no effect on the button component and visually remains the same.
+Breakpoints wrap text at mobile, and max width contains text when on desktop.
 
 ## Accessibility
-
-Colour contrast test for all buttons showed a WCAG AA Pass.

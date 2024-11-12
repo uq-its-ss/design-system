@@ -7,13 +7,11 @@ export default {
     // return `<div>${label}</div>`;
     return createAcknowledgementStatement({ label, ...args });
   },
-  argTypes: {
-  },
+  argTypes: {},
 };
 
 export const reconciliationStatement = {
-  args: {
-  },
+  args: {},
   render: () => {
     return `
     <div  class="uq-acknowledgement-statement">
@@ -26,8 +24,7 @@ export const reconciliationStatement = {
 };
 
 export const culturalAdvise = {
-  args: {
-  },
+  args: {},
   render: () => {
     return `
     <div  class="uq-acknowledgement-statement">

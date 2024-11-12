@@ -1,0 +1,49 @@
+import { Meta, Story, Canvas, Controls } from "@storybook/blocks";
+import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
+import * as AcknowledgementStatementStories from "./acknowledgement-statement.stories";
+
+<Meta of={AcknowledgementStatementStories} />
+
+# Acknowledgement Statement
+
+<StatusBadge.Development />
+
+<StatusBadge.DraftDoc />
+
+<a href="https://github.com/uq-its-ss/design-system/issues" target="_blank">
+  Check for open issues
+</a>
+
+## Overview
+
+The button component is used to make common actions more obvious and help users more easily perform them.
+
+### Reconciliation
+
+The default button style used for the primary action on a page, eg. a submit button on a form. This should generally only be used once per view.
+
+<Canvas sourceState="hidden">
+  <Story of={AcknowledgementStatementStories.reconciliationStatement} />
+</Canvas>
+
+### Cultural Advise
+
+A button style used alongside the default primary button to highlight an important action, eg. a save button on a form.
+
+<Canvas sourceState="hidden">
+  <Story of={AcknowledgementStatementStories.culturalAdvise} />
+</Canvas>
+
+
+### States
+
+Default - Button text is not underlined. <br />
+Hover - Button text is underlined. The background and text color may change depending on the variant.
+
+### Breakpoints
+
+Breakpoints have no effect on the button component and visually remains the same.
+
+## Accessibility
+
+Colour contrast test for all buttons showed a WCAG AA Pass.

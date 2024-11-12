@@ -55,15 +55,6 @@
     }
   }
 
-  &__acknowledgement-flag {
-    width: 2.25rem;
-    height: core.$space-l;
-
-    &:first-child {
-      margin-right: core.$space-s;
-    }
-  }
-
   &__acknowledgement-text {
     margin-top: core.$space-m;
     flex-basis: 100%;
@@ -71,7 +62,6 @@
     @media #{core.$screen-xl-up} {
       flex-basis: auto;
       margin-top: core.$space-none;
-      padding-left: core.$space-l;
     }
   }
 

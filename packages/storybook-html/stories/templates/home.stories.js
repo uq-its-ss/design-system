@@ -83,21 +83,18 @@ export const Home = {
     title: "Our campuses",
     description:
       "Our campuses boast world-class facilities, beautiful outdoor areas, and a range of sporting and cultural amenities.",
-    image:
-      "https://www.uq.edu.au/sites/default/files/styles/card_image/public/2023-12/st-lucia-campus.jpg",
+    image: "images/card/card-example-herston-campus.jpg",
   })}
   ${CardImage({
     title: "Apply now",
     description: "View the steps to apply and get started on your application.",
-    image:
-      "https://www.uq.edu.au/sites/default/files/styles/card_image/public/2023-12/brand-imagery-two-students-laptop.jpg",
+    image: "images/card/card-example-st-lucia-campus.jpg",
   })}
   ${CardImage({
     title: "Scholarships",
     description:
       "Apply for financial support to enrich your time at UQ and help you to focus on your studies.",
-    image:
-      "https://www.uq.edu.au/sites/default/files/styles/card_image/public/2023-12/brand-imagery-two-students_0.jpg",
+    image: "images/card/card-example-gatton-campus.jpg",
   })}
 </div>
 </div>
@@ -112,20 +109,17 @@ export const Home = {
   ${NewsCard({
     title: "Lifelike lab-grown skin developed from human stem cells",
     description: "",
-    image:
-      "https://www.uq.edu.au/sites/default/files/styles/card_image/public/2024-03/med-skin-organoid-stained-with-key-human-skin-markers%20OPTIMISED.jpg",
+    image: "images/card/card-example-gatton-campus.jpg",
   })}
   ${NewsCard({
     title: "Zinc discovery holds promise for people with cystic fibrosis",
     description: "",
-    image:
-      "https://www.uq.edu.au/sites/default/files/styles/card_image/public/2024-03/zinc-discovery-for-people-living-with-cystic-fibrosis%20OPTIMISED.jpg",
+    image: "images/card/card-example-herston-campus.jpg",
   })}
   ${NewsCard({
     title: "A lightweight fish pen to move farms to deeper seas",
     description: "",
-    image:
-      "https://www.uq.edu.au/sites/default/files/styles/card_image/public/2024-03/seafisher-pen%20OPTIMISED.jpg",
+    image: "images/card/card-example-st-lucia-campus.jpg",
   })}
 </div>
 </div>

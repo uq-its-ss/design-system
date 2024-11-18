@@ -44,20 +44,20 @@ export const Overview = {
     title: "Community updates",
     href: "https://www.yammer.com/uq.edu.au/#/threads/inGroup?type=in_group&feedId=35286523904",
     description: "Join the Design System community on UQ Yammer for updates.",
-    image: "https://design-system.uq.edu.au/images/general/purple-hands.png",
+    image: "images/general/purple-hands.png",
   })}
   ${Card({
     title: "View recent changes",
     href: "https://github.com/uq-its-ss/design-system/pulls?q=is%3Apr+is%3Aclosed",
     description:
       "Review potential changes with collaborators or view recently pushed commits.",
-    image: "https://design-system.uq.edu.au/images/general/purple-rocket.png",
+    image: "images/general/purple-rocket.png",
   })}
   ${Card({
     title: "View open issues",
     href: "https://github.com/uq-its-ss/design-system/issue",
     description: "Build awareness of feature requests and bugs.",
-    image: "https://design-system.uq.edu.au/images/general/purple-bug.png",
+    image: "images/general/purple-bug.png",
   })}
 </div>
 `,

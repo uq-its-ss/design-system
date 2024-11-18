@@ -48,7 +48,7 @@ class NewHeader {
 
     // megamenu
     const megaMenuItem = document.querySelectorAll(
-      ".uq-header__nav-primary-item"
+      ".uq-header__nav-primary-item",
     );
     megaMenuItem.forEach((item) => {
       item.addEventListener("mouseenter", this.handleToggle);

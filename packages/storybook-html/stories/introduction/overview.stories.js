@@ -20,7 +20,6 @@ export default {
 
 export const Overview = {
   render: () => `
-<div class="uq-sections">
   ${Hero({
     title: "Design System",
     button: "",
@@ -208,6 +207,5 @@ ${Section({
 </div>
 `,
   })}
-</div>
 `,
 };

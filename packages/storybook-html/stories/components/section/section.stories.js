@@ -7,10 +7,17 @@ export default {
     title: {
       control: "text",
     },
+    headingElement: {
+      options: ["h2", "h3", "h4", "h5", "h6"],
+      control: "select",
+    },
     description: {
       control: "text",
     },
     shaded: {
+      control: "boolean",
+    },
+    noMargin: {
       control: "boolean",
     },
   },
@@ -19,14 +26,30 @@ export default {
 export const Section = {
   args: {
     title: "Title",
+    headingElement: "h3",
     description: "Description",
     content: "",
     shaded: false,
+    noMargin: false,
   },
-  render: ({ title, description, content, shaded }) => `
-<section class="${classNames("uq-section", { "uq-section--shaded": shaded })}">
+  render: ({
+    title,
+    headingElement,
+    description,
+    content,
+    shaded,
+    noMargin,
+  }) => `
+<section class="${classNames("uq-section", {
+    "uq-section--shaded": shaded,
+    "uq-section--no-margin": noMargin,
+  })}">
   <div class="uq-section__header">
-    ${title ? `<h2 class="uq-section__title">${title}</h2>` : ""}
+    ${
+      title
+        ? `<${headingElement} class="uq-section__title">${title}</${headingElement}>`
+        : ""
+    }
     ${
       description
         ? `
@@ -43,9 +66,7 @@ export const Section = {
 export const Shaded = {
   ...Section,
   args: {
-    title: "Title",
-    description: "Description",
-    content: "",
+    ...Section.args,
     shaded: true,
   },
 };
@@ -54,15 +75,20 @@ export const Container = {
   name: "With container",
   args: {
     title: "Title",
+    headingElement: "h3",
     description: "Description",
     content: "",
     shaded: false,
   },
-  render: ({ title, description, content, shaded }) => `
+  render: ({ title, headingElement, description, content, shaded }) => `
 <section class="${classNames("uq-section", { "uq-section--shaded": shaded })}">
   <div class="uq-container">
     <div class="uq-section__header">
-      ${title ? `<h2 class="uq-section__title">${title}</h2>` : ""}
+      ${
+        title
+          ? `<${headingElement} class="uq-section__title">${title}</${headingElement}>`
+          : ""
+      }
       ${
         description
           ? `
@@ -80,9 +106,15 @@ export const Container = {
 export const ShadedContainer = {
   ...Container,
   args: {
-    title: "Title",
-    description: "Description",
-    content: "",
+    ...Container.args,
     shaded: true,
+  },
+};
+
+export const NoMargin = {
+  ...Section,
+  args: {
+    ...Section.args,
+    noMargin: true,
   },
 };

@@ -235,8 +235,10 @@
     color: core.$white; //core.$purple-500;
     text-decoration: none;
     padding: core.$space-m core.$space-l;
-    transition: background-color 0.25s, border-color 0.25s;
-    font-weight: 400;
+    transition:
+      background-color 0.25s,
+      border-color 0.25s;
+    font-weight: core.$font-weight-normal;
     position: relative;
     border-bottom: 4px solid transparent;
 
@@ -370,7 +372,9 @@
     top: 3.95rem;
     z-index: 20;
     box-shadow: 0 0.75rem core.$space-l rgb(24 24 24 / 20%);
-    transition: max-height 0.2s ease-in-out, transform 0.2s ease-in-out; //, visibility .2s ease;
+    transition:
+      max-height 0.2s ease-in-out,
+      transform 0.2s ease-in-out; //, visibility .2s ease;
     transform: translateY(-1rem);
     max-height: 0;
     overflow: hidden;
@@ -439,7 +443,10 @@
     text-decoration: none;
     text-indent: 0;
     top: calc(50% - 1.375rem);
-    transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+    transition:
+      color 0.2s,
+      background-color 0.2s,
+      border-color 0.2s;
     width: 2.75rem;
 
     &::before {
@@ -557,7 +564,7 @@
 
   .megamenu__heading {
     color: core.$purple-500;
-    font-weight: 500;
+    font-weight: core.$font-weight-medium;
     padding-top: core.$space-xs;
     padding-bottom: core.$space-xs;
 
@@ -672,6 +679,7 @@ body.no-scroll {
   .slide-menu__control {
     padding-top: 1rem;
     padding-bottom: 1rem;
+    font-weight: core.$font-weight-medium;
   }
 
   a {
@@ -681,6 +689,7 @@ body.no-scroll {
     font-size: core.$font-size-m;
     color: core.$purple-500;
     position: relative;
+    font-weight: core.$font-weight-normal;
 
     &:hover {
       color: core.$purple-500;
@@ -689,7 +698,7 @@ body.no-scroll {
   }
 
   & .slide-menu__backlink {
-    font-weight: 500;
+    font-weight: core.$font-weight-medium;
     padding-left: core.$space-xxxl;
 
     &::before {
@@ -827,7 +836,7 @@ body.no-scroll {
   }
 
   &__audience-link {
-    font-weight: 500;
+    font-weight: core.$font-weight-medium;
   }
 }
 
@@ -875,8 +884,10 @@ body.no-scroll {
   display: block;
   color: #fff;
   text-decoration: none;
-  transition: background-color 0.25s, border-color 0.25s;
-  font-weight: 400;
+  transition:
+    background-color 0.25s,
+    border-color 0.25s;
+  font-weight: core.$font-weight-normal;
   position: relative;
   border-bottom: 4px solid transparent;
 }
@@ -940,7 +951,7 @@ body.no-scroll {
 
 .uq-header__search-range label {
   color: core.$white;
-  font-weight: 400;
+  font-weight: core.$font-weight-normal;
   display: inline-block;
   vertical-align: top;
 }

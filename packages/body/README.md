@@ -1,6 +1,6 @@
 # `@uqds/body`
 
-> Basic styles for HTML elements (excluding form elements and buttons).
+> Basic styles for HTML elements (excluding form elements)
 
 ## Usage
 

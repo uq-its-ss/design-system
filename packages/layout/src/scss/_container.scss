@@ -1,3 +1,5 @@
+@use "@uqds/core/src/scss/global" as core;
+
 .uq-container {
   width: 100%;
   max-width: var(--layout-container-max-width);
@@ -5,4 +7,16 @@
   padding-right: var(--layout-gap);
   margin-left: auto;
   margin-right: auto;
+}
+
+.uq-container--flex {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  justify-content: center;
+
+  @media #{core.$screen-md-up} {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }

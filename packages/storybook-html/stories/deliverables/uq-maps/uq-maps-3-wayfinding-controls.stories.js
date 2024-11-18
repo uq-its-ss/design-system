@@ -111,7 +111,7 @@ export const wayfindingControlWorking = {
   },
   play: ({ canvasElement }) => {
     const circularProgress = canvasElement.querySelector(
-      "#wayfindingProgressIndicator"
+      "#wayfindingProgressIndicator",
     );
     if (circularProgress) {
       const circleProgress = new MDCCircularProgress(circularProgress);

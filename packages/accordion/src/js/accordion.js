@@ -85,7 +85,7 @@ class accordion {
       () => {
         content.classList.remove(`${this.className}__content--active`);
       },
-      { once: true }
+      { once: true },
     );
     content.setAttribute("aria-hidden", "true");
   }
@@ -121,7 +121,7 @@ class accordion {
       .filter(
         (toggler) =>
           toggler !== el &&
-          toggler.classList.contains(`${this.className}__toggle--active`)
+          toggler.classList.contains(`${this.className}__toggle--active`),
       )
       .forEach((toggler) => {
         this.slideContentUp(toggler);
@@ -166,7 +166,7 @@ class accordion {
     // Scroll to hash (param string) selected accordion
     if (this.hash && this.hash !== "") {
       const hashSelectedContent = document.querySelector(
-        `${this.hash}.${this.className}__content`
+        `${this.hash}.${this.className}__content`,
       );
 
       if (hashSelectedContent) {
@@ -174,7 +174,7 @@ class accordion {
 
         const hashSelected = accordion.getPrevSibling(
           hashSelectedContent,
-          `.${this.className}__toggle`
+          `.${this.className}__toggle`,
         );
         this.slideContentDown(hashSelected);
 
@@ -184,12 +184,12 @@ class accordion {
     }
 
     const accordions = document.querySelectorAll(
-      `.${this.className}:not([data-accordion-init])`
+      `.${this.className}:not([data-accordion-init])`,
     );
 
     // wrap contents of uq-accordion__content in a wrapper to apply padding and prevent animation jump
     const accordionContents = document.querySelectorAll(
-      `.${this.className}:not([data-accordion-init]) .${this.className}__content`
+      `.${this.className}:not([data-accordion-init]) .${this.className}__content`,
     );
 
     accordions.forEach((el) => {

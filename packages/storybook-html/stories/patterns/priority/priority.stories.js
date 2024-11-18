@@ -2,7 +2,7 @@
 import "../../components/core/_colour.scss";
 
 export default {
-  title: "Patterns/priority",
+  title: "Patterns/Priority",
   parameters: {
     layout: "padded",
     previewTabs: {

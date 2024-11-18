@@ -5,7 +5,7 @@ import siteHeaderNavigation from "@uqds/site-header/src/js/site-header-navigatio
 import { breadcrumb } from "@uqds/breadcrumb/src/js/main";
 
 // import HTML template strings
-import { Header } from "../../components/header/header.stories";
+import { HeaderInterim } from "../../components/header/header.stories";
 import { siteHeaderWithSubnav } from "../../components/site-header/site-header.stories";
 import { Breadcrumb } from "../../components/breadcrumb/breadcrumb.stories";
 import { footer } from "../../components/footer/footer.stories";
@@ -23,7 +23,7 @@ export default {
 export const basicPage = {
   render: () => {
     return `
-    ${Header.render()}
+    ${HeaderInterim.render()}
       ${siteHeaderWithSubnav.render()}
       ${Breadcrumb.render()}
       <div class="uq-grid">
@@ -75,7 +75,7 @@ export const basicPage = {
       });
 
       var slideMenuBackButtons = document.querySelectorAll(
-        ".slide-menu__backlink, .global-mobile-nav__audience-link"
+        ".slide-menu__backlink, .global-mobile-nav__audience-link",
       );
 
       Array.prototype.forEach.call(slideMenuBackButtons, function (el, i) {
@@ -92,7 +92,7 @@ export const basicPage = {
           //reset the menu toggle after closing.
           this.mainNavToggle = document.querySelector(".nav-primary__toggle");
           this.mainNavToggle.classList.remove(
-            "nav-primary__menu-toggle--is-open"
+            "nav-primary__menu-toggle--is-open",
           );
           this.body = document.querySelector("body");
           this.body.classList.remove("no-scroll");

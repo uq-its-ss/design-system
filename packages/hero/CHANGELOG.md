@@ -3,6 +3,56 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.4-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/hero@1.0.3...@uqds/hero@1.0.4-alpha.0) (2024-09-04)
+
+**Note:** Version bump only for package @uqds/hero
+
+## [1.0.3](https://github.com/uq-its-ss/design-system/compare/@uqds/hero@1.0.2-alpha.3...@uqds/hero@1.0.3) (2024-09-04)
+
+**Note:** Version bump only for package @uqds/hero
+
+## [1.0.2](https://github.com/uq-its-ss/design-system/compare/@uqds/hero@1.0.2-alpha.3...@uqds/hero@1.0.2) (2024-09-04)
+
+**Note:** Version bump only for package @uqds/hero
+
+## [1.0.2-alpha.3](https://github.com/uq-its-ss/design-system/compare/@uqds/hero@1.0.2-alpha.2...@uqds/hero@1.0.2-alpha.3) (2024-06-18)
+
+### Bug Fixes
+
+- modified max width of hero ([#531](https://github.com/uq-its-ss/design-system/issues/531)) ([f55ed0d](https://github.com/uq-its-ss/design-system/commit/f55ed0d3e27a0ecc64754684145fd254459e4402))
+
+## [1.0.2-alpha.2](https://github.com/uq-its-ss/design-system/compare/@uqds/hero@1.0.2-alpha.1...@uqds/hero@1.0.2-alpha.2) (2024-05-23)
+
+### Bug Fixes
+
+- further spacing fixes ([#534](https://github.com/uq-its-ss/design-system/issues/534)) ([6ead71a](https://github.com/uq-its-ss/design-system/commit/6ead71adf2c69a9f500a4f4ee2ca54feca6e4983))
+
+## [1.0.2-alpha.1](https://github.com/uq-its-ss/design-system/compare/@uqds/hero@1.0.2-alpha.0...@uqds/hero@1.0.2-alpha.1) (2024-05-22)
+
+### Bug Fixes
+
+- Spacing fixes ([#533](https://github.com/uq-its-ss/design-system/issues/533)) ([909b898](https://github.com/uq-its-ss/design-system/commit/909b8986be507d3b2c0df969c5563bbc2fe67348))
+
+## [1.0.2-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/hero@1.0.0-alpha.6...@uqds/hero@1.0.2-alpha.0) (2024-05-03)
+
+**Note:** Version bump only for package @uqds/hero
+
+## [1.0.1](https://github.com/uq-its-ss/design-system/compare/@uqds/hero@1.0.0-alpha.6...@uqds/hero@1.0.1) (2024-05-03)
+
+**Note:** Version bump only for package @uqds/hero
+
+# [1.0.0](https://github.com/uq-its-ss/design-system/compare/@uqds/hero@1.0.0-alpha.6...@uqds/hero@1.0.0) (2024-05-03)
+
+**Note:** Version bump only for package @uqds/hero
+
+# [1.0.0-alpha.6](https://github.com/uq-its-ss/design-system/compare/@uqds/hero@1.0.0-alpha.5...@uqds/hero@1.0.0-alpha.6) (2024-04-29)
+
+**Note:** Version bump only for package @uqds/hero
+
+# [1.0.0-alpha.5](https://github.com/uq-its-ss/design-system/compare/@uqds/hero@1.0.0-alpha.4...@uqds/hero@1.0.0-alpha.5) (2024-04-29)
+
+**Note:** Version bump only for package @uqds/hero
+
 # [1.0.0-alpha.4](https://github.com/uq-its-ss/design-system/compare/@uqds/hero@1.0.0-alpha.3...@uqds/hero@1.0.0-alpha.4) (2024-04-08)
 
 **Note:** Version bump only for package @uqds/hero

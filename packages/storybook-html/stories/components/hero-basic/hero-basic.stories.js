@@ -88,16 +88,16 @@ export const HeroBasic = {
               "uq-tabs__tab--active": index === 0,
             })}">
               ${name}
-            </a>`
+            </a>`,
               )
               .join("")}
           </div>
         </div>
       </div>
-    </div>
-  </div>`
+    </div>`
         : ""
     }
+  </div>
 </div>`,
 };
 

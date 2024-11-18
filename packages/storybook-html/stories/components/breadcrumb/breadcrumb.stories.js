@@ -22,7 +22,7 @@ export const Breadcrumb = {
   },
   render: () => `
 <div class="uq-breadcrumbs">
-  <div class="uq-container">
+  <div class="uq-container uq-container--flex">
     <nav class="uq-breadcrumb" aria-label="Breadcrumb">
       <ol class="uq-breadcrumb__list">
         <li class="uq-breadcrumb__item">

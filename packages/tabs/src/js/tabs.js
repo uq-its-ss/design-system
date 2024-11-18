@@ -311,7 +311,7 @@ export class Tabs {
         this.checkTabFocus(target);
       },
       this.delay,
-      target
+      target,
     );
   }
 

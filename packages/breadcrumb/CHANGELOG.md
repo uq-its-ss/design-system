@@ -3,6 +3,52 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.4-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/breadcrumb@2.0.3...@uqds/breadcrumb@2.0.4-alpha.0) (2024-09-04)
+
+**Note:** Version bump only for package @uqds/breadcrumb
+
+## [2.0.3](https://github.com/uq-its-ss/design-system/compare/@uqds/breadcrumb@2.0.2-alpha.1...@uqds/breadcrumb@2.0.3) (2024-09-04)
+
+**Note:** Version bump only for package @uqds/breadcrumb
+
+## [2.0.2](https://github.com/uq-its-ss/design-system/compare/@uqds/breadcrumb@2.0.2-alpha.1...@uqds/breadcrumb@2.0.2) (2024-09-04)
+
+**Note:** Version bump only for package @uqds/breadcrumb
+
+## [2.0.2-alpha.1](https://github.com/uq-its-ss/design-system/compare/@uqds/breadcrumb@2.0.2-alpha.0...@uqds/breadcrumb@2.0.2-alpha.1) (2024-05-13)
+
+### Bug Fixes
+
+- add variant for uq-container to include flex capabilities. this … ([#528](https://github.com/uq-its-ss/design-system/issues/528)) ([d9ab3f3](https://github.com/uq-its-ss/design-system/commit/d9ab3f3dfc8ac0d8a32e5ddba3b4d1382c717b5d))
+
+## [2.0.2-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/breadcrumb@2.0.0-alpha.12...@uqds/breadcrumb@2.0.2-alpha.0) (2024-05-03)
+
+**Note:** Version bump only for package @uqds/breadcrumb
+
+## [2.0.1](https://github.com/uq-its-ss/design-system/compare/@uqds/breadcrumb@2.0.0-alpha.12...@uqds/breadcrumb@2.0.1) (2024-05-03)
+
+**Note:** Version bump only for package @uqds/breadcrumb
+
+# [2.0.0](https://github.com/uq-its-ss/design-system/compare/@uqds/breadcrumb@2.0.0-alpha.12...@uqds/breadcrumb@2.0.0) (2024-05-03)
+
+**Note:** Version bump only for package @uqds/breadcrumb
+
+# [2.0.0-alpha.12](https://github.com/uq-its-ss/design-system/compare/@uqds/breadcrumb@2.0.0-alpha.11...@uqds/breadcrumb@2.0.0-alpha.12) (2024-04-29)
+
+**Note:** Version bump only for package @uqds/breadcrumb
+
+# [2.0.0-alpha.11](https://github.com/uq-its-ss/design-system/compare/@uqds/breadcrumb@2.0.0-alpha.10...@uqds/breadcrumb@2.0.0-alpha.11) (2024-04-29)
+
+**Note:** Version bump only for package @uqds/breadcrumb
+
+# [2.0.0-alpha.10](https://github.com/uq-its-ss/design-system/compare/@uqds/breadcrumb@2.0.0-alpha.9...@uqds/breadcrumb@2.0.0-alpha.10) (2024-04-29)
+
+**Note:** Version bump only for package @uqds/breadcrumb
+
+# [2.0.0-alpha.9](https://github.com/uq-its-ss/design-system/compare/@uqds/breadcrumb@2.0.0-alpha.8...@uqds/breadcrumb@2.0.0-alpha.9) (2024-04-10)
+
+**Note:** Version bump only for package @uqds/breadcrumb
+
 # [2.0.0-alpha.8](https://github.com/uq-its-ss/design-system/compare/@uqds/breadcrumb@2.0.0-alpha.7...@uqds/breadcrumb@2.0.0-alpha.8) (2024-04-08)
 
 **Note:** Version bump only for package @uqds/breadcrumb

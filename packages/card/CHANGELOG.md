@@ -3,6 +3,62 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.4-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/card@0.1.3...@uqds/card@0.1.4-alpha.0) (2024-09-04)
+
+**Note:** Version bump only for package @uqds/card
+
+## [0.1.3](https://github.com/uq-its-ss/design-system/compare/@uqds/card@0.1.2-alpha.3...@uqds/card@0.1.3) (2024-09-04)
+
+**Note:** Version bump only for package @uqds/card
+
+## [0.1.2](https://github.com/uq-its-ss/design-system/compare/@uqds/card@0.1.2-alpha.3...@uqds/card@0.1.2) (2024-09-04)
+
+**Note:** Version bump only for package @uqds/card
+
+## [0.1.2-alpha.3](https://github.com/uq-its-ss/design-system/compare/@uqds/card@0.1.2-alpha.2...@uqds/card@0.1.2-alpha.3) (2024-08-04)
+
+### Bug Fixes
+
+- updated heading levels for cards and sections ([#537](https://github.com/uq-its-ss/design-system/issues/537)) ([4ef7163](https://github.com/uq-its-ss/design-system/commit/4ef7163277dd5c92c48ede1ae6bf16f77a597983))
+
+## [0.1.2-alpha.2](https://github.com/uq-its-ss/design-system/compare/@uqds/card@0.1.2-alpha.1...@uqds/card@0.1.2-alpha.2) (2024-05-22)
+
+**Note:** Version bump only for package @uqds/card
+
+## [0.1.2-alpha.1](https://github.com/uq-its-ss/design-system/compare/@uqds/card@0.1.2-alpha.0...@uqds/card@0.1.2-alpha.1) (2024-05-13)
+
+**Note:** Version bump only for package @uqds/card
+
+## [0.1.2-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/card@0.1.0-alpha.7...@uqds/card@0.1.2-alpha.0) (2024-05-03)
+
+**Note:** Version bump only for package @uqds/card
+
+## [0.1.1](https://github.com/uq-its-ss/design-system/compare/@uqds/card@0.1.0-alpha.7...@uqds/card@0.1.1) (2024-05-03)
+
+**Note:** Version bump only for package @uqds/card
+
+# [0.1.0](https://github.com/uq-its-ss/design-system/compare/@uqds/card@0.1.0-alpha.7...@uqds/card@0.1.0) (2024-05-03)
+
+**Note:** Version bump only for package @uqds/card
+
+# [0.1.0-alpha.7](https://github.com/uq-its-ss/design-system/compare/@uqds/card@0.1.0-alpha.6...@uqds/card@0.1.0-alpha.7) (2024-04-29)
+
+**Note:** Version bump only for package @uqds/card
+
+# [0.1.0-alpha.6](https://github.com/uq-its-ss/design-system/compare/@uqds/card@0.1.0-alpha.5...@uqds/card@0.1.0-alpha.6) (2024-04-29)
+
+**Note:** Version bump only for package @uqds/card
+
+# [0.1.0-alpha.5](https://github.com/uq-its-ss/design-system/compare/@uqds/card@0.1.0-alpha.4...@uqds/card@0.1.0-alpha.5) (2024-04-29)
+
+### Bug Fixes
+
+- [ITSADSSD-55779] Icon nav fix ([#517](https://github.com/uq-its-ss/design-system/issues/517)) ([afd930e](https://github.com/uq-its-ss/design-system/commit/afd930e66bf37a1c722e00ecb88512be1247ea22))
+
+# [0.1.0-alpha.4](https://github.com/uq-its-ss/design-system/compare/@uqds/card@0.1.0-alpha.3...@uqds/card@0.1.0-alpha.4) (2024-04-10)
+
+**Note:** Version bump only for package @uqds/card
+
 # [0.1.0-alpha.3](https://github.com/uq-its-ss/design-system/compare/@uqds/card@0.1.0-alpha.2...@uqds/card@0.1.0-alpha.3) (2024-04-08)
 
 ### Bug Fixes

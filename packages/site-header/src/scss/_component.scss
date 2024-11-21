@@ -381,3 +381,27 @@
   outline: 2px solid core.$utility-500;
   outline-offset: 0;
 }
+
+// D7 overrides and hacks
+
+.uq-site-header {
+  font-family: core.$roboto;
+}
+
+.uq-site-header__navigation__list-link:hover,
+.uq-site-header__navigation__sub-toggle {
+  /* override for bless css in D7 sites.*/
+  color: core.$purple-500 !important;
+  background-color: transparent !important;
+}
+
+.uq-site-header__navigation a {
+  /* override for bless css in D7 sites.*/
+  color: core.$purple-500 !important;
+}
+
+.uq-site-header__nav-secondary-link {
+  @media #{core.$screen-lg-up} {
+    line-height: core.$line-height;
+  }
+}

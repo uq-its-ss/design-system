@@ -21,6 +21,14 @@ export default {
 };
 
 export const footer = {
+  parameters: {
+    design: {
+      allowFullscreen: true,
+      name: "Figma",
+      type: "figma",
+      url: "https://www.figma.com/file/Li7SZkmaLgw8ZdiHje2q7x/One-UQ-component-library?type=design&node-id=6599-5138&mode=design&t=1ihpAR7SlIXznVw1-4",
+    },
+  },
   render: () => {
     return footerHTML;
   },

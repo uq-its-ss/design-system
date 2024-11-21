@@ -12,6 +12,14 @@ export default {
 };
 
 export const Breadcrumb = {
+  parameters: {
+    design: {
+      allowFullscreen: true,
+      name: "Figma",
+      type: "figma",
+      url: "https://www.figma.com/file/Li7SZkmaLgw8ZdiHje2q7x/One-UQ-component-library?type=design&node-id=6045-7038&mode=design&t=8G1CIvJ297Ruw5u5-4",
+    },
+  },
   render: () => `
 <div class="uq-breadcrumbs">
   <div class="uq-container uq-container--flex">

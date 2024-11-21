@@ -12,6 +12,19 @@
   line-height: core.$line-height;
   color: #d4c8de;
 
+  &__link {
+    text-decoration: none;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: core.$white;
+
+    &:hover {
+      text-decoration: underline;
+      color: #d4c8de;
+    }
+  }
+
   /* NAVIGATION */
 
   &__navigation {
@@ -53,6 +66,7 @@
   }
 
   &__navigation-link {
+    text-decoration: none;
     display: block;
     padding: core.$space-m core.$space-l;
     color: core.$white;

@@ -31,6 +31,8 @@
     "components-accordion--has-subtitle": "http://localhost:6006/iframe.html?id=components-accordion--has-subtitle",
     "components-accordion--is-compact": "http://localhost:6006/iframe.html?id=components-accordion--is-compact",
     "components-accordion--is-manual": "http://localhost:6006/iframe.html?id=components-accordion--is-manual",
+    "components-acknowledgement-statement--reconciliation-statement": "http://localhost:6006/iframe.html?id=components-acknowledgement-statement--reconciliation-statement",
+    "components-acknowledgement-statement--cultural-advise": "http://localhost:6006/iframe.html?id=components-acknowledgement-statement--cultural-advise",
     "components-alert--alert-info": "http://localhost:6006/iframe.html?id=components-alert--alert-info",
     "components-alert--alert-success": "http://localhost:6006/iframe.html?id=components-alert--alert-success",
     "components-alert--alert-warning": "http://localhost:6006/iframe.html?id=components-alert--alert-warning",

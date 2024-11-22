@@ -13,7 +13,7 @@ export default {
         {
           name: "Static map",
           value:
-            '#D7D1CC url("/images/app-maps/map-sample-bg.jpg") center top / 1920px 969px repeat',
+            '#D7D1CC url("images/app-maps/map-sample-bg.jpg") center top / 1920px 969px repeat',
         },
         {
           name: "Diagonal stripes",

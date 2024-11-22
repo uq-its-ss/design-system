@@ -55,7 +55,7 @@ export const Overview = {
   })}
   ${Card({
     title: "View open issues",
-    href: "https://github.com/uq-its-ss/design-system/issue",
+    href: "https://github.com/uq-its-ss/design-system/issues",
     description: "Build awareness of feature requests and bugs.",
     image: "images/general/purple-bug.png",
   })}

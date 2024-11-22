@@ -418,7 +418,7 @@ export const blackandwhite = {
         </div>
       `;
   },
-  name: "Bacl and White",
+  name: "Black and White",
 };
 
 export const utility = {

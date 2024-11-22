@@ -28,9 +28,7 @@ There are 2 size variations - small (default) and large (use the `.uq-hero--larg
 
 There are 2 color variations - purple (default) and white (use the `.uq-hero--light` modifier class).
 
-<Canvas sourceState={"none"}>
-  <Story of={HeroStories.Hero} />
-</Canvas>
+<Canvas of={HeroStories.Hero} sourceState="hidden" />
 
 <Source of={HeroStories.Hero} />
 
@@ -41,24 +39,18 @@ There are 2 color variations - purple (default) and white (use the `.uq-hero--li
 The homepage hero use the `.uq-hero--light` and `.uq-hero--large` modifier classes
 and includes a purple button.
 
-<Canvas>
-  <Story of={HeroStories.Home} />
-</Canvas>
+<Canvas of={HeroStories.Home} />
 
 ### Level 1
 
 Level 1 pages use the `.uq-hero--light` modifier class. Level 1 and 2 pages do not
 include a button.
 
-<Canvas>
-  <Story of={HeroStories.Level1} />
-</Canvas>
+<Canvas of={HeroStories.Level1} />
 
 ### Level 2
 
 Level 2 pages don't use any modifier classes. Level 1 and 2 pages do not
 include a button.
 
-<Canvas>
-  <Story of={HeroStories.Level2} />
-</Canvas>
+<Canvas of={HeroStories.Level2} />

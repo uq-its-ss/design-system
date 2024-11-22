@@ -21,9 +21,13 @@ validation.
 Display an error summary _above/before_ the form when the user submits the form
 (_on submit_).
 
-<Canvas sourceState="hidden" withToolbar>
-  <Story of={FormValidationStories.EmptyFormSubmitExample} autoplay />
-</Canvas>
+<Canvas
+  of={FormValidationStories.EmptyFormSubmitExample}
+  story={{
+    autoplay: true,
+  }}
+  sourceState="hidden"
+/>
 
 ---
 
@@ -120,9 +124,13 @@ different types of instantaneously feedback types and usage examples.
 
 ## Example: password reset form
 
-<Canvas sourceState="hidden" withToolbar>
-  <Story of={FormValidationStories.PasswordForm_} autoplay />
-</Canvas>
+<Canvas
+  of={FormValidationStories.PasswordForm_}
+  story={{
+    autoplay: true,
+  }}
+  withToolbar={true}
+/>
 
 ## Glossary
 

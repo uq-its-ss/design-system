@@ -22,24 +22,34 @@ It also provides a consistent information architecture (navigation structure) fo
 
 The interim header is suitable for a broad range of sites and applications, it includes the following sections:
 
-- The primary section includes the UQ logo, Primary navigation (Study, Research, Partners and community, about) and search using [_UQ Search_](https://www.uq.edu.au/search).
+- The primary section includes the UQ logo, Primary navigation (Study, Research, Partners and community, about) and search using [_UQ Search_](https://search.uq.edu.au).
 - The secondary section provides navigation to UQ home, News, Events, Give and contact.
 - An optional third navigation section is available on mobile when paired with the [Site header component](?path=/docs/components-site-header--site-header-with-subnav), which provides site title and local navigation options. This combines to provide a stacked mobile menu of all three sections (Local, primary and secondary navigation).
 
-<Canvas withToolbar>
-  <Story of={HeaderStories.HeaderInterim} autoplay />
-</Canvas>
+<Canvas
+  of={HeaderStories.HeaderInterim}
+  story={{
+    autoplay: true,
+    height: "200px",
+  }}
+  withToolbar={true}
+/>
 
 ### Header with mega menu
 
 Currently reserved for the UQ Homepage and level one landing pages for Study, Research, Partners & community and about.
 
-- The primary section includes the UQ logo, Primary navigation (Study, Research, Partners and community, about) with an extended drop down information architecture (mega menu) and search using [_UQ Search_](https://www.uq.edu.au/search).
+- The primary section includes the UQ logo, Primary navigation (Study, Research, Partners and community, about) with an extended drop down information architecture (mega menu) and search using [_UQ Search_](https://search.uq.edu.au).
 - The secondary section provides navigation to UQ home, News, Events, Give and contact.
 
-<Canvas withToolbar>
-  <Story height="300px" of={HeaderStories.Header} autoplay />
-</Canvas>
+<Canvas
+  of={HeaderStories.Header}
+  story={{
+    autoplay: true,
+    height: "200px",
+  }}
+  withToolbar={true}
+/>
 
 ### Usage
 
@@ -69,7 +79,7 @@ UQ purple background combined with the UQ logo make up the most important elemen
 
 ### Default search
 
-The default option is a global search of all UQ. The search feature sends users to results on [_UQ Search_](https://www.uq.edu.au/search).
+The default option is a global search of all UQ. The search feature sends users to results on [_UQ Search_](https://search.uq.edu.au).
 
 > Don't reappropriate the search function for special integrated search
 > functionality within your application e.g. searching for a location on a map,

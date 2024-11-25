@@ -1,7 +1,6 @@
 @use "@uqds/core/src/scss/global" as core;
 @use "@uqds/icon/src/scss/global" as icon;
 @use "global" as *;
-@use "icons" as *;
 
 $use-encapsulation: false !default;
 
@@ -200,7 +199,8 @@ $use-encapsulation: false !default;
 
       &:focus {
         border-color: core.$utility-500;
-        box-shadow: 0 2px 0 0 core.$utility-500,
+        box-shadow:
+          0 2px 0 0 core.$utility-500,
           0 0 0 1px core.$utility-500 inset;
       }
     }

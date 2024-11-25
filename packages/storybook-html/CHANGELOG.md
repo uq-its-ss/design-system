@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.4-alpha.2](https://github.com/uq-its-ss/design-system/compare/storybook-html@1.0.4-alpha.1...storybook-html@1.0.4-alpha.2) (2024-09-24)
+
+**Note:** Version bump only for package storybook-html
+
+## [1.0.4-alpha.1](https://github.com/uq-its-ss/design-system/compare/storybook-html@1.0.4-alpha.0...storybook-html@1.0.4-alpha.1) (2024-09-08)
+
+### Bug Fixes
+
+- broken card styles ([#539](https://github.com/uq-its-ss/design-system/issues/539)) ([2ae1129](https://github.com/uq-its-ss/design-system/commit/2ae1129115e041b822c63eec35c7332f0db62585))
+
+## [1.0.4-alpha.0](https://github.com/uq-its-ss/design-system/compare/storybook-html@1.0.3...storybook-html@1.0.4-alpha.0) (2024-09-04)
+
+**Note:** Version bump only for package storybook-html
+
 ## [1.0.3](https://github.com/uq-its-ss/design-system/compare/storybook-html@1.0.2-alpha.9...storybook-html@1.0.3) (2024-09-04)
 
 **Note:** Version bump only for package storybook-html

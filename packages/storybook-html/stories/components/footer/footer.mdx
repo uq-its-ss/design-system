@@ -24,9 +24,13 @@ The footer consists of five main sections.
 
 ## Default example
 
-<Canvas withToolbar>
-  <Story of={FooterStories.footer} autoplay />
-</Canvas>
+<Canvas
+  of={FooterStories.footer}
+  story={{
+    autoplay: true,
+  }}
+  withToolbar={true}
+/>
 
 ## When and how to use
 

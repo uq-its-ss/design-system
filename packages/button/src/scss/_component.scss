@@ -18,7 +18,9 @@
   position: relative;
   text-align: center;
   text-decoration: none;
-  transition: background-color 200ms ease-out, color 200ms ease-out,
+  transition:
+    background-color 200ms ease-out,
+    color 200ms ease-out,
     border 200ms ease-out;
 
   *,

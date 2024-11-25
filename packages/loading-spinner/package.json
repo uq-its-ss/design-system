@@ -1,6 +1,6 @@
 {
   "name": "@uqds/loading-spinner",
-  "version": "0.1.3",
+  "version": "0.1.4-alpha.0",
   "description": "Loading spinner component",
   "keywords": [
     "uqds",
@@ -40,7 +40,7 @@
     "url": "https://github.com/uq-its-ss/design-system/issues"
   },
   "dependencies": {
-    "@uqds/core": "^1.2.3",
-    "@uqds/icon": "^0.0.18"
+    "@uqds/core": "^1.2.4-alpha.0",
+    "@uqds/icon": "^0.0.19-alpha.0"
   }
 }

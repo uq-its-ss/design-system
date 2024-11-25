@@ -31,7 +31,7 @@
             o,
             function (e) {
               return t[e];
-            }.bind(null, o)
+            }.bind(null, o),
           );
       return r;
     }),
@@ -301,8 +301,8 @@
           ? (a ? !p && t[e] && (u = !0) : delete t[e],
             u ? (t[e] = n) : o(t, e, n))
           : u
-          ? (t[e] = n)
-          : c(e, n);
+            ? (t[e] = n)
+            : c(e, n);
     })(Function.prototype, "toString", function () {
       return ("function" == typeof this && u(this).source) || s(this);
     });
@@ -414,7 +414,7 @@
       o = n(47);
     r(
       { target: "Object", stat: !0, forced: Object.assign !== o },
-      { assign: o }
+      { assign: o },
     );
   },
   function (t, e) {
@@ -638,8 +638,8 @@
                     f(this, "b", { value: 3, enumerable: !1 });
                   },
                 }),
-                { b: 2 }
-              )
+                { b: 2 },
+              ),
             ).b
         )
           return !0;
@@ -716,11 +716,11 @@
             String(
               void 0 === n && t instanceof RegExp && !("flags" in s)
                 ? c.call(t)
-                : n
+                : n,
             )
           );
         },
-        { unsafe: !0 }
+        { unsafe: !0 },
       );
   },
   function (t, e, n) {
@@ -751,10 +751,10 @@
         includes: function (t) {
           return !!~String(i(this)).indexOf(
             o(t),
-            arguments.length > 1 ? arguments[1] : void 0
+            arguments.length > 1 ? arguments[1] : void 0,
           );
         },
-      }
+      },
     );
   },
   function (t, e, n) {
@@ -891,15 +891,17 @@
         if (t || e) {
           Array.from(
             this.wrapperElem.querySelectorAll(
-              ".".concat(u.CLASS_NAMES.decorator)
-            )
+              ".".concat(u.CLASS_NAMES.decorator),
+            ),
           ).forEach((t) => {
             t.parentElement && t.parentElement.removeChild(t);
           });
         }
         if (n) {
           Array.from(
-            this.wrapperElem.querySelectorAll(".".concat(u.CLASS_NAMES.control))
+            this.wrapperElem.querySelectorAll(
+              ".".concat(u.CLASS_NAMES.control),
+            ),
           ).forEach((t) => {
             const e = s(t, "li");
             e && e.parentElement && e.parentElement.removeChild(e);
@@ -922,12 +924,12 @@
           const e = document.querySelector(t);
           if (!(e instanceof HTMLElement))
             throw new Error(
-              "Invalid parameter `target`. A valid query selector is required."
+              "Invalid parameter `target`. A valid query selector is required.",
             );
           t = e;
         }
         Array.from(
-          this.wrapperElem.querySelectorAll(".".concat(u.CLASS_NAMES.active))
+          this.wrapperElem.querySelectorAll(".".concat(u.CLASS_NAMES.active)),
         ).forEach((t) => {
           (t.style.display = "none"), t.classList.remove(u.CLASS_NAMES.active);
         });
@@ -947,15 +949,15 @@
             const e = t.target,
               n = e.matches("a") ? e : s(e, "a");
             n && this.navigate(r.Forward, n);
-          })
+          }),
         ),
           this.menuElem.addEventListener(
             "transitionend",
-            this.onTransitionEnd.bind(this)
+            this.onTransitionEnd.bind(this),
           ),
           this.wrapperElem.addEventListener(
             "transitionend",
-            this.onTransitionEnd.bind(this)
+            this.onTransitionEnd.bind(this),
           ),
           this.initKeybindings(),
           this.initSubmenuVisibility();

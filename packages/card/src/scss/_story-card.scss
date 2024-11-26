@@ -73,10 +73,6 @@ $story-card-small-container: 600px;
       flex-shrink: 0;
     }
 
-    & .uq-story-card__title {
-      -webkit-line-clamp: 3;
-    }
-
     & .uq-story-card__description {
       display: none;
     }
@@ -98,7 +94,7 @@ $story-card-small-container: 600px;
 .uq-card-grid--target-1x {
   & .uq-story-card {
     & .uq-story-card__description {
-      display: block;
+      display: -webkit-box;
     }
   }
 
@@ -149,7 +145,7 @@ $story-card-small-container: 600px;
   }
 
   & .uq-story-card__description {
-    display: block;
+    display: -webkit-box;
   }
 
   @media #{core.$screen-md-down} {

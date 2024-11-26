@@ -60,7 +60,7 @@
     text-decoration: none;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 5;
+    -webkit-line-clamp: 4;
     overflow: hidden;
 
     &::after {
@@ -84,6 +84,10 @@
 .uq-card__description,
 %uq-card__description {
   margin-top: core.$space-s;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
 }
 
 .uq-card__image,

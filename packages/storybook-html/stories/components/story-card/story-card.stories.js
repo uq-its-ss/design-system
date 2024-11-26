@@ -22,7 +22,7 @@ export default {
   args: {
     title: "How does ATAR work and what does it mean?",
     description:
-      "The University of Queensland is honouring a learning scientist who is leading by example to inspire and teach future teachers.",
+      "The University of Queensland is honouring a learning scientist who is leading by example to inspire and teach future teachers. The University of Queensland is honouring a learning scientist who is leading by example to inspire and teach future teachers. The University of Queensland is honouring a learning scientist who is leading by example to inspire and teach future teachers.",
     topLabel: "Uni life",
     bottomLabel: "3 minute read time",
     image: "images/card/card-example-herston-campus.jpg",
@@ -91,10 +91,31 @@ export const LandscapeCard = {
   ...StoryCard,
   decorators: [storyCardDecorator],
   args: {
+    title:
+      "ATAR advice for school leavers from Australia’s University Teacher of the Year ATAR advice for school leavers from Australia’s University Teacher of the Year",
     topLabel: "News",
     bottomLabel: "20 September 2023",
     variant: "landscape",
   },
+};
+
+export const LandscapeMissingImageCard = {
+  ...LandscapeCard,
+  args: {
+    topLabel: "News",
+    bottomLabel: "20 September 2023",
+    variant: "landscape",
+  },
+  render: ({ variant, title, href, topLabel, description, bottomLabel }) => `
+<div class="uq-story-card uq-story-card--${variant}">
+  <div class="uq-story-card__image"></div>
+  <div class="uq-story-card__content">
+    <div class="uq-story-card__top-label">${topLabel}</div>
+    <h3 class="uq-story-card__title"><a href="${href}">${title}</a></h3>
+    <div class="uq-story-card__description">${description}</div>
+    <div class="uq-story-card__bottom-label">${bottomLabel}</div>
+  </div>
+</div>`,
 };
 
 export const LandscapeNoImageCard = {

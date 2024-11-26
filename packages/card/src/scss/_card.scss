@@ -2,7 +2,8 @@
 @use "@uqds/icon/src/scss/global" as icon;
 @use "@uqds/layout/src/scss/global" as layout;
 
-.uq-card {
+.uq-card,
+%uq-card {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -48,7 +49,8 @@
   }
 }
 
-.uq-card__title {
+.uq-card__title,
+%uq-card__title {
   margin: 0;
   color: core.$black;
   font-size: var(--card-title-font-size);
@@ -79,11 +81,13 @@
   }
 }
 
-.uq-card__description {
+.uq-card__description,
+%uq-card__description {
   margin-top: core.$space-s;
 }
 
-.uq-card__image {
+.uq-card__image,
+%uq-card__image {
   aspect-ratio: 1.5 / 1;
   position: relative;
   flex-shrink: 0;

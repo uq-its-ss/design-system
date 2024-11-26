@@ -1,10 +1,9 @@
 import "@uqds/card/src/scss/main.scss";
 import "@uqds/icon/src/scss/main.scss";
-import { cardDecorator } from "../../../lib/decorators";
+import { cardDecorator, storyCardDecorator } from "../../../lib/decorators";
 
 export default {
   title: "Components/Cards/Story Card",
-  decorators: [cardDecorator],
   argTypes: {
     title: "text",
     href: "text",
@@ -13,7 +12,7 @@ export default {
     bottomLabel: "text",
     variant: {
       control: "select",
-      options: ["story", "news", "event"],
+      options: ["story", "news", "event", "landscape", "feature"],
     },
     image: {
       control: "select",
@@ -36,6 +35,7 @@ export const StoryCard = {
     variant: "story",
     description: "",
   },
+  decorators: [cardDecorator],
   render: ({
     variant,
     image,
@@ -84,5 +84,34 @@ export const EventCard = {
     bottomLabel: "St Lucia",
     variant: "event",
     description: "",
+  },
+};
+
+export const LandscapeCard = {
+  ...StoryCard,
+  decorators: [storyCardDecorator],
+  args: {
+    topLabel: "News",
+    bottomLabel: "20 September 2023",
+    variant: "landscape",
+  },
+};
+
+export const LandscapeNoImageCard = {
+  ...LandscapeCard,
+  args: {
+    topLabel: "News",
+    bottomLabel: "20 September 2023",
+    variant: "landscape",
+    image: null,
+  },
+};
+
+export const FeatureCard = {
+  ...LandscapeCard,
+  args: {
+    topLabel: "News",
+    bottomLabel: "20 September 2023",
+    variant: "feature",
   },
 };

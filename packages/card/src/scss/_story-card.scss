@@ -146,12 +146,6 @@ $story-card-small-container: 600px;
   & .uq-story-card__description {
     display: -webkit-box;
   }
-
-  @media #{core.$screen-md-down} {
-    .uq-story-card__image {
-      aspect-ratio: 2 / 1;
-    }
-  }
 }
 
 .uq-story-card--landscape {

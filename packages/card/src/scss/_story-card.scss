@@ -1,5 +1,6 @@
 @use "@uqds/core/src/scss/global" as core;
 @use "@uqds/layout/src/scss/global" as layout;
+@use "@uqds/icon/src/scss/global" as icon-constants;
 @use "card";
 
 $story-card-small-container: 600px;
@@ -182,11 +183,21 @@ $story-card-small-container: 600px;
     aspect-ratio: unset;
     flex-shrink: 0;
     margin-top: 6px;
-    background: core.$grey-100;
 
     @container (width < #{$story-card-small-container}) {
       width: 120px;
       height: 100px;
+    }
+
+    &:not(:has(img)) {
+      background-color: core.$grey-100;
+      background-image: url(icon-constants.get-icon(
+        "how-youll-learn--book-open-text",
+        core.$grey-600
+      ));
+      background-size: 88px;
+      background-position: center;
+      background-repeat: no-repeat;
     }
   }
 

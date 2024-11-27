@@ -190,7 +190,7 @@ body {
   #storybook-root > .uq-card,
   #storybook-root > .uq-story-card,
   #storybook-root > .uq-pane {
-  max-width: 600px;
+  max-width: 700px;
 
   @media #{core.$screen-md-down} {
     max-width: none;

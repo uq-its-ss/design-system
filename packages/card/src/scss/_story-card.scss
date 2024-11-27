@@ -20,7 +20,7 @@ $story-card-small-container: 600px;
   @extend %uq-card__title;
 
   @media #{core.$screen-md-down} {
-    font-size: 20px;
+    font-size: core.$font-size-xl;
   }
 }
 
@@ -140,7 +140,7 @@ $story-card-small-container: 600px;
 
 .uq-story-card--feature {
   .uq-story-card__title {
-    font-size: 32px;
+    font-size: core.$font-size-xxxl;
 
     @media #{core.$screen-md-down} {
       font-size: 22px;
@@ -203,7 +203,7 @@ $story-card-small-container: 600px;
 
   & .uq-story-card__title {
     @container (width < #{$story-card-small-container}) {
-      font-size: 20px;
+      font-size: core.$font-size-xl;
     }
   }
 

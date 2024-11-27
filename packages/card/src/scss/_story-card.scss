@@ -18,10 +18,6 @@ $story-card-small-container: 600px;
 
 .uq-story-card__title {
   @extend %uq-card__title;
-
-  @media #{core.$screen-md-down} {
-    font-size: core.$font-size-xl;
-  }
 }
 
 .uq-story-card__description {
@@ -143,7 +139,7 @@ $story-card-small-container: 600px;
     font-size: core.$font-size-xxxl;
 
     @media #{core.$screen-md-down} {
-      font-size: 22px;
+      font-size: var(--card-title-font-size);
     }
   }
 
@@ -198,12 +194,6 @@ $story-card-small-container: 600px;
       background-size: 88px;
       background-position: center;
       background-repeat: no-repeat;
-    }
-  }
-
-  & .uq-story-card__title {
-    @container (width < #{$story-card-small-container}) {
-      font-size: core.$font-size-xl;
     }
   }
 

@@ -1,0 +1,15 @@
+@use "@uqds/core/src/scss/global" as core;
+
+/**
+ * Ensure sections and card grid have reduced spacing.
+ */
+
+.uq-reduced-spacing {
+  & .uq-section:not(.uq-section--no-margin) {
+    margin-bottom: core.$space-uul;
+  }
+
+  & .uq-card-grid {
+    gap: core.$space-l;
+  }
+}

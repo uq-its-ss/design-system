@@ -185,6 +185,18 @@ body {
   }
 }
 
+.uqds-story-card-preview,
+  // Add this hack because the decorator isn't being added on first load.
+  #storybook-root > .uq-card,
+  #storybook-root > .uq-story-card,
+  #storybook-root > .uq-pane {
+  max-width: 700px;
+
+  @media #{core.$screen-md-down} {
+    max-width: none;
+  }
+}
+
 .uqds-layout-preview {
   background: repeating-linear-gradient(
     45deg,

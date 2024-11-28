@@ -38,12 +38,12 @@ export const NewsExample = {
     <div class="uq-sidebar-right-layout__main">
       <div class="uq-section">
         <div class="uq-card-grid">
-          ${FeatureCard({ title: "How to host a climate positive Olympic Games", description: "Online gaming could be the answer to engaging young Queenslanders to help create a legacy for the city from the Brisbane 2032 Olympic and Paralympic Games.", image: "/images/news/feature.jpg", topLabel: null })}
+          ${FeatureCard({ title: "How to host a climate positive Olympic Games", description: "Online gaming could be the answer to engaging young Queenslanders to help create a legacy for the city from the Brisbane 2032 Olympic and Paralympic Games.", image: "images/news/feature.jpg", topLabel: null })}
           <div class="uq-card-grid uq-card-grid--target-2x">
-            ${NewsCard({ title: "Giant new snake species identified in the Amazon", description: "A team of scientists on location with a film crew in the remote Amazon has uncovered a previously undocumented species.", image: "/images/news/image-1.jpg", topLabel: null })}
-            ${NewsCard({ title: "Setting a course for improving Queensland’s waterways", description: "University of Queensland scientists are leading efforts to explore a water quality trading scheme to improve the state’s water.", image: "/images/news/image-3.jpg", topLabel: null })}
-            ${NewsCard({ title: "UQ start-up to help solar farms power on", description: "A tech start-up from The University of Queensland is set to make efficiencies in the renewable energy sector by detecting.", image: "/images/news/image-4.jpg", topLabel: "Feature" })}
-            ${NewsCard({ title: "Overweight or obese COVID-19 patients at risk of more severe disease", description: "COVID-19 patients who are overweight or obese have more severe symptoms and are highly likely to require invasive respiratory.", image: "/images/news/image-2.jpg", topLabel: null })}
+            ${NewsCard({ title: "Giant new snake species identified in the Amazon", description: "A team of scientists on location with a film crew in the remote Amazon has uncovered a previously undocumented species.", image: "images/news/image-1.jpg", topLabel: null })}
+            ${NewsCard({ title: "Setting a course for improving Queensland’s waterways", description: "University of Queensland scientists are leading efforts to explore a water quality trading scheme to improve the state’s water.", image: "images/news/image-3.jpg", topLabel: null })}
+            ${NewsCard({ title: "UQ start-up to help solar farms power on", description: "A tech start-up from The University of Queensland is set to make efficiencies in the renewable energy sector by detecting.", image: "images/news/image-4.jpg", topLabel: "Feature" })}
+            ${NewsCard({ title: "Overweight or obese COVID-19 patients at risk of more severe disease", description: "COVID-19 patients who are overweight or obese have more severe symptoms and are highly likely to require invasive respiratory.", image: "images/news/image-2.jpg", topLabel: null })}
           </div>
         </div>
       </div>
@@ -53,9 +53,9 @@ export const NewsExample = {
           <div class="uq-section__link"><a href="#">See more science and technology news</a></div>
         </div>
         <div class="uq-card-grid">
-          ${LandscapeCard({ title: "Sustainable battery research wins UQ's Three Minute Thesis", image: "/images/news/image-1.jpg", topLabel: null })}
-          ${LandscapeCard({ title: "UQ's most fascinating research gadgets revealed", image: "/images/news/image-2.jpg", topLabel: null })}
-          ${LandscapeCard({ title: "Innovative research to prevent medication related harm", image: "/images/news/image-3.jpg", topLabel: null })}
+          ${LandscapeCard({ title: "Sustainable battery research wins UQ's Three Minute Thesis", image: "images/news/image-1.jpg", topLabel: null })}
+          ${LandscapeCard({ title: "UQ's most fascinating research gadgets revealed", image: "images/news/image-2.jpg", topLabel: null })}
+          ${LandscapeCard({ title: "Innovative research to prevent medication related harm", image: "images/news/image-3.jpg", topLabel: null })}
         </div> 
       </div>
       <div class="uq-section">
@@ -63,9 +63,9 @@ export const NewsExample = {
           <h2 class="uq-section__title">Brisbane Olympics 2032</h2>
         </div>
         <div class="uq-card-grid">
-          ${LandscapeCard({ title: "Our commitment to 2032 Olympic and Paralympic Games", image: "/images/news/image-7.jpg", topLabel: null })}
-          ${LandscapeCard({ title: "Olympic and Paralympian medallists among UQ Sporting Scholarship received", image: "/images/news/image-8.jpg", topLabel: null })}
-          ${LandscapeCard({ title: "Young Queenslanders changing the game on Brisbane 2032 legacy", image: "/images/news/image-9.jpg", topLabel: null })}
+          ${LandscapeCard({ title: "Our commitment to 2032 Olympic and Paralympic Games", image: "images/news/image-7.jpg", topLabel: null })}
+          ${LandscapeCard({ title: "Olympic and Paralympian medallists among UQ Sporting Scholarship received", image: "images/news/image-8.jpg", topLabel: null })}
+          ${LandscapeCard({ title: "Young Queenslanders changing the game on Brisbane 2032 legacy", image: "images/news/image-9.jpg", topLabel: null })}
         </div> 
       </div>
     </div>
@@ -75,10 +75,10 @@ export const NewsExample = {
           <h2 class="uq-section__title">Editors' pick</h2>
         </div>
         <div class="uq-card-grid">
-            ${LandscapeCard({ title: "Moving policy forward nanotechnology", image: "/images/news/image-2.jpg", topLabel: null })}
-            ${LandscapeCard({ title: "From 'face of UQ' to champion of diversity", image: "/images/news/image-1.jpg", topLabel: null })}
-            ${LandscapeCard({ title: "Gene editing for fun and profit: it’s a knockout!", image: "/images/news/image-3.jpg", topLabel: null })}
-            ${LandscapeCard({ title: "Broome diaries: in search of bushfoods in the Kimberly region", image: "/images/news/image-4.jpg", topLabel: null })}
+            ${LandscapeCard({ title: "Moving policy forward nanotechnology", image: "images/news/image-2.jpg", topLabel: null })}
+            ${LandscapeCard({ title: "From 'face of UQ' to champion of diversity", image: "images/news/image-1.jpg", topLabel: null })}
+            ${LandscapeCard({ title: "Gene editing for fun and profit: it’s a knockout!", image: "images/news/image-3.jpg", topLabel: null })}
+            ${LandscapeCard({ title: "Broome diaries: in search of bushfoods in the Kimberly region", image: "images/news/image-4.jpg", topLabel: null })}
         </div>    
       </div>
       <div class="uq-section">
@@ -104,8 +104,8 @@ export const NewsExample = {
           <h2 class="uq-section__title">Media</h2>
         </div>
         <div class="uq-card-grid uq-card-grid--target-2x">
-          ${NewsCard({ title: "Unpacking the potential of wattleseed", description: "A tech start-up from The University of Queensland is set to make efficiencies in the renewable energy sector by detecting.", image: "/images/news/image-5.jpg", topLabel: "Audio" })}
-          ${NewsCard({ title: "A Grey Matter podcast: Autism and genetics", description: "COVID-19 patients who are overweight or obese have more severe symptoms and are highly likely to require invasive respiratory.", image: "/images/news/image-6.jpg", topLabel: "Video" })}
+          ${NewsCard({ title: "Unpacking the potential of wattleseed", description: "A tech start-up from The University of Queensland is set to make efficiencies in the renewable energy sector by detecting.", image: "images/news/image-5.jpg", topLabel: "Audio" })}
+          ${NewsCard({ title: "A Grey Matter podcast: Autism and genetics", description: "COVID-19 patients who are overweight or obese have more severe symptoms and are highly likely to require invasive respiratory.", image: "images/news/image-6.jpg", topLabel: "Video" })}
         </div>
       </div>
     </div>

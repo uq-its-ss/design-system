@@ -1,44 +1,42 @@
-// import styles
-import "./blockquote.scss";
-
-// import HTML template strings
-import blockquoteHTML from "./blockquote.html";
-import blockquoteLightHTML from "./blockquote-light.html";
+import classNames from "classnames";
+import "@uqds/blockquote/src/scss/main.scss";
 
 export default {
   title: "Components/Blockquote",
-  parameters: {
-    layout: "padded",
-    previewTabs: {
-      canvas: { hidden: false },
+  argTypes: {
+    content: {
+      control: "text",
+    },
+    citation: {
+      control: "text",
+    },
+    light: {
+      control: "boolean",
     },
   },
-};
-
-export const blockquote = {
-  render: () => {
-    return blockquoteHTML;
+  args: {
+    content: `<p>Words can be like X-rays, if you use them properly—they'll go through anything.</p><p>You read and you're pierced.</p>`,
+    citation: `Aldous Huxley, <a href="https://www.huxley.net/bnw/four.html">Brave New World</a>`,
+    light: false,
   },
-
-  name: "Default",
+  render: ({ content, citation, light }) => {
+    return `
+<blockquote class="${classNames({ "blockquote--light": light })}">
+  ${content}
+  ${citation ? `<cite>${citation}</cite>` : ""}
+</blockquote>`;
+  },
 };
 
-export const blockquoteLight = {
+export const Blockquote = {};
+
+export const Light = {
+  args: {
+    light: true,
+  },
   parameters: {
     backgrounds: {
-      default: "Purple",
-      values: [
-        {
-          name: "Purple",
-          value: "#51247A",
-        },
-      ],
+      default: "UQ purple",
     },
   },
-
-  render: () => {
-    return blockquoteLightHTML;
-  },
-
-  name: "Light",
 };

@@ -1,5 +1,7 @@
 # Release management
 
+## When w
+
 The design system automates processes where possible. 
 
 We have two main environments. 
@@ -7,7 +9,14 @@ We have two main environments.
 Stage 
 Production
 
+## When we push to stage
 
+- Automatically when a Pull request is approved
+- Critical bug fix
+
+## When we push to Production
+
+- After a major system change or scheduled release
 
 Conventional Commits [eBay](https://ebay.com)
 

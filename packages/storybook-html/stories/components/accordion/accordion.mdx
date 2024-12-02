@@ -1,4 +1,4 @@
-import { Meta, Story, Canvas } from "@storybook/blocks";
+import { Meta, Source, Canvas } from "@storybook/blocks";
 import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
 import * as AccordionStories from "./accordion.stories";
 
@@ -18,100 +18,23 @@ import * as AccordionStories from "./accordion.stories";
 
 An accordion is a vertically stacked group of titles that can expand to show, or collapse to hide associated content.
 
-Accordions can be implemented using `<div>` or `<ul>` lists.
+### How-to
 
-### Using divs
-
-Use divs if there is a significant amount of content to be displayed.
-
-<Canvas
-  of={AccordionStories.usingDivs}
-  story={{
-    autoplay: true,
-  }}
-/>
-
-```html
-<div class="uq-accordion" aria-label="Accordion button group">
-  <div class="uq-accordion__item">
-    <button
-      class="uq-accordion__toggle"
-      aria-controls="content-1"
-      aria-expanded="false"
-      id="accordion-title-1"
-    >
-      Title 1
-    </button>
-    <div
-      class="uq-accordion__content"
-      aria-hidden="true"
-      id="content-1"
-      aria-labelledby="accordion-title-1"
-    >
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
-        auctor eros dui, vitae iaculis leo ornare eget. Etiam tristique lobortis
-        ligula non mattis. Ut dapibus libero neque, vel tincidunt nunc tempus
-        eget.
-      </p>
-    </div>
-  </div>
-  ... ...
-</div>
-```
-
-### Using lists
-
-Use lists if there is less content and when the semantics of a list serves better with assistive technologies like screen readers.
-
-{" "}
-
-<Canvas
-  of={AccordionStories.usingLists}
-  story={{
-    autoplay: true,
-  }}
-  withToolbar={true}
-/>
-
-```html
-<ul class="uq-accordion" aria-label="Accordion button group">
-  <li class="uq-accordion__item">
-    <button
-      class="uq-accordion__toggle"
-      aria-controls="content-11"
-      aria-expanded="false"
-      id="accordion-title-11"
-    >
-      Title 1
-    </button>
-    <div
-      class="uq-accordion__content"
-      role="region"
-      aria-hidden="true"
-      id="content-11"
-      aria-labelledby="accordion-title-11"
-    >
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
-        auctor eros dui, vitae iaculis leo ornare eget. Etiam tristique lobortis
-        ligula non mattis. Ut dapibus libero neque, vel tincidunt nunc tempus
-        eget.
-      </p>
-    </div>
-  </li>
-  ... ...
-</ul>
-```
-
-### Usage
-
-Use JavaScript to initialize the component to ensure it will work as expected.
+Follow the markup example below, and then initialise all accordions on the page using:
 
 ```js
-// Initialise accordions
 new uq.accordion();
 ```
+
+<Canvas
+  of={AccordionStories.Accordion}
+  story={{
+    autoplay: true,
+  }}
+  sourceState="none"
+/>
+
+<Source of={AccordionStories.Accordion} />
 
 ## Variants
 
@@ -119,151 +42,100 @@ new uq.accordion();
 
 The subtitle allows for a secondary context. Typically the primary title should provide enough information.
 
-{" "}
-
 <Canvas
   of={AccordionStories.HasSubtitle}
   story={{
     autoplay: true,
   }}
   withToolbar={true}
+  sourceState="none"
 />
 
-```html
-<div
-  class="uq-accordion uq-accordion--is-manual"
-  aria-label="Accordion button group"
->
-  <div class="uq-accordion__item">
-    <button
-      class="uq-accordion__toggle"
-      aria-controls="content-1"
-      aria-expanded="false"
-      id="accordion-title-1"
-    >
-      Title 1
-      <span class="uq-accordion__subtitle"
-        >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
-        auctor eros dui, vitae iaculis leo ornare eget.</span
-      >
-    </button>
-    <div
-      class="uq-accordion__content"
-      aria-hidden="true"
-      id="content-1"
-      aria-labelledby="accordion-title-1"
-    >
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
-        auctor eros dui, vitae iaculis leo ornare eget. Etiam tristique lobortis
-        ligula non mattis. Ut dapibus libero neque, vel tincidunt nunc tempus
-        eget.
-      </p>
-    </div>
-  </div>
-  ... ...
-</div>
-```
+<Source of={AccordionStories.HasSubtitle} />
+
+### Using lists
+
+The accordion can be implemented with `div` or `ul` and `li` tags.
+Use lists if there is less content and when the semantics of a list serves better with assistive technologies like screen readers.
+
+<Canvas
+  of={AccordionStories.UsingLists}
+  story={{
+    autoplay: true,
+  }}
+  withToolbar={true}
+  sourceState="none"
+/>
+
+<Source of={AccordionStories.UsingLists} />
+
+### Using heading tags
+
+The title can be wrapped in a `h2`, `h3`, `h4` or `h5` tag when semantics require.
+
+<Canvas
+  of={AccordionStories.WithHeadings}
+  story={{
+    autoplay: true,
+  }}
+  withToolbar={true}
+  sourceState="none"
+/>
+
+<Source of={AccordionStories.WithHeadings} />
+
+### With icon
+
+The accordion button can include an icon within the `.uq-accordion__icon` element.
+
+<Canvas
+  of={AccordionStories.WithIcon}
+  story={{
+    autoplay: true,
+  }}
+  withToolbar={true}
+  sourceState="none"
+/>
+
+<Source of={AccordionStories.WithIcon} />
 
 ### Compact
 
 A smaller more compact version. Used as a support class for more complex interfaces mixing components. For general content use the standard size accordion.
 
-{" "}
-
 <Canvas
-  of={AccordionStories.IsCompact}
+  of={AccordionStories.Compact}
   story={{
     autoplay: true,
   }}
   withToolbar={true}
+  sourceState="none"
 />
 
-```html
-<div
-  class="uq-accordion uq-accordion--compact"
-  aria-label="Accordion button group"
->
-  <div class="uq-accordion__item">
-    <button
-      class="uq-accordion__toggle"
-      aria-controls="content-1"
-      aria-expanded="false"
-      id="accordion-title-1"
-    >
-      Title 1
-    </button>
-    <div
-      class="uq-accordion__content"
-      aria-hidden="true"
-      id="content-1"
-      aria-labelledby="accordion-title-1"
-    >
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
-        auctor eros dui, vitae iaculis leo ornare eget. Etiam tristique lobortis
-        ligula non mattis. Ut dapibus libero neque, vel tincidunt nunc tempus
-        eget.
-      </p>
-    </div>
-  </div>
-  ... ...
-</div>
-```
+<Source of={AccordionStories.Compact} />
 
-### Behaviour
+## Behaviour
 
 The accordion expand and collpase behaviour can either be automatic or manual.
 
-#### Automatic behaviour
+### Automatic behaviour
 
 By default, users can expand and collapse one accordion at a time. When a user expands one accordion then clicks on another, the previously expanded accordion collapses automatically. This is useful if users only need to view the contents of one accordion at a time. Examples of this default behaviour are shown in the accordions above using `<div>` or `<ul>`.
 
-#### Manual Behaviour
+### Manual Behaviour
 
 Alternate behaviour is to allow users to expand and collapse any number of accordions at a time. When a user expands one accordion then clicks on another, the previously expanded accordion remains expanded and the user will need to manually collapse it. This is useful if users need to view the contents of multiple accordions at a time. To enable this behaviour, add the classname `uq-accordion--is-manual` to the `<div>` or `<ul>` as shown below.
 
-{" "}
-
 <Canvas
-  of={AccordionStories.isManual}
+  of={AccordionStories.Manual}
   story={{
     autoplay: true,
   }}
   withToolbar={true}
+  sourceState="none"
 />
 
-```html
-<div
-  class="uq-accordion uq-accordion--is-manual"
-  aria-label="Accordion button group"
->
-  <div class="uq-accordion__item">
-    <button
-      class="uq-accordion__toggle"
-      aria-controls="content-1"
-      aria-expanded="false"
-      id="accordion-title-1"
-    >
-      Title 1
-    </button>
-    <div
-      class="uq-accordion__content"
-      aria-hidden="true"
-      id="content-1"
-      aria-labelledby="accordion-title-1"
-    >
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
-        auctor eros dui, vitae iaculis leo ornare eget. Etiam tristique lobortis
-        ligula non mattis. Ut dapibus libero neque, vel tincidunt nunc tempus
-        eget.
-      </p>
-    </div>
-  </div>
-  ... ...
-</div>
-```
+<Source of={AccordionStories.Manual} />
 
 ## How and when to use
 

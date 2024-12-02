@@ -1,0 +1,17 @@
+@use "@uqds/core/src/scss/global" as core;
+
+/**
+ * Ensure spacing is correct on article layouts.
+ */
+
+.uq-article-layout {
+  margin-top: core.$space-xxl;
+
+  & .uq-section:not(.uq-section--no-margin) {
+    margin-bottom: core.$space-xl;
+  }
+
+  & .uq-card-grid {
+    gap: core.$space-l;
+  }
+}

@@ -1,96 +1,128 @@
-// import scripts
+import classNames from "classnames";
+import iconCatalog from "@uqds/icon";
 import { accordion } from "@uqds/accordion/src/js/main";
-// import styles
-import "@uqds/accordion/src/scss/_component.scss";
-
-// import HTML template strings
-import accordionDivHTML from "./accordion-div.html";
-import accordionListHTML from "./accordion-list.html";
-import accordionSubtitleHTML from "./accordion-subtitle.html";
-import accordionCompactHTML from "./accordion-compact.html";
-import accordionDivIsManualHTML from "./accordion-div-is-manual.html";
+import "@uqds/accordion/src/scss/main.scss";
 
 export default {
   title: "Components/Accordion",
-  parameters: {
-    layout: "padded",
-    previewTabs: {
-      canvas: { hidden: false },
+  argTypes: {
+    title: {
+      control: "text",
+    },
+    titleElement: {
+      options: ["none", "h2", "h3", "h4", "h5"],
+      control: "select",
+    },
+    content: {
+      control: "text",
+    },
+    subtitle: {
+      control: "text",
+    },
+    icon: {
+      options: iconCatalog.map((icon) => `${icon.category}--${icon.name}`),
+      control: "select",
+    },
+    accordionElement: {
+      options: ["div", "ul/li"],
+      control: "select",
+    },
+    compact: {
+      type: "boolean",
+    },
+    isManual: {
+      type: "boolean",
+    },
+    accordionCount: {
+      control: "number",
     },
   },
-};
-
-export const usingDivs = {
-  render: () => {
-    return accordionDivHTML;
+  args: {
+    title: "Title",
+    titleElement: "none",
+    icon: "",
+    subtitle: "",
+    content: `<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor eros dui, vitae iaculis leo ornare eget. Etiam tristique lobortis ligula non mattis. Ut dapibus libero neque, vel tincidunt nunc tempus eget.</p>`,
+    accordionElement: "div",
+    compact: false,
+    isManual: false,
+    accordionCount: 1,
+  },
+  render: ({
+    title,
+    titleElement,
+    icon,
+    subtitle,
+    content,
+    accordionElement,
+    compact,
+    isManual,
+    accordionCount,
+  }) => {
+    let counter = 0;
+    let accordions = "";
+    while (counter < accordionCount) {
+      accordions += `<${accordionElement !== "div" ? `li` : `div`} class="uq-accordion__item">
+    <button class="uq-accordion__toggle" aria-controls="content-1" aria-expanded="false" id="accordion-title-1">
+      ${icon ? `<div class="uq-accordion__icon"><span class="uq-icon uq-icon--${icon}" /></div>` : ""}
+      ${titleElement !== "none" ? `<${titleElement}>${title}</${titleElement}>` : title}
+      ${subtitle ? `<span class="uq-accordion__subtitle">${subtitle}</span>` : ""}
+    </button>
+    <div class="uq-accordion__content" role="region" aria-hidden="true" id="content-1" aria-labelledby="accordion-title-1">
+      ${content}
+    </div>
+    </${accordionElement !== "div" ? `li` : `div`}>`;
+      counter += 1;
+    }
+    return `
+<${accordionElement !== "div" ? `ul` : `div`} class="${classNames("uq-accordion", { "uq-accordion--compact": compact, "uq-accordion--is-manual": isManual })}" aria-label="Accordion button group" role="presentation">
+  ${accordions}
+</${accordionElement !== "div" ? `ul` : `div`}>
+`;
   },
   play: () => {
     new accordion();
   },
-  name: "Using divs",
 };
 
-export const usingLists = {
-  render: () => {
-    return accordionListHTML;
+export const Accordion = {};
+
+export const UsingLists = {
+  args: {
+    accordionElement: "ul/li",
+    accordionCount: 3,
   },
-  play: () => {
-    new accordion();
-  },
-  name: "Using lists",
 };
 
 export const HasSubtitle = {
-  render: () => {
-    return accordionSubtitleHTML;
-  },
-  play: () => {
-    new accordion();
-  },
-  name: "Subtitle",
-};
-
-export const IsCompact = {
-  render: () => {
-    return accordionCompactHTML;
-  },
-  play: () => {
-    new accordion();
-  },
-  name: "Compact",
-};
-
-export const isManual = {
-  render: () => {
-    return accordionDivIsManualHTML;
-  },
-  play: () => {
-    new accordion();
-  },
-
-  name: "Variant behaviour",
-};
-
-export const withHeadings = {
-  render: (args) =>
-    `<div class="uq-accordion" aria-label="Accordion button group" role="presentation">
-      <div class="uq-accordion__item">
-      <button class="uq-accordion__toggle" aria-controls="content-1" aria-expanded="false" id="accordion-title-1"><${args.tag}>Title 1</${args.tag}></button>
-      <div class="uq-accordion__content" role="region" aria-hidden="true" id="content-1" aria-labelledby="accordion-title-1">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor eros dui, vitae iaculis leo ornare eget. Etiam tristique lobortis ligula non mattis. Ut dapibus libero neque, vel tincidunt nunc tempus eget.</p>
-      </div>
-      </div>`,
-  play: () => {
-    new accordion();
-  },
   args: {
-    tag: "span",
+    subtitle:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor eros dui, vitae iaculis leo ornare eget.",
   },
+};
 
-  argTypes: {
-    tag: {
-      options: ["span", "h2", "h3", "h4", "h5"],
-      control: { type: "select" },
-    },
+export const WithIcon = {
+  args: {
+    icon: "agriculture-and-environment--ecology-leaf",
+  },
+};
+
+export const Compact = {
+  args: {
+    compact: true,
+    accordionCount: 3,
+  },
+};
+
+export const Manual = {
+  args: {
+    isManual: true,
+    accordionCount: 3,
+  },
+};
+
+export const WithHeadings = {
+  args: {
+    titleElement: "h2",
   },
 };

@@ -37,7 +37,7 @@
   cursor: pointer;
   display: flex;
   align-items: center;
-  gap: core.$space-s;
+  gap: core.$space-s core.$space-m;
   font-family: core.$font-body;
   font-size: core.$font-size-xl;
   font-weight: 500;
@@ -111,11 +111,19 @@
 }
 
 .uq-accordion__icon {
-  width: 30px;
-  height: 30px;
+  width: 24px;
+  height: 24px;
   margin-block: -3px;
   display: flex;
   align-items: center;
+
+  & img,
+  & svg,
+  & .uq-icon::before {
+    width: 24px;
+    height: 24px;
+    margin: 0;
+  }
 }
 
 .uq-accordion__subtitle {

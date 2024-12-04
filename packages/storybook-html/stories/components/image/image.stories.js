@@ -11,15 +11,23 @@ export default {
   args: {
     image: "images/example-1.jpg",
     alt: "Alt text",
-    caption: "<p>Dr Wenger diving in Queensland / Image: Jane Smith</p>",
+    caption: "<p>Dr Wenger diving in Queensland.</p>",
+    credit: "Jane Smith",
   },
-  render: ({ image, alt, caption }) => {
+  render: ({ image, alt, caption, credit }) => {
     return `
 <figure class="uq-image">
   <div class="uq-image__image">
     <img src="${image}" alt="${alt}" />
   </div>
-  ${caption ? `<figcaption class="uq-image__caption">${caption}</figcaption>` : ""}
+  ${
+    caption || credit
+      ? `<figcaption class="uq-image__caption">
+    ${caption}
+    ${credit ? `<p>(Photo credit: ${credit})</p>` : ""}
+  </figcaption>`
+      : ""
+  }
 </figure>`;
   },
 };

@@ -1,0 +1,30 @@
+import { Meta, Canvas, Source } from "@storybook/blocks";
+import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
+import * as ImageStories from "./image.stories";
+
+<Meta of={ImageStories} />
+
+# Image
+
+<StatusBadge.Stable /> <StatusBadge.StableDoc /> [Check for open
+issues](https://github.com/uq-its-ss/design-system/issues)
+
+## Overview
+
+An image component that includes an image with or without a caption.
+
+The image is locked at a 1.5:1 aspect ratio, except for larger containers where it will be locked at 640px max height.
+
+<Canvas of={ImageStories.Image} sourceState="none" />
+
+<Source of={ImageStories.Image} />
+
+## How and when to use
+
+- Follow the markup above.
+- HTML can be included in the caption (for example `p` tags).
+- Add the credit to the caption manually.
+
+## Accessibility
+
+Use the `figure` and `figcaption` elements and an appropriate `alt` attribute.

@@ -1,119 +1,74 @@
-// import scripts
+import classNames from "classnames";
 import { Alerts } from "@uqds/alert/src/js/main";
-
-// import styles
-import "./alert.scss";
 
 export default {
   title: "Components/Alert",
-  parameters: {
-    layout: "padded",
-    previewTabs: {
-      canvas: { hidden: false },
+  argTypes: {
+    title: { control: "text" },
+    message: { control: "text" },
+    button: { control: "text" },
+    status: {
+      options: ["info", "success", "warning", "error"],
+      control: "select",
     },
   },
-};
-
-export const alertInfo = {
-  render: () => {
+  args: {
+    status: "info",
+    title: "",
+    message: `<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>`,
+    button: "",
+    link: "",
+  },
+  render: ({ title, message, status, button, link }) => {
     return `
-    <div class="uq-alert uq-alert--info" role="alert">
-      <div class="uq-alert__message">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <div class="${classNames("uq-alert", `uq-alert--${status}`)}" role="alert">
+        <div class="uq-alert__message">
+          ${title ? `<h3 class="uq-alert__title">${title}</h3>` : ""}
+          ${message}
+          ${button ? `<a href="#" title="Button" class="uq-button">${button}</a>` : ""}
+          ${link ? `<a href="#" title="Link" class="uq-button--inline">${link}</a>` : ""}
+        </div>
       </div>
-    </div>
     `;
   },
-
-  name: "Info",
 };
+
+export const alertInfo = {};
 
 export const alertSuccess = {
-  render: () => {
-    return `
-    <div class="uq-alert uq-alert--success" role="alert">
-      <div class="uq-alert__message">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      </div>
-    </div>
-    `;
+  args: {
+    status: "success",
   },
-
-  name: "Success",
 };
 
 export const alertWarning = {
-  render: () => {
-    return `
-    <div class="uq-alert uq-alert--warning" role="alert">
-      <div class="uq-alert__message">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      </div>
-    </div>
-    `;
+  args: {
+    status: "warning",
   },
-
-  name: "Warning",
 };
 
 export const alertError = {
-  render: () => {
-    return `
-    <div class="uq-alert uq-alert--error" role="alert">
-      <div class="uq-alert__message">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      </div>
-    </div>
-    `;
+  args: {
+    status: "error",
   },
-
-  name: "Error",
 };
 
 export const alertWithLink = {
-  render: () => {
-    return `
-    <div class="uq-alert" role="alert">
-      <div class="uq-alert__message">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        <a href="#" title="Link" class="uq-button--inline">Link</a>
-      </div>
-    </div>
-    `;
+  args: {
+    link: "Link",
   },
-
-  name: "with Link",
 };
 
 export const alertWithButton = {
-  render: () => {
-    return `
-    <div class="uq-alert" role="alert">
-      <div class="uq-alert__message">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        <a href="#" title="Button" class="uq-button">Button</a>
-      </div>
-    </div>
-    `;
+  args: {
+    button: "Button",
   },
-
-  name: "with Button",
 };
 
 export const alertWithTitle = {
-  render: () => {
-    return `
-    <div class="uq-alert" role="alert">
-      <div class="uq-alert__message">
-        <h3 class="uq-alert__title">Title goes here</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        <a href="#" title="Button" class="uq-button">Button</a>
-      </div>
-    </div>
-    `;
+  args: {
+    title: "Title",
   },
-
-  name: "with Title",
 };
 
 export const infoGlobal = {

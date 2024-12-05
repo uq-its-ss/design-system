@@ -8,6 +8,8 @@ import "@uqds/hero/src/scss/main.scss";
 import "@uqds/card/src/scss/main.scss";
 import "@uqds/pane/src/scss/main.scss";
 import "@uqds/button/src/scss/main.scss";
+import "@uqds/icon/src/scss/main.scss";
+import "@uqds/alert/src/scss/main.scss";
 
 import "./preview.scss";
 

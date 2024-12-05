@@ -21,6 +21,14 @@
 
 .uq-pane__description {
   margin-top: core.$space-s;
+
+  & :last-child {
+    margin-bottom: 0;
+  }
+
+  & li {
+    margin-bottom: core.$space-s;
+  }
 }
 
 .uq-pane__image {

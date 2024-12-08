@@ -1,93 +1,107 @@
-import { createButton } from "./button";
+import classNames from "classnames";
+import iconCatalog from "@uqds/icon";
 
 export default {
   title: "Components/Button",
-  render: ({ label, ...args }) => {
-    // You can either use a function to create DOM elements or use a plain html string!
-    // return `<div>${label}</div>`;
-    return createButton({ label, ...args });
+  render: ({ style, label, size, expand, icon }) => {
+    return `<button class="${classNames("uq-button", style, size, { "uq-button--expand": expand })}">
+  ${icon ? `<span class="uq-icon uq-icon--${icon}"></span>` : ""} ${label}
+</button>`;
   },
   argTypes: {
-    label: { control: "text" },
+    label: "text",
     style: {
-      control: { type: "radio" },
-      options: {
+      control: "select",
+      options: ["Primary", "Secondary", "Tertiary"],
+      mapping: {
         Primary: "",
         Secondary: "uq-button--secondary",
         Tertiary: "uq-button--tertiary",
       },
-      //options: ['small', 'medium', 'large'],
     },
     size: {
-      control: { type: "inline-radio" },
-      options: {
-        default: "",
-        tiny: "uq-button--tiny",
-        small: "uq-button--small",
-        large: "uq-button--large",
+      control: "select",
+      options: ["Tiny", "Small", "Default", "Large"],
+      mapping: {
+        Default: "",
+        Tiny: "uq-button--tiny",
+        Small: "uq-button--small",
+        Large: "uq-button--large",
       },
-      //options: ['small', 'medium', 'large'],
     },
-    expand: { control: "boolean" },
+    expand: "boolean",
+    icon: {
+      options: iconCatalog.map((icon) => `${icon.category}--${icon.name}`),
+      control: "select",
+    },
   },
-};
-
-export const button = {
   args: {
-    label: "Button",
-    style: "",
-    size: "",
+    style: "Primary",
+    size: "Default",
     expand: false,
+    label: "Button",
   },
 };
 
-export const buttonSecondary = {
+export const Primary = {};
+
+export const Secondary = {
   args: {
     label: "Secondary",
-    style: "uq-button--secondary",
+    style: "Secondary",
   },
 };
 
-export const buttonTertiary = {
+export const Tertiary = {
   args: {
     label: "Tertiary",
-    style: "uq-button--tertiary",
+    style: "Tertiary",
   },
 };
 
-export const buttonSize = {
-  args: {
-    buttons: [{ ...createButton.button }, { ...createButton.buttonSecondary }],
-    orientation: "horizontal",
+export const Size = {
+  parameters: {
+    tags: ["!dev"],
   },
   render: () => {
-    return `
-    <button type="button" class="uq-button uq-button--tiny">Tiny</button>
-    <button type="button" class="uq-button uq-button--small">Small</button>
-    <button type="button" class="uq-button">Default</button>
-    <button type="button" class="uq-button uq-button--large">Large</button>
-    `;
+    return `<p>
+  <button type="button" class="uq-button uq-button--tiny">Tiny</button>
+</p>
+<p>
+  <button type="button" class="uq-button uq-button--small">Small</button>
+</p>
+<p>
+  <button type="button" class="uq-button">Default</button>
+</p>
+<p>
+  <button type="button" class="uq-button uq-button--large">Large</button>
+</p>`;
   },
 };
 
-export const buttonExpanded = {
+export const Expanded = {
   args: {
     expand: true,
-    label: "Button",
   },
 };
 
-export const buttonIcon = {
+export const Icon = {
   args: {
-    buttons: [{ ...createButton.button }, { ...createButton.buttonSecondary }],
-    orientation: "horizontal",
+    icon: "engineering-and-computing--cog",
+  },
+  parameters: {
+    tags: ["!dev"],
   },
   render: () => {
-    return `
-    <button type="button" class="uq-button uq-button--tiny"><span class="uq-icon uq-icon--standard--close uq-icon--light"></span> Tiny</button>
-    <button type="button" class="uq-button uq-button--small"><span class="uq-icon uq-icon--standard--close uq-icon--light""></span> Small</button>
-    <button type="button" class="uq-button"><span class="uq-icon uq-icon--standard--close uq-icon--light""></span> Default</button>
-    <button type="button" class="uq-button uq-button--large"><span class="uq-icon uq-icon--standard--close uq-icon--light""></span> Large</button>
-    `;
+    return `<p>
+  <button class="uq-button">
+    <span class="uq-icon uq-icon--engineering-and-computing--icon-plane-1"></span> Button
+  </button>
+</p>
+<p>
+  <button class="uq-button">
+    Button <span class="uq-icon uq-icon--education--basketball-ball"></span>
+  </button>
+</p>`;
   },
 };

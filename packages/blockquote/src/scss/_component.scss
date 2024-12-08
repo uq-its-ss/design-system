@@ -1,7 +1,7 @@
 @use "@uqds/core/src/scss/global" as core;
 
 blockquote {
-  border-left: 4px solid core.$purple-500;
+  border-left: 6px solid core.$purple-500;
   border-radius: 4px;
   font-size: core.$font-size-xl;
   margin: core.$space-xxl 0;

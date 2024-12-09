@@ -113,9 +113,7 @@
 .uq-accordion__icon {
   width: 24px;
   height: 24px;
-  margin-block: -3px;
-  display: flex;
-  align-items: center;
+  margin-block: -4px;
 
   & img,
   & svg,
@@ -154,6 +152,15 @@
 
   :last-child {
     margin-bottom: core.$space-none;
+  }
+
+  & .uq-alert {
+    margin-block: core.$space-l;
+  }
+
+  & img {
+    margin-block: core.$space-m;
+    display: block;
   }
 }
 

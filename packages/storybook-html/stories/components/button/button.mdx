@@ -22,47 +22,39 @@ The button component is used to make common actions more obvious and help users 
 
 The default button style used for the primary action on a page, eg. a submit button on a form. This should generally only be used once per view.
 
-<Canvas of={ButtonStories.button} />
+<Canvas of={ButtonStories.Primary} />
 
-<Controls of={ButtonStories.button} />
+<Controls of={ButtonStories.Primary} />
 
 ### Secondary
 
 A button style used alongside the default primary button to highlight an important action, eg. a save button on a form.
 
-<Canvas of={ButtonStories.buttonSecondary} />
+<Canvas of={ButtonStories.Secondary} />
 
 ### Tertiary
 
 A demphasied button style used for tertiary actions on a page, eg a Cancel button on a form.
 
-<Canvas of={ButtonStories.buttonTertiary} />
+<Canvas of={ButtonStories.Tertiary} />
 
 ### Size
 
 The button sizes are normal, tiny `uq-button--tiny`, small `uq-button--small` and large `uq-button--large`
 
-<Canvas of={ButtonStories.buttonSize} />
-
-```html
-<button class="uq-button">Button</button>
-
-<button class="uq-button uq-button--tiny">Button</button>
-
-<button class="uq-button uq-button--small">Button</button>
-
-<button class="uq-button uq-button--large">Button</button>
-```
+<Canvas of={ButtonStories.Size} />
 
 ### Expand
 
 Expand variant of the button `uq-button--expand` would extend the width of the button to full width of its parent container.
 
-<Canvas of={ButtonStories.buttonExpanded} />
+<Canvas of={ButtonStories.Expanded} />
 
-```html
-<button class="uq-button uq-button--expand">Button</button>
-```
+### Icon
+
+Icon variant of the button that includes a `uq-icon` element. The icon can be added before or after the label.
+
+<Canvas of={ButtonStories.Icon} />
 
 ### States
 

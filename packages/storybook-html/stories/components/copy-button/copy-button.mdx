@@ -1,0 +1,35 @@
+import { Meta, Story, Canvas, Controls, Source } from "@storybook/blocks";
+import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
+import * as CopyButtonStories from "./copy-button.stories";
+
+<Meta of={CopyButtonStories} />
+
+# Copy button
+
+<StatusBadge.Stable />
+
+<StatusBadge.StableDoc />
+
+<a href="https://github.com/uq-its-ss/design-system/issues" target="_blank">
+  Check for open issues
+</a>
+
+## Overview
+
+A button that allows copying of a string of text to the users clipboard.
+
+<Canvas of={CopyButtonStories.CopyButton} story={{ autoplay: true }} />
+
+<Source of={CopyButtonStories.CopyButton} />
+
+## How to use
+
+Implement the button markup following the example above, then call the copyButton() function as so:
+
+```js
+import { copyButton } from "@uqds/button";
+
+const element = document.querySelector(".uq-copy-button");
+const stringToCopy = element.dataset.copy;
+copyButton(element, stringToCopy);
+```

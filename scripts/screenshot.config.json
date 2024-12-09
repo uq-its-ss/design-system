@@ -172,6 +172,8 @@
     "patterns-form-validation--empty-form-submit-example": "http://localhost:6006/iframe.html?id=patterns-form-validation--empty-form-submit-example",
     "patterns-form-validation--password-form": "http://localhost:6006/iframe.html?id=patterns-form-validation--password-form",
     "patterns-kitchen-sink--kitchen-sink": "http://localhost:6006/iframe.html?id=gallery-examples-kitchen-sink--kitchen-sink",
+    "templates-news-article--article": "http://localhost:6006/iframe.html?id=templates-news-article--article",
+    "templates-news-home--home": "http://localhost:6006/iframe.html?id=templates-news-home--home",
     "templates-home--home": "http://localhost:6006/iframe.html?id=templates-home--home",
     "templates-level-1--level-1": "http://localhost:6006/iframe.html?id=templates-level-1--level-1",
     "templates-level-2--level-2": "http://localhost:6006/iframe.html?id=templates-level-2--level-2",

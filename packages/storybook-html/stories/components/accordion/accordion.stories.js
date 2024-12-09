@@ -64,7 +64,7 @@ export default {
     while (counter < accordionCount) {
       accordions += `<${accordionElement !== "div" ? `li` : `div`} class="uq-accordion__item">
     <button class="uq-accordion__toggle" aria-controls="content-1" aria-expanded="false" id="accordion-title-1">
-      ${icon ? `<div class="uq-accordion__icon"><span class="uq-icon uq-icon--${icon}" /></div>` : ""}
+      ${icon ? `<div class="uq-accordion__icon"><span class="uq-icon uq-icon--${icon}"></span></div>` : ""}
       ${titleElement !== "none" ? `<${titleElement}>${title}</${titleElement}>` : title}
       ${subtitle ? `<span class="uq-accordion__subtitle">${subtitle}</span>` : ""}
     </button>

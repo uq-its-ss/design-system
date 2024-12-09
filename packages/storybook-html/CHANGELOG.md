@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0-alpha.0](https://github.com/uq-its-ss/design-system/compare/storybook-html@1.0.4-alpha.2...storybook-html@2.0.0-alpha.0) (2024-12-05)
+
+### Bug Fixes
+
+- align image references to hero ([de01403](https://github.com/uq-its-ss/design-system/commit/de014030cb6b521ef31ff399ee4be347f58babb5))
+- updated card and pane references ([c6d9429](https://github.com/uq-its-ss/design-system/commit/c6d94291686009f921ab58e251fc0d3889a14f82))
+
+- feat!: ITSADSSD-59299: Blockquote component (#568) ([71d8d3d](https://github.com/uq-its-ss/design-system/commit/71d8d3d2589ed99f374923430fb84f0fe0b97b69)), closes [#568](https://github.com/uq-its-ss/design-system/issues/568)
+
+### Features
+
+- ITSADSSD-59302: Video pane ([#569](https://github.com/uq-its-ss/design-system/issues/569)) ([9ae841a](https://github.com/uq-its-ss/design-system/commit/9ae841a5987062a149fa12baa61e92c45b026a6c))
+- ITSADSSD-59515: Image with caption ([#570](https://github.com/uq-its-ss/design-system/issues/570)) ([a1393ce](https://github.com/uq-its-ss/design-system/commit/a1393ceecd670a9f117dfcfdb594560867ef0fbc))
+- ITSADSSD-59777: Accordion updates and article template ([#567](https://github.com/uq-its-ss/design-system/issues/567)) ([8311fa4](https://github.com/uq-its-ss/design-system/commit/8311fa49bc079806e221931f6abd3ec948e0b9fe))
+
+### BREAKING CHANGES
+
+- Review updated blockquote markup
+
+- increase spacing
+
+- chore: regression test update
+
 ## [1.0.4-alpha.2](https://github.com/uq-its-ss/design-system/compare/storybook-html@1.0.4-alpha.1...storybook-html@1.0.4-alpha.2) (2024-09-24)
 
 **Note:** Version bump only for package storybook-html

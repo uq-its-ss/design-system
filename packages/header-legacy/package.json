@@ -1,6 +1,6 @@
 {
   "name": "@uqds/header-legacy",
-  "version": "0.1.4-alpha.0",
+  "version": "0.1.4-alpha.1",
   "description": "Header component",
   "private": true,
   "keywords": [
@@ -37,6 +37,6 @@
   "dependencies": {
     "@uqds/core": "^1.2.4-alpha.0",
     "@uqds/grid": "^0.0.19-alpha.0",
-    "@uqds/icon": "^0.0.19-alpha.0"
+    "@uqds/icon": "^0.0.19-alpha.1"
   }
 }

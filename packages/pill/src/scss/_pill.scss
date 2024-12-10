@@ -7,7 +7,7 @@
   align-items: center;
   border: 1px solid var(--pill-colour);
   color: var(--pill-colour);
-  padding: 13px var(--pill-padding);
+  padding: var(--pill-padding);
   height: var(--pill-height);
   border-radius: calc(var(--pill-height) / 2);
   text-decoration: none;
@@ -45,6 +45,8 @@
 }
 
 .uq-pill:has(input[type="checkbox"]:checked) {
+  padding-right: core.$space-s;
+
   &::after {
     content: "";
     height: 24px;

@@ -8,12 +8,14 @@ import * as AlertStories from "../../components/alert/alert.stories";
 import { accordion } from "@uqds/accordion/src/js/main";
 import * as BlockquoteStories from "../../components/blockquote/blockquote.stories";
 import * as ImageStories from "../../components/image/image.stories";
+import * as PillListStories from "../../components/pill/list/pill-list.stories";
 
 const { Image: ImageCard, Text: TextCard } = storyRenderer(CardStories);
 const { TextShaded: ShadedPane, Text: Pane } = storyRenderer(PaneStories);
 const { alertWarning: Alert } = storyRenderer(AlertStories);
 const { Blockquote } = storyRenderer(BlockquoteStories);
 const { Image: ImageWithCaption } = storyRenderer(ImageStories);
+const { Title: PillList } = storyRenderer(PillListStories);
 
 export default {
   title: "Templates/News/Article",
@@ -79,6 +81,9 @@ ${Breadcrumb.render()}
           <p>Dr Wenger said the UQ-developed product would be an open access, almost real-time management program that allows users to map pollution, identify coral reefs at risk and determine the management effort needed to protect coral reefs.</p>
           <h3>Collaboration and acknowledgements</h3>
           <p>Dr Wenger would like to acknowledge the collaborators for this research Dr Rachael Reader from the Faculty of Science at the University of Sydney for her incredible contributions to this research.</p>
+        </div>
+        <div class="uq-section">
+          ${PillList()}
         </div>
         <div class="uq-section">
           <div class="uq-accordion" aria-label="Accordion button group" role="presentation">

@@ -61,6 +61,7 @@
     "@uqds/page-header": "^0.1.4-alpha.0",
     "@uqds/pagination": "^0.1.4-alpha.0",
     "@uqds/pane": "^0.2.0-alpha.0",
+    "@uqds/pill": "^1.0.0-alpha.0",
     "@uqds/previous-next": "^0.1.4-alpha.1",
     "@uqds/progression": "^0.1.4-alpha.0",
     "@uqds/sections": "^0.1.4-alpha.1",

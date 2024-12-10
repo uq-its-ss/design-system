@@ -1,0 +1,40 @@
+import { Meta, Story, Canvas, Controls, Source } from "@storybook/blocks";
+import StatusBadge from "../../../../.storybook/custom/components/StatusBadge";
+import * as PillStories from "./pill.stories";
+
+<Meta of={PillStories} />
+
+# Pill
+
+<StatusBadge.Stable />
+
+<StatusBadge.StableDoc />
+
+<a href="https://github.com/uq-its-ss/design-system/issues" target="_blank">
+  Check for open issues
+</a>
+
+## Overview
+
+A pill is a button like component that can be rendered as a link, checkbox or
+radio button.
+
+### Link
+
+A pill using a link tag.
+
+<Canvas of={PillStories.Link} sourceState="none" />
+
+<Source of={PillStories.Link} />
+
+### Checkbox
+
+A pill with a checkbox input.
+
+<Canvas of={PillStories.Checkbox} />
+
+### Radio
+
+A pill with a radio input.
+
+<Canvas of={PillStories.Radio} />

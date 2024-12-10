@@ -5,10 +5,12 @@ import * as HeroStories from "../../components/hero/hero.stories";
 import * as SidebarRightStories from "../../layout/page-layouts/sidebar-right/sidebar-right.stories";
 import * as CardStories from "../../components/card/card.stories";
 import { storyRenderer } from "../../../lib/storyRenderer";
+import * as PillListStories from "../../components/pill/list/pill-list.stories";
 
 const { Level2: Level2Hero } = storyRenderer(HeroStories);
 const { NewsExample } = storyRenderer(SidebarRightStories);
 const { Text: Card } = storyRenderer(CardStories);
+const { List: PillList } = storyRenderer(PillListStories);
 
 export default {
   title: "Templates/News/Home",
@@ -31,7 +33,13 @@ export const Home = {
 ${Header.render()}
 ${Breadcrumb.render()}
 ${Level2Hero({ title: "News", description: "Get the latest from UQ News.", image: null })}
-${NewsExample()}  
+${NewsExample()}
+<div class="uq-section">
+  <div class="uq-container">
+    <h3>Browse by topic</h3>
+    ${PillList()}
+  </div>
+</div>
 <div class="uq-section">
   <div class="uq-container">
     <div class="uq-card-grid uq-card-grid--target-2x">

@@ -1,0 +1,29 @@
+@use "@uqds/core/src/scss/global" as core;
+@use "@uqds/body/src/scss/global" as body;
+@use "@uqds/icon/src/scss/global" as icon-constants;
+
+.uq-pill-list {
+  display: flex;
+  flex-direction: column;
+  gap: core.$space-m;
+
+  @media #{core.$screen-sm-up} {
+    flex-direction: row;
+    gap: core.$space-l;
+  }
+}
+
+.uq-pill-list__title {
+  margin: 0;
+  font-size: core.$font-size-l;
+
+  @media #{core.$screen-sm-up} {
+    margin-top: core.$space-s;
+  }
+}
+
+.uq-pill-list__content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: core.$space-m;
+}

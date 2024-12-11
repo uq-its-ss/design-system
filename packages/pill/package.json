@@ -1,7 +1,7 @@
 {
-  "name": "@uqds/hero",
-  "version": "1.0.4-alpha.2",
-  "description": "Hero component",
+  "name": "@uqds/pill",
+  "version": "1.0.0-alpha.1",
+  "description": "Pill component",
   "keywords": [
     "uqds",
     "uq",
@@ -10,7 +10,7 @@
     "scss",
     "sass",
     "css",
-    "hero"
+    "grid"
   ],
   "publishConfig": {
     "access": "public"
@@ -41,8 +41,6 @@
     "url": "https://github.com/uq-its-ss/design-system/issues"
   },
   "dependencies": {
-    "@uqds/button": "^0.2.0-alpha.0",
-    "@uqds/core": "^1.2.4-alpha.0",
-    "@uqds/grid": "^0.0.19-alpha.0"
+    "@uqds/core": "^1.2.4-alpha.0"
   }
 }

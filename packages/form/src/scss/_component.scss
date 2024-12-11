@@ -165,7 +165,7 @@ $use-encapsulation: false !default;
     max-width: 100%;
     min-width: 100%;
     padding: ($form-spacing - core.$space-xs) $form-spacing;
-    border: $form-border-width solid core.$grey-300;
+    border: $form-border-width solid core.$grey-600;
     border-radius: $form-border-radius;
     font-size: $form-text-size;
     color: core.$grey-900;
@@ -190,7 +190,7 @@ $use-encapsulation: false !default;
     }
 
     &::placeholder {
-      color: core.$grey-300;
+      color: core.$grey-500;
     }
 
     &.uq-input--error,

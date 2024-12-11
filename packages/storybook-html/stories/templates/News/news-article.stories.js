@@ -105,6 +105,9 @@ ${Breadcrumb.render()}
           <p>Dr Wenger would like to acknowledge the collaborators for this research Dr Rachael Reader from the Faculty of Science at the University of Sydney for her incredible contributions to this research.</p>
         </div>
         <div class="uq-section">
+          ${PillList()}
+        </div>
+        <div class="uq-section">
           <div class="uq-accordion" aria-label="Accordion button group" role="presentation">
             <div class="uq-accordion__item">
               <button class="uq-accordion__toggle" aria-controls="content-1" aria-expanded="false" id="accordion-title-1">

@@ -1,0 +1,33 @@
+import { Meta, Story, Canvas, Controls, Source } from "@storybook/blocks";
+import StatusBadge from "../../../../.storybook/custom/components/StatusBadge";
+import * as PillListStories from "./pill-list.stories";
+
+<Meta of={PillListStories} />
+
+# PillList
+
+<StatusBadge.Stable />
+
+<StatusBadge.StableDoc />
+
+<a href="https://github.com/uq-its-ss/design-system/issues" target="_blank">
+  Check for open issues
+</a>
+
+## Overview
+
+Combine multiple pill using the Pill list.
+
+### With title
+
+A pill list with an inline title.
+
+<Canvas of={PillListStories.Title} sourceState="none" />
+
+<Source of={PillListStories.Title} />
+
+### List
+
+A long list of pills.
+
+<Canvas of={PillListStories.List} />

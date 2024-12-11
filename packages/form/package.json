@@ -29,6 +29,17 @@
     "dist/*",
     "src/*"
   ],
+  "main": "dist/js/uqds.js",
+  "module": "dist/mjs/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/mjs/index.js",
+      "require": "./dist/js/uqds.js"
+    },
+    "./src/js/*": "./src/js/*.js",
+    "./src/scss/*": "./src/scss/*"
+  },
+  "style": "dist/css/main.css",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/uq-its-ss/design-system.git"

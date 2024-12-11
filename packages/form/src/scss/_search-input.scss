@@ -1,0 +1,55 @@
+@use "@uqds/core/src/scss/global" as core;
+@use "@uqds/icon/src/scss/global" as icon;
+@use "global" as *;
+
+.uq-search-input {
+  position: relative;
+  max-width: 554px;
+
+  & input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]) {
+    margin: 0;
+  }
+}
+
+.uq-search-input--wide {
+  max-width: 800px;
+}
+
+.uq-search-input__clear,
+.uq-search-input__submit {
+  appearance: none;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & .uq-icon {
+    &::before {
+      margin: 0;
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+
+.uq-search-input__submit {
+  position: absolute;
+  top: 7px;
+  right: 12px;
+}
+
+.uq-search-input__clear {
+  position: absolute;
+  top: 7px;
+  right: 46px;
+
+  & .uq-icon::before {
+    filter: icon.$icon-text-filter;
+    opacity: 0.6;
+  }
+}

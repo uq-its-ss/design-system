@@ -6,11 +6,14 @@ import * as SidebarRightStories from "../../layout/page-layouts/sidebar-right/si
 import * as CardStories from "../../components/card/card.stories";
 import { storyRenderer } from "../../../lib/storyRenderer";
 import * as PillListStories from "../../components/pill/list/pill-list.stories";
+import * as SearchInputStories from "../../components/search-input/search-input.stories";
+import { searchInput } from "@uqds/form/src/js/main";
 
 const { Level2: Level2Hero } = storyRenderer(HeroStories);
 const { NewsExample } = storyRenderer(SidebarRightStories);
 const { Text: Card } = storyRenderer(CardStories);
 const { List: PillList } = storyRenderer(PillListStories);
+const { SearchInput } = storyRenderer(SearchInputStories);
 
 export default {
   title: "Templates/News/Home",
@@ -29,6 +32,10 @@ export default {
 };
 
 export const Home = {
+  play: ({ canvasElement }) => {
+    const search = canvasElement.querySelector(".uq-search-input");
+    searchInput(search);
+  },
   render: ({ showGrid }) => `
 ${Header.render()}
 ${Breadcrumb.render()}
@@ -36,6 +43,9 @@ ${Level2Hero({ title: "News", description: "Get the latest from UQ News.", image
 ${NewsExample()}
 <div class="uq-section">
   <div class="uq-container">
+    <h2>Looking for specific news?</h2>
+    <h3>Search by keyword</h3>
+    ${SearchInput()}
     <h3>Browse by topic</h3>
     ${PillList()}
   </div>

@@ -101,6 +101,7 @@
     "components-form-controls--input-password": "http://localhost:6006/iframe.html?id=components-form-controls--input-password",
     "components-form-error-summary--error-summary": "http://localhost:6006/iframe.html?id=components-form-error-summary--error-summary",
     "components-form-searchinput--search-input": "http://localhost:6006/iframe.html?id=components-form-searchinput--search-input",
+    "components-form-searchinput--wide": "http://localhost:6006/iframe.html?id=components-form-searchinput--wide",
     "components-grid-menu--grid-menu-default": "http://localhost:6006/iframe.html?id=components-grid-menu--grid-menu-default",
     "components-grid-menu--grid-menu-description": "http://localhost:6006/iframe.html?id=components-grid-menu--grid-menu-description",
     "components-grid-menu--grid-menu-dark-text": "http://localhost:6006/iframe.html?id=components-grid-menu--grid-menu-dark-text",

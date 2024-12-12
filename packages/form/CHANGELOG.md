@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/form@0.1.4-alpha.1...@uqds/form@0.2.0-alpha.0) (2024-12-12)
+
+### Features
+
+- ITSADSSD-59530: Search input component + ITSADSSD-59301: Search block ([#578](https://github.com/uq-its-ss/design-system/issues/578)) ([913370b](https://github.com/uq-its-ss/design-system/commit/913370bc935fdb3ccdfefbef1318ef52e6330da1))
+
 ## [0.1.4-alpha.1](https://github.com/uq-its-ss/design-system/compare/@uqds/form@0.1.4-alpha.0...@uqds/form@0.1.4-alpha.1) (2024-12-05)
 
 **Note:** Version bump only for package @uqds/form

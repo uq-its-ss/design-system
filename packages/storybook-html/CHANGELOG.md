@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0-alpha.5](https://github.com/uq-its-ss/design-system/compare/storybook-html@2.0.0-alpha.4...storybook-html@2.0.0-alpha.5) (2024-12-12)
+
+### Features
+
+- ITSADSSD-59530: Search input component + ITSADSSD-59301: Search block ([#578](https://github.com/uq-its-ss/design-system/issues/578)) ([913370b](https://github.com/uq-its-ss/design-system/commit/913370bc935fdb3ccdfefbef1318ef52e6330da1))
+
 # [2.0.0-alpha.4](https://github.com/uq-its-ss/design-system/compare/storybook-html@2.0.0-alpha.3...storybook-html@2.0.0-alpha.4) (2024-12-11)
 
 **Note:** Version bump only for package storybook-html

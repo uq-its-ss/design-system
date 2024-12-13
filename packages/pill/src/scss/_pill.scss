@@ -28,8 +28,7 @@
   }
 
   &:has(:focus-visible) {
-    outline: 4px solid core.$utility-500;
-    outline-offset: -1px;
+    @include body.focus-styles;
   }
 
   & input {

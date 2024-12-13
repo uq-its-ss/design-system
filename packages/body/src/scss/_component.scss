@@ -18,11 +18,6 @@ $use-encapsulation: false !default;
   padding: core.$space-none;
 }
 
-@mixin focus-styles {
-  outline: 4px solid core.$utility-500;
-  outline-offset: -1px;
-}
-
 @mixin -base-styles {
   /**
    * TODO: user should be able to configure whether or not they want this

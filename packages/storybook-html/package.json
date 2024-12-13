@@ -67,6 +67,7 @@
     "@uqds/sections": "^0.1.4-alpha.1",
     "@uqds/side-nav": "^0.1.4-alpha.1",
     "@uqds/site-header": "^1.2.4-alpha.1",
+    "@uqds/social": "^1.0.0-alpha.0",
     "@uqds/table": "^0.1.4-alpha.1",
     "@uqds/tabs": "^0.1.4-alpha.1",
     "babel-loader": "^9.2.1",

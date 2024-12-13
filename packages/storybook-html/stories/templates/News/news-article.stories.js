@@ -11,6 +11,9 @@ import * as ImageStories from "../../components/image/image.stories";
 import * as PillListStories from "../../components/pill/list/pill-list.stories";
 import * as CopyButtonStories from "../../components/copy-button/copy-button.stories";
 import { copyButton } from "@uqds/button/src/js/copy-button";
+import * as SocialShareStories
+  from "../../components/social-share/social-share.stories";
+import { socialShare } from "@uqds/social/src/js/social-share";
 
 const { Image: ImageCard, Text: TextCard } = storyRenderer(CardStories);
 const { TextShaded: ShadedPane, Text: Pane } = storyRenderer(PaneStories);
@@ -19,6 +22,7 @@ const { Blockquote } = storyRenderer(BlockquoteStories);
 const { Image: ImageWithCaption } = storyRenderer(ImageStories);
 const { Title: PillList } = storyRenderer(PillListStories);
 const { CopyButton } = storyRenderer(CopyButtonStories);
+const { SocialShare } = storyRenderer(SocialShareStories);
 
 export default {
   title: "Templates/News/Article",
@@ -42,6 +46,9 @@ export const Article = {
 
     const button = canvasElement.querySelector(".uq-copy-button");
     copyButton(button, button.dataset.copy);
+
+    const social = canvasElement.querySelector(".uq-social-share");
+    socialShare(social);
   },
   render: ({ showGrid }) => `
 ${Header.render()}
@@ -106,6 +113,9 @@ ${Breadcrumb.render()}
         </div>
         <div class="uq-section">
           ${PillList()}
+        </div>
+        <div class="uq-section">
+          ${SocialShare()}
         </div>
         <div class="uq-section">
           <div class="uq-accordion" aria-label="Accordion button group" role="presentation">

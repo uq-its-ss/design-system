@@ -139,6 +139,7 @@
     "components-pill--radio": "http://localhost:6006/iframe.html?id=components-pill-pill--radio",
     "components-pill-list--list": "http://localhost:6006/iframe.html?id=components-pill-list--list",
     "components-pill-list--title": "http://localhost:6006/iframe.html?id=components-pill-list--title",
+    "components-social-share--social-share": "http://localhost:6006/iframe.html?id=components-social-share--social-share",
     "components-previous-next--previous-next-initial": "http://localhost:6006/iframe.html?id=components-previous-next--previous-next-initial",
     "components-previous-next--previous-next-middle": "http://localhost:6006/iframe.html?id=components-previous-next--previous-next-middle",
     "components-previous-next--previous-next-final": "http://localhost:6006/iframe.html?id=components-previous-next--previous-next-final",

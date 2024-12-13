@@ -35,7 +35,7 @@ export default {
 
 export const SearchInput = {};
 
-export const Wide = {
+export const Expand = {
   args: {
     expand: true,
   },

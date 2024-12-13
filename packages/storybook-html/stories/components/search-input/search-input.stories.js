@@ -10,15 +10,15 @@ export default {
   argTypes: {
     label: "text",
     placeholder: "text",
-    wide: "boolean",
+    expand: "boolean",
   },
   args: {
     label: "Search",
     placeholder: "Search by keyword",
-    wide: false,
+    expand: false,
   },
-  render: ({ label, placeholder, wide }) => {
-    return `<div class="${classNames("uq-search-input", { "uq-search-input--wide": wide })}">
+  render: ({ label, placeholder, expand }) => {
+    return `<div class="${classNames("uq-search-input", { "uq-search-input--expand": expand })}">
   <label for="search-input-text" class="visually-hidden">${label}</label>
   <input type="text" id="search-input-text" placeholder="${placeholder}" class="uq-search-input__input" />
   <button type="submit" class="uq-search-input__submit">
@@ -37,6 +37,6 @@ export const SearchInput = {};
 
 export const Wide = {
   args: {
-    wide: true,
+    expand: true,
   },
 };

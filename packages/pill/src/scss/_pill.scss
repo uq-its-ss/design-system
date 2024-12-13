@@ -27,10 +27,9 @@
     cursor: pointer;
   }
 
-  &:has(:focus-visible),
-  &:focus-visible {
+  &:has(:focus-visible) {
     outline: 4px solid core.$utility-500;
-    border-color: transparent;
+    outline-offset: -1px;
   }
 
   & input {

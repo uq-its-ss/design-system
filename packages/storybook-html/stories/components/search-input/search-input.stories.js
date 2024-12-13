@@ -20,7 +20,7 @@ export default {
   render: ({ label, placeholder, wide }) => {
     return `<div class="${classNames("uq-search-input", { "uq-search-input--wide": wide })}">
   <label for="search-input-text" class="visually-hidden">${label}</label>
-  <input type="text" id="search-input-text" placeholder="${placeholder}" class="uq-search-input__input" />
+  <input type="text" id="search-input-text" placeholder="${placeholder}" class="uq-input" />
   <button type="submit" class="uq-search-input__submit">
     <span class="uq-icon uq-icon--standard--search"></span>
     <span class="visually-hidden">Submit</span>

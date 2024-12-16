@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0-alpha.6](https://github.com/uq-its-ss/design-system/compare/storybook-html@2.0.0-alpha.5...storybook-html@2.0.0-alpha.6) (2024-12-16)
+
+### Features
+
+- ITSADSSD-59296: Image carousel ([#579](https://github.com/uq-its-ss/design-system/issues/579)) ([e23e92a](https://github.com/uq-its-ss/design-system/commit/e23e92adc14ba68f07c108dd3d2d1b47f82625f9))
+
 # [2.0.0-alpha.5](https://github.com/uq-its-ss/design-system/compare/storybook-html@2.0.0-alpha.4...storybook-html@2.0.0-alpha.5) (2024-12-12)
 
 ### Features

@@ -1,0 +1,70 @@
+import { Meta, Canvas, Source } from "@storybook/blocks";
+import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
+import * as ImageCarouselStories from "./image-carousel.stories";
+
+<Meta of={ImageCarouselStories} />
+
+# Image Carousel
+
+<StatusBadge.Stable /> <StatusBadge.StableDoc /> [Check for open
+issues](https://github.com/uq-its-ss/design-system/issues)
+
+## Overview
+
+A carousel component that displays multiple images. Powered by [Swiper](https://swiperjs.com/).
+
+<Canvas
+  of={ImageCarouselStories.ImageCarousel}
+  sourceState="none"
+  story={{ autoplay: true }}
+/>
+
+## How to use.
+
+Provide the following wrapper markup:
+
+```html
+<div class="uq-image-carousel swiper">
+  <div class="uq-image-carousel__slides swiper-wrapper">
+    <!-- add slides here -->
+  </div>
+  <div class="uq-image-carousel__controls">
+    <div class="uq-image-carousel__previous">
+      <span class="uq-icon uq-icon--standard--chevron-left-sml"></span>
+      <span class="visually-hidden">Previous</span>
+    </div>
+    <div class="uq-image-carousel__next">
+      <span class="uq-icon uq-icon--standard--chevron-right-sml"></span>
+      <span class="visually-hidden">Next</span>
+    </div>
+    <div class="uq-image-carousel__pagination"></div>
+  </div>
+</div>
+```
+
+Each slide is marked up as so:
+
+```html
+<figure class="uq-image swiper-slide">
+  <div class="uq-image__image">
+    <img src="images/example-1.jpg" alt="Example alt text" />
+  </div>
+  <figcaption class="uq-image__caption">
+    <p>Dr Amelia Wenger conducting research during snorkelling in Myanmar.</p>
+    <p>(Photo credit: Jake Smith)</p>
+  </figcaption>
+</figure>
+```
+
+Then call the JS:
+
+```js
+import { imageCarousel } from "@usds/image";
+
+const carousel = canvasElement.querySelector(".uq-image-carousel");
+imageCarousel(carousel);
+```
+
+## Accessibility
+
+The Image carousel implements the Swiper [Accessibility](https://swiperjs.com/swiper-api#accessibility-a11y) module.

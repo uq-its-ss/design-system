@@ -1,6 +1,6 @@
 {
   "name": "@uqds/image",
-  "version": "1.0.0-alpha.1",
+  "version": "1.0.0-alpha.2",
   "description": "Image components",
   "keywords": [
     "uqds",
@@ -29,6 +29,16 @@
     "src/*",
     "dist/*"
   ],
+  "main": "dist/js/uqds.js",
+  "module": "dist/mjs/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/mjs/index.js",
+      "require": "./dist/js/uqds.js"
+    },
+    "./src/js/*": "./src/js/*.js",
+    "./src/scss/*": "./src/scss/*"
+  },
   "style": "dist/css/main.css",
   "scripts": {
     "prepare": "gulp -f ../../gulpfile.js --cwd=. prepare"
@@ -41,6 +51,7 @@
     "url": "https://github.com/uq-its-ss/design-system/issues"
   },
   "dependencies": {
-    "@uqds/core": "^1.2.4-alpha.0"
+    "@uqds/core": "^1.2.4-alpha.0",
+    "swiper": "^11.1.15"
   }
 }

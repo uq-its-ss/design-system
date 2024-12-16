@@ -13,6 +13,8 @@ import * as CopyButtonStories from "../../components/copy-button/copy-button.sto
 import { copyButton } from "@uqds/button/src/js/copy-button";
 import * as SocialShareStories from "../../components/social-share/social-share.stories";
 import { socialShare } from "@uqds/social/src/js/social-share";
+import * as ImageCarouselStories from "../../components/image-carousel/image-carousel.stories";
+import { imageCarousel } from "@uqds/image/src/js/image-carousel";
 
 const { Image: ImageCard, Text: TextCard } = storyRenderer(CardStories);
 const { TextShaded: ShadedPane, Text: Pane } = storyRenderer(PaneStories);
@@ -22,6 +24,7 @@ const { Image: ImageWithCaption } = storyRenderer(ImageStories);
 const { Title: PillList } = storyRenderer(PillListStories);
 const { CopyButton } = storyRenderer(CopyButtonStories);
 const { SocialShare } = storyRenderer(SocialShareStories);
+const { ImageCarousel } = storyRenderer(ImageCarouselStories);
 
 export default {
   title: "Templates/News/Article",
@@ -48,6 +51,8 @@ export const Article = {
 
     const social = canvasElement.querySelector(".uq-social-share");
     socialShare(social);
+    const carousel = canvasElement.querySelector(".uq-image-carousel");
+    imageCarousel(carousel);
   },
   render: ({ showGrid }) => `
 ${Header.render()}
@@ -63,7 +68,7 @@ ${Breadcrumb.render()}
           ${Alert({ message: "Warning: Some readers may find the details in this story distressing." })}
         </div>
         <div class="uq-section">
-          ${ImageWithCaption({})}
+          ${ImageWithCaption()}
         </div>
         <div class="uq-section">
           <p>Dr Wenger said the UQ-developed product would be an open access, almost real-time management program that allows users to map pollution, identify coral reefs at risk and determine the management effort needed to protect coral reefs.</p>
@@ -77,28 +82,10 @@ ${Breadcrumb.render()}
           <p>"Water pollution from land-based activities is now the biggest threat for more than 30 per cent of the world’s coral reefs" Dr Wenger said.</p>
           <p>"It affects the food, health, livelihood and economic opportunities for millions of people."</p>
           <p>Dr Wenger said the UQ-developed product would be an open access, almost real-time management program that allows users to map pollution, identify coral reefs at risk and determine the management effort needed to protect coral reefs.</p>
-        </div>
-        <div class="uq-section">
           ${Blockquote()}
         </div>
         <div class="uq-section">
-          ${ImageWithCaption({})}
-        </div>
-        <div class="uq-section">
-          <h2>Example H2 heading</h2>
-          <p>The program, funded by the Coral Research and Development Accelerator Platform (CORDAP) an initiative of the G20, will identify near-real time threats to reef systems, providing conservation managers with the crucial information they need to better protect coral reefs.</p>
-          <p>The project is a collaboration between Dr Amelia Wenger from UQ’s School of the Environment and the Wildlife Conservation Society – along with Associate Professor Simon Albert and Dr Nick Hutley from UQ's School of Civil Engineering.</p>
-          <p>"Water pollution from land-based activities is now the biggest threat for more than 30 per cent of the world’s coral reefs" Dr Wenger said.</p>
-          <p>"It affects the food, health, livelihood and economic opportunities for millions of people."</p>
-          <p>Dr Wenger said the UQ-developed product would be an open access, almost real-time management program that allows users to map pollution, identify coral reefs at risk and determine the management effort needed to protect coral reefs.</p>
-          <h3>Collaboration and acknowledgements</h3>
-          <p>Dr Wenger would like to acknowledge the collaborators for this research Dr Rachael Reader from the Faculty of Science at the University of Sydney for her incredible contributions to this research.</p>
-        </div>
-        <div class="uq-section">
-          ${Blockquote()}
-        </div>
-        <div class="uq-section">
-          ${ImageWithCaption({})}
+          ${ImageCarousel()}
         </div>
         <div class="uq-section">
           <h2>Example H2 heading</h2>

@@ -1,6 +1,6 @@
 export const searchInput = (element) => {
   if (element) {
-    const textInput = element.querySelector(".uq-search-input__input");
+    const textInput = element.querySelector(".uq-input");
     const clearButton = element.querySelector(".uq-search-input__clear");
 
     if (textInput && clearButton) {

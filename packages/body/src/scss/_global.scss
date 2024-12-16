@@ -1,3 +1,5 @@
+@use "@uqds/core/src/scss/global" as core;
+
 @mixin visually-hidden {
   position: absolute !important;
   overflow: hidden;
@@ -7,4 +9,9 @@
   word-wrap: normal;
   margin: 0;
   padding: 0;
+}
+
+@mixin focus-styles {
+  outline: 4px solid core.$utility-500;
+  outline-offset: -1px;
 }

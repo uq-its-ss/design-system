@@ -231,3 +231,11 @@ body {
 .sb-purple-background {
   background-color: core.$purple-500 !important;
 }
+
+.sbdocs-preview,
+.sb-main-padded {
+  .uq-image,
+  .uq-image-carousel {
+    max-width: 900px;
+  }
+}

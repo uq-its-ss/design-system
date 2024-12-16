@@ -125,6 +125,7 @@
     "components-heros-hero--level-2": "http://localhost:6006/iframe.html?id=components-heros-hero--level-2",
     "components-icon--icon": "http://localhost:6006/iframe.html?id=components-icon--icon",
     "components-image--image": "http://localhost:6006/iframe.html?id=components-image--image",
+    "components-image-carousel--image-carousel": "http://localhost:6006/iframe.html?id=components-image-carousel--image-carousel",
     "components-loading-spinner--loading-spinner": "http://localhost:6006/iframe.html?id=components-loading-spinner--loading-spinner",
     "components-loading-spinner--loading-spinner-light": "http://localhost:6006/iframe.html?id=components-loading-spinner--loading-spinner-light",
     "components-loading-spinner--loading-spinner-small": "http://localhost:6006/iframe.html?id=components-loading-spinner--loading-spinner-small",

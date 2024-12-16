@@ -13,6 +13,7 @@ const {
 } = storyRenderer(CardStories);
 const {
   Image: PaneImage,
+  Video: PaneVideo,
   TextShaded: PaneTextShaded,
   IconShaded: PaneIcon,
   IconLarge: PaneIconLarge,
@@ -258,4 +259,20 @@ export const StoryCardExample = {
     </div>
   </div>
 `,
+};
+
+export const CardGrid1PerRowExample = {
+  render: () => {
+    return `
+<div class="uq-container">
+  <div class="uq-card-grid uq-card-grid--target-1x">
+     ${PaneImage()}
+     ${PaneVideo()}
+     ${CardImage()}
+     ${NewsCard()}
+     ${EventCard()}
+     ${StoryCard()}
+  </div>
+</div>`;
+  },
 };

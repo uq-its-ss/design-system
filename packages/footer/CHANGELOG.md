@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.4-alpha.3](https://github.com/uq-its-ss/design-system/compare/@uqds/footer@1.2.4-alpha.2...@uqds/footer@1.2.4-alpha.3) (2024-12-11)
+
+### Bug Fixes
+
+- accordion footer chevron colour fix ([#577](https://github.com/uq-its-ss/design-system/issues/577)) ([541e344](https://github.com/uq-its-ss/design-system/commit/541e344c46977c0aeb5408ccab0ae15d960b854d))
+
+## [1.2.4-alpha.2](https://github.com/uq-its-ss/design-system/compare/@uqds/footer@1.2.4-alpha.1...@uqds/footer@1.2.4-alpha.2) (2024-12-09)
+
+**Note:** Version bump only for package @uqds/footer
+
+## [1.2.4-alpha.1](https://github.com/uq-its-ss/design-system/compare/@uqds/footer@1.2.4-alpha.0...@uqds/footer@1.2.4-alpha.1) (2024-12-05)
+
+**Note:** Version bump only for package @uqds/footer
+
 ## [1.2.4-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/footer@1.2.3...@uqds/footer@1.2.4-alpha.0) (2024-09-04)
 
 **Note:** Version bump only for package @uqds/footer

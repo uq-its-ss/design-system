@@ -1,0 +1,102 @@
+@use "@uqds/core/src/scss/global" as core;
+@use "@uqds/icon/src/scss/global" as icon;
+@import "~swiper/css";
+
+.uq-image-carousel {
+  container-type: inline-size;
+  margin: 0 0 core.$space-l;
+
+  & .uq-image {
+    margin: 0;
+  }
+}
+
+.uq-image-carousel__slide-counter {
+  font-weight: core.$font-weight-medium;
+}
+
+.uq-image-carousel__controls {
+  width: 100%;
+  aspect-ratio: 1.5 / 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  @container (min-width: 801px) {
+    height: 640px;
+    aspect-ratio: unset;
+  }
+}
+
+.uq-image-carousel__previous,
+.uq-image-carousel__next {
+  appearance: none;
+  background: rgba(255 255 255 / 0.9);
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 1px solid transparent;
+
+  & .uq-icon {
+    display: block;
+    width: 32px;
+    height: 32px;
+
+    &::before {
+      width: 32px;
+      height: 32px;
+      margin: 0;
+    }
+  }
+
+  &.swiper-button-disabled {
+    background: transparent;
+    border-color: core.$white;
+
+    & .uq-icon {
+      &::before {
+        filter: icon.$icon-light-filter;
+      }
+    }
+  }
+}
+
+.uq-image-carousel__previous {
+  left: core.$space-m;
+}
+
+.uq-image-carousel__next {
+  right: core.$space-m;
+}
+
+.uq-image-carousel__pagination {
+  position: absolute;
+  bottom: core.$space-m;
+  left: 0;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: end;
+  gap: 8px;
+  width: 100%;
+}
+
+.uq-image-carousel__pagination-item {
+  width: 8px;
+  height: 8px;
+  background: rgba(255 255 255 / 0.9);
+  border-radius: 50%;
+
+  &.is-active {
+    background: core.$purple-500;
+  }
+}

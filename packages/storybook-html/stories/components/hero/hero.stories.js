@@ -53,9 +53,14 @@ export const Hero = {
     "uq-hero--light": light,
     "uq-hero--large": large,
   })}">
+${
+  image
+    ? `
   <div class="uq-hero__image">
     <img src="${image}" alt="" role="presentation" />
-  </div>
+  </div>`
+    : ""
+}
   <div class="uq-container">
     <div class="uq-hero__content">
       <h1 class="uq-hero__title">${title}</h1>

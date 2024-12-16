@@ -1,6 +1,6 @@
 {
   "name": "@uqds/form",
-  "version": "0.1.4-alpha.0",
+  "version": "0.2.0-alpha.1",
   "description": "Form element style rules",
   "keywords": [
     "uqds",
@@ -29,6 +29,17 @@
     "dist/*",
     "src/*"
   ],
+  "main": "dist/js/uqds.js",
+  "module": "dist/mjs/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/mjs/index.js",
+      "require": "./dist/js/uqds.js"
+    },
+    "./src/js/*": "./src/js/*.js",
+    "./src/scss/*": "./src/scss/*"
+  },
+  "style": "dist/css/main.css",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/uq-its-ss/design-system.git"
@@ -43,6 +54,6 @@
   },
   "dependencies": {
     "@uqds/core": "^1.2.4-alpha.0",
-    "@uqds/icon": "^0.0.19-alpha.0"
+    "@uqds/icon": "^0.0.19-alpha.1"
   }
 }

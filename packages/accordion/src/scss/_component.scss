@@ -17,171 +17,193 @@
   list-style: none;
   margin-bottom: core.$space-l;
   padding: core.$space-none;
+}
 
-  // Accordion item.
-  &__item {
-    background: core.$white;
-    border: 1px solid core.$grey-200;
-    border-radius: 2px;
-    margin-bottom: core.$space-s;
+.uq-accordion__item {
+  background: core.$white;
+  border: 1px solid core.$grey-200;
+  border-radius: 2px;
+  margin-bottom: core.$space-s;
+}
 
-    &--is-open {
-      box-shadow: 0 0.25rem 0.5rem rgb(0 0 0 / 10%);
-    }
-  }
+.uq-accordion__toggle {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background: core.$white;
+  border-radius: 0;
+  border-style: solid;
+  border-width: 0;
+  color: core.$grey-900;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: core.$space-s core.$space-m;
+  font-family: core.$font-body;
+  font-size: core.$font-size-xl;
+  font-weight: 500;
+  line-height: core.$line-height-h;
+  margin: core.$space-none;
+  padding: core.$space-m core.$space-xxxxl core.$space-m core.$space-m;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: all ease 0.2s;
+  width: 100%;
 
-  // Accordion title / toggle button.
-  &__toggle {
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    background: core.$white;
-    border-radius: 0;
-    border-style: solid;
-    border-width: 0;
+  & > * {
+    margin: 0;
     color: core.$grey-900;
-    cursor: pointer;
-    display: inline-block;
-    font-family: core.$font-body;
     font-size: core.$font-size-xl;
     font-weight: 500;
-    line-height: core.$line-height-h;
-    margin: core.$space-none;
-    padding: core.$space-m core.$space-xxxxl core.$space-m core.$space-m;
-    position: relative;
-    text-align: left;
-    text-decoration: none;
-    transition: all ease 0.2s;
-    width: 100%;
+  }
 
-    & > * {
-      margin: 0;
-      color: core.$grey-900;
-      font-size: core.$font-size-xl;
-      font-weight: 500;
-    }
+  @media #{core.$screen-md-up} {
+    padding: core.$space-m core.$space-uul core.$space-m core.$space-l;
+  }
+
+  // Closed state.
+  &::before {
+    content: "";
+    background-image: url(icon-constants.get-icon(
+      "standard--chevron-down",
+      core.$black
+    ));
+    background-repeat: no-repeat;
+    width: core.$space-l;
+    height: core.$space-l;
+    position: absolute;
+    right: core.$space-m;
 
     @media #{core.$screen-md-up} {
-      padding: core.$space-m core.$space-uul core.$space-m core.$space-l;
-    }
-
-    // Closed state.
-    &::before {
-      content: "";
-      background-image: url(icon-constants.get-icon(
-        "standard--chevron-down",
-        core.$purple-500
-      ));
-      background-repeat: no-repeat;
-      width: core.$space-l;
-      height: core.$space-l;
-      position: absolute;
-      right: core.$space-m;
-
-      @media #{core.$screen-md-up} {
-        right: core.$space-l;
-      }
-    }
-
-    &:hover,
-    &:focus {
-      color: core.$grey-900;
-      background-color: core.$grey-50;
-    }
-
-    &:focus {
-      outline: 0 none;
-    }
-
-    // Active toggle.
-    &--active {
-      background: core.$white;
-
-      // Open state.
-      &::before {
-        background-image: url(icon-constants.get-icon(
-          "standard--chevron-down",
-          core.$purple-500
-        ));
-      }
-
-      &:hover,
-      &:focus {
-        background-color: core.$white;
-      }
-    }
-  }
-  &__subtitle {
-    font-size: core.$font-size-s;
-    font-weight: 400;
-    color: #6f6f6f;
-    line-height: 1.4;
-    // required to Truncate text and add ellipsis
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
-
-  // Accordion content
-  &__content {
-    overflow: hidden;
-    word-wrap: break-word;
-    transition: height 200ms ease;
-
-    &-wrapper {
-      padding: core.$space-none core.$space-m core.$space-m;
-
-      @media #{core.$screen-md-up} {
-        padding: core.$space-none core.$space-l core.$space-l;
-      }
-    }
-
-    &:not(.uq-accordion__content--active) {
-      display: none;
-    }
-
-    p:first-of-type {
-      margin-top: core.$space-none;
-    }
-
-    :last-child {
-      margin-bottom: core.$space-none;
+      right: core.$space-l;
     }
   }
 
-  // No bottom spacing variant.
-  &--no-bottom-spacing {
+  &:hover,
+  &:focus {
+    color: core.$grey-900;
+  }
+
+  &:focus {
+    outline: 0 none;
+  }
+
+  &:has(.uq-accordion__subtitle) {
+    flex-wrap: wrap;
+  }
+}
+
+.uq-accordion__toggle--active {
+  background: core.$white;
+
+  // Open state.
+  &::before {
+    background-image: url(icon-constants.get-icon(
+      "standard--chevron-up",
+      core.$black
+    ));
+  }
+
+  &:hover,
+  &:focus {
+    background-color: core.$white;
+  }
+}
+
+.uq-accordion__icon {
+  width: 24px;
+  height: 24px;
+  margin-block: -4px;
+
+  & img,
+  & svg,
+  & .uq-icon::before {
+    width: 24px;
+    height: 24px;
+    margin: 0;
+  }
+}
+
+.uq-accordion__subtitle {
+  width: 100%;
+  font-size: core.$font-size-s;
+  font-weight: 400;
+  color: #6f6f6f;
+  line-height: 1.4;
+  // required to Truncate text and add ellipsis
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.uq-accordion__content {
+  overflow: hidden;
+  word-wrap: break-word;
+  transition: height 200ms ease;
+
+  &:not(.uq-accordion__content--active) {
+    display: none;
+  }
+
+  p:first-of-type {
+    margin-top: core.$space-none;
+  }
+
+  :last-child {
     margin-bottom: core.$space-none;
   }
 
-  // Contextual link region cog position fix.
-  .contextual-links-wrapper {
-    top: 0 !important;
+  & .uq-alert {
+    margin-block: core.$space-l;
   }
 
-  // Compact Modifier, reduces size for use in mixed components.
-  &--compact {
-    & .uq-accordion__toggle {
-      font-size: core.$font-size-m;
-      padding: core.$space-s core.$space-xxxxl core.$space-s core.$space-m;
-    }
+  & img {
+    margin-block: core.$space-m;
+    display: block;
+  }
+}
 
-    & .uq-accordion__toggle::before {
-      width: core.$space-m;
-      height: core.$space-m;
-      right: core.$space-m;
-    }
+.uq-accordion__content-wrapper {
+  padding: core.$space-none core.$space-m core.$space-m;
 
-    & .uq-accordion__toggle--active::before {
-      width: core.$space-m;
-      height: core.$space-m;
-      right: core.$space-m;
-    }
+  @media #{core.$screen-md-up} {
+    padding: core.$space-none core.$space-l core.$space-l;
+  }
+}
 
-    & .uq-accordion__content-wrapper {
-      @media #{core.$screen-md-up} {
-        padding: core.$space-none core.$space-m core.$space-m;
-      }
+// No bottom spacing variant.
+.uq-accordion--no-bottom-spacing {
+  margin-bottom: core.$space-none;
+}
+
+// Contextual link region cog position fix.
+.contextual-links-wrapper {
+  top: 0 !important;
+}
+
+// Compact Modifier, reduces size for use in mixed components.
+.uq-accordion--compact {
+  & .uq-accordion__toggle {
+    font-size: core.$font-size-m;
+    padding: core.$space-s core.$space-xxxxl core.$space-s core.$space-m;
+  }
+
+  & .uq-accordion__toggle::before {
+    width: core.$space-m;
+    height: core.$space-m;
+    right: core.$space-m;
+  }
+
+  & .uq-accordion__toggle--active::before {
+    width: core.$space-m;
+    height: core.$space-m;
+    right: core.$space-m;
+  }
+
+  & .uq-accordion__content-wrapper {
+    @media #{core.$screen-md-up} {
+      padding: core.$space-none core.$space-m core.$space-m;
     }
   }
 }

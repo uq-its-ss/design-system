@@ -3,6 +3,67 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0-alpha.7](https://github.com/uq-its-ss/design-system/compare/storybook-html@2.0.0-alpha.6...storybook-html@2.0.0-alpha.7) (2024-12-16)
+
+### Bug Fixes
+
+- ITSADSSD-59530: Search bar QA ([#581](https://github.com/uq-its-ss/design-system/issues/581)) ([1625632](https://github.com/uq-its-ss/design-system/commit/16256322335dddba7766d4309bd09c6109c6a888))
+
+# [2.0.0-alpha.6](https://github.com/uq-its-ss/design-system/compare/storybook-html@2.0.0-alpha.5...storybook-html@2.0.0-alpha.6) (2024-12-16)
+
+### Features
+
+- ITSADSSD-59296: Image carousel ([#579](https://github.com/uq-its-ss/design-system/issues/579)) ([e23e92a](https://github.com/uq-its-ss/design-system/commit/e23e92adc14ba68f07c108dd3d2d1b47f82625f9))
+
+# [2.0.0-alpha.5](https://github.com/uq-its-ss/design-system/compare/storybook-html@2.0.0-alpha.4...storybook-html@2.0.0-alpha.5) (2024-12-12)
+
+### Features
+
+- ITSADSSD-59530: Search input component + ITSADSSD-59301: Search block ([#578](https://github.com/uq-its-ss/design-system/issues/578)) ([913370b](https://github.com/uq-its-ss/design-system/commit/913370bc935fdb3ccdfefbef1318ef52e6330da1))
+
+# [2.0.0-alpha.4](https://github.com/uq-its-ss/design-system/compare/storybook-html@2.0.0-alpha.3...storybook-html@2.0.0-alpha.4) (2024-12-11)
+
+**Note:** Version bump only for package storybook-html
+
+# [2.0.0-alpha.3](https://github.com/uq-its-ss/design-system/compare/storybook-html@2.0.0-alpha.2...storybook-html@2.0.0-alpha.3) (2024-12-11)
+
+### Features
+
+- ITSADSSD-59308: Pill component ([#576](https://github.com/uq-its-ss/design-system/issues/576)) ([99aa75e](https://github.com/uq-its-ss/design-system/commit/99aa75e531aa293b5b897d196cb2ec25ae7c1cc0))
+
+# [2.0.0-alpha.2](https://github.com/uq-its-ss/design-system/compare/storybook-html@2.0.0-alpha.1...storybook-html@2.0.0-alpha.2) (2024-12-11)
+
+### Features
+
+- ITSADSSD-59775: Copy button ([#575](https://github.com/uq-its-ss/design-system/issues/575)) ([ede3b65](https://github.com/uq-its-ss/design-system/commit/ede3b65fac9a1dc9e301105f760c9afa48e4c7e0))
+
+# [2.0.0-alpha.1](https://github.com/uq-its-ss/design-system/compare/storybook-html@2.0.0-alpha.0...storybook-html@2.0.0-alpha.1) (2024-12-09)
+
+**Note:** Version bump only for package storybook-html
+
+# [2.0.0-alpha.0](https://github.com/uq-its-ss/design-system/compare/storybook-html@1.0.4-alpha.2...storybook-html@2.0.0-alpha.0) (2024-12-05)
+
+### Bug Fixes
+
+- align image references to hero ([de01403](https://github.com/uq-its-ss/design-system/commit/de014030cb6b521ef31ff399ee4be347f58babb5))
+- updated card and pane references ([c6d9429](https://github.com/uq-its-ss/design-system/commit/c6d94291686009f921ab58e251fc0d3889a14f82))
+
+- feat!: ITSADSSD-59299: Blockquote component (#568) ([71d8d3d](https://github.com/uq-its-ss/design-system/commit/71d8d3d2589ed99f374923430fb84f0fe0b97b69)), closes [#568](https://github.com/uq-its-ss/design-system/issues/568)
+
+### Features
+
+- ITSADSSD-59302: Video pane ([#569](https://github.com/uq-its-ss/design-system/issues/569)) ([9ae841a](https://github.com/uq-its-ss/design-system/commit/9ae841a5987062a149fa12baa61e92c45b026a6c))
+- ITSADSSD-59515: Image with caption ([#570](https://github.com/uq-its-ss/design-system/issues/570)) ([a1393ce](https://github.com/uq-its-ss/design-system/commit/a1393ceecd670a9f117dfcfdb594560867ef0fbc))
+- ITSADSSD-59777: Accordion updates and article template ([#567](https://github.com/uq-its-ss/design-system/issues/567)) ([8311fa4](https://github.com/uq-its-ss/design-system/commit/8311fa49bc079806e221931f6abd3ec948e0b9fe))
+
+### BREAKING CHANGES
+
+- Review updated blockquote markup
+
+- increase spacing
+
+- chore: regression test update
+
 ## [1.0.4-alpha.2](https://github.com/uq-its-ss/design-system/compare/storybook-html@1.0.4-alpha.1...storybook-html@1.0.4-alpha.2) (2024-09-24)
 
 **Note:** Version bump only for package storybook-html

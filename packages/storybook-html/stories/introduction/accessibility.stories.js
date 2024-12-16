@@ -7,8 +7,9 @@ import * as PaneStories from "../components/pane/pane.stories";
 const { Home: Hero } = storyRenderer(HeroStories);
 const { Container: Section } = storyRenderer(SectionStories);
 const { Image: Card } = storyRenderer(CardStories);
-const { IconShaded: PaneIconShaded, Text: PaneText } =
-  storyRenderer(PaneStories);
+const { IconShaded: PaneIconShaded, Text: PaneText, Video: PaneVideo } = storyRenderer(PaneStories);
+
+
 
 export default {
   title: "Core/Standards/Accessibility",
@@ -36,14 +37,23 @@ export const Accessibility = {
   <li>perceive, understand, navigate, and interact with the Web</li>
   <li>contribute to the Web</li>
   </ul>
-  <p>Fundamentally, a website should be designed to work for all people, whatever their hardware, software, language, location, or ability.</p>`,
+  <p>Fundamentally, a website should be designed to work for all people, whatever their hardware, software, language, location, or ability.</p>
+      ${PaneVideo({
+      title: "Why we need web accessibility",
+      description:
+        "The Web is an increasingly important resource in many aspects of life: education, employment, government, commerce, health care, recreation, and more. It is essential that the web be accessible in order to provide equal access and equal opportunity to people with diverse abilities. Access to information and communications technologies, including the Web, is defined as a basic human right in the United Nations Convention on the Rights of Persons with Disabilities.",
+      video: "https://www.youtube-nocookie.com/embed/20SHvU2PKsM",
+      links: ``,
+    })}
+    `,
     })}
     ${Section({
-      title: "Community",
-      description: `
-  <p>The Design System is managed and supported by the User Interface Design and Development team in ITS Application Development and Support (ADS-UI for short). Join the Design System community on <a class="text--link" href="https://www.yammer.com/uq.edu.au/#/threads/inGroup?type=in_group&feedId=35286523904">UQ Yammer</a> for updates and discussion or email the ADS UI team <a href="mailto:webservices@uq.edu.au">webservices@uq.edu.au</a> with questions and feedback.</p>
-  <p>We'd love to come talk to your team about the design system and answer any questions you have.</p>`,
+      title: "Web accessibility at UQ and in our roles",
+      description: ``,
       content: `
+      <h3>Governance of disability and inclusion at UQ</h3>
+  <p>UQ as an education provider, employer and provider of other services is required by law to ensure people with disabilities have equal access to information and services.</p>
+  <p><a href="https://ppl.app.uq.edu.au/content/1.70.08-disability">UQ's Disability Policy</a> covers UQ's "commitments and responsibilities under legislation and its aim to ensure an inclusive environment for people with a disability participating in work and study at the University.</p>
   <div class="uq-card-grid uq-card-grid--target-3x">
     ${Card({
       title: "Community updates",

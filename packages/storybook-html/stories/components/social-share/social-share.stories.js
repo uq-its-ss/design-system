@@ -27,6 +27,4 @@ export default {
   },
 };
 
-export const SocialShare = {
-
-};
+export const SocialShare = {};

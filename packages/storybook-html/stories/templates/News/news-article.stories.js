@@ -11,8 +11,7 @@ import * as ImageStories from "../../components/image/image.stories";
 import * as PillListStories from "../../components/pill/list/pill-list.stories";
 import * as CopyButtonStories from "../../components/copy-button/copy-button.stories";
 import { copyButton } from "@uqds/button/src/js/copy-button";
-import * as SocialShareStories
-  from "../../components/social-share/social-share.stories";
+import * as SocialShareStories from "../../components/social-share/social-share.stories";
 import { socialShare } from "@uqds/social/src/js/social-share";
 
 const { Image: ImageCard, Text: TextCard } = storyRenderer(CardStories);

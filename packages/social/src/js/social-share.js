@@ -2,13 +2,13 @@ import copy from "copy-to-clipboard";
 
 export const socialShare = (element) => {
   if (element) {
-    const copyButton = element.querySelector(".uq-social-share__copy")
+    const copyButton = element.querySelector(".uq-social-share__copy");
     if (copyButton) {
       copyButton.addEventListener("click", (event) => {
         event.preventDefault();
 
         const label = element.querySelector(".visually-hidden");
-        const labelText = label.textContent
+        const labelText = label.textContent;
 
         // Copy string + provide text feedback.
         copy(copyButton.dataset.copy);

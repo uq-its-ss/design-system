@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0-alpha.7](https://github.com/uq-its-ss/design-system/compare/storybook-html@2.0.0-alpha.6...storybook-html@2.0.0-alpha.7) (2024-12-16)
+
+### Bug Fixes
+
+- ITSADSSD-59530: Search bar QA ([#581](https://github.com/uq-its-ss/design-system/issues/581)) ([1625632](https://github.com/uq-its-ss/design-system/commit/16256322335dddba7766d4309bd09c6109c6a888))
+
 # [2.0.0-alpha.6](https://github.com/uq-its-ss/design-system/compare/storybook-html@2.0.0-alpha.5...storybook-html@2.0.0-alpha.6) (2024-12-16)
 
 ### Features

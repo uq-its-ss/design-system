@@ -13,6 +13,7 @@ import "@uqds/alert/src/scss/main.scss";
 import "@uqds/accordion/src/scss/main.scss";
 import "@uqds/form/src/scss/main.scss";
 import "@uqds/table/src/scss/main.scss";
+import "@uqds/social/src/scss/main.scss";
 
 import "./preview.scss";
 

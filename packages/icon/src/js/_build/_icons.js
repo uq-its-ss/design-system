@@ -1044,6 +1044,10 @@ export default [
     category: "standard",
   },
   {
+    name: "link",
+    category: "standard",
+  },
+  {
     name: "minus-sml",
     category: "standard",
   },

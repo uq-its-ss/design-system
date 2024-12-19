@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0-alpha.1](https://github.com/uq-its-ss/design-system/compare/@uqds/alert@1.3.0-alpha.0...@uqds/alert@1.3.0-alpha.1) (2024-12-19)
+
+**Note:** Version bump only for package @uqds/alert
+
 # [1.3.0-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/alert@1.2.4-alpha.0...@uqds/alert@1.3.0-alpha.0) (2024-12-05)
 
 ### Features

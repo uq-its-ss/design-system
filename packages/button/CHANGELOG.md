@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0-alpha.1](https://github.com/uq-its-ss/design-system/compare/@uqds/button@0.2.0-alpha.0...@uqds/button@0.2.0-alpha.1) (2024-12-19)
+
+### Features
+
+- ITSADSSD-59298: Social share ([#582](https://github.com/uq-its-ss/design-system/issues/582)) ([9d1886c](https://github.com/uq-its-ss/design-system/commit/9d1886c236359f6d705fd42137dc5bc892a31dd9))
+
 # [0.2.0-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/button@0.1.4-alpha.1...@uqds/button@0.2.0-alpha.0) (2024-12-11)
 
 ### Features

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0-alpha.8](https://github.com/uq-its-ss/design-system/compare/storybook-html@2.0.0-alpha.7...storybook-html@2.0.0-alpha.8) (2024-12-19)
+
+### Features
+
+- ITSADSSD-59298: Social share ([#582](https://github.com/uq-its-ss/design-system/issues/582)) ([9d1886c](https://github.com/uq-its-ss/design-system/commit/9d1886c236359f6d705fd42137dc5bc892a31dd9))
+
 # [2.0.0-alpha.7](https://github.com/uq-its-ss/design-system/compare/storybook-html@2.0.0-alpha.6...storybook-html@2.0.0-alpha.7) (2024-12-16)
 
 ### Bug Fixes

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.1.0-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/icon@0.0.19-alpha.1...@uqds/icon@0.1.0-alpha.0) (2024-12-19)
+
+### Features
+
+- ITSADSSD-59298: Social share ([#582](https://github.com/uq-its-ss/design-system/issues/582)) ([9d1886c](https://github.com/uq-its-ss/design-system/commit/9d1886c236359f6d705fd42137dc5bc892a31dd9))
+
 ## [0.0.19-alpha.1](https://github.com/uq-its-ss/design-system/compare/@uqds/icon@0.0.19-alpha.0...@uqds/icon@0.0.19-alpha.1) (2024-12-05)
 
 **Note:** Version bump only for package @uqds/icon

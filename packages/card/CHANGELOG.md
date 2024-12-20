@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/uq-its-ss/design-system/compare/@uqds/card@0.1.4-alpha.0...@uqds/card@0.3.0) (2024-12-20)
+
+- Release/1.0.3 (#583) ([930f8d9](https://github.com/uq-its-ss/design-system/commit/930f8d97b814748829f45194e1b5009680ee7890)), closes [#583](https://github.com/uq-its-ss/design-system/issues/583) [#568](https://github.com/uq-its-ss/design-system/issues/568)
+
+### BREAKING CHANGES
+
+- Review updated blockquote markup
+
+- increase spacing
+
+- chore: regression test update
+
+# [0.2.0](https://github.com/uq-its-ss/design-system/compare/@uqds/card@0.1.4-alpha.0...@uqds/card@0.2.0) (2024-12-20)
+
+- Release/1.0.3 (#583) ([930f8d9](https://github.com/uq-its-ss/design-system/commit/930f8d97b814748829f45194e1b5009680ee7890)), closes [#583](https://github.com/uq-its-ss/design-system/issues/583) [#568](https://github.com/uq-its-ss/design-system/issues/568)
+
+### BREAKING CHANGES
+
+- Review updated blockquote markup
+
+- increase spacing
+
+- chore: regression test update
+
 ## [0.1.4-alpha.2](https://github.com/uq-its-ss/design-system/compare/@uqds/card@0.1.4-alpha.1...@uqds/card@0.1.4-alpha.2) (2024-12-19)
 
 **Note:** Version bump only for package @uqds/card

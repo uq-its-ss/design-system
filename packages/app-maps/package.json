@@ -1,6 +1,6 @@
 {
   "name": "@uqds/app-maps",
-  "version": "0.1.4-alpha.2",
+  "version": "0.3.0",
   "description": "Application stylesheets for UQ Maps",
   "private": true,
   "keywords": [
@@ -43,8 +43,8 @@
   },
   "dependencies": {
     "@material/circular-progress": "^14.0.0",
-    "@uqds/body": "^0.1.4-alpha.2",
-    "@uqds/core": "^1.2.4-alpha.0"
+    "@uqds/body": "^0.3.0",
+    "@uqds/core": "^1.2.5"
   },
   "devDependencies": {
     "@svgdotjs/svg.js": "^3.0.16",

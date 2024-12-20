@@ -1,6 +1,6 @@
 {
   "name": "@uqds/image",
-  "version": "2.0.0",
+  "version": "3.0.0-alpha.0",
   "description": "Image components",
   "keywords": [
     "uqds",
@@ -51,7 +51,7 @@
     "url": "https://github.com/uq-its-ss/design-system/issues"
   },
   "dependencies": {
-    "@uqds/core": "^1.2.5",
+    "@uqds/core": "^2.0.0-alpha.0",
     "swiper": "^11.1.15"
   }
 }

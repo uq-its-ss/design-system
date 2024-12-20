@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0](https://github.com/uq-its-ss/design-system/compare/@uqds/footer@1.2.4-alpha.0...@uqds/footer@3.0.0) (2024-12-20)
+
+- Release/1.0.3 (#583) ([930f8d9](https://github.com/uq-its-ss/design-system/commit/930f8d97b814748829f45194e1b5009680ee7890)), closes [#583](https://github.com/uq-its-ss/design-system/issues/583) [#568](https://github.com/uq-its-ss/design-system/issues/568)
+
+### BREAKING CHANGES
+
+- Review updated blockquote markup
+
+- increase spacing
+
+- chore: regression test update
+
+# [2.0.0](https://github.com/uq-its-ss/design-system/compare/@uqds/footer@1.2.4-alpha.0...@uqds/footer@2.0.0) (2024-12-20)
+
+- Release/1.0.3 (#583) ([930f8d9](https://github.com/uq-its-ss/design-system/commit/930f8d97b814748829f45194e1b5009680ee7890)), closes [#583](https://github.com/uq-its-ss/design-system/issues/583) [#568](https://github.com/uq-its-ss/design-system/issues/568)
+
+### BREAKING CHANGES
+
+- Review updated blockquote markup
+
+- increase spacing
+
+- chore: regression test update
+
 ## [1.2.4-alpha.4](https://github.com/uq-its-ss/design-system/compare/@uqds/footer@1.2.4-alpha.3...@uqds/footer@1.2.4-alpha.4) (2024-12-19)
 
 **Note:** Version bump only for package @uqds/footer

@@ -1,6 +1,6 @@
 {
   "name": "@uqds/grid-menu",
-  "version": "0.1.4-alpha.0",
+  "version": "0.1.4-alpha.2",
   "description": "Grid menu components",
   "keywords": [
     "uqds",
@@ -42,6 +42,6 @@
   },
   "dependencies": {
     "@uqds/core": "^1.2.4-alpha.0",
-    "@uqds/icon": "^0.0.19-alpha.0"
+    "@uqds/icon": "^0.1.0-alpha.0"
   }
 }

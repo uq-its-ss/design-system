@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.4-alpha.2](https://github.com/uq-its-ss/design-system/compare/@uqds/header-legacy@0.1.4-alpha.1...@uqds/header-legacy@0.1.4-alpha.2) (2024-12-19)
+
+**Note:** Version bump only for package @uqds/header-legacy
+
+## [0.1.4-alpha.1](https://github.com/uq-its-ss/design-system/compare/@uqds/header-legacy@0.1.4-alpha.0...@uqds/header-legacy@0.1.4-alpha.1) (2024-12-05)
+
+**Note:** Version bump only for package @uqds/header-legacy
+
 ## [0.1.4-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/header-legacy@0.1.3...@uqds/header-legacy@0.1.4-alpha.0) (2024-09-04)
 
 **Note:** Version bump only for package @uqds/header-legacy

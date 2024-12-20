@@ -1,0 +1,9 @@
+@use "@uqds/core/src/scss/global" as core;
+
+:root {
+  --pill-height: 42px;
+  --pill-background: #{core.$white};
+  --pill-colour: #{core.$purple-500};
+  --pill-font-size: #{core.$font-size-m};
+  --pill-padding: 12px #{core.$space-m};
+}

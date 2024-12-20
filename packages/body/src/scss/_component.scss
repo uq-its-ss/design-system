@@ -173,6 +173,14 @@ $use-encapsulation: false !default;
     }
   }
 
+  :focus {
+    outline: none;
+  }
+
+  :focus-visible {
+    @include focus-styles;
+  }
+
   // Typography utilities
   .text {
     // Text colour

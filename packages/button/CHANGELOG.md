@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0-alpha.1](https://github.com/uq-its-ss/design-system/compare/@uqds/button@0.2.0-alpha.0...@uqds/button@0.2.0-alpha.1) (2024-12-19)
+
+### Features
+
+- ITSADSSD-59298: Social share ([#582](https://github.com/uq-its-ss/design-system/issues/582)) ([9d1886c](https://github.com/uq-its-ss/design-system/commit/9d1886c236359f6d705fd42137dc5bc892a31dd9))
+
+# [0.2.0-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/button@0.1.4-alpha.1...@uqds/button@0.2.0-alpha.0) (2024-12-11)
+
+### Features
+
+- ITSADSSD-59775: Copy button ([#575](https://github.com/uq-its-ss/design-system/issues/575)) ([ede3b65](https://github.com/uq-its-ss/design-system/commit/ede3b65fac9a1dc9e301105f760c9afa48e4c7e0))
+
+## [0.1.4-alpha.1](https://github.com/uq-its-ss/design-system/compare/@uqds/button@0.1.4-alpha.0...@uqds/button@0.1.4-alpha.1) (2024-12-05)
+
+**Note:** Version bump only for package @uqds/button
+
 ## [0.1.4-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/button@0.1.3...@uqds/button@0.1.4-alpha.0) (2024-09-04)
 
 **Note:** Version bump only for package @uqds/button

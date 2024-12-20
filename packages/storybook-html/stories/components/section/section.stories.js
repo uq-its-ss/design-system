@@ -27,6 +27,7 @@ export const Section = {
   args: {
     title: "Title",
     headingElement: "h3",
+    link: `<a href="#">See more</a>`,
     description: "Description",
     content: "",
     shaded: false,
@@ -35,6 +36,7 @@ export const Section = {
   render: ({
     title,
     headingElement,
+    link,
     description,
     content,
     shaded,
@@ -50,6 +52,7 @@ export const Section = {
         ? `<${headingElement} class="uq-section__title">${title}</${headingElement}>`
         : ""
     }
+    ${link ? `<div class="uq-section__link">${link}</div>` : ""}
     ${
       description
         ? `

@@ -3,8 +3,7 @@
 .uq-sidebar-right-layout {
   display: flex;
   flex-direction: column;
-  gap: 32px;
-
+  
   @media #{core.$screen-lg-up} {
     display: grid;
     gap: 32px;

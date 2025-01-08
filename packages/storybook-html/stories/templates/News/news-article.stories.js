@@ -15,8 +15,10 @@ import * as SocialShareStories from "../../components/social-share/social-share.
 import { socialShare } from "@uqds/social/src/js/social-share";
 import * as ImageCarouselStories from "../../components/image-carousel/image-carousel.stories";
 import { imageCarousel } from "@uqds/image/src/js/image-carousel";
+import * as StoryCardStories from "../../components/story-card/story-card.stories";
 
 const { Image: ImageCard, Text: TextCard } = storyRenderer(CardStories);
+const { NewsCard } = storyRenderer(StoryCardStories);
 const { TextShaded: ShadedPane, Text: Pane } = storyRenderer(PaneStories);
 const { alertWarning: Alert } = storyRenderer(AlertStories);
 const { Blockquote } = storyRenderer(BlockquoteStories);
@@ -62,7 +64,16 @@ ${Breadcrumb.render()}
     <div class="uq-sidebar-right-layout uq-article-layout">
       <div class="uq-sidebar-right-layout__main">
         <div class="uq-section">
-          <h1>Setting a course for improving Queensland's waterways</h1>
+          <div class="uq-article-layout__header">
+            <div class="uq-article-layout__label">News</div>
+            <div class="uq-article-layout__label">Faculty of Science</div>
+            <h1 class="uq-article-layout__title">Setting a course for improving Queensland's waterways</h1>
+            <div class="uq-article-layout__meta">
+              <div class="uq-article-layout__meta-item">20 September 2024</div>
+              <div class="uq-article-layout__meta-item">By Jane Smith</div>
+              <div class="uq-article-layout__meta-item">3 minute read</div>
+            </div>
+          </div>
         </div>
         <div class="uq-section">
           ${Alert({ message: "Warning: Some readers may find the details in this story distressing." })}
@@ -124,8 +135,8 @@ ${Breadcrumb.render()}
             <h2 class="uq-section__title">Related articles</h2>
           </div>
           <div class="uq-card-grid uq-card-grid--target-2x">
-            ${ImageCard({ title: "Looking for a UQ expert?", description: "Browse our searchable database of UQ Staff available to share their specialist knowledge and research developments." })}
-            ${ImageCard({ title: "Contact us", description: "Do you have a media enquiry or a question for the UQ communications team?" })}
+            ${NewsCard()}
+            ${NewsCard()}
           </div>
         </div>
       </div>

@@ -15,3 +15,37 @@
     gap: core.$space-l;
   }
 }
+
+.uq-article-layout__title {
+  margin: 0 0 core.$space-m;
+  font-size: core.$font-size-xxxxl;
+  font-weight: core.$font-weight-medium;
+  color: core.$black;
+  line-height: core.$line-height-h;
+  letter-spacing: core.$letter-spacing;
+}
+
+.uq-article-layout__label {
+  font-size: core.$font-size-l;
+  font-weight: core.$font-weight-medium;
+  color: core.$grey-700;
+}
+
+.uq-article-layout__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 11px;
+}
+
+.uq-article-layout__meta-item:not(:last-child) {
+  &::after {
+    content: "";
+    background: core.$grey-300;
+    margin-left: 11px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+  }
+}

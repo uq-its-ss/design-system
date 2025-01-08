@@ -13,7 +13,7 @@ export const socialShare = (element) => {
         // Copy string + provide text feedback.
         copy(copyButton.dataset.copy);
         label.textContent = "Copied";
-        copyButton.setAttribute('title', "Link copied")
+        copyButton.setAttribute("title", "Link copied");
 
         // Change icon.
         const icon = copyButton.querySelector(".uq-icon");
@@ -25,7 +25,7 @@ export const socialShare = (element) => {
           label.textContent = labelText;
           icon.classList.add("uq-icon--standard--link");
           icon.classList.remove("uq-icon--standard--check");
-          copyButton.setAttribute('title', "Copy link")
+          copyButton.setAttribute("title", "Copy link");
         }, 1000);
       });
     }

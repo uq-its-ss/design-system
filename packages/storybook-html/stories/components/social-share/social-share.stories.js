@@ -21,7 +21,7 @@ export default {
     <li class="uq-social-share__list__item"><a href="http://www.facebook.com/sharer.php?u=${url}&t=${title}" target="_blank"><span class="uq-icon uq-icon--social--facebook"></span><span class="visually-hidden">Facebook</span></a></li>
     <li class="uq-social-share__list__item"><a href="http://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${title}" target="_blank"><span class="uq-icon uq-icon--social--linkedin"></span><span class="visually-hidden">LinkedIn</span></a></li>
     <li class="uq-social-share__list__item"><a href="https://twitter.com/intent/tweet?url=${url}&text=${title}" target="_blank"><span class="uq-icon uq-icon--social--social-x-twitter"></span><span class="visually-hidden">X</span></a></li>
-    <li class="uq-social-share__list__item"><button data-copy="${url}" class="uq-social-share__copy"><span class="uq-icon uq-icon--standard--link"></span><span class="visually-hidden">Copy</span></button></li>
+    <li class="uq-social-share__list__item"><button data-copy="${url}" class="uq-social-share__copy" title="Copy link"><span class="uq-icon uq-icon--standard--link"></span><span class="visually-hidden">Copy</span></button></li>
   </ul>
 </div>`;
   },

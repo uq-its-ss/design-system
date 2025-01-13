@@ -3,6 +3,62 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/form@0.2.0-alpha.2...@uqds/form@1.0.0-alpha.0) (2024-12-20)
+
+- Merge release/1.0.3 back to master (#585) ([00ba8a4](https://github.com/uq-its-ss/design-system/commit/00ba8a439019ed08ab357499c758be419f50f150)), closes [#585](https://github.com/uq-its-ss/design-system/issues/585) [#583](https://github.com/uq-its-ss/design-system/issues/583) [#568](https://github.com/uq-its-ss/design-system/issues/568)
+
+### BREAKING CHANGES
+
+- Review updated blockquote markup
+
+- increase spacing
+
+- chore: regression test update
+
+# [0.3.0](https://github.com/uq-its-ss/design-system/compare/@uqds/form@0.1.4-alpha.0...@uqds/form@0.3.0) (2024-12-20)
+
+- Release/1.0.3 (#583) ([930f8d9](https://github.com/uq-its-ss/design-system/commit/930f8d97b814748829f45194e1b5009680ee7890)), closes [#583](https://github.com/uq-its-ss/design-system/issues/583) [#568](https://github.com/uq-its-ss/design-system/issues/568)
+
+### BREAKING CHANGES
+
+- Review updated blockquote markup
+
+- increase spacing
+
+- chore: regression test update
+
+# [0.2.0](https://github.com/uq-its-ss/design-system/compare/@uqds/form@0.1.4-alpha.0...@uqds/form@0.2.0) (2024-12-20)
+
+- Release/1.0.3 (#583) ([930f8d9](https://github.com/uq-its-ss/design-system/commit/930f8d97b814748829f45194e1b5009680ee7890)), closes [#583](https://github.com/uq-its-ss/design-system/issues/583) [#568](https://github.com/uq-its-ss/design-system/issues/568)
+
+### BREAKING CHANGES
+
+- Review updated blockquote markup
+
+- increase spacing
+
+- chore: regression test update
+
+# [0.2.0-alpha.2](https://github.com/uq-its-ss/design-system/compare/@uqds/form@0.2.0-alpha.1...@uqds/form@0.2.0-alpha.2) (2024-12-19)
+
+**Note:** Version bump only for package @uqds/form
+
+# [0.2.0-alpha.1](https://github.com/uq-its-ss/design-system/compare/@uqds/form@0.2.0-alpha.0...@uqds/form@0.2.0-alpha.1) (2024-12-16)
+
+### Bug Fixes
+
+- ITSADSSD-59530: Search bar QA ([#581](https://github.com/uq-its-ss/design-system/issues/581)) ([1625632](https://github.com/uq-its-ss/design-system/commit/16256322335dddba7766d4309bd09c6109c6a888))
+
+# [0.2.0-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/form@0.1.4-alpha.1...@uqds/form@0.2.0-alpha.0) (2024-12-12)
+
+### Features
+
+- ITSADSSD-59530: Search input component + ITSADSSD-59301: Search block ([#578](https://github.com/uq-its-ss/design-system/issues/578)) ([913370b](https://github.com/uq-its-ss/design-system/commit/913370bc935fdb3ccdfefbef1318ef52e6330da1))
+
+## [0.1.4-alpha.1](https://github.com/uq-its-ss/design-system/compare/@uqds/form@0.1.4-alpha.0...@uqds/form@0.1.4-alpha.1) (2024-12-05)
+
+**Note:** Version bump only for package @uqds/form
+
 ## [0.1.4-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/form@0.1.3...@uqds/form@0.1.4-alpha.0) (2024-09-04)
 
 **Note:** Version bump only for package @uqds/form

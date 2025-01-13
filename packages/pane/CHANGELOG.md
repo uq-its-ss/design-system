@@ -3,6 +3,53 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-alpha.1](https://github.com/uq-its-ss/design-system/compare/@uqds/pane@1.0.0-alpha.0...@uqds/pane@1.0.0-alpha.1) (2025-01-13)
+
+**Note:** Version bump only for package @uqds/pane
+
+# [1.0.0-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/pane@0.2.0-alpha.0...@uqds/pane@1.0.0-alpha.0) (2024-12-20)
+
+- Merge release/1.0.3 back to master (#585) ([00ba8a4](https://github.com/uq-its-ss/design-system/commit/00ba8a439019ed08ab357499c758be419f50f150)), closes [#585](https://github.com/uq-its-ss/design-system/issues/585) [#583](https://github.com/uq-its-ss/design-system/issues/583) [#568](https://github.com/uq-its-ss/design-system/issues/568)
+
+### BREAKING CHANGES
+
+- Review updated blockquote markup
+
+- increase spacing
+
+- chore: regression test update
+
+# [0.3.0](https://github.com/uq-its-ss/design-system/compare/@uqds/pane@0.1.4-alpha.1...@uqds/pane@0.3.0) (2024-12-20)
+
+- Release/1.0.3 (#583) ([930f8d9](https://github.com/uq-its-ss/design-system/commit/930f8d97b814748829f45194e1b5009680ee7890)), closes [#583](https://github.com/uq-its-ss/design-system/issues/583) [#568](https://github.com/uq-its-ss/design-system/issues/568)
+
+### BREAKING CHANGES
+
+- Review updated blockquote markup
+
+- increase spacing
+
+- chore: regression test update
+
+# [0.2.0](https://github.com/uq-its-ss/design-system/compare/@uqds/pane@0.1.4-alpha.1...@uqds/pane@0.2.0) (2024-12-20)
+
+- Release/1.0.3 (#583) ([930f8d9](https://github.com/uq-its-ss/design-system/commit/930f8d97b814748829f45194e1b5009680ee7890)), closes [#583](https://github.com/uq-its-ss/design-system/issues/583) [#568](https://github.com/uq-its-ss/design-system/issues/568)
+
+### BREAKING CHANGES
+
+- Review updated blockquote markup
+
+- increase spacing
+
+- chore: regression test update
+
+# [0.2.0-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/pane@0.1.4-alpha.1...@uqds/pane@0.2.0-alpha.0) (2024-12-05)
+
+### Features
+
+- ITSADSSD-59302: Video pane ([#569](https://github.com/uq-its-ss/design-system/issues/569)) ([9ae841a](https://github.com/uq-its-ss/design-system/commit/9ae841a5987062a149fa12baa61e92c45b026a6c))
+- ITSADSSD-59777: Accordion updates and article template ([#567](https://github.com/uq-its-ss/design-system/issues/567)) ([8311fa4](https://github.com/uq-its-ss/design-system/commit/8311fa49bc079806e221931f6abd3ec948e0b9fe))
+
 ## [0.1.4-alpha.1](https://github.com/uq-its-ss/design-system/compare/@uqds/pane@0.1.4-alpha.0...@uqds/pane@0.1.4-alpha.1) (2024-09-24)
 
 **Note:** Version bump only for package @uqds/pane

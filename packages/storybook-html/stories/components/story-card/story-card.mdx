@@ -11,26 +11,36 @@ import * as StoryCardStories from "./story-card.stories";
 
 ## Overview
 
-<Canvas>
-  <Story of={StoryCardStories.StoryCard} />
-</Canvas>
+<Canvas of={StoryCardStories.StoryCard} />
 
 ## Variants
 
 ### Story
 
-<Canvas>
-  <Story of={StoryCardStories.StoryCard} />
-</Canvas>
-
-### News
-
-<Canvas>
-  <Story of={StoryCardStories.NewsCard} />
-</Canvas>
+<Canvas of={StoryCardStories.StoryCard} />
 
 ### Event
 
-<Canvas>
-  <Story of={StoryCardStories.EventCard} />
-</Canvas>
+<Canvas of={StoryCardStories.EventCard} />
+
+### News
+
+<Canvas of={StoryCardStories.NewsCard} />
+
+### Landscape
+
+<Canvas of={StoryCardStories.LandscapeCard} />
+
+### Landscape (no image)
+
+<Canvas of={StoryCardStories.LandscapeNoImageCard} />
+
+### Landscape (missing image)
+
+Used for legacy content that may not have images.
+
+<Canvas of={StoryCardStories.LandscapeMissingImageCard} />
+
+### Feature
+
+<Canvas of={StoryCardStories.FeatureCard} />

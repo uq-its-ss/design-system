@@ -1,0 +1,56 @@
+{
+  "name": "@uqds/social",
+  "version": "3.0.0-alpha.1",
+  "description": "Social component",
+  "keywords": [
+    "uqds",
+    "uq",
+    "University of Queensland",
+    "design system",
+    "scss",
+    "sass",
+    "css",
+    "grid"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": {
+    "name": "University of Queensland",
+    "email": "webservices@uq.edu.au",
+    "url": "https://uq.edu.au"
+  },
+  "homepage": "https://github.com/uq-its-ss/design-system#readme",
+  "license": "ISC",
+  "directories": {
+    "lib": "src"
+  },
+  "files": [
+    "src/*",
+    "dist/*"
+  ],
+  "main": "dist/js/uqds.js",
+  "module": "dist/mjs/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/mjs/index.js",
+      "require": "./dist/js/uqds.js"
+    },
+    "./src/js/*": "./src/js/*.js",
+    "./src/scss/*": "./src/scss/*"
+  },
+  "style": "dist/css/main.css",
+  "scripts": {
+    "prepare": "gulp -f ../../gulpfile.js --cwd=. prepare"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uq-its-ss/design-system.git"
+  },
+  "bugs": {
+    "url": "https://github.com/uq-its-ss/design-system/issues"
+  },
+  "dependencies": {
+    "@uqds/core": "^2.0.0-alpha.0"
+  }
+}

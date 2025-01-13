@@ -7,6 +7,10 @@
 
 .uq-section__header {
   margin-bottom: core.$space-l;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: core.$space-m core.$space-l;
 
   &:only-child {
     margin-bottom: 0;
@@ -14,12 +18,14 @@
 }
 
 .uq-section__title {
-  margin: 0 0 core.$space-m;
+  margin: 0;
   color: core.$black;
   font-size: var(--section-font-size-xxxl);
 }
 
 .uq-section__description {
+  width: 100%;
+
   & p,
   & ul,
   & ol {

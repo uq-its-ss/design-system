@@ -1,0 +1,28 @@
+@use "@uqds/core/src/scss/global" as core;
+
+.uq-sidebar-right-layout {
+  display: flex;
+  flex-direction: column;
+
+  @media #{core.$screen-lg-up} {
+    display: grid;
+    gap: 32px;
+    grid-template-columns:
+      1fr
+      296px;
+  }
+
+  @media #{core.$screen-xl-up} {
+    grid-template-columns:
+      1fr
+      308px;
+  }
+}
+
+.uq-sidebar-right-layout__sidebar {
+  grid-column: 2 / span 1;
+}
+
+.uq-sidebar-right-layout__main {
+  grid-column: 1 / span 1;
+}

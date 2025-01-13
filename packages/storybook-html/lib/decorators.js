@@ -9,3 +9,9 @@ export const cardDecorator = (Story) => `
   ${Story()}
 </div>
 `;
+
+export const storyCardDecorator = (Story) => `
+<div class="uqds-story-card-preview">
+  ${Story()}
+</div>
+`;

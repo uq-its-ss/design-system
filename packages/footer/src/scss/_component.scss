@@ -146,7 +146,7 @@
     background-image: url(icon-constants.get-icon(
       "standard--chevron-down-sml",
       core.$white
-    ));
+    )) !important;
     background-repeat: no-repeat;
     width: core.$space-l;
     height: core.$space-l;
@@ -164,7 +164,7 @@
     background-image: url(icon-constants.get-icon(
       "standard--chevron-up-sml",
       core.$white
-    ));
+    )) !important;
   }
 
   /* FOOTER */

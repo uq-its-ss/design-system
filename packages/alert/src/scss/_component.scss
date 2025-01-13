@@ -32,14 +32,8 @@
 
   &__message {
     position: relative;
-    font-size: core.$font-size-s;
-    font-weight: core.$font-weight-thin;
-    line-height: core.$line-height-h;
-    padding-top: core.$space-m;
-    padding-bottom: core.$space-m;
-    padding-left: core.$space-m;
-    padding-right: core.$space-m;
-    margin-left: core.$space-xl;
+    padding: core.$space-l;
+    margin-left: core.$space-xxl;
 
     &::before {
       content: "";
@@ -52,7 +46,7 @@
       width: core.$space-l;
       height: core.$space-l;
       position: absolute;
-      top: core.$font-size-xs;
+      top: 25px;
       left: -(core.$space-m);
     }
 

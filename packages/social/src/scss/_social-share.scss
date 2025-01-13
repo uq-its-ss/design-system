@@ -1,0 +1,67 @@
+@use "@uqds/core/src/scss/global" as core;
+@use "@uqds/icon/src/scss/global" as icon;
+
+.uq-social-share {
+  display: flex;
+  gap: core.$space-m;
+  align-items: center;
+}
+
+.uq-social-share__title {
+  font-size: core.$font-size-l;
+  font-weight: core.$font-weight-medium;
+}
+
+.uq-social-share__list {
+  display: flex;
+  gap: core.$space-m;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  & li {
+    margin: 0;
+    padding: 0;
+  }
+
+  & button,
+  & a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: core.$purple-500;
+    appearance: none;
+    border: 0;
+    cursor: pointer;
+
+    & .uq-icon {
+      display: flex;
+      height: 100%;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+
+      &::before {
+        filter: icon.$icon-light-filter;
+        margin: 0;
+        background-size: 18px;
+        background-position: center;
+      }
+    }
+
+    &:hover {
+      background: core.$grey-50;
+
+      & .uq-icon::before {
+        filter: icon.$icon-primary-filter;
+      }
+    }
+
+    & .uq-icon--standard--check::before {
+      background-size: 24px;
+    }
+  }
+}

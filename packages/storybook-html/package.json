@@ -36,6 +36,7 @@
     "@storybook/test-runner": "^0.19.1",
     "@storybook/theming": "^8.4.2",
     "@uqds/accordion": "^4.0.0-alpha.0",
+    "@uqds/acknowledgement-statement": "^0.0.1-alpha.0",
     "@uqds/alert": "^4.0.0-alpha.0",
     "@uqds/app-maps": "^1.0.0-alpha.0",
     "@uqds/blockquote": "^3.0.0-alpha.0",

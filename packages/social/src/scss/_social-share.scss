@@ -26,6 +26,7 @@
 
   & button,
   & a {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -49,6 +50,8 @@
         margin: 0;
         background-size: 18px;
         background-position: center;
+        width: 32px;
+        height: 32px;
       }
     }
 
@@ -62,6 +65,27 @@
 
     & .uq-icon--standard--check::before {
       background-size: 24px;
+    }
+
+    &::after {
+      content: attr(aria-label);
+      position: absolute;
+      top: -30px;
+      text-align: center;
+      background: core.$grey-50;
+      color: core.$grey-900;
+      font-size: core.$font-size-s;
+      text-decoration: none;
+      white-space: nowrap;
+      font-weight: normal;
+      padding: core.$space-xs;
+      height: 26px;
+      line-height: 18px;
+      display: none;
+    }
+
+    &:hover::after {
+      display: block;
     }
   }
 }

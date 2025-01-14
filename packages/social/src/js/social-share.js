@@ -7,13 +7,11 @@ export const socialShare = (element) => {
       copyButton.addEventListener("click", (event) => {
         event.preventDefault();
 
-        const label = element.querySelector(".visually-hidden");
-        const labelText = label.textContent;
+        const labelText = copyButton.getAttribute("aria-label");
 
         // Copy string + provide text feedback.
         copy(copyButton.dataset.copy);
-        label.textContent = "Copied";
-        copyButton.setAttribute("title", "Link copied");
+        copyButton.setAttribute("aria-label", "Link copied");
 
         // Change icon.
         const icon = copyButton.querySelector(".uq-icon");
@@ -22,10 +20,9 @@ export const socialShare = (element) => {
 
         // Reset button to previous state.
         setTimeout(() => {
-          label.textContent = labelText;
           icon.classList.add("uq-icon--standard--link");
           icon.classList.remove("uq-icon--standard--check");
-          copyButton.setAttribute("title", "Copy link");
+          copyButton.setAttribute("aria-label", labelText);
         }, 1000);
       });
     }

@@ -29,13 +29,24 @@
     "src/*",
     "dist/*"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/uq-its-ss/design-system.git"
+  "main": "dist/js/uqds.js",
+  "module": "dist/mjs/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/mjs/index.js",
+      "require": "./dist/js/uqds.js"
+    },
+    "./src/js/*": "./src/js/*.js",
+    "./src/scss/*": "./src/scss/*"
   },
+  "style": "dist/css/main.css",
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1",
     "prepare": "gulp -f ../../gulpfile.js --cwd=. prepare"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uq-its-ss/design-system.git"
   },
   "bugs": {
     "url": "https://github.com/uq-its-ss/design-system/issues"

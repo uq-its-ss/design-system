@@ -1,6 +1,6 @@
 {
   "name": "private-design-output",
-  "version": "1.0.0-alpha.1",
+  "version": "1.0.0-alpha.2",
   "description": "Render style kits for UQ clients",
   "private": true,
   "author": {
@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "@uqds/accordion": "^4.0.0-alpha.0",
-    "@uqds/alert": "^4.0.0-alpha.0",
+    "@uqds/alert": "^4.0.0-alpha.1",
     "@uqds/blockquote": "^3.0.0-alpha.0",
     "@uqds/body": "^1.0.0-alpha.0",
     "@uqds/breadcrumb": "^5.0.0-alpha.0",

@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.0.0-alpha.3](https://github.com/uq-its-ss/design-system/compare/storybook-html@4.0.0-alpha.2...storybook-html@4.0.0-alpha.3) (2025-01-15)
+
+### Features
+
+- add mobile stacking/ordering ([#588](https://github.com/uq-its-ss/design-system/issues/588)) ([901e299](https://github.com/uq-its-ss/design-system/commit/901e299df1fba200f11ac1c3df5aa3e697bc109e))
+
+# [4.0.0-alpha.2](https://github.com/uq-its-ss/design-system/compare/storybook-html@4.0.0-alpha.1...storybook-html@4.0.0-alpha.2) (2025-01-14)
+
+**Note:** Version bump only for package storybook-html
+
 # [4.0.0-alpha.1](https://github.com/uq-its-ss/design-system/compare/storybook-html@4.0.0-alpha.0...storybook-html@4.0.0-alpha.1) (2025-01-13)
 
 ### Bug Fixes

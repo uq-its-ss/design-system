@@ -43,7 +43,9 @@ ${Level2Hero({ title: "News", description: "Get the latest from UQ News.", image
 ${NewsExample()}
 <div class="uq-section">
   <div class="uq-container">
-    <h2>Looking for specific news?</h2>
+    <div class="uq-section__header">
+      <h2 class="uq-section__title">Looking for specific news?</h2>
+    </div>
     <h3>Search by keyword</h3>
     ${SearchInput()}
     <h3>Browse by topic</h3>

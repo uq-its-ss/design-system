@@ -37,11 +37,19 @@
     border: 0;
     cursor: pointer;
 
-    & .uq-icon::before {
-      filter: icon.$icon-light-filter;
-      margin: 0;
-      width: 18px;
-      height: 18px;
+    & .uq-icon {
+      display: flex;
+      height: 100%;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+
+      &::before {
+        filter: icon.$icon-light-filter;
+        margin: 0;
+        background-size: 18px;
+        background-position: center;
+      }
     }
 
     &:hover {
@@ -53,8 +61,7 @@
     }
 
     & .uq-icon--standard--check::before {
-      width: 24px;
-      height: 24px;
+      background-size: 24px;
     }
   }
 }

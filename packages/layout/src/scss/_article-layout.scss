@@ -34,18 +34,25 @@
 .uq-article-layout__meta {
   display: flex;
   flex-wrap: wrap;
-  gap: 11px;
+  gap: core.$space-s;
 }
 
 .uq-article-layout__meta-item:not(:last-child) {
   &::after {
     content: "";
     background: core.$grey-300;
-    margin-left: 11px;
+    margin-left: core.$space-s;
     width: 6px;
     height: 6px;
     border-radius: 50%;
     display: inline-block;
     vertical-align: middle;
+  }
+}
+
+.uq-article-layout__key-points {
+  & ul,
+  & p {
+    font-size: core.$font-size-l;
   }
 }

@@ -84,7 +84,7 @@ ${Breadcrumb.render()}
         <div class="uq-section">
           <p>Dr Wenger said the UQ-developed product would be an open access, almost real-time management program that allows users to map pollution, identify coral reefs at risk and determine the management effort needed to protect coral reefs.</p>
         </div>
-        <div class="uq-section">
+        <div class="uq-section uq-article-layout__key-points">
           ${ShadedPane({ title: "Key points", links: null, description: `<ul><li>Two of only four national recipients appointed a Companion of the Order of Australia (AC) are from the UQ community.</li><li>More than 40 members of the UQ community received Australia Day honours from ACs to OAMs.</li></ul>` })}
         </div>
         <div class="uq-section">

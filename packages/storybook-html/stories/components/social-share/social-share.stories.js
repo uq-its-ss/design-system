@@ -19,22 +19,22 @@ export default {
   <div class="uq-social-share__title">Share</div>
   <ul class="uq-social-share__list">
     <li class="uq-social-share__list__item">
-      <a href="http://www.facebook.com/sharer.php?u=${url}&t=${title}" target="_blank" aria-label="Share by Facebook">
+      <a href="http://www.facebook.com/sharer.php?u=${url}&t=${title}" target="_blank" title="Share by Facebook">
         <span class="uq-icon uq-icon--social--facebook"></span>
       </a>
     </li>
     <li class="uq-social-share__list__item">
-      <a href="http://www.linkedin.com/shareArticle?mini=true&url=${url}&aria-label=${title}" target="_blank" aria-label="Share by Linkedin">
+      <a href="http://www.linkedin.com/shareArticle?mini=true&url=${url}&aria-label=${title}" target="_blank" title="Share by Linkedin">
         <span class="uq-icon uq-icon--social--linkedin"></span>
       </a>
     </li>
     <li class="uq-social-share__list__item">
-      <a href="https://twitter.com/intent/tweet?url=${url}&text=${title}" target="_blank" aria-label="Share by X">
+      <a href="https://twitter.com/intent/tweet?url=${url}&text=${title}" target="_blank" title="Share by X">
         <span class="uq-icon uq-icon--social--social-x-twitter"></span>
       </a>
     </li>
     <li class="uq-social-share__list__item">
-      <button data-copy="${url}" class="uq-social-share__copy" aria-label="Copy link">
+      <button data-copy="${url}" class="uq-social-share__copy" title="Copy link">
         <span class="uq-icon uq-icon--standard--link"></span>
       </button>
     </li>

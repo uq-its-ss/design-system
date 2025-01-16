@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.0.0-alpha.3](https://github.com/uq-its-ss/design-system/compare/@uqds/layout@4.0.0-alpha.2...@uqds/layout@4.0.0-alpha.3) (2025-01-16)
+
+### Features
+
+- ITSADSSD-59774: Article template including header ([#587](https://github.com/uq-its-ss/design-system/issues/587)) ([7920651](https://github.com/uq-its-ss/design-system/commit/7920651fc4ac7eac9aca851baeaccd140c92c54f))
+
 # [4.0.0-alpha.2](https://github.com/uq-its-ss/design-system/compare/@uqds/layout@4.0.0-alpha.1...@uqds/layout@4.0.0-alpha.2) (2025-01-15)
 
 ### Features

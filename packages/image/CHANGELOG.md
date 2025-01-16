@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0-alpha.1](https://github.com/uq-its-ss/design-system/compare/@uqds/image@3.0.0-alpha.0...@uqds/image@3.0.0-alpha.1) (2025-01-16)
+
+### Bug Fixes
+
+- ITSADSSD-59374: Fix image css build ([#591](https://github.com/uq-its-ss/design-system/issues/591)) ([ff26450](https://github.com/uq-its-ss/design-system/commit/ff26450f1b9edbacfbcfb3f2eb974a6b5a9975de))
+
 # [3.0.0-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/image@1.0.0-alpha.2...@uqds/image@3.0.0-alpha.0) (2024-12-20)
 
 - Merge release/1.0.3 back to master (#585) ([00ba8a4](https://github.com/uq-its-ss/design-system/commit/00ba8a439019ed08ab357499c758be419f50f150)), closes [#585](https://github.com/uq-its-ss/design-system/issues/585) [#583](https://github.com/uq-its-ss/design-system/issues/583) [#568](https://github.com/uq-its-ss/design-system/issues/568)

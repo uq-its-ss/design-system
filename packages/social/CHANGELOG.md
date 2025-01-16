@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0-alpha.2](https://github.com/uq-its-ss/design-system/compare/@uqds/social@3.0.0-alpha.1...@uqds/social@3.0.0-alpha.2) (2025-01-16)
+
+### Bug Fixes
+
+- ITSADSSD-59298: Tooltips for social buttons ([#589](https://github.com/uq-its-ss/design-system/issues/589)) ([4632316](https://github.com/uq-its-ss/design-system/commit/4632316834cf97e826ca779d1be6885078b66974))
+
 # [3.0.0-alpha.1](https://github.com/uq-its-ss/design-system/compare/@uqds/social@3.0.0-alpha.0...@uqds/social@3.0.0-alpha.1) (2025-01-13)
 
 ### Bug Fixes

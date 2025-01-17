@@ -70,7 +70,7 @@ ${Breadcrumb.render()}
             <h1 class="uq-article-layout__title">Setting a course for improving Queensland's waterways</h1>
             <div class="uq-article-layout__meta">
               <div class="uq-article-layout__meta-item">20 September 2024</div>
-              <div class="uq-article-layout__meta-item">By Jane Smith</div>
+              <div class="uq-article-layout__meta-item">By <a href="#">Jane Smith</a></div>
               <div class="uq-article-layout__meta-item">3 minute read</div>
             </div>
           </div>

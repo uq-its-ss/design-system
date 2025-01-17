@@ -24,7 +24,7 @@ export default {
       </a>
     </li>
     <li class="uq-social-share__list__item">
-      <a href="http://www.linkedin.com/shareArticle?mini=true&url=${url}&aria-label=${title}" target="_blank" title="Share by Linkedin">
+      <a href="https://www.linkedin.com/feed/?shareActive=true&shareUrl=${url}&text=${title}" target="_blank" title="Share by Linkedin">
         <span class="uq-icon uq-icon--social--linkedin"></span>
       </a>
     </li>

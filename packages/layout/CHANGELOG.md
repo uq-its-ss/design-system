@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.0.0](https://github.com/uq-its-ss/design-system/compare/@uqds/layout@3.0.0...@uqds/layout@5.0.0) (2025-01-20)
+
+- Release/1.0.4 (#595) ([b40223d](https://github.com/uq-its-ss/design-system/commit/b40223d819d456f67620dfd880380b85214c4103)), closes [#595](https://github.com/uq-its-ss/design-system/issues/595) [#568](https://github.com/uq-its-ss/design-system/issues/568)
+
+### BREAKING CHANGES
+
+- Review updated blockquote markup
+
+- increase spacing
+
+- chore: regression test update
+
+# [4.0.0](https://github.com/uq-its-ss/design-system/compare/@uqds/layout@3.0.0...@uqds/layout@4.0.0) (2025-01-20)
+
+- Release/1.0.4 (#595) ([b40223d](https://github.com/uq-its-ss/design-system/commit/b40223d819d456f67620dfd880380b85214c4103)), closes [#595](https://github.com/uq-its-ss/design-system/issues/595) [#568](https://github.com/uq-its-ss/design-system/issues/568)
+
+### BREAKING CHANGES
+
+- Review updated blockquote markup
+
+- increase spacing
+
+- chore: regression test update
+
 # [4.0.0-alpha.3](https://github.com/uq-its-ss/design-system/compare/@uqds/layout@4.0.0-alpha.2...@uqds/layout@4.0.0-alpha.3) (2025-01-16)
 
 ### Features

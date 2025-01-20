@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.0.0](https://github.com/uq-its-ss/design-system/compare/@uqds/social@2.0.0...@uqds/social@4.0.0) (2025-01-20)
+
+- Release/1.0.4 (#595) ([b40223d](https://github.com/uq-its-ss/design-system/commit/b40223d819d456f67620dfd880380b85214c4103)), closes [#595](https://github.com/uq-its-ss/design-system/issues/595) [#568](https://github.com/uq-its-ss/design-system/issues/568)
+
+### BREAKING CHANGES
+
+- Review updated blockquote markup
+
+- increase spacing
+
+- chore: regression test update
+
+# [3.0.0](https://github.com/uq-its-ss/design-system/compare/@uqds/social@2.0.0...@uqds/social@3.0.0) (2025-01-20)
+
+- Release/1.0.4 (#595) ([b40223d](https://github.com/uq-its-ss/design-system/commit/b40223d819d456f67620dfd880380b85214c4103)), closes [#595](https://github.com/uq-its-ss/design-system/issues/595) [#568](https://github.com/uq-its-ss/design-system/issues/568)
+
+### BREAKING CHANGES
+
+- Review updated blockquote markup
+
+- increase spacing
+
+- chore: regression test update
+
 # [3.0.0-alpha.2](https://github.com/uq-its-ss/design-system/compare/@uqds/social@3.0.0-alpha.1...@uqds/social@3.0.0-alpha.2) (2025-01-16)
 
 ### Bug Fixes

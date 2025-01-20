@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.0.0-alpha.8](https://github.com/uq-its-ss/design-system/compare/storybook-html@4.0.0-alpha.7...storybook-html@4.0.0-alpha.8) (2025-01-20)
+
+### Bug Fixes
+
+- add link tag to news article header ([#593](https://github.com/uq-its-ss/design-system/issues/593)) ([bc518e3](https://github.com/uq-its-ss/design-system/commit/bc518e33a708c28300c212e2dca20c8527143be1))
+
 # [4.0.0-alpha.7](https://github.com/uq-its-ss/design-system/compare/storybook-html@4.0.0-alpha.6...storybook-html@4.0.0-alpha.7) (2025-01-20)
 
 ### Bug Fixes

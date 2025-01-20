@@ -1,6 +1,6 @@
 {
   "name": "@uqds/alert",
-  "version": "3.0.0",
+  "version": "4.0.0-alpha.1",
   "description": "Alert component",
   "keywords": [
     "uqds",
@@ -29,21 +29,32 @@
     "src/*",
     "dist/*"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/uq-its-ss/design-system.git"
+  "main": "dist/js/uqds.js",
+  "module": "dist/mjs/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/mjs/index.js",
+      "require": "./dist/js/uqds.js"
+    },
+    "./src/js/*": "./src/js/*.js",
+    "./src/scss/*": "./src/scss/*"
   },
+  "style": "dist/css/main.css",
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1",
     "prepare": "gulp -f ../../gulpfile.js --cwd=. prepare"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uq-its-ss/design-system.git"
   },
   "bugs": {
     "url": "https://github.com/uq-its-ss/design-system/issues"
   },
   "dependencies": {
-    "@uqds/core": "^1.2.5",
-    "@uqds/grid": "^0.0.20",
-    "@uqds/icon": "^0.2.0"
+    "@uqds/core": "^2.0.0-alpha.0",
+    "@uqds/grid": "^1.0.0-alpha.0",
+    "@uqds/icon": "^1.0.0-alpha.0"
   },
   "devDependencies": {
     "@testing-library/dom": "^10.4.0",

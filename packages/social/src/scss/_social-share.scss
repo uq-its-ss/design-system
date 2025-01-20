@@ -22,6 +22,9 @@
   & li {
     margin: 0;
     padding: 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
   }
 
   & button,
@@ -37,14 +40,25 @@
     border: 0;
     cursor: pointer;
 
-    & .uq-icon::before {
-      filter: icon.$icon-light-filter;
-      margin: 0;
-      width: 18px;
-      height: 18px;
+    & .uq-icon {
+      display: flex;
+      width: 32px;
+      height: 32px;
+      justify-content: center;
+      align-items: center;
+
+      &::before {
+        filter: icon.$icon-light-filter;
+        margin: 0;
+        background-size: 18px;
+        background-position: center;
+        width: 32px;
+        height: 32px;
+      }
     }
 
-    &:hover {
+    &.is-active,
+    &:active {
       background: core.$grey-50;
 
       & .uq-icon::before {
@@ -52,9 +66,34 @@
       }
     }
 
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        background: core.$grey-50;
+
+        & .uq-icon::before {
+          filter: icon.$icon-primary-filter;
+        }
+      }
+    }
+
     & .uq-icon--standard--check::before {
-      width: 24px;
-      height: 24px;
+      background-size: 24px;
     }
   }
+}
+
+.uq-social-share__tooltip {
+  position: absolute;
+  top: -40px;
+  text-align: center;
+  background: core.$purple-500;
+  color: core.$white;
+  font-size: core.$font-size-s;
+  text-decoration: none;
+  white-space: nowrap;
+  font-weight: core.$font-weight-medium;
+  padding: 0 core.$space-s;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 2px;
 }

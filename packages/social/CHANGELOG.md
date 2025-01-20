@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0-alpha.2](https://github.com/uq-its-ss/design-system/compare/@uqds/social@3.0.0-alpha.1...@uqds/social@3.0.0-alpha.2) (2025-01-16)
+
+### Bug Fixes
+
+- ITSADSSD-59298: Tooltips for social buttons ([#589](https://github.com/uq-its-ss/design-system/issues/589)) ([4632316](https://github.com/uq-its-ss/design-system/commit/4632316834cf97e826ca779d1be6885078b66974))
+
+# [3.0.0-alpha.1](https://github.com/uq-its-ss/design-system/compare/@uqds/social@3.0.0-alpha.0...@uqds/social@3.0.0-alpha.1) (2025-01-13)
+
+### Bug Fixes
+
+- ITSADSSD-59298 + ITSADSSD-60374: Bug fixes ([#586](https://github.com/uq-its-ss/design-system/issues/586)) ([c606542](https://github.com/uq-its-ss/design-system/commit/c606542f1b0869d81285b067ca5c4d56a75e3076))
+
+# [3.0.0-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/social@1.0.0-alpha.1...@uqds/social@3.0.0-alpha.0) (2024-12-20)
+
+- Merge release/1.0.3 back to master (#585) ([00ba8a4](https://github.com/uq-its-ss/design-system/commit/00ba8a439019ed08ab357499c758be419f50f150)), closes [#585](https://github.com/uq-its-ss/design-system/issues/585) [#583](https://github.com/uq-its-ss/design-system/issues/583) [#568](https://github.com/uq-its-ss/design-system/issues/568)
+
+### BREAKING CHANGES
+
+- Review updated blockquote markup
+
+- increase spacing
+
+- chore: regression test update
+
 # 2.0.0 (2024-12-20)
 
 - Release/1.0.3 (#583) ([930f8d9](https://github.com/uq-its-ss/design-system/commit/930f8d97b814748829f45194e1b5009680ee7890)), closes [#583](https://github.com/uq-its-ss/design-system/issues/583) [#568](https://github.com/uq-its-ss/design-system/issues/568)

@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.0.0-alpha.1](https://github.com/uq-its-ss/design-system/compare/@uqds/alert@4.0.0-alpha.0...@uqds/alert@4.0.0-alpha.1) (2025-01-14)
+
+### Bug Fixes
+
+- add package.json exports ([#590](https://github.com/uq-its-ss/design-system/issues/590)) ([7d0455a](https://github.com/uq-its-ss/design-system/commit/7d0455ab5bdc14466b10193eb9d3dfa3fde0c545))
+
+# [4.0.0-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/alert@1.3.0-alpha.1...@uqds/alert@4.0.0-alpha.0) (2024-12-20)
+
+- Merge release/1.0.3 back to master (#585) ([00ba8a4](https://github.com/uq-its-ss/design-system/commit/00ba8a439019ed08ab357499c758be419f50f150)), closes [#585](https://github.com/uq-its-ss/design-system/issues/585) [#583](https://github.com/uq-its-ss/design-system/issues/583) [#568](https://github.com/uq-its-ss/design-system/issues/568)
+
+### BREAKING CHANGES
+
+- Review updated blockquote markup
+
+- increase spacing
+
+- chore: regression test update
+
 # [3.0.0](https://github.com/uq-its-ss/design-system/compare/@uqds/alert@1.2.4-alpha.0...@uqds/alert@3.0.0) (2024-12-20)
 
 - Release/1.0.3 (#583) ([930f8d9](https://github.com/uq-its-ss/design-system/commit/930f8d97b814748829f45194e1b5009680ee7890)), closes [#583](https://github.com/uq-its-ss/design-system/issues/583) [#568](https://github.com/uq-its-ss/design-system/issues/568)

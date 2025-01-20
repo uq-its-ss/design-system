@@ -1,6 +1,6 @@
 {
   "name": "@uqds/layout",
-  "version": "3.0.0",
+  "version": "4.0.0-alpha.3",
   "description": "Grid CSS",
   "keywords": [
     "uqds",
@@ -41,6 +41,6 @@
     "url": "https://github.com/uq-its-ss/design-system/issues"
   },
   "dependencies": {
-    "@uqds/core": "^1.2.5"
+    "@uqds/core": "^2.0.0-alpha.0"
   }
 }

@@ -32,6 +32,7 @@
     "src/*",
     "dist/*"
   ],
+  "style": "dist/css/main.css",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/uq-its-ss/design-system.git"

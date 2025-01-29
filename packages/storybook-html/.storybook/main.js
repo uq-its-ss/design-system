@@ -54,6 +54,18 @@ const config = {
     name: getAbsolutePath("@storybook/html-webpack5"),
     options: {},
   },
+
+  refs: (config, { configType }) => {
+    if (configType === 'DEVELOPMENT') {
+      return {
+        react: {
+          title: 'React',
+          url: 'http://localhost:6007',
+        },
+      }
+    }
+    // @todo add export for deploys here.
+  },
 };
 
 /**

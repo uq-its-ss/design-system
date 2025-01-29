@@ -1,0 +1,33 @@
+{
+  "name": "storybook-react",
+  "version": "1.0.0-alpha.0",
+  "description": "Storybook for React instance for uqds component development",
+  "private": true,
+  "keywords": [],
+  "author": {
+    "name": "University of Queensland",
+    "email": "webservices@uq.edu.au",
+    "url": "https://uq.edu.au"
+  },
+  "license": "ISC",
+  "scripts": {
+    "start": "npm run storybook",
+    "storybook": "storybook dev -p 6007",
+    "build-storybook": "storybook build"
+  },
+  "dependencies": {
+    "@uqds/icon": "^3.0.0-alpha.0",
+    "@uqds/react": "^1.0.0-alpha.0"
+  },
+  "devDependencies": {
+    "@storybook/addon-essentials": "^8.4.2",
+    "@storybook/addon-interactions": "^8.4.2",
+    "@storybook/addon-onboarding": "^8.4.2",
+    "@storybook/addon-webpack5-compiler-swc": "^2.0.0",
+    "@storybook/blocks": "^8.4.2",
+    "@storybook/react": "^8.4.2",
+    "@storybook/react-webpack5": "^8.4.2",
+    "@storybook/test": "^8.4.2",
+    "storybook": "^8.4.2"
+  }
+}

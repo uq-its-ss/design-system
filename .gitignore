@@ -10,3 +10,4 @@ lerna-debug.log
 .dump
 .reg
 screenshots/*.png
+*storybook.log

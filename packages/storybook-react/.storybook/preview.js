@@ -4,9 +4,7 @@ import "@uqds/react/src/scss/main.scss";
 const preview = {
   parameters: {
     backgrounds: {
-      values: [
-        { name: "UQ purple", value: "#51247a" },
-      ],
+      values: [{ name: "UQ purple", value: "#51247a" }],
     },
   },
 };

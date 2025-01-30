@@ -56,13 +56,13 @@ const config = {
   },
 
   refs: (config, { configType }) => {
-    if (configType === 'DEVELOPMENT') {
+    if (configType === "DEVELOPMENT") {
       return {
         react: {
-          title: 'React',
-          url: 'http://localhost:6007',
+          title: "React",
+          url: "http://localhost:6007",
         },
-      }
+      };
     }
     // @todo add export for deploys here.
   },

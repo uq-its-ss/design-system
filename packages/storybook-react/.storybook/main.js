@@ -55,7 +55,7 @@ const config = {
     jsc: {
       transform: {
         react: {
-          runtime: 'automatic',
+          runtime: "automatic",
         },
       },
     },

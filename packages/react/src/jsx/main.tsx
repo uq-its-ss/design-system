@@ -1,5 +1,5 @@
 import { UqIcon, UqIconVariant } from "./components/UqIcon";
-import { UqCard } from "./components/UqCard";
+import { UqCard, UqCardVariant } from "./components/UqCard";
 
 export { UqCard, UqIcon  }
-export type { UqIconVariant }
+export type { UqIconVariant, UqCardVariant }

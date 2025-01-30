@@ -12,6 +12,12 @@
   }
 }
 
+.uq-card-grid--target-1x {
+  & > * {
+    overflow: hidden;
+  }
+}
+
 .uq-card-grid--target-2x {
   grid-template-columns: 1fr 1fr;
 

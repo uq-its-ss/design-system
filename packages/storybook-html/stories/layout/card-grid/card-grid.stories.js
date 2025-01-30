@@ -268,6 +268,7 @@ export const CardGrid1PerRowExample = {
   <div class="uq-card-grid uq-card-grid--target-1x">
      ${PaneImage()}
      ${PaneVideo()}
+     ${PaneImage({ title: "Pane with long text", description: `<p>Lorem est irure qui consequat ad occaecat excepteur esse duis et. In ad Lorem et laborum. Consequat reprehenderit consequat velit anim. Ipsum amet enim nulla irure cupidatat ea voluptate do nisi aliqua sit et veniam commodo nisi. Sit laboris commodo excepteur amet cillum sunt. Enim ex ut incididunt magna ad incididunt.</p><p>Amet magna adipisicing aliqua enim occaecat est velit elit aute. Magna elit amet commodo esse in ullamco dolore ut. Non ut consectetur Lorem adipisicing. Quis proident proident nostrud ad qui elit commodo commodo duis est ullamco sint nulla. Proident do sint ut pariatur deserunt aute elit velit culpa.</p><p>Irure non occaecat consequat nisi do eiusmod nisi laborum ea eiusmod id exercitation ad incididunt eiusmod. Irure ea aliqua consequat enim deserunt amet nostrud nisi esse. Et aliquip eu pariatur et cupidatat ex in ex fugiat tempor quis ex adipisicing adipisicing dolore. Laboris amet et ullamco esse ad cupidatat adipisicing non non magna excepteur duis consectetur. Nulla adipisicing eiusmod ipsum occaecat. Ex dolor ullamco voluptate tempor. Sit deserunt excepteur nisi minim tempor fugiat est aute ipsum ea pariatur ea mollit eu excepteur.</p>` })}
      ${CardImage()}
      ${NewsCard()}
      ${EventCard()}

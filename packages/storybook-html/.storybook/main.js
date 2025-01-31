@@ -64,7 +64,7 @@ const config = {
         },
       };
     }
-    // @todo add export for deploys here.
+    return { }
   },
 };
 

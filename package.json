@@ -87,7 +87,6 @@
     "test-watch": "vitest",
     "update-screenshots": "wait-on tcp:6006 && node scripts/screenshot.js",
     "reg-suit": "reg-suit run",
-    "serve-screenshots": "http-server dist -i -p 6006",
     "storybook-html": "cd packages/storybook-html && npm run storybook",
     "storybook-react": "cd packages/storybook-react && npm run storybook",
     "storybook": "concurrently -k -n \"HTML,REACT\" -c \"#636cff,#ff4785\" \"wait-on tcp:6007 && npm run storybook-html\" \"npm run storybook-react\""

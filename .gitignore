@@ -11,3 +11,4 @@ lerna-debug.log
 .reg
 screenshots/*.png
 *storybook.log
+storybook-static

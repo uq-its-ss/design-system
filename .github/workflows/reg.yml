@@ -25,9 +25,15 @@ jobs:
       - name: "📦️ Install dependencies"
         run: npm install
 
+      - name: "Build Storybook"
+        run: |
+          npm run build-storybook
+        working-directory: packages/storybook-html/
+
       - name: "Serve Storybook"
         run: |
-          npm run storybook &
+          npm run serve-storybook
+        working-directory: packages/storybook-html/
 
       - name: "Create screenshots"
         run: |

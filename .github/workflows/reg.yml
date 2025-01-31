@@ -32,7 +32,7 @@ jobs:
 
       - name: "Serve Storybook"
         run: |
-          npm run serve-storybook
+          npm run serve-storybook &
         working-directory: packages/storybook-html/
 
       - name: "Create screenshots"

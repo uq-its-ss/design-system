@@ -1,4 +1,4 @@
-import { FC, ReactNode } from 'react'
+import { FC, ReactNode } from "react";
 import classNames from "classnames";
 
 export enum UqCardVariant {
@@ -9,15 +9,24 @@ export enum UqCardVariant {
 }
 
 export interface UqCardProps {
-  image: ReactNode
-  icon?: ReactNode
-  title: ReactNode
-  description?: ReactNode
-  variant: UqCardVariant
+  title: ReactNode;
+  variant: UqCardVariant;
+  image?: ReactNode;
+  icon?: ReactNode;
+  description?: ReactNode;
 }
 
-export const UqCard: FC<UqCardProps> = ({ image, icon, title, description, variant }) => (
-  <div className={classNames("uq-card", `uq-card--${variant}`)} data-gtm-category="Card">
+export const UqCard: FC<UqCardProps> = ({
+  image,
+  icon,
+  title,
+  description,
+  variant,
+}) => (
+  <div
+    className={classNames("uq-card", `uq-card--${variant}`)}
+    data-gtm-category="Card"
+  >
     {image && <div className="uq-card__image">{image}</div>}
     <div className="uq-card__content">
       {icon && <div className="uq-card__icon">{icon}</div>}
@@ -25,4 +34,4 @@ export const UqCard: FC<UqCardProps> = ({ image, icon, title, description, varia
       {description && <div className="uq-card__description">{description}</div>}
     </div>
   </div>
-)
+);

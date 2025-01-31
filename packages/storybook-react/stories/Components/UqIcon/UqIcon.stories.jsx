@@ -1,10 +1,5 @@
-import {
-  UqIcon as Component,
-  UqIconVariant,
-} from "@uqds/react/src/components/UqIcon.tsx";
+import { UqIcon as Component, UqIconVariant } from "@uqds/react/src/jsx/main";
 import iconCatalog from "@uqds/icon";
-
-console.log(iconCatalog.map((icon) => `${icon["category"]}--${icon["name"]}`));
 
 export default {
   title: "Components/UqIcon",

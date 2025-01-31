@@ -46,6 +46,7 @@
   },
   "dependencies": {
     "@uqds/body": "^3.0.0-alpha.0",
+    "@uqds/layout": "6.0.0-alpha.0",
     "@uqds/card": "^3.0.0-alpha.1",
     "@uqds/core": "^4.0.0-alpha.0",
     "@uqds/icon": "^3.0.0-alpha.0",

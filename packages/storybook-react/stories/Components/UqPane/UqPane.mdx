@@ -1,0 +1,26 @@
+import { Meta, Canvas, Controls, Source } from "@storybook/blocks";
+import * as UqPaneStories from "./UqPane.stories";
+
+<Meta of={UqPaneStories} />
+
+# UqPane
+
+The pane component.
+
+## Installation
+
+```bash
+npm i @uqds/react
+```
+
+## Usage
+
+```js
+import { UqPane } from "@uqds/react";
+```
+
+<Canvas of={UqPaneStories.UqPane} sourceState="none" />
+
+<Controls of={UqPaneStories.UqPane} />
+
+<Source of={UqPaneStories.UqPane} />

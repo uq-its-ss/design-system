@@ -85,7 +85,7 @@
     "test": "vitest run",
     "test-ui": "vitest --ui",
     "test-watch": "vitest",
-    "update-screenshots": "node scripts/screenshot.js",
+    "update-screenshots": "wait-on tcp:6006 && node scripts/screenshot.js",
     "reg-suit": "reg-suit run",
     "serve-screenshots": "http-server dist -i -p 6006",
     "storybook-html": "cd packages/storybook-html && npm run storybook",

@@ -1,7 +1,7 @@
 @use "@uqds/core/src/scss/global" as core;
 
 :root {
-  --card-title-font-size: 24px;
+  --card-title-font-size: #{core.$font-size-xxl};
 }
 
 @media #{core.$screen-md-down} {

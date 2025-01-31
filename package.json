@@ -38,6 +38,7 @@
     "@testing-library/user-event": "^14.5.2",
     "@vitest/ui": "^2.1.4",
     "cli-progress": "^3.12.0",
+    "concurrently": "^9.1.2",
     "core-js": "^3.39.0",
     "eslint": "^8.57.1",
     "eslint-config-prettier": "^9.1.0",
@@ -72,6 +73,7 @@
     "vinyl-buffer": "^1.0.1",
     "vinyl-source-stream": "^2.0.0",
     "vitest": "^2.1.4",
+    "wait-on": "^8.0.2",
     "whatwg-fetch": "^3.6.20"
   },
   "scripts": {
@@ -85,7 +87,10 @@
     "test-watch": "vitest",
     "update-screenshots": "node scripts/screenshot.js",
     "reg-suit": "reg-suit run",
-    "serve-screenshots": "http-server dist -i -p 6006"
+    "serve-screenshots": "http-server dist -i -p 6006",
+    "storybook-html": "cd packages/storybook-html && npm run storybook",
+    "storybook-react": "cd packages/storybook-react && npm run storybook",
+    "storybook": "concurrently -k -n \"HTML,REACT\" -c \"#636cff,#ff4785\" \"wait-on tcp:6007 && npm run storybook-html\" \"npm run storybook-react\""
   },
   "engines": {
     "node": ">=18",

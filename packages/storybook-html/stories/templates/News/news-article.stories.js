@@ -118,7 +118,7 @@ ${Breadcrumb.render()}
           <div class="uq-accordion" aria-label="Accordion button group" role="presentation">
             <div class="uq-accordion__item">
               <button class="uq-accordion__toggle" aria-controls="content-1" aria-expanded="false" id="accordion-title-1">
-                <div class="uq-accordion__icon"><img src="images/news/creative-commons.svg" alt="" /></div>
+                <div class="uq-accordion__icon"><span class="uq-icon uq-icon--other--creative-commons uq-icon--text"></span></div>
                 Republish via Creative Commons
               </button>
               <div class="uq-accordion__content" role="region" aria-hidden="true" id="content-1" aria-labelledby="accordion-title-1">

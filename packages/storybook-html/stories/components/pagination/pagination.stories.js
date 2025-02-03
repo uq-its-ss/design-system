@@ -1,88 +1,437 @@
-// import styles
-import "./pagination.scss";
-
-// import HTML template strings
-import paginationHTML from "./pagination.html";
-
 export default {
   title: "Components/Pagination",
-  parameters: {
-    previewTabs: {
-      canvas: { hidden: false },
-    },
+};
+
+export const Pagination = {
+  render: () => {
+    return `<nav class="uq-pagination" aria-label="Pagination">
+  <ul>
+    <li>
+      <a href="#" class="uq-pagination__item uq-pagination__previous">
+        <span class="visually-hidden">Previous page</span>
+        <span class="uq-icon uq-icon--standard--chevron-left"></span>
+      </a>
+    </li>
+    <li>
+      <a href="#" class="uq-pagination__item">
+        <span class="visually-hidden">Page</span> 1
+      </a>
+    </li>
+    <li>
+      <a href="#" class="uq-pagination__item uq-pagination__ellipsis">
+        &hellip;
+      </a>
+    </li>
+    <li>
+      <a href="#" class="uq-pagination__item">
+        <span class="visually-hidden">Page</span> 4
+      </a>
+    </li>
+    <li>
+      <a href="#" class="uq-pagination__item uq-pagination__current" aria-current="page">
+        <span class="visually-hidden">Page</span> 5
+      </a>
+    </li>
+    <li>
+      <a href="#" class="uq-pagination__item">
+        <span class="visually-hidden">Page</span> 6
+      </a>
+    </li>
+    <li>
+      <a href="#" class="uq-pagination__item uq-pagination__ellipsis">
+        &hellip;
+      </a>
+    </li>
+    <li>
+      <a href="#" class="uq-pagination__item">
+        <span class="visually-hidden">Page</span> 13
+      </a>
+    </li>
+    <li>
+      <a href="#" class="uq-pagination__item uq-pagination__next">
+        <span class="visually-hidden">Next page</span>
+        <span class="uq-icon uq-icon--standard--chevron-right"></span>
+      </a>
+    </li>
+  </ul>
+</nav>`;
   },
 };
 
-export const pagination = {
+export const AsButtons = {
   render: () => {
-    return paginationHTML;
+    return `<nav class="uq-pagination" aria-label="Pagination">
+  <ul>
+    <li>
+      <button href="#" class="uq-pagination__item uq-pagination__previous">
+        <span class="visually-hidden">Previous page</span>
+        <span class="uq-icon uq-icon--standard--chevron-left"></span>
+      </button>
+    </li>
+    <li>
+      <button href="#" class="uq-pagination__item">
+        <span class="visually-hidden">Page</span> 1
+      </button>
+    </li>
+    <li>
+      <a href="#" class="uq-pagination__item uq-pagination__ellipsis">
+        &hellip;
+      </a>
+    </li>
+    <li>
+      <button href="#" class="uq-pagination__item">
+        <span class="visually-hidden">Page</span> 4
+      </button>
+    </li>
+    <li>
+      <button href="#" class="uq-pagination__item uq-pagination__current" aria-current="page">
+        <span class="visually-hidden">Page</span> 5
+      </button>
+    </li>
+    <li>
+      <button href="#" class="uq-pagination__item">
+        <span class="visually-hidden">Page</span> 6
+      </button>
+    </li>
+    <li>
+      <a href="#" class="uq-pagination__item uq-pagination__ellipsis">
+        &hellip;
+      </a>
+    </li>
+    <li>
+      <button href="#" class="uq-pagination__item">
+        <span class="visually-hidden">Page</span> 13
+      </button>
+    </li>
+    <li>
+      <button href="#" class="uq-pagination__item uq-pagination__next">
+        <span class="visually-hidden">Next page</span>
+        <span class="uq-icon uq-icon--standard--chevron-right"></span>
+      </button>
+    </li>
+  </ul>
+</nav>`;
   },
-
-  name: "Pagination all",
 };
 
-export const paginationFirst = {
+export const Previous = {
   render: () => {
-    return `
-      <ul class="uq-pagination">
-        <li class="uq-pagination__item uq-pagination__item--first uq-pagination__item--current"><a class="uq-pagination__link" title="Go to page 1" href="#">1</a></li>
-        <li class="uq-pagination__item"><a class="uq-pagination__link" title="Go to page 2" href="#">2</a></li>
-        <li class="uq-pagination__item"><a class="uq-pagination__link" title="Go to page 3" href="#">3</a></li>
-        <li class="uq-pagination__item"><a class="uq-pagination__link" title="Go to page 4" href="#">4</a></li>
-        <li class="uq-pagination__item"><a class="uq-pagination__link" title="Go to page 5" href="#">5</a></li>
-        <li class="uq-pagination__item"><a class="uq-pagination__link" title="Go to page 6" href="#">6</a></li>
-        <li class="uq-pagination__item"><a class="uq-pagination__link" title="Go to page 7" href="#">7</a></li>
-        <li class="uq-pagination__ellipsis uq-pagination__ellipsis--right">…</li>
-        <li class="uq-pagination__item uq-pagination__item--go-next"><a class="uq-pagination__link" title="Go to next page" href="#">next &rsaquo;</a></li>
-        <li class="uq-pagination__item uq-pagination__item--go-last"><a class="uq-pagination__link" title="Go to last page" href="#">last &raquo;</a></li>
-      </ul>
-    `;
+    return `<a href="#" class="uq-pagination__item uq-pagination__previous">
+  <span class="visually-hidden">Previous page</span>
+  <span class="uq-icon uq-icon--standard--chevron-left"></span>
+</a>`;
   },
-
-  name: "Pagination first",
 };
 
-export const paginationMiddle = {
+export const Next = {
   render: () => {
-    return `
-      <ul class="uq-pagination">
-        <li class="uq-pagination__item uq-pagination__item--go-first"><a class="uq-pagination__link" title="Go to first page" href="#">&laquo; first</a></li>
-        <li class="uq-pagination__item uq-pagination__item--go-previous"><a class="uq-pagination__link" title="Go to previous page" href="#">&lsaquo; prev</a></li>
-        <li class="uq-pagination__ellipsis uq-pagination__ellipsis--left">…</li>
-        <li class="uq-pagination__item"><a class="uq-pagination__link" title="Go to page 8" href="#">8</a></li>
-        <li class="uq-pagination__item"><a class="uq-pagination__link" title="Go to page 9" href="#">9</a></li>
-        <li class="uq-pagination__item"><a class="uq-pagination__link" title="Go to page 10" href="#">10</a></li>
-        <li class="uq-pagination__item uq-pagination__item--current"><a class="uq-pagination__link" title="Go to page 11" href="#">11</a></li>
-        <li class="uq-pagination__item"><a class="uq-pagination__link" title="Go to page 12" href="#">12</a></li>
-        <li class="uq-pagination__item"><a class="uq-pagination__link" title="Go to page 13" href="#">13</a></li>
-        <li class="uq-pagination__item"><a class="uq-pagination__link" title="Go to page 14" href="#">14</a></li>
-        <li class="uq-pagination__ellipsis uq-pagination__ellipsis--right">…</li>
-        <li class="uq-pagination__item uq-pagination__item--go-next"><a class="uq-pagination__link" title="Go to next page" href="#">next &rsaquo;</a></li>
-        <li class="uq-pagination__item uq-pagination__item--go-last"><a class="uq-pagination__link" title="Go to last page" href="#">last &raquo;</a></li>
-      </ul>
-    `;
+    return `<a href="#" class="uq-pagination__item uq-pagination__next">
+  <span class="visually-hidden">Previous page</span>
+  <span class="uq-icon uq-icon--standard--chevron-right"></span>
+</a>`;
   },
-
-  name: "Pagination middle",
 };
 
-export const paginationLast = {
+export const Current = {
   render: () => {
-    return `
-      <ul class="uq-pagination">
-        <li class="uq-pagination__item uq-pagination__item--go-first"><a class="uq-pagination__link" title="Go to first page" href="#">&laquo; first</a></li>
-        <li class="uq-pagination__item uq-pagination__item--go-previous"><a class="uq-pagination__link" title="Go to prev page" href="#">&lsaquo; prev</a></li>
-        <li class="uq-pagination__ellipsis uq-pagination__ellipsis--left">…</li>
-        <li class="uq-pagination__item"><a class="uq-pagination__link" title="Go to page 15" href="#">15</a></li>
-        <li class="uq-pagination__item"><a class="uq-pagination__link" title="Go to page 16" href="#">16</a></li>
-        <li class="uq-pagination__item"><a class="uq-pagination__link" title="Go to page 17" href="#">17</a></li>
-        <li class="uq-pagination__item"><a class="uq-pagination__link" title="Go to page 18" href="#">18</a></li>
-        <li class="uq-pagination__item"><a class="uq-pagination__link" title="Go to page 19" href="#">19</a></li>
-        <li class="uq-pagination__item"><a class="uq-pagination__link" title="Go to page 20" href="#">20</a></li>
-        <li class="uq-pagination__item uq-pagination__item--last uq-pagination__item--current"><a class="uq-pagination__link" title="Go to page 21" href="#">21</a></li>
-      </ul>
-    `;
+    return `<a href="#" class="uq-pagination__item uq-pagination__current" aria-current="page">
+  <span class="visually-hidden">Page</span> 5
+</a>`;
   },
+};
 
-  name: "Pagination last",
+export const Number = {
+  render: () => {
+    return `<a href="#" class="uq-pagination__item">
+  <span class="visually-hidden">Page</span> 1
+</a>`;
+  },
+};
+
+export const Ellipsis = {
+  render: () => {
+    return `<span href="#" class="uq-pagination__item uq-pagination__ellipsis">
+  &hellip;
+</span>`;
+  },
+};
+
+export const EllipsisLinked = {
+  render: () => {
+    return `<a href="#" class="uq-pagination__item uq-pagination__ellipsis">
+  <span class="visually-hidden">Page 9</span>
+  &hellip;
+</span>`;
+  },
+};
+
+export const PagesLessFirst = {
+  render: () => {
+    return `<nav class="uq-pagination" aria-label="Pagination">
+  <ul
+    <li>
+      <a href="#" class="uq-pagination__item uq-pagination__current" aria-current="page">
+        <span class="visually-hidden">Page</span> 1
+      </a>
+    </li>
+    <li>
+      <a href="#" class="uq-pagination__item">
+        <span class="visually-hidden">Page</span> 2
+      </a>
+    </li>
+    <li>
+      <a href="#" class="uq-pagination__item">
+        <span class="visually-hidden">Page</span> 3
+      </a>
+    </li>
+    <li>
+      <a href="#" class="uq-pagination__item">
+        <span class="visually-hidden">Page</span> 4
+      </a>
+    </li>
+    <li>
+      <a href="#" class="uq-pagination__item uq-pagination__next">
+        <span class="visually-hidden">Next page</span>
+        <span class="uq-icon uq-icon--standard--chevron-right"></span>
+      </a>
+    </li>
+  </ul>
+</nav>`;
+  },
+};
+
+export const PagesLessLast = {
+  render: () => {
+    return `<nav class="uq-pagination" aria-label="Pagination">
+  <ul
+    <li>
+      <a href="#" class="uq-pagination__item uq-pagination__previous">
+        <span class="visually-hidden">Previous page</span>
+        <span class="uq-icon uq-icon--standard--chevron-left"></span>
+      </a>
+    </li>
+    <li>
+      <a href="#" class="uq-pagination__item">
+        <span class="visually-hidden">Page</span> 1
+      </a>
+    </li>
+    <li>
+      <a href="#" class="uq-pagination__item">
+        <span class="visually-hidden">Page</span> 2
+      </a>
+    </li>
+    <li>
+      <a href="#" class="uq-pagination__item">
+        <span class="visually-hidden">Page</span> 3
+      </a>
+    </li>
+    <li>
+      <a href="#" class="uq-pagination__item uq-pagination__current" aria-current="page">
+        <span class="visually-hidden">Page</span> 4
+      </a>
+    </li>
+  </ul>
+</nav>`;
+  },
+};
+
+export const PagesLessMiddle = {
+  render: () => {
+    return `<nav class="uq-pagination" aria-label="Pagination">
+  <ul
+    <li>
+      <a href="#" class="uq-pagination__item uq-pagination__previous">
+        <span class="visually-hidden">Previous page</span>
+        <span class="uq-icon uq-icon--standard--chevron-left"></span>
+      </a>
+    </li>
+    <li>
+      <a href="#" class="uq-pagination__item">
+        <span class="visually-hidden">Page</span> 1
+      </a>
+    </li>
+    <li>
+      <a href="#" class="uq-pagination__item">
+        <span class="visually-hidden">Page</span> 2
+      </a>
+    </li>
+    <li>
+      <a href="#"  class="uq-pagination__item uq-pagination__current" aria-current="page">
+        <span class="visually-hidden">Page</span> 3
+      </a>
+    </li>
+    <li>
+      <a href="#" class="uq-pagination__item">
+        <span class="visually-hidden">Page</span> 4
+      </a>
+    </li>
+    <li>
+      <a href="#" class="uq-pagination__item uq-pagination__next">
+        <span class="visually-hidden">Next page</span>
+        <span class="uq-icon uq-icon--standard--chevron-right"></span>
+      </a>
+    </li>
+  </ul>
+</nav>`;
+  },
+};
+
+export const PagesMoreFirst = {
+  render: () => {
+    return `<nav class="uq-pagination" aria-label="Pagination">
+  <ul
+    <li>
+      <a href="#" class="uq-pagination__item uq-pagination__current" aria-current="page">
+        <span class="visually-hidden">Page</span> 1
+      </a>
+    </li>
+    <li>
+      <a href="#" class="uq-pagination__item">
+        <span class="visually-hidden">Page</span> 2
+      </a>
+    </li>
+    <li>
+      <a href="#" class="uq-pagination__item">
+        <span class="visually-hidden">Page</span> 3
+      </a>
+    </li>
+    <li>
+      <a href="#" class="uq-pagination__item">
+        <span class="visually-hidden">Page</span> 4
+      </a>
+    </li>
+    <li>
+      <a href="#" class="uq-pagination__item">
+        <span class="visually-hidden">Page</span> 5
+      </a>
+    </li>
+    <li>
+      <a href="#" class="uq-pagination__item uq-pagination__ellipsis">
+        <span class="visually-hidden">Page 6</span>
+        &hellip;
+      </a>
+    </li>
+    <li>
+      <a href="#" class="uq-pagination__item">
+        <span class="visually-hidden">Page</span> 13
+      </a>
+    </li>
+    <li>
+      <a href="#" class="uq-pagination__item uq-pagination__next">
+        <span class="visually-hidden">Next page</span>
+        <span class="uq-icon uq-icon--standard--chevron-right"></span>
+      </a>
+    </li>
+  </ul>
+</nav>`;
+  },
+};
+
+export const PagesMoreLast = {
+  render: () => {
+    return `<nav class="uq-pagination" aria-label="Pagination">
+  <ul
+    <li>
+      <a href="#" class="uq-pagination__item uq-pagination__previous">
+        <span class="visually-hidden">Previous page</span>
+        <span class="uq-icon uq-icon--standard--chevron-left"></span>
+      </a>
+    </li>
+    <li>
+      <a href="#" class="uq-pagination__item">
+        <span class="visually-hidden">Page</span> 1
+      </a>
+    </li>
+    <li>
+      <a href="#" class="uq-pagination__item uq-pagination__ellipsis">
+        <span class="visually-hidden">Page 8</span>
+        &hellip;
+      </a>
+    </li>
+    <li>
+      <a href="#" class="uq-pagination__item">
+        <span class="visually-hidden">Page</span> 9
+      </a>
+    </li>
+    <li>
+      <a href="#" class="uq-pagination__item">
+        <span class="visually-hidden">Page</span> 10
+      </a>
+    </li>
+    <li>
+      <a href="#" class="uq-pagination__item">
+        <span class="visually-hidden">Page</span> 11
+      </a>
+    </li>
+    <li>
+      <a href="#" class="uq-pagination__item">
+        <span class="visually-hidden">Page</span> 12
+      </a>
+    </li>
+    <li>
+      <a href="#" class="uq-pagination__item uq-pagination__current" aria-current="page">
+        <span class="visually-hidden">Page</span> 13
+      </a>
+    </li>
+  </ul>
+</nav>`;
+  },
+};
+
+export const PagesMoreMiddle = {
+  render: () => {
+    return `<nav class="uq-pagination" aria-label="Pagination">
+  <ul
+    <li>
+      <a href="#" class="uq-pagination__item uq-pagination__previous">
+        <span class="visually-hidden">Previous page</span>
+        <span class="uq-icon uq-icon--standard--chevron-left"></span>
+      </a>
+    </li>
+    <li>
+      <a href="#" class="uq-pagination__item">
+        <span class="visually-hidden">Page</span> 1
+      </a>
+    </li>
+    <li>
+      <a href="#" class="uq-pagination__item uq-pagination__ellipsis">
+        <span class="visually-hidden">Page 5</span>
+        &hellip;
+      </a>
+    </li>
+    <li>
+      <a href="#" class="uq-pagination__item">
+        <span class="visually-hidden">Page</span> 7
+      </a>
+    </li>
+    <li>
+      <a href="#"  class="uq-pagination__item uq-pagination__current" aria-current="page">
+        <span class="visually-hidden">Page</span> 8
+      </a>
+    </li>
+    <li>
+      <a href="#" class="uq-pagination__item">
+        <span class="visually-hidden">Page</span> 9
+      </a>
+    </li>
+    <li>
+      <a href="#" class="uq-pagination__item uq-pagination__ellipsis">
+        <span class="visually-hidden">Page 11</span>
+        &hellip;
+      </a>
+    </li>
+    <li>
+      <a href="#" class="uq-pagination__item">
+        <span class="visually-hidden">Page</span> 13
+      </a>
+    </li>
+    <li>
+      <a href="#" class="uq-pagination__item uq-pagination__next">
+        <span class="visually-hidden">Next page</span>
+        <span class="uq-icon uq-icon--standard--chevron-right"></span>
+      </a>
+    </li>
+  </ul>
+</nav>`;
+  },
 };

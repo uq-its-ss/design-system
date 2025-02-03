@@ -584,6 +584,10 @@ export default [
     category: "other",
   },
   {
+    name: "creative-commons",
+    category: "other",
+  },
+  {
     name: "e-learning-book-laptop",
     category: "other",
   },

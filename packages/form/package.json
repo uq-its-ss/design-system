@@ -1,6 +1,6 @@
 {
   "name": "@uqds/form",
-  "version": "3.0.0-alpha.0",
+  "version": "3.0.0-alpha.1",
   "description": "Form element style rules",
   "keywords": [
     "uqds",
@@ -54,6 +54,6 @@
   },
   "dependencies": {
     "@uqds/core": "^4.0.0-alpha.0",
-    "@uqds/icon": "^3.0.0-alpha.0"
+    "@uqds/icon": "^3.0.0-alpha.1"
   }
 }

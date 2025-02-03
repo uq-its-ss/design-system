@@ -1,6 +1,6 @@
 {
   "name": "@uqds/navigation",
-  "version": "6.0.0-alpha.0",
+  "version": "6.0.0-alpha.1",
   "description": "Navigation components",
   "keywords": [
     "uqds",
@@ -43,6 +43,6 @@
   },
   "dependencies": {
     "@uqds/core": "^4.0.0-alpha.0",
-    "@uqds/icon": "^3.0.0-alpha.0"
+    "@uqds/icon": "^3.0.0-alpha.1"
   }
 }

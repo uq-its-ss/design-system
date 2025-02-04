@@ -3,7 +3,7 @@ import { UqPaginationItem, UqPaginationItemType } from "./UqPaginationItem";
 
 export interface UqPaginationProps {
   As?: "button" | "a";
-  total: number;
+  totalResults: number;
   resultsPerPage: number;
   currentPage: number;
   onClick: MouseEventHandler<HTMLButtonElement>;
@@ -11,17 +11,17 @@ export interface UqPaginationProps {
 
 export const UqPagination: FC<UqPaginationProps> = ({
   As = "button",
-  total,
+  totalResults,
   resultsPerPage,
   currentPage,
   onClick,
 }) => {
   /**
-   * The last page is the total / resultsPerPage, rounded up.
+   * The last page is the totalResults / resultsPerPage, rounded up.
    */
   const lastPage = useMemo<number>(
-    () => Math.ceil(total / resultsPerPage),
-    [total, resultsPerPage],
+    () => Math.ceil(totalResults / resultsPerPage),
+    [totalResults, resultsPerPage],
   );
 
   /**
@@ -31,11 +31,11 @@ export const UqPagination: FC<UqPaginationProps> = ({
     const pages: number[] = [];
 
     // If there's only 1 visible page go no further.
-    if (!total || resultsPerPage >= total) {
+    if (!totalResults || resultsPerPage >= totalResults) {
       return pages;
     }
 
-    const totalPages = Math.ceil(total / resultsPerPage);
+    const totalPages = Math.ceil(totalResults / resultsPerPage);
 
     // Show all pages.
     // Do this if there are less than 6 pages,
@@ -89,7 +89,7 @@ export const UqPagination: FC<UqPaginationProps> = ({
     }
 
     return pages;
-  }, [total, lastPage, resultsPerPage, currentPage]);
+  }, [totalResults, lastPage, resultsPerPage, currentPage]);
 
   /**
    * The first ellipsis will show if the first visible page is > 2.

@@ -12,13 +12,13 @@ export default {
   },
   args: {
     As: "button",
-    total: 100,
+    totalResults: 125,
     resultsPerPage: 10,
   },
   render: (args) => {
     const [currentPage, setCurrentPage] = useState(1);
     const onClick = (event) => {
-      const value = event.target.value;
+      const value = event.currentTarget.value;
       setCurrentPage(Number(value));
     };
     return <Component currentPage={currentPage} onClick={onClick} {...args} />;

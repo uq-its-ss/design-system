@@ -1,6 +1,6 @@
 import { reactCardDecorator } from "../../../lib/decorators";
 import { UqCard as Component, UqIcon } from "@uqds/react/src/jsx/main";
-import { UqCardVariant } from "@uqds/react/src/jsx/components/UqCard";
+import { UqCardVariant } from "@uqds/react/src/jsx/components/UqCard/UqCard";
 
 export default {
   title: "Components/UqCard",

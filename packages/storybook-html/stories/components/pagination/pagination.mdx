@@ -34,7 +34,7 @@ Instead of `<a>` tags `<button>` tags can be used instead.
 
 Pagination should adapt depending on the number of available pages.
 
-### 6 or less pages
+### 5 or less pages
 
 Buttons for all pages show.
 
@@ -50,25 +50,25 @@ If on any other page, both Previous and Next buttons show.
 
 <Canvas of={PaginationStories.PagesLessMiddle} />
 
-### 7 or more pages
+### 6 or more pages
 
 Visible page buttons adapts depending on the current page.
 
-If on the first page, the first 5 pages show. An ellipsis shows before the last page.
+If on the first or second pages, the first 4 pages show. An ellipsis shows before the last page.
 
 Clicking the ellipsis shows the first invisible page.
 
 <Canvas of={PaginationStories.PagesMoreFirst} />
 
-If on the last page, the last 5 pages show. An ellipsis shows before the first page.
+If on the last or second last page, the last 4 pages show. An ellipsis shows before the first page.
 
 Clicking the ellipsis shows the next invisible page.
 
 <Canvas of={PaginationStories.PagesMoreLast} />
 
-If on any other page the before and after pages show, with an ellipsis before the first and last pages.
+If on any other page one less and one more pages show, with an ellipsis before the first and last pages.
 
-Clicking the either ellipsis skips 3 pages forward or back from the current page.
+Clicking either ellipsis skips 3 pages forward or back from the current page.
 
 <Canvas of={PaginationStories.PagesMoreMiddle} />
 

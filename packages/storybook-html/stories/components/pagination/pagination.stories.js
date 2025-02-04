@@ -308,11 +308,6 @@ export const PagesMoreFirst = {
       </a>
     </li>
     <li>
-      <a href="#" class="uq-pagination__item">
-        <span class="visually-hidden">Page</span> 5
-      </a>
-    </li>
-    <li>
       <a href="#" class="uq-pagination__item uq-pagination__ellipsis">
         <span class="visually-hidden">Page 6</span>
         &hellip;
@@ -353,11 +348,6 @@ export const PagesMoreLast = {
       <a href="#" class="uq-pagination__item uq-pagination__ellipsis">
         <span class="visually-hidden">Page 8</span>
         &hellip;
-      </a>
-    </li>
-    <li>
-      <a href="#" class="uq-pagination__item">
-        <span class="visually-hidden">Page</span> 9
       </a>
     </li>
     <li>

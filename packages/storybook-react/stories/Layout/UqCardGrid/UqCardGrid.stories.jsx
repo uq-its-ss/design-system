@@ -1,5 +1,7 @@
-import { UqCardGrid as Component } from "@uqds/react/src/jsx/main";
-import { UqCardGridTarget } from "@uqds/react/src/jsx/layout/UqCardGrid/UqCardGrid";
+import {
+  UqCardGrid as Component,
+  UqCardGridTarget,
+} from "@uqds/react/src/jsx/main";
 
 export default {
   title: "Layout/UqCardGrid",

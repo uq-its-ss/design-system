@@ -1,12 +1,6 @@
-import { FC, ReactNode } from "react";
+import type { FC, ReactNode } from "react";
 import classNames from "classnames";
-
-export enum UqCardVariant {
-  text = "text",
-  image = "image",
-  icon = "icon",
-  iconNav = "icon-nav",
-}
+import { UqCardVariant } from "../../enum";
 
 export interface UqCardProps {
   title: ReactNode;

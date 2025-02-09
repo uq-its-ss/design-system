@@ -78,7 +78,7 @@
   },
   "scripts": {
     "format": "prettier --write \"**/*.{css,scss,js,jsx,json,md,mdx,tsx}\"",
-    "lint": "prettier --check \"**/*.{css,scss,js,jsx,json,md,mdx,tsx}\" && npm run lint-js && npm run lint-css",
+    "lint": "prettier --check \"**/*.{css,scss,js,jsx,json,md,mdx,tsx}\" && npm run lint-js && npm run lint-css && npm run lint-tsc --workspace=packages/react",
     "lint-js": "eslint",
     "lint-css": "stylelint \"**/*.{css,scss}\"",
     "lint-fix": "npm run format && npm run lint-js -- --fix && npm run lint-css -- --fix",

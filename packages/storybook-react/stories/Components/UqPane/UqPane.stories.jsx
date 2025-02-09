@@ -1,6 +1,9 @@
 import { reactCardDecorator } from "../../../lib/decorators";
-import { UqPane as Component, UqIcon } from "@uqds/react/src/jsx/main";
-import { UqPaneVariant } from "@uqds/react/src/jsx/components/UqPane/UqPane";
+import {
+  UqPane as Component,
+  UqPaneVariant,
+  UqIcon,
+} from "@uqds/react/src/jsx/main";
 
 export default {
   title: "Components/UqPane",

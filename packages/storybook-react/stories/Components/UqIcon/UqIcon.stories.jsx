@@ -1,5 +1,4 @@
-import { UqIcon as Component } from "@uqds/react/src/jsx/main";
-import { UqIconVariant } from "@uqds/react/src/jsx/components/UqIcon/UqIcon";
+import { UqIcon as Component, UqIconVariant } from "@uqds/react/src/jsx/main";
 import iconCatalog from "@uqds/icon";
 
 export default {

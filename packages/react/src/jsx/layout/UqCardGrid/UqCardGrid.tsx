@@ -1,12 +1,6 @@
-import { FC, PropsWithChildren } from "react";
+import type { FC, PropsWithChildren } from "react";
 import classNames from "classnames";
-
-export enum UqCardGridTarget {
-  x1 = "1x",
-  x2 = "2x",
-  x3 = "3x",
-  x4 = "4x",
-}
+import { UqCardGridTarget } from "../../enum";
 
 export interface UqCardGridProps extends PropsWithChildren {
   target?: UqCardGridTarget;

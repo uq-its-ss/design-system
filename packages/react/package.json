@@ -39,7 +39,8 @@
     "url": "git+https://github.com/uq-its-ss/design-system.git"
   },
   "scripts": {
-    "prepare": "gulp -f ../../gulpfile.js --cwd=. prepare && vite build"
+    "prepare": "gulp -f ../../gulpfile.js --cwd=. prepare && vite build",
+    "lint-tsc": "tsc"
   },
   "bugs": {
     "url": "https://github.com/uq-its-ss/design-system/issues"

@@ -1,20 +1,11 @@
-import { UqContainer } from "./layout/UqContainer/UqContainer.tsx";
-import {
-  UqCardGrid,
-  UqCardGridTarget,
-} from "./layout/UqCardGrid/UqCardGrid.tsx";
-import { UqIcon, UqIconVariant } from "./components/UqIcon/UqIcon.tsx";
-import { UqCard, UqCardVariant } from "./components/UqCard/UqCard.tsx";
-import { UqPane, UqPaneVariant } from "./components/UqPane/UqPane.tsx";
-import {
-  UqStoryCard,
-  UqStoryCardVariant,
-} from "./components/UqStoryCard/UqStoryCard.tsx";
-import { UqPagination } from "./components/UqPagination/UqPagination.tsx";
-import {
-  UqPaginationItem,
-  UqPaginationItemType,
-} from "./components/UqPagination/UqPaginationItem.tsx";
+import { UqContainer } from "./layout/UqContainer/UqContainer";
+import { UqCardGrid } from "./layout/UqCardGrid/UqCardGrid";
+import { UqIcon } from "./components/UqIcon/UqIcon";
+import { UqCard } from "./components/UqCard/UqCard";
+import { UqPane } from "./components/UqPane/UqPane";
+import { UqStoryCard } from "./components/UqStoryCard/UqStoryCard";
+import { UqPagination } from "./components/UqPagination/UqPagination";
+import { UqPaginationItem } from "./components/UqPagination/UqPaginationItem";
 
 export {
   UqContainer,
@@ -26,11 +17,5 @@ export {
   UqPagination,
   UqPaginationItem,
 };
-export type {
-  UqCardGridTarget,
-  UqIconVariant,
-  UqCardVariant,
-  UqPaneVariant,
-  UqStoryCardVariant,
-  UqPaginationItemType,
-};
+
+export * from "./enum/index";

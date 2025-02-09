@@ -1,15 +1,6 @@
-import { FC, ReactNode } from "react";
+import type { FC, ReactNode } from "react";
 import classNames from "classnames";
-
-export enum UqPaneVariant {
-  text = "text",
-  image = "image",
-  video = "video",
-  icon = "icon",
-  iconLarge = "icon-large",
-  textShaded = "text-shaded",
-  iconShaded = "icon-shaded",
-}
+import { UqPaneVariant } from "../../enum";
 
 export interface UqPaneProps {
   title: string;

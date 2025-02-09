@@ -1,10 +1,6 @@
-import { FC } from "react";
+import type { FC } from "react";
 import classNames from "classnames";
-
-export enum UqIconVariant {
-  light = "light",
-  text = "text",
-}
+import { UqIconVariant } from "../../enum";
 
 export interface UqIconProps {
   name: string;

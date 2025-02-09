@@ -1,5 +1,6 @@
-import { FC, MouseEventHandler, useMemo } from "react";
-import { UqPaginationItem, UqPaginationItemType } from "./UqPaginationItem";
+import { type FC, type MouseEventHandler, useMemo } from "react";
+import { UqPaginationItem } from "./UqPaginationItem";
+import { UqPaginationItemType } from "../../enum";
 
 export interface UqPaginationProps {
   As?: "button" | "a";
@@ -112,7 +113,7 @@ export const UqPagination: FC<UqPaginationProps> = ({
 
   return (
     <nav className="uq-pagination" aria-label="Pagination">
-      <ul>
+      <ul className="uq-pagination__list">
         {currentPage !== 1 && (
           <UqPaginationItem
             As={As}
@@ -133,6 +134,7 @@ export const UqPagination: FC<UqPaginationProps> = ({
             As={As}
             type={UqPaginationItemType.Ellipsis}
             value={`${currentPage - 3}`}
+            number={currentPage - 3}
             onClick={onClick}
           />
         )}
@@ -151,6 +153,7 @@ export const UqPagination: FC<UqPaginationProps> = ({
             As={As}
             type={UqPaginationItemType.Ellipsis}
             value={`${currentPage + 3}`}
+            number={currentPage + 3}
             onClick={onClick}
           />
         )}

@@ -1,6 +1,7 @@
 import { Meta, Story, Canvas } from "@storybook/blocks";
 import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
 import * as PaginationStories from "./pagination.stories";
+import * as PaginationItemStories from "./paginationItem.stories";
 
 <Meta of={PaginationStories} />
 
@@ -71,17 +72,3 @@ If on any other page one less and one more pages show, with an ellipsis before t
 Clicking either ellipsis skips 3 pages forward or back from the current page.
 
 <Canvas of={PaginationStories.PagesMoreMiddle} />
-
-## Elements
-
-<Canvas of={PaginationStories.Previous} />
-
-<Canvas of={PaginationStories.Next} />
-
-<Canvas of={PaginationStories.Number} />
-
-<Canvas of={PaginationStories.Current} />
-
-<Canvas of={PaginationStories.Ellipsis} />
-
-<Canvas of={PaginationStories.EllipsisLinked} />

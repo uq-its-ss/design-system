@@ -1,18 +1,19 @@
 @use "@uqds/core/src/scss/global" as core;
 
-.uq-pagination {
-  & ul {
-    display: flex;
-    list-style: none;
-    gap: 1px;
-    margin: 0;
-    padding: 0;
-  }
+.uq-pagination__list,
+.uq-pagination ul {
+  display: flex;
+  list-style: none;
+  gap: 1px;
+  margin: 0;
+  padding: 0;
+}
 
-  & li {
-    margin: 0;
-    padding: 0;
-  }
+.uq-pagination__list-item,
+.uq-pagination li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .uq-pagination__item {

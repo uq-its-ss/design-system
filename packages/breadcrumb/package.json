@@ -1,6 +1,6 @@
 {
   "name": "@uqds/breadcrumb",
-  "version": "7.0.0-alpha.0",
+  "version": "7.0.0-alpha.1",
   "description": "Breadcrumb component",
   "keywords": [
     "uqds",
@@ -52,6 +52,6 @@
   },
   "dependencies": {
     "@uqds/core": "^4.0.0-alpha.0",
-    "@uqds/icon": "^3.0.0-alpha.0"
+    "@uqds/icon": "^3.0.0-alpha.1"
   }
 }

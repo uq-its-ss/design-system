@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0-alpha.3](https://github.com/uq-its-ss/design-system/compare/@uqds/card@3.0.0-alpha.2...@uqds/card@3.0.0-alpha.3) (2025-02-03)
+
+**Note:** Version bump only for package @uqds/card
+
+# [3.0.0-alpha.2](https://github.com/uq-its-ss/design-system/compare/@uqds/card@3.0.0-alpha.1...@uqds/card@3.0.0-alpha.2) (2025-01-31)
+
+### Bug Fixes
+
+- [ITSADSSD-60892][ITSADSSD-60967]: Bug fixes for News site ([#603](https://github.com/uq-its-ss/design-system/issues/603)) ([afbdb52](https://github.com/uq-its-ss/design-system/commit/afbdb52b0957b4613a9ac7cef4eab980e4b29b05))
+
 # [3.0.0-alpha.1](https://github.com/uq-its-ss/design-system/compare/@uqds/card@3.0.0-alpha.0...@uqds/card@3.0.0-alpha.1) (2025-01-23)
 
 ### Bug Fixes

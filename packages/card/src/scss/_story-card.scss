@@ -4,6 +4,7 @@
 @use "card";
 
 $story-card-small-container: 600px;
+$story-card-font-size-small: 22px;
 
 .uq-story-card {
   @extend %uq-card;
@@ -166,6 +167,12 @@ $story-card-small-container: 600px;
 
   & .uq-story-card__content {
     padding: 0;
+  }
+
+  & .uq-story-card__title {
+    @container (width < #{$story-card-small-container}) {
+      font-size: $story-card-font-size-small;
+    }
   }
 
   & .uq-story-card__image {

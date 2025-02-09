@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0-alpha.1](https://github.com/uq-its-ss/design-system/compare/@uqds/icon@3.0.0-alpha.0...@uqds/icon@3.0.0-alpha.1) (2025-02-03)
+
+### Bug Fixes
+
+- add creative commons icon to republish accordion ([#604](https://github.com/uq-its-ss/design-system/issues/604)) ([4a7d840](https://github.com/uq-its-ss/design-system/commit/4a7d840a64c6b379771c94bbffa9052e4ff2aab4))
+
 # [3.0.0-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/icon@1.0.0-alpha.0...@uqds/icon@3.0.0-alpha.0) (2025-01-20)
 
 - Merge release/1.0.4 back to master (#597) ([c85f4dd](https://github.com/uq-its-ss/design-system/commit/c85f4dd04601bad019d83edeb680dd919fd1aebb)), closes [#597](https://github.com/uq-its-ss/design-system/issues/597) [#583](https://github.com/uq-its-ss/design-system/issues/583) [#568](https://github.com/uq-its-ss/design-system/issues/568)

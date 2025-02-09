@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.0.0-alpha.4](https://github.com/uq-its-ss/design-system/compare/storybook-html@6.0.0-alpha.3...storybook-html@6.0.0-alpha.4) (2025-02-03)
+
+### Bug Fixes
+
+- add creative commons icon to republish accordion ([#604](https://github.com/uq-its-ss/design-system/issues/604)) ([4a7d840](https://github.com/uq-its-ss/design-system/commit/4a7d840a64c6b379771c94bbffa9052e4ff2aab4))
+
+# [6.0.0-alpha.3](https://github.com/uq-its-ss/design-system/compare/storybook-html@6.0.0-alpha.2...storybook-html@6.0.0-alpha.3) (2025-01-31)
+
+### Bug Fixes
+
+- [ITSADSSD-60892][ITSADSSD-60967]: Bug fixes for News site ([#603](https://github.com/uq-its-ss/design-system/issues/603)) ([afbdb52](https://github.com/uq-its-ss/design-system/commit/afbdb52b0957b4613a9ac7cef4eab980e4b29b05))
+
 # [6.0.0-alpha.2](https://github.com/uq-its-ss/design-system/compare/storybook-html@6.0.0-alpha.1...storybook-html@6.0.0-alpha.2) (2025-01-23)
 
 **Note:** Version bump only for package storybook-html

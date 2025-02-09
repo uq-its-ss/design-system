@@ -32,7 +32,7 @@ jobs:
 
       - name: "Serve Storybook"
         run: |
-          npx http-server storybook-static --port 6006 &
+          npm run serve-storybook &
         working-directory: packages/storybook-html/
 
       - name: "Create screenshots"

@@ -1,0 +1,77 @@
+@use "@uqds/core/src/scss/global" as core;
+
+.uq-pagination__list,
+.uq-pagination ul {
+  display: flex;
+  list-style: none;
+  gap: 1px;
+  margin: 0;
+  padding: 0;
+}
+
+.uq-pagination__list-item,
+.uq-pagination li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.uq-pagination__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  appearance: none;
+  border: 1px solid transparent;
+  background-color: core.$white;
+  width: var(--pagination-size);
+  height: var(--pagination-size);
+  border-radius: 50%;
+  text-decoration: none;
+  color: core.$grey-900;
+  padding: 0;
+  margin: 0;
+  font-size: core.$font-size-m;
+  font-weight: core.$font-weight-medium;
+  font-family: core.$roboto;
+  cursor: pointer;
+
+  .uq-icon {
+    height: 1.5em;
+
+    &::before {
+      margin: 0;
+    }
+  }
+
+  &:not(.uq-pagination__current, span.uq-pagination__ellipsis):hover {
+    background-color: core.$grey-50;
+    text-decoration: underline;
+    color: core.$grey-900;
+  }
+
+  &:focus-visible {
+    outline-offset: -3px;
+  }
+}
+
+span.uq-pagination__ellipsis {
+  cursor: unset;
+}
+
+.uq-pagination__previous,
+.uq-pagination__next {
+  border-color: core.$purple-500;
+}
+
+.uq-pagination__previous {
+  margin-right: var(--pagination-space);
+}
+
+.uq-pagination__next {
+  margin-left: var(--pagination-space);
+}
+
+.uq-pagination__current {
+  background-color: core.$purple-500;
+  color: core.$white;
+}

@@ -1,6 +1,6 @@
 {
   "name": "private-design-output",
-  "version": "3.0.0-alpha.4",
+  "version": "3.0.0-alpha.5",
   "description": "Render style kits for UQ clients",
   "private": true,
   "author": {
@@ -51,7 +51,7 @@
     "@uqds/loading-spinner": "^3.0.0-alpha.1",
     "@uqds/navigation": "^6.0.0-alpha.1",
     "@uqds/page-header": "^3.0.0-alpha.0",
-    "@uqds/pagination": "^3.0.0-alpha.0",
+    "@uqds/pagination": "^3.0.0-alpha.1",
     "@uqds/pane": "^3.0.0-alpha.1",
     "@uqds/previous-next": "^3.0.0-alpha.1",
     "@uqds/progression": "^3.0.0-alpha.0",

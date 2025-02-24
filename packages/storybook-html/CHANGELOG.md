@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.0.0-alpha.5](https://github.com/uq-its-ss/design-system/compare/storybook-html@6.0.0-alpha.4...storybook-html@6.0.0-alpha.5) (2025-02-24)
+
+- [ITSADSSD-59700]: New pagination (#605) ([2cd8d76](https://github.com/uq-its-ss/design-system/commit/2cd8d7670bc27a15cfdfe3a1eacdab941f728800)), closes [#605](https://github.com/uq-its-ss/design-system/issues/605)
+
+### BREAKING CHANGES
+
+- new pagination markup
+
+- chore: fix lint, remove old files
+
+- chore: update pagination features to match react implementation
+
+- chore: add stories for pagination item to reduce markup
+
+- chore: added screenshots
+
 # [6.0.0-alpha.4](https://github.com/uq-its-ss/design-system/compare/storybook-html@6.0.0-alpha.3...storybook-html@6.0.0-alpha.4) (2025-02-03)
 
 ### Bug Fixes

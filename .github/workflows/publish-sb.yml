@@ -31,9 +31,14 @@ jobs:
           args: --follow-symlinks --delete
         env:
           AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET_STAGING }}
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_STAGING_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_STAGING_KEY }}
           SOURCE_DIR: 'packages/storybook-html/storybook-static'
+
+      - name: Configure AWS Credentials for Staging
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_ARN }}
+          aws-region: ap-southeast-2
+          role-session-name: GitHubActions-S3Sync-Staging-${{ github.run_id }}
 
       - name: "Sync releases to Production environment"
         if: ${{ github.ref_name == 'releases' }}
@@ -42,7 +47,12 @@ jobs:
            args: --follow-symlinks --delete
         env:
           AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET_PRODUCTION }}
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_PRODUCTION_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_PRODUCTION_KEY }}
           SOURCE_DIR: 'packages/storybook-html/storybook-static'
+
+      - name: Configure AWS Credentials for Production
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_ARN }}
+          aws-region: ap-southeast-2
+          role-session-name: GitHubActions-S3Sync-Production-${{ github.run_id }}
 

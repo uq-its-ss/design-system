@@ -49,7 +49,7 @@ jobs:
       - name: Configure AWS Credentials for Reg-Suit
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: ${{ secrets.AWS_ARN }}
+          role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME_TOOLS }}
           aws-region: ap-southeast-2
           role-session-name: GitHubActions-RegSuit-${{ github.run_id }}
 
@@ -65,7 +65,7 @@ jobs:
       - name: Configure AWS Credentials for S3 Sync Preview
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: ${{ secrets.AWS_ARN }}
+          role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME_TOOLS }}
           aws-region: ap-southeast-2
           role-session-name: GitHubActions-S3Sync-Preview-${{ github.run_id }}
 

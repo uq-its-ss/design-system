@@ -24,35 +24,29 @@ jobs:
           npm run build-storybook
         working-directory: packages/storybook-html/
 
-      - name: "Sync master to staging environment"
-        if: ${{ github.ref_name == 'master' }}
-        uses: jakejarvis/s3-sync-action@master
-        with:
-          args: --follow-symlinks --delete
-        env:
-          AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET_STAGING }}
-          SOURCE_DIR: 'packages/storybook-html/storybook-static'
-
       - name: Configure AWS Credentials for Staging
+        if: ${{ github.ref_name == 'master' }}
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME_TOOLS_PRODUCTION }}
+          role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME_TOOLS_STAGING }}
           aws-region: ap-southeast-2
           role-session-name: GitHubActions-S3Sync-Staging-${{ github.run_id }}
 
-      - name: "Sync releases to Production environment"
-        if: ${{ github.ref_name == 'releases' }}
-        uses: jakejarvis/s3-sync-action@master
-        with:
-           args: --follow-symlinks --delete
-        env:
-          AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET_PRODUCTION }}
-          SOURCE_DIR: 'packages/storybook-html/storybook-static'
+      - name: "Sync master to staging environment"
+        if: ${{ github.ref_name == 'master' }}
+        run: |
+          aws s3 sync packages/storybook-html/storybook-static s3://${{ secrets.AWS_S3_BUCKET_STAGING }} --delete --follow-symlinks --acl public-read
 
       - name: Configure AWS Credentials for Production
+        if: ${{ github.ref_name == 'releases' }}
         uses: aws-actions/configure-aws-credentials@v4
         with:
           role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME_TOOLS_PRODUCTION }}
           aws-region: ap-southeast-2
           role-session-name: GitHubActions-S3Sync-Production-${{ github.run_id }}
+
+      - name: "Sync releases to Production environment"
+        if: ${{ github.ref_name == 'releases' }}
+        run: |
+          aws s3 sync packages/storybook-html/storybook-static s3://${{ secrets.AWS_S3_BUCKET_PRODUCTION }} --delete --follow-symlinks --acl public-read
 

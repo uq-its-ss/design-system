@@ -1,5 +1,9 @@
 name: Visual Regression Testing and preview environment
 
+permissions:
+  id-token: write
+  contents: read
+
 on:
   push:
     branches:

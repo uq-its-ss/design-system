@@ -39,6 +39,13 @@ jobs:
         run: |
           npm run update-screenshots
 
+      - name: Configure AWS Credentials for Reg-Suit
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME_TOOLS }}
+          aws-region: ap-southeast-2
+          role-session-name: GitHubActions-RegSuit-${{ github.run_id }}
+
       - name: Run visual regression
         env:
           UQDS_PERSONAL_ACCESS_TOKEN: ${{ secrets.UQDS_PERSONAL_ACCESS_TOKEN }}
@@ -46,12 +53,12 @@ jobs:
         run: |
           npm run reg-suit run --update-screenshots
 
-      - name: Configure AWS Credentials for Reg-Suit
+      - name: Configure AWS Credentials for S3 Sync Preview
         uses: aws-actions/configure-aws-credentials@v4
         with:
           role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME_TOOLS }}
           aws-region: ap-southeast-2
-          role-session-name: GitHubActions-RegSuit-${{ github.run_id }}
+          role-session-name: GitHubActions-S3Sync-Preview-${{ github.run_id }}
 
       - name: "Sync to preview environment"
         uses: jakejarvis/s3-sync-action@master
@@ -61,13 +68,6 @@ jobs:
           AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET_TOOLS }}
           SOURCE_DIR: 'packages/storybook-html/storybook-static'
           DEST_DIR: storybook-preview/${{ github.run_id }}
-
-      - name: Configure AWS Credentials for S3 Sync Preview
-        uses: aws-actions/configure-aws-credentials@v4
-        with:
-          role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME_TOOLS }}
-          aws-region: ap-southeast-2
-          role-session-name: GitHubActions-S3Sync-Preview-${{ github.run_id }}
 
       - name: "Add link to storybook preview in comments"
         uses: marocchino/sticky-pull-request-comment@v2

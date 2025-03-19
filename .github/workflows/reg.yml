@@ -65,13 +65,12 @@ jobs:
           role-session-name: GitHubActions-S3Sync-Preview-${{ github.run_id }}
 
       - name: "Sync to preview environment"
-        uses: jakejarvis/s3-sync-action@master
+        uses: aws-actions/s3-sync@v5
         with:
           args: --acl public-read --follow-symlinks
-        env:
-          AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET_TOOLS }}
-          SOURCE_DIR: 'packages/storybook-html/storybook-static'
-          DEST_DIR: storybook-preview/${{ github.run_id }}
+          bucket: ${{ secrets.AWS_S3_BUCKET_TOOLS }}
+          source-dir: 'packages/storybook-html/storybook-static'
+          destination-dir: storybook-preview/${{ github.run_id }}
 
       - name: "Add link to storybook preview in comments"
         uses: marocchino/sticky-pull-request-comment@v2

@@ -28,7 +28,7 @@ jobs:
         if: ${{ github.ref_name == 'master' }}
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME_TOOLS_STAGING }}
+          role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME_STAGING }}
           aws-region: ap-southeast-2
           role-session-name: GitHubActions-S3Sync-Staging-${{ github.run_id }}
 
@@ -41,7 +41,7 @@ jobs:
         if: ${{ github.ref_name == 'releases' }}
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME_TOOLS_PRODUCTION }}
+          role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME_PRODUCTION }}
           aws-region: ap-southeast-2
           role-session-name: GitHubActions-S3Sync-Production-${{ github.run_id }}
 

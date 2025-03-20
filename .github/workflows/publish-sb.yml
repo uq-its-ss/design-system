@@ -40,7 +40,7 @@ jobs:
       - name: "Sync master to staging environment"
         if: ${{ github.ref_name == 'master' }}
         run: |
-          aws s3 sync packages/storybook-html/storybook-static s3://${{ secrets.AWS_S3_BUCKET_STAGING }} --delete --follow-symlinks --acl public-read
+          aws s3 sync packages/storybook-html/storybook-static s3://${{ secrets.AWS_S3_BUCKET_STAGING }} --delete --follow-symlinks
 
       - name: Configure AWS Credentials for Production
         if: ${{ github.ref_name == 'releases' }}
@@ -53,5 +53,5 @@ jobs:
       - name: "Sync releases to Production environment"
         if: ${{ github.ref_name == 'releases' }}
         run: |
-          aws s3 sync packages/storybook-html/storybook-static s3://${{ secrets.AWS_S3_BUCKET_PRODUCTION }} --delete --follow-symlinks --acl public-read
+          aws s3 sync packages/storybook-html/storybook-static s3://${{ secrets.AWS_S3_BUCKET_PRODUCTION }} --delete --follow-symlinks
 

@@ -31,6 +31,7 @@
   "dependencies": {
     "@uqds/accordion": "^6.0.0-alpha.1",
     "@uqds/alert": "^6.0.0-alpha.1",
+    "@uqds/app-maps": "^3.0.0-alpha.0",
     "@uqds/blockquote": "^5.0.0-alpha.1",
     "@uqds/body": "^3.0.0-alpha.0",
     "@uqds/breadcrumb": "^7.0.0-alpha.1",
@@ -46,6 +47,7 @@
     "@uqds/header-legacy": "^3.0.0-alpha.1",
     "@uqds/hero": "^6.0.0-alpha.1",
     "@uqds/icon": "^3.0.0-alpha.1",
+    "@uqds/image": "^5.0.0-alpha.0",
     "@uqds/layout": "^6.0.0-alpha.1",
     "@uqds/lists": "^3.0.0-alpha.0",
     "@uqds/loading-spinner": "^3.0.0-alpha.1",
@@ -53,11 +55,13 @@
     "@uqds/page-header": "^3.0.0-alpha.0",
     "@uqds/pagination": "^3.0.0-alpha.1",
     "@uqds/pane": "^3.0.0-alpha.1",
+    "@uqds/pill": "^5.0.0-alpha.0",
     "@uqds/previous-next": "^3.0.0-alpha.1",
     "@uqds/progression": "^3.0.0-alpha.0",
     "@uqds/sections": "^3.0.0-alpha.0",
     "@uqds/side-nav": "^3.0.0-alpha.1",
     "@uqds/site-header": "^6.0.0-alpha.1",
+    "@uqds/social": "^5.0.0-alpha.0",
     "@uqds/table": "^3.0.0-alpha.0",
     "@uqds/tabs": "^3.0.0-alpha.0"
   }

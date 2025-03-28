@@ -8,4 +8,14 @@ import { imageCarousel } from "@uqds/image/src/js/main";
 import { socialShare } from "@uqds/social/src/js/main";
 import { Tabs } from "@uqds/tabs/src/js/main";
 
-export { header, siteHeaderNavigation, accordion, Alerts, breadcrumb, copyButton, imageCarousel, socialShare, Tabs };
+export {
+  header,
+  siteHeaderNavigation,
+  accordion,
+  Alerts,
+  breadcrumb,
+  copyButton,
+  imageCarousel,
+  socialShare,
+  Tabs,
+};

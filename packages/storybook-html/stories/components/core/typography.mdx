@@ -1,12 +1,13 @@
-import { Meta, Story, Canvas, Preview } from "@storybook/blocks";
-import "./_typography.scss";
+import { Meta, Story, Canvas, Preview, Typeset } from "@storybook/blocks";
+import * as TypographyExample from "./typography-example.stories";
 
 <Meta title="Core/Typography" />
 
 # Typography
 
-## Fonts
+<Canvas of={TypographyExample.Example} />
 
+## Fonts
 The following fonts are used for UQ online applications:
 
 <table className="uqds-table uqds-table--card uqds-fonts">

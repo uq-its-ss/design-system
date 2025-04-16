@@ -20,7 +20,7 @@ export const Example = {
   </thead>
   <tbody>
     <tr className="uq-table__row">
-      <td className="uq-table__item"><span class="h1">Heading 1</span></td>
+      <td className="uq-table__item"><div class="h1">Heading 1</div></td>
       <td className="uq-table__item" data-title="Font:">Montserrat</td>
       <td className="uq-table__item" data-title="Weight:">500</td>
       <td className="uq-table__item" data-title="Size:">40px</td>
@@ -28,7 +28,7 @@ export const Example = {
       <td className="uq-table__item" data-title="Colour:">$black</td>
     </tr>
     <tr className="uq-table__row">
-      <td className="uq-table__item"><span class="h2">Heading 2</span></td>
+      <td className="uq-table__item"><div class="h2">Heading 2</div></td>
       <td className="uq-table__item" data-title="Font:">Roboto</td>
       <td className="uq-table__item" data-title="Weight:">500</td>
       <td className="uq-table__item" data-title="Size:">32px</td>
@@ -36,7 +36,7 @@ export const Example = {
       <td className="uq-table__item" data-title="Colour:">$black</td>
     </tr>
     <tr className="uq-table__row">
-      <td className="uq-table__item"><span class="h3">Heading 3</span></td>
+      <td className="uq-table__item"><div class="h3">Heading 3</div></td>
       <td className="uq-table__item" data-title="Font:">Roboto</td>
       <td className="uq-table__item" data-title="Weight:">500</td>
       <td className="uq-table__item" data-title="Size:">24px</td>
@@ -44,7 +44,7 @@ export const Example = {
       <td className="uq-table__item" data-title="Colour:">$black</td>
     </tr>
     <tr className="uq-table__row">
-      <td className="uq-table__item"><span class="h4">Heading 4</span></td>
+      <td className="uq-table__item"><div class="h4">Heading 4</div></td>
       <td className="uq-table__item" data-title="Font:">Roboto</td>
       <td className="uq-table__item" data-title="Weight:">500</td>
       <td className="uq-table__item" data-title="Size:">20px</td>
@@ -52,7 +52,7 @@ export const Example = {
       <td className="uq-table__item" data-title="Colour:">$black</td>
     </tr>
     <tr className="uq-table__row">
-      <td className="uq-table__item"><span class="h5">Heading 5</span></td>
+      <td className="uq-table__item"><div class="h5">Heading 5</div></td>
       <td className="uq-table__item" data-title="Font:">Roboto</td>
       <td className="uq-table__item" data-title="Weight:">500</td>
       <td className="uq-table__item" data-title="Size:">18px</td>
@@ -60,7 +60,7 @@ export const Example = {
       <td className="uq-table__item" data-title="Colour:">$black</td>
     </tr>
     <tr className="uq-table__row">
-      <td className="uq-table__item"><span class="h6">Heading 6</span></td>
+      <td className="uq-table__item"><div class="h6">Heading 6</div></td>
       <td className="uq-table__item" data-title="Font:">Roboto</td>
       <td className="uq-table__item" data-title="Weight:">500</td>
       <td className="uq-table__item" data-title="Size:">16px</td>

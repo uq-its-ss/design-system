@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.0.0-alpha.7](https://github.com/uq-its-ss/design-system/compare/storybook-html@6.0.0-alpha.6...storybook-html@6.0.0-alpha.7) (2025-03-31)
+
+**Note:** Version bump only for package storybook-html
+
+# [6.0.0-alpha.6](https://github.com/uq-its-ss/design-system/compare/storybook-html@6.0.0-alpha.5...storybook-html@6.0.0-alpha.6) (2025-03-28)
+
+**Note:** Version bump only for package storybook-html
+
 # [6.0.0-alpha.5](https://github.com/uq-its-ss/design-system/compare/storybook-html@6.0.0-alpha.4...storybook-html@6.0.0-alpha.5) (2025-02-24)
 
 - [ITSADSSD-59700]: New pagination (#605) ([2cd8d76](https://github.com/uq-its-ss/design-system/commit/2cd8d7670bc27a15cfdfe3a1eacdab941f728800)), closes [#605](https://github.com/uq-its-ss/design-system/issues/605)

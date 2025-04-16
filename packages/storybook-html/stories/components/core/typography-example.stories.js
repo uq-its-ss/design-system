@@ -5,7 +5,7 @@ export default {
 };
 
 export const Example = {
-  name: "Example",
+  name: "Examples",
   render: () => `
 <table className="uqds-table uqds-table--card">
   <thead>
@@ -23,8 +23,8 @@ export const Example = {
     <tr className="uqds-table__row">
       <td className="uqds-table__item"><h1>Heading 1</h1></td>
       <td className="uqds-table__item" data-title="Font:">Montserrat</td>
-      <td className="uqds-table__item" data-title="Weight:">Medium, 500</td>
-      <td className="uqds-table__item" data-title="Size:">$font-size-xxxxl</td>
+      <td className="uqds-table__item" data-title="Weight:">500</td>
+      <td className="uqds-table__item" data-title="Size:">40px</td>
       <td className="uqds-table__item" data-title="Line-height:">1.2</td> 
       <td className="uqds-table__item" data-title="Colour:">$black</td>
     </tr>
@@ -32,8 +32,8 @@ export const Example = {
     <tr className="uqds-table__row">
       <td className="uqds-table__item"><h2>Heading 2</h2></td>
       <td className="uqds-table__item" data-title="Font:">Roboto</td>
-      <td className="uqds-table__item" data-title="Weight:">Medium, 500</td>
-      <td className="uqds-table__item" data-title="Size:">$font-size-xxxl</td>
+      <td className="uqds-table__item" data-title="Weight:">500</td>
+      <td className="uqds-table__item" data-title="Size:">32px</td>
       <td className="uqds-table__item" data-title="Line-height:">1.2</td>
       <td className="uqds-table__item" data-title="Colour:">$black</td>
     </tr>
@@ -41,8 +41,8 @@ export const Example = {
     <tr className="uqds-table__row">
       <td className="uqds-table__item"><h3>Heading 3</h3></td>
       <td className="uqds-table__item" data-title="Font:">Roboto</td>
-      <td className="uqds-table__item" data-title="Weight:">Medium, 500</td>
-      <td className="uqds-table__item" data-title="Size:">$font-size-xxl</td>
+      <td className="uqds-table__item" data-title="Weight:">500</td>
+      <td className="uqds-table__item" data-title="Size:">24px</td>
       <td className="uqds-table__item" data-title="Line-height:">1.2</td>
       <td className="uqds-table__item" data-title="Colour:">$black</td>
     </tr>
@@ -50,8 +50,8 @@ export const Example = {
     <tr className="uqds-table__row">
       <td className="uqds-table__item"><h4>Heading 4</h4></td>
       <td className="uqds-table__item" data-title="Font:">Roboto</td>
-      <td className="uqds-table__item" data-title="Weight:">Medium, 500</td>
-      <td className="uqds-table__item" data-title="Size:">$font-size-xl</td>
+      <td className="uqds-table__item" data-title="Weight:">500</td>
+      <td className="uqds-table__item" data-title="Size:">20px</td>
       <td className="uqds-table__item" data-title="Line-height:">1.2</td>
       <td className="uqds-table__item" data-title="Colour:">$black</td>
     </tr>
@@ -59,8 +59,8 @@ export const Example = {
     <tr className="uqds-table__row">
       <td className="uqds-table__item"><h5>Heading 5</h5></td>
       <td className="uqds-table__item" data-title="Font:">Roboto</td>
-      <td className="uqds-table__item" data-title="Weight:">Medium, 500</td>
-      <td className="uqds-table__item" data-title="Size:">$font-size-l</td>
+      <td className="uqds-table__item" data-title="Weight:">500</td>
+      <td className="uqds-table__item" data-title="Size:">18px</td>
       <td className="uqds-table__item" data-title="Line-height:">1.2</td>
       <td className="uqds-table__item" data-title="Colour:">$black</td>
     </tr>
@@ -68,8 +68,8 @@ export const Example = {
     <tr className="uqds-table__row">
       <td className="uqds-table__item"><h6>Heading 6</h6></td>
       <td className="uqds-table__item" data-title="Font:">Roboto</td>
-      <td className="uqds-table__item" data-title="Weight:">Medium, 500</td>
-      <td className="uqds-table__item" data-title="Size:">$font-size-m</td>
+      <td className="uqds-table__item" data-title="Weight:">500</td>
+      <td className="uqds-table__item" data-title="Size:">16px</td>
       <td className="uqds-table__item" data-title="Line-height:">1.2</td>
       <td className="uqds-table__item" data-title="Colour:">$black</td>
     </tr>
@@ -77,8 +77,8 @@ export const Example = {
     <tr className="uqds-table__row">
       <td className="uqds-table__item"><p>Body</p></td>
       <td className="uqds-table__item" data-title="Font:">Roboto</td>
-      <td className="uqds-table__item" data-title="Weight:">Regular, 400</td>
-      <td className="uqds-table__item" data-title="Size:">$font-size-m</td>
+      <td className="uqds-table__item" data-title="Weight:">400</td>
+      <td className="uqds-table__item" data-title="Size:">16px</td>
       <td className="uqds-table__item" data-title="Line-height:">1.5</td>
       <td className="uqds-table__item" data-title="Colour:">$grey-900</td>
     </tr>
@@ -86,8 +86,8 @@ export const Example = {
     <tr className="uqds-table__row">
       <td className="uqds-table__item"><p><small>Body - small</small></p></td>
       <td className="uqds-table__item" data-title="Font:">Roboto</td>
-      <td className="uqds-table__item" data-title="Weight:">Regular, 400</td>
-      <td className="uqds-table__item" data-title="Size:">$font-size-m</td>
+      <td className="uqds-table__item" data-title="Weight:">400</td>
+      <td className="uqds-table__item" data-title="Size:">14px</td>
       <td className="uqds-table__item" data-title="Line-height:">1.5</td>
       <td className="uqds-table__item" data-title="Colour:">$grey-900</td>
     </tr>
@@ -95,8 +95,8 @@ export const Example = {
     <tr className="uqds-table__row">
       <td className="uqds-table__item"><a href="#">Link</a></td>
       <td className="uqds-table__item" data-title="Font:">Roboto</td>
-      <td className="uqds-table__item" data-title="Weight:">Medium, 500</td>
-      <td className="uqds-table__item" data-title="Size:">$font-size-m</td>
+      <td className="uqds-table__item" data-title="Weight:">500</td>
+      <td className="uqds-table__item" data-title="Size:">16px</td>
       <td className="uqds-table__item" data-title="Line-height:">1.5</td>
       <td className="uqds-table__item" data-title="Colour:">$purple-500</td>
     </tr>
@@ -104,8 +104,8 @@ export const Example = {
     <tr className="uqds-table__row">
       <td className="uqds-table__item"><ol><li>Ordered list</li></ol></td>
       <td className="uqds-table__item" data-title="Font:">Roboto</td>
-      <td className="uqds-table__item" data-title="Weight:">Regular, 400</td>
-      <td className="uqds-table__item" data-title="Size:">$font-size-m</td>
+      <td className="uqds-table__item" data-title="Weight:">400</td>
+      <td className="uqds-table__item" data-title="Size:">16px</td>
       <td className="uqds-table__item" data-title="Line-height:">1.5</td>
       <td className="uqds-table__item" data-title="Colour:">$grey-900</td>
     </tr>
@@ -113,8 +113,8 @@ export const Example = {
     <tr className="uqds-table__row">
       <td className="uqds-table__item"><ul><li>Unordered list</li></ul></td>
       <td className="uqds-table__item" data-title="Font:">Roboto</td>
-      <td className="uqds-table__item" data-title="Weight:">Regular, 400</td>
-      <td className="uqds-table__item" data-title="Size:">$font-size-m</td>
+      <td className="uqds-table__item" data-title="Weight:">400</td>
+      <td className="uqds-table__item" data-title="Size:">16px</td>
       <td className="uqds-table__item" data-title="Line-height:">1.5</td>
       <td className="uqds-table__item" data-title="Colour:">$grey-900</td>
     </tr>
@@ -122,8 +122,8 @@ export const Example = {
     <tr className="uqds-table__row">
       <td className="uqds-table__item"><label>Label</label></td>
       <td className="uqds-table__item" data-title="Font:">Roboto</td>
-      <td className="uqds-table__item" data-title="Weight:">Regular, 400</td>
-      <td className="uqds-table__item" data-title="Size:">$font-size-s</td>
+      <td className="uqds-table__item" data-title="Weight:">400</td>
+      <td className="uqds-table__item" data-title="Size:">14px</td>
       <td className="uqds-table__item" data-title="Line-height:">1.5</td>
       <td className="uqds-table__item" data-title="Colour:">$grey-900</td>
     </tr>
@@ -131,14 +131,13 @@ export const Example = {
     <tr className="uqds-table__row">
       <td className="uqds-table__item"><blockquote>Blockquote</blockquote></td>
       <td className="uqds-table__item" data-title="Font:">Roboto</td>
-      <td className="uqds-table__item" data-title="Weight:">Regular, 400</td>
-      <td className="uqds-table__item" data-title="Size:">$font-size-l</td>
+      <td className="uqds-table__item" data-title="Weight:">400</td>
+      <td className="uqds-table__item" data-title="Size:">20px</td>
       <td className="uqds-table__item" data-title="Line-height:">1.5</td>
       <td className="uqds-table__item" data-title="Colour:">$grey-900</td>
     </tr>
 
   </tbody>
 </table>
-
 `,
 };

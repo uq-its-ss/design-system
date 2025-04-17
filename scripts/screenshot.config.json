@@ -149,7 +149,6 @@
     "components-pagination--pagination-pages-more-first": "http://localhost:6006/iframe.html?id=components-pagination-pagination--pages-more-first",
     "components-pagination--pages-more-last": "http://localhost:6006/iframe.html?id=components-pagination-pagination--pages-more-last",
     "components-pagination--pages-more-middle": "http://localhost:6006/iframe.html?id=components-pagination-pagination--pages-more-middle",
-    "components-pane--all": "http://localhost:6006/iframe.html?id=components-pane--all",
     "components-pill--link": "http://localhost:6006/iframe.html?id=components-pill-pill--link",
     "components-pill--checkbox": "http://localhost:6006/iframe.html?id=components-pill-pill--checkbox",
     "components-pill--radio": "http://localhost:6006/iframe.html?id=components-pill-pill--radio",

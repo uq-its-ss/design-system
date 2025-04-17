@@ -161,8 +161,6 @@
     "components-progression--progression-initial": "http://localhost:6006/iframe.html?id=components-progression--progression-initial",
     "components-progression--progression-middle": "http://localhost:6006/iframe.html?id=components-progression--progression-middle",
     "components-progression--progression-final": "http://localhost:6006/iframe.html?id=components-progression--progression-final",
-    "components-side-nav--side-nav-single-level": "http://localhost:6006/iframe.html?id=components-side-nav--side-nav-single-level",
-    "components-side-nav--side-nav-multi-level": "http://localhost:6006/iframe.html?id=components-side-nav--side-nav-multi-level",
     "components-site-header--site-header-with-subnav": "http://localhost:6006/iframe.html?id=components-site-header--site-header-with-subnav",
     "components-site-header--site-header-without-subnav": "http://localhost:6006/iframe.html?id=components-site-header--site-header-without-subnav",
     "components-table--table": "http://localhost:6006/iframe.html?id=components-table--table",

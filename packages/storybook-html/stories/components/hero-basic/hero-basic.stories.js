@@ -115,7 +115,7 @@ export const Basic = {
 
 export const Program = {
   ...HeroBasic,
-  name: "Home",
+  name: "Program",
   args: {
     eyebrow: "Bachelors of",
     title: "Agribusiness / Agricultural Science",

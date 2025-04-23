@@ -2,7 +2,7 @@ import { layoutDecorator } from "../../../lib/decorators";
 import "@uqds/layout/src/scss/main.scss";
 
 export default {
-  title: "Email Templates/Newsletter",
+  title: "Newsletter/Salesforce",
   parameters: {
     layout: "fullscreen",
   },
@@ -12,8 +12,9 @@ export default {
   decorators: [layoutDecorator],
 };
 
-export const Newsletter = {
+export const Salesforce = {
   render: () => `
+
 
 
   <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -21,7 +22,7 @@ export const Newsletter = {
   <head><meta name="robots" content="noindex, nofollow"/><meta name="referrer" content="no-referrer"/>
    <!--[if gte mso 9]>  <xml>   <o:OfficeDocumentSettings>   <o:AllowPNG/>   <o:PixelsPerInch>96</o:PixelsPerInch>   </o:OfficeDocumentSettings>  </xml>  <![endif]-->
    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+   <meta name="viewport" content="width=device-width, initial-scale=.5, maximum-scale=12.0, minimum-scale=.25, user-scalable=yes"/>
    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
    <meta name="format-detection" content="date=no" />
    <meta name="format-detection" content="address=no" />
@@ -60,7 +61,7 @@ export const Newsletter = {
   
     .l-grey a { color: #6f6f6f; }
     .l-gold a { color: #BB9D65; }
-    .l-white a { color: #fffffe; }
+    .l-white a { color: #ffffff; }
     .l-lpurple a { color: #962A8B; }
     .l-dpurple a { color: #51247A; }
   
@@ -70,40 +71,52 @@ export const Newsletter = {
     }
   
     @media (prefers-color-scheme: dark ) {
-     .title, .text, a { color: #000001 !important; }
+      
+     .title { color: #FFFFFF !important; }
+     .text { color: #E8E8E8 !important; }
+     a { color: #C29FDF !important; }
      .c-grey, .l-grey a { color: #6f6f6f !important; }
      .c-gold, .l-gold a { color: #BB9D65 !important; }
-     .c-white, .l-white a { color: #fffffe !important; }
-     .c-lpurple, .l-lpurple a { color: #962A8B !important; }
+     .c-white, .l-white a { color: #ffffff !important; }
+     .c-lpurple, .l-lpurple a { color: #C29FDF !important; }
      .c-dpurple, .l-dpurple a { color: #51247A !important; }
   
+     
+      
+     .bg-white { background-color: #19151C !important; }
+     .bg-grey-f7 { background-color: #302C33 !important; }
+      
      .bg-black { background-color: #000001 !important; }
-     .bg-white { background-color: #fffffe !important; }
      .bg-purple { background-color: #51247A !important; }
-     .bg-grey-f7 { background-color: #f7f5f4 !important; }
-     .bg-grey-c7 { background-color: #C7C7C7 !important; }
-     .bg-white-fa { background-color: #fafafa !important; }
+     .bg-grey-c7 { background-color: #5E5B60 !important; }
+     .bg-white-fa { background-color: #19151C !important; }
   
      .bd-grey { border-color: #c4c4c4 !important; }
      .bd-purple { border-color: #962a8b !important; }
+     .bd-lpurple { border-color: #C29FDF !important; }
+      
     }
-  
-    [data-ogsc] .title, [data-ogsc] .text, [data-ogsc] a { color: #000001 !important; }
+     
+    [data-ogsc] .title { color: #FFFFFF !important; }
+    [data-ogsc] .text { color: #E8E8E8 !important; }
+    [data-ogsc] a { color: #C29FDF !important; }
     [data-ogsc] .c-grey, [data-ogsc] .l-grey a { color: #6f6f6f !important; }
     [data-ogsc] .c-gold, [data-ogsc] .l-gold a { color: #BB9D65 !important; }
-    [data-ogsc] .c-white, [data-ogsc] .l-white a { color: #fffffe !important; }
-    [data-ogsc] .c-lpurple, [data-ogsc] .l-lpurple a { color: #962A8B !important; }
+    [data-ogsc] .c-white, [data-ogsc] .l-white a { color: #ffffff !important; }
+    [data-ogsc] .c-lpurple, [data-ogsc] .l-lpurple a { color: #C29FDF !important; } 
     [data-ogsc] .c-dpurple, [data-ogsc] .l-dpurple a { color: #51247A !important; }
   
+    [data-ogsc] .bg-white { background-color: #19151C !important; }
+    [data-ogsc] .bg-grey-f7 { background-color: #302C33 !important; }
+     
     [data-ogsc] .bg-black { background-color: #000001 !important; }
-    [data-ogsc] .bg-white { background-color: #fffffe !important; }
     [data-ogsc] .bg-purple { background-color: #51247A !important; }
-    [data-ogsc] .bg-grey-f7 { background-color: #f7f5f4 !important; }
-    [data-ogsc] .bg-grey-c7 { background-color: #C7C7C7 !important; }
+    [data-ogsc] .bg-grey-c7 { background-color: #5E5B60 !important; }
     [data-ogsc] .bg-white-fa { background-color: #fafafa !important; }
   
     [data-ogsc] .bd-grey { border-color: #c4c4c4 !important; }
     [data-ogsc] .bd-purple { border-color: #962a8b !important; }
+    [data-ogsc] .bd-lpurple { border-color: #C29FDF !important; }
   
     /* Mobile styles */
     @media only screen and (max-device-width: 480px), only screen and (max-width: 480px) {
@@ -177,18 +190,18 @@ export const Newsletter = {
     }
    </style>
   </head>
-  <body class="body bg-grey-c7" style="padding:0 !important; margin:0 auto !important; display:block !important; min-width:100% !important; width:100% !important; background:#C7C7C7; -webkit-text-size-adjust:none; background-color:#C7C7C7;">
+  <body class="body bg-grey-c7" style="padding:0 !important; margin:0 auto !important; display:block !important; min-width:100% !important; width:100% !important; background:#D1D0D2; -webkit-text-size-adjust:none; background-color:#D1D0D2;">
      <!-- ======|| TRACKING ||====== -->
       
       <div id="tracking_pixel">
-        <img src="http://click.explore-test.uq.edu.au/open.aspx?ffcb10-fec6127274660174-fe231570716303757d1372-fe34117175640478711779-ff991072-fe3315707162077d701174-ffce15&d=500010&bmt=0" width="1" height="1" alt="">
+        <img src="http://click.explore-test.uq.edu.au/open.aspx?ffcb10-feca12737562077e-fe2b157070620775771778-fe34117175640478711779-ff991072-fe3115707162077d701077-ffce15&d=500015&bmt=0" width="1" height="1" alt="">
       </div>
       <div id="dmp_pixel">
         
       </div>
       <!-- ======|| TEMPLATE ||====== -->
    <center>
-    <table class="main-table bg-grey-c7" width="100%" border="0" cellspacing="0" cellpadding="0" style="margin: 0; padding: 0; width: 100%; height: 100%; background-color:#C7C7C7;" bgcolor="#C7C7C7">
+    <table class="main-table bg-grey-c7" width="100%" border="0" cellspacing="0" cellpadding="0" style="margin: 0; padding: 0; width: 100%; height: 100%; background-color:#D1D0D2;" bgcolor="#D1D0D2">
      <tr>
       <td style="margin: 0; padding: 0; width: 100%; height: 100%;" align="center" valign="top">
        <table class="m-hide" style="mso-hide: all;" width="100%" border="0" cellspacing="0" cellpadding="0">
@@ -225,13 +238,13 @@ export const Newsletter = {
             
               <tr>
                 <td class="img" style="font-size:0pt; line-height:0pt; text-align:left;">
-                  <a   data-linkto="https://" href="http://click.explore-test.uq.edu.au/?qs=bf7df03b97f962a73055617c85353ebccba6ed5ca076a785aaf9f409bbecee9518163d47d1f7bbbfce4ce9201e2496d23a379eb123d60de0034a3e1842354519" target="_blank" title="The University of Queensland"><img alt="The University of Queensland logo" data-assetid="81270" height="50" src="https://image.explore.uq.edu.au/lib/fe37117175640478711776/m/1/a04b5099-9772-4cff-92fd-af188038c008.png" style="height: 42px; width: 160px; padding: 0px; text-align: center;" width="190"></a><a href="http://click.explore-test.uq.edu.au/?qs=bf7df03b97f962a707c616b7965eac136f82456a5a3a2b5f00712f5229ce4784589f0983fc4e2ef6ed33fb56d0aa3c7a6a7c1fb59b2edecf" target="_blank"> </a></td><td class="text fz-10 lh-14 a-right c-white l-white pb-10" style="font-family:'Roboto', Arial, sans-serif; font-size: 16px; line-height: 20px; text-align:right; color:#fffffe; padding-bottom: 10px;">
-                  <a class="link-u c-white" href="http://view.explore-test.uq.edu.au/?qs=44567a3b36a843d9613cde397fef459e823e2d88fe7aab6c5a5a8edddf58427bb162eba6d224650e2dc65d876a3ee7161ac3152189f41947d0dd0fbd1fbe82937be54fccece8d5c90e34005c929df640" style="text-decoration:underline; color:#fffffe; font-weight:normal" target="_blank">View in browser</a></td></tr></table></td></tr></table><!-- END Header --></td></tr></table>
+                  <a   data-linkto="https://" href="http://click.explore-test.uq.edu.au/?qs=0b948bfd746bc9ac9679fa0f8d60c267fa8874df9ee15699aabef98759bc3e75eba5e3c376283d79e7b384150eae500e57d49139340cf6082a6c910b57414320" target="_blank" title="The University of Queensland"><img alt="The University of Queensland logo" data-assetid="81270" height="50" src="https://image.explore.uq.edu.au/lib/fe37117175640478711776/m/1/a04b5099-9772-4cff-92fd-af188038c008.png" style="height: 42px; width: 160px; padding: 0px; text-align: center;" width="190"></a><a href="http://click.explore-test.uq.edu.au/?qs=0b948bfd746bc9aca95d46d212daaed400d1f8aec1870a3ebacc9b99374a61c95b2569a043163ef05fcf8a265308f55664e14d8f9506f9c3" target="_blank"> </a></td><td class="text fz-10 lh-14 a-right c-white l-white pb-10" style="font-family:'Roboto', Arial, sans-serif; font-size: 16px; line-height: 20px; text-align:right; color:#fffffe; padding-bottom: 10px;">
+                  <a class="link-u c-white" href="http://view.explore-test.uq.edu.au/?qs=5687294870903d6b4f661915cd6a9ba9ec8820e738ad515e1aa26d6ec82389441eba13892b25341c691a7fd481f26f28b072947e9136ec38163534c3170b99f87bf4e3d9bc322c41bbcc0387c622681d" style="text-decoration:underline; color:#fffffe; font-weight:normal" target="_blank">View in browser</a></td></tr></table></td></tr></table><!-- END Header --></td></tr></table>
           <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><!-- Hero image --><table border="0" cellpadding="0" cellspacing="0" width="100%">
    
     <tr>
      <td class="fluid-img" style="font-size:0pt; line-height:0pt; text-align:center;">
-      <a   data-linkto="https://" href="http://click.explore-test.uq.edu.au/?qs=bf7df03b97f962a72fa8689aed22bd4e19498a411c7a16121abdeca2570acd68e3bd8ad6779c86ed2d3877261f4ce50530a984ac32306fd52bad980a3726ea91" target="_blank" title="#"><img alt="Hero image" src="https://image.explore.uq.edu.au/lib/fe37117175640478711776/m/1/7d6b42b1-bb12-4eaa-a8d6-1c6ca8165721.png" style="height: auto; width: 100%;" width="640"></a><a href="http://click.explore-test.uq.edu.au/?qs=bf7df03b97f962a707c616b7965eac136f82456a5a3a2b5f00712f5229ce4784589f0983fc4e2ef6ed33fb56d0aa3c7a6a7c1fb59b2edecf" target="_blank"> </a></td></tr></table><!-- END Hero image --></td></tr></table>
+      <a   data-linkto="https://" href="http://click.explore-test.uq.edu.au/?qs=0b948bfd746bc9acd793106ddf165a2896a825fca8e2948dd085690de495446250d080bb2b95ca873972f281881429a6a963489f58a77f7646ec6829d006b7f1" target="_blank" title="#"><img alt="Hero image" src="https://image.explore.uq.edu.au/lib/fe37117175640478711776/m/1/7d6b42b1-bb12-4eaa-a8d6-1c6ca8165721.png" style="height: auto; width: 100%;" width="640"></a><a href="http://click.explore-test.uq.edu.au/?qs=0b948bfd746bc9aca95d46d212daaed400d1f8aec1870a3ebacc9b99374a61c95b2569a043163ef05fcf8a265308f55664e14d8f9506f9c3" target="_blank"> </a></td></tr></table><!-- END Hero image --></td></tr></table>
           <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><!-- Purple Intro Banner --><table border="0" cellpadding="0" cellspacing="0" class="bg-purple" style="background-color:#51247A;" width="100%">
     
       <tr>
@@ -259,16 +272,16 @@ export const Newsletter = {
          <td class="title fz-26 lh-31 pb-24" style="font-family:'Roboto', Arial, sans-serif; font-size: 24px; line-height: 29px; color:#19151C; font-weight: bold; padding-bottom: 20px;">
           <p>
            Headline goes here</p></td></tr><!-- END Headings --><!-- Body Text --><tr>
-         <td class="text fz-14 lh-20 a-center pb-24" style="color:#3b383e; font-family:'Roboto', Arial, sans-serif; font-size: 16px; line-height: 26px; padding-bottom: 20px;">
+         <td class="text fz-14 lh-20 pb-24" style="color:#3b383e; font-family:'Roboto', Arial, sans-serif; font-size: 16px; line-height: 26px; padding-bottom: 20px;">
           <p>
            Introduction text will go here incid que iusam hitio dolupti aspicaes quatus elenecatem voluptatur? Quiatur simpori oreria dolorerro. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, accusantium?</p></td></tr><!-- END Body Text --><!-- Button --><tr>
          <td>
           <table border="0" cellpadding="0" cellspacing="0" style="background-color:#51247A; border-radius: 4px;">
            
             <tr>
-             <td class="btn btnp-9-20 fz-14 lh-18 c-white l-white" style="font-family:'Roboto', Arial, sans-serif; text-align:center; mso-padding-alt:16px 24px; font-size: 16px; line-height: 18px; color:#ffffff;">
+             <td class="btn btnp-9-20 fz-14 lh-18" style="font-family:'Roboto', Arial, sans-serif; text-align:center; mso-padding-alt:16px 24px; font-size: 16px; line-height: 18px; color:#ffffff;">
               <p>
-               <a  class="link c-white"  data-linkto="https://" href="http://click.explore-test.uq.edu.au/?qs=bf7df03b97f962a7c03ef61b84889a6bfcac1e2717d1c018aca266923b7607e6f719f769433bb2be61aee85e7bae0e0dd7f77c4296a6b9e932a37ebd1c72c231" style="color:#fffffe;text-decoration:none;display: block; padding: 16px 24px;" target="_blank" title="This is a primary CTA">This is a primary CTA</a></p></td></tr></table></td></tr><!-- END Button --><!-- Button --><!-- END Button --></table></td></tr></table></td></tr></table>
+               <a  class="link c-white"  data-linkto="https://" href="http://click.explore-test.uq.edu.au/?qs=0b948bfd746bc9ac16fb1b4b831a6ea040629cc7e4bfe06702a097ef497af05008aed74e4452ecd7f7fc44edd95b2d39e028ac156c5d141a0c05ff7ca37ba365" style="color:#fffffe;text-decoration:none;display: block; padding: 16px 24px;" target="_blank" title="This is a primary CTA">This is a primary CTA</a></p></td></tr></table></td></tr><!-- END Button --><!-- Button --><!-- END Button --></table></td></tr></table></td></tr></table>
           <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><!-- 2 Column Story Block --><table border="0" cellpadding="0" cellspacing="0" width="100%">
    
     <tr>
@@ -281,69 +294,69 @@ export const Newsletter = {
            
             <tr>
              <td class="fluid-img pb-19" style="font-size:0pt; line-height:0pt; text-align:center; padding-bottom: 20px;">
-              <a   data-linkto="https://" href="http://click.explore-test.uq.edu.au/?qs=bf7df03b97f962a7923b1cb3a9673927b6449b70393e7d2764d5560dcf32f7ee8f8e3f37b8a032ee16c3b796fac71feaf6acdb3bbd23bb319fdfe6658e391419" title="#"><img alt="image-1" border="0" src="https://image.explore.uq.edu.au/lib/fe37117175640478711776/m/1/174f995e-003b-43ad-990d-1a9ee71e7304.jpg" style="height: auto; width: 100%;" width="284"></a></td></tr><tr>
-             <td class="title fz-20 lh-24 c-dpurple l-dpurple pb-20 px-10" style="font-weight: bold; font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 24px; line-height: 24px; color:#19151C; padding-bottom: 20px;">
+              <a   data-linkto="https://" href="http://click.explore-test.uq.edu.au/?qs=0b948bfd746bc9ac4ce6686549d51b62c9e3cec13354fc60068ea022656537a51d10a70b62ea93090a6cf1a99ba1fe86252df1057b112c5257571ba6bc4de484" title="#"><img alt="image-1" border="0" src="https://image.explore.uq.edu.au/lib/fe37117175640478711776/m/1/174f995e-003b-43ad-990d-1a9ee71e7304.jpg" style="height: auto; width: 100%;" width="284"></a></td></tr><tr>
+             <td class="title fz-20 lh-24 pb-20 px-10" style="font-weight: bold; font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 24px; line-height: 24px; color:#19151C; padding-bottom: 20px;">
               <p>
                Headline</p></td></tr><tr>
              <td class="text fz-14 lh-20 pb-18 px-10" style="color:#3b383e; font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 16px; line-height: 26px; padding-bottom: 18px;">
               <p>
                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et consectetur adipiscing nulla rhoncus, dapibus ipsum feugiat.</p></td></tr><tr>
              <td style="padding-bottom: 24px;">
-              <!-- Button --><table border="0" cellpadding="0" cellspacing="0" style="background-color:#FFFFFF; border-radius: 4px;border-color:#51247A;border-width:2px;border-style:solid">
+              <!-- Button --><table border="0" cellpadding="0" cellspacing="0" class="bd-lpurple" style="background-color:#FFFFFF; border-radius: 4px;border-color:#51247A;border-width:2px;border-style:solid">
                
                 <tr>
-                 <td class="btn btnp-9-20 fz-14 lh-18 c-white l-white" style="font-family:'Roboto', Arial, sans-serif; text-align:center; mso-padding-alt:16px 24px; font-size: 16px; line-height: 18px; color:#fffffe;">
+                 <td class="btn btnp-9-20 fz-14 lh-18 c-lpurple l-lpurple" style="font-family:'Roboto', Arial, sans-serif; text-align:center; mso-padding-alt:16px 24px; font-size: 16px; line-height: 18px; color:#fffffe;">
                   <p>
-                   <a  class="link c-white"  data-linkto="https://" href="http://click.explore-test.uq.edu.au/?qs=bf7df03b97f962a7ea821f84cb81eb1e60941e3f66050e5e23a867b393cedf7123c1efb751ee130d7463e1f4508920e357d99d7c2ad1c9c12d298c93fb655f38" style="color:#51247A;text-decoration:none;display: block; padding: 16px 24px;" target="_blank" title="Secondary CTA">Secondary CTA</a></p></td></tr></table><!-- END Button --></td></tr></table></th><th class="column mpb-10" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal;" width="24">
+                   <a  class="link "  data-linkto="https://" href="http://click.explore-test.uq.edu.au/?qs=0b948bfd746bc9ac07f84655b1d36b4cf7174c09db7cdca1412ee46a4401011b9de5a610d818129a9bfc043df75a2e691aac7430bfa2a18bceb6d507b9c9666a" style="color:#51247A;text-decoration:none;display: block; padding: 16px 24px;" target="_blank" title="Secondary CTA">Secondary CTA</a></p></td></tr></table><!-- END Button --></td></tr></table></th><th class="column mpb-10" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal;" width="24">
          </th><th class="column-top" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;" width="286">
           <table border="0" cellpadding="0" cellspacing="0" width="100%">
            
             <tr>
              <td class="fluid-img pb-19" style="font-size:0pt; line-height:0pt; text-align:center; padding-bottom: 20px;">
-              <a   data-linkto="https://" href="http://click.explore-test.uq.edu.au/?qs=bf7df03b97f962a7923b1cb3a9673927b6449b70393e7d2764d5560dcf32f7ee8f8e3f37b8a032ee16c3b796fac71feaf6acdb3bbd23bb319fdfe6658e391419" title="#"><img alt="image 2" border="0" src="https://image.explore.uq.edu.au/lib/fe37117175640478711776/m/1/174f995e-003b-43ad-990d-1a9ee71e7304.jpg" style="height: auto; width: 100%;" width="284"></a></td></tr><tr>
-             <td class="title fz-20 lh-24 c-dpurple l-dpurple pb-20 px-10" style="font-weight: bold; font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 24px; line-height: 24px; color:#19151C; padding-bottom: 20px;">
+              <a   data-linkto="https://" href="http://click.explore-test.uq.edu.au/?qs=0b948bfd746bc9ac4ce6686549d51b62c9e3cec13354fc60068ea022656537a51d10a70b62ea93090a6cf1a99ba1fe86252df1057b112c5257571ba6bc4de484" title="#"><img alt="image 2" border="0" src="https://image.explore.uq.edu.au/lib/fe37117175640478711776/m/1/174f995e-003b-43ad-990d-1a9ee71e7304.jpg" style="height: auto; width: 100%;" width="284"></a></td></tr><tr>
+             <td class="title fz-20 lh-24 pb-20 px-10" style="font-weight: bold; font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 24px; line-height: 24px; color:#19151C; padding-bottom: 20px;">
               <p>
                Headline</p></td></tr><tr>
              <td class="text fz-14 lh-20 pb-18 px-10" style="color:#3b383e; font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 16px; line-height: 26px; padding-bottom: 18px;">
               <p>
                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et consectetur adipiscing nulla rhoncus, dapibus ipsum feugiat.</p></td></tr><tr>
              <td style="padding-bottom: 24px;">
-              <!-- Button --><table border="0" cellpadding="0" cellspacing="0" style="background-color:#FFFFFF; border-radius: 4px;border-color:#51247A;border-width:2px;border-style:solid">
+              <!-- Button --><table border="0" cellpadding="0" cellspacing="0" class="bd-lpurple" style="background-color:#FFFFFF; border-radius: 4px;border-color:#51247A;border-width:2px;border-style:solid">
                
                 <tr>
-                 <td class="btn btnp-9-20 fz-14 lh-18 c-white l-white" style="font-family:'Roboto', Arial, sans-serif; text-align:center; mso-padding-alt:16px 24px; font-size: 16px; line-height: 18px; color:#fffffe;">
+                 <td class="btn btnp-9-20 fz-14 lh-18 c-lpurple l-lpurple" style="font-family:'Roboto', Arial, sans-serif; text-align:center; mso-padding-alt:16px 24px; font-size: 16px; line-height: 18px; color:#fffffe;">
                   <p>
-                   <a  class="link c-white"  data-linkto="https://" href="http://click.explore-test.uq.edu.au/?qs=bf7df03b97f962a7ea821f84cb81eb1e60941e3f66050e5e23a867b393cedf7123c1efb751ee130d7463e1f4508920e357d99d7c2ad1c9c12d298c93fb655f38" style="color:#51247A;text-decoration:none;display: block; padding: 16px 24px;" target="_blank" title="Secondary CTA">Secondary CTA</a></p></td></tr></table><!-- END Button --></td></tr></table></th></tr></table></td></tr></table><!-- END 2 Column Story Block --></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><!-- Divider - 24px --><table border="0" cellpadding="0" cellspacing="0" width="100%">
+                   <a  class="link"  data-linkto="https://" href="http://click.explore-test.uq.edu.au/?qs=0b948bfd746bc9ac07f84655b1d36b4cf7174c09db7cdca1412ee46a4401011b9de5a610d818129a9bfc043df75a2e691aac7430bfa2a18bceb6d507b9c9666a" style="color:#51247A;text-decoration:none;display: block; padding: 16px 24px;" target="_blank" title="Secondary CTA">Secondary CTA</a></p></td></tr></table><!-- END Button --></td></tr></table></th></tr></table></td></tr></table><!-- END 2 Column Story Block --></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><!-- Divider - 24px --><table border="0" cellpadding="0" cellspacing="0" width="100%">
    
     <tr>
      <td style="font-size:1px;line-height:24px" width="111">
       &nbsp;</td></tr></table><!-- END Divider - 24px --></td></tr></table>
           <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><!-- Image Left Block --><table border="0" cellpadding="0" cellspacing="0" style="padding-left:24px;padding-right:24px;">
-    
-      <tr>
-        <td>
-          <table border="0" cellpadding="0" cellspacing="0" class="bg-grey-f7" width="100%">
-            
-              <tr>
-                <th class="column-top" style="font-size:0pt; line-height:0pt; padding-right: 20px; padding-bottom: 24px; margin:0; font-weight:normal; vertical-align:top;" width="320">
-                  <div class="fluid-img" style="font-size:0pt; line-height:0pt; text-align:left;">
-                    <a   data-linkto="https://" href="http://click.explore-test.uq.edu.au/?qs=bf7df03b97f962a7923b1cb3a9673927b6449b70393e7d2764d5560dcf32f7ee8f8e3f37b8a032ee16c3b796fac71feaf6acdb3bbd23bb319fdfe6658e391419" title="#"><img alt="image" border="0" src="https://image.explore.uq.edu.au/lib/fe37117175640478711776/m/1/174f995e-003b-43ad-990d-1a9ee71e7304.jpg" style="height: auto; width: 100%;" width="320"></a></div></th><th class="column-top" style="font-size:0pt; line-height:0pt; padding-bottom: 24px; margin:0; font-weight:normal; vertical-align:top;" width="320">
-                  <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                    
-                      <tr>
-                        <td class="p-20 mpb-10" style="">
-                          <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
-                            
-                              <tr>
-                                <td class="title fz-20 lh-24 c-lpurple l-lpurple pb-20" style="font-weight: bold; font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 24px; line-height: 29px; color:#19151c; padding-bottom: 18px;">
-                                  <p>
-                                    Headline</p></td></tr><tr>
-                                <td class="text fz-14 lh-19 ff-os pb-16" style="color:#000001; text-align:left; font-size: 16px; line-height: 26px; font-family:'Roboto', Arial, sans-serif; padding-bottom: 16px;">
-                                  <p>
-                                    Body copy will go here untur, soluptae nimil idi repelit laborpossume untur nimil idi repelit laborpossume veri vidicae pos dustiatetur ma natem.</p></td></tr><tr>
-                                <td class="text fz-18 lh-22 c-gold l-gold" style="font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 16px; line-height: 26px; color:#BB9D65;">
-                                  <p>
-                                    <a  class="link"  data-linkto="https://" href="http://click.explore-test.uq.edu.au/?qs=bf7df03b97f962a7ea821f84cb81eb1e60941e3f66050e5e23a867b393cedf7123c1efb751ee130d7463e1f4508920e357d99d7c2ad1c9c12d298c93fb655f38" style="color:#51247a;text-decoration:underline;" target="_blank" title="#">This is a text link</a></p></td></tr></table></td></tr></table></th></tr></table></td></tr></table><!-- END Image Left Block --></td></tr></table>
+   
+    <tr>
+     <td>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+       
+        <tr>
+         <th class="column-top" style="font-size:0pt; line-height:0pt; padding-right: 20px; padding-bottom: 24px; margin:0; font-weight:normal; vertical-align:top;" width="320">
+          <div class="fluid-img" style="font-size:0pt; line-height:0pt; text-align:left;">
+           <a   data-linkto="https://" href="http://click.explore-test.uq.edu.au/?qs=0b948bfd746bc9ac4ce6686549d51b62c9e3cec13354fc60068ea022656537a51d10a70b62ea93090a6cf1a99ba1fe86252df1057b112c5257571ba6bc4de484" title="#"><img alt="image" border="0" src="https://image.explore.uq.edu.au/lib/fe37117175640478711776/m/1/174f995e-003b-43ad-990d-1a9ee71e7304.jpg" style="height: auto; width: 100%;" width="320"></a></div></th><th class="column-top" style="font-size:0pt; line-height:0pt; padding-bottom: 24px; margin:0; font-weight:normal; vertical-align:top;" width="320">
+          <table border="0" cellpadding="0" cellspacing="0" width="100%">
+           
+            <tr>
+             <td class="p-20 mpb-10" style="">
+              <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+               
+                <tr>
+                 <td class="title fz-20 lh-24 pb-20" style="font-weight: bold; font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 24px; line-height: 29px; color:#19151c; padding-bottom: 18px;">
+                  <p>
+                   Headline</p></td></tr><tr>
+                 <td class="text fz-14 lh-19 ff-os pb-16" style="color:#000001; text-align:left; font-size: 16px; line-height: 26px; font-family:'Roboto', Arial, sans-serif; padding-bottom: 16px;">
+                  <p>
+                   Body copy will go here untur, soluptae nimil idi repelit laborpossume untur nimil idi repelit laborpossume veri vidicae pos dustiatetur ma natem.</p></td></tr><tr>
+                 <td class="text fz-18 lh-22" style="font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 16px; line-height: 26px; color:#BB9D65;">
+                  <p>
+                   <a  class="link"  data-linkto="https://" href="http://click.explore-test.uq.edu.au/?qs=0b948bfd746bc9ac07f84655b1d36b4cf7174c09db7cdca1412ee46a4401011b9de5a610d818129a9bfc043df75a2e691aac7430bfa2a18bceb6d507b9c9666a" style="color:#51247a;text-decoration:underline;" target="_blank" title="#">This is a text link</a></p></td></tr></table></td></tr></table></th></tr></table></td></tr></table><!-- END Image Left Block --></td></tr></table>
           <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><!-- Divider - 24px --><table border="0" cellpadding="0" cellspacing="0" width="100%">
    
     <tr>
@@ -352,12 +365,12 @@ export const Newsletter = {
    
     <tr>
      <td>
-      <table border="0" cellpadding="0" cellspacing="0" class="bg-grey-f7" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
        
         <tr>
          <th class="column-top" style="font-size:0pt; line-height:0pt; padding-right: 20px; padding-bottom: 24px; margin:0; font-weight:normal; vertical-align:top;" width="320">
           <div class="fluid-img" style="font-size:0pt; line-height:0pt; text-align:left;">
-           <a   data-linkto="https://" href="http://click.explore-test.uq.edu.au/?qs=bf7df03b97f962a7923b1cb3a9673927b6449b70393e7d2764d5560dcf32f7ee8f8e3f37b8a032ee16c3b796fac71feaf6acdb3bbd23bb319fdfe6658e391419" title="#"><img alt="image" border="0" src="https://image.explore.uq.edu.au/lib/fe37117175640478711776/m/1/174f995e-003b-43ad-990d-1a9ee71e7304.jpg" style="height: auto; width: 100%;" width="320"></a></div></th><th class="column-top" style="font-size:0pt; line-height:0pt; padding-bottom: 24px; margin:0; font-weight:normal; vertical-align:top;" width="320">
+           <a   data-linkto="https://" href="http://click.explore-test.uq.edu.au/?qs=0b948bfd746bc9ac4ce6686549d51b62c9e3cec13354fc60068ea022656537a51d10a70b62ea93090a6cf1a99ba1fe86252df1057b112c5257571ba6bc4de484" title="#"><img alt="image" border="0" src="https://image.explore.uq.edu.au/lib/fe37117175640478711776/m/1/174f995e-003b-43ad-990d-1a9ee71e7304.jpg" style="height: auto; width: 100%;" width="320"></a></div></th><th class="column-top" style="font-size:0pt; line-height:0pt; padding-bottom: 24px; margin:0; font-weight:normal; vertical-align:top;" width="320">
           <table border="0" cellpadding="0" cellspacing="0" width="100%">
            
             <tr>
@@ -365,15 +378,15 @@ export const Newsletter = {
               <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
                
                 <tr>
-                 <td class="title fz-20 lh-24 c-lpurple l-lpurple pb-20" style="font-weight: bold; font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 24px; line-height: 29px; color:#19151c; padding-bottom: 18px;">
+                 <td class="title fz-20 lh-24 pb-20" style="font-weight: bold; font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 24px; line-height: 29px; color:#19151c; padding-bottom: 18px;">
                   <p>
                    Headline</p></td></tr><tr>
                  <td class="text fz-14 lh-19 ff-os pb-16" style="color:#000001; text-align:left; font-size: 16px; line-height: 26px; font-family:'Roboto', Arial, sans-serif; padding-bottom: 16px;">
                   <p>
                    Body copy will go here untur, soluptae nimil idi repelit laborpossume untur nimil idi repelit laborpossume veri vidicae pos dustiatetur ma natem.</p></td></tr><tr>
-                 <td class="text fz-18 lh-22 c-gold l-gold" style="font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 16px; line-height: 26px; color:#BB9D65;">
+                 <td class="text fz-18 lh-22" style="font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 16px; line-height: 26px; color:#BB9D65;">
                   <p>
-                   <a  class="link"  data-linkto="https://" href="http://click.explore-test.uq.edu.au/?qs=bf7df03b97f962a7ea821f84cb81eb1e60941e3f66050e5e23a867b393cedf7123c1efb751ee130d7463e1f4508920e357d99d7c2ad1c9c12d298c93fb655f38" style="color:#51247a;text-decoration:underline;" target="_blank" title="#">This is a text link</a></p></td></tr></table></td></tr></table></th></tr></table></td></tr></table><!-- END Image Left Block --></td></tr></table>
+                   <a  class="link"  data-linkto="https://" href="http://click.explore-test.uq.edu.au/?qs=0b948bfd746bc9ac07f84655b1d36b4cf7174c09db7cdca1412ee46a4401011b9de5a610d818129a9bfc043df75a2e691aac7430bfa2a18bceb6d507b9c9666a" style="color:#51247a;text-decoration:underline;" target="_blank" title="#">This is a text link</a></p></td></tr></table></td></tr></table></th></tr></table></td></tr></table><!-- END Image Left Block --></td></tr></table>
           <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><!-- Divider - 24px --><table border="0" cellpadding="0" cellspacing="0" width="100%">
    
     <tr>
@@ -395,12 +408,12 @@ export const Newsletter = {
           <p>
            Introduction text will go here incid que iusam hitio dolupti aspicaes quatus elenecatem voluptatur? Quiatur simpori oreria dolorerro. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, accusantium?</p></td></tr><!-- END Body Text --><!-- Button --><!-- END Button --><!-- Button --><tr>
          <td>
-          <table border="0" cellpadding="0" cellspacing="0" style="background-color:#FFFFFF; border-radius: 4px;border-color:#51247A;border-width:2px;border-style:solid">
+          <table border="0" cellpadding="0" cellspacing="0" class="bd-lpurple" style="background-color:#FFFFFF; border-radius: 4px;border-color:#51247A;border-width:2px;border-style:solid">
            
             <tr>
-             <td class="btn btnp-9-20 fz-14 lh-18 c-white l-white" style="font-family:'Roboto', Arial, sans-serif; text-align:center; mso-padding-alt:16px 24px; font-size: 16px; line-height: 18px; color:#ffffff;">
+             <td class="btn btnp-9-20 fz-14 lh-18 c-lpurple l-lpurple" style="font-family:'Roboto', Arial, sans-serif; text-align:center; mso-padding-alt:16px 24px; font-size: 16px; line-height: 18px; color:#ffffff;">
               <p>
-               <a  class="link c-white"  data-linkto="https://" href="http://click.explore-test.uq.edu.au/?qs=bf7df03b97f962a7ea821f84cb81eb1e60941e3f66050e5e23a867b393cedf7123c1efb751ee130d7463e1f4508920e357d99d7c2ad1c9c12d298c93fb655f38" style="color:#51247A;text-decoration:none;display: block; padding: 16px 24px;" target="_blank" title="This is a secondary CTA">Watch event recording</a></p></td></tr></table></td></tr><!-- END Button --></table></td></tr></table></td></tr></table>
+               <a  class="link"  data-linkto="https://" href="http://click.explore-test.uq.edu.au/?qs=0b948bfd746bc9ac07f84655b1d36b4cf7174c09db7cdca1412ee46a4401011b9de5a610d818129a9bfc043df75a2e691aac7430bfa2a18bceb6d507b9c9666a" style="color:#51247A;text-decoration:none;display: block; padding: 16px 24px;" target="_blank" title="This is a secondary CTA">Watch event recording</a></p></td></tr></table></td></tr><!-- END Button --></table></td></tr></table></td></tr></table>
           <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><!-- 2 Column Event Listing --><table border="0" cellpadding="0" cellspacing="0" class="bg-grey-f7" style="background-color:#f3f4f4;" width="100%">
    
     <tr>
@@ -413,37 +426,37 @@ export const Newsletter = {
            
             <tr>
              <td class="img pb-12" style="font-size:0pt; line-height:0pt; text-align:left; padding-bottom: 24px;">
-              <img alt="image" border="0" data-assetid="71815" height="51" src="https://image.explore.uq.edu.au/lib/fe37117175640478711776/m/1/edfe31ea-cb10-4c84-a988-6377f510dc72.png" style="height: 51px; width: 51px;" width="51"></td></tr><tr>
-             <td class="title fz-16 lh-20 c-dpurple l-dpurple pb-12" style="font-weight: bold; font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 24px; line-height: 29px; color:#19151c; padding-bottom: 18px;">
+              <img alt="calendar" border="0" data-assetid="71815" height="51" src="https://image.explore.uq.edu.au/lib/fe37117175640478711776/m/1/d0a75930-eedf-459d-bcb3-c356e817cc49.png" style="height: 51px; width: 51px;" width="51"></td></tr><tr>
+             <td class="title fz-16 lh-20 pb-12" style="font-weight: bold; font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 24px; line-height: 29px; color:#19151c; padding-bottom: 18px;">
               <p>
                Event heading</p></td></tr><tr>
-             <td class="title fz-14 lh-18 c-lpurple l-lpurple pb-14" style="font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 16px; line-height: 26px; color:#3b383e; padding-bottom: 16px;">
+             <td class="text fz-14 lh-18 pb-14" style="font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 16px; line-height: 26px; color:#3b383e; padding-bottom: 16px;">
               <p>
                September 25, 2021</p></td></tr><tr>
-             <td class="text fz-14 lh-20 c-grey l-grey pb-25" style="font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 16px; line-height: 26px; color:#3b383e; padding-bottom: 18px;">
+             <td class="text fz-14 lh-20 pb-25" style="font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 16px; line-height: 26px; color:#3b383e; padding-bottom: 18px;">
               <p>
                Introduction text will go here incid que iusam est, accusantium?</p></td></tr><tr>
-             <td class="text fz-18 lh-22 c-gold l-gold" style="font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 16px; line-height: 26px; color:#BB9D65;padding-bottom:24px">
+             <td class="text fz-18 lh-22" style="font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 16px; line-height: 26px; padding-bottom:24px">
               <p>
-               <a  class="link"  data-linkto="https://" href="http://click.explore-test.uq.edu.au/?qs=bf7df03b97f962a7ea821f84cb81eb1e60941e3f66050e5e23a867b393cedf7123c1efb751ee130d7463e1f4508920e357d99d7c2ad1c9c12d298c93fb655f38" style="color:#51247a;text-decoration:underline;" target="_blank" title="#">This is a text link</a></p></td></tr></table></th><th class="column" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal;" width="50">
+               <a  class="link"  data-linkto="https://" href="http://click.explore-test.uq.edu.au/?qs=0b948bfd746bc9ac07f84655b1d36b4cf7174c09db7cdca1412ee46a4401011b9de5a610d818129a9bfc043df75a2e691aac7430bfa2a18bceb6d507b9c9666a" style="color:#51247a;text-decoration:underline;" target="_blank" title="#">This is a text link</a></p></td></tr></table></th><th class="column" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal;" width="50">
          </th><th class="column-top" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;" width="265">
           <table border="0" cellpadding="0" cellspacing="0" width="100%">
            
             <tr>
              <td class="img pb-12" style="font-size:0pt; line-height:0pt; text-align:left; padding-bottom: 24px;">
-              <img alt="calendar" border="0" data-assetid="71815" height="51" src="https://image.explore.uq.edu.au/lib/fe37117175640478711776/m/1/edfe31ea-cb10-4c84-a988-6377f510dc72.png" style="height: 51px; width: 51px;" width="51"></td></tr><tr>
-             <td class="title fz-16 lh-20 c-dpurple l-dpurple pb-12" style="font-weight: bold; font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 24px; line-height: 29px; color:#19151c; padding-bottom: 18px;">
+              <img alt="calendar" border="0" data-assetid="71815" height="51" src="https://image.explore.uq.edu.au/lib/fe37117175640478711776/m/1/d0a75930-eedf-459d-bcb3-c356e817cc49.png" style="height: 51px; width: 51px;" width="51"></td></tr><tr>
+             <td class="title fz-16 lh-20 pb-12" style="font-weight: bold; font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 24px; line-height: 29px; color:#19151c; padding-bottom: 18px;">
               <p>
                Event heading</p></td></tr><tr>
-             <td class="title fz-14 lh-18 c-lpurple l-lpurple pb-14" style="font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 16px; line-height: 26px; color:#3b383e; padding-bottom: 16px;">
+             <td class="text fz-14 lh-18 pb-14" style="font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 16px; line-height: 26px; color:#3b383e; padding-bottom: 16px;">
               <p>
                September 25, 2021</p></td></tr><tr>
-             <td class="text fz-14 lh-20 c-grey l-grey pb-25" style="font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 16px; line-height: 26px; color:#3b383e; padding-bottom: 18px;">
+             <td class="text fz-14 lh-20 pb-25" style="font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 16px; line-height: 26px; color:#3b383e; padding-bottom: 18px;">
               <p>
                Introduction text will go here incid que iusam est, accusantium?</p></td></tr><tr>
-             <td class="text fz-18 lh-22 c-gold l-gold" style="font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 16px; line-height: 26px; color:#BB9D65;padding-bottom:24px">
+             <td class="text fz-18 lh-22" style="font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 16px; line-height: 26px; color:#BB9D65;padding-bottom:24px">
               <p>
-               <a  class="link"  data-linkto="https://" href="http://click.explore-test.uq.edu.au/?qs=bf7df03b97f962a7ea821f84cb81eb1e60941e3f66050e5e23a867b393cedf7123c1efb751ee130d7463e1f4508920e357d99d7c2ad1c9c12d298c93fb655f38" style="color:#51247a;text-decoration:underline;" target="_blank" title="#">This is a text link</a></p></td></tr></table></th></tr></table></td></tr></table><!-- END 2 Column Event Listing --></td></tr></table>
+               <a  class="link"  data-linkto="https://" href="http://click.explore-test.uq.edu.au/?qs=0b948bfd746bc9ac07f84655b1d36b4cf7174c09db7cdca1412ee46a4401011b9de5a610d818129a9bfc043df75a2e691aac7430bfa2a18bceb6d507b9c9666a" style="color:#51247a;text-decoration:underline;" target="_blank" title="#">This is a text link</a></p></td></tr></table></th></tr></table></td></tr></table><!-- END 2 Column Event Listing --></td></tr></table>
           <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><!-- Divider - 48px --><table border="0" cellpadding="0" cellspacing="0" width="100%">
    
     <tr>
@@ -455,7 +468,7 @@ export const Newsletter = {
       <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
        <!-- Title -->
         <tr>
-         <td class="title fz-24 lh-28 c-dpurple l-dpurple pb-16" style="font-weight: bold; font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 24px; line-height: 29px; color:#19151c; padding-bottom: 28px;">
+         <td class="title fz-24 lh-28 pb-16" style="font-weight: bold; font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 24px; line-height: 29px; color:#19151c; padding-bottom: 28px;">
           <p>
            Get the most out of the webinar</p></td></tr><!-- END Title --><!-- 2 Cols --><tr>
          <td>
@@ -466,21 +479,21 @@ export const Newsletter = {
               <!-- Ordered List --><table border="0" cellpadding="0" cellspacing="0" width="100%">
                
                 <tr>
-                 <td class="img pb-4" style="font-size:0pt; line-height:0pt; text-align:left; padding-bottom: 10px;" valign="top" width="35">
-                  <img alt="num 1" border="0" data-assetid="81256" height="35" src="https://image.explore.uq.edu.au/lib/fe37117175640478711776/m/1/566a4149-7f69-42b2-bd73-a8f652b4fbd5.png" style="height: 35px; width: 35px;" width="35"></td><td class="pb-4" style="font-size: 0pt; line-height: 0pt;" width="14">
-                  &nbsp;</td><td class="text fz-16 lh-20 c-lpurple l-lpurple pb-4" style="font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 16px; line-height: 26px; color:#3b383e; padding-bottom: 10px;">
+                 <td class="img pb-4" style="font-size:0pt; line-height:0pt; text-align:left; padding-bottom: 10px;" valign="top" width="41">
+                  <img alt="num 1" border="0" data-assetid="81256" height="41" src="https://image.explore.uq.edu.au/lib/fe37117175640478711776/m/1/e6cfa079-a8d6-4c0b-88e3-b9d608bcb419.png" style="height: 41px; width: 41px;" width="41"></td><td class="pb-4" style="font-size: 0pt; line-height: 0pt;" width="14">
+                  &nbsp;</td><td class="text fz-16 lh-20 pb-4" style="font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 16px; line-height: 26px; color:#3b383e; padding-bottom: 10px;">
                   The webinar will commence at 6pm. Please ensure you are seated comfortably a few minutes before the session begins.</td></tr><tr>
-                 <td class="img pb-4" style="font-size:0pt; line-height:0pt; text-align:left; padding-bottom: 10px;" valign="top" width="35">
-                  <img alt="num 2" border="0" data-assetid="81253" height="35" src="https://image.explore.uq.edu.au/lib/fe37117175640478711776/m/1/a578cc9f-61a1-4897-ac81-2702a3690153.png" style="height: 35px; width: 35px;" width="35"></td><td class="pb-4" style="font-size: 0pt; line-height: 0pt; padding-bottom: 10px;" width="14">
-                 </td><td class="text fz-16 lh-20 c-lpurple l-lpurple pb-4" style="font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 16px; line-height: 26px; color:#3b383e; padding-bottom: 10px;">
+                 <td class="img pb-4" style="font-size:0pt; line-height:0pt; text-align:left; padding-bottom: 10px;" valign="top" width="41">
+                  <img alt="num 2" border="0" data-assetid="81253" height="41" src="https://image.explore.uq.edu.au/lib/fe37117175640478711776/m/1/32e39374-5fef-4870-bbf7-925a99adad1d.png" style="height: 41px; width: 41px;" width="41"></td><td class="pb-4" style="font-size: 0pt; line-height: 0pt; padding-bottom: 10px;" width="14">
+                 </td><td class="text fz-16 lh-20 pb-4" style="font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 16px; line-height: 26px; color:#3b383e; padding-bottom: 10px;">
                   When you enter the webinar, your microphone and camera will automatically switch off throughout the session.</td></tr><tr>
-                 <td class="img pb-4" style="font-size:0pt; line-height:0pt; text-align:left; padding-bottom: 10px;" valign="top" width="35">
-                  <img alt="num 3" border="0" data-assetid="81255" height="35" src="https://image.explore.uq.edu.au/lib/fe37117175640478711776/m/1/1df748aa-950c-4046-809c-957687443589.png" style="height: 35px; width: 35px;" width="35"></td><td class="pb-4" style="font-size: 0pt; line-height: 0pt; padding-bottom: 10px;" width="14">
-                 </td><td class="text fz-16 lh-20 c-lpurple l-lpurple pb-4" style="font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 16px; line-height: 26px; color:#3b383e; padding-bottom: 10px;">
+                 <td class="img pb-4" style="font-size:0pt; line-height:0pt; text-align:left; padding-bottom: 10px;" valign="top" width="41">
+                  <img alt="num 3" border="0" data-assetid="81255" height="41" src="https://image.explore.uq.edu.au/lib/fe37117175640478711776/m/1/7631ab46-a0df-47df-934c-25d1cc40e839.png" style="height: 41px; width: 41px;" width="41"></td><td class="pb-4" style="font-size: 0pt; line-height: 0pt; padding-bottom: 10px;" width="14">
+                 </td><td class="text fz-16 lh-20 pb-4" style="font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 16px; line-height: 26px; color:#3b383e; padding-bottom: 10px;">
                   There will be a Q&amp;A at the end of the session. Submit your questions through the Q&amp;A function on Zoom.</td></tr><tr>
-                 <td class="img pb-4" style="font-size:0pt; line-height:0pt; text-align:left;" valign="top" width="35">
-                  <img alt="num 4" border="0" data-assetid="81252" height="35" src="https://image.explore.uq.edu.au/lib/fe37117175640478711776/m/1/4408b6ae-4476-43ae-86d7-c6666c953a17.png" style="height: 35px; width: 35px;" width="35"></td><td class="pb-4" style="font-size: 0pt; line-height: 0pt;" width="14">
-                 </td><td class="text fz-16 lh-20 c-lpurple l-lpurple pb-4" style="font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 16px; line-height: 26px; color:#3b383e;">
+                 <td class="img pb-4" style="font-size:0pt; line-height:0pt; text-align:left;" valign="top" width="41">
+                  <img alt="num 4" border="0" data-assetid="81252" height="41" src="https://image.explore.uq.edu.au/lib/fe37117175640478711776/m/1/cd5a02c7-cb8a-458b-b031-a8f97c328ea0.png" style="height: 41px; width: 41px;" width="41"></td><td class="pb-4" style="font-size: 0pt; line-height: 0pt;" width="14">
+                 </td><td class="text fz-16 lh-20 pb-4" style="font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 16px; line-height: 26px; color:#3b383e;">
                   You do not need a Zoom account to attend the webinar, however we recommend downloading the Zoom app prior to the session.</td></tr></table><!-- END Ordered List --></th></tr></table></td></tr><!-- END 2 Cols --></table></td></tr></table><!-- END Event Checklist --></td></tr></table>
           <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><!-- Purple Intro Banner --><table border="0" cellpadding="0" cellspacing="0" class="bg-purple" style="background-color:#51247A;" width="100%">
    
@@ -498,7 +511,7 @@ export const Newsletter = {
             <tr>
              <td class="btn btnp-9-20 fz-14 lh-18 c-white l-white" style="font-family:'Roboto', Arial, sans-serif; text-align:center; mso-padding-alt:9px 20px; font-size: 16px; line-height: 18px; color:#ffffff;">
               <p>
-               <a  class="link c-purple"  data-linkto="https://" href="http://click.explore-test.uq.edu.au/?qs=bf7df03b97f962a7ea821f84cb81eb1e60941e3f66050e5e23a867b393cedf7123c1efb751ee130d7463e1f4508920e357d99d7c2ad1c9c12d298c93fb655f38" style="color:#ffffff; text-decoration:none; display: block; padding: 16px 24px" target="_blank" title="Register now">Secondary inverse button</a></p></td></tr></table></td></tr><!-- END Alt Button --></table></td></tr></table><!-- END Purple Intro Banner --></td></tr></table>
+               <a  class="link c-purple"  data-linkto="https://" href="http://click.explore-test.uq.edu.au/?qs=0b948bfd746bc9ac07f84655b1d36b4cf7174c09db7cdca1412ee46a4401011b9de5a610d818129a9bfc043df75a2e691aac7430bfa2a18bceb6d507b9c9666a" style="color:#ffffff; text-decoration:none; display: block; padding: 16px 24px" target="_blank" title="Register now">Secondary inverse button</a></p></td></tr></table></td></tr><!-- END Alt Button --></table></td></tr></table><!-- END Purple Intro Banner --></td></tr></table>
           <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><!-- Divider - 48px --><table border="0" cellpadding="0" cellspacing="0" width="100%">
    
     <tr>
@@ -510,7 +523,7 @@ export const Newsletter = {
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
        
         <tr>
-         <td class="title fz-26 lh-30 c-dpurple l-dpurple pb-19" style="font-weight: 500; font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 26px; line-height: 30px; color:#19151c; font-weight:bold; padding-bottom: 30px;">
+         <td class="title fz-26 lh-30 pb-19" style="font-weight: bold; font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 26px; line-height: 30px; color:#19151c; font-weight:bold; padding-bottom: 30px;">
           <p>
            Headline Goes Here</p></td></tr></table><table border="0" cellpadding="0" cellspacing="0" width="100%">
        
@@ -520,49 +533,55 @@ export const Newsletter = {
            
             <tr>
              <td class="img pb-12" style="font-size:0pt; line-height:0pt; text-align:left; padding-bottom: 24px;">
-              <img alt="calendar" border="0" data-assetid="71815" height="51" src="https://image.explore.uq.edu.au/lib/fe37117175640478711776/m/1/edfe31ea-cb10-4c84-a988-6377f510dc72.png" style="height: 51px; width: 51px; padding: 0px; text-align: center;" width="51"></td></tr><tr>
-             <td class="title fz-16 lh-20 c-dpurple l-dpurple pb-12" style="font-weight: bold; font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 20px; line-height: 24px; color:#19151c; padding-bottom: 18px;">
+              <img alt="calendar" border="0" data-assetid="71815" height="51" src="https://image.explore.uq.edu.au/lib/fe37117175640478711776/m/1/d0a75930-eedf-459d-bcb3-c356e817cc49.png" style="height: 51px; width: 51px; padding: 0px; text-align: center;" width="51"></td></tr><tr>
+             <td class="title fz-16 lh-20 pb-12" style="font-weight: bold; font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 20px; line-height: 24px; color:#19151c; padding-bottom: 18px;">
               <p>
                Event heading</p></td></tr><tr>
-             <td class="title fz-14 lh-18 c-lpurple l-lpurple pb-14" style="font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 16px; line-height: 26px; color:#3b383e; padding-bottom: 14px;">
+             <td class="text fz-14 lh-18 pb-14" style="font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 16px; line-height: 26px; color:#3b383e; padding-bottom: 14px;">
               <p>
-               September 25, 2021</p><p>
+               September 25, 2021</p></td></tr><tr>
+             <td class="text fz-14 lh-18 pb-14" style="font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 16px; line-height: 26px; color:#3b383e; padding-bottom: 14px;">
+              <p>
                Introduction text will go here incid que iusam est, accusantium?</p></td></tr><tr>
-             <td class="text fz-18 lh-22 c-gold l-gold" style="font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 16px; line-height: 26px; color:#BB9D65;padding-bottom:25px">
+             <td class="text fz-18 lh-22" style="font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 16px; line-height: 26px; color:#BB9D65;padding-bottom:25px">
               <p>
-               <a  class="link"  data-linkto="https://" href="http://click.explore-test.uq.edu.au/?qs=bf7df03b97f962a7ea821f84cb81eb1e60941e3f66050e5e23a867b393cedf7123c1efb751ee130d7463e1f4508920e357d99d7c2ad1c9c12d298c93fb655f38" style="color:#51247a;text-decoration:underline;" target="_blank" title="#">This is a text link</a></p></td></tr></table></th><th class="column" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal;" width="26">
+               <a  class="link"  data-linkto="https://" href="http://click.explore-test.uq.edu.au/?qs=0b948bfd746bc9ac07f84655b1d36b4cf7174c09db7cdca1412ee46a4401011b9de5a610d818129a9bfc043df75a2e691aac7430bfa2a18bceb6d507b9c9666a" style="color:#51247a;text-decoration:underline;" target="_blank" title="#">This is a text link</a></p></td></tr></table></th><th class="column" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal;" width="26">
          </th><th class="column-top" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;" width="176">
           <table border="0" cellpadding="0" cellspacing="0" width="100%">
            
             <tr>
              <td class="img pb-12" style="font-size:0pt; line-height:0pt; text-align:left; padding-bottom: 24px;">
-              <img alt="calendar" border="0" data-assetid="71815" height="51" src="https://image.explore.uq.edu.au/lib/fe37117175640478711776/m/1/edfe31ea-cb10-4c84-a988-6377f510dc72.png" style="height: 51px; width: 51px; padding: 0px; text-align: center;" width="51"></td></tr><tr>
-             <td class="title fz-16 lh-20 c-dpurple l-dpurple pb-12" style="font-weight: bold; font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 20px; line-height: 24px; color:#19151c; padding-bottom: 18px;">
+              <img alt="calendar" border="0" data-assetid="71815" height="51" src="https://image.explore.uq.edu.au/lib/fe37117175640478711776/m/1/d0a75930-eedf-459d-bcb3-c356e817cc49.png" style="height: 51px; width: 51px; padding: 0px; text-align: center;" width="51"></td></tr><tr>
+             <td class="title fz-16 lh-20 pb-12" style="font-weight: bold; font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 20px; line-height: 24px; color:#19151c; padding-bottom: 18px;">
               <p>
                Event heading</p></td></tr><tr>
-             <td class="title fz-14 lh-18 c-lpurple l-lpurple pb-14" style="font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 16px; line-height: 26px; color:#3b383e; padding-bottom: 14px;">
+             <td class="text fz-14 lh-18 pb-14" style="font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 16px; line-height: 26px; color:#3b383e; padding-bottom: 14px;">
               <p>
-               September 25, 2021</p><p>
+               September 25, 2021</p></td></tr><tr>
+             <td class="text fz-14 lh-18 pb-14" style="font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 16px; line-height: 26px; color:#3b383e; padding-bottom: 14px;">
+              <p>
                Introduction text will go here incid que iusam est, accusantium?</p></td></tr><tr>
-             <td class="text fz-18 lh-22 c-gold l-gold" style="font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 16px; line-height: 26px; color:#BB9D65;padding-bottom:25px">
+             <td class="text fz-18 lh-22" style="font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 16px; line-height: 26px; color:#BB9D65;padding-bottom:25px">
               <p>
-               <a  class="link"  data-linkto="https://" href="http://click.explore-test.uq.edu.au/?qs=bf7df03b97f962a7ea821f84cb81eb1e60941e3f66050e5e23a867b393cedf7123c1efb751ee130d7463e1f4508920e357d99d7c2ad1c9c12d298c93fb655f38" style="color:#51247a;text-decoration:underline;" target="_blank" title="#">This is a text link</a></p></td></tr></table></th><th class="column" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal;" width="26">
+               <a  class="link"  data-linkto="https://" href="http://click.explore-test.uq.edu.au/?qs=0b948bfd746bc9ac07f84655b1d36b4cf7174c09db7cdca1412ee46a4401011b9de5a610d818129a9bfc043df75a2e691aac7430bfa2a18bceb6d507b9c9666a" style="color:#51247a;text-decoration:underline;" target="_blank" title="#">This is a text link</a></p></td></tr></table></th><th class="column" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal;" width="26">
          </th><th class="column-top" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;" width="176">
           <table border="0" cellpadding="0" cellspacing="0" width="100%">
            
             <tr>
              <td class="img pb-12" style="font-size:0pt; line-height:0pt; text-align:left; padding-bottom: 24px;">
-              <img alt="calendar" border="0" data-assetid="71815" height="51" src="https://image.explore.uq.edu.au/lib/fe37117175640478711776/m/1/edfe31ea-cb10-4c84-a988-6377f510dc72.png" style="height: 51px; width: 51px; padding: 0px; text-align: center;" width="51"></td></tr><tr>
-             <td class="title fz-16 lh-20 c-dpurple l-dpurple pb-12" style="font-weight: bold; font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 20px; line-height: 24px; color:#19151c; padding-bottom: 18px;">
+              <img alt="calendar" border="0" data-assetid="71815" height="51" src="https://image.explore.uq.edu.au/lib/fe37117175640478711776/m/1/d0a75930-eedf-459d-bcb3-c356e817cc49.png" style="height: 51px; width: 51px; padding: 0px; text-align: center;" width="51"></td></tr><tr>
+             <td class="title fz-16 lh-20 pb-12" style="font-weight: bold; font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 20px; line-height: 24px; color:#19151c; padding-bottom: 18px;">
               <p>
                Event heading</p></td></tr><tr>
-             <td class="title fz-14 lh-18 c-lpurple l-lpurple pb-14" style="font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 16px; line-height: 26px; color:#3b383e; padding-bottom: 14px;">
+             <td class="text fz-14 lh-18 pb-14" style="font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 16px; line-height: 26px; color:#3b383e; padding-bottom: 14px;">
               <p>
-               September 25, 2021</p><p>
+               September 25, 2021</p></td></tr><tr>
+             <td class="text fz-14 lh-18 pb-14" style="font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 16px; line-height: 26px; color:#3b383e; padding-bottom: 14px;">
+              <p>
                Introduction text will go here incid que iusam est, accusantium?</p></td></tr><tr>
-             <td class="text fz-18 lh-22 c-gold l-gold" style="font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 16px; line-height: 26px; color:#BB9D65;padding-bottom:25px">
+             <td class="text fz-18 lh-22" style="font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 16px; line-height: 26px; color:#BB9D65;padding-bottom:25px">
               <p>
-               <a  class="link"  data-linkto="https://" href="http://click.explore-test.uq.edu.au/?qs=bf7df03b97f962a7ea821f84cb81eb1e60941e3f66050e5e23a867b393cedf7123c1efb751ee130d7463e1f4508920e357d99d7c2ad1c9c12d298c93fb655f38" style="color:#51247a;text-decoration:underline;" target="_blank" title="#">This is a text link</a></p></td></tr></table></th></tr></table></td></tr></table><!-- END 3 Column Event Summary --></td></tr></table>
+               <a  class="link"  data-linkto="https://" href="http://click.explore-test.uq.edu.au/?qs=0b948bfd746bc9ac07f84655b1d36b4cf7174c09db7cdca1412ee46a4401011b9de5a610d818129a9bfc043df75a2e691aac7430bfa2a18bceb6d507b9c9666a" style="color:#51247a;text-decoration:underline;" target="_blank" title="#">This is a text link</a></p></td></tr></table></th></tr></table></td></tr></table><!-- END 3 Column Event Summary --></td></tr></table>
           <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><!-- Divider - 48px --><table border="0" cellpadding="0" cellspacing="0" width="100%">
     
       <tr>
@@ -595,33 +614,33 @@ export const Newsletter = {
           <table border="0" cellpadding="0" cellspacing="0" class="mw-100p">
            
             <tr>
-             <th class="column bd-purple mh-auto mpt-30 mpb-25" height="160" style="font-size:0pt; line-height:0pt; padding-top:16px; margin:0; font-weight:normal;background-color:#f3f4f4;" valign="top" width="180">
+             <th class="column bg-grey-f7 mh-auto mpt-30 mpb-25" height="160" style="font-size:0pt; line-height:0pt; padding-top:16px; margin:0; font-weight:normal;background-color:#f3f4f4;" valign="top" width="180">
               <table border="0" cellpadding="0" cellspacing="0" width="100%">
                
                 <tr>
                  <td class="img-center pb-12" style="font-size:0pt; line-height:0pt; text-align:left; padding-bottom: 16px;padding-left:16px;padding-right:16px;">
-                  <img alt="calendar" border="0" data-assetid="81261" height="55" src="https://image.explore.uq.edu.au/lib/fe37117175640478711776/m/1/edfe31ea-cb10-4c84-a988-6377f510dc72.png" style="height: 55px; width: 55px;" width="55"></td></tr><tr>
+                  <img alt="calendar" border="0" data-assetid="81261" height="55" src="https://image.explore.uq.edu.au/lib/fe37117175640478711776/m/1/d0a75930-eedf-459d-bcb3-c356e817cc49.png" style="height: 55px; width: 55px;" width="55"></td></tr><tr>
                  <td class="text fz-14 lh-20 a-center" style="color:#3b383e; font-family:'Roboto', Arial, sans-serif; font-size: 16px; line-height: 26px; text-align:left;padding-left:16px;padding-right:16px;">
                   <p>
                    August 4</p></td></tr></table></th><th class="m-hide" style="font-size: 0pt; line-height: 0pt;" width="27">
-             </th><th class="column bd-purple mh-auto" style="font-size:0pt; line-height:0pt; padding-top:24px; margin:0; font-weight:normal;" valign="top">
-             </th><th class="column bd-purple mh-auto mpt-30 mpb-25" height="160" style="font-size:0pt; line-height:0pt; padding-top:16px; margin:0; font-weight:normal;background-color:#f3f4f4;" valign="top" width="180">
+             </th><th class="column bg-grey-f7 mh-auto" style="font-size:0pt; line-height:0pt; padding-top:24px; margin:0; font-weight:normal;" valign="top">
+             </th><th class="column bg-grey-f7 mh-auto mpt-30 mpb-25" height="160" style="font-size:0pt; line-height:0pt; padding-top:16px; margin:0; font-weight:normal;background-color:#f3f4f4;" valign="top" width="180">
               <table border="0" cellpadding="0" cellspacing="0" width="100%">
                
                 <tr>
                  <td class="img-center pb-12" style="font-size:0pt; line-height:0pt; text-align:left; padding-bottom: 16px;padding-left:16px;padding-right:16px;">
-                  <img alt="clock" border="0" data-assetid="81259" height="55" src="https://image.explore.uq.edu.au/lib/fe37117175640478711776/m/1/a63eb6db-23de-4572-b813-eeff2ca9e4f2.png" style="height: 55px; width: 55px;" width="55"></td></tr><tr>
+                  <img alt="clock" border="0" data-assetid="81259" height="55" src="https://image.explore.uq.edu.au/lib/fe37117175640478711776/m/1/0835d720-87f9-4174-b5bc-d461a9604800.png" style="height: 55px; width: 55px;" width="55"></td></tr><tr>
                  <td class="text fz-14 lh-20 a-center" style="color:#3b383e; font-family:'Roboto', Arial, sans-serif; font-size: 16px; line-height: 26px; text-align:left;padding-left:16px;padding-right:16px;">
                   <p>
                    4:30 &ndash; 5:15pm<br>
                    (Brisbane GMT+10)</p></td></tr></table></th><th class="m-hide" style="font-size: 0pt; line-height: 0pt;" width="27">
-             </th><th class="column bd-purple mh-auto" style="font-size:0pt; line-height:0pt; padding-top:24px; margin:0; font-weight:normal;" valign="top">
-             </th><th class="column bd-purple mh-auto mpt-30 mpb-25" height="160" style="font-size:0pt; line-height:0pt; padding-top:16px; margin:0; font-weight:normal;background-color:#f3f4f4;" valign="top" width="180">
+             </th><th class="column bg-grey-f7 mh-auto" style="font-size:0pt; line-height:0pt; padding-top:24px; margin:0; font-weight:normal;" valign="top">
+             </th><th class="column bg-grey-f7 mh-auto mpt-30 mpb-25" height="160" style="font-size:0pt; line-height:0pt; padding-top:16px; margin:0; font-weight:normal;background-color:#f3f4f4;" valign="top" width="180">
               <table border="0" cellpadding="0" cellspacing="0" width="100%">
                
                 <tr>
                  <td class="img-center pb-12" style="font-size:0pt; line-height:0pt; text-align:left; padding-bottom: 16px;padding-left:16px;padding-right:16px;">
-                  <img alt="pin" border="0" data-assetid="81260" height="55" src="https://image.explore.uq.edu.au/lib/fe37117175640478711776/m/1/1392ecd8-649b-4239-a73b-fb9ee7c0d3c5.png" style="height: 55px; width: 55px;" width="55"></td></tr><tr>
+                  <img alt="pin" border="0" data-assetid="81260" height="55" src="https://image.explore.uq.edu.au/lib/fe37117175640478711776/m/1/5d10e78e-677b-4ec6-8a85-b8d72e27f130.png" style="height: 55px"></td></tr><tr>
                  <td class="text fz-14 lh-20 a-center" style="color:#3b383e; font-family:'Roboto', Arial, sans-serif; font-size: 16px; line-height: 26px; text-align:left;padding-left:16px;padding-right:16px;">
                   <p>
                    Online via Zoom</p></td></tr></table></th></tr></table></td></tr></table></td></tr></table><!-- END Event Details --></td></tr></table>
@@ -630,19 +649,19 @@ export const Newsletter = {
     <tr>
      <td style="font-size:1px;line-height:48px" width="111">
       &nbsp;</td></tr></table><!-- END Divider - 48px --></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><table border="0" cellpadding="0" cellspacing="0" width="100%">
-   
-    <tr>
-     <td class="pt-25 px-40 mpx-20" style="padding-left: 24px; padding-right: 24px;">
-      <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
-       <!-- Headings -->
-        <tr>
-         <td class="title fz-26 lh-31 pb-24" style="font-family:'Roboto', Arial, sans-serif; font-size: 24px; line-height: 29px; color:#19151C; font-weight: bold">
-          <p>
-           Important dates</p></td></tr><!-- END Headings --><!-- Body Text --><!-- END Body Text --><!-- Button --><!-- END Button --><!-- Button --><!-- END Button --></table></td></tr></table></td></tr></table>
+    
+      <tr>
+        <td class="pt-25 px-40 mpx-20" style="padding-left: 24px; padding-right: 24px;">
+          <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+            <!-- Headings -->
+              <tr>
+                <td class="title fz-26 lh-31 pb-24" style="font-family:'Roboto', Arial, sans-serif; font-size: 24px; line-height: 29px; color:#19151C; font-weight: bold">
+                  <p>
+                    Important dates</p></td></tr><!-- END Headings --><!-- Body Text --><!-- END Body Text --><!-- Button --><!-- END Button --><!-- Button --><!-- END Button --></table></td></tr></table></td></tr></table>
           <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><!-- Divider - 24px --><table border="0" cellpadding="0" cellspacing="0" width="100%">
    
     <tr>
-     <td style="font-size:1px;line-height:16px" width="111">
+     <td style="font-size:1px;line-height:24px" width="111">
       &nbsp;</td></tr></table><!-- END Divider - 24px --></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><!-- Key Dates - lt bkgd --><table border="0" cellpadding="0" cellspacing="0" width="100%">
    
     <tr>
@@ -655,22 +674,22 @@ export const Newsletter = {
            
             <tr>
              <th class="column-top img" style="padding:0; margin:0; font-weight:normal; vertical-align:top; font-size:0pt; line-height:0pt; text-align:left;" width="65">
-              <img alt="calendar" border="0" data-assetid="81257" height="56" src="https://image.explore.uq.edu.au/lib/fe37117175640478711776/m/1/edfe31ea-cb10-4c84-a988-6377f510dc72.png" style="height: 56px; width: 56px;" width="65"></th><th style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal;" width="24">
+              <img alt="calendar" border="0" data-assetid="81257" height="56" src="https://image.explore.uq.edu.au/lib/fe37117175640478711776/m/1/d0a75930-eedf-459d-bcb3-c356e817cc49.png" style="height: 56px; width: 56px;" width="65"></th><th style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal;" width="24">
              </th><th style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;">
               <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
                
                 <tr>
-                 <td class="title fz-16 lh-20 c-dpurple l-dpurple pb-12" style="font-weight: bold; font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 20px; line-height: 24px; color:#19151c; padding-bottom: 8px;">
+                 <td class="title fz-16 lh-20 pb-12" style="font-weight: bold; font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 20px; line-height: 24px; color:#19151c; padding-bottom: 8px;">
                   <p>
                    August 31, 2025</p></td></tr><tr>
                  <td class="text fz-14 lh-20" style="color:#3b383e; font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 16px; line-height: 26px;">
                   <p>
                    Introduction text will go here incid que iusam est, accusantium?</p></td></tr></table></th></tr></table></td></tr><!-- END Date 1 --></table></td></tr></table><!-- END Key Dates - lt bkgd --></td></tr></table>
           <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><!-- Divider - 24px --><table border="0" cellpadding="0" cellspacing="0" width="100%">
-    
-      <tr>
-        <td style="font-size:1px;line-height:16px" width="111">
-          &nbsp;</td></tr></table><!-- END Divider - 24px --></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><!-- Key Dates - lt bkgd --><table border="0" cellpadding="0" cellspacing="0" width="100%">
+   
+    <tr>
+     <td style="font-size:1px;line-height:24px" width="111">
+      &nbsp;</td></tr></table><!-- END Divider - 24px --></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><!-- Key Dates - lt bkgd --><table border="0" cellpadding="0" cellspacing="0" width="100%">
    
     <tr>
      <td class="pt-18 px-30" style="padding-left: 24px; padding-right: 24px;">
@@ -682,12 +701,12 @@ export const Newsletter = {
            
             <tr>
              <th class="column-top img" style="padding:0; margin:0; font-weight:normal; vertical-align:top; font-size:0pt; line-height:0pt; text-align:left;" width="65">
-              <img alt="calendar" border="0" data-assetid="81257" height="56" src="https://image.explore.uq.edu.au/lib/fe37117175640478711776/m/1/edfe31ea-cb10-4c84-a988-6377f510dc72.png" style="height: 56px; width: 56px;" width="65"></th><th style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal;" width="24">
+              <img alt="calendar" border="0" data-assetid="81257" height="56" src="https://image.explore.uq.edu.au/lib/fe37117175640478711776/m/1/d0a75930-eedf-459d-bcb3-c356e817cc49.png" style="height: 56px; width: 56px;" width="65"></th><th style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal;" width="24">
              </th><th style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;">
               <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
                
                 <tr>
-                 <td class="title fz-16 lh-20 c-dpurple l-dpurple pb-12" style="font-weight: bold; font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 20px; line-height: 24px; color:#19151c; padding-bottom: 8px;">
+                 <td class="title fz-16 lh-20 pb-12" style="font-weight: bold; font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 20px; line-height: 24px; color:#19151c; padding-bottom: 8px;">
                   <p>
                    August 31, 2025</p></td></tr><tr>
                  <td class="text fz-14 lh-20" style="color:#3b383e; font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 16px; line-height: 26px;">
@@ -695,7 +714,7 @@ export const Newsletter = {
                    Introduction text will go here incid que iusam est, accusantium?</p></td></tr></table></th></tr></table></td></tr><!-- END Date 1 --></table></td></tr></table><!-- END Key Dates - lt bkgd --></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><!-- Divider - 24px --><table border="0" cellpadding="0" cellspacing="0" width="100%">
    
     <tr>
-     <td style="font-size:1px;line-height:16px" width="111">
+     <td style="font-size:1px;line-height:24px" width="111">
       &nbsp;</td></tr></table><!-- END Divider - 24px --></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><!-- Key Dates - lt bkgd --><table border="0" cellpadding="0" cellspacing="0" width="100%">
    
     <tr>
@@ -708,12 +727,12 @@ export const Newsletter = {
            
             <tr>
              <th class="column-top img" style="padding:0; margin:0; font-weight:normal; vertical-align:top; font-size:0pt; line-height:0pt; text-align:left;" width="65">
-              <img alt="calendar" border="0" data-assetid="81257" height="56" src="https://image.explore.uq.edu.au/lib/fe37117175640478711776/m/1/edfe31ea-cb10-4c84-a988-6377f510dc72.png" style="height: 56px; width: 56px;" width="65"></th><th style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal;" width="24">
+              <img alt="calendar" border="0" data-assetid="81257" height="56" src="https://image.explore.uq.edu.au/lib/fe37117175640478711776/m/1/d0a75930-eedf-459d-bcb3-c356e817cc49.png" style="height: 56px; width: 56px;" width="65"></th><th style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal;" width="24">
              </th><th style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;">
               <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
                
                 <tr>
-                 <td class="title fz-16 lh-20 c-dpurple l-dpurple pb-12" style="font-weight: bold; font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 20px; line-height: 24px; color:#19151c; padding-bottom: 8px;">
+                 <td class="title fz-16 lh-20 pb-12" style="font-weight: bold; font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 20px; line-height: 24px; color:#19151c; padding-bottom: 8px;">
                   <p>
                    August 31, 2025</p></td></tr><tr>
                  <td class="text fz-14 lh-20" style="color:#3b383e; font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 16px; line-height: 26px;">
@@ -739,7 +758,7 @@ export const Newsletter = {
               <table border="0" cellpadding="0" cellspacing="0" width="100%">
                
                 <tr>
-                 <td class="title fz-24 lh-28 c-dpurple l-dpurple pb-16" style="font-weight: bold; font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 24px; line-height: 29px; color:#19151c; padding-bottom: 20px;">
+                 <td class="title fz-24 lh-28 pb-16" style="font-weight: bold; font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 24px; line-height: 29px; color:#19151c; padding-bottom: 20px;">
                   <p>
                    Event checklist</p></td></tr><tr>
                  <td class="text fz-16 lh-20" style="color:#000001; font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 16px; line-height: 26px;color:#3b383e; ">
@@ -751,25 +770,25 @@ export const Newsletter = {
               <!-- Ordered List --><table border="0" cellpadding="0" cellspacing="0" width="100%">
                
                 <tr>
-                 <td class="img pb-4" style="font-size:0pt; line-height:0pt; text-align:left; padding-bottom: 8px;" width="35">
-                  <img alt="num 1" border="0" data-assetid="81256" height="35" src="https://image.explore.uq.edu.au/lib/fe37117175640478711776/m/1/566a4149-7f69-42b2-bd73-a8f652b4fbd5.png" style="height: 35px; width: 35px;" width="35"></td><td class="pb-4" style="font-size: 0pt; line-height: 0pt; padding-bottom: 8px;" width="16">
-                  &nbsp;</td><td class="text fz-16 lh-20 c-lpurple l-lpurple pb-4" style="font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 16px; line-height: 26px; color:#3b383e; padding-bottom: 8px;">
-                  Go to the <a  class="link-u c-lpurple"  data-linkto="https://" href="http://click.explore-test.uq.edu.au/?qs=bf7df03b97f962a741612541fecd92a634965f51dcfede14917313c1d8fa938294646e9f83d392e516000b2c05750a5fae0770ecc4309e9fe93cee727dca8b7c" style="color:#51247a;text-decoration:underline;" target="_blank" title="Go to the website">website</a></td></tr><tr>
-                 <td class="img pb-4" style="font-size:0pt; line-height:0pt; text-align:left; padding-bottom: 8px;" width="35">
-                  <img alt="num 2" border="0" data-assetid="81253" height="35" src="https://image.explore.uq.edu.au/lib/fe37117175640478711776/m/1/a578cc9f-61a1-4897-ac81-2702a3690153.png" style="height: 35px; width: 35px;" width="35"></td><td class="pb-4" style="font-size: 0pt; line-height: 0pt; padding-bottom: 8px;" width="16">
-                  &nbsp;</td><td class="text fz-16 lh-20 c-lpurple l-lpurple pb-4" style="font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 16px; line-height: 26px; color:#3b383e; padding-bottom: 8px;">
-                  <a   data-linkto="https://" href="http://click.explore-test.uq.edu.au/?qs=bf7df03b97f962a783f149fc6896376dd2fe735584f39a12ad2da86ca509ca982fe8f39085f5b10cfc2954fbc3f5de71627fe43146cd77f378240c328fe1770d" style="color:#51247a;text-decoration:underline;" title="Register&nbsp;for the event">Register</a>&nbsp;for the event</td></tr><tr>
-                 <td class="img pb-4" style="font-size:0pt; line-height:0pt; text-align:left; padding-bottom: 8px;" width="35">
-                  <img alt="num 3" border="0" data-assetid="81255" height="35" src="https://image.explore.uq.edu.au/lib/fe37117175640478711776/m/1/1df748aa-950c-4046-809c-957687443589.png" style="height: 35px; width: 35px;" width="35"></td><td class="pb-4" style="font-size: 0pt; line-height: 0pt; padding-bottom: 8px;" width="16">
-                  &nbsp;</td><td class="text fz-16 lh-20 c-lpurple l-lpurple pb-4" style="font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 16px; line-height: 26px; color:#3b383e; padding-bottom: 8px;">
+                 <td class="img pb-4" style="font-size:0pt; line-height:0pt; text-align:left; padding-bottom: 4px;" width="35">
+                  <img alt="num 1" border="0" data-assetid="81256" height="43" src="https://image.explore.uq.edu.au/lib/fe37117175640478711776/m/1/e6cfa079-a8d6-4c0b-88e3-b9d608bcb419.png" style="height: 43px; width: 43px;" width="43"></td><td class="pb-4" style="font-size: 0pt; line-height: 0pt; padding-bottom: 4px;" width="16">
+                  &nbsp;</td><td class="text fz-16 lh-20 pb-4" style="font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 16px; line-height: 26px; color:#3b383e; padding-bottom: 4px;">
+                  Go to the <a   data-linkto="https://" href="http://click.explore-test.uq.edu.au/?qs=0b948bfd746bc9ac3cf63f0a5b9a132b409209331e126353e6eb085b47aa440356dcd55233abf496f9362b724f366654d2f5014f2a11fa0a0f94b5d404fa1294" style="color:#51247a;text-decoration:underline;" target="_blank" title="Go to the website">website</a></td></tr><tr>
+                 <td class="img pb-4" style="font-size:0pt; line-height:0pt; text-align:left; padding-bottom: 4px;" width="35">
+                  <img alt="num 2" border="0" data-assetid="81253" height="43" src="https://image.explore.uq.edu.au/lib/fe37117175640478711776/m/1/32e39374-5fef-4870-bbf7-925a99adad1d.png" style="height: 43px; width: 43px;" width="43"></td><td class="pb-4" style="font-size: 0pt; line-height: 0pt; padding-bottom: 4px;" width="16">
+                  &nbsp;</td><td class="text fz-16 lh-20 pb-4" style="font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 16px; line-height: 26px; color:#3b383e; padding-bottom: 4px;">
+                  <a   data-linkto="https://" href="http://click.explore-test.uq.edu.au/?qs=0b948bfd746bc9aca3150649d7473c31e3d4dbe4cc18e925deaa0d78724d4a683d5c65cfe03adb0b253d0e30f8217963350ef60d70733168e554ff26e38630c1" style="color:#51247a;text-decoration:underline;" title="Register for the event">Register</a>&nbsp;for the event</td></tr><tr>
+                 <td class="img pb-4" style="font-size:0pt; line-height:0pt; text-align:left; padding-bottom: 4px;" width="35">
+                  <img alt="num 3" border="0" data-assetid="81255" height="43" src="https://image.explore.uq.edu.au/lib/fe37117175640478711776/m/1/7631ab46-a0df-47df-934c-25d1cc40e839.png" style="height: 43px; width: 43px;" width="43"></td><td class="pb-4" style="font-size: 0pt; line-height: 0pt; padding-bottom: 4px;" width="16">
+                  &nbsp;</td><td class="text fz-16 lh-20 pb-4" style="font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 16px; line-height: 26px; color:#3b383e; padding-bottom: 4px;">
                   Add it to your calendar</td></tr><tr>
-                 <td class="img pb-4" style="font-size:0pt; line-height:0pt; text-align:left; padding-bottom: 8px;" width="35">
-                  <img alt="num 4" border="0" data-assetid="81252" height="35" src="https://image.explore.uq.edu.au/lib/fe37117175640478711776/m/1/4408b6ae-4476-43ae-86d7-c6666c953a17.png" style="height: 35px; width: 35px;" width="35"></td><td class="pb-4" style="font-size: 0pt; line-height: 0pt; padding-bottom: 8px;" width="16">
-                  &nbsp;</td><td class="text fz-16 lh-20 c-lpurple l-lpurple pb-4" style="font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 16px; line-height: 26px; color:#3b383e; padding-bottom: 8px;">
+                 <td class="img pb-4" style="font-size:0pt; line-height:0pt; text-align:left; padding-bottom: 4px;" width="35">
+                  <img alt="num 4" border="0" data-assetid="81252" height="43" src="https://image.explore.uq.edu.au/lib/fe37117175640478711776/m/1/cd5a02c7-cb8a-458b-b031-a8f97c328ea0.png" style="height: 43px; width: 43px;" width="43"></td><td class="pb-4" style="font-size: 0pt; line-height: 0pt; padding-bottom: 4px;" width="16">
+                  &nbsp;</td><td class="text fz-16 lh-20 pb-4" style="font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 16px; line-height: 26px; color:#3b383e; padding-bottom: 4px;">
                   Get directions to the event</td></tr><tr>
                  <td class="img pb-4" style="font-size:0pt; line-height:0pt; text-align:left;" width="35">
-                  <img alt="num 5" border="0" data-assetid="81254" height="35" src="https://image.explore.uq.edu.au/lib/fe37117175640478711776/m/1/615a2731-8914-4358-a5a6-d85d999de468.png" style="height: 35px; width: 35px;" width="35"></td><td class="pb-4" style="font-size: 0pt; line-height: 0pt;" width="16">
-                  &nbsp;</td><td class="text fz-16 lh-20 c-lpurple l-lpurple pb-4" style="font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 16px; line-height: 26px; color:#3b383e">
+                  <img alt="num 5" border="0" data-assetid="81254" height="43" src="https://image.explore.uq.edu.au/lib/fe37117175640478711776/m/1/c906d57f-3a5f-4000-ae75-05a97effa5f2.png" style="height: 43px; width: 43px;" width="43"></td><td class="pb-4" style="font-size: 0pt; line-height: 0pt;" width="16">
+                  &nbsp;</td><td class="text fz-16 lh-20 pb-4" style="font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 16px; line-height: 26px; color:#3b383e">
                   You're done!</td></tr></table><!-- END Ordered List --></th></tr></table></td></tr><!-- END 2 Cols --></table></td></tr></table><!-- END Event Checklist --></td></tr></table>
           <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><!-- Divider - 48px --><table border="0" cellpadding="0" cellspacing="0" width="100%">
     
@@ -782,7 +801,7 @@ export const Newsletter = {
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
        
         <tr>
-         <td class="title fz-26 lh-30 c-dpurple l-dpurple pb-19" style="font-weight: 500; font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 26px; line-height: 30px; color:#19151c; font-weight:bold; padding-bottom: 30px;">
+         <td class="title fz-26 lh-30 pb-19" style="font-weight: 500; font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 26px; line-height: 30px; color:#19151c; font-weight:bold; padding-bottom: 30px;">
           <p>
            Starter program webinars</p></td></tr></table><table border="0" cellpadding="0" cellspacing="0" width="100%">
        
@@ -792,15 +811,15 @@ export const Newsletter = {
            
             <tr>
              <td class="img pb-12" style="font-size:0pt; line-height:0pt; text-align:left; padding-bottom: 24px;">
-              <img alt="clock" border="0" data-assetid="71804" height="50" src="https://image.explore.uq.edu.au/lib/fe37117175640478711776/m/1/a63eb6db-23de-4572-b813-eeff2ca9e4f2.png" style="height: 50px; width: 50px;" width="50"></td></tr><tr>
-             <td class="title fz-16 lh-20 c-dpurple l-dpurple pb-12" style="font-weight: bold; font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 20px; line-height: 24px; color:#19151c; padding-bottom: 18px;">
+              <img alt="clock" border="0" data-assetid="71804" height="50" src="https://image.explore.uq.edu.au/lib/fe37117175640478711776/m/1/0835d720-87f9-4174-b5bc-d461a9604800.png" style="height: 50px; width: 50px;" width="50"></td></tr><tr>
+             <td class="title fz-16 lh-20 pb-12" style="font-weight: bold; font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 20px; line-height: 24px; color:#19151c; padding-bottom: 18px;">
               <p>
                Student clubs and connection</p></td></tr><tr>
-             <td class="title fz-14 lh-18 c-lpurple l-lpurple pb-14" style="font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 16px; line-height: 26px; color:#3b383e; padding-bottom: 14px;">
+             <td class="text fz-14 lh-18 pb-14" style="font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 16px; line-height: 26px; color:#3b383e; padding-bottom: 14px;">
               <p>
                November 6, 2024<br>
                4pm &ndash; 5:30pm*</p></td></tr><tr>
-             <td class="title fz-14 lh-18 c-lpurple l-lpurple pb-14" style="font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 16px; line-height: 26px; color:#3b383e; padding-bottom: 24px;">
+             <td class="text fz-14 lh-18 pb-14" style="font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 16px; line-height: 26px; color:#3b383e; padding-bottom: 24px;">
               <p>
                Find out about the extracurricular programs on offer and how to improve your employability skills during your studies.</p></td></tr></table></th><th class="column" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal;" width="26">
          </th><th class="column-top" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;" width="176">
@@ -808,15 +827,15 @@ export const Newsletter = {
            
             <tr>
              <td class="img pb-12" style="font-size:0pt; line-height:0pt; text-align:left; padding-bottom: 24px;">
-              <img alt="calendar" border="0" data-assetid="71815" height="51" src="https://image.explore.uq.edu.au/lib/fe37117175640478711776/m/1/edfe31ea-cb10-4c84-a988-6377f510dc72.png" style="height: 51px; width: 51px; padding: 0px; text-align: center;" width="51"></td></tr><tr>
-             <td class="title fz-16 lh-20 c-dpurple l-dpurple pb-12" style="font-weight: bold; font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 20px; line-height: 24px; color:#19151c; padding-bottom: 18px;">
+              <img alt="calendar" border="0" data-assetid="71815" height="51" src="https://image.explore.uq.edu.au/lib/fe37117175640478711776/m/1/d0a75930-eedf-459d-bcb3-c356e817cc49.png" style="height: 51px; width: 51px; padding: 0px; text-align: center;" width="51"></td></tr><tr>
+             <td class="title fz-16 lh-20 pb-12" style="font-weight: bold; font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 20px; line-height: 24px; color:#19151c; padding-bottom: 18px;">
               <p>
                Student clubs and connection</p></td></tr><tr>
-             <td class="title fz-14 lh-18 c-lpurple l-lpurple pb-14" style="font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 16px; line-height: 26px; color:#3b383e; padding-bottom: 14px;">
+             <td class="text fz-14 lh-18 pb-14" style="font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 16px; line-height: 26px; color:#3b383e; padding-bottom: 14px;">
               <p>
                November 6, 2024<br>
                4pm &ndash; 5:30pm*</p></td></tr><tr>
-             <td class="title fz-14 lh-18 c-lpurple l-lpurple pb-14" style="font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 16px; line-height: 26px; color:#3b383e; padding-bottom: 24px;">
+             <td class="text fz-14 lh-18 pb-14" style="font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 16px; line-height: 26px; color:#3b383e; padding-bottom: 24px;">
               <p>
                Find out about the extracurricular programs on offer and how to improve your employability skills during your studies.</p></td></tr></table></th><th class="column" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal;" width="26">
          </th><th class="column-top" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;" width="176">
@@ -824,15 +843,15 @@ export const Newsletter = {
            
             <tr>
              <td class="img pb-12" style="font-size:0pt; line-height:0pt; text-align:left; padding-bottom: 24px;">
-              <img alt="pin" border="0" data-assetid="71810" height="51" src="https://image.explore.uq.edu.au/lib/fe37117175640478711776/m/1/1392ecd8-649b-4239-a73b-fb9ee7c0d3c5.png" style="height: 51px; width: 51px;" width="51"></td></tr><tr>
-             <td class="title fz-16 lh-20 c-dpurple l-dpurple pb-12" style="font-weight: bold; font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 20px; line-height: 24px; color:#19151c; padding-bottom: 18px;">
+              <img alt="pin" border="0" data-assetid="71810" height="51" src="https://image.explore.uq.edu.au/lib/fe37117175640478711776/m/1/5d10e78e-677b-4ec6-8a85-b8d72e27f130.png" style="height: 51px"></td></tr><tr>
+             <td class="title fz-16 lh-20 pb-12" style="font-weight: bold; font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 20px; line-height: 24px; color:#19151c; padding-bottom: 18px;">
               <p>
                Student clubs and connection</p></td></tr><tr>
-             <td class="title fz-14 lh-18 c-lpurple l-lpurple pb-14" style="font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 16px; line-height: 26px; color:#3b383e; padding-bottom: 14px;">
+             <td class="text fz-14 lh-18 pb-14" style="font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 16px; line-height: 26px; color:#3b383e; padding-bottom: 14px;">
               <p>
                November 6, 2024<br>
                4pm &ndash; 5:30pm*</p></td></tr><tr>
-             <td class="title fz-14 lh-18 c-lpurple l-lpurple pb-14" style="font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 16px; line-height: 26px; color:#3b383e; padding-bottom: 24px;">
+             <td class="text fz-14 lh-18 pb-14" style="font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 16px; line-height: 26px; color:#3b383e; padding-bottom: 24px;">
               <p>
                Find out about the extracurricular programs on offer and how to improve your employability skills during your studies.</p></td></tr></table></th></tr></table></td></tr></table><!-- END 3 Column Event Summary --></td></tr></table>
           <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><!-- Divider - 48px --><table border="0" cellpadding="0" cellspacing="0" width="100%">
@@ -851,11 +870,11 @@ export const Newsletter = {
            
             <tr>
              <td class="fluid-img pb-19" style="font-size:0pt; line-height:0pt; text-align:center; padding-bottom: 20px;">
-              <a   data-linkto="https://" href="http://click.explore-test.uq.edu.au/?qs=bf7df03b97f962a7923b1cb3a9673927b6449b70393e7d2764d5560dcf32f7ee8f8e3f37b8a032ee16c3b796fac71feaf6acdb3bbd23bb319fdfe6658e391419" title="#"><img alt="image-1" border="0" src="https://image.explore.uq.edu.au/lib/fe37117175640478711776/m/1/174f995e-003b-43ad-990d-1a9ee71e7304.jpg" style="height: auto; width: 100%;" width="284"></a></td></tr><tr>
-             <td class="title fz-16 lh-20 c-grey l-grey pb-20 px-10" style="color:#3b383e; font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 16px; line-height: 26px;padding-bottom:6px">
+              <a   data-linkto="https://" href="http://click.explore-test.uq.edu.au/?qs=0b948bfd746bc9ac4ce6686549d51b62c9e3cec13354fc60068ea022656537a51d10a70b62ea93090a6cf1a99ba1fe86252df1057b112c5257571ba6bc4de484" title="#"><img alt="image-1" border="0" src="https://image.explore.uq.edu.au/lib/fe37117175640478711776/m/1/174f995e-003b-43ad-990d-1a9ee71e7304.jpg" style="height: auto; width: 100%;" width="284"></a></td></tr><tr>
+             <td class="title fz-16 lh-20 pb-20 px-10" style="color:#3b383e; font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 16px; line-height: 26px;padding-bottom:6px">
               <p>
                Uni life</p></td></tr><tr>
-             <td class="title fz-20 lh-24 c-dpurple l-dpurple pb-20 px-10" style="font-weight: bold; font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 24px; line-height: 24px; color:#19151C; padding-bottom: 20px;">
+             <td class="title fz-20 lh-24 pb-20 px-10" style="font-weight: bold; font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 24px; line-height: 24px; color:#19151C; padding-bottom: 20px;">
               <p>
                Headline goes here</p></td></tr><tr>
              <td class="text fz-14 lh-20 pb-18 px-10" style="color:#3b383e; font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 16px; line-height: 26px; padding-bottom: 18px;">
@@ -864,19 +883,19 @@ export const Newsletter = {
              <td class="text fz-14 lh-20 pb-18 px-10" style="color:#3b383e; font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 16px; line-height: 26px; padding-bottom: 18px;">
               <p>
                6-minute read</p></td></tr><tr>
-             <td class="text fz-18 lh-22 c-gold l-gold" style="font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 16px; line-height: 26px; color:#BB9D65;">
+             <td class="text fz-18 lh-22" style="font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 16px; line-height: 26px; color:#BB9D65;">
               <p>
-               <a  class="link"  data-linkto="https://" href="http://click.explore-test.uq.edu.au/?qs=bf7df03b97f962a7ea821f84cb81eb1e60941e3f66050e5e23a867b393cedf7123c1efb751ee130d7463e1f4508920e357d99d7c2ad1c9c12d298c93fb655f38" style="color:#51247a;text-decoration:underline;" target="_blank" title="#">This is a text link</a></p></td></tr></table></th><th class="column mpb-10" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal;" width="24">
+               <a  class="link"  data-linkto="https://" href="http://click.explore-test.uq.edu.au/?qs=0b948bfd746bc9ac07f84655b1d36b4cf7174c09db7cdca1412ee46a4401011b9de5a610d818129a9bfc043df75a2e691aac7430bfa2a18bceb6d507b9c9666a" style="color:#51247a;text-decoration:underline;" target="_blank" title="#">This is a text link</a></p></td></tr></table></th><th class="column mpb-10" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal;" width="24">
          </th><th class="column-top" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;" width="286">
           <table border="0" cellpadding="0" cellspacing="0" width="100%">
            
             <tr>
              <td class="fluid-img pb-19" style="font-size:0pt; line-height:0pt; text-align:center; padding-bottom: 20px;">
-              <a   data-linkto="https://" href="http://click.explore-test.uq.edu.au/?qs=bf7df03b97f962a7923b1cb3a9673927b6449b70393e7d2764d5560dcf32f7ee8f8e3f37b8a032ee16c3b796fac71feaf6acdb3bbd23bb319fdfe6658e391419" title="#"><img alt="image 2" border="0" src="https://image.explore.uq.edu.au/lib/fe37117175640478711776/m/1/174f995e-003b-43ad-990d-1a9ee71e7304.jpg" style="height: auto; width: 100%;" width="284"></a></td></tr><tr>
-             <td class="title fz-16 lh-20 c-grey l-grey pb-20 px-10" style="color:#3b383e; font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 16px; line-height: 26px;padding-bottom:6px">
+              <a   data-linkto="https://" href="http://click.explore-test.uq.edu.au/?qs=0b948bfd746bc9ac4ce6686549d51b62c9e3cec13354fc60068ea022656537a51d10a70b62ea93090a6cf1a99ba1fe86252df1057b112c5257571ba6bc4de484" title="#"><img alt="image 2" border="0" src="https://image.explore.uq.edu.au/lib/fe37117175640478711776/m/1/174f995e-003b-43ad-990d-1a9ee71e7304.jpg" style="height: auto; width: 100%;" width="284"></a></td></tr><tr>
+             <td class="title fz-16 lh-20 pb-20 px-10" style="color:#3b383e; font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 16px; line-height: 26px;padding-bottom:6px">
               <p>
                Uni life</p></td></tr><tr>
-             <td class="title fz-20 lh-24 c-dpurple l-dpurple pb-20 px-10" style="font-weight: bold; font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 24px; line-height: 24px; color:#19151C; padding-bottom: 20px;">
+             <td class="title fz-20 lh-24 pb-20 px-10" style="font-weight: bold; font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 24px; line-height: 24px; color:#19151C; padding-bottom: 20px;">
               <p>
                Headline goes here</p></td></tr><tr>
              <td class="text fz-14 lh-20 pb-18 px-10" style="color:#3b383e; font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 16px; line-height: 26px; padding-bottom: 18px;">
@@ -885,9 +904,9 @@ export const Newsletter = {
              <td class="text fz-14 lh-20 pb-18 px-10" style="color:#3b383e; font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 16px; line-height: 26px; padding-bottom: 18px;">
               <p>
                6-minute read</p></td></tr><tr>
-             <td class="text fz-18 lh-22 c-gold l-gold" style="font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 16px; line-height: 26px; color:#BB9D65;">
+             <td class="text fz-18 lh-22" style="font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 16px; line-height: 26px; color:#BB9D65;">
               <p>
-               <a  class="link"  data-linkto="https://" href="http://click.explore-test.uq.edu.au/?qs=bf7df03b97f962a7ea821f84cb81eb1e60941e3f66050e5e23a867b393cedf7123c1efb751ee130d7463e1f4508920e357d99d7c2ad1c9c12d298c93fb655f38" style="color:#51247a;text-decoration:underline;" target="_blank" title="#">This is a text link</a></p></td></tr></table></th></tr></table></td></tr></table><!-- END 2 Column Story Block --></td></tr></table>
+               <a  class="link"  data-linkto="https://" href="http://click.explore-test.uq.edu.au/?qs=0b948bfd746bc9ac07f84655b1d36b4cf7174c09db7cdca1412ee46a4401011b9de5a610d818129a9bfc043df75a2e691aac7430bfa2a18bceb6d507b9c9666a" style="color:#51247a;text-decoration:underline;" target="_blank" title="#">This is a text link</a></p></td></tr></table></th></tr></table></td></tr></table><!-- END 2 Column Story Block --></td></tr></table>
           <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><!-- Divider - 48px --><table border="0" cellpadding="0" cellspacing="0" width="100%">
    
     <tr>
@@ -919,42 +938,46 @@ export const Newsletter = {
          <td class="title fz-18 lh-22 c-white l-white" style="font-weight: bold; font-family:'Roboto', Arial, sans-serif; text-align:left; font-size: 24px; line-height: 30px; color:#f3f3f4; padding-bottom: 20px;">
           Get in touch with us</td></tr><tr>
          <td class="text fz-18 lh-20 c-white l-white" style="font-family:'Roboto', Arial, sans-serif; font-size: 18px; line-height: 20px; text-align:left; color:#f3f3f4;padding-bottom: 12px" valign="top">
-          <a  class="link c-white"  data-linkto="https://" href="http://click.explore-test.uq.edu.au/?qs=bf7df03b97f962a70100685c59a4e76092cc8ec26135bc9c51fad56657cc18764b0039bff31669c0fe534226d40a03e3666067af389c5c00" style="text-decoration:underline;color:#fffffe;" target="_blank" title="Submit Enquiry">Send us an enquiry</a></td></tr><tr>
+          <a  class="link c-white"  data-linkto="https://" href="http://click.explore-test.uq.edu.au/?qs=0b948bfd746bc9ac0a8b2d00915c5238b0e0de85286a4691468c9b01dde435e48cdd33363ae03a8819cf79fc787bed97c2145701477bf940" style="text-decoration:underline;color:#fffffe;" target="_blank" title="Submit Enquiry">Send us an enquiry</a></td></tr><tr>
          <td class="text fz-18 lh-20 c-white l-white" style="font-family:'Roboto', Arial, sans-serif; font-size: 18px; line-height: 20px; text-align:left; color:#f3f3f4;padding-bottom: 12px" valign="top">
           <a class="link c-white" href="tel:+61 733469872" style="text-decoration:underline; color:#fffffe;" target="_blank">+61 7 3346 9872</a></td></tr><tr>
          <td class="text fz-18 lh-20 c-white l-white" style="font-family:'Roboto', Arial, sans-serif; font-size: 18px; line-height: 20px; text-align:left; color:#f3f3f4;padding-bottom: 30px" valign="top">
-          <a class="link c-white" href="http://click.explore-test.uq.edu.au/?qs=bf7df03b97f962a707c616b7965eac136f82456a5a3a2b5f00712f5229ce4784589f0983fc4e2ef6ed33fb56d0aa3c7a6a7c1fb59b2edecf" style="text-decoration:underline; color:#fffffe;" target="_blank">uq.edu.au</a></td></tr><tr>
+          <a class="link c-white" href="http://click.explore-test.uq.edu.au/?qs=0b948bfd746bc9aca95d46d212daaed400d1f8aec1870a3ebacc9b99374a61c95b2569a043163ef05fcf8a265308f55664e14d8f9506f9c3" style="text-decoration:underline; color:#fffffe;" target="_blank">uq.edu.au</a></td></tr><tr>
          <th class="column-dir-top" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; direction:ltr; vertical-align:top;text-align:left;" width="185">
           <!-- Socials --><table border="0" cellpadding="0" cellspacing="0">
            
             <tr>
              <td class="img" style="font-size:0pt; line-height:0pt; text-align:left;">
-              <a   data-linkto="https://" href="http://click.explore-test.uq.edu.au/?qs=bf7df03b97f962a7905d6225b43e716c307ef1df6ce822947bf0414c6c644679100ed29c848c74265e7404edf43690af50aab10a5cf4404b74ea5317236f2449" target="_blank" title="Facebook"><img alt="Facebook" data-assetid="234101" height="32" src="https://image.explore.uq.edu.au/lib/fe37117175640478711776/m/1/dab272e1-4a73-4075-a9a1-fce4bd121725.png" style="height: 32px; width: 32px; padding: 0px; text-align: center;" width="32"></a></td><td class="mw-20" style="font-size: 0pt; line-height: 0pt;" width="16">
+              <a   data-linkto="https://" href="http://click.explore-test.uq.edu.au/?qs=0b948bfd746bc9accc9871bb940a289a9cd7cb339efc512435e0b5011cdef3a8906b7fc7e3978baf4779cb4a311546dd8f62a016b5e8e4faa559d9a67b0b54df" target="_blank" title="Facebook"><img alt="Facebook" data-assetid="234101" height="32" src="https://image.explore.uq.edu.au/lib/fe37117175640478711776/m/1/dab272e1-4a73-4075-a9a1-fce4bd121725.png" style="height: 32px; width: 32px; padding: 0px; text-align: center;" width="32"></a></td><td class="mw-20" style="font-size: 0pt; line-height: 0pt;" width="16">
               &nbsp;</td><td class="img" style="font-size:0pt; line-height:0pt; text-align:left;">
-              <a   data-linkto="https://" href="http://click.explore-test.uq.edu.au/?qs=bf7df03b97f962a791a7f911690be4464e60d9dfeb69e671ac11afc29c10484cf25853e4b48bd926485a043cfece8fb69144d3a56b3bd1b151fd1ea327e09f2f" target="_blank" title="Linkedin"><img alt="Linkedin" data-assetid="177239" height="32" src="https://image.explore.uq.edu.au/lib/fe37117175640478711776/m/1/39271ee0-141e-4c24-a3d9-c5adbb4c03e8.png" style="height: 32px; width: 32px; padding: 0px; text-align: center;" width="32"></a></td><td class="mw-20" style="font-size: 0pt; line-height: 0pt;" width="16">
+              <a   data-linkto="https://" href="http://click.explore-test.uq.edu.au/?qs=0b948bfd746bc9aca31d4ae6a496a429dbf548887bd0961c4204c7221c6b5dfdd5cdc45dd3156fadb8027f3300446a70ac0a16bca5468d0cac547c656c3fbca9" target="_blank" title="Linkedin"><img alt="Linkedin" data-assetid="177239" height="32" src="https://image.explore.uq.edu.au/lib/fe37117175640478711776/m/1/39271ee0-141e-4c24-a3d9-c5adbb4c03e8.png" style="height: 32px; width: 32px; padding: 0px; text-align: center;" width="32"></a></td><td class="mw-20" style="font-size: 0pt; line-height: 0pt;" width="16">
               &nbsp;</td><td class="img" style="font-size:0pt; line-height:0pt; text-align:left;">
-              <a   data-linkto="https://" href="http://click.explore-test.uq.edu.au/?qs=bf7df03b97f962a78d12d3fc3850f1d0d69f69c6b5a2a80497091566e23c88e7eacff634fac7f54168f49e2ff0657a08451e01191f4172b27db444d972deb35b" target="_blank" title="X"><img alt="X, formerly known as Twitter" data-assetid="177234" height="32" src="https://image.explore.uq.edu.au/lib/fe37117175640478711776/m/1/ee2c24c9-4c2c-4171-b0d3-c4f56b2b0358.png" style="height: 32px; width: 32px; padding: 0px; text-align: center;" width="32"></a></td><td class="mw-20" style="font-size: 0pt; line-height: 0pt;" width="16">
+              <a   data-linkto="https://" href="http://click.explore-test.uq.edu.au/?qs=0b948bfd746bc9ac06af0e885f8ee2bf751e66c1147fc5b7fcd2d500e2907d89ad685558a3f251ecb4d73a019317a57816abc6cde0977076c3a501c208bce80e" target="_blank" title="X"><img alt="X, formerly known as Twitter" data-assetid="177234" height="32" src="https://image.explore.uq.edu.au/lib/fe37117175640478711776/m/1/ee2c24c9-4c2c-4171-b0d3-c4f56b2b0358.png" style="height: 32px; width: 32px; padding: 0px; text-align: center;" width="32"></a></td><td class="mw-20" style="font-size: 0pt; line-height: 0pt;" width="16">
               &nbsp;</td><td class="img" style="font-size:0pt; line-height:0pt; text-align:left;">
-              <a   data-linkto="https://" href="http://click.explore-test.uq.edu.au/?qs=bf7df03b97f962a74ce5fba921c0ea0bcb64218baf65670c4870644aba1c2ff67346cc939c2d386b18a8528ce637ea995b2dd76f106435b54d300c94156e9665" target="_blank" title="Youtube"><img alt="Youtube" data-assetid="177231" height="32" src="https://image.explore.uq.edu.au/lib/fe37117175640478711776/m/1/66a16759-bf45-4062-bd4e-6781527d77d7.png" style="height: 32px; width: 32px; padding: 0px; text-align: center;" width="32"></a></td><td class="mw-20" style="font-size: 0pt; line-height: 0pt;" width="16">
+              <a   data-linkto="https://" href="http://click.explore-test.uq.edu.au/?qs=0b948bfd746bc9acaca668a3cac13be770e87afcc9868d90e9ef040049db8495af2dd1a71a748c5af242bf3d2783aec9bcd0a815b7ddee244950ada59d334c0d" target="_blank" title="Youtube"><img alt="Youtube" data-assetid="177231" height="32" src="https://image.explore.uq.edu.au/lib/fe37117175640478711776/m/1/66a16759-bf45-4062-bd4e-6781527d77d7.png" style="height: 32px; width: 32px; padding: 0px; text-align: center;" width="32"></a></td><td class="mw-20" style="font-size: 0pt; line-height: 0pt;" width="16">
               &nbsp;</td><td class="img" style="font-size:0pt; line-height:0pt; text-align:left;">
-              <a   data-linkto="https://" href="http://click.explore-test.uq.edu.au/?qs=bf7df03b97f962a7992147075217c2e86918b4886590f68f3c8b84428c86957b73c6957213b82688e89217d3938ae469b630f4414a877e2fa3436e884d10dedc" target="_blank" title="Instagram"><img alt="Instagram" data-assetid="177236" height="32" src="https://image.explore.uq.edu.au/lib/fe37117175640478711776/m/1/cfddad1c-b608-4a89-bf15-567129ddec01.png" style="height: 32px; width: 32px; padding: 0px; text-align: center;" width="32"></a></td></tr></table><!-- END Socials --></th></tr></table></td></tr></table><!-- END Contact Banner --></td></tr></table>
-          <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><!-- Footer --><table border="0" cellpadding="0" cellspacing="0" class="bg-grey-f7" style="background-color:#ffffff;" width="100%">
-    
-      <tr>
-        <td class="pt-24 pb-20 px-70 mpx-25" style="padding-top: 24px; padding-bottom: 20px; padding-left: 24px; padding-right: 24px;">
-          <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
-            
-              <tr>
-                <td class="text fz-10 lh-14 a-center pb-23" style="color:#000001; font-family:'Roboto', Arial, sans-serif; font-size: 16px; line-height: 20px; text-align:left; padding-bottom: 20px">
-                  <p>
-                    The University of Queensland, St Lucia Qld 4072 Australia<br>
-                    <a  class="link-u"  data-linkto="https://" href="http://click.explore-test.uq.edu.au/?qs=bf7df03b97f962a7548aa550fc4ed45a8addd75700122f1e68ba1808e5f5fb8a842934fa2c6cff8b62673616a83222588293964592681067" style="color:#51247a;text-decoration:underline;font-weight:normal" target="_blank" title="Institution details">CRICOS 00025B</a>&nbsp;&nbsp; | &nbsp;&nbsp; <a  class="link-u"  data-linkto="https://" href="http://click.explore-test.uq.edu.au/?qs=bf7df03b97f962a7bf24a49c88f18748290e13eb73fe4feb6c8330d931c87afcbd3270155ef02ec6dda8ee933035d7561aa6e3efee4c0a6d" style="color:#51247a;text-decoration:underline;font-weight:normal" target="_blank" title="Institution details">TEQSA PRV12080</a></p></td></tr><tr>
-                <td class="text fz-10 lh-14 a-center pb-23" style="color:#000001; font-family:'Roboto', Arial, sans-serif; font-size: 16px; line-height: 20px; text-align:left; padding-bottom: 28px">
-                  <p>
-                    Read <a  class="link-u"  data-linkto="https://" href="http://click.explore-test.uq.edu.au/?qs=bf7df03b97f962a724b68bee6ddf45e9018cefa1c28f9f0d2099e153bc2c66942feb95a6102b7ca679e74cab8d5c92d3a5bb052748a78d50" style="color:#51247a;text-decoration:underline;font-weight:normal" target="_blank" title="Marketing consent and privacy notice">UQ's marketing consent and privacy notice</a>.</p></td></tr><tr>
-                <td class="text fz-10 lh-14 a-center pb-23" style="color:#000001; font-family:'Roboto', Arial, sans-serif; font-size: 16px; line-height: 20px; text-align:left; padding-bottom: 10px">
-                  <p>
-                    <a  class="link"  data-linkto="other" href="http://click.explore-test.uq.edu.au/?qs=bf7df03b97f962a7f3eb0abc174c200fcdc0c4f9ab9160b029c77bfff140ec012d5f998520e8c99aaa35cedc5159b5bc1d16c11986e82ea25b5358c2f8d4976956d8095b8909fb79" style="color:#51247a;text-decoration:underline;font-weight:normal" target="_blank" title="Opt out or manage your subscriptions">Unsubscribe</a> from {mailing list name}</p></td></tr></table></td></tr></table><!-- END Footer --></td></tr></table>
+              <a   data-linkto="https://" href="http://click.explore-test.uq.edu.au/?qs=0b948bfd746bc9ac1e9057b40858b564e50bfd4753b5857dd831173bf86225fcea51948512e6618cbcfe3c569fb02e53a9b966497581fe31a2575e898218df1a" target="_blank" title="Instagram"><img alt="Instagram" data-assetid="177236" height="32" src="https://image.explore.uq.edu.au/lib/fe37117175640478711776/m/1/cfddad1c-b608-4a89-bf15-567129ddec01.png" style="height: 32px; width: 32px; padding: 0px; text-align: center;" width="32"></a></td><td class="mw-20" style="font-size: 0pt; line-height: 0pt;" width="16">
+              &nbsp;</td><td class="img" style="font-size:0pt; line-height:0pt; text-align:left;">
+              <a   data-linkto="https://" href="http://click.explore-test.uq.edu.au/?qs=0b948bfd746bc9ac97e8081eac687eca8fbd031095e66e3f9ddf20425847561ad11284ddf48ee1572bb7306954a8939afd726944d3f133555c9dfddddf0b024c" target="_blank" title="TikTok"><img alt="TikTok" data-assetid="177236" height="32" src="https://image.explore.uq.edu.au/lib/fe37117175640478711776/m/1/da1fc854-daef-4538-aeda-e1de93253627.png" style="height: 32px; width: 32px; padding: 0px; text-align: center;" width="32"></a></td><td class="mw-20" style="font-size: 0pt; line-height: 0pt;" width="16">
+              &nbsp;</td><td class="img" style="font-size:0pt; line-height:0pt; text-align:left;">
+              <a   data-linkto="https://" href="http://click.explore-test.uq.edu.au/?qs=0b948bfd746bc9acdc691b72a5c3ec78fd13d92370a4d8f40fad38b55ede772bf27e701df8309cc6e7015ce4c4c56f74b4c04683e7e152514ffd35943f6dcfed" target="_blank" title="Weibo"><img alt="Weibo" data-assetid="177236" height="32" src="https://image.explore.uq.edu.au/lib/fe37117175640478711776/m/1/92b0da4c-07a5-4026-9974-a599c4cfefa6.png" style="height: 32px; width: 32px; padding: 0px; text-align: center;" width="32"></a></td></tr></table><!-- END Socials --></th></tr></table></td></tr></table><!-- END Contact Banner --></td></tr></table>
+          <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><!-- Footer --><table border="0" cellpadding="0" cellspacing="0" class="bg-white" style="background-color:#ffffff;" width="100%">
+   
+    <tr>
+     <td class="pt-24 pb-20 px-70 mpx-25" style="padding-top: 24px; padding-bottom: 20px; padding-left: 24px; padding-right: 24px;">
+      <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+       
+        <tr>
+         <td class="text fz-10 lh-14 a-center pb-23" style="color:#000001; font-family:'Roboto', Arial, sans-serif; font-size: 16px; line-height: 20px; text-align:left; padding-bottom: 20px">
+          <p>
+           The University of Queensland, St Lucia Qld 4072 Australia<br>
+           <a  class="link-u"  data-linkto="https://" href="http://click.explore-test.uq.edu.au/?qs=0b948bfd746bc9ac4402ff3727b8d9c9c6323aa7dbd4e05f9e3a9e3e447cd0c094ced9e72dd8e420737db8ad0730b4d8632c9c2a77bed5c4" style="color:#51247a;text-decoration:underline;font-weight:normal" target="_blank" title="Institution details">CRICOS 00025B</a>&nbsp;&nbsp; | &nbsp;&nbsp; <a  class="link-u"  data-linkto="https://" href="http://click.explore-test.uq.edu.au/?qs=0b948bfd746bc9ac4aa6ce7b8e4918515f27f5668d8351e29221c03b20c507ce8f2076a469c44cd07529f8603f6961bbc8226e7ab0e55240" style="color:#51247a;text-decoration:underline;font-weight:normal" target="_blank" title="Institution details">TEQSA PRV12080</a></p></td></tr><tr>
+         <td class="text fz-10 lh-14 a-center pb-23" style="color:#000001; font-family:'Roboto', Arial, sans-serif; font-size: 16px; line-height: 20px; text-align:left; padding-bottom: 28px">
+          <p>
+           Read <a  class="link-u"  data-linkto="https://" href="http://click.explore-test.uq.edu.au/?qs=0b948bfd746bc9acb7e504baf8761ba9863229400e0d21476ef37229ee5cdf6fbb4ad5d4f62da57f5f4d9940d45f6a374ec9ebbc835badf9" style="color:#51247a;text-decoration:underline;font-weight:normal" target="_blank" title="Marketing consent and privacy notice">UQ's marketing consent and privacy notice</a>.</p></td></tr><tr>
+         <td class="text fz-10 lh-14 a-center pb-23" style="color:#000001; font-family:'Roboto', Arial, sans-serif; font-size: 16px; line-height: 20px; text-align:left; padding-bottom: 10px">
+          <p>
+           <a  class="link"  data-linkto="other" href="http://click.explore-test.uq.edu.au/?qs=0b948bfd746bc9acefd7ace50307a250b28783a9dd9321f2b942ff668665355ec52f883ab81cc1b1d6576cb64af4c88958c57bfa64f72db5d1870e14eff3e4f24578e858ff52df5f" style="color:#51247a;text-decoration:underline;font-weight:normal" target="_blank" title="Opt out or manage your subscriptions">Unsubscribe</a> from {mailing list name}</p></td></tr></table></td></tr></table><!-- END Footer --></td></tr></table>
          </td>
         </tr>
        </table>
@@ -964,5 +987,6 @@ export const Newsletter = {
    </center>
   </body>
   </html>
+
 `,
 };

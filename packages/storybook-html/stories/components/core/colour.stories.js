@@ -403,6 +403,7 @@ export const grey = {
             <div class="uqds-colour__palette uqds-colour--grey-700">grey-700</div>
             <div class="uqds-colour__palette uqds-colour--grey-800">grey-800</div>
             <div class="uqds-colour__palette uqds-colour--grey-900">grey-900</div>
+            <div class="uqds-colour__palette uqds-colour--grey-925">grey-925</div>
         </div>
       `;
   },

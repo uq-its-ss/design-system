@@ -31,6 +31,28 @@
     box-sizing: border-box;
   }
 
+  &:hover {
+    background-color: core.$white;
+    border-color: core.$purple-500;
+    color: core.$purple-500;
+    text-decoration: underline;
+
+    & .uq-icon::before {
+      filter: icon.$icon-primary-filter;
+    }
+  }
+
+  & .button--reverse {
+    background-color: core.$white;
+    border-color: core.$white;
+    color: core.$purple-500;
+
+    &:hover {
+      background-color: transparent;
+      color: core.$white;
+    }
+  }
+
   & .uq-icon {
     width: 24px;
     height: 24px;
@@ -43,21 +65,10 @@
       filter: icon.$icon-light-filter;
     }
   }
-
-  &:hover {
-    background-color: core.$white;
-    border-color: core.$purple-500;
-    color: core.$purple-500;
-    text-decoration: underline;
-
-    & .uq-icon::before {
-      filter: icon.$icon-primary-filter;
-    }
-  }
 }
 
 .uq-button--secondary {
-  background-color: core.$white;
+  background-color: transparent;
   border-color: core.$purple-500;
   color: core.$purple-500;
 
@@ -67,11 +78,22 @@
     border-color: core.$purple-500;
     color: core.$white;
   }
+
+  & .button--reverse {
+    background-color: transparent;
+    border-color: core.$white;
+    color: core.$white;
+
+    &:hover {
+      background-color: core.$white;
+      color: core.$purple-500;
+    }
+  }
 }
 
 .uq-button--tertiary {
-  background-color: core.$white;
-  border-color: core.$white;
+  background-color: transparent;
+  border-color: transparent;
   color: core.$purple-500;
   text-decoration: underline;
 
@@ -80,6 +102,16 @@
     background-color: core.$purple-500;
     border-color: core.$purple-500;
     color: core.$white;
+  }
+
+  & .button--reverse {
+    color: core.$white;
+
+    &:hover {
+      background-color: core.$white;
+      border-color: core.$white;
+      color: core.$purple-500;
+    }
   }
 }
 

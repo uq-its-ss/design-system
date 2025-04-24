@@ -42,6 +42,11 @@
     }
   }
 
+  &:focus {
+    outline: 2px solid core.$utility-500;
+    outline-offset: 0;
+  }
+
   & .button--reverse {
     background-color: core.$white;
     border-color: core.$white;

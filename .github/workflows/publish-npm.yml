@@ -9,13 +9,14 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
+    # This condition prevents the workflow running FOR the Lerna publish commit itself
     if: ${{ ! startsWith(github.event.head_commit.message, 'chore(release):Publish') }}
     steps:
       - name: "⬇️ Checkout repo"
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0
-          token: ${{ secrets.UQDS_PERSONAL_ACCESS_TOKEN }}
+          fetch-depth: 0 # Important to fetch all history and tags
+          token: ${{ secrets.UQDS_PERSONAL_ACCESS_TOKEN }} # Use PAT to allow pushing tags/commits later
 
       - name: "⎔ Setup node 18"
         uses: actions/setup-node@v3
@@ -23,7 +24,7 @@ jobs:
           node-version: 18
 
       - name: "📦️ Install dependencies"
-        run: npm install
+        run: npm ci
 
       - name: "🔐 Authenticate to NPM"
         run: |
@@ -32,6 +33,8 @@ jobs:
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
+      # --- Steps for 'releases' branch ---
+      
       - name: "🧐 Version dry run"
         if: ${{ github.ref_name == 'releases' }}
         env:
@@ -39,7 +42,8 @@ jobs:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
           git config user.name "${{ github.actor }}"
-          git config user.email "${{ github.actor}}@users.noreply.github.com"          
+          git config user.email "${{ github.actor}}@users.noreply.github.com"
+          # Dry run for version bump ONLY, no tag/push yet       
           npx lerna version --conventional-commits --conventional-graduate --yes --no-git-tag-version --no-push || true
 
       - name: "⌛️ Wait for approval"
@@ -52,7 +56,8 @@ jobs:
           issue-title: 'Approve new release ✅'
           issue-body: >
             Please approve or deny the release of a new release.
-            [View the workflow output](https://github.com/uq-its-ss/design-system/actions/runs/${{ github.run_number }}) to confirm the version is as expected.
+            [View the workflow output](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})
+            to confirm the version is as expected.
 
           exclude-workflow-initiator-as-approver: false
 
@@ -62,12 +67,16 @@ jobs:
           GH_TOKEN: ${{ secrets.UQDS_PERSONAL_ACCESS_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
+          # Ensure clean state before publish, especially after dry run
           git reset --hard HEAD
           git clean -fd
           git config user.name "${{ github.actor }}"
           git config user.email "${{ github.actor}}@users.noreply.github.com"
+          # Publish: bumps version, creates tag vx.y.z, commits, pushes commit/tag, publishes to npm
           npx lerna publish --conventional-commits --conventional-graduate --yes
 
+      # --- Steps for 'master' branch ---
+      
       - name: "🐣 Publish alpha"
         if: ${{ github.ref_name == 'master' }}
         env:
@@ -76,4 +85,5 @@ jobs:
         run: |
           git config user.name "${{ github.actor }}"
           git config user.email "${{ github.actor}}@users.noreply.github.com"
+          # Publish alpha: bumps version, creates tag vx.y.z-alpha.N, commits, pushes commit/tag, publishes to npm
           npx lerna publish --conventional-commits --conventional-prerelease --dist-tag alpha --yes

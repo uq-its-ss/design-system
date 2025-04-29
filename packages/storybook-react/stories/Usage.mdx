@@ -1,0 +1,48 @@
+import { Meta } from "@storybook/blocks";
+
+<Meta title="Usage" />
+
+# Usage
+
+To use `@uqds/react` components follow these steps.
+
+## Installation
+
+First install the React package.
+
+```bash
+npm i @uqds/react
+```
+
+## CSS
+
+CSS styles for all components are bundled into a single CSS import you'll need to add to your
+project globally.
+
+### PostCSS
+
+```css
+@import "@uqds/react";
+```
+
+### Sass
+
+```css
+@use "@uqds/react/src/scss/main" as react;
+```
+
+### JS
+
+```js
+import "design-system/packages/react/dist/css/main.css";
+```
+
+Alternatively individual components can be imported from the component packages, for example.
+
+```css
+@import "@uqds/icon";
+```
+
+## Component usage
+
+Follow the docs page of each component for individual component usage.

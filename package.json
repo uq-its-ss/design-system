@@ -53,6 +53,7 @@
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^5.1.0",
     "gulp-uglify": "^3.0.2",
+    "http-server": "^14.1.1",
     "jsdom": "^25.0.1",
     "lerna": "^8.1.9",
     "msw": "^2.6.0",
@@ -89,7 +90,8 @@
     "reg-suit": "reg-suit run",
     "storybook-html": "cd packages/storybook-html && npm run storybook",
     "storybook-react": "cd packages/storybook-react && npm run storybook",
-    "storybook": "concurrently -k -n \"HTML,REACT\" -c \"#636cff,#ff4785\" \"wait-on tcp:6007 && npm run storybook-html\" \"npm run storybook-react\""
+    "storybook": "concurrently -k -n \"HTML,REACT\" -c \"#636cff,#ff4785\" \"wait-on tcp:6007 && npm run storybook-html\" \"npm run storybook-react\"",
+    "serve-storybook": "http-server storybook-static -p 6006"
   },
   "engines": {
     "node": ">=18",

@@ -27,7 +27,7 @@ jobs:
           node-version: 18
 
       - name: "📦️ Install dependencies"
-        run: npm install
+        run: npm ci
 
       - name: "Build Storybook"
         run: |

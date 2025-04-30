@@ -21,7 +21,7 @@ jobs:
           node-version: 18
 
       - name: "📦️ Install dependencies"
-        run: npm install
+        run: npm ci
 
       - name: "🧹 Linting"
         run: npm run lint

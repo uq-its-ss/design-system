@@ -1,8 +1,9 @@
 name: Visual Regression Testing and preview environment
 
 permissions:
-  id-token: write
-  contents: read
+  id-token: write # Required for OIDC AWS authentication
+  contents: read  # Required to check out the repository
+  pull-requests: write # Required to write PR comments
 
 on:
   push:
@@ -12,51 +13,58 @@ on:
   pull_request: {}
 
 jobs:
-  build:
+  build_test_deploy:
     runs-on: ubuntu-latest
     steps:
       - name: "⬇️ Checkout repo"
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          fetch-depth: 0 # Needed for reg-suit history comparison
+          # Checkout the merge commit on PRs for accurate testing, otherwise checkout the branch head
           ref: ${{ github.event.pull_request.head.ref || github.ref}}
 
       - name: "⎔ Setup node 18"
         uses: actions/setup-node@v3
         with:
           node-version: 18
+          cache: 'npm' # Add caching for faster installs
 
       - name: "📦️ Install dependencies"
-        run: npm install
+        run: npm ci
 
-      - name: "Build Storybook"
-        run: |
-          npm run build-storybook
+      # --- Build Storybook HTML ---
+      - name: "Build Storybook HTML"
+        run: npm run build-storybook
         working-directory: packages/storybook-html/
 
-      - name: "Serve Storybook"
-        run: |
-          npm run serve-storybook &
+      # --- Build Storybook React ---
+      - name: "Build Storybook REACT"
+        run: npm run build-storybook
+        working-directory: packages/storybook-react/
+
+      # --- Visual Regression (targets storybook-html) ---
+      - name: "Serve Storybook HTML for VRT"
+        run: npm run serve-storybook & sleep 10
         working-directory: packages/storybook-html/
 
-      - name: "Create screenshots"
-        run: |
-          npm run update-screenshots
+      - name: "Create screenshots (HTML)"
+        run: npm run update-screenshots
 
-      - name: Configure AWS Credentials for Reg-Suit
+      - name: "Configure AWS Credentials for Reg-Suit"
         uses: aws-actions/configure-aws-credentials@v4
         with:
           role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME_TOOLS }}
           aws-region: ap-southeast-2
           role-session-name: GitHubActions-RegSuit-${{ github.run_id }}
 
-      - name: Run visual regression
+      - name: "Run visual regression (HTML)"
         env:
           UQDS_PERSONAL_ACCESS_TOKEN: ${{ secrets.UQDS_PERSONAL_ACCESS_TOKEN }}
           AWS_REGION: 'ap-southeast-2'
         run: |
           npm run reg-suit run --update-screenshots
 
+      # --- Deploy to S3 ---
       - name: Configure AWS Credentials for S3 Sync Preview
         uses: aws-actions/configure-aws-credentials@v4
         with:
@@ -64,15 +72,21 @@ jobs:
           aws-region: ap-southeast-2
           role-session-name: GitHubActions-S3Sync-Preview-${{ github.run_id }}
 
-      - name: "Sync to preview environment"
+      - name: "Sync Storybook HTML to S3 preview environment"
         run: |
-          aws s3 sync packages/storybook-html/storybook-static s3://${{ secrets.AWS_S3_BUCKET_TOOLS }}/storybook-preview/${{ github.run_id }} --acl public-read --follow-symlinks
+          aws s3 sync packages/storybook-html/storybook-static s3://${{ secrets.AWS_S3_BUCKET_TOOLS }}/storybook-html/${{ github.run_id }} --acl public-read --follow-symlinks --delete
+  
+      - name: "Sync Storybook REACT to S3 preview environment"
+        run: |
+          aws s3 sync packages/storybook-react/storybook-static s3://${{ secrets.AWS_S3_BUCKET_TOOLS }}/storybook-react/${{ github.run_id }} --acl public-read --follow-symlinks --delete
 
-      - name: "Add link to storybook preview in comments"
+      - name: "Add links to Storybook previews in PR comment"
         uses: marocchino/sticky-pull-request-comment@v2
         with:
           GITHUB_TOKEN: ${{ secrets.UQDS_PERSONAL_ACCESS_TOKEN }}
           header: preview
           message: |
-            Storybook preview https://uq-ds-regsuit.s3.amazonaws.com/storybook-preview/${{ github.run_id }}/index.html
+            Storybook Previews for Run `${{ github.run_id }}`:
+            * **HTML:** https://uq-ds-regsuit.s3.amazonaws.com/storybook-html/${{ github.run_id }}/index.html
+            * **React:** https://uq-ds-regsuit.s3.amazonaws.com/storybook-react/${{ github.run_id }}/index.html
 

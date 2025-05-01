@@ -32,15 +32,15 @@ jobs:
       - name: "📦️ Install dependencies"
         run: npm ci
 
-      # --- Build Storybook HTML ---
-      - name: "Build Storybook HTML"
-        run: npm run build-storybook
-        working-directory: packages/storybook-html/
-
       # --- Build Storybook React ---
       - name: "Build Storybook REACT"
         run: npm run build-storybook
         working-directory: packages/storybook-react/
+
+      # --- Build Storybook HTML ---
+      - name: "Build Storybook HTML"
+        run: wait-on tcp:6007 && npm run build-storybook
+        working-directory: packages/storybook-html/
 
       # --- Visual Regression (targets storybook-html) ---
       - name: "Serve Storybook HTML for VRT"

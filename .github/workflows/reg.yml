@@ -34,12 +34,14 @@ jobs:
 
       # --- Build Storybook React ---
       #- name: "Build Storybook REACT"
-      #  run: npm run build-storybook
+      #  run: |
+      #     npm run build-storybook
       #  working-directory: packages/storybook-react/
 
       # --- Build Storybook HTML ---
       - name: "Build Storybook HTML"
-        run: npm run build-storybook
+        run: |
+          npm run build-storybook
         working-directory: packages/storybook-html/
 
       # --- Visual Regression (targets storybook-html) ---
@@ -50,7 +52,8 @@ jobs:
         working-directory: packages/storybook-html/
 
       - name: "Create screenshots (HTML)"
-        run: npm run update-screenshots
+        run: |
+          npm run update-screenshots
 
       - name: "Configure AWS Credentials for Reg-Suit"
         uses: aws-actions/configure-aws-credentials@v4

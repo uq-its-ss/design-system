@@ -50,7 +50,7 @@ jobs:
         working-directory: packages/storybook-html/
 
       - name: "Create screenshots (HTML)"
-        run: npm run update-screenshots -vvv
+        run: npm run update-screenshots
 
       - name: "Configure AWS Credentials for Reg-Suit"
         uses: aws-actions/configure-aws-credentials@v4

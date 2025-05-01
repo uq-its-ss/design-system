@@ -55,11 +55,33 @@
 .uq-hero-basic__back {
   margin-top: core.$space-s;
 
-  & .uq-icon::before {
-    // Lock icon width to 16px.
-    width: 16px;
-    // Allow height to match <a> element.
-    height: 19px;
+
+  & a {
+    text-decoration: none;
+    display: inline-flex;
+    
+    & .uq-hero-basic__back-text {
+      text-decoration: underline;
+    }
+
+    &:hover {
+      & .uq-hero-basic__back-text {
+        background-color: core.$white;
+        color: core.$purple-500;
+      }
+
+    }
+  }
+
+  & .uq-icon {
+    
+    &::before {
+      // Lock icon width to 16px.
+      width: 16px;
+      // Allow height to match <a> element.
+      height: 19px;
+    }
+
   }
 }
 

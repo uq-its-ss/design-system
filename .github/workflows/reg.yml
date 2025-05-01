@@ -44,7 +44,9 @@ jobs:
 
       # --- Visual Regression (targets storybook-html) ---
       - name: "Serve Storybook HTML for VRT"
-        run: npm run serve-storybook & sleep 10
+        # run: npm run serve-storybook & sleep 10
+        run: |
+          npx http-server storybook-static --port 6006 &
         working-directory: packages/storybook-html/
 
       - name: "Create screenshots (HTML)"

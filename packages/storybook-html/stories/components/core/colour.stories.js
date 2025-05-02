@@ -399,10 +399,10 @@ export const grey = {
             <div class="uqds-colour__palette uqds-colour--grey-400">grey-400</div>
             <div class="uqds-colour__palette uqds-colour--grey-500">grey-500</div>
             <div class="uqds-colour__palette uqds-colour--grey-600">grey-600</div>
-            <div class="uqds-colour__palette uqds-colour--grey-600">grey-650</div>
             <div class="uqds-colour__palette uqds-colour--grey-700">grey-700</div>
             <div class="uqds-colour__palette uqds-colour--grey-800">grey-800</div>
             <div class="uqds-colour__palette uqds-colour--grey-900">grey-900</div>
+            <div class="uqds-colour__palette uqds-colour--grey-925">grey-925</div>
         </div>
       `;
   },

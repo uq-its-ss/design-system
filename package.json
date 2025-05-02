@@ -86,12 +86,11 @@
     "test": "vitest run",
     "test-ui": "vitest --ui",
     "test-watch": "vitest",
-    "update-screenshots": "wait-on tcp:6006 && node scripts/screenshot.js",
+    "update-screenshots": "node scripts/screenshot.js",
     "reg-suit": "reg-suit run",
     "storybook-html": "cd packages/storybook-html && npm run storybook",
     "storybook-react": "cd packages/storybook-react && npm run storybook",
-    "storybook": "concurrently -k -n \"HTML,REACT\" -c \"#636cff,#ff4785\" \"wait-on tcp:6007 && npm run storybook-html\" \"npm run storybook-react\"",
-    "serve-storybook": "http-server storybook-static -p 6006"
+    "storybook": "concurrently -k -n \"HTML,REACT\" -c \"#636cff,#ff4785\" \"wait-on tcp:6007 && npm run storybook-html\" \"npm run storybook-react\""
   },
   "engines": {
     "node": ">=18",

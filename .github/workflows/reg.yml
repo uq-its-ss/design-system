@@ -81,9 +81,9 @@ jobs:
         run: |
           aws s3 sync packages/storybook-html/storybook-static s3://${{ secrets.AWS_S3_BUCKET_TOOLS }}/storybook-html/${{ github.run_id }} --acl public-read --follow-symlinks --delete
   
-      - name: "Sync Storybook REACT to S3 preview environment"
+      - name: "Sync Storybook EMAIL to S3 preview environment"
         run: |
-          aws s3 sync packages/storybook-email/storybook-static s3://${{ secrets.AWS_S3_BUCKET_TOOLS }}/storybook-email${{ github.run_id }} --acl public-read --follow-symlinks --delete
+          aws s3 sync packages/storybook-email/storybook-static s3://${{ secrets.AWS_S3_BUCKET_TOOLS }}/storybook-email/${{ github.run_id }} --acl public-read --follow-symlinks --delete
 
       - name: "Add links to Storybook previews in PR comment"
         uses: marocchino/sticky-pull-request-comment@v2

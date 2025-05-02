@@ -73,6 +73,7 @@
     "vinyl-buffer": "^1.0.1",
     "vinyl-source-stream": "^2.0.0",
     "vitest": "^2.1.4",
+    "wait-on": "^8.0.2",
     "whatwg-fetch": "^3.6.20"
   },
   "scripts": {

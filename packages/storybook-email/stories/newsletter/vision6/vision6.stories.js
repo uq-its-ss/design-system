@@ -252,9 +252,9 @@ export default {
   </html>
     `;
   },
-argTypes: {
-label: "text",
-},
+  argTypes: {
+    label: "text",
+  },
   args: {
     label: "Heading - 32px",
   },
@@ -512,5 +512,5 @@ export const WithImages = {
   </td></tr></table></div>
   <img width="100" height="1" src="https://app4.vision6.com.au/download/images/50178/4032204/a006a90/bg.gif" alt="" /></body>
   </html>
-  `
+  `,
 };

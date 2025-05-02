@@ -33,10 +33,10 @@ jobs:
         run: npm ci
 
       # --- Build Storybook React ---
-      #- name: "Build Storybook REACT"
-      #  run: |
-      #     npm run build-storybook
-      #  working-directory: packages/storybook-react/
+      - name: "Build Storybook REACT"
+        run: |
+           npm run build-storybook
+        working-directory: packages/storybook-react/
 
       # --- Build Storybook HTML ---
       - name: "Build Storybook HTML"
@@ -81,9 +81,9 @@ jobs:
         run: |
           aws s3 sync packages/storybook-html/storybook-static s3://${{ secrets.AWS_S3_BUCKET_TOOLS }}/storybook-html/${{ github.run_id }} --acl public-read --follow-symlinks --delete
   
-      #- name: "Sync Storybook REACT to S3 preview environment"
-      #  run: |
-      #    aws s3 sync packages/storybook-react/storybook-static s3://${{ secrets.AWS_S3_BUCKET_TOOLS }}/storybook-react/${{ github.run_id }} --acl public-read --follow-symlinks --delete
+      - name: "Sync Storybook REACT to S3 preview environment"
+        run: |
+          aws s3 sync packages/storybook-react/storybook-static s3://${{ secrets.AWS_S3_BUCKET_TOOLS }}/storybook-react/${{ github.run_id }} --acl public-read --follow-symlinks --delete
 
       - name: "Add links to Storybook previews in PR comment"
         uses: marocchino/sticky-pull-request-comment@v2

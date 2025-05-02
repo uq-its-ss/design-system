@@ -14,7 +14,8 @@
   "scripts": {
     "start": "npm run storybook",
     "storybook": "storybook dev -p 6008",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "serve-storybook": "http-server storybook-static -i -p 6008"
   },
   "devDependencies": {
     "@babel/core": "^7.26.0",

@@ -478,3 +478,30 @@
     }
   }
 }
+
+// D7 overrides and hacks
+.uq-footer {
+  font-family: core.$roboto;
+}
+.uq-footer--mobile .uq-accordion__toggle {
+  margin-bottom: 0;
+  position: unset;
+  padding: 1rem 4.5rem 1rem 1.5rem;
+  width: 100%;
+  text-align: left;
+}
+
+.uq-footer__navigation--is-open .uq-footer__navigation-level-2 {
+  height: auto;
+  overflow: hidden;
+}
+.uq-accordion__content:not(.uq-accordion__content--active) {
+  display: none;
+}
+
+.uq-footer__footer-item {
+  margin-bottom: 1rem;
+}
+.uq-footer a:focus {
+  color: #d4c8de;
+}

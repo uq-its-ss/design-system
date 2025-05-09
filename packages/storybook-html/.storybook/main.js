@@ -99,7 +99,7 @@ const config = {
           reactStorybookUrl = "/error-preview-url-not-configured";
         } else {
           // Construct the dynamic URL based on the S3 deployment structure
-          reactStorybookUrl = `https://${bucketName}.s3.amazonaws.com/storybook-react/${githubRunId}/index.html`;
+          reactStorybookUrl = `https://${bucketName}.s3.amazonaws.com/storybook-react/${githubRunId}/`;
           console.log(
             `Preview React Storybook URL set to: ${reactStorybookUrl}`,
           );
@@ -109,14 +109,14 @@ const config = {
         // Use static URL or read from different env vars if needed
         reactStorybookUrl =
           process.env.STORYBOOK_REACT_STAGING_URL ||
-          "https://design-system.ads-staging.aws.uq.edu.au/storybook-react/index.html";
+          "https://design-system.ads-staging.aws.uq.edu.au/storybook-react/";
         break;
       case "production":
       default: // Default to production
         // Use static URL or read from different env vars if needed
         reactStorybookUrl =
           process.env.STORYBOOK_REACT_PROD_URL ||
-          "https://design-system.uq.edu.au/storybook-react/index.html";
+          "https://design-system.uq.edu.au/storybook-react/";
         break;
     }
 

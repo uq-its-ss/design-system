@@ -40,6 +40,8 @@ jobs:
 
       # --- Build Storybook HTML ---
       - name: "Build Storybook HTML"
+        env:
+          STORYBOOK_TARGET_ENV: DEVELOPMENT # Explicitly set for main.js
         run: |
           npm run build-storybook
         working-directory: packages/storybook-html/

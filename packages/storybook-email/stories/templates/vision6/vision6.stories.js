@@ -239,7 +239,7 @@ export default {
   <br clear="all" /><div class="email_footer">
   <table width="550" border="0" align="center"><tr><td>
   <p align="center">
-  <font face="Verdana, Arial, Helvetica, sans-serif" color="#555555" size="1">This email was sent by The University of Queensland, Read <a href="https://www.uq.edu.au/legal/marketing-consent" style="text-decoration:underline;color:#51247a;" target="_blank" title="Marketing consent and privacy notice" rel="noreferrer noopener">UQ's marketing consent and privacy notice</a>.<br /><br />To unsubscribe from _____________, please click the 'Unsubscribe' link below.<br /><br />This email was sent to l.keating@uq.edu.au</font>
+  <font face="Verdana, Arial, Helvetica, sans-serif" color="#555555" size="1">This email was sent by The University of Queensland, Read <a href="https://www.uq.edu.au/legal/marketing-consent" style="text-decoration: underline;color: #51247a;" target="_blank" title="Marketing consent and privacy notice">UQ's marketing consent and privacy notice</a>.<br /><br />To unsubscribe from _____________, please click the 'Unsubscribe' link below.<br /><br />This email was sent to l.keating@uq.edu.au</font>
   </p>
   <p align="center">
   <font face="Verdana, Arial, Helvetica, sans-serif" color="#000000" size="1"><br /><a target="_blank" href="https://app4.vision6.com.au/forms/u/_8O3hPOGU7IbK8uO8xNJjZktDVwSeFmv5vCn0-tf-p8/50178/4032203.html" rel="noreferrer noopener"><font size="1" face="arial" color="#000000">Unsubscribe</font></a><br /><br /><br /></font>
@@ -501,7 +501,7 @@ export const WithImages = {
   <br clear="all" /><div class="email_footer">
   <table width="550" border="0" align="center"><tr><td>
   <p align="center">
-  <font face="Verdana, Arial, Helvetica, sans-serif" color="#555555" size="1">This email was sent by The University of Queensland, Read <a href="https://www.uq.edu.au/legal/marketing-consent" style="text-decoration:underline;color:#51247a;" target="_blank" title="Marketing consent and privacy notice" rel="noreferrer noopener">UQ's marketing consent and privacy notice</a>.<br /><br />To unsubscribe from _____________, please click the 'Unsubscribe' link below.<br /><br />This email was sent to l.keating@uq.edu.au</font>
+  <font face="Verdana, Arial, Helvetica, sans-serif" color="#555555" size="1">This email was sent by The University of Queensland, Read <a href="https://www.uq.edu.au/legal/marketing-consent" style="text-decoration: underline;color: #51247a;" target="_blank" title="Marketing consent and privacy notice">UQ's marketing consent and privacy notice</a>.<br /><br />To unsubscribe from _____________, please click the 'Unsubscribe' link below.<br /><br />This email was sent to l.keating@uq.edu.au</font>
   </p>
   <p align="center">
   <font face="Verdana, Arial, Helvetica, sans-serif" color="#000000" size="1"><br /><a target="_blank" href="https://app4.vision6.com.au/forms/u/UXoaWTxoATPFcd3z98iwYzzVqzblji-44ynjmhh-ndA/50178/4032204.html" rel="noreferrer noopener"><font size="1" face="arial" color="#000000">Unsubscribe</font></a><br /><br /><br /></font>

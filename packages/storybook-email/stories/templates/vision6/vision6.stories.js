@@ -2,7 +2,7 @@ import { layoutDecorator } from "../../../lib/decorators";
 import "@uqds/layout/src/scss/main.scss";
 
 export default {
-  title: "Newsletter/Vision 6",
+  title: "Templates/Vision 6",
   parameters: {
     layout: "fullscreen",
   },

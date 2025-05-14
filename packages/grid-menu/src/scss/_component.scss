@@ -45,7 +45,7 @@
     color: core.$utility-500;
     display: block;
     font-size: 1.375rem;
-    font-weight: 400;
+    font-weight: core.$font-weight-normal;
     line-height: normal;
     padding: core.$space-m core.$space-xl core.$space-m core.$space-m;
     position: relative;
@@ -96,14 +96,14 @@
 
   &__title {
     font-size: 1.375rem;
-    font-weight: 400;
+    font-weight: core.$font-weight-normal;
   }
 
   &__description {
     color: core.$grey-700;
     display: block;
     font-size: 0.8rem;
-    font-weight: 400;
+    font-weight: core.$font-weight-normal;
     line-height: normal;
     margin-top: core.$space-xs;
   }

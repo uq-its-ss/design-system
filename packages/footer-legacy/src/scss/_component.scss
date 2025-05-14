@@ -19,7 +19,7 @@
 
   a {
     color: $site-footer-link-color;
-    font-weight: 500;
+    font-weight: core.$font-weight-medium;
     text-decoration: none;
 
     &:hover {

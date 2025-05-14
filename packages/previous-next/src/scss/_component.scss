@@ -33,7 +33,7 @@
   a {
     color: core.$utility-500;
     font-size: 1.7rem;
-    font-weight: 400;
+    font-weight: core.$font-weight-normal;
     line-height: 1.2;
     text-decoration: none;
 
@@ -96,6 +96,6 @@
     display: block;
     font-size: 1rem;
     font-style: italic;
-    font-weight: 400;
+    font-weight: core.$font-weight-normal;
   }
 }

@@ -7,7 +7,7 @@ $use-encapsulation: false !default;
   color: core.$grey-900;
   font-size: 1rem;
   font-family: core.$font-body;
-  font-weight: 400;
+  font-weight: core.$font-weight-medium;;
   line-height: core.$line-height;
 }
 

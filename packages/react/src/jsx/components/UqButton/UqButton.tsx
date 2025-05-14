@@ -18,10 +18,10 @@ export const UqButton: FC<UqButtonProps> = ({
     expand, 
     icon,
 }) => (
-    <button className={classNames("uq-button", `${style}`, `${size}`, `${uq-button--expand}`)}>
-    {icon && <span className="uq-icon uq-icon--{icon}"></span>}
+  <button className={classNames("uq-button", `${style}`, `${size}`, `${uq-button--expand}`)}>
+    {icon && <span className={`uq-icon uq-icon--${icon}`}></span>}
     {label}
-    </button>
+  </button>
 );
 
 export const UqButton: FC<UqButtonProps> = ({

@@ -900,6 +900,10 @@ export default [
     category: "social",
   },
   {
+    name: "social-tiktok-circle",
+    category: "social",
+  },
+  {
     name: "social-wechat-circle",
     category: "social",
   },

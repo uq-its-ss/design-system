@@ -1,6 +1,6 @@
 {
   "name": "@uqds/footer-legacy",
-  "version": "3.0.0-alpha.0",
+  "version": "3.0.0-alpha.1",
   "description": "The UQ footer component package",
   "private": true,
   "keywords": [
@@ -35,7 +35,7 @@
     "url": "https://github.com/uq-its-ss/design-system/issues"
   },
   "dependencies": {
-    "@uqds/core": "^4.0.0-alpha.0",
-    "@uqds/grid": "^3.0.0-alpha.0"
+    "@uqds/core": "^4.0.0-alpha.1",
+    "@uqds/grid": "^3.0.0-alpha.1"
   }
 }

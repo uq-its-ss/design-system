@@ -40,7 +40,7 @@
   gap: core.$space-s core.$space-m;
   font-family: core.$font-body;
   font-size: core.$font-size-xl;
-  font-weight: 500;
+  font-weight: core.$font-weight-medium;
   line-height: core.$line-height-h;
   margin: core.$space-none;
   padding: core.$space-m core.$space-xxxxl core.$space-m core.$space-m;
@@ -54,7 +54,7 @@
     margin: 0;
     color: core.$grey-900;
     font-size: core.$font-size-xl;
-    font-weight: 500;
+    font-weight: core.$font-weight-medium;
   }
 
   @media #{core.$screen-md-up} {
@@ -127,7 +127,7 @@
 .uq-accordion__subtitle {
   width: 100%;
   font-size: core.$font-size-s;
-  font-weight: 400;
+  font-weight: core.$font-weight-normal;
   color: #6f6f6f;
   line-height: 1.4;
   // required to Truncate text and add ellipsis

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0-alpha.8](https://github.com/uq-its-ss/design-system/compare/@uqds/card@3.0.0-alpha.7...@uqds/card@3.0.0-alpha.8) (2025-05-14)
+
+### Bug Fixes
+
+- remove line clamp from standard cards ([#625](https://github.com/uq-its-ss/design-system/issues/625)) ([ede20d4](https://github.com/uq-its-ss/design-system/commit/ede20d466978a1837b6d0e62f0a3a018f04045e4))
+
 # [3.0.0-alpha.7](https://github.com/uq-its-ss/design-system/compare/@uqds/card@3.0.0-alpha.6...@uqds/card@3.0.0-alpha.7) (2025-04-30)
 
 ### Bug Fixes

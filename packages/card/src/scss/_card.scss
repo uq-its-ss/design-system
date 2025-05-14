@@ -67,6 +67,7 @@
       content: "";
       position: absolute;
       inset: 0;
+      z-index: 1;
     }
 
     &:focus {
@@ -178,7 +179,6 @@
 
     & .uq-card__image {
       width: 50%;
-      height: 100%;
     }
 
     & .uq-card__content {

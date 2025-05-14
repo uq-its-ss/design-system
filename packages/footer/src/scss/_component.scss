@@ -231,12 +231,6 @@
   /* FOOTER */
   &__footer {
     grid-area: FooterTerms;
-
-    @media #{core.$screen-xl-up} {
-      & :last-child {
-        justify-content: flex-end;
-      }
-    }
   }
 
   &__footer-list {
@@ -389,6 +383,20 @@
         #d4c8de
       ));
     }
+
+    /* TikTok icon */
+    &--tiktok::before {
+      background-image: url(icon-constants.get-icon(
+        "social--social-tiktok-circle",
+        core.$white
+      ));
+    }
+    &--tiktok:hover::before {
+      background-image: url(icon-constants.get-icon(
+        "social--social-tiktok-circle",
+        #d4c8de
+      ));
+    }
   }
 
   &--desktop {
@@ -461,9 +469,10 @@
     }
     @media #{core.$screen-xl-up} {
       grid-template-areas:
-        "FooterNavigation FooterNavigation FooterNavigation FooterNavigation FooterNavigation"
-        "FooterSocial FooterSocial FooterSocial FooterSocial FooterSocial"
-        "FooterOrg FooterOrg FooterOrg FooterTerms FooterTerms";
+        "FooterNavigation"
+        "FooterSocial"
+        "FooterOrg"
+        "FooterTerms";
       row-gap: core.$space-xl;
       padding: core.$space-xl core.$space-m core.$space-xxl;
     }

@@ -1,6 +1,6 @@
 {
   "name": "@uqds/previous-next",
-  "version": "1.0.0-alpha.0",
+  "version": "3.0.0-alpha.3",
   "description": "Previous Next component",
   "keywords": [
     "uqds",
@@ -41,7 +41,7 @@
     "url": "https://github.com/uq-its-ss/design-system/issues"
   },
   "dependencies": {
-    "@uqds/core": "^2.0.0-alpha.0",
-    "@uqds/icon": "^1.0.0-alpha.0"
+    "@uqds/core": "^4.0.0-alpha.1",
+    "@uqds/icon": "^3.0.0-alpha.3"
   }
 }

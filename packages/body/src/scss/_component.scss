@@ -58,44 +58,56 @@ $use-encapsulation: false !default;
   h3,
   h4,
   h5,
-  h6 {
+  h6,
+  .h1,
+  .h2,
+  .h3,
+  .h4,
+  .h5,
+  .h6 {
     font-weight: core.$font-weight-bold;
     line-height: core.$line-height-h;
-    color: core.$grey-900;
+    color: core.$black;
   }
 
-  h1 {
+  h1,
+  .h1 {
     margin-top: core.$space-l;
     margin-bottom: core.$space-xxl;
     font-size: core.$font-size-xxxxl;
     font-family: core.$font-title;
   }
 
-  h2 {
+  h2,
+  .h2 {
     margin-top: core.$space-xxl;
     margin-bottom: core.$space-l;
     font-size: core.$font-size-xxxl;
   }
 
-  h3 {
+  h3,
+  .h3 {
     margin-top: core.$space-xl;
     margin-bottom: core.$space-m;
     font-size: core.$font-size-xxl;
   }
 
-  h4 {
+  h4,
+  .h4 {
     margin-top: core.$space-xl;
     margin-bottom: core.$space-l;
     font-size: core.$font-size-xl;
   }
 
-  h5 {
+  h5,
+  .h5 {
     margin-top: core.$space-l;
     margin-bottom: core.$space-m;
     font-size: core.$font-size-l;
   }
 
-  h6 {
+  h6,
+  .h6 {
     margin-top: core.$space-l;
     margin-bottom: core.$space-s;
     font-size: core.$font-size-m;

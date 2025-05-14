@@ -46,6 +46,7 @@
     "@uqds/header-legacy": "^3.0.0-alpha.3",
     "@uqds/hero": "^6.0.0-alpha.3",
     "@uqds/icon": "^3.0.0-alpha.3",
+    "@uqds/image": "^5.0.0-alpha.1",
     "@uqds/layout": "^6.0.0-alpha.3",
     "@uqds/lists": "^3.0.0-alpha.1",
     "@uqds/loading-spinner": "^3.0.0-alpha.3",
@@ -53,11 +54,13 @@
     "@uqds/page-header": "^3.0.0-alpha.1",
     "@uqds/pagination": "^3.0.0-alpha.2",
     "@uqds/pane": "^3.0.0-alpha.3",
+    "@uqds/pill": "^5.0.0-alpha.1",
     "@uqds/previous-next": "^3.0.0-alpha.3",
     "@uqds/progression": "^3.0.0-alpha.1",
     "@uqds/sections": "^3.0.0-alpha.1",
     "@uqds/side-nav": "^3.0.0-alpha.3",
     "@uqds/site-header": "^6.0.0-alpha.3",
+    "@uqds/social": "^5.0.0-alpha.1",
     "@uqds/table": "^3.0.0-alpha.1",
     "@uqds/tabs": "^3.0.0-alpha.1"
   }

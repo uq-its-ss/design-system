@@ -1,6 +1,6 @@
 import type { FC, ReactNode } from "react";
 import classNames from "classnames";
-import { UqButtonStyle, UqButtonSize} from "../../enum";
+import { UqButtonStyle, UqButtonSize } from "../../enum";
 
 export interface UqButtonProps {
   style: UqButtonStyle;
@@ -11,13 +11,17 @@ export interface UqButtonProps {
 }
 
 export const UqButton: FC<UqButtonProps> = ({
-    style,
-    size,
-    expand,
-    label,  
-    icon,
+  style,
+  size,
+  expand,
+  label,
+  icon,
 }) => (
-  <button className={classNames("uq-button", `${style}`, `${size}`, {"uq-button--expand": expand})}>
+  <button
+    className={classNames("uq-button", `${style}`, `${size}`, {
+      "uq-button--expand": expand,
+    })}
+  >
     {icon && <span className={`uq-icon uq-icon--${icon}`}></span>}
     {label}
   </button>

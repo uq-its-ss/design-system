@@ -2,7 +2,8 @@ import { reactCardDecorator } from "../../../lib/decorators";
 import iconCatalog from "@uqds/icon";
 import {
   UqButton as Component,
-  UqButtonStyle, UqButtonSize,
+  UqButtonStyle,
+  UqButtonSize,
   UqIcon,
 } from "@uqds/react/src/jsx/main";
 

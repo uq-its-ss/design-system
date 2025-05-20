@@ -1,0 +1,26 @@
+import { Meta, Canvas, Controls, Source } from "@storybook/blocks";
+import * as UqCardStories from "./UqCard.stories";
+
+<Meta of={UqCardStories} />
+
+# UqCard
+
+The card component.
+
+## Installation
+
+```bash
+npm i @uqds/react
+```
+
+## Usage
+
+```js
+import { UqCard } from "@uqds/react";
+```
+
+<Canvas of={UqCardStories.UqCard} sourceState="none" />
+
+<Controls of={UqCardStories.UqCard} />
+
+<Source of={UqCardStories.UqCard} />

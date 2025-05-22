@@ -1,7 +1,7 @@
 const { src, dest, parallel } = require("gulp"); // eslint-disable-line
 
 function exportImages() {
-  return src(["./src/images/*.*"], { encoding: false }).pipe(
+  return src(["./src/images/**/*.*"], { encoding: false }).pipe(
     dest("./dist/images"),
   );
 }

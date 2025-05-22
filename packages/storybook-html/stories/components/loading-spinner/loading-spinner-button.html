@@ -1,0 +1,21 @@
+<button class="uq-button">
+    <i class="uq-loading-spinner" role="alert" aria-live="assertive"></i>
+    Submit
+</button>
+
+<button class="uq-button uq-button--secondary">
+    <i class="uq-loading-spinner" role="alert" aria-live="assertive"></i>
+    Save
+</button>
+
+<button class="uq-button uq-button--tertiary">
+    <i class="uq-loading-spinner" role="alert" aria-live="assertive"></i>
+    Refresh
+</button>
+
+<button class="uq-button"
+    onclick="this.getElementsByClassName('uq-loading-spinner')[0].style.display = ''; this.getElementsByClassName('uq-icon')[0].style.display = 'none'; setTimeout(() => { this.getElementsByClassName('uq-loading-spinner')[0].style.display = 'none'; this.getElementsByClassName('uq-icon')[0].style.display = ''; }, 2000);">
+    <i class="uq-icon uq-icon--science-and-mathematics--lab-tube-experiment"></i>
+    <i class="uq-loading-spinner" role="alert" aria-live="assertive" style="display: none;"></i>
+    Click me
+</button>

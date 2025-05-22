@@ -1,6 +1,20 @@
 @use "@uqds/core/src/scss/global" as core;
 @use "global" as *;
 
+// Special size when appearing inside a button, to match the size of the icon
+// the spinner replaces.  This avoids the button changing size when switching
+// between the spinner and the icon.
+.uq-button .uq-loading-spinner {
+  @extend .uq-loading-spinner--small;
+
+  // Must match uq-icon.
+  margin-right: 0.3em;
+  height: 1.5em;
+  width: 1.5em;
+  padding: 0;
+  margin: 0;
+}
+
 .uq-loading-spinner {
   color: core.$purple-500;
   background-color: transparent;

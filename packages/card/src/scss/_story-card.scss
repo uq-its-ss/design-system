@@ -23,6 +23,10 @@ $story-card-font-size-small: 22px;
 
 .uq-story-card__description {
   @extend %uq-card__description;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
 }
 
 .uq-story-card__top-label {

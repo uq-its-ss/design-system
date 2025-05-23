@@ -41,7 +41,7 @@
     max-width: 73.25rem;
     padding: core.$space-xl core.$space-l;
     color: #d4c8de;
-    font-weight: 400;
+    font-weight: core.$font-weight-normal;
     font-size: core.$font-size-m;
     line-height: 1.5;
     margin: auto;
@@ -78,7 +78,7 @@
   &__link {
     font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-style: normal;
-    font-weight: 400;
+    font-weight: core.$font-weight-normal;
     color: core.$white;
 
     &:hover {
@@ -123,7 +123,7 @@
   &__navigation-title {
     color: #d4c8de;
     font-size: core.$font-size-m;
-    font-weight: 500;
+    font-weight: core.$font-weight-medium;
     margin: core.$space-none;
   }
 
@@ -139,7 +139,7 @@
 
     @media #{core.$screen-lg-up} {
       padding: core.$space-m core.$space-none core.$space-none;
-      font-weight: 500;
+      font-weight: core.$font-weight-medium;
     }
   }
   &__navigation-toggle {

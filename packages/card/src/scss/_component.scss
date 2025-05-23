@@ -111,7 +111,7 @@
 
     &-super {
       font-size: core.$font-size-s;
-      font-weight: 500;
+      font-weight: core.$font-weight-medium;
       color: core.$purple-light;
       text-transform: uppercase;
       margin: core.$space-none core.$space-none core.$space-s;
@@ -121,7 +121,7 @@
       }
 
       &--grey {
-        font-weight: 400;
+        font-weight: core.$font-weight-normal;
         color: core.$grey-800;
       }
     }

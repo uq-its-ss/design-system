@@ -21,12 +21,8 @@
     font-style: italic;
   }
 
-  &--300 {
-    font-weight: 300;
-  }
-
   &--500 {
-    font-weight: 500;
+    font-weight: core.$font-weight-medium;
   }
 
   &--lead {

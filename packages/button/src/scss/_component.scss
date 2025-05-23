@@ -54,49 +54,81 @@
       filter: icon.$icon-primary-filter;
     }
   }
-}
 
-.uq-button--secondary {
-  background-color: core.$white;
-  border-color: core.$purple-500;
-  color: core.$purple-500;
-
-  &:hover,
   &:focus {
-    background-color: core.$purple-500;
-    border-color: core.$purple-500;
-    color: core.$white;
+    outline: 2px solid core.$utility-500;
+    outline-offset: 0;
   }
-}
 
-.uq-button--tertiary {
-  background-color: core.$white;
-  border-color: core.$white;
-  color: core.$purple-500;
-  text-decoration: underline;
+  &.uq-button--reverse {
+    background-color: core.$white;
+    border-color: core.$white;
+    color: core.$purple-500;
 
-  &:hover,
-  &:focus {
-    background-color: core.$purple-500;
-    border-color: core.$purple-500;
-    color: core.$white;
+    & .uq-icon::before {
+      filter: icon.$icon-primary-filter;
+    }
+
+    &:hover {
+      background-color: transparent;
+      color: core.$white;
+
+      & .uq-icon::before {
+        filter: icon.$icon-light-filter;
+      }
+    }
   }
 }
 
 .uq-button--secondary,
 .uq-button--tertiary {
+  background-color: transparent;
+  border-color: core.$purple-500;
+  color: core.$purple-500;
+
   & .uq-icon::before {
     filter: icon.$icon-primary-filter;
   }
 
-  &:hover,
-  &:focus {
+  &:hover {
     background-color: core.$purple-500;
     border-color: core.$purple-500;
     color: core.$white;
 
     & .uq-icon::before {
       filter: icon.$icon-light-filter;
+    }
+  }
+
+  &.uq-button--reverse {
+    background-color: transparent;
+    border-color: core.$white;
+    color: core.$white;
+
+    & .uq-icon::before {
+      filter: icon.$icon-light-filter;
+    }
+
+    &:hover {
+      background-color: core.$white;
+      color: core.$purple-500;
+
+      & .uq-icon::before {
+        filter: icon.$icon-primary-filter;
+      }
+    }
+  }
+}
+
+.uq-button--tertiary {
+  border-color: transparent;
+  text-decoration: underline;
+
+  &.uq-button--reverse {
+    border-color: transparent;
+
+    &:hover {
+      border-color: core.$white;
     }
   }
 }

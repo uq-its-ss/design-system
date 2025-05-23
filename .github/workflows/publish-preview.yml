@@ -36,7 +36,7 @@ jobs:
       - name: "Build uqds-builder"
         run: |
            npm run prepare
-        working-directory: /packages/uqds-builder/
+        working-directory: packages/uqds-builder/
 
       # --- Build Storybook React ---
       - name: "Build Storybook REACT"

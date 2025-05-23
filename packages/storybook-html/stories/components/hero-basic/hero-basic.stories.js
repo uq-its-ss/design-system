@@ -67,8 +67,9 @@ export const HeroBasic = {
         back
           ? `
       <div class="uq-hero-basic__back">
-        <a href="#">
-          <span class="uq-icon uq-icon--common--chevron-left uq-icon--light"></span>${back}
+        <a href="#">  
+          <span class="uq-icon uq-icon--common--chevron-left uq-icon--light"></span>
+          <span class="uq-hero-basic__back-text">${back}</span>
         </a>
       </div>`
           : ""

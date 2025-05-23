@@ -30,7 +30,7 @@ Contents:
 - [Accessibility requirements [TODO]](./docs/accessibility.md)
 - Package docs
   - [`icons`](./packages/icon/MAINTENANCE.md)
-  - [`private-design-output`](./packages/private-design-output#readme)
+  - [`uqds-builder`](./packages/uqds-builder#readme)
   - [`storybook-html`](./packages/storybook-html#readme)
 - [FUTURE] Accessibility testing
 - [FUTURE] Visual unit/regression testing

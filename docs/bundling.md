@@ -2,11 +2,11 @@
 
 ## Tools
 
-### `packages/private-design-output`
+### `packages/uqds-builder`
 
 > This tool allows you to generate an export-ready bundle of the UQDS from source.
 
-[Read the docs](/packages/private-design-output/README.md)
+[Read the docs](/packages/uqds-builder/README.md)
 
 ## Released bundle packages (coming soon)
 

@@ -1,6 +1,6 @@
 {
   "name": "@uqds/pagination",
-  "version": "3.0.0-alpha.1",
+  "version": "3.0.0-alpha.2",
   "description": "Pagination component",
   "keywords": [
     "uqds",
@@ -30,6 +30,7 @@
     "src/*",
     "dist/*"
   ],
+  "style": "dist/css/main.css",
   "scripts": {
     "prepare": "gulp -f ../../gulpfile.js --cwd=. prepare"
   },
@@ -41,6 +42,6 @@
     "url": "https://github.com/uq-its-ss/design-system/issues"
   },
   "dependencies": {
-    "@uqds/core": "^4.0.0-alpha.0"
+    "@uqds/core": "^4.0.0-alpha.1"
   }
 }

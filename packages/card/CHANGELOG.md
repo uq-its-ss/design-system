@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0-alpha.8](https://github.com/uq-its-ss/design-system/compare/@uqds/card@3.0.0-alpha.7...@uqds/card@3.0.0-alpha.8) (2025-05-14)
+
+### Bug Fixes
+
+- remove line clamp from standard cards ([#625](https://github.com/uq-its-ss/design-system/issues/625)) ([ede20d4](https://github.com/uq-its-ss/design-system/commit/ede20d466978a1837b6d0e62f0a3a018f04045e4))
+
+# [3.0.0-alpha.7](https://github.com/uq-its-ss/design-system/compare/@uqds/card@3.0.0-alpha.6...@uqds/card@3.0.0-alpha.7) (2025-04-30)
+
+### Bug Fixes
+
+- add z-index to link element::after to fix hover bug ([#620](https://github.com/uq-its-ss/design-system/issues/620)) ([e455205](https://github.com/uq-its-ss/design-system/commit/e4552059f7692a729ddceec84b3de2e792a8e2bf))
+
+# [3.0.0-alpha.6](https://github.com/uq-its-ss/design-system/compare/@uqds/card@3.0.0-alpha.5...@uqds/card@3.0.0-alpha.6) (2025-04-30)
+
+**Note:** Version bump only for package @uqds/card
+
+# [3.0.0-alpha.5](https://github.com/uq-its-ss/design-system/compare/@uqds/card@3.0.0-alpha.4...@uqds/card@3.0.0-alpha.5) (2025-04-30)
+
+**Note:** Version bump only for package @uqds/card
+
 # [3.0.0-alpha.4](https://github.com/uq-its-ss/design-system/compare/@uqds/card@3.0.0-alpha.3...@uqds/card@3.0.0-alpha.4) (2025-03-28)
 
 **Note:** Version bump only for package @uqds/card

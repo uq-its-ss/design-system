@@ -179,14 +179,10 @@
       color: inherit;
       text-decoration: underline;
 
-      &:link,
-      &:visited,
-      &:active {
-        text-decoration: underline;
-      }
       &:hover,
       &:focus {
-        text-decoration: none;
+        background-color: core.$white;
+        color: core.$purple-500;
       }
     }
 
@@ -232,10 +228,6 @@
       color: core.$grey-900;
 
       .uq-alert__title {
-        color: core.$grey-900;
-      }
-
-      a {
         color: core.$grey-900;
       }
     }

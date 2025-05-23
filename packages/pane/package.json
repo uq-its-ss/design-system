@@ -1,6 +1,6 @@
 {
   "name": "@uqds/pane",
-  "version": "3.0.0-alpha.2",
+  "version": "3.0.0-alpha.3",
   "description": "Pane component",
   "keywords": [
     "uqds",
@@ -41,7 +41,7 @@
     "url": "https://github.com/uq-its-ss/design-system/issues"
   },
   "dependencies": {
-    "@uqds/core": "^4.0.0-alpha.0",
-    "@uqds/layout": "^6.0.0-alpha.2"
+    "@uqds/core": "^4.0.0-alpha.1",
+    "@uqds/layout": "^6.0.0-alpha.3"
   }
 }

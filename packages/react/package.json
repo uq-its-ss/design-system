@@ -1,6 +1,6 @@
 {
   "name": "@uqds/react",
-  "version": "1.0.0-alpha.4",
+  "version": "1.0.0-alpha.5",
   "description": "React components",
   "keywords": [
     "uqds",
@@ -47,7 +47,7 @@
   },
   "dependencies": {
     "@uqds/body": "^3.0.0-alpha.2",
-    "@uqds/card": "^3.0.0-alpha.7",
+    "@uqds/card": "^3.0.0-alpha.8",
     "@uqds/core": "^4.0.0-alpha.1",
     "@uqds/icon": "^3.0.0-alpha.3",
     "@uqds/layout": "6.0.0-alpha.0",

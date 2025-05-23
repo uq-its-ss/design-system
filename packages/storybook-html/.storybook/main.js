@@ -55,16 +55,87 @@ const config = {
     options: {},
   },
 
+  //
+  // --- Storybook composition configuration ---
+  //
   refs: (config, { configType }) => {
+    // --- Development Environment ---
     if (configType === "DEVELOPMENT") {
+      console.log("Configuring Storybook refs for DEVELOPMENT");
       return {
         react: {
-          title: "React",
+          title: "React (Local)",
           url: "http://localhost:6007",
         },
       };
     }
-    return {};
+
+    // --- Static Build Environment ---
+    const targetEnv = process.env.STORYBOOK_TARGET_ENV || "production";
+
+    // Read GitHub Actions specific variables ONLY when building for preview
+    const githubRunId = process.env.GITHUB_RUN_ID;
+    const bucketName = process.env.S3_BUCKET_TOOLS; // Get bucket name from env var
+
+    console.log(
+      `Configuring Storybook refs for static build, target environment: ${targetEnv}`,
+    );
+    if (targetEnv === "preview") {
+      console.log(
+        `Preview Build - GitHub Run ID: ${githubRunId}, Bucket: ${bucketName}`,
+      );
+    }
+
+    let reactStorybookUrl; // URL for the Storybook you want to compose
+
+    switch (targetEnv) {
+      case "preview":
+        // Check if required variables are present for preview URL construction
+        if (!githubRunId || !bucketName) {
+          console.error(
+            "ERROR: Missing GITHUB_RUN_ID or S3_BUCKET_TOOLS environment variables for preview build!",
+          );
+          // Provide a fallback URL or handle the error appropriately
+          reactStorybookUrl = "/error-preview-url-not-configured";
+        } else {
+          // Construct the dynamic URL based on the S3 deployment structure
+          reactStorybookUrl = `https://${bucketName}.s3.amazonaws.com/storybook-react/${githubRunId}/`;
+          console.log(
+            `Preview React Storybook URL set to: ${reactStorybookUrl}`,
+          );
+        }
+        break;
+      case "staging":
+        // Use static URL or read from different env vars if needed
+        reactStorybookUrl =
+          process.env.STORYBOOK_REACT_STAGING_URL ||
+          "https://design-system.ads-staging.aws.uq.edu.au/storybook-react/";
+        break;
+      case "production":
+      default: // Default to production
+        // Use static URL or read from different env vars if needed
+        reactStorybookUrl =
+          process.env.STORYBOOK_REACT_PROD_URL ||
+          "https://design-system.uq.edu.au/storybook-react/";
+        break;
+    }
+
+    // Return the refs configuration
+    if (!reactStorybookUrl) {
+      console.warn(
+        `No valid URL found for react Storybook ref in environment: ${targetEnv}`,
+      );
+      return {}; // Return empty refs if URL construction failed
+    }
+
+    return {
+      react: {
+        // Make the title dynamic for preview as well
+        title: `React (${targetEnv === "preview" && githubRunId ? `Preview #${githubRunId}` : targetEnv.charAt(0).toUpperCase() + targetEnv.slice(1)})`,
+        url: reactStorybookUrl,
+      },
+      // Add other compositions if needed
+    };
   },
 };
 

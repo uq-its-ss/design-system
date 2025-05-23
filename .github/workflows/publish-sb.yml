@@ -1,4 +1,4 @@
-name: Publish Storybook
+name: Publish Storybook (Staging/Production)
 
 permissions:
   id-token: write
@@ -24,11 +24,30 @@ jobs:
       - name: "📦️ Install dependencies and build"
         run: npm ci
 
-      - name: "Build Storybook"
+      # --- Build Storybook React ---
+      - name: "Build Storybook REACT"
+        run: |
+          npm run build-storybook
+        working-directory: packages/storybook-react/
+
+      # --- Build Storybook HTML ---
+      - name: "Build Staging Storybook HTML"
+        if: ${{ github.ref_name == 'master' }}
+        env:
+          STORYBOOK_TARGET_ENV: staging # Explicitly set for main.js}
         run: |
           npm run build-storybook
         working-directory: packages/storybook-html/
 
+      - name: "Build Production Storybook HTML"
+        if: ${{ github.ref_name == 'releases' }}
+        env:
+          STORYBOOK_TARGET_ENV: Poduction # Explicitly set for main.js}
+        run: |
+          npm run build-storybook
+        working-directory: packages/storybook-html/
+
+      # --- Deploy to Staging S3 ---
       - name: Configure AWS Credentials for Staging
         if: ${{ github.ref_name == 'master' }}
         uses: aws-actions/configure-aws-credentials@v4
@@ -37,11 +56,17 @@ jobs:
           aws-region: ap-southeast-2
           role-session-name: GitHubActions-S3Sync-Staging-${{ github.run_id }}
 
-      - name: "Sync master to staging environment"
+      - name: "Storybook REACT: Sync master to staging environment"
         if: ${{ github.ref_name == 'master' }}
         run: |
-          aws s3 sync packages/storybook-html/storybook-static s3://${{ secrets.AWS_S3_BUCKET_STAGING }} --delete --follow-symlinks
+          aws s3 sync packages/storybook-react/storybook-static s3://${{ secrets.AWS_S3_BUCKET_STAGING }}/storybook-react/ --delete --follow-symlinks
 
+      - name: "Storybook HTML: Sync master to staging environment"
+        if: ${{ github.ref_name == 'master' }}
+        run: |
+          aws s3 sync packages/storybook-html/storybook-static s3://${{ secrets.AWS_S3_BUCKET_STAGING }}/storybook-html/ --delete --follow-symlinks
+
+      # --- Deploy to Production S3 ---
       - name: Configure AWS Credentials for Production
         if: ${{ github.ref_name == 'releases' }}
         uses: aws-actions/configure-aws-credentials@v4
@@ -50,8 +75,13 @@ jobs:
           aws-region: ap-southeast-2
           role-session-name: GitHubActions-S3Sync-Production-${{ github.run_id }}
 
-      - name: "Sync releases to Production environment"
+      - name: "Storybook REACT: Sync releases to Production environment"
         if: ${{ github.ref_name == 'releases' }}
         run: |
-          aws s3 sync packages/storybook-html/storybook-static s3://${{ secrets.AWS_S3_BUCKET_PRODUCTION }} --delete --follow-symlinks
+          aws s3 sync packages/storybook-react/storybook-static s3://${{ secrets.AWS_S3_BUCKET_PRODUCTION }}/storybook-react/ --delete --follow-symlinks
+
+      - name: "Storybook HTML: Sync releases to Production environment"
+        if: ${{ github.ref_name == 'releases' }}
+        run: |
+          aws s3 sync packages/storybook-html/storybook-static s3://${{ secrets.AWS_S3_BUCKET_PRODUCTION }}/storybook-html/ --delete --follow-symlinks
 

@@ -52,6 +52,11 @@
       .uq-breadcrumb__link {
         max-width: 650px;
         text-decoration: none;
+
+          &:hover {
+            background-color: transparent;
+            color: core.$grey-700;
+          }
       }
     }
   }
@@ -78,8 +83,4 @@
     max-width: 9rem;
   }
 
-  &:hover {
-    background-color: transparent;
-    color: core.$grey-700;
-  }
 }

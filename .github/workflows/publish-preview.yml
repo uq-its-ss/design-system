@@ -61,15 +61,15 @@ jobs:
           aws-region: ap-southeast-2
           role-session-name: GitHubActions-S3Sync-Preview-${{ github.run_id }}
 
-      - name: "Sync UQDS-BUILDERto S3 preview environment"
+      - name: "UQDS-BUILDER: Sync to preview environment"
         run: |
           aws s3 cp packages/uqds-builder/dist s3://${{ secrets.AWS_S3_BUCKET_TOOLS }}/uqds-builder/${{ github.run_id }} --acl public-read --follow-symlinks --recursive
 
-      - name: "Sync Storybook HTML to S3 preview environment"
+      - name: "Storybook HTML: Sync to preview environment"
         run: |
           aws s3 sync packages/storybook-html/storybook-static s3://${{ secrets.AWS_S3_BUCKET_TOOLS }}/storybook-html/${{ github.run_id }} --acl public-read --follow-symlinks --delete
   
-      - name: "Sync Storybook REACT to S3 preview environment"
+      - name: "Storybook REACT: Sync to preview environment"
         run: |
           aws s3 sync packages/storybook-react/storybook-static s3://${{ secrets.AWS_S3_BUCKET_TOOLS }}/storybook-react/${{ github.run_id }} --acl public-read --follow-symlinks --delete
 

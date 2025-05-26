@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0-alpha.16](https://github.com/uq-its-ss/design-system/compare/private-design-output@3.0.0-alpha.15...private-design-output@3.0.0-alpha.16) (2025-05-23)
+
+**Note:** Version bump only for package private-design-output
+
 # [3.0.0-alpha.15](https://github.com/uq-its-ss/design-system/compare/private-design-output@3.0.0-alpha.14...private-design-output@3.0.0-alpha.15) (2025-05-23)
 
 **Note:** Version bump only for package private-design-output

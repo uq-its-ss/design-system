@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0-alpha.4](https://github.com/uq-its-ss/design-system/compare/@uqds/form@3.0.0-alpha.3...@uqds/form@3.0.0-alpha.4) (2025-05-26)
+
+**Note:** Version bump only for package @uqds/form
+
 # [3.0.0-alpha.3](https://github.com/uq-its-ss/design-system/compare/@uqds/form@3.0.0-alpha.2...@uqds/form@3.0.0-alpha.3) (2025-04-30)
 
 **Note:** Version bump only for package @uqds/form

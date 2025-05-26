@@ -187,7 +187,7 @@
 
   &__nav-primary-container {
     @media #{core.$screen-lg-up} {
-      padding: 0 0 0 core.$space-xxl;
+      padding: 0 0 0 core.$space-l;
     }
   }
 
@@ -208,25 +208,29 @@
 
   &__nav-primary-item {
     margin: 0;
-    padding-left: 2rem;
-
-    &:first-child {
-      padding-left: 0;
-    }
 
     &--is-open {
+      background-color: core.$white;
+
+      .uq-header__nav-primary-link {
+        color: core.$purple-500;
+        text-decoration: none;
+      }
+
+
+
       & > .uq-header__megamenu {
         height: auto;
         visibility: visible;
       }
 
       & .uq-header__nav-primary-link {
-        border-bottom: 4px solid white;
+       // border-bottom: 4px solid white;
       }
     }
 
     & .uq-header__nav-primary-link--active {
-      border-bottom: 4px solid white;
+      //border-bottom: 4px solid white;
     }
   }
 
@@ -234,26 +238,25 @@
     display: block;
     color: core.$white; //core.$purple-500;
     text-decoration: none;
-    padding: core.$space-m core.$space-l;
+    padding: core.$space-m core.$space-xl;
     transition:
-      background-color 0.25s,
-      border-color 0.25s;
+      background-color 0.25s;
     font-weight: core.$font-weight-normal;
     position: relative;
-    border-bottom: 4px solid transparent;
 
     &:hover {
-      color: core.$white;
+      color: core.$purple-500;
+      background-color: core.$white;
       text-decoration: none;
     }
 
     @media #{core.$screen-lg-up} {
-      padding: core.$space-xl core.$space-s;
+      padding: core.$space-xl core.$space-l;
     }
   }
 
   .nav-primary-link--has-dropdown {
-    padding: core.$space-xl core.$space-l core.$space-xl core.$space-s;
+    padding: core.$space-xl core.$space-xxl core.$space-xl core.$space-l;
 
     &::after {
       content: "";
@@ -270,7 +273,16 @@
       right: 1.75rem;
 
       @media #{core.$screen-lg-up} {
-        right: 0.25rem;
+        right: 1rem;
+      }
+    }
+
+    &:hover {
+      &::after {
+        background-image: url(icon-constants.get-icon(
+          "standard--chevron-down-sml",
+          core.$purple-500
+        ));
       }
     }
   }
@@ -381,7 +393,7 @@
     visibility: hidden;
 
     @media #{core.$screen-lg-up} {
-      top: 8.3rem;
+      top: 8.05rem;
     }
 
     &--is-open {
@@ -521,7 +533,7 @@
 
   &__megamenu {
     position: absolute;
-    top: 8.3rem;
+    top: 8.05rem;
     left: 0;
     width: 100%;
     z-index: 30;
@@ -536,7 +548,7 @@
 
     padding: core.$space-m core.$space-xxxl core.$space-xxl core.$space-xxxl;
     background: core.$white;
-    box-shadow: 0 0.75rem core.$space-l rgb(24 24 24 / 20%);
+    //box-shadow: 0 0.75rem core.$space-l rgb(24 24 24 / 20%);
     border-radius: 0 0 0.25rem 0.25rem;
 
     @media #{core.$screen-xl-up} {
@@ -797,6 +809,7 @@ body.no-scroll {
     background-color: core.$purple-500;
   }
 
+
   .uq-header__newglobal-nav-link {
     color: core.$white;
     background-color: core.$purple-500;
@@ -876,7 +889,7 @@ body.no-scroll {
 }
 
 .uq-header__nav-primary-list li:hover .uq-header__nav-primary-link {
-  border-bottom: 4px solid #fff;
+  //border-bottom: 4px solid #fff;
 }
 
 .uq-header__nav-primary-link,
@@ -889,7 +902,7 @@ body.no-scroll {
     border-color 0.25s;
   font-weight: core.$font-weight-normal;
   position: relative;
-  border-bottom: 4px solid transparent;
+  //border-bottom: 4px solid transparent;
 }
 
 .uq-header a:focus {

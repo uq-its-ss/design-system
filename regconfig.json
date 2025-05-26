@@ -17,7 +17,7 @@
     },
     "reg-publish-s3-plugin": {
       "bucketName": "uq-ds-regsuit",
-      "pathPrefix?": "Regression"
+      "pathPrefix": "regression"
     },
     "reg-keygen-git-hash-plugin": {}
   }

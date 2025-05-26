@@ -63,7 +63,7 @@ jobs:
 
       - name: "UQDS-BUILDER: Sync to preview environment"
         run: |
-          aws s3 cp packages/uqds-builder/dist s3://${{ secrets.AWS_S3_BUCKET_TOOLS }}/preview/${{ github.run_id }}/uqds-builder/ --acl public-read --follow-symlinks --recursive
+          aws s3 cp packages/uqds-builder/dist s3://${{ secrets.AWS_S3_BUCKET_TOOLS }}/preview/${{ github.run_id }}/ --acl public-read --follow-symlinks --recursive
 
       - name: "Storybook HTML: Sync to preview environment"
         run: |
@@ -80,9 +80,12 @@ jobs:
           header: preview
           message: |
             Design System Previews for Run `${{ github.run_id }}`:
+            
             **UQDS-BUILDER**
-            * **HOMEPAGE:** https://uq-ds-regsuit.s3.amazonaws.com/preview/${{ github.run_id }}/uqds-builder/index.html
-            **Storybook Previews**
-            * **HTML:** https://uq-ds-regsuit.s3.amazonaws.com/preview/${{ github.run_id }}/storybook-html/index.html
-            * **REACT:** https://uq-ds-regsuit.s3.amazonaws.com/preview/${{ github.run_id }}/storybook-react/index.html
+              * [Homepage](https://uq-ds-regsuit.s3.amazonaws.com/preview/${{ github.run_id }}/index.html)
+
+            **Storybook**
+
+              * [HTML Components](https://uq-ds-regsuit.s3.amazonaws.com/preview/${{ github.run_id }}/storybook-html/index.html)
+              * [REACT Components](https://uq-ds-regsuit.s3.amazonaws.com/preview/${{ github.run_id }}/storybook-react/index.html)
 

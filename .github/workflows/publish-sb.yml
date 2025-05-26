@@ -87,7 +87,7 @@ jobs:
           role-session-name: GitHubActions-S3Sync-Production-${{ github.run_id }}
 
       - name: "UQDS-BUILDER: Sync releases to Production environment"
-        if: ${{ github.ref_name == 'master' }}
+        if: ${{ github.ref_name == 'releases' }}
         run: |
           aws s3 cp packages/uqds-builder/dist s3://${{ secrets.AWS_S3_BUCKET_PRODUCTION }} --follow-symlinks --recursive
 

@@ -30,9 +30,11 @@
     "index.js",
     "dist/*",
     "src/js/*",
-    "src/scss/*"
+    "src/scss/*",
+    "src/ts/_build/*"
   ],
   "style": "dist/css/main.css",
+  "types": "src/ts/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/uq-its-ss/design-system.git"

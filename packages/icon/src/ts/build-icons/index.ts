@@ -133,15 +133,23 @@ const processSVG = async (inputFilePath: string, outputDir: string): Promise<Pro
 const createAdditionalOutputs = async (
     results: ProcessSVGResult[],
     jsModule: string,
+    tsModule: string,
     sassModule: string,
     sassMixins: string
 ): Promise<void> => {
     // Map new array for JS module API
     const iconArrModule = results.map(({ name, category }) => ({ name, category }));
     try {
-        await FS.writeFile(jsModule, `export default ${JSON.stringify(iconArrModule, null, 4)};`);
-    } catch (e) {
-        throw new Error("Error creating JS Module output");
+        await FS.writeFile(jsModule, `export default ${JSON.stringify(iconArrModule, null, 2)};`);
+    } catch (e: any) {
+        throw new Error(`Error creating JS Module output: ${e.message}`);
+    }
+
+    const iconTypes = results.map(({ name, category }) => `${category}--${name}`);
+    try {
+        await FS.writeFile(tsModule, `export type IconCode =\n  "${iconTypes.join('"\n    | "')}"\n;\n`);
+    } catch (e: any) {
+        throw new Error(`Error creating Typescript output: ${e.message}`);
     }
 
     // Accumulating string for Sass module API
@@ -151,18 +159,18 @@ const createAdditionalOutputs = async (
     icons += ");";
     try {
         await FS.writeFile(sassModule, `${icons}\n${svgSassString}`);
-    } catch (e) {
-        throw new Error("Error creating Sass Module output");
+    } catch (e: any) {
+        throw new Error(`Error creating Sass Module output: ${e.message}`);
     }
 
     // Accumulating string for emitting icons using Sass mixins
     const iconsMixins = results.reduce((acc, { name, category }) => {
-        return `${acc}  @include icon('${category}--${name}');\n`;
-    }, "@use '../global' as *;\n\n");
+        return `${acc}@include icon("${category}--${name}");\n`;
+    }, "@use \"../global\" as *;\n\n");
     try {
         await FS.writeFile(sassMixins, `${iconsMixins}`);
-    } catch (e) {
-        throw new Error("Error creating Sass Mixins output");
+    } catch (e: any) {
+        throw new Error(`Error creating Sass Mixins output: ${e.message}`);
     }
 };
 
@@ -182,6 +190,7 @@ const main = async (): Promise<void> => {
     await createAdditionalOutputs(
         results,
         "./src/js/_build/_icons.js",
+        "./src/ts/_build/_icons.d.ts",
         "./src/scss/_build/_icons.scss",
         "./src/scss/_build/_icons-emit.scss"
     );

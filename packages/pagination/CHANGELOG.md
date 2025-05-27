@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0-alpha.3](https://github.com/uq-its-ss/design-system/compare/@uqds/pagination@3.0.0-alpha.2...@uqds/pagination@3.0.0-alpha.3) (2025-05-26)
+
+### Bug Fixes
+
+- pagination styles export ([#624](https://github.com/uq-its-ss/design-system/issues/624)) ([fc8725b](https://github.com/uq-its-ss/design-system/commit/fc8725b2dc390e867b23e214cb04c47150e09934))
+
 # [3.0.0-alpha.2](https://github.com/uq-its-ss/design-system/compare/@uqds/pagination@3.0.0-alpha.1...@uqds/pagination@3.0.0-alpha.2) (2025-04-30)
 
 **Note:** Version bump only for package @uqds/pagination

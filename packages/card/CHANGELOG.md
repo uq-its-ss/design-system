@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0-alpha.9](https://github.com/uq-its-ss/design-system/compare/@uqds/card@3.0.0-alpha.8...@uqds/card@3.0.0-alpha.9) (2025-05-26)
+
+### Bug Fixes
+
+- remove 300 weight fonts, updated to 400 weight ([#594](https://github.com/uq-its-ss/design-system/issues/594)) ([02ad03d](https://github.com/uq-its-ss/design-system/commit/02ad03d918c153cf41df3f0dfb8dc2bed19e2262))
+
 # [3.0.0-alpha.8](https://github.com/uq-its-ss/design-system/compare/@uqds/card@3.0.0-alpha.7...@uqds/card@3.0.0-alpha.8) (2025-05-14)
 
 ### Bug Fixes

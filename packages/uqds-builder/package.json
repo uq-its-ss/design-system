@@ -1,6 +1,6 @@
 {
-  "name": "private-design-output",
-  "version": "3.0.0-alpha.17",
+  "name": "uqds-builder",
+  "version": "3.0.0-alpha.16",
   "description": "Render style kits for UQ clients",
   "private": true,
   "author": {

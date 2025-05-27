@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0](https://github.com/uq-its-ss/design-system/compare/@uqds/tabs@2.0.0...@uqds/tabs@3.0.0) (2025-05-27)
+
+- Release/1.0.5 (#631) ([e247c79](https://github.com/uq-its-ss/design-system/commit/e247c790585abe267b95de489381efe25107a7bb)), closes [#631](https://github.com/uq-its-ss/design-system/issues/631) [#568](https://github.com/uq-its-ss/design-system/issues/568)
+
+### BREAKING CHANGES
+
+- Review updated blockquote markup
+
+- increase spacing
+
+- chore: regression test update
+
 # [3.0.0-alpha.2](https://github.com/uq-its-ss/design-system/compare/@uqds/tabs@3.0.0-alpha.1...@uqds/tabs@3.0.0-alpha.2) (2025-05-26)
 
 ### Bug Fixes

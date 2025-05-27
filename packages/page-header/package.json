@@ -1,6 +1,6 @@
 {
   "name": "@uqds/page-header",
-  "version": "3.0.0-alpha.2",
+  "version": "3.0.0",
   "description": "Page Header component",
   "keywords": [
     "uqds",
@@ -40,6 +40,6 @@
     "url": "https://github.com/uq-its-ss/design-system/issues"
   },
   "dependencies": {
-    "@uqds/core": "^4.0.0-alpha.2"
+    "@uqds/core": "^4.0.0"
   }
 }

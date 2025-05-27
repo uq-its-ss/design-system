@@ -1,6 +1,6 @@
 {
   "name": "@uqds/form",
-  "version": "3.0.0-alpha.3",
+  "version": "3.0.0-alpha.4",
   "description": "Form element style rules",
   "keywords": [
     "uqds",
@@ -53,7 +53,7 @@
     "url": "https://github.com/uq-its-ss/design-system/issues"
   },
   "dependencies": {
-    "@uqds/core": "^4.0.0-alpha.1",
-    "@uqds/icon": "^3.0.0-alpha.3"
+    "@uqds/core": "^4.0.0-alpha.2",
+    "@uqds/icon": "^3.0.0-alpha.4"
   }
 }

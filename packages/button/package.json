@@ -1,6 +1,6 @@
 {
   "name": "@uqds/button",
-  "version": "3.0.0-alpha.3",
+  "version": "3.0.0-alpha.4",
   "description": "The button component package",
   "keywords": [
     "uqds",
@@ -51,7 +51,7 @@
     "url": "https://github.com/uq-its-ss/design-system/issues"
   },
   "dependencies": {
-    "@uqds/core": "^4.0.0-alpha.1",
+    "@uqds/core": "^4.0.0-alpha.2",
     "copy-to-clipboard": "^3.3.3"
   }
 }

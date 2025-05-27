@@ -1,6 +1,6 @@
 {
   "name": "@uqds/table",
-  "version": "3.0.0-alpha.1",
+  "version": "3.0.0-alpha.2",
   "description": "The table component package",
   "keywords": [
     "uqds",
@@ -40,6 +40,6 @@
     "url": "https://github.com/uq-its-ss/design-system/issues"
   },
   "dependencies": {
-    "@uqds/core": "^4.0.0-alpha.1"
+    "@uqds/core": "^4.0.0-alpha.2"
   }
 }

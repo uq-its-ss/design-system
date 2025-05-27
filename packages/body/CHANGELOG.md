@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0-alpha.3](https://github.com/uq-its-ss/design-system/compare/@uqds/body@3.0.0-alpha.2...@uqds/body@3.0.0-alpha.3) (2025-05-26)
+
+### Bug Fixes
+
+- remove 300 weight fonts, updated to 400 weight ([#594](https://github.com/uq-its-ss/design-system/issues/594)) ([02ad03d](https://github.com/uq-its-ss/design-system/commit/02ad03d918c153cf41df3f0dfb8dc2bed19e2262))
+
 # [3.0.0-alpha.2](https://github.com/uq-its-ss/design-system/compare/@uqds/body@3.0.0-alpha.1...@uqds/body@3.0.0-alpha.2) (2025-04-30)
 
 **Note:** Version bump only for package @uqds/body

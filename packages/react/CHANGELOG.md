@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-alpha.6](https://github.com/uq-its-ss/design-system/compare/@uqds/react@1.0.0-alpha.5...@uqds/react@1.0.0-alpha.6) (2025-05-26)
+
+**Note:** Version bump only for package @uqds/react
+
 # [1.0.0-alpha.5](https://github.com/uq-its-ss/design-system/compare/@uqds/react@1.0.0-alpha.4...@uqds/react@1.0.0-alpha.5) (2025-05-14)
 
 **Note:** Version bump only for package @uqds/react

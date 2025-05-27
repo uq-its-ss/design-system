@@ -1,0 +1,91 @@
+name: Publish preview environment
+
+permissions:
+  id-token: write # Required for OIDC AWS authentication
+  contents: read  # Required to check out the repository
+  pull-requests: write # Required to write PR comments
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'beta'
+  pull_request: {}
+
+jobs:
+  build_test_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "⬇️ Checkout repo"
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Needed for reg-suit history comparison
+          # Checkout the merge commit on PRs for accurate testing, otherwise checkout the branch head
+          ref: ${{ github.event.pull_request.head.ref || github.ref}}
+
+      - name: "⎔ Setup node 18"
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: 'npm' # Add caching for faster installs
+
+      - name: "📦️ Install dependencies"
+        run: npm ci
+
+      # --- Build UQDS-BUILDER ---
+      - name: "Build UQDS-BUILDER"
+        run: |
+           npm run prepare
+        working-directory: packages/uqds-builder/
+
+      # --- Build Storybook REACT ---
+      - name: "Build Storybook REACT"
+        run: |
+           npm run build-storybook
+        working-directory: packages/storybook-react/
+
+      # --- Build Storybook HTML ---
+      - name: "Build Storybook HTML"
+        env:
+          STORYBOOK_TARGET_ENV: preview # Explicitly set for main.js}
+          S3_BUCKET_TOOLS: ${{ secrets.AWS_S3_BUCKET_TOOLS }}
+        run: |
+          npm run build-storybook
+        working-directory: packages/storybook-html/
+
+      # --- Deploy to S3 ---
+      - name: Configure AWS Credentials for S3 Sync Preview
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME_TOOLS }}
+          aws-region: ap-southeast-2
+          role-session-name: GitHubActions-S3Sync-Preview-${{ github.run_id }}
+
+      - name: "UQDS-BUILDER: Sync to preview environment"
+        run: |
+          aws s3 cp packages/uqds-builder/dist s3://${{ secrets.AWS_S3_BUCKET_TOOLS }}/preview/${{ github.run_id }}/ --acl public-read --follow-symlinks --recursive
+
+      - name: "Storybook HTML: Sync to preview environment"
+        run: |
+          aws s3 sync packages/storybook-html/storybook-static s3://${{ secrets.AWS_S3_BUCKET_TOOLS }}/preview/${{ github.run_id }}/storybook-html/ --acl public-read --follow-symlinks --delete
+
+      - name: "Storybook REACT: Sync to preview environment"
+        run: |
+          aws s3 sync packages/storybook-react/storybook-static s3://${{ secrets.AWS_S3_BUCKET_TOOLS }}/preview/${{ github.run_id }}/storybook-react/ --acl public-read --follow-symlinks --delete
+
+      - name: "Add links to Storybook previews in PR comment"
+        uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          GITHUB_TOKEN: ${{ secrets.UQDS_PERSONAL_ACCESS_TOKEN }}
+          header: preview
+          message: |
+            Design System Previews for Run `${{ github.run_id }}`:
+            
+            **UQDS-BUILDER**
+              * [Homepage](https://uq-ds-regsuit.s3.amazonaws.com/preview/${{ github.run_id }}/index.html)
+
+            **Storybook**
+
+              * [HTML Components](https://uq-ds-regsuit.s3.amazonaws.com/preview/${{ github.run_id }}/storybook-html/index.html)
+              * [REACT Components](https://uq-ds-regsuit.s3.amazonaws.com/preview/${{ github.run_id }}/storybook-react/index.html)
+

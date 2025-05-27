@@ -4,6 +4,7 @@
 @use "card";
 
 $story-card-small-container: 600px;
+$story-card-font-size-small: 22px;
 
 .uq-story-card {
   @extend %uq-card;
@@ -22,6 +23,10 @@ $story-card-small-container: 600px;
 
 .uq-story-card__description {
   @extend %uq-card__description;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
 }
 
 .uq-story-card__top-label {
@@ -43,44 +48,46 @@ $story-card-small-container: 600px;
  * Mobile landscape/listing display.
  */
 
-.uq-story-card:not(.uq-story-card--feature) {
-  @media #{core.$screen-md-down} {
-    border-radius: 0;
-    border-inline-width: 0;
-    border-top-width: 0;
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: start;
-    gap: core.$space-m;
-    padding-bottom: core.$space-m;
-    background-color: transparent;
-
-    &:has(a:hover) {
+.uq-card-grid:not(.uq-card-grid--target-1x) {
+  .uq-story-card:not(.uq-story-card--feature) {
+    @media #{core.$screen-md-down} {
+      border-radius: 0;
+      border-inline-width: 0;
+      border-top-width: 0;
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: start;
+      gap: core.$space-m;
+      padding-bottom: core.$space-m;
       background-color: transparent;
-    }
 
-    & .uq-story-card__content {
-      padding: 0;
-    }
+      &:has(a:hover) {
+        background-color: transparent;
+      }
 
-    & .uq-story-card__image {
-      width: 120px;
-      height: 100px;
-      aspect-ratio: unset;
-      flex-shrink: 0;
-      margin-top: 6px;
-    }
+      & .uq-story-card__content {
+        padding: 0;
+      }
 
-    & .uq-story-card__description {
-      display: none;
-    }
+      & .uq-story-card__image {
+        width: 120px;
+        height: 100px;
+        aspect-ratio: unset;
+        flex-shrink: 0;
+        margin-top: 6px;
+      }
 
-    & .uq-story-card__top-label {
-      margin-bottom: 0;
-    }
+      & .uq-story-card__description {
+        display: none;
+      }
 
-    & .uq-story-card__bottom-label {
-      padding-top: core.$space-s;
+      & .uq-story-card__top-label {
+        margin-bottom: 0;
+      }
+
+      & .uq-story-card__bottom-label {
+        padding-top: core.$space-s;
+      }
     }
   }
 }
@@ -164,6 +171,12 @@ $story-card-small-container: 600px;
 
   & .uq-story-card__content {
     padding: 0;
+  }
+
+  & .uq-story-card__title {
+    @container (width < #{$story-card-small-container}) {
+      font-size: $story-card-font-size-small;
+    }
   }
 
   & .uq-story-card__image {

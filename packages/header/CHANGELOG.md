@@ -3,6 +3,38 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.0.0-alpha.5](https://github.com/uq-its-ss/design-system/compare/@uqds/header@6.0.0-alpha.4...@uqds/header@6.0.0-alpha.5) (2025-05-27)
+
+**Note:** Version bump only for package @uqds/header
+
+# [6.0.0-alpha.4](https://github.com/uq-its-ss/design-system/compare/@uqds/header@6.0.0-alpha.3...@uqds/header@6.0.0-alpha.4) (2025-05-26)
+
+**Note:** Version bump only for package @uqds/header
+
+# [6.0.0-alpha.3](https://github.com/uq-its-ss/design-system/compare/@uqds/header@6.0.0-alpha.2...@uqds/header@6.0.0-alpha.3) (2025-04-30)
+
+**Note:** Version bump only for package @uqds/header
+
+# [6.0.0-alpha.2](https://github.com/uq-its-ss/design-system/compare/@uqds/header@6.0.0-alpha.1...@uqds/header@6.0.0-alpha.2) (2025-04-30)
+
+**Note:** Version bump only for package @uqds/header
+
+# [6.0.0-alpha.1](https://github.com/uq-its-ss/design-system/compare/@uqds/header@6.0.0-alpha.0...@uqds/header@6.0.0-alpha.1) (2025-02-03)
+
+**Note:** Version bump only for package @uqds/header
+
+# [6.0.0-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/header@4.0.0-alpha.0...@uqds/header@6.0.0-alpha.0) (2025-01-20)
+
+- Merge release/1.0.4 back to master (#597) ([c85f4dd](https://github.com/uq-its-ss/design-system/commit/c85f4dd04601bad019d83edeb680dd919fd1aebb)), closes [#597](https://github.com/uq-its-ss/design-system/issues/597) [#583](https://github.com/uq-its-ss/design-system/issues/583) [#568](https://github.com/uq-its-ss/design-system/issues/568)
+
+### BREAKING CHANGES
+
+- Review updated blockquote markup
+
+- increase spacing
+
+- chore: regression test update
+
 # [5.0.0](https://github.com/uq-its-ss/design-system/compare/@uqds/header@3.0.0...@uqds/header@5.0.0) (2025-01-20)
 
 - Release/1.0.4 (#595) ([b40223d](https://github.com/uq-its-ss/design-system/commit/b40223d819d456f67620dfd880380b85214c4103)), closes [#595](https://github.com/uq-its-ss/design-system/issues/595) [#568](https://github.com/uq-its-ss/design-system/issues/568)

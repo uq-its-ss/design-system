@@ -3,6 +3,68 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0-alpha.10](https://github.com/uq-its-ss/design-system/compare/@uqds/card@3.0.0-alpha.9...@uqds/card@3.0.0-alpha.10) (2025-05-27)
+
+**Note:** Version bump only for package @uqds/card
+
+# [3.0.0-alpha.9](https://github.com/uq-its-ss/design-system/compare/@uqds/card@3.0.0-alpha.8...@uqds/card@3.0.0-alpha.9) (2025-05-26)
+
+### Bug Fixes
+
+- remove 300 weight fonts, updated to 400 weight ([#594](https://github.com/uq-its-ss/design-system/issues/594)) ([02ad03d](https://github.com/uq-its-ss/design-system/commit/02ad03d918c153cf41df3f0dfb8dc2bed19e2262))
+
+# [3.0.0-alpha.8](https://github.com/uq-its-ss/design-system/compare/@uqds/card@3.0.0-alpha.7...@uqds/card@3.0.0-alpha.8) (2025-05-14)
+
+### Bug Fixes
+
+- remove line clamp from standard cards ([#625](https://github.com/uq-its-ss/design-system/issues/625)) ([ede20d4](https://github.com/uq-its-ss/design-system/commit/ede20d466978a1837b6d0e62f0a3a018f04045e4))
+
+# [3.0.0-alpha.7](https://github.com/uq-its-ss/design-system/compare/@uqds/card@3.0.0-alpha.6...@uqds/card@3.0.0-alpha.7) (2025-04-30)
+
+### Bug Fixes
+
+- add z-index to link element::after to fix hover bug ([#620](https://github.com/uq-its-ss/design-system/issues/620)) ([e455205](https://github.com/uq-its-ss/design-system/commit/e4552059f7692a729ddceec84b3de2e792a8e2bf))
+
+# [3.0.0-alpha.6](https://github.com/uq-its-ss/design-system/compare/@uqds/card@3.0.0-alpha.5...@uqds/card@3.0.0-alpha.6) (2025-04-30)
+
+**Note:** Version bump only for package @uqds/card
+
+# [3.0.0-alpha.5](https://github.com/uq-its-ss/design-system/compare/@uqds/card@3.0.0-alpha.4...@uqds/card@3.0.0-alpha.5) (2025-04-30)
+
+**Note:** Version bump only for package @uqds/card
+
+# [3.0.0-alpha.4](https://github.com/uq-its-ss/design-system/compare/@uqds/card@3.0.0-alpha.3...@uqds/card@3.0.0-alpha.4) (2025-03-28)
+
+**Note:** Version bump only for package @uqds/card
+
+# [3.0.0-alpha.3](https://github.com/uq-its-ss/design-system/compare/@uqds/card@3.0.0-alpha.2...@uqds/card@3.0.0-alpha.3) (2025-02-03)
+
+**Note:** Version bump only for package @uqds/card
+
+# [3.0.0-alpha.2](https://github.com/uq-its-ss/design-system/compare/@uqds/card@3.0.0-alpha.1...@uqds/card@3.0.0-alpha.2) (2025-01-31)
+
+### Bug Fixes
+
+- [ITSADSSD-60892][ITSADSSD-60967]: Bug fixes for News site ([#603](https://github.com/uq-its-ss/design-system/issues/603)) ([afbdb52](https://github.com/uq-its-ss/design-system/commit/afbdb52b0957b4613a9ac7cef4eab980e4b29b05))
+
+# [3.0.0-alpha.1](https://github.com/uq-its-ss/design-system/compare/@uqds/card@3.0.0-alpha.0...@uqds/card@3.0.0-alpha.1) (2025-01-23)
+
+### Bug Fixes
+
+- story cards in 1x card grids should display as full cards ([#599](https://github.com/uq-its-ss/design-system/issues/599)) ([32f837c](https://github.com/uq-its-ss/design-system/commit/32f837cb90657a8f8e787c16e24fd0a72d9d0c15))
+
+# [3.0.0-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/card@1.0.0-alpha.3...@uqds/card@3.0.0-alpha.0) (2025-01-20)
+
+- Merge release/1.0.4 back to master (#597) ([c85f4dd](https://github.com/uq-its-ss/design-system/commit/c85f4dd04601bad019d83edeb680dd919fd1aebb)), closes [#597](https://github.com/uq-its-ss/design-system/issues/597) [#583](https://github.com/uq-its-ss/design-system/issues/583) [#568](https://github.com/uq-its-ss/design-system/issues/568)
+
+### BREAKING CHANGES
+
+- Review updated blockquote markup
+
+- increase spacing
+
+- chore: regression test update
+
 # [2.0.0](https://github.com/uq-its-ss/design-system/compare/@uqds/card@0.3.0...@uqds/card@2.0.0) (2025-01-20)
 
 - Release/1.0.4 (#595) ([b40223d](https://github.com/uq-its-ss/design-system/commit/b40223d819d456f67620dfd880380b85214c4103)), closes [#595](https://github.com/uq-its-ss/design-system/issues/595) [#568](https://github.com/uq-its-ss/design-system/issues/568)

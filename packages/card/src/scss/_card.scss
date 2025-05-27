@@ -67,6 +67,7 @@
       content: "";
       position: absolute;
       inset: 0;
+      z-index: 1;
     }
 
     &:focus {
@@ -84,10 +85,6 @@
 .uq-card__description,
 %uq-card__description {
   margin-top: core.$space-s;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 4;
-  overflow: hidden;
 }
 
 .uq-card__image,
@@ -178,7 +175,6 @@
 
     & .uq-card__image {
       width: 50%;
-      height: 100%;
     }
 
     & .uq-card__content {

@@ -1,0 +1,68 @@
+{
+  "name": "@uqds/react",
+  "version": "1.0.0-alpha.8",
+  "description": "React components",
+  "keywords": [
+    "uqds",
+    "uq",
+    "University of Queensland",
+    "design system",
+    "scss",
+    "sass",
+    "css",
+    "accordion",
+    "react"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": {
+    "name": "University of Queensland",
+    "email": "webservices@uq.edu.au",
+    "url": "https://uq.edu.au"
+  },
+  "homepage": "https://github.com/uq-its-ss/design-system#readme",
+  "license": "ISC",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/js/main.js"
+    },
+    "./src/jsx/*": "./src/jsx/*",
+    "./src/scss/*": "./src/scss/*"
+  },
+  "style": "dist/css/main.css",
+  "main": "dist/js/main.js",
+  "types": "dist/js/main.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uq-its-ss/design-system.git"
+  },
+  "scripts": {
+    "prepare": "gulp -f ../../gulpfile.js --cwd=. prepare && vite build",
+    "lint-tsc": "tsc"
+  },
+  "bugs": {
+    "url": "https://github.com/uq-its-ss/design-system/issues"
+  },
+  "dependencies": {
+    "@uqds/body": "^3.0.0-alpha.3",
+    "@uqds/card": "^3.0.0-alpha.10",
+    "@uqds/core": "^4.0.0-alpha.2",
+    "@uqds/icon": "^3.0.0-alpha.5",
+    "@uqds/layout": "6.0.0-alpha.0",
+    "@uqds/pagination": "^3.0.0-alpha.3",
+    "@uqds/pane": "^3.0.0-alpha.5",
+    "classnames": "^2.5.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.18",
+    "@vitejs/plugin-react": "^4.3.4",
+    "typescript": "^5.7.3",
+    "vite": "^6.0.11",
+    "vite-plugin-dts": "^4.5.0"
+  },
+  "peerDependencies": {
+    "react": "^18.3.1"
+  }
+}

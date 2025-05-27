@@ -1,6 +1,6 @@
 {
   "name": "@uqds/site-header",
-  "version": "6.0.0-alpha.5",
+  "version": "6.0.0",
   "description": "Site header (title, utility area, and navigation)",
   "keywords": [
     "uqds",
@@ -40,9 +40,9 @@
     "url": "https://github.com/uq-its-ss/design-system/issues"
   },
   "dependencies": {
-    "@uqds/core": "^4.0.0-alpha.2",
-    "@uqds/grid": "^3.0.0-alpha.2",
-    "@uqds/icon": "^3.0.0-alpha.5"
+    "@uqds/core": "^4.0.0",
+    "@uqds/grid": "^3.0.0",
+    "@uqds/icon": "^3.0.0"
   },
   "devDependencies": {
     "gulp": "^5.0.0"

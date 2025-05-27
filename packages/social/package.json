@@ -1,6 +1,6 @@
 {
   "name": "@uqds/social",
-  "version": "5.0.0-alpha.2",
+  "version": "5.0.0",
   "description": "Social component",
   "keywords": [
     "uqds",
@@ -51,6 +51,6 @@
     "url": "https://github.com/uq-its-ss/design-system/issues"
   },
   "dependencies": {
-    "@uqds/core": "^4.0.0-alpha.2"
+    "@uqds/core": "^4.0.0"
   }
 }

@@ -85,6 +85,10 @@
 .uq-card__description,
 %uq-card__description {
   margin-top: core.$space-s;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
 }
 
 .uq-card__image,

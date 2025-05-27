@@ -1,6 +1,6 @@
 {
   "name": "@uqds/react",
-  "version": "1.0.0-alpha.7",
+  "version": "1.0.0-alpha.8",
   "description": "React components",
   "keywords": [
     "uqds",
@@ -47,9 +47,9 @@
   },
   "dependencies": {
     "@uqds/body": "^3.0.0-alpha.3",
-    "@uqds/card": "^3.0.0-alpha.9",
+    "@uqds/card": "^3.0.0-alpha.10",
     "@uqds/core": "^4.0.0-alpha.2",
-    "@uqds/icon": "^3.0.0-alpha.4",
+    "@uqds/icon": "^3.0.0-alpha.5",
     "@uqds/layout": "6.0.0-alpha.0",
     "@uqds/pagination": "^3.0.0-alpha.3",
     "@uqds/pane": "^3.0.0-alpha.5",

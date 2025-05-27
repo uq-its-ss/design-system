@@ -1,6 +1,6 @@
 {
   "name": "@uqds/side-nav",
-  "version": "3.0.0-alpha.4",
+  "version": "3.0.0-alpha.5",
   "description": "Side nav (title, side navigation)",
   "keywords": [
     "uqds",
@@ -41,6 +41,6 @@
   },
   "dependencies": {
     "@uqds/core": "^4.0.0-alpha.2",
-    "@uqds/icon": "^3.0.0-alpha.4"
+    "@uqds/icon": "^3.0.0-alpha.5"
   }
 }

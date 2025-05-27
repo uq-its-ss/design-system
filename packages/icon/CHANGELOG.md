@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0-alpha.5](https://github.com/uq-its-ss/design-system/compare/@uqds/icon@3.0.0-alpha.4...@uqds/icon@3.0.0-alpha.5) (2025-05-27)
+
+### Features
+
+- Add Typescript type for icons ([#630](https://github.com/uq-its-ss/design-system/issues/630)) ([45f1b3c](https://github.com/uq-its-ss/design-system/commit/45f1b3cb331c4ad647f3a32028d931cb6a562591))
+
 # [3.0.0-alpha.4](https://github.com/uq-its-ss/design-system/compare/@uqds/icon@3.0.0-alpha.3...@uqds/icon@3.0.0-alpha.4) (2025-05-26)
 
 **Note:** Version bump only for package @uqds/icon

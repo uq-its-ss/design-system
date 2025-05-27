@@ -1,6 +1,6 @@
 {
   "name": "@uqds/footer",
-  "version": "6.0.0-alpha.5",
+  "version": "6.0.0-alpha.6",
   "description": "The POC UQ footer component package",
   "keywords": [
     "uqds",
@@ -37,10 +37,10 @@
     "url": "https://github.com/uq-its-ss/design-system/issues"
   },
   "dependencies": {
-    "@uqds/accordion": "^6.0.0-alpha.4",
+    "@uqds/accordion": "^6.0.0-alpha.5",
     "@uqds/core": "^4.0.0-alpha.2",
     "@uqds/grid": "^3.0.0-alpha.2",
-    "@uqds/icon": "^3.0.0-alpha.4"
+    "@uqds/icon": "^3.0.0-alpha.5"
   },
   "devDependencies": {
     "gulp": "^5.0.0"

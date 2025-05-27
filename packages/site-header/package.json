@@ -1,6 +1,6 @@
 {
   "name": "@uqds/site-header",
-  "version": "6.0.0-alpha.4",
+  "version": "6.0.0-alpha.5",
   "description": "Site header (title, utility area, and navigation)",
   "keywords": [
     "uqds",
@@ -42,7 +42,7 @@
   "dependencies": {
     "@uqds/core": "^4.0.0-alpha.2",
     "@uqds/grid": "^3.0.0-alpha.2",
-    "@uqds/icon": "^3.0.0-alpha.4"
+    "@uqds/icon": "^3.0.0-alpha.5"
   },
   "devDependencies": {
     "gulp": "^5.0.0"

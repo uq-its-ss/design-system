@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0-alpha.5](https://github.com/uq-its-ss/design-system/compare/@uqds/previous-next@3.0.0-alpha.4...@uqds/previous-next@3.0.0-alpha.5) (2025-05-27)
+
+**Note:** Version bump only for package @uqds/previous-next
+
 # [3.0.0-alpha.4](https://github.com/uq-its-ss/design-system/compare/@uqds/previous-next@3.0.0-alpha.3...@uqds/previous-next@3.0.0-alpha.4) (2025-05-26)
 
 ### Bug Fixes

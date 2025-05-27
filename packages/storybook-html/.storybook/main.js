@@ -99,7 +99,7 @@ const config = {
           reactStorybookUrl = "/error-preview-url-not-configured";
         } else {
           // Construct the dynamic URL based on the S3 deployment structure
-          reactStorybookUrl = `https://${bucketName}.s3.amazonaws.com/storybook-react/${githubRunId}/`;
+          reactStorybookUrl = `https://${bucketName}.s3.amazonaws.com/preview/${githubRunId}/storybook-react/`;
           console.log(
             `Preview React Storybook URL set to: ${reactStorybookUrl}`,
           );

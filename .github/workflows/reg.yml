@@ -32,7 +32,7 @@ jobs:
       - name: "📦️ Install dependencies"
         run: npm ci
 
-      # --- Build Storybook React ---
+      # --- Build Storybook REACT ---
       - name: "Build Storybook REACT"
         run: |
            npm run build-storybook

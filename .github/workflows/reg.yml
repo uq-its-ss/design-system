@@ -46,6 +46,10 @@ jobs:
           npm run build-storybook
         working-directory: packages/storybook-html/
 
+      # --- Generate screenshots ---
+      - name: Generate screenshot config from Storybook
+        run: node scripts/generate-screenshot-config.js
+
       # --- Visual Regression (targets storybook-html) ---
       - name: "Serve Storybook HTML for VRT"
         run: |

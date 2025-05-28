@@ -13,7 +13,7 @@ console.log(`Generating ${outputConfigPath} from ${storiesJsonPath}...`);
 
 try {
   const storiesData = JSON.parse(fs.readFileSync(storiesJsonPath, "utf8"));
-  const stories = storiesData.stories;
+   const stories = storiesData.entries;
 
   // Initialize the 'uris' object
   const uris = {};

@@ -1,9 +1,14 @@
 {
   "uris": {
-    "core-colour--brand": "http://localhost:6006/iframe.html?id=core-colour--brand"
   },
   "viewports": {
-    "mobile": { "width": 375, "height": 932 },
-    "desktop": { "width": 1280, "height": 900 }
+    "mobile": {
+      "width": 375,
+      "height": 932
+    },
+    "desktop": {
+      "width": 1280,
+      "height": 900
+    }
   }
 }

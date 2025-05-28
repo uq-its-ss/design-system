@@ -4,7 +4,7 @@ const path = require("path");
 
 const storybookStaticDir = path.join(
   __dirname,
-  "../packages/storybook-html/storybook-static/",
+  "../packages/storybook-html/storybook-static",
 ); // Adjust if your build directory is different
 const storiesJsonPath = path.join(storybookStaticDir, "stories.json");
 const outputConfigPath = path.join(__dirname, "./screenshot.config.json");

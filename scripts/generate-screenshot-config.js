@@ -6,7 +6,7 @@ const storybookStaticDir = path.join(
   __dirname,
   "../packages/storybook-html/storybook-static",
 ); // Adjust if your build directory is different
-const storiesJsonPath = path.join(storybookStaticDir, "stories.json");
+const storiesJsonPath = path.join(storybookStaticDir, "index.json");
 const outputConfigPath = path.join(__dirname, "./screenshot.config.json");
 
 console.log(`Generating ${outputConfigPath} from ${storiesJsonPath}...`);
@@ -52,7 +52,7 @@ try {
 } catch (error) {
   console.error("Error generating screenshot config:", error);
   console.error(
-    "Ensure Storybook has been built and stories.json exists at:",
+    "Ensure Storybook has been built and index.json exists at:",
     storiesJsonPath,
   );
   process.exit(1); // Exit with an error code

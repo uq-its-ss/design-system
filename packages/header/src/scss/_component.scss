@@ -63,7 +63,7 @@
         display: block;
         font-family: core.$roboto;
         font-size: core.$font-size-m;
-        text-align: right;
+        text-align: center;
         width: 3.2rem;
       }
     }
@@ -140,12 +140,19 @@
 
     @media #{core.$screen-lg-up} {
       &:hover {
-        color: #d4c8de;
-        text-decoration: underline;
+        text-decoration: none;
+      
+        .search-toggle__label {
+          background-color: core.$white;
+          color: core.$purple-500;
+        }
       }
     }
 
+
     &--is-open {
+
+      text-align: center;
       &::before {
         background-image: url(icon-constants.get-icon(
           "standard--x",
@@ -210,9 +217,10 @@
     margin: 0;
 
     &--is-open {
-      background-color: core.$white;
+      
 
       .uq-header__nav-primary-link {
+        background-color: core.$white;
         color: core.$purple-500;
         text-decoration: none;
       }
@@ -276,8 +284,10 @@
         right: 1rem;
       }
     }
+  }
 
-    &:hover {
+  .nav-primary-link--has-dropdown:hover,  
+  .uq-header__nav-primary-item--is-open > .nav-primary-link--has-dropdown {
       &::after {
         background-image: url(icon-constants.get-icon(
           "standard--chevron-down-sml",
@@ -285,7 +295,6 @@
         ));
       }
     }
-  }
 
   .mega-menu {
     display: none;
@@ -355,24 +364,24 @@
 
   &__nav-secondary-item {
     margin: 0;
+    padding: core.$space-m core.$space-l;
+
+    @media #{core.$screen-lg-up} {
+      padding: 0.625rem core.$space-m;
+      font-size: core.$font-size-s;
+    }
   }
 
   &__nav-secondary-link {
     display: block;
     color: white;
-    padding: core.$space-m core.$space-l;
     text-decoration: none;
     font-weight: core.$font-weight-normal;
 
-    @media #{core.$screen-lg-up} {
-      font-size: core.$font-size-s;
-      padding: 0.625rem core.$space-m;
-    }
-
     &:hover {
-      color: #d4c8de;
+      color: core.$purple-500;
       text-decoration: underline;
-      background-color: transparent;
+      background-color: core.$white;;
       text-decoration: underline;
     }
   }

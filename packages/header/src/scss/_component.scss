@@ -571,9 +571,14 @@
     text-decoration: none;
 
     &:hover {
-      background-color: core.$purple-500;
-      color: core.$white;
-      text-decoration: underline;
+      background-color: transparent;
+      color: transparent;
+
+      .megamenu__overview-label {
+        background-color: core.$purple-500;
+        color: core.$white;
+        text-decoration: underline;
+      }
     }
   }
 

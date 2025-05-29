@@ -578,7 +578,8 @@
     text-decoration: none;
 
     &:hover {
-      background-color: transparent;
+      background-color: core.$purple-500;
+      color: core.$white;
       text-decoration: underline;
     }
   }
@@ -605,13 +606,14 @@
 
         & a {
           display: inline-block;
-          padding-top: core.$space-s;
+          margin-top: core.$space-s;
           color: core.$purple-500;
           text-decoration: none;
           font-weight: core.$font-weight-normal;
 
           &:hover {
-            background-color: transparent;
+            background-color: core.$purple-500;
+            color: core.$white;
             text-decoration: underline;
           }
         }

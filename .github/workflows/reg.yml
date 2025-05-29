@@ -51,6 +51,11 @@ jobs:
         run: node scripts/generate-screenshot-config.js
 
       # --- Visual Regression (targets storybook-html) ---
+      - name: "Serve Storybook REACT for VRT"
+        run: |
+          npm run serve-storybook &
+        working-directory: packages/storybook-react/
+
       - name: "Serve Storybook HTML for VRT"
         run: |
           npm run serve-storybook &

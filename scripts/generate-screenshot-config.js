@@ -4,10 +4,18 @@ const path = require('path');
 
 const outputConfigPath = path.join(__dirname, './screenshot.config.json');
 
-// Define paths to your Storybook static build directories
-const storybookBuildPaths = [
-  path.join(__dirname, '../packages/storybook-html/storybook-static'),
-  path.join(__dirname, '../packages/storybook-react/storybook-static')
+// Define paths to your Storybook static build directories ALONG WITH THEIR BASE URLs
+const storybookBuildConfigs = [
+  {
+    name: 'html', // Optional: for logging/identification
+    path: path.join(__dirname, '../packages/storybook-html/storybook-static'),
+    baseUrl: 'http://localhost:6006'
+  },
+  {
+    name: 'react', // Optional: for logging/identification
+    path: path.join(__dirname, '../packages/storybook-react/storybook-static'),
+    baseUrl: 'http://localhost:6007'
+  }
 ];
 
 console.log('Generating screenshot config from multiple Storybook builds...');
@@ -15,10 +23,12 @@ console.log('Generating screenshot config from multiple Storybook builds...');
 try {
   let combinedEntries = {}; // This will hold all unique stories from both builds
 
-  for (const buildPath of storybookBuildPaths) {
+  for (const buildConfig of storybookBuildConfigs) {
+    const buildPath = buildConfig.path;
+    const baseUrl = buildConfig.baseUrl; // Get the base URL for the current build
     const indexJsonPath = path.join(buildPath, 'index.json');
 
-    console.log(`Processing: ${indexJsonPath}`);
+    console.log(`Processing build: ${buildConfig.name || buildPath} from ${indexJsonPath}`);
 
     if (!fs.existsSync(indexJsonPath)) {
       console.warn(`Warning: index.json not found at ${indexJsonPath}. Skipping this build.`);
@@ -29,25 +39,32 @@ try {
 
     if (storiesData && storiesData.entries) {
       // Merge entries from the current build into the combinedEntries object
-      // If there are duplicate story IDs (unlikely but possible), the last one processed will win.
-      Object.assign(combinedEntries, storiesData.entries);
-      console.log(`Found ${Object.keys(storiesData.entries).length} entries in ${path.basename(buildPath)}.`);
+      // We'll store the story object along with its base URL for later use
+      Object.keys(storiesData.entries).forEach(key => {
+        const story = storiesData.entries[key];
+        // Only include actual stories here if you want to avoid docs pages in your combined list
+        if (story.type === 'story') {
+            combinedEntries[key] = {
+                ...story, // Spread existing story properties
+                _baseUrl: baseUrl // Add the base URL specific to this story's origin
+            };
+        }
+      });
+      console.log(`Found ${Object.keys(storiesData.entries).length} entries in ${buildConfig.name || buildPath}.`);
     } else {
-      console.warn(`Warning: 'entries' key not found in ${indexJsonPath}. Skipping this build.`);
+      console.warn(`Warning: 'entries' key not found or empty in ${indexJsonPath}. Skipping this build.`);
     }
   }
 
   // Initialize the 'uris' object from the combined entries
   const uris = {};
 
-  Object.keys(combinedEntries)
-    .filter(key => combinedEntries[key].type === 'story') // Only include actual stories (not docs)
-    .forEach(key => {
+  Object.keys(combinedEntries).forEach(key => {
       const story = combinedEntries[key];
-      // Construct the iframe URL for the story
-      const url = `/iframe.html?id=${story.id}`;
-      uris[story.id] = url; // Assign the URL to the story ID key
-    });
+      // Use the stored _baseUrl to construct the full URL
+      const url = `${story._baseUrl}/iframe.html?id=${story.id}`;
+      uris[story.id] = url; // Assign the full URL to the story ID key
+  });
 
   // Define the static viewports settings
   const viewports = {

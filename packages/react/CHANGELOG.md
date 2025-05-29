@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.0.0 (2025-05-27)
+
+- Release/1.0.5 (#631) ([e247c79](https://github.com/uq-its-ss/design-system/commit/e247c790585abe267b95de489381efe25107a7bb)), closes [#631](https://github.com/uq-its-ss/design-system/issues/631) [#568](https://github.com/uq-its-ss/design-system/issues/568)
+
+### BREAKING CHANGES
+
+- Review updated blockquote markup
+
+- increase spacing
+
+- chore: regression test update
+
+# [1.0.0-alpha.8](https://github.com/uq-its-ss/design-system/compare/@uqds/react@1.0.0-alpha.7...@uqds/react@1.0.0-alpha.8) (2025-05-27)
+
+**Note:** Version bump only for package @uqds/react
+
+# [1.0.0-alpha.7](https://github.com/uq-its-ss/design-system/compare/@uqds/react@1.0.0-alpha.6...@uqds/react@1.0.0-alpha.7) (2025-05-27)
+
+**Note:** Version bump only for package @uqds/react
+
+# [1.0.0-alpha.6](https://github.com/uq-its-ss/design-system/compare/@uqds/react@1.0.0-alpha.5...@uqds/react@1.0.0-alpha.6) (2025-05-26)
+
+**Note:** Version bump only for package @uqds/react
+
 # [1.0.0-alpha.5](https://github.com/uq-its-ss/design-system/compare/@uqds/react@1.0.0-alpha.4...@uqds/react@1.0.0-alpha.5) (2025-05-14)
 
 **Note:** Version bump only for package @uqds/react

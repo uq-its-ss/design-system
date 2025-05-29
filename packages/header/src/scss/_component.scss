@@ -141,7 +141,7 @@
     @media #{core.$screen-lg-up} {
       &:hover {
         text-decoration: none;
-      
+
         .search-toggle__label {
           background-color: core.$white;
           color: core.$purple-500;
@@ -149,9 +149,7 @@
       }
     }
 
-
     &--is-open {
-
       text-align: center;
       &::before {
         background-image: url(icon-constants.get-icon(
@@ -217,15 +215,11 @@
     margin: 0;
 
     &--is-open {
-      
-
       .uq-header__nav-primary-link {
         background-color: core.$white;
         color: core.$purple-500;
         text-decoration: none;
       }
-
-
 
       & > .uq-header__megamenu {
         height: auto;
@@ -233,7 +227,7 @@
       }
 
       & .uq-header__nav-primary-link {
-       // border-bottom: 4px solid white;
+        // border-bottom: 4px solid white;
       }
     }
 
@@ -247,8 +241,7 @@
     color: core.$white; //core.$purple-500;
     text-decoration: none;
     padding: core.$space-m core.$space-xl;
-    transition:
-      background-color 0.25s;
+    transition: background-color 0.25s;
     font-weight: core.$font-weight-normal;
     position: relative;
 
@@ -286,15 +279,15 @@
     }
   }
 
-  .nav-primary-link--has-dropdown:hover,  
+  .nav-primary-link--has-dropdown:hover,
   .uq-header__nav-primary-item--is-open > .nav-primary-link--has-dropdown {
-      &::after {
-        background-image: url(icon-constants.get-icon(
-          "standard--chevron-down-sml",
-          core.$purple-500
-        ));
-      }
+    &::after {
+      background-image: url(icon-constants.get-icon(
+        "standard--chevron-down-sml",
+        core.$purple-500
+      ));
     }
+  }
 
   .mega-menu {
     display: none;
@@ -381,7 +374,7 @@
     &:hover {
       color: core.$purple-500;
       text-decoration: underline;
-      background-color: core.$white;;
+      background-color: core.$white;
       text-decoration: underline;
     }
   }
@@ -819,7 +812,6 @@ body.no-scroll {
   .uq-header__newglobal-nav-item {
     background-color: core.$purple-500;
   }
-
 
   .uq-header__newglobal-nav-link {
     color: core.$white;

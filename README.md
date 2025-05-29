@@ -30,7 +30,7 @@ Contents:
 - [Accessibility requirements [TODO]](./docs/accessibility.md)
 - Testing
   - [FUTURE] Accessibility testing
-  - [Visual Regression Testing](./docs/visual-regression.md)
+  - [Visual Regression Testing](./docs/testing/visual-regression.md)
 - Package docs
   - [`icons`](./packages/icon/MAINTENANCE.md)
   - [`uqds-builder`](./packages/uqds-builder#readme)

@@ -114,37 +114,37 @@ After a GitHub Action run completes, you can review the Visual Regression result
 
 ### GitHub Action logs
 
-The run summary will indicate whether the `Visual Regression Testing` job passed or failed. 
+The run summary will indicate whether the `Visual Regression Testing` job passed or failed.
 
-- **Previous Snapshot** detects the previous visual regression. 
-    ```javascript
-    [reg-suit] info Detected the previous snapshot key: '206e0b3a360c71f3524fb6d25ff38cf4f6275773'
-    [reg-publish-s3-plugin] info Download 442 files from uq-ds-regsuit.
-    ```
+- **Previous Snapshot** detects the previous visual regression.
+  ```javascript
+  [reg-suit] info Detected the previous snapshot key: '206e0b3a360c71f3524fb6d25ff38cf4f6275773'
+  [reg-publish-s3-plugin] info Download 442 files from uq-ds-regsuit.
+  ```
 - **Comparison and current snapshot** Will indicate changed, new, deleted and passed items
-    ```javascript
-    [reg-suit] info    Changed items: 0
-    [reg-suit] info    New items: 80
-    [reg-suit] info    Deleted items: 22
-    [reg-suit] info    Passed items: 420
-    [reg-suit] info The current snapshot key: 'ecca89a09e154107b250f8668371c7134794170c'
-    ```
-- **Publish snapshot** indicates successful publish to S3 bucket and report URL. 
-    ```javascript
-    [reg-publish-s3-plugin] info Upload 946 files to uq-ds-regsuit.
-    [reg-suit] info Published snapshot 'ecca89a09e154107b250f8668371c7134794170c' successfully.
-    [reg-suit] info Report URL: https://uq-ds-regsuit.s3.amazonaws.com/regression/ecca89a09e154107b250f8668371c7134794170c/index.html
-    ```
+  ```javascript
+  [reg-suit] info    Changed items: 0
+  [reg-suit] info    New items: 80
+  [reg-suit] info    Deleted items: 22
+  [reg-suit] info    Passed items: 420
+  [reg-suit] info The current snapshot key: 'ecca89a09e154107b250f8668371c7134794170c'
+  ```
+- **Publish snapshot** indicates successful publish to S3 bucket and report URL.
+  ```javascript
+  [reg-publish-s3-plugin] info Upload 946 files to uq-ds-regsuit.
+  [reg-suit] info Published snapshot 'ecca89a09e154107b250f8668371c7134794170c' successfully.
+  [reg-suit] info Report URL: https://uq-ds-regsuit.s3.amazonaws.com/regression/ecca89a09e154107b250f8668371c7134794170c/index.html
+  ```
 
 ### GitHub pull request's comment
 
 `reg-notify-github-plugin` will send the comparison result as the GitHub pull request's comment.
 
 - **Pull request comment** comment will typically indicate which tests were new, deleted, passed, or had differences.
-[Regression summary]: https://github.com/reg-viz/reg-suit/blob/master/packages/reg-notify-github-plugin/images/capt_pr_comment.png "regression summary"
+  [Regression summary]: https://github.com/reg-viz/reg-suit/blob/master/packages/reg-notify-github-plugin/images/capt_pr_comment.png "regression summary"
 
 - **View report** If changes have been flagged the report will provide a visual comparison of artifacts, including difference images (highlighting visual deviations).
-[Difference images]: https://raw.githubusercontent.com/reg-viz/reg-suit-lp/master/src/images/chrome_mobile.png "Difference images"
+  [Difference images]: https://raw.githubusercontent.com/reg-viz/reg-suit-lp/master/src/images/chrome_mobile.png "Difference images"
 
 ---
 

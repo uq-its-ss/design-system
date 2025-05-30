@@ -1,29 +1,29 @@
-## UQ Design System: Automated Visual Regression Testing
+# Visual Regression Testing (Automated)
 
 This document outlines the automated visual regression testing process implemented in the UQ Design System. It provides an overview for developers contributing components and detailed information for maintainers responsible for the testing infrastructure.
 
 ---
 
-### 1. Purpose of Visual Regression Testing
+## 1. Purpose of Visual Regression Testing
 
 Visual regression testing is crucial for the UQ Design System to ensure that visual changes to components are intentional and do not introduce unintended side effects across different parts of the system or break existing components. By comparing screenshots of components over time, we can quickly identify and address unwanted visual deviations, maintaining a consistent and high-quality user interface.
 
 ---
 
-### 2. Overview of the Automated Process
+## 2. Overview of the Automated Process
 
-Our visual regression testing is integrated into the GitHub Actions workflow. When changes are pushed to specific branches (e.g., `main`, `develop`, or pull requests), a dedicated GitHub Action is triggered. This action automates the following steps:
+Our visual regression testing is integrated into the GitHub Actions workflow. When changes are pushed to specific branches (e.g., `pull requests`, `master`, or `releases`), a dedicated GitHub Action is triggered. This action automates the following steps:
 
 1.  **Builds Storybook instances:** It compiles both the HTML and React Storybooks into static bundles.
 2.  **Generates Test Configuration:** A script automatically discovers all active stories from the built Storybooks and generates a `screenshot.config.json` file. This file includes the specific `localhost` URLs for each story (based on their respective Storybook ports) and defined viewport settings.
-3.  **Runs Regression Tests:** An external visual regression testing tool (driven by `screenshot.js`) consumes the generated `screenshot.config.json` to navigate to each Storybook story at specified viewports, capture screenshots, and compare them against a baseline.
-4.  **Reports Results:** The results, including any detected visual differences, are reported back in the GitHub Action run.
+3.  **Runs Regression Tests:** `reg-suit` visual regression testing tool (driven by `screenshot.js`) consumes the generated `screenshot.config.json` to navigate to each Storybook story at specified viewports, capture screenshots, and compare them against a baseline.
+4.  **Reports Results:** The results, including any detected visual differences, are reported back in the GitHub Action run and posted as a comment in the `pull request`.
 
 This automation ensures that every new component or story is automatically included in the regression test suite, removing the need for manual configuration updates and guaranteeing comprehensive coverage.
 
 ---
 
-### 3. Key Files and Their Roles
+## 3. Key Files and Their Roles
 
 Understanding these files is essential for both using and maintaining the system:
 
@@ -66,22 +66,22 @@ Understanding these files is essential for both using and maintaining the system
 
 ---
 
-### 4. How the Automation Works (Detailed Flow in `reg.yml`)
+## 4. How the Automation Works (Detailed Flow in `reg.yml`)
 
 When the `reg.yml` workflow is triggered:
 
 1.  **Checkout Code:** The repository code is checked out.
 2.  **Node.js Setup:** Node.js is installed to run the scripts.
 3.  **Install Dependencies:** `npm ci` installs all project dependencies.
-4.  **Build Storybook (HTML):** The command `npm run build-storybook:html` is executed, which compiles the HTML Storybook and generates its static assets, including `index.json` in `packages/storybook-html/storybook-static/`.
-5.  **Build Storybook (React):** The command `npm run build-storybook:react` is executed, compiling the React Storybook and generating its static assets, including `index.json` in `packages/storybook-react/storybook-static/`.
+4.  **Build Storybook (React):** The command `npm run build-storybook:react` is executed, compiling the React Storybook and generating its static assets, including `index.json` in `packages/storybook-react/storybook-static/`.
+5.  **Build Storybook (HTML):** The command `npm run build-storybook:html` is executed, which compiles the HTML Storybook and generates its static assets, including `index.json` in `packages/storybook-html/storybook-static/`.
 6.  **Generate Screenshot Config:** `node scripts/generate-screenshot-config.js` is run. This script:
-    - Reads `packages/storybook-html/storybook-static/index.json`.
     - Reads `packages/storybook-react/storybook-static/index.json`.
+    - Reads `packages/storybook-html/storybook-static/index.json`.
     - Combines all `type: "story"` entries from both files.
     - For each story, it creates a full URL:
-      - `http://localhost:6006/iframe.html?id=<storyId>` for HTML stories.
       - `http://localhost:6007/iframe.html?id=<storyId>` for React stories.
+      - `http://localhost:6006/iframe.html?id=<storyId>` for HTML stories.
     - Writes the final `uris` (with correct base URLs) and `viewports` to `scripts/screenshot.config.json`.
 7.  **Run Regression Tests:** `node scripts/screenshot.js` is executed. This script then uses the newly generated `screenshot.config.json` to instruct your visual regression tool to:
     - Spin up local web servers for `packages/storybook-html/storybook-static` on port `6006` and `packages/storybook-react/storybook-static` on port `6007` (or connect to pre-existing ones if your `screenshot.js` handles that).
@@ -92,7 +92,7 @@ When the `reg.yml` workflow is triggered:
 
 ---
 
-### 5. How to Add a New Component/Story for Testing
+## 5. How to Add a New Component/Story for Testing
 
 One of the main benefits of this automation is simplicity for developers:
 
@@ -108,21 +108,47 @@ One of the main benefits of this automation is simplicity for developers:
 
 ---
 
-### 6. Understanding Test Results
+## 6. Understanding Test Results
 
-After a GitHub Action run completes, you can review the visual regression test results:
+After a GitHub Action run completes, you can review the Visual Regression results:
 
-- **GitHub Action Summary:** The run summary will indicate whether the `regression` job passed or failed.
-- **Logs:** Drill down into the "Run regression tests" step to view the detailed output from `scripts/screenshot.js`. This will typically indicate which tests passed, failed, or had differences.
-- **Artifacts:** If your `screenshot.js` or the underlying regression tool is configured to upload artifacts, you might find:
-  - New screenshots (baseline or actual).
-  - Difference images (highlighting visual deviations).
-  - HTML reports (for detailed visual comparison in a browser).
-  - Look for a "Summary" or "Artifacts" tab in the GitHub Actions run details.
+### GitHub Action logs
+
+The run summary will indicate whether the `Visual Regression Testing` job passed or failed. 
+
+- **Previous Snapshot** detects the previous visual regression. 
+    ```javascript
+    [reg-suit] info Detected the previous snapshot key: '206e0b3a360c71f3524fb6d25ff38cf4f6275773'
+    [reg-publish-s3-plugin] info Download 442 files from uq-ds-regsuit.
+    ```
+- **Comparison and current snapshot** Will indicate changed, new, deleted and passed items
+    ```javascript
+    [reg-suit] info    Changed items: 0
+    [reg-suit] info    New items: 80
+    [reg-suit] info    Deleted items: 22
+    [reg-suit] info    Passed items: 420
+    [reg-suit] info The current snapshot key: 'ecca89a09e154107b250f8668371c7134794170c'
+    ```
+- **Publish snapshot** indicates successful publish to S3 bucket and report URL. 
+    ```javascript
+    [reg-publish-s3-plugin] info Upload 946 files to uq-ds-regsuit.
+    [reg-suit] info Published snapshot 'ecca89a09e154107b250f8668371c7134794170c' successfully.
+    [reg-suit] info Report URL: https://uq-ds-regsuit.s3.amazonaws.com/regression/ecca89a09e154107b250f8668371c7134794170c/index.html
+    ```
+
+### GitHub pull request's comment
+
+`reg-notify-github-plugin` will send the comparison result as the GitHub pull request's comment.
+
+- **Pull request comment** comment will typically indicate which tests were new, deleted, passed, or had differences.
+[Regression summary]: https://github.com/reg-viz/reg-suit/blob/master/packages/reg-notify-github-plugin/images/capt_pr_comment.png "regression summary"
+
+- **View report** If changes have been flagged the report will provide a visual comparison of artifacts, including difference images (highlighting visual deviations).
+[Difference images]: https://raw.githubusercontent.com/reg-viz/reg-suit-lp/master/src/images/chrome_mobile.png "Difference images"
 
 ---
 
-### 7. Troubleshooting Common Issues
+## 7. Troubleshooting Common Issues
 
 - **`index.json` not found:**
   - **Cause:** The Storybook build step (`npm run build-storybook:html` or `npm run build-storybook:react`) might have failed, or the `storybookStaticDir` paths in `generate-screenshot-config.js` are incorrect.
@@ -148,7 +174,7 @@ After a GitHub Action run completes, you can review the visual regression test r
 
 ---
 
-### 8. Maintenance and Future Considerations
+## 8. Maintenance and Future Considerations
 
 - **Updating Storybook Versions:** When upgrading Storybook, always check for changes in the `index.json` format or build output locations. The `generate-screenshot-config.js` script might need minor adjustments.
 - **Adding New Storybook Instances:** If you introduce another Storybook instance (e.g., for a different framework), you will need to:

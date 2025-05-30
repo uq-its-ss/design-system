@@ -26,8 +26,12 @@
   "type": "module",
   "exports": {
     ".": {
-      "import": "./dist/js/main.js"
+      "import": {
+        "types": "./dist/js/main.d.ts",
+        "default": "./dist/js/main.js"
+      }
     },
+    "./tsx": "./src/jsx/main.tsx",
     "./src/jsx/*": "./src/jsx/*",
     "./src/scss/*": "./src/scss/*"
   },
@@ -47,6 +51,7 @@
   },
   "dependencies": {
     "@uqds/body": "^4.0.0",
+    "@uqds/button": "^4.0.0",
     "@uqds/card": "^4.0.1",
     "@uqds/core": "^5.0.0",
     "@uqds/icon": "^4.0.1",

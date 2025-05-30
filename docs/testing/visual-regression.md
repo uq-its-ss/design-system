@@ -141,10 +141,10 @@ The run summary will indicate whether the `Visual Regression Testing` job passed
 `reg-notify-github-plugin` will send the comparison result as the GitHub pull request's comment.
 
 - **Pull request comment** comment will typically indicate which tests were new, deleted, passed, or had differences.
-  ![Regression summary](https://github.com/reg-viz/reg-suit/blob/master/packages/reg-notify-github-plugin/images/capt_pr_comment.png)
+![Regression summary](https://github.com/reg-viz/reg-suit/blob/master/packages/reg-notify-github-plugin/images/capt_pr_comment.png)
 
 - **View report** If changes have been flagged the report will provide a visual comparison of artifacts, including difference images (highlighting visual deviations).
-  ![Difference images](https://raw.githubusercontent.com/reg-viz/reg-suit-lp/master/src/images/chrome_mobile.png)
+![Difference images](https://raw.githubusercontent.com/reg-viz/reg-suit-lp/master/src/images/chrome_mobile.png)
 
 ---
 
@@ -183,5 +183,3 @@ The run summary will indicate whether the `Visual Regression Testing` job passed
   3.  Ensure its `index.json` is correctly generated.
   4.  Update `reg.yml` to start/manage its static server.
 - **Changing Ports:** If the ports (`6006`, `6007`) for serving Storybook instances change, update them in `scripts/generate-screenshot-config.js` (within `storybookBuildConfigs`) and in your `reg.yml` workflow (`http-server` commands and `wait-on` scripts).
-- **Performance:** For very large design systems, crawling all stories might become slow. Consider optimizations like parallelizing screenshot capture or using a dedicated visual regression service.
-- **Baseline Management:** Establish a clear process for reviewing and updating visual regression baselines. This is crucial for maintaining the effectiveness of the tests.

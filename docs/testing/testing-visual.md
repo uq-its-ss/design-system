@@ -1,3 +1,0 @@
-# Visual unit testing
-
-[FUTURE]

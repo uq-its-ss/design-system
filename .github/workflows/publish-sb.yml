@@ -24,7 +24,13 @@ jobs:
       - name: "📦️ Install dependencies and build"
         run: npm ci
 
-      # --- Build Storybook React ---
+      # --- Build UQDS-BUILDER ---
+      - name: "Build UQDS-BUILDER"
+        run: |
+           npm run prepare
+        working-directory: packages/uqds-builder/
+
+      # --- Build Storybook REACT ---
       - name: "Build Storybook REACT"
         run: |
           npm run build-storybook
@@ -56,6 +62,11 @@ jobs:
           aws-region: ap-southeast-2
           role-session-name: GitHubActions-S3Sync-Staging-${{ github.run_id }}
 
+      - name: "UQDS-BUILDER: Sync to staging environment"
+        if: ${{ github.ref_name == 'master' }}
+        run: |
+          aws s3 cp packages/uqds-builder/dist s3://${{ secrets.AWS_S3_BUCKET_STAGING }} --follow-symlinks --recursive
+
       - name: "Storybook REACT: Sync master to staging environment"
         if: ${{ github.ref_name == 'master' }}
         run: |
@@ -74,6 +85,11 @@ jobs:
           role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME_PRODUCTION }}
           aws-region: ap-southeast-2
           role-session-name: GitHubActions-S3Sync-Production-${{ github.run_id }}
+
+      - name: "UQDS-BUILDER: Sync releases to Production environment"
+        if: ${{ github.ref_name == 'releases' }}
+        run: |
+          aws s3 cp packages/uqds-builder/dist s3://${{ secrets.AWS_S3_BUCKET_PRODUCTION }} --follow-symlinks --recursive
 
       - name: "Storybook REACT: Sync releases to Production environment"
         if: ${{ github.ref_name == 'releases' }}

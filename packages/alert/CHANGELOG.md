@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.0.0](https://github.com/uq-its-ss/design-system/compare/@uqds/alert@5.0.0...@uqds/alert@6.0.0) (2025-05-27)
+
+- Release/1.0.5 (#631) ([e247c79](https://github.com/uq-its-ss/design-system/commit/e247c790585abe267b95de489381efe25107a7bb)), closes [#631](https://github.com/uq-its-ss/design-system/issues/631) [#568](https://github.com/uq-its-ss/design-system/issues/568)
+
+### BREAKING CHANGES
+
+- Review updated blockquote markup
+
+- increase spacing
+
+- chore: regression test update
+
+# [6.0.0-alpha.6](https://github.com/uq-its-ss/design-system/compare/@uqds/alert@6.0.0-alpha.5...@uqds/alert@6.0.0-alpha.6) (2025-05-27)
+
+**Note:** Version bump only for package @uqds/alert
+
+# [6.0.0-alpha.5](https://github.com/uq-its-ss/design-system/compare/@uqds/alert@6.0.0-alpha.4...@uqds/alert@6.0.0-alpha.5) (2025-05-26)
+
+**Note:** Version bump only for package @uqds/alert
+
+# [6.0.0-alpha.4](https://github.com/uq-its-ss/design-system/compare/@uqds/alert@6.0.0-alpha.3...@uqds/alert@6.0.0-alpha.4) (2025-05-12)
+
+**Note:** Version bump only for package @uqds/alert
+
 # [6.0.0-alpha.3](https://github.com/uq-its-ss/design-system/compare/@uqds/alert@6.0.0-alpha.2...@uqds/alert@6.0.0-alpha.3) (2025-04-30)
 
 **Note:** Version bump only for package @uqds/alert

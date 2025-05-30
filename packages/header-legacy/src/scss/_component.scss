@@ -9,7 +9,7 @@
   background: core.$purple-gradient;
   box-sizing: border-box;
   font-family: core.$font-body;
-  font-weight: core.$font-weight-thin;
+  font-weight: 300;
   line-height: core.$line-height;
 
   &__container {
@@ -112,7 +112,7 @@
     &-link {
       color: core.$white;
       font-size: core.$font-size-s;
-      font-weight: core.$font-weight-thin;
+      font-weight: 300;
       text-decoration: none;
 
       &:hover,

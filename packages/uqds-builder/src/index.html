@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>UQ Design System</title>
+  <link href="favicon.ico" type="image/x-icon" rel="shortcut icon" />
+  <link href="favicon.ico" type="image/x-icon" rel="icon" />
+  <link rel="stylesheet" type="text/css"
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto:wght@300;400;500&display=swap" />
+  <link rel="stylesheet" type="text/css" href="css/main.css" />
+</head>
+
+<body>
+
+  <header class="uq-header" data-gtm-category="Header">
+    <div class="uq-header__container">
+      <div class="uq-header__menu-toggle" data-target="global-mobile-nav" data-gtm-category="Primary header">
+        <button type="button" class="nav-primary__toggle nav-primary__menu-toggle slide-menu__control"
+          data-target="global-mobile-nav" data-action="toggle" data-gtm-action="Toggle">Menu</button>
+      </div>
+      <div class="uq-header__logo" data-gtm-category="Primary header">
+        <a class="logo--large" href="https://www.uq.edu.au" data-gtm-label="UQ Logo">
+          <img alt="The University of Queensland"
+            src="https://static.uq.net.au/v15/logos/corporate/uq-logo--reversed.svg">
+        </a>
+      </div>
+      <div class="uq-header__nav-primary" data-gtm-category="Primary header">
+        <nav class="uq-header__nav-primary-container" aria-label="primary navigation">
+          <ul class="uq-header__nav-primary-list">
+            <li class="uq-header__nav-primary-item"><a class="uq-header__nav-primary-link"
+                href="https://study.uq.edu.au">Study</a></li>
+            <li class="uq-header__nav-primary-item"><a class="uq-header__nav-primary-link"
+                href="https://research.uq.edu.au">Research</a></li>
+            <li class="uq-header__nav-primary-item"><a class="uq-header__nav-primary-link"
+                href="https://partners-community.uq.edu.au">Partners and community</a></li>
+            <li class="uq-header__nav-primary-item"><a class="uq-header__nav-primary-link"
+                href="https://about.uq.edu.au">About</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="uq-header__search-toggle" data-gtm-category="Search">
+        <button class="nav-primary__toggle nav-primary__search-toggle" data-gtm-action="Toggle">
+          <div class="search-toggle__label">Search</div>
+        </button>
+      </div>
+    </div>
+    <nav class="slide-menu global-mobile-nav" id="global-mobile-nav" aria-label="primary navigation mobile">
+      <div class="uq-site-header__title-container">
+        <div class="uq-site-header__title-container__left">
+          <a href="" class="uq-site-header__title">UQ Design System</a>
+        </div>
+      </div>
+      <ul>
+        <li data-gtm-category="Main navigation">
+          <a class="global-mobile-nav__audience-link slide-menu__control" href="#" data-gtm-label="Study">Build using the Design System</a>
+          <ul>
+            <li>
+              <a href="storybook-html/index.html" data-gtm-label="HTML, CSS, JS components">HTML, CSS, JS components</a>
+            </li>
+            <li>
+              <a href="storybook-react/index.html" data-gtm-label="REACT component library">REACT component library</a>
+            </li>
+            <li>
+              <a href="https://www.figma.com/design/Li7SZkmaLgw8ZdiHje2q7x/One-UQ-component-library?m=auto&t=Qv6W7wBqvGj5S1EZ-6" data-gtm-label="FIGMA component library">FIGMA component library</a>
+            </li>
+          </ul>
+        </li>
+        <li data-gtm-category="Main navigation">
+          <a class="global-mobile-nav__audience-link slide-menu__control" href="/admissions" aria-haspopup="true"
+            aria-expanded="false" data-gtm-label="Community">Community</a>
+          <ul>
+            <li>
+              <a href="https://www.yammer.com/uq.edu.au/#/threads/inGroup?type=in_group&feedId=35286523904" data-gtm-label="Community updates">Community updates</a>
+            </li>
+            <li>
+              <a href="https://github.com/uq-its-ss/design-system/pulls?q=is%3Apr+is%3Aclosed" data-gtm-label="View recent changes">View recent changes</a>
+            </li>
+            <li>
+              <a href="https://github.com/uq-its-ss/design-system/issues" data-gtm-label="View open issues">View open issues</a>
+            </li>
+          </ul>
+        </li>
+        <li class="uq-header__newglobal-nav-item" data-gtm-category="Primary header">
+          <a class="uq-header__newglobal-nav-link" href="https://study.uq.edu.au">Study</a>
+        </li>
+        <li class="uq-header__newglobal-nav-item" data-gtm-category="Primary header">
+          <a class="uq-header__newglobal-nav-link" href="https://research.uq.edu.au">Research</a>
+        </li>
+        <li class="uq-header__newglobal-nav-item" data-gtm-category="Primary header">
+          <a class="uq-header__newglobal-nav-link" href="https://partners-community.uq.edu.au">Partners and
+            community</a>
+        </li>
+        <li class="uq-header__newglobal-nav-item" data-gtm-category="Primary header">
+          <a class="uq-header__newglobal-nav-link" href="https://about.uq.edu.au">About</a>
+        </li>
+        <li class="uq-header__nav-secondary-item" data-gtm-category="Secondary header">
+          <a class="uq-header__nav-secondary-link" href="https://www.uq.edu.au">UQ home</a>
+        </li>
+        <li class="uq-header__nav-secondary-item" data-gtm-category="Secondary header">
+          <a class="uq-header__nav-secondary-link" href="https://www.uq.edu.au/news">News</a>
+        </li>
+        <li class="uq-header__nav-secondary-item" data-gtm-category="Secondary header">
+          <a class="uq-header__nav-secondary-link" href="https://www.uq.edu.au/uq-events">Events</a>
+        </li>
+        <li class="uq-header__nav-secondary-item" data-gtm-category="Secondary header">
+          <a class="uq-header__nav-secondary-link" href="https://alumni.uq.edu.au/giving">Give</a>
+        </li>
+        <li class="uq-header__nav-secondary-item" data-gtm-category="Secondary header">
+          <a class="uq-header__nav-secondary-link" href="https://contacts.uq.edu.au/contacts">Contact</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="uq-header__search" data-gtm-category="Search">
+      <div class="uq-header__search-container">
+        <form action="https://search.uq.edu.au" method="get" data-gtm-action="Text search" data-gtm-form-action>
+          <fieldset>
+            <div class="uq-header__search-query">
+              <label for="edit-q" class="visually-hidden uq-header__search-query-label">Search term</label>
+              <input type="text" id="edit-q" name="q" value="" maxlength="128" placeholder="Search by keyword"
+                autocomplete="off" class="uq-header__search-query-input" data-gtm-trigger="change" data-gtm-form-search>
+              <span class="uq-header__search-query-button">
+                <input type="submit" value="Search" class="uq-header__search-query-submit" data-gtm-trigger="click">
+              </span>
+            </div>
+            <div class="uq-header__search-range">
+              <input type="radio" id="edit-as_sitesearch-off" name="as_sitesearch" value=""
+                class="form-radio uq-header__search-radio">
+              <label for="edit-as_sitesearch-off" class="option uq-header__search-label">Search all UQ websites</label>
+            </div>
+            <div class="uq-header__search-range">
+              <input type="radio" id="edit-as_sitesearch-on" name="as_sitesearch"
+                value="https://design-system.uq.edu.au" checked="checked" class="form-radio uq-header__search-radio">
+              <label for="edit-as_sitesearch-on" class="option uq-header__search-label">Search this website
+                (design-system.uq.edu.au)</label>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+    <div class="uq-header__nav-secondary">
+      <nav class="uq-header__nav-secondary-container">
+        <ul class="uq-header__nav-secondary-list">
+          <li class="uq-header__nav-secondary-item">
+            <a href="https://www.uq.edu.au" rel="external" class="uq-header__nav-secondary-link">UQ home</a>
+          </li>
+          <li class="uq-header__nav-secondary-item">
+            <a href="https://www.uq.edu.au/news" rel="external" class="uq-header__nav-secondary-link">News</a>
+          </li>
+          <li class="uq-header__nav-secondary-item">
+            <a href="https://www.uq.edu.au/uq-events" rel="external" class="uq-header__nav-secondary-link">Events</a>
+          </li>
+          <li class="uq-header__nav-secondary-item">
+            <a href="https://alumni.uq.edu.au/giving" rel="external" class="uq-header__nav-secondary-link">Give</a>
+          </li>
+          <li class="uq-header__nav-secondary-item">
+            <a href="https://contacts.uq.edu.au/contacts" rel="external"
+              class="uq-header__nav-secondary-link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Content -->
+  <div class="uq-hero">
+    <div class="uq-container">
+      <div class="uq-hero__content">
+        <h1 class="uq-hero__title">Design System</h1>
+        <div class="uq-hero__description">
+          <p>Styles, components, patterns and standards.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+
+  <section class="uq-section">
+    <div class="uq-container">
+      <div class="uq-section__header">
+        <h3 class="uq-section__title">Overview</h3>
+
+        <div class="uq-section__description">
+
+          <p>The Design System is a guide to how user interfaces should look, feel, and behave at UQ. The system
+            provides styles, layouts, components, patterns, and examples of common user interfaces at UQ. It aims to
+            help designers and developers build projects more easily and supports the application of the <a
+              href="https://marketing-communication.uq.edu.au/one-brand">UQ Brand Guidelines</a> to ensure user
+            interfaces across UQ are consistent.</p>
+          <p>Follow our <a
+              href="/design-system/packages/storybook-html/public?path=/docs/introduction-get-started--page">Get
+              started</a> guide to see how you can use the Design System in your project. If your project has unique
+            needs, you may need to adapt and extend what is provided in the system. If you want to share your work, <a
+              href="mailto:webservices@uq.edu.au">contact us</a> to become a contributor.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section class="uq-section">
+    <div class="uq-container">
+      <div class="uq-section__header">
+        <h3 class="uq-section__title">Build using the Design System</h3>
+
+        <div class="uq-section__description">
+
+          <p>These libraries a collection of reusable UI elements and guidelines that product teams use to build and maintain consistent experiences across digital products.</p>
+        </div>
+      </div>
+
+      <div class="uq-card-grid uq-card-grid--target-3x">
+
+        <div class="uq-card uq-card--text">
+
+          <div class="uq-card__content">
+
+
+            <h3 class="uq-card__title"><a href="storybook-html/index.html">HTML, CSS, JS component library</a></h3>
+            <div class="uq-card__description">Styles, components, patterns and standards.</div>
+
+          </div>
+        </div>
+
+        <div class="uq-card uq-card--text">
+
+          <div class="uq-card__content">
+
+
+            <h3 class="uq-card__title"><a href="storybook-react/index.html">REACT component library</a></h3>
+            <div class="uq-card__description">React is a JavaScript library primarily used for building user interfaces (UIs) for web applications and mobile apps</div>
+
+          </div>
+        </div>
+
+        <div class="uq-card uq-card--text">
+
+          <div class="uq-card__content">
+
+
+            <h3 class="uq-card__title"><a href="https://www.figma.com/design/Li7SZkmaLgw8ZdiHje2q7x/One-UQ-component-library?m=auto&t=Qv6W7wBqvGj5S1EZ-6  ">FIGMA component library</a></h3>
+            <div class="uq-card__description">Design and prototyping tool used primarily for user interface (UI) and user experience (UX) design.</div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="uq-section">
+    <div class="uq-container">
+      <div class="uq-section__header">
+        <h3 class="uq-section__title">Community</h3>
+
+        <div class="uq-section__description">
+
+          <p>The Design System is managed and supported by the User Interface Design and Development team in ITS
+            Application Development and Support (ADS-UI for short). Join the Design System community on <a
+              class="text--link"
+              href="https://www.yammer.com/uq.edu.au/#/threads/inGroup?type=in_group&amp;feedId=35286523904">UQ
+              Yammer</a> for updates and discussion or email the ADS UI team <a
+              href="mailto:webservices@uq.edu.au">webservices@uq.edu.au</a> with questions and feedback.</p>
+          <p>We'd love to come talk to your team about the design system and answer any questions you have.</p>
+        </div>
+      </div>
+
+      <div class="uq-card-grid uq-card-grid--target-3x">
+
+        <div class="uq-card uq-card--image">
+          <div class="uq-card__image"><img src="images/general/purple-hands.png" alt=""></div>
+          <div class="uq-card__content">
+
+
+            <h3 class="uq-card__title"><a
+                href="https://www.yammer.com/uq.edu.au/#/threads/inGroup?type=in_group&amp;feedId=35286523904">Community
+                updates</a></h3>
+            <div class="uq-card__description">Join the Design System community on UQ Yammer for updates.</div>
+
+          </div>
+        </div>
+
+        <div class="uq-card uq-card--image">
+          <div class="uq-card__image"><img src="images/general/purple-rocket.png" alt=""></div>
+          <div class="uq-card__content">
+
+
+            <h3 class="uq-card__title"><a
+                href="https://github.com/uq-its-ss/design-system/pulls?q=is%3Apr+is%3Aclosed">View recent changes</a>
+            </h3>
+            <div class="uq-card__description">Review potential changes with collaborators or view recently pushed
+              commits.</div>
+
+          </div>
+        </div>
+
+        <div class="uq-card uq-card--image">
+          <div class="uq-card__image"><img src="images/general/purple-bug.png" alt=""></div>
+          <div class="uq-card__content">
+
+
+            <h3 class="uq-card__title"><a href="https://github.com/uq-its-ss/design-system/issues">View open issues</a>
+            </h3>
+            <div class="uq-card__description">Build awareness of feature requests and bugs.</div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="uq-section">
+    <div class="uq-container">
+      <div class="uq-section__header">
+        <h3 class="uq-section__title">Contribute</h3>
+
+        <div class="uq-section__description">
+
+          <p>If UQ development teams work together, we can save time and build better.</p>
+          <p>Our <a href="https://github.com/uq-its-ss/design-system">GitHub repository</a> contains all the code and
+            content which make up the design system.</p>
+          <p>Contact <a href="mailto:webservices@uq.edu.au">ADS-UI</a> if you'd like to contribute to the design system.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="uq-section">
+    <div class="uq-container">
+      <div class="uq-section__header">
+        <h3 class="uq-section__title">Why have a design system?</h3>
+
+      </div>
+
+      <div class="uq-card-grid uq-card-grid--target-3x">
+
+        <div class="uq-pane uq-pane--icon-shaded">
+
+
+          <div class="uq-pane__content">
+            <div class="uq-pane__icon"><span class="uq-icon uq-icon--other--time-clock-circle-1"></span></div>
+            <h3 class="uq-pane__title">Efficiency</h3>
+            <div class="uq-pane__description">Stop reinventing the wheel and create once, share for re-use with better
+              upfront requirements.</div>
+
+          </div>
+        </div>
+
+        <div class="uq-pane uq-pane--icon-shaded">
+
+
+          <div class="uq-pane__content">
+            <div class="uq-pane__icon"><span class="uq-icon uq-icon--rankings--certified-ribbon-2"></span></div>
+            <h3 class="uq-pane__title">Quality</h3>
+            <div class="uq-pane__description">Accessibility, browser and device compatibility, usability.</div>
+
+          </div>
+        </div>
+
+        <div class="uq-pane uq-pane--icon-shaded">
+
+
+          <div class="uq-pane__content">
+            <div class="uq-pane__icon"><span
+                class="uq-icon uq-icon--arts-humanities-and-social-sciences--brain-network"></span></div>
+            <h3 class="uq-pane__title">Consistency</h3>
+            <div class="uq-pane__description">Better customer experience and brand compliance whilst being easier to
+              learn and maintain.</div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="uq-section">
+    <div class="uq-container">
+      <div class="uq-section__header">
+        <h3 class="uq-section__title">What are the main parts</h3>
+
+      </div>
+
+      <div class="uq-card-grid uq-card-grid--target-2x">
+
+        <div class="uq-pane uq-pane--text">
+
+
+          <div class="uq-pane__content">
+
+            <h3 class="uq-pane__title">UI style guide</h3>
+            <div class="uq-pane__description">Website where you can view examples, code and documentation.</div>
+
+          </div>
+        </div>
+
+        <div class="uq-pane uq-pane--text">
+
+
+          <div class="uq-pane__content">
+
+            <h3 class="uq-pane__title">Core styles</h3>
+            <div class="uq-pane__description">Foundations of "look and feel": typography, colour, spacing, imagery.
+            </div>
+
+          </div>
+        </div>
+
+        <div class="uq-pane uq-pane--text">
+
+
+          <div class="uq-pane__content">
+
+            <h3 class="uq-pane__title">Code</h3>
+            <div class="uq-pane__description">A full set of code for user interfaces (HTML, CSS, javascript).</div>
+
+          </div>
+        </div>
+
+        <div class="uq-pane uq-pane--text">
+
+
+          <div class="uq-pane__content">
+
+            <h3 class="uq-pane__title">Assets</h3>
+            <div class="uq-pane__description">Supporting assets (icons, logo, font files).</div>
+
+          </div>
+        </div>
+
+        <div class="uq-pane uq-pane--text">
+
+
+          <div class="uq-pane__content">
+
+            <h3 class="uq-pane__title">Components</h3>
+            <div class="uq-pane__description">The pieces that make up a page in a website or web application: header,
+              footer, form, table, menu, alert, tabs, accordions.</div>
+
+          </div>
+        </div>
+
+        <div class="uq-pane uq-pane--text">
+
+
+          <div class="uq-pane__content">
+
+            <h3 class="uq-pane__title">Patterns</h3>
+            <div class="uq-pane__description">How you combine and layout components and content in the interface.</div>
+
+          </div>
+        </div>
+
+        <div class="uq-pane uq-pane--text">
+
+
+          <div class="uq-pane__content">
+
+            <h3 class="uq-pane__title">Standards</h3>
+            <div class="uq-pane__description">Meet quality standards: accessibility, mobile optimisation, browser
+              compatibility.</div>
+
+          </div>
+        </div>
+
+        <div class="uq-pane uq-pane--text">
+
+
+          <div class="uq-pane__content">
+
+            <h3 class="uq-pane__title">Usage advice</h3>
+            <div class="uq-pane__description">Include advice for when and how to use the component.</div>
+
+          </div>
+        </div>
+
+        <div class="uq-pane uq-pane--text">
+
+
+          <div class="uq-pane__content">
+
+            <h3 class="uq-pane__title">Best Practice</h3>
+            <div class="uq-pane__description">Best practice for a recurring task or process: enter an address, take a
+              payment, display errors on a form, step users through a complex process, page not found error.</div>
+
+          </div>
+        </div>
+
+        <div class="uq-pane uq-pane--text">
+
+
+          <div class="uq-pane__content">
+
+            <h3 class="uq-pane__title">Code repository</h3>
+            <div class="uq-pane__description">Access a shared online code repository, e.g. github or similar (access
+              controls).</div>
+
+          </div>
+        </div>
+
+        <div class="uq-pane uq-pane--text">
+
+
+          <div class="uq-pane__content">
+
+            <h3 class="uq-pane__title">Package registry</h3>
+            <div class="uq-pane__description">Published packages of html, CSS, javascript and images.</div>
+
+          </div>
+        </div>
+
+        <div class="uq-pane uq-pane--text">
+
+
+          <div class="uq-pane__content">
+
+            <h3 class="uq-pane__title">Community</h3>
+            <div class="uq-pane__description">BA community that uses and contributes to the design system, used by the
+              teams who design and implement user interfaces.</div>
+
+          </div>
+        </div>
+
+        <div class="uq-pane uq-pane--text">
+
+
+          <div class="uq-pane__content">
+
+            <h3 class="uq-pane__title">Feedback</h3>
+            <div class="uq-pane__description">Ways to give feedback.</div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="uq-section">
+    <div class="uq-container">
+      <div class="uq-section__header">
+        <h3 class="uq-section__title">Expectations</h3>
+
+      </div>
+
+      <div class="uq-card-grid uq-card-grid--target-2x">
+
+        <div class="uq-pane uq-pane--icon-shaded">
+
+
+          <div class="uq-pane__content">
+            <div class="uq-pane__icon"><span class="uq-icon uq-icon--student-services--maps-search"></span></div>
+            <h3 class="uq-pane__title">It's a starting point</h3>
+            <div class="uq-pane__description">It's impossible for the design system to cover every use case or
+              requirement across UQ. Our goal is to be a good starting point, covering 80% of use cases and
+              requirements. Each project will need to address any requirements unique to the project. If your project
+              will need a lot of additional components or support, contact us to plan for that.</div>
+
+          </div>
+        </div>
+
+        <div class="uq-pane uq-pane--icon-shaded">
+
+
+          <div class="uq-pane__content">
+            <div class="uq-pane__icon"><span class="uq-icon uq-icon--other--fitness-weightlift"></span></div>
+            <h3 class="uq-pane__title">It's not a straitjacket</h3>
+            <div class="uq-pane__description">It's important to have consistent user interfaces across UQ, but it's not
+              meant to stop innovation. Adapt and tweak if there's a justifiable reason to deviate from standard designs
+              for a specific use case or scenario. Consult before moving too far from the standard designs.</div>
+
+          </div>
+        </div>
+
+        <div class="uq-pane uq-pane--icon-shaded">
+
+
+          <div class="uq-pane__content">
+            <div class="uq-pane__icon"><span class="uq-icon uq-icon--education--family-home"></span></div>
+            <h3 class="uq-pane__title">It's a shoestring operation</h3>
+            <div class="uq-pane__description">There's a very small operational team to manage and support the design
+              system. We'll do our best to prioritise our work to meet your needs. If you plan to use the design system,
+              allocate some time to contribute back so that the design system becomes more valuable to everyone.</div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- END: Content -->
+
+  <footer class="uq-footer" data-gtm-category="Footer">
+    <div class="uq-footer__reconciliation">
+      <div class="uq-footer__acknowledgement">
+        <img class="uq-footer__acknowledgement-flag" alt="Australian Aboriginal Flag"
+          src="https://static.uq.net.au/v15/images/rap/aboriginal.svg" /> <img class="uq-footer__acknowledgement-flag"
+          alt="Torres Strait Islander Flag" src="https://static.uq.net.au/v15/images/rap/torres-strait-islanders.svg" />
+        <span class="uq-footer__acknowledgement-text">UQ acknowledges the Traditional Owners and their custodianship of
+          the lands on which UQ is situated. &mdash; <a href="https://about.uq.edu.au/reconciliation"
+            class="uq-footer__link">Reconciliation at UQ</a></span>
+      </div>
+    </div>
+    <div class="uq-footer__container">
+      <nav class="uq-footer__navigation uq-footer--desktop" aria-label="footer navigation">
+        <ul class="uq-footer__navigation-list uq-footer__navigation-level-1">
+          <li class="uq-footer__navigation-item uq-footer__navigation--is-open">
+            <h2 class="uq-footer__navigation-title">Media</h2>
+            <ul class="uq-footer__navigation-list uq-footer__navigation-level-2">
+              <li class="uq-footer__navigation-item">
+                <a href="https://www.uq.edu.au/news/contacts" class="uq-footer__navigation-link">Media team contacts</a>
+              </li>
+              <li class="uq-footer__navigation-item">
+                <a href="https://about.uq.edu.au/experts" class="uq-footer__navigation-link">Find a subject matter
+                  expert</a>
+              </li>
+              <li class="uq-footer__navigation-item">
+                <a href="https://www.uq.edu.au/news" class="uq-footer__navigation-link">UQ news</a>
+              </li>
+            </ul>
+          </li>
+          <li class="uq-footer__navigation-item">
+            <h2 class="uq-footer__navigation-title">Working at UQ</h2>
+            <ul class="uq-footer__navigation-list uq-footer__navigation-level-2">
+              <li class="uq-footer__navigation-item">
+                <a href="https://staff.uq.edu.au" class="uq-footer__navigation-link">Current staff</a>
+              </li>
+              <li class="uq-footer__navigation-item">
+                <a href="https://about.uq.edu.au/careers" class="uq-footer__navigation-link">Careers at UQ</a>
+              </li>
+              <li class="uq-footer__navigation-item">
+                <a href="https://about.uq.edu.au/strategic-plan" class="uq-footer__navigation-link">Strategic plan</a>
+              </li>
+              <li class="uq-footer__navigation-item">
+                <a href="https://staff.uq.edu.au/information-and-services/health-safety-wellbeing"
+                  class="uq-footer__navigation-link">Staff support</a>
+              </li>
+              <li class="uq-footer__navigation-item">
+                <a href="https://staff.uq.edu.au/information-and-services/information-technology/it-support"
+                  class="uq-footer__navigation-link">IT support for staff</a>
+              </li>
+            </ul>
+          </li>
+          <li class="uq-footer__navigation-item">
+            <h2 class="uq-footer__navigation-title">Current students</h2>
+            <ul class="uq-footer__navigation-list uq-footer__navigation-level-2">
+              <li class="uq-footer__navigation-item">
+                <a href="https://my.uq.edu.au" class="uq-footer__navigation-link">my.UQ</a>
+              </li>
+              <li class="uq-footer__navigation-item">
+                <a href="https://programs-courses.uq.edu.au" class="uq-footer__navigation-link">Programs and courses</a>
+              </li>
+              <li class="uq-footer__navigation-item">
+                <a href="https://about.uq.edu.au/academic-calendar" class="uq-footer__navigation-link">Key dates</a>
+              </li>
+              <li class="uq-footer__navigation-item">
+                <a href="https://my.uq.edu.au/student-support" class="uq-footer__navigation-link">Student support</a>
+              </li>
+              <li class="uq-footer__navigation-item">
+                <a href="https://my.uq.edu.au/information-and-services/information-technology/student-it-support"
+                  class="uq-footer__navigation-link">IT support for students</a>
+              </li>
+            </ul>
+          </li>
+          <li class="uq-footer__navigation-item">
+            <h2 class="uq-footer__navigation-title">Library</h2>
+            <ul class="uq-footer__navigation-list uq-footer__navigation-level-2">
+              <li class="uq-footer__navigation-item">
+                <a href="https://www.library.uq.edu.au" class="uq-footer__navigation-link">Library</a>
+              </li>
+              <li class="uq-footer__navigation-item">
+                <a href="https://web.library.uq.edu.au/study-and-learning-support"
+                  class="uq-footer__navigation-link">Study and learning support</a>
+              </li>
+              <li class="uq-footer__navigation-item">
+                <a href="https://web.library.uq.edu.au/research-and-publish" class="uq-footer__navigation-link">Research
+                  and publish</a>
+              </li>
+              <li class="uq-footer__navigation-item">
+                <a href="https://web.library.uq.edu.au/visit" class="uq-footer__navigation-link">Visit</a>
+              </li>
+            </ul>
+          </li>
+          <li class="uq-footer__navigation-item">
+            <h2 class="uq-footer__navigation-title">Contact</h2>
+            <ul class="uq-footer__navigation-list uq-footer__navigation-level-2">
+              <li class="uq-footer__navigation-item">
+                <a href="https://contacts.uq.edu.au/contacts" class="uq-footer__navigation-link">Contact UQ</a>
+              </li>
+              <li class="uq-footer__navigation-item">
+                <a href="https://researchers.uq.edu.au" class="uq-footer__navigation-link">Find a researcher</a>
+              </li>
+              <li class="uq-footer__navigation-item">
+                <a href="https://about.uq.edu.au/faculties-schools-institutes-centres"
+                  class="uq-footer__navigation-link">Faculties, schools, institutes and centres</a>
+              </li>
+              <li class="uq-footer__navigation-item">
+                <a href="https://organisation.about.uq.edu.au" class="uq-footer__navigation-link">Divisions and
+                  departments</a>
+              </li>
+              <li class="uq-footer__navigation-item">
+                <a href="https://campuses.uq.edu.au" class="uq-footer__navigation-link">Campuses, maps and transport</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Mobile Footer Navigation-->
+      <nav class="uq-footer__navigation uq-footer--mobile" aria-label="footer navigation mobile">
+        <ul class="uq-accordion uq-footer__navigation-list uq-footer__navigation-level-1">
+          <li class="uq-accordion__item uq-footer__navigation-item uq-footer__navigation--is-open">
+            <button class="uq-accordion__toggle uq-footer__navigation-toggle" data-gtm-action="Toggle">Media</button>
+            <ul class="uq-accordion__content uq-footer__navigation-list uq-footer__navigation-level-2">
+              <li class="uq-footer__navigation-item">
+                <a href="https://www.uq.edu.au/news/contacts" class="uq-footer__navigation-link">Media team contacts</a>
+              </li>
+              <li class="uq-footer__navigation-item">
+                <a href="https://about.uq.edu.au/experts" class="uq-footer__navigation-link">Find a subject matter
+                  expert</a>
+              </li>
+              <li class="uq-footer__navigation-item">
+                <a href="https://www.uq.edu.au/news" class="uq-footer__navigation-link">UQ news</a>
+              </li>
+            </ul>
+          </li>
+          <li class="uq-accordion__item uq-footer__navigation-item">
+            <button class="uq-accordion__toggle uq-footer__navigation-toggle" data-gtm-action="Toggle">Working at
+              UQ</button>
+            <ul class="uq-accordion__content uq-footer__navigation-list uq-footer__navigation-level-2">
+              <li class="uq-footer__navigation-item">
+                <a href="https://staff.uq.edu.au" class="uq-footer__navigation-link">Current staff</a>
+              </li>
+              <li class="uq-footer__navigation-item">
+                <a href="https://about.uq.edu.au/careers" class="uq-footer__navigation-link">Careers at UQ</a>
+              </li>
+              <li class="uq-footer__navigation-item">
+                <a href="https://about.uq.edu.au/strategic-plan" class="uq-footer__navigation-link">Strategic plan</a>
+              </li>
+              <li class="uq-footer__navigation-item">
+                <a href="https://staff.uq.edu.au/information-and-services/health-safety-wellbeing"
+                  class="uq-footer__navigation-link">Staff support</a>
+              </li>
+              <li class="uq-footer__navigation-item">
+                <a href="https://staff.uq.edu.au/information-and-services/information-technology/it-support"
+                  class="uq-footer__navigation-link">IT support for staff</a>
+              </li>
+            </ul>
+          </li>
+          <li class="uq-accordion__item uq-footer__navigation-item">
+            <button class="uq-accordion__toggle uq-footer__navigation-toggle" data-gtm-action="Toggle">Current
+              students</button>
+            <ul class="uq-accordion__content uq-footer__navigation-list uq-footer__navigation-level-2">
+              <li class="uq-footer__navigation-item">
+                <a href="https://my.uq.edu.au" class="uq-footer__navigation-link">my.UQ</a>
+              </li>
+              <li class="uq-footer__navigation-item">
+                <a href="https://programs-courses.uq.edu.au" class="uq-footer__navigation-link">Programs and courses</a>
+              </li>
+              <li class="uq-footer__navigation-item">
+                <a href="https://about.uq.edu.au/academic-calendar" class="uq-footer__navigation-link">Key dates</a>
+              </li>
+              <li class="uq-footer__navigation-item">
+                <a href="https://my.uq.edu.au/student-support" class="uq-footer__navigation-link">Student support</a>
+              </li>
+              <li class="uq-footer__navigation-item">
+                <a href="https://my.uq.edu.au/information-and-services/information-technology/student-it-support"
+                  class="uq-footer__navigation-link">IT support for students</a>
+              </li>
+            </ul>
+          </li>
+          <li class="uq-accordion__item uq-footer__navigation-item">
+            <button class="uq-accordion__toggle uq-footer__navigation-toggle" data-gtm-action="Toggle">Library</button>
+            <ul class="uq-accordion__content uq-footer__navigation-list uq-footer__navigation-level-2">
+              <li class="uq-footer__navigation-item">
+                <a href="https://www.library.uq.edu.au" class="uq-footer__navigation-link">Library</a>
+              </li>
+              <li class="uq-footer__navigation-item">
+                <a href="https://web.library.uq.edu.au/study-and-learning-support"
+                  class="uq-footer__navigation-link">Study and learning support</a>
+              </li>
+              <li class="uq-footer__navigation-item">
+                <a href="https://web.library.uq.edu.au/research-and-publish" class="uq-footer__navigation-link">Research
+                  and publish</a>
+              </li>
+              <li class="uq-footer__navigation-item">
+                <a href="https://web.library.uq.edu.au/visit" class="uq-footer__navigation-link">Visit</a>
+              </li>
+            </ul>
+          </li>
+          <li class="uq-accordion__item uq-footer__navigation-item">
+            <button class="uq-accordion__toggle uq-footer__navigation-toggle" data-gtm-action="Toggle">Contact</button>
+            <ul class="uq-accordion__content uq-footer__navigation-list uq-footer__navigation-level-2">
+              <li class="uq-footer__navigation-item">
+                <a href="https://contacts.uq.edu.au/contacts" class="uq-footer__navigation-link">Contact UQ</a>
+              </li>
+              <li class="uq-footer__navigation-item">
+                <a href="https://researchers.uq.edu.au" class="uq-footer__navigation-link">Find a researcher</a>
+              </li>
+              <li class="uq-footer__navigation-item">
+                <a href="https://about.uq.edu.au/faculties-schools-institutes-centres"
+                  class="uq-footer__navigation-link">Faculties, schools, institutes and centres</a>
+              </li>
+              <li class="uq-footer__navigation-item">
+                <a href="https://organisation.about.uq.edu.au" class="uq-footer__navigation-link">Divisions and
+                  departments</a>
+              </li>
+              <li class="uq-footer__navigation-item">
+                <a href="https://campuses.uq.edu.au" class="uq-footer__navigation-link">Campuses, maps and transport</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <!-- Footer contact details -->
+      <div class="uq-footer__contact">
+        <nav class="uq-footer__contact-item" aria-label="Social Media" data-gtm-category="Social share link">
+          <ul class="uq-footer__footer-list uq-footer__contact-social">
+            <li class="uq-footer__footer-item"><a href="https://www.facebook.com/uniofqld"
+                class="uq-footer__meta-icons--facebook uq-footer__meta-icons" aria-label="Follow us on Facebook"
+                data-gtm-label="Follow us on Facebook"></a></li>
+            <li class="uq-footer__footer-item"><a href="https://www.linkedin.com/school/university-of-queensland"
+                class="uq-footer__meta-icons--linkedin uq-footer__meta-icons" aria-label="Follow us on linkedin"
+                data-gtm-label="Follow us on Linkedin"></a></li>
+            <li class="uq-footer__footer-item"><a href="https://twitter.com/uq_news"
+                class="uq-footer__meta-icons--twitter uq-footer__meta-icons" aria-label="Follow us on X"
+                data-gtm-label="Follow us on X"></a></li>
+            <li class="uq-footer__footer-item"><a href="https://www.youtube.com/user/universityqueensland"
+                class="uq-footer__meta-icons--youtube uq-footer__meta-icons" aria-label="Follow us on Youtube"
+                data-gtm-label="Follow us on Youtube"></a></li>
+            <li class="uq-footer__footer-item"><a href="https://instagram.com/uniofqld"
+                class="uq-footer__meta-icons--instagram uq-footer__meta-icons" aria-label="Follow us on Instagram"
+                data-gtm-label="Follow us on Instagram"></a></li>
+          </ul>
+        </nav>
+        <div class="uq-footer__contact-item uq-footer__contact-login"><a href="#" class="uq-footer__link"
+            rel="nofollow">Web login</a></div>
+
+      </div>
+      <nav class="uq-footer__meta" aria-label="Business meta">
+        <ul class="uq-footer__footer-list">
+          <li class="uq-footer__footer-item">&copy; The University of Queensland</li>
+          <li class="uq-footer__footer-item"><abbr title="Australian Business Number">ABN</abbr>: 63 942 912 684 </li>
+          <li class="uq-footer__footer-item"><abbr
+              title="Commonwealth Register of Institutions and Courses for Overseas Students">CRICOS</abbr>: <a
+              class="uq-footer__link" href="https://www.uq.edu.au/about/cricos-link" rel="external"
+              data-gtm-label="CRICOS 00025B">00025B</a></li>
+          <li class="uq-footer__footer-item"><abbr title="Tertiary Education Quality and Standards Agency">TEQSA</abbr>:
+            <a class="uq-footer__link" href="https://www.uq.edu.au/about/teqsa-link" rel="external"
+              data-gtm-label="TEQSA PRV12080">PRV12080</a>
+          </li>
+        </ul>
+      </nav>
+      <nav class="uq-footer__footer" aria-label="Terms and conditions">
+        <ul class="uq-footer__footer-list">
+          <li class="uq-footer__footer-item">
+            <a href="https://www.uq.edu.au/legal/copyright-privacy-disclaimer/" class="uq-footer__link">Copyright,
+              privacy and disclaimer</a>
+          </li>
+          <li class="uq-footer__footer-item">
+            <a href="https://uq.edu.au/accessibility" class="uq-footer__link">Accessibility</a>
+          </li>
+          <li class="uq-footer__footer-item">
+            <a href="https://governance-risk.uq.edu.au/rtip" class="uq-footer__link">Right to information</a>
+          </li>
+          <li class="uq-footer__footer-menu__item">
+            <a href="https://my.uq.edu.au/feedback?r=https://uq.edu.au" class="uq-footer__link">Feedback</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <script type="text/javascript" src="js/uqds.min.js"></script>
+  <script type="text/javascript">
+    // Initialise header
+    const headerElem = document.querySelector('.uq-header');
+    new uq.header(headerElem);
+    // Initialise Main Navigation
+    const navElem = document.getElementById("jsNav"); if (navElem) { new uq.siteHeaderNavigation(navElem, "uq-site-header__navigation"); }
+    // Initialise accordions
+    new uq.accordion();
+
+    const appHeight = () => {
+      const doc = document.documentElement
+      doc.style.setProperty('--app-height', `${window.innerHeight}px`)
+    }
+    window.addEventListener('resize', appHeight)
+    appHeight()
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const menuLeftElem = document.getElementById('global-mobile-nav');
+
+      const menuLeft = new SlideMenu(menuLeftElem, {
+        position: 'left',
+        submenuLinkAfter: ' ',
+        backLinkBefore: ' ',
+      });
+
+      this.searchToggle = document.querySelector('.nav-primary__search-toggle');
+
+      this.searchToggle.addEventListener('click', () => {
+        menuLeft.close();
+      });
+
+      var slideMenuBackButtons = document.querySelectorAll('.slide-menu__backlink, .global-mobile-nav__audience-link');
+
+      Array.prototype.forEach.call(slideMenuBackButtons, function (el, i) {
+        el.addEventListener('click', () => {
+          document.querySelector('.global-mobile-nav').scrollTop = 0;
+        });
+      });
+    });
+  </script>
+  <script type="text/javascript" src="js/slide-menu.js"></script>
+</body>
+
+</html>

@@ -3,6 +3,34 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0](https://github.com/uq-its-ss/design-system/compare/@uqds/card@2.0.0...@uqds/card@3.0.0) (2025-05-27)
+
+- Release/1.0.5 (#631) ([e247c79](https://github.com/uq-its-ss/design-system/commit/e247c790585abe267b95de489381efe25107a7bb)), closes [#631](https://github.com/uq-its-ss/design-system/issues/631) [#568](https://github.com/uq-its-ss/design-system/issues/568)
+
+### BREAKING CHANGES
+
+- Review updated blockquote markup
+
+- increase spacing
+
+- chore: regression test update
+
+# [3.0.0-alpha.10](https://github.com/uq-its-ss/design-system/compare/@uqds/card@3.0.0-alpha.9...@uqds/card@3.0.0-alpha.10) (2025-05-27)
+
+**Note:** Version bump only for package @uqds/card
+
+# [3.0.0-alpha.9](https://github.com/uq-its-ss/design-system/compare/@uqds/card@3.0.0-alpha.8...@uqds/card@3.0.0-alpha.9) (2025-05-26)
+
+### Bug Fixes
+
+- remove 300 weight fonts, updated to 400 weight ([#594](https://github.com/uq-its-ss/design-system/issues/594)) ([02ad03d](https://github.com/uq-its-ss/design-system/commit/02ad03d918c153cf41df3f0dfb8dc2bed19e2262))
+
+# [3.0.0-alpha.8](https://github.com/uq-its-ss/design-system/compare/@uqds/card@3.0.0-alpha.7...@uqds/card@3.0.0-alpha.8) (2025-05-14)
+
+### Bug Fixes
+
+- remove line clamp from standard cards ([#625](https://github.com/uq-its-ss/design-system/issues/625)) ([ede20d4](https://github.com/uq-its-ss/design-system/commit/ede20d466978a1837b6d0e62f0a3a018f04045e4))
+
 # [3.0.0-alpha.7](https://github.com/uq-its-ss/design-system/compare/@uqds/card@3.0.0-alpha.6...@uqds/card@3.0.0-alpha.7) (2025-04-30)
 
 ### Bug Fixes

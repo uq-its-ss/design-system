@@ -64,7 +64,7 @@ const config = {
       console.log("Configuring Storybook refs for DEVELOPMENT");
       return {
         react: {
-          title: "React (Local)",
+          title: "React (Localhost:6007)",
           url: "http://localhost:6007",
         },
       };
@@ -130,8 +130,8 @@ const config = {
 
     return {
       react: {
-        // Make the title dynamic for preview as well
-        title: `React (${targetEnv === "preview" && githubRunId ? `Preview #${githubRunId}` : targetEnv.charAt(0).toUpperCase() + targetEnv.slice(1)})`,
+        // Make the title dynamic for preview and staging
+        title: `React (${targetEnv === "preview" && githubRunId ? `Preview #${githubRunId}` : targetEnv === "staging" ? "staging" : targetEnv.charAt(0).toUpperCase() + targetEnv.slice(1)})`,
         url: reactStorybookUrl,
       },
       // Add other compositions if needed

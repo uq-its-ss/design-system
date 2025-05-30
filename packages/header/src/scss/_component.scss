@@ -140,11 +140,10 @@
 
     @media #{core.$screen-lg-up} {
       &:hover {
-        text-decoration: none;
-
         .search-toggle__label {
           background-color: core.$white;
           color: core.$purple-500;
+          text-decoration: underline;
         }
       }
     }
@@ -218,7 +217,7 @@
       .uq-header__nav-primary-link {
         background-color: core.$white;
         color: core.$purple-500;
-        text-decoration: none;
+        text-decoration: underline;
       }
 
       & > .uq-header__megamenu {
@@ -248,7 +247,7 @@
     &:hover {
       color: core.$purple-500;
       background-color: core.$white;
-      text-decoration: none;
+      text-decoration: underline;
     }
 
     @media #{core.$screen-lg-up} {
@@ -375,7 +374,6 @@
       color: core.$purple-500;
       text-decoration: underline;
       background-color: core.$white;
-      text-decoration: underline;
     }
   }
 

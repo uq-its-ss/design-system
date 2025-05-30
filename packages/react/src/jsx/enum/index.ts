@@ -40,16 +40,3 @@ export const enum UqStoryCardVariant {
   landscape = "landscape",
   feature = "feature",
 }
-
-export const enum UqButtonStyle {
-  primary = "",
-  secondary = "uq-button--secondary",
-  tertiary = "uq-button--tertiary",
-}
-
-export const enum UqButtonSize {
-  default = "",
-  tiny = "uq-button--tiny",
-  small = "uq-button--small",
-  large = "uq-button--large",
-}

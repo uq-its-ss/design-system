@@ -30,7 +30,7 @@ Prefix such classes with
 #### Repo packages that this rule applies to:
 
 - `storybook-html`
-- `private-design-output`
+- `uqds-builder`
 
 ## Class naming convention
 

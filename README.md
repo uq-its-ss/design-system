@@ -23,6 +23,7 @@ Contents:
 - [Using Storybook as a styleguide for component development](./docs/using-storybook.md)
 - [Creating a new package](./docs/create-a-package.md)
 - [Bundling](./docs/bundling.md)
+- [Code Quality and Testing Guide](./docs/testing/testing-linting.md)
 - [Code standards and style [MOVE TO STORYBOOK]](./docs/standards/standards.md)
 - [Access requests](./docs/access-request.md)
 - [Commit workflow [TODO]](./docs/commit-workflow.md)

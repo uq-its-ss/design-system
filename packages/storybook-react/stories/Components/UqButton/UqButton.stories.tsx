@@ -7,7 +7,7 @@ export default {
   argTypes: {
     icon: {
       options: [
-        '',
+        "",
         ...iconCatalog.map((icon) => `${icon.category}--${icon.name}`),
       ],
       control: "radio",
@@ -18,7 +18,7 @@ export default {
     expand: false,
     spinner: false,
     disabled: false,
-    onClick: () => alert('Button clicked'),
+    onClick: () => alert("Button clicked"),
   },
 } satisfies Meta<typeof Component>;
 

@@ -53,10 +53,10 @@
         max-width: 650px;
         text-decoration: none;
 
-          &:hover {
-            background-color: transparent;
-            color: core.$grey-700;
-          }
+        &:hover {
+          background-color: transparent;
+          color: core.$grey-700;
+        }
       }
     }
   }
@@ -82,5 +82,4 @@
   @media #{core.$screen-md-up} {
     max-width: 9rem;
   }
-
 }

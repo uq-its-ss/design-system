@@ -76,7 +76,7 @@
     height: 100%;
 
     @media #{core.$screen-lg-up} {
-      padding: 1rem 0 1rem 1.5rem;
+      padding: 2.175rem 0 2.175rem 1.5rem;
       height: auto;
     }
   }
@@ -133,13 +133,14 @@
       right: core.$space-xl;
 
       @media #{core.$screen-lg-up} {
-        top: 0.1rem;
+        top: 1.25rem;
         left: -1rem;
       }
     }
 
     @media #{core.$screen-lg-up} {
-      &:hover {
+      &:hover,
+      &:focus {
         .search-toggle__label {
           background-color: core.$white;
           color: core.$purple-500;
@@ -224,14 +225,6 @@
         height: auto;
         visibility: visible;
       }
-
-      & .uq-header__nav-primary-link {
-        // border-bottom: 4px solid white;
-      }
-    }
-
-    & .uq-header__nav-primary-link--active {
-      //border-bottom: 4px solid white;
     }
   }
 
@@ -244,7 +237,8 @@
     font-weight: core.$font-weight-normal;
     position: relative;
 
-    &:hover {
+    &:hover,
+    &:focus {
       color: core.$purple-500;
       background-color: core.$white;
       text-decoration: underline;
@@ -279,6 +273,7 @@
   }
 
   .nav-primary-link--has-dropdown:hover,
+  .nav-primary-link--has-dropdown:focus,
   .uq-header__nav-primary-item--is-open > .nav-primary-link--has-dropdown {
     &::after {
       background-image: url(icon-constants.get-icon(
@@ -370,7 +365,8 @@
     text-decoration: none;
     font-weight: core.$font-weight-normal;
 
-    &:hover {
+    &:hover,
+    &:focus {
       color: core.$purple-500;
       text-decoration: underline;
       background-color: core.$white;
@@ -568,7 +564,8 @@
     font-weight: core.$font-weight-normal;
     text-decoration: none;
 
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: transparent;
       color: transparent;
 
@@ -607,7 +604,8 @@
           text-decoration: none;
           font-weight: core.$font-weight-normal;
 
-          &:hover {
+          &:hover,
+          &:focus {
             background-color: core.$purple-500;
             color: core.$white;
             text-decoration: underline;
@@ -894,12 +892,7 @@ body.no-scroll {
   margin: 0;
 }
 
-.uq-header__nav-primary-list li:hover .uq-header__nav-primary-link {
-  //border-bottom: 4px solid #fff;
-}
-
-.uq-header__nav-primary-link,
-.uq-header__nav-primary-link:focus {
+.uq-header__nav-primary-link {
   display: block;
   color: #fff;
   text-decoration: none;
@@ -908,11 +901,6 @@ body.no-scroll {
     border-color 0.25s;
   font-weight: core.$font-weight-normal;
   position: relative;
-  //border-bottom: 4px solid transparent;
-}
-
-.uq-header a:focus {
-  color: #d4c8de;
 }
 
 .uq-header__search-container {

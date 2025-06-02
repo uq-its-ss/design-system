@@ -1,4 +1,4 @@
-name: Visual Regression Testing and preview environment
+name: Visual Regression Testing
 
 permissions:
   id-token: write # Required for OIDC AWS authentication
@@ -46,13 +46,22 @@ jobs:
           npm run build-storybook
         working-directory: packages/storybook-html/
 
+      # --- Generate screenshots ---
+      - name: Generate screenshot config from Storybook
+        run: node scripts/generate-screenshot-config.js
+
       # --- Visual Regression (targets storybook-html) ---
+      - name: "Serve Storybook REACT for VRT"
+        run: |
+          npm run serve-storybook &
+        working-directory: packages/storybook-react/
+
       - name: "Serve Storybook HTML for VRT"
         run: |
           npm run serve-storybook &
         working-directory: packages/storybook-html/
 
-      - name: "Create screenshots (HTML)"
+      - name: "Create screenshots (HTML and REACT)"
         run: |
           npm run update-screenshots
 
@@ -63,7 +72,7 @@ jobs:
           aws-region: ap-southeast-2
           role-session-name: GitHubActions-RegSuit-${{ github.run_id }}
 
-      - name: "Run visual regression (HTML)"
+      - name: "Run visual regression (HTML and REACT)"
         env:
           UQDS_PERSONAL_ACCESS_TOKEN: ${{ secrets.UQDS_PERSONAL_ACCESS_TOKEN }}
           AWS_REGION: 'ap-southeast-2'

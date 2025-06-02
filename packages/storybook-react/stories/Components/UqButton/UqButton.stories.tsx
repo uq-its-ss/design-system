@@ -10,7 +10,7 @@ export default {
         "",
         ...iconCatalog.map((icon) => `${icon.category}--${icon.name}`),
       ],
-      control: "radio",
+      control: "select",
     },
   },
   args: {

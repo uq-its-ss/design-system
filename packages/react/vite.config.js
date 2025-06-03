@@ -12,9 +12,6 @@ export default defineConfig({
     }),
   ],
   build: {
-    // Don't minify, because it causes Storybook to display the minified names
-    // for components.
-    minify: false,
     lib: {
       entry: resolve(import.meta.dirname, "src/jsx/main.tsx"),
       fileName: "main",

@@ -12,13 +12,14 @@ Go to the [UQ Design System](https://design-system.uq.edu.au/) website for infor
 - how to contribute.
 
 ---
+
 # Contributing
 
 ## Quick Start
 
-If your development environment is setup simply run the following line in your terminal. 
+If your development environment is setup simply run the following line in your terminal.
 
-`npm run ci && npm run storybook` 
+`npm run ci && npm run storybook`
 
 It will install dependancies, build and deploy both Storybook HTML (http://localhost:6006/) and Storybook REACT (http://localhost:6007).
 

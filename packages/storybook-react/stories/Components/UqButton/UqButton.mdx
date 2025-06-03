@@ -1,11 +1,11 @@
-import { Meta, Canvas, Controls, Source } from "@storybook/blocks";
-import * as UqButtonStories from "./UqButton.stories";
+import { Meta, Canvas, Controls, Description, Source } from "@storybook/blocks";
+import * as stories from "./UqButton.stories";
 
-<Meta of={UqButtonStories} />
+<Meta of={stories} />
 
 # UqButton
 
-The button component.
+<Description of={stories} />
 
 ## Installation
 
@@ -19,8 +19,8 @@ npm i @uqds/react
 import { UqButton } from "@uqds/react";
 ```
 
-<Canvas of={UqButtonStories.UqButton} sourceState="none" />
+<Canvas of={stories.base} />
 
-<Controls of={UqButtonStories.UqButton} />
+<Controls of={stories.base} />
 
-<Source of={UqButtonStories.UqButton} />
+<Source of={stories.base} />

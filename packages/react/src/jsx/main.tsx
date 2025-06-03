@@ -1,23 +1,11 @@
-import { UqContainer } from "./layout/UqContainer/UqContainer";
-import { UqCardGrid } from "./layout/UqCardGrid/UqCardGrid";
-import { UqIcon } from "./components/UqIcon/UqIcon";
-import { UqButton } from "./components/UqButton/UqButton";
-import { UqCard } from "./components/UqCard/UqCard";
-import { UqPane } from "./components/UqPane/UqPane";
-import { UqStoryCard } from "./components/UqStoryCard/UqStoryCard";
-import { UqPagination } from "./components/UqPagination/UqPagination";
-import { UqPaginationItem } from "./components/UqPagination/UqPaginationItem";
-
-export {
-  UqContainer,
-  UqCardGrid,
-  UqCard,
-  UqIcon,
-  UqButton,
-  UqPane,
-  UqStoryCard,
-  UqPagination,
-  UqPaginationItem,
-};
+export { UqButton } from "./components/UqButton/UqButton";
+export { UqCard } from "./components/UqCard/UqCard";
+export { UqCardGrid } from "./layout/UqCardGrid/UqCardGrid";
+export { UqContainer } from "./layout/UqContainer/UqContainer";
+export { UqIcon } from "./components/UqIcon/UqIcon";
+export { UqPagination } from "./components/UqPagination/UqPagination";
+export { UqPaginationItem } from "./components/UqPagination/UqPaginationItem";
+export { UqPane } from "./components/UqPane/UqPane";
+export { UqStoryCard } from "./components/UqStoryCard/UqStoryCard";
 
 export * from "./enum/index";

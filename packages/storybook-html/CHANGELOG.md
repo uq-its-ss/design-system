@@ -3,6 +3,218 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [7.0.0-alpha.0](https://github.com/uq-its-ss/design-system/compare/storybook-html@6.0.0-alpha.19...storybook-html@7.0.0-alpha.0) (2025-06-02)
+
+- Merge release/1.0.5 back to master (#634) ([206e0b3](https://github.com/uq-its-ss/design-system/commit/206e0b3a360c71f3524fb6d25ff38cf4f6275773)), closes [#634](https://github.com/uq-its-ss/design-system/issues/634) [#583](https://github.com/uq-its-ss/design-system/issues/583) [#568](https://github.com/uq-its-ss/design-system/issues/568)
+
+### BREAKING CHANGES
+
+- Review updated blockquote markup
+
+- increase spacing
+
+- chore: regression test update
+
+# [6.0.0](https://github.com/uq-its-ss/design-system/compare/storybook-html@5.0.0...storybook-html@6.0.0) (2025-05-27)
+
+- Release/1.0.5 (#631) ([e247c79](https://github.com/uq-its-ss/design-system/commit/e247c790585abe267b95de489381efe25107a7bb)), closes [#631](https://github.com/uq-its-ss/design-system/issues/631) [#568](https://github.com/uq-its-ss/design-system/issues/568)
+
+### BREAKING CHANGES
+
+- Review updated blockquote markup
+
+- increase spacing
+
+- chore: regression test update
+
+# [6.0.0-alpha.19](https://github.com/uq-its-ss/design-system/compare/storybook-html@6.0.0-alpha.18...storybook-html@6.0.0-alpha.19) (2025-05-27)
+
+**Note:** Version bump only for package storybook-html
+
+# [6.0.0-alpha.18](https://github.com/uq-its-ss/design-system/compare/storybook-html@6.0.0-alpha.17...storybook-html@6.0.0-alpha.18) (2025-05-27)
+
+- [ITSADSSD-59698]: React storybook and @uqds/react package (#602) ([28ca458](https://github.com/uq-its-ss/design-system/commit/28ca458437ccfdc51896d17b69d2337ceb07484d)), closes [#602](https://github.com/uq-its-ss/design-system/issues/602) [#621](https://github.com/uq-its-ss/design-system/issues/621) [#617](https://github.com/uq-its-ss/design-system/issues/617) [#618](https://github.com/uq-its-ss/design-system/issues/618) [#614](https://github.com/uq-its-ss/design-system/issues/614) [#615](https://github.com/uq-its-ss/design-system/issues/615) [#616](https://github.com/uq-its-ss/design-system/issues/616) [#620](https://github.com/uq-its-ss/design-system/issues/620) [#623](https://github.com/uq-its-ss/design-system/issues/623) [#624](https://github.com/uq-its-ss/design-system/issues/624)
+
+### BREAKING CHANGES
+
+- new pagination markup
+
+- feat: add UqPagination
+
+- chore: fix lint, remove old files
+
+- chore: update pagination features to match react implementation
+
+- fix: next buttons
+
+- chore: add stories for pagination item to reduce markup
+
+- chore: added screenshots
+
+- chore: pr feedback, updates to pagination, add linting/tsc command
+
+- chore: update package-lock
+
+# [6.0.0-alpha.17](https://github.com/uq-its-ss/design-system/compare/storybook-html@6.0.0-alpha.16...storybook-html@6.0.0-alpha.17) (2025-05-26)
+
+### Bug Fixes
+
+- remove 300 weight fonts, updated to 400 weight ([#594](https://github.com/uq-its-ss/design-system/issues/594)) ([02ad03d](https://github.com/uq-its-ss/design-system/commit/02ad03d918c153cf41df3f0dfb8dc2bed19e2262))
+
+# [6.0.0-alpha.16](https://github.com/uq-its-ss/design-system/compare/storybook-html@6.0.0-alpha.15...storybook-html@6.0.0-alpha.16) (2025-05-23)
+
+**Note:** Version bump only for package storybook-html
+
+# [6.0.0-alpha.15](https://github.com/uq-its-ss/design-system/compare/storybook-html@6.0.0-alpha.14...storybook-html@6.0.0-alpha.15) (2025-05-14)
+
+**Note:** Version bump only for package storybook-html
+
+# [6.0.0-alpha.14](https://github.com/uq-its-ss/design-system/compare/storybook-html@6.0.0-alpha.13...storybook-html@6.0.0-alpha.14) (2025-05-12)
+
+**Note:** Version bump only for package storybook-html
+
+# [6.0.0-alpha.13](https://github.com/uq-its-ss/design-system/compare/storybook-html@6.0.0-alpha.12...storybook-html@6.0.0-alpha.13) (2025-04-30)
+
+**Note:** Version bump only for package storybook-html
+
+# [6.0.0-alpha.12](https://github.com/uq-its-ss/design-system/compare/storybook-html@6.0.0-alpha.11...storybook-html@6.0.0-alpha.12) (2025-04-30)
+
+**Note:** Version bump only for package storybook-html
+
+# [6.0.0-alpha.11](https://github.com/uq-its-ss/design-system/compare/storybook-html@6.0.0-alpha.10...storybook-html@6.0.0-alpha.11) (2025-04-30)
+
+**Note:** Version bump only for package storybook-html
+
+# [6.0.0-alpha.10](https://github.com/uq-its-ss/design-system/compare/storybook-html@6.0.0-alpha.9...storybook-html@6.0.0-alpha.10) (2025-04-30)
+
+**Note:** Version bump only for package storybook-html
+
+# [6.0.0-alpha.9](https://github.com/uq-its-ss/design-system/compare/storybook-html@6.0.0-alpha.8...storybook-html@6.0.0-alpha.9) (2025-04-22)
+
+**Note:** Version bump only for package storybook-html
+
+# [6.0.0-alpha.8](https://github.com/uq-its-ss/design-system/compare/storybook-html@6.0.0-alpha.7...storybook-html@6.0.0-alpha.8) (2025-04-22)
+
+**Note:** Version bump only for package storybook-html
+
+# [6.0.0-alpha.7](https://github.com/uq-its-ss/design-system/compare/storybook-html@6.0.0-alpha.6...storybook-html@6.0.0-alpha.7) (2025-03-31)
+
+**Note:** Version bump only for package storybook-html
+
+# [6.0.0-alpha.6](https://github.com/uq-its-ss/design-system/compare/storybook-html@6.0.0-alpha.5...storybook-html@6.0.0-alpha.6) (2025-03-28)
+
+**Note:** Version bump only for package storybook-html
+
+# [6.0.0-alpha.5](https://github.com/uq-its-ss/design-system/compare/storybook-html@6.0.0-alpha.4...storybook-html@6.0.0-alpha.5) (2025-02-24)
+
+- [ITSADSSD-59700]: New pagination (#605) ([2cd8d76](https://github.com/uq-its-ss/design-system/commit/2cd8d7670bc27a15cfdfe3a1eacdab941f728800)), closes [#605](https://github.com/uq-its-ss/design-system/issues/605)
+
+### BREAKING CHANGES
+
+- new pagination markup
+
+- chore: fix lint, remove old files
+
+- chore: update pagination features to match react implementation
+
+- chore: add stories for pagination item to reduce markup
+
+- chore: added screenshots
+
+# [6.0.0-alpha.4](https://github.com/uq-its-ss/design-system/compare/storybook-html@6.0.0-alpha.3...storybook-html@6.0.0-alpha.4) (2025-02-03)
+
+### Bug Fixes
+
+- add creative commons icon to republish accordion ([#604](https://github.com/uq-its-ss/design-system/issues/604)) ([4a7d840](https://github.com/uq-its-ss/design-system/commit/4a7d840a64c6b379771c94bbffa9052e4ff2aab4))
+
+# [6.0.0-alpha.3](https://github.com/uq-its-ss/design-system/compare/storybook-html@6.0.0-alpha.2...storybook-html@6.0.0-alpha.3) (2025-01-31)
+
+### Bug Fixes
+
+- [ITSADSSD-60892][ITSADSSD-60967]: Bug fixes for News site ([#603](https://github.com/uq-its-ss/design-system/issues/603)) ([afbdb52](https://github.com/uq-its-ss/design-system/commit/afbdb52b0957b4613a9ac7cef4eab980e4b29b05))
+
+# [6.0.0-alpha.2](https://github.com/uq-its-ss/design-system/compare/storybook-html@6.0.0-alpha.1...storybook-html@6.0.0-alpha.2) (2025-01-23)
+
+**Note:** Version bump only for package storybook-html
+
+# [6.0.0-alpha.1](https://github.com/uq-its-ss/design-system/compare/storybook-html@6.0.0-alpha.0...storybook-html@6.0.0-alpha.1) (2025-01-23)
+
+**Note:** Version bump only for package storybook-html
+
+# [6.0.0-alpha.0](https://github.com/uq-its-ss/design-system/compare/storybook-html@4.0.0-alpha.8...storybook-html@6.0.0-alpha.0) (2025-01-20)
+
+- Merge release/1.0.4 back to master (#597) ([c85f4dd](https://github.com/uq-its-ss/design-system/commit/c85f4dd04601bad019d83edeb680dd919fd1aebb)), closes [#597](https://github.com/uq-its-ss/design-system/issues/597) [#583](https://github.com/uq-its-ss/design-system/issues/583) [#568](https://github.com/uq-its-ss/design-system/issues/568)
+
+### BREAKING CHANGES
+
+- Review updated blockquote markup
+
+- increase spacing
+
+- chore: regression test update
+
+# [5.0.0](https://github.com/uq-its-ss/design-system/compare/storybook-html@3.0.0...storybook-html@5.0.0) (2025-01-20)
+
+- Release/1.0.4 (#595) ([b40223d](https://github.com/uq-its-ss/design-system/commit/b40223d819d456f67620dfd880380b85214c4103)), closes [#595](https://github.com/uq-its-ss/design-system/issues/595) [#568](https://github.com/uq-its-ss/design-system/issues/568)
+
+### BREAKING CHANGES
+
+- Review updated blockquote markup
+
+- increase spacing
+
+- chore: regression test update
+
+# [4.0.0](https://github.com/uq-its-ss/design-system/compare/storybook-html@3.0.0...storybook-html@4.0.0) (2025-01-20)
+
+- Release/1.0.4 (#595) ([b40223d](https://github.com/uq-its-ss/design-system/commit/b40223d819d456f67620dfd880380b85214c4103)), closes [#595](https://github.com/uq-its-ss/design-system/issues/595) [#568](https://github.com/uq-its-ss/design-system/issues/568)
+
+### BREAKING CHANGES
+
+- Review updated blockquote markup
+
+- increase spacing
+
+- chore: regression test update
+
+# [4.0.0-alpha.8](https://github.com/uq-its-ss/design-system/compare/storybook-html@4.0.0-alpha.7...storybook-html@4.0.0-alpha.8) (2025-01-20)
+
+### Bug Fixes
+
+- add link tag to news article header ([#593](https://github.com/uq-its-ss/design-system/issues/593)) ([bc518e3](https://github.com/uq-its-ss/design-system/commit/bc518e33a708c28300c212e2dca20c8527143be1))
+
+# [4.0.0-alpha.7](https://github.com/uq-its-ss/design-system/compare/storybook-html@4.0.0-alpha.6...storybook-html@4.0.0-alpha.7) (2025-01-20)
+
+### Bug Fixes
+
+- [ITSADSSD-59298]: Update linkedin share link ([#592](https://github.com/uq-its-ss/design-system/issues/592)) ([de06b25](https://github.com/uq-its-ss/design-system/commit/de06b25700044598cca6628a726ec2826780fff9))
+
+# [4.0.0-alpha.6](https://github.com/uq-its-ss/design-system/compare/storybook-html@4.0.0-alpha.5...storybook-html@4.0.0-alpha.6) (2025-01-16)
+
+**Note:** Version bump only for package storybook-html
+
+# [4.0.0-alpha.5](https://github.com/uq-its-ss/design-system/compare/storybook-html@4.0.0-alpha.4...storybook-html@4.0.0-alpha.5) (2025-01-16)
+
+### Bug Fixes
+
+- ITSADSSD-59298: Tooltips for social buttons ([#589](https://github.com/uq-its-ss/design-system/issues/589)) ([4632316](https://github.com/uq-its-ss/design-system/commit/4632316834cf97e826ca779d1be6885078b66974))
+
+# [4.0.0-alpha.4](https://github.com/uq-its-ss/design-system/compare/storybook-html@4.0.0-alpha.3...storybook-html@4.0.0-alpha.4) (2025-01-16)
+
+### Features
+
+- ITSADSSD-59774: Article template including header ([#587](https://github.com/uq-its-ss/design-system/issues/587)) ([7920651](https://github.com/uq-its-ss/design-system/commit/7920651fc4ac7eac9aca851baeaccd140c92c54f))
+
+# [4.0.0-alpha.3](https://github.com/uq-its-ss/design-system/compare/storybook-html@4.0.0-alpha.2...storybook-html@4.0.0-alpha.3) (2025-01-15)
+
+### Features
+
+- add mobile stacking/ordering ([#588](https://github.com/uq-its-ss/design-system/issues/588)) ([901e299](https://github.com/uq-its-ss/design-system/commit/901e299df1fba200f11ac1c3df5aa3e697bc109e))
+
+# [4.0.0-alpha.2](https://github.com/uq-its-ss/design-system/compare/storybook-html@4.0.0-alpha.1...storybook-html@4.0.0-alpha.2) (2025-01-14)
+
+**Note:** Version bump only for package storybook-html
+
 # [4.0.0-alpha.1](https://github.com/uq-its-ss/design-system/compare/storybook-html@4.0.0-alpha.0...storybook-html@4.0.0-alpha.1) (2025-01-13)
 
 ### Bug Fixes

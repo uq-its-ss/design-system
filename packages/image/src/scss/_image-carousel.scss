@@ -1,6 +1,6 @@
 @use "@uqds/core/src/scss/global" as core;
 @use "@uqds/icon/src/scss/global" as icon;
-@import "~swiper/css";
+@use "../../../../node_modules/swiper/swiper";
 
 .uq-image-carousel {
   container-type: inline-size;

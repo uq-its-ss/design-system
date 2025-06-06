@@ -584,6 +584,10 @@ export default [
     category: "other",
   },
   {
+    name: "creative-commons",
+    category: "other",
+  },
+  {
     name: "e-learning-book-laptop",
     category: "other",
   },
@@ -893,6 +897,10 @@ export default [
   },
   {
     name: "social-linkedin-circle",
+    category: "social",
+  },
+  {
+    name: "social-tiktok-circle",
     category: "social",
   },
   {

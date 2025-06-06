@@ -35,7 +35,7 @@ export const NewsExample = {
   render: () => `
 <div class="uq-container">
   <div class="uq-sidebar-right-layout uq-reduced-spacing">
-    <div class="uq-sidebar-right-layout__main">
+    <div class="uq-sidebar-right-layout__main uq-sidebar-right-layout__first">
       <div class="uq-section">
         <div class="uq-card-grid">
           ${FeatureCard({ title: "How to host a climate positive Olympic Games", description: "Online gaming could be the answer to engaging young Queenslanders to help create a legacy for the city from the Brisbane 2032 Olympic and Paralympic Games.", image: "images/news/feature.jpg", topLabel: null })}
@@ -47,6 +47,21 @@ export const NewsExample = {
           </div>
         </div>
       </div>
+    </div>
+    <div class="uq-sidebar-right-layout__sidebar uq-sidebar-right-layout__first">
+      <div class="uq-section">
+        <div class="uq-section__header">
+          <h2 class="uq-section__title">Editors' pick</h2>
+        </div>
+        <div class="uq-card-grid">
+            ${LandscapeCard({ title: "Moving policy forward nanotechnology", image: "images/news/image-2.jpg", topLabel: null })}
+            ${LandscapeCard({ title: "From 'face of UQ' to champion of diversity", image: "images/news/image-1.jpg", topLabel: null })}
+            ${LandscapeCard({ title: "Gene editing for fun and profit: it’s a knockout!", image: "images/news/image-3.jpg", topLabel: null })}
+            ${LandscapeCard({ title: "Broome diaries: in search of bushfoods in the Kimberly region", image: "images/news/image-4.jpg", topLabel: null })}
+        </div>    
+      </div>
+    </div>
+    <div class="uq-sidebar-right-layout__main uq-sidebar-right-layout__second">
       <div class="uq-section">
         <div class="uq-section__header">
           <h2 class="uq-section__title">Science and technology news</h2>
@@ -69,18 +84,7 @@ export const NewsExample = {
         </div> 
       </div>
     </div>
-    <div class="uq-sidebar-right-layout__sidebar">
-      <div class="uq-section">
-        <div class="uq-section__header">
-          <h2 class="uq-section__title">Editors' pick</h2>
-        </div>
-        <div class="uq-card-grid">
-            ${LandscapeCard({ title: "Moving policy forward nanotechnology", image: "images/news/image-2.jpg", topLabel: null })}
-            ${LandscapeCard({ title: "From 'face of UQ' to champion of diversity", image: "images/news/image-1.jpg", topLabel: null })}
-            ${LandscapeCard({ title: "Gene editing for fun and profit: it’s a knockout!", image: "images/news/image-3.jpg", topLabel: null })}
-            ${LandscapeCard({ title: "Broome diaries: in search of bushfoods in the Kimberly region", image: "images/news/image-4.jpg", topLabel: null })}
-        </div>    
-      </div>
+    <div class="uq-sidebar-right-layout__sidebar uq-sidebar-right-layout__second">
       <div class="uq-section">
         <div class="uq-card-grid">
           ${Card({ title: "Subscribe to UQ News", description: "Get the latest from our newsroom." })}

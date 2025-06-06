@@ -83,12 +83,21 @@
 .uq-pane--text,
 .uq-pane--text-shaded {
   & .uq-pane__image,
-  & .uq-pane__icon {
+  & .uq-pane__icon,
+  & .uq-pane__video {
     display: none;
   }
 }
 
 .uq-pane--image {
+  & .uq-pane__icon,
+  & .uq-pane__video {
+    display: none;
+  }
+}
+
+.uq-pane--video {
+  & .uq-pane__image,
   & .uq-pane__icon {
     display: none;
   }
@@ -97,7 +106,8 @@
 .uq-pane--icon,
 .uq-pane--icon-large,
 .uq-pane--icon-shaded {
-  & .uq-pane__image {
+  & .uq-pane__image,
+  & .uq-pane__video {
     display: none;
   }
 }

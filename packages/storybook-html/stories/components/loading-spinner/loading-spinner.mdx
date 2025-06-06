@@ -61,6 +61,21 @@ Reduces the component to half the size of the default.
 </div>
 ```
 
+## Nesting
+
+Loading spinners can be used inside certain other components.
+
+### Button
+
+<Canvas of={LoadingSpinnerStories.loadingSpinnerButton} />
+
+```html
+<button class="uq-button">
+  <i class="uq-loading-spinner" role="alert" aria-live="assertive"></i>
+  Submit
+</button>
+```
+
 ## How and when to use
 
 The loading spinner component can be used to represent the loading of data in a page or within a component.

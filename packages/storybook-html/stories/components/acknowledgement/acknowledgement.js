@@ -1,8 +1,8 @@
 // import styles
-import "./acknowledgement-statement.scss";
+import "./acknowledgement.scss";
 
-export const createAcknowledgementStatement = ({
-  style = "primart",
+export const createAcknowledgement = ({
+  style = "primary",
   label,
   size = "default",
   expand = false,

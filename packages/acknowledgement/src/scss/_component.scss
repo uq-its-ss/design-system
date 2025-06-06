@@ -2,7 +2,7 @@
 @use "@uqds/core/src/scss/global" as core;
 @use "global" as *;
 
-.uq-acknowledgement-statement {
+.uq-acknowledgement {
   background: core.$black;
   background-image: linear-gradient(
       0deg,
@@ -27,7 +27,7 @@
     max-width: 73.25rem;
     padding: core.$space-compressed-m core.$space-l;
     color: core.$white;
-    font-weight: 400;
+    font-weight: core.$font-weight-normal;
     font-size: core.$font-size-m;
     line-height: 1.5;
     margin: auto;
@@ -48,7 +48,7 @@
   &__link {
     font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-style: normal;
-    font-weight: 400;
+    font-weight: core.$font-weight-normal;
     color: core.$white;
 
     &:hover {

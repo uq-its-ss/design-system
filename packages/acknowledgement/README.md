@@ -1,4 +1,4 @@
-# `@uqds/acknowledgement-statement`
+# `@uqds/acknowledgement`
 
 > Acknowledgement statement component
 
@@ -9,19 +9,19 @@
 With Yarn:
 
 ```shell
-yarn add @uqds/acknowledgement-statement
+yarn add @uqds/acknowledgement
 ```
 
 With NPM:
 
 ````shell
-npm i @uqds/acknowledgement-statement
+npm i @uqds/acknowledgement
 
 ---
 
 ## Dependency graph
 
 ```shell
-@uqds/acknowledgement-statement
+@uqds/acknowledgement
 ├─ @uqds/core
 ````

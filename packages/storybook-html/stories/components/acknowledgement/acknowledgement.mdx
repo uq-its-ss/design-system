@@ -1,10 +1,10 @@
 import { Meta, Story, Canvas, Controls } from "@storybook/blocks";
 import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
-import * as AcknowledgementStatementStories from "./acknowledgement-statement.stories";
+import * as AcknowledgementStories from "./acknowledgement.stories";
 
-<Meta of={AcknowledgementStatementStories} />
+<Meta of={AcknowledgementStories} />
 
-# Acknowledgement Statement
+# Acknowledgement
 
 <StatusBadge.Development />
 
@@ -23,17 +23,14 @@ These statements are used to show respect and recognition of the traditional own
 
 Cultural statement persistent across all library pages
 
-<Canvas sourceState="hidden">
-  <Story of={AcknowledgementStatementStories.culturalAdvise} />
-</Canvas>
+<Canvas of={AcknowledgementStories.culturalAdvise} />
+<Controls of={AcknowledgementStories.culturalAdvise} />
 
 ### Reconciliation
 
-Reconciliation statement persistent across all UQ Footers and uses the modifier 'uq-acknowledgement-statement--large'
+Reconciliation statement persistent across all UQ Footers and uses the modifier 'uq-acknowledgement--large'
 
-<Canvas sourceState="hidden">
-  <Story of={AcknowledgementStatementStories.reconciliationStatement} />
-</Canvas>
+<Canvas of={AcknowledgementStories.reconciliationStatement} />
 
 ### States
 

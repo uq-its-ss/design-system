@@ -4,24 +4,38 @@
 .uq-card-grid {
   display: grid;
   gap: var(--layout-gap);
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: 1fr;
   container-type: inline-size;
 
   & > * {
-    grid-column: auto / span 12;
+    grid-column: auto / span 1;
+  }
+}
+
+.uq-card-grid--target-1x {
+  & > * {
+    overflow: hidden;
   }
 }
 
 .uq-card-grid--target-2x {
+  grid-template-columns: 1fr 1fr;
+
   & > * {
+    grid-column: auto / span 2;
+
     @container (width > #{$card-grid-container-sm}) {
-      grid-column: auto / span 6;
+      grid-column: auto / span 1;
     }
   }
 }
 
 .uq-card-grid--target-3x {
+  grid-template-columns: repeat(12, 1fr);
+
   & > * {
+    grid-column: auto / span 12;
+
     @container (width > #{$card-grid-container-sm}) {
       grid-column: auto / span 6;
     }
@@ -33,7 +47,11 @@
 }
 
 .uq-card-grid--target-4x {
+  grid-template-columns: repeat(12, 1fr);
+
   & > * {
+    grid-column: auto / span 12;
+
     @container (width > #{$card-grid-container-sm}) {
       grid-column: auto / span 6;
     }

@@ -25,7 +25,7 @@ body {
   &-title {
     font-size: core.$font-size-xxxl !important;
     margin: 0 0 core.$space-s !important;
-    font-weight: 500 !important;
+    font-weight: core.$font-weight-medium !important;
     color: core.$purple-500 !important;
     font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   }
@@ -56,7 +56,7 @@ body {
   &-h5,
   &-h6 {
     margin: core.$space-xxxl 0 0 !important;
-    font-weight: 500 !important;
+    font-weight: core.$font-weight-medium !important;
     padding-bottom: 0 !important;
     border-bottom: 0 !important;
     color: core.$purple-500 !important;
@@ -91,7 +91,7 @@ body {
   .uq-alert__title {
     /* restore original alert title styles overridden by heading styles above */
     color: core.$grey-900 !important;
-    font-weight: 500 !important;
+    font-weight: core.$font-weight-medium !important;
     font-size: core.$font-size-m !important;
     margin: 0 0 core.$space-s !important;
   }
@@ -111,7 +111,7 @@ body {
 }
 
 .uqds-table .uqds-table__heading {
-  font-weight: 500;
+  font-weight: core.$font-weight-medium;
   text-align: left;
   color: #51247a;
   background-color: #f1f1f1;
@@ -185,6 +185,18 @@ body {
   }
 }
 
+.uqds-story-card-preview,
+  // Add this hack because the decorator isn't being added on first load.
+  #storybook-root > .uq-card,
+  #storybook-root > .uq-story-card,
+  #storybook-root > .uq-pane {
+  max-width: 700px;
+
+  @media #{core.$screen-md-down} {
+    max-width: none;
+  }
+}
+
 .uqds-layout-preview {
   background: repeating-linear-gradient(
     45deg,
@@ -214,4 +226,16 @@ body {
   background-color: lighten(core.$utility-500, 40%);
   border: 1px solid core.$utility-500;
   height: 220px;
+}
+
+.sb-purple-background {
+  background-color: core.$purple-500 !important;
+}
+
+.sbdocs-preview,
+.sb-main-padded {
+  .uq-image,
+  .uq-image-carousel {
+    max-width: 900px;
+  }
 }

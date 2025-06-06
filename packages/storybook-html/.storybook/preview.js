@@ -2,6 +2,20 @@ import TocDocs from "./custom/components/TocDocs";
 import DocsHeader from "./custom/components/DocsHeader";
 import DocsPage from "./custom/components/DocsPage";
 
+import "@uqds/layout/src/scss/main.scss";
+import "@uqds/sections/src/scss/main.scss";
+import "@uqds/hero/src/scss/main.scss";
+import "@uqds/card/src/scss/main.scss";
+import "@uqds/pane/src/scss/main.scss";
+import "@uqds/button/src/scss/main.scss";
+import "@uqds/icon/src/scss/main.scss";
+import "@uqds/alert/src/scss/main.scss";
+import "@uqds/accordion/src/scss/main.scss";
+import "@uqds/form/src/scss/main.scss";
+import "@uqds/table/src/scss/main.scss";
+import "@uqds/social/src/scss/main.scss";
+import "@uqds/pagination/src/scss/main.scss";
+
 import "./preview.scss";
 
 /** @type { import('@storybook/html').Preview } */

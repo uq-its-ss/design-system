@@ -1,0 +1,39 @@
+import { Meta, Canvas, Source } from "@storybook/blocks";
+import StatusBadge from "../../../../.storybook/custom/components/StatusBadge";
+import * as SidebarRightStories from "./sidebar-right.stories";
+
+<Meta of={SidebarRightStories} />
+
+# Sidebar right layout
+
+<StatusBadge.Development />
+<StatusBadge.DraftDoc />
+
+## Overview
+
+The `.uq-sidebar-right-layout` component provides a sidebar right grid system.
+
+### How-to
+
+The element must first be wrapped in a `.uq-container` element to provide the
+**page container**.
+
+Then implement the component as per the HTML example below.
+
+`.uq-section` elements are then used within `.uq-sidebar-right-layout__main` and `.uq-sidebar-right-layout__sidebar` to
+provide correct **section spacing**.
+
+<Canvas of={SidebarRightStories.SidebarRight} sourceState="none" />
+
+<Source of={SidebarRightStories.SidebarRight} />
+
+### Examples
+
+#### Sidebar right layout with News cards.
+
+This example uses the `.uq-reduced-spacing` class for smaller gaps between sections and cards.
+
+Multiple main and sidebar elements can be used combined with the `.uq-sidebar-right-layout__first` and `.uq-sidebar-right-layout__second` to achieve
+complex mobile stack ordering whilst maintaining the desktop grid layout.
+
+<Canvas of={SidebarRightStories.NewsExample} />

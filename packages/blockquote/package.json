@@ -1,6 +1,6 @@
 {
   "name": "@uqds/blockquote",
-  "version": "0.1.4-alpha.0",
+  "version": "5.0.0",
   "description": "Blockquote component",
   "keywords": [
     "uqds",
@@ -32,6 +32,7 @@
     "src/*",
     "dist/*"
   ],
+  "style": "dist/css/main.css",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/uq-its-ss/design-system.git"
@@ -40,6 +41,6 @@
     "url": "https://github.com/uq-its-ss/design-system/issues"
   },
   "dependencies": {
-    "@uqds/core": "^1.2.4-alpha.0"
+    "@uqds/core": "^4.0.0"
   }
 }

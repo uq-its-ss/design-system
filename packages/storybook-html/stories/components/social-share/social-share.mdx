@@ -1,0 +1,34 @@
+import { Meta, Canvas, Source } from "@storybook/blocks";
+import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
+import * as SocialShareStories from "./social-share.stories";
+
+<Meta of={SocialShareStories} />
+
+# Social share
+
+<StatusBadge.Stable />
+
+<StatusBadge.StableDoc />
+
+<a href="https://github.com/uq-its-ss/design-system/issues" target="_blank">
+  Check for open issues
+</a>
+
+## Overview
+
+A button that allows copying of a string of text to the users clipboard.
+
+<Canvas of={SocialShareStories.SocialShare} story={{ autoplay: true }} />
+
+<Source of={SocialShareStories.SocialShare} />
+
+## How to use
+
+Implement the social share links markup following the example above, then call the socialShare() function as so:
+
+```js
+import { socialShare } from "@uqds/social";
+
+const element = document.querySelector(".uq-social-share");
+socialShare(element);
+```

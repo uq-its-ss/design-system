@@ -1,0 +1,60 @@
+@use "@uqds/core/src/scss/global" as core;
+@use "@uqds/body/src/scss/global" as body;
+@use "@uqds/icon/src/scss/global" as icon-constants;
+
+.uq-pill {
+  display: inline-block;
+  align-items: center;
+  border: 1px solid var(--pill-colour);
+  color: var(--pill-colour);
+  padding: var(--pill-padding);
+  height: var(--pill-height);
+  border-radius: calc(var(--pill-height) / 2);
+  text-decoration: none;
+  background-color: var(--pill-background);
+  font-size: var(--pill-font-size);
+  font-weight: normal;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 100%;
+  line-height: 1;
+
+  &:hover {
+    text-decoration: underline;
+    background-color: var(--pill-background);
+    color: var(--pill-colour);
+    cursor: pointer;
+  }
+
+  &:has(:focus-visible) {
+    @include body.focus-styles;
+  }
+
+  & input {
+    @include body.visually-hidden;
+  }
+}
+
+.uq-pill--active,
+.uq-pill:has(:checked) {
+  --pill-background: #{core.$purple-50};
+  border-color: transparent;
+}
+
+.uq-pill:has(input[type="checkbox"]:checked) {
+  padding-right: core.$space-s;
+
+  &::after {
+    content: "";
+    height: 24px;
+    width: 24px;
+    display: inline-block;
+    background-image: url(icon-constants.get-icon(
+      "standard--x-sml",
+      core.$purple-500
+    ));
+    margin-block: -6px;
+    margin-left: core.$space-xs;
+  }
+}

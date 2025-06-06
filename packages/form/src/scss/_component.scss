@@ -1,7 +1,6 @@
 @use "@uqds/core/src/scss/global" as core;
 @use "@uqds/icon/src/scss/global" as icon;
 @use "global" as *;
-@use "icons" as *;
 
 $use-encapsulation: false !default;
 
@@ -159,25 +158,21 @@ $use-encapsulation: false !default;
     }
   }
 
+  .uq-input,
   input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]),
   select,
   textarea {
     background-color: core.$white;
     max-width: 100%;
     min-width: 100%;
-    padding: ($form-spacing - core.$space-xs) $form-spacing;
-    border: $form-border-width solid core.$grey-300;
+    padding: 12px $form-spacing;
+    border: $form-border-width solid core.$grey-600;
     border-radius: $form-border-radius;
     font-size: $form-text-size;
     color: core.$grey-900;
-    line-height: core.$line-height-ui;
+    line-height: 1;
+    height: 48px;
     margin-bottom: core.$space-l;
-
-    &:focus {
-      border-color: core.$utility-500;
-      box-shadow: 0 0 0 1px core.$utility-500 inset;
-      outline: none;
-    }
 
     &[disabled] {
       color: core.$grey-300;
@@ -191,7 +186,7 @@ $use-encapsulation: false !default;
     }
 
     &::placeholder {
-      color: core.$grey-300;
+      color: core.$grey-500;
     }
 
     &.uq-input--error,

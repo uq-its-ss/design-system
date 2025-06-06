@@ -21,6 +21,14 @@
 
 .uq-pane__description {
   margin-top: core.$space-s;
+
+  & :last-child {
+    margin-bottom: 0;
+  }
+
+  & li {
+    margin-bottom: core.$space-s;
+  }
 }
 
 .uq-pane__image {
@@ -36,6 +44,21 @@
     inset: 0;
     position: absolute;
     object-fit: cover;
+  }
+}
+
+.uq-pane__video {
+  flex-shrink: 0;
+  aspect-ratio: 16 / 9;
+  margin-bottom: core.$space-l;
+  position: relative;
+
+  & iframe {
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    position: absolute;
+    border: 0;
   }
 }
 
@@ -60,12 +83,21 @@
 .uq-pane--text,
 .uq-pane--text-shaded {
   & .uq-pane__image,
-  & .uq-pane__icon {
+  & .uq-pane__icon,
+  & .uq-pane__video {
     display: none;
   }
 }
 
 .uq-pane--image {
+  & .uq-pane__icon,
+  & .uq-pane__video {
+    display: none;
+  }
+}
+
+.uq-pane--video {
+  & .uq-pane__image,
   & .uq-pane__icon {
     display: none;
   }
@@ -74,7 +106,8 @@
 .uq-pane--icon,
 .uq-pane--icon-large,
 .uq-pane--icon-shaded {
-  & .uq-pane__image {
+  & .uq-pane__image,
+  & .uq-pane__video {
     display: none;
   }
 }
@@ -119,6 +152,11 @@
     & .uq-pane__image {
       width: 50%;
       height: 100%;
+      margin: 0;
+    }
+
+    .uq-pane__video {
+      width: 50%;
       margin: 0;
     }
 

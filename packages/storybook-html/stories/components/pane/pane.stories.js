@@ -13,17 +13,17 @@ export default {
       options: [
         "text",
         "image",
+        "video",
         "icon",
         "icon-large",
         "text-shaded",
         "icon-shaded",
       ],
     },
+    video: "text",
     image: {
       control: "select",
-      options: [
-        "https://design-system.ads-staging.aws.uq.edu.au/images/card/card-example-herston-campus.jpg",
-      ],
+      options: ["images/card/card-example-herston-campus.jpg"],
     },
     icon: {
       control: "select",
@@ -48,16 +48,20 @@ export default {
 export const Pane = {
   args: {
     variant: "image",
-    image:
-      "https://design-system.ads-staging.aws.uq.edu.au/images/card/card-example-herston-campus.jpg",
+    image: "images/card/card-example-herston-campus.jpg",
     icon: "",
     links: `<a href="#">This is a link</a><a href="#">This is another link</a>`,
   },
-  render: ({ variant, image, icon, title, description, links }) => `
+  render: ({ variant, image, icon, title, description, links, video }) => `
 <div class="uq-pane uq-pane--${variant}">
   ${
     image
       ? `<div class="uq-pane__image"><img src="${image}" alt="" /></div>`
+      : ""
+  }
+  ${
+    video
+      ? `<div class="uq-pane__video"><iframe width="560" height="315" src="${video}" allowfullscreen></iframe></div>`
       : ""
   }
   <div class="uq-pane__content">
@@ -81,8 +85,15 @@ export const Image = {
   ...Pane,
   args: {
     variant: "image",
-    image:
-      "https://design-system.ads-staging.aws.uq.edu.au/images/card/card-example-herston-campus.jpg",
+    image: "images/card/card-example-herston-campus.jpg",
+  },
+};
+
+export const Video = {
+  ...Pane,
+  args: {
+    variant: "video",
+    video: "https://www.youtube.com/embed/ViMYZ8PRAjQ?si=MjVUL2on656-WESr",
   },
 };
 

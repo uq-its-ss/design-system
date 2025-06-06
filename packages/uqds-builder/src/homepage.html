@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
+  <head> 
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>UQ UQDS Example</title>
+    <link href="favicon.ico" type="image/x-icon" rel="shortcut icon" />
+    <link href="favicon.ico" type="image/x-icon" rel="icon" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto:wght@400;500&display=swap" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+  </head>
+  <body>
+    <header class="uq-header" data-gtm-category="Header">
+      <div class="uq-header__container">
+        <div class="uq-header__menu-toggle" data-gtm-category="Primary header">
+          <button type="button" class="nav-primary__toggle nav-primary__menu-toggle slide-menu__control" data-target="global-mobile-nav" data-action="toggle" data-gtm-action="Toggle">Menu</button>
+        </div>
+        <div class="uq-header__logo" data-gtm-category="Primary header">
+          <a class="logo--large" href="https://www.uq.edu.au" data-gtm-label="UQ Logo">
+            <img alt="The University of Queensland" src="https://static.uq.net.au/v15/logos/corporate/uq-logo--reversed.svg">
+          </a>
+        </div>
+        <div class="uq-header__nav-primary" data-gtm-category="Primary header">
+          <nav class="uq-header__nav-primary-container" aria-label="primary navigation">
+            <ul class="uq-header__nav-primary-list">
+              <li class="uq-header__nav-primary-item"><a class="uq-header__nav-primary-link nav-primary-link--has-dropdown" href="https://study.uq.edu.au" data-gtm-label="Study">Study</a>
+                <div class="uq-header__megamenu">
+                  <div class="uq-header__megamenu-container">
+                    <a href="https://study.uq.edu.au" class="megamenu__overview-link" data-gtm-label="Study > Study overview">Study overview</a>
+                    <div class="megamenu__row">
+                      <div class="megamenu__column">
+                        <div class="megamenu__heading">Study with us</div>
+                        <div class="megamenu__menu">
+                          <ul>
+                            <li><a href="https://study.uq.edu.au/study-options/programs" data-gtm-label="Study > Find a course or program">Find a course or program</a></li>
+                            <li><a href="https://study.uq.edu.au/study-options/browse-study-areas" data-gtm-label="Study > Browse study areas">Browse study areas</a></li>
+                            <li><a href="https://study.uq.edu.au/study-options" data-gtm-label="Study > Study options">Study options</a></li>
+                            <li><a href="https://study.uq.edu.au/short-courses" data-gtm-label="Study > Short courses">Short courses</a></li>
+                            <li><a href="https://study.uq.edu.au/admissions" data-gtm-label="Study > How to apply">How to apply</a></li>
+                            <li><a href="https://scholarships.uq.edu.au" data-gtm-label="Study > Scholarships">Scholarships</a></li>
+                            <li><a href="https://my.uq.edu.au/starting-at-uq" data-gtm-label="Study > Starting at UQ">Starting at UQ</a></li>
+                            <li><a href="https://study.uq.edu.au/contact" data-gtm-label="Study > Contact">Contact</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="megamenu__column">
+                        <div class="megamenu__heading">Discover UQ</div>
+                        <div class="megamenu__menu">
+                          <ul>
+                            <li><a href="https://study.uq.edu.au/why-choose-uq" data-gtm-label="Study > Why choose UQ">Why choose UQ</a></li>
+                            <li><a href="https://study.uq.edu.au/enhance-your-employability" data-gtm-label="Study > Enhance your employability">Enhance your employability</a></li>
+                            <li><a href="https://study.uq.edu.au/university-life" data-gtm-label="Study > Life at UQ and accommodation">Life at UQ and accommodation</a></li>
+                            <li><a href="https://campuses.uq.edu.au" data-gtm-label="Study > Campuses, maps and transport">Campuses, maps and transport</a></li>
+                            <li><a href="https://study.uq.edu.au/events" data-gtm-label="Study > Events for prospective students">Events for prospective students</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="megamenu__column">
+                        <div class="megamenu__heading">Information for</div>
+                        <div class="megamenu__menu">
+                          <ul>
+                            <li><a href="https://study.uq.edu.au/information-resources/international-students" data-gtm-label="Study > International students">International students</a></li>
+                            <li><a href="https://study.uq.edu.au/information-resources/high-school-students" data-gtm-label="Study > High school students">High school students</a></li>
+                            <li><a href="https://study.uq.edu.au/information-resources/non-school-leavers" data-gtm-label="Study > Non-school leavers">Non-school leavers</a></li>
+                            <li><a href="https://study.uq.edu.au/study-options/phd-mphil-professional-doctorate" data-gtm-label="Study > PhD, MPhil and professional doctorate students">PhD, MPhil and professional doctorate students</a></li>
+                            <li><a href="https://study.uq.edu.au/information-resources/aboriginal-torres-strait-islander-students" data-gtm-label="Study > Aboriginal and Torres Strait Islander students">Aboriginal and Torres Strait Islander students</a></li>
+                            <li><a href="https://study.uq.edu.au/study-options/study-abroad" data-gtm-label="Study > Study abroad and exchange students">Study abroad and exchange students</a></li>
+                            <li><a href="https://study.uq.edu.au/information-resources/teachers-guidance-counsellors" data-gtm-label="Study > Teachers and guidance counsellors">Teachers and guidance counsellors</a></li>
+                            <li><a href="https://study.uq.edu.au/information-resources/parents-guardians" data-gtm-label="Study > Parents and guardians">Parents and guardians</a></li>
+                            <li><a href="https://my.uq.edu.au" data-gtm-label="Study > Current students">Current students</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+              </li>
+              <li class="uq-header__nav-primary-item"><a class="uq-header__nav-primary-link nav-primary-link--has-dropdown" href="https://research.uq.edu.au"  data-gtm-label="Research">Research</a>
+                <div class="uq-header__megamenu">
+                  <div class="uq-header__megamenu-container">
+                    <a href="https://research.uq.edu.au" class="megamenu__overview-link" data-gtm-label="Research > Research overview">Research overview</a>
+                    <div class="megamenu__row">
+                      <div class="megamenu__column">
+                        <div class="megamenu__heading">Our research</div>
+                        <div class="megamenu__menu">
+                          <ul>
+                            <li><a href="https://research.uq.edu.au/strategy" data-gtm-label="Research > Strategy and impact">Strategy and impact</a></li>
+                            <li><a href="https://research.uq.edu.au/research-capabilities" data-gtm-label="Research > Research capabilities">Research capabilities</a></li>
+                            <li><a href="https://research.uq.edu.au/facilities" data-gtm-label="Research > Facilities and infrastructure">Facilities and infrastructure</a></li>
+                            <li><a href="https://research.uq.edu.au/ethics-integrity" data-gtm-label="Research > Ethics and integrity">Ethics and integrity</a></li>
+                            <li><a href="https://research.uq.edu.au/supporting-researchers" data-gtm-label="Research > Supporting our researchers">Supporting our researchers</a></li>
+                            <li><a href="https://uq.edu.au/research/news" data-gtm-label="Research > News">News</a></li>
+              <li><a href="https://about.uq.edu.au/experts" data-gtm-label="Research > Find an expert">Find an expert</a></li>
+              <li><a href="https://research.uq.edu.au/contact" data-gtm-label="Research > Contact">Contact</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="megamenu__column">
+                        <div class="megamenu__heading">Graduate research</div>
+                        <div class="megamenu__menu">
+                          <ul>
+                            <li><a href="https://research.uq.edu.au/graduate-research" data-gtm-label="Research > About Graduate School">About Graduate School</a></li>
+                            <li><a href="https://study.uq.edu.au/study-options/phd-mphil-professional-doctorate" data-gtm-label="Research > PhD, MPhil and professional doctorate">PhD, MPhil and professional doctorate</a></li>
+                            <li><a href="https://about.uq.edu.au/experts" data-gtm-label="Research > Find a supervisor">Find a supervisor</a></li>
+                            <li><a href="https://study.uq.edu.au/admissions/phd-mphil-professional-doctorate" data-gtm-label="Research > How to apply">How to apply</a></li>
+                            <li><a href="https://my.uq.edu.au/information-and-services/higher-degree-research" data-gtm-label="Research > Current students">Current students</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="megamenu__column">
+                        <div class="megamenu__heading">Partner with us</div>
+                        <div class="megamenu__menu">
+                          <ul>
+                            <li><a href="https://research.uq.edu.au/partner" data-gtm-label="Research > About partnerships">About partnerships</a></li>
+                            <li><a href="https://research.uq.edu.au/partner/industry" data-gtm-label="Research > Industry portfolios">Industry portfolios</a></li>
+                            <li><a href="https://research.uq.edu.au/partner/ways-to-partner" data-gtm-label="Research > Ways to partner">Ways to partner</a></li>                        
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="uq-header__nav-primary-item"><a class="uq-header__nav-primary-link nav-primary-link--has-dropdown" href="https://partners-community.uq.edu.au" data-gtm-label="Partners and community">Partners and community</a>
+                <div class="uq-header__megamenu">
+                  <div class="uq-header__megamenu-container">
+                    <a href="https://partners-community.uq.edu.au" class="megamenu__overview-link" data-gtm-label="Partners and community > Partners and community overview">Partners and community overview</a>
+                    <div class="megamenu__row">
+                      <div class="megamenu__column">
+                        <div class="megamenu__heading">Industry partnerships</div>
+                        <div class="megamenu__menu">
+                          <ul>
+                            <li><a href="https://research.uq.edu.au/partner" data-gtm-label="Partners and community > Research partnerships">Research partnerships</a></li>
+                            <li><a href="https://global-partnerships.uq.edu.au/partnerships" data-gtm-label="Partners and community > Teaching and exchange collaborations">Teaching and exchange collaborations</a></li>
+                            <li><a href="https://employability.uq.edu.au/work-experience" data-gtm-label="Partners and community > Student work placements and internships​">Student work placements and internships​</a></li>
+                            <li><a href="https://about.uq.edu.au/initiatives/2032-games" data-gtm-label="Partners and community > Office of 2032 Games Engagement">Office of 2032 Games Engagement</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="megamenu__column">
+                        <div class="megamenu__heading">Community engagement​</div>
+                        <div class="megamenu__menu">
+                          <ul>
+                            <li><a href="https://alumni.uq.edu.au" data-gtm-label="Partners and community > Alumni">Alumni</a></li>
+                            <li><a href="https://alumni.uq.edu.au/giving" data-gtm-label="Partners and community > Giving and philanthropy">Giving and philanthropy</a></li>
+                            <li><a href="https://alumni.uq.edu.au/volunteer" data-gtm-label="Partners and community > Volunteering​">Volunteering​</a></li>
+                            <li><a href="https://study.uq.edu.au/information-resources/teachers-guidance-counsellors" data-gtm-label="Partners and community > High school engagement">High school engagement</a></li>
+                            <li><a href="https://indigenous-engagement.uq.edu.au" data-gtm-label="Partners and community > Indigenous engagement​">Indigenous engagement​</a></li>
+                            <li><a href="https://partners-community.uq.edu.au/sponsorships" data-gtm-label="Partners and community > Sponsorships and brand partnerships​">Sponsorships and brand partnerships</a></li>
+                            <li><a href="https://about.uq.edu.au/initiatives/queensland-commitment" data-gtm-label="Partners and community > The Queensland Commitment">The Queensland Commitment</a></li>
+                         </ul>
+                        </div>
+                      </div>
+                      <div class="megamenu__column">
+                        <div class="megamenu__heading">Our facilities</div>
+                        <div class="megamenu__menu">
+                          <ul>
+                            <li><a href="https://partners-community.uq.edu.au/arts" data-gtm-label="Partners and community > Arts and culture​">Arts and culture​</a></li>
+                            <li><a href="https://campuses.uq.edu.au" data-gtm-label="Partners and community > Explore our campuses​">Explore our campuses​</a></li>
+                            <li><a href="https://campuses.uq.edu.au/information-and-services/shops" data-gtm-label="Partners and community > Services and shops​">Services and shops​</a></li>
+                            <li><a href="https://about.uq.edu.au/sport-recreation-precinct" data-gtm-label="Partners and community > Sport and recreation facilities​">Sport and recreation facilities​</a></li>
+                            <li><a href="https://about.uq.edu.au/venues" data-gtm-label="Partners and community > Venue hire and event spaces​">Venue hire and event spaces​</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="uq-header__nav-primary-item"><a class="uq-header__nav-primary-link nav-primary-link--has-dropdown" href="https://about.uq.edu.au" data-gtm-label="About">About</a>
+                <div class="uq-header__megamenu">
+                  <div class="uq-header__megamenu-container">
+                    <a href="https://about.uq.edu.au" class="megamenu__overview-link" data-gtm-label="About > About overview">About overview</a>
+                    <div class="megamenu__row">
+                      <div class="megamenu__column">
+                        <div class="megamenu__heading">Our profile</div>
+                        <div class="megamenu__menu">
+                          <ul>
+                            <li><a href="https://about.uq.edu.au/university-profile" data-gtm-label="About > Introducing UQ">Introducing UQ</a></li>
+                            <li><a href="https://about.uq.edu.au/strategic-plan" data-gtm-label="About > Vision, values and strategy">Vision, values and strategy</a></li>
+                            <li><a href="https://about.uq.edu.au/learning-teaching-student-experience" data-gtm-label="About > Learning, teaching and student experience">Learning, teaching and student experience</a></li>
+                            <li><a href="https://about.uq.edu.au/initiatives" data-gtm-label="About > Strategic initiatives and projects">Strategic initiatives and projects</a></li>
+                            <li><a href="https://about.uq.edu.au/governance-and-organisational-structure" data-gtm-label="About > Governance and organisational structure">Governance and organisational structure</a></li>
+                            <li><a href="https://policies.uq.edu.au" data-gtm-label="About > Policies and procedures">Policies and procedures</a></li>
+                            <li><a href="https://about.uq.edu.au/faculties-schools-institutes-centres" data-gtm-label="About > Faculties, schools, institutes and centres">Faculties, schools, institutes and centres</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="megamenu__column">
+                        <div class="megamenu__heading">Campuses and facilities</div>
+                        <div class="megamenu__menu">
+                          <ul>
+                            <li><a href="https://campuses.uq.edu.au" data-gtm-label="About > Campuses, maps and transport">Campuses, maps and transport</a></li>
+                            <li><a href="https://my.uq.edu.au/student-support/accommodation" data-gtm-label="About > Colleges and accommodation">Colleges and accommodation</a></li>
+                            <li><a href="https://campuses.uq.edu.au/information-and-services/shops" data-gtm-label="About > Community facilities and services">Community facilities and services</a></li>
+                            <li><a href="https://about.uq.edu.au/venues" data-gtm-label="About > Venue hire and event spaces​">Venue hire and event spaces​</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="megamenu__column">
+                        <div class="megamenu__heading">Working at UQ</div>
+                        <div class="megamenu__menu">
+                          <ul>
+                            <li><a href="https://about.uq.edu.au/careers" data-gtm-label="About > Careers at UQ">Careers at UQ</a></li>
+                            <li><a href="https://about.uq.edu.au/careers" data-gtm-label="About > Jobs search">Jobs search</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="uq-header__search-toggle" data-gtm-category="Search">
+          <button class="nav-primary__toggle nav-primary__search-toggle" data-gtm-action="Toggle">
+             <div class="search-toggle__label">Search</div>
+          </button>
+        </div>
+      </div>
+      <nav class="slide-menu global-mobile-nav" id="global-mobile-nav"   aria-label="primary navigation mobile">
+        <ul>
+          <li class="uq-header__newglobal-nav-item" data-gtm-category="Primary header">
+            <a class="uq-header__newglobal-nav-link slide-menu__control" href="#">Study</a>
+            <ul>
+              <li>
+                <a href="https://study.uq.edu.au" data-gtm-label="Study > Study overview">Study overview</a>
+              </li>
+              <li>
+                <a href="#" class="global-mobile-nav__audience-link slide-menu__control">Study with us</a>
+                <ul>
+                  <li><a href="https://study.uq.edu.au/study-options/programs" data-gtm-label="Study > Find a course or program">Find a course or program</a></li>
+                  <li><a href="https://study.uq.edu.au/study-options/browse-study-areas" data-gtm-label="Study > Browse study areas">Browse study areas</a></li>
+                  <li><a href="https://study.uq.edu.au/study-options" data-gtm-label="Study > Study options">Study options</a></li>
+                  <li><a href="https://study.uq.edu.au/short-courses" data-gtm-label="Study > Short courses">Short courses</a></li>
+                  <li><a href="https://study.uq.edu.au/admissions" data-gtm-label="Study > How to apply">How to apply</a></li>
+                  <li><a href="https://scholarships.uq.edu.au" data-gtm-label="Study > Scholarships">Scholarships</a></li>
+                  <li><a href="https://my.uq.edu.au/starting-at-uq" data-gtm-label="Study > Starting at UQ">Starting at UQ</a></li>
+                  <li><a href="https://study.uq.edu.au/contact" data-gtm-label="Study > Contact">Contact</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#" class="global-mobile-nav__audience-link slide-menu__control">Discover UQ</a>
+                <ul>
+                  <li><a href="https://study.uq.edu.au/why-choose-uq" data-gtm-label="Study > Why choose UQ">Why choose UQ</a></li>
+                  <li><a href="https://study.uq.edu.au/enhance-your-employability" data-gtm-label="Study > Enhance your employability">Enhance your employability</a></li>
+                  <li><a href="https://study.uq.edu.au/university-life" data-gtm-label="Study > Life at UQ and accommodation">Life at UQ and accommodation</a></li>
+                  <li><a href="https://campuses.uq.edu.au" data-gtm-label="Study > Campuses, maps and transport">Campuses, maps and transport</a></li>
+                  <li><a href="https://study.uq.edu.au/events" data-gtm-label="Study > Events for prospective students">Events for prospective students</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#" class="global-mobile-nav__audience-link slide-menu__control">Information for</a>
+                <ul>
+                  <li><a href="https://study.uq.edu.au/information-resources/international-students" data-gtm-label="Study > International students">International students</a></li>
+                  <li><a href="https://study.uq.edu.au/information-resources/high-school-students" data-gtm-label="Study > High school students">High school students</a></li>
+                  <li><a href="https://study.uq.edu.au/information-resources/non-school-leavers" data-gtm-label="Study > Non-school leavers">Non-school leavers</a></li>
+                  <li><a href="https://study.uq.edu.au/study-options/phd-mphil-professional-doctorate" data-gtm-label="Study > PhD, MPhil and professional doctorate students">PhD, MPhil and professional doctorate students</a></li>
+                  <li><a href="https://study.uq.edu.au/information-resources/aboriginal-torres-strait-islander-students" data-gtm-label="Study > Aboriginal and Torres Strait Islander students">Aboriginal and Torres Strait Islander students</a></li>
+                  <li><a href="https://study.uq.edu.au/study-options/study-abroad" data-gtm-label="Study > Study abroad and exchange students">Study abroad and exchange students</a></li>
+                  <li><a href="https://study.uq.edu.au/information-resources/teachers-guidance-counsellors" data-gtm-label="Study > Teachers and guidance counsellors">Teachers and guidance counsellors</a></li>
+                  <li><a href="https://study.uq.edu.au/information-resources/parents-guardians" data-gtm-label="Study > Parents and guardians">Parents and guardians</a></li>
+                  <li><a href="https://my.uq.edu.au" data-gtm-label="Study > Current students">Current students</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li  class="uq-header__newglobal-nav-item" data-gtm-category="Primary header">
+            <a  class="uq-header__newglobal-nav-link slide-menu__control" href="#">Research</a>
+            <ul>
+              <li>
+                <a href="https://research.uq.edu.au" data-gtm-label="Research > Research overview">Research overview</a>
+              </li>
+    
+              <li>
+                <a href="#" class="global-mobile-nav__audience-link slide-menu__control">Our research</a>
+                <ul>
+                  <li><a href="https://research.uq.edu.au/strategy" data-gtm-label="Research > Strategy and impact">Strategy and impact</a></li>
+                  <li><a href="https://research.uq.edu.au/research-capabilities" data-gtm-label="Research > Research capabilities">Research capabilities</a></li>
+                  <li><a href="https://research.uq.edu.au/facilities" data-gtm-label="Research > Facilities and infrastructure">Facilities and infrastructure</a></li>
+                  <li><a href="https://research.uq.edu.au/ethics-integrity" data-gtm-label="Research > Ethics and integrity">Ethics and integrity</a></li>
+                  <li><a href="https://research.uq.edu.au/supporting-researchers" data-gtm-label="Research > Supporting our researchers">Supporting our researchers</a></li>
+                  <li><a href="https://uq.edu.au/research/news" data-gtm-label="Research > News">News</a></li>
+              <li><a href="https://about.uq.edu.au/experts" data-gtm-label="Research > Find an expert">Find an expert</a></li>
+              <li><a href="https://research.uq.edu.au/contact" data-gtm-label="Research > Contact">Contact</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#" class="global-mobile-nav__audience-link slide-menu__control">Graduate research</a>
+                <ul>
+                  <li><a href="https://research.uq.edu.au/graduate-research" data-gtm-label="Research > About Graduate School">About Graduate School</a></li>
+                  <li><a href="https://study.uq.edu.au/study-options/phd-mphil-professional-doctorate" data-gtm-label="Research > PhD, MPhil and professional doctorate">PhD, MPhil and professional doctorate</a></li>
+                  <li><a href="https://about.uq.edu.au/experts" data-gtm-label="Research > Find a supervisor">Find a supervisor</a></li>
+                  <li><a href="https://study.uq.edu.au/admissions/phd-mphil-professional-doctorate" data-gtm-label="Research > How to apply">How to apply</a></li>
+                  <li><a href="https://my.uq.edu.au/information-and-services/higher-degree-research" data-gtm-label="Research > Current students">Current students</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#" class="global-mobile-nav__audience-link slide-menu__control">Partner with us</a>
+                <ul>
+                  <li><a href="https://research.uq.edu.au/partner" data-gtm-label="Research > About partnerships">About partnerships</a></li>
+                  <li><a href="https://research.uq.edu.au/partner/industry" data-gtm-label="Research > Industry portfolios">Industry portfolios</a></li>
+                  <li><a href="https://research.uq.edu.au/partner/ways-to-partner" data-gtm-label="Research > Ways to partner">Ways to partner</a></li>              
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li  class="uq-header__newglobal-nav-item" data-gtm-category="Primary header">
+            <a class="uq-header__newglobal-nav-link slide-menu__control" href="#">Partners and community</a> 
+            <ul>
+              <li>
+                <a href="https://partners-community.uq.edu.au" data-gtm-label="Partners and community > Partners and community overview">Partners and community overview</a>
+              </li>
+              <li>
+                <a href="#" class="global-mobile-nav__audience-link slide-menu__control">Industry partnerships</a>
+                <ul>
+                  <li><a href="https://research.uq.edu.au/partner" data-gtm-label="Partners and community > Research partnerships">Research partnerships</a></li>
+                  <li><a href="https://global-partnerships.uq.edu.au/partnerships" data-gtm-label="Partners and community > Teaching and exchange collaborations">Teaching and exchange collaborations</a></li>
+                  <li><a href="https://employability.uq.edu.au/work-experience" data-gtm-label="Partners and community > Student work placements and internships​">Student work placements and internships​</a></li>
+                  <li><a href="https://about.uq.edu.au/initiatives/2032-games" data-gtm-label="Partners and community > Office of 2032 Games Engagement">Office of 2032 Games Engagement​</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#" class="global-mobile-nav__audience-link slide-menu__control">Community engagement​</a>
+                <ul>
+                  <li><a href="https://alumni.uq.edu.au" data-gtm-label="Partners and community > Alumni">Alumni</a></li>
+                  <li><a href="https://alumni.uq.edu.au/giving" data-gtm-label="Partners and community > Giving and philanthropy">Giving and philanthropy</a></li>
+                  <li><a href="https://alumni.uq.edu.au/volunteer" data-gtm-label="Partners and community > Volunteering​">Volunteering​</a></li>
+                  <li><a href="https://study.uq.edu.au/information-resources/teachers-guidance-counsellors" data-gtm-label="Partners and community > High school engagement">High school engagement</a></li>
+                  <li><a href="https://indigenous-engagement.uq.edu.au" data-gtm-label="Partners and community > Indigenous engagement​">Indigenous engagement​</a></li>
+                  <li><a href="https://partners-community.uq.edu.au/sponsorships" data-gtm-label="Partners and community > Sponsorships and brand partnerships​">Sponsorships and brand partnerships</a></li>
+                  <li><a href="https://about.uq.edu.au/initiatives/queensland-commitment" data-gtm-label="Partners and community > The Queensland Commitment">The Queensland Commitment</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#" class="global-mobile-nav__audience-link slide-menu__control">Our facilities</a>
+                <ul>
+                  <li><a href="https://partners-community.uq.edu.au/arts" data-gtm-label="Partners and community > Arts and culture​">Arts and culture​</a></li>
+                  <li><a href="https://campuses.uq.edu.au" data-gtm-label="Partners and community > Explore our campuses​">Explore our campuses​</a></li>
+                  <li><a href="https://campuses.uq.edu.au/information-and-services/shops" data-gtm-label="Partners and community > Services and shops​">Services and shops​</a></li>
+                  <li><a href="https://about.uq.edu.au/sport-recreation-precinct" data-gtm-label="Partners and community > Sport and recreation facilities​">Sport and recreation facilities​</a></li>
+                  <li><a href="https://about.uq.edu.au/venues" data-gtm-label="Partners and community > Venue hire and event spaces​">Venue hire and event spaces​</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="uq-header__newglobal-nav-item" data-gtm-category="Primary header">
+            <a class="uq-header__newglobal-nav-link slide-menu__control" href="#">About</a>
+            <ul>
+              <li>
+                <a href="https://about.uq.edu.au" data-gtm-label="About > About overview">About overview</a>
+              </li>
+              <li>
+                <a href="#" class="global-mobile-nav__audience-link slide-menu__control">Our profile</a>
+                <ul>
+                  <li><a href="https://about.uq.edu.au/university-profile" data-gtm-label="About > Introducing UQ">Introducing UQ</a></li>
+                  <li><a href="https://about.uq.edu.au/strategic-plan" data-gtm-label="About > Vision, values and strategy">Vision, values and strategy</a></li>
+                  <li><a href="https://about.uq.edu.au/learning-teaching-student-experience" data-gtm-label="About > Learning, teaching and student experience">Learning, teaching and student experience</a></li>
+                  <li><a href="https://about.uq.edu.au/initiatives" data-gtm-label="About > Strategic initiatives and projects">Strategic initiatives and projects</a></li>
+                  <li><a href="https://about.uq.edu.au/governance-and-organisational-structure" data-gtm-label="About > Governance and organisational structure">Governance and organisational structure</a></li>
+                  <li><a href="https://policies.uq.edu.au" data-gtm-label="About > Policies and procedures">Policies and procedures</a></li>
+                  <li><a href="https://about.uq.edu.au/faculties-schools-institutes-centres" data-gtm-label="About > Faculties, schools, institutes and centres">Faculties, schools, institutes and centres</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#" class="global-mobile-nav__audience-link slide-menu__control">Campuses and facilities</a>
+                <ul>
+                  <li><a href="https://campuses.uq.edu.au" data-gtm-label="About > Campuses, maps and transport">Campuses, maps and transport</a></li>
+                  <li><a href="https://my.uq.edu.au/student-support/accommodation" data-gtm-label="About > Colleges and accommodation">Colleges and accommodation</a></li>
+                  <li><a href="https://campuses.uq.edu.au/information-and-services/shops" data-gtm-label="About > Community facilities and services">Community facilities and services</a></li>
+                  <li><a href="https://about.uq.edu.au/venues" data-gtm-label="About > Venue hire and event spaces​">Venue hire and event spaces​</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#" class="global-mobile-nav__audience-link slide-menu__control">Working at UQ</a>
+                <ul>
+                  <li><a href="https://about.uq.edu.au/careers" data-gtm-label="About > Careers at UQ">Careers at UQ</a></li>
+                  <li><a href="https://about.uq.edu.au/careers" data-gtm-label="About > Jobs search">Jobs search</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="uq-header__nav-secondary-item" data-gtm-category="Secondary header">
+            <a href="https://www.uq.edu.au" class="uq-header__nav-secondary-link">UQ home</a>
+          </li>
+          <li class="uq-header__nav-secondary-item" data-gtm-category="Secondary header">
+              <a href="https://www.uq.edu.au/news" class="uq-header__nav-secondary-link">News</a>
+          </li>
+          <li class="uq-header__nav-secondary-item" data-gtm-category="Secondary header">
+              <a href="https://www.uq.edu.au/uq-events" class="uq-header__nav-secondary-link">Events</a>
+          </li>
+          <li class="uq-header__nav-secondary-item" data-gtm-category="Secondary header">
+              <a href="https://alumni.uq.edu.au/giving" class="uq-header__nav-secondary-link">Give</a>
+          </li>
+          <li class="uq-header__nav-secondary-item" data-gtm-category="Secondary header">
+            <a href="https://contacts.uq.edu.au/contacts" class="uq-header__nav-secondary-link">Contact</a>
+          </li> 
+        </ul>
+      </nav>
+      <div class="uq-header__search" data-gtm-category="Search">
+        <div class="uq-header__search-container">
+          <form action="https://search.uq.edu.au" method="get" data-gtm-action="Text search" data-gtm-form-action>
+            <fieldset>
+              <div class="uq-header__search-query">
+                <label for="edit-q" class="visually-hidden uq-header__search-query-label">Search term</label>
+                <input type="text" id="edit-q" name="q" value="" maxlength="128" placeholder="Search by keyword" autocomplete="off" class="uq-header__search-query-input" data-gtm-trigger="change" data-gtm-form-search>
+                <span class="uq-header__search-query-button">
+                  <input type="submit" value="Search" class="uq-header__search-query-submit" data-gtm-trigger="click">
+                </span>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+      <div class="uq-header__nav-secondary" data-gtm-category="Secondary header">
+        <nav class="uq-header__nav-secondary-container">
+          <ul class="uq-header__nav-secondary-list">
+              <li class="uq-header__nav-secondary-item">
+                <a href="https://www.uq.edu.au" class="uq-header__nav-secondary-link">UQ home</a>
+              </li>
+              <li class="uq-header__nav-secondary-item">
+                  <a href="https://www.uq.edu.au/news" class="uq-header__nav-secondary-link">News</a>
+              </li>
+              <li class="uq-header__nav-secondary-item">
+                  <a href="https://www.uq.edu.au/uq-events" class="uq-header__nav-secondary-link">Events</a>
+              </li>
+              <li class="uq-header__nav-secondary-item">
+                  <a href="https://alumni.uq.edu.au/giving" class="uq-header__nav-secondary-link">Give</a>
+              </li>
+              <li class="uq-header__nav-secondary-item">
+                <a href="https://contacts.uq.edu.au/contacts" class="uq-header__nav-secondary-link">Contact</a>
+              </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  
+    <!-- Alert -->
+    <div class="uq-alert uq-alert--info uq-alert--dark uq-alert--global uq-alert" role="alert">
+      <div class="uq-alert__container">
+        <div class="uq-alert__message">
+          <h3 class="uq-alert__title visually-hidden">Title goes here</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <a href="#" title="Link" class="uq-button--inline">Link</a></p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Page header (default) -->
+
+    <div class="uq-hero uq-hero--feature-image uq-hero--large">  
+      <div class="uq-hero__image">
+        <div class="uq-hero__image--small">
+          <img src="images/hero-example--small.jpg" alt="" role="presentation" />
+        </div>
+        <div class="uq-hero__image--large">
+          <img src="images/hero-example--large.jpg" alt="" role="presentation" />
+        </div>
+      </div>
+      <div class="uq-hero__content">
+        <div class="uq-hero__text">
+          <div class="uq-hero__title">Start postgraduate study online</div>
+          <p class="uq-hero__subtext">Apply by June 30</p>
+          <p><a class="uq-button" href="#">Learn more</a></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- alert -->
+    <!-- <div class="uq-alert uq-alert--info" role="alert">
+      <div class="uq-alert__message">
+        <p>This is a default info alert</p>
+      </div>
+    </div> -->
+
+    <section class="uq-section" aria-label="section title">
+      <div class="uq-section__container">
+        <div class="uq-section__header">
+          <h2 class="uq-section__title"><!--section title--></h2>
+        </div>
+        <div class="uq-section__content">
+          <p>Vel felis elementum egestas id a at netus donec a suspendisse ad a hac natoque nam suspendisse dolor lorem sem iaculis. Tempor felis vestibulum ullamcorper ultrices aptent a lacinia lobortis sagittis scelerisque ultricies vestibulum a vitae dignissim. Nisi senectus curabitur hac praesent nascetur erat a per parturient non nam sit ut auctor nibh quis consectetur ad fermentum consequat consequat. Non lectus per rutrum ut volutpat scelerisque sem ornare augue dis id sit dui euismod sagittis enim curabitur nisi tristique porttitor cubilia consectetur dictum iaculis a. Fames diam per orci dictumst lectus ac augue mauris rutrum ornare suspendisse platea ullamcorper lacus quam. </p>
+          <p>A semper vestibulum potenti conubia quisque dis volutpat posuere natoque parturient nibh consequat rutrum lectus primis auctor venenatis. Vestibulum id nunc vestibulum dictum vivamus scelerisque hac consectetur ac cubilia a enim conubia ridiculus hendrerit litora leo convallis parturient pretium varius. Feugiat suspendisse felis sed in porta tempor vestibulum eu non dolor ac ridiculus a sed vestibulum sem nascetur ut bibendum. Luctus fermentum quis suspendisse hac sodales consectetur scelerisque ac justo adipiscing neque montes semper a faucibus morbi nec diam magna suspendisse mollis. Vestibulum a condimentum scelerisque eros ad torquent sit est nibh rhoncus vestibulum pretium adipiscing litora. Suspendisse lectus curae fusce et elit orci adipiscing a mauris a mus integer nec parturient sodales ullamcorper mi sed vestibulum sodales convallis. </p>
+          <p>Ultrices hac mauris tempus dictum lorem mi sociis ad ut a ullamcorper at fames purus vestibulum velit ad condimentum parturient sem phasellus nunc aliquam dis. Augue a condimentum magnis mus a potenti a platea scelerisque tristique parturient urna a imperdiet vestibulum rhoncus vel sit a sit aliquam pharetra eu duis bibendum. Nisi lobortis eu ut a vestibulum cum a erat amet primis elit erat lobortis vulputate enim urna mi ullamcorper. Hac pretium adipiscing adipiscing dis gravida adipiscing ullamcorper interdum scelerisque cum arcu nulla semper penatibus molestie lacinia nam donec tristique scelerisque praesent. Viverra sit aptent at rutrum a gravida vel blandit lacus vestibulum ipsum tincidunt maecenas diam accumsan fermentum adipiscing eu adipiscing a curabitur fames luctus adipiscing class dis morbi. Nam eu est malesuada vestibulum aliquet felis a ad diam velit felis iaculis facilisi ac suspendisse purus natoque vel sed posuere rutrum suspendisse a.</p>
+        </div>
+      </div>
+    </section>
+
+
+    <footer class="uq-footer" data-gtm-category="Footer">
+      <div  class="uq-footer__reconciliation">
+        <div class="uq-footer__acknowledgement">
+          <img class="uq-footer__acknowledgement-flag" alt="Australian Aboriginal Flag" src="https://static.uq.net.au/v15/images/rap/aboriginal.svg"/> <img class="uq-footer__acknowledgement-flag" alt="Torres Strait Islander Flag" src="https://static.uq.net.au/v15/images/rap/torres-strait-islanders.svg"/> <span class="uq-footer__acknowledgement-text">UQ acknowledges the Traditional Owners and their custodianship of the lands on which UQ is situated. &mdash; <a href="https://about.uq.edu.au/reconciliation" class="uq-footer__link">Reconciliation at UQ</a></span>
+        </div>
+      </div>
+      <div class="uq-footer__container">
+        <nav class="uq-footer__navigation uq-footer--desktop"  aria-label="footer navigation">
+          <ul class="uq-footer__navigation-list uq-footer__navigation-level-1">
+            <li class="uq-footer__navigation-item uq-footer__navigation--is-open">
+              <h2 class="uq-footer__navigation-title">Media</h2>
+              <ul class="uq-footer__navigation-list uq-footer__navigation-level-2">
+                <li class="uq-footer__navigation-item">
+                  <a href="https://www.uq.edu.au/news/contacts" class="uq-footer__navigation-link">Media team contacts</a>
+                </li>
+                <li class="uq-footer__navigation-item">
+                  <a href="https://about.uq.edu.au/experts" class="uq-footer__navigation-link">Find a subject matter expert</a>
+                </li>
+                <li class="uq-footer__navigation-item">
+                  <a href="https://www.uq.edu.au/news" class="uq-footer__navigation-link">UQ news</a>
+                </li>
+              </ul>
+            </li>
+            <li class="uq-footer__navigation-item">
+              <h2 class="uq-footer__navigation-title">Working at UQ</h2>
+              <ul class="uq-footer__navigation-list uq-footer__navigation-level-2">
+                <li class="uq-footer__navigation-item">
+                  <a href="https://staff.uq.edu.au" class="uq-footer__navigation-link">Current staff</a>
+                </li>
+                <li class="uq-footer__navigation-item">
+                  <a href="https://about.uq.edu.au/careers" class="uq-footer__navigation-link">Careers at UQ</a>
+                </li>
+                <li class="uq-footer__navigation-item">
+                  <a href="https://about.uq.edu.au/strategic-plan" class="uq-footer__navigation-link">Strategic plan</a>
+                </li>
+                <li class="uq-footer__navigation-item">
+                  <a href="https://staff.uq.edu.au/information-and-services/health-safety-wellbeing" class="uq-footer__navigation-link">Staff support</a>
+                </li>
+                <li class="uq-footer__navigation-item">
+                  <a href="https://staff.uq.edu.au/information-and-services/information-technology/it-support" class="uq-footer__navigation-link">IT support for staff</a>
+                </li>
+              </ul>
+            </li>
+            <li class="uq-footer__navigation-item">
+              <h2 class="uq-footer__navigation-title">Current students</h2>
+              <ul class="uq-footer__navigation-list uq-footer__navigation-level-2">
+                <li class="uq-footer__navigation-item">
+                  <a href="https://my.uq.edu.au" class="uq-footer__navigation-link">my.UQ</a>
+                </li>
+                <li class="uq-footer__navigation-item">
+                  <a href="https://programs-courses.uq.edu.au" class="uq-footer__navigation-link">Programs and courses</a>
+                </li>
+                <li class="uq-footer__navigation-item">
+                  <a href="https://about.uq.edu.au/academic-calendar" class="uq-footer__navigation-link">Key dates</a>
+                </li>
+                <li class="uq-footer__navigation-item">
+                  <a href="https://my.uq.edu.au/student-support" class="uq-footer__navigation-link">Student support</a>
+                </li>
+                <li class="uq-footer__navigation-item">
+                  <a href="https://my.uq.edu.au/information-and-services/information-technology/student-it-support" class="uq-footer__navigation-link">IT support for students</a>
+                </li>
+              </ul>
+            </li>
+            <li class="uq-footer__navigation-item">
+              <h2 class="uq-footer__navigation-title">Library</h2>
+              <ul class="uq-footer__navigation-list uq-footer__navigation-level-2">
+                <li class="uq-footer__navigation-item">
+                  <a href="https://www.library.uq.edu.au" class="uq-footer__navigation-link">Library</a>
+                </li>
+                <li class="uq-footer__navigation-item">
+                  <a href="https://web.library.uq.edu.au/study-and-learning-support" class="uq-footer__navigation-link">Study and learning support</a>
+                </li>
+                <li class="uq-footer__navigation-item">
+                  <a href="https://web.library.uq.edu.au/research-and-publish" class="uq-footer__navigation-link">Research and publish</a>
+                </li>
+                <li class="uq-footer__navigation-item">
+                  <a href="https://web.library.uq.edu.au/visit" class="uq-footer__navigation-link">Visit</a>
+                </li>
+              </ul>
+            </li>
+            <li class="uq-footer__navigation-item">
+              <h2 class="uq-footer__navigation-title">Contact</h2>
+              <ul class="uq-footer__navigation-list uq-footer__navigation-level-2">
+                <li class="uq-footer__navigation-item">
+                  <a href="https://contacts.uq.edu.au/contacts" class="uq-footer__navigation-link">Contact UQ</a>
+                </li>
+                <li class="uq-footer__navigation-item">
+                  <a href="https://researchers.uq.edu.au" class="uq-footer__navigation-link">Find a researcher</a>
+                </li>
+                <li class="uq-footer__navigation-item">
+                  <a href="https://about.uq.edu.au/faculties-schools-institutes-centres" class="uq-footer__navigation-link">Faculties, schools, institutes and centres</a>
+                </li>
+                <li class="uq-footer__navigation-item">
+                  <a href="https://organisation.about.uq.edu.au" class="uq-footer__navigation-link">Divisions and departments</a>
+                </li>
+                <li class="uq-footer__navigation-item">
+                  <a href="https://campuses.uq.edu.au" class="uq-footer__navigation-link">Campuses, maps and transport</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Mobile Footer Navigation-->
+        <nav class="uq-footer__navigation uq-footer--mobile" aria-label="footer navigation mobile">
+          <ul class="uq-accordion uq-footer__navigation-list uq-footer__navigation-level-1">
+            <li class="uq-accordion__item uq-footer__navigation-item uq-footer__navigation--is-open">
+              <button class="uq-accordion__toggle uq-footer__navigation-toggle" data-gtm-action="Toggle">Media</button>
+              <ul class="uq-accordion__content uq-footer__navigation-list uq-footer__navigation-level-2">
+                <li class="uq-footer__navigation-item">
+                  <a href="https://www.uq.edu.au/news/contacts" class="uq-footer__navigation-link">Media team contacts</a>
+                </li>
+                <li class="uq-footer__navigation-item">
+                  <a href="https://about.uq.edu.au/experts" class="uq-footer__navigation-link">Find a subject matter expert</a>
+                </li>
+                <li class="uq-footer__navigation-item">
+                  <a href="https://www.uq.edu.au/news" class="uq-footer__navigation-link">UQ news</a>
+                </li>
+              </ul>
+            </li>
+            <li class="uq-accordion__item uq-footer__navigation-item">
+              <button class="uq-accordion__toggle uq-footer__navigation-toggle" data-gtm-action="Toggle">Working at UQ</button>
+              <ul class="uq-accordion__content uq-footer__navigation-list uq-footer__navigation-level-2">
+                <li class="uq-footer__navigation-item">
+                  <a href="https://staff.uq.edu.au" class="uq-footer__navigation-link">Current staff</a>
+                </li>
+                <li class="uq-footer__navigation-item">
+                  <a href="https://about.uq.edu.au/careers" class="uq-footer__navigation-link">Careers at UQ</a>
+                </li>
+                <li class="uq-footer__navigation-item">
+                  <a href="https://about.uq.edu.au/strategic-plan" class="uq-footer__navigation-link">Strategic plan</a>
+                </li>
+                <li class="uq-footer__navigation-item">
+                  <a href="https://staff.uq.edu.au/information-and-services/health-safety-wellbeing" class="uq-footer__navigation-link">Staff support</a>
+                </li>
+                <li class="uq-footer__navigation-item">
+                  <a href="https://staff.uq.edu.au/information-and-services/information-technology/it-support" class="uq-footer__navigation-link">IT support for staff</a>
+                </li>
+              </ul>
+            </li>
+            <li class="uq-accordion__item uq-footer__navigation-item">
+              <button class="uq-accordion__toggle uq-footer__navigation-toggle" data-gtm-action="Toggle">Current students</button>
+              <ul class="uq-accordion__content uq-footer__navigation-list uq-footer__navigation-level-2">
+                <li class="uq-footer__navigation-item">
+                  <a href="https://my.uq.edu.au" class="uq-footer__navigation-link">my.UQ</a>
+                </li>
+                <li class="uq-footer__navigation-item">
+                  <a href="https://programs-courses.uq.edu.au/" class="uq-footer__navigation-link">Programs and courses</a>
+                </li>
+                <li class="uq-footer__navigation-item">
+                  <a href="https://about.uq.edu.au/academic-calendar" class="uq-footer__navigation-link">Key dates</a>
+                </li>
+                <li class="uq-footer__navigation-item">
+                  <a href="https://my.uq.edu.au/student-support" class="uq-footer__navigation-link">Student support</a>
+                </li>
+                <li class="uq-footer__navigation-item">
+                  <a href="https://my.uq.edu.au/information-and-services/information-technology/student-it-support" class="uq-footer__navigation-link">IT support for students</a>
+                </li>
+              </ul>
+            </li>
+            <li class="uq-accordion__item uq-footer__navigation-item">
+              <button class="uq-accordion__toggle uq-footer__navigation-toggle" data-gtm-action="Toggle">Library</button>
+              <ul class="uq-accordion__content uq-footer__navigation-list uq-footer__navigation-level-2">
+                <li class="uq-footer__navigation-item">
+                  <a href="https://www.library.uq.edu.au" class="uq-footer__navigation-link">Library</a>
+                </li>
+                <li class="uq-footer__navigation-item">
+                  <a href="https://web.library.uq.edu.au/study-and-learning-support" class="uq-footer__navigation-link">Study and learning support</a>
+                </li>
+                <li class="uq-footer__navigation-item">
+                  <a href="https://web.library.uq.edu.au/research-and-publish" class="uq-footer__navigation-link">Research and publish</a>
+                </li>
+                <li class="uq-footer__navigation-item">
+                  <a href="https://web.library.uq.edu.au/visit" class="uq-footer__navigation-link">Visit</a>
+                </li>
+              </ul>
+            </li>
+            <li class="uq-accordion__item uq-footer__navigation-item">
+              <button class="uq-accordion__toggle uq-footer__navigation-toggle" data-gtm-action="Toggle">Contact</button>
+              <ul class="uq-accordion__content uq-footer__navigation-list uq-footer__navigation-level-2">
+                <li class="uq-footer__navigation-item">
+                  <a href="https://contacts.uq.edu.au/contacts" class="uq-footer__navigation-link">Contact UQ</a>
+                </li>
+                <li class="uq-footer__navigation-item">
+                  <a href="https://researchers.uq.edu.au" class="uq-footer__navigation-link">Find a researcher</a>
+                </li>
+                <li class="uq-footer__navigation-item">
+                  <a href="https://about.uq.edu.au/faculties-schools-institutes-centres" class="uq-footer__navigation-link">Faculties, schools, institutes and centres</a>
+                </li>
+                <li class="uq-footer__navigation-item">
+                  <a href="https://organisation.about.uq.edu.au" class="uq-footer__navigation-link">Divisions and departments</a>
+                </li>
+                <li class="uq-footer__navigation-item">
+                  <a href="https://campuses.uq.edu.au" class="uq-footer__navigation-link">Campuses, maps and transport</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <!-- Footer contact details -->
+        <div class="uq-footer__contact">   
+          <nav class="uq-footer__contact-item" aria-label="Social Media" data-gtm-category="Social share link">
+            <ul class="uq-footer__footer-list uq-footer__contact-social"> 
+              <li class="uq-footer__footer-item"><a href="https://www.facebook.com/uniofqld" class="uq-footer__meta-icons--facebook uq-footer__meta-icons" aria-label="Follow us on Facebook" data-gtm-label="Follow us on Facebook"></a></li> 
+              <li class="uq-footer__footer-item"><a href="https://www.linkedin.com/school/university-of-queensland" class="uq-footer__meta-icons--linkedin uq-footer__meta-icons" aria-label="Follow us on linkedin" data-gtm-label="Follow us on Linkedin"></a></li> 
+              <li class="uq-footer__footer-item"><a href="https://twitter.com/uq_news" class="uq-footer__meta-icons--twitter uq-footer__meta-icons" aria-label="Follow us on X" data-gtm-label="Follow us on X"></a></li>
+              <li class="uq-footer__footer-item"><a href="https://www.youtube.com/user/universityqueensland" class="uq-footer__meta-icons--youtube uq-footer__meta-icons" aria-label="Follow us on Youtube" data-gtm-label="Follow us on Youtube"></a></li>
+              <li class="uq-footer__footer-item"><a href="https://instagram.com/uniofqld" class="uq-footer__meta-icons--instagram uq-footer__meta-icons" aria-label="Follow us on Instagram" data-gtm-label="Follow us on Instagram"></a></li>
+            </ul>
+          </nav> 
+          <div class="uq-footer__contact-item uq-footer__contact-login"><a href="#" class="uq-footer__link" rel="nofollow">Web login</a></div>
+       
+        </div>
+        <nav class="uq-footer__meta" aria-label="Business meta">
+          <ul  class="uq-footer__footer-list">
+            <li class="uq-footer__footer-item">&copy; The University of Queensland</li>
+            <li class="uq-footer__footer-item"><abbr title="Australian Business Number">ABN</abbr>: 63 942 912 684 </li>
+            <li class="uq-footer__footer-item"><abbr title="Commonwealth Register of Institutions and Courses for Overseas Students">CRICOS</abbr>: <a class="uq-footer__link" href="https://www.uq.edu.au/about/cricos-link" rel="external" data-gtm-label="CRICOS 00025B">00025B</a></li>
+            <li class="uq-footer__footer-item"><abbr title="Tertiary Education Quality and Standards Agency">TEQSA</abbr>: <a class="uq-footer__link" href="https://www.uq.edu.au/about/teqsa-link" rel="external" data-gtm-label="TEQSA PRV12080">PRV12080</a></li>
+          </ul>
+        </nav>
+        <nav class="uq-footer__footer" aria-label="Terms and conditions">
+          <ul class="uq-footer__footer-list">
+              <li class="uq-footer__footer-item">
+                  <a href="https://www.uq.edu.au/legal/copyright-privacy-disclaimer/" class="uq-footer__link">Copyright, privacy and disclaimer</a>
+              </li>
+              <li class="uq-footer__footer-item">
+                <a href="https://uq.edu.au/accessibility" class="uq-footer__link">Accessibility</a>
+              </li>
+              <li class="uq-footer__footer-item">
+                  <a href="https://governance-risk.uq.edu.au/rtip" class="uq-footer__link">Right to information</a>
+              </li>
+              <li class="uq-footer__footer-menu__item">
+                <a href="https://my.uq.edu.au/feedback?r=https://uq.edu.au" class="uq-footer__link">Feedback</a>
+              </li>
+          </ul>
+           </nav>
+      </div>
+    </footer>
+
+    <script type="text/javascript" src="js/uqds.min.js"></script>
+    <script type="text/javascript">
+      // Initialise header
+      const headerElem = document.querySelector('.uq-header');
+      new uq.header(headerElem);
+      // Initialise Main Navigation
+      // const navElem = document.getElementById("jsNav");
+      // new uq.siteHeaderNavigation(navElem, "uq-site-header__navigation");
+      // Initialise accordions
+      new uq.accordion();
+
+      const appHeight = () => {
+        const doc = document.documentElement
+        doc.style.setProperty('--app-height', `${window.innerHeight}px`)
+      }
+      window.addEventListener('resize', appHeight)
+      appHeight()
+
+    </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const menuLeftElem = document.getElementById('global-mobile-nav');
+
+        const menuLeft = new SlideMenu(menuLeftElem, {
+          position: 'left',
+          submenuLinkAfter: ' ',
+          backLinkBefore: ' ',
+        });
+
+        this.searchToggle = document.querySelector('.nav-primary__search-toggle');
+
+        this.searchToggle.addEventListener('click', () => {
+          menuLeft.close();
+        });
+
+
+        var slideMenuBackButtons = document.querySelectorAll('.slide-menu__backlink, .global-mobile-nav__audience-link');
+        
+        Array.prototype.forEach.call(slideMenuBackButtons, function(el, i){
+            el.addEventListener('click', () => {
+              document.querySelector('.global-mobile-nav').scrollTop = 0;
+            });
+        });
+
+        // Responsive Resize Close menu and update toggles 
+        window.addEventListener('resize', (event) => {
+        
+        // Target Resize of LG ($screen-lg, 64rem, 1024px). 
+        if (window.innerWidth > 1024) {
+              menuLeft.close(true);
+              //reset the menu toggle after closing. 
+              this.mainNavToggle = document.querySelector('.nav-primary__toggle');
+              this.mainNavToggle.classList.remove('nav-primary__menu-toggle--is-open');
+              this.body = document.querySelector('body');
+              this.body.classList.remove('no-scroll');
+              }
+        });
+      });
+
+    </script>
+    <script type="text/javascript" src="js/slide-menu.js"></script>
+  </body>
+</html>

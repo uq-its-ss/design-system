@@ -1,7 +1,7 @@
 @use "@uqds/core/src/scss/global" as core;
+@use "@uqds/icon/src/scss/global" as icon;
 @use "global" as *;
 
-/* button Default */
 .uq-button {
   background-color: core.$purple-500;
   border: 2px solid core.$purple-500;
@@ -9,7 +9,9 @@
   box-sizing: border-box;
   color: core.$white;
   cursor: pointer;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: core.$space-s;
   font-family: core.$roboto;
   font-size: core.$font-size-m;
   font-weight: core.$font-weight-medium;
@@ -29,61 +31,126 @@
     box-sizing: border-box;
   }
 
+  & .uq-icon {
+    width: 24px;
+    height: 24px;
+    margin-block: -4px !important;
+
+    &::before {
+      width: 24px;
+      height: 24px;
+      margin: 0;
+      filter: icon.$icon-light-filter;
+    }
+  }
+
   &:hover {
     background-color: core.$white;
     border-color: core.$purple-500;
     color: core.$purple-500;
     text-decoration: underline;
-  }
 
-  /* button secondary */
-  &--secondary {
-    background-color: core.$white;
-    border-color: core.$purple-500;
-    color: core.$purple-500;
-
-    &:hover,
-    &:focus {
-      background-color: core.$purple-500;
-      border-color: core.$purple-500;
-      color: core.$white;
+    & .uq-icon::before {
+      filter: icon.$icon-primary-filter;
     }
   }
 
-  /* button purple */
-  &--tertiary {
+  &:focus {
+    outline: 2px solid core.$utility-500;
+    outline-offset: 0;
+  }
+
+  &.uq-button--reverse {
     background-color: core.$white;
     border-color: core.$white;
     color: core.$purple-500;
-    text-decoration: underline;
 
-    &:hover,
-    &:focus {
-      background-color: core.$purple-500;
-      border-color: core.$purple-500;
+    & .uq-icon::before {
+      filter: icon.$icon-primary-filter;
+    }
+
+    &:hover {
+      background-color: transparent;
       color: core.$white;
+
+      & .uq-icon::before {
+        filter: icon.$icon-light-filter;
+      }
+    }
+  }
+}
+
+.uq-button--secondary,
+.uq-button--tertiary {
+  background-color: transparent;
+  border-color: core.$purple-500;
+  color: core.$purple-500;
+
+  & .uq-icon::before {
+    filter: icon.$icon-primary-filter;
+  }
+
+  &:hover {
+    background-color: core.$purple-500;
+    border-color: core.$purple-500;
+    color: core.$white;
+
+    & .uq-icon::before {
+      filter: icon.$icon-light-filter;
     }
   }
 
-  /* button sizes */
-  &--tiny {
-    font-size: core.$font-size-xs;
-    padding: core.$space-xs core.$space-s;
-  }
+  &.uq-button--reverse {
+    background-color: transparent;
+    border-color: core.$white;
+    color: core.$white;
 
-  &--small {
-    font-size: core.$font-size-s;
-    padding: core.$space-s core.$space-m;
-  }
+    & .uq-icon::before {
+      filter: icon.$icon-light-filter;
+    }
 
-  &--large {
-    font-size: core.$font-size-l;
-    padding: core.$space-m core.$space-xxl;
-  }
+    &:hover {
+      background-color: core.$white;
+      color: core.$purple-500;
 
-  &--expand {
-    padding-left: core.$space-none;
-    padding-right: core.$space-none;
-    width: 100%;
+      & .uq-icon::before {
+        filter: icon.$icon-primary-filter;
+      }
+    }
   }
+}
+
+.uq-button--tertiary {
+  border-color: transparent;
+  text-decoration: underline;
+
+  &.uq-button--reverse {
+    border-color: transparent;
+
+    &:hover {
+      border-color: core.$white;
+    }
+  }
+}
+
+.uq-button--tiny {
+  font-size: core.$font-size-xs;
+  padding: core.$space-xs core.$space-s;
+}
+
+.uq-button--small {
+  font-size: core.$font-size-s;
+  padding: core.$space-s core.$space-m;
+}
+
+.uq-button--large {
+  font-size: core.$font-size-l;
+  padding: core.$space-m core.$space-xxl;
+}
+
+.uq-button--expand {
+  padding-left: core.$space-s;
+  padding-right: core.$space-s;
+  width: 100%;
+  justify-content: center;
 }

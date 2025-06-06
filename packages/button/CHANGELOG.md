@@ -3,6 +3,124 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0](https://github.com/uq-its-ss/design-system/compare/@uqds/button@2.0.0...@uqds/button@3.0.0) (2025-05-27)
+
+- Release/1.0.5 (#631) ([e247c79](https://github.com/uq-its-ss/design-system/commit/e247c790585abe267b95de489381efe25107a7bb)), closes [#631](https://github.com/uq-its-ss/design-system/issues/631) [#568](https://github.com/uq-its-ss/design-system/issues/568)
+
+### BREAKING CHANGES
+
+- Review updated blockquote markup
+
+- increase spacing
+
+- chore: regression test update
+
+# [3.0.0-alpha.4](https://github.com/uq-its-ss/design-system/compare/@uqds/button@3.0.0-alpha.3...@uqds/button@3.0.0-alpha.4) (2025-05-26)
+
+**Note:** Version bump only for package @uqds/button
+
+# [3.0.0-alpha.3](https://github.com/uq-its-ss/design-system/compare/@uqds/button@3.0.0-alpha.2...@uqds/button@3.0.0-alpha.3) (2025-04-30)
+
+**Note:** Version bump only for package @uqds/button
+
+# [3.0.0-alpha.2](https://github.com/uq-its-ss/design-system/compare/@uqds/button@3.0.0-alpha.1...@uqds/button@3.0.0-alpha.2) (2025-04-30)
+
+**Note:** Version bump only for package @uqds/button
+
+# [3.0.0-alpha.1](https://github.com/uq-its-ss/design-system/compare/@uqds/button@3.0.0-alpha.0...@uqds/button@3.0.0-alpha.1) (2025-01-31)
+
+### Bug Fixes
+
+- [ITSADSSD-60892][ITSADSSD-60967]: Bug fixes for News site ([#603](https://github.com/uq-its-ss/design-system/issues/603)) ([afbdb52](https://github.com/uq-its-ss/design-system/commit/afbdb52b0957b4613a9ac7cef4eab980e4b29b05))
+
+# [3.0.0-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/button@1.0.0-alpha.0...@uqds/button@3.0.0-alpha.0) (2025-01-20)
+
+- Merge release/1.0.4 back to master (#597) ([c85f4dd](https://github.com/uq-its-ss/design-system/commit/c85f4dd04601bad019d83edeb680dd919fd1aebb)), closes [#597](https://github.com/uq-its-ss/design-system/issues/597) [#583](https://github.com/uq-its-ss/design-system/issues/583) [#568](https://github.com/uq-its-ss/design-system/issues/568)
+
+### BREAKING CHANGES
+
+- Review updated blockquote markup
+
+- increase spacing
+
+- chore: regression test update
+
+# [2.0.0](https://github.com/uq-its-ss/design-system/compare/@uqds/button@0.3.0...@uqds/button@2.0.0) (2025-01-20)
+
+- Release/1.0.4 (#595) ([b40223d](https://github.com/uq-its-ss/design-system/commit/b40223d819d456f67620dfd880380b85214c4103)), closes [#595](https://github.com/uq-its-ss/design-system/issues/595) [#568](https://github.com/uq-its-ss/design-system/issues/568)
+
+### BREAKING CHANGES
+
+- Review updated blockquote markup
+
+- increase spacing
+
+- chore: regression test update
+
+# [1.0.0](https://github.com/uq-its-ss/design-system/compare/@uqds/button@0.3.0...@uqds/button@1.0.0) (2025-01-20)
+
+- Release/1.0.4 (#595) ([b40223d](https://github.com/uq-its-ss/design-system/commit/b40223d819d456f67620dfd880380b85214c4103)), closes [#595](https://github.com/uq-its-ss/design-system/issues/595) [#568](https://github.com/uq-its-ss/design-system/issues/568)
+
+### BREAKING CHANGES
+
+- Review updated blockquote markup
+
+- increase spacing
+
+- chore: regression test update
+
+# [1.0.0-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/button@0.2.0-alpha.1...@uqds/button@1.0.0-alpha.0) (2024-12-20)
+
+- Merge release/1.0.3 back to master (#585) ([00ba8a4](https://github.com/uq-its-ss/design-system/commit/00ba8a439019ed08ab357499c758be419f50f150)), closes [#585](https://github.com/uq-its-ss/design-system/issues/585) [#583](https://github.com/uq-its-ss/design-system/issues/583) [#568](https://github.com/uq-its-ss/design-system/issues/568)
+
+### BREAKING CHANGES
+
+- Review updated blockquote markup
+
+- increase spacing
+
+- chore: regression test update
+
+# [0.3.0](https://github.com/uq-its-ss/design-system/compare/@uqds/button@0.1.4-alpha.0...@uqds/button@0.3.0) (2024-12-20)
+
+- Release/1.0.3 (#583) ([930f8d9](https://github.com/uq-its-ss/design-system/commit/930f8d97b814748829f45194e1b5009680ee7890)), closes [#583](https://github.com/uq-its-ss/design-system/issues/583) [#568](https://github.com/uq-its-ss/design-system/issues/568)
+
+### BREAKING CHANGES
+
+- Review updated blockquote markup
+
+- increase spacing
+
+- chore: regression test update
+
+# [0.2.0](https://github.com/uq-its-ss/design-system/compare/@uqds/button@0.1.4-alpha.0...@uqds/button@0.2.0) (2024-12-20)
+
+- Release/1.0.3 (#583) ([930f8d9](https://github.com/uq-its-ss/design-system/commit/930f8d97b814748829f45194e1b5009680ee7890)), closes [#583](https://github.com/uq-its-ss/design-system/issues/583) [#568](https://github.com/uq-its-ss/design-system/issues/568)
+
+### BREAKING CHANGES
+
+- Review updated blockquote markup
+
+- increase spacing
+
+- chore: regression test update
+
+# [0.2.0-alpha.1](https://github.com/uq-its-ss/design-system/compare/@uqds/button@0.2.0-alpha.0...@uqds/button@0.2.0-alpha.1) (2024-12-19)
+
+### Features
+
+- ITSADSSD-59298: Social share ([#582](https://github.com/uq-its-ss/design-system/issues/582)) ([9d1886c](https://github.com/uq-its-ss/design-system/commit/9d1886c236359f6d705fd42137dc5bc892a31dd9))
+
+# [0.2.0-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/button@0.1.4-alpha.1...@uqds/button@0.2.0-alpha.0) (2024-12-11)
+
+### Features
+
+- ITSADSSD-59775: Copy button ([#575](https://github.com/uq-its-ss/design-system/issues/575)) ([ede3b65](https://github.com/uq-its-ss/design-system/commit/ede3b65fac9a1dc9e301105f760c9afa48e4c7e0))
+
+## [0.1.4-alpha.1](https://github.com/uq-its-ss/design-system/compare/@uqds/button@0.1.4-alpha.0...@uqds/button@0.1.4-alpha.1) (2024-12-05)
+
+**Note:** Version bump only for package @uqds/button
+
 ## [0.1.4-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/button@0.1.3...@uqds/button@0.1.4-alpha.0) (2024-09-04)
 
 **Note:** Version bump only for package @uqds/button

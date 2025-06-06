@@ -1,0 +1,99 @@
+@use "@uqds/core/src/scss/global" as core;
+@use "@uqds/icon/src/scss/global" as icon;
+
+.uq-social-share {
+  display: flex;
+  gap: core.$space-m;
+  align-items: center;
+}
+
+.uq-social-share__title {
+  font-size: core.$font-size-l;
+  font-weight: core.$font-weight-medium;
+}
+
+.uq-social-share__list {
+  display: flex;
+  gap: core.$space-m;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  & li {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  & button,
+  & a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: core.$purple-500;
+    appearance: none;
+    border: 0;
+    cursor: pointer;
+
+    & .uq-icon {
+      display: flex;
+      width: 32px;
+      height: 32px;
+      justify-content: center;
+      align-items: center;
+
+      &::before {
+        filter: icon.$icon-light-filter;
+        margin: 0;
+        background-size: 18px;
+        background-position: center;
+        width: 32px;
+        height: 32px;
+      }
+    }
+
+    &.is-active,
+    &:active {
+      background: core.$grey-50;
+
+      & .uq-icon::before {
+        filter: icon.$icon-primary-filter;
+      }
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        background: core.$grey-50;
+
+        & .uq-icon::before {
+          filter: icon.$icon-primary-filter;
+        }
+      }
+    }
+
+    & .uq-icon--standard--check::before {
+      background-size: 24px;
+    }
+  }
+}
+
+.uq-social-share__tooltip {
+  position: absolute;
+  top: -40px;
+  text-align: center;
+  background: core.$purple-500;
+  color: core.$white;
+  font-size: core.$font-size-s;
+  text-decoration: none;
+  white-space: nowrap;
+  font-weight: core.$font-weight-medium;
+  padding: 0 core.$space-s;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 2px;
+}

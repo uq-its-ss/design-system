@@ -26,9 +26,7 @@ description to introduce another set of components.
 
 Implement the markup structure below for the header.
 
-<Canvas>
-  <Story of={SectionStories.Section} />
-</Canvas>
+<Canvas of={SectionStories.Section} />
 
 ```html
 <div class="uq-section">
@@ -48,18 +46,14 @@ A section with a grey background.
 
 Modifier class: `.uq-section--shaded`
 
-<Canvas>
-  <Story of={SectionStories.Shaded} />
-</Canvas>
+<Canvas of={SectionStories.Shaded} />
 
 ### With container
 
 Sections can also implement a `.uq-container` element within their markup so the
 section can run edge-to-edge.
 
-<Canvas>
-  <Story of={SectionStories.Container} />
-</Canvas>
+<Canvas of={SectionStories.Container} />
 
 ### Shaded with container
 
@@ -67,9 +61,7 @@ For shaded sections that go edge-to-edge.
 
 Modifier class: `.uq-section--shaded`
 
-<Canvas>
-  <Story of={SectionStories.ShadedContainer} />
-</Canvas>
+<Canvas of={SectionStories.ShadedContainer} />
 
 ### No margin
 
@@ -77,6 +69,4 @@ In cases where bottom margin is not desired.
 
 Modifier class: `.uq-section--no-margin`
 
-<Canvas>
-  <Story of={SectionStories.NoMargin} />
-</Canvas>
+<Canvas of={SectionStories.NoMargin} />

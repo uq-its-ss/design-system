@@ -28,12 +28,13 @@ Contents:
 - [Commit workflow [TODO]](./docs/commit-workflow.md)
 - [Staff training [TODO]](./docs/training/training.md)
 - [Accessibility requirements [TODO]](./docs/accessibility.md)
+- Testing
+  - [FUTURE] Accessibility testing
+  - [Visual Regression Testing](./docs/testing/visual-regression.md)
 - Package docs
   - [`icons`](./packages/icon/MAINTENANCE.md)
   - [`uqds-builder`](./packages/uqds-builder#readme)
   - [`storybook-html`](./packages/storybook-html#readme)
-- [FUTURE] Accessibility testing
-- [FUTURE] Visual unit/regression testing
 - [FUTURE] Release management
   - Publishing Storybook
   - Publishing packages

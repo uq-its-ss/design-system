@@ -17,6 +17,7 @@ With NPM:
 ```shell
 npm i @uqds/acknowledgement
 ```
+
 ---
 
 ## Dependency graph

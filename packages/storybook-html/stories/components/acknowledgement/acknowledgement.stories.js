@@ -31,7 +31,7 @@ export default {
   },
 };
 
-export const culturalAdvise = {
+export const culturalAdvice = {
   args: {
     content: `The Library is custodian of culturally sensitive <a href="https://web.library.uq.edu.au/collections/culturally-sensitive-collections" class="uq-acknowledgement__link">Aboriginal and Torres Strait Islander materials</a>`,
     size: "Default",

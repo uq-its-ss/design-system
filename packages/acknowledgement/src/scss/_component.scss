@@ -68,11 +68,4 @@
       padding: core.$space-xxl core.$space-m;
     }
   }
-  &__text {
-    @media (min-width: 40rem) {
-      /* 640px */
-      max-width: 47.313rem;
-      width: 74.1%;
-    }
-  }
 }

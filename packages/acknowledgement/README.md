@@ -14,9 +14,9 @@ yarn add @uqds/acknowledgement
 
 With NPM:
 
-````shell
+```shell
 npm i @uqds/acknowledgement
-
+```
 ---
 
 ## Dependency graph
@@ -24,4 +24,4 @@ npm i @uqds/acknowledgement
 ```shell
 @uqds/acknowledgement
 ├─ @uqds/core
-````
+```

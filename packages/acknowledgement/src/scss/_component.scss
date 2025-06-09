@@ -53,7 +53,8 @@
 
     &:hover {
       text-decoration: underline;
-      color: #d4c8de;
+      background-color: core.$white;
+      color: core.$purple-500;
     }
   }
 

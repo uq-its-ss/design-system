@@ -12,70 +12,8 @@
   line-height: core.$line-height;
   color: #d4c8de;
 
-  &__reconciliation {
-    background: core.$black;
-    background-image: linear-gradient(
-        0deg,
-        #48206c 45.31%,
-        rgba(72, 32, 108, 0.55) 85.94%,
-        rgba(72, 32, 108, 0) 100%
-      ),
-      url("https://static.uq.net.au/v15/images/rap/brisbane-river-artwork.png");
-
-    @media #{core.$screen-xl-up} {
-      background-image: linear-gradient(
-          90deg,
-          #48206c 28.12%,
-          rgba(72, 32, 108, 0.65) 70.31%,
-          rgba(72, 32, 108, 0) 100%
-        ),
-        url("https://static.uq.net.au/v15/images/rap/brisbane-river-artwork.png");
-    }
-  }
-
-  a {
-    text-decoration: none;
-  }
-
-  &__acknowledgement {
-    max-width: 73.25rem;
-    padding: core.$space-xl core.$space-l;
-    color: #d4c8de;
-    font-weight: core.$font-weight-normal;
-    font-size: core.$font-size-m;
-    line-height: 1.5;
-    margin: auto;
-
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-
-    @media #{core.$screen-xl-up} {
-      padding: core.$space-xl core.$space-m;
-    }
-  }
-
-  &__acknowledgement-flag {
-    width: 2.25rem;
-    height: core.$space-l;
-
-    &:first-child {
-      margin-right: core.$space-s;
-    }
-  }
-
-  &__acknowledgement-text {
-    margin-top: core.$space-m;
-    flex-basis: 100%;
-
-    @media #{core.$screen-xl-up} {
-      flex-basis: auto;
-      margin-top: core.$space-none;
-      padding-left: core.$space-l;
-    }
-  }
-
   &__link {
+    text-decoration: none;
     font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-style: normal;
     font-weight: core.$font-weight-normal;
@@ -128,6 +66,7 @@
   }
 
   &__navigation-link {
+    text-decoration: none;
     display: block;
     padding: core.$space-m core.$space-l;
     color: core.$white;

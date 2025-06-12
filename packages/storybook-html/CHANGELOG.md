@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [7.0.0-alpha.3](https://github.com/uq-its-ss/design-system/compare/storybook-html@7.0.0-alpha.2...storybook-html@7.0.0-alpha.3) (2025-06-11)
+
+**Note:** Version bump only for package storybook-html
+
+# [7.0.0-alpha.2](https://github.com/uq-its-ss/design-system/compare/storybook-html@7.0.0-alpha.1...storybook-html@7.0.0-alpha.2) (2025-06-09)
+
+**Note:** Version bump only for package storybook-html
+
+# [7.0.0-alpha.1](https://github.com/uq-its-ss/design-system/compare/storybook-html@7.0.0-alpha.0...storybook-html@7.0.0-alpha.1) (2025-06-09)
+
+**Note:** Version bump only for package storybook-html
+
+# [7.0.0-alpha.0](https://github.com/uq-its-ss/design-system/compare/storybook-html@6.0.0-alpha.19...storybook-html@7.0.0-alpha.0) (2025-06-02)
+
+- Merge release/1.0.5 back to master (#634) ([206e0b3](https://github.com/uq-its-ss/design-system/commit/206e0b3a360c71f3524fb6d25ff38cf4f6275773)), closes [#634](https://github.com/uq-its-ss/design-system/issues/634) [#583](https://github.com/uq-its-ss/design-system/issues/583) [#568](https://github.com/uq-its-ss/design-system/issues/568)
+
+### BREAKING CHANGES
+
+- Review updated blockquote markup
+
+- increase spacing
+
+- chore: regression test update
+
 # [6.0.0](https://github.com/uq-its-ss/design-system/compare/storybook-html@5.0.0...storybook-html@6.0.0) (2025-05-27)
 
 - Release/1.0.5 (#631) ([e247c79](https://github.com/uq-its-ss/design-system/commit/e247c790585abe267b95de489381efe25107a7bb)), closes [#631](https://github.com/uq-its-ss/design-system/issues/631) [#568](https://github.com/uq-its-ss/design-system/issues/568)

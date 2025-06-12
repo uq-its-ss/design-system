@@ -3,6 +3,8 @@
 .uq-pagination__list,
 .uq-pagination ul {
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   list-style: none;
   gap: 1px;
   margin: 0;
@@ -43,7 +45,7 @@
     }
   }
 
-  &:not(.uq-pagination__current, span.uq-pagination__ellipsis):hover {
+  &:not(.uq-pagination__current, .uq-pagination__ellipsis):hover {
     background-color: core.$grey-50;
     text-decoration: underline;
     color: core.$grey-900;
@@ -54,8 +56,20 @@
   }
 }
 
-span.uq-pagination__ellipsis {
-  cursor: unset;
+.uq-pagination__ellipsis {
+  @media #{core.$screen-md-down} {
+    width: 20px;
+  }
+
+  &:hover {
+    background-color: transparent;
+    text-decoration: underline;
+    color: core.$grey-900;
+  }
+
+  &span {
+    cursor: unset;
+  }
 }
 
 .uq-pagination__previous,

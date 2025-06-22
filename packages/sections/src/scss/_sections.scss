@@ -21,10 +21,18 @@
   margin: 0;
   color: core.$black;
   font-size: var(--section-font-size-xxxl);
+
+  @media #{core.$screen-md-up} {
+    order: 1;
+  }
 }
 
 .uq-section__description {
   width: 100%;
+
+  @media #{core.$screen-md-up} {
+    order: 3;
+  }
 
   & p,
   & ul,
@@ -32,6 +40,12 @@
     &:last-child {
       margin-bottom: 0;
     }
+  }
+}
+
+.uq-section__link {
+  @media #{core.$screen-md-up} {
+    order: 2;
   }
 }
 

@@ -15,12 +15,10 @@ import { svgoOptions } from "./svgoOptions";
  */
 const optimiseSVG = (svgInput: string): string => {
     const result = optimize(svgInput, svgoOptions);
-    //@ts-ignore
-    if (result.data) {
-        //@ts-ignore
-        return result.data;
+    if (result.error) {
+        throw new Error(`Error occurred while optimising SVG: ${result.error}`);
     }
-    throw new Error("Failed to optimise SVG using SVGO dependency.");
+    return (result as any).data;
 };
 
 /** Takes an SVG's filepath and parses out the category and filename.

@@ -591,13 +591,17 @@ $-icons: (
     "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 17.88 17.88' fill='~~COLOR~~'%3e%3cg fill='none' stroke='~~COLOR~~' stroke-linecap='round' stroke-linejoin='round' stroke-width='.75'%3e%3cpath class='cls-1' d='m.5 12.43 4.78 4.94h7.32l4.78-4.94V5.44L12.6.5H5.28L.5 5.44v6.99ZM13.06 8.94H4.81'%3e%3c/path%3e%3c/g%3e%3c/svg%3e",
 );
 
+@use "sass:map";
+@use "sass:string";
+@use "sass:meta";
+
 @function -str-replace($string, $search, $replace: "") {
-  $index: str-index($string, $search);
+  $index: string.index($string, $search);
 
   @if $index {
-    @return str-slice($string, 1, $index - 1) + $replace +
+    @return string.slice($string, 1, $index - 1) + $replace +
       -str-replace(
-        str-slice($string, $index + str-length($search)),
+        string.slice($string, $index + string.length($search)),
         $search,
         $replace
       );
@@ -607,16 +611,16 @@ $-icons: (
 }
 
 @function get-icon($icon, $color: #000) {
-  @if type-of($color) != "color" and $color != "none" {
+  @if meta.type-of($color) != "color" and $color != "none" {
     @warn 'The requested color - "' + $color + '" - was not recognized as a Sass color value.';
     @return null;
   }
 
-  @if map-has-key($-icons, $icon) {
-    $icon: map-get($-icons, $icon);
+  @if map.has-key($-icons, $icon) {
+    $icon: map.get($-icons, $icon);
     $data-uri: -str-replace($icon, "~~COLOR~~", $color);
 
-    @return -str-replace($data-uri, "#", "%23");
+    @return $data-uri;
   }
 
   @warn 'The requested icon - "' + $icon + '" - is not defined in the $icons map.';

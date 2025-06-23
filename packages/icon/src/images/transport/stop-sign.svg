@@ -1,1 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?><svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.88 17.88"><defs><style>.cls-1{fill:none;stroke:#181818;stroke-linecap:round;stroke-linejoin:round;}</style></defs><path class="cls-1" d="M.5,12.43l4.78,4.94h7.32l4.78-4.94v-6.99L12.6.5h-7.32L.5,5.44v6.99Z"/><path class="cls-1" d="M13.06,8.94H4.81"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.88 17.88">
+<g fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".75">
+<path class="cls-1" d="M.5,12.43l4.78,4.94h7.32l4.78-4.94v-6.99L12.6.5h-7.32L.5,5.44v6.99Z"/>
+<path class="cls-1" d="M13.06,8.94H4.81"/>
+</g>
+</svg>

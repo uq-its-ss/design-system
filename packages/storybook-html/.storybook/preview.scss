@@ -1,3 +1,4 @@
+@use "sass:color";
 @use "@uqds/core/src/scss/_global" as core;
 @use "@uqds/body/src/scss/_component" as body;
 @use "@uqds/grid/src/scss/_component" as grid;
@@ -213,17 +214,17 @@ body {
   & .uq-card-grid {
     background: repeating-linear-gradient(
       45deg,
-      lighten(core.$success-500, 30%),
-      lighten(core.$success-500, 30%) 10px,
-      lighten(core.$success-500, 35%) 10px,
-      lighten(core.$success-500, 35%) 20px
+      color.adjust(core.$success-500, $lightness: 30%),
+      color.adjust(core.$success-500, $lightness: 30%) 10px,
+      color.adjust(core.$success-500, $lightness: 35%) 10px,
+      color.adjust(core.$success-500, $lightness: 35%) 20px
     );
   }
 }
 
 .uqds-layout-demo-card,
 .uqds-layout-demo-el {
-  background-color: lighten(core.$utility-500, 40%);
+  background-color: color.adjust(core.$utility-500, $lightness: 40%);
   border: 1px solid core.$utility-500;
   height: 220px;
 }

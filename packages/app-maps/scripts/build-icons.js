@@ -39,8 +39,8 @@ const svgSassFn = `
       @return null;
     }
 
-    @if map-has-key($-icons, $icon) {
-      $icon: map-get($-icons, $icon);
+    @if map.has-key($-icons, $icon) {
+      $icon: map.get($-icons, $icon);
       $data-uri: -str-replace($icon, "${colorPlaceholder}", $color);
 
       @return -str-replace( $data-uri, "#", "%23" );

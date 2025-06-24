@@ -1,5 +1,5 @@
 @use "sass:math";
-@use 'sass:list';
+@use "sass:list";
 @use "@uqds/core/src/scss/global" as core;
 
 // Grid schema
@@ -55,7 +55,8 @@ $max-container-width: 71.25rem !default;
   @media (min-width: #{core.$screen-md + (2 * list.nth($schema-base, 3)) - (2 * list.nth($schema-md, 3))}) {
     margin-left: core.$space-auto;
     margin-right: core.$space-auto;
-    max-width: core.$screen-md - (2 * list.nth($schema-md, 3)) + list.nth($schema-base, 2);
+    max-width: core.$screen-md - (2 * list.nth($schema-md, 3)) +
+      list.nth($schema-base, 2);
   }
 
   @media #{core.$screen-md-up} {
@@ -68,7 +69,8 @@ $max-container-width: 71.25rem !default;
   @media (min-width: #{core.$screen-xl + (2 * list.nth($schema-md, 3)) - (2 * list.nth($schema-xl, 3))}) {
     margin-left: core.$space-auto;
     margin-right: core.$space-auto;
-    max-width: core.$screen-xl - 2 * list.nth($schema-xl, 3) + list.nth($schema-md, 2);
+    max-width: core.$screen-xl - 2 * list.nth($schema-xl, 3) +
+      list.nth($schema-md, 2);
   }
 
   @media (min-width: #{core.$screen-xl}) {

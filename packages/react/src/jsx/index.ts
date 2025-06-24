@@ -8,6 +8,7 @@ export { UqPaginationItem } from "./components/UqPagination/UqPaginationItem";
 export { UqPane } from "./components/UqPane/UqPane";
 export { UqStoryCard } from "./components/UqStoryCard/UqStoryCard";
 export { Hero } from "./components/Hero/Hero";
+export { LoadingSpinner } from "./components/LoadingSpinner/LoadingSpinner";
 export { TextInput } from "./components/TextInput/TextInput";
 
 export * from "./enum/index";

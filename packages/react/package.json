@@ -24,20 +24,27 @@
   "homepage": "https://github.com/uq-its-ss/design-system#readme",
   "license": "ISC",
   "type": "module",
+  "directories": {
+    "lib": "src"
+  },
+  "files": [
+    "src/*",
+    "dist/*"
+  ],
+  "main": "dist/js/index.js",
+  "types": "./dist/js/index.d.ts",
+  "module": "dist/mjs/index.js",
   "exports": {
     ".": {
-      "import": {
-        "types": "./dist/js/main.d.ts",
-        "default": "./dist/js/main.js"
-      }
+      "types": "./dist/js/index.d.ts",
+      "import": "./dist/js/index.js"
     },
-    "./tsx": "./src/jsx/main.tsx",
-    "./src/jsx/*": "./src/jsx/*",
-    "./src/scss/*": "./src/scss/*"
+    "./css": {
+      "types": "./src/types/css.d.ts",
+      "default": "./dist/js/index.css"
+    }
   },
-  "style": "dist/css/main.css",
-  "main": "dist/js/main.js",
-  "types": "dist/js/main.d.ts",
+  "style": "dist/js/index.css",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/uq-its-ss/design-system.git"

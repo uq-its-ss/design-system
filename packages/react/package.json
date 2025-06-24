@@ -42,7 +42,8 @@
     "./css": {
       "types": "./src/types/css.d.ts",
       "default": "./dist/js/index.css"
-    }
+    },
+    "./tsx": "./src/jsx/index.ts"
   },
   "style": "dist/js/index.css",
   "repository": {

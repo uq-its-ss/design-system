@@ -1,6 +1,6 @@
 import { Meta } from "@storybook/react";
 import iconCatalog from "@uqds/icon";
-import { UqButton as Component } from "@uqds/react";
+import { UqButton as Component } from "@uqds/react/tsx";
 
 export default {
   component: Component,

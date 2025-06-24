@@ -62,6 +62,7 @@
     "@uqds/button": "^4.0.0",
     "@uqds/card": "^4.0.1",
     "@uqds/core": "^5.0.0",
+    "@uqds/hero": "^7.0.0",
     "@uqds/icon": "^4.0.1",
     "@uqds/layout": "6.0.0-alpha.0",
     "@uqds/pagination": "^4.0.1",

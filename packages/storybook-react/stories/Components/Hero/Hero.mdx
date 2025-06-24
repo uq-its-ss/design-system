@@ -1,0 +1,26 @@
+import { Meta, Canvas, Controls, Description, Source } from "@storybook/blocks";
+import * as stories from "./Hero.stories";
+
+<Meta of={stories} />
+
+# Hero
+
+<Description of={stories} />
+
+## Installation
+
+```bash
+npm i @uqds/react
+```
+
+## Usage
+
+```js
+import { Hero } from "@uqds/react";
+```
+
+<Canvas of={stories.base} />
+
+<Controls of={stories.base} />
+
+<Source of={stories.base} />

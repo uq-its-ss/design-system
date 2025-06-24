@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Meta } from "@storybook/react";
-import { TextInput as Component } from "@uqds/react";
+import { TextInput as Component } from "@uqds/react/tsx";
 
 export default {
   component: Component,

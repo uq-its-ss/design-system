@@ -121,7 +121,7 @@ $max-container-width: 71.25rem !default;
   $columns,
   $column-count: list.nth($schema-base, 1)
 ) {
-  @return percentage(math.div($columns, $column-count));
+  @return math.percentage(math.div($columns, $column-count));
 }
 
 /* Padding to make up gaps/gutters (horizonal) */

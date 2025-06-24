@@ -1,11 +1,14 @@
 import { createSVGWindow } from "svgdom";
 import { registerWindow, SVG as createSVGElement } from "@svgdotjs/svg.js";
 import { optimize } from "svgo";
-import { colourPlaceholder, svgSassString } from "./svgSassString";
 import glob from "glob";
 import { promises as FS } from "fs";
 import svgConverter from "mini-svg-data-uri";
 import { svgoOptions } from "./svgoOptions";
+
+// Placeholder string using URL safe strings that are unreserved.
+// Must match the value in scss/_util.scss.
+const colourPlaceholder = "~~COLOR~~";
 
 /** Takes and SVG input string and spits out an optimised version
  *
@@ -153,10 +156,10 @@ const createAdditionalOutputs = async (
     // Accumulating string for Sass module API
     let icons = results.reduce((acc, { name, category, svgSassData }) => {
         return `${acc}  "${category}--${name}": "${svgSassData}",\n`;
-    }, "$-icons: (\n");
+    }, "$icons: (\n");
     icons += ");";
     try {
-        await FS.writeFile(sassModule, `${icons}\n${svgSassString}`);
+        await FS.writeFile(sassModule, icons);
     } catch (e: any) {
         throw new Error(`Error creating Sass Module output: ${e.message}`);
     }

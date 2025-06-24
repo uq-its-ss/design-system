@@ -7,5 +7,6 @@ export { UqPagination } from "./components/UqPagination/UqPagination";
 export { UqPaginationItem } from "./components/UqPagination/UqPaginationItem";
 export { UqPane } from "./components/UqPane/UqPane";
 export { UqStoryCard } from "./components/UqStoryCard/UqStoryCard";
+export { TextInput } from "./components/TextInput/TextInput";
 
 export * from "./enum/index";

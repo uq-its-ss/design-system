@@ -1,7 +1,6 @@
 import type { FC } from "react";
 import classNames from "classnames";
-import "@uqds/button/css";
-import "@uqds/loading-spinner/css";
+import css from "./styles.module.scss";
 import { type IconCode } from "@uqds/icon";
 
 export interface UqButtonProps {
@@ -38,10 +37,10 @@ export const UqButton: FC<UqButtonProps> = ({
   return (
     <button
       className={classNames({
-        "uq-button": true,
-        [`uq-button--${style}`]: !!style,
-        [`uq-button--${size}`]: !!size,
-        "uq-button--expand": expand,
+        [css["uq-button"]]: true,
+        [css[`uq-button--${style}`]]: !!style,
+        [css[`uq-button--${size}`]]: !!size,
+        [css["uq-button--expand"]]: expand,
       })}
       onClick={onClick}
       disabled={disabled}
@@ -50,9 +49,9 @@ export const UqButton: FC<UqButtonProps> = ({
         (spinner ? (
           <span
             className={classNames({
-              "uq-loading-spinner": true,
-              "uq-loading-spinner--small": true,
-              "uq-loading-spinner--light": [
+              [css["uq-loading-spinner"]]: true,
+              [css["uq-loading-spinner--small"]]: true,
+              [css["uq-loading-spinner--light"]]: [
                 // Use a light spinner for these dark button styles.
                 "",
                 "primary",
@@ -61,7 +60,10 @@ export const UqButton: FC<UqButtonProps> = ({
           ></span>
         ) : (
           // Show the icon if present, if the spinner is not in use.
-          <span className={`uq-icon uq-icon--${icon}`}></span>
+          <span className={classNames({
+            [css["uq-icon"]]: true,
+            [css[`uq-icon--${icon}`]]: true,
+          })}></span>
         ))}
       {label}
     </button>

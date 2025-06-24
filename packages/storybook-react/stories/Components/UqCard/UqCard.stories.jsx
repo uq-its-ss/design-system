@@ -3,7 +3,7 @@ import {
   UqCard as Component,
   UqCardVariant,
   UqIcon,
-} from "@uqds/react/src/jsx/main";
+} from "@uqds/react";
 
 export default {
   title: "Components/UqCard",

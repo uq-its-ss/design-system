@@ -30,7 +30,11 @@ export const svgSassString = `
 
       @if map.has-key($-icons, $icon) {
         $icon: map.get($-icons, $icon);
-        $data-uri: -str-replace($icon, "${colourPlaceholder}", $color);
+        // Since we're inserting the colour into a data URI (which is made up
+        // of URL-escaped SVG), we need to make sure the incoming value is
+        // already escaped.
+        $escapedColor: -str-replace("" + $color, "#", "%23");
+        $data-uri: -str-replace($icon, "${colourPlaceholder}", $escapedColor);
 
         @return $data-uri;
       }

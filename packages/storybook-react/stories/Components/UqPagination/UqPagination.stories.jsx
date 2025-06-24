@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { UqPagination as Component } from "@uqds/react/src/jsx/main";
+import { UqPagination as Component } from "@uqds/react";
 
 export default {
   title: "Components/UqPagination",

@@ -30,7 +30,9 @@
   },
   "dependencies": {
     "@uqds/accordion": "^6.0.0",
+    "@uqds/acknowledgement": "^0.1.0",
     "@uqds/alert": "^6.0.0",
+    "@uqds/app-maps": "^3.0.0",
     "@uqds/blockquote": "^5.0.0",
     "@uqds/body": "^3.0.0",
     "@uqds/breadcrumb": "^8.0.0",

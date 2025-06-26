@@ -13,7 +13,7 @@ export default {
   },
 } satisfies Meta<typeof Component>;
 
-export const detail = {
+export const showcase = {
   render: () => {
     const [text, setText] = useState("");
     const [searchText, setSearchText] = useState("");

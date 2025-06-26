@@ -58,6 +58,7 @@
     "url": "https://github.com/uq-its-ss/design-system/issues"
   },
   "dependencies": {
+    "@uqds/alert": "^6.0.0",
     "@uqds/body": "^3.0.0",
     "@uqds/button": "^3.0.0",
     "@uqds/card": "^4.0.0-alpha.0",

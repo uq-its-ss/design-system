@@ -144,7 +144,7 @@ $max-container-width: 71.25rem !default;
  * Map columns to another base
  */
 @function calc-true-colspan($span, $column-count, $shadow-column-count) {
-  @return round(math.div($shadow-column-count, $column-count) * $span);
+  @return math.round(math.div($shadow-column-count, $column-count) * $span);
 }
 
 /**

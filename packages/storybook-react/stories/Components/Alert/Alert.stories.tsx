@@ -1,6 +1,6 @@
 import React from "react";
 import { Meta } from "@storybook/react";
-import { Alert as Component, UqButton as Button } from "@uqds/react/tsx";
+import { Alert as Component, Button } from "@uqds/react/tsx";
 
 export default {
   component: Component,

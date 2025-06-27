@@ -126,17 +126,23 @@ $max-container-width: 71.25rem !default;
 
 /* Padding to make up gaps/gutters (horizonal) */
 @mixin grid-col-padding {
-  padding-left: list.nth($schema-base, 2) * 0.5;
-  padding-right: list.nth($schema-base, 2) * 0.5;
+  & {
+    padding-left: list.nth($schema-base, 2) * 0.5;
+    padding-right: list.nth($schema-base, 2) * 0.5;
+  }
 
   @media #{core.$screen-md-up} {
-    padding-left: list.nth($schema-md, 2) * 0.5;
-    padding-right: list.nth($schema-md, 2) * 0.5;
+    & {
+      padding-left: list.nth($schema-md, 2) * 0.5;
+      padding-right: list.nth($schema-md, 2) * 0.5;
+    }
   }
 
   @media #{core.$screen-xl-up} {
-    padding-left: list.nth($schema-xl, 2) * 0.5;
-    padding-right: list.nth($schema-xl, 2) * 0.5;
+    & {
+      padding-left: list.nth($schema-xl, 2) * 0.5;
+      padding-right: list.nth($schema-xl, 2) * 0.5;
+    }
   }
 }
 
@@ -287,14 +293,14 @@ $max-container-width: 71.25rem !default;
     @content;
 
     &__col {
+      flex: none;
+      @include grid-col-padding;
+      @include _grid-col-v-padding;
       /*
         TODO: implement row gap (at the moment we can't test—using @supports—for
         partial support i.e. we can't test for `gap` property support in flex
         layouts even though it's specified)
       */
-      @include grid-col-padding;
-      @include _grid-col-v-padding;
-      flex: none;
     }
   }
 }
@@ -312,32 +318,44 @@ $max-container-width: 71.25rem !default;
 
 /* Padding to make up gaps/gutters (vertical) */
 @mixin _grid-col-v-padding {
-  padding-top: list.nth($schema-base, 2) * 0.5;
-  padding-bottom: list.nth($schema-base, 2) * 0.5;
+  & {
+    padding-top: list.nth($schema-base, 2) * 0.5;
+    padding-bottom: list.nth($schema-base, 2) * 0.5;
+  }
 
   @media #{core.$screen-md-up} {
-    padding-top: list.nth($schema-md, 2) * 0.5;
-    padding-bottom: list.nth($schema-md, 2) * 0.5;
+    & {
+      padding-top: list.nth($schema-md, 2) * 0.5;
+      padding-bottom: list.nth($schema-md, 2) * 0.5;
+    }
   }
 
   @media #{core.$screen-xl-up} {
-    padding-top: list.nth($schema-xl, 2) * 0.5;
-    padding-bottom: list.nth($schema-xl, 2) * 0.5;
+    & {
+      padding-top: list.nth($schema-xl, 2) * 0.5;
+      padding-bottom: list.nth($schema-xl, 2) * 0.5;
+    }
   }
 }
 
 /* Margins to normalise the gaps/gutter offset (vertical) */
 @mixin _grid-row-v-margins {
-  margin-top: -(list.nth($schema-base, 2) * 0.5);
-  margin-bottom: -(list.nth($schema-base, 2) * 0.5);
+  & {
+    margin-top: -(list.nth($schema-base, 2) * 0.5);
+    margin-bottom: -(list.nth($schema-base, 2) * 0.5);
+  }
 
   @media #{core.$screen-md-up} {
-    margin-top: -(list.nth($schema-md, 2) * 0.5);
-    margin-bottom: -(list.nth($schema-md, 2) * 0.5);
+    & {
+      margin-top: -(list.nth($schema-md, 2) * 0.5);
+      margin-bottom: -(list.nth($schema-md, 2) * 0.5);
+    }
   }
 
   @media #{core.$screen-xl-up} {
-    margin-top: -(list.nth($schema-xl, 2) * 0.5);
-    margin-bottom: -(list.nth($schema-xl, 2) * 0.5);
+    & {
+      margin-top: -(list.nth($schema-xl, 2) * 0.5);
+      margin-bottom: -(list.nth($schema-xl, 2) * 0.5);
+    }
   }
 }

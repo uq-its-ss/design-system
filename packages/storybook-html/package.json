@@ -78,7 +78,7 @@
     "http-server": "^14.1.1",
     "joi-browser": "^13.4.0",
     "mermaid": "^11.4.0",
-    "sass": "^1.80.6",
+    "sass": "^1.89.2",
     "sass-loader": "^16.0.3",
     "storybook": "^8.5.2",
     "tocbot": "^4.31.0",

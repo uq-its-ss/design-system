@@ -1,39 +1,43 @@
-import type { FC, ReactNode } from "react";
-import { useCallback } from "react";
+import type {
+  ComponentPropsWithoutRef,
+  FC,
+  ReactNode
+} from "react";
 import classNames from "classnames";
 import css from "./styles.module.scss";
 
 export interface HeroProps {
   /** Small text to appear above the main title. */
   eyebrow?: ReactNode;
+
   /** Main title text. */
   title: ReactNode;
 
   /** Optional link to go back to the previous page. */
-  back?: ReactNode;
-  /** URL for back link intead of `backOnClick`. */
-  backHref?: string;
-  /** Handler for back link instead of `backHref`. */
-  backOnClick?: () => void;
+  backText?: ReactNode;
+
+  /** If backText is specified, the component to render it can be changed from
+   * the default HTML `<a>` to something else, such as React Router's `<Link>`.
+   */
+  backComponent?: any;
+
+  /** Props to pass to the backComponent, such as `href`, `onClick` or for
+   * React Router, `to`. */
+  backComponentProps?: ComponentPropsWithoutRef<
+    HeroProps["backComponent"] extends undefined
+    ? "a"
+    : HeroProps["backComponent"]
+  >;
 }
 
 /** A button the user can click on to perform an action. */
 export const Hero: FC<HeroProps> = ({
   eyebrow,
   title,
-  back,
-  backHref,
-  backOnClick,
+  backText,
+  backComponent: BackComponent = "a", // Default to an HTML <a> element
+  backComponentProps = {},
 }) => {
-  const wrapBackOnClick = useCallback((ev: React.MouseEvent<HTMLAnchorElement>) => {
-    if (backOnClick) {
-      ev.preventDefault();
-      backOnClick();
-    }
-  }, [
-    backOnClick,
-  ]);
-
   return (
     <div className={css["uq-hero-basic"]}>
 
@@ -46,16 +50,18 @@ export const Hero: FC<HeroProps> = ({
             {title}
           </h1>
 
-          {back && (
+          {backText && (
             <div className={css["uq-hero-basic__back"]}>
-              <a href={backHref ?? "#"} onClick={wrapBackOnClick}>
+              <BackComponent
+                {...backComponentProps}
+              >
                 <span className={classNames({
                   [css["uq-icon"]]: true,
                   [css["uq-icon--common--chevron-left"]]: true,
                   [css["uq-icon--light"]]: true,
                 })}></span>
-                <span className={css["uq-hero-basic__back-text"]}>{back}</span>
-              </a>
+                <span className={css["uq-hero-basic__back-text"]}>{backText}</span>
+              </BackComponent>
             </div>
           )}
         </div>

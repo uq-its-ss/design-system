@@ -69,6 +69,7 @@
     "@uqds/loading-spinner": "^3.0.0",
     "@uqds/pagination": "^4.0.0",
     "@uqds/pane": "^3.0.0",
+    "@uqds/table": "^3.0.0",
     "classnames": "^2.5.1"
   },
   "devDependencies": {

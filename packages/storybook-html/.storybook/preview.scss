@@ -3,8 +3,6 @@
 @use "@uqds/body/src/scss/_component" as body;
 @use "@uqds/grid/src/scss/_component" as grid;
 
-@import "@uqds/core/src/scss/main.scss";
-
 body {
   // Prevent the @uqds/body from imposing a background colour.
   background-color: transparent !important;

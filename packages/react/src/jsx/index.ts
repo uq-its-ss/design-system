@@ -10,6 +10,7 @@ export { UqStoryCard } from "./components/UqStoryCard/UqStoryCard";
 export { Alert } from "./components/Alert/Alert";
 export { Hero } from "./components/Hero/Hero";
 export { LoadingSpinner } from "./components/LoadingSpinner/LoadingSpinner";
+export { Table } from "./components/Table/Table";
 export { TextInput } from "./components/TextInput/TextInput";
 
 export * from "./enum/index";

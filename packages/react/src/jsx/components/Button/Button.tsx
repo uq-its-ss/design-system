@@ -3,7 +3,7 @@ import classNames from "classnames";
 import css from "./styles.module.scss";
 import { type IconCode } from "@uqds/icon";
 
-export interface UqButtonProps {
+export interface ButtonProps {
   /** Button significance. */
   style?: "primary" | "secondary" | "tertiary";
   /** The size of the button. */
@@ -24,7 +24,7 @@ export interface UqButtonProps {
 }
 
 /** A button the user can click on to perform an action. */
-export const UqButton: FC<UqButtonProps> = ({
+export const Button: FC<ButtonProps> = ({
   style = "primary",
   size = "default",
   expand = false,

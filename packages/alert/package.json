@@ -1,6 +1,6 @@
 {
   "name": "@uqds/alert",
-  "version": "6.0.0",
+  "version": "7.0.0-alpha.0",
   "description": "Alert component",
   "keywords": [
     "uqds",
@@ -54,7 +54,7 @@
   "dependencies": {
     "@uqds/core": "^4.0.0",
     "@uqds/grid": "^3.0.0",
-    "@uqds/icon": "^3.0.0"
+    "@uqds/icon": "^4.0.0-alpha.0"
   },
   "devDependencies": {
     "@testing-library/dom": "^10.4.0",

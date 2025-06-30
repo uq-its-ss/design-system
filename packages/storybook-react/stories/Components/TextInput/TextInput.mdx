@@ -17,6 +17,17 @@ npm i @uqds/react
 
 ```js
 import { TextInput } from "@uqds/react";
+
+// Controlled component example.
+const [text, setText] = useState('');
+return (
+  <TextInput
+    type="search"
+    value={text}
+    onChange={setText}
+  />
+);
+
 ```
 
 ## Showcase

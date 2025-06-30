@@ -1,6 +1,6 @@
 {
   "name": "@uqds/loading-spinner",
-  "version": "3.0.0",
+  "version": "4.0.0-alpha.0",
   "description": "Loading spinner component",
   "keywords": [
     "uqds",
@@ -41,6 +41,6 @@
   },
   "dependencies": {
     "@uqds/core": "^4.0.0",
-    "@uqds/icon": "^3.0.0"
+    "@uqds/icon": "^4.0.0-alpha.0"
   }
 }

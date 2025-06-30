@@ -80,7 +80,7 @@ jobs:
           header: preview
           message: |
             Design System Previews for Run `${{ github.run_id }}`:
-            
+
             **UQDS-BUILDER**
               * [Homepage](https://uq-ds-regsuit.s3.amazonaws.com/preview/${{ github.run_id }}/index.html)
 
@@ -88,4 +88,3 @@ jobs:
 
               * [HTML Components](https://uq-ds-regsuit.s3.amazonaws.com/preview/${{ github.run_id }}/storybook-html/index.html)
               * [REACT Components](https://uq-ds-regsuit.s3.amazonaws.com/preview/${{ github.run_id }}/storybook-react/index.html)
-

@@ -78,4 +78,3 @@ jobs:
           AWS_REGION: 'ap-southeast-2'
         run: |
           npm run reg-suit run --update-screenshots
-

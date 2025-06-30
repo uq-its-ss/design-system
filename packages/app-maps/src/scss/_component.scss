@@ -1,3 +1,4 @@
+@use "sass:color";
 @use "@uqds/core/src/scss/global" as core;
 @use "@uqds/body/src/scss/global" as body;
 @use "@material/circular-progress/mdc-circular-progress";
@@ -168,7 +169,7 @@ $-result-icon-spacing: $-icon-spacing;
       &:hover {
         background-image: url(get-icon(
           "ui--arrow-left",
-          darken(core.$purple-500, 10%)
+          color.adjust(core.$purple-500, $lightness: -10%)
         ));
       }
     }
@@ -180,7 +181,7 @@ $-result-icon-spacing: $-icon-spacing;
       &:hover {
         background-image: url(get-icon(
           "ui--close",
-          darken(core.$purple-500, 10%)
+          color.adjust(core.$purple-500, $lightness: -10%)
         ));
       }
     }
@@ -323,7 +324,7 @@ $-result-icon-spacing: $-icon-spacing;
       &:hover {
         background-image: url(get-icon(
           "ui--arrow-left",
-          darken(core.$purple-500, 10%)
+          color.adjust(core.$purple-500, $lightness: -10%)
         ));
       }
     }
@@ -334,7 +335,7 @@ $-result-icon-spacing: $-icon-spacing;
       &:hover {
         background-image: url(get-icon(
           "ui--swap",
-          darken(core.$purple-500, 10%)
+          color.adjust(core.$purple-500, $lightness: -10%)
         ));
       }
     }

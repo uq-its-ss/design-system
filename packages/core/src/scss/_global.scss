@@ -3,8 +3,8 @@
 @forward "_partials/text-constants";
 @forward "_partials/media-constants";
 
-@use "_partials/colour-constants" as *;
-@use "_partials/text-constants" as *;
+@use "_partials/colour-constants";
+@use "_partials/text-constants";
 
 // Provide an overlay over backgrounds to darken, lighten an image to provide
 // better visual contrast for content.
@@ -33,11 +33,11 @@
 // Dark tint layer provides a black tint
 %dark-tint {
   @extend %tint;
-  background-color: $grey-900;
+  background-color: colour-constants.$grey-900;
 
   &::before {
     @extend %tint-overlay;
-    background: $black;
+    background: colour-constants.$black;
   }
 }
 
@@ -47,7 +47,7 @@
 
   &::before {
     @extend %tint-overlay;
-    background: $white;
+    background: colour-constants.$white;
   }
 }
 
@@ -62,37 +62,37 @@
 
 // Light
 %light-palette {
-  border-color: $grey-200;
-  color: $grey-50;
+  border-color: colour-constants.$grey-200;
+  color: colour-constants.$grey-50;
 
   a {
-    color: $white;
-    font-weight: $font-weight-normal;
+    color: colour-constants.$white;
+    font-weight: text-constants.$font-weight-normal;
 
     &:hover {
-      color: $grey-50;
+      color: colour-constants.$grey-50;
     }
   }
 }
 
 %light-palette-bg {
-  background-color: $white;
+  background-color: colour-constants.$white;
 }
 
 // Dark
 %dark-palette {
-  border-color: $grey-50;
-  color: $grey-900;
+  border-color: colour-constants.$grey-50;
+  color: colour-constants.$grey-900;
 
   a {
-    color: $utility-500;
+    color: colour-constants.$utility-500;
 
     &:hover {
-      color: $utility-600;
+      color: colour-constants.$utility-600;
     }
   }
 }
 
 %dark-palette-bg {
-  background-color: $grey-700;
+  background-color: colour-constants.$grey-700;
 }

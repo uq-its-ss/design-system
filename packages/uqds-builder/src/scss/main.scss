@@ -1,4 +1,5 @@
 // Required base styles
+@use "@uqds/core/src/scss/main" as core;
 @use "@uqds/body/src/scss/main" as body;
 
 // Customise Layouts
@@ -7,4 +8,30 @@
 
 // Customise Components
 
-@use "@uqds/footer-legacy/src/scss/main" as footer-legacy;
+@use "@uqds/accordion/src/scss/main" as accordion;
+@use "@uqds/alert/src/scss/main" as alert;
+@use "@uqds/blockquote/src/scss/main" as blockquote;
+@use "@uqds/breadcrumb/src/scss/main" as breadcrumb;
+@use "@uqds/button/src/scss/main" as button;
+@use "@uqds/card/src/scss/main" as card;
+@use "@uqds/footer/src/scss/main" as footer;
+@use "@uqds/form/src/scss/main" as form;
+@use "@uqds/grid-menu/src/scss/main" as grid-menu;
+@use "@uqds/header/src/scss/main" as header;
+@use "@uqds/hero/src/scss/main" as hero;
+@use "@uqds/icon/src/scss/main" as icon;
+// broken swiper-vars.scss reference @use "@uqds/image/src/scss/main" as image;
+@use "@uqds/lists/src/scss/main" as lists;
+@use "@uqds/loading-spinner/src/scss/main" as loading-spinner;
+@use "@uqds/navigation/src/scss/main" as navigation;
+@use "@uqds/pagination/src/scss/main" as pagination;
+@use "@uqds/pane/src/scss/main" as pane;
+@use "@uqds/pill/src/scss/main" as pill;
+@use "@uqds/previous-next/src/scss/main" as previous-next;
+@use "@uqds/progression/src/scss/main" as progression;
+@use "@uqds/sections/src/scss/main" as sections;
+@use "@uqds/social/src/scss/main" as social;
+@use "@uqds/side-nav/src/scss/main" as side-nav;
+@use "@uqds/site-header/src/scss/main" as site-header;
+@use "@uqds/table/src/scss/main" as table;
+@use "@uqds/tabs/src/scss/main" as tabs;

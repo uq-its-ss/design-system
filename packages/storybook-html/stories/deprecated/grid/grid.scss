@@ -1,3 +1,4 @@
+@use "sass:color";
 @use "../../../../../node_modules/@uqds/core/src/scss/global" as core;
 @use "../../../../../node_modules/@uqds/grid/src/scss/global" as grid;
 
@@ -36,7 +37,7 @@
   .uq-grid {
     &__col {
       > span {
-        background-color: lighten(core.$utility-500, 45%);
+        background-color: color.adjust(core.$utility-500, $lightness: 45%);
         border: 1px solid core.$utility-500;
         display: block;
         height: 100%;
@@ -50,7 +51,7 @@
         }
 
         @media #{core.$screen-xs-up} {
-          background-color: lighten(core.$warning-500, 35%);
+          background-color: color.adjust(core.$warning-500, $lightness: 35%);
           border-color: core.$warning-500;
         }
 
@@ -60,17 +61,17 @@
         }
 
         @media #{core.$screen-md-up} {
-          background-color: lighten(core.$purple-500, 45%);
+          background-color: color.adjust(core.$purple-500, $lightness: 45%);
           border-color: core.$purple-500;
         }
 
         @media #{core.$screen-lg-up} {
-          background-color: lighten(core.$success-500, 45%);
+          background-color: color.adjust(core.$success-500, $lightness: 45%);
           border-color: core.$success-500;
         }
 
         @media #{core.$screen-xl-up} {
-          background-color: lighten(core.$utility-500, 40%);
+          background-color: color.adjust(core.$utility-500, $lightness: 40%);
           border-color: core.$utility-500;
         }
       }

@@ -1,4 +1,4 @@
-$-icons: (
+$icons: (
   "agriculture-and-environment--agriculture-machine-harvester-1":
     "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='~~COLOR~~'%3e%3cg fill='none' stroke='~~COLOR~~' stroke-linecap='round' stroke-linejoin='round' stroke-width='.75'%3e%3cpath d='M2.97 10.94c.69 0 1.26.58 1.26 1.26 0 .69-.57 1.26-1.26 1.26-.68 0-1.26-.57-1.26-1.26 0-.68.58-1.26 1.26-1.26zM8 10.11a1.69 1.69 0 1 1-1.69 1.69c0-.94.78-1.69 1.69-1.69zM4.14 11.8h2.17'%3e%3c/path%3e%3cpath d='M5.48 7.17H3.8a1.7 1.7 0 0 0-1.69 1.69v2.43m.03-5.77h.83c.46 0 .83.37.83.82v.83m5.89 4.63 1.25-7.54H5.48v4.2c0 .91.75 1.68 1.7 1.68H8m3.34-5.88c0-.92-.74-1.69-1.68-1.69H6.74c-.91 0-1.68.74-1.68 1.69zm0 5.03h2.95l-2.1 3.34h-1.25'%3e%3c/path%3e%3c/g%3e%3c/svg%3e",
   "agriculture-and-environment--agriculture-machine-plow-2":
@@ -590,35 +590,3 @@ $-icons: (
   "transport--stop-sign":
     "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 17.88 17.88' fill='~~COLOR~~'%3e%3cg fill='none' stroke='~~COLOR~~' stroke-linecap='round' stroke-linejoin='round' stroke-width='.75'%3e%3cpath class='cls-1' d='m.5 12.43 4.78 4.94h7.32l4.78-4.94V5.44L12.6.5H5.28L.5 5.44v6.99ZM13.06 8.94H4.81'%3e%3c/path%3e%3c/g%3e%3c/svg%3e",
 );
-
-@function -str-replace($string, $search, $replace: "") {
-  $index: str-index($string, $search);
-
-  @if $index {
-    @return str-slice($string, 1, $index - 1) + $replace +
-      -str-replace(
-        str-slice($string, $index + str-length($search)),
-        $search,
-        $replace
-      );
-  }
-
-  @return $string;
-}
-
-@function get-icon($icon, $color: #000) {
-  @if type-of($color) != "color" and $color != "none" {
-    @warn 'The requested color - "' + $color + '" - was not recognized as a Sass color value.';
-    @return null;
-  }
-
-  @if map-has-key($-icons, $icon) {
-    $icon: map-get($-icons, $icon);
-    $data-uri: -str-replace($icon, "~~COLOR~~", $color);
-
-    @return -str-replace($data-uri, "#", "%23");
-  }
-
-  @warn 'The requested icon - "' + $icon + '" - is not defined in the $icons map.';
-  @return null;
-}

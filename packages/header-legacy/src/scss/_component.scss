@@ -13,7 +13,6 @@
   line-height: core.$line-height;
 
   &__container {
-    @include grid.layout-containment;
     position: relative;
     padding: core.$space-m core.$space-s 0;
     display: grid;
@@ -23,6 +22,7 @@
       "search search"
       "nav nav";
     justify-items: center;
+    @include grid.layout-containment;
 
     @media #{core.$screen-lg-up} {
       padding: core.$space-l core.$space-m 0;

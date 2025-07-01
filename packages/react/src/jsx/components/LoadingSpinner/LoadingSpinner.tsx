@@ -9,7 +9,7 @@ export interface LoadingSpinnerProps {
   /** Size of animation. */
   size?: "small" | "default";
 
-  /** Show/hide the alert.  If omitted, always visible.  This is to allow it
+  /** Show/hide the component.  If omitted, always visible.  This is to allow it
    * to be dynamically shown without causing a virtual DOM update. */
   visible?: boolean;
 }

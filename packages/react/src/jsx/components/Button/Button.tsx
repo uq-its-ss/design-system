@@ -1,6 +1,7 @@
 import type { FC } from "react";
 import classNames from "classnames";
 import css from "../index.module.scss";
+import { Icon } from "../Icon/Icon";
 import { type IconCode } from "@uqds/icon";
 
 export interface ButtonProps {
@@ -60,10 +61,7 @@ export const Button: FC<ButtonProps> = ({
           ></span>
         ) : (
           // Show the icon if present, if the spinner is not in use.
-          <span className={classNames({
-            [css["uq-icon"]]: true,
-            [css[`uq-icon--${icon}`]]: true,
-          })}></span>
+          <Icon name={icon} />
         ))}
       {label}
     </button>

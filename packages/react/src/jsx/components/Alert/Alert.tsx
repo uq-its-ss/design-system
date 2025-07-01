@@ -3,10 +3,6 @@ import classNames from "classnames";
 import css from "../index.module.scss";
 
 export interface AlertProps {
-  /** Show/hide the alert.  If omitted, always visible.  This is to allow it
-   * to be dynamically shown without causing a virtual DOM update. */
-  visible?: boolean;
-
   /** Small text to appear above the main title. */
   variant: 'info' | 'warning' | 'error' | 'success';
 
@@ -22,6 +18,10 @@ export interface AlertProps {
 
   /** Optional button or link to display below the message. */
   suffix?: ReactNode;
+
+  /** Show/hide the component.  If omitted, always visible.  This is to allow it
+   * to be dynamically shown without causing a virtual DOM update. */
+  visible?: boolean;
 };
 
 /** A box used to notify users of important information or changes on a page

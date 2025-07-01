@@ -1,3 +1,4 @@
+@use "sass:color";
 @use "../../../../node_modules/@uqds/core/src/scss/global" as core;
 
 .uqds-base-layout-grid {
@@ -15,10 +16,10 @@
     &::before {
       background: repeating-linear-gradient(
         45deg,
-        lighten(core.$error-500, 30%),
-        lighten(core.$error-500, 30%) 10px,
-        lighten(core.$error-500, 35%) 10px,
-        lighten(core.$error-500, 35%) 20px
+        color.adjust(core.$error-500, $lightness: 30%),
+        color.adjust(core.$error-500, $lightness: 30%) 10px,
+        color.adjust(core.$error-500, $lightness: 35%) 10px,
+        color.adjust(core.$error-500, $lightness: 35%) 20px
       );
       content: "";
       position: absolute;
@@ -38,7 +39,7 @@
       }
 
       > span {
-        background-color: lighten(core.$utility-500, 45%);
+        background-color: color.adjust(core.$utility-500, $lightness: 45%);
         border: 1px solid core.$utility-500;
         display: flex;
         flex-direction: column;
@@ -53,14 +54,14 @@
 
       @media #{core.$screen-xs-up} {
         > span {
-          background-color: lighten(core.$warning-500, 35%);
+          background-color: color.adjust(core.$warning-500, $lightness: 35%);
           border-color: core.$warning-500;
         }
       }
 
       @media #{core.$screen-sm-up} {
         > span {
-          background-color: lighten(core.$error-500, 35%);
+          background-color: color.adjust(core.$error-500, $lightness: 35%);
           border-color: core.$error-500;
         }
       }
@@ -75,14 +76,14 @@
         }
 
         > span {
-          background-color: lighten(core.$purple-500, 50%);
+          background-color: color.adjust(core.$purple-500, $lightness: 50%);
           border-color: core.$purple-500;
         }
       }
 
       @media #{core.$screen-lg-up} {
         > span {
-          background-color: lighten(core.$success-500, 45%);
+          background-color: color.adjust(core.$success-500, $lightness: 45%);
           border-color: core.$success-500;
         }
       }
@@ -93,7 +94,7 @@
         }
 
         > span {
-          background-color: lighten(core.$utility-500, 40%);
+          background-color: color.adjust(core.$utility-500, $lightness: 40%);
           border-color: core.$utility-500;
         }
       }

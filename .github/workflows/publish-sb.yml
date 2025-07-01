@@ -3,7 +3,7 @@ name: Publish Storybook (Staging/Production)
 permissions:
   id-token: write
   contents: read
-  
+
 on:
   push:
     branches:
@@ -100,4 +100,3 @@ jobs:
         if: ${{ github.ref_name == 'releases' }}
         run: |
           aws s3 sync packages/storybook-html/storybook-static s3://${{ secrets.AWS_S3_BUCKET_PRODUCTION }}/storybook-html/ --delete --follow-symlinks
-

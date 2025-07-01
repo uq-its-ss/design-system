@@ -54,10 +54,10 @@
   }
 
   &__container {
-    @include grid.layout-containment;
-    @include grid.grid-col-padding;
     padding-top: core.$space-xxxl;
     padding-bottom: core.$space-xxxl;
+    @include grid.layout-containment;
+    @include grid.grid-col-padding;
   }
 
   &__row {

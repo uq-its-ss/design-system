@@ -1,6 +1,6 @@
 import type { FC, ReactNode } from "react";
 import classNames from "classnames";
-import css from "./styles.module.scss";
+import css from "../index.module.scss";
 
 export interface AlertProps {
   /** Show/hide the alert.  If omitted, always visible.  This is to allow it

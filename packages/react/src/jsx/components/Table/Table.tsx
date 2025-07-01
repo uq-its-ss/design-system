@@ -1,5 +1,5 @@
 import type { FC, ReactNode } from "react";
-import css from "./styles.module.scss";
+import css from "../index.module.scss";
 
 export interface TableProps {
   /** Normal table content - thead, tr, td, td, etc. */

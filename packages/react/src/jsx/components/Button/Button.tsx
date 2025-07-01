@@ -1,6 +1,6 @@
 import type { FC } from "react";
 import classNames from "classnames";
-import css from "./styles.module.scss";
+import css from "../index.module.scss";
 import { type IconCode } from "@uqds/icon";
 
 export interface ButtonProps {

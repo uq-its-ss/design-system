@@ -40,7 +40,7 @@ export const culturalAdvice = {
 
 export const reconciliationStatement = {
   args: {
-    content: `UQ acknowledges the Traditional Owners and their custodianship of the lands on which UQ is situated. &mdash; <a href="https://about.uq.edu.au/reconciliation" class="uq-acknowledgement__link">Reconciliation at UQ</a>`,
+    content: `UQ acknowledges the Traditional Owners and their custodianship of the lands on which UQ is situated. &ndash; <a href="https://about.uq.edu.au/reconciliation" class="uq-acknowledgement__link">Reconciliation at UQ</a>`,
     size: "Large",
   },
 };

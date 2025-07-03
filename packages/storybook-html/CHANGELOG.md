@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [8.0.0-alpha.1](https://github.com/uq-its-ss/design-system/compare/storybook-html@8.0.0-alpha.0...storybook-html@8.0.0-alpha.1) (2025-06-30)
+
+**Note:** Version bump only for package storybook-html
+
+# [8.0.0-alpha.0](https://github.com/uq-its-ss/design-system/compare/storybook-html@7.0.0...storybook-html@8.0.0-alpha.0) (2025-06-22)
+
+### Bug Fixes
+
+- section link comes last ([4b96196](https://github.com/uq-its-ss/design-system/commit/4b96196c18cd892c0020b6dbea2021cd39c4ad64))
+
+### BREAKING CHANGES
+
+- move .uq-section**link so its the last element in .uq-section**header
+
 # [7.0.0](https://github.com/uq-its-ss/design-system/compare/storybook-html@6.0.0...storybook-html@7.0.0) (2025-06-12)
 
 - Release/1.0.6 (#644) ([e032fa3](https://github.com/uq-its-ss/design-system/commit/e032fa34747b1108429c67e26351d9b7f836efb0)), closes [#644](https://github.com/uq-its-ss/design-system/issues/644) [#568](https://github.com/uq-its-ss/design-system/issues/568)

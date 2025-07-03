@@ -203,7 +203,9 @@ class accordion {
 
     // Wrap accordion content in a div tag that's used for layout without breaking the animation
     accordionContents.forEach((accordionContent) => {
-      if (!accordionContent.querySelector(`.${this.className}__content-wrapper`)) {
+      if (
+        !accordionContent.querySelector(`.${this.className}__content-wrapper`)
+      ) {
         const wrapper = document.createElement("div");
         wrapper.classList.add(`${this.className}__content-wrapper`);
         wrapper.replaceChildren(...accordionContent.childNodes);

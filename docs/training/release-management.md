@@ -1,11 +1,10 @@
 # Release management
 
-The design system automates the release processes where possible. 
+The design system automates the release processes where possible.
 This includes a stage and production workflow:
 
 1. Publishing the stage website and creating alpha packages.
 2. Publishing the production website and latest (stable) packages.
-
 
 ### When we push to stage
 
@@ -25,7 +24,7 @@ This includes a stage and production workflow:
 This is our default way to publish storybook.
 
 When a Pull request is merged into `master` or `releases` branch, it triggers a github workflow `publish-sb.yml`
-This workflow will run storybooks `build-storybook` and then update the files in the AWS S3 Bucket associated with stage or production. 
+This workflow will run storybooks `build-storybook` and then update the files in the AWS S3 Bucket associated with stage or production.
 
 ### Manual publishing
 
@@ -35,12 +34,12 @@ This workflow will run storybooks `build-storybook` and then update the files in
 2. Update dependencies `npm ci`
 3. Go to storybook directory `cd packages/storybook-html`
 4. Build site `npm run build-storybook`
-5. This will create the storybook files in `packages/storybook-html/storybook-static` (this is what goes into AWS S3 bucket.) 
+5. This will create the storybook files in `packages/storybook-html/storybook-static` (this is what goes into AWS S3 bucket.)
 
-**Publish to stage or production** 
+**Publish to stage or production**
 
 1. Login to [ITS Cloud Services](https://cloud-services.its.uq.edu.au/)
-2. Select AWS management console 
+2. Select AWS management console
 3. Select the environment account, ending in `ads-staging` or `ads-prod`
 4. Open S3 bucket starting with `uidf-client`
 5. Replace all files and folders
@@ -51,7 +50,7 @@ This workflow will run storybooks `build-storybook` and then update the files in
 **Clear cache**
 
 1. Login to [ITS Cloud Services](https://cloud-services.its.uq.edu.au/)
-2. Select AWS management console 
+2. Select AWS management console
 3. Select the environment account, ending in `ads-prod`
 4. Select CloudFront service
 5. click into the `UQDS` distribution
@@ -61,12 +60,10 @@ This workflow will run storybooks `build-storybook` and then update the files in
 
 ## Publishing packages
 
-All packages are published to the [NPM registry](https://www.npmjs.com/search?q=uqds). 
+All packages are published to the [NPM registry](https://www.npmjs.com/search?q=uqds).
 
 Packages are scoped to `@uqds/`
 
-
-
-We automaticallu publish *Alpha* and *Latest* packages with semantic versioning.
+We automaticallu publish _Alpha_ and _Latest_ packages with semantic versioning.
 
 Conventional Commits [eBay](https://ebay.com)

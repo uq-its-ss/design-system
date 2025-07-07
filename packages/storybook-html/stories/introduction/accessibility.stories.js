@@ -6,10 +6,13 @@ import * as PaneStories from "../components/pane/pane.stories";
 
 const { Home: Hero } = storyRenderer(HeroStories);
 const { Container: Section } = storyRenderer(SectionStories);
-const { Image: Card, Text: CardText  } = storyRenderer(CardStories);
-const { IconShaded: PaneIconShaded, Text: PaneText, Video: PaneVideo, TextShaded:PaneShaded } = storyRenderer(PaneStories);
-
-
+const { Image: Card, Text: CardText } = storyRenderer(CardStories);
+const {
+  IconShaded: PaneIconShaded,
+  Text: PaneText,
+  Video: PaneVideo,
+  TextShaded: PaneShaded,
+} = storyRenderer(PaneStories);
 
 export default {
   title: "Core/Standards/Accessibility",
@@ -20,7 +23,7 @@ export default {
 };
 
 export const Accessibility = {
-    render: () => `
+  render: () => `
     ${Hero({
       title: "Accessibility training",
       button: "",
@@ -39,12 +42,12 @@ export const Accessibility = {
   </ul>
   <p>Fundamentally, a website should be designed to work for all people, whatever their hardware, software, language, location, or ability.</p>
       ${PaneVideo({
-      title: "Why we need web accessibility",
-      description:
-        "The Web is an increasingly important resource in many aspects of life: education, employment, government, commerce, health care, recreation, and more. It is essential that the web be accessible in order to provide equal access and equal opportunity to people with diverse abilities. Access to information and communications technologies, including the Web, is defined as a basic human right in the United Nations Convention on the Rights of Persons with Disabilities.",
-      video: "https://www.youtube-nocookie.com/embed/20SHvU2PKsM",
-      links: ``,
-    })}
+        title: "Why we need web accessibility",
+        description:
+          "The Web is an increasingly important resource in many aspects of life: education, employment, government, commerce, health care, recreation, and more. It is essential that the web be accessible in order to provide equal access and equal opportunity to people with diverse abilities. Access to information and communications technologies, including the Web, is defined as a basic human right in the United Nations Convention on the Rights of Persons with Disabilities.",
+        video: "https://www.youtube-nocookie.com/embed/20SHvU2PKsM",
+        links: ``,
+      })}
     `,
     })}
     ${Section({
@@ -58,7 +61,8 @@ export const Accessibility = {
   <div class="uq-card-grid uq-card-grid--target-3x">
     ${CardText({
       title: "Read the policy.",
-      description: "UQ's Disability Action Plan (PDF, 260KB) is where the Disability Policy gets turned into action.",
+      description:
+        "UQ's Disability Action Plan (PDF, 260KB) is where the Disability Policy gets turned into action.",
       links: `https://staff.uq.edu.au/files/17880/uq-disability-action-plan-2018-2021.pdf`,
     })}
   </div>
@@ -66,19 +70,22 @@ export const Accessibility = {
   <div class="uq-card-grid uq-card-grid--target-3x">
     ${PaneShaded({
       title: "Read sections 1-3",
-      description: "<strong>Read sections 1-3 of the Disability Action Plan</strong> to learn about the vision, governance and implementation of the plan.",
+      description:
+        "<strong>Read sections 1-3 of the Disability Action Plan</strong> to learn about the vision, governance and implementation of the plan.",
       links: ``,
     })}
       ${PaneShaded({
-      title: "Browse section 4",
-      description: "Browse section 4 of the plan, and <strong>read items 1.1 and 3.1 to 3.10</strong> which apply to inclusion and accessibility in the digital environment.",
-      links: ``,
-    })}
+        title: "Browse section 4",
+        description:
+          "Browse section 4 of the plan, and <strong>read items 1.1 and 3.1 to 3.10</strong> which apply to inclusion and accessibility in the digital environment.",
+        links: ``,
+      })}
       ${PaneShaded({
-      title: "More detailed information",
-      description: "More detailed information about the legislative framework and standards which apply to UQ can be found in Appendix 1 of UQ's Disability Action Plan.",
-      links: ``,
-    })}
+        title: "More detailed information",
+        description:
+          "More detailed information about the legislative framework and standards which apply to UQ can be found in Appendix 1 of UQ's Disability Action Plan.",
+        links: ``,
+      })}
   </div>
   </div>
   <h3>The Web Content Accessibility Guidelines (WCAG)</h3>
@@ -171,7 +178,8 @@ export const Accessibility = {
     })}
     ${PaneIconShaded({
       title: "Quality",
-      description: "Accessibility, browser and device compatibility, usability.",
+      description:
+        "Accessibility, browser and device compatibility, usability.",
       icon: "rankings--certified-ribbon-2",
       links: ``,
     })}
@@ -192,7 +200,8 @@ export const Accessibility = {
   <div class="uq-card-grid uq-card-grid--target-2x">
     ${PaneText({
       title: "UI style guide",
-      description: "Website where you can view examples, code and documentation.",
+      description:
+        "Website where you can view examples, code and documentation.",
       links: ``,
     })}
     ${PaneText({
@@ -296,5 +305,4 @@ export const Accessibility = {
   `,
     })}
   `,
-  };
-  
+};

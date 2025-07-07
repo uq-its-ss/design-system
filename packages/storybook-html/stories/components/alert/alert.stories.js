@@ -81,7 +81,7 @@ export const infoGlobal = {
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           <a href="#" title="Link" class="uq-button--inline">Link</a>
         </div>
-        <button class="uq-alert__close">Close alert</button>
+        <button class="uq-alert__close">close</button>
       </div>
     </div>
     `;
@@ -100,7 +100,7 @@ export const successGlobal = {
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           <a href="#" title="Link" class="uq-button--inline">Link</a>
         </div>
-        <button class="uq-alert__close">Close alert</button>
+        <button class="uq-alert__close">close</button>
       </div>
     </div>
     `;

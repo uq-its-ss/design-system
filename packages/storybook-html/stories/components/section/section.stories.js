@@ -52,7 +52,6 @@ export const Section = {
         ? `<${headingElement} class="uq-section__title">${title}</${headingElement}>`
         : ""
     }
-    ${link ? `<div class="uq-section__link">${link}</div>` : ""}
     ${
       description
         ? `
@@ -61,6 +60,7 @@ export const Section = {
     </div>`
         : ""
     }
+    ${link ? `<div class="uq-section__link">${link}</div>` : ""}
   </div>
   ${content}
 </section>`,

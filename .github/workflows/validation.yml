@@ -1,0 +1,36 @@
+name: validate
+on:
+  push:
+    branches:
+      - 'master'
+      - 'beta'
+  pull_request: {}
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: "🛑 Cancel Previous Runs"
+        uses: styfle/cancel-workflow-action@0.11.0
+
+      - name: "⬇️ Checkout repository"
+        uses: actions/checkout@v4
+
+      - name: "⎔ Setup Node.js"
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: "📦 Install dependencies"
+        run: npm ci
+
+      - name: "📐 Check Code Formatting"
+        run: npm run check:format
+
+      - name: "🧹 Run All Linting Checks"
+        run: npm run lint
+
+      - name: "✅ Run Tests"
+        run: npm run test
+

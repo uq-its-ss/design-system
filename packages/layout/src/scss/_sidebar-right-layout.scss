@@ -3,11 +3,10 @@
 .uq-sidebar-right-layout {
   display: flex;
   flex-direction: column;
-  gap: 32px;
 
   @media #{core.$screen-lg-up} {
     display: grid;
-    gap: 32px;
+    gap: 0 32px;
     grid-template-columns:
       1fr
       296px;
@@ -20,10 +19,33 @@
   }
 }
 
-.uq-sidebar-right-layout__sidebar {
-  grid-column: 2 / span 1;
-}
-
 .uq-sidebar-right-layout__main {
   grid-column: 1 / span 1;
+
+  &.uq-sidebar-right-layout__first {
+    grid-row: 1 / span 2;
+  }
+
+  &.uq-sidebar-right-layout__second {
+    grid-row: 3 / span 1;
+  }
+}
+
+.uq-sidebar-right-layout__sidebar {
+  grid-column: 2 / span 1;
+
+  &.uq-sidebar-right-layout__first {
+    grid-row: 1 / span 1;
+  }
+
+  &.uq-sidebar-right-layout__second {
+    grid-row: 2 / span 2;
+  }
+}
+
+/* Allow source based ordering of blocks for news homepage layout. */
+.uq-sidebar-right-layout:has(.uq-sidebar-right-layout__first) {
+  @media #{core.$screen-lg-up} {
+    grid-template-rows: min-content min-content 1fr;
+  }
 }

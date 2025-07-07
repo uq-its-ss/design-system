@@ -1,0 +1,11 @@
+@use "@uqds/core/src/scss/global" as core;
+
+:root {
+  --pagination-size: 44px;
+  --pagination-space: 12px;
+
+  @media #{core.$screen-md-down} {
+    --pagination-size: 40px;
+    --pagination-space: 0;
+  }
+}

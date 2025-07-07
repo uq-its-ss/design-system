@@ -1,0 +1,50 @@
+import { Meta, Story, Canvas, Controls } from "@storybook/blocks";
+import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
+import * as AcknowledgementStories from "./acknowledgement.stories";
+
+<Meta of={AcknowledgementStories} />
+
+# Acknowledgement
+
+<StatusBadge.Development />
+
+<StatusBadge.DraftDoc />
+
+<a href="https://github.com/uq-its-ss/design-system/issues" target="_blank">
+  Check for open issues
+</a>
+
+## Overview
+
+Cultural and reconciliation statements are used to acknowledge the traditional owners of the land and the importance of reconciliation.
+These statements are used to show respect and recognition of the traditional owners of the land and the importance of reconciliation.
+
+### Cultural advice
+
+Cultural statement persistent across all library pages
+
+<Canvas of={AcknowledgementStories.culturalAdvice} />
+<Controls of={AcknowledgementStories.culturalAdvice} />
+
+### Reconciliation
+
+Reconciliation statement persistent across all UQ Footers and uses the modifier 'uq-acknowledgement--large'
+
+<Canvas of={AcknowledgementStories.reconciliationStatement} />
+
+### States
+
+- Cultural statement persistent across all library pages
+- Not an alert - specific component for specific use case
+- Not dismissible
+- Recommended character limit 100 desktop 62 mobile
+- Include link to further content
+- Link text should be descriptive about destination page
+- Only link text should be hyperlinked
+- Use same pattern background and behaviour as reconciliation statement so that it can be a ‘reusable pattern’
+
+### Breakpoints
+
+Breakpoints wrap text at mobile, and max width contains text when on desktop.
+
+## Accessibility

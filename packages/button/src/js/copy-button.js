@@ -2,7 +2,9 @@ import copy from "copy-to-clipboard";
 
 export const copyButton = (element, string) => {
   if (element) {
-    element.addEventListener("click", () => {
+    element.addEventListener("click", (event) => {
+      event.preventDefault();
+
       const label = element.textContent;
 
       // Copy string + provide text feedback.

@@ -11,16 +11,21 @@ import * as ImageStories from "../../components/image/image.stories";
 import * as PillListStories from "../../components/pill/list/pill-list.stories";
 import * as CopyButtonStories from "../../components/copy-button/copy-button.stories";
 import { copyButton } from "@uqds/button/src/js/copy-button";
+import * as SocialShareStories from "../../components/social-share/social-share.stories";
+import { socialShare } from "@uqds/social/src/js/social-share";
 import * as ImageCarouselStories from "../../components/image-carousel/image-carousel.stories";
 import { imageCarousel } from "@uqds/image/src/js/image-carousel";
+import * as StoryCardStories from "../../components/story-card/story-card.stories";
 
 const { Image: ImageCard, Text: TextCard } = storyRenderer(CardStories);
+const { NewsCard } = storyRenderer(StoryCardStories);
 const { TextShaded: ShadedPane, Text: Pane } = storyRenderer(PaneStories);
 const { alertWarning: Alert } = storyRenderer(AlertStories);
 const { Blockquote } = storyRenderer(BlockquoteStories);
 const { Image: ImageWithCaption } = storyRenderer(ImageStories);
 const { Title: PillList } = storyRenderer(PillListStories);
 const { CopyButton } = storyRenderer(CopyButtonStories);
+const { SocialShare } = storyRenderer(SocialShareStories);
 const { ImageCarousel } = storyRenderer(ImageCarouselStories);
 
 export default {
@@ -46,6 +51,8 @@ export const Article = {
     const button = canvasElement.querySelector(".uq-copy-button");
     copyButton(button, button.dataset.copy);
 
+    const social = canvasElement.querySelector(".uq-social-share");
+    socialShare(social);
     const carousel = canvasElement.querySelector(".uq-image-carousel");
     imageCarousel(carousel);
   },
@@ -57,7 +64,16 @@ ${Breadcrumb.render()}
     <div class="uq-sidebar-right-layout uq-article-layout">
       <div class="uq-sidebar-right-layout__main">
         <div class="uq-section">
-          <h1>Setting a course for improving Queensland's waterways</h1>
+          <div class="uq-article-layout__header">
+            <div class="uq-article-layout__label">News</div>
+            <div class="uq-article-layout__label">Faculty of Science</div>
+            <h1 class="uq-article-layout__title">Setting a course for improving Queensland's waterways</h1>
+            <div class="uq-article-layout__meta">
+              <div class="uq-article-layout__meta-item">20 September 2024</div>
+              <div class="uq-article-layout__meta-item">By <a href="#">Jane Smith</a></div>
+              <div class="uq-article-layout__meta-item">3 minute read</div>
+            </div>
+          </div>
         </div>
         <div class="uq-section">
           ${Alert({ message: "Warning: Some readers may find the details in this story distressing." })}
@@ -68,7 +84,7 @@ ${Breadcrumb.render()}
         <div class="uq-section">
           <p>Dr Wenger said the UQ-developed product would be an open access, almost real-time management program that allows users to map pollution, identify coral reefs at risk and determine the management effort needed to protect coral reefs.</p>
         </div>
-        <div class="uq-section">
+        <div class="uq-section uq-article-layout__key-points">
           ${ShadedPane({ title: "Key points", links: null, description: `<ul><li>Two of only four national recipients appointed a Companion of the Order of Australia (AC) are from the UQ community.</li><li>More than 40 members of the UQ community received Australia Day honours from ACs to OAMs.</li></ul>` })}
         </div>
         <div class="uq-section">
@@ -96,10 +112,13 @@ ${Breadcrumb.render()}
           ${PillList()}
         </div>
         <div class="uq-section">
+          ${SocialShare()}
+        </div>
+        <div class="uq-section">
           <div class="uq-accordion" aria-label="Accordion button group" role="presentation">
             <div class="uq-accordion__item">
               <button class="uq-accordion__toggle" aria-controls="content-1" aria-expanded="false" id="accordion-title-1">
-                <div class="uq-accordion__icon"><img src="images/news/creative-commons.svg" alt="" /></div>
+                <div class="uq-accordion__icon"><span class="uq-icon uq-icon--other--creative-commons uq-icon--text"></span></div>
                 Republish via Creative Commons
               </button>
               <div class="uq-accordion__content" role="region" aria-hidden="true" id="content-1" aria-labelledby="accordion-title-1">
@@ -116,8 +135,8 @@ ${Breadcrumb.render()}
             <h2 class="uq-section__title">Related articles</h2>
           </div>
           <div class="uq-card-grid uq-card-grid--target-2x">
-            ${ImageCard({ title: "Looking for a UQ expert?", description: "Browse our searchable database of UQ Staff available to share their specialist knowledge and research developments." })}
-            ${ImageCard({ title: "Contact us", description: "Do you have a media enquiry or a question for the UQ communications team?" })}
+            ${NewsCard()}
+            ${NewsCard()}
           </div>
         </div>
       </div>

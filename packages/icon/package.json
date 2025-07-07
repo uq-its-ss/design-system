@@ -1,6 +1,6 @@
 {
   "name": "@uqds/icon",
-  "version": "0.0.19-alpha.1",
+  "version": "4.0.0",
   "description": "Icon component",
   "keywords": [
     "uqds",
@@ -30,27 +30,30 @@
     "index.js",
     "dist/*",
     "src/js/*",
-    "src/scss/*"
+    "src/scss/*",
+    "src/ts/_build/*"
   ],
   "style": "dist/css/main.css",
+  "types": "src/ts/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/uq-its-ss/design-system.git"
   },
   "scripts": {
-    "build": "npm run build-ts && npm run build-icons",
+    "build": "npm run build-ts && npm run build-icons && npm run format",
     "build-ts": "tsc -p ./src/ts/tsconfig.json",
     "build-icons": "node dist/index.js",
     "clean": "npm run clean-ts && npm run clean-icons",
     "clean-ts": "rm -rf ./dist/*.js*",
     "clean-icons": "rm -rf ./dist/images src/*/_build/*",
+    "format": "prettier --write \"**/*.{css,scss,js,jsx,json,md,mdx,tsx}\"",
     "prepare": "gulp -f ../../gulpfile.js --cwd=. prepare"
   },
   "bugs": {
     "url": "https://github.com/uq-its-ss/design-system/issues"
   },
   "dependencies": {
-    "@uqds/core": "^1.2.4-alpha.0"
+    "@uqds/core": "^4.0.0"
   },
   "devDependencies": {
     "@svgdotjs/svg.js": "^3.1.2",

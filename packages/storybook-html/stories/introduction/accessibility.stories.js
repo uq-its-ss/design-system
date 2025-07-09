@@ -8,7 +8,8 @@ import * as PaneStories from "../components/pane/pane.stories";
 const { Home: Hero } = storyRenderer(HeroStories);
 const { Container: Section } = storyRenderer(SectionStories);
 const { Image: Card, Text: CardText } = storyRenderer(CardStories);
-const { NewsCard: NewsCard, EventCard: EventCard } = storyRenderer(StoryCardStories);
+const { NewsCard: NewsCard, EventCard: EventCard } =
+  storyRenderer(StoryCardStories);
 const {
   IconShaded: PaneIconShaded,
   Text: PaneText,
@@ -174,7 +175,7 @@ export const Accessibility = {
       <div class="uq-card-grid uq-card-grid--target-1x">
       ${PaneShaded({
         title: "All team members are expected to",
-      description: `
+        description: `
           <ul>
             <li>Understand what web accessibility is and why it's important</li>
             <li>Identify accessibility requirements during planning and estimating steps</li>
@@ -190,7 +191,7 @@ export const Accessibility = {
       <div class="uq-card-grid uq-card-grid--target-2x">
         ${PaneShaded({
           title: "Team leaders are expected to",
-          description:`
+          description: `
           <ul>
           <li>Ensure position descriptions include accessibility responsibilities</li>
           <li>Ensure team members receive appropriate accessibly induction and training for their role, including this training</li>
@@ -202,7 +203,7 @@ export const Accessibility = {
         })}
           ${PaneShaded({
             title: "Web developers are expected to",
-            description:`
+            description: `
             <ul>
             <li>Develop components and applications that meet accessibility standards</li>
             <li>Implement Accessible Rich Internet Applications (ARIA) features in line with W3C authoring practices</li>
@@ -212,7 +213,7 @@ export const Accessibility = {
           })}
           ${PaneShaded({
             title: "Web designers are expected to",
-            description:`
+            description: `
             <ul>
             <li>Ensure interactive elements are accessible by all users</li>
             <li>Create accessibility tests for web components</li>
@@ -223,7 +224,7 @@ export const Accessibility = {
           })}
           ${PaneShaded({
             title: "Web coordinators are expected to",
-            description:`
+            description: `
             <ul>
             <li>Persuasively explain the requirements and benefits of web accessibility to clients and stakeholders</li>
             <li>Support clients and stakeholders to play their part in ensuring accessibility</li>
@@ -236,7 +237,7 @@ export const Accessibility = {
           })}
           ${PaneShaded({
             title: "Web content writers are expected to",
-            description:`
+            description: `
             <ul>
             <li>Incorporate accessibility needs into the content design process</li>
             <li>Write web content that meets accessibility standards</li>
@@ -251,9 +252,9 @@ export const Accessibility = {
     })}
 
   ${Section({
-      title: "What if something doesn't meet the standard?",
-      description: ``,
-      content: `
+    title: "What if something doesn't meet the standard?",
+    description: ``,
+    content: `
       <p><strong>New assets</strong> should always meet the standard. Legacy assets may not.</p>
 <p>For <strong>legacy assets within our control</strong>, accessibility defects should be added to our work backlog and regularly incorporated into our work. Accessibility improvements on legacy assets should be <strong>prioritised to maximise inclusion</strong> across all assets and users. Prioritisation of improvements should incorporate factors like:</p>
 <ul>
@@ -299,7 +300,7 @@ export const Accessibility = {
 </ol>
 <p>When the above process has not worked and there are still serious accessibility defects which compromise UQ's commitment to equal access, we should escalate our concerns to our management.</p>
       `,
-    })}
+  })}
 
     ${Section({
       title: "3. Principles of web accessibility",
@@ -417,7 +418,7 @@ export const Accessibility = {
       <div class="uq-card-grid uq-card-grid--target-1x">
         ${PaneShaded({
           title: "Web content accessibility",
-          description:`
+          description: `
           <p>Content Producers are responsible for the day to day maintenance of accessible content. An understanding of WCAG 2.0 AA standards is part of the position description and should be achieved soon after a Content Producer's arrival if not brought with them from a previous role.</p>
         <p>Publication and maintenance of accessible text, images and documents are the responsibility of the Content Producer. Content Producers are also the public face of Team Champagne when it comes to getting stakeholders to understand, accept and comply with accessibility standards.</p>
         <p>In addition to the Web content accessibility training, Content Producers should have an understanding of what Web Coordinators must know and basic design principles (such as colour contrast ratios) in order to build accessible websites in Drupal. Content should use semantic tags (divs, headings, sections, etc) so assistive technology can process and present content the way the user decides. Tables should not be used for layout purposes. Use UQ Standard's built in responsive design elements to make content accessible on a wider range of devices.</p>
@@ -455,7 +456,7 @@ export const Accessibility = {
         })}
         ${PaneShaded({
           title: "Web development accessibility",
-          description:`
+          description: `
            <p>Frontend and backend developers are responsible for delivering accessibility compliant code and components. The ability to apply accessibility standards, identify failure points and test for accessibility issues is an important aspect of daily workflow.</p>
 
         <h3>The World Wide Web Consortium (W3C)</h3>
@@ -607,7 +608,7 @@ export const Accessibility = {
         })}
         ${PaneShaded({
           title: "Web design accessibility",
-          description:`
+          description: `
           <p>If one half of the recipe for an accessible application/website is ease of use with assistive technologies (e.g. screen readers, magnifiers), then the other half should be thoughtful design that improves the user experience of people with different kinds disabilities. Designing for accessibility requires an understanding of the requirements of users with disabilities as well as the understanding that complying with accessibility guidelines benefits <em>all</em> users.</p>
 
         <h3>Web designers at UQ should be comfortable with WCAG documentation</h3>
@@ -668,7 +669,7 @@ export const Accessibility = {
         })}
         ${PaneShaded({
           title: "Web coordinator accessibility",
-          description:`
+          description: `
           <p>As people who liaise between internal teams and clients/stakeholders, web coordinators need to be a "jack of all trades but master of none" when it comes to accessibility.</p>
 
         <h3>Planning</h3>

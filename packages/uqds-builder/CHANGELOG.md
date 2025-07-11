@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.2-alpha.2](https://github.com/uq-its-ss/design-system/compare/uqds-builder@4.0.2-alpha.1...uqds-builder@4.0.2-alpha.2) (2025-07-11)
+
+### Bug Fixes
+
+- UQ Builder: updated styles and examples ([#651](https://github.com/uq-its-ss/design-system/issues/651)) ([fcd904e](https://github.com/uq-its-ss/design-system/commit/fcd904ef796b27c59de287004fdfb2af2e77b71b))
+
 ## [4.0.2-alpha.1](https://github.com/uq-its-ss/design-system/compare/uqds-builder@4.0.2-alpha.0...uqds-builder@4.0.2-alpha.1) (2025-07-10)
 
 ### Bug Fixes

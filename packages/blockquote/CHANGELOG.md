@@ -3,6 +3,40 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.0.0-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/blockquote@5.0.0...@uqds/blockquote@6.0.0-alpha.0) (2025-07-10)
+
+### Bug Fixes
+
+- missing blockquote style export ([#601](https://github.com/uq-its-ss/design-system/issues/601)) ([dab0ce7](https://github.com/uq-its-ss/design-system/commit/dab0ce739de67080822ef3da58234470439c545b))
+
+- Merge release/1.0.5 back to master (#634) ([206e0b3](https://github.com/uq-its-ss/design-system/commit/206e0b3a360c71f3524fb6d25ff38cf4f6275773)), closes [#634](https://github.com/uq-its-ss/design-system/issues/634) [#583](https://github.com/uq-its-ss/design-system/issues/583) [#568](https://github.com/uq-its-ss/design-system/issues/568)
+- Merge release/1.0.4 back to master (#597) ([c85f4dd](https://github.com/uq-its-ss/design-system/commit/c85f4dd04601bad019d83edeb680dd919fd1aebb)), closes [#597](https://github.com/uq-its-ss/design-system/issues/597) [#583](https://github.com/uq-its-ss/design-system/issues/583) [#568](https://github.com/uq-its-ss/design-system/issues/568)
+- Merge release/1.0.3 back to master (#585) ([00ba8a4](https://github.com/uq-its-ss/design-system/commit/00ba8a439019ed08ab357499c758be419f50f150)), closes [#585](https://github.com/uq-its-ss/design-system/issues/585) [#583](https://github.com/uq-its-ss/design-system/issues/583) [#568](https://github.com/uq-its-ss/design-system/issues/568)
+- feat!: ITSADSSD-59299: Blockquote component (#568) ([71d8d3d](https://github.com/uq-its-ss/design-system/commit/71d8d3d2589ed99f374923430fb84f0fe0b97b69)), closes [#568](https://github.com/uq-its-ss/design-system/issues/568)
+
+### BREAKING CHANGES
+
+- Review updated blockquote markup
+
+- increase spacing
+
+- chore: regression test update
+- Review updated blockquote markup
+
+- increase spacing
+
+- chore: regression test update
+- Review updated blockquote markup
+
+- increase spacing
+
+- chore: regression test update
+- Review updated blockquote markup
+
+- increase spacing
+
+- chore: regression test update
+
 # [5.0.0](https://github.com/uq-its-ss/design-system/compare/@uqds/blockquote@4.0.0...@uqds/blockquote@5.0.0) (2025-05-27)
 
 - Release/1.0.5 (#631) ([e247c79](https://github.com/uq-its-ss/design-system/commit/e247c790585abe267b95de489381efe25107a7bb)), closes [#631](https://github.com/uq-its-ss/design-system/issues/631) [#568](https://github.com/uq-its-ss/design-system/issues/568)

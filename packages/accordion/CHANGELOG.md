@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.0.1-alpha.1](https://github.com/uq-its-ss/design-system/compare/@uqds/accordion@7.0.1-alpha.0...@uqds/accordion@7.0.1-alpha.1) (2025-07-10)
+
+**Note:** Version bump only for package @uqds/accordion
+
+## [7.0.1-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/accordion@7.0.0...@uqds/accordion@7.0.1-alpha.0) (2025-07-04)
+
+### Bug Fixes
+
+- return swiper object from imageCarousel ([#658](https://github.com/uq-its-ss/design-system/issues/658)) ([4ae54bc](https://github.com/uq-its-ss/design-system/commit/4ae54bcda69d2c51e48fd48799236f791899e760))
+
+# [7.0.0](https://github.com/uq-its-ss/design-system/compare/@uqds/accordion@7.0.0-alpha.0...@uqds/accordion@7.0.0) (2025-07-03)
+
+**Note:** Version bump only for package @uqds/accordion
+
 # [7.0.0-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/accordion@6.0.0...@uqds/accordion@7.0.0-alpha.0) (2025-06-30)
 
 ### Bug Fixes

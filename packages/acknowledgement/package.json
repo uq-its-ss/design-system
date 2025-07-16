@@ -1,0 +1,43 @@
+{
+  "name": "@uqds/acknowledgement",
+  "version": "0.1.1-alpha.0",
+  "description": "Acknowledgement component",
+  "keywords": [
+    "uqds",
+    "uq",
+    "University of Queensland",
+    "design system",
+    "scss",
+    "sass",
+    "css",
+    "Acknowledgement"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": {
+    "name": "University of Queensland",
+    "email": "webservices@uq.edu.au",
+    "url": "https://uq.edu.au"
+  },
+  "homepage": "https://github.com/uq-its-ss/design-system#readme",
+  "license": "ISC",
+  "exports": {
+    "./src/scss/*": "./src/scss/*"
+  },
+  "style": "dist/css/main.css",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uq-its-ss/design-system.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "prepare": "gulp -f ../../gulpfile.js --cwd=. prepare"
+  },
+  "bugs": {
+    "url": "https://github.com/uq-its-ss/design-system/issues"
+  },
+  "dependencies": {
+    "@uqds/core": "^5.0.0-alpha.0"
+  }
+}

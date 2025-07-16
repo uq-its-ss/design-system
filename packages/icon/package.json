@@ -1,6 +1,6 @@
 {
   "name": "@uqds/icon",
-  "version": "3.0.0",
+  "version": "4.0.1-alpha.0",
   "description": "Icon component",
   "keywords": [
     "uqds",
@@ -40,11 +40,9 @@
     "url": "git+https://github.com/uq-its-ss/design-system.git"
   },
   "scripts": {
-    "build": "npm run build-ts && npm run build-icons && npm run format",
-    "build-ts": "tsc -p ./src/ts/tsconfig.json",
-    "build-icons": "node dist/index.js",
-    "clean": "npm run clean-ts && npm run clean-icons",
-    "clean-ts": "rm -rf ./dist/*.js*",
+    "build": "npm run clean-icons && npm run build-icons && npm run format",
+    "build-icons": "tsx src/ts/build-icons/index.ts",
+    "clean": "npm run clean-icons",
     "clean-icons": "rm -rf ./dist/images src/*/_build/*",
     "format": "prettier --write \"**/*.{css,scss,js,jsx,json,md,mdx,tsx}\"",
     "prepare": "gulp -f ../../gulpfile.js --cwd=. prepare"
@@ -53,7 +51,7 @@
     "url": "https://github.com/uq-its-ss/design-system/issues"
   },
   "dependencies": {
-    "@uqds/core": "^4.0.0"
+    "@uqds/core": "^5.0.0-alpha.0"
   },
   "devDependencies": {
     "@svgdotjs/svg.js": "^3.1.2",
@@ -69,6 +67,7 @@
     "prettier": "^2.5.1",
     "svgdom": "0.1.14",
     "svgo": "^2.8.0",
+    "tsx": "^4.20.3",
     "typescript": "^4.5.5"
   }
 }

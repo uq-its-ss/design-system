@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.0.1-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/site-header@7.0.0...@uqds/site-header@7.0.1-alpha.0) (2025-07-10)
+
+### Bug Fixes
+
+- Use SASS modules to resolve deprecation warnings ([#648](https://github.com/uq-its-ss/design-system/issues/648)) ([92121d1](https://github.com/uq-its-ss/design-system/commit/92121d1c9993ede1b9a04a362c3d36b343a217ef))
+
+# [7.0.0](https://github.com/uq-its-ss/design-system/compare/@uqds/site-header@7.0.0-alpha.0...@uqds/site-header@7.0.0) (2025-07-03)
+
+**Note:** Version bump only for package @uqds/site-header
+
 # [7.0.0-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/site-header@6.0.0...@uqds/site-header@7.0.0-alpha.0) (2025-06-30)
 
 - Merge release/1.0.5 back to master (#634) ([206e0b3](https://github.com/uq-its-ss/design-system/commit/206e0b3a360c71f3524fb6d25ff38cf4f6275773)), closes [#634](https://github.com/uq-its-ss/design-system/issues/634) [#583](https://github.com/uq-its-ss/design-system/issues/583) [#568](https://github.com/uq-its-ss/design-system/issues/568)

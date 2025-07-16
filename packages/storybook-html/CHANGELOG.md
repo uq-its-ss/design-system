@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.0.1-alpha.2](https://github.com/uq-its-ss/design-system/compare/storybook-html@8.0.1-alpha.1...storybook-html@8.0.1-alpha.2) (2025-07-11)
+
+### Bug Fixes
+
+- UQ Builder: updated styles and examples ([#651](https://github.com/uq-its-ss/design-system/issues/651)) ([fcd904e](https://github.com/uq-its-ss/design-system/commit/fcd904ef796b27c59de287004fdfb2af2e77b71b))
+
+## [8.0.1-alpha.1](https://github.com/uq-its-ss/design-system/compare/storybook-html@8.0.1-alpha.0...storybook-html@8.0.1-alpha.1) (2025-07-10)
+
+### Bug Fixes
+
+- Use SASS modules to resolve deprecation warnings ([#648](https://github.com/uq-its-ss/design-system/issues/648)) ([92121d1](https://github.com/uq-its-ss/design-system/commit/92121d1c9993ede1b9a04a362c3d36b343a217ef))
+
+## [8.0.1-alpha.0](https://github.com/uq-its-ss/design-system/compare/storybook-html@8.0.0...storybook-html@8.0.1-alpha.0) (2025-07-04)
+
+**Note:** Version bump only for package storybook-html
+
+# [8.0.0](https://github.com/uq-its-ss/design-system/compare/storybook-html@8.0.0-alpha.1...storybook-html@8.0.0) (2025-07-03)
+
+**Note:** Version bump only for package storybook-html
+
 # [8.0.0-alpha.1](https://github.com/uq-its-ss/design-system/compare/storybook-html@8.0.0-alpha.0...storybook-html@8.0.0-alpha.1) (2025-06-30)
 
 **Note:** Version bump only for package storybook-html

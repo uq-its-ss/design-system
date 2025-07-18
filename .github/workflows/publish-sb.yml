@@ -16,10 +16,10 @@ jobs:
       - name: "⬇️ Checkout repo"
         uses: actions/checkout@v4
 
-      - name: "⎔ Setup node 18"
+      - name: "⎔ Setup node 20"
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 20
 
       - name: "📦️ Install dependencies and build"
         run: npm ci

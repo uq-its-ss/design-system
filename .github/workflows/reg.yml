@@ -23,10 +23,10 @@ jobs:
           # Checkout the merge commit on PRs for accurate testing, otherwise checkout the branch head
           ref: ${{ github.event.pull_request.head.ref || github.ref}}
 
-      - name: "⎔ Setup node 18"
+      - name: "⎔ Setup node 20"
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 20
           cache: 'npm' # Add caching for faster installs
 
       - name: "📦️ Install dependencies"

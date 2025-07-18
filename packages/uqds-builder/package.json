@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "@uqds/accordion": "^7.0.1-alpha.1",
-    "@uqds/acknowledgement": "^0.1.0",
+    "@uqds/acknowledgement": "^0.1.1-alpha.0",
     "@uqds/alert": "^7.0.1-alpha.0",
     "@uqds/blockquote": "^6.0.0-alpha.0",
     "@uqds/body": "^4.0.0-alpha.0",

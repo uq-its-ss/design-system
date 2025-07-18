@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.0.1-alpha.4](https://github.com/uq-its-ss/design-system/compare/storybook-html@8.0.1-alpha.3...storybook-html@8.0.1-alpha.4) (2025-07-18)
+
+### Bug Fixes
+
+- updated EM dash and Link weight ([#654](https://github.com/uq-its-ss/design-system/issues/654)) ([27152cf](https://github.com/uq-its-ss/design-system/commit/27152cf0d000e71ea69787eedd3a8cb0929959f6))
+
 ## [8.0.1-alpha.3](https://github.com/uq-its-ss/design-system/compare/storybook-html@8.0.1-alpha.2...storybook-html@8.0.1-alpha.3) (2025-07-16)
 
 **Note:** Version bump only for package storybook-html

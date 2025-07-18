@@ -98,8 +98,8 @@
     "test:watch": "vitest"
   },
   "engines": {
-    "node": ">=18",
-    "npm": ">=9"
+    "node": ">=20",
+    "npm": ">=10"
   },
   "browserslist": [
     "last 4 chrome versions",

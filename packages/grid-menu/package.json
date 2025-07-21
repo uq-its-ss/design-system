@@ -1,6 +1,6 @@
 {
   "name": "@uqds/grid-menu",
-  "version": "4.0.1-alpha.0",
+  "version": "4.0.1",
   "description": "Grid menu components",
   "keywords": [
     "uqds",
@@ -41,7 +41,7 @@
     "url": "https://github.com/uq-its-ss/design-system/issues"
   },
   "dependencies": {
-    "@uqds/core": "^5.0.0-alpha.0",
-    "@uqds/icon": "^4.0.1-alpha.0"
+    "@uqds/core": "^5.0.0",
+    "@uqds/icon": "^4.0.1"
   }
 }

@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.0.0](https://github.com/uq-its-ss/design-system/compare/@uqds/pill@6.0.0-alpha.0...@uqds/pill@6.0.0) (2025-07-21)
+
+**Note:** Version bump only for package @uqds/pill
+
 # [6.0.0-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/pill@5.0.0...@uqds/pill@6.0.0-alpha.0) (2025-07-10)
 
 ### Bug Fixes

@@ -1,4 +1,5 @@
 // Required base styles
+@use "@uqds/core/src/scss/main" as core;
 @use "@uqds/body/src/scss/main" as body;
 
 // Customise Layouts
@@ -8,6 +9,7 @@
 // Customise Components
 
 @use "@uqds/accordion/src/scss/main" as accordion;
+@use "@uqds/acknowledgement/src/scss/main" as acknowledgement;
 @use "@uqds/alert/src/scss/main" as alert;
 @use "@uqds/blockquote/src/scss/main" as blockquote;
 @use "@uqds/breadcrumb/src/scss/main" as breadcrumb;

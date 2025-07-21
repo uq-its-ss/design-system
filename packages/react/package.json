@@ -1,6 +1,6 @@
 {
   "name": "@uqds/react",
-  "version": "2.0.1",
+  "version": "2.0.2-alpha.0",
   "description": "React components",
   "keywords": [
     "uqds",
@@ -46,13 +46,13 @@
     "url": "https://github.com/uq-its-ss/design-system/issues"
   },
   "dependencies": {
-    "@uqds/body": "^3.0.0",
-    "@uqds/card": "^4.0.0",
-    "@uqds/core": "^4.0.0",
-    "@uqds/icon": "^4.0.0",
+    "@uqds/body": "^4.0.0-alpha.0",
+    "@uqds/card": "^4.0.1-alpha.0",
+    "@uqds/core": "^5.0.0-alpha.0",
+    "@uqds/icon": "^4.0.1-alpha.0",
     "@uqds/layout": "6.0.0-alpha.0",
-    "@uqds/pagination": "^4.0.0",
-    "@uqds/pane": "^3.0.0",
+    "@uqds/pagination": "^4.0.1-alpha.0",
+    "@uqds/pane": "^4.0.0-alpha.0",
     "classnames": "^2.5.1"
   },
   "devDependencies": {

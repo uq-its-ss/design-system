@@ -3,6 +3,53 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.0.0-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/pane@3.0.0...@uqds/pane@4.0.0-alpha.0) (2025-07-10)
+
+- Merge release/1.0.5 back to master (#634) ([206e0b3](https://github.com/uq-its-ss/design-system/commit/206e0b3a360c71f3524fb6d25ff38cf4f6275773)), closes [#634](https://github.com/uq-its-ss/design-system/issues/634) [#583](https://github.com/uq-its-ss/design-system/issues/583) [#568](https://github.com/uq-its-ss/design-system/issues/568)
+- [ITSADSSD-59698]: React storybook and @uqds/react package (#602) ([28ca458](https://github.com/uq-its-ss/design-system/commit/28ca458437ccfdc51896d17b69d2337ceb07484d)), closes [#602](https://github.com/uq-its-ss/design-system/issues/602) [#621](https://github.com/uq-its-ss/design-system/issues/621) [#617](https://github.com/uq-its-ss/design-system/issues/617) [#618](https://github.com/uq-its-ss/design-system/issues/618) [#614](https://github.com/uq-its-ss/design-system/issues/614) [#615](https://github.com/uq-its-ss/design-system/issues/615) [#616](https://github.com/uq-its-ss/design-system/issues/616) [#620](https://github.com/uq-its-ss/design-system/issues/620) [#623](https://github.com/uq-its-ss/design-system/issues/623) [#624](https://github.com/uq-its-ss/design-system/issues/624)
+- Merge release/1.0.4 back to master (#597) ([c85f4dd](https://github.com/uq-its-ss/design-system/commit/c85f4dd04601bad019d83edeb680dd919fd1aebb)), closes [#597](https://github.com/uq-its-ss/design-system/issues/597) [#583](https://github.com/uq-its-ss/design-system/issues/583) [#568](https://github.com/uq-its-ss/design-system/issues/568)
+- Merge release/1.0.3 back to master (#585) ([00ba8a4](https://github.com/uq-its-ss/design-system/commit/00ba8a439019ed08ab357499c758be419f50f150)), closes [#585](https://github.com/uq-its-ss/design-system/issues/585) [#583](https://github.com/uq-its-ss/design-system/issues/583) [#568](https://github.com/uq-its-ss/design-system/issues/568)
+
+### Features
+
+- ITSADSSD-59302: Video pane ([#569](https://github.com/uq-its-ss/design-system/issues/569)) ([9ae841a](https://github.com/uq-its-ss/design-system/commit/9ae841a5987062a149fa12baa61e92c45b026a6c))
+- ITSADSSD-59777: Accordion updates and article template ([#567](https://github.com/uq-its-ss/design-system/issues/567)) ([8311fa4](https://github.com/uq-its-ss/design-system/commit/8311fa49bc079806e221931f6abd3ec948e0b9fe))
+
+### BREAKING CHANGES
+
+- Review updated blockquote markup
+
+- increase spacing
+
+- chore: regression test update
+- new pagination markup
+
+- feat: add UqPagination
+
+- chore: fix lint, remove old files
+
+- chore: update pagination features to match react implementation
+
+- fix: next buttons
+
+- chore: add stories for pagination item to reduce markup
+
+- chore: added screenshots
+
+- chore: pr feedback, updates to pagination, add linting/tsc command
+
+- chore: update package-lock
+- Review updated blockquote markup
+
+- increase spacing
+
+- chore: regression test update
+- Review updated blockquote markup
+
+- increase spacing
+
+- chore: regression test update
+
 # [3.0.0](https://github.com/uq-its-ss/design-system/compare/@uqds/pane@2.0.0...@uqds/pane@3.0.0) (2025-05-27)
 
 - Release/1.0.5 (#631) ([e247c79](https://github.com/uq-its-ss/design-system/commit/e247c790585abe267b95de489381efe25107a7bb)), closes [#631](https://github.com/uq-its-ss/design-system/issues/631) [#568](https://github.com/uq-its-ss/design-system/issues/568)

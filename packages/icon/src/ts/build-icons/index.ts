@@ -1,11 +1,14 @@
 import { createSVGWindow } from "svgdom";
 import { registerWindow, SVG as createSVGElement } from "@svgdotjs/svg.js";
 import { optimize } from "svgo";
-import { colourPlaceholder, svgSassString } from "./svgSassString";
 import glob from "glob";
 import { promises as FS } from "fs";
 import svgConverter from "mini-svg-data-uri";
 import { svgoOptions } from "./svgoOptions";
+
+// Placeholder string using URL safe strings that are unreserved.
+// Must match the value in scss/_util.scss.
+const colourPlaceholder = "~~COLOR~~";
 
 /** Takes and SVG input string and spits out an optimised version
  *
@@ -15,12 +18,10 @@ import { svgoOptions } from "./svgoOptions";
  */
 const optimiseSVG = (svgInput: string): string => {
     const result = optimize(svgInput, svgoOptions);
-    //@ts-ignore
-    if (result.data) {
-        //@ts-ignore
-        return result.data;
+    if (result.error) {
+        throw new Error(`Error occurred while optimising SVG: ${result.error}`);
     }
-    throw new Error("Failed to optimise SVG using SVGO dependency.");
+    return (result as any).data;
 };
 
 /** Takes an SVG's filepath and parses out the category and filename.
@@ -155,10 +156,10 @@ const createAdditionalOutputs = async (
     // Accumulating string for Sass module API
     let icons = results.reduce((acc, { name, category, svgSassData }) => {
         return `${acc}  "${category}--${name}": "${svgSassData}",\n`;
-    }, "$-icons: (\n");
+    }, "$icons: (\n");
     icons += ");";
     try {
-        await FS.writeFile(sassModule, `${icons}\n${svgSassString}`);
+        await FS.writeFile(sassModule, icons);
     } catch (e: any) {
         throw new Error(`Error creating Sass Module output: ${e.message}`);
     }

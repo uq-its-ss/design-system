@@ -18,7 +18,7 @@ export const Breadcrumb = {
     <nav class="uq-breadcrumb" aria-label="Breadcrumb">
       <ol class="uq-breadcrumb__list">
         <li class="uq-breadcrumb__item">
-          <a class="uq-breadcrumb__link" title="UQ home" href="https://uq.edu.au/">UQ home</a>
+          <a class="uq-breadcrumb__link" title="UQ home" href="https://uq.edu.au">UQ home</a>
         </li>
         <li class="uq-breadcrumb__item">
           <a class="uq-breadcrumb__link" title="Level one" href="/information-and-services">Level one</a>

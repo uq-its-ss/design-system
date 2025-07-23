@@ -128,7 +128,7 @@ export const basicHeader = {
     <header class="uq-header" data-gtm-category="Header">
       <div class="uq-header__container">
         <div class="uq-header__logo" data-gtm-category="Primary header">
-          <a class="logo--large" href="https://www.uq.edu.au" data-gtm-label="UQ Logo">
+          <a class="logo--large" href="https://uq.edu.au" data-gtm-label="UQ Logo">
             <img alt="The University of Queensland" src="https://static.uq.net.au/v15/logos/corporate/uq-logo--reversed.svg">
           </a>
         </div>        

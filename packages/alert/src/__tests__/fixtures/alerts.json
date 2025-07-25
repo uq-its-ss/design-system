@@ -6,7 +6,7 @@
       "dismissalIgnoreBefore": 0,
       "styleClass": "alert-info",
       "showOnPages": [
-        "https://www.uq.edu.au",
+        "https://uq.edu.au",
         "https://study.uq.edu.au/",
         "http://127.0.0.1:8080/stuff/*"
       ],
@@ -28,7 +28,7 @@
       "dismissalIgnoreBefore": 0,
       "styleClass": "alert-info",
       "showOnPages": [
-        "https://www.uq.edu.au",
+        "https://uq.edu.au",
         "https://study.uq.edu.au/",
         "http://127.0.0.1:8080/stuff/*"
       ],

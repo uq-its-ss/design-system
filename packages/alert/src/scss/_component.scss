@@ -196,6 +196,7 @@
       &:hover,
       &:focus {
         background-image: url(icon.get-icon("standard--x", core.$white));
+        background-color: transparent;
       }
     }
 
@@ -229,6 +230,15 @@
 
       .uq-alert__title {
         color: core.$grey-900;
+      }
+
+      .uq-alert__close {
+      background-image: url(icon.get-icon("standard--x", core.$grey-900));
+
+        &:hover,
+        &:focus {
+          background-image: url(icon.get-icon("standard--x", core.$grey-900));
+        }
       }
     }
 

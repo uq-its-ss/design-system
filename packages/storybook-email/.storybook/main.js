@@ -26,10 +26,7 @@ const config = {
                 options: {
                   implementation: require.resolve("sass"),
                   sassOptions: {
-                    includePaths: [
-                      "node_modules",
-                      "../../node_modules",
-                    ],
+                    includePaths: ["node_modules", "../../node_modules"],
                   },
                 },
               },
@@ -41,8 +38,6 @@ const config = {
     getAbsolutePath("@storybook/addon-mdx-gfm"),
     getAbsolutePath("@storybook/addon-webpack5-compiler-babel"),
   ],
-
-  staticDirs: ["../public"],
 
   features: {
     postcss: false,

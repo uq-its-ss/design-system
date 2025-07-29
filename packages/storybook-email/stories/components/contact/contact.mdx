@@ -1,0 +1,35 @@
+import { Meta, Story, Canvas } from "@storybook/blocks";
+import { Source } from "@storybook/addon-docs";
+import * as ContactStories from "./contact.stories";
+
+<Meta of={ContactStories} />
+
+# Contact Footer
+
+The `.uq-container` component provides the **page container** by:
+
+- Centering horizontally,
+- using the `1140px` max-width,
+- and adding responsive `32px` and `24px` page gutters for desktop and tablet/mobile respectively.
+
+## Domestic
+
+When and how to use the **ContactDomestic** component.
+
+<Canvas of={ContactStories.ContactDomestic} />
+
+## International
+
+When and how to use the **ContactInternational** component.
+
+<Canvas of={ContactStories.ContactInternational} />
+
+### Copy email HTML
+
+Click the **Show Code** button to copy the email HTML to your clipboard.
+
+This HTML can be pasted into your email client or email service provider.
+
+### Examples
+
+@todo

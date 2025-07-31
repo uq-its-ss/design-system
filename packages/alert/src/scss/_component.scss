@@ -114,7 +114,7 @@
     .uq-alert__message {
       &::before {
         background-image: url(icon.get-icon(
-          "standard--exclamation-circle",
+          "standard--exclamation-triangle",
           core.$grey-900
         ));
       }
@@ -126,7 +126,7 @@
     .uq-alert__message {
       &::before {
         background-image: url(icon.get-icon(
-          "standard--exclamation-triangle",
+          "standard--x-circle",
           core.$grey-900
         ));
       }
@@ -146,16 +146,11 @@
     .uq-alert__message {
       line-height: #{core.$line-height}rem;
       font-weight: core.$font-weight-normal;
-      margin-left: core.$space-compressed-uuul;
-      padding: core.$space-stretched-s core.$space-l core.$space-stretched-s
-        core.$space-s;
+      margin-left: core.$space-xxl;
+      padding: core.$space-l;
 
       @media #{core.$screen-md-up} {
         font-size: core.$font-size-m;
-      }
-
-      @media #{core.$screen-lg-up} {
-        margin-left: core.$space-compressed-uul;
       }
 
       &::before {
@@ -164,8 +159,8 @@
         width: core.$space-l;
         height: core.$space-l;
         position: absolute;
-        top: core.$space-stretched-s;
-        left: -(core.$space-l);
+        top: core.$space-l;
+        left: -(core.$space-m);
       }
     }
   }
@@ -248,7 +243,7 @@
       .uq-alert__message {
         &::before {
           background-image: url(icon.get-icon(
-            "standard--exclamation-triangle",
+            "standard--x-circle",
             core.$white
           ));
         }

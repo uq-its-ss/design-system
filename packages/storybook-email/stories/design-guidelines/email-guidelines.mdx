@@ -1,45 +1,153 @@
-import { Meta, Story, Canvas } from "@storybook/blocks";
+import { Meta, Story, Canvas, Source } from "@storybook/blocks";
+import * as buttonStories from "../components/buttons.stories.js";
+import * as headerStories from "../components/header.stories.js";
+import * as senderHeaderStories from "../components/sender-header.stories.js";
+import * as footerStandardStories from "../components/footer-standard.stories.js";
+import * as footerMailingListStories from "../components/footer-mailing-list.stories.js";
 
 <Meta title="Design guidelines/Email template guidelines" />
 
 # Email template guidelines
 
-These guidelines help us ensure we maintain brand consistency and compliance in student email communications, preserving our brand’s strength and credibility while creating a cohesive experience for our students.
+These guidelines help us ensure we maintain brand consistency and compliance in student email communications, preserving our brand’s strength and credibility while creating a cohesive experience for our students. 
 
 ## Styles
 
-These styles define the look and feel of your email, including recommended fonts, colours, and link treatments for a cohesive and professional appearance.
+These styles define the look and feel of your email, including recommended fonts, colours, and link treatments for a cohesive and professional appearance.                                                                                                    |
 
-| Item                                      | Styles                                                                                                                                                                                               |
-| :---------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Headings**                              | **Colour:** #19151c <br /> **Font:** Roboto (if not available use Arial) <br /> **Font weight:** Bold <br /> **Font sizes:** <br /> Heading 1 – 32px <br /> Heading 2 – 24px <br /> Heading 3 - 18px |
-| **Body copy (min size 16px)**             | **Colour:** #3b383e <br /> **Font:** Roboto (if not available use Arial) <br /> **Font weight:** Regular / normal <br /> **Font size:** 16px                                                         |
-| **Links**                                 | **Colour:** #51247a (UQ purple) <br /> **Font:** Roboto, Arial <br /> **Font weight:** Regular / normal <br /> **Text decoration:** Underline                                                        |
-| **Link style on UQ purple background**    | **Colour:** #FFFFFF                                                                                                                                                                                  |
-| **Buttons**                               |                                                                                                                                                                                                      |
-| &nbsp;&nbsp;&nbsp;Primary button          | **Background colour:** #51247a <br /> **Font colour:** #FFFFFF                                                                                                                                       |
-| &nbsp;&nbsp;&nbsp;Secondary button        | **Background colour:** #FFFFFF <br /> **Font colour:** #51247a <br /> **Border colour:** #51247a                                                                                                     |
-| **Button styles on UQ purple background** |                                                                                                                                                                                                      |
-| &nbsp;&nbsp;&nbsp;Primary button          | **Background colour:** #FFFFFF <br /> **Font colour:** #51247a                                                                                                                                       |
-| &nbsp;&nbsp;&nbsp;Secondary button        | **Background colour:** #51247a <br /> **Font colour:** #FFFFFF <br /> **Border colour:** #FFFFFF                                                                                                     |
+<table width={"100%"}>
+  <thead>
+    <tr>
+      <th>Element</th>
+      <th>Font</th>
+      <th>Weight</th>
+      <th>Size</th>
+      <th>Line height</th>
+      <th>Colour</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Heading 1</td>
+      <td>Roboto</td>
+      <td>Bold</td>
+      <td>32px</td>
+      <td>38px</td>
+      <td class="uqds-colour--black"><span class="uqds-colour--white">#19151c</span></td>
+      <td><h1 class="sb-unstyled uqds-h1">Heading 1</h1></td>
+    </tr>
+    <tr>
+      <td>Heading 2</td>
+      <td>Roboto</td>
+      <td>Bold</td>
+      <td>24px</td>
+      <td>29px</td>
+      <td class="uqds-colour--black"><span class="uqds-colour--white">#19151c</span></td>
+      <td><h2 class="sb-unstyled sb-unstyled uqds-h2">Heading 2</h2></td>
+    </tr>
+    <tr>
+      <td>Heading 3</td>
+      <td>Roboto</td>
+      <td>Bold</td>
+      <td>18px</td>
+      <td>22px</td>
+      <td class="uqds-colour--black"><span class="uqds-colour--white">#19151c</span></td>
+      <td><h3 class="sb-unstyled uqds-h3">Heading 3</h3></td>
+    </tr>
+    <tr>
+      <td>Body</td>
+      <td>Roboto</td>
+      <td>Regular</td>
+      <td>16px</td>
+      <td>26px</td>
+      <td class="uqds-colour--grey-900"><span class="uqds-colour--white">#3B383E</span></td>
+      <td><p class="sb-unstyled uqds-body">body</p></td>
+    </tr>
+    <tr>
+      <td>Link</td>
+      <td>Roboto</td>
+      <td>Regular</td>
+      <td>16px</td>
+      <td>26px</td>
+      <td class="uqds-colour--purple-500"><span class="uqds-colour--white">#51274A</span></td>
+      <td><a href="#" class="sb-unstyled uqds-link">Link</a></td>
+    </tr>
+  </tbody>
+</table>
+
 
 ## Assets
 
-These assets form the core layout of your email, including the header, footer, and other essential structural elements.
+These assets form the core layout of your email, including buttons, UQ header and other essential structural elements.
 
-### Header
+### Buttons
 
-Used across all UQ emails.
-Includes the UQ logo, linking to the UQ homepage, and a ‘View in browser’ link that opens the email in the user’s browser for easier viewing.
+Buttons are used to create clear calls to action that encourage user interaction and drive engagement within your email.
 
-### Sub-header
+#### Primary button
 
-Use this for faculty or school emails to display the faculty or school name.
+Use the primary button to highlight the most important call to action within the email, ideally limiting it to a single instance to maintain visual hierarchy and emphasis.
 
-### Hero image
+To use this primary button, select the ‘copy’ button in the right corner of the box below to copy the HTML code.
 
-Optional – use only if it adds value, enhances engagement, or supports the email’s purpose.
-Avoid using the UQ graphic device (purple wave graphic that aligns flush with the bottom edge of the hero image).
+<Canvas of={buttonStories.buttonPrimary} sourceState="shown" />
+
+<Source of={buttonStories.buttonPrimary} />
+
+#### Secondary button
+
+Use the secondary button for important actions that are not the primary call to action, it has less visual emphasis than the primary button and can be used multiple times within an email.
+
+To use this secondary button, select the ‘copy’ button in the right corner of the box below to copy the HTML code.
+
+<Canvas of={buttonStories.buttonSecondary} sourceState="shown" />
+
+## UQ header
+
+Used across all UQ emails. Includes the UQ logo, linking to the UQ homepage, and a ‘View in browser’ link that opens the email in the user’s browser for easier viewing.
+
+<Canvas of={headerStories.header} />
+
+## Sender header
+
+To help recipients recognise and trust UQ email communications, always use the full name of the area, faculty, school, or office in the sender name, with the acronym in brackets where relevant.  This ensures students can quickly identify the source of the message, particularly when communications come from a faculty, school, division, or central office.
+
+Examples:
+- Faculty of Engineering, Architecture and Information Technology (EAIT)
+- Faculty of Health, Medicine and Behavioural Sciences (HABS)
+- Business School
+- From the Deputy Vice-Chancellor (Academic)
+- Institute for Teaching and Learning Innovation (ITaLI)
+
+<Canvas of={senderHeaderStories.senderHeader} />
+
+## Footer
+
+### Standard footer
+
+Used across all UQ emails. 
+
+Includes:
+- Acknowledgement of Country
+- CRICOS
+- TEQSA
+- UQ’s Privacy Policy
+
+<Canvas of={footerStandardStories.footerStandard} />
+
+### Mailing list footer
+
+Used for mailing list emails.
+
+Includes:
+- Acknowledgement of Country
+- CRICOS
+- TEQSA
+- UQ's marketing consent and privacy notice.
+- Unsubscribe text must specify which mailing list the user is unsubscribing from.
+
+<Canvas of={footerMailingListStories.footerMailingList} />
 
 **Image sizing**
 

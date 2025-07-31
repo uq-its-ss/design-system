@@ -1,18 +1,11 @@
-import { layoutDecorator } from "../../../lib/decorators";
 import "@uqds/layout/src/scss/main.scss";
 
 export default {
-  title: "Components/Contact",
-  parameters: {
-    layout: "fullscreen",
-  },
-  args: {
-    children: `<div class="uqds-layout-demo-el"></div>`,
-  },
-  decorators: [layoutDecorator],
+  title: "Components",
+  tags: ['autodocs'],
 };
 
-export const ContactDomestic = {
+export const footerContactDomestic = {
   render: () => `
 
 
@@ -160,7 +153,7 @@ export const ContactDomestic = {
 `,
 };
 
-export const ContactInternational = {
+export const footerContactInternational = {
   render: () => `
 
 <!-- Contact Banner -->

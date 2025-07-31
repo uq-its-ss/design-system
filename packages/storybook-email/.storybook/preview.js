@@ -38,22 +38,7 @@ const preview = {
     },
     options: {
       storySort: {
-        order: [
-          "Introduction",
-          ["Overview", "Get started"],
-          "Core",
-          ["Typography", "Space", "Breakpoints", "Colour"],
-          "Layout",
-          ["Container", "Page layouts", "Card grid"],
-          "Components",
-          ["Body", ["Body", "Elements", "Utilities"], "Navigation", "Section"],
-          "Patterns",
-          ["Kitchen sink", "Basic page"],
-          "Templates",
-          "Deliverables",
-          ["UQ Maps", ["Overview", "UX models"]],
-          "Deprecated",
-        ],
+        order: ["Design guidelines", "Templates", "Components"],
       },
     },
   },

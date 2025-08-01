@@ -1,9 +1,8 @@
-
 import "@uqds/layout/src/scss/main.scss";
 
 export default {
   title: "Components",
-  tags: ['autodocs'],
+  tags: ["autodocs"],
 };
 
 export const senderHeader = {

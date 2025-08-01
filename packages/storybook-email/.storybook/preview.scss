@@ -3,10 +3,10 @@
 
 /* Colours */
 .uqds-colour__palette {
-    width: 100%;
-    border-radius: 0.25rem;
-    height: 100%;
-  }
+  width: 100%;
+  border-radius: 0.25rem;
+  height: 100%;
+}
 .uqds-colour--purple-500 {
   background-color: core.$purple-500;
   color: core.$white;
@@ -23,40 +23,39 @@
   color: core.$white;
 }
 
-
 /* Typography */
 .uqds-h1 {
-    color: core.$black;
-    font-family: core.$font-body;
-    font-size: core.$font-size-xxxl; /* 32px */
-    line-height: core.$line-height-h; /* 38px */
-    font-weight: core.$font-weight-medium; /* 500 */
+  color: core.$black;
+  font-family: core.$font-body;
+  font-size: core.$font-size-xxxl; /* 32px */
+  line-height: core.$line-height-h; /* 38px */
+  font-weight: core.$font-weight-medium; /* 500 */
 }
 .uqds-h2 {
-    color: core.$black;
-    font-family: core.$font-body;
-    font-size: core.$font-size-xxl; /* 24px */
-    line-height: core.$line-height-h; /* 29px */
-    font-weight: core.$font-weight-medium; /* 500 */
+  color: core.$black;
+  font-family: core.$font-body;
+  font-size: core.$font-size-xxl; /* 24px */
+  line-height: core.$line-height-h; /* 29px */
+  font-weight: core.$font-weight-medium; /* 500 */
 }
 .uqds-h3 {
-    color: core.$black;
-    font-family: core.$font-body;
-    font-size: core.$font-size-l; /* 18px */
-    line-height: core.$line-height-h; /* 29px */
-    font-weight: core.$font-weight-medium; /* 500 */
+  color: core.$black;
+  font-family: core.$font-body;
+  font-size: core.$font-size-l; /* 18px */
+  line-height: core.$line-height-h; /* 29px */
+  font-weight: core.$font-weight-medium; /* 500 */
 }
 .uqds-body {
-    color: core.$grey-900;
-    font-family: core.$font-body;
-    font-size: core.$font-size-m; /* 16px */
-    line-height: core.$line-height; /* 26px */
-    font-weight: core.$font-weight-normal; /* 400 */
+  color: core.$grey-900;
+  font-family: core.$font-body;
+  font-size: core.$font-size-m; /* 16px */
+  line-height: core.$line-height; /* 26px */
+  font-weight: core.$font-weight-normal; /* 400 */
 }
 .uqds-link {
-    color: core.$purple-500;
-    font-family: core.$font-body;
-    font-size: core.$font-size-m; /* 16px */
-    line-height: core.$line-height; /* 26px */
-    font-weight: core.$font-weight-normal; /* 400 */
+  color: core.$purple-500;
+  font-family: core.$font-body;
+  font-size: core.$font-size-m; /* 16px */
+  line-height: core.$line-height; /* 26px */
+  font-weight: core.$font-weight-normal; /* 400 */
 }

@@ -30,6 +30,12 @@ jobs:
            npm run prepare
         working-directory: packages/uqds-builder/
 
+      # --- Build Storybook EMAIL ---
+      - name: "Build Storybook EMAIL"
+        run: |
+          npm run build-storybook
+        working-directory: packages/storybook-email/
+
       # --- Build Storybook REACT ---
       - name: "Build Storybook REACT"
         run: |
@@ -67,6 +73,11 @@ jobs:
         run: |
           aws s3 cp packages/uqds-builder/dist s3://${{ secrets.AWS_S3_BUCKET_STAGING }} --follow-symlinks --recursive
 
+      - name: "Storybook EMAIL: Sync master to staging environment"
+        if: ${{ github.ref_name == 'master' }}
+        run: |
+          aws s3 sync packages/storybook-email/storybook-static s3://${{ secrets.AWS_S3_BUCKET_STAGING }}/storybook-email/ --delete --follow-symlinks
+
       - name: "Storybook REACT: Sync master to staging environment"
         if: ${{ github.ref_name == 'master' }}
         run: |
@@ -90,6 +101,11 @@ jobs:
         if: ${{ github.ref_name == 'releases' }}
         run: |
           aws s3 cp packages/uqds-builder/dist s3://${{ secrets.AWS_S3_BUCKET_PRODUCTION }} --follow-symlinks --recursive
+
+      - name: "Storybook EMAIL: Sync releases to Production environment"
+        if: ${{ github.ref_name == 'releases' }}
+        run: |
+          aws s3 sync packages/storybook-email/storybook-static s3://${{ secrets.AWS_S3_BUCKET_PRODUCTION }}/storybook-email/ --delete --follow-symlinks
 
       - name: "Storybook REACT: Sync releases to Production environment"
         if: ${{ github.ref_name == 'releases' }}

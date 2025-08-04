@@ -33,7 +33,7 @@
 
   &__message {
     position: relative;
-    padding: core.$space-l core.$space-xxxxl;
+    padding: core.$space-l core.$space-xxxxl core.$space-l core.$space-ul;
 
     &::before {
       content: "";
@@ -47,7 +47,7 @@
       height: core.$space-l;
       position: absolute;
       top: 25px;
-      left: (core.$space-m);
+      left: core.$space-compressed-xxxl;
     }
 
     p {

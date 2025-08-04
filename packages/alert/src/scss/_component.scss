@@ -13,7 +13,8 @@
   position: relative;
 
   &__container {
-    margin: 0 auto;
+    @include grid.layout-containment;
+    @include grid.grid-col-padding;
 
     .uq-alert__message {
       &:not(:last-child) {
@@ -32,8 +33,7 @@
 
   &__message {
     position: relative;
-    padding: core.$space-l;
-    margin-left: core.$space-xxl;
+    padding: core.$space-l core.$space-xxxxl;
 
     &::before {
       content: "";
@@ -47,7 +47,7 @@
       height: core.$space-l;
       position: absolute;
       top: 25px;
-      left: -(core.$space-m);
+      left: (core.$space-m);
     }
 
     p {
@@ -61,17 +61,19 @@
   }
 
   &__close {
+    margin: 0;
+    padding: 0;
     position: absolute;
     top: core.$space-none;
-    right: core.$space-none;
+    right: -(core.$space-compressed-m);
     background-image: url(icon.get-icon("standard--x", core.$grey-900));
     background-repeat: no-repeat;
     background-size: 1rem;
     background-position: center;
     background-color: transparent;
     border: none;
-    width: core.$space-xxxl;
-    height: core.$space-xxxl;
+    width: core.$space-xxl;
+    height: core.$space-uul;
     text-indent: 999px;
     overflow: hidden;
     cursor: pointer;
@@ -137,17 +139,15 @@
   &--global {
     .uq-alert__container {
       @media #{core.$screen-lg-up} {
-        max-width: 73.25rem;
-        margin-left: auto;
-        margin-right: auto;
+        @include grid.layout-containment;
+        @include grid.grid-col-padding;
       }
     }
 
     .uq-alert__message {
       line-height: #{core.$line-height}rem;
       font-weight: core.$font-weight-normal;
-      margin-left: core.$space-xxl;
-      padding: core.$space-l;
+      padding: core.$space-l core.$space-xxl;
 
       @media #{core.$screen-md-up} {
         font-size: core.$font-size-m;
@@ -160,7 +160,7 @@
         height: core.$space-l;
         position: absolute;
         top: core.$space-l;
-        left: -(core.$space-m);
+        left: core.$space-none;
       }
     }
   }

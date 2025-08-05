@@ -78,10 +78,10 @@ export const infoGlobal = {
       <div class="uq-alert__container">
         <div class="uq-alert__message">
           <h3 class="uq-alert__title">Title goes here</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <a href="#" title="Link" class="uq-button--inline">Link</a>
+          <button class="uq-alert__close">close</button>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+          <p><a href="#" title="Link" class="uq-button--inline">Link</a></p>
         </div>
-        <button class="uq-alert__close">close</button>
       </div>
     </div>
     `;
@@ -97,10 +97,10 @@ export const successGlobal = {
       <div class="uq-alert__container">
         <div class="uq-alert__message">
           <h3 class="uq-alert__title">Title goes here</h3>
+          <button class="uq-alert__close">close</button>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <a href="#" title="Link" class="uq-button--inline">Link</a>
+          <p><a href="#" title="Link" class="uq-button--inline">Link</a></p>
         </div>
-        <button class="uq-alert__close">close</button>
       </div>
     </div>
     `;
@@ -117,7 +117,7 @@ export const warningGlobal = {
         <div class="uq-alert__message">
           <h3 class="uq-alert__title">Title goes here</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <a href="#" title="Link" class="uq-button--inline">Link</a>
+          <p><a href="#" title="Link" class="uq-button--inline">Link</a></p>
         </div>
       </div>
     </div>
@@ -135,7 +135,7 @@ export const errorGlobal = {
         <div class="uq-alert__message">
           <h3 class="uq-alert__title">Title goes here</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <a href="#" title="Link" class="uq-button--inline">Link</a>
+          <p><a href="#" title="Link" class="uq-button--inline">Link</a></p>
         </div>
       </div>
     </div>

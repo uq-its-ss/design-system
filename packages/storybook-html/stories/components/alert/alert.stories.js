@@ -25,7 +25,7 @@ export default {
         <div class="uq-alert__message">
           ${title ? `<h3 class="uq-alert__title">${title}</h3>` : ""}
           ${message}
-          ${button ? `<a href="#" title="Button" class="uq-button">${button}</a>` : ""}
+          ${button ? `<p><a href="#" title="Button" class="uq-button">${button}</a></p>` : ""}
           ${link ? `<a href="#" title="Link" class="uq-button--inline">${link}</a>` : ""}
         </div>
       </div>
@@ -78,10 +78,10 @@ export const infoGlobal = {
       <div class="uq-alert__container">
         <div class="uq-alert__message">
           <h3 class="uq-alert__title">Title goes here</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <a href="#" title="Link" class="uq-button--inline">Link</a>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+          <p><a href="#" title="Link" class="uq-button--inline">Link</a></p>
+          <button class="uq-alert__close">close</button>
         </div>
-        <button class="uq-alert__close">close</button>
       </div>
     </div>
     `;
@@ -98,9 +98,9 @@ export const successGlobal = {
         <div class="uq-alert__message">
           <h3 class="uq-alert__title">Title goes here</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <a href="#" title="Link" class="uq-button--inline">Link</a>
+          <p><a href="#" title="Link" class="uq-button--inline">Link</a></p>
+          <button class="uq-alert__close">close</button>
         </div>
-        <button class="uq-alert__close">close</button>
       </div>
     </div>
     `;
@@ -110,20 +110,21 @@ export const successGlobal = {
 };
 
 export const warningGlobal = {
-  render: () => {
-    return `
+  render: () => `
     <div class="uq-alert uq-alert--warning uq-alert--dark uq-alert--global" role="alert">
       <div class="uq-alert__container">
         <div class="uq-alert__message">
           <h3 class="uq-alert__title">Title goes here</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <a href="#" title="Link" class="uq-button--inline">Link</a>
+          <p><a href="#" title="Link" class="uq-button--inline">Link</a></p>
         </div>
       </div>
     </div>
-    `;
-  },
-
+    `,
+    play: ({ canvasElement }) => {
+      const alert = canvasElement.querySelector("#global-alerts-container");
+      if (alert) new Alerts(alert);
+    },
   name: "Warning global",
 };
 
@@ -135,7 +136,7 @@ export const errorGlobal = {
         <div class="uq-alert__message">
           <h3 class="uq-alert__title">Title goes here</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <a href="#" title="Link" class="uq-button--inline">Link</a>
+          <p><a href="#" title="Link" class="uq-button--inline">Link</a></p>
         </div>
       </div>
     </div>

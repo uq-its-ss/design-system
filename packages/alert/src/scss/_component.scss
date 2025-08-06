@@ -1,6 +1,7 @@
 @use "@uqds/core/src/scss/global" as core;
 @use "@uqds/grid/src/scss/global" as grid;
 @use "@uqds/icon/src/scss/global" as icon;
+@use "@uqds/layout/src/scss/global" as layout;
 @use "global" as *;
 
 .uq-alert {
@@ -13,7 +14,18 @@
   position: relative;
 
   &__container {
-    margin: 0 auto;
+    width: 100%;
+    max-width: 32px + 1140px + 32px;
+    padding-left: core.$space-l;
+    padding-right: core.$space-l;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-x: clip; /* Prevent long URLs from breaking container */
+
+    @media #{core.$screen-lg-up} {
+      padding-left: core.$space-xl;
+      padding-right: core.$space-xl;
+    }
 
     .uq-alert__message {
       &:not(:last-child) {
@@ -32,8 +44,7 @@
 
   &__message {
     position: relative;
-    padding: core.$space-l;
-    margin-left: core.$space-xxl;
+    padding: core.$space-l core.$space-xxxxl core.$space-l core.$space-ul;
 
     &::before {
       content: "";
@@ -47,31 +58,33 @@
       height: core.$space-l;
       position: absolute;
       top: 25px;
-      left: -(core.$space-m);
+      left: core.$space-compressed-xxxl;
     }
 
     p {
       margin-bottom: core.$space-m;
       margin-top: core.$space-none;
 
-      &:last-child {
+      &:last-of-type {
         margin-bottom: core.$space-none;
       }
     }
   }
 
   &__close {
+    margin: 0;
+    padding: 0;
     position: absolute;
     top: core.$space-none;
-    right: core.$space-none;
+    right: -(core.$space-compressed-m);
     background-image: url(icon.get-icon("standard--x", core.$grey-900));
     background-repeat: no-repeat;
     background-size: 1rem;
     background-position: center;
     background-color: transparent;
     border: none;
-    width: core.$space-xxxl;
-    height: core.$space-xxxl;
+    width: core.$space-xxl;
+    height: core.$space-uul;
     text-indent: 999px;
     overflow: hidden;
     cursor: pointer;
@@ -114,7 +127,7 @@
     .uq-alert__message {
       &::before {
         background-image: url(icon.get-icon(
-          "standard--exclamation-circle",
+          "standard--exclamation-triangle",
           core.$grey-900
         ));
       }
@@ -126,7 +139,7 @@
     .uq-alert__message {
       &::before {
         background-image: url(icon.get-icon(
-          "standard--exclamation-triangle",
+          "standard--x-circle",
           core.$grey-900
         ));
       }
@@ -135,27 +148,15 @@
 
   // Global alert
   &--global {
-    .uq-alert__container {
-      @media #{core.$screen-lg-up} {
-        max-width: 73.25rem;
-        margin-left: auto;
-        margin-right: auto;
-      }
-    }
+
 
     .uq-alert__message {
       line-height: #{core.$line-height}rem;
       font-weight: core.$font-weight-normal;
-      margin-left: core.$space-compressed-uuul;
-      padding: core.$space-stretched-s core.$space-l core.$space-stretched-s
-        core.$space-s;
+      padding: core.$space-l core.$space-xxl;
 
       @media #{core.$screen-md-up} {
         font-size: core.$font-size-m;
-      }
-
-      @media #{core.$screen-lg-up} {
-        margin-left: core.$space-compressed-uul;
       }
 
       &::before {
@@ -164,8 +165,8 @@
         width: core.$space-l;
         height: core.$space-l;
         position: absolute;
-        top: core.$space-stretched-s;
-        left: -(core.$space-l);
+        top: core.$space-l;
+        left: core.$space-none;
       }
     }
   }
@@ -196,6 +197,7 @@
       &:hover,
       &:focus {
         background-image: url(icon.get-icon("standard--x", core.$white));
+        background-color: transparent;
       }
     }
 
@@ -230,6 +232,15 @@
       .uq-alert__title {
         color: core.$grey-900;
       }
+
+      .uq-alert__close {
+        background-image: url(icon.get-icon("standard--x", core.$grey-900));
+
+        &:hover,
+        &:focus {
+          background-image: url(icon.get-icon("standard--x", core.$grey-900));
+        }
+      }
     }
 
     &.uq-alert--error {
@@ -238,7 +249,7 @@
       .uq-alert__message {
         &::before {
           background-image: url(icon.get-icon(
-            "standard--exclamation-triangle",
+            "standard--x-circle",
             core.$white
           ));
         }

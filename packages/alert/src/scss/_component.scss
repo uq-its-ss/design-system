@@ -1,6 +1,7 @@
 @use "@uqds/core/src/scss/global" as core;
 @use "@uqds/grid/src/scss/global" as grid;
 @use "@uqds/icon/src/scss/global" as icon;
+@use "@uqds/layout/src/scss/global" as layout;
 @use "global" as *;
 
 .uq-alert {
@@ -13,8 +14,18 @@
   position: relative;
 
   &__container {
-    @include grid.layout-containment;
-    @include grid.grid-col-padding;
+    width: 100%;
+    max-width: 32px + 1140px + 32px;
+    padding-left: core.$space-l;
+    padding-right: core.$space-l;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-x: clip; /* Prevent long URLs from breaking container */
+
+    @media #{core.$screen-lg-up} {
+      padding-left: core.$space-xl;
+      padding-right: core.$space-xl;
+    }
 
     .uq-alert__message {
       &:not(:last-child) {
@@ -54,7 +65,7 @@
       margin-bottom: core.$space-m;
       margin-top: core.$space-none;
 
-      &:last-child {
+      &:last-of-type {
         margin-bottom: core.$space-none;
       }
     }
@@ -137,12 +148,7 @@
 
   // Global alert
   &--global {
-    .uq-alert__container {
-      @media #{core.$screen-lg-up} {
-        @include grid.layout-containment;
-        @include grid.grid-col-padding;
-      }
-    }
+
 
     .uq-alert__message {
       line-height: #{core.$line-height}rem;

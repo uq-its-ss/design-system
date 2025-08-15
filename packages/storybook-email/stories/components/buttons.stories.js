@@ -37,7 +37,7 @@ export const buttonSecondary = {
     <table border="0" cellpadding="0" cellspacing="0" class="bd-lpurple" style="border-radius: 4px;border-color:#51247A;border-width:2px;border-style:solid">
       <tr>
         <td class="btn btnp-9-20 fz-14 lh-18 c-lpurple l-lpurple" style="font-family:'Roboto', Arial, sans-serif; text-align:center; mso-padding-alt:16px 24px; font-size: 16px; line-height: 18px; color:#ffffff;">
-        <p><a href="#" class="link" style="color:#51247A;text-decoration:none;display: block; padding: 4px 24px;" target="_blank" title="This is a secondary CTA">This is a secondary CTA</a></p>
+        <p><a href="#" class="link" style="color:#51247A;text-decoration:none;display: block; padding: 4px 24px;" target="_blank" title="Secondary button">Secondary button</a></p>
         </td>
       </tr>
     </table>

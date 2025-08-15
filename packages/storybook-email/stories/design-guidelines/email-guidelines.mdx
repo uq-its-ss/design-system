@@ -6,6 +6,7 @@ import * as footerStandardStories from "../components/footer-standard.stories.js
 import * as footerMailingListStories from "../components/footer-mailing-list.stories.js";
 import * as footerBlockStories from "../components/footer-block.stories.js";
 import * as footerContactStories from "../components/footer-contact.stories.js";
+import * as typographyStories from "../components/typography.stories.js";
 
 <Meta title="Design guidelines/Email template guidelines" />
 
@@ -19,7 +20,7 @@ To use any of the assets, click 'Show code' in the bottom right corner of the as
 
 These styles define the look and feel of your email, including recommended fonts, colours, and link treatments for a cohesive and professional appearance
 
-### Heading examples
+### Typography
 
 <table width={"100%"}>
   <thead>
@@ -44,7 +45,7 @@ These styles define the look and feel of your email, including recommended fonts
         <span class="uqds-colour--white">#19151c</span>
       </td>
       <td>
-        <h1 class="sb-unstyled uqds-h1">Heading 1</h1>
+        <Story name="headingOne" of={typographyStories.headingOne} />
       </td>
     </tr>
     <tr>
@@ -57,7 +58,7 @@ These styles define the look and feel of your email, including recommended fonts
         <span class="uqds-colour--white">#19151c</span>
       </td>
       <td>
-        <h2 class="sb-unstyled sb-unstyled uqds-h2">Heading 2</h2>
+        <Story name="headingTwo" of={typographyStories.headingTwo} />
       </td>
     </tr>
     <tr>
@@ -70,7 +71,7 @@ These styles define the look and feel of your email, including recommended fonts
         <span class="uqds-colour--white">#19151c</span>
       </td>
       <td>
-        <h3 class="sb-unstyled uqds-h3">Heading 3</h3>
+        <Story name="headingThree" of={typographyStories.headingThree} />
       </td>
     </tr>
     <tr>
@@ -83,7 +84,7 @@ These styles define the look and feel of your email, including recommended fonts
         <span class="uqds-colour--white">#3B383E</span>
       </td>
       <td>
-        <p class="sb-unstyled uqds-body">body</p>
+        <Story name="Body text" of={typographyStories.bodyText} />
       </td>
     </tr>
     <tr>
@@ -96,9 +97,7 @@ These styles define the look and feel of your email, including recommended fonts
         <span class="uqds-colour--white">#51274A</span>
       </td>
       <td>
-        <a href="#" class="sb-unstyled uqds-link">
-          Link
-        </a>
+        <Story name="Link" of={typographyStories.bodyLink} />
       </td>
     </tr>
   </tbody>
@@ -116,15 +115,11 @@ Buttons are used to create clear calls to action that encourage user interaction
 
 Use the primary button to highlight the most important call to action within the email, ideally limiting it to a single instance to maintain visual hierarchy and emphasis.
 
-To use this primary button, select the ‘copy’ button in the right corner of the box below to copy the HTML code.
-
 <Canvas of={buttonStories.buttonPrimary} />
 
 #### Secondary button
 
 Use the secondary button for important actions that are not the primary call to action, it has less visual emphasis than the primary button and can be used multiple times within an email.
-
-To use this secondary button, select the ‘copy’ button in the right corner of the box below to copy the HTML code.
 
 <Canvas of={buttonStories.buttonSecondary} />
 
@@ -266,17 +261,26 @@ Different social links are displayed according to the audience group. Refer to t
   </thead>
   <tbody>
     <tr>
-      <td>
+      <td rowspan="4">
         <strong>Domestic & International</strong> <br />
-        All audiences (except current students) - Recommended social links. -
-        Can display custom, faculty specific links. - Maximum 1 social account
-        per platform - Maximum 7 social links
+        Current students
+        <ul>
+          <li>Recommended social links.</li>
+          <li>Can display custom, faculty specific links.</li>
+          <li>Maximum 1 social account per platform</li>
+          <li>Maximum 7 social links</li>
+        </ul>
       </td>
-      <td>
-        - https://www.facebook.com/uqlife/ - https://www.instagram.com/uqlife/ -
-        https://www.youtube.com/@uqstudentservices/featured -
-        https://x.com/uq_news
-      </td>
+      <td>https://www.facebook.com/uqlife/</td>
+    </tr>
+    <tr>
+      <td>https://www.instagram.com/uqlife/</td>
+    </tr>
+    <tr>
+      <td>https://www.youtube.com/@uqstudentservices/featured</td>
+    </tr>
+    <tr>
+      <td>https://x.com/uq_news</td>
     </tr>
   </tbody>
 </table>

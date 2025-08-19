@@ -7,7 +7,7 @@ export default {
     title: "text",
   },
   args: {
-    url: "https://www.uq.edu.au/news/article/2024/12/biodiversity-risk-most-rainforests",
+    url: "https://news.uq.edu.au/article/2024/12/biodiversity-risk-most-rainforests",
     title: "Biodiversity at risk in most rainforests",
   },
   play: ({ canvasElement }) => {

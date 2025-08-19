@@ -55,7 +55,7 @@ export const open = {
             Mobile app version: XX.XX.XX
           </div>
           <div class="uq-maps__drawer__main__details-block">
-            <a href="https://www.uq.edu.au/terms-of-use/">Privacy & Terms of use</a>
+            <a href="https://uq.edu.au/terms-of-use/">Privacy & Terms of use</a>
           </div>
         </div>
       </div>

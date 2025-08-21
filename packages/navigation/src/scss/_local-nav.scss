@@ -44,7 +44,7 @@
 }
 
 .uq-local-nav__grandparent {
-  d & .uq-local-nav__link {
+  & .uq-local-nav__link {
     border-bottom: 2px solid core.$grey-900;
   }
 }

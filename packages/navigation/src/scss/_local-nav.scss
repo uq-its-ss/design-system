@@ -43,8 +43,8 @@
   }
 }
 
-.uq-local-nav__grandparent {d
-  & .uq-local-nav__link {
+.uq-local-nav__grandparent {
+  d & .uq-local-nav__link {
     border-bottom: 2px solid core.$grey-900;
   }
 }
@@ -78,7 +78,7 @@
 
   .uq-local-nav__grandchild {
     background-color: core.$grey-100;
-    
+
     & > .uq-local-nav__link {
       border-bottom: 1px solid core.$grey-200;
     }

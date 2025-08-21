@@ -1,6 +1,6 @@
 {
   "name": "@uqds/header",
-  "version": "7.0.2-alpha.0",
+  "version": "7.0.2",
   "description": "The POC UQ Header component package",
   "keywords": [
     "uqds",

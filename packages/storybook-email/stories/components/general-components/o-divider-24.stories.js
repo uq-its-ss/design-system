@@ -3,7 +3,7 @@ export default {
   tags: ["autodocs"],
 };
 
-export const Divider24 = {
+export const divider24 = {
   render: () => `
 <!-- Divider - 24px -->
 <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%;">

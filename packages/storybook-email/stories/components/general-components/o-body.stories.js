@@ -3,7 +3,7 @@ export default {
   tags: ["autodocs"],
 };
 
-export const Body = {
+export const body = {
   render: () => `
 <!-- Body Text Block -->
 <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: transparent; min-width: 100%;">

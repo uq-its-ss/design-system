@@ -3,7 +3,7 @@ export default {
   tags: ["autodocs"],
 };
 
-export const BottomWrapper = {
+export const bottomWrapper = {
   render: () => `
                             <!-- BOTTOM WRAPPER -->
                             </td>

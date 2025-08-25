@@ -1,0 +1,339 @@
+import { Meta, Story, Canvas, Source } from "@storybook/blocks";
+import * as buttonStories from "../components/general-components/buttons.stories.js";
+import * as headerStories from "../components/general-components/o-header.stories.js";
+import * as senderHeaderStories from "../components/general-components/o-sender-header.stories.js";
+import * as footerStandardStories from "../components/general-components/footer-standard.stories.js";
+import * as footerMailingListStories from "../components/general-components/footer-mailing-list.stories.js";
+import * as footerBlockStories from "../components/general-components/footer-block.stories.js";
+import * as footerContactStories from "../components/general-components/footer-contact.stories.js";
+import * as typographyStories from "../components/general-components/typography.stories.js";
+
+<Meta title="Design guidelines/Email template guidelines" />
+
+# Email template guidelines
+
+These guidelines help us ensure we maintain brand consistency and compliance in student email communications, preserving our brand’s strength and credibility while creating a cohesive experience for our students.
+
+To use any of the assets, click 'Show code' in the bottom right corner of the asset, then select 'Copy code' to copy it to your clipboard.
+
+## Styles
+
+These styles define the look and feel of your email, including recommended fonts, colours, and link treatments for a cohesive and professional appearance
+
+### Typography
+
+<table width={"100%"}>
+  <thead>
+    <tr>
+      <th>Element</th>
+      <th>Font</th>
+      <th>Weight</th>
+      <th>Size</th>
+      <th>Line height</th>
+      <th>Colour</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Heading 1</td>
+      <td>Roboto</td>
+      <td>Bold</td>
+      <td>32px</td>
+      <td>38px</td>
+      <td class="uqds-colour--black">
+        <span class="uqds-colour--white">#19151c</span>
+      </td>
+      <td>
+        <Story name="headingOne" of={typographyStories.headingOne} />
+      </td>
+    </tr>
+    <tr>
+      <td>Heading 2</td>
+      <td>Roboto</td>
+      <td>Bold</td>
+      <td>24px</td>
+      <td>29px</td>
+      <td class="uqds-colour--black">
+        <span class="uqds-colour--white">#19151c</span>
+      </td>
+      <td>
+        <Story name="headingTwo" of={typographyStories.headingTwo} />
+      </td>
+    </tr>
+    <tr>
+      <td>Heading 3</td>
+      <td>Roboto</td>
+      <td>Bold</td>
+      <td>18px</td>
+      <td>22px</td>
+      <td class="uqds-colour--black">
+        <span class="uqds-colour--white">#19151c</span>
+      </td>
+      <td>
+        <Story name="headingThree" of={typographyStories.headingThree} />
+      </td>
+    </tr>
+    <tr>
+      <td>Body</td>
+      <td>Roboto</td>
+      <td>Regular</td>
+      <td>16px</td>
+      <td>26px</td>
+      <td class="uqds-colour--grey-900">
+        <span class="uqds-colour--white">#3B383E</span>
+      </td>
+      <td>
+        <Story name="Body text" of={typographyStories.bodyText} />
+      </td>
+    </tr>
+    <tr>
+      <td>Link</td>
+      <td>Roboto</td>
+      <td>Regular</td>
+      <td>16px</td>
+      <td>26px</td>
+      <td class="uqds-colour--purple-500">
+        <span class="uqds-colour--white">#51274A</span>
+      </td>
+      <td>
+        <Story name="Link" of={typographyStories.bodyLink} />
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+## Assets
+
+These assets form the core layout of your email, including buttons, UQ header and other essential structural elements.
+
+### Buttons
+
+Buttons are used to create clear calls to action that encourage user interaction and drive engagement within your email.
+
+#### Primary button
+
+Use the primary button to highlight the most important call to action within the email, ideally limiting it to a single instance to maintain visual hierarchy and emphasis.
+
+<Canvas of={buttonStories.buttonPrimary} />
+
+#### Secondary button
+
+Use the secondary button for important actions that are not the primary call to action, it has less visual emphasis than the primary button and can be used multiple times within an email.
+
+<Canvas of={buttonStories.buttonSecondary} />
+
+## UQ header
+
+Used across all UQ emails. Includes the UQ logo, linking to the UQ homepage, and a ‘View in browser’ link that opens the email in the user’s browser for easier viewing.
+
+<Canvas of={headerStories.header} />
+
+## Sender header
+
+To help recipients recognise and trust UQ email communications, always use the full name of the area, faculty, school, or office in the sender name, with the acronym in brackets where relevant. This ensures students can quickly identify the source of the message, particularly when communications come from a faculty, school, division, or central office.
+
+Examples:
+
+- Faculty of Engineering, Architecture and Information Technology (EAIT)
+- Faculty of Health, Medicine and Behavioural Sciences (HABS)
+- Business School
+- From the Deputy Vice-Chancellor (Academic)
+- Institute for Teaching and Learning Innovation (ITaLI)
+
+<Canvas of={senderHeaderStories.senderHeader} />
+
+## Footer
+
+### Standard footer
+
+Used across all UQ emails.
+
+Includes:
+
+- Acknowledgement of Country
+- CRICOS
+- TEQSA
+- UQ’s Privacy Policy
+
+<Canvas of={footerStandardStories.footerStandard} />
+
+### Mailing list footer
+
+Used for mailing list emails.
+
+Includes:
+
+- Acknowledgement of Country
+- CRICOS
+- TEQSA
+- UQ's marketing consent and privacy notice.
+- Unsubscribe text must specify which mailing list the user is unsubscribing from.
+
+<Canvas of={footerMailingListStories.footerMailingList} />
+
+### Mailing list footer - Vision 6
+
+Emails sent via Vision 6 will have the unsubscribe section hardcoded into the footer.
+[Instructions on how to add mailing list footer here](#missing).
+
+<Canvas of={footerMailingListStories.footerMailingList} />
+
+### Block footer
+
+Used in emails without a contact footer to clearly separate the main content from the footer section.
+
+<Canvas of={footerBlockStories.footerBlock} />
+
+## Contact Footer
+
+Includes the sender’s contact details to clearly identify the source of the email.
+
+Minimum requirements:
+
+- Contact name
+- Email address or link to an enquiry form
+
+### Oracle
+
+The contact details must be included at the bottom of the email, after the main body of the email in the following format:
+
+#### Area:
+
+<Canvas of={footerContactStories.contactArea} />
+
+#### Individual (USET or C-suite):
+
+<Canvas of={footerContactStories.contact} />
+
+### Vision 6
+
+The senders details must be included within the contact footer component:
+
+<table>
+  <tr>
+    <th>Structure</th>
+    <th>Example</th>
+  </tr>
+  <tr>
+    <td>*Contact (area/faculty name)</td>
+    <td>`Contact EAIT`</td>
+  </tr>
+  <tr>
+    <td>Contact hours (include time zone)</td>
+    <td>`Monday to Friday 8:30am–4:30pm AEST`</td>
+  </tr>
+  <tr>
+    <td>Phone number (include country code)</td>
+    <td>`+61 7 3365 4666`</td>
+  </tr>
+  <tr>
+    <td>*Email address or link to an enquiry form</td>
+    <td>`enquiries@eait.uq.edu.au`</td>
+  </tr>
+  <tr>
+    <td>Website</td>
+    <td>`Visit UQ website`</td>
+  </tr>
+  <tr>
+    <td>Location (use UQ maps URL)</td>
+    <td>`Level 2, Hawken Engineering Building 50, St Lucia Campus`</td>
+  </tr>
+</table>
+(*denotes min required contact methods) 
+
+<Canvas of={footerContactStories.footerContactDomestic} />
+
+### Social links
+
+Different social links are displayed according to the audience group. Refer to the table below for specific guidelines.
+
+<table>
+  <thead>
+    <tr>
+      <th>Audience</th>
+      <th>Social links</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="4">
+        <strong>Domestic & International</strong> <br />
+        Current students
+        <ul>
+          <li>Recommended social links.</li>
+          <li>Can display custom, faculty specific links.</li>
+          <li>Maximum 1 social account per platform</li>
+          <li>Maximum 7 social links</li>
+        </ul>
+      </td>
+      <td>https://www.facebook.com/uqlife/</td>
+    </tr>
+    <tr>
+      <td>https://www.instagram.com/uqlife/</td>
+    </tr>
+    <tr>
+      <td>https://www.youtube.com/@uqstudentservices/featured</td>
+    </tr>
+    <tr>
+      <td>https://x.com/uq_news</td>
+    </tr>
+  </tbody>
+</table>
+
+## Content structure
+
+Properly structuring your content is essential to ensure maximum accessibility and readability for your audience.
+
+### layout
+
+- Left-align all content.
+- Use headings, lists, and concise paragraphs for better readability.
+
+### Call to actions (CTAs) and in-text hyperlinks
+
+- Limit the number of CTAs: 1 primary action helps avoid overwhelming recipients.
+- Use secondary or tertiary style CTAs (ie. outline buttons or text links) for any additional calls to action.
+- Use descriptive link text: “Download the guide” or “Access the course materials” rather than “Click here.”
+
+### Imagery
+
+- Using images effectively in emails is about purpose, accessibility, and relevance—not just visual appeal. Images should:
+
+  - add value or enhance engagement
+  - support the message, not distract from it.
+
+- When to use images:
+
+  - Images work best in Category 3 emails (e.g., newsletters or promotional content)
+  - Categories 1 and 2 (critical or action-driven emails) should prioritise clear, text-based communication.
+
+- Provide descriptive alt text:
+
+  - Example: “Student reading in the UQ Library” – tells visually impaired users what’s in the image
+  - Less effective: “Image” – provides no useful context
+
+- Avoid text within images:
+  - Screen readers can’t interpret embedded text, making text in images inaccessible to some users. Instead, keep important content as actual text in the email body to ensure everyone can read it.
+
+### Helpful links
+
+- Best practise guidelines for email and SMS
+- UQ written style guide
+- Accessibility author checklist
+
+## Technical guidelines
+
+Keep these technical guidelines in mind when testing your emails.
+
+### Ensure mobile-friendly design
+
+A high percentage of users open emails on their mobile devices first. Make sure your email layout is responsive and easy to scan on smaller screens and confirm that images and text scale properly for a condensed format.
+
+### Test emails across multiple email clients and devices
+
+Ensuring consistent formatting and functionality across different email clients (such as Gmail and Outlook) and platforms (iOS and Android) enhances user experience and credibility. Always conduct thorough cross-platform testing.
+
+### Plan for images being blocked
+
+Some email providers or users block images by default, include HTML-based text for all critical information. Use alternative text to convey key messages when images don’t display, ensuring recipients still receive important details.

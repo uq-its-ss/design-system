@@ -38,6 +38,12 @@ jobs:
            npm run prepare
         working-directory: packages/uqds-builder/
 
+      # --- Build Storybook EMAIL ---
+      - name: "Build Storybook EMAIL"
+        run: |
+           npm run build-storybook
+        working-directory: packages/storybook-email/
+
       # --- Build Storybook REACT ---
       - name: "Build Storybook REACT"
         run: |
@@ -65,6 +71,10 @@ jobs:
         run: |
           aws s3 cp packages/uqds-builder/dist s3://${{ secrets.AWS_S3_BUCKET_TOOLS }}/preview/${{ github.run_id }}/ --acl public-read --follow-symlinks --recursive
 
+      - name: "Storybook EMAIL: Sync to preview environment"
+        run: |
+          aws s3 sync packages/storybook-email/storybook-static s3://${{ secrets.AWS_S3_BUCKET_TOOLS }}/preview/${{ github.run_id }}/storybook-email/ --acl public-read --follow-symlinks --delete
+
       - name: "Storybook HTML: Sync to preview environment"
         run: |
           aws s3 sync packages/storybook-html/storybook-static s3://${{ secrets.AWS_S3_BUCKET_TOOLS }}/preview/${{ github.run_id }}/storybook-html/ --acl public-read --follow-symlinks --delete
@@ -88,4 +98,5 @@ jobs:
 
               * [HTML Components](https://uq-ds-regsuit.s3.amazonaws.com/preview/${{ github.run_id }}/storybook-html/index.html)
               * [REACT Components](https://uq-ds-regsuit.s3.amazonaws.com/preview/${{ github.run_id }}/storybook-react/index.html)
-
+              * [EMAIL Components](https://uq-ds-regsuit.s3.amazonaws.com/preview/${{ github.run_id }}/storybook-email/index.html)
+              

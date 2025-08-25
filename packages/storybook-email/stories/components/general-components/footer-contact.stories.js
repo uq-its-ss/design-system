@@ -1,7 +1,5 @@
-import "@uqds/layout/src/scss/main.scss";
-
 export default {
-  title: "Components",
+  title: "Components/General components",
   tags: ["autodocs"],
 };
 

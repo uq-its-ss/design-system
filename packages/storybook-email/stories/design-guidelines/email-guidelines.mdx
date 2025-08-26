@@ -14,13 +14,13 @@ import * as typographyStories from "../components/general-components/typography.
 
 These guidelines help us ensure we maintain brand consistency and compliance in student email communications, preserving our brand’s strength and credibility while creating a cohesive experience for our students.
 
-To use any of the assets, click 'Show code' in the bottom right corner of the asset, then select 'Copy code' to copy it to your clipboard.
-
 ## Styles
 
 These styles define the look and feel of your email, including recommended fonts, colours, and link treatments for a cohesive and professional appearance
 
 ### Typography
+
+Roboto is the primary font used in emails, with Arial as the fallback. The table below outlines the sizes and styles for each of the type styles.
 
 <table width={"100%"}>
   <thead>
@@ -115,19 +115,19 @@ Buttons are used to create clear calls to action that encourage user interaction
 
 Use the primary button to highlight the most important call to action within the email, ideally limiting it to a single instance to maintain visual hierarchy and emphasis.
 
-<Canvas of={buttonStories.buttonPrimary} />
+<Canvas of={buttonStories.buttonPrimary} sourceState="none" />
 
 #### Secondary button
 
 Use the secondary button for important actions that are not the primary call to action, it has less visual emphasis than the primary button and can be used multiple times within an email.
 
-<Canvas of={buttonStories.buttonSecondary} />
+<Canvas of={buttonStories.buttonSecondary} sourceState="none" />
 
 ## UQ header
 
 Used across all UQ emails. Includes the UQ logo, linking to the UQ homepage, and a ‘View in browser’ link that opens the email in the user’s browser for easier viewing.
 
-<Canvas of={headerStories.header} />
+<Canvas of={headerStories.header} sourceState="none" />
 
 ## Sender header
 
@@ -141,7 +141,7 @@ Examples:
 - From the Deputy Vice-Chancellor (Academic)
 - Institute for Teaching and Learning Innovation (ITaLI)
 
-<Canvas of={senderHeaderStories.senderHeader} />
+<Canvas of={senderHeaderStories.senderHeader} sourceState="none" />
 
 ## Footer
 
@@ -156,7 +156,7 @@ Includes:
 - TEQSA
 - UQ’s Privacy Policy
 
-<Canvas of={footerStandardStories.footerStandard} />
+<Canvas of={footerStandardStories.footerStandard} sourceState="none" />
 
 ### Mailing list footer
 
@@ -170,20 +170,13 @@ Includes:
 - UQ's marketing consent and privacy notice.
 - Unsubscribe text must specify which mailing list the user is unsubscribing from.
 
-<Canvas of={footerMailingListStories.footerMailingList} />
-
-### Mailing list footer - Vision 6
-
-Emails sent via Vision 6 will have the unsubscribe section hardcoded into the footer.
-[Instructions on how to add mailing list footer here](#missing).
-
-<Canvas of={footerMailingListStories.footerMailingList} />
+<Canvas of={footerMailingListStories.footerMailingList} sourceState="none" />
 
 ### Block footer
 
 Used in emails without a contact footer to clearly separate the main content from the footer section.
 
-<Canvas of={footerBlockStories.footerBlock} />
+<Canvas of={footerBlockStories.footerBlock} sourceState="none" />
 
 ## Contact Footer
 
@@ -200,86 +193,11 @@ The contact details must be included at the bottom of the email, after the main 
 
 #### Area:
 
-<Canvas of={footerContactStories.contactArea} />
+<Canvas of={footerContactStories.contactArea} sourceState="none" />
 
 #### Individual (USET or C-suite):
 
-<Canvas of={footerContactStories.contact} />
-
-### Vision 6
-
-The senders details must be included within the contact footer component:
-
-<table>
-  <tr>
-    <th>Structure</th>
-    <th>Example</th>
-  </tr>
-  <tr>
-    <td>*Contact (area/faculty name)</td>
-    <td>`Contact EAIT`</td>
-  </tr>
-  <tr>
-    <td>Contact hours (include time zone)</td>
-    <td>`Monday to Friday 8:30am–4:30pm AEST`</td>
-  </tr>
-  <tr>
-    <td>Phone number (include country code)</td>
-    <td>`+61 7 3365 4666`</td>
-  </tr>
-  <tr>
-    <td>*Email address or link to an enquiry form</td>
-    <td>`enquiries@eait.uq.edu.au`</td>
-  </tr>
-  <tr>
-    <td>Website</td>
-    <td>`Visit UQ website`</td>
-  </tr>
-  <tr>
-    <td>Location (use UQ maps URL)</td>
-    <td>`Level 2, Hawken Engineering Building 50, St Lucia Campus`</td>
-  </tr>
-</table>
-(*denotes min required contact methods) 
-
-<Canvas of={footerContactStories.footerContactDomestic} />
-
-### Social links
-
-Different social links are displayed according to the audience group. Refer to the table below for specific guidelines.
-
-<table>
-  <thead>
-    <tr>
-      <th>Audience</th>
-      <th>Social links</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td rowspan="4">
-        <strong>Domestic & International</strong> <br />
-        Current students
-        <ul>
-          <li>Recommended social links.</li>
-          <li>Can display custom, faculty specific links.</li>
-          <li>Maximum 1 social account per platform</li>
-          <li>Maximum 7 social links</li>
-        </ul>
-      </td>
-      <td>https://www.facebook.com/uqlife/</td>
-    </tr>
-    <tr>
-      <td>https://www.instagram.com/uqlife/</td>
-    </tr>
-    <tr>
-      <td>https://www.youtube.com/@uqstudentservices/featured</td>
-    </tr>
-    <tr>
-      <td>https://x.com/uq_news</td>
-    </tr>
-  </tbody>
-</table>
+<Canvas of={footerContactStories.contact} sourceState="none" />
 
 ## Content structure
 
@@ -298,29 +216,29 @@ Properly structuring your content is essential to ensure maximum accessibility a
 
 ### Imagery
 
-- Using images effectively in emails is about purpose, accessibility, and relevance—not just visual appeal. Images should:
+Using images effectively in emails is about purpose, accessibility, and relevance—not just visual appeal. Images should:
 
   - add value or enhance engagement
   - support the message, not distract from it.
 
-- When to use images:
+When to use images:
 
   - Images work best in Category 3 emails (e.g., newsletters or promotional content)
   - Categories 1 and 2 (critical or action-driven emails) should prioritise clear, text-based communication.
 
-- Provide descriptive alt text:
+Provide descriptive alt text:
 
   - Example: “Student reading in the UQ Library” – tells visually impaired users what’s in the image
   - Less effective: “Image” – provides no useful context
 
-- Avoid text within images:
+Avoid text within images:
   - Screen readers can’t interpret embedded text, making text in images inaccessible to some users. Instead, keep important content as actual text in the email body to ensure everyone can read it.
 
 ### Helpful links
 
-- Best practise guidelines for email and SMS
-- UQ written style guide
-- Accessibility author checklist
+- [Writing effective email communications (Workday modules)](https://wd3.myworkday.com/uq/learning/course/03754d08acfb1000da689b451a150000?type=9882927d138b100019b928e75843018d&record=91348ef70804100082cc384e3a320000&metadataEntryPoint=%2Fuq%2Flearning)
+- [UQ written style guide](https://marketing-communication.uq.edu.au/written-style-guide)
+- [Accessibility author checklist](https://staff.uq.edu.au/information-and-services/information-technology/web-and-intranet-sites/web-writing-guide/edit-website-content/web-accessibility/accessibility-author-checklist)
 
 ## Technical guidelines
 

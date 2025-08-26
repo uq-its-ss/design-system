@@ -5,7 +5,7 @@ export default {
     title: "text",
   },
   args: {
-    title: "Sender header",
+    title: "Faculty of Health, Medicine and Behavioural Sciences (HABS)",
   },
 };
 

@@ -7,8 +7,6 @@ import { divider24 } from "../../components/general-components/o-divider-24.stor
 import { footer } from "../../components/general-components/o-footer.stories.js";
 import { bottomWrapper } from "../../components/general-components/o-bottom-wrapper.stories.js";
 
-
-
 export default {
   title: "Templates/Oracle",
   parameters: {

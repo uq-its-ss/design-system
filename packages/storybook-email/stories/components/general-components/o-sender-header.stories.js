@@ -10,9 +10,7 @@ export default {
 };
 
 export const senderHeader = {
-  render: ({
-    title,
-  }) => `
+  render: ({ title }) => `
 <!-- Sender Header -->
 <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="width: 100% !important; min-width: 100% !important;">
     <tr>

@@ -41,9 +41,3 @@ export const footerMailingList = {
 </table>
 `,
 };
-
-export const footerMailingListVision6 = {
-  render: () => `
-Read <a href="https://www.uq.edu.au/legal/marketing-consent" style="text-decoration: underline;color: #51247a;" target="_blank" title="Marketing consent and privacy notice">UQ's marketing consent and privacy notice</a>.<br /><br />To unsubscribe from _____________, please click the 'Unsubscribe' link below.<br /><br />This email was sent
-`,
-};

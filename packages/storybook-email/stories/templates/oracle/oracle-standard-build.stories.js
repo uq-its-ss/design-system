@@ -7,6 +7,8 @@ import { divider24 } from "../../components/general-components/o-divider-24.stor
 import { footer } from "../../components/general-components/o-footer.stories.js";
 import { bottomWrapper } from "../../components/general-components/o-bottom-wrapper.stories.js";
 
+
+
 export default {
   title: "Templates/Oracle",
   parameters: {
@@ -17,10 +19,12 @@ export default {
 };
 
 export const oracleStandardBuild = {
-  render: () => `
+  render: ({
+    title,
+  }) => `
   ${topWrapper.render()}
   ${header.render()}
-  ${senderHeader.render()}
+  ${senderHeader.render({ title: "UQ Library" })}
   ${body.render()}
   ${purpleBlock.render()}
   ${divider24.render()}

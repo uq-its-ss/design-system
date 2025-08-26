@@ -1,10 +1,18 @@
 export default {
   title: "Components/General components",
   tags: ["autodocs"],
+  argTypes: {
+    title: "text",
+  },
+  args: {
+    title: "Sender header",
+  },
 };
 
 export const senderHeader = {
-  render: () => `
+  render: ({
+    title,
+  }) => `
 <!-- Sender Header -->
 <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="width: 100% !important; min-width: 100% !important;">
     <tr>
@@ -18,7 +26,7 @@ export const senderHeader = {
                                     class="title c-white l-white"
                                     style="font-family: 'Roboto', Arial, sans-serif; font-size: 20px; line-height: 24px; text-align: left; color: #ffffff; font-weight: bold; width: 100% !important;"
                                 >
-                                    UQ Library
+                                    ${title}
                                 </td>
                             </tr>
                         </table>

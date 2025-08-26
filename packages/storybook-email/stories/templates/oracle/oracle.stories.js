@@ -306,13 +306,13 @@ Academic Services
 </tbody>
 </table>
 <!-- END Button --><!-- Contact Details -->
-<p>Kind regards<br />
-First name Last name<br />
-Job Title<br />
-The University of Queensland</p>
-<p><strong>Contact</strong><br />
-<a style="TEXT-DECORATION: underline" href="mailto:ADD EMAIL ADDRESS HERE">email@uq.edu.au</a><br />
-+61 7 0000 0000</p>
+<!-- Contact Banner -->
+<p><strong>Contact UQ Area Name</strong><br>
+Monday to Friday 8:30am-5pm AEST<br>
+<a style="color:#51247a; text-decoration:underline;" href="mailto:ADD EMAIL ADDRESS HERE">email@uq.edu.au</a><br>
++61 7 0000 0000<br>
+<a style="color:#51247a; text-decoration:underline;" href="LINK HERE">Visit UQ Area Name website</a></p>
+<!-- END Contact Banner -->
 
 <!-- END Body Text -->
 </td>

@@ -19,9 +19,7 @@ export default {
 };
 
 export const oracleStandardBuild = {
-  render: ({
-    title,
-  }) => `
+  render: ({}) => `
   ${topWrapper.render()}
   ${header.render()}
   ${senderHeader.render({ title: "UQ Library" })}

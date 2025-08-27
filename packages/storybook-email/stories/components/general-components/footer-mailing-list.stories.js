@@ -3,7 +3,7 @@ export default {
   tags: ["autodocs"],
 };
 
-export const footerMailingList = {
+export const MailingListFooter = {
   render: () => `
 <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%;">
     <tr>

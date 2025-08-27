@@ -12,13 +12,13 @@ import * as typographyStories from "../components/general-components/typography.
 
 # Email template guidelines
 
-These guidelines help us ensure we maintain brand consistency and compliance in student email communications, preserving our brand’s strength and credibility while creating a cohesive experience for our students.
+These guidelines help ensure brand consistency and compliance in email communications, preserving our brand’s strength and credibility while creating a cohesive experience for all audiences.
 
-To use any of the assets listed, go to [General components](?path=/docs/components-general-components--docs) folder and click 'show code' in the bottom right corner of the asset , then select 'Copy code' to copy to your clipboard
+To use any of the assets listed, go to the [General components](?path=/docs/components-general-components--docs) folder and click 'show code' in the bottom right corner of the asset , then select 'Copy code' to copy to your clipboard.
 
 ## Styles
 
-These styles define the look and feel of your email, including recommended fonts, colours, and link treatments for a cohesive and professional appearance
+These styles define the look and feel of your email, including recommended fonts, colours, and link treatments for a cohesive and professional appearance.
 
 ### Typography
 
@@ -47,7 +47,7 @@ Roboto is the primary font used in emails, with Arial as the fallback. The table
         <span class="uqds-colour--white">#19151c</span>
       </td>
       <td>
-        <Story name="headingOne" of={typographyStories.headingOne} />
+        <Story name="headingOne" of={typographyStories.heading1} />
       </td>
     </tr>
     <tr>
@@ -60,7 +60,7 @@ Roboto is the primary font used in emails, with Arial as the fallback. The table
         <span class="uqds-colour--white">#19151c</span>
       </td>
       <td>
-        <Story name="headingTwo" of={typographyStories.headingTwo} />
+        <Story name="headingTwo" of={typographyStories.heading2} />
       </td>
     </tr>
     <tr>
@@ -73,7 +73,7 @@ Roboto is the primary font used in emails, with Arial as the fallback. The table
         <span class="uqds-colour--white">#19151c</span>
       </td>
       <td>
-        <Story name="headingThree" of={typographyStories.headingThree} />
+        <Story name="headingThree" of={typographyStories.heading3} />
       </td>
     </tr>
     <tr>
@@ -117,13 +117,13 @@ Buttons are used to create clear calls to action that encourage user interaction
 
 Use the primary button to highlight the most important call to action within the email, ideally limiting it to a single instance to maintain visual hierarchy and emphasis.
 
-<Canvas of={buttonStories.buttonPrimary} sourceState="none" />
+<Canvas of={buttonStories.primaryButton} sourceState="none" />
 
 #### Secondary button
 
 Use the secondary button for important actions that are not the primary call to action, it has less visual emphasis than the primary button and can be used multiple times within an email.
 
-<Canvas of={buttonStories.buttonSecondary} sourceState="none" />
+<Canvas of={buttonStories.secondaryButton} sourceState="none" />
 
 ## UQ header
 
@@ -180,7 +180,7 @@ Used in emails without a contact footer to clearly separate the main content fro
 
 <Canvas of={footerBlockStories.footerBlock} sourceState="none" />
 
-## Contact Footer
+## Contact footer
 
 Includes the sender’s contact details to clearly identify the source of the email.
 
@@ -189,15 +189,13 @@ Minimum requirements:
 - Contact name
 - Email address or link to an enquiry form
 
-### Oracle
-
 The contact details must be included at the bottom of the email, after the main body of the email in the following format:
 
-#### Area:
+### Area:
 
 <Canvas of={footerContactStories.contactArea} sourceState="none" />
 
-#### Individual (USET or C-suite):
+### Individual (USET or C-suite):
 
 <Canvas of={footerContactStories.contact} sourceState="none" />
 
@@ -212,13 +210,13 @@ Properly structuring your content is essential to ensure maximum accessibility a
 
 ### Call to actions (CTAs) and in-text hyperlinks
 
-- Limit the number of CTAs: 1 primary action helps avoid overwhelming recipients.
-- Use secondary or tertiary style CTAs (ie. outline buttons or text links) for any additional calls to action.
+- Limit the number of CTAs: 1 primary button or action helps avoid overwhelming recipients.
+- Use secondary buttons or text links for any additional CTAs (ie. outline buttons or text links) for any additional calls to action.
 - Use descriptive link text: “Download the guide” or “Access the course materials” rather than “Click here.”
 
 ### Imagery
 
-Using images effectively in emails is about purpose, accessibility, and relevance—not just visual appeal. Images should:
+Using images effectively in emails is about purpose, accessibility, and relevance &ndash; not just visual appeal. Images should:
 
 - add value or enhance engagement
 - support the message, not distract from it.

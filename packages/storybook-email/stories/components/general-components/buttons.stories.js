@@ -3,7 +3,7 @@ export default {
   tags: ["autodocs"],
 };
 
-export const buttonPrimary = {
+export const primaryButton = {
   render: () => `
 <!-- Purple Button -->
 <table role="presentation" cellspacing="0" cellpadding="0" width="100%" border="0">
@@ -27,7 +27,7 @@ export const buttonPrimary = {
 `,
 };
 
-export const buttonSecondary = {
+export const secondaryButton = {
   render: () => `
 <!-- Button -->
 <tr>

@@ -3,17 +3,17 @@ export default {
   tags: ["autodocs"],
 };
 
-export const headingOne = {
+export const heading1 = {
   render: () =>
     `<p style="FONT-SIZE: 32px; MARGIN-BOTTOM: 8px; FONT-WEIGHT: 500; LINE-HEIGHT: 38px; COLOUR:#19151C;">Heading 1</p>`,
 };
 
-export const headingTwo = {
+export const heading2 = {
   render: () =>
     `<p style="FONT-SIZE: 24px; MARGIN-BOTTOM: 8px; FONT-WEIGHT: 500; LINE-HEIGHT: 29px; COLOUR:#19151C;">Heading 2</p>`,
 };
 
-export const headingThree = {
+export const heading3 = {
   render: () =>
     `<p style="FONT-SIZE: 18px; MARGIN-BOTTOM: 8px; FONT-WEIGHT: 500; LINE-HEIGHT: 22px; COLOUR:#19151C;">Heading 3</p>`,
 };

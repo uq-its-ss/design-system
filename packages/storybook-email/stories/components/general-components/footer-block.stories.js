@@ -3,7 +3,7 @@ export default {
   tags: ["autodocs"],
 };
 
-export const footerBlock = {
+export const blockFooter = {
   render: () => `
 <!-- Purple block -->
 <table border="0" cellpadding="0" cellspacing="0" width="100%" style="width:100%!important">

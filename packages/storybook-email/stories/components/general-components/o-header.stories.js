@@ -41,4 +41,5 @@ export const header = {
 </table>
 <!-- END UQ Header -->
 `,
+  name: "UQ header",
 };

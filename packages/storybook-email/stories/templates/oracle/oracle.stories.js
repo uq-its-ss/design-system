@@ -7,13 +7,8 @@ export default {
   },
 };
 
-export const oracle = {
+export const standardTemplate = {
   render: () => `
-
-
-
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:rn="http://schemas.rightnow.com/crm/document" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" lang="en" xml:lang="en">
 <head>
@@ -256,7 +251,7 @@ export const oracle = {
 <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%!important" width="100%">
 <tr>
 <td class="title c-white l-white" style="font-family:'Roboto', Arial, sans-serif; font-size: 20px; line-height: 24px; text-align:left; color:#ffffff;font-weight:bold;width:100%!important"><!-- Purple Intro Banner Primary Heading -->
-Academic Services
+Sender header
 <!-- END Purple Intro Banner Primary Heading --></td>
 </tr>
 </table>

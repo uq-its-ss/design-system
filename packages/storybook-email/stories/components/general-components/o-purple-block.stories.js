@@ -19,4 +19,5 @@ export const purpleBlock = {
 </table>
 <!-- END Purple block -->
 `,
+  name: "Purple block",
 };

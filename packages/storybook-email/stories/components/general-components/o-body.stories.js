@@ -29,4 +29,5 @@ export const body = {
 </table>
 <!-- END Body Text Block -->
 `,
+  name: "Body",
 };

@@ -19,4 +19,5 @@ export const divider24 = {
 </table>
 <!-- END Divider - 24px -->
 `,
+  name: "Divider 24",
 };

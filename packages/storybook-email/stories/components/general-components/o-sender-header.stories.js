@@ -36,4 +36,5 @@ export const senderHeader = {
 </table>
 <!-- END Sender Header -->
 `,
+  name: "Sender header",
 };

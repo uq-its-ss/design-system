@@ -225,4 +225,5 @@ export const topWrapper = {
                             <td style="font-size: 0pt; line-height: 0pt;">
                             <!-- END TOP WRAPPER -->
 `,
+  name: "Top wrapper",
 };

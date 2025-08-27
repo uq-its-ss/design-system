@@ -46,4 +46,5 @@ export const footerStandard = {
 </table>
 <!-- END Footer -->
 `,
+  name: "Standard footer",
 };

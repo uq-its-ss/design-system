@@ -17,4 +17,5 @@ export const bottomWrapper = {
 </html>
 <!-- END BOTTOM WRAPPER -->
 `,
+  name: "Bottom wrapper",
 };

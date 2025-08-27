@@ -13,4 +13,5 @@ export const blockFooter = {
 </table>
 <!-- END Purple block -->
 `,
+  name: "Block footer",
 };

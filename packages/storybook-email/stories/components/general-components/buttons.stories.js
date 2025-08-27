@@ -25,6 +25,7 @@ export const primaryButton = {
 </table>
 <!-- END Button -->
 `,
+  name: "Primary button",
 };
 
 export const secondaryButton = {
@@ -43,4 +44,5 @@ export const secondaryButton = {
 </tr>
 <!-- END Button -->
 `,
+  name: "Secondary button",
 };

@@ -391,7 +391,6 @@ Read <a style="color:#51247a;text-decoration:underline;font-weight:normal" href=
 </center>
 </body>
 </html>
-
-
 `,
+  name: "Standard template",
 };

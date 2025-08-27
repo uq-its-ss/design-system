@@ -1,7 +1,7 @@
 {
   "name": "storybook-react",
   "version": "2.0.2",
-  "description": "Storybook for React instance for uqds component development",
+  "description": "Storybook for REACT instance for uqds component development",
   "private": true,
   "keywords": [],
   "author": {

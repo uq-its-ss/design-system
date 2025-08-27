@@ -1,0 +1,59 @@
+{
+  "name": "storybook-email",
+  "version": "1.0.0",
+  "description": "Storybook for EMAIL instance for uqds component development",
+  "private": true,
+  "main": "index.js",
+  "keywords": [],
+  "author": {
+    "name": "University of Queensland",
+    "email": "webservices@uq.edu.au",
+    "url": "https://uq.edu.au"
+  },
+  "license": "ISC",
+  "scripts": {
+    "start": "npm run storybook",
+    "storybook": "storybook dev -p 6008",
+    "build-storybook": "storybook build",
+    "serve-storybook": "http-server storybook-static -i -p 6008"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
+    "@babel/preset-react": "^7.25.9",
+    "@babel/preset-typescript": "^7.26.0",
+    "@material/circular-progress": "^14.0.0",
+    "@storybook/addon-a11y": "^8.5.2",
+    "@storybook/addon-essentials": "^8.5.2",
+    "@storybook/addon-interactions": "^8.5.2",
+    "@storybook/addon-links": "^8.5.2",
+    "@storybook/addon-mdx-gfm": "^8.5.2",
+    "@storybook/addon-styling-webpack": "^1.0.1",
+    "@storybook/addon-webpack5-compiler-babel": "^3.0.3",
+    "@storybook/blocks": "^8.5.2",
+    "@storybook/html": "^8.5.2",
+    "@storybook/html-webpack5": "^8.5.2",
+    "@storybook/manager-api": "^8.5.2",
+    "@storybook/test-runner": "^0.19.1",
+    "@storybook/theming": "^8.4.2",
+    "@uqds/accordion": "^7.0.1",
+    "babel-loader": "^9.2.1",
+    "core-js": "^3.39.0",
+    "css-loader": "^7.1.2",
+    "font-awesome": "^4.7.0",
+    "http-server": "^14.1.1",
+    "joi-browser": "^13.4.0",
+    "mermaid": "^11.4.0",
+    "sass": "^1.89.2",
+    "sass-loader": "^16.0.3",
+    "storybook": "^8.5.2",
+    "tocbot": "^4.31.0",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.6.3",
+    "underscore": "^1.13.7",
+    "zxcvbn": "^4.4.2"
+  },
+  "dependencies": {
+    "classnames": "^2.5.1"
+  }
+}

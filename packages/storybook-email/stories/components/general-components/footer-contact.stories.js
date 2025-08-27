@@ -8,12 +8,12 @@ export const contactArea = {
 
 <!-- Contact Banner -->
 <p>Kind regards,<br>
-Student Central</p>
-<p><strong>Contact Student Central</strong><br>
-Monday to Friday 8:30am&mdash;5pm AEST<br>
-<a style="color:#51247a; text-decoration:underline;" href="mailto:student.services@uq.edu.au">student.services@uq.edu.au</a><br>
-1300 275 870<br>
-<a style="color:#51247a; text-decoration:underline;" href="LINK HERE">Visit UQ Student Central website</a></p>
+UQ Library</p>
+<p><strong>Contact UQ Library</strong><br>
+Monday to Friday 8am&mdash;8pm AEST<br>
+<a style="color:#51247a; text-decoration:underline;" href="mailto:askus@library.uq.edu.au">askus@library.uq.edu.au</a><br>
++61 7 334 64312<br>
+<a style="color:#51247a; text-decoration:underline;" href="LINK HERE">Visit Library website</a></p>
 <!-- END Contact Banner -->
 
 `,

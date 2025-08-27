@@ -3,7 +3,7 @@ export default {
   tags: ["autodocs"],
 };
 
-export const footer = {
+export const footerStandard = {
   render: () => `
 <!-- Footer -->
 <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%;">
@@ -24,12 +24,9 @@ export const footer = {
                             <tr>
                                 <td class="text" style="color: #3b383e; font-family: 'Roboto', Arial, sans-serif; font-size: 16px; line-height: 26px; text-align: left; padding-bottom: 20px;">
                                     The University of Queensland, St&#160;Lucia Qld 4072 Australia<br />
-                                    <rn:tracklink link_id="85831" style="color: #51247a; text-decoration: underline; font-weight: normal;" target="_blank" title="Institution details">
-                                        CRICOS 00025B
-                                    </rn:tracklink>
-                                    <rn:tracklink link_id="85832" style="color: #51247a; text-decoration: underline; font-weight: normal;" target="_blank" title="Institution details">
-                                        TEQSA PRV12080
-                                    </rn:tracklink>
+                                    <rn:tracklink link_id="85831" style="color: #51247a; text-decoration: underline; font-weight: normal;" target="_blank" title="Institution details">CRICOS 00025B</rn:tracklink>
+                                    &#160;&#160;|&#160;&#160;
+                                    <rn:tracklink link_id="85832" style="color: #51247a; text-decoration: underline; font-weight: normal;" target="_blank" title="Institution details">TEQSA PRV12080</rn:tracklink>
                                 </td>
                             </tr>
                             <tr>
@@ -48,6 +45,5 @@ export const footer = {
     </tr>
 </table>
 <!-- END Footer -->
-
 `,
 };

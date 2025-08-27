@@ -51,7 +51,7 @@ const preview = {
               "Secondary Button",
               "UQ header",
               "Sender Header",
-              "Standard footer",
+              "Footer Standard",
               "Mailing list footer",
               "Block Footer",
               "Contact footer - area",

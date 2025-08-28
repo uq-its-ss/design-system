@@ -3,7 +3,7 @@ import {
   UqPane as Component,
   UqPaneVariant,
   UqIcon,
-} from "@uqds/react/src/jsx/main";
+} from "@uqds/react";
 
 export default {
   title: "Components/UqPane",

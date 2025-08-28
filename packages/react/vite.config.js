@@ -3,15 +3,11 @@ import { resolve } from "path";
 import react from "@vitejs/plugin-react";
 import dts from "vite-plugin-dts";
 import commonjs from "vite-plugin-commonjs";
-import purgecss from "vite-plugin-purgecss";
 
 export default defineConfig({
   plugins: [
     commonjs(),
     react(),
-    purgecss({
-      content: ["./src/**/*.tsx"],
-    }),
     dts({
       rollupTypes: true,
       tsconfigPath: "./tsconfig.json",

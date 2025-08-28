@@ -70,8 +70,7 @@
     "@uqds/pagination": "^4.0.1",
     "@uqds/pane": "^4.0.0",
     "@uqds/table": "^4.0.0",
-    "classnames": "^2.5.1",
-    "vite-plugin-purgecss": "^0.2.13"
+    "classnames": "^2.5.1"
   },
   "devDependencies": {
     "@types/react": "^18.3.18",

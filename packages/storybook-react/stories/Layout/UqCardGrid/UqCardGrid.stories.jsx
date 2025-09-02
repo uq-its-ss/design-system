@@ -1,7 +1,7 @@
 import {
   UqCardGrid as Component,
   UqCardGridTarget,
-} from "@uqds/react/src/jsx/main";
+} from "@uqds/react";
 
 export default {
   title: "Layout/UqCardGrid",

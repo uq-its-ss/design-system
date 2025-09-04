@@ -1,0 +1,40 @@
+import { Meta, Story, Canvas, Controls } from "@storybook/blocks";
+import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
+import * as ProfileStories from "./profile.stories";
+
+<Meta of={ProfileStories} />
+
+# Profile
+
+<StatusBadge.Stable />
+
+<StatusBadge.StableDoc />
+
+<a href="https://github.com/uq-its-ss/design-system/issues" target="_blank">
+  Check for open issues
+</a>
+
+## Overview
+
+The button component is used to make common actions more obvious and help users more easily perform them.
+
+### Default
+
+The default button style used for the primary action on a page, eg. a submit button on a form. This should generally only be used once per view.
+
+<Canvas of={ProfileStories.Primary} />
+
+<Controls of={ProfileStories.Primary} />
+
+### States
+
+Default - Button text is not underlined. <br />
+Hover - Button text is underlined. The background and text color may change depending on the variant.
+
+### Breakpoints
+
+Breakpoints have no effect on the button component and visually remains the same.
+
+## Accessibility
+
+Colour contrast test for all buttons showed a WCAG AA Pass.

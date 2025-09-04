@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.3](https://github.com/uq-its-ss/design-system/compare/storybook-react@2.0.3-alpha.0...storybook-react@2.0.3) (2025-09-04)
+
+**Note:** Version bump only for package storybook-react
+
 ## [2.0.3-alpha.0](https://github.com/uq-its-ss/design-system/compare/storybook-react@2.0.2...storybook-react@2.0.3-alpha.0) (2025-09-04)
 
 **Note:** Version bump only for package storybook-react

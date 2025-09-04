@@ -1,6 +1,6 @@
 {
   "name": "storybook-email",
-  "version": "1.0.2-alpha.0",
+  "version": "1.0.2",
   "description": "Storybook for EMAIL instance for uqds component development",
   "private": true,
   "main": "index.js",
@@ -36,7 +36,7 @@
     "@storybook/manager-api": "^8.5.2",
     "@storybook/test-runner": "^0.19.1",
     "@storybook/theming": "^8.4.2",
-    "@uqds/accordion": "^7.0.2-alpha.0",
+    "@uqds/accordion": "^7.0.2",
     "babel-loader": "^9.2.1",
     "core-js": "^3.39.0",
     "css-loader": "^7.1.2",

@@ -1028,6 +1028,10 @@ export default [
     category: "standard",
   },
   {
+    name: "download",
+    category: "standard",
+  },
+  {
     name: "dual-program",
     category: "standard",
   },
@@ -1093,6 +1097,10 @@ export default [
   },
   {
     name: "plus",
+    category: "standard",
+  },
+  {
+    name: "refresh",
     category: "standard",
   },
   {

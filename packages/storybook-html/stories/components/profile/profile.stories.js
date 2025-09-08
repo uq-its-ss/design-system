@@ -1,107 +1,177 @@
-import classNames from "classnames";
-import iconCatalog from "@uqds/icon";
+import "@uqds/profile/src/scss/main.scss";
 
 export default {
   title: "Components/Profile",
-  render: ({ style, label, size, expand, icon }) => {
-    return `<button class="${classNames("uq-button", style, size, { "uq-button--expand": expand })}">
-  ${icon ? `<span class="uq-icon uq-icon--${icon}"></span>` : ""} ${label}
-</button>`;
-  },
   argTypes: {
-    label: "text",
-    style: {
-      control: "select",
-      options: ["Primary", "Secondary", "Tertiary"],
-      mapping: {
-        Primary: "",
-        Secondary: "uq-button--secondary",
-        Tertiary: "uq-button--tertiary",
-      },
-    },
-    size: {
-      control: "select",
-      options: ["Tiny", "Small", "Default", "Large"],
-      mapping: {
-        Default: "",
-        Tiny: "uq-button--tiny",
-        Small: "uq-button--small",
-        Large: "uq-button--large",
-      },
-    },
-    expand: "boolean",
-    icon: {
-      options: iconCatalog.map((icon) => `${icon.category}--${icon.name}`),
+    titleElement: {
+      name: "Title element",
+      options: ["h2", "h3", "h4", "h5"],
       control: "select",
     },
+    title: {
+      control: "text",
+    },
+    name: {
+      control: "text",
+    },
+    position: {
+      control: "text",
+    },
+    bio: {
+      control: "text",
+    },
+    hasContact: {
+      name: "Contact block",
+      control: "boolean",
+    },
+    email: {
+      control: "text",
+      if: { arg: "hasContact" },
+    },
+    Phone: {
+      control: "text",
+      if: { arg: "hasContact" },
+    },
+    ctaUrl: {
+      control: "text",
+    },
+    hasImage: {
+      name: "Profile Image",
+      control: "boolean",
+    },
+    image: {
+      name: "Image src",
+      control: "select",
+      options: ["none", "images/hero/hero-example--small.jpg"],
+      if: { arg: "hasImage" },
+    },
   },
   args: {
-    style: "Primary",
-    size: "Default",
-    expand: false,
-    label: "Button",
+    titleElement: "h2",
+    title: "Professor",
+    name: "Ulrik Wisløff",
+    position: "Head of School",
+    bio: "Professor John Cairney is the Head of School of Human Movement and Nutrition Sciences. He is an academic leader in the field of paediatric exercise medicine and child health research and is particularly well-known for his work on developmental coordination disorder (DCD) and its impact on the health and well-being of children. Prof John Cairney started at UQ in January 2020.",
+    hasContact: true,
+    email: "john.cairney@uq.edu.au",
+    Phone: "+61 7 3365 1111",
+    ctaUrl: "https://about.uq.edu.au/experts/1371",
+    hasImage: true,
+    image: "none",
+  },
+  render: ({
+    titleElement,
+    title,
+    name,
+    position,
+    bio,
+    hasContact,
+    email,
+    Phone,
+    ctaUrl,
+    hasImage,
+    image,
+  }) => {
+    return `<div class="uq-profile">
+    <div class="uq-profile__content">
+      <header class="uq-profile__header">
+      <${titleElement} class="uq-profile__title">${title} ${name}</${titleElement}>
+      ${position ? `<p>${position}</p>` : ""}
+      </header>
+      ${
+        bio
+          ? `<section class="uq-profile__bio">
+        <p>${bio}</p>
+      </section>`
+          : ""
+      }
+      ${
+        hasContact
+          ? `
+      <section class="uq-profile__contact">
+      ${email ? `<a href="mailto:${email}">${email}</a>` : ""}
+      ${Phone ? `${email ? `<br />` : ""}
+        <a href="tel:${Phone}">${Phone}</a>` : ""}
+      </section>
+      `
+          : ""
+      }
+      ${
+        ctaUrl
+          ? `
+        <footer class="uq-profile__footer">
+          <a href="${ctaUrl}"> View ${title} ${name}'s profile</a>
+        </footer>
+        `
+          : ""
+      }
+    </div>
+    ${
+      hasImage
+        ? `
+    <div class="uq-profile--image">
+      <div class="uq-profile__image">
+        ${image !== "none" ? `<img src="${image}" alt="Image of ${title} ${name}" />` : ""}
+      </div>
+    </div>
+      `
+        : ""
+    }
+  </div>`;
   },
 };
 
-export const Primary = {};
+export const profile = {};
 
-export const Secondary = {
+export const researcherCta = {
   args: {
-    label: "Secondary",
-    style: "Secondary",
+    position: "",
+    bio: "",
+    hasContact: false,
+    image: "images/hero/hero-example--small.jpg",
   },
 };
 
-export const Tertiary = {
+export const researcherEmail = {
   args: {
-    label: "Tertiary",
-    style: "Tertiary",
+    position: "",
+    bio: "",
+    email: "john.cairney@uq.edu.au",
+    Phone: "",
+    image: "images/hero/hero-example--small.jpg",
+    ctaUrl: "",
   },
 };
 
-export const Size = {
-  parameters: {
-    tags: ["!dev"],
-  },
-  render: () => {
-    return `<p>
-  <button type="button" class="uq-button uq-button--tiny">Tiny</button>
-</p>
-<p>
-  <button type="button" class="uq-button uq-button--small">Small</button>
-</p>
-<p>
-  <button type="button" class="uq-button">Default</button>
-</p>
-<p>
-  <button type="button" class="uq-button uq-button--large">Large</button>
-</p>`;
-  },
-};
-
-export const Expanded = {
+export const staffListingFull = {
   args: {
-    expand: true,
+    image: "images/hero/hero-example--small.jpg",
   },
 };
 
-export const Icon = {
+export const staffListingNoBio = {
   args: {
-    icon: "engineering-and-computing--cog",
-  },
-  parameters: {
-    tags: ["!dev"],
-  },
-  render: () => {
-    return `<p>
-  <button class="uq-button">
-    <span class="uq-icon uq-icon--engineering-and-computing--icon-plane-1"></span> Button
-  </button>
-</p>
-<p>
-  <button class="uq-button">
-    Button <span class="uq-icon uq-icon--education--basketball-ball"></span>
-  </button>
-</p>`;
+    bio: "",
+    image: "images/hero/hero-example--small.jpg",
   },
 };
+
+export const staffListingCta = {
+  args: {
+    position: "",
+    bio: "",
+    hasContact: false,
+    image: "none",
+  },
+};
+
+export const staffListingNoPhoto = {
+  args: {
+    position: "",
+    bio: "",
+    hasContact: false,
+    hasImage: false,
+  },
+};
+
+

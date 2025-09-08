@@ -90,8 +90,12 @@ export default {
           ? `
       <section class="uq-profile__contact">
       ${email ? `<a href="mailto:${email}">${email}</a>` : ""}
-      ${Phone ? `${email ? `<br />` : ""}
-        <a href="tel:${Phone}">${Phone}</a>` : ""}
+      ${
+        Phone
+          ? `${email ? `<br />` : ""}
+        <a href="tel:${Phone}">${Phone}</a>`
+          : ""
+      }
       </section>
       `
           : ""
@@ -173,5 +177,3 @@ export const staffListingNoPhoto = {
     hasImage: false,
   },
 };
-
-

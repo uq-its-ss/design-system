@@ -38,6 +38,7 @@
     "@storybook/theming": "^8.4.2",
     "@uqds/accordion": "^7.0.2",
     "@uqds/acknowledgement": "^0.1.1",
+    "@uqds/avatar": "^1.0.0",
     "@uqds/alert": "^7.0.3",
     "@uqds/app-maps": "^4.0.0",
     "@uqds/blockquote": "^6.0.0",

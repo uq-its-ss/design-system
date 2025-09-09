@@ -1,4 +1,5 @@
 import "@uqds/profile/src/scss/main.scss";
+import avatar from "../avatar/avatar.stories";
 
 export default {
   title: "Components/Profile",
@@ -72,7 +73,7 @@ export default {
     hasImage,
     image,
   }) => {
-    return `<div class="uq-profile">
+    return `<article class="uq-profile">
     <div class="uq-profile__content">
       <header class="uq-profile__header">
       <${titleElement} class="uq-profile__title">${title} ${name}</${titleElement}>
@@ -89,15 +90,9 @@ export default {
         hasContact
           ? `
       <section class="uq-profile__contact">
-      ${email ? `<a href="mailto:${email}">${email}</a>` : ""}
-      ${
-        Phone
-          ? `${email ? `<br />` : ""}
-        <a href="tel:${Phone}">${Phone}</a>`
-          : ""
-      }
-      </section>
-      `
+      ${email ? `<div><a href="mailto:${email}">${email}</a></div>` : ""}
+      ${Phone ? `<div><a href="tel:${Phone}">${Phone}</a></div>` : ""}
+      </section>`
           : ""
       }
       ${
@@ -113,15 +108,13 @@ export default {
     ${
       hasImage
         ? `
-    <div class="uq-profile--image">
-      <div class="uq-profile__image">
-        ${image !== "none" ? `<img src="${image}" alt="Image of ${title} ${name}" />` : ""}
-      </div>
+    <div class="uq-profile__image">
+      ${avatar.render({ userName: title + " " + name, userAvatar: image })}
     </div>
       `
         : ""
     }
-  </div>`;
+  </article>`;
   },
 };
 

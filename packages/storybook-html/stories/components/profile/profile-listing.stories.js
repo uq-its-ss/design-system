@@ -19,10 +19,10 @@ export const profileListing = {
           email: "jane.doe@uq.edu.au",
         })}
       </li>
-            <li>
+      <li>
         ${profile.render(args)}
       </li>
-            <li>
+      <li>
         ${profile.render(args)}
       </li>
     </ul>
@@ -42,7 +42,7 @@ export const profileListing = {
       <div>
         ${profile.render(args)}
       </div>
-            <div>
+      <div>
         ${profile.render(args)}
       </div>
     </div>

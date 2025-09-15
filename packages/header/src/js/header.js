@@ -47,11 +47,13 @@ class NewHeader {
     });
 
     // ** NEW HYBRID MEGAMENU LOGIC **
-    const menuItems = this.header.querySelectorAll(
+
+    // Store the NodeList as an instance property
+    this.menuItems = this.header.querySelectorAll(
       ".uq-header__nav-primary-item",
     );
 
-    menuItems.forEach((item) => {
+    this.menuItems.forEach((item) => {
       const trigger = item.querySelector(".nav-primary-link--has-dropdown");
       if (!trigger) return;
 

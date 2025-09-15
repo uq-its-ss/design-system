@@ -2,27 +2,22 @@
 
 /**
  * NewHeader module
- * @file Handles interaction behaviour for the Header.
+ * @file Handles interaction behaviour for the Header with hover and keyboard support.
  */
 class NewHeader {
   constructor(el) {
-    // Store the header element
     this.header = el;
     this.init();
   }
 
   init() {
+    // --- Mobile and Search Toggles (unchanged) ---
     this.menuToggle = this.header.querySelector(".nav-primary__menu-toggle");
-    this.searchToggle = this.header.querySelector(
-      ".nav-primary__search-toggle",
-    );
+    this.searchToggle = this.header.querySelector(".nav-primary__search-toggle");
     this.searchLabel = this.header.querySelector(".search-toggle__label");
     this.searchBlock = this.header.querySelector(".uq-header__search");
-    this.searchInput = this.header.querySelector(
-      ".uq-header__search-query-input",
-    );
+    this.searchInput = this.header.querySelector(".uq-header__search-query-input");
 
-    // Mobile menu and search toggle listeners (unchanged)
     this.menuToggle.addEventListener("click", () => {
       document.body.classList.toggle("no-scroll");
       this.menuToggle.classList.toggle("nav-primary__menu-toggle--is-open");
@@ -43,60 +38,52 @@ class NewHeader {
         this.searchInput.blur();
         this.searchToggle.blur();
       }
-      this.searchLabel.innerHTML =
-        this.searchLabel.innerHTML === "Search" ? "Close" : "Search";
+      this.searchLabel.innerHTML = this.searchLabel.innerHTML === "Search" ? "Close" : "Search";
     });
 
-    // ** NEW ACCESSIBLE MEGAMENU LOGIC **
-    this.megaMenuTriggers = this.header.querySelectorAll(
-      ".nav-primary-link--has-dropdown",
-    );
+    // ** NEW HYBRID MEGAMENU LOGIC **
+    const menuItems = this.header.querySelectorAll('.uq-header__nav-primary-item');
 
-    this.megaMenuTriggers.forEach((trigger) => {
-      // Toggle menu on click
-      trigger.addEventListener("click", (e) => {
-        // Prevent link navigation when opening/closing the menu
-        e.preventDefault();
-        this.toggleMenu(trigger);
+    menuItems.forEach(item => {
+      const trigger = item.querySelector('.nav-primary-link--has-dropdown');
+      if (!trigger) return;
+
+      // --- Hover Listeners (for mouse users) ---
+      item.addEventListener('mouseenter', () => this.openMenu(trigger));
+      item.addEventListener('mouseleave', () => this.closeMenu(trigger));
+
+      // --- Focus Listeners (for keyboard tabbing) ---
+      item.addEventListener('focusin', () => {
+        this.closeAllMenus(trigger); // Close others when a new one gets focus
+        this.openMenu(trigger);
+      });
+      item.addEventListener('focusout', (e) => {
+        // Only close if focus moves outside the entire menu item component
+        if (!item.contains(e.relatedTarget)) {
+          this.closeMenu(trigger);
+        }
       });
 
-      // Handle keyboard events
-      trigger.addEventListener("keydown", (e) => {
-        if (e.key === "Enter" || e.key === " ") {
-          e.preventDefault();
-          this.toggleMenu(trigger);
+      // --- Click and Keydown Listeners (for explicit toggle) ---
+      trigger.addEventListener('click', e => {
+        e.preventDefault();
+        const isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+        // Close all other menus before toggling the current one
+        this.closeAllMenus(trigger);
+        if (isExpanded) {
+          this.closeMenu(trigger);
+        } else {
+          this.openMenu(trigger);
         }
-        if (e.key === "Escape") {
+      });
+
+      trigger.addEventListener('keydown', e => {
+        if (e.key === 'Escape') {
           this.closeMenu(trigger);
           trigger.focus(); // Return focus to the button
         }
       });
     });
-
-    // Close menus when clicking outside
-    document.addEventListener("click", (e) => {
-      if (!this.header.contains(e.target)) {
-        this.closeAllMenus();
-      }
-    });
-  }
-
-  /**
-   * Toggles a megamenu's visibility.
-   * @param {HTMLElement} currentTrigger - The button/link that was clicked.
-   */
-  toggleMenu(currentTrigger) {
-    const isExpanded = currentTrigger.getAttribute("aria-expanded") === "true";
-
-    // First, close all other menus
-    this.closeAllMenus(currentTrigger);
-
-    // Now, toggle the current menu
-    if (isExpanded) {
-      this.closeMenu(currentTrigger);
-    } else {
-      this.openMenu(currentTrigger);
-    }
   }
 
   /**
@@ -104,8 +91,8 @@ class NewHeader {
    * @param {HTMLElement} trigger - The button/link for the menu to open.
    */
   openMenu(trigger) {
-    trigger.setAttribute("aria-expanded", "true");
-    trigger.parentElement.classList.add("uq-header__nav-primary-item--is-open");
+    trigger.setAttribute('aria-expanded', 'true');
+    trigger.parentElement.classList.add('uq-header__nav-primary-item--is-open');
   }
 
   /**
@@ -113,10 +100,8 @@ class NewHeader {
    * @param {HTMLElement} trigger - The button/link for the menu to close.
    */
   closeMenu(trigger) {
-    trigger.setAttribute("aria-expanded", "false");
-    trigger.parentElement.classList.remove(
-      "uq-header__nav-primary-item--is-open",
-    );
+    trigger.setAttribute('aria-expanded', 'false');
+    trigger.parentElement.classList.remove('uq-header__nav-primary-item--is-open');
   }
 
   /**
@@ -124,7 +109,7 @@ class NewHeader {
    * @param {HTMLElement} [except] - An optional trigger element to ignore.
    */
   closeAllMenus(except = null) {
-    this.megaMenuTriggers.forEach((trigger) => {
+    this.header.querySelectorAll('.nav-primary-link--has-dropdown').forEach(trigger => {
       if (trigger !== except) {
         this.closeMenu(trigger);
       }

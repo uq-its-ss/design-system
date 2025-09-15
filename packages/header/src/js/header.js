@@ -13,10 +13,14 @@ class NewHeader {
   init() {
     // --- Mobile and Search Toggles (unchanged) ---
     this.menuToggle = this.header.querySelector(".nav-primary__menu-toggle");
-    this.searchToggle = this.header.querySelector(".nav-primary__search-toggle");
+    this.searchToggle = this.header.querySelector(
+      ".nav-primary__search-toggle",
+    );
     this.searchLabel = this.header.querySelector(".search-toggle__label");
     this.searchBlock = this.header.querySelector(".uq-header__search");
-    this.searchInput = this.header.querySelector(".uq-header__search-query-input");
+    this.searchInput = this.header.querySelector(
+      ".uq-header__search-query-input",
+    );
 
     this.menuToggle.addEventListener("click", () => {
       document.body.classList.toggle("no-scroll");
@@ -38,26 +42,29 @@ class NewHeader {
         this.searchInput.blur();
         this.searchToggle.blur();
       }
-      this.searchLabel.innerHTML = this.searchLabel.innerHTML === "Search" ? "Close" : "Search";
+      this.searchLabel.innerHTML =
+        this.searchLabel.innerHTML === "Search" ? "Close" : "Search";
     });
 
     // ** NEW HYBRID MEGAMENU LOGIC **
-    const menuItems = this.header.querySelectorAll('.uq-header__nav-primary-item');
+    const menuItems = this.header.querySelectorAll(
+      ".uq-header__nav-primary-item",
+    );
 
-    menuItems.forEach(item => {
-      const trigger = item.querySelector('.nav-primary-link--has-dropdown');
+    menuItems.forEach((item) => {
+      const trigger = item.querySelector(".nav-primary-link--has-dropdown");
       if (!trigger) return;
 
       // --- Hover Listeners (for mouse users) ---
-      item.addEventListener('mouseenter', () => this.openMenu(trigger));
-      item.addEventListener('mouseleave', () => this.closeMenu(trigger));
+      item.addEventListener("mouseenter", () => this.openMenu(trigger));
+      item.addEventListener("mouseleave", () => this.closeMenu(trigger));
 
       // --- Focus Listeners (for keyboard tabbing) ---
-      item.addEventListener('focusin', () => {
+      item.addEventListener("focusin", () => {
         this.closeAllMenus(trigger); // Close others when a new one gets focus
         this.openMenu(trigger);
       });
-      item.addEventListener('focusout', (e) => {
+      item.addEventListener("focusout", (e) => {
         // Only close if focus moves outside the entire menu item component
         if (!item.contains(e.relatedTarget)) {
           this.closeMenu(trigger);
@@ -65,9 +72,9 @@ class NewHeader {
       });
 
       // --- Click and Keydown Listeners (for explicit toggle) ---
-      trigger.addEventListener('click', e => {
+      trigger.addEventListener("click", (e) => {
         e.preventDefault();
-        const isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+        const isExpanded = trigger.getAttribute("aria-expanded") === "true";
         // Close all other menus before toggling the current one
         this.closeAllMenus(trigger);
         if (isExpanded) {
@@ -77,8 +84,8 @@ class NewHeader {
         }
       });
 
-      trigger.addEventListener('keydown', e => {
-        if (e.key === 'Escape') {
+      trigger.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
           this.closeMenu(trigger);
           trigger.focus(); // Return focus to the button
         }
@@ -91,8 +98,8 @@ class NewHeader {
    * @param {HTMLElement} trigger - The button/link for the menu to open.
    */
   openMenu(trigger) {
-    trigger.setAttribute('aria-expanded', 'true');
-    trigger.parentElement.classList.add('uq-header__nav-primary-item--is-open');
+    trigger.setAttribute("aria-expanded", "true");
+    trigger.parentElement.classList.add("uq-header__nav-primary-item--is-open");
   }
 
   /**
@@ -100,8 +107,10 @@ class NewHeader {
    * @param {HTMLElement} trigger - The button/link for the menu to close.
    */
   closeMenu(trigger) {
-    trigger.setAttribute('aria-expanded', 'false');
-    trigger.parentElement.classList.remove('uq-header__nav-primary-item--is-open');
+    trigger.setAttribute("aria-expanded", "false");
+    trigger.parentElement.classList.remove(
+      "uq-header__nav-primary-item--is-open",
+    );
   }
 
   /**
@@ -109,11 +118,13 @@ class NewHeader {
    * @param {HTMLElement} [except] - An optional trigger element to ignore.
    */
   closeAllMenus(except = null) {
-    this.header.querySelectorAll('.nav-primary-link--has-dropdown').forEach(trigger => {
-      if (trigger !== except) {
-        this.closeMenu(trigger);
-      }
-    });
+    this.header
+      .querySelectorAll(".nav-primary-link--has-dropdown")
+      .forEach((trigger) => {
+        if (trigger !== except) {
+          this.closeMenu(trigger);
+        }
+      });
   }
 }
 

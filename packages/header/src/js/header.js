@@ -55,36 +55,36 @@ class NewHeader {
       item.addEventListener("mouseleave", this.handleToggle);
     });
 
-    el.querySelectorAll('.nav-primary-link--has-dropdown').forEach(link => {
-      const menuId = link.getAttribute('aria-controls');
+    el.querySelectorAll(".nav-primary-link--has-dropdown").forEach((link) => {
+      const menuId = link.getAttribute("aria-controls");
       const menu = el.getElementById(menuId);
 
       // Toggle menu on click or Enter/Space
-      link.addEventListener('click', e => {
+      link.addEventListener("click", (e) => {
         e.preventDefault();
         this.toggleMenu(link, menu);
       });
-      link.addEventListener('keydown', e => {
-        if (e.key === 'Enter' || e.key === ' ') {
+      link.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
           e.preventDefault();
           this.toggleMenu(link, menu);
         }
-        if (e.key === 'ArrowDown') {
+        if (e.key === "ArrowDown") {
           e.preventDefault();
           this.openMenu(link, menu);
           // Focus first menu item
           const firstItem = menu.querySelector('[role="menuitem"]');
           if (firstItem) firstItem.focus();
         }
-        if (e.key === 'Escape') {
+        if (e.key === "Escape") {
           this.closeMenu(link, menu);
           link.focus();
         }
       });
 
       // Close menu on Escape inside menu
-      menu.addEventListener('keydown', e => {
-        if (e.key === 'Escape') {
+      menu.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
           this.closeMenu(link, menu);
           link.focus();
         }
@@ -116,7 +116,7 @@ class NewHeader {
   }
 
   toggleMenu(link, menu) {
-    const expanded = link.getAttribute('aria-expanded') === 'true';
+    const expanded = link.getAttribute("aria-expanded") === "true";
     if (expanded) {
       this.closeMenu(link, menu);
     } else {
@@ -125,12 +125,12 @@ class NewHeader {
   }
 
   openMenu(link, menu) {
-    link.setAttribute('aria-expanded', 'true');
+    link.setAttribute("aria-expanded", "true");
     menu.hidden = false;
   }
 
   closeMenu(link, menu) {
-    link.setAttribute('aria-expanded', 'false');
+    link.setAttribute("aria-expanded", "false");
     menu.hidden = true;
   }
 }

@@ -13,7 +13,7 @@
     "version": {
       "ignoreChanges": ["**/*.md", "**/package.json", "**/package-lock.json"],
       "conventionalCommits": true,
-      "allowBranch": ["master", "releases"],
+      "allowBranch": ["master", "releases", "Version-Dry-Run"],
       "message": "chore(release):Publish"
     }
   },

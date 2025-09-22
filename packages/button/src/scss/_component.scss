@@ -154,3 +154,11 @@
   width: 100%;
   justify-content: center;
 }
+
+.uq-button--disabled,
+.uq-button:disabled {
+  background-color: core.$grey-300;
+  border-color: core.$grey-300;
+  color: core.$grey-600;
+  cursor: not-allowed;
+}

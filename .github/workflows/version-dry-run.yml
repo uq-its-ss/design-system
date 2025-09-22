@@ -44,7 +44,7 @@ jobs:
             COMMAND="npx lerna version --conventional-commits --conventional-graduate --yes --no-git-tag-version --no-push --allow-branch *"
           else
             echo "Running dry run for an ALPHA release (targeting 'master')."
-            COMMAND="npx lerna version --conventional-commits --conventional-prerelease --yes --no-git-tag-version --no-push --allow-branch *"
+            COMMAND="npx lerna version --conventional-commits --conventional-prerelease --yes --no-git-tag-version --no-push --allow-branch Version-Dry-Run"
           fi
 
           # Execute the command, capturing output and exit code.

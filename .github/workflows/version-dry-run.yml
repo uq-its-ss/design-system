@@ -1,0 +1,90 @@
+name: Version Dry Run
+
+# This workflow runs on pull requests targeting the main release branches
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    branches:
+      - master
+      - releases
+
+jobs:
+  dry-run:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write # Required to post a comment on the PR
+
+    steps:
+      - name: "⬇️ Checkout repo"
+        uses: actions/checkout@v4
+        with:
+          # Important to fetch all history for Lerna to determine the version
+          fetch-depth: 0
+
+      - name: "⎔ Setup node 20"
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: "📦️ Install dependencies"
+        run: npm ci
+
+      - name: "🧐 Determine and capture version dry run output"
+        id: lerna_dry_run # Give this step an ID to reference its output later
+        run: |
+          # Configure git user, as Lerna may need it
+          git config user.name "${{ github.actor }}"
+          git config user.email "${{ github.actor}}@users.noreply.github.com"
+
+          # Prepare the appropriate Lerna command based on the PR's target branch
+          if [[ "${{ github.base_ref }}" == "releases" ]]; then
+            echo "Running dry run for a STABLE release (targeting 'releases')."
+            COMMAND="npx lerna version --conventional-commits --conventional-graduate --yes --no-git-tag-version --no-push"
+          else
+            echo "Running dry run for an ALPHA release (targeting 'master')."
+            COMMAND="npx lerna version --conventional-commits --conventional-prerelease --dist-tag alpha --yes --no-git-tag-version --no-push"
+          fi
+
+          # Execute the command, capturing output and exit code.
+          # We use `|| LERNA_EXIT_CODE=$?` to prevent the script from exiting on a non-zero code immediately.
+          VERSION_OUTPUT=$($COMMAND 2>&1) || LERNA_EXIT_CODE=$?
+
+          # Lerna exits with 1 when no changes are found. We can provide a friendlier message for this case.
+          if [[ $LERNA_EXIT_CODE -eq 1 && "$VERSION_OUTPUT" == *"No changed packages to version"* ]]; then
+            VERSION_OUTPUT="✅ Lerna found no changes to version. This is expected if there are no new 'fix:', 'feat:', or 'BREAKING CHANGE:' commits."
+          elif [[ $LERNA_EXIT_CODE -ne 0 ]]; then
+            echo "Lerna failed with an unexpected error. Exit code: $LERNA_EXIT_CODE"
+            echo "$VERSION_OUTPUT"
+            # If there's a real error, we'll still post it to the PR for debugging
+          fi
+
+          # Use a heredoc to properly handle multi-line output for the next step
+          {
+            echo "output<<EOF"
+            echo "$VERSION_OUTPUT"
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: "✍️ Post dry run results as PR comment"
+        uses: peter-evans/create-or-update-comment@v4
+        with:
+          # The token is automatically provided by GitHub Actions
+          token: ${{ secrets.GITHUB_TOKEN }}
+          # The issue number is the PR number in this context
+          issue-number: ${{ github.event.pull_request.number }}
+          # This body will be the content of our comment
+          body: |
+            ### 🤖 Lerna Version Dry Run 🤖
+
+            This is a preview of the version bump that will occur if this PR is merged into `${{ github.base_ref }}`.
+
+            <details>
+            <summary>Click to view Lerna output</summary>
+
+            ```
+            ${{ steps.lerna_dry_run.outputs.output }}
+            ```
+
+            </details>
+
+            *This is an automated comment. The version has not been published.*

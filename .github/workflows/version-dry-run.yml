@@ -41,23 +41,29 @@ jobs:
           # Prepare the appropriate Lerna command based on the PR's target branch
           if [[ "${{ github.base_ref }}" == "releases" ]]; then
             echo "Running dry run for a STABLE release (targeting 'releases')."
-            COMMAND="npx lerna version --conventional-commits --conventional-graduate --yes --no-git-tag-version --no-push --allow-branch Version-Dry-Run"
+            COMMAND="npx lerna version --conventional-commits --conventional-graduate --yes --no-git-tag-version --no-push --allow-branch *"
           else
             echo "Running dry run for an ALPHA release (targeting 'master')."
-            COMMAND="npx lerna version --conventional-commits --conventional-prerelease --yes --no-git-tag-version --no-push --allow-branch Version-Dry-Run"
+            COMMAND="npx lerna version --conventional-commits --conventional-prerelease --yes --no-git-tag-version --no-push --allow-branch *"
           fi
 
           # Execute the command, capturing output and exit code.
           # We use `|| LERNA_EXIT_CODE=$?` to prevent the script from exiting on a non-zero code immediately.
           VERSION_OUTPUT=$($COMMAND 2>&1) || LERNA_EXIT_CODE=$?
 
-          # Lerna exits with 1 when no changes are found. We can provide a friendlier message for this case.
+          # Use awk to extract the "Changes:" block
+          # This command starts printing when it sees "Changes:", and stops when it sees a blank line or another "lerna" info line.
+          EXTRACTED_CHANGES=$(echo "$VERSION_OUTPUT" | awk '/^Changes:/,/^lerna (info|success|WARN|notice)/ {if (!/^lerna /) print}')
+          
           if [[ $LERNA_EXIT_CODE -eq 1 && "$VERSION_OUTPUT" == *"No changed packages to version"* ]]; then
+            # If no changes are found, use the original friendly message.
             VERSION_OUTPUT="✅ Lerna found no changes to version. This is expected if there are no new 'fix:', 'feat:', or 'BREAKING CHANGE:' commits."
           elif [[ $LERNA_EXIT_CODE -ne 0 ]]; then
-            echo "Lerna failed with an unexpected error. Exit code: $LERNA_EXIT_CODE"
-            echo "$VERSION_OUTPUT"
-            # If there's a real error, we'll still post it to the PR for debugging
+            # If an error occurred, use the raw output for debugging.
+            VERSION_OUTPUT="Lerna failed with an unexpected error. Exit code: $LERNA_EXIT_CODE\n$VERSION_OUTPUT"
+          else
+            # If successful, use the extracted changes.
+            VERSION_OUTPUT="$EXTRACTED_CHANGES"
           fi
 
           # Use a heredoc to properly handle multi-line output for the next step
@@ -100,4 +106,4 @@ jobs:
 
             </details>
 
-            *This is an automated comment. The version has not been published.*
+            *This is an automated comment. The version will not be published until the PR is merged.*

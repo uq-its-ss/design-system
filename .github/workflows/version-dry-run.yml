@@ -76,13 +76,15 @@ jobs:
           body-includes: '### 🤖 Lerna Version Dry Run 🤖'
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: "✍️ Post dry run results as PR comment"
+      - name: "✍️ Create or update dry run results comment"
         uses: peter-evans/create-or-update-comment@v4
         with:
           # The token is automatically provided by GitHub Actions
           token: ${{ secrets.GITHUB_TOKEN }}
           # The issue number is the PR number in this context
           issue-number: ${{ github.event.pull_request.number }}
+          comment-id: ${{ steps.find_comment.outputs.comment-id }}
+          edit-mode: replace
           # This body will be the content of our comment
           body: |
             ### 🤖 Lerna Version Dry Run 🤖

@@ -18,6 +18,8 @@ jobs:
       - name: "⬇️ Checkout repo"
         uses: actions/checkout@v4
         with:
+          # Checkout the PR's head branch instead of the temporary merge commit
+          ref: ${{ github.head_ref }}
           # Important to fetch all history for Lerna to determine the version
           fetch-depth: 0
 

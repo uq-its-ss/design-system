@@ -100,13 +100,8 @@ jobs:
 
             This is a preview of the version bump that will occur if this PR is merged into `${{ github.base_ref }}`.
 
-            <details>
-            <summary>Click to view Lerna output</summary>
-
             ```
             ${{ steps.lerna_dry_run.outputs.output }}
             ```
-
-            </details>
-
+            
             *This is an automated comment. The version will not be published until the PR is merged.*

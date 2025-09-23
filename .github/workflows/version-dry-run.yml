@@ -61,7 +61,7 @@ jobs:
           # Check for the specific "no changes" message and exit code 0
           if [[ $LERNA_EXIT_CODE -eq 0 && "$VERSION_OUTPUT" == *"No changed packages to version"* ]]; then
           # If no changes are found, use the original friendly message.
-          VERSION_OUTPUT="✅ Lerna found no changes to version. This is expected if there are no new 'fix:', 'feat:', or 'BREAKING CHANGE:' commits."
+          VERSION_OUTPUT="✅ Lerna found no changes to version. This may be expected if there are no new 'fix:', 'feat:', or 'BREAKING CHANGE:' commits."
           elif [[ $LERNA_EXIT_CODE -ne 0 ]]; then
           # If an error occurred, use the raw output for debugging.
           VERSION_OUTPUT="Lerna failed with an unexpected error. Exit code: $LERNA_EXIT_CODE\n$VERSION_OUTPUT"

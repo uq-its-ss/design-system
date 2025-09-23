@@ -50,9 +50,6 @@ jobs:
             COMMAND="npx lerna version --conventional-commits --conventional-prerelease --yes --no-git-tag-version --no-push --allow-branch $BRANCH_NAME"
           fi
 
-          # Initialize exit code to 0.
-          LERNA_EXIT_CODE=0
-
           # Execute the command, capturing output and exit code.
           # We use `|| LERNA_EXIT_CODE=$?` to prevent the script from exiting on a non-zero code immediately.
           VERSION_OUTPUT=$($COMMAND 2>&1) || LERNA_EXIT_CODE=$?
@@ -64,7 +61,9 @@ jobs:
           # Check for the specific "no changes" message and exit code 0
           if [[ $LERNA_EXIT_CODE -eq 0 && "$VERSION_OUTPUT" == *"No changed packages to version"* ]]; then
           # If no changes are found, use the original friendly message.
-          VERSION_OUTPUT="✅ Lerna found no changes to version. This is expected if there are no new 'fix:', 'feat:', or 'BREAKING CHANGE:' commits."
+          VERSION_OUTPUT="✅ Lerna found no changes to version.
+          This is expected if there are no new 'fix:',
+          'feat:', or 'BREAKING CHANGE:' commits."
           elif [[ $LERNA_EXIT_CODE -ne 0 ]]; then
           # If an error occurred, use the raw output for debugging.
           VERSION_OUTPUT="Lerna failed with an unexpected error. Exit code: $LERNA_EXIT_CODE\n$VERSION_OUTPUT"

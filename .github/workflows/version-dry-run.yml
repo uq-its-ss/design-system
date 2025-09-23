@@ -54,13 +54,19 @@ jobs:
           # We use `|| LERNA_EXIT_CODE=$?` to prevent the script from exiting on a non-zero code immediately.
           VERSION_OUTPUT=$($COMMAND 2>&1) || LERNA_EXIT_CODE=$?
 
-          # Lerna exits with 1 when no changes are found. Provide a friendlier message for this case.
+          # Use awk to extract the "Changes:" block
+          # This command starts printing when it sees "Changes:", and stops when it sees a blank line or another "lerna" info line.
+          EXTRACTED_CHANGES=$(echo "$VERSION_OUTPUT" | awk '/^Changes:/,/^lerna (info|success|WARN|notice)/ {if (!/^lerna /) print}')
+          
           if [[ $LERNA_EXIT_CODE -eq 1 && "$VERSION_OUTPUT" == *"No changed packages to version"* ]]; then
+            # If no changes are found, use the original friendly message.
             VERSION_OUTPUT="✅ Lerna found no changes to version. This is expected if there are no new 'fix:', 'feat:', or 'BREAKING CHANGE:' commits."
           elif [[ $LERNA_EXIT_CODE -ne 0 ]]; then
-            echo "Lerna failed with an unexpected error. Exit code: $LERNA_EXIT_CODE"
-            echo "$VERSION_OUTPUT"
-            # If there's a real error, we'll still post it to the PR for debugging
+            # If an error occurred, use the raw output for debugging.
+            VERSION_OUTPUT="Lerna failed with an unexpected error. Exit code: $LERNA_EXIT_CODE\n$VERSION_OUTPUT"
+          else
+            # If successful, use the extracted changes.
+            VERSION_OUTPUT="$EXTRACTED_CHANGES"
           fi
 
           # Use a heredoc to properly handle multi-line output for the next step

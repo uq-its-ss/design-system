@@ -5,6 +5,7 @@ import "./loading-spinner.scss";
 import loadingSpinnerHTML from "./loading-spinner.html";
 import loadingSpinnerLightHTML from "./loading-spinner-light.html";
 import loadingSpinnerSmallHTML from "./loading-spinner-small.html";
+import loadingSpinnerButtonHTML from "./loading-spinner-button.html";
 
 export default {
   title: "Components/Loading spinner",
@@ -53,4 +54,12 @@ export const loadingSpinnerSmall = {
   },
 
   name: "Small",
+};
+
+export const loadingSpinnerButton = {
+  render: () => {
+    return loadingSpinnerButtonHTML;
+  },
+
+  name: "Button",
 };

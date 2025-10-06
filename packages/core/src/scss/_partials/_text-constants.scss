@@ -1,4 +1,4 @@
-@use "media-constants";
+@use "_media-constants";
 
 // font family
 $roboto: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -22,6 +22,12 @@ $font-size-s: 0.875rem; /* 14px - Sub */
 $font-size-xs: 0.75rem; /* 12px - Small */
 $font-size-xxs: 0.625rem; /* 10px - Small uppercase */
 
+@media #{media-constants.$screen-md-down} {
+    $font-size-xxxxl: 1.875rem; /* 30px - H1 */
+    $font-size-xxxl: 1.5rem; /* 24px - H2 */
+    $font-size-xxl: 1.375rem; /* 22px - H3 */
+}
+
 // font weights
 $font-weight-normal: 400;
 $font-weight-medium: 500;
@@ -35,8 +41,4 @@ $line-height-ui: 1;
 // 1% letter spacing
 $letter-spacing: 0.01rem;
 
-@media #{core.$screen-md-down} {
-    $font-size-xxxxl: 1.875rem; /* 30px - H1 */
-    $font-size-xxxl: 1.5rem; /* 24px - H2 */
-    $font-size-xxl: 1.375rem; /* 22px - H3 */
-}
+

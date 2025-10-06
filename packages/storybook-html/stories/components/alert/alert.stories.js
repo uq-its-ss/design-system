@@ -121,10 +121,10 @@ export const warningGlobal = {
       </div>
     </div>
     `,
-    play: ({ canvasElement }) => {
-      const alert = canvasElement.querySelector("#global-alerts-container");
-      if (alert) new Alerts(alert);
-    },
+  play: ({ canvasElement }) => {
+    const alert = canvasElement.querySelector("#global-alerts-container");
+    if (alert) new Alerts(alert);
+  },
   name: "Warning global",
 };
 

@@ -1,0 +1,35 @@
+@use "sass:color";
+@use "@uqds/core/src/scss/_component" as core;
+
+/* Colours */
+.uqds-colour__palette {
+  width: 100%;
+  border-radius: 0.25rem;
+  height: 100%;
+}
+.uqds-colour--purple-500 {
+  background-color: core.$purple-500;
+  color: core.$white;
+}
+.uqds-colour--black {
+  background-color: core.$black;
+  color: core.$white;
+}
+.uqds-colour--grey-900 {
+  background-color: core.$grey-900;
+  color: core.$white;
+}
+.uqds-colour--white {
+  color: core.$white;
+}
+
+/* Email Fonts */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-family: core.$font-body;
+}

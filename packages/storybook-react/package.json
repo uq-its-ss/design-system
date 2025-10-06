@@ -1,7 +1,7 @@
 {
   "name": "storybook-react",
-  "version": "2.0.2",
-  "description": "Storybook for React instance for uqds component development",
+  "version": "2.0.3",
+  "description": "Storybook for REACT instance for uqds component development",
   "private": true,
   "keywords": [],
   "author": {
@@ -17,8 +17,8 @@
     "serve-storybook": "http-server storybook-static -i -p 6007"
   },
   "dependencies": {
-    "@uqds/icon": "^4.0.1",
-    "@uqds/react": "^2.0.2"
+    "@uqds/icon": "^4.0.2",
+    "@uqds/react": "^2.0.3"
   },
   "devDependencies": {
     "@storybook/addon-a11y": "^8.5.2",

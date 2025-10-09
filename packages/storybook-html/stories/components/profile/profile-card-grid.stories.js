@@ -4,30 +4,11 @@ export default {
   title: "Components/Profile/Profile List Examples",
 };
 
-export const profileListing = {
+export const profileCardGrid = {
   render: (args) => {
-    return `<h2>Staff Listing using lists</h2>
-    <ul class="uq-staff-listing">
-      <li>
-        ${profile.render(args)}
-      </li>
-      <li>
-        ${profile.render({
-          ...args,
-          name: "Jane Doe",
-          title: "Associate Professor",
-          email: "jane.doe@uq.edu.au",
-        })}
-      </li>
-      <li>
-        ${profile.render(args)}
-      </li>
-      <li>
-        ${profile.render(args)}
-      </li>
-    </ul>
-    <h2>Staff Listing using divs</h2>
-    <div class="uq-staff-listing">
+    return `<h2>Profile using Card grid</h2>
+
+    <div class="uq-card-grid uq-card-grid--target-2x">
       <div>
         ${profile.render(args)}
       </div>

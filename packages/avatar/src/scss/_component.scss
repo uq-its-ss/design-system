@@ -17,3 +17,10 @@
     object-position: center; /* centers the image within the container */
   }
 }
+
+@media #{core.$screen-lg-up} {
+  .uq-avatar {
+    width: 144px;
+    height: 144px;
+  }
+}

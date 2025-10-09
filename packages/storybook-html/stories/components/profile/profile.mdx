@@ -20,8 +20,43 @@ A profile is a component that displays user information, including their name, p
 
 ### Profile
 
-A profile using a link tag.
+The defualt profile component.
 
 <Canvas of={profileStories.profile} />
 <Controls of={profileStories.profile} />
-<Source of={profileStories.profile} />
+
+### Variants and states
+
+The following examples demonstrate different variations of the profile component. The profile image will also scale responsively based on the page width.
+
+#### No Image
+
+If no image is required, the profiles can be displayed without one.
+
+<Canvas of={profileStories.NoImage} />
+
+#### Fall back icon
+
+If no image is provided, a placeholder icon is displayed.
+
+<Canvas of={profileStories.FallbackImage} />
+
+### Patterns
+
+Examples of contextual usage of the profile component.
+
+#### Bio profile
+
+<Canvas of={profileStories.BioProfile} />
+
+#### Contact profile
+
+<Canvas of={profileStories.contactProfile} />
+
+#### Call to action profile
+
+<Canvas of={profileStories.CallToAction} />
+
+#### Expert profile
+
+<Canvas of={profileStories.ExpertProfile} />

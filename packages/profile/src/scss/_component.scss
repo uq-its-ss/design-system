@@ -25,13 +25,7 @@
   margin: core.$space-none;
 }
 .uq-profile__image {
-  display: none;
   order: -1;
-}
-@media #{core.$screen-md-up} {
-  .uq-profile__image {
-    display: block;
-  }
 }
 
 .uq-staff-listing {
@@ -41,4 +35,34 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
+}
+
+.generic-grid {
+  /* 1. Establish the container as a CSS Grid */
+  display: grid;
+
+  /* 2. Define the minimum width for each column and the auto-responsive behavior */
+  grid-template-columns: repeat(auto-fit, minmax(317px, 1fr));
+
+  /* Optional: Add spacing between grid items */
+  gap: core.$space-l;
+}
+@media #{core.$screen-lg-up} {
+  .generic-grid {
+    gap: core.$space-xl;
+  }
+}
+.generic-grid--2x {
+  grid-template-columns: repeat(auto-fit, minmax(317px, 1fr 1fr));
+}
+@media (min-width: 666px) {
+  .generic-grid--2x {
+    /* Explicitly set to 2 columns when there's enough room */
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.generic-grid > * {
+  /* Ensure the item doesn't shrink smaller than the min width (317px) defined in the grid-template-columns */
+  min-width: 317px;
 }

@@ -43,22 +43,22 @@ export default {
     image: {
       name: "Image src",
       control: "select",
-      options: ["none", "images/hero/hero-example--small.jpg"],
+      options: ["none", "images/profile/profile.png"],
       if: { arg: "hasImage" },
     },
   },
   args: {
     titleElement: "h2",
     title: "Professor",
-    name: "Ulrik Wisløff",
+    name: "Jane Doe",
     position: "Head of School",
-    bio: "Professor John Cairney is the Head of School of Human Movement and Nutrition Sciences. He is an academic leader in the field of paediatric exercise medicine and child health research and is particularly well-known for his work on developmental coordination disorder (DCD) and its impact on the health and well-being of children. Prof John Cairney started at UQ in January 2020.",
+    bio: "",
     hasContact: true,
-    email: "john.cairney@uq.edu.au",
-    Phone: "+61 7 3365 1111",
+    email: "jane.doe@uq.edu.au",
+    Phone: "+61 7 3000 0000",
     ctaUrl: "https://about.uq.edu.au/experts/1371",
     hasImage: true,
-    image: "none",
+    image: "images/profile/profile.png",
   },
   render: ({
     titleElement,
@@ -120,53 +120,58 @@ export default {
 
 export const profile = {};
 
-export const researcherCta = {
+export const NoImage = {
   args: {
-    position: "",
-    bio: "",
-    hasContact: false,
-    image: "images/hero/hero-example--small.jpg",
+    hasImage: false,
   },
 };
 
-export const researcherEmail = {
+export const FallbackImage = {
   args: {
-    position: "",
-    bio: "",
-    email: "john.cairney@uq.edu.au",
-    Phone: "",
-    image: "images/hero/hero-example--small.jpg",
-    ctaUrl: "",
-  },
-};
-
-export const staffListingFull = {
-  args: {
-    image: "images/hero/hero-example--small.jpg",
-  },
-};
-
-export const staffListingNoBio = {
-  args: {
-    bio: "",
-    image: "images/hero/hero-example--small.jpg",
-  },
-};
-
-export const staffListingCta = {
-  args: {
-    position: "",
-    bio: "",
-    hasContact: false,
+    hasImage: true,
     image: "none",
   },
 };
 
-export const staffListingNoPhoto = {
+export const BioProfile = {
+  args: {
+    title: "Professor",
+    name: "Jane Doe",
+    position: "Head of School",
+    bio: "Dr Jane Doe is a Senior Lecturer specialising in behavioural science and wellbeing research. She teaches undergraduate and postgraduate courses, mentors research students, and collaborates on projects improving student mental health.",
+    hasContact: true,
+    email: "jane.doe@uq.edu.au",
+    Phone: "+61 7 3000 0000",
+    ctaUrl: "https://about.uq.edu.au/experts/1371",
+    hasImage: true,
+    image: "images/profile/profile.png",
+  },
+};
+
+export const contactProfile = {
+  args: {
+    position: "Head of School",
+    image: "images/profile/profile.png",
+    ctaUrl: "",
+  },
+};
+
+export const CallToAction = {
+  args: {
+    position: "Head of School",
+    bio: "",
+    email: "john.cairney@uq.edu.au",
+    Phone: "",
+    image: "images/profile/profile.png",
+    ctaUrl: "",
+  },
+};
+
+export const ExpertProfile = {
   args: {
     position: "",
     bio: "",
     hasContact: false,
-    hasImage: false,
+    image: "images/profile/profile.png",
   },
 };

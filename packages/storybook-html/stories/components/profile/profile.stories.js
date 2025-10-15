@@ -20,32 +20,57 @@ export default {
     },
     bio: {
       control: "text",
+      table: {
+        category: "Biography", // Groups the field
+      },
     },
+    // --- Contact Group Starts ---
     hasContact: {
       name: "Contact block",
       control: "boolean",
+      table: {
+        category: "Contact & Links", // Groups the toggle switch
+      },
     },
     email: {
       control: "text",
       if: { arg: "hasContact" },
+      table: {
+        category: "Contact & Links", // Groups the field
+      },
     },
     Phone: {
       control: "text",
       if: { arg: "hasContact" },
+      table: {
+        category: "Contact & Links", // Groups the field
+      },
     },
     ctaUrl: {
       control: "text",
+      table: {
+        category: "Call to action", // Groups the field
+      },
     },
+    // --- Contact Group Ends ---
+    // --- Image Group Starts ---
     hasImage: {
       name: "Profile Image",
       control: "boolean",
+      table: {
+        category: "Image", // Groups the toggle switch
+      },
     },
     image: {
       name: "Image src",
       control: "select",
       options: ["none", "images/profile/profile.png"],
       if: { arg: "hasImage" },
+      table: {
+        category: "Image", // Groups the field
+      },
     },
+    // --- Image Group Ends ---
   },
   args: {
     titleElement: "h2",
@@ -87,11 +112,11 @@ export default {
           : ""
       }
       ${
-        hasContact
+        hasContact && (email || Phone)
           ? `
       <section class="uq-profile__contact">
-      ${email ? `<div><a href="mailto:${email}">${email}</a></div>` : ""}
-      ${Phone ? `<div><a href="tel:${Phone}">${Phone}</a></div>` : ""}
+      ${email ? `<div><a href=\"mailto:${email}\">${email}</a></div>` : ""}
+      ${Phone ? `<div><a href=\"tel:${Phone}\">${Phone}</a></div>` : ""}
       </section>`
           : ""
       }

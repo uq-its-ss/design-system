@@ -3,46 +3,68 @@ import "./header.scss";
 
 // import scripts
 import "./slide-menu.js";
-import { primaryLinks, secondaryLinks } from './menuData'; // Import the menu data
+import { primaryLinks, secondaryLinks } from "./menuData"; // Import the menu data
 import { header } from "@uqds/header/src/js/main"; // Import 'header' for UQ header JS functionality
 
 // Helper function to render the mega menu columns, groups, and children
 const renderMegaMenu = (columns, parentTitle) => {
-  return columns.map(column => `
+  return columns
+    .map(
+      (column) => `
     <div class="megamenu__column">
-      ${column.groups.map(group => `
+      ${column.groups
+        .map(
+          (group) => `
         <div class="megamenu__heading">${group.heading}</div>
         <div class="megamenu__menu">
           <ul>
-            ${group.children.map(child => `
+            ${group.children
+              .map(
+                (child) => `
               <li data-gtm-category="Main navigation"><a href="${child.href}" data-gtm-label="${parentTitle} > ${child.title}">${child.title}</a></li>
-            `).join('')}
+            `,
+              )
+              .join("")}
           </ul>
         </div>
-      `).join('')}
+      `,
+        )
+        .join("")}
     </div>
-  `).join('');
+  `,
+    )
+    .join("");
 };
 
 // Helper function to render the mobile navigation structure
 const renderMobileNav = (columns, parentTitle) => {
-    return columns.map(column =>
-        column.groups.map(group => `
+  return columns
+    .map((column) =>
+      column.groups
+        .map(
+          (group) => `
       <li>
         <a href="#" class="global-mobile-nav__audience-link slide-menu__control">${group.heading}</a>
         <ul>
-          ${group.children.map(child => `
+          ${group.children
+            .map(
+              (child) => `
             <li><a href="${child.href}" data-gtm-label="${parentTitle} > ${child.title}">${child.title}</a></li>
-          `).join('')}
+          `,
+            )
+            .join("")}
         </ul>
       </li>
-    `).join('')
-    ).join('');
+    `,
+        )
+        .join(""),
+    )
+    .join("");
 };
 
 // Render the Search structure
 const renderSearch = (hasLocalSite, siteDomain) => {
-    return `<div class="uq-header__search" data-gtm-category="Search">
+  return `<div class="uq-header__search" data-gtm-category="Search">
     <div class="uq-header__search-container">
       <form action="https://search.uq.edu.au/" method="get" data-gtm-action="Text search" data-gtm-form-action="">
         <fieldset>
@@ -52,7 +74,7 @@ const renderSearch = (hasLocalSite, siteDomain) => {
             <span class="uq-header__search-query-button">
               <input type="submit" name="op" value="Search" class="uq-header__search-query-submit" data-gtm-trigger="click">
             </span>
-            ${hasLocalSite ? `<input type="hidden" value="${siteDomain}" name="as_sitesearch" id="edit-as_sitesearch-on">` : ''}            
+            ${hasLocalSite ? `<input type="hidden" value="${siteDomain}" name="as_sitesearch" id="edit-as_sitesearch-on">` : ""}            
           </div>
         </fieldset>
       </form>
@@ -60,57 +82,67 @@ const renderSearch = (hasLocalSite, siteDomain) => {
   </div>`;
 };
 
-
 /**
  * The SiteHeader component displays the primary and secondary navigation, logo, and search functionality.
  */
 export default {
-  title: 'Components/New Header',
+  title: "Components/New Header",
   // Parameters provide story-level metadata
   parameters: {
     layout: "fullscreen",
     backgrounds: {
-    default: "UQ Neutral 1",
+      default: "UQ Neutral 1",
     },
   },
   // ArgTypes define the controls for your component's properties (args)
   argTypes: {
     showGlobalHeader: {
-      name: 'Show Global Header (Mega Menu)',
-      control: 'boolean',
-      description: 'Controls the visibility of the mega menu dropdowns for primary navigation items.',
+      name: "Show Global Header (Mega Menu)",
+      control: "boolean",
+      description:
+        "Controls the visibility of the mega menu dropdowns for primary navigation items.",
     },
     hasLocalSite: {
-      name: 'Has Local Site Search',
-      control: 'boolean',
-      description: 'Controls site search options.',
+      name: "Has Local Site Search",
+      control: "boolean",
+      description: "Controls site search options.",
     },
     siteDomain: {
-        name: 'Site Domain (for search)',
-        control: 'text',
-        description: 'The domain used for site search when not on the global homepage.',
+      name: "Site Domain (for search)",
+      control: "text",
+      description:
+        "The domain used for site search when not on the global homepage.",
     },
     siteName: {
-        name: 'Site Name (for mobile)',
-        control: 'text',
-        description: 'The title displayed in the mobile menu when not on the global homepage.',
+      name: "Site Name (for mobile)",
+      control: "text",
+      description:
+        "The title displayed in the mobile menu when not on the global homepage.",
     },
     primaryLinks: {
-      name: 'Primary Navigation Links',
-      control: 'object',
-      description: 'JSON object for the main navigation items and their mega menu structure.',
+      name: "Primary Navigation Links",
+      control: "object",
+      description:
+        "JSON object for the main navigation items and their mega menu structure.",
     },
     secondaryLinks: {
-      name: 'Secondary Navigation Links',
-      control: 'object',
-      description: 'JSON object for the secondary header links.',
+      name: "Secondary Navigation Links",
+      control: "object",
+      description: "JSON object for the secondary header links.",
     },
   },
 };
 
 // --- Story Rendering Logic (The previous Template function, now the 'render' method) ---
 
-const headerRenderer = ({ showGlobalHeader, hasLocalSite, siteDomain, siteName, primaryLinks, secondaryLinks }) => `
+const headerRenderer = ({
+  showGlobalHeader,
+  hasLocalSite,
+  siteDomain,
+  siteName,
+  primaryLinks,
+  secondaryLinks,
+}) => `
 <header class="uq-header" data-gtm-category="Header">
   <div class="uq-header__container">
     <div class="uq-header__menu-toggle" data-target="global-mobile-nav" data-gtm-category="Primary header">
@@ -124,10 +156,14 @@ const headerRenderer = ({ showGlobalHeader, hasLocalSite, siteDomain, siteName, 
     <div class="uq-header__nav-primary" data-gtm-category="Primary header">
       <nav class="uq-header__nav-primary-container" aria-label="primary navigation">
         <ul class="uq-header__nav-primary-list">
-          ${primaryLinks.map(link => `
+          ${primaryLinks
+            .map(
+              (link) => `
             <li class="uq-header__nav-primary-item">
-              <a class="uq-header__nav-primary-link ${showGlobalHeader ? 'nav-primary-link--has-dropdown' : ''}" href="${link.href}" data-gtm-label="${link.title}">${link.title}</a>
-              ${showGlobalHeader ? `
+              <a class="uq-header__nav-primary-link ${showGlobalHeader ? "nav-primary-link--has-dropdown" : ""}" href="${link.href}" data-gtm-label="${link.title}">${link.title}</a>
+              ${
+                showGlobalHeader
+                  ? `
                 <div class="uq-header__megamenu">
                   <div class="uq-header__megamenu-container">
                     <a href="${link.href}" class="megamenu__overview-link" data-gtm-label="${link.title} > ${link.title} overview"><span class="megamenu__overview-label">${link.title} overview</span></a>
@@ -136,9 +172,13 @@ const headerRenderer = ({ showGlobalHeader, hasLocalSite, siteDomain, siteName, 
                     </div>
                   </div>
                 </div>
-              ` : ''}
+              `
+                  : ""
+              }
             </li>
-          `).join('')}
+          `,
+            )
+            .join("")}
         </ul>
       </nav>
     </div>
@@ -150,16 +190,22 @@ const headerRenderer = ({ showGlobalHeader, hasLocalSite, siteDomain, siteName, 
   </div>
 
   <nav class="slide-menu global-mobile-nav" id="global-mobile-nav" aria-label="primary navigation mobile">
-    ${!showGlobalHeader ? `
+    ${
+      !showGlobalHeader
+        ? `
       <div class="uq-site-header__title-container">
         <div class="uq-site-header__title-container__left">
             <a href="/" class="uq-site-header__title">${siteName}</a>
         </div>
       </div>`
-    : ''}
+        : ""
+    }
     <ul>
-        ${showGlobalHeader
-          ? primaryLinks.map(link => `
+        ${
+          showGlobalHeader
+            ? primaryLinks
+                .map(
+                  (link) => `
             <li class="uq-header__newglobal-nav-item" data-gtm-category="Primary header">
               <a class="uq-header__newglobal-nav-link slide-menu__control" href="${link.href}">${link.title}</a>
                 <ul>
@@ -168,15 +214,21 @@ const headerRenderer = ({ showGlobalHeader, hasLocalSite, siteDomain, siteName, 
                   </li>
                   ${renderMobileNav(link.columns, link.title)}
                 </ul>
-            </li>`).join('')
-          : ``
+            </li>`,
+                )
+                .join("")
+            : ``
         }
 
-      ${secondaryLinks.map(link => `
+      ${secondaryLinks
+        .map(
+          (link) => `
         <li class="uq-header__nav-secondary-item" data-gtm-category="Secondary header">
           <a class="uq-header__nav-secondary-link" href="${link.href}">${link.title}</a>
         </li>
-      `).join('')}
+      `,
+        )
+        .join("")}
     </ul>
   </nav>
 
@@ -185,11 +237,15 @@ const headerRenderer = ({ showGlobalHeader, hasLocalSite, siteDomain, siteName, 
   <div class="uq-header__nav-secondary">
     <nav class="uq-header__nav-secondary-container">
       <ul class="uq-header__nav-secondary-list">
-        ${secondaryLinks.map(link => `
+        ${secondaryLinks
+          .map(
+            (link) => `
           <li class="uq-header__nav-secondary-item" data-gtm-category="Secondary header">
             <a href="${link.href}" class="uq-header__nav-secondary-link" data-gtm-label="${link.title}">${link.title}</a>
           </li>
-        `).join('')}
+        `,
+          )
+          .join("")}
       </ul>
     </nav>
   </div>
@@ -204,15 +260,13 @@ const headerPlayFunction = ({ canvasElement }) => {
 
   const menuLeftElem = headerElem.querySelector("#global-mobile-nav");
   // Assuming SlideMenu is imported or available globally from "./slide-menu.js"
-  const menuLeft = new SlideMenu(menuLeftElem, { 
+  const menuLeft = new SlideMenu(menuLeftElem, {
     position: "left",
     submenuLinkAfter: " ",
     backLinkBefore: " ",
   });
 
-  const searchToggle = headerElem.querySelector(
-    ".nav-primary__search-toggle",
-  );
+  const searchToggle = headerElem.querySelector(".nav-primary__search-toggle");
   searchToggle.addEventListener("click", () => {
     menuLeft.close();
   });
@@ -247,17 +301,17 @@ const headerPlayFunction = ({ canvasElement }) => {
 export const Default = {
   // The 'render' property replaces the Template.bind({}); pattern
   render: headerRenderer,
-  
+
   // The 'args' property replaces Default.args = { ... }
   args: {
     showGlobalHeader: true,
     hasLocalSite: true,
-    siteDomain: 'https://uq.edu.au',
-    siteName: 'Your Site Name',
+    siteDomain: "https://uq.edu.au",
+    siteName: "Your Site Name",
     primaryLinks: primaryLinks, // Use imported data
     secondaryLinks: secondaryLinks, // Use imported data
   },
-  
+
   // The 'play' property replaces Default.play = ...
   play: headerPlayFunction,
 };
@@ -266,13 +320,13 @@ export const Default = {
 export const WithoutMegaMenu = {
   // Re-use the same renderer function
   render: headerRenderer,
-  
+
   // Inherit args from the default story and override the necessary one
   args: {
-    ...Default.args, 
+    ...Default.args,
     showGlobalHeader: false,
   },
-  
+
   // Re-use the same play function
   play: headerPlayFunction,
 };

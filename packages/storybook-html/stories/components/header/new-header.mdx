@@ -1,0 +1,25 @@
+import { Meta, Story, Canvas, Controls } from "@storybook/blocks";
+import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
+import * as NewHeaderStories from "./new-header.stories";
+import { background } from "@storybook/theming";
+
+<Meta of={NewHeaderStories} />
+
+# Global header
+
+<StatusBadge.Stable />
+
+<StatusBadge.Stable />
+
+## Overview
+
+<Canvas
+  of={NewHeaderStories.WithoutMegaMenu} 
+  story={{
+    autoplay: true,
+    height: "200px",
+  }}
+/>
+
+<Controls of={NewHeaderStories.WithoutMegaMenu} />
+

@@ -9,7 +9,6 @@ import * as PillListStories from "../../components/pill/list/pill-list.stories";
 import * as SearchInputStories from "../../components/search-input/search-input.stories";
 import { searchInput } from "@uqds/form/src/js/main";
 
-
 const { Level2: Level2Hero } = storyRenderer(HeroStories);
 const { NewsExample } = storyRenderer(SidebarRightStories);
 const { Text: Card } = storyRenderer(CardStories);

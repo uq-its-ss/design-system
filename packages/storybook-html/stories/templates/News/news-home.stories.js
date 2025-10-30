@@ -1,4 +1,4 @@
-import { Header } from "../../components/header/header.stories";
+import { Default as Header } from "../../components/header/header.stories";
 import { footer } from "../../components/footer/footer.stories";
 import { Breadcrumb } from "../../components/breadcrumb/breadcrumb.stories";
 import * as HeroStories from "../../components/hero/hero.stories";
@@ -8,6 +8,7 @@ import { storyRenderer } from "../../../lib/storyRenderer";
 import * as PillListStories from "../../components/pill/list/pill-list.stories";
 import * as SearchInputStories from "../../components/search-input/search-input.stories";
 import { searchInput } from "@uqds/form/src/js/main";
+
 
 const { Level2: Level2Hero } = storyRenderer(HeroStories);
 const { NewsExample } = storyRenderer(SidebarRightStories);
@@ -37,7 +38,7 @@ export const Home = {
     searchInput(search);
   },
   render: ({ showGrid }) => `
-${Header.render()}
+${Header.render(Header.args)}
 ${Breadcrumb.render()}
 ${Level2Hero({ title: "News", description: "Get the latest from UQ News.", image: null })}
 ${NewsExample()}

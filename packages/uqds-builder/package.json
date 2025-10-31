@@ -1,6 +1,6 @@
 {
   "name": "uqds-builder",
-  "version": "4.0.5",
+  "version": "4.0.6-alpha.0",
   "description": "Render style kits for UQ clients",
   "private": true,
   "author": {
@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "@uqds/accordion": "^7.0.2",
-    "@uqds/acknowledgement": "^0.1.1",
+    "@uqds/acknowledgement": "^0.1.2-alpha.0",
     "@uqds/alert": "^7.0.3",
     "@uqds/blockquote": "^6.0.0",
     "@uqds/body": "^4.0.0",
@@ -38,12 +38,12 @@
     "@uqds/button": "^4.0.0",
     "@uqds/card": "^4.0.2",
     "@uqds/core": "^5.0.0",
-    "@uqds/footer": "^7.0.3",
+    "@uqds/footer": "^7.0.4-alpha.0",
     "@uqds/footer-legacy": "^4.0.0",
     "@uqds/form": "^4.0.2",
     "@uqds/grid": "^4.0.0",
     "@uqds/grid-menu": "^4.0.2",
-    "@uqds/header": "^7.0.3",
+    "@uqds/header": "^7.0.4-alpha.0",
     "@uqds/header-legacy": "^4.0.2",
     "@uqds/hero": "^7.0.0",
     "@uqds/icon": "^4.0.2",
@@ -60,7 +60,7 @@
     "@uqds/progression": "^4.0.0",
     "@uqds/sections": "^4.0.1",
     "@uqds/side-nav": "^4.0.2",
-    "@uqds/site-header": "^7.0.2",
+    "@uqds/site-header": "^7.0.3-alpha.0",
     "@uqds/social": "^6.0.0",
     "@uqds/table": "^4.0.0",
     "@uqds/tabs": "^4.0.0"

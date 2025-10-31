@@ -4,7 +4,7 @@
 @use "global" as *;
 
 .uq-header {
-  background: core.$purple-500; //linear-gradient(90deg, $uq-purple 0%, 87%, #962A8B 100%);
+  background: core.$purple-500; // linear-gradient(90deg, $uq-purple 0%, 87%, #962A8B 100%);
   display: grid;
   align-items: center;
   grid-template-columns: auto;

@@ -26,6 +26,10 @@
     "src/*",
     "dist/*"
   ],
+  "exports": {
+    "./src/scss/*": "./src/scss/*"
+  },
+  "style": "dist/css/main.css",
   "scripts": {
     "prepare": "gulp -f ../../gulpfile.js --cwd=. prepare"
   },

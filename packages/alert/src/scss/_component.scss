@@ -12,6 +12,10 @@
   line-height: core.$line-height;
   position: relative;
 
+  *:first-child {
+    margin-top: 0;
+  }
+
   &__container {
     margin: 0 auto;
 

@@ -8,8 +8,8 @@ import "./slide-menu.js";
 import { header } from "@uqds/header/src/js/main";
 
 // import HTML template strings
-import HeaderInterimHTML from "./header-interim.html";
-import HeaderHTML from "./header.html";
+import HeaderInterimHTML from "./header-interim.html?raw";
+import HeaderHTML from "./header.html?raw";
 
 export default {
   title: "Components/Header",

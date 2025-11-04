@@ -2,7 +2,7 @@
 import "./footer.scss";
 
 // import HTML template strings
-import footerHTML from "./footer.html";
+import footerHTML from "./footer.html?raw";
 
 export default {
   title: "Deprecated/Footer",

@@ -2,9 +2,9 @@
 import "./loading-spinner.scss";
 
 // import HTML template strings
-import loadingSpinnerHTML from "./loading-spinner.html";
-import loadingSpinnerLightHTML from "./loading-spinner-light.html";
-import loadingSpinnerSmallHTML from "./loading-spinner-small.html";
+import loadingSpinnerHTML from "./loading-spinner.html?raw";
+import loadingSpinnerLightHTML from "./loading-spinner-light.html?raw";
+import loadingSpinnerSmallHTML from "./loading-spinner-small.html?raw";
 
 export default {
   title: "Components/Loading spinner",

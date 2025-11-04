@@ -27,7 +27,6 @@ const preview = {
       page: DocsPage,
       toc: true, // 👈 Enables the table of contents
     },
-    actions: { argTypesRegex: "^on[A-Z].*" },
     controls: {
       matchers: {
         color: /(background|color)$/i,
@@ -71,5 +70,7 @@ const preview = {
       },
     },
   },
+
+  tags: ["autodocs"]
 };
 export default preview;

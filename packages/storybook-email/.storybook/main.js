@@ -26,8 +26,8 @@ const config = {
   },
 
   docs: {
-    autodocs: true
-  }
+    autodocs: true,
+  },
 };
 
 /**

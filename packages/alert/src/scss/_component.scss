@@ -12,16 +12,16 @@
   line-height: core.$line-height;
   position: relative;
 
-  *:first-child {
+  .uq-alert__message > *:first-child {
     margin-top: 0;
   }
 
-  h1:first-child,
-  h2:first-child,
-  h3:first-child,
-  h4:first-child,
-  h5:first-child,
-  h6:first-child {
+  .uq-alert__message > h1:first-child,
+  .uq-alert__message > h2:first-child,
+  .uq-alert__message > h3:first-child,
+  .uq-alert__message > h4:first-child,
+  .uq-alert__message > h5:first-child,
+  .uq-alert__message > h6:first-child {
     line-height: 24px;
   }
 

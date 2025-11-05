@@ -77,6 +77,19 @@ export const alertWithHeading = {
     <div class="uq-alert uq-alert--info" role="alert">
       <div class="uq-alert__container">
         <div class="uq-alert__message">
+          <h1>Heading 1</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <a href="#" title="Link" class="uq-button--inline">Link</a>
+        </div>
+        <button class="uq-alert__close">close</button>
+      </div>
+    </div>
+
+    <br />
+    
+    <div class="uq-alert uq-alert--info" role="alert">
+      <div class="uq-alert__container">
+        <div class="uq-alert__message">
           <h2>Heading 2</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           <a href="#" title="Link" class="uq-button--inline">Link</a>

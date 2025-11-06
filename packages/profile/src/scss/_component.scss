@@ -1,0 +1,68 @@
+@use "@uqds/core/src/scss/global" as core;
+@use "global" as *;
+
+.uq-profile {
+  display: flex;
+  flex-direction: row;
+  gap: core.$space-l;
+}
+.uq-profile__content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: core.$space-m;
+
+  :first-child {
+    margin-top: core.$space-none;
+  }
+  :last-child {
+    margin-bottom: core.$space-none;
+  }
+}
+.uq-profile__title {
+  font-size: core.$font-size-xxl;
+  font-weight: core.$font-weight-medium;
+  margin: core.$space-none;
+}
+.uq-profile__image {
+  order: -1;
+}
+
+.uq-staff-listing {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.generic-grid {
+  /* 1. Establish the container as a CSS Grid */
+  display: grid;
+
+  /* 2. Define the minimum width for each column and the auto-responsive behavior */
+  grid-template-columns: repeat(auto-fit, minmax(317px, 1fr));
+
+  /* Optional: Add spacing between grid items */
+  gap: core.$space-l;
+}
+@media #{core.$screen-lg-up} {
+  .generic-grid {
+    gap: core.$space-xl;
+  }
+}
+.generic-grid--2x {
+  grid-template-columns: repeat(auto-fit, minmax(317px, 1fr 1fr));
+}
+@media (min-width: 666px) {
+  .generic-grid--2x {
+    /* Explicitly set to 2 columns when there's enough room */
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.generic-grid > * {
+  /* Ensure the item doesn't shrink smaller than the min width (317px) defined in the grid-template-columns */
+  min-width: 317px;
+}

@@ -1,0 +1,27 @@
+import { Meta, Story, Canvas, Controls, Source } from "@storybook/blocks";
+import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
+import * as avatarStories from "./avatar.stories";
+
+<Meta of={avatarStories} />
+
+# Avatar
+
+<StatusBadge.Stable />
+
+<StatusBadge.StableDoc />
+
+<a href="https://github.com/uq-its-ss/design-system/issues" target="_blank">
+  Check for open issues
+</a>
+
+## Overview
+
+An avatar is a component that displays a user's picture, with a fallback to a default image.
+
+### Avatar
+
+An avatar using a link tag.
+
+<Canvas of={avatarStories.avatar} />
+<Controls of={avatarStories.avatar} />
+<Source of={avatarStories.avatar} />

@@ -1,4 +1,4 @@
-import { Header } from "../../components/header/header.stories";
+import { Default as Header } from "../../components/header/header.stories";
 import { footer } from "../../components/footer/footer.stories";
 import { Breadcrumb } from "../../components/breadcrumb/breadcrumb.stories";
 import * as HeroStories from "../../components/hero/hero.stories";
@@ -37,7 +37,7 @@ export const Home = {
     searchInput(search);
   },
   render: ({ showGrid }) => `
-${Header.render()}
+${Header.render(Header.args)}
 ${Breadcrumb.render()}
 ${Level2Hero({ title: "News", description: "Get the latest from UQ News.", image: null })}
 ${NewsExample()}

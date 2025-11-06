@@ -1,4 +1,4 @@
-import { Header } from "../../components/header/header.stories";
+import { Default as Header } from "../../components/header/header.stories";
 import { footer } from "../../components/footer/footer.stories";
 import { Breadcrumb } from "../../components/breadcrumb/breadcrumb.stories";
 import * as CardStories from "../../components/card/card.stories";
@@ -57,7 +57,7 @@ export const Article = {
     imageCarousel(carousel);
   },
   render: ({ showGrid }) => `
-${Header.render()}
+${Header.render(Header.args)}
 ${Breadcrumb.render()}
 <div class="uq-section">
   <div class="uq-container">

@@ -14,10 +14,10 @@ First install the React package.
 npm i @uqds/react
 ```
 
-## CSS
+## Global CSS
 
-CSS styles for all components are bundled into a single CSS import you'll need to add to your
-project globally.
+Include Global CSS once for a whole project. Component CSS is handled with
+CSS Modules.
 
 ### PostCSS
 
@@ -25,22 +25,10 @@ project globally.
 @import "@uqds/react";
 ```
 
-### Sass
-
-```css
-@use "@uqds/react/src/scss/main" as react;
-```
-
 ### JS
 
 ```js
-import "design-system/packages/react/dist/css/main.css";
-```
-
-Alternatively individual components can be imported from the component packages, for example.
-
-```css
-@import "@uqds/icon";
+import "@uqds/react/dist/main.css";
 ```
 
 ## Component usage

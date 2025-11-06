@@ -1,4 +1,4 @@
-import "@uqds/react/src/scss/main.scss";
+import "@uqds/react/src/jsx/global.scss";
 import "../../storybook-html/.storybook/preview.scss";
 
 /** @type { import('@storybook/react').Preview } */

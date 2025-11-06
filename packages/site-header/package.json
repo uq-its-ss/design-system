@@ -1,6 +1,6 @@
 {
   "name": "@uqds/site-header",
-  "version": "7.0.3-alpha.0",
+  "version": "7.0.3",
   "description": "Site header (title, utility area, and navigation)",
   "keywords": [
     "uqds",

@@ -1,6 +1,6 @@
 {
   "name": "@uqds/profile",
-  "version": "1.0.1-alpha.0",
+  "version": "1.0.1",
   "description": "The profile component package",
   "keywords": [
     "uqds",
@@ -44,7 +44,7 @@
     "url": "https://github.com/uq-its-ss/design-system/issues"
   },
   "dependencies": {
-    "@uqds/avatar": "^1.0.1-alpha.0",
+    "@uqds/avatar": "^1.0.1",
     "@uqds/core": "^5.0.0"
   }
 }

@@ -34,9 +34,9 @@ export const Light = {
   args: {
     light: true,
   },
-  parameters: {
+  globals: {
     backgrounds: {
-      default: "UQ purple",
-    },
+      value: "uq_purple"
+    }
   },
 };

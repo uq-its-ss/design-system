@@ -10,15 +10,20 @@ import headerNoLocalSearchHTML from "./header_no-local-search.html?raw";
 
 export default {
   title: "Deprecated/Header",
+
   parameters: {
     layout: "fullscreen",
-    backgrounds: {
-      default: "UQ Neutral 1",
-    },
+
     previewTabs: {
       canvas: { hidden: false },
-    },
+    }
   },
+
+  globals: {
+    backgrounds: {
+      value: "uq_neutral_1"
+    }
+  }
 };
 
 export const header = {

@@ -2,16 +2,21 @@ import "./uq-maps.scss";
 
 export default {
   title: "Deliverables/UQ Maps/5 Slide drawer",
+
   parameters: {
     layout: "fullscreen",
+
     //viewMode: 'story',
     previewTabs: {
       canvas: { hidden: false },
-    },
-    backgrounds: {
-      default: "Diagonal stripes",
-    },
+    }
   },
+
+  globals: {
+    backgrounds: {
+      value: "diagonal_stripes"
+    }
+  }
 };
 
 export const expanded = {

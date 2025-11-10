@@ -5,27 +5,34 @@ import "./uq-maps.scss";
 
 export default {
   title: "Deliverables/UQ Maps/2 Search field",
+
   parameters: {
     layout: "fullscreen",
     previewTabs: {
       canvas: { hidden: false },
     },
     backgrounds: {
-      values: [
-        {
+      options: {
+        static_map: {
           name: "Static map",
           value:
             '#D7D1CC url("images/app-maps/map-sample-bg.jpg") center top / 1920px 969px repeat',
         },
-        {
+
+        diagonal_stripes: {
           name: "Diagonal stripes",
           value:
             "repeating-linear-gradient(45deg, #efedeb, #efedeb 10px, #f7f6f5 10px, #f7f6f5 20px)",
-        },
-      ],
-      default: "Static map",
+        }
+      }
     },
   },
+
+  globals: {
+    backgrounds: {
+      value: "static_map"
+    }
+  }
 };
 
 export const searchField = {

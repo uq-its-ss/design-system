@@ -10,7 +10,7 @@ const config = {
   addons: [
     getAbsolutePath("@storybook/addon-a11y"),
     getAbsolutePath("@storybook/addon-links"),
-    getAbsolutePath("@storybook/addon-docs")
+    getAbsolutePath("@storybook/addon-docs"),
   ],
 
   staticDirs: ["../public"],
@@ -106,7 +106,7 @@ const config = {
       },
       // Add other compositions if needed
     };
-  }
+  },
 };
 
 /**

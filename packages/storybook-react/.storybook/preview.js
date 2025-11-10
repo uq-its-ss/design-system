@@ -6,7 +6,7 @@ const preview = {
   parameters: {
     backgrounds: {
       options: {
-        uq_purple: { name: "UQ purple", value: "#51247a" }
+        uq_purple: { name: "UQ purple", value: "#51247a" },
       },
     },
   },

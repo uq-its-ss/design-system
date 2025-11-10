@@ -10,7 +10,7 @@ const config = {
   addons: [
     getAbsolutePath("@storybook/addon-a11y"),
     getAbsolutePath("@storybook/addon-links"),
-    getAbsolutePath("@storybook/addon-docs")
+    getAbsolutePath("@storybook/addon-docs"),
   ],
 
   staticDirs: ["../../storybook-html/public"],
@@ -22,7 +22,7 @@ const config = {
 
   typescript: {
     reactDocgen: "react-docgen-typescript",
-  }
+  },
 };
 export default config;
 

@@ -10,7 +10,7 @@ const config = {
   addons: [
     getAbsolutePath("@storybook/addon-a11y"),
     getAbsolutePath("@storybook/addon-links"),
-    getAbsolutePath("@storybook/addon-docs")
+    getAbsolutePath("@storybook/addon-docs"),
   ],
 
   features: {
@@ -21,7 +21,7 @@ const config = {
   framework: {
     name: getAbsolutePath("@storybook/html-vite"),
     options: {},
-  }
+  },
 };
 
 /**

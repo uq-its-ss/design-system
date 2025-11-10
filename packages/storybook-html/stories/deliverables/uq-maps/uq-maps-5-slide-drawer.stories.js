@@ -9,14 +9,14 @@ export default {
     //viewMode: 'story',
     previewTabs: {
       canvas: { hidden: false },
-    }
+    },
   },
 
   globals: {
     backgrounds: {
-      value: "diagonal_stripes"
-    }
-  }
+      value: "diagonal_stripes",
+    },
+  },
 };
 
 export const expanded = {

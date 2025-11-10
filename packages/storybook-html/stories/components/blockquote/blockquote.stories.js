@@ -36,7 +36,7 @@ export const Light = {
   },
   globals: {
     backgrounds: {
-      value: "uq_purple"
-    }
+      value: "uq_purple",
+    },
   },
 };

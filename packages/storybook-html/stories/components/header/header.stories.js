@@ -19,14 +19,14 @@ export default {
 
     previewTabs: {
       canvas: { hidden: false },
-    }
+    },
   },
 
   globals: {
     backgrounds: {
-      value: "uq_neutral_1"
-    }
-  }
+      value: "uq_neutral_1",
+    },
+  },
 };
 
 export const HeaderInterim = {
@@ -168,8 +168,8 @@ export const searchGlobal = {
 
   globals: {
     backgrounds: {
-      value: "uq_purple"
-    }
+      value: "uq_purple",
+    },
   },
 };
 
@@ -205,12 +205,12 @@ export const searchLocal = {
   parameters: {
     docs: {
       inlineStories: false,
-    }
+    },
   },
 
   globals: {
     backgrounds: {
-      value: "uq_purple"
-    }
-  }
+      value: "uq_purple",
+    },
+  },
 };

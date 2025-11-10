@@ -40,16 +40,16 @@ export const loadingSpinnerLight = {
         purple: {
           name: "Purple",
           value: "#51247A",
-        }
-      }
+        },
+      },
     },
   },
 
   globals: {
     backgrounds: {
-      value: "purple"
-    }
-  }
+      value: "purple",
+    },
+  },
 };
 
 export const loadingSpinnerSmall = {

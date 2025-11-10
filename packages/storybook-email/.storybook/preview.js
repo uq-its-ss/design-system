@@ -34,7 +34,7 @@ const preview = {
           name: "Diagonal stripes",
           value:
             "repeating-linear-gradient(45deg, #efedeb, #efedeb 10px, #f7f6f5 10px, #f7f6f5 20px)",
-        }
+        },
       },
     },
     options: {

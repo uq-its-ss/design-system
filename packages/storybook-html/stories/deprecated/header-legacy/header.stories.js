@@ -16,14 +16,14 @@ export default {
 
     previewTabs: {
       canvas: { hidden: false },
-    }
+    },
   },
 
   globals: {
     backgrounds: {
-      value: "uq_neutral_1"
-    }
-  }
+      value: "uq_neutral_1",
+    },
+  },
 };
 
 export const header = {

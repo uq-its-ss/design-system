@@ -1,6 +1,6 @@
 {
   "name": "storybook-email",
-  "version": "1.0.2",
+  "version": "1.1.0-alpha.0",
   "description": "Storybook for EMAIL instance for uqds component development",
   "private": true,
   "main": "index.js",
@@ -24,6 +24,7 @@
     "@babel/preset-typescript": "^7.26.0",
     "@material/circular-progress": "^14.0.0",
     "@storybook/addon-a11y": "9.1.16",
+    "@storybook/addon-docs": "9.1.16",
     "@storybook/addon-links": "9.1.16",
     "@storybook/html-vite": "9.1.16",
     "@uqds/accordion": "^7.0.2",
@@ -41,8 +42,7 @@
     "ts-loader": "^9.5.1",
     "typescript": "^5.6.3",
     "underscore": "^1.13.7",
-    "zxcvbn": "^4.4.2",
-    "@storybook/addon-docs": "9.1.16"
+    "zxcvbn": "^4.4.2"
   },
   "dependencies": {
     "classnames": "^2.5.1"

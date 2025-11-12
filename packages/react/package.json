@@ -28,7 +28,8 @@
     ".": {
       "import": "./dist/main.js"
     },
-    "./src/jsx/*": "./src/jsx/*"
+    "./src/jsx/*": "./src/jsx/*",
+    "./css": "./dist/main.css"
   },
   "style": "dist/main.css",
   "main": "dist/main.js",

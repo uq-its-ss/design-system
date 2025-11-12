@@ -1,5 +1,5 @@
-import baddestForm from "./form-errors-kitchen-sink.html";
-import passwordResetHTML from "./examples/password-reset.html";
+import baddestForm from "./form-errors-kitchen-sink.html?raw";
+import passwordResetHTML from "./examples/password-reset.html?raw";
 
 // import scripts
 import passwordResetInit from "./examples/password-reset.es6";

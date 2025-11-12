@@ -1,6 +1,6 @@
 import { dirname, join } from "path";
 
-/** @type { import('@storybook/html-webpack5').StorybookConfig } */
+/** @type { import('@storybook/html-vite').StorybookConfig } */
 const config = {
   stories: [
     "../stories/**/*.mdx",
@@ -10,9 +10,7 @@ const config = {
   addons: [
     getAbsolutePath("@storybook/addon-a11y"),
     getAbsolutePath("@storybook/addon-links"),
-    getAbsolutePath("@storybook/addon-essentials"),
-    getAbsolutePath("@storybook/addon-interactions"),
-    getAbsolutePath("@storybook/addon-mdx-gfm"),
+    getAbsolutePath("@storybook/addon-docs"),
   ],
 
   staticDirs: ["../public"],
@@ -108,10 +106,6 @@ const config = {
       },
       // Add other compositions if needed
     };
-  },
-
-  docs: {
-    autodocs: false,
   },
 };
 

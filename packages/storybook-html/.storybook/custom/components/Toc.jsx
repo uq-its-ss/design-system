@@ -1,5 +1,5 @@
 import React from "react";
-import { H2 } from "@storybook/components";
+import { H2 } from "storybook/internal/components";
 import "./Toc.scss";
 
 const Toc = () => {

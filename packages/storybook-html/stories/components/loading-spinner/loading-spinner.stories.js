@@ -36,13 +36,18 @@ export const loadingSpinnerLight = {
       inlineStories: false,
     },
     backgrounds: {
-      default: "Purple",
-      values: [
-        {
+      options: {
+        purple: {
           name: "Purple",
           value: "#51247A",
         },
-      ],
+      },
+    },
+  },
+
+  globals: {
+    backgrounds: {
+      value: "purple",
     },
   },
 };

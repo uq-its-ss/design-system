@@ -9,13 +9,18 @@ import footerHTML from "./footer.html?raw";
 
 export default {
   title: "Components/Footer",
+
   parameters: {
     layout: "fullscreen",
-    backgrounds: {
-      default: "UQ Neutral 1",
-    },
+
     previewTabs: {
       canvas: { hidden: false },
+    },
+  },
+
+  globals: {
+    backgrounds: {
+      value: "uq_neutral_1",
     },
   },
 };

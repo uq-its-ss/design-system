@@ -1,4 +1,4 @@
-import { Meta, Canvas, Source } from "@storybook/addon-docs/blocks";
+import { Meta, Canvas, Controls } from "@storybook/addon-docs/blocks";
 import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
 import * as BlockquoteStories from "./blockquote.stories";
 
@@ -13,27 +13,19 @@ issues](https://github.com/uq-its-ss/design-system/issues)
 
 The blockquote component is used for quoting a passage of text or speech, the author, and the source.
 
-## Default
+### Default
 
 Displays the blockquote text, author, and source in purple text for use on light backgrounds such as white or light-grey.
 
-<Canvas of={BlockquoteStories.Blockquote} sourceState="none" />
+<Canvas of={BlockquoteStories.Blockquote} />
 
-<Source of={BlockquoteStories.Blockquote} />
-
-## Variants
+<Controls of={BlockquoteStories.Blockquote} />
 
 ### Light
 
 Changes the colour of the blockquote text to white so it can be used on darker backgrounds such as UQ purple.
 
-<Canvas
-  of={BlockquoteStories.Light}
-  sourceState="none"
-  className="sb-purple-background"
-/>
-
-<Source of={BlockquoteStories.Light} />
+<Canvas of={BlockquoteStories.Light} className="sb-purple-background" />
 
 ## How and when to use
 

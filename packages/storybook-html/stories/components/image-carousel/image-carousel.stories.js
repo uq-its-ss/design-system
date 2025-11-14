@@ -3,23 +3,43 @@ import { imageCarousel } from "@uqds/image/src/js/main";
 
 export default {
   title: "Components/Image Carousel",
-  argTypes: {},
-  args: {},
+  argTypes: {
+    caption: {
+      control: "text",
+    },
+    credit: {
+      control: "text",
+    },
+    image: {
+      control: "select",
+      options: [
+        "images/example-1.jpg",
+        "images/example-2.jpg",
+        "images/example-3.jpg",
+        "images/example-4.jpg",
+      ],
+    },
+  },
+  args: {
+    caption: "Dr Wenger diving in Queensland.",
+    credit: "Jane Smith",
+    image: "images/example-2.jpg",
+  },
   play: ({ canvasElement }) => {
     const carousel = canvasElement.querySelector(".uq-image-carousel");
     imageCarousel(carousel);
   },
-  render: ({ image, alt, caption, credit }) => {
+  render: ({ caption, credit, image }) => {
     return `
 <div class="uq-image-carousel swiper">
   <div class="uq-image-carousel__slides swiper-wrapper">
     <figure class="uq-image swiper-slide">
       <div class="uq-image__image">
-        <img src="images/example-2.jpg" alt="Example alt text 1" />
+        <img src="${image}" alt="Example alt text 1" />
       </div>
       <figcaption class="uq-image__caption">
-        <p>Dr Wenger diving in Queensland.</p>
-        <p>(Photo credit: Jane Smith)</p>
+        <p>${caption}</p>
+        <p>(Photo credit: ${credit})</p>
       </figcaption>
     </figure>
     <figure class="uq-image swiper-slide">

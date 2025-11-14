@@ -1,4 +1,4 @@
-import { Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
+import { Meta, Canvas, Controls } from "@storybook/addon-docs/blocks";
 import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
 import * as PaneStories from "./pane.stories";
 
@@ -6,35 +6,50 @@ import * as PaneStories from "./pane.stories";
 
 # Pane
 
-<StatusBadge.Development />
-<StatusBadge.DraftDoc />
+<StatusBadge.Stable /> <StatusBadge.StableDoc /> [Check for open
+issues](https://github.com/uq-its-ss/design-system/issues)
 
 ## Overview
 
+Like the card the pane is used to feature links to content. Unlike the card
+multiple links can be included with a pane.
+
 <Canvas of={PaneStories.Pane} />
 
-## Variants
+<Controls of={PaneStories.Pane} />
 
 ### Text
+
+A text only pane.
 
 <Canvas of={PaneStories.Text} />
 
 ### Text Shaded
 
+A text only pane suitable for use in sidebars and elsewhere.
+
 <Canvas of={PaneStories.TextShaded} />
 
 ### Image
+
+The standard pane with an image.
 
 <Canvas of={PaneStories.Image} />
 
 ### Icon
 
+The icon card can include any [UQ icon](?path=/docs/components-icon--docs).
+
 <Canvas of={PaneStories.Icon} />
 
 ### Icon Large
 
+More impactful icon variant.
+
 <Canvas of={PaneStories.IconLarge} />
 
 ### Icon Shaded
+
+A shaded icon variant.
 
 <Canvas of={PaneStories.IconShaded} />

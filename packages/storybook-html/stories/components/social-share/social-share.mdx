@@ -1,4 +1,4 @@
-import { Meta, Canvas, Source } from "@storybook/addon-docs/blocks";
+import { Meta, Canvas, Controls } from "@storybook/addon-docs/blocks";
 import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
 import * as SocialShareStories from "./social-share.stories";
 
@@ -6,21 +6,16 @@ import * as SocialShareStories from "./social-share.stories";
 
 # Social share
 
-<StatusBadge.Stable />
-
-<StatusBadge.StableDoc />
-
-<a href="https://github.com/uq-its-ss/design-system/issues" target="_blank">
-  Check for open issues
-</a>
+<StatusBadge.Stable /> <StatusBadge.StableDoc /> [Check for open
+issues](https://github.com/uq-its-ss/design-system/issues)
 
 ## Overview
 
-A button that allows copying of a string of text to the users clipboard.
+Share links for social media services and a functioning copy to clipboard button.
 
 <Canvas of={SocialShareStories.SocialShare} story={{ autoplay: true }} />
 
-<Source of={SocialShareStories.SocialShare} />
+<Controls of={SocialShareStories.SocialShare} />
 
 ## How to use
 

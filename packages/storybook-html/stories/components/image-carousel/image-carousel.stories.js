@@ -1,4 +1,3 @@
-import "@uqds/image/src/scss/main.scss";
 import { imageCarousel } from "@uqds/image/src/js/main";
 
 export default {

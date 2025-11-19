@@ -1,7 +1,6 @@
-import { Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
+import { Meta, Canvas, Controls } from "@storybook/addon-docs/blocks";
 import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
 import * as PaginationStories from "./pagination.stories";
-import * as PaginationItemStories from "./paginationItem.stories";
 
 <Meta of={PaginationStories} />
 
@@ -19,17 +18,11 @@ import * as PaginationItemStories from "./paginationItem.stories";
 
 Pagination, also known as paging, is the process of dividing a document into discrete pages.
 
-### Default
-
-The default pager uses `<a>` tags.
+The default pager uses `<a>` tags, but can also use `<button>` tags.
 
 <Canvas of={PaginationStories.Pagination} />
 
-### With buttons
-
-Instead of `<a>` tags `<button>` tags can be used instead.
-
-<Canvas of={PaginationStories.AsButtons} />
+<Controls of={PaginationStories.Pagination} />
 
 ## Usage
 

@@ -112,6 +112,12 @@ export default {
       },
     },
   },
+
+  globals: {
+    backgrounds: {
+      value: "uq_neutral_1",
+    },
+  },
 };
 
 // --- Story Rendering Logic (The previous Template function, now the 'render' method) ---

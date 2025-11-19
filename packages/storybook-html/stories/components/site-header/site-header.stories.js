@@ -5,8 +5,8 @@ import "./site-header.scss";
 import siteHeaderNavigation from "@uqds/site-header/src/js/site-header-navigation";
 
 // import HTML template strings
-import siteHeaderWithSubnavHTML from "./site-header-with-subnav.html";
-import siteHeaderWithoutSubnavHTML from "./site-header-without-subnav.html";
+import siteHeaderWithSubnavHTML from "./site-header-with-subnav.html?raw";
+import siteHeaderWithoutSubnavHTML from "./site-header-without-subnav.html?raw";
 
 export default {
   title: "Components/Site header",

@@ -2,7 +2,7 @@
 import "./lists.scss";
 
 // import HTML template strings
-import listsHTML from "./lists.html";
+import listsHTML from "./lists.html?raw";
 
 export default {
   title: "Components/Lists",

@@ -2,17 +2,22 @@
 import "./footer.scss";
 
 // import HTML template strings
-import footerHTML from "./footer.html";
+import footerHTML from "./footer.html?raw";
 
 export default {
   title: "Deprecated/Footer",
+
   parameters: {
     layout: "fullscreen",
-    backgrounds: {
-      default: "UQ Neutral 1",
-    },
+
     previewTabs: {
       canvas: { hidden: false },
+    },
+  },
+
+  globals: {
+    backgrounds: {
+      value: "uq_neutral_1",
     },
   },
 };

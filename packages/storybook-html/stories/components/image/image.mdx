@@ -1,4 +1,4 @@
-import { Meta, Canvas, Source } from "@storybook/addon-docs/blocks";
+import { Meta, Canvas, Controls } from "@storybook/addon-docs/blocks";
 import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
 import * as ImageStories from "./image.stories";
 
@@ -17,7 +17,7 @@ The image is locked at a 1.5:1 aspect ratio, except for larger containers where 
 
 <Canvas of={ImageStories.Image} sourceState="none" />
 
-<Source of={ImageStories.Image} />
+<Controls of={ImageStories.Image} />
 
 ## How and when to use
 

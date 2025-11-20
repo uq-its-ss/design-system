@@ -1,18 +1,33 @@
 import { breadcrumb } from "@uqds/breadcrumb/src/js/main";
-import "@uqds/layout/src/scss/main.scss";
-import "@uqds/breadcrumb/src/scss/main.scss";
 
 export default {
   title: "Components/Breadcrumb",
-  parameters: {
-    previewTabs: {
-      canvas: { hidden: false },
+  argTypes: {
+    showLevels: {
+      control: "number",
     },
+    levelOne: "text",
+    levelTwo: "text",
+    levelThree: "text",
+    levelFour: "text",
+    currentPage: "text",
   },
-};
-
-export const Breadcrumb = {
-  render: () => `
+  args: {
+    showLevels: 4,
+    levelOne: "Level one",
+    levelTwo: "Level two",
+    levelThree: "Level three",
+    levelFour: "Level four",
+    currentPage: "Current page",
+  },
+  render: ({
+    showLevels,
+    levelOne,
+    levelTwo,
+    levelThree,
+    levelFour,
+    currentPage,
+  }) => `
 <div class="uq-breadcrumbs">
   <div class="uq-container uq-container--flex">
     <nav class="uq-breadcrumb" aria-label="Breadcrumb">
@@ -20,20 +35,40 @@ export const Breadcrumb = {
         <li class="uq-breadcrumb__item">
           <a class="uq-breadcrumb__link" title="UQ home" href="https://uq.edu.au">UQ home</a>
         </li>
+        ${
+          showLevels > 0
+            ? `
         <li class="uq-breadcrumb__item">
-          <a class="uq-breadcrumb__link" title="Level one" href="/information-and-services">Level one</a>
-        </li>
+          <a class="uq-breadcrumb__link" title="Level one" href="/information-and-services">${levelOne}</a>
+        </li>`
+            : ""
+        }
+        ${
+          showLevels > 1
+            ? `
         <li class="uq-breadcrumb__item">
-          <a class="uq-breadcrumb__link" title="Level two" href="/information-and-services/internet-and-wifi">Level two</a>
-        </li>
+          <a class="uq-breadcrumb__link" title="Level two" href="/information-and-services/internet-and-wifi">${levelTwo}</a>
+        </li>`
+            : ""
+        }
+        ${
+          showLevels > 2
+            ? `
         <li class="uq-breadcrumb__item">
-          <a class="uq-breadcrumb__link" title="Bachelor of Business with a Major in Management or Finance" href="#">Bachelor of Business with a Major in Management or Finance</a>
-        </li>
+          <a class="uq-breadcrumb__link" title="Bachelor of Business with a Major in Management or Finance" href="#">${levelThree}</a>
+        </li>`
+            : ""
+        }           
+        ${
+          showLevels > 3
+            ? `
         <li class="uq-breadcrumb__item">
-          <a class="uq-breadcrumb__link" title="Major Leadership and Management Science" href="#">Major Leadership and Management Science</a>
-        </li>
+          <a class="uq-breadcrumb__link" title="Major Leadership and Management Science" href="#">${levelFour}</a>
+        </li>`
+            : ""
+        }   
         <li class="uq-breadcrumb__item">
-          <a class="uq-breadcrumb__link" title="Current page" href="#">Current page</a>
+          <a class="uq-breadcrumb__link" title="Current page" href="#">${currentPage}</a>
         </li>
       </ol>
     </nav>
@@ -44,3 +79,5 @@ export const Breadcrumb = {
     if (breadcrumbs) new breadcrumb(breadcrumbs);
   },
 };
+
+export const Breadcrumb = {};

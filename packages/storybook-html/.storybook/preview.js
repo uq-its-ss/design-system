@@ -15,6 +15,7 @@ import "@uqds/form/src/scss/main.scss";
 import "@uqds/table/src/scss/main.scss";
 import "@uqds/social/src/scss/main.scss";
 import "@uqds/pagination/src/scss/main.scss";
+import "@uqds/breadcrumb/src/scss/main.scss";
 
 import "./preview.scss";
 

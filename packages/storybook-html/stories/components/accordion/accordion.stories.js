@@ -1,7 +1,6 @@
 import classNames from "classnames";
 import iconCatalog from "@uqds/icon";
 import { accordion } from "@uqds/accordion/src/js/main";
-import "@uqds/accordion/src/scss/main.scss";
 
 export default {
   title: "Components/Accordion",

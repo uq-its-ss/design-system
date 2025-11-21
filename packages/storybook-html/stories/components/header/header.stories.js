@@ -3,7 +3,7 @@ import "./header.scss";
 
 // import scripts
 import "./slide-menu.js";
-import { primaryLinks, secondaryLinks } from "./menuData.js"; // Import the menu data
+import { localLinks, primaryLinks, secondaryLinks } from "./menuData.js"; // Import the menu data
 import { header } from "@uqds/header/src/js/main"; // Import 'header' for UQ header JS functionality
 
 // Helper function to render the mega menu columns, groups, and children
@@ -36,28 +36,73 @@ const renderMegaMenu = (columns, parentTitle) => {
     .join("");
 };
 
+// helper function for recursive rendering of nested links
+const renderNestedLinks = (children, isRoot = false) => {
+  if (!children || children.length === 0) {
+    return "";
+  }
+
+  return children
+    .map((child) => {
+      // Check if the current child itself has nested children (e.g., third level)
+      const hasGrandchildren = child.children && child.children.length > 0;
+
+      let linkContent = `
+        <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+          <a href="${child.href}" class="${hasGrandchildren ? "uq-header__nav-mobile-audience-link slide-menu__control" : ""}">${child.title}</a>
+          ${
+            hasGrandchildren
+              ? `
+            <ul>
+              <li class="uq-header__nav-mobile-item">
+                <a class="uq-header__nav-mobile-audience-link" href="${child.href}">${child.title}</a>
+              </li>
+              ${renderNestedLinks(child.children)}
+            </ul>
+            `
+              : ""
+          }
+        </li>
+      `;
+
+      return linkContent;
+    })
+    .join("");
+};
+
 // Helper function to render the mobile navigation structure
-const renderMobileNav = (columns, parentTitle) => {
-  return columns
-    .map((column) =>
-      column.groups
-        .map(
-          (group) => `
-      <li>
-        <a href="#" class="global-mobile-nav__audience-link slide-menu__control">${group.heading}</a>
-        <ul>
-          ${group.children
-            .map(
-              (child) => `
-            <li><a href="${child.href}" data-gtm-label="${parentTitle} > ${child.title}">${child.title}</a></li>
-          `,
-            )
-            .join("")}
-        </ul>
+const renderMobileNav = (links) => {
+  return links
+    .map(
+      (link) => `
+      <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+        <a href="${link.href}" class="${link.columns ? "uq-header__nav-mobile-audience-link slide-menu__control" : ""}">${link.title}</a>
+        ${
+          link.columns
+            ? `
+          <ul class="uq-header__nav-mobile-list">
+            <li class="uq-header__nav-mobile-item">
+              <a class="uq-header__nav-mobile-link" href="${link.href}">${link.title}</a>
+            </li>
+            ${link.columns // Iterate over columns
+              .map((column) =>
+                column.groups
+                  .map(
+                    (
+                      group, // Iterate over groups in the column
+                    ) =>
+                      // Use the recursive helper to render all nested children
+                      renderNestedLinks(group.children),
+                  )
+                  .join(""),
+              )
+              .join("")}
+          </ul>
+          `
+            : ""
+        }
       </li>
     `,
-        )
-        .join(""),
     )
     .join("");
 };
@@ -94,6 +139,21 @@ export default {
       description:
         "Controls the visibility of the mega menu dropdowns for primary navigation items.",
     },
+    showLocalMobile: {
+      name: "Show Local Mobile Nav (overrides Primary)",
+      control: "boolean",
+      description:
+        "Controls the visibility of the local mobile nav menu, replacing the global primary nav on mobile.",
+    },
+    localLinks: {
+      name: "Local Navigation Links",
+      control: "object",
+      description:
+        "JSON object for the main navigation items and their mega menu structure.",
+      table: {
+        category: "navigation Links",
+      },
+    },
     primaryLinks: {
       name: "Primary Navigation Links",
       control: "object",
@@ -126,6 +186,8 @@ const headerRenderer = ({
   siteName,
   siteDomain,
   showGlobalHeader,
+  showLocalMobile,
+  localLinks,
   primaryLinks,
   secondaryLinks,
 }) => `
@@ -176,150 +238,50 @@ const headerRenderer = ({
     </div>
   </div>
 
-  <nav class="slide-menu global-mobile-nav" id="global-mobile-nav" aria-label="primary navigation mobile">
+  <nav class="slide-menu uq-header__nav-mobile ${showLocalMobile ? "uq-header__nav-mobile-local" : ""}" id="global-mobile-nav" aria-label="primary navigation mobile">
+    <ul class="uq-header__nav-mobile-list">
     ${
-      !showGlobalHeader
+      showLocalMobile
         ? `
-      <div class="uq-site-header__title-container">
-        <div class="uq-site-header__title-container__left">
-            <a href="/" class="uq-site-header__title">${siteName}</a>
-        </div>
-      </div>`
-        : ""
-    }
-    <ul>
-    ${
-      !showGlobalHeader
-        ? `
-              <li data-gtm-category="Main navigation">
-        <a class="global-mobile-nav__audience-link slide-menu__control" href="#">Study</a>
-        <ul>
-          <li>
-            <a href="/study/programs">Find a program</a>
-          </li>
-          <li>
-            <a href="/study/agriculture-environment">Agriculture and Environment</a>
-          </li>
-          <li>
-            <a href="/study/architecture-planning">Architecture and Planning</a>
-          </li>
-          <li>
-            <a href="/study/arts-humanities-social-sciences">Arts, Humanities and Social Sciences</a>
-          </li>
-          <li>
-            <a href="/study/business-economics">Business and Economics</a>
-          </li>
-          <li>
-            <a href="/study/education">Education</a>
-          </li>
-          <li>
-            <a href="/study/engineering-computing">Engineering and Computing</a>
-          </li>
-          <li>
-            <a href="/study/health-behavioural-sciences">Health and Behavioural Sciences</a>
-          </li>
-          <li>
-            <a href="/study/law">Law</a>
-          </li>
-          <li>
-            <a href="/study/medicine">Medicine</a>
-          </li>
-          <li>
-            <a href="/study/science-mathematics">Science and Mathematics</a>
-          </li>
-          <li>
-            <a href="/study/micromasters-uqx">MicroMasters and UQx</a>
-          </li>
-        </ul>
-      </li>
-      <li data-gtm-category="Main navigation">
-        <a class="global-mobile-nav__audience-link slide-menu__control" href="/admissions" aria-haspopup="true" aria-expanded="false">Admissions</a>
-        <ul>
-          <li>
-            <a href="/admissions/undergraduate">Undergraduate</a>
-          </li>
-          <li>
-            <a href="/admissions/honours">Honours</a>
-          </li>
-          <li>
-            <a href="/admissions/postgraduate-coursework">Postgraduate coursework</a>
-          </li>
-          <li>
-            <a href="/admissions/higher-degree-research">Higher degree by research</a>
-          </li>
-          <li>
-            <a href="/admissions/cross-institutional-study">Cross-institutional study</a>
-          </li>
-          <li>
-            <a href="/admissions/non-award-study">Non-award study</a>
-          </li>
-          <li>
-            <a href="/admissions/doctor-medicine">Doctor of Medicine</a>
-          </li>
-          <li>
-            <a href="https://uq.edu.au/studyabroad/how-to-apply">Study abroad and incoming exchange</a>
-          </li>
-        </ul>
-      </li>
-      <li data-gtm-category="Main navigation">
-        <a class="global-mobile-nav__audience-link slide-menu__control" href="/university-life" aria-haspopup="true" aria-expanded="false">University life</a>
-        <ul>
-          <li>
-            <a href="/university-life/living-in-brisbane">Living in Brisbane</a>
-          </li>
-          <li>
-            <a href="/university-life/getting-prepared-to-come-to-australia">Getting prepared to come to Australia</a>
-          </li>
-          <li>
-            <a href="/university-life/campuses-research-sites">Campuses and research sites</a>
-          </li>
-          <li>
-            <a href="/university-life/campus-tours">Campus tours</a>
-          </li>
-        </ul>
-      </li>
-      <li data-gtm-category="Main navigation">
-        <a href="/events">Events</a>
-      </li>
-      <li data-gtm-category="Main navigation">
-        <a href="/stories">Stories</a>
-      </li>
-      <li data-gtm-category="Main navigation">
-        <a href="/contact-us">Contact</a>
-      </li>
+        <li class="uq-header__nav-mobile-item">
+          <a class="uq-header__nav-mobile-home" href="https://uq.edu.au">UQ home</a>
+        </li>
+        <li class="uq-header__nav-mobile-item">
+            <a class="is-active" href="/study">Study</a>
+        </li>
+        ${renderMobileNav(localLinks)}
         `
         : ""
     }
-    ${primaryLinks
-      .map(
-        (link) => `
-        <li class="uq-header__newglobal-nav-item" data-gtm-category="Primary header">
-            <a class="uq-header__newglobal-nav-link ${showGlobalHeader ? `slide-menu__control` : ""}" href="${link.href}">${link.title}</a>
-            ${
-              showGlobalHeader
-                ? `    
-            <ul>
-                <li>
-                <a href="${link.href}" data-gtm-label="${link.title} > ${link.title} overview">${link.title} overview</a>
-                </li>
-                ${renderMobileNav(link.columns, link.title)}
-            </ul>
-            `
-                : ""
-            }
-        </li>`,
-      )
-      .join("")}
+    
 
-    ${secondaryLinks
-      .map(
-        (link) => `
-        <li class="uq-header__nav-secondary-item" data-gtm-category="Secondary header">
-            <a class="uq-header__nav-secondary-link" href="${link.href}">${link.title}</a>
-        </li>
-    `,
-      )
-      .join("")}
+    ${
+      !showLocalMobile
+        ? `
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Secondary header">
+            <a class="uq-header__nav-mobile-primary" href="https://uq.edu.au">UQ home <span class="slide-menu__decorator"> </span></a>
+          </li>
+          ${primaryLinks
+            .map(
+              (link) => `
+              <li class="uq-header__nav-mobile-item" data-gtm-category="Primary header">
+                  <a class="uq-header__nav-mobile-primary" href="${link.href}">${link.title}</a>
+              </li>`,
+            )
+            .join("")}
+
+          ${secondaryLinks
+            .map(
+              (link) => `
+              <li class="uq-header__nav-mobile-secondary-item" data-gtm-category="Secondary header">
+                  <a class="uq-header__nav-mobile-secondary" href="${link.href}">${link.title}</a>
+              </li>
+          `,
+            )
+            .join("")}
+        `
+        : ""
+    }
     </ul>
   </nav>
 
@@ -344,6 +306,9 @@ const headerRenderer = ({
     <div class="uq-header__nav-secondary">
         <nav class="uq-header__nav-secondary-container">
         <ul class="uq-header__nav-secondary-list">
+            <li class="uq-header__nav-secondary-item" data-gtm-category="Secondary header">
+              <a class="uq-header__nav-secondary-link gtm-processed" href="https://www.uq.edu.au/">UQ home</a>
+            </li>
             ${secondaryLinks
               .map(
                 (link) => `
@@ -412,8 +377,10 @@ export const Default = {
   // The 'args' property replaces Default.args = { ... }
   args: {
     showGlobalHeader: true,
+    showLocalMobile: true,
     siteDomain: "https://uq.edu.au",
     siteName: "Your Site Name",
+    localLinks: localLinks, // Use imported data
     primaryLinks: primaryLinks, // Use imported data
     secondaryLinks: secondaryLinks, // Use imported data
   },

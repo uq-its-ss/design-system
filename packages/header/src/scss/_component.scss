@@ -627,8 +627,8 @@ body.no-scroll {
   }
 }
 
-// Slide mobile menu
-
+// Slide mobile menu (OLD SLIDE MENU)
+/*
 .slide-menu {
   width: 100%;
   max-width: 100%;
@@ -749,8 +749,8 @@ body.no-scroll {
       top: core.$space-xs;
     }
   }
-
-  /* Controls */
+*/
+/* Controls */ /*
   .controls {
     display: flex;
     margin-bottom: core.$space-m;
@@ -831,9 +831,9 @@ body.no-scroll {
     ));
   }
 }
-
+*/
 /* LOCAL SITE NAVIGATION MODIFIERS */
-
+/*
 .global-mobile-nav {
   .uq-site-header__title-container {
     margin: 0;
@@ -858,6 +858,293 @@ body.no-scroll {
 
 .uq-site-header__navigation-toggle {
   display: none;
+} 
+*/
+
+/* MOBILE MENU */
+
+.slide-menu {
+  width: 100%;
+  max-width: 100%;
+  background-color: #48206c;
+  height: calc(var(--app-height) - 4.3rem);
+  display: none;
+  box-sizing: border-box;
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(100%);
+  will-change: transform;
+  z-index: 1000;
+  position: fixed;
+  top: 4.3rem;
+  right: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #51247a;
+}
+
+@media (min-width: 64rem) {
+  .slide-menu {
+    display: none !important;
+  }
+}
+/* inserted by JS, allows back to work */
+.slide-menu .slide-menu__slider {
+  width: 100%;
+  transform: translateX(0);
+  transition: transform 0.3s ease-in-out;
+  will-change: transform;
+}
+
+.slide-menu ul {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+  background-color: #fff;
+}
+
+/* positions the submenus */
+.slide-menu ul ul {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  display: none;
+}
+
+/* redundant handled by a tag
+.slide-menu ul ul a {
+    padding: 1rem 3rem 1rem 3rem
+} */
+/* .slide-menu ul ul li:nth-of-type(2) a {
+    padding-left: 1.5rem;
+} */
+/* made redundant moved to a
+.slide-menu ul a {
+    display: block
+}*/
+
+.slide-menu li {
+  margin-bottom: 0;
+}
+
+/* Not needed any more 
+.slide-menu .slide-menu__control {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-weight: 500
+}
+    */
+
+/* Menu links */
+.slide-menu a {
+  display: block;
+  cursor: pointer;
+  padding: 1rem 3rem;
+  text-decoration: none;
+  font-size: 1rem;
+  color: #19151c;
+  position: relative;
+  font-weight: 400;
+}
+.slide-menu a:hover {
+  color: #19151c;
+  background-color: #f3f3f4;
+}
+/* returns the padding for Parent page link */
+.slide-menu ul li:nth-of-type(2) a {
+  padding-left: 1.5rem;
+}
+/* Back to previous menu section */
+.slide-menu .slide-menu__backlink {
+  font-weight: 500;
+}
+
+/* Back to previous menu section */
+.slide-menu .slide-menu__backlink::before {
+  content: "";
+  background-image: url("data:image/svg+xml,%3csvg viewBox=%270 0 24 24%27 fill=%27none%27 xmlns=%27http://www.w3.org/2000/svg%27%3e%3cpath d=%27m15 5-7 7 7 7%27 stroke=%27%23000%27 stroke-width=%271.5%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3e%3c/path%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  width: 1.5rem;
+  height: 1.5rem;
+  transform: translateY(50%);
+  position: absolute;
+  left: 1.25rem;
+  top: 0.25rem;
+}
+/* Child menu item */
+.slide-menu__decorator::before {
+  content: "";
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m10 17 5-5-5-5' stroke='%2351247a' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3e%3c/path%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  width: 1.5rem;
+  height: 1.5rem;
+  transform: translateY(50%);
+  position: absolute;
+  right: 1.5rem;
+  top: 0.25rem;
+}
+/* Controls Section is Removed 
+.slide-menu .controls {
+    display: flex;
+    margin-bottom: 1rem
+}
+*/
+
+/* Slide menu buttons not used
+.slide-menu .btn {
+    padding: .75rem 1.5rem;
+    flex: 1 0 auto;
+    font-size: 90%;
+    color: #51247a;
+    background-color: #fff;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    line-height: 1
+}
+
+.slide-menu .btn:first-of-type {
+    text-align: left
+}
+
+.slide-menu .btn:first-of-type:before {
+    content: "⮜ this";
+    margin-right: .5rem
+}
+
+.slide-menu .btn:last-of-type {
+    text-align: right
+}
+
+.slide-menu .btn:last-of-type:before {
+    content: "✕";
+    margin-right: .5rem
+} */
+
+.uq-header__nav-mobile-local {
+  background-color: #fff;
+}
+
+/* UQ Home back link  */
+.slide-menu .uq-header__nav-mobile-home {
+  padding-left: calc(3rem - 4px);
+  font-weight: 500;
+}
+.slide-menu .uq-header__nav-mobile-home::before {
+  content: "";
+  background: url("data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M20%2012L5%2012%22%20stroke%3D%22%2319151C%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3Cpath%20d%3D%22M10%206L4%2012L10%2018%22%20stroke%3D%22%2319151C%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  width: 1.5rem;
+  height: 1.5rem;
+  transform: translateY(50%);
+  position: absolute;
+  left: 1rem;
+  top: 0.25rem;
+}
+
+.slide-menu .uq-header__nav-mobile-secondary-item {
+  background-color: #48206c;
+}
+
+.slide-menu .uq-header__nav-mobile-secondary-item:hover {
+  background-color: #48206c;
+}
+
+.slide-menu .uq-header__nav-mobile-secondary {
+  color: #fff;
+  padding: 0.5rem 1.5rem;
+}
+
+.slide-menu .uq-header__nav-mobile-secondary:hover {
+  color: #48206c;
+  background-color: #fff;
+}
+
+/* convoluted way to target the first Secondary item and add space above, refine when better classes added */
+.slide-menu ul > li.uq-header__nav-mobile-secondary-item {
+  padding-top: 1rem;
+}
+/* convoluted way to target the first Secondary item and add space above, refine when better classes added */
+.slide-menu
+  ul
+  > li.uq-header__nav-mobile-secondary-item
+  ~ li.uq-header__nav-mobile-secondary-item {
+  padding-top: 0rem;
+}
+
+.slide-menu .uq-header__newglobal-nav-parent {
+  font-weight: 500;
+}
+
+.slide-menu .uq-header__nav-mobile-primary {
+  color: #fff;
+  padding: 1rem 1.5rem;
+  background-color: #51247a;
+  font-weight: 500;
+}
+
+.slide-menu .uq-header__nav-mobile-primary:hover {
+  color: #51247a;
+  background-color: #fff;
+}
+
+.slide-menu .uq-header__nav-mobile-primary .slide-menu__decorator::before {
+  content: "";
+  background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M4%2012L19%2012%22%20stroke%3D%22%23fff%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3Cpath%20d%3D%22M14%2018L20%2012L14%206%22%20stroke%3D%22%23fff%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E");
+}
+.slide-menu
+  .uq-header__nav-mobile-primary:hover
+  .slide-menu__decorator::before {
+  content: "";
+  background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M4%2012L19%2012%22%20stroke%3D%22%2351247a%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3Cpath%20d%3D%22M14%2018L20%2012L14%206%22%20stroke%3D%22%2351247a%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E");
+}
+/* Active state Calc function needs a glbal variable to allow targeting of active subitems */
+.slide-menu .is-active {
+  border-left: 6px solid #51247a;
+  padding-left: calc(1.5rem - 6px);
+  background-color: #f3f3f4;
+}
+.slide-menu ul ul .is-active {
+  padding-left: calc(3rem - 6px);
+}
+/* Remove these as site title is not used
+.uq-header__nav-mobile-audience-link .uq-site-header__title-container {
+    margin: 0;
+    padding: 1rem 1.5rem
+}
+
+.uq-header__nav-mobile-audience-link {
+    padding: 0;
+    font-size: 1rem;
+    font-weight: 500;
+    display: block
+}
+
+.uq-header__nav-mobile-audience-link:hover {
+    background: none
+}
+*/
+
+.uq-header__nav-mobile-audience-link {
+  font-weight: 500;
+}
+
+.uq-site-header__navigation-toggle {
+  display: none;
+}
+
+.admin-menu .slide-menu {
+  top: 7.5rem;
+}
+
+@media (min-width: 37.5rem) {
+  .admin-menu .slide-menu {
+    top: 6.15rem;
+  }
 }
 
 /* D7 overrides and hacks */

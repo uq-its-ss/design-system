@@ -10,7 +10,7 @@ import * as StoryCardStories from "../components/story-card/story-card.stories";
 import "@uqds/layout/src/scss/main.scss";
 import "@uqds/sections/src/scss/main.scss";
 
-const { Header } = storyRenderer(HeaderStories);
+const { Default: Header } = storyRenderer(HeaderStories);
 const { footer } = storyRenderer(FooterStories);
 const { Breadcrumb } = storyRenderer(BreadcrumbStories);
 const { Home: Hero } = storyRenderer(HeroStories);

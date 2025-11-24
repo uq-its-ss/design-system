@@ -49,7 +49,7 @@ const renderNestedLinks = (children, isRoot = false) => {
 
       let linkContent = `
         <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
-          <a href="${child.href}" class="${hasGrandchildren ? "uq-header__nav-mobile-audience-link slide-menu__control" : ""}">${child.title}</a>
+          <a href="${child.href}" class="${hasGrandchildren ? "uq-header__nav-mobile-audience-link slide-menu__control" : "uq-header__nav-mobile-link"}">${child.title}</a>
           ${
             hasGrandchildren
               ? `
@@ -76,7 +76,7 @@ const renderMobileNav = (links) => {
     .map(
       (link) => `
       <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
-        <a href="${link.href}" class="${link.columns ? "uq-header__nav-mobile-audience-link slide-menu__control" : ""}">${link.title}</a>
+        <a href="${link.href}" class="${link.columns ? "uq-header__nav-mobile-audience-link slide-menu__control" : "uq-header__nav-mobile-link"}">${link.title}</a>
         ${
           link.columns
             ? `
@@ -247,7 +247,7 @@ const headerRenderer = ({
           <a class="uq-header__nav-mobile-home" href="https://uq.edu.au">UQ home</a>
         </li>
         <li class="uq-header__nav-mobile-item">
-            <a class="is-active" href="/study">Study</a>
+            <a class="uq-header__nav-mobile-link is-active" href="/study">Study</a>
         </li>
         ${renderMobileNav(localLinks)}
         `

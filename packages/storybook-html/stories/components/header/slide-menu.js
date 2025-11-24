@@ -1050,7 +1050,17 @@
           t.addEventListener("click", (t) => {
             t.preventDefault();
           });
-          const n = t.textContent;
+          // Find the Grandparent UL to get the L1 title
+          const GrandparentUL = s(t.parentElement, ".uq-header__nav-mobile-list");
+    let n = t.textContent; // Fallback: default to Parent title
+
+    if (GrandparentUL) {
+      // The Grandparent link is reliably the first <li>'s <a> element in the root UL.
+      const L1TitleLink = GrandparentUL.querySelector("li:nth-child(2) a");
+      if (L1TitleLink) {
+        n = L1TitleLink.textContent; // Set n to the Grandparent title
+      }
+    }
           if ((this.addLinkDecorators(t), this.options.showBackLink)) {
             const { backLinkBefore: t, backLinkAfter: r } = this.options,
               o = document.createElement("a");

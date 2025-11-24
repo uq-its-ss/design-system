@@ -942,6 +942,9 @@
           e.forEach((t) => {
             (t.style.display = "block"), t.classList.add(u.CLASS_NAMES.active);
           });
+
+          // NEW LINE TO RESET SCROLL POSITION
+          this.menuElem.scrollTop = 0;
       }
       initEventHandlers() {
         Array.from(this.menuElem.querySelectorAll("a")).forEach((t) =>
@@ -1012,6 +1015,8 @@
         this.triggerEvent(o),
           (this.level = this.level + t),
           this.moveSlider(this.wrapperElem, n);
+          // NEW LINE TO RESET SCROLL POSITION
+          this.menuElem.scrollTop = 0;
       }
       moveSlider(t, e) {
         e.toString().includes("%") || (e += "%"),

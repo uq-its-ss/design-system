@@ -346,7 +346,8 @@ const headerPlayFunction = ({ canvasElement }) => {
   var slideMenuBackButtons = headerElem.querySelectorAll(
     ".slide-menu__backlink, .global-mobile-nav__audience-link",
   );
-
+  //this resets the scroll position of the menu when navigating back or to audience links.
+  // Is it replaced by new code in slide-menu.js `this.menuElem.scrollTop = 0;`
   Array.prototype.forEach.call(slideMenuBackButtons, function (el, i) {
     el.addEventListener("click", () => {
       menuLeftElem.scrollTop = 0;

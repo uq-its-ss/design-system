@@ -265,7 +265,7 @@ const headerRenderer = ({
             .map(
               (link) => `
               <li class="uq-header__nav-mobile-item" data-gtm-category="Primary header">
-                  <a class="uq-header__nav-mobile-primary" href="${link.href}">${link.title}</a>
+                  <a class="uq-header__nav-mobile-primary" href="${link.href}">${link.title} <span class="slide-menu__decorator"> </span></a>
               </li>`,
             )
             .join("")}

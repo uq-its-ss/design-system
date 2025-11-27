@@ -1,6 +1,8 @@
 @use "@uqds/core/src/scss/global" as core;
 @use "global" as *;
 
+@use "sass:map";
+
 $use-encapsulation: false !default;
 
 @mixin -text-primer {
@@ -312,6 +314,55 @@ $use-encapsulation: false !default;
     @include visually-hidden;
   }
 }
+
+//Padding utility
+@mixin padding($size) {
+  $value: map.get($padding-sizes, $size);
+
+  .padding--#{$size} {
+    padding: $value;
+  }
+
+  .padding--top-#{$size} {
+    padding-top: $value;
+  }
+
+  .padding--bottom-#{$size} {
+    padding-bottom: $value;
+  }
+
+  .padding--left-#{$size} {
+    padding-left: $value;
+  }
+
+  .padding--right-#{$size} {
+    padding-right: $value;
+  }
+}
+
+
+$padding-sizes: (
+  uuuuul: core.$space-uuuuul,
+  uuuul: core.$space-uuuul,
+  uuul: core.$space-uuul,
+  uul: core.$space-uul,
+  ul: core.$space-ul,
+  xxxxl: core.$space-xxxxl,
+  xxxl: core.$space-xxxl,
+  xxl: core.$space-xxl,
+  xl: core.$space-xl,
+  l: core.$space-l,
+  m: core.$space-m,
+  s: core.$space-s,
+  xs: core.$space-xs
+);
+
+
+
+@each $size, $value in $padding-sizes {
+  @include padding($size);
+}
+
 
 @if $use-encapsulation {
   .uq {

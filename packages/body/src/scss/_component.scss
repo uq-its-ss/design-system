@@ -317,7 +317,7 @@ $use-encapsulation: false !default;
 
 //Padding utility classes
 @mixin padding($size) {
-  $value: map.get($padding-sizes, $size);
+  $value: map.get($spacing-sizes, $size);
 
   .padding--#{$size} {
     padding: $value;
@@ -340,7 +340,32 @@ $use-encapsulation: false !default;
   }
 }
 
-$padding-sizes: (
+//Padding utility classes
+@mixin margin($size) {
+  $value: map.get($spacing-sizes, $size);
+
+  .margin--#{$size} {
+    margin: $value;
+  }
+
+  .margin--top-#{$size} {
+    margin-top: $value;
+  }
+
+  .margin--bottom-#{$size} {
+    margin-bottom: $value;
+  }
+
+  .margin--left-#{$size} {
+    margin-left: $value;
+  }
+
+  .margin--right-#{$size} {
+    margin-right: $value;
+  }
+}
+
+$spacing-sizes: (
   uuuuul: core.$space-uuuuul,
   uuuul: core.$space-uuuul,
   uuul: core.$space-uuul,
@@ -356,8 +381,12 @@ $padding-sizes: (
   xs: core.$space-xs,
 );
 
-@each $size, $value in $padding-sizes {
+@each $size, $value in $spacing-sizes {
   @include padding($size);
+}
+
+@each $size, $value in $spacing-sizes {
+  @include margin($size);
 }
 
 @if $use-encapsulation {

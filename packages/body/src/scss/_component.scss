@@ -315,7 +315,7 @@ $use-encapsulation: false !default;
   }
 }
 
-//Padding utility
+//Padding utility classes
 @mixin padding($size) {
   $value: map.get($padding-sizes, $size);
 
@@ -340,7 +340,6 @@ $use-encapsulation: false !default;
   }
 }
 
-
 $padding-sizes: (
   uuuuul: core.$space-uuuuul,
   uuuul: core.$space-uuuul,
@@ -354,15 +353,12 @@ $padding-sizes: (
   l: core.$space-l,
   m: core.$space-m,
   s: core.$space-s,
-  xs: core.$space-xs
+  xs: core.$space-xs,
 );
-
-
 
 @each $size, $value in $padding-sizes {
   @include padding($size);
 }
-
 
 @if $use-encapsulation {
   .uq {

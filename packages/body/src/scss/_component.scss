@@ -383,9 +383,6 @@ $spacing-sizes: (
 
 @each $size, $value in $spacing-sizes {
   @include padding($size);
-}
-
-@each $size, $value in $spacing-sizes {
   @include margin($size);
 }
 

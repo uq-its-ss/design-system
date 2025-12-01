@@ -182,7 +182,7 @@ export const backgroundColourUtils = {
 };
 
 export const visibilityUtils = {
-  render: () => `
+  render: () => ` 
     <div class="text--xl">
       <div>.hidden <span class="hidden">🕺</span></div>
       <div>.hidden--mobile-only <span class="hidden--mobile-only">🕺</span></div>

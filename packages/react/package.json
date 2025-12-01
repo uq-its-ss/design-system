@@ -1,6 +1,6 @@
 {
   "name": "@uqds/react",
-  "version": "2.0.3",
+  "version": "2.0.4-alpha.0",
   "description": "React components",
   "keywords": [
     "uqds",
@@ -46,7 +46,7 @@
     "url": "https://github.com/uq-its-ss/design-system/issues"
   },
   "dependencies": {
-    "@uqds/body": "^4.0.0",
+    "@uqds/body": "^4.0.1-alpha.0",
     "@uqds/card": "^4.0.2",
     "@uqds/core": "^5.0.0",
     "@uqds/icon": "^4.0.2",

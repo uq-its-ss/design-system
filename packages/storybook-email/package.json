@@ -1,6 +1,6 @@
 {
   "name": "storybook-email",
-  "version": "1.1.0-alpha.0",
+  "version": "1.1.0",
   "description": "Storybook for EMAIL instance for uqds component development",
   "private": true,
   "main": "index.js",

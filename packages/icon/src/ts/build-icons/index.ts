@@ -9,6 +9,7 @@ import { svgoOptions } from "./svgoOptions";
 // Placeholder string using URL safe strings that are unreserved.
 // Must match the value in scss/_util.scss.
 const colourPlaceholder = "~~COLOR~~";
+const strokeWidthPlaceholder = "~~STROKEWIDTH~~";
 
 /** Takes and SVG input string and spits out an optimised version
  *
@@ -85,6 +86,7 @@ const svgToURI = (svgInput: string): string => {
     // Replace all fill and stroke attributes except when value is explicitly set to `none`.
     svg = svg.replace(/fill="(?!none")[^"]+"/g, `fill="${colourPlaceholder}"`);
     svg = svg.replace(/stroke="(?!none")[^"]+"/g, `stroke="${colourPlaceholder}"`);
+    svg = svg.replace(/stroke-width=['"].*?['"]/gi, `stroke-width='${strokeWidthPlaceholder}'`);
 
     return svgConverter(svg);
 };

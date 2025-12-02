@@ -1,6 +1,6 @@
 {
   "name": "uqds-builder",
-  "version": "4.0.6",
+  "version": "4.0.7-alpha.0",
   "description": "Render style kits for UQ clients",
   "private": true,
   "author": {
@@ -33,7 +33,7 @@
     "@uqds/acknowledgement": "^0.1.2",
     "@uqds/alert": "^7.0.4",
     "@uqds/blockquote": "^6.0.0",
-    "@uqds/body": "^4.0.0",
+    "@uqds/body": "^4.0.1-alpha.0",
     "@uqds/breadcrumb": "^8.0.3",
     "@uqds/button": "^4.0.0",
     "@uqds/card": "^4.0.2",

@@ -2,7 +2,7 @@
 import "./page-header.scss";
 
 // import HTML template strings
-import pageHeaderHTML from "./page-header.html";
+import pageHeaderHTML from "./page-header.html?raw";
 
 export default {
   title: "Components/Page header",

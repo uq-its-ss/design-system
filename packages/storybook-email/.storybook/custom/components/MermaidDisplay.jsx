@@ -1,12 +1,12 @@
 import React, { useEffect, useRef } from "react";
-import { mermaidAPI } from "mermaid";
+import mermaid from "mermaid";
 import "./MermaidDisplay.scss";
 
 const MermaidDisplay = ({ graph, svgId }) => {
   const outputElem = useRef(null);
 
   useEffect(() => {
-    mermaidAPI.render(svgId, graph, (svg) => {
+    mermaid.render(svgId, graph, (svg) => {
       outputElem.current.innerHTML = svg;
     });
   });

@@ -39,7 +39,8 @@
     position: relative;
     background-image: url(icon.get-icon(
       "standard--arrow-right",
-      core.$purple-500
+      core.$purple-500,
+      2
     ));
     background-position: right bottom;
     background-size: 24px;

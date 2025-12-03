@@ -1,10 +1,12 @@
+import { initJs } from "../../../lib/initJs";
 import { breadcrumb } from "@uqds/breadcrumb/src/js/main";
 
 export default {
   title: "Components/Breadcrumb",
   argTypes: {
     showLevels: {
-      control: "number",
+      control: "select",
+      options: [1, 2, 3, 4],
     },
     levelOne: "text",
     levelTwo: "text",
@@ -20,6 +22,12 @@ export default {
     levelFour: "Level four",
     currentPage: "Current page",
   },
+  decorators: [
+    (storyFn) =>
+      initJs(storyFn, (component) => {
+        new breadcrumb(component);
+      }),
+  ],
   render: ({
     showLevels,
     levelOne,
@@ -74,10 +82,6 @@ export default {
     </nav>
   </div>
 </div>`,
-  play: ({ canvasElement }) => {
-    const breadcrumbs = canvasElement.querySelector(".uq-breadcrumb");
-    if (breadcrumbs) new breadcrumb(breadcrumbs);
-  },
 };
 
 export const Breadcrumb = {};

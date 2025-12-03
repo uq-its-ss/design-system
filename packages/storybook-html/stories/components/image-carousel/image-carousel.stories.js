@@ -1,4 +1,4 @@
-import { initJs } from "../../../.storybook/custom/decorators/initJs";
+import { initJs } from "../../../lib/initJs";
 import { imageCarousel } from "@uqds/image/src/js/main";
 
 export default {
@@ -25,9 +25,12 @@ export default {
     credit: "Jane Smith",
     image: "images/example-2.jpg",
   },
-  decorators: [(storyFn) => initJs(storyFn, (component) => {
-    imageCarousel(component);
-  })],
+  decorators: [
+    (storyFn) =>
+      initJs(storyFn, (component) => {
+        imageCarousel(component);
+      }),
+  ],
   render: ({ caption, credit, image }) => {
     return `
 <div class="uq-image-carousel swiper">

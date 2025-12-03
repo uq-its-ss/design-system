@@ -13,4 +13,4 @@ export const initJs = (storyFn, initFn) => {
   queueMicrotask(() => initFn(component));
 
   return component;
-}
+};

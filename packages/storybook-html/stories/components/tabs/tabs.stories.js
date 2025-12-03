@@ -1,6 +1,7 @@
 import { Tabs } from "@uqds/tabs/src/js/tabs";
 import classNames from "classnames";
 import iconCatalog from "@uqds/icon";
+import { initJs } from "../../../lib/initJs";
 
 export default {
   title: "Components/Tabs",
@@ -31,12 +32,12 @@ export default {
     panel: "Tab1 panel text",
     link: "Tab link",
   },
-  play: ({ canvasElement }) => {
-    const tabs = {
-      container: canvasElement.querySelector(".uq-tabs"),
-    };
-    if (tabs) new Tabs(tabs);
-  },
+  decorators: [
+    (storyFn) =>
+      initJs(storyFn, (component) => {
+        new Tabs(component);
+      }),
+  ],
   render: ({ style, icon, tab, panel, link }) => {
     const prefix = (Math.random() + 1).toString(36).substring(7);
     return `

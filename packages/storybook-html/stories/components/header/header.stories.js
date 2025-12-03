@@ -10,6 +10,7 @@ import { header } from "@uqds/header/src/js/main";
 // import HTML template strings
 import HeaderInterimHTML from "./header-interim.html?raw";
 import HeaderHTML from "./header.html?raw";
+import { initJs } from "../../../lib/initJs";
 
 export default {
   title: "Components/Header",
@@ -33,48 +34,51 @@ export const HeaderInterim = {
   render: () => {
     return HeaderInterimHTML;
   },
-  play: ({ canvasElement }) => {
-    const headerElem = canvasElement.querySelector(".uq-header");
-    if (headerElem) new header(headerElem);
+  decorators: [
+    (storyFn) =>
+      initJs(storyFn, (component) => {
+        if (component) new header(component);
 
-    const menuLeftElem = headerElem.querySelector("#global-mobile-nav");
-    const menuLeft = new SlideMenu(menuLeftElem, {
-      position: "left",
-      submenuLinkAfter: " ",
-      backLinkBefore: " ",
-    });
+        const menuLeftElem = component.querySelector("#global-mobile-nav");
+        const menuLeft = new SlideMenu(menuLeftElem, {
+          position: "left",
+          submenuLinkAfter: " ",
+          backLinkBefore: " ",
+        });
 
-    const searchToggle = headerElem.querySelector(
-      ".nav-primary__search-toggle",
-    );
-    searchToggle.addEventListener("click", () => {
-      menuLeft.close();
-    });
+        const searchToggle = component.querySelector(
+          ".nav-primary__search-toggle",
+        );
+        searchToggle.addEventListener("click", () => {
+          menuLeft.close();
+        });
 
-    var slideMenuBackButtons = headerElem.querySelectorAll(
-      ".slide-menu__backlink, .global-mobile-nav__audience-link",
-    );
+        var slideMenuBackButtons = component.querySelectorAll(
+          ".slide-menu__backlink, .global-mobile-nav__audience-link",
+        );
 
-    Array.prototype.forEach.call(slideMenuBackButtons, function (el, i) {
-      el.addEventListener("click", () => {
-        menuLeftElem.scrollTop = 0;
-      });
-    });
+        Array.prototype.forEach.call(slideMenuBackButtons, function (el, i) {
+          el.addEventListener("click", () => {
+            menuLeftElem.scrollTop = 0;
+          });
+        });
 
-    // Responsive Resize Close menu and update toggles
-    window.addEventListener("resize", (event) => {
-      // Target Resize of LG ($screen-lg, 64rem, 1024px).
-      if (window.innerWidth > 1024) {
-        menuLeft.close(true);
-        //reset the menu toggle after closing.
-        const mainNavToggle = headerElem.querySelector(".nav-primary__toggle");
-        mainNavToggle.classList.remove("nav-primary__menu-toggle--is-open");
-        const body = document.querySelector("body");
-        body.classList.remove("no-scroll");
-      }
-    });
-  },
-
+        // Responsive Resize Close menu and update toggles
+        window.addEventListener("resize", (event) => {
+          // Target Resize of LG ($screen-lg, 64rem, 1024px).
+          if (window.innerWidth > 1024) {
+            menuLeft.close(true);
+            //reset the menu toggle after closing.
+            const mainNavToggle = component.querySelector(
+              ".nav-primary__toggle",
+            );
+            mainNavToggle.classList.remove("nav-primary__menu-toggle--is-open");
+            const body = document.querySelector("body");
+            body.classList.remove("no-scroll");
+          }
+        });
+      }),
+  ],
   name: "Header interim",
 };
 
@@ -82,47 +86,51 @@ export const Header = {
   render: () => {
     return HeaderHTML;
   },
-  play: ({ canvasElement }) => {
-    const headerElem = canvasElement.querySelector(".uq-header");
-    if (headerElem) new header(headerElem);
+  decorators: [
+    (storyFn) =>
+      initJs(storyFn, (component) => {
+        if (component) new header(component);
 
-    const menuLeftElem = headerElem.querySelector("#global-mobile-nav");
-    const menuLeft = new SlideMenu(menuLeftElem, {
-      position: "left",
-      submenuLinkAfter: " ",
-      backLinkBefore: " ",
-    });
+        const menuLeftElem = component.querySelector("#global-mobile-nav");
+        const menuLeft = new SlideMenu(menuLeftElem, {
+          position: "left",
+          submenuLinkAfter: " ",
+          backLinkBefore: " ",
+        });
 
-    const searchToggle = headerElem.querySelector(
-      ".nav-primary__search-toggle",
-    );
-    searchToggle.addEventListener("click", () => {
-      menuLeft.close();
-    });
+        const searchToggle = component.querySelector(
+          ".nav-primary__search-toggle",
+        );
+        searchToggle.addEventListener("click", () => {
+          menuLeft.close();
+        });
 
-    var slideMenuBackButtons = headerElem.querySelectorAll(
-      ".slide-menu__backlink, .global-mobile-nav__audience-link",
-    );
+        var slideMenuBackButtons = component.querySelectorAll(
+          ".slide-menu__backlink, .global-mobile-nav__audience-link",
+        );
 
-    Array.prototype.forEach.call(slideMenuBackButtons, function (el, i) {
-      el.addEventListener("click", () => {
-        menuLeftElem.scrollTop = 0;
-      });
-    });
+        Array.prototype.forEach.call(slideMenuBackButtons, function (el, i) {
+          el.addEventListener("click", () => {
+            menuLeftElem.scrollTop = 0;
+          });
+        });
 
-    // Responsive Resize Close menu and update toggles
-    window.addEventListener("resize", (event) => {
-      // Target Resize of LG ($screen-lg, 64rem, 1024px).
-      if (window.innerWidth > 1024) {
-        menuLeft.close(true);
-        //reset the menu toggle after closing.
-        const mainNavToggle = headerElem.querySelector(".nav-primary__toggle");
-        mainNavToggle.classList.remove("nav-primary__menu-toggle--is-open");
-        const body = document.querySelector("body");
-        body.classList.remove("no-scroll");
-      }
-    });
-  },
+        // Responsive Resize Close menu and update toggles
+        window.addEventListener("resize", (event) => {
+          // Target Resize of LG ($screen-lg, 64rem, 1024px).
+          if (window.innerWidth > 1024) {
+            menuLeft.close(true);
+            //reset the menu toggle after closing.
+            const mainNavToggle = component.querySelector(
+              ".nav-primary__toggle",
+            );
+            mainNavToggle.classList.remove("nav-primary__menu-toggle--is-open");
+            const body = document.querySelector("body");
+            body.classList.remove("no-scroll");
+          }
+        });
+      }),
+  ],
 
   name: "Header with mega menu",
 };

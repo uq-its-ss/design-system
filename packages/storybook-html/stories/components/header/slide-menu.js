@@ -942,6 +942,9 @@
           e.forEach((t) => {
             (t.style.display = "block"), t.classList.add(u.CLASS_NAMES.active);
           });
+
+        // NEW LINE TO RESET SCROLL POSITION
+        this.menuElem.scrollTop = 0;
       }
       initEventHandlers() {
         Array.from(this.menuElem.querySelectorAll("a")).forEach((t) =>
@@ -1012,6 +1015,8 @@
         this.triggerEvent(o),
           (this.level = this.level + t),
           this.moveSlider(this.wrapperElem, n);
+        // NEW LINE TO RESET SCROLL POSITION
+        this.menuElem.scrollTop = 0;
       }
       moveSlider(t, e) {
         e.toString().includes("%") || (e += "%"),
@@ -1050,7 +1055,30 @@
           t.addEventListener("click", (t) => {
             t.preventDefault();
           });
-          const n = t.textContent;
+          // Find the Grandparent UL (the root menu)
+          const GrandparentUL = s(
+            t.parentElement,
+            ".uq-header__nav-mobile-list",
+          );
+
+          // Determine the most accurate Parent Title (e.g., L2 title for the L3 click).
+          // This is the text of the link that opened the current parent UL.
+          const ParentUL = t.parentElement.parentElement;
+          const ParentLink =
+            ParentUL && ParentUL.parentElement.querySelector("a");
+
+          // Set 'n' to the direct parent's link text as the default back link (e.g., "PhD, MPhil...")
+          let n = ParentLink ? ParentLink.textContent : t.textContent; // Fallback to original t.textContent if no link found
+
+          // Only proceed with the L1 title lookup if the current list is the root UL (L1 to L2 navigation)
+          if (GrandparentUL && ParentUL === GrandparentUL) {
+            // The Grandparent link is reliably the first <li>'s <a> element in the root UL.
+            const L1TitleLink =
+              GrandparentUL.querySelector("li:nth-child(2) a");
+            if (L1TitleLink) {
+              n = L1TitleLink.textContent; // Set n to the hardcoded L1 title ("Study options")
+            }
+          }
           if ((this.addLinkDecorators(t), this.options.showBackLink)) {
             const { backLinkBefore: t, backLinkAfter: r } = this.options,
               o = document.createElement("a");

@@ -8,18 +8,23 @@ import "./slide-menu.js";
 import { header } from "@uqds/header/src/js/main";
 
 // import HTML template strings
-import HeaderInterimHTML from "./header-interim.html";
-import HeaderHTML from "./header.html";
+import HeaderInterimHTML from "./header-interim.html?raw";
+import HeaderHTML from "./header.html?raw";
 
 export default {
   title: "Components/Header",
+
   parameters: {
     layout: "fullscreen",
-    backgrounds: {
-      default: "UQ Neutral 1",
-    },
+
     previewTabs: {
       canvas: { hidden: false },
+    },
+  },
+
+  globals: {
+    backgrounds: {
+      value: "uq_neutral_1",
     },
   },
 };
@@ -161,9 +166,9 @@ export const searchGlobal = {
 
   name: "Default search",
 
-  parameters: {
+  globals: {
     backgrounds: {
-      default: "UQ purple",
+      value: "uq_purple",
     },
   },
 };
@@ -201,8 +206,11 @@ export const searchLocal = {
     docs: {
       inlineStories: false,
     },
+  },
+
+  globals: {
     backgrounds: {
-      default: "UQ purple",
+      value: "uq_purple",
     },
   },
 };

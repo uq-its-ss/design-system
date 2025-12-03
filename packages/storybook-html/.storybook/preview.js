@@ -17,6 +17,7 @@ import "@uqds/social/src/scss/main.scss";
 import "@uqds/pagination/src/scss/main.scss";
 import "@uqds/breadcrumb/src/scss/main.scss";
 import "@uqds/tabs/src/scss/main.scss";
+import "@uqds/image/src/scss/main.scss";
 
 import "./preview.scss";
 

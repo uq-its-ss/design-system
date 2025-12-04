@@ -1,4 +1,4 @@
-import { Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
+import { Meta, Canvas, Controls } from "@storybook/addon-docs/blocks";
 import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
 import * as HeroBasicStories from "./hero-basic.stories";
 
@@ -6,8 +6,8 @@ import * as HeroBasicStories from "./hero-basic.stories";
 
 # Hero basic
 
-<StatusBadge.Development />
-<StatusBadge.DraftDoc />
+<StatusBadge.Stable /> <StatusBadge.StableDoc /> [Check for open
+issues](https://github.com/uq-its-ss/design-system/issues)
 
 ## Overview
 
@@ -25,6 +25,8 @@ There are 4 elements within the basic hero.
 There are no size or colour variations for the basic hero component.
 
 <Canvas of={HeroBasicStories.HeroBasic} />
+
+<Controls of={HeroBasicStories.HeroBasic} />
 
 ## Examples
 

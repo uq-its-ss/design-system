@@ -1,4 +1,4 @@
-import { Meta, Canvas, Source } from "@storybook/addon-docs/blocks";
+import { Meta, Canvas, Controls } from "@storybook/addon-docs/blocks";
 import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
 import * as ImageCarouselStories from "./image-carousel.stories";
 
@@ -13,13 +13,11 @@ issues](https://github.com/uq-its-ss/design-system/issues)
 
 A carousel component that displays multiple images. Powered by [Swiper](https://swiperjs.com/).
 
-<Canvas
-  of={ImageCarouselStories.ImageCarousel}
-  sourceState="none"
-  story={{ autoplay: true }}
-/>
+<Canvas of={ImageCarouselStories.ImageCarousel} story={{ autoplay: true }} />
 
-## How to use.
+<Controls of={ImageCarouselStories.ImageCarousel} />
+
+## How to use
 
 Provide the following wrapper markup:
 

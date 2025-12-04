@@ -17,7 +17,7 @@ export default defineConfig({
       fileName: "main",
       formats: ["es"],
     },
-    outDir: resolve(import.meta.dirname, "./dist/js"),
+    outDir: resolve(import.meta.dirname, "./dist"),
     rollupOptions: {
       external: ["react", "react/jsx-runtime"],
     },

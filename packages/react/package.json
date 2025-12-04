@@ -26,14 +26,14 @@
   "type": "module",
   "exports": {
     ".": {
-      "import": "./dist/js/main.js"
+      "import": "./dist/main.js"
     },
     "./src/jsx/*": "./src/jsx/*",
-    "./src/scss/*": "./src/scss/*"
+    "./css": "./dist/main.css"
   },
-  "style": "dist/css/main.css",
-  "main": "dist/js/main.js",
-  "types": "dist/js/main.d.ts",
+  "style": "dist/main.css",
+  "main": "dist/main.js",
+  "types": "dist/main.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/uq-its-ss/design-system.git"
@@ -53,7 +53,7 @@
     "@uqds/layout": "6.0.0-alpha.0",
     "@uqds/pagination": "^4.0.1",
     "@uqds/pane": "^4.0.0",
-    "classnames": "^2.5.1"
+    "clsx": "^2.1.1"
   },
   "devDependencies": {
     "@types/react": "^18.3.18",

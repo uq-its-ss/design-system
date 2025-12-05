@@ -2,17 +2,13 @@ import classNames from "classnames";
 import { storyRenderer } from "../../lib/storyRenderer";
 import * as HeaderStories from "../components/header/header.stories";
 import * as FooterStories from "../components/footer/footer.stories";
-import * as BreadcrumbStories from "../components/breadcrumb/breadcrumb.stories";
 import * as HeroStories from "../components/hero/hero.stories";
 import * as SectionStories from "../components/section/section.stories";
 import * as CardStories from "../components/card/card.stories";
 import * as StoryCardStories from "../components/story-card/story-card.stories";
-import "@uqds/layout/src/scss/main.scss";
-import "@uqds/sections/src/scss/main.scss";
 
 const { Default: Header } = storyRenderer(HeaderStories);
 const { footer } = storyRenderer(FooterStories);
-const { Breadcrumb } = storyRenderer(BreadcrumbStories);
 const { Home: Hero } = storyRenderer(HeroStories);
 const { Container: Section } = storyRenderer(SectionStories);
 const { IconNav: CardIconNav, Image: CardImage } = storyRenderer(CardStories);
@@ -20,6 +16,7 @@ const { NewsCard } = storyRenderer(StoryCardStories);
 
 export default {
   title: "Templates/Home",
+  tags: ["!autodocs"],
   parameters: {
     layout: "fullscreen",
     options: { showPanel: false },
@@ -38,12 +35,11 @@ export const Home = {
   render: ({ showGrid }) => `
 <div class="${classNames({ "uqds-layout-demo-bg": showGrid })}">
   ${Header()}
-  ${Breadcrumb()}
-    ${Hero()}
-    ${Section({
-      title: "",
-      description: "",
-      content: `
+  ${Hero()}
+  ${Section({
+    title: "",
+    description: "",
+    content: `
 <div class="uq-section">
 <div class="uq-card-grid uq-card-grid--target-4x">
   ${CardIconNav({
@@ -72,7 +68,7 @@ export const Home = {
 </div>
 </div>
       `,
-    })}
+  })}
     ${Section({
       title: "",
       description: "",

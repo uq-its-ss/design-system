@@ -5,6 +5,7 @@ import "./header.scss";
 import "./slide-menu.js";
 import { primaryLinks, secondaryLinks } from "./menuData.js"; // Import the menu data
 import { header } from "@uqds/header/src/js/main"; // Import 'header' for UQ header JS functionality
+import { initJs } from "../../../lib/initJs";
 
 // Helper function to render the mega menu columns, groups, and children
 const renderMegaMenu = (columns, parentTitle) => {
@@ -359,49 +360,6 @@ const headerRenderer = ({
 </header>
 `;
 
-// --- Play Function Logic (Kept separate for re-use) ---
-
-const headerPlayFunction = ({ canvasElement }) => {
-  const headerElem = canvasElement.querySelector(".uq-header");
-  if (headerElem) new header(headerElem);
-
-  const menuLeftElem = headerElem.querySelector("#global-mobile-nav");
-  // Assuming SlideMenu is imported or available globally from "./slide-menu.js"
-  const menuLeft = new SlideMenu(menuLeftElem, {
-    position: "left",
-    submenuLinkAfter: " ",
-    backLinkBefore: " ",
-  });
-
-  const searchToggle = headerElem.querySelector(".nav-primary__search-toggle");
-  searchToggle.addEventListener("click", () => {
-    menuLeft.close();
-  });
-
-  var slideMenuBackButtons = headerElem.querySelectorAll(
-    ".slide-menu__backlink, .global-mobile-nav__audience-link",
-  );
-
-  Array.prototype.forEach.call(slideMenuBackButtons, function (el, i) {
-    el.addEventListener("click", () => {
-      menuLeftElem.scrollTop = 0;
-    });
-  });
-
-  // Responsive Resize Close menu and update toggles
-  window.addEventListener("resize", (event) => {
-    // Target Resize of LG ($screen-lg, 64rem, 1024px).
-    if (window.innerWidth > 1024) {
-      menuLeft.close(true);
-      //reset the menu toggle after closing.
-      const mainNavToggle = headerElem.querySelector(".nav-primary__toggle");
-      mainNavToggle.classList.remove("nav-primary__menu-toggle--is-open");
-      const body = document.querySelector("body");
-      body.classList.remove("no-scroll");
-    }
-  });
-};
-
 // -------------------------------------------------------------
 // CSF 3.0 Stories: Exported Objects
 
@@ -417,9 +375,51 @@ export const Default = {
     primaryLinks: primaryLinks, // Use imported data
     secondaryLinks: secondaryLinks, // Use imported data
   },
+  decorators: [
+    (storyFn) =>
+      initJs(storyFn, (component) => {
+        if (component) new header(component);
 
-  // The 'play' property replaces Default.play = ...
-  play: headerPlayFunction,
+        const menuLeftElem = component.querySelector("#global-mobile-nav");
+        const menuLeft = new SlideMenu(menuLeftElem, {
+          position: "left",
+          submenuLinkAfter: " ",
+          backLinkBefore: " ",
+        });
+
+        const searchToggle = component.querySelector(
+          ".nav-primary__search-toggle",
+        );
+        searchToggle.addEventListener("click", () => {
+          menuLeft.close();
+        });
+
+        var slideMenuBackButtons = component.querySelectorAll(
+          ".slide-menu__backlink, .global-mobile-nav__audience-link",
+        );
+
+        Array.prototype.forEach.call(slideMenuBackButtons, function (el, i) {
+          el.addEventListener("click", () => {
+            menuLeftElem.scrollTop = 0;
+          });
+        });
+
+        // Responsive Resize Close menu and update toggles
+        window.addEventListener("resize", (event) => {
+          // Target Resize of LG ($screen-lg, 64rem, 1024px).
+          if (window.innerWidth > 1024) {
+            menuLeft.close(true);
+            //reset the menu toggle after closing.
+            const mainNavToggle = component.querySelector(
+              ".nav-primary__toggle",
+            );
+            mainNavToggle.classList.remove("nav-primary__menu-toggle--is-open");
+            const body = document.querySelector("body");
+            body.classList.remove("no-scroll");
+          }
+        });
+      }),
+  ],
 };
 
 // Create a variation of the story without the mega menu
@@ -432,9 +432,51 @@ export const WithoutMegaMenu = {
     ...Default.args,
     showGlobalHeader: false,
   },
+  decorators: [
+    (storyFn) =>
+      initJs(storyFn, (component) => {
+        if (component) new header(component);
 
-  // Re-use the same play function
-  play: headerPlayFunction,
+        const menuLeftElem = component.querySelector("#global-mobile-nav");
+        const menuLeft = new SlideMenu(menuLeftElem, {
+          position: "left",
+          submenuLinkAfter: " ",
+          backLinkBefore: " ",
+        });
+
+        const searchToggle = component.querySelector(
+          ".nav-primary__search-toggle",
+        );
+        searchToggle.addEventListener("click", () => {
+          menuLeft.close();
+        });
+
+        var slideMenuBackButtons = component.querySelectorAll(
+          ".slide-menu__backlink, .global-mobile-nav__audience-link",
+        );
+
+        Array.prototype.forEach.call(slideMenuBackButtons, function (el, i) {
+          el.addEventListener("click", () => {
+            menuLeftElem.scrollTop = 0;
+          });
+        });
+
+        // Responsive Resize Close menu and update toggles
+        window.addEventListener("resize", (event) => {
+          // Target Resize of LG ($screen-lg, 64rem, 1024px).
+          if (window.innerWidth > 1024) {
+            menuLeft.close(true);
+            //reset the menu toggle after closing.
+            const mainNavToggle = component.querySelector(
+              ".nav-primary__toggle",
+            );
+            mainNavToggle.classList.remove("nav-primary__menu-toggle--is-open");
+            const body = document.querySelector("body");
+            body.classList.remove("no-scroll");
+          }
+        });
+      }),
+  ],
 };
 
 export const basicHeader = {

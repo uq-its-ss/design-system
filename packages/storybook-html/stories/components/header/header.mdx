@@ -1,4 +1,4 @@
-import { Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
+import { Meta, Story, Canvas, Controls } from "@storybook/addon-docs/blocks";
 import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
 import * as HeaderStories from "./header.stories";
 import { background } from "storybook/theming";
@@ -16,25 +16,6 @@ import { background } from "storybook/theming";
 The headers purpose is to introduce branding and make the site instantly recognizable to those who are already familiar with UQ.
 It also provides a consistent information architecture (navigation structure) for our websites.
 
-## Default example
-
-### Header interim
-
-The interim header is suitable for a broad range of sites and applications, it includes the following sections:
-
-- The primary section includes the UQ logo, Primary navigation (Study, Research, Partners and community, about) and search using [_UQ Search_](https://search.uq.edu.au).
-- The secondary section provides navigation to UQ home, News, Events, Give and contact.
-- An optional third navigation section is available on mobile when paired with the [Site header component](?path=/docs/components-site-header--site-header-with-subnav), which provides site title and local navigation options. This combines to provide a stacked mobile menu of all three sections (Local, primary and secondary navigation).
-
-<Canvas
-  of={HeaderStories.HeaderInterim}
-  story={{
-    autoplay: true,
-    height: "200px",
-  }}
-  withToolbar={true}
-/>
-
 ### Header with mega menu
 
 Currently reserved for the UQ Homepage and level one landing pages for Study, Research, Partners & community and about.
@@ -43,13 +24,13 @@ Currently reserved for the UQ Homepage and level one landing pages for Study, Re
 - The secondary section provides navigation to UQ home, News, Events, Give and contact.
 
 <Canvas
-  of={HeaderStories.Header}
+  of={HeaderStories.Default}
   story={{
     autoplay: true,
     height: "200px",
   }}
-  withToolbar={true}
 />
+<Controls of={HeaderStories.Default} />
 
 ### Usage
 
@@ -70,77 +51,25 @@ appHeight();
 
 ## Variant examples
 
+### Header interim
+
+The interim header is suitable for a broad range of sites and applications, it includes the following sections:
+
+- The primary section includes the UQ logo, Primary navigation (Study, Research, Partners and community, about) and search using [_UQ Search_](https://search.uq.edu.au).
+- The secondary section provides navigation to UQ home, News, Events, Give and contact.
+- An optional third navigation section is available on mobile when paired with the [Site header component](?path=/docs/components-site-header--site-header-with-subnav), which provides site title and local navigation options. This combines to provide a stacked mobile menu of all three sections (Local, primary and secondary navigation).
+
+<Canvas
+  of={HeaderStories.WithoutMegaMenu}
+  story={{
+    autoplay: true,
+    height: "200px",
+  }}
+/>
+
 ### Header simplified
 
 When implementation of the full header is not possible, a simplified approach using basic elements may be appropriate.
 UQ purple background combined with the UQ logo make up the most important elements of the header.
 
-<Story of={HeaderStories.basicHeader} />
-
-### Default search
-
-The default option is a global search of all UQ. The search feature sends users to results on [_UQ Search_](https://search.uq.edu.au).
-
-> Don't reappropriate the search function for special integrated search
-> functionality within your application e.g. searching for a location on a map,
-> searching for books or articles in a library database.
-
-<Story of={HeaderStories.searchGlobal} />
-
-### Global and local search
-
-You can optionally provide two radio fields, allowing users to choose to search all UQ sites or just the content on your site.
-
-> \*If your application/website isn't indexed by UQ Search, it may impact what results are provided by a restricted search.
-
-<Story of={HeaderStories.searchLocal} />
-
-```html
-<div class="uq-header__search-range">
-  <input
-    type="radio"
-    id="edit-as_sitesearch-off"
-    name="as_sitesearch"
-    value=""
-    class="form-radio uq-header__search-radio"
-  />
-  <label for="edit-as_sitesearch-off" class="option uq-header__search-label"
-    >Search all UQ websites</label
-  >
-</div>
-<div class="uq-header__search-range">
-  <input
-    type="radio"
-    id="edit-as_sitesearch-on"
-    name="as_sitesearch"
-    value="https://future-students.uq.edu.au"
-    checked="checked"
-    class="form-radio uq-header__search-radio"
-  />
-  <label for="edit-as_sitesearch-on" class="option uq-header__search-label"
-    >Search this website (future-students.uq.edu.au)</label
-  >
-</div>
-```
-
-## When and how to use
-
-It is highly desireable that all websites of the University maintain a consistent digital presence.
-Whenever possible the complete header should be implemented.
-Optionally pair with the [Site header component](?path=/docs/components-site-header--site-header-with-subnav) to provide a site title and local navigation.
-
-Software as a service (SaaS) applications and templates supplied by third party solutions may make implementation of the header difficult.
-
-We recommend simplifying the header to basic elements [_Header simplified_](?path=/docs/components-header--basic-header).
-
-## Accessibility
-
-Every navigation `<nav>` includes an aria label, for example:
-
-```html
-<nav aria-label="primary navigation"></nav>
-```
-
-## Related
-
-- [Site header](?path=/docs/components-site-header--site-header-with-subnav)
+<Canvas of={HeaderStories.basicHeader} />

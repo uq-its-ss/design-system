@@ -194,8 +194,8 @@ const headerRenderer = ({
 <header class="uq-header" data-gtm-category="Header">
   <div class="uq-header__container">
     <div class="uq-header__menu-toggle" data-target="global-mobile-nav" data-gtm-category="Primary header">
-      <button type="button" class="nav-primary__toggle nav-primary__menu-toggle slide-menu__control" data-target="global-mobile-nav" data-action="toggle" data-gtm-action="Toggle">Menu</button>
-    </div>
+      <button type="button" class="nav-primary__toggle nav-primary__menu-toggle slide-menu__control" data-target="global-mobile-nav" data-arg=".is-active" data-action="smartToggle" data-gtm-action="Toggle">Menu</button>
+      </div>
     <div class="uq-header__logo" data-gtm-category="Primary header">
       <a class="logo--large" href="https://uq.edu.au" data-gtm-label="UQ Logo">
         <img alt="The University of Queensland" src="https://static.uq.net.au/v11/logos/corporate/uq-logo--reversed.svg">

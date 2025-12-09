@@ -879,6 +879,21 @@
       close(t = !0) {
         this.triggerEvent(i.Close), this.toggle(!1, t);
       }
+      smartToggle(selector) {
+        if (this.isOpen) {
+          this.close();
+        } else {
+          this.open();
+          // If a selector is provided (e.g. ".is-active")
+          if (selector) {
+            // search strictly inside the menu for the target to ensure we don't grab elements elsewhere on the page
+            const target = this.menuElem.querySelector(selector);
+            if (target) {
+              this.navigateTo(target);
+            }
+          }
+        }
+      }
       back() {
         this.navigate(r.Backward);
       }

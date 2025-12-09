@@ -320,7 +320,7 @@
   }
 
   &__nav-secondary {
-    background-color:  core.$purple-600;
+    background-color: core.$purple-600;
     grid-area: secondarynav;
   }
 
@@ -631,7 +631,7 @@ body.no-scroll {
 .slide-menu {
   width: 100%;
   max-width: 100%;
-  background-color:  core.$purple-600; // Keeping as literal as this is a darker purple than core.$purple-500
+  background-color: core.$purple-600; // Keeping as literal as this is a darker purple than core.$purple-500
   height: calc(var(--app-height) - 4.3rem);
   display: none;
   box-sizing: border-box;
@@ -646,7 +646,7 @@ body.no-scroll {
   overflow-x: hidden;
   font-size: core.$space-m;
   line-height: 1.6;
-  color:  core.$purple-500; // Keeping as literal as this is a darker purple than core.$purple-500
+  color: core.$purple-500; // Keeping as literal as this is a darker purple than core.$purple-500
 
   @media #{core.$screen-lg-up} {
     display: none !important;
@@ -756,10 +756,10 @@ body.no-scroll {
   }
 
   .uq-header__nav-mobile-secondary-item {
-    background-color:  core.$purple-600;
+    background-color: core.$purple-600;
 
     &:hover {
-      background-color:  core.$purple-600;
+      background-color: core.$purple-600;
     }
   }
 
@@ -768,7 +768,7 @@ body.no-scroll {
     padding: core.$space-s core.$space-l;
 
     &:hover {
-      color:  core.$purple-600;
+      color: core.$purple-600;
       background-color: core.$white;
     }
   }
@@ -790,11 +790,11 @@ body.no-scroll {
   .uq-header__nav-mobile-primary {
     color: core.$white;
     padding: core.$space-m core.$space-l;
-    background-color:  core.$purple-500;
+    background-color: core.$purple-500;
     font-weight: core.$font-weight-medium;
 
     &:hover {
-      color:  core.$purple-500;
+      color: core.$purple-500;
       background-color: core.$white;
 
       .slide-menu__decorator::before {
@@ -811,7 +811,7 @@ body.no-scroll {
 
   /* Active state Calc function needs a glbal variable to allow targeting of active subitems */
   .is-active {
-    border-left: 6px solid  core.$purple-500;
+    border-left: 6px solid core.$purple-500;
     padding-left: calc(core.$space-l - 6px);
     background-color: core.$grey-50;
   }
@@ -829,7 +829,7 @@ body.no-scroll {
 .uq-header__nav-mobile-audience-link,
 .uq-header__nav-mobile-home,
 .slide-menu__backlink {
-  border-bottom: 1px solid  core.$grey-100; // Keeping as literal
+  border-bottom: 1px solid core.$grey-100; // Keeping as literal
 }
 
 .uq-header__nav-mobile-local {
@@ -839,4 +839,3 @@ body.no-scroll {
 .uq-site-header__navigation-toggle {
   display: none;
 }
-

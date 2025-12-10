@@ -1,4 +1,4 @@
-import { Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
+import { Meta, Canvas, Controls } from "@storybook/addon-docs/blocks";
 import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
 import * as CardStories from "./card.stories";
 
@@ -6,28 +6,37 @@ import * as CardStories from "./card.stories";
 
 # Card
 
-<StatusBadge.Development />
-<StatusBadge.DraftDoc />
-[Check for open issues](https://github.com/uq-its-ss/design-system/issues)
+<StatusBadge.Stable /> <StatusBadge.StableDoc /> [Check for open
+issues](https://github.com/uq-its-ss/design-system/issues)
 
 ## Overview
 
+The card component is used to highlight a link to content.
+
 <Canvas of={CardStories.Card} />
 
-## Variants
+<Controls of={CardStories.Card} />
 
 ### Text
+
+Use the text only version for smaller features.
 
 <Canvas of={CardStories.Text} />
 
 ### Image
 
+The standard card.
+
 <Canvas of={CardStories.Image} />
 
 ### Icon
 
+The icon card can include any [UQ icon](?path=/docs/components-icon--docs).
+
 <Canvas of={CardStories.Icon} />
 
 ### Icon nav
+
+The icon nav variant hides the description on mobile.
 
 <Canvas of={CardStories.IconNav} />

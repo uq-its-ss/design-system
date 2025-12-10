@@ -1,4 +1,4 @@
-import { Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
+import { Meta, Canvas, Controls } from "@storybook/addon-docs/blocks";
 import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
 import * as StoryCardStories from "./story-card.stories";
 
@@ -6,32 +6,45 @@ import * as StoryCardStories from "./story-card.stories";
 
 # StoryCard
 
-<StatusBadge.Development />
-<StatusBadge.DraftDoc />
+<StatusBadge.Stable /> <StatusBadge.StableDoc /> [Check for open
+issues](https://github.com/uq-its-ss/design-system/issues)
 
 ## Overview
 
+The story card is a speciality variation of the standard card that is intended
+for use with stories, news or events.
+
 <Canvas of={StoryCardStories.StoryCard} />
 
-## Variants
+<Controls of={StoryCardStories.StoryCard} />
 
 ### Story
+
+A standard story card used for articles.
 
 <Canvas of={StoryCardStories.StoryCard} />
 
 ### Event
 
+Designed specifically for events. Includes a purple highlight for the event date.
+
 <Canvas of={StoryCardStories.EventCard} />
 
 ### News
+
+Designed specifically for news articles. Includes the news category as the top label.
 
 <Canvas of={StoryCardStories.NewsCard} />
 
 ### Landscape
 
+Intended for listing pages.
+
 <Canvas of={StoryCardStories.LandscapeCard} />
 
 ### Landscape (no image)
+
+Indented for listings with limited horizontal space.
 
 <Canvas of={StoryCardStories.LandscapeNoImageCard} />
 
@@ -42,5 +55,7 @@ Used for legacy content that may not have images.
 <Canvas of={StoryCardStories.LandscapeMissingImageCard} />
 
 ### Feature
+
+The feature format for use at the top of pages.
 
 <Canvas of={StoryCardStories.FeatureCard} />

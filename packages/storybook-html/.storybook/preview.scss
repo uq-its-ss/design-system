@@ -238,3 +238,52 @@ body {
     max-width: 900px;
   }
 }
+
+// Storybook UI form fixes.
+.docblock-argstable {
+  & select {
+    background-image: none !important;
+    padding-inline-end: 30px;
+    height: auto;
+  }
+
+  // True/false switch
+  & label:has(input[role="switch"], span:nth-child(1)) {
+    & span {
+      vertical-align: unset;
+      margin: 0;
+      padding: 7px 15px;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    & input[type="checkbox"] {
+      border: 0 !important;
+      outline: 0 !important;
+      appearance: none;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      border-radius: 3em;
+
+      &:checked {
+        background-color: transparent;
+      }
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  // Radios/Checkboxes.
+  & label:has(input[type="radio"]),
+  & label:has(input[type="checkbox"]) {
+    & span {
+      margin: 0;
+      padding-block: 0;
+      font-size: 12px;
+    }
+  }
+}

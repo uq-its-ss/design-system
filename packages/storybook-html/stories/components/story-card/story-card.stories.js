@@ -1,5 +1,3 @@
-import "@uqds/card/src/scss/main.scss";
-import "@uqds/icon/src/scss/main.scss";
 import { cardDecorator, storyCardDecorator } from "../../../lib/decorators";
 
 export default {
@@ -16,7 +14,14 @@ export default {
     },
     image: {
       control: "select",
-      options: ["images/card/card-example-herston-campus.jpg"],
+      options: [
+        "none",
+        "images/card/card-example-herston-campus.jpg",
+        "images/example-1.jpg",
+        "images/example-2.jpg",
+        "images/example-3.jpg",
+        "images/example-4.jpg",
+      ],
     },
   },
   args: {
@@ -28,14 +33,6 @@ export default {
     image: "images/card/card-example-herston-campus.jpg",
     href: "",
   },
-};
-
-export const StoryCard = {
-  args: {
-    variant: "story",
-    description: "",
-  },
-  decorators: [cardDecorator],
   render: ({
     variant,
     image,
@@ -47,7 +44,7 @@ export const StoryCard = {
   }) => `
 <div class="uq-story-card uq-story-card--${variant}">
   ${
-    image
+    image && image !== "none"
       ? `<div class="uq-story-card__image"><img src="${image}" alt="" /></div>`
       : ""
   }
@@ -66,6 +63,14 @@ export const StoryCard = {
     }
   </div>
 </div>`,
+};
+
+export const StoryCard = {
+  args: {
+    variant: "story",
+    description: "",
+  },
+  decorators: [cardDecorator],
 };
 
 export const NewsCard = {
@@ -88,7 +93,6 @@ export const EventCard = {
 };
 
 export const LandscapeCard = {
-  ...StoryCard,
   decorators: [storyCardDecorator],
   args: {
     title:

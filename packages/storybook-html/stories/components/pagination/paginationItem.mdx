@@ -1,0 +1,49 @@
+import { Meta, Canvas, Controls } from "@storybook/addon-docs/blocks";
+import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
+import * as PaginationItemStories from "./paginationItem.stories";
+
+<Meta of={PaginationItemStories} />
+
+# Pagination item
+
+<StatusBadge.Stable />
+<StatusBadge.StableDoc />
+<a href="https://github.com/uq-its-ss/design-system/issues" target="_blank">
+  Check for open issues
+</a>
+
+## Overview
+
+Pagination is made up of various items.
+
+### Item
+
+The standard item used for pages.
+
+<Canvas of={PaginationItemStories.Item} />
+
+<Controls of={PaginationItemStories.Item} />
+
+### Current
+
+The current page item is highlighted purple, and is clickable.
+
+<Canvas of={PaginationItemStories.Current} />
+
+### Ellipsis
+
+Clicking the ellipsis item shows the first invisible page in each direction.
+
+<Canvas of={PaginationItemStories.Ellipsis} />
+
+### Previous
+
+The Previous item shows for all pages, except the first.
+
+<Canvas of={PaginationItemStories.Previous} />
+
+### Next
+
+The Next item shows for all pages, except the last.
+
+<Canvas of={PaginationItemStories.Next} />

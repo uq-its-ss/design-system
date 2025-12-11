@@ -2,7 +2,6 @@
 import "./header.scss";
 
 // import scripts
-import "./slide-menu.js";
 import { localLinks, primaryLinks, secondaryLinks } from "./menuData.js"; // Import the menu data
 import { header } from "@uqds/header/src/js/main"; // Import 'header' for UQ header JS functionality
 

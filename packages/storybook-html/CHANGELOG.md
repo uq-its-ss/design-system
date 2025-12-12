@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.1.1-alpha.3](https://github.com/uq-its-ss/design-system/compare/storybook-html@8.1.1-alpha.2...storybook-html@8.1.1-alpha.3) (2025-12-12)
+
+### Bug Fixes
+
+- add uq- prefix to padding and margin utility classes. update doco to reflect. ([#719](https://github.com/uq-its-ss/design-system/issues/719)) ([258cfbf](https://github.com/uq-its-ss/design-system/commit/258cfbf7fea6fa0ff16222aa180150695a07ff43))
+
 ## [8.1.1-alpha.2](https://github.com/uq-its-ss/design-system/compare/storybook-html@8.1.1-alpha.1...storybook-html@8.1.1-alpha.2) (2025-12-10)
 
 **Note:** Version bump only for package storybook-html

@@ -38,11 +38,16 @@ import * as BodyUtilitiesStories from "./body-utilities.stories";
 
 Coming soon
 
-## Padding adjustment
+## Padding and margin adjustment
 
-Use the padding utility classes to customise padding around elements.
+Use the padding and margin utility classes to customise spacing around elements.
 
-The classes are named using the format `padding-{-side}{-size}` where:
+The classes are named using the format `uq{-property}-{-side}{-size}` where:
+
+`{-property}` is one of:
+
+- `-padding`
+- `-margin`
 
 `{-side}` is one of:
 
@@ -70,9 +75,9 @@ The classes are named using the format `padding-{-side}{-size}` where:
 
 ### Examples
 
-`padding--uuul` applies `uuul`**(5rem) padding to **all sides\*\*
+`uq-padding--uuul` applies `uuul`(5rem) padding to **all sides**
 
-`padding--bottom-xs` applies `xs`(5rem) padding to the **bottom side**
+`uq-margin--bottom-xs` applies `xs`(0.25rem) margin to the **bottom side**
 
 ## Divider
 

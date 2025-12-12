@@ -52,7 +52,7 @@ const renderNestedLinks = (children, isRoot = false) => {
           ${
             hasGrandchildren
               ? `
-            <ul>
+            <ul class="uq-header__nav-mobile-list">
               <li class="uq-header__nav-mobile-item">
                 <a class="uq-header__nav-mobile-audience-link" href="${child.href}">${child.title}</a>
               </li>
@@ -193,8 +193,8 @@ const headerRenderer = ({
 <header class="uq-header" data-gtm-category="Header">
   <div class="uq-header__container">
     <div class="uq-header__menu-toggle" data-target="global-mobile-nav" data-gtm-category="Primary header">
-      <button type="button" class="nav-primary__toggle nav-primary__menu-toggle slide-menu__control" data-target="global-mobile-nav" data-arg=".is-active" data-action="smartToggle" data-gtm-action="Toggle">Menu</button>
-      </div>
+      <button type="button" class="nav-primary__toggle nav-primary__menu-toggle slide-menu__control" data-target="global-mobile-nav" data-arg=".is-active" data-action="smartToggle" data-gtm-trigger="click" data-gtm-action="Toggle">Menu</button>
+    </div>
     <div class="uq-header__logo" data-gtm-category="Primary header">
       <a class="logo--large" href="https://uq.edu.au" data-gtm-label="UQ Logo">
         <img alt="The University of Queensland" src="https://static.uq.net.au/v11/logos/corporate/uq-logo--reversed.svg">
@@ -229,14 +229,14 @@ const headerRenderer = ({
         </ul>
       </nav>
     </div>
-
     <div class="uq-header__search-toggle" data-gtm-category="Search">
       <button class="nav-primary__toggle nav-primary__search-toggle" data-gtm-action="Toggle">
         <div class="search-toggle__label">Search</div>
       </button>
     </div>
   </div>
-
+  
+  <!-- Mobile only navigation -->
   <nav class="slide-menu uq-header__nav-mobile ${showLocalMobile ? "uq-header__nav-mobile-local" : ""}" id="global-mobile-nav" aria-label="primary navigation mobile">
     <ul class="uq-header__nav-mobile-list">
     ${
@@ -306,7 +306,7 @@ const headerRenderer = ({
         <nav class="uq-header__nav-secondary-container">
         <ul class="uq-header__nav-secondary-list">
             <li class="uq-header__nav-secondary-item" data-gtm-category="Secondary header">
-              <a class="uq-header__nav-secondary-link gtm-processed" href="https://www.uq.edu.au/">UQ home</a>
+              <a class="uq-header__nav-secondary-link gtm-processed" href="https://www.uq.edu.au">UQ home</a>
             </li>
             ${secondaryLinks
               .map(

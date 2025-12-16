@@ -1098,7 +1098,11 @@
             const { backLinkBefore: t, backLinkAfter: r } = this.options,
               o = document.createElement("a");
             (o.innerHTML = t + n + r),
-              o.classList.add(u.CLASS_NAMES.backlink, u.CLASS_NAMES.control, "uq-header__nav-mobile-link"),
+              o.classList.add(
+                u.CLASS_NAMES.backlink,
+                u.CLASS_NAMES.control,
+                "uq-header__nav-mobile-link",
+              ),
               o.setAttribute("data-action", i.Back);
             const c = document.createElement("li");
             c.classList.add("uq-header__nav-mobile-item");

@@ -173,6 +173,8 @@
 
       @media #{core.$screen-lg-up} {
         height: 40px;
+        max-width: unset; // override Drupal (img, picture max-width: 100%)
+}
       }
     }
   }

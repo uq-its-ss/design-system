@@ -20,10 +20,10 @@ export default {
   },
   args: {
     As: "a",
-    number: 1,
+    number: "1",
     current: false,
     href: "#",
-    value: null,
+    value: "",
   },
 };
 

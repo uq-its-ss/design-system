@@ -13,6 +13,19 @@
   line-height: core.$line-height;
   position: relative;
 
+  .uq-alert__message > *:first-child {
+    margin-top: 0;
+  }
+
+  .uq-alert__message > h1:first-child,
+  .uq-alert__message > h2:first-child,
+  .uq-alert__message > h3:first-child,
+  .uq-alert__message > h4:first-child,
+  .uq-alert__message > h5:first-child,
+  .uq-alert__message > h6:first-child {
+    line-height: 24px;
+  }
+
   &__container {
     width: 100%;
     max-width: 32px + 1140px + 32px;

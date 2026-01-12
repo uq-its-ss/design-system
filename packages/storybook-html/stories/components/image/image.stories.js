@@ -1,9 +1,15 @@
-import "@uqds/image/src/scss/main.scss";
-
 export default {
   title: "Components/Image",
   argTypes: {
-    image: "text",
+    image: {
+      control: "select",
+      options: [
+        "images/example-1.jpg",
+        "images/example-2.jpg",
+        "images/example-3.jpg",
+        "images/example-4.jpg",
+      ],
+    },
     alt: "text",
     caption: "text",
     credit: "text",

@@ -1,4 +1,4 @@
-import { Meta, Story, Canvas } from "@storybook/blocks";
+import { Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
 import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
 import * as BodyUtilitiesStories from "./body-utilities.stories";
 
@@ -38,9 +38,46 @@ import * as BodyUtilitiesStories from "./body-utilities.stories";
 
 Coming soon
 
-## Padding adjustment
+## Padding and margin adjustment
 
-Coming soon
+Use the padding and margin utility classes to customise spacing around elements.
+
+The classes are named using the format `uq{-property}-{-side}{-size}` where:
+
+`{-property}` is one of:
+
+- `-padding`
+- `-margin`
+
+`{-side}` is one of:
+
+- `-top`
+- `-right`
+- `-bottom`
+- `-left`
+- or omitted for all sides
+
+`{-size}` is one of:
+
+- `-uuuuul`
+- `-uuuul`
+- `-uuul`
+- `-uul`
+- `-ul`
+- `-xxxxl`
+- `-xxxl`
+- `-xxl`
+- `-xl`
+- `-l`
+- `-m`
+- `-s`
+- `-xs`
+
+### Examples
+
+`uq-padding--uuul` applies `uuul`(5rem) padding to **all sides**
+
+`uq-margin--bottom-xs` applies `xs`(0.25rem) margin to the **bottom side**
 
 ## Divider
 

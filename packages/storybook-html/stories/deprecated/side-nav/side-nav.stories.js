@@ -2,8 +2,8 @@
 import "./side-nav.scss";
 
 // import HTML template strings
-import sideNavSingleLevelHTML from "./side-nav.html";
-import sideNavMultiLevelHTML from "./side-nav-multi-level.html";
+import sideNavSingleLevelHTML from "./side-nav.html?raw";
+import sideNavMultiLevelHTML from "./side-nav-multi-level.html?raw";
 
 export default {
   title: "Deprecated/Side nav",

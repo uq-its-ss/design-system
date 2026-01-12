@@ -1,25 +1,14 @@
-<<<<<<< HEAD
-import { Header } from "../../components/header/header.stories";
-import { footer } from "../../components/footer/footer.stories";
-import * as AlertStories from "../../components/alert/alert.stories";
-import { Breadcrumb } from "../../components/breadcrumb/breadcrumb.stories";
-=======
 import { storyRenderer } from "../../../lib/storyRenderer";
 import * as HeaderStories from "../../components/header/header.stories";
 import * as BreadcrumbStories from "../../components/breadcrumb/breadcrumb.stories";
->>>>>>> origin
 import * as HeroStories from "../../components/hero/hero.stories";
 import * as SidebarRightStories from "../../layout/page-layouts/sidebar-right/sidebar-right.stories";
 import * as CardStories from "../../components/card/card.stories";
 import * as PillListStories from "../../components/pill/list/pill-list.stories";
 import * as SearchInputStories from "../../components/search-input/search-input.stories";
 import { searchInput } from "@uqds/form/src/js/main";
-<<<<<<< HEAD
-import { Alerts } from "@uqds/alert/src/js/main";
-=======
 import * as FooterStories from "../../components/footer/footer.stories";
 import { initJs } from "../../../lib/initJs";
->>>>>>> origin
 
 const { Header } = storyRenderer(HeaderStories);
 const { Breadcrumb } = storyRenderer(BreadcrumbStories);

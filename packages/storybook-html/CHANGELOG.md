@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.1.1-alpha.4](https://github.com/uq-its-ss/design-system/compare/storybook-html@8.1.1-alpha.3...storybook-html@8.1.1-alpha.4) (2026-01-14)
+
+### Bug Fixes
+
+- update ds variable name to honorificPrefix for added clarity ([#720](https://github.com/uq-its-ss/design-system/issues/720)) ([fc9999c](https://github.com/uq-its-ss/design-system/commit/fc9999c2f510ec9a473d1ea80adf3307d5a40dd2))
+
 ## [8.1.1-alpha.3](https://github.com/uq-its-ss/design-system/compare/storybook-html@8.1.1-alpha.2...storybook-html@8.1.1-alpha.3) (2025-12-12)
 
 ### Bug Fixes

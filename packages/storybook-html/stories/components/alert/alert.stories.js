@@ -17,29 +17,29 @@ export default {
       name: "global",
       control: "boolean",
     },
-    title: { 
+    title: {
       control: "text",
       table: {
         category: "Content",
-      } 
+      },
     },
-    message: { 
+    message: {
       control: "text",
       table: {
         category: "Content",
-      } 
+      },
     },
-    button: { 
+    button: {
       control: "text",
       table: {
         category: "Call to action",
-      } 
+      },
     },
-    link: { 
+    link: {
       control: "text",
       table: {
         category: "Call to action",
-      } 
+      },
     },
   },
   args: {
@@ -58,7 +58,7 @@ export default {
           "uq-alert",
           `uq-alert--${status}`,
           isGlobal === true && "uq-alert--global",
-          isDark === true && "uq-alert--dark"
+          isDark === true && "uq-alert--dark",
         )}"
         role="alert">
         ${isGlobal ? `<div class="uq-alert__container">` : ""}

@@ -4,24 +4,63 @@ import { Alerts } from "@uqds/alert/src/js/main";
 export default {
   title: "Components/Alert",
   argTypes: {
-    title: { control: "text" },
-    message: { control: "text" },
-    button: { control: "text" },
     status: {
+      name: "status",
       options: ["info", "success", "warning", "error"],
       control: "select",
+    },
+    isDark: {
+      name: "dark",
+      control: "boolean",
+    },
+    isGlobal: {
+      name: "global",
+      control: "boolean",
+    },
+    title: { 
+      control: "text",
+      table: {
+        category: "Content",
+      } 
+    },
+    message: { 
+      control: "text",
+      table: {
+        category: "Content",
+      } 
+    },
+    button: { 
+      control: "text",
+      table: {
+        category: "Call to action",
+      } 
+    },
+    link: { 
+      control: "text",
+      table: {
+        category: "Call to action",
+      } 
     },
   },
   args: {
     status: "info",
+    isGlobal: false,
+    isDark: false,
     title: "",
     message: `<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>`,
     button: "",
     link: "",
   },
-  render: ({ title, message, status, button, link }) => {
+  render: ({ isGlobal, isDark, status, title, message, button, link }) => {
     return `
-      <div class="${classNames("uq-alert", `uq-alert--${status}`)}" role="alert">
+      <div 
+        class="${classNames(
+          "uq-alert",
+          `uq-alert--${status}`,
+          isGlobal === true && "uq-alert--global",
+          isDark === true && "uq-alert--dark"
+        )}"
+        role="alert">
         <div class="uq-alert__message">
           ${title ? `<h3 class="uq-alert__title">${title}</h3>` : ""}
           ${message}

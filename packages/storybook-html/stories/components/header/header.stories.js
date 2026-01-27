@@ -1,3 +1,9 @@
+/**
+ * @file header.stories.js
+ * Storybook configuration for the UQ Header component.
+ * Purpose: Simulates the Header's HTML generation and JS initialization.
+ */
+
 // import styles
 import "./header.scss";
 
@@ -5,7 +11,11 @@ import "./header.scss";
 import { localLinks, primaryLinks, secondaryLinks } from "./menuData.js"; // Import the menu data
 import { header } from "@uqds/header/src/js/main"; // Import 'header' for UQ header JS functionality
 
-// Helper function to render the mega menu columns, groups, and children
+/**
+ * HELPER: Mega Menu Renderer (Desktop)
+ * Renders the multi-column dropdowns seen on large screens.
+ * Structure: Column -> Group Heading -> List Items.
+ */
 const renderMegaMenu = (columns, parentTitle) => {
   return columns
     .map(
@@ -35,7 +45,10 @@ const renderMegaMenu = (columns, parentTitle) => {
     .join("");
 };
 
-// helper function for recursive rendering of nested links
+/**
+ * HELPER: Recursive Nested Link Renderer (Mobile)
+ * It handles the deep hierarchy of the mobile slide-out menu.
+ */
 const renderNestedLinks = (children, isRoot = false) => {
   if (!children || children.length === 0) {
     return "";
@@ -44,6 +57,7 @@ const renderNestedLinks = (children, isRoot = false) => {
   return children
     .map((child) => {
       // Check if the current child itself has nested children (e.g., third level)
+      // If an item has children, it becomes a toggle for the next menu level
       const hasGrandchildren = child.children && child.children.length > 0;
 
       let linkContent = `
@@ -69,7 +83,10 @@ const renderNestedLinks = (children, isRoot = false) => {
     .join("");
 };
 
-// Helper function to render the mobile navigation structure
+/**
+ * HELPER: Mobile Navigation Root
+ * Entry point for building the mobile menu structure.
+ */
 const renderMobileNav = (links) => {
   return links
     .map(
@@ -179,8 +196,10 @@ export default {
   },
 };
 
-// --- Story Rendering Logic (The previous Template function, now the 'render' method) ---
-
+/**
+ * RENDERER: Main Header Template
+ * This function generates the final HTML string. 
+ */
 const headerRenderer = ({
   siteName,
   siteDomain,
@@ -192,14 +211,20 @@ const headerRenderer = ({
 }) => `
 <header class="uq-header" data-gtm-category="Header">
   <div class="uq-header__container">
+
+    <!-- MENU TOGGLE -->
     <div class="uq-header__menu-toggle" data-target="global-mobile-nav" data-gtm-category="Primary header">
       <button type="button" class="nav-primary__toggle nav-primary__menu-toggle slide-menu__control" data-target="global-mobile-nav" data-arg=".is-active" data-action="smartToggle" data-gtm-trigger="click" data-gtm-action="Toggle">Menu</button>
     </div>
+
+    <!-- LOGO -->
     <div class="uq-header__logo" data-gtm-category="Primary header">
       <a class="logo--large" href="https://uq.edu.au" data-gtm-label="UQ Logo">
         <img alt="The University of Queensland" src="https://static.uq.net.au/v11/logos/corporate/uq-logo--reversed.svg">
       </a>
     </div>
+
+   <!-- DESKTOP NAV (Primary) -->
     <div class="uq-header__nav-primary" data-gtm-category="Primary header">
       <nav class="uq-header__nav-primary-container" aria-label="primary navigation">
         <ul class="uq-header__nav-primary-list">
@@ -211,6 +236,7 @@ const headerRenderer = ({
               ${
                 showGlobalHeader
                   ? `
+                <!-- Mega Menu (Desktop Only) -->
                 <div class="uq-header__megamenu">
                   <div class="uq-header__megamenu-container">
                     <a href="${link.href}" class="megamenu__overview-link" data-gtm-label="${link.title} > ${link.title} overview"><span class="megamenu__overview-label">${link.title} overview</span></a>
@@ -229,6 +255,8 @@ const headerRenderer = ({
         </ul>
       </nav>
     </div>
+
+    <!-- SEARCH TOGGLE -->
     <div class="uq-header__search-toggle" data-gtm-category="Search">
       <button class="nav-primary__toggle nav-primary__search-toggle" data-gtm-action="Toggle">
         <div class="search-toggle__label">Search</div>
@@ -236,9 +264,12 @@ const headerRenderer = ({
     </div>
   </div>
   
-  <!-- Mobile only navigation -->
+  <!-- MOBILE NAVIGATION (Slide Menu) -->
+  <!-- "uq-header__nav-mobile-local" class is added if showing local site menu -->
   <nav class="slide-menu uq-header__nav-mobile ${showLocalMobile ? "uq-header__nav-mobile-local" : ""}" id="global-mobile-nav" aria-label="primary navigation mobile">
     <ul class="uq-header__nav-mobile-list">
+
+    <!-- SCENARIO A: Local Site Navigation -->
     ${
       showLocalMobile
         ? `
@@ -248,18 +279,21 @@ const headerRenderer = ({
         <li class="uq-header__nav-mobile-item">
             <a class="uq-header__nav-mobile-link is-active" href="/study">Study</a>
         </li>
+        <!-- Hook for the recursive menu file above -->
         ${renderMobileNav(localLinks)}
         `
         : ""
     }
     
-
+    <!-- SCENARIO 2: Global Mobile Navigation (e.g., Homepage or Fallback) -->
     ${
       !showLocalMobile
         ? `
           <li class="uq-header__nav-mobile-item" data-gtm-category="Secondary header">
             <a class="uq-header__nav-mobile-primary" href="https://uq.edu.au">UQ home <span class="slide-menu__decorator"> </span></a>
           </li>
+
+          <!-- Global Primary Links (Flattened for Mobile) -->
           ${primaryLinks
             .map(
               (link) => `
@@ -269,6 +303,7 @@ const headerRenderer = ({
             )
             .join("")}
 
+          <!-- Global Secondary Links -->
           ${secondaryLinks
             .map(
               (link) => `
@@ -284,7 +319,7 @@ const headerRenderer = ({
     </ul>
   </nav>
 
-
+    <!-- SEARCH FORM -->
     <div class="uq-header__search" data-gtm-category="Search">
     <div class="uq-header__search-container">
         <form action="https://search.uq.edu.au/" method="get" data-gtm-action="Text search" data-gtm-form-action="">
@@ -302,6 +337,7 @@ const headerRenderer = ({
     </div>
     </div>
 
+    <!-- Desktop Secondary Navigation -->
     <div class="uq-header__nav-secondary">
         <nav class="uq-header__nav-secondary-container">
         <ul class="uq-header__nav-secondary-list">

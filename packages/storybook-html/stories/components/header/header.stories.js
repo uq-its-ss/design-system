@@ -156,7 +156,7 @@ export const basicHeader = {
 export const searchGlobal = {
   render: () => {
     return `
-      <div id="uq-header" class="uq-header__search-container">
+      <div class="uq-header__search-container">
         <form action="https://search.uq.edu.au/" method="get" data-gtm-action="Text search" data-gtm-form-action="">
           <fieldset>
             <div class="uq-header__search-query">
@@ -184,7 +184,7 @@ export const searchGlobal = {
 export const searchLocal = {
   render: () => {
     return `
-    <div id="uq-header" class="uq-header__search-container">
+    <div class="uq-header__search-container">
     <form action="https://search.uq.edu.au/" method="get" data-gtm-action="Text search" data-gtm-form-action="">
       <fieldset>
         <div class="uq-header__search-query">

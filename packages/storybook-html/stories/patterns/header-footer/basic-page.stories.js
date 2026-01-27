@@ -7,7 +7,7 @@ import { breadcrumb } from "@uqds/breadcrumb/src/js/main";
 // import HTML template strings
 import { HeaderInterim } from "../../components/header/header.stories";
 import { siteHeaderWithSubnav } from "../../components/site-header/site-header.stories";
-import { Breadcrumb } from "../../components/breadcrumb/breadcrumb.stories";
+import * as breadcrumb from "../../components/breadcrumb/breadcrumb.stories";
 import { footer } from "../../components/footer/footer.stories";
 
 export default {
@@ -25,7 +25,7 @@ export const basicPage = {
     return `
     ${HeaderInterim.render()}
       ${siteHeaderWithSubnav.render()}
-      ${Breadcrumb.render()}
+      ${BreadcrumbStories.default.render ? BreadcrumbStories.default.render(BreadcrumbStories.default.args || {}) : ""}
       <div class="uq-grid">
         <div class="uq-grid__col uq-grid__col--6">
           <h1>Heading level 1 (h1)</h1>

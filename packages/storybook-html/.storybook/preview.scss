@@ -22,14 +22,15 @@ body {
 .sbdocs {
 
   * { 
-    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif !important; 
+    font-family: core.$roboto !important; 
   }
 
   h1,
   &-title {
-    font-size: core.$font-size-xxxl !important;
+    font-family: core.$montserrat !important;
+    font-size: core.$font-size-xxxxl !important;
     margin: 0 0 core.$space-s !important;
-
+    font-weight: core.$font-weight-bold !important;
   }
 
   h2 {

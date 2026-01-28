@@ -25,6 +25,11 @@ body {
     font-family: core.$roboto !important; 
   }
 
+  code,
+  pre * {
+    font-family: core.$font-monospace !important;
+  }
+
   h1,
   &-title {
     font-family: core.$montserrat !important;

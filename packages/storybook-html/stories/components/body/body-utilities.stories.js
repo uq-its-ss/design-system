@@ -199,13 +199,17 @@ export const skipLinks = {
   name: "Skip links",
   parameters: {
     docs: {
-      codePanel: false,
+      source: {
+        code: `<a href="#uq-header" class="visually-hidden focusable">Skip to header</a>
+    <a href="#uq-main" class="visually-hidden focusable">Skip to content</a>
+    <a href="#uq-footer" class="visually-hidden focusable">Skip to footer</a>`, 
+      },
     }
   },
   render: () => ` 
     <a href="#uq-header" class="visually-hidden focusable">Skip to header</a>
     <a href="#uq-main" class="visually-hidden focusable">Skip to content</a>
     <a href="#uq-footer" class="visually-hidden focusable">Skip to footer</a>
-    <p>Tab to skip links to make them visible</p>
+    <div>Tab to skip links to make them visible</div>
   `,  
 };

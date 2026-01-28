@@ -6,7 +6,6 @@ import * as HeroStories from "../components/hero/hero.stories";
 import * as SectionStories from "../components/section/section.stories";
 import * as CardStories from "../components/card/card.stories";
 import * as StoryCardStories from "../components/story-card/story-card.stories";
- 
 
 const { Header } = storyRenderer(HeaderStories);
 const { footer } = storyRenderer(FooterStories);
@@ -61,7 +60,8 @@ export const Home = {
             })}
             ${CardIconNav({
               title: "Partners and community",
-              description: "We collaborate locally and globally to drive innovation.",
+              description:
+                "We collaborate locally and globally to drive innovation.",
               icon: "other--tool-box",
             })}
             ${CardIconNav({
@@ -75,9 +75,9 @@ export const Home = {
       `,
     })}
     ${Section({
-        title: "",
-        description: "",
-        content: `
+      title: "",
+      description: "",
+      content: `
           <div class="uq-section">
             <div class="uq-card-grid uq-card-grid--target-3x">
               ${CardImage({
@@ -88,7 +88,8 @@ export const Home = {
               })}
               ${CardImage({
                 title: "Apply now",
-                description: "View the steps to apply and get started on your application.",
+                description:
+                  "View the steps to apply and get started on your application.",
                 image: "images/card/card-example-st-lucia-campus.jpg",
               })}
               ${CardImage({
@@ -100,7 +101,7 @@ export const Home = {
             </div>
           </div>
         `,
-      })}
+    })}
       ${Section({
         title: "News",
         description: `<a href="#">See more news</a>`,
@@ -108,12 +109,14 @@ export const Home = {
           <div class="uq-section">
             <div class="uq-card-grid uq-card-grid--target-3x">
               ${NewsCard({
-                title: "Lifelike lab-grown skin developed from human stem cells",
+                title:
+                  "Lifelike lab-grown skin developed from human stem cells",
                 description: "",
                 image: "images/card/card-example-gatton-campus.jpg",
               })}
               ${NewsCard({
-                title: "Zinc discovery holds promise for people with cystic fibrosis",
+                title:
+                  "Zinc discovery holds promise for people with cystic fibrosis",
                 description: "",
                 image: "images/card/card-example-herston-campus.jpg",
               })}
@@ -125,7 +128,7 @@ export const Home = {
             </div>
           </div>    
         `,
-    })}
+      })}
     </main>  
     ${footer()}
   </div>`,

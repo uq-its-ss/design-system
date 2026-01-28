@@ -313,7 +313,7 @@ $use-encapsulation: false !default;
   .visually-hidden {
     @include visually-hidden;
 
-    &.focusable:active, 
+    &.focusable:active,
     &.focusable:focus {
       position: static !important;
       overflow: visible;

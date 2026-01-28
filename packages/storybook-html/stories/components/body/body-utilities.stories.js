@@ -194,3 +194,18 @@ export const visibilityUtils = {
 
   name: "Visibility",
 };
+
+export const skipLinks = {
+  name: "Skip links",
+  parameters: {
+    docs: {
+      codePanel: false,
+    }
+  },
+  render: () => ` 
+    <a href="#uq-header" class="visually-hidden focusable">Skip to header</a>
+    <a href="#uq-main" class="visually-hidden focusable">Skip to content</a>
+    <a href="#uq-footer" class="visually-hidden focusable">Skip to footer</a>
+    <p>Tab to skip links to make them visible</p>
+  `,  
+};

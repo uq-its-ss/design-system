@@ -45,29 +45,34 @@ export const Home = {
   ],
   render: () => `
 <div>
+  <a href="#uq-header" class="visually-hidden focusable">Skip to header</a>
+  <a href="#uq-main" class="visually-hidden focusable">Skip to content</a>
+  <a href="#uq-footer" class="visually-hidden focusable">Skip to footer</a>  
   ${Header()}
-  ${Breadcrumb({ showLevels: 0, currentPage: "News" })}
-  ${Level2Hero({ title: "News", description: "Get the latest from UQ News.", image: null })}
-  ${NewsExample()}
-  <div class="uq-section">
-    <div class="uq-container">
-      <div class="uq-section__header">
-        <h2 class="uq-section__title">Looking for specific news?</h2>
-      </div>
-      <h3>Search by keyword</h3>
-      ${SearchInput()}
-      <h3>Browse by topic</h3>
-      ${PillList()}
-    </div>
-  </div>
-  <div class="uq-section">
-    <div class="uq-container">
-      <div class="uq-card-grid uq-card-grid--target-2x">
-        ${Card({ title: "Looking for a UQ expert?", description: "Browse our searchable database of UQ Staff available to share their specialist knowledge and research developments." })}
-        ${Card({ title: "Contact us", description: "Do you have a media enquiry or a question for the UQ communications team?" })}
+  <main id="uq-main">
+    ${Breadcrumb({ showLevels: 0, currentPage: "News" })}
+    ${Level2Hero({ title: "News", description: "Get the latest from UQ News.", image: null })}
+    ${NewsExample()}
+    <div class="uq-section">
+      <div class="uq-container">
+        <div class="uq-section__header">
+          <h2 class="uq-section__title">Looking for specific news?</h2>
+        </div>
+        <h3>Search by keyword</h3>
+        ${SearchInput()}
+        <h3>Browse by topic</h3>
+        ${PillList()}
       </div>
     </div>
-  </div>
+    <div class="uq-section">
+      <div class="uq-container">
+        <div class="uq-card-grid uq-card-grid--target-2x">
+          ${Card({ title: "Looking for a UQ expert?", description: "Browse our searchable database of UQ Staff available to share their specialist knowledge and research developments." })}
+          ${Card({ title: "Contact us", description: "Do you have a media enquiry or a question for the UQ communications team?" })}
+        </div>
+      </div>
+    </div>
+  </main>
   ${footer()}
 </div>
 `,

@@ -6,6 +6,8 @@
   .toc-list {
     .toc-list-item {
       a.toc-link {
+        font-weight: core.$font-weight-normal;
+
         &::before {
           width: 0;
         }
@@ -24,6 +26,7 @@
       }
 
       & > a {
+        font-weight: core.$font-weight-bold;
         color: core.$purple-500;
       }
     }

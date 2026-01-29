@@ -20,14 +20,6 @@ body {
 
 // Set heading styles
 .sbdocs {
-  * {
-    font-family: core.$roboto !important;
-  }
-
-  code,
-  pre * {
-    font-family: core.$font-monospace !important;
-  }
 
   h1,
   &-title {
@@ -66,7 +58,7 @@ body {
     font-weight: core.$font-weight-medium !important;
     padding-bottom: 0 !important;
     border-bottom: 0 !important;
-    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    font-family: core.$roboto;
   }
 
   h2 + :not(p),
@@ -75,6 +67,24 @@ body {
   h5 + :not(p),
   h6 + :not(p) {
     margin-top: 1rem !important;
+  }
+
+  p, a, ul, ol, li, span {
+    font-family: core.$roboto;
+  }
+
+  a {
+    color: core.$purple-500;
+
+    &:hover,
+    &:focus {
+      color: core.$white;
+    }
+  }
+
+  code,
+  pre * {
+    font-family: core.$font-monospace !important;
   }
 }
 

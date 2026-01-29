@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.1.1-alpha.5](https://github.com/uq-its-ss/design-system/compare/storybook-html@8.1.1-alpha.4...storybook-html@8.1.1-alpha.5) (2026-01-29)
+
+**Note:** Version bump only for package storybook-html
+
 ## [8.1.1-alpha.4](https://github.com/uq-its-ss/design-system/compare/storybook-html@8.1.1-alpha.3...storybook-html@8.1.1-alpha.4) (2026-01-14)
 
 ### Bug Fixes

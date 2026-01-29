@@ -33,10 +33,10 @@ export default {
 
 export const Home = {
   render: ({ showGrid }) => `
-<div class="${classNames({ "uqds-layout-demo-bg": showGrid })}">
+<div class="${classNames({ "uqds-layout-preview": showGrid })}">
   <a href="#uq-header" class="visually-hidden focusable">Skip to header</a>
-  <a href="#uq-main" class="visually-hidden focusable">Skip to content</a>
-  <a href="#uq-footer" class="visually-hidden focusable">Skip to footer</a>
+    <a href="#uq-main" class="visually-hidden focusable">Skip to content</a>
+    <a href="#uq-footer" class="visually-hidden focusable">Skip to footer</a>
   ${Header()}
   <main id="uq-main">
     ${Hero()}

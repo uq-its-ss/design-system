@@ -20,7 +20,6 @@ body {
 
 // Set heading styles
 .sbdocs {
-
   h1,
   &-title {
     font-family: core.$montserrat !important;
@@ -69,7 +68,12 @@ body {
     margin-top: 1rem !important;
   }
 
-  p, a, ul, ol, li, span {
+  p,
+  a,
+  ul,
+  ol,
+  li,
+  span {
     font-family: core.$roboto;
   }
 

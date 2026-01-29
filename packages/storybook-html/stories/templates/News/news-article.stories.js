@@ -1,3 +1,4 @@
+import classNames from "classnames";
 import { storyRenderer } from "../../../lib/storyRenderer";
 import * as CardStories from "../../components/card/card.stories";
 import * as PaneStories from "../../components/pane/pane.stories";
@@ -62,8 +63,8 @@ export const Article = {
         new accordion();
       }),
   ],
-  render: () => `
-<div>
+  render: ({ showGrid }) => `
+<div class="${classNames({ "uqds-layout-preview": showGrid })}">
   <a href="#uq-header" class="visually-hidden focusable">Skip to header</a>
   <a href="#uq-main" class="visually-hidden focusable">Skip to content</a>
   <a href="#uq-footer" class="visually-hidden focusable">Skip to footer</a>  

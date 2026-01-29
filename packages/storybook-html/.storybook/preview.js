@@ -1,4 +1,3 @@
-import TocDocs from "./custom/components/TocDocs";
 import DocsHeader from "./custom/components/DocsHeader";
 import DocsPage from "./custom/components/DocsPage";
 
@@ -26,9 +25,15 @@ const preview = {
   parameters: {
     docs: {
       components: { h1: DocsHeader },
-      container: TocDocs,
       page: DocsPage,
-      toc: true, // 👈 Enables the table of contents
+      toc: {
+        contentsSelector: '.sbdocs-content',
+        headingSelector: 'h2, h3',
+        disable: false,
+        unsafeTocbotOptions: {
+          orderedList: false,
+        },
+      },
     },
     controls: {
       matchers: {

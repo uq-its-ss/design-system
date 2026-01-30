@@ -187,6 +187,7 @@
     background-color: core.$utility-500;
     color: core.$white;
 
+    // link overrides for dark variant
     a {
       color: inherit;
       text-decoration: underline;
@@ -195,6 +196,18 @@
       &:focus {
         background-color: core.$white;
         color: core.$purple-500;
+      }
+    }
+
+    // button overrides for dark variant
+    a.uq-button {
+      background-color: core.$white;
+      color: core.$purple-500;
+
+      &:hover,
+      &:focus {
+        background-color: core.$purple-500;
+        color: core.$white;
       }
     }
 

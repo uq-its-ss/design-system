@@ -29,6 +29,7 @@ const preview = {
       toc: {
         contentsSelector: '.sbdocs-content',
         headingSelector: 'h2, h3',
+        ignoreSelector: '.sbdocs-preview h2, .sbdocs-preview h3',
         disable: false,
         unsafeTocbotOptions: {
           orderedList: false,

@@ -27,9 +27,9 @@ const preview = {
       components: { h1: DocsHeader },
       page: DocsPage,
       toc: {
-        contentsSelector: '.sbdocs-content',
-        headingSelector: 'h2, h3',
-        ignoreSelector: '.sbdocs-preview h2, .sbdocs-preview h3',
+        contentsSelector: ".sbdocs-content",
+        headingSelector: "h2, h3",
+        ignoreSelector: ".sbdocs-preview h2, .sbdocs-preview h3",
         disable: false,
         unsafeTocbotOptions: {
           orderedList: false,

@@ -3,90 +3,57 @@
 
 // tocbot style overrides
 .toc-wrapper {
-  .toc-list {
-    .toc-list-item {
-      a.toc-link {
-        font-weight: core.$font-weight-normal;
+  .toc-list,
+  .toc-list-item::before,
+  .toc-list-item a::before,
+  .toc-list-item.is-active-li a::before {
+    content: none !important;
+    border-left: none !important;
+  }
 
-        &::before {
-          width: 0;
-        }
+  .toc-list-item {
+    margin: 0 !important;
+    padding: 0 !important;
 
-        &:hover,
-        &:focus {
-          background-color: transparent;
-          text-decoration: underline;
-        }
+    a.toc-link {
+      font-family: core.$roboto;
+      font-weight: core.$font-weight-normal;
+      padding: 0.3rem 0 0.3rem 0.6rem;
+      border-left: 2px solid transparent;
+
+      &:hover,
+      &:focus {
+        font-weight: core.$font-weight-medium;
+        color: core.$purple-500;
+        background-color: transparent;
+        text-decoration: underline;
       }
     }
 
-    .toc-list-item.is-active-li {
-      &::before {
-        border-left: solid 2px core.$purple-500;
-      }
+    a.toc-link.is-active-link,
+    .toc-list.is-collapsible a.toc-link.is-active-link {
+      border-left: 2px solid core.$purple-500;
+    }
 
-      & > a {
-        font-weight: core.$font-weight-bold;
-        color: core.$purple-500;
+    .toc-list {
+      a.toc-link {
+        padding-left: 1.2rem;
       }
     }
   }
-}
 
-@media only screen and (min-width: #{core.$screen-md + 16.5rem}) {
-  .uqds-toc {
-    width: 12.5rem;
-    position: fixed;
-    top: 0;
-    right: 0;
-    padding-top: core.$space-uul;
-    height: 100%;
-
-    &__toc {
-      margin-left: -(core.$space-m);
-
-      .toc-list {
-        padding-left: core.$space-m;
-      }
-
-      a.toc-link {
-        display: inline-block;
-        margin: core.$space-xs core.$space-none;
-        padding-left: core.$space-m;
-        padding-right: core.$space-m;
-        text-decoration: none;
-        transition: all 0.125s ease-in;
-        color: core.$grey-900;
-
-        &::before {
-          width: core.$space-xs;
-        }
-
-        &:hover,
-        &:focus {
-          color: core.$grey-900;
-        }
-      }
-
-      .is-active-link {
-        font-weight: core.$font-weight-bold;
-
-        &::before {
-          background-color: core.$purple-500;
-        }
-      }
+  .toc-list-item:has(ul.is-collapsible:not(.is-collapsed)) {
+    > a {
+      font-weight: core.$font-weight-medium;
     }
 
-    &__heading {
-      // Visually hide heading
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-      border: 0;
+    a.toc-link {
+      border-left: 2px solid #ccc;
     }
+  }
+
+  .toc-list-item.is-active-li > a {
+    color: core.$purple-500 !important;
+    font-weight: core.$font-weight-bold !important;
   }
 }

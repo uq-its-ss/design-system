@@ -20,7 +20,7 @@ body {
 
 // Set heading styles
 .sbdocs {
-  h1,
+  > h1,
   &-title {
     font-family: core.$montserrat !important;
     font-size: core.$font-size-xxxxl !important;
@@ -28,31 +28,31 @@ body {
     font-weight: core.$font-weight-bold !important;
   }
 
-  h2 {
+  > h2 {
     font-size: core.$font-size-xxxl !important;
   }
 
-  h3 {
+  > h3 {
     font-size: core.$font-size-xxl !important;
   }
 
-  h4 {
+  > h4 {
     font-size: core.$font-size-xl !important;
   }
 
-  h5 {
+  > h5 {
     font-size: core.$font-size-l !important;
   }
 
-  h6 {
+  > h6 {
     font-size: core.$font-size-m !important;
   }
 
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
+  > h2,
+  > h3,
+  > h4,
+  > h5,
+  > h6 {
     margin: core.$space-xxxl 0 0 !important;
     font-weight: core.$font-weight-medium !important;
     padding-bottom: 0 !important;
@@ -60,24 +60,24 @@ body {
     font-family: core.$roboto;
   }
 
-  h2 + :not(p),
-  h3 + :not(p),
-  h4 + :not(p),
-  h5 + :not(p),
-  h6 + :not(p) {
+  > h2 + :not(p),
+  > h3 + :not(p),
+  > h4 + :not(p),
+  > h5 + :not(p),
+  > h6 + :not(p) {
     margin-top: 1rem !important;
   }
 
-  p,
-  a,
-  ul,
-  ol,
-  li,
-  span {
+  > p,
+  > a,
+  > ul,
+  > ol,
+  > li,
+  > span {
     font-family: core.$roboto;
   }
 
-  a {
+  > a {
     color: core.$purple-500;
     text-decoration: underline;
 

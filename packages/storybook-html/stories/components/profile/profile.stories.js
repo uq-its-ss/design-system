@@ -9,7 +9,7 @@ export default {
       options: ["h2", "h3", "h4", "h5"],
       control: "select",
     },
-    title: {
+    honorificPrefix: {
       control: "text",
     },
     name: {
@@ -74,7 +74,7 @@ export default {
   },
   args: {
     titleElement: "h2",
-    title: "Professor",
+    honorificPrefix: "Professor",
     name: "Jane Doe",
     position: "Head of School",
     bio: "",
@@ -87,7 +87,7 @@ export default {
   },
   render: ({
     titleElement,
-    title,
+    honorificPrefix,
     name,
     position,
     bio,
@@ -101,7 +101,7 @@ export default {
     return `<article class="uq-profile">
     <div class="uq-profile__content">
       <header class="uq-profile__header">
-      <${titleElement} class="uq-profile__title">${title} ${name}</${titleElement}>
+      <${titleElement} class="uq-profile__title">${honorificPrefix} ${name}</${titleElement}>
       ${position ? `<p>${position}</p>` : ""}
       </header>
       ${
@@ -124,7 +124,7 @@ export default {
         ctaUrl
           ? `
         <footer class="uq-profile__footer">
-          <a href="${ctaUrl}"> View ${title} ${name}'s profile</a>
+          <a href="${ctaUrl}"> View ${honorificPrefix} ${name}'s profile</a>
         </footer>
         `
           : ""
@@ -134,7 +134,7 @@ export default {
       hasImage
         ? `
     <div class="uq-profile__image">
-      ${avatar.render({ userName: title + " " + name, userAvatar: image })}
+      ${avatar.render({ userName: honorificPrefix + " " + name, userAvatar: image })}
     </div>
       `
         : ""
@@ -160,7 +160,7 @@ export const FallbackImage = {
 
 export const BioProfile = {
   args: {
-    title: "Professor",
+    honorificPrefix: "Professor",
     name: "Jane Doe",
     position: "Head of School",
     bio: "Dr Jane Doe is a Senior Lecturer specialising in behavioural science and wellbeing research. She teaches undergraduate and postgraduate courses, mentors research students, and collaborates on projects improving student mental health.",

@@ -68,13 +68,84 @@ export default {
           ${button ? `<p><a href="#" title="Button" class="uq-button">${button}</a></p>` : ""}
           ${link ? `<a href="#" title="Link" class="uq-button--inline">${link}</a>` : ""}
         </div>
-        ${isGlobal ? `</div">` : ""}
+        ${isGlobal ? `</div>` : ""}
       </div>
     `;
   },
 };
 
 export const alert = {};
+
+// Examples
+export const alertPageInfo = {
+  args: {
+    status: "info",
+    message: `<p>A info page alert</p>`,
+  },
+};
+
+export const alertPageSuccess = {
+  args: {
+    status: "success",
+    title: "Success!",
+    message: `<p>A success page alert</p>`,
+  },
+};
+
+export const alertPageWarning = {
+  args: {
+    status: "warning",
+    message: `<p>A warning page alert including link. <a href='#'>Call to action</a></p>`,
+  },
+};
+
+export const alertPageError = {
+  args: {
+    status: "error",
+    title: "A problem",
+    message: `<p>A error page alert</p>`,
+    button: "Call to action",
+  },
+};
+
+export const alertGlobalInfo = {
+  args: {
+    status: "info",
+    isGlobal: true,
+    isDark: true,
+    message: `<p>A info global alert</p>`,
+  },
+};
+
+export const alertGlobalSuccess = {
+  args: {
+    status: "success",
+    isGlobal: true,
+    isDark: true,
+    title: "Success!",
+    message: `<p>A success global alert</p>`,
+  },
+};
+
+export const alertGlobalWarning = {
+  args: {
+    status: "warning",
+    isGlobal: true,
+    isDark: true,
+    message: `<p>A warning global alert including link. <a href='#'>Call to action</a></p>`,
+  },
+};
+
+export const alertGlobalError = {
+  args: {
+    status: "error",
+    isGlobal: true,
+    isDark: true,
+    title: "A problem",
+    message: `<p>A error global alert</p>`,
+    button: "Call to action",
+  },
+};
 
 export const loadedFromExternalUri = {
   render: () => `

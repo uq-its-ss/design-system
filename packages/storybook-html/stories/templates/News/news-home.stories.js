@@ -1,3 +1,4 @@
+import classNames from "classnames";
 import { storyRenderer } from "../../../lib/storyRenderer";
 import * as HeaderStories from "../../components/header/header.stories";
 import * as BreadcrumbStories from "../../components/breadcrumb/breadcrumb.stories";
@@ -43,8 +44,8 @@ export const Home = {
         searchInput(component.querySelector(".uq-search-input"));
       }),
   ],
-  render: () => `
-<div>
+  render: ({ showGrid }) => `
+<div class="${classNames({ "uqds-layout-preview": showGrid })}">
   <a href="#uq-header" class="visually-hidden focusable">Skip to header</a>
   <a href="#uq-main" class="visually-hidden focusable">Skip to content</a>
   <a href="#uq-footer" class="visually-hidden focusable">Skip to footer</a>  

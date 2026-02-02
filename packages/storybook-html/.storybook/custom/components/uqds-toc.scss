@@ -1,0 +1,59 @@
+@use "@uqds/core/src/scss/_global" as core;
+@use "../../../../../node_modules/tocbot/src/scss/tocbot";
+
+// tocbot style overrides
+.toc-wrapper {
+  .toc-list,
+  .toc-list-item::before,
+  .toc-list-item a::before,
+  .toc-list-item.is-active-li a::before {
+    content: none !important;
+    border-left: none !important;
+  }
+
+  .toc-list-item {
+    margin: 0 !important;
+    padding: 0 !important;
+
+    a.toc-link {
+      font-family: core.$roboto;
+      font-weight: core.$font-weight-normal;
+      padding: 0.3rem 0 0.3rem 0.6rem;
+      border-left: 2px solid transparent;
+
+      &:hover,
+      &:focus {
+        font-weight: core.$font-weight-medium;
+        color: core.$purple-500;
+        background-color: transparent;
+        text-decoration: underline;
+      }
+    }
+
+    a.toc-link.is-active-link,
+    .toc-list.is-collapsible a.toc-link.is-active-link {
+      border-left: 2px solid core.$purple-500;
+    }
+
+    .toc-list {
+      a.toc-link {
+        padding-left: 1.2rem;
+      }
+    }
+  }
+
+  .toc-list-item:has(ul.is-collapsible:not(.is-collapsed)) {
+    > a {
+      font-weight: core.$font-weight-medium;
+    }
+
+    a.toc-link {
+      border-left: 2px solid #ccc;
+    }
+  }
+
+  .toc-list-item.is-active-li > a {
+    color: core.$purple-500 !important;
+    font-weight: core.$font-weight-bold !important;
+  }
+}

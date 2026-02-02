@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.2-alpha.1](https://github.com/uq-its-ss/design-system/compare/@uqds/body@4.0.2-alpha.0...@uqds/body@4.0.2-alpha.1) (2026-01-29)
+
+**Note:** Version bump only for package @uqds/body
+
+## [4.0.2-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/body@4.0.1...@uqds/body@4.0.2-alpha.0) (2025-12-12)
+
+### Bug Fixes
+
+- add uq- prefix to padding and margin utility classes. update doco to reflect. ([#719](https://github.com/uq-its-ss/design-system/issues/719)) ([258cfbf](https://github.com/uq-its-ss/design-system/commit/258cfbf7fea6fa0ff16222aa180150695a07ff43))
+
 ## [4.0.1](https://github.com/uq-its-ss/design-system/compare/@uqds/body@4.0.1-alpha.0...@uqds/body@4.0.1) (2025-12-02)
 
 **Note:** Version bump only for package @uqds/body

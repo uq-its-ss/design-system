@@ -19,7 +19,6 @@ const { NewsExample } = storyRenderer(SidebarRightStories);
 const { Text: Card } = storyRenderer(CardStories);
 const { List: PillList } = storyRenderer(PillListStories);
 const { SearchInput } = storyRenderer(SearchInputStories);
-const { successGlobal } = storyRenderer(AlertStories);
 
 export default {
   title: "Templates/News/Home",

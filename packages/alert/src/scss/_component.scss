@@ -26,27 +26,6 @@
     line-height: 24px;
   }
 
-  &__container {
-    width: 100%;
-    max-width: 32px + 1140px + 32px;
-    padding-left: core.$space-l;
-    padding-right: core.$space-l;
-    margin-left: auto;
-    margin-right: auto;
-    overflow-x: clip; /* Prevent long URLs from breaking container */
-
-    @media #{core.$screen-lg-up} {
-      padding-left: core.$space-xl;
-      padding-right: core.$space-xl;
-    }
-
-    .uq-alert__message {
-      &:not(:last-child) {
-        padding-right: core.$space-xxxl;
-      }
-    }
-  }
-
   &__title {
     font-size: core.$font-size-l;
     font-weight: core.$font-weight-medium;
@@ -58,6 +37,11 @@
   &__message {
     position: relative;
     padding: core.$space-l core.$space-xxxxl core.$space-l core.$space-ul;
+    width: 100%;
+    max-width: 1204px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-x: clip;
 
     &::before {
       content: "";
@@ -71,7 +55,7 @@
       height: core.$space-l;
       position: absolute;
       top: 25px;
-      left: core.$space-compressed-xxxl;
+      left: core.$space-l;
     }
 
     p {
@@ -89,7 +73,7 @@
     padding: 0;
     position: absolute;
     top: core.$space-none;
-    right: -(core.$space-compressed-m);
+    right: core.$space-m;
     background-image: url(icon.get-icon("standard--x", core.$grey-900));
     background-repeat: no-repeat;
     background-size: 1rem;
@@ -159,33 +143,19 @@
     }
   }
 
-  // Global alert
+  // Global variant
   &--global {
-    .uq-alert__message {
-      line-height: #{core.$line-height}rem;
-      font-weight: core.$font-weight-normal;
-      padding: core.$space-l core.$space-xxl;
-
-      @media #{core.$screen-md-up} {
-        font-size: core.$font-size-m;
-      }
-
-      &::before {
-        content: "";
-        background-size: 1.5rem;
-        width: core.$space-l;
-        height: core.$space-l;
-        position: absolute;
-        top: core.$space-l;
-        left: core.$space-none;
-      }
-    }
-  }
-
-  // Dark variant
-  &--dark {
     background-color: core.$utility-500;
     color: core.$white;
+
+    // container overrides to match content width
+    .uq-alert__message {
+      padding-left: core.$space-uul;
+
+      &::before {
+        left: core.$space-xl;
+      }
+    }
 
     // link overrides for dark variant
     a {
@@ -203,11 +173,13 @@
     a.uq-button {
       background-color: core.$white;
       color: core.$purple-500;
+      text-decoration: none;
 
       &:hover,
       &:focus {
         background-color: core.$purple-500;
         color: core.$white;
+        text-decoration: underline;
       }
     }
 

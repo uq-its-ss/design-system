@@ -9,10 +9,6 @@ export default {
       options: ["info", "success", "warning", "error"],
       control: "select",
     },
-    isDark: {
-      name: "dark",
-      control: "boolean",
-    },
     isGlobal: {
       name: "global",
       control: "boolean",
@@ -45,7 +41,6 @@ export default {
   args: {
     status: "info",
     isGlobal: false,
-    isDark: false,
     title: "",
     message: `<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>`,
     button: "",
@@ -58,17 +53,14 @@ export default {
           "uq-alert",
           `uq-alert--${status}`,
           isGlobal === true && "uq-alert--global",
-          isDark === true && "uq-alert--dark",
         )}"
         role="alert">
-        ${isGlobal ? `<div class="uq-alert__container">` : ""}
         <div class="uq-alert__message">
           ${title ? `<h3 class="uq-alert__title">${title}</h3>` : ""}
           ${message}
           ${button ? `<p><a href="#" title="Button" class="uq-button">${button}</a></p>` : ""}
           ${link ? `<a href="#" title="Link" class="uq-button--inline">${link}</a>` : ""}
         </div>
-        ${isGlobal ? `</div>` : ""}
       </div>
     `;
   },
@@ -112,7 +104,6 @@ export const alertGlobalInfo = {
   args: {
     status: "info",
     isGlobal: true,
-    isDark: true,
     message: `<p>A info global alert</p>`,
   },
 };
@@ -121,7 +112,6 @@ export const alertGlobalSuccess = {
   args: {
     status: "success",
     isGlobal: true,
-    isDark: true,
     title: "Success!",
     message: `<p>A success global alert</p>`,
   },
@@ -131,7 +121,6 @@ export const alertGlobalWarning = {
   args: {
     status: "warning",
     isGlobal: true,
-    isDark: true,
     message: `<p>A warning global alert including link. <a href='#'>Call to action</a></p>`,
   },
 };
@@ -140,7 +129,6 @@ export const alertGlobalError = {
   args: {
     status: "error",
     isGlobal: true,
-    isDark: true,
     title: "A problem",
     message: `<p>A error global alert</p>`,
     button: "Call to action",

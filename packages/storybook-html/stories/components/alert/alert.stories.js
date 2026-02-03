@@ -125,16 +125,6 @@ export const alertGlobalWarning = {
   },
 };
 
-export const alertGlobalError = {
-  args: {
-    status: "error",
-    isGlobal: true,
-    title: "A problem",
-    message: `<p>A error global alert</p>`,
-    button: "Call to action",
-  },
-};
-
 export const loadedFromExternalUri = {
   render: () => `
     <div id="global-alerts-container" data-uri="/api/v1/alerts.json">

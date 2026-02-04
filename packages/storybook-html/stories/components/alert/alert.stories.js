@@ -59,7 +59,7 @@ export default {
           ${title ? `<h3 class="uq-alert__title">${title}</h3>` : ""}
           ${message}
           ${button ? `<p><a href="#" title="Button" class="uq-button">${button}</a></p>` : ""}
-          ${link ? `<a href="#" title="Link" class="uq-button--inline">${link}</a>` : ""}
+          ${link ? `<p><a href="#" title="Link" class="uq-button--inline">${link}</a></p>` : ""}
         </div>
       </div>
     `;
@@ -108,14 +108,6 @@ export const alertGlobalInfo = {
   },
 };
 
-export const alertGlobalSuccess = {
-  args: {
-    status: "success",
-    isGlobal: true,
-    title: "Success!",
-    message: `<p>A success global alert</p>`,
-  },
-};
 
 export const alertGlobalWarning = {
   args: {

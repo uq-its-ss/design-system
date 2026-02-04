@@ -108,7 +108,6 @@ export const alertGlobalInfo = {
   },
 };
 
-
 export const alertGlobalWarning = {
   args: {
     status: "warning",

@@ -64,12 +64,12 @@ const screenshot = async (browser, viewportName, pageName) => {
   // NEW: Background Image Waiter Script
   // This scans the DOM for elements with background images and waits for them to load.
   await page.evaluate(async () => {
-    const allElements = document.querySelectorAll('*');
+    const allElements = document.querySelectorAll("*");
     const backgroundImages = [];
 
-    allElements.forEach(el => {
+    allElements.forEach((el) => {
       const bg = window.getComputedStyle(el).backgroundImage;
-      if (bg && bg !== 'none' && bg.includes('url')) {
+      if (bg && bg !== "none" && bg.includes("url")) {
         const urlMatch = bg.match(/url\(["']?([^"']*)["']?\)/);
         if (urlMatch) {
           backgroundImages.push(urlMatch[1]);
@@ -77,7 +77,7 @@ const screenshot = async (browser, viewportName, pageName) => {
       }
     });
 
-    const promises = backgroundImages.map(url => {
+    const promises = backgroundImages.map((url) => {
       return new Promise((resolve) => {
         const img = new Image();
         img.src = url;

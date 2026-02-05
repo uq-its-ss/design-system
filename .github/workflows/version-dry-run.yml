@@ -42,6 +42,7 @@ jobs:
           BRANCH_NAME=$(echo ${{ github.head_ref }} | sed 's|refs/heads/||g')
 
           # Prepare the appropriate Lerna command based on the PR's target branch
+          # As the workflow runs in a separate, isolated environment, we do not need to reset the head to avoid buming version twice. 
           if [[ "${{ github.base_ref }}" == "releases" ]]; then
             echo "Running dry run for a STABLE release (targeting 'releases')."
             COMMAND="npx lerna version --conventional-commits --conventional-graduate --yes --no-git-tag-version --no-push --allow-branch $BRANCH_NAME"

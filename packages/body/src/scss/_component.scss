@@ -312,6 +312,15 @@ $use-encapsulation: false !default;
 
   .visually-hidden {
     @include visually-hidden;
+
+    &.focusable:active,
+    &.focusable:focus {
+      position: static !important;
+      overflow: visible;
+      clip: auto;
+      width: auto;
+      height: auto;
+    }
   }
 }
 
@@ -319,23 +328,23 @@ $use-encapsulation: false !default;
 @mixin padding($size) {
   $value: map.get($spacing-sizes, $size);
 
-  .padding--#{$size} {
+  .uq-padding--#{$size} {
     padding: $value;
   }
 
-  .padding--top-#{$size} {
+  .uq-padding--top-#{$size} {
     padding-top: $value;
   }
 
-  .padding--bottom-#{$size} {
+  .uq-padding--bottom-#{$size} {
     padding-bottom: $value;
   }
 
-  .padding--left-#{$size} {
+  .uq-padding--left-#{$size} {
     padding-left: $value;
   }
 
-  .padding--right-#{$size} {
+  .uq-padding--right-#{$size} {
     padding-right: $value;
   }
 }
@@ -344,23 +353,23 @@ $use-encapsulation: false !default;
 @mixin margin($size) {
   $value: map.get($spacing-sizes, $size);
 
-  .margin--#{$size} {
+  .uq-margin--#{$size} {
     margin: $value;
   }
 
-  .margin--top-#{$size} {
+  .uq-margin--top-#{$size} {
     margin-top: $value;
   }
 
-  .margin--bottom-#{$size} {
+  .uq-margin--bottom-#{$size} {
     margin-bottom: $value;
   }
 
-  .margin--left-#{$size} {
+  .uq-margin--left-#{$size} {
     margin-left: $value;
   }
 
-  .margin--right-#{$size} {
+  .uq-margin--right-#{$size} {
     margin-right: $value;
   }
 }

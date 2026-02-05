@@ -1,0 +1,109 @@
+name: Version Dry Run
+
+# This workflow runs on pull requests targeting the main release branches
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    branches:
+      - master
+      - releases
+
+jobs:
+  dry-run:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write # Required to post a comment on the PR
+
+    steps:
+      - name: "⬇️ Checkout repo"
+        uses: actions/checkout@v4
+        with:
+          # Checkout the PR's head branch instead of the temporary merge commit
+          ref: ${{ github.head_ref }}
+          # Important to fetch all history for Lerna to determine the version
+          fetch-depth: 0
+
+      - name: "⎔ Setup node 20"
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: "📦️ Install dependencies"
+        run: npm ci
+
+      - name: "🧐 Determine and capture version dry run output"
+        id: lerna_dry_run # Give this step an ID to reference its output later
+        run: |
+          # Configure git user, as Lerna may need it
+          git config user.name "${{ github.actor }}"
+          git config user.email "${{ github.actor }}@users.noreply.github.com"
+
+          # Dynamically get the branch name from the pull request's head ref
+          BRANCH_NAME=$(echo ${{ github.head_ref }} | sed 's|refs/heads/||g')
+
+          # Prepare the appropriate Lerna command based on the PR's target branch
+          # As the workflow runs in a separate, isolated environment, we do not need to reset the head to avoid buming version twice. 
+          if [[ "${{ github.base_ref }}" == "releases" ]]; then
+            echo "Running dry run for a STABLE release (targeting 'releases')."
+            COMMAND="npx lerna version --conventional-commits --conventional-graduate --yes --no-git-tag-version --no-push --allow-branch $BRANCH_NAME"
+          else
+            echo "Running dry run for an ALPHA release (targeting 'master')."
+            COMMAND="npx lerna version --conventional-commits --conventional-prerelease --yes --no-git-tag-version --no-push --allow-branch $BRANCH_NAME"
+          fi
+
+          # Execute the command, capturing output and exit code.
+          # We use `|| LERNA_EXIT_CODE=$?` to prevent the script from exiting on a non-zero code immediately.
+          VERSION_OUTPUT=$($COMMAND 2>&1) || LERNA_EXIT_CODE=$?
+
+          # Use awk to extract the "Changes:" block
+          # This command starts printing when it sees "Changes:", and stops when it sees a blank line or another "lerna" info line.
+          EXTRACTED_CHANGES=$(echo "$VERSION_OUTPUT" | awk '/^Changes:/,/^lerna (info|success|WARN|notice)/ {if (!/^lerna /) print}')
+          
+          # Check for the specific "no changes" message and exit code 0
+          if [[ $LERNA_EXIT_CODE -eq 0 && "$VERSION_OUTPUT" == *"No changed packages to version"* ]]; then
+          # If no changes are found, use the original friendly message.
+          VERSION_OUTPUT="✅ Lerna found no changes to version. This may be expected if there are no new 'fix:', 'feat:', or 'BREAKING CHANGE:' commits."
+          elif [[ $LERNA_EXIT_CODE -ne 0 ]]; then
+          # If an error occurred, use the raw output for debugging.
+          VERSION_OUTPUT="Lerna failed with an unexpected error. Exit code: $LERNA_EXIT_CODE\n$VERSION_OUTPUT"
+          else
+          # If successful, use the extracted changes.
+          VERSION_OUTPUT="$EXTRACTED_CHANGES"
+          fi
+
+          # Use a heredoc to properly handle multi-line output for the next step
+          {
+            echo "output<<EOF"
+            echo "$VERSION_OUTPUT"
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: "🔍 Find existing Lerna dry run comment"
+        id: find_comment
+        uses: peter-evans/find-comment@v3
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          comment-author: 'github-actions[bot]'
+          body-includes: '### 🤖 Lerna Version Dry Run 🤖'
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: "✍️ Create or update dry run results comment"
+        uses: peter-evans/create-or-update-comment@v4
+        with:
+          # The token is automatically provided by GitHub Actions
+          token: ${{ secrets.GITHUB_TOKEN }}
+          # The issue number is the PR number in this context
+          issue-number: ${{ github.event.pull_request.number }}
+          comment-id: ${{ steps.find_comment.outputs.comment-id }}
+          edit-mode: replace
+          # This body will be the content of our comment
+          body: |
+            ### 🤖 Lerna Version Dry Run 🤖
+
+            This is a preview of the version bump that will occur if this PR is merged into `${{ github.base_ref }}`.
+
+            ```
+            ${{ steps.lerna_dry_run.outputs.output }}
+            ```
+            
+            *This is an automated comment. The version will not be published until the PR is merged.*

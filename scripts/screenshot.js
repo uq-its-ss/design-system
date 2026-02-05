@@ -43,8 +43,8 @@ const screenshot = async (browser, viewportName, pageName) => {
   const uri = config.uris[pageName];
   await page.setViewport(viewport);
 
-  // UPDATED: Changed from load to networkidle2 to handle persistent connections/trackers
-  // networkidle0 can cause issues if there are any long-polling requests or trackers that keep the network active.
+  // Use networkidle2 instead of networkidle0 to better handle persistent connections/trackers.
+  // networkidle0 waits for the network to be completely idle, which can hang on pages with long-polling requests or trackers.
   await page.goto(uri, { waitUntil: "networkidle2", timeout: 0 });
 
   // Custom CSS to disable animations (existing logic)
@@ -70,9 +70,13 @@ const screenshot = async (browser, viewportName, pageName) => {
     allElements.forEach((el) => {
       const bg = window.getComputedStyle(el).backgroundImage;
       if (bg && bg !== "none" && bg.includes("url")) {
-        const urlMatch = bg.match(/url\(["']?([^"']*)["']?\)/);
-        if (urlMatch) {
-          backgroundImages.push(urlMatch[1]);
+        const urlRegex = /url\(\s*(?:(["'])([^"']*)\1|([^)"']*))\s*\)/g;
+        let match;
+        while ((match = urlRegex.exec(bg)) !== null) {
+          const url = match[2] || match[3];
+          if (url) {
+            backgroundImages.push(url);
+          }
         }
       }
     });
@@ -80,9 +84,20 @@ const screenshot = async (browser, viewportName, pageName) => {
     const promises = backgroundImages.map((url) => {
       return new Promise((resolve) => {
         const img = new Image();
+        let resolved = false;
+        const done = () => {
+          if (!resolved) {
+            resolved = true;
+            resolve();
+          }
+        };
+        img.onload = done;
+        img.onerror = done; // Resolve on error so the script doesn't hang
         img.src = url;
-        img.onload = resolve;
-        img.onerror = resolve; // Resolve on error so the script doesn't hang
+        if (img.complete) {
+          // Image may already be cached and complete; ensure we resolve.
+          done();
+        }
       });
     });
 

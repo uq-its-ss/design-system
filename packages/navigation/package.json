@@ -1,6 +1,6 @@
 {
   "name": "@uqds/navigation",
-  "version": "7.0.0",
+  "version": "7.0.4",
   "description": "Navigation components",
   "keywords": [
     "uqds",
@@ -42,7 +42,7 @@
     "url": "https://github.com/uq-its-ss/design-system/issues"
   },
   "dependencies": {
-    "@uqds/core": "^4.0.0",
-    "@uqds/icon": "^4.0.0"
+    "@uqds/core": "^5.0.0",
+    "@uqds/icon": "^4.0.3"
   }
 }

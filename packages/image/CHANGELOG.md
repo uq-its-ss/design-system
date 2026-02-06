@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.0.0](https://github.com/uq-its-ss/design-system/compare/@uqds/image@6.0.0-alpha.1...@uqds/image@6.0.0) (2025-07-21)
+
+**Note:** Version bump only for package @uqds/image
+
+# [6.0.0-alpha.1](https://github.com/uq-its-ss/design-system/compare/@uqds/image@6.0.0-alpha.0...@uqds/image@6.0.0-alpha.1) (2025-07-10)
+
+**Note:** Version bump only for package @uqds/image
+
 # [6.0.0-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/image@5.0.0...@uqds/image@6.0.0-alpha.0) (2025-07-04)
 
 ### Bug Fixes

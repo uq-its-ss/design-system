@@ -79,9 +79,10 @@
     "whatwg-fetch": "^3.6.20"
   },
   "scripts": {
-    "storybook": "concurrently -k -n \"HTML,REACT\" -c \"#636cff,#ff4785\" \"wait-on tcp:6007 && npm run storybook:html\" \"npm run storybook:react\"",
-    "storybook:html": "cd packages/storybook-html && npm run storybook",
+    "storybook": "concurrently -k -n \"HTML,REACT,EMAIL\" -c \"#70ff63,#636cff,#ff4785\" \"wait-on tcp:6007 && npm run storybook:html\" \"wait-on tcp:6008 && npm run storybook:react\" \"npm run storybook:email\"",
+    "storybook:email": "cd packages/storybook-email && npm run storybook",
     "storybook:react": "cd packages/storybook-react && npm run storybook",
+    "storybook:html": "cd packages/storybook-html && npm run storybook",
     "update-screenshots": "node scripts/screenshot.js",
     "reg-suit": "reg-suit run",
     "format": "prettier --write \"**/*.{css,scss,js,jsx,json,md,mdx,tsx}\"",
@@ -98,8 +99,8 @@
     "test:watch": "vitest"
   },
   "engines": {
-    "node": ">=18",
-    "npm": ">=9"
+    "node": ">=20",
+    "npm": ">=10"
   },
   "browserslist": [
     "last 4 chrome versions",

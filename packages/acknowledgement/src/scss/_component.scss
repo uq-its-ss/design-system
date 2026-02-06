@@ -48,7 +48,7 @@
   &__link {
     font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-style: normal;
-    font-weight: core.$font-weight-normal;
+    font-weight: core.$font-weight-medium;
     color: core.$white;
 
     &:hover {
@@ -57,7 +57,7 @@
       color: core.$purple-500;
     }
   }
-
+  // large
   &--large &__content {
     padding: core.$space-xxl core.$space-l core.$space-l;
     @media (min-width: 40rem) {

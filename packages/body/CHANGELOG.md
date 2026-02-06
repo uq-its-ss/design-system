@@ -3,6 +3,66 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.2](https://github.com/uq-its-ss/design-system/compare/@uqds/body@4.0.2-alpha.1...@uqds/body@4.0.2) (2026-02-02)
+
+**Note:** Version bump only for package @uqds/body
+
+## [4.0.2-alpha.1](https://github.com/uq-its-ss/design-system/compare/@uqds/body@4.0.2-alpha.0...@uqds/body@4.0.2-alpha.1) (2026-01-29)
+
+**Note:** Version bump only for package @uqds/body
+
+## [4.0.2-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/body@4.0.1...@uqds/body@4.0.2-alpha.0) (2025-12-12)
+
+### Bug Fixes
+
+- add uq- prefix to padding and margin utility classes. update doco to reflect. ([#719](https://github.com/uq-its-ss/design-system/issues/719)) ([258cfbf](https://github.com/uq-its-ss/design-system/commit/258cfbf7fea6fa0ff16222aa180150695a07ff43))
+
+## [4.0.1](https://github.com/uq-its-ss/design-system/compare/@uqds/body@4.0.1-alpha.0...@uqds/body@4.0.1) (2025-12-02)
+
+**Note:** Version bump only for package @uqds/body
+
+## [4.0.1-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/body@4.0.0...@uqds/body@4.0.1-alpha.0) (2025-12-01)
+
+### Bug Fixes
+
+- add margin utility class aswell. update map to be gnereic ([38429f8](https://github.com/uq-its-ss/design-system/commit/38429f84ba4e50f2bb2b38d6def1ea0a2bea5743))
+- consolidate each loop for padding and margin utility classes ([be57996](https://github.com/uq-its-ss/design-system/commit/be5799676c6f1aa98f3df00f4b65a4c73c4d3618))
+- implement padding utility mixin to generate padding classes ([b8260dc](https://github.com/uq-its-ss/design-system/commit/b8260dc23aa78cacb31c749e569a769ecb913f15))
+- linting ([3dfa13d](https://github.com/uq-its-ss/design-system/commit/3dfa13dd58f8303bddec96a2ff64195ab58ce571))
+
+# [4.0.0](https://github.com/uq-its-ss/design-system/compare/@uqds/body@4.0.0-alpha.0...@uqds/body@4.0.0) (2025-07-21)
+
+**Note:** Version bump only for package @uqds/body
+
+# [4.0.0-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/body@3.0.0...@uqds/body@4.0.0-alpha.0) (2025-07-10)
+
+### Bug Fixes
+
+- ITSADSSD-59530: Search bar QA ([#581](https://github.com/uq-its-ss/design-system/issues/581)) ([1625632](https://github.com/uq-its-ss/design-system/commit/16256322335dddba7766d4309bd09c6109c6a888))
+- remove 300 weight fonts, updated to 400 weight ([#594](https://github.com/uq-its-ss/design-system/issues/594)) ([02ad03d](https://github.com/uq-its-ss/design-system/commit/02ad03d918c153cf41df3f0dfb8dc2bed19e2262))
+
+- Merge release/1.0.5 back to master (#634) ([206e0b3](https://github.com/uq-its-ss/design-system/commit/206e0b3a360c71f3524fb6d25ff38cf4f6275773)), closes [#634](https://github.com/uq-its-ss/design-system/issues/634) [#583](https://github.com/uq-its-ss/design-system/issues/583) [#568](https://github.com/uq-its-ss/design-system/issues/568)
+- Merge release/1.0.4 back to master (#597) ([c85f4dd](https://github.com/uq-its-ss/design-system/commit/c85f4dd04601bad019d83edeb680dd919fd1aebb)), closes [#597](https://github.com/uq-its-ss/design-system/issues/597) [#583](https://github.com/uq-its-ss/design-system/issues/583) [#568](https://github.com/uq-its-ss/design-system/issues/568)
+- Merge release/1.0.3 back to master (#585) ([00ba8a4](https://github.com/uq-its-ss/design-system/commit/00ba8a439019ed08ab357499c758be419f50f150)), closes [#585](https://github.com/uq-its-ss/design-system/issues/585) [#583](https://github.com/uq-its-ss/design-system/issues/583) [#568](https://github.com/uq-its-ss/design-system/issues/568)
+
+### BREAKING CHANGES
+
+- Review updated blockquote markup
+
+- increase spacing
+
+- chore: regression test update
+- Review updated blockquote markup
+
+- increase spacing
+
+- chore: regression test update
+- Review updated blockquote markup
+
+- increase spacing
+
+- chore: regression test update
+
 # [3.0.0](https://github.com/uq-its-ss/design-system/compare/@uqds/body@2.0.0...@uqds/body@3.0.0) (2025-05-27)
 
 - Release/1.0.5 (#631) ([e247c79](https://github.com/uq-its-ss/design-system/commit/e247c790585abe267b95de489381efe25107a7bb)), closes [#631](https://github.com/uq-its-ss/design-system/issues/631) [#568](https://github.com/uq-its-ss/design-system/issues/568)

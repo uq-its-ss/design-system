@@ -1,16 +1,18 @@
-@import "_global";
+@forward "_global";
+@use "_partials/colour-constants";
+@use "_partials/text-constants";
 
 html {
   font-size: 100%; /* 16px in most browsers */
-  font-family: $font-body;
-  font-weight: $font-weight-normal;
-  line-height: $line-height;
-  color: $grey-900;
+  font-family: text-constants.$font-body;
+  font-weight: text-constants.$font-weight-normal;
+  line-height: text-constants.$line-height;
+  color: colour-constants.$grey-900;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 /* global setting for letter-spacing. implemented via wildcard to avoid form elements not inheriting the style */
 * {
-  letter-spacing: $letter-spacing;
+  letter-spacing: text-constants.$letter-spacing;
 }

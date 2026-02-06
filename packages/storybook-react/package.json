@@ -1,7 +1,7 @@
 {
   "name": "storybook-react",
-  "version": "2.0.1",
-  "description": "Storybook for React instance for uqds component development",
+  "version": "2.1.1",
+  "description": "Storybook for REACT instance for uqds component development",
   "private": true,
   "keywords": [],
   "author": {
@@ -17,19 +17,16 @@
     "serve-storybook": "http-server storybook-static -i -p 6007"
   },
   "dependencies": {
-    "@uqds/icon": "^4.0.0",
-    "@uqds/react": "^2.0.1"
+    "@uqds/icon": "^4.0.3",
+    "@uqds/react": "^2.0.5"
   },
   "devDependencies": {
-    "@storybook/addon-a11y": "^8.5.2",
-    "@storybook/addon-essentials": "^8.5.2",
-    "@storybook/addon-interactions": "^8.5.2",
-    "@storybook/addon-links": "^8.5.2",
-    "@storybook/blocks": "^8.5.2",
-    "@storybook/react": "^8.5.2",
-    "@storybook/react-vite": "^8.5.2",
+    "@storybook/addon-a11y": "9.1.16",
+    "@storybook/addon-docs": "9.1.16",
+    "@storybook/addon-links": "9.1.16",
+    "@storybook/react-vite": "9.1.16",
     "@vitejs/plugin-react": "^4.3.4",
-    "storybook": "^8.5.2",
+    "storybook": "9.1.16",
     "vite": "^6.0.11"
   }
 }

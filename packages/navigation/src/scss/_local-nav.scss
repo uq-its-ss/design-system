@@ -12,13 +12,13 @@
   color: core.$black;
   padding-block: core.$space-m;
   padding-inline-start: core.$space-xl;
-  border-bottom: 1px solid core.$grey-200;
+  border-bottom: 1px solid core.$grey-500;
   text-decoration: none;
   font-weight: core.$font-weight-normal;
 
   &:hover {
     color: core.$black;
-    background-color: core.$grey-50;
+    background-color: core.$grey-100;
   }
 
   &:focus-visible {
@@ -37,13 +37,15 @@
     background-repeat: no-repeat;
     background-size: 24px;
     background-position: left center;
+    border-width: 2px;
+    border-color: core.$black;
     font-weight: core.$font-weight-medium;
   }
 }
 
 .uq-local-nav__grandparent {
   & .uq-local-nav__link {
-    border-color: core.$grey-900;
+    border-bottom: 2px solid core.$grey-900;
   }
 }
 
@@ -61,7 +63,7 @@
 
 .uq-local-nav__grandchild {
   & .uq-local-nav__link {
-    padding-inline: core.$space-xxl;
+    padding-inline: core.$space-xxxl;
   }
 }
 
@@ -70,13 +72,21 @@
   margin-top: -1px;
 
   & > .uq-local-nav__link {
-    border-top: 1px solid core.$grey-200;
+    border-bottom: 1px solid core.$grey-200;
     padding-inline: calc(#{core.$space-xl} - 4px) 0;
+  }
+
+  .uq-local-nav__grandchild {
+    background-color: core.$grey-50;
+
+    & > .uq-local-nav__link {
+      border-bottom: 1px solid core.$grey-200;
+    }
   }
 }
 
 .uq-local-nav--active-link {
-  background-color: core.$grey-50;
+  background-color: core.$grey-200;
   font-weight: core.$font-weight-medium;
 }
 

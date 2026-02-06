@@ -1,8 +1,7 @@
-@use "@uqds/core/src/scss/_global" as core;
+@use "sass:color";
+@use "@uqds/core/src/scss/_component" as core;
 @use "@uqds/body/src/scss/_component" as body;
 @use "@uqds/grid/src/scss/_component" as grid;
-
-@import "@uqds/core/src/scss/main.scss";
 
 body {
   // Prevent the @uqds/body from imposing a background colour.
@@ -21,54 +20,76 @@ body {
 
 // Set heading styles
 .sbdocs {
-  &-h1,
+  > h1,
   &-title {
-    font-size: core.$font-size-xxxl !important;
+    font-family: core.$montserrat !important;
+    font-size: core.$font-size-xxxxl !important;
     margin: 0 0 core.$space-s !important;
-    font-weight: core.$font-weight-medium !important;
-    color: core.$purple-500 !important;
-    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    font-weight: core.$font-weight-bold !important;
   }
 
-  &-h2 {
+  > h2 {
     font-size: core.$font-size-xxxl !important;
   }
 
-  &-h3 {
+  > h3 {
     font-size: core.$font-size-xxl !important;
   }
 
-  &-h4 {
+  > h4 {
     font-size: core.$font-size-xl !important;
   }
 
-  &-h5 {
+  > h5 {
     font-size: core.$font-size-l !important;
   }
 
-  &-h6 {
+  > h6 {
     font-size: core.$font-size-m !important;
   }
 
-  &-h2,
-  &-h3,
-  &-h4,
-  &-h5,
-  &-h6 {
+  > h2,
+  > h3,
+  > h4,
+  > h5,
+  > h6 {
     margin: core.$space-xxxl 0 0 !important;
     font-weight: core.$font-weight-medium !important;
     padding-bottom: 0 !important;
     border-bottom: 0 !important;
-    color: core.$purple-500 !important;
-    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    font-family: core.$roboto;
   }
 
-  &-h2 + :not(p),
-  &-h3 + :not(p),
-  &-h4 + :not(p),
-  &-h5 + :not(p),
-  &-h6 + :not(p) {
+  > h2 + :not(p),
+  > h3 + :not(p),
+  > h4 + :not(p),
+  > h5 + :not(p),
+  > h6 + :not(p) {
     margin-top: 1rem !important;
+  }
+
+  > p,
+  > a,
+  > ul,
+  > ol,
+  > li,
+  > span {
+    font-family: core.$roboto;
+  }
+
+  > a {
+    color: core.$purple-500;
+    text-decoration: underline;
+
+    &:hover,
+    &:focus {
+      color: core.$white;
+    }
+  }
+
+  code,
+  pre * {
+    font-family: core.$font-monospace !important;
   }
 }
 
@@ -213,17 +234,17 @@ body {
   & .uq-card-grid {
     background: repeating-linear-gradient(
       45deg,
-      lighten(core.$success-500, 30%),
-      lighten(core.$success-500, 30%) 10px,
-      lighten(core.$success-500, 35%) 10px,
-      lighten(core.$success-500, 35%) 20px
+      color.adjust(core.$success-500, $lightness: 30%),
+      color.adjust(core.$success-500, $lightness: 30%) 10px,
+      color.adjust(core.$success-500, $lightness: 35%) 10px,
+      color.adjust(core.$success-500, $lightness: 35%) 20px
     );
   }
 }
 
 .uqds-layout-demo-card,
 .uqds-layout-demo-el {
-  background-color: lighten(core.$utility-500, 40%);
+  background-color: color.adjust(core.$utility-500, $lightness: 40%);
   border: 1px solid core.$utility-500;
   height: 220px;
 }
@@ -237,5 +258,54 @@ body {
   .uq-image,
   .uq-image-carousel {
     max-width: 900px;
+  }
+}
+
+// Storybook UI form fixes.
+.docblock-argstable {
+  & select {
+    background-image: none !important;
+    padding-inline-end: 30px;
+    height: auto;
+  }
+
+  // True/false switch
+  & label:has(input[role="switch"], span:nth-child(1)) {
+    & span {
+      vertical-align: unset;
+      margin: 0;
+      padding: 7px 15px;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    & input[type="checkbox"] {
+      border: 0 !important;
+      outline: 0 !important;
+      appearance: none;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      border-radius: 3em;
+
+      &:checked {
+        background-color: transparent;
+      }
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  // Radios/Checkboxes.
+  & label:has(input[type="radio"]),
+  & label:has(input[type="checkbox"]) {
+    & span {
+      margin: 0;
+      padding-block: 0;
+      font-size: 12px;
+    }
   }
 }

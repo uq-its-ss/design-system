@@ -18,10 +18,10 @@ jobs:
           fetch-depth: 0 # Important to fetch all history and tags
           token: ${{ secrets.UQDS_PERSONAL_ACCESS_TOKEN }} # Use PAT to allow pushing tags/commits later
 
-      - name: "⎔ Setup node 18"
+      - name: "⎔ Setup node 20"
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 20
 
       - name: "📦️ Install dependencies"
         run: npm ci

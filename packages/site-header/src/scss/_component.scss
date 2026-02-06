@@ -41,7 +41,7 @@
       padding: core.$space-m core.$space-m 0 core.$space-m;
     }
   }
-
+  // title
   &__title {
     color: core.$purple-500;
     font-size: $title-font-size;
@@ -327,14 +327,6 @@
         }
       }
     }
-
-    // @media #{core.$screen-lg-up} {
-    //   margin: core.$space-none calc(#{nth(grid.$schema-md, 2) * 0.5} - #{core.$space-l});
-    // }
-
-    // @media #{core.$screen-xl-up} {
-    //   margin: core.$space-none calc(#{nth(grid.$schema-xl, 2) * 0.5} - #{core.$space-l});
-    // }
   }
 
   &--no-site-title {

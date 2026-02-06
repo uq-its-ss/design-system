@@ -3,6 +3,58 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.2](https://github.com/uq-its-ss/design-system/compare/@uqds/app-maps@4.0.2-alpha.1...@uqds/app-maps@4.0.2) (2026-02-02)
+
+**Note:** Version bump only for package @uqds/app-maps
+
+## [4.0.2-alpha.1](https://github.com/uq-its-ss/design-system/compare/@uqds/app-maps@4.0.2-alpha.0...@uqds/app-maps@4.0.2-alpha.1) (2026-01-29)
+
+**Note:** Version bump only for package @uqds/app-maps
+
+## [4.0.2-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/app-maps@4.0.1...@uqds/app-maps@4.0.2-alpha.0) (2025-12-12)
+
+**Note:** Version bump only for package @uqds/app-maps
+
+## [4.0.1](https://github.com/uq-its-ss/design-system/compare/@uqds/app-maps@4.0.1-alpha.0...@uqds/app-maps@4.0.1) (2025-12-02)
+
+**Note:** Version bump only for package @uqds/app-maps
+
+## [4.0.1-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/app-maps@4.0.0...@uqds/app-maps@4.0.1-alpha.0) (2025-12-01)
+
+**Note:** Version bump only for package @uqds/app-maps
+
+# [4.0.0](https://github.com/uq-its-ss/design-system/compare/@uqds/app-maps@4.0.0-alpha.0...@uqds/app-maps@4.0.0) (2025-07-21)
+
+**Note:** Version bump only for package @uqds/app-maps
+
+# [4.0.0-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/app-maps@3.0.0...@uqds/app-maps@4.0.0-alpha.0) (2025-07-10)
+
+### Bug Fixes
+
+- Use SASS modules to resolve deprecation warnings ([#648](https://github.com/uq-its-ss/design-system/issues/648)) ([92121d1](https://github.com/uq-its-ss/design-system/commit/92121d1c9993ede1b9a04a362c3d36b343a217ef))
+
+- Merge release/1.0.5 back to master (#634) ([206e0b3](https://github.com/uq-its-ss/design-system/commit/206e0b3a360c71f3524fb6d25ff38cf4f6275773)), closes [#634](https://github.com/uq-its-ss/design-system/issues/634) [#583](https://github.com/uq-its-ss/design-system/issues/583) [#568](https://github.com/uq-its-ss/design-system/issues/568)
+- Merge release/1.0.4 back to master (#597) ([c85f4dd](https://github.com/uq-its-ss/design-system/commit/c85f4dd04601bad019d83edeb680dd919fd1aebb)), closes [#597](https://github.com/uq-its-ss/design-system/issues/597) [#583](https://github.com/uq-its-ss/design-system/issues/583) [#568](https://github.com/uq-its-ss/design-system/issues/568)
+- Merge release/1.0.3 back to master (#585) ([00ba8a4](https://github.com/uq-its-ss/design-system/commit/00ba8a439019ed08ab357499c758be419f50f150)), closes [#585](https://github.com/uq-its-ss/design-system/issues/585) [#583](https://github.com/uq-its-ss/design-system/issues/583) [#568](https://github.com/uq-its-ss/design-system/issues/568)
+
+### BREAKING CHANGES
+
+- Review updated blockquote markup
+
+- increase spacing
+
+- chore: regression test update
+- Review updated blockquote markup
+
+- increase spacing
+
+- chore: regression test update
+- Review updated blockquote markup
+
+- increase spacing
+
+- chore: regression test update
+
 # [3.0.0](https://github.com/uq-its-ss/design-system/compare/@uqds/app-maps@2.0.0...@uqds/app-maps@3.0.0) (2025-05-27)
 
 - Release/1.0.5 (#631) ([e247c79](https://github.com/uq-its-ss/design-system/commit/e247c790585abe267b95de489381efe25107a7bb)), closes [#631](https://github.com/uq-its-ss/design-system/issues/631) [#568](https://github.com/uq-its-ss/design-system/issues/568)

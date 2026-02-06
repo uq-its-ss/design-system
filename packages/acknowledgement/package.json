@@ -1,6 +1,6 @@
 {
   "name": "@uqds/acknowledgement",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Acknowledgement component",
   "keywords": [
     "uqds",
@@ -22,6 +22,10 @@
   },
   "homepage": "https://github.com/uq-its-ss/design-system#readme",
   "license": "ISC",
+  "files": [
+    "src/*",
+    "dist/*"
+  ],
   "exports": {
     "./src/scss/*": "./src/scss/*"
   },
@@ -38,6 +42,6 @@
     "url": "https://github.com/uq-its-ss/design-system/issues"
   },
   "dependencies": {
-    "@uqds/core": "^4.0.0"
+    "@uqds/core": "^5.0.0"
   }
 }

@@ -92,7 +92,7 @@
     display: grid;
 
     // @media #{core.$screen-md-up} {
-    //   grid-template-columns: repeat(3, minmax(0, 1fr));
+    // grid-template-columns: repeat(3, minmax(0, 1fr));
     // }
 
     @media #{core.$screen-lg-up} {
@@ -267,7 +267,7 @@
       ));
     }
 
-    /* Linkedin icon */
+    /* LinkedIn icon */
     &--linkedin::before {
       background-image: url(icon-constants.get-icon(
         "social--social-linkedin-circle",

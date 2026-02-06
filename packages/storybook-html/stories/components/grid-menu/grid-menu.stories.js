@@ -2,7 +2,7 @@
 import "./grid-menu.scss";
 
 // import HTML template strings
-import gridMenuHTML from "./grid-menu.html";
+import gridMenuHTML from "./grid-menu.html?raw";
 
 export default {
   title: "Components/Grid menu",

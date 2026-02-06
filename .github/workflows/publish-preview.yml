@@ -23,10 +23,10 @@ jobs:
           # Checkout the merge commit on PRs for accurate testing, otherwise checkout the branch head
           ref: ${{ github.event.pull_request.head.ref || github.ref}}
 
-      - name: "⎔ Setup node 18"
+      - name: "⎔ Setup node 20"
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 20
           cache: 'npm' # Add caching for faster installs
 
       - name: "📦️ Install dependencies"
@@ -37,6 +37,12 @@ jobs:
         run: |
            npm run prepare
         working-directory: packages/uqds-builder/
+
+      # --- Build Storybook EMAIL ---
+      - name: "Build Storybook EMAIL"
+        run: |
+           npm run build-storybook
+        working-directory: packages/storybook-email/
 
       # --- Build Storybook REACT ---
       - name: "Build Storybook REACT"
@@ -65,6 +71,10 @@ jobs:
         run: |
           aws s3 cp packages/uqds-builder/dist s3://${{ secrets.AWS_S3_BUCKET_TOOLS }}/preview/${{ github.run_id }}/ --acl public-read --follow-symlinks --recursive
 
+      - name: "Storybook EMAIL: Sync to preview environment"
+        run: |
+          aws s3 sync packages/storybook-email/storybook-static s3://${{ secrets.AWS_S3_BUCKET_TOOLS }}/preview/${{ github.run_id }}/storybook-email/ --acl public-read --follow-symlinks --delete
+
       - name: "Storybook HTML: Sync to preview environment"
         run: |
           aws s3 sync packages/storybook-html/storybook-static s3://${{ secrets.AWS_S3_BUCKET_TOOLS }}/preview/${{ github.run_id }}/storybook-html/ --acl public-read --follow-symlinks --delete
@@ -88,4 +98,5 @@ jobs:
 
               * [HTML Components](https://uq-ds-regsuit.s3.amazonaws.com/preview/${{ github.run_id }}/storybook-html/index.html)
               * [REACT Components](https://uq-ds-regsuit.s3.amazonaws.com/preview/${{ github.run_id }}/storybook-react/index.html)
-
+              * [EMAIL Components](https://uq-ds-regsuit.s3.amazonaws.com/preview/${{ github.run_id }}/storybook-email/index.html)
+              

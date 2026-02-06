@@ -2,22 +2,25 @@
 
 /**
  * NewHeader module
- * @file Handles interaction behaviour for the Header. Does not output any
- * HTML elements.
- * TODO: make this class configurable
+ * @file Handles interaction behaviour for the Header with hover and keyboard support.
  */
-
 class NewHeader {
   constructor(el) {
-    this.init(el);
+    this.header = el;
+    this.init();
   }
 
-  init(el) {
-    this.menuToggle = el.querySelector(".nav-primary__menu-toggle");
-    this.searchToggle = el.querySelector(".nav-primary__search-toggle");
-    this.searchLabel = el.querySelector(".search-toggle__label");
-    this.searchBlock = el.querySelector(".uq-header__search");
-    this.searchInput = el.querySelector(".uq-header__search-query-input");
+  init() {
+    // --- Mobile and Search Toggles (unchanged) ---
+    this.menuToggle = this.header.querySelector(".nav-primary__menu-toggle");
+    this.searchToggle = this.header.querySelector(
+      ".nav-primary__search-toggle",
+    );
+    this.searchLabel = this.header.querySelector(".search-toggle__label");
+    this.searchBlock = this.header.querySelector(".uq-header__search");
+    this.searchInput = this.header.querySelector(
+      ".uq-header__search-query-input",
+    );
 
     this.menuToggle.addEventListener("click", () => {
       document.body.classList.toggle("no-scroll");
@@ -28,6 +31,7 @@ class NewHeader {
     });
 
     this.searchToggle.addEventListener("click", (e) => {
+      e.preventDefault();
       document.body.classList.remove("no-scroll");
       this.searchToggle.classList.toggle("nav-primary__search-toggle--is-open");
       this.searchBlock.classList.toggle("uq-header__search--is-open");
@@ -38,46 +42,95 @@ class NewHeader {
         this.searchInput.blur();
         this.searchToggle.blur();
       }
-      if (this.searchLabel.innerHTML === "Search") {
-        this.searchLabel.innerHTML = "Close";
-      } else {
-        this.searchLabel.innerHTML = "Search";
-      }
-      e.preventDefault();
+      this.searchLabel.innerHTML =
+        this.searchLabel.innerHTML === "Search" ? "Close" : "Search";
     });
 
-    // megamenu
-    const megaMenuItem = document.querySelectorAll(
+    // ** NEW HYBRID MEGAMENU LOGIC **
+
+    // Store the NodeList as an instance property
+    this.menuItems = this.header.querySelectorAll(
       ".uq-header__nav-primary-item",
     );
-    megaMenuItem.forEach((item) => {
-      item.addEventListener("mouseenter", this.handleToggle);
-      item.addEventListener("mouseleave", this.handleToggle);
+
+    this.menuItems.forEach((item) => {
+      const trigger = item.querySelector(".nav-primary-link--has-dropdown");
+      if (!trigger) return;
+
+      // --- Hover Listeners (for mouse users) ---
+      item.addEventListener("mouseenter", () => this.openMenu(trigger));
+      item.addEventListener("mouseleave", () => this.closeMenu(trigger));
+
+      // --- Focus Listeners (for keyboard tabbing) ---
+      item.addEventListener("focusin", () => {
+        this.closeAllMenus(trigger); // Close others when a new one gets focus
+        this.openMenu(trigger);
+      });
+      item.addEventListener("focusout", (e) => {
+        // Only close if focus moves outside the entire menu item component
+        if (!item.contains(e.relatedTarget)) {
+          this.closeMenu(trigger);
+        }
+      });
+
+      // --- Click and Keydown Listeners (for explicit toggle) ---
+      trigger.addEventListener("click", (e) => {
+        e.preventDefault();
+        const isExpanded = trigger.getAttribute("aria-expanded") === "true";
+        // Close all other menus before toggling the current one
+        this.closeAllMenus(trigger);
+        if (isExpanded) {
+          this.closeMenu(trigger);
+        } else {
+          this.openMenu(trigger);
+        }
+      });
+
+      trigger.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+          this.closeMenu(trigger);
+          trigger.focus(); // Return focus to the button
+        }
+      });
     });
   }
 
-  handleToggle(event) {
-    let menuItem = event.target;
-    if (menuItem.tagName !== "LI") {
-      menuItem = menuItem.parentElement;
-    }
-    menuItem.eventType = event.type;
+  /**
+   * Opens a specific megamenu.
+   * @param {HTMLElement} trigger - The button/link for the menu to open.
+   */
+  openMenu(trigger) {
+    trigger.setAttribute("aria-expanded", "true");
+    trigger.parentElement.classList.add("uq-header__nav-primary-item--is-open");
+  }
 
-    window.setTimeout(function () {
-      if (
-        (event.type === "mouseenter" || event.type === "mouseleave") &&
-        window.matchMedia("(max-width: 1024px)").matches
-      ) {
-        return;
-      }
+  /**
+   * Closes a specific megamenu.
+   * @param {HTMLElement} trigger - The button/link for the menu to close.
+   */
+  closeMenu(trigger) {
+    trigger.setAttribute("aria-expanded", "false");
+    trigger.parentElement.classList.remove(
+      "uq-header__nav-primary-item--is-open",
+    );
+  }
 
-      if (menuItem.eventType === "mouseenter") {
-        menuItem.classList.add("uq-header__nav-primary-item--is-open");
-      } else {
-        menuItem.classList.remove("uq-header__nav-primary-item--is-open");
-      }
-    }, 250);
+  /**
+   * Closes all open megamenus.
+   * @param {HTMLElement} [except] - An optional trigger element to ignore.
+   */
+  closeAllMenus(except = null) {
+    this.header
+      .querySelectorAll(".nav-primary-link--has-dropdown")
+      .forEach((trigger) => {
+        if (trigger !== except) {
+          this.closeMenu(trigger);
+        }
+      });
   }
 }
 
 export default NewHeader;
+// This assumes you have a script that instantiates the class like:
+// const headerElem = document.querySelector('.uq-header');
+// new NewHeader(headerElem);

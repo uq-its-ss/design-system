@@ -1,7 +1,8 @@
 import type { FC, MouseEventHandler } from "react";
-import classNames from "classnames";
+import clsx from "clsx";
 import { UqIcon } from "../UqIcon/UqIcon.tsx";
 import { UqPaginationItemType } from "../../enum";
+import styles from "./uq-pagination.module.scss";
 
 export interface UqPaginationItemProps {
   As?: "button" | "a";
@@ -23,11 +24,11 @@ export const UqPaginationItem: FC<UqPaginationItemProps> = ({
   onClick,
 }) => {
   return (
-    <li className="uq-pagination__list-item">
+    <li className={styles["uq-pagination__list-item"]}>
       <As
-        className={classNames("uq-pagination__item", {
-          [`uq-pagination__${type}`]: type,
-          "uq-pagination__current": current,
+        className={clsx(styles["uq-pagination__item"], {
+          [styles[`uq-pagination__${type}`]]: type,
+          [styles["uq-pagination__current"]]: current,
         })}
         aria-current={current && "page"}
         // @ts-expect-error Dynamic elements expect different attributes (a and button).

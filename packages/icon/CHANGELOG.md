@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.3](https://github.com/uq-its-ss/design-system/compare/@uqds/icon@4.0.3-alpha.0...@uqds/icon@4.0.3) (2026-02-02)
+
+**Note:** Version bump only for package @uqds/icon
+
+## [4.0.3-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/icon@4.0.2...@uqds/icon@4.0.3-alpha.0) (2025-12-04)
+
+### Bug Fixes
+
+- added new arrow icons ([#714](https://github.com/uq-its-ss/design-system/issues/714)) ([597b81e](https://github.com/uq-its-ss/design-system/commit/597b81e38865948ee185bb28f46eeb472d9d63c0))
+
+## [4.0.2](https://github.com/uq-its-ss/design-system/compare/@uqds/icon@4.0.2-alpha.0...@uqds/icon@4.0.2) (2025-09-04)
+
+**Note:** Version bump only for package @uqds/icon
+
+## [4.0.2-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/icon@4.0.1...@uqds/icon@4.0.2-alpha.0) (2025-09-04)
+
+**Note:** Version bump only for package @uqds/icon
+
 ## [4.0.1](https://github.com/uq-its-ss/design-system/compare/@uqds/icon@4.0.1-alpha.0...@uqds/icon@4.0.1) (2025-07-21)
 
 **Note:** Version bump only for package @uqds/icon

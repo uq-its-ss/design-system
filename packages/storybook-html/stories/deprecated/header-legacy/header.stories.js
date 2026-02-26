@@ -5,18 +5,23 @@ import "./header.scss";
 import headerCreate from "@uqds/header-legacy/src/js/header";
 
 // import HTML template strings
-import headerHTML from "./header.html";
-import headerNoLocalSearchHTML from "./header_no-local-search.html";
+import headerHTML from "./header.html?raw";
+import headerNoLocalSearchHTML from "./header_no-local-search.html?raw";
 
 export default {
   title: "Deprecated/Header",
+
   parameters: {
     layout: "fullscreen",
-    backgrounds: {
-      default: "UQ Neutral 1",
-    },
+
     previewTabs: {
       canvas: { hidden: false },
+    },
+  },
+
+  globals: {
+    backgrounds: {
+      value: "uq_neutral_1",
     },
   },
 };

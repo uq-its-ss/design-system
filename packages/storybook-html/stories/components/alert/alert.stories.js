@@ -4,179 +4,116 @@ import { Alerts } from "@uqds/alert/src/js/main";
 export default {
   title: "Components/Alert",
   argTypes: {
-    title: { control: "text" },
-    message: { control: "text" },
-    button: { control: "text" },
     status: {
+      name: "status",
       options: ["info", "success", "warning", "error"],
       control: "select",
+    },
+    isGlobal: {
+      name: "global",
+      control: "boolean",
+    },
+    title: {
+      control: "text",
+      table: {
+        category: "Content",
+      },
+    },
+    message: {
+      control: "text",
+      table: {
+        category: "Content",
+      },
+    },
+    button: {
+      control: "text",
+      table: {
+        category: "Call to action",
+      },
+    },
+    link: {
+      control: "text",
+      table: {
+        category: "Call to action",
+      },
     },
   },
   args: {
     status: "info",
+    isGlobal: false,
     title: "",
     message: `<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>`,
     button: "",
     link: "",
   },
-  render: ({ title, message, status, button, link }) => {
+  render: ({ isGlobal, isDark, status, title, message, button, link }) => {
     return `
-      <div class="${classNames("uq-alert", `uq-alert--${status}`)}" role="alert">
+      <div 
+        class="${classNames(
+          "uq-alert",
+          `uq-alert--${status}`,
+          isGlobal === true && "uq-alert--global",
+        )}"
+        role="alert">
         <div class="uq-alert__message">
           ${title ? `<h3 class="uq-alert__title">${title}</h3>` : ""}
           ${message}
-          ${button ? `<a href="#" title="Button" class="uq-button">${button}</a>` : ""}
-          ${link ? `<a href="#" title="Link" class="uq-button--inline">${link}</a>` : ""}
+          ${button ? `<p><a href="#" title="Button" class="uq-button">${button}</a></p>` : ""}
+          ${link ? `<p><a href="#" title="Link" class="uq-button--inline">${link}</a></p>` : ""}
         </div>
       </div>
     `;
   },
 };
 
-export const alertInfo = {};
+export const alert = {};
 
-export const alertSuccess = {
+// Examples
+export const alertPageInfo = {
+  args: {
+    status: "info",
+    message: `<p>A info page alert</p>`,
+  },
+};
+
+export const alertPageSuccess = {
   args: {
     status: "success",
+    title: "Success!",
+    message: `<p>A success page alert</p>`,
   },
 };
 
-export const alertWarning = {
+export const alertPageWarning = {
   args: {
     status: "warning",
+    message: `<p>A warning page alert including link. <a href='#'>Call to action</a></p>`,
   },
 };
 
-export const alertError = {
+export const alertPageError = {
   args: {
     status: "error",
+    title: "A problem",
+    message: `<p>A error page alert</p>`,
+    button: "Call to action",
   },
 };
 
-export const alertWithLink = {
+export const alertGlobalInfo = {
   args: {
-    link: "Link",
+    status: "info",
+    isGlobal: true,
+    message: `<p>A info global alert</p>`,
   },
 };
 
-export const alertWithButton = {
+export const alertGlobalWarning = {
   args: {
-    button: "Button",
+    status: "warning",
+    isGlobal: true,
+    message: `<p>A warning global alert including link. <a href='#'>Call to action</a></p>`,
   },
-};
-
-export const alertWithTitle = {
-  args: {
-    title: "Title",
-  },
-};
-
-export const infoGlobal = {
-  render: () => {
-    return `
-    <div class="uq-alert uq-alert--info uq-alert--dark uq-alert--global" role="alert">
-      <div class="uq-alert__container">
-        <div class="uq-alert__message">
-          <h3 class="uq-alert__title">Title goes here</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <a href="#" title="Link" class="uq-button--inline">Link</a>
-        </div>
-        <button class="uq-alert__close">close</button>
-      </div>
-    </div>
-    `;
-  },
-
-  name: "Info global",
-};
-
-export const successGlobal = {
-  render: () => {
-    return `
-    <div class="uq-alert uq-alert--success uq-alert--dark uq-alert--global" role="alert">
-      <div class="uq-alert__container">
-        <div class="uq-alert__message">
-          <h3 class="uq-alert__title">Title goes here</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <a href="#" title="Link" class="uq-button--inline">Link</a>
-        </div>
-        <button class="uq-alert__close">close</button>
-      </div>
-    </div>
-    `;
-  },
-
-  name: "Success global",
-};
-
-export const warningGlobal = {
-  render: () => {
-    return `
-    <div class="uq-alert uq-alert--warning uq-alert--dark uq-alert--global" role="alert">
-      <div class="uq-alert__container">
-        <div class="uq-alert__message">
-          <h3 class="uq-alert__title">Title goes here</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <a href="#" title="Link" class="uq-button--inline">Link</a>
-        </div>
-      </div>
-    </div>
-    `;
-  },
-
-  name: "Warning global",
-};
-
-export const errorGlobal = {
-  render: () => {
-    return `
-    <div class="uq-alert uq-alert--error uq-alert--dark uq-alert--global" role="alert">
-      <div class="uq-alert__container">
-        <div class="uq-alert__message">
-          <h3 class="uq-alert__title">Title goes here</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <a href="#" title="Link" class="uq-button--inline">Link</a>
-        </div>
-      </div>
-    </div>
-    `;
-  },
-
-  name: "Error global",
-};
-
-export const infoGlobalNoTitleOrDismiss = {
-  render: () => {
-    return `
-    <div class="uq-alert uq-alert--info uq-alert--dark uq-alert--global uq-alert" role="alert">
-      <div class="uq-alert__container">
-        <div class="uq-alert__message">
-          <h3 class="uq-alert__title visually-hidden">Title goes here</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <a href="#" title="Link" class="uq-button--inline">Link</a></p>
-        </div>
-      </div>
-    </div>
-    `;
-  },
-
-  name: "Info global (no title, no dismiss)",
-};
-
-export const warningGlobalNoTitleOrDismiss = {
-  render: () => {
-    return `
-    <div class="uq-alert uq-alert--warning uq-alert--dark uq-alert--global uq-alert" role="alert">
-      <div class="uq-alert__container">
-        <div class="uq-alert__message">
-          <h3 class="uq-alert__title visually-hidden">Title goes here</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <a href="#" title="Link" class="uq-button--inline">Link</a></p>
-        </div>
-      </div>
-    </div>
-    `;
-  },
-
-  name: "Warning global (no title, no dismiss)",
 };
 
 export const loadedFromExternalUri = {

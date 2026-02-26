@@ -940,7 +940,15 @@ export default [
     category: "standard",
   },
   {
+    name: "arrow-down",
+    category: "standard",
+  },
+  {
     name: "arrow-left-1",
+    category: "standard",
+  },
+  {
+    name: "arrow-left",
     category: "standard",
   },
   {
@@ -1028,6 +1036,10 @@ export default [
     category: "standard",
   },
   {
+    name: "download",
+    category: "standard",
+  },
+  {
     name: "dual-program",
     category: "standard",
   },
@@ -1093,6 +1105,10 @@ export default [
   },
   {
     name: "plus",
+    category: "standard",
+  },
+  {
+    name: "refresh",
     category: "standard",
   },
   {

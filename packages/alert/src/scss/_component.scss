@@ -1,6 +1,7 @@
 @use "@uqds/core/src/scss/global" as core;
 @use "@uqds/grid/src/scss/global" as grid;
 @use "@uqds/icon/src/scss/global" as icon;
+@use "@uqds/layout/src/scss/global" as layout;
 @use "global" as *;
 
 .uq-alert {
@@ -12,14 +13,17 @@
   line-height: core.$line-height;
   position: relative;
 
-  &__container {
-    margin: 0 auto;
+  .uq-alert__message > *:first-child {
+    margin-top: 0;
+  }
 
-    .uq-alert__message {
-      &:not(:last-child) {
-        padding-right: core.$space-xxxl;
-      }
-    }
+  .uq-alert__message > h1:first-child,
+  .uq-alert__message > h2:first-child,
+  .uq-alert__message > h3:first-child,
+  .uq-alert__message > h4:first-child,
+  .uq-alert__message > h5:first-child,
+  .uq-alert__message > h6:first-child {
+    line-height: 24px;
   }
 
   &__title {
@@ -32,8 +36,12 @@
 
   &__message {
     position: relative;
-    padding: core.$space-l;
-    margin-left: core.$space-xxl;
+    padding: core.$space-l core.$space-xxxxl core.$space-l core.$space-ul;
+    width: 100%;
+    max-width: 1204px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-x: clip;
 
     &::before {
       content: "";
@@ -47,31 +55,33 @@
       height: core.$space-l;
       position: absolute;
       top: 25px;
-      left: -(core.$space-m);
+      left: core.$space-l;
     }
 
     p {
       margin-bottom: core.$space-m;
       margin-top: core.$space-none;
 
-      &:last-child {
+      &:last-of-type {
         margin-bottom: core.$space-none;
       }
     }
   }
 
   &__close {
+    margin: 0;
+    padding: 0;
     position: absolute;
     top: core.$space-none;
-    right: core.$space-none;
+    right: core.$space-m;
     background-image: url(icon.get-icon("standard--x", core.$grey-900));
     background-repeat: no-repeat;
     background-size: 1rem;
     background-position: center;
     background-color: transparent;
     border: none;
-    width: core.$space-xxxl;
-    height: core.$space-xxxl;
+    width: core.$space-xxl;
+    height: core.$space-uul;
     text-indent: 999px;
     overflow: hidden;
     cursor: pointer;
@@ -114,7 +124,7 @@
     .uq-alert__message {
       &::before {
         background-image: url(icon.get-icon(
-          "standard--exclamation-circle",
+          "standard--exclamation-triangle",
           core.$grey-900
         ));
       }
@@ -126,55 +136,28 @@
     .uq-alert__message {
       &::before {
         background-image: url(icon.get-icon(
-          "standard--exclamation-triangle",
+          "standard--x-circle",
           core.$grey-900
         ));
       }
     }
   }
 
-  // Global alert
+  // Global variant
   &--global {
-    .uq-alert__container {
-      @media #{core.$screen-lg-up} {
-        max-width: 73.25rem;
-        margin-left: auto;
-        margin-right: auto;
-      }
-    }
-
-    .uq-alert__message {
-      line-height: #{core.$line-height}rem;
-      font-weight: core.$font-weight-normal;
-      margin-left: core.$space-compressed-uuul;
-      padding: core.$space-stretched-s core.$space-l core.$space-stretched-s
-        core.$space-s;
-
-      @media #{core.$screen-md-up} {
-        font-size: core.$font-size-m;
-      }
-
-      @media #{core.$screen-lg-up} {
-        margin-left: core.$space-compressed-uul;
-      }
-
-      &::before {
-        content: "";
-        background-size: 1.5rem;
-        width: core.$space-l;
-        height: core.$space-l;
-        position: absolute;
-        top: core.$space-stretched-s;
-        left: -(core.$space-l);
-      }
-    }
-  }
-
-  // Dark variant
-  &--dark {
     background-color: core.$utility-500;
     color: core.$white;
 
+    // container overrides to match content width
+    .uq-alert__message {
+      padding-left: core.$space-uul;
+
+      &::before {
+        left: core.$space-xl;
+      }
+    }
+
+    // link overrides for dark variant
     a {
       color: inherit;
       text-decoration: underline;
@@ -183,6 +166,20 @@
       &:focus {
         background-color: core.$white;
         color: core.$purple-500;
+      }
+    }
+
+    // button overrides for dark variant
+    a.uq-button {
+      background-color: core.$white;
+      color: core.$purple-500;
+      text-decoration: none;
+
+      &:hover,
+      &:focus {
+        background-color: core.$purple-500;
+        color: core.$white;
+        text-decoration: underline;
       }
     }
 
@@ -196,6 +193,7 @@
       &:hover,
       &:focus {
         background-image: url(icon.get-icon("standard--x", core.$white));
+        background-color: transparent;
       }
     }
 
@@ -230,6 +228,15 @@
       .uq-alert__title {
         color: core.$grey-900;
       }
+
+      .uq-alert__close {
+        background-image: url(icon.get-icon("standard--x", core.$grey-900));
+
+        &:hover,
+        &:focus {
+          background-image: url(icon.get-icon("standard--x", core.$grey-900));
+        }
+      }
     }
 
     &.uq-alert--error {
@@ -238,7 +245,7 @@
       .uq-alert__message {
         &::before {
           background-image: url(icon.get-icon(
-            "standard--exclamation-triangle",
+            "standard--x-circle",
             core.$white
           ));
         }

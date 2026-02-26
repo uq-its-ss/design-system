@@ -1,6 +1,8 @@
 @use "@uqds/core/src/scss/global" as core;
 @use "global" as *;
 
+@use "sass:map";
+
 $use-encapsulation: false !default;
 
 @mixin -text-primer {
@@ -310,7 +312,87 @@ $use-encapsulation: false !default;
 
   .visually-hidden {
     @include visually-hidden;
+
+    &.focusable:active,
+    &.focusable:focus {
+      position: static !important;
+      overflow: visible;
+      clip: auto;
+      width: auto;
+      height: auto;
+    }
   }
+}
+
+//Padding utility classes
+@mixin padding($size) {
+  $value: map.get($spacing-sizes, $size);
+
+  .uq-padding--#{$size} {
+    padding: $value;
+  }
+
+  .uq-padding--top-#{$size} {
+    padding-top: $value;
+  }
+
+  .uq-padding--bottom-#{$size} {
+    padding-bottom: $value;
+  }
+
+  .uq-padding--left-#{$size} {
+    padding-left: $value;
+  }
+
+  .uq-padding--right-#{$size} {
+    padding-right: $value;
+  }
+}
+
+//Padding utility classes
+@mixin margin($size) {
+  $value: map.get($spacing-sizes, $size);
+
+  .uq-margin--#{$size} {
+    margin: $value;
+  }
+
+  .uq-margin--top-#{$size} {
+    margin-top: $value;
+  }
+
+  .uq-margin--bottom-#{$size} {
+    margin-bottom: $value;
+  }
+
+  .uq-margin--left-#{$size} {
+    margin-left: $value;
+  }
+
+  .uq-margin--right-#{$size} {
+    margin-right: $value;
+  }
+}
+
+$spacing-sizes: (
+  uuuuul: core.$space-uuuuul,
+  uuuul: core.$space-uuuul,
+  uuul: core.$space-uuul,
+  uul: core.$space-uul,
+  ul: core.$space-ul,
+  xxxxl: core.$space-xxxxl,
+  xxxl: core.$space-xxxl,
+  xxl: core.$space-xxl,
+  xl: core.$space-xl,
+  l: core.$space-l,
+  m: core.$space-m,
+  s: core.$space-s,
+  xs: core.$space-xs,
+);
+
+@each $size, $value in $spacing-sizes {
+  @include padding($size);
+  @include margin($size);
 }
 
 @if $use-encapsulation {

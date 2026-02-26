@@ -42,8 +42,12 @@ const screenshot = async (browser, viewportName, pageName) => {
   const viewport = config.viewports[viewportName];
   const uri = config.uris[pageName];
   await page.setViewport(viewport);
-  await page.goto(uri, { waitUntil: "load", timeout: 0 });
-  // Custom CSS
+
+  // Use networkidle2 instead of networkidle0 to better handle persistent connections/trackers.
+  // networkidle0 waits for the network to be completely idle, which can hang on pages with long-polling requests or trackers.
+  await page.goto(uri, { waitUntil: "networkidle2", timeout: 0 });
+
+  // Custom CSS to disable animations (existing logic)
   await page.addStyleTag({
     content: `*, *::before, *::after { 
     -moz-transition: none !important;
@@ -51,9 +55,53 @@ const screenshot = async (browser, viewportName, pageName) => {
     -moz-animation: none !important;
     animation: none !important; }`,
   });
-  // Give it 2 seconds for images etc to load and animations to fire.
+
+  // Give it an additional second for scripts to fire (existing logic)
   await new Promise((res) => {
-    setTimeout(() => res(), 2000);
+    setTimeout(() => res(), 1000);
+  });
+
+  // NEW: Background Image Waiter Script
+  // This scans the DOM for elements with background images and waits for them to load.
+  await page.evaluate(async () => {
+    const allElements = document.querySelectorAll("*");
+    const backgroundImages = [];
+
+    allElements.forEach((el) => {
+      const bg = window.getComputedStyle(el).backgroundImage;
+      if (bg && bg !== "none" && bg.includes("url")) {
+        const urlRegex = /url\(\s*(?:(["'])([^"']*)\1|([^)"']*))\s*\)/g;
+        let match;
+        while ((match = urlRegex.exec(bg)) !== null) {
+          const url = match[2] || match[3];
+          if (url) {
+            backgroundImages.push(url);
+          }
+        }
+      }
+    });
+
+    const promises = backgroundImages.map((url) => {
+      return new Promise((resolve) => {
+        const img = new Image();
+        let resolved = false;
+        const done = () => {
+          if (!resolved) {
+            resolved = true;
+            resolve();
+          }
+        };
+        img.onload = done;
+        img.onerror = done; // Resolve on error so the script doesn't hang
+        img.src = url;
+        if (img.complete) {
+          // Image may already be cached and complete; ensure we resolve.
+          done();
+        }
+      });
+    });
+
+    await Promise.all(promises);
   });
 
   if (globalHideSelectors.length > 0) await hideSelectors(page);

@@ -1,8 +1,5 @@
 import { reactStoryCardDecorator } from "../../../lib/decorators";
-import {
-  UqStoryCard as Component,
-  UqStoryCardVariant,
-} from "@uqds/react";
+import { UqStoryCard as Component, UqStoryCardVariant } from "@uqds/react";
 
 export default {
   title: "Components/UqStoryCard",

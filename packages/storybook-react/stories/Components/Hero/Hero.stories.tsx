@@ -22,33 +22,30 @@ export default {
 // Dummy Link component to demonstrate using different back components.
 interface LinkProps {
   children: React.ReactNode;
-};
+}
 const Link: FC<LinkProps> = ({ children }) => (
-  <a href="#" onClick={(ev) => {
-    alert("Custom component clicked.");
-    ev.preventDefault();
-  }}>
+  <a
+    href="#"
+    onClick={(ev) => {
+      alert("Custom component clicked.");
+      ev.preventDefault();
+    }}
+  >
     {children}
   </a>
 );
 
 export const showcase = {
   render: () => (
-    <div style={{
-      display: "flex",
-      flexDirection: "column",
-      gap: "0px"
-    }}>
-      <Component
-        eyebrow={undefined}
-        title="Title Only"
-        backText={undefined}
-      />
-      <Component
-        eyebrow="With Eyebrow"
-        title="Title"
-        backText={undefined}
-      />
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        gap: "0px",
+      }}
+    >
+      <Component eyebrow={undefined} title="Title Only" backText={undefined} />
+      <Component eyebrow="With Eyebrow" title="Title" backText={undefined} />
       <Component
         eyebrow={undefined}
         title="Title"
@@ -58,7 +55,7 @@ export const showcase = {
           onClick: (ev: React.MouseEvent<HTMLAnchorElement>) => {
             alert("Back link clicked.");
             ev.preventDefault();
-          }
+          },
         }}
       />
       <Component

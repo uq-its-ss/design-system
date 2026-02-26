@@ -28,10 +28,10 @@ npm i -S @uqds/react@latest --tag=alpha
 
 1. Import the CSS in a top-level file, such as `App.tsx`.
 
-    import '@uqds/react/css';
+   import '@uqds/react/css';
 
 2. In a React .tsx or .jsx file, import and use the components as needed.
 
-    import { TextInput } from '@uqds/react';
+   import { TextInput } from '@uqds/react';
 
-    <TextInput placeholder="Example" />
+   <TextInput placeholder="Example" />

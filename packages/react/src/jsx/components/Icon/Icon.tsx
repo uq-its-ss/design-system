@@ -10,20 +10,19 @@ export interface IconProps {
 
   /** Small text to appear above the main title. */
   variant?: "default" | "light" | "text";
-};
+}
 
 /** A box used to notify users of important information or changes on a page
  * needing their attention, without interrupting their task. */
-export const Icon: FC<IconProps> = ({
-  name,
-  variant,
-}) => {
+export const Icon: FC<IconProps> = ({ name, variant }) => {
   return (
-    <span className={classNames({
-      [css["uq-icon"]]: true,
-      [css[`uq-icon--${name}`]]: true,
-      [css[`uq-icon--light`]]: variant === "light",
-      [css[`uq-icon--text`]]: variant === "text",
-    })}></span>
+    <span
+      className={classNames({
+        [css["uq-icon"]]: true,
+        [css[`uq-icon--${name}`]]: true,
+        [css[`uq-icon--light`]]: variant === "light",
+        [css[`uq-icon--text`]]: variant === "text",
+      })}
+    ></span>
   );
 };

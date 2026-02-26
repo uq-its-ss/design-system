@@ -1,8 +1,4 @@
-import type {
-  ComponentPropsWithoutRef,
-  FC,
-  ReactNode
-} from "react";
+import type { ComponentPropsWithoutRef, FC, ReactNode } from "react";
 import classNames from "classnames";
 import css from "../index.module.scss";
 
@@ -25,8 +21,8 @@ export interface HeroProps {
    * React Router, `to`. */
   backComponentProps?: ComponentPropsWithoutRef<
     HeroProps["backComponent"] extends undefined
-    ? "a"
-    : HeroProps["backComponent"]
+      ? "a"
+      : HeroProps["backComponent"]
   >;
 }
 
@@ -40,7 +36,6 @@ export const Hero: FC<HeroProps> = ({
 }) => {
   return (
     <div className={css["uq-hero-basic"]}>
-
       <div className={css["uq-container"]}>
         <div className={css["uq-hero-basic__content"]}>
           <h1 className={css["uq-hero-basic__title"]}>
@@ -52,20 +47,21 @@ export const Hero: FC<HeroProps> = ({
 
           {backText && (
             <div className={css["uq-hero-basic__back"]}>
-              <BackComponent
-                {...backComponentProps}
-              >
-                <span className={classNames({
-                  [css["uq-icon"]]: true,
-                  [css["uq-icon--common--chevron-left"]]: true,
-                  [css["uq-icon--light"]]: true,
-                })}></span>
-                <span className={css["uq-hero-basic__back-text"]}>{backText}</span>
+              <BackComponent {...backComponentProps}>
+                <span
+                  className={classNames({
+                    [css["uq-icon"]]: true,
+                    [css["uq-icon--common--chevron-left"]]: true,
+                    [css["uq-icon--light"]]: true,
+                  })}
+                ></span>
+                <span className={css["uq-hero-basic__back-text"]}>
+                  {backText}
+                </span>
               </BackComponent>
             </div>
           )}
         </div>
-
       </div>
     </div>
   );

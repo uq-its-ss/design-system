@@ -1,4 +1,10 @@
-import { Meta, Canvas, Controls, Description, Source } from "@storybook/addon-docs/blocks";
+import {
+  Meta,
+  Canvas,
+  Controls,
+  Description,
+  Source,
+} from "@storybook/addon-docs/blocks";
 import * as stories from "./TextInput.stories";
 
 <Meta of={stories} />
@@ -19,15 +25,8 @@ npm i @uqds/react
 import { TextInput } from "@uqds/react";
 
 // Controlled component example.
-const [text, setText] = useState('');
-return (
-  <TextInput
-    type="search"
-    value={text}
-    onChange={setText}
-  />
-);
-
+const [text, setText] = useState("");
+return <TextInput type="search" value={text} onChange={setText} />;
 ```
 
 ## Showcase

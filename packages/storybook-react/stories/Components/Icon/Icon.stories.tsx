@@ -36,76 +36,51 @@ export default {
 
 export const showcase = {
   render: () => (
-    <div style={{
-      display: "grid",
-      gridTemplateColumns: "repeat(3, minmax(200px, 1fr))",
-      gap: "2rem",
-      alignItems: "center",
-      justifyContent: "center",
-    }}>
+    <div
+      style={{
+        display: "grid",
+        gridTemplateColumns: "repeat(3, minmax(200px, 1fr))",
+        gap: "2rem",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
       <div style={styles.plain}>
-        <Component
-          name="social--email"
-          variant="default"
-        />
+        <Component name="social--email" variant="default" />
         <span>Default</span>
       </div>
       <div style={styles.plain}>
-        <Component
-          name="social--email"
-          variant="light"
-        />
+        <Component name="social--email" variant="light" />
         <span>Light</span>
       </div>
       <div style={styles.plain}>
-        <Component
-          name="social--email"
-          variant="text"
-        />
+        <Component name="social--email" variant="text" />
         <span>Text</span>
       </div>
 
       <div style={styles.dark}>
-        <Component
-          name="social--email"
-          variant="default"
-        />
+        <Component name="social--email" variant="default" />
         <span>Default</span>
       </div>
       <div style={styles.dark}>
-        <Component
-          name="social--email"
-          variant="light"
-        />
+        <Component name="social--email" variant="light" />
         <span>Light</span>
       </div>
       <div style={styles.dark}>
-        <Component
-          name="social--email"
-          variant="text"
-        />
+        <Component name="social--email" variant="text" />
         <span>Text</span>
       </div>
 
       <div style={styles.uq}>
-        <Component
-          name="social--email"
-          variant="default"
-        />
+        <Component name="social--email" variant="default" />
         <span>Default</span>
       </div>
       <div style={styles.uq}>
-        <Component
-          name="social--email"
-          variant="light"
-        />
+        <Component name="social--email" variant="light" />
         <span>Light</span>
       </div>
       <div style={styles.uq}>
-        <Component
-          name="social--email"
-          variant="text"
-        />
+        <Component name="social--email" variant="text" />
         <span>Text</span>
       </div>
     </div>

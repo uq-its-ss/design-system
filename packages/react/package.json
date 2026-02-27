@@ -31,27 +31,39 @@
     "src/*",
     "dist/*"
   ],
-  "main": "dist/js/index.js",
-  "types": "./dist/js/index.d.ts",
-  "module": "dist/mjs/index.js",
+  "main": "dist/modules/index.js",
+  "types": "./dist/modules/index.d.ts",
+  "module": "dist/modules/index.js",
   "exports": {
     ".": {
-      "types": "./dist/js/index.d.ts",
-      "import": "./dist/js/index.js"
+      "types": "./dist/modules/index.d.ts",
+      "import": "./dist/modules/index.js"
+    },
+    "./plain": {
+      "types": "./dist/plain/index.d.ts",
+      "import": "./dist/plain/index.js"
     },
     "./css": {
       "types": "./src/types/css.d.ts",
-      "default": "./dist/js/index.css"
+      "default": "./dist/modules/index.css"
     },
+    "./plain/css": {
+      "types": "./src/types/css.d.ts",
+      "default": "./dist/plain/index.css"
+    },
+    "./scss": "./src/scss/main.scss",
     "./tsx": "./src/jsx/index.ts"
   },
-  "style": "dist/js/index.css",
+  "style": "dist/modules/index.css",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/uq-its-ss/design-system.git"
   },
   "scripts": {
-    "prepare": "gulp -f ../../gulpfile.js --cwd=. prepare && vite build",
+    "prepare": "gulp -f ../../gulpfile.js --cwd=. prepare && npm run build",
+    "build": "npm run build:modules && npm run build:plain",
+    "build:modules": "vite build --config vite.config.modules.js",
+    "build:plain": "vite build --config vite.config.plain.js",
     "lint-tsc": "tsc"
   },
   "bugs": {

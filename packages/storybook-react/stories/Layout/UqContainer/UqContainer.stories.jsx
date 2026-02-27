@@ -1,4 +1,4 @@
-import { UqContainer as Component } from "@uqds/react/src/jsx/main";
+import { UqContainer as Component } from "@uqds/react";
 
 export default {
   title: "Layout/UqContainer",

@@ -1,4 +1,4 @@
-import "@uqds/react/src/scss/main.scss";
+import "@uqds/react/css";
 import "../../storybook-html/.storybook/preview.scss";
 
 /** @type { import('@storybook/react-vite').Preview } */

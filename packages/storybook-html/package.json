@@ -1,6 +1,6 @@
 {
   "name": "storybook-html",
-  "version": "8.1.2-alpha.0",
+  "version": "8.1.2",
   "description": "Storybook for HTML instance for uqds component development",
   "private": true,
   "main": "index.js",
@@ -29,7 +29,7 @@
     "@storybook/html-vite": "9.1.16",
     "@uqds/accordion": "^7.0.3",
     "@uqds/acknowledgement": "^0.1.2",
-    "@uqds/alert": "^7.0.6-alpha.0",
+    "@uqds/alert": "^7.0.6",
     "@uqds/app-maps": "^4.0.2",
     "@uqds/avatar": "^1.0.1",
     "@uqds/blockquote": "^6.0.0",

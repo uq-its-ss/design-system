@@ -1,15 +1,10 @@
 @use "@uqds/core/src/scss/global" as core;
-@use "@uqds/grid/src/scss/global" as grid;
 @use "@uqds/table/src/scss/main" as *;
 // @use '@uqds/body/src/scss/_component' as body with (
 //   $use-encapsulation: true
 // );
 
 .uqds-body {
-  &__container {
-    @include grid.layout-containment;
-    @include grid.grid-col-padding;
-  }
 
   &__bg-color-utility__container,
   &__text-utility__container {

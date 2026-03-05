@@ -13,17 +13,9 @@
   line-height: core.$line-height;
   position: relative;
 
-  .uq-alert__message > *:first-child {
+  .uq-alert__message
+    > :is(p, h1, h2, h3, h4, h5, h6):first-child:not(.uq-alert__title) {
     margin-top: 0;
-  }
-
-  .uq-alert__message > h1:first-child,
-  .uq-alert__message > h2:first-child,
-  .uq-alert__message > h3:first-child,
-  .uq-alert__message > h4:first-child,
-  .uq-alert__message > h5:first-child,
-  .uq-alert__message > h6:first-child {
-    line-height: 24px;
   }
 
   &__title {
@@ -31,7 +23,7 @@
     font-weight: core.$font-weight-medium;
     line-height: core.$line-height-h;
     color: core.$grey-900;
-    margin: core.$space-none core.$space-none core.$space-s;
+    margin: 0.2rem core.$space-none core.$space-s;
   }
 
   &__message {

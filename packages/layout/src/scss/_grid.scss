@@ -1,25 +1,31 @@
 @use "global" as *;
 
 .uq-grid {
-    display: grid;
-    gap: var(--uq-grid-gap);
-    grid-template-columns: auto;
+  display: grid;
+  gap: var(--uq-grid-gap);
+  grid-template-columns: auto;
 }
 
 /* MODIFIER CLASSES: These set the IDEAL column count when there is enough space */
 
 .uq-grid--1-column {
-    grid-template-columns: auto;
+  grid-template-columns: auto;
 }
 .uq-grid--2-column {
-    grid-template-columns: repeat(auto-fit,
-            minmax(max(317px, calc(50% - (var(--uq-grid-gap) / 2))), 1fr));
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(max(317px, calc(50% - (var(--uq-grid-gap) / 2))), 1fr)
+  );
 }
 .uq-grid--3-column {
-    grid-template-columns: repeat(auto-fit,
-            minmax(max(317px, calc(33.333% - (var(--uq-grid-gap) * 2 / 3))), 1fr));
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(max(317px, calc(33.333% - (var(--uq-grid-gap) * 2 / 3))), 1fr)
+  );
 }
 .uq-grid--4-column {
-    grid-template-columns: repeat(auto-fit,
-            minmax(max(317px, calc(25% - (var(--uq-grid-gap) * 3 / 4))), 1fr));
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(max(317px, calc(25% - (var(--uq-grid-gap) * 3 / 4))), 1fr)
+  );
 }

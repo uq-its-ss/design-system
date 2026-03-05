@@ -38,27 +38,25 @@ export default {
     ItemType: "Demo item",
     NumberOfItems: "Default",
   },
-  render: ({
-    Columns,
-    ItemType,
-    NumberOfItems,
-  }) => {
+  render: ({ Columns, ItemType, NumberOfItems }) => {
     let numItems;
-    
+
     if (NumberOfItems === "Default") {
-      const numColumns = Columns === "Default" ? 1 : parseInt(Columns.match(/\d+/)?.[0] || "1");
+      const numColumns =
+        Columns === "Default" ? 1 : parseInt(Columns.match(/\d+/)?.[0] || "1");
       numItems = numColumns + 1;
     } else {
       numItems = parseInt(NumberOfItems);
     }
-    
-    const cardContent = ItemType === "Profile Card" 
-      ? ProfileCard()
-      : '<div class="uqds-layout-demo-card"></div>';
-    
-    const items = Array(numItems).fill(cardContent).join('\n      ');
-    
-    return `<div class="${classNames('uq-grid', Columns !== "Default" && `uq-grid--${Columns.toLowerCase().replace(" ", "-")}`)}">
+
+    const cardContent =
+      ItemType === "Profile Card"
+        ? ProfileCard()
+        : '<div class="uqds-layout-demo-card"></div>';
+
+    const items = Array(numItems).fill(cardContent).join("\n      ");
+
+    return `<div class="${classNames("uq-grid", Columns !== "Default" && `uq-grid--${Columns.toLowerCase().replace(" ", "-")}`)}">
       ${items}
       </div>
       `;
@@ -76,8 +74,8 @@ export const GridDemo = {
 
 export const ProfileExample = {
   args: {
-      Columns: "Default",
-      ItemType: "Profile Card",
-      NumberOfItems: "Default",
-    },
+    Columns: "Default",
+    ItemType: "Profile Card",
+    NumberOfItems: "Default",
+  },
 };

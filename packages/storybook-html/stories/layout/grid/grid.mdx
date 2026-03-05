@@ -20,12 +20,14 @@ The Grid component is a layout utility designed to arrange content in a structur
 ---
 
 ## Grid
+
 The default state allows the grid to behave as a single-column stack or follow its inherent content width.
 
 <Canvas of={GridStories.GridDemo} />
 <Controls of={GridStories.GridDemo} />
 
 ### Profile Card Implementation
+
 This example demonstrates the grid populated with complex components like Profile Cards.
 
 <Canvas of={GridStories.ProfileExample} />
@@ -34,8 +36,8 @@ This example demonstrates the grid populated with complex components like Profil
 ## Usage Guide
 
 ### Multi-Column Layouts
-When using 2, 3, or 4-column modifiers, the grid calculates the necessary space by subtracting the gap width from the percentage-based width to ensure a perfect fit.
 
+When using 2, 3, or 4-column modifiers, the grid calculates the necessary space by subtracting the gap width from the percentage-based width to ensure a perfect fit.
 
 <table>
   <thead>
@@ -46,25 +48,47 @@ When using 2, 3, or 4-column modifiers, the grid calculates the necessary space 
     </tr>
   </thead>
   <tbody>
-      <tr>
-      <td><code>.uq-grid--1-column & no modifier</code></td>
+    <tr>
+      <td>
+        <code>.uq-grid--1-column & no modifier</code>
+      </td>
       <td>1 Columns</td>
-      <td><code>grid-template-columns: auto;</code></td>
+      <td>
+        <code>grid-template-columns: auto;</code>
+      </td>
     </tr>
     <tr>
-      <td><code>.uq-grid--2-column</code></td>
+      <td>
+        <code>.uq-grid--2-column</code>
+      </td>
       <td>2 Columns</td>
-      <td><code>minmax(max(317px, calc(50% - (var(--uq-grid-gap) / 2))), 1fr)</code></td>
+      <td>
+        <code>
+          minmax(max(317px, calc(50% - (var(--uq-grid-gap) / 2))), 1fr)
+        </code>
+      </td>
     </tr>
     <tr>
-      <td><code>.uq-grid--3-column</code></td>
+      <td>
+        <code>.uq-grid--3-column</code>
+      </td>
       <td>3 Columns</td>
-      <td><code>minmax(max(317px, calc(33.333% - (var(--uq-grid-gap) * 2 / 3))), 1fr)</code></td>
+      <td>
+        <code>
+          minmax(max(317px, calc(33.333% - (var(--uq-grid-gap) * 2 / 3))), 1fr)
+        </code>
+      </td>
     </tr>
     <tr>
-      <td><code>.uq-grid--4-column</code></td>
+      <td>
+        <code>.uq-grid--4-column</code>
+      </td>
       <td>4 Columns</td>
-      <td><code>minmax(max(317px, calc(25% - (var(--uq-grid-gap) * 3 / 4))), 1fr)</code></td>
+      <td>
+        <code>
+          minmax(max(317px, calc(25% - (var(--uq-grid-gap) * 3 / 4))), 1fr)
+        </code>
+      </td>
     </tr>
   </tbody>
 </table>
@@ -72,16 +96,20 @@ When using 2, 3, or 4-column modifiers, the grid calculates the necessary space 
 ---
 
 ### For Designers
-* **Column Flexibility**: You can choose between 1, 2, 3, or 4-column layouts.
-* **Minimum Width**: Each grid item has a "hard floor" of **317px**. If a container becomes too narrow to hold items at that width, they will automatically wrap to a new row.
-* **Consistency**: Use the grid to align repetitive elements like Profile Cards, News snippets, or Galleries.
+
+- **Column Flexibility**: You can choose between 1, 2, 3, or 4-column layouts.
+- **Minimum Width**: Each grid item has a "hard floor" of **317px**. If a container becomes too narrow to hold items at that width, they will automatically wrap to a new row.
+- **Consistency**: Use the grid to align repetitive elements like Profile Cards, News snippets, or Galleries.
 
 ### For Developers
+
 The grid uses the `auto-fit` and `minmax` strategy to create a fluid layout.
-* **Base Class**: Use `.uq-grid` on the container.
-* **Modifiers**: Apply modifiers like `.uq-grid--3-column` to set the *ideal* maximum number of columns.
-* **Gap Management**: The spacing between items is controlled by the CSS variable `--uq-grid-gap`.
+
+- **Base Class**: Use `.uq-grid` on the container.
+- **Modifiers**: Apply modifiers like `.uq-grid--3-column` to set the _ideal_ maximum number of columns.
+- **Gap Management**: The spacing between items is controlled by the CSS variable `--uq-grid-gap`.
 
 ### Best Practices
+
 1.  **Don't Nest Too Deeply**: While the grid is flexible, nesting multiple grids can lead to very narrow columns that trigger the 317px wrap immediately.
 2.  **Content Sizing**: Ensure the content inside the grid items can handle a minimum width of 317px gracefully.

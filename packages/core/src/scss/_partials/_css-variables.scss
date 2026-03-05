@@ -2,14 +2,13 @@
 
 /* CSS Variables */
 :root {
-    /* Default grid gap */
-    --uq-grid-gap: #{space.$space-l};
+  /* Default grid gap */
+  --uq-grid-gap: #{space.$space-l};
 }
 
-
 @media (min-width: 1024px) {
-    :root {
-        /* Desktop grid gap */
-        --uq-grid-gap: #{space.$space-xl};
-    }
+  :root {
+    /* Desktop grid gap */
+    --uq-grid-gap: #{space.$space-xl};
+  }
 }

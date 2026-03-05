@@ -40,7 +40,6 @@
     "@uqds/core": "^5.0.0",
     "@uqds/footer": "^7.0.5",
     "@uqds/form": "^4.0.3",
-    "@uqds/grid": "^4.0.0",
     "@uqds/grid-menu": "^4.0.3",
     "@uqds/header": "^7.0.5",
     "@uqds/hero": "^7.0.0",

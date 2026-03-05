@@ -141,11 +141,13 @@
     color: core.$white;
 
     // container overrides to match content width
-    .uq-alert__message {
-      padding-left: core.$space-uul;
+    @media #{core.$screen-xl-up} {
+      .uq-alert__message {
+        padding-left: core.$space-uul;
 
-      &::before {
-        left: core.$space-xl;
+        &::before {
+          left: core.$space-xl;
+        }
       }
     }
 

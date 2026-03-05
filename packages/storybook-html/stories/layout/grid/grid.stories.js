@@ -2,6 +2,7 @@ import classNames from "classnames";
 import { layoutDecorator } from "../../../lib/decorators";
 import { storyRenderer } from "../../../lib/storyRenderer";
 import * as ProfileStories from "../../components/profile/profile.stories";
+import "@uqds/layout/src/scss/main.scss";
 
 const { profile: ProfileCard } = storyRenderer(ProfileStories);
 

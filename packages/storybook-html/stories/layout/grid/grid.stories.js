@@ -67,10 +67,6 @@ export default {
 
 export const GridDemo = {
   decorators: [layoutDecorator],
-  globals: {
-    // 👇 Override background value for this story
-    backgrounds: { value: 'diagonal_stripes' },
-  },
   args: {
     Columns: "Default",
     ItemType: "Demo item",
@@ -79,9 +75,9 @@ export const GridDemo = {
 };
 
 export const ProfileExample = {
-args: {
-    Columns: "Default",
-    ItemType: "Profile Card",
-    NumberOfItems: "Default",
-  },
+  args: {
+      Columns: "Default",
+      ItemType: "Profile Card",
+      NumberOfItems: "Default",
+    },
 };

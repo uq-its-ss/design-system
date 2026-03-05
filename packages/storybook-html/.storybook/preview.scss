@@ -1,7 +1,6 @@
 @use "sass:color";
 @use "@uqds/core/src/scss/_component" as core;
 @use "@uqds/body/src/scss/_component" as body;
-@use "@uqds/grid/src/scss/_component" as grid;
 
 body {
   // Prevent the @uqds/body from imposing a background colour.

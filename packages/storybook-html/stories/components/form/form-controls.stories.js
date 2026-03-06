@@ -32,23 +32,6 @@ const layout = (states = ["N/A", "N/A", "N/A"]) => `
   </div>
 `;
 
-const gridLayout = (main, aside) => `
-  <div class="uq-grid uq-grid--golden uq-grid--full-width">
-    <div class="uq-grid__col">
-      ${main}
-    </div>
-    ${
-      aside
-        ? `
-      <div class="uq-grid__col">
-        ${aside}
-      </div>
-    `
-        : ""
-    }
-  </div>
-`;
-
 export const inputText = {
   render: () =>
     layout([
@@ -101,23 +84,21 @@ export const inputTextLarge = {
 };
 
 export const inputTextError = {
-  render: () =>
-    gridLayout(`
+  render: () => `
     <label class="uq-label--error" for="textError1">First name</label>
     <input type="text" id="textError1" class="uq-input--error" aria-describedby="textError1Error" aria-invalid="true" />
     <span id="textError1Error" class="uq-error-message" aria-live="polite">Enter your first name</span>
-  `),
+  `,
 
   name: "Text input (error)",
 };
 
 export const inputTextSuccess = {
-  render: () =>
-    gridLayout(`
+  render: () => `
     <label class="uq-label--success" for="textSuccess1">Mobile number</label>
     <input type="text" id="textSuccess1" value="0421 234 456" class="uq-input--success" aria-describedby="textSuccess1Feedback" />
     <span id="textSuccess1Feedback" class="uq-success-message" aria-live="polite">That number looks correct. It will still need to be verified via SMS.</span>
-  `),
+  `,
 
   name: "Text input (success)",
 };
@@ -164,8 +145,7 @@ export const selectAlt = {
 };
 
 export const selectError = {
-  render: () =>
-    gridLayout(`
+  render: () => `
     <label for="selectError1" class="uq-label--error">Begin study in</label>
     <select id="selectError1" class="uq-input--error" aria-describedby="selectError1Error" aria-invalid="true">
       <option value=""></option>
@@ -173,14 +153,13 @@ export const selectError = {
       <option value="2022">2022</option>
     </select>
     <span id="selectError1Error" aria-live="polite" class="uq-error-message">Select the year you will commence study at UQ</span>
-  `),
+  `,
 
   name: "Select (error)",
 };
 
 export const selectErrorAlt = {
-  render: () =>
-    gridLayout(`
+  render: () => `
     <label class="uq-label--error">Begin study in
       <select class="uq-input--error" aria-describedby="selectError2Error" aria-invalid="true">
         <option value=""></option>
@@ -189,7 +168,7 @@ export const selectErrorAlt = {
       </select>
       <span id="selectError2Error" aria-live="polite" class="uq-error-message">Select the year you will commence study at UQ</span>
     </label>
-  `),
+  `,
 
   name: "Select (nested & error)",
 };
@@ -268,25 +247,23 @@ export const checkboxAlt = {
 };
 
 export const checkboxError = {
-  render: () =>
-    gridLayout(`
+  render: () => `
     <input id="singleCheckboxError1" type="checkbox" class="uq-input--error" aria-describedby="singleCheckboxError1Feedback" aria-invalid="true" />
     <label for="singleCheckboxError1" class="uq-label--error">I declare that the information I've provided is correct and true</label>
     <span id="singleCheckboxError1Feedback" aria-live="polite" class="uq-error-message">Make sure your details are correct and then check the declaration statement</span>
-  `),
+  `,
 
   name: "Checkbox (error)",
 };
 
 export const checkboxErrorAlt = {
-  render: () =>
-    gridLayout(`
+  render: () => `
     <label class="uq-label--error">
       <input type="checkbox" class="uq-input--error" aria-describedby="singleCheckboxError2Feedback" aria-invalid="true" />
       <span>I declare that the information I've provided is correct and true</span>
     </label>
     <span id="singleCheckboxError2Feedback" aria-live="polite" class="uq-error-message">Make sure your details are correct and then check the declaration statement</span>
-  `),
+  `,
 
   name: "Checkbox (nested & error)",
 };
@@ -366,8 +343,7 @@ export const radioAlt = {
 };
 
 export const radioError = {
-  render: () =>
-    gridLayout(`
+  render: () => `
     <fieldset>
       <legend class="uq-legend--error">What semester will you start?</legend>
       <input id="singleRadio7" type="radio" name="radioGroup3" class="uq-input--error" aria-invalid="true" aria-describedby="radioButtonFeedback">
@@ -376,14 +352,13 @@ export const radioError = {
       <label for="singleRadio8" class="uq-label--error">Semester 2</label>
       <span id="radioButtonFeedback" aria-live="polite" class="uq-error-message">Please select a semester</label>
     </fieldset>
-  `),
+  `,
 
   name: "Radio buttons (error)",
 };
 
 export const radioErrorAlt = {
-  render: () =>
-    gridLayout(`
+  render: () => `
     <fieldset>
       <legend class="uq-legend--error">What semester will you start?</legend>
       <label class="uq-label--error">
@@ -396,7 +371,7 @@ export const radioErrorAlt = {
       </label>
       <span id="radioButtonFeedback" aria-live="polite" class="uq-error-message">Please select a semester</label>
     </fieldset>
-  `),
+  `,
 
   name: "Radio buttons (nested & error)",
 };

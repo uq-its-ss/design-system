@@ -2,8 +2,6 @@ import "./form.scss";
 
 const ErrorSummary = () => {
   return `
-    <div class="uq-grid uq-grid--golden uq-grid--full-width">
-      <div class="uq-grid__col">
         <div id="errorSummary" role="alert" class="uq-error-summary">
           <div class="uq-error-summary__body">
             <h2 class="uq-error-summary__title">Your form could not be submitted</h2>
@@ -14,8 +12,6 @@ const ErrorSummary = () => {
             </ul>
           </div>
         </div>
-      </div>
-    </div>
   `;
 };
 

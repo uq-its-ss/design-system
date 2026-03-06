@@ -1,4 +1,5 @@
 @forward "_global";
+@use "_partials/css-variables"; // Injects :root variables into the CSS output
 @use "_partials/colour-constants";
 @use "_partials/text-constants";
 

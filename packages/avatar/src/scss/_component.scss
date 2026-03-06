@@ -23,4 +23,16 @@
     width: 144px;
     height: 144px;
   }
+
+  // Keep avatar at 80px in multi-column grids within sidebar layouts
+  // where containers are narrower (667px-800px) and would cause overlap
+  .uq-sidebar-layout .uq-grid--2-column .uq-avatar,
+  .uq-sidebar-layout .uq-grid--3-column .uq-avatar,
+  .uq-sidebar-layout .uq-grid--4-column .uq-avatar,
+  .uq-sidebar-right-layout .uq-grid--2-column .uq-avatar,
+  .uq-sidebar-right-layout .uq-grid--3-column .uq-avatar,
+  .uq-sidebar-right-layout .uq-grid--4-column .uq-avatar {
+    width: core.$space-uuul;
+    height: core.$space-uuul;
+  }
 }

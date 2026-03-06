@@ -18,21 +18,24 @@
   }
 }
 
-// 1. Viewport MUST be >= 1024px to even consider large avatars
+// At 1024px and above, use larger avatars with container-aware sizing
 @media #{core.$screen-lg-up} {
+  // Default: All avatars become 144px
   .uq-avatar {
     width: 144px;
     height: 144px;
   }
   
-  // Single column grids always have enough room for 144px avatars here
-  .uq-grid--1-column .uq-avatar {
-    width: 144px;
-    height: 144px;
+  // Multi-column grids default to 80px to prevent overlap in narrow containers
+  .uq-grid--2-column .uq-avatar,
+  .uq-grid--3-column .uq-avatar,
+  .uq-grid--4-column .uq-avatar {
+    width: core.$space-uuul;
+    height: core.$space-uuul;
   }
 
-  // 2. 2-Column grids need the container to be at least ~850px wide
-  // This passes the 960px Full Width, but fails the 667px Sidebar
+  // Container queries: Increase to 144px ONLY when grid has enough width
+  // 2-column needs ~850px (allows 2 × 144px avatars + gaps + card padding)
   @container uq-grid-container (min-width: 850px) {
     .uq-grid--2-column .uq-avatar {
       width: 144px;
@@ -40,9 +43,17 @@
     }
   }
 
-  // 3. 3-Column grids need even more room (approx 1100px)
+  // 3-column needs ~1100px (allows 3 × 144px avatars + gaps + card padding)
   @container uq-grid-container (min-width: 1100px) {
     .uq-grid--3-column .uq-avatar {
+      width: 144px;
+      height: 144px;
+    }
+  }
+
+  // 4-column needs ~1400px (allows 4 × 144px avatars + gaps + card padding)
+  @container uq-grid-container (min-width: 1400px) {
+    .uq-grid--4-column .uq-avatar {
       width: 144px;
       height: 144px;
     }

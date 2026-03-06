@@ -4,6 +4,10 @@
   display: grid;
   gap: var(--uq-grid-gap);
   grid-template-columns: auto;
+
+  // Establish the grid block as a container
+  container-type: inline-size;
+  container-name: uq-grid-container;
 }
 
 /* MODIFIER CLASSES: These set the IDEAL column count when there is enough space */

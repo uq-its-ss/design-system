@@ -13,17 +13,16 @@
   line-height: core.$line-height;
   position: relative;
 
-  .uq-alert__message
-    > :is(p, h1, h2, h3, h4, h5, h6):first-child:not(.uq-alert__title) {
-    margin-top: 0;
+  &__title {
+    margin: core.$space-none core.$space-none core.$space-s;
   }
 
-  &__title {
-    font-size: core.$font-size-l;
-    font-weight: core.$font-weight-medium;
-    line-height: core.$line-height-h;
-    color: core.$grey-900;
-    margin: 0.2rem core.$space-none core.$space-s;
+  h5.uq-alert__title {
+    margin-top: 0.2rem;
+  }
+
+  h6.uq-alert__title {
+    margin-top: core.$space-xs;
   }
 
   &__message {

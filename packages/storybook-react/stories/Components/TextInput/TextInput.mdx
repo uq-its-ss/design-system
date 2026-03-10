@@ -1,0 +1,42 @@
+import {
+  Meta,
+  Canvas,
+  Controls,
+  Description,
+  Source,
+} from "@storybook/addon-docs/blocks";
+import * as stories from "./TextInput.stories";
+
+<Meta of={stories} />
+
+# TextInput
+
+<Description of={stories} />
+
+## Installation
+
+```bash
+npm i @uqds/react
+```
+
+## Usage
+
+```js
+import { TextInput } from "@uqds/react";
+
+// Controlled component example.
+const [text, setText] = useState("");
+return <TextInput type="search" value={text} onChange={setText} />;
+```
+
+## Showcase
+
+<Canvas of={stories.showcase} />
+
+## Properties
+
+<Canvas of={stories.base} />
+
+<Controls of={stories.base} />
+
+<Source of={stories.base} />

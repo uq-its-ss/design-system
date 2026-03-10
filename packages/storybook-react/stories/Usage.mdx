@@ -14,33 +14,20 @@ First install the React package.
 npm i @uqds/react
 ```
 
-## CSS
+## Implementation
 
-CSS styles for all components are bundled into a single CSS import you'll need to add to your
-project globally.
-
-### PostCSS
-
-```css
-@import "@uqds/react";
-```
-
-### Sass
-
-```css
-@use "@uqds/react/src/scss/main" as react;
-```
-
-### JS
+Import the CSS in a top-level file, such as `App.tsx`.
 
 ```js
-import "design-system/packages/react/dist/css/main.css";
+import "@uqds/react/css";
 ```
 
-Alternatively individual components can be imported from the component packages, for example.
+In a React .tsx or .jsx file, import and use the components as needed.
 
-```css
-@import "@uqds/icon";
+```js
+import { TextInput } from "@uqds/react";
+
+<TextInput placeholder="Example" />;
 ```
 
 ## Component usage

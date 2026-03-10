@@ -1,0 +1,38 @@
+import {
+  Meta,
+  Canvas,
+  Controls,
+  Description,
+  Source,
+} from "@storybook/addon-docs/blocks";
+import * as stories from "./Button.stories";
+
+<Meta of={stories} />
+
+# Button
+
+<Description of={stories} />
+
+## Installation
+
+```bash
+npm i @uqds/react
+```
+
+## Usage
+
+```js
+import { Button } from "@uqds/react";
+```
+
+## Showcase
+
+<Canvas of={stories.showcase} />
+
+## Properties
+
+<Canvas of={stories.base} />
+
+<Controls of={stories.base} />
+
+<Source of={stories.base} />

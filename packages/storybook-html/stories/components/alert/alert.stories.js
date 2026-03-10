@@ -55,7 +55,15 @@ export default {
     button: "",
     link: "",
   },
-  render: ({ isGlobal, status, title, titleElement, message, button, link }) => {
+  render: ({
+    isGlobal,
+    status,
+    title,
+    titleElement,
+    message,
+    button,
+    link,
+  }) => {
     return `
       <div 
         class="${classNames(

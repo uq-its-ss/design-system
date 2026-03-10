@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.10-alpha.0](https://github.com/uq-its-ss/design-system/compare/uqds-builder@4.0.9...uqds-builder@4.0.10-alpha.0) (2026-03-10)
+
+**Note:** Version bump only for package uqds-builder
+
 ## [4.0.9](https://github.com/uq-its-ss/design-system/compare/uqds-builder@4.0.9-alpha.0...uqds-builder@4.0.9) (2026-02-25)
 
 **Note:** Version bump only for package uqds-builder

@@ -17,12 +17,9 @@
     margin: core.$space-none core.$space-none core.$space-s;
   }
 
-  h5.uq-alert__title {
-    margin-top: 0.2rem;
-  }
-
+  h5.uq-alert__title,
   h6.uq-alert__title {
-    margin-top: core.$space-xs;
+    margin-top: 0.2rem;
   }
 
   &__message {

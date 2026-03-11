@@ -1,0 +1,30 @@
+import {
+  Meta,
+  Story,
+  Canvas,
+  Controls,
+  Source,
+} from "@storybook/addon-docs/blocks";
+import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
+import * as profileGridStories from "./profile-grid.stories";
+
+<Meta of={profileGridStories} />
+
+# Profiles Using Grid Layouts
+
+<StatusBadge.Stable />
+
+<StatusBadge.StableDoc />
+
+<a href="https://github.com/uq-its-ss/design-system/issues" target="_blank">
+  Check for open issues
+</a>
+
+## Overview
+
+ Profiles should only be used in either single or two column layouts.
+
+### Grid options
+
+<Canvas of={profileGridStories.usingGrid} />
+<Controls of={profileGridStories.usingGrid} />

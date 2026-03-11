@@ -39,7 +39,7 @@ export default {
         category: "Contact & Links", // Groups the field
       },
     },
-    phone: {
+    Phone: {
       control: "text",
       if: { arg: "hasContact" },
       table: {
@@ -73,7 +73,7 @@ export default {
     // --- Image Group Ends ---
   },
   args: {
-    titleElement: "h3",
+    titleElement: "h2",
     honorificPrefix: "Professor",
     name: "Jane Doe",
     position: "Head of School",

@@ -43,7 +43,7 @@ export default {
     image: { table: { disable: true } },
   },
   args: {
-     ...ProfileStories.default.args,
+    ...ProfileStories.default.args,
     Columns: "2 Column",
     NumberOfItems: 3,
     hasSidebar: false,

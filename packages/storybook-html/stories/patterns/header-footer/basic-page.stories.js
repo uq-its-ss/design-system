@@ -28,6 +28,7 @@ export const basicPage = {
       ${BreadcrumbStories.render(BreadcrumbStories.args || {})}
 
       <div class="uq-container">
+      <h1>Basic page</h1>
         <div class="uq-sidebar-right-layout">
           <div class="uq-sidebar-right-layout__main">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit ut aliquam purus sit amet luctus venenatis. Ut tellus elementum sagittis vitae et leo. Eu sem integer vitae justo. Massa vitae tortor condimentum lacinia quis. Vel fringilla est ullamcorper eget nulla facilisi. Quis imperdiet massa tincidunt nunc. Convallis tellus id interdum velit laoreet id. Eu mi bibendum neque egestas congue quisque egestas diam in.</p>

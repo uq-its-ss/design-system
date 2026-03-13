@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.0.1-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/layout@7.0.0...@uqds/layout@7.0.1-alpha.0) (2026-03-13)
+
+### Bug Fixes
+
+- deprecated grid, added new grid to Layout ([e281dc6](https://github.com/uq-its-ss/design-system/commit/e281dc609dd7260f8ad81e5f522b353417d5f308))
+- grid scss reference update ([644dc3a](https://github.com/uq-its-ss/design-system/commit/644dc3a60972d56167724f519ca64dc101f55838))
+
 # [7.0.0](https://github.com/uq-its-ss/design-system/compare/@uqds/layout@7.0.0-alpha.0...@uqds/layout@7.0.0) (2025-07-21)
 
 **Note:** Version bump only for package @uqds/layout

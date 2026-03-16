@@ -19,6 +19,14 @@ export default {
         category: "Content",
       },
     },
+    titleElement: {
+      name: "title element",
+      options: ["h2", "h3", "h4", "h5", "h6"],
+      control: "select",
+      table: {
+        category: "Content",
+      },
+    },
     message: {
       control: "text",
       table: {
@@ -42,11 +50,20 @@ export default {
     status: "info",
     isGlobal: false,
     title: "",
+    titleElement: "h3",
     message: `<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>`,
     button: "",
     link: "",
   },
-  render: ({ isGlobal, isDark, status, title, message, button, link }) => {
+  render: ({
+    isGlobal,
+    status,
+    title,
+    titleElement,
+    message,
+    button,
+    link,
+  }) => {
     return `
       <div 
         class="${classNames(
@@ -56,7 +73,7 @@ export default {
         )}"
         role="alert">
         <div class="uq-alert__message">
-          ${title ? `<h3 class="uq-alert__title">${title}</h3>` : ""}
+          ${title ? `<${titleElement} class="uq-alert__title">${title}</${titleElement}>` : ""}
           ${message}
           ${button ? `<p><a href="#" title="Button" class="uq-button">${button}</a></p>` : ""}
           ${link ? `<p><a href="#" title="Link" class="uq-button--inline">${link}</a></p>` : ""}

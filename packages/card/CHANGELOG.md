@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.4-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/card@4.0.3...@uqds/card@4.0.4-alpha.0) (2026-03-13)
+
+### Bug Fixes
+
+- removed grid css ([6a81ec8](https://github.com/uq-its-ss/design-system/commit/6a81ec8dfe91c806dd5315e6ffc29159df4d1f2e))
+
 ## [4.0.3](https://github.com/uq-its-ss/design-system/compare/@uqds/card@4.0.3-alpha.0...@uqds/card@4.0.3) (2026-02-02)
 
 **Note:** Version bump only for package @uqds/card

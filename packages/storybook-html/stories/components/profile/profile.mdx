@@ -1,0 +1,68 @@
+import {
+  Meta,
+  Story,
+  Canvas,
+  Controls,
+  Source,
+} from "@storybook/addon-docs/blocks";
+import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
+import * as profileStories from "./profile.stories";
+
+<Meta of={profileStories} />
+
+# Profile
+
+<StatusBadge.Stable />
+
+<StatusBadge.StableDoc />
+
+<a href="https://github.com/uq-its-ss/design-system/issues" target="_blank">
+  Check for open issues
+</a>
+
+## Overview
+
+A profile is a component that displays user information, including their name, position, and an optional profile image.
+
+### Profile
+
+The defualt profile component.
+
+<Canvas of={profileStories.profile} />
+<Controls of={profileStories.profile} />
+
+### Variants and states
+
+The following examples demonstrate different variations of the profile component. The profile image will also scale responsively based on the page width.
+
+#### No Image
+
+If no image is required, the profiles can be displayed without one.
+
+<Canvas of={profileStories.NoImage} />
+
+#### Fall back icon
+
+If no image is provided, a placeholder icon is displayed.
+
+<Canvas of={profileStories.FallbackImage} />
+
+### Patterns
+
+Examples of contextual usage of the profile component.
+
+#### Bio profile
+
+<Canvas of={profileStories.BioProfile} />
+
+#### Contact profile
+
+<Canvas of={profileStories.contactProfile} />
+
+#### Call to action profile
+
+<Canvas of={profileStories.CallToAction} />
+
+#### Expert profile
+
+<Canvas of={profileStories.ExpertProfile} />

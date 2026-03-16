@@ -1,4 +1,4 @@
-import { Meta, Story, Canvas } from "@storybook/blocks";
+import { Meta, Story, Canvas, Source } from "@storybook/addon-docs/blocks";
 import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
 import * as BodyUtilitiesStories from "./body-utilities.stories";
 
@@ -10,57 +10,89 @@ import * as BodyUtilitiesStories from "./body-utilities.stories";
 
 <StatusBadge.DraftDoc />
 
-## Text colour
+### Text colour
 
 <Story of={BodyUtilitiesStories.textColorUtils} />
 
-## Text size
+### Text size
 
 <Story of={BodyUtilitiesStories.textSizeUtils} />
 
-## Text weight
+### Text weight
 
 <Story of={BodyUtilitiesStories.textWeightUtils} />
 
-## Text alignment
+### Text alignment
 
 <Story of={BodyUtilitiesStories.textAlignUtils} />
 
-## Text prettiers
+### Text prettiers
 
 <Story of={BodyUtilitiesStories.textPrettyUtils} />
 
-## Background colour
+### Background colour
 
 <Story of={BodyUtilitiesStories.backgroundColourUtils} />
 
-## Margin adjustment
+### Padding and margin adjustment
 
-Coming soon
+Use the padding and margin utility classes to customise spacing around elements.
 
-## Padding adjustment
+The classes are named using the format `uq{-property}-{-side}{-size}` where:
 
-Coming soon
+`{-property}` is one of:
 
-## Divider
+- `-padding`
+- `-margin`
 
-Coming soon
+`{-side}` is one of:
 
-## Highlight box
+- `-top`
+- `-right`
+- `-bottom`
+- `-left`
+- or omitted for all sides
 
-Coming soon
+`{-size}` is one of:
 
-## Visibility
+- `-uuuuul`
+- `-uuuul`
+- `-uuul`
+- `-uul`
+- `-ul`
+- `-xxxxl`
+- `-xxxl`
+- `-xxl`
+- `-xl`
+- `-l`
+- `-m`
+- `-s`
+- `-xs`
+
+#### Examples
+
+`uq-padding--uuul` applies `uuul`(5rem) padding to **all sides**
+
+`uq-margin--bottom-xs` applies `xs`(0.25rem) margin to the **bottom side**
+
+### Visibility
 
 <Story of={BodyUtilitiesStories.visibilityUtils} />
 
 <br />
 
-### Print visibility
+#### Print visibility
 
 - `.show-for-print` - Add classname to element to show when printing
 - `.hide-for-print` - Add classname to element to hide when printing
 
-## Embedded media
+### Skip links
 
-Coming soon
+<Canvas
+  of={BodyUtilitiesStories.skipLinks}
+  code={`
+    <a href="#uq-header" class="visually-hidden focusable">Skip to header</a>
+    <a href="#uq-main" class="visually-hidden focusable">Skip to content</a>
+    <a href="#uq-footer" class="visually-hidden focusable">Skip to footer</a>
+`}
+/>

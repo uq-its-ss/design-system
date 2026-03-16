@@ -1,6 +1,5 @@
-import "@uqds/pane/src/scss/main.scss";
-import "@uqds/icon/src/scss/main.scss";
 import { cardDecorator } from "../../../lib/decorators";
+import iconCatalog from "@uqds/icon";
 
 export default {
   title: "Components/Cards/Pane",
@@ -23,17 +22,18 @@ export default {
     video: "text",
     image: {
       control: "select",
-      options: ["images/card/card-example-herston-campus.jpg"],
+      options: [
+        "none",
+        "images/card/card-example-herston-campus.jpg",
+        "images/example-1.jpg",
+        "images/example-2.jpg",
+        "images/example-3.jpg",
+        "images/example-4.jpg",
+      ],
     },
     icon: {
+      options: iconCatalog.map((icon) => `${icon.category}--${icon.name}`),
       control: "select",
-      options: [
-        "other--walking",
-        "student-services--disability-wheelchair",
-        "agriculture-and-environment--ecology-leaf",
-        "education--mortarboard",
-        "science-and-mathematics--science-molecule",
-      ],
     },
     links: "text",
   },
@@ -43,19 +43,10 @@ export default {
       "Settle in to uni life quicker with guides on everything from Orientation to campus safety.",
     links: `<a href="#">This is a link</a>`,
   },
-};
-
-export const Pane = {
-  args: {
-    variant: "image",
-    image: "images/card/card-example-herston-campus.jpg",
-    icon: "",
-    links: `<a href="#">This is a link</a><a href="#">This is another link</a>`,
-  },
   render: ({ variant, image, icon, title, description, links, video }) => `
 <div class="uq-pane uq-pane--${variant}">
   ${
-    image
+    image && image !== "none"
       ? `<div class="uq-pane__image"><img src="${image}" alt="" /></div>`
       : ""
   }
@@ -81,8 +72,16 @@ export const Pane = {
 </div>`,
 };
 
+export const Pane = {
+  args: {
+    variant: "image",
+    image: "images/card/card-example-herston-campus.jpg",
+    icon: "",
+    links: `<a href="#">This is a link</a><a href="#">This is another link</a>`,
+  },
+};
+
 export const Image = {
-  ...Pane,
   args: {
     variant: "image",
     image: "images/card/card-example-herston-campus.jpg",
@@ -90,7 +89,6 @@ export const Image = {
 };
 
 export const Video = {
-  ...Pane,
   args: {
     variant: "video",
     video: "https://www.youtube.com/embed/ViMYZ8PRAjQ?si=MjVUL2on656-WESr",
@@ -98,7 +96,6 @@ export const Video = {
 };
 
 export const Text = {
-  ...Pane,
   args: {
     variant: "text",
     image: "",
@@ -114,7 +111,6 @@ export const TextShaded = {
 };
 
 export const Icon = {
-  ...Pane,
   args: {
     variant: "icon",
     image: "",

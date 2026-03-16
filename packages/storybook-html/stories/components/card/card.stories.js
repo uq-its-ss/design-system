@@ -1,6 +1,5 @@
-import "@uqds/card/src/scss/main.scss";
-import "@uqds/icon/src/scss/main.scss";
 import { cardDecorator } from "../../../lib/decorators";
+import iconCatalog from "@uqds/icon";
 
 export default {
   title: "Components/Cards/Card",
@@ -19,17 +18,18 @@ export default {
     },
     image: {
       control: "select",
-      options: ["images/card/card-example-herston-campus.jpg"],
+      options: [
+        "none",
+        "images/card/card-example-herston-campus.jpg",
+        "images/example-1.jpg",
+        "images/example-2.jpg",
+        "images/example-3.jpg",
+        "images/example-4.jpg",
+      ],
     },
     icon: {
+      options: iconCatalog.map((icon) => `${icon.category}--${icon.name}`),
       control: "select",
-      options: [
-        "other--walking",
-        "student-services--disability-wheelchair",
-        "agriculture-and-environment--ecology-leaf",
-        "education--mortarboard",
-        "science-and-mathematics--science-molecule",
-      ],
     },
   },
   args: {
@@ -42,13 +42,6 @@ export default {
     icon: "",
     image: "",
     href: "",
-  },
-};
-
-export const Card = {
-  args: {
-    variant: "image",
-    image: "images/card/card-example-herston-campus.jpg",
   },
   render: ({
     variant,
@@ -63,7 +56,7 @@ export const Card = {
   }) => `
 <div class="uq-card uq-card--${variant}">
   ${
-    image
+    image && image !== "none"
       ? `<div class="uq-card__image"><img src="${image}" alt="" /></div>`
       : ""
   }
@@ -89,22 +82,26 @@ export const Card = {
 </div>`,
 };
 
+export const Card = {
+  args: {
+    variant: "image",
+    image: "images/card/card-example-herston-campus.jpg",
+  },
+};
+
 export const Text = {
-  ...Card,
   args: {
     variant: "text",
   },
 };
 
 export const Image = {
-  ...Card,
   args: {
     ...Card.args,
   },
 };
 
 export const Icon = {
-  ...Card,
   args: {
     variant: "icon",
     icon: "other--walking",
@@ -112,7 +109,6 @@ export const Icon = {
 };
 
 export const IconNav = {
-  ...Card,
   args: {
     variant: "icon-nav",
     title: "Research",

@@ -1,10 +1,9 @@
 @use "@uqds/core/src/scss/global" as core;
 @use "@uqds/icon/src/scss/global" as icon-constants;
-@use "@uqds/grid/src/scss/global" as grid;
 @use "global" as *;
 
 .uq-header {
-  background: core.$purple-500; //linear-gradient(90deg, $uq-purple 0%, 87%, #962A8B 100%);
+  background: core.$purple-500; // linear-gradient(90deg, $uq-purple 0%, 87%, #962A8B 100%);
   display: grid;
   align-items: center;
   grid-template-columns: auto;

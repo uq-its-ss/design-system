@@ -1,14 +1,19 @@
-import { Header } from "../../components/header/header.stories";
-import { footer } from "../../components/footer/footer.stories";
-import { Breadcrumb } from "../../components/breadcrumb/breadcrumb.stories";
+import classNames from "classnames";
+import { storyRenderer } from "../../../lib/storyRenderer";
+import * as HeaderStories from "../../components/header/header.stories";
+import * as BreadcrumbStories from "../../components/breadcrumb/breadcrumb.stories";
 import * as HeroStories from "../../components/hero/hero.stories";
 import * as SidebarRightStories from "../../layout/page-layouts/sidebar-right/sidebar-right.stories";
 import * as CardStories from "../../components/card/card.stories";
-import { storyRenderer } from "../../../lib/storyRenderer";
 import * as PillListStories from "../../components/pill/list/pill-list.stories";
 import * as SearchInputStories from "../../components/search-input/search-input.stories";
 import { searchInput } from "@uqds/form/src/js/main";
+import * as FooterStories from "../../components/footer/footer.stories";
+import { initJs } from "../../../lib/initJs";
 
+const { Header } = storyRenderer(HeaderStories);
+const { Breadcrumb } = storyRenderer(BreadcrumbStories);
+const { footer } = storyRenderer(FooterStories);
 const { Level2: Level2Hero } = storyRenderer(HeroStories);
 const { NewsExample } = storyRenderer(SidebarRightStories);
 const { Text: Card } = storyRenderer(CardStories);
@@ -17,6 +22,7 @@ const { SearchInput } = storyRenderer(SearchInputStories);
 
 export default {
   title: "Templates/News/Home",
+  tags: ["!autodocs"],
   parameters: {
     layout: "fullscreen",
     options: { showPanel: false },
@@ -32,34 +38,43 @@ export default {
 };
 
 export const Home = {
-  play: ({ canvasElement }) => {
-    const search = canvasElement.querySelector(".uq-search-input");
-    searchInput(search);
-  },
+  decorators: [
+    (storyFn) =>
+      initJs(storyFn, (component) => {
+        searchInput(component.querySelector(".uq-search-input"));
+      }),
+  ],
   render: ({ showGrid }) => `
-${Header.render()}
-${Breadcrumb.render()}
-${Level2Hero({ title: "News", description: "Get the latest from UQ News.", image: null })}
-${NewsExample()}
-<div class="uq-section">
-  <div class="uq-container">
-    <div class="uq-section__header">
-      <h2 class="uq-section__title">Looking for specific news?</h2>
+<div class="${classNames({ "uqds-layout-preview": showGrid })}">
+  <a href="#uq-header" class="visually-hidden focusable">Skip to header</a>
+  <a href="#uq-main" class="visually-hidden focusable">Skip to content</a>
+  <a href="#uq-footer" class="visually-hidden focusable">Skip to footer</a>  
+  ${Header()}
+  <main id="uq-main">
+    ${Breadcrumb({ showLevels: 0, currentPage: "News" })}
+    ${Level2Hero({ title: "News", description: "Get the latest from UQ News.", image: null })}
+    ${NewsExample()}
+    <div class="uq-section">
+      <div class="uq-container">
+        <div class="uq-section__header">
+          <h2 class="uq-section__title">Looking for specific news?</h2>
+        </div>
+        <h3>Search by keyword</h3>
+        ${SearchInput()}
+        <h3>Browse by topic</h3>
+        ${PillList()}
+      </div>
     </div>
-    <h3>Search by keyword</h3>
-    ${SearchInput()}
-    <h3>Browse by topic</h3>
-    ${PillList()}
-  </div>
-</div>
-<div class="uq-section">
-  <div class="uq-container">
-    <div class="uq-card-grid uq-card-grid--target-2x">
-      ${Card({ title: "Looking for a UQ expert?", description: "Browse our searchable database of UQ Staff available to share their specialist knowledge and research developments." })}
-      ${Card({ title: "Contact us", description: "Do you have a media enquiry or a question for the UQ communications team?" })}
+    <div class="uq-section">
+      <div class="uq-container">
+        <div class="uq-card-grid uq-card-grid--target-2x">
+          ${Card({ title: "Looking for a UQ expert?", description: "Browse our searchable database of UQ Staff available to share their specialist knowledge and research developments." })}
+          ${Card({ title: "Contact us", description: "Do you have a media enquiry or a question for the UQ communications team?" })}
+        </div>
+      </div>
     </div>
-  </div>
+  </main>
+  ${footer()}
 </div>
-${footer.render()}
 `,
 };

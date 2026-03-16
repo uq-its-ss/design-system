@@ -940,7 +940,15 @@ export default [
     category: "standard",
   },
   {
+    name: "arrow-down",
+    category: "standard",
+  },
+  {
     name: "arrow-left-1",
+    category: "standard",
+  },
+  {
+    name: "arrow-left",
     category: "standard",
   },
   {

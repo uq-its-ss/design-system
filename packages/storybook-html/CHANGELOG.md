@@ -3,6 +3,119 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.1.3-alpha.1](https://github.com/uq-its-ss/design-system/compare/storybook-html@8.1.3-alpha.0...storybook-html@8.1.3-alpha.1) (2026-03-13)
+
+### Bug Fixes
+
+- add heading back to basic page ([c224afe](https://github.com/uq-its-ss/design-system/commit/c224afe8c89d308370a8c58b8841e5a382a33220))
+- deprecated grid, added new grid to Layout ([e281dc6](https://github.com/uq-its-ss/design-system/commit/e281dc609dd7260f8ad81e5f522b353417d5f308))
+- grid ([a70ff67](https://github.com/uq-its-ss/design-system/commit/a70ff6710c5b64f1161002946be347fcc6f4fe63))
+- grid scss reference update ([644dc3a](https://github.com/uq-its-ss/design-system/commit/644dc3a60972d56167724f519ca64dc101f55838))
+- removed old grid reference ([fcba683](https://github.com/uq-its-ss/design-system/commit/fcba6836e0965c3865bf7dac994b385082526f8f))
+- set profile title to H3 by default ([8f82acc](https://github.com/uq-its-ss/design-system/commit/8f82acc65e447a0b436d0f1a825c6dc3c3944bb9))
+- settign up profile grid examples ([e80b019](https://github.com/uq-its-ss/design-system/commit/e80b0190eb56aa1d6e3345ed4f95eabea8e04760))
+- Updated Avatar sizing in Grids and sidebar ([fe7869b](https://github.com/uq-its-ss/design-system/commit/fe7869b58d99fc3088af3e96694e0d454a424a23))
+- updated examples removing old grid ([db0912d](https://github.com/uq-its-ss/design-system/commit/db0912d9311c75353475c2d368dae35f91587806))
+
+## [8.1.3-alpha.0](https://github.com/uq-its-ss/design-system/compare/storybook-html@8.1.2...storybook-html@8.1.3-alpha.0) (2026-03-10)
+
+**Note:** Version bump only for package storybook-html
+
+## [8.1.2](https://github.com/uq-its-ss/design-system/compare/storybook-html@8.1.2-alpha.0...storybook-html@8.1.2) (2026-02-25)
+
+**Note:** Version bump only for package storybook-html
+
+## [8.1.2-alpha.0](https://github.com/uq-its-ss/design-system/compare/storybook-html@8.1.1...storybook-html@8.1.2-alpha.0) (2026-02-05)
+
+**Note:** Version bump only for package storybook-html
+
+## [8.1.1](https://github.com/uq-its-ss/design-system/compare/storybook-html@8.1.1-alpha.9...storybook-html@8.1.1) (2026-02-02)
+
+**Note:** Version bump only for package storybook-html
+
+## [8.1.1-alpha.9](https://github.com/uq-its-ss/design-system/compare/storybook-html@8.1.1-alpha.8...storybook-html@8.1.1-alpha.9) (2026-02-02)
+
+**Note:** Version bump only for package storybook-html
+
+## [8.1.1-alpha.8](https://github.com/uq-its-ss/design-system/compare/storybook-html@8.1.1-alpha.7...storybook-html@8.1.1-alpha.8) (2026-02-02)
+
+**Note:** Version bump only for package storybook-html
+
+## [8.1.1-alpha.7](https://github.com/uq-its-ss/design-system/compare/storybook-html@8.1.1-alpha.6...storybook-html@8.1.1-alpha.7) (2026-01-30)
+
+**Note:** Version bump only for package storybook-html
+
+## [8.1.1-alpha.6](https://github.com/uq-its-ss/design-system/compare/storybook-html@8.1.1-alpha.5...storybook-html@8.1.1-alpha.6) (2026-01-30)
+
+### Bug Fixes
+
+- updated breadcrumb render ([#722](https://github.com/uq-its-ss/design-system/issues/722)) ([29ca626](https://github.com/uq-its-ss/design-system/commit/29ca626c6a42aa2804a4bf3a067d941b8553d009))
+
+## [8.1.1-alpha.5](https://github.com/uq-its-ss/design-system/compare/storybook-html@8.1.1-alpha.4...storybook-html@8.1.1-alpha.5) (2026-01-29)
+
+**Note:** Version bump only for package storybook-html
+
+## [8.1.1-alpha.4](https://github.com/uq-its-ss/design-system/compare/storybook-html@8.1.1-alpha.3...storybook-html@8.1.1-alpha.4) (2026-01-14)
+
+### Bug Fixes
+
+- update ds variable name to honorificPrefix for added clarity ([#720](https://github.com/uq-its-ss/design-system/issues/720)) ([fc9999c](https://github.com/uq-its-ss/design-system/commit/fc9999c2f510ec9a473d1ea80adf3307d5a40dd2))
+
+## [8.1.1-alpha.3](https://github.com/uq-its-ss/design-system/compare/storybook-html@8.1.1-alpha.2...storybook-html@8.1.1-alpha.3) (2025-12-12)
+
+### Bug Fixes
+
+- add uq- prefix to padding and margin utility classes. update doco to reflect. ([#719](https://github.com/uq-its-ss/design-system/issues/719)) ([258cfbf](https://github.com/uq-its-ss/design-system/commit/258cfbf7fea6fa0ff16222aa180150695a07ff43))
+
+## [8.1.1-alpha.2](https://github.com/uq-its-ss/design-system/compare/storybook-html@8.1.1-alpha.1...storybook-html@8.1.1-alpha.2) (2025-12-10)
+
+**Note:** Version bump only for package storybook-html
+
+## [8.1.1-alpha.1](https://github.com/uq-its-ss/design-system/compare/storybook-html@8.1.1-alpha.0...storybook-html@8.1.1-alpha.1) (2025-12-10)
+
+**Note:** Version bump only for package storybook-html
+
+## [8.1.1-alpha.0](https://github.com/uq-its-ss/design-system/compare/storybook-html@8.1.0...storybook-html@8.1.1-alpha.0) (2025-12-04)
+
+**Note:** Version bump only for package storybook-html
+
+# [8.1.0](https://github.com/uq-its-ss/design-system/compare/storybook-html@8.1.0-alpha.1...storybook-html@8.1.0) (2025-12-02)
+
+**Note:** Version bump only for package storybook-html
+
+# [8.1.0-alpha.1](https://github.com/uq-its-ss/design-system/compare/storybook-html@8.1.0-alpha.0...storybook-html@8.1.0-alpha.1) (2025-12-01)
+
+### Bug Fixes
+
+- initial doco update. TODO: needs alot of polish ([88855ef](https://github.com/uq-its-ss/design-system/commit/88855efebd0b859eea6776a13cb19de940262111))
+
+# [8.1.0-alpha.0](https://github.com/uq-its-ss/design-system/compare/storybook-html@8.0.5...storybook-html@8.1.0-alpha.0) (2025-11-12)
+
+### Bug Fixes
+
+- mermaid import ([9020aeb](https://github.com/uq-its-ss/design-system/commit/9020aeb1ba4e1f23cbc3c3716ea7cc011c18306b))
+- update to storybook 8.6 ([4992d32](https://github.com/uq-its-ss/design-system/commit/4992d325a282f58cf42e2340df4da23556838de8))
+
+### Features
+
+- storybook 9 upgrade ([c833816](https://github.com/uq-its-ss/design-system/commit/c83381662a2bb079d379bf1ad543804ee6abe7cc))
+
+## [8.0.5](https://github.com/uq-its-ss/design-system/compare/storybook-html@8.0.5-alpha.2...storybook-html@8.0.5) (2025-11-06)
+
+**Note:** Version bump only for package storybook-html
+
+## [8.0.5-alpha.2](https://github.com/uq-its-ss/design-system/compare/storybook-html@8.0.5-alpha.1...storybook-html@8.0.5-alpha.2) (2025-11-06)
+
+**Note:** Version bump only for package storybook-html
+
+## [8.0.5-alpha.1](https://github.com/uq-its-ss/design-system/compare/storybook-html@8.0.5-alpha.0...storybook-html@8.0.5-alpha.1) (2025-10-31)
+
+**Note:** Version bump only for package storybook-html
+
+## [8.0.5-alpha.0](https://github.com/uq-its-ss/design-system/compare/storybook-html@8.0.4...storybook-html@8.0.5-alpha.0) (2025-10-27)
+
+**Note:** Version bump only for package storybook-html
+
 ## [8.0.4](https://github.com/uq-its-ss/design-system/compare/storybook-html@8.0.4-alpha.0...storybook-html@8.0.4) (2025-09-04)
 
 **Note:** Version bump only for package storybook-html

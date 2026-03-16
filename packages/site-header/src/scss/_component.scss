@@ -1,5 +1,4 @@
 @use "@uqds/core/src/scss/global" as core;
-@use "@uqds/grid/src/scss/global" as grid;
 @use "@uqds/icon/src/scss/global" as icon-constants;
 @use "global" as *;
 
@@ -19,8 +18,6 @@
   }
 
   &__title-container {
-    // @include grid.layout-containment;
-    // @include grid.grid-col-padding;
     margin-left: auto;
     margin-right: auto;
     max-width: 73.25rem;
@@ -41,7 +38,7 @@
       padding: core.$space-m core.$space-m 0 core.$space-m;
     }
   }
-
+  // title
   &__title {
     color: core.$purple-500;
     font-size: $title-font-size;
@@ -119,7 +116,6 @@
     position: relative;
 
     @media #{core.$screen-lg-up} {
-      // @include grid.layout-containment;
       margin-left: auto;
       margin-right: auto;
       max-width: 73.25rem;

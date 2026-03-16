@@ -2,12 +2,12 @@
 import "./table.scss";
 
 // import HTML template strings
-import tableHTML from "./table.html";
-import tableClassesHTML from "./table-with-classes.html";
-import tableMultipleHeadersHTML from "./table-multiple-headers.html";
-import tableIrregularHeadersHTML from "./table-irregular-headers.html";
-import tableMultiLevelHeadersHTML from "./table-multi-level-headers.html";
-import tableCardHTML from "./table-card.html";
+import tableHTML from "./table.html?raw";
+import tableClassesHTML from "./table-with-classes.html?raw";
+import tableMultipleHeadersHTML from "./table-multiple-headers.html?raw";
+import tableIrregularHeadersHTML from "./table-irregular-headers.html?raw";
+import tableMultiLevelHeadersHTML from "./table-multi-level-headers.html?raw";
+import tableCardHTML from "./table-card.html?raw";
 
 export default {
   title: "Components/Table",

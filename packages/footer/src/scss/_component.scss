@@ -1,6 +1,5 @@
 @use "@uqds/core/src/scss/global" as core;
 @use "@uqds/icon/src/scss/global" as icon-constants;
-@use "@uqds/grid/src/scss/global" as grid;
 @use "global" as *;
 
 .uq-footer {
@@ -92,7 +91,7 @@
     display: grid;
 
     // @media #{core.$screen-md-up} {
-    //   grid-template-columns: repeat(3, minmax(0, 1fr));
+    // grid-template-columns: repeat(3, minmax(0, 1fr));
     // }
 
     @media #{core.$screen-lg-up} {

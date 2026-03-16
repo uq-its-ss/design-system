@@ -1,5 +1,5 @@
 import addons from "@storybook/addons";
-import { STORY_RENDERED } from "@storybook/core-events";
+import { STORY_RENDERED } from "storybook/internal/core-events";
 
 addons.register("TitleAddon", (api) => {
   const customTitle = "Design System - The University of Queensland"; // Define your customTitle title

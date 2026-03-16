@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.0.6-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/footer@7.0.5...@uqds/footer@7.0.6-alpha.0) (2026-03-13)
+
+### Bug Fixes
+
+- removed grid ([e33206d](https://github.com/uq-its-ss/design-system/commit/e33206d08f838f4ebea21e284bca65953c1e9541))
+- removed old grid reference ([fcba683](https://github.com/uq-its-ss/design-system/commit/fcba6836e0965c3865bf7dac994b385082526f8f))
+
+## [7.0.5](https://github.com/uq-its-ss/design-system/compare/@uqds/footer@7.0.5-alpha.0...@uqds/footer@7.0.5) (2026-02-02)
+
+**Note:** Version bump only for package @uqds/footer
+
+## [7.0.5-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/footer@7.0.4...@uqds/footer@7.0.5-alpha.0) (2025-12-04)
+
+**Note:** Version bump only for package @uqds/footer
+
+## [7.0.4](https://github.com/uq-its-ss/design-system/compare/@uqds/footer@7.0.4-alpha.0...@uqds/footer@7.0.4) (2025-11-06)
+
+**Note:** Version bump only for package @uqds/footer
+
+## [7.0.4-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/footer@7.0.3...@uqds/footer@7.0.4-alpha.0) (2025-10-31)
+
+**Note:** Version bump only for package @uqds/footer
+
 ## [7.0.3](https://github.com/uq-its-ss/design-system/compare/@uqds/footer@7.0.3-alpha.0...@uqds/footer@7.0.3) (2025-09-04)
 
 **Note:** Version bump only for package @uqds/footer

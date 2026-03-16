@@ -10,33 +10,7 @@ const config = {
   addons: [
     getAbsolutePath("@storybook/addon-a11y"),
     getAbsolutePath("@storybook/addon-links"),
-    getAbsolutePath("@storybook/addon-essentials"),
-    getAbsolutePath("@storybook/addon-interactions"),
-    {
-      name: getAbsolutePath("@storybook/addon-styling-webpack"),
-      options: {
-        rules: [
-          {
-            test: /\.s[ac]ss$/i,
-            use: [
-              "style-loader",
-              "css-loader",
-              {
-                loader: "sass-loader",
-                options: {
-                  implementation: require.resolve("sass"),
-                  sassOptions: {
-                    includePaths: ["node_modules", "../../node_modules"],
-                  },
-                },
-              },
-            ],
-          },
-        ],
-      },
-    },
-    getAbsolutePath("@storybook/addon-mdx-gfm"),
-    getAbsolutePath("@storybook/addon-webpack5-compiler-babel"),
+    getAbsolutePath("@storybook/addon-docs"),
   ],
 
   features: {
@@ -45,7 +19,7 @@ const config = {
   },
 
   framework: {
-    name: getAbsolutePath("@storybook/html-webpack5"),
+    name: getAbsolutePath("@storybook/html-vite"),
     options: {},
   },
 };

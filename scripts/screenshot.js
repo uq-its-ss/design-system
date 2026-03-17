@@ -45,7 +45,17 @@ const screenshot = async (browser, viewportName, pageName) => {
 
   // Use networkidle2 instead of networkidle0 to better handle persistent connections/trackers.
   // networkidle0 waits for the network to be completely idle, which can hang on pages with long-polling requests or trackers.
-  await page.goto(uri, { waitUntil: "networkidle2", timeout: 0 });
+  // Use a finite timeout to avoid hanging indefinitely
+  try {
+    await page.goto(uri, { waitUntil: "networkidle2", timeout: 30000 }); // 30s timeout
+  } catch (error) {
+    if (error.name === 'TimeoutError') {
+      console.warn(`\n[Warning] Navigation timeout waiting for networkidle2 on ${uri}. Proceeding to fallback wait strategy.`);
+      await page.waitForTimeout(5000); // fallback: wait 5s
+    } else {
+      throw error;
+    }
+  }
 
   // Custom CSS to disable animations (existing logic)
   await page.addStyleTag({

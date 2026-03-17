@@ -19,7 +19,6 @@ import "@uqds/tabs/src/scss/main.scss";
 import "@uqds/image/src/scss/main.scss";
 
 import "./preview.scss";
-import { profile } from "../stories/components/profile/profile.stories";
 
 /** @type { import('@storybook/html-vite').Preview } */
 const preview = {

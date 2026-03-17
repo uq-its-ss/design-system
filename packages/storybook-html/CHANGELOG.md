@@ -677,7 +677,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-- closing div for uq-contianer in wrong location ([#514](https://github.com/uq-its-ss/design-system/issues/514)) ([d246301](https://github.com/uq-its-ss/design-system/commit/d246301f1dea1e80ce7bd9f941f59639912cb202))
+- closing div for uq-container in wrong location ([#514](https://github.com/uq-its-ss/design-system/issues/514)) ([d246301](https://github.com/uq-its-ss/design-system/commit/d246301f1dea1e80ce7bd9f941f59639912cb202))
 
 # [1.0.0-alpha.18](https://github.com/uq-its-ss/design-system/compare/storybook-html@1.0.0-alpha.17...storybook-html@1.0.0-alpha.18) (2024-04-11)
 

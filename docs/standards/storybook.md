@@ -29,7 +29,7 @@ Group `args` to organise related controls, this will make component structure an
 Use descriptive labels:
 The goal is to make the group's purpose obvious, which helps with management and communication.
 
-Example: (Will create a collapsable contianer called `Biography`)
+Example: (Will create a collapsible container called `Biography`)
 
 ```
 bio: {
@@ -40,7 +40,7 @@ bio: {
     },
 ```
 
-## naming
+## Naming
 
 ### Containers and wrappers
 
@@ -60,9 +60,9 @@ These are objects that contain different types of visual information.
 | Component | `pagination`, `button`, `navigation`    |
 | Media     | `image`, `video`, `asset`, `icon`       |
 
-### Naimng Variants
+### Naming Variants
 
-Layout modifers
+Layout modifiers
 
 Scale
 
@@ -74,7 +74,7 @@ Variant **argTypes**, consider your usage when configuring the **Control** type.
 | :--------- | :----------------- | :------------------ | :------------------------------------------------------------------------------------------------- |
 | Style      | Mutually exclusive | `select` or `radio` | `Primary`, `Secondary` or `info`, `warning`, `success`                                             |
 | Size       | Mutually exclusive | `select` or `radio` | `large`, `small`                                                                                   |
-| Position   | Mutually exclusive | `select` or `radio` | `top`, `buttom`, `middle`, `right`, `left`, `top-left`, `top-right`, `buttom-left`, `buttom-right` |
+| Position   | Mutually exclusive | `select` or `radio` | `top`, `buttom`, `middle`, `right`, `left`, `top-left`, `top-right`, `bottom-left`, `bottom-right` |
 | Expand     | Coexist            | `toggle`            | `expand`                                                                                           |
 | Visibility | Coexist            | `toggle`            | `show`, `hide`                                                                                     |
 

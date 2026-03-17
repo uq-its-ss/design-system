@@ -350,7 +350,7 @@ export const radioError = {
       <label for="singleRadio7" class="uq-label--error">Semester 1</label><br/>
       <input id="singleRadio8" type="radio" name="radioGroup3" class="uq-input--error" aria-invalid="true" aria-describedby="radioButtonFeedback">
       <label for="singleRadio8" class="uq-label--error">Semester 2</label>
-      <span id="radioButtonFeedback" aria-live="polite" class="uq-error-message">Please select a semester</label>
+      <span id="radioButtonFeedback" aria-live="polite" class="uq-error-message">Please select a semester</span>
     </fieldset>
   `,
 
@@ -369,7 +369,7 @@ export const radioErrorAlt = {
         <input type="radio" name="radioGroup4" class="uq-input--error" aria-invalid="true" aria-describedby="radioButtonFeedback">
         <span>Semester 2</span>
       </label>
-      <span id="radioButtonFeedback" aria-live="polite" class="uq-error-message">Please select a semester</label>
+      <span id="radioButtonFeedback" aria-live="polite" class="uq-error-message">Please select a semester</span>
     </fieldset>
   `,
 

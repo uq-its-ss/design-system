@@ -2,12 +2,27 @@
 
 /* CSS Variables */
 :root {
+  /* Default font size variables */
+  --font-size-xxxxl: #{text-constants.$font-size-xxxxl-mobile};
+  --font-size-xxxl: #{text-constants.$font-size-xxxl-mobile};
+  --font-size-xxl: #{text-constants.$font-size-xxl-mobile};
   /* Default grid gap */
   --uq-grid-gap: #{space.$space-l};
 }
 
 @media (min-width: 1024px) {
   :root {
+    /* Desktop font size variables */
+    --font-size-ul: #{text-constants.$font-size-ul};
+    --font-size-xxxxl: #{text-constants.$font-size-xxxxl};
+    --font-size-xxxl: #{text-constants.$font-size-xxxl};
+    --font-size-xxl: #{text-constants.$font-size-xxl};
+    --font-size-xl: #{text-constants.$font-size-xl};
+    --font-size-l: #{text-constants.$font-size-l};
+    --font-size-m: #{text-constants.$font-size-m};
+    --font-size-s: #{text-constants.$font-size-s};
+    --font-size-xs: #{text-constants.$font-size-xs};
+    --font-size-xxs: #{text-constants.$font-size-xxs};
     /* Desktop grid gap */
     --uq-grid-gap: #{space.$space-xl};
   }

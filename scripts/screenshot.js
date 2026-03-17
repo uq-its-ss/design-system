@@ -49,8 +49,10 @@ const screenshot = async (browser, viewportName, pageName) => {
   try {
     await page.goto(uri, { waitUntil: "networkidle2", timeout: 30000 }); // 30s timeout
   } catch (error) {
-    if (error.name === 'TimeoutError') {
-      console.warn(`\n[Warning] Navigation timeout waiting for networkidle2 on ${uri}. Proceeding to fallback wait strategy.`);
+    if (error.name === "TimeoutError") {
+      console.warn(
+        `\n[Warning] Navigation timeout waiting for networkidle2 on ${uri}. Proceeding to fallback wait strategy.`,
+      );
       await page.waitForTimeout(5000); // fallback: wait 5s
     } else {
       throw error;

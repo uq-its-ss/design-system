@@ -80,7 +80,7 @@ export default {
     bio: "",
     hasContact: true,
     email: "jane.doe@uq.edu.au",
-    Phone: "+61 7 3000 0000",
+    phone: "+61 7 3000 0000",
     ctaUrl: "https://about.uq.edu.au/experts/1371",
     hasImage: true,
     image: "images/profile/profile.png",
@@ -93,7 +93,7 @@ export default {
     bio,
     hasContact,
     email,
-    Phone,
+    phone,
     ctaUrl,
     hasImage,
     image,
@@ -112,11 +112,11 @@ export default {
           : ""
       }
       ${
-        hasContact && (email || Phone)
+        hasContact && (email || phone)
           ? `
       <section class="uq-profile__contact">
       ${email ? `<div><a href=\"mailto:${email}\">${email}</a></div>` : ""}
-      ${Phone ? `<div><a href=\"tel:${Phone}\">${Phone}</a></div>` : ""}
+      ${phone ? `<div><a href=\"tel:${phone}\">${phone}</a></div>` : ""}
       </section>`
           : ""
       }
@@ -166,7 +166,7 @@ export const BioProfile = {
     bio: "Dr Jane Doe is a Senior Lecturer specialising in behavioural science and wellbeing research. She teaches undergraduate and postgraduate courses, mentors research students, and collaborates on projects improving student mental health.",
     hasContact: true,
     email: "jane.doe@uq.edu.au",
-    Phone: "+61 7 3000 0000",
+    phone: "+61 7 3000 0000",
     ctaUrl: "https://about.uq.edu.au/experts/1371",
     hasImage: true,
     image: "images/profile/profile.png",
@@ -186,7 +186,7 @@ export const CallToAction = {
     position: "Head of School",
     bio: "",
     email: "john.cairney@uq.edu.au",
-    Phone: "",
+    phone: "",
     image: "images/profile/profile.png",
     ctaUrl: "",
   },

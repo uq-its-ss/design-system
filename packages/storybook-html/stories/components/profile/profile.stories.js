@@ -73,7 +73,7 @@ export default {
     // --- Image Group Ends ---
   },
   args: {
-    titleElement: "h2",
+    titleElement: "h3",
     honorificPrefix: "Professor",
     name: "Jane Doe",
     position: "Head of School",

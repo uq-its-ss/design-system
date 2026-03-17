@@ -53,6 +53,7 @@ jobs:
 
           # Execute the command, capturing output and exit code.
           # We use `|| LERNA_EXIT_CODE=$?` to prevent the script from exiting on a non-zero code immediately.
+          LERNA_EXIT_CODE=0
           VERSION_OUTPUT=$($COMMAND 2>&1) || LERNA_EXIT_CODE=$?
 
           # Use awk to extract the "Changes:" block

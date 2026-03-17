@@ -1,11 +1,12 @@
 @use "_space-constants" as space;
+@use "_text-constants" as text;
 
 /* CSS Variables */
 :root {
   /* Default font size variables */
-  --uq-font-size-xxxxl: #{text-constants.$font-size-xxxxl-mobile};
-  --uq-font-size-xxxl: #{text-constants.$font-size-xxxl-mobile};
-  --uq-font-size-xxl: #{text-constants.$font-size-xxl-mobile};
+  --uq-font-size-xxxxl: #{text.$font-size-xxxxl-mobile};
+  --uq-font-size-xxxl: #{text.$font-size-xxxl-mobile};
+  --uq-font-size-xxl: #{text.$font-size-xxl-mobile};
   /* Default grid gap */
   --uq-grid-gap: #{space.$space-l};
 }
@@ -13,16 +14,16 @@
 @media (min-width: 1024px) {
   :root {
     /* Desktop font size variables */
-    --uq-font-size-ul: #{text-constants.$font-size-ul};
-    --uq-font-size-xxxxl: #{text-constants.$font-size-xxxxl};
-    --uq-font-size-xxxl: #{text-constants.$font-size-xxxl};
-    --uq-font-size-xxl: #{text-constants.$font-size-xxl};
-    --uq-font-size-xl: #{text-constants.$font-size-xl};
-    --uq-font-size-l: #{text-constants.$font-size-l};
-    --uq-font-size-m: #{text-constants.$font-size-m};
-    --uq-font-size-s: #{text-constants.$font-size-s};
-    --uq-font-size-xs: #{text-constants.$font-size-xs};
-    --uq-font-size-xxs: #{text-constants.$font-size-xxs};
+    --uq-font-size-ul: #{text.$font-size-ul};
+    --uq-font-size-xxxxl: #{text.$font-size-xxxxl};
+    --uq-font-size-xxxl: #{text.$font-size-xxxl};
+    --uq-font-size-xxl: #{text.$font-size-xxl};
+    --uq-font-size-xl: #{text.$font-size-xl};
+    --uq-font-size-l: #{text.$font-size-l};
+    --uq-font-size-m: #{text.$font-size-m};
+    --uq-font-size-s: #{text.$font-size-s};
+    --uq-font-size-xs: #{text.$font-size-xs};
+    --uq-font-size-xxs: #{text.$font-size-xxs};
     /* Desktop grid gap */
     --uq-grid-gap: #{space.$space-xl};
   }

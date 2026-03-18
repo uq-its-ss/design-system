@@ -1,6 +1,6 @@
 {
   "name": "@uqds/core",
-  "version": "5.0.0",
+  "version": "5.0.1-alpha.0",
   "description": "The core package that all component packages depend on",
   "keywords": [
     "uqds",
@@ -29,6 +29,12 @@
     "src/*",
     "dist/*"
   ],
+  "exports": {
+    "./dist/css/main.css": "./dist/css/main.css",
+    "./src/scss/*": "./src/scss/*",
+    "./src/scss/_partials/*": "./src/scss/_partials/*"
+  },
+  "style": "dist/css/main.css",
   "scripts": {
     "prepare": "gulp -f ../../gulpfile.js --cwd=. prepare"
   },

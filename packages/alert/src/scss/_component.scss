@@ -1,5 +1,4 @@
 @use "@uqds/core/src/scss/global" as core;
-@use "@uqds/grid/src/scss/global" as grid;
 @use "@uqds/icon/src/scss/global" as icon;
 @use "@uqds/layout/src/scss/global" as layout;
 @use "global" as *;
@@ -13,25 +12,13 @@
   line-height: core.$line-height;
   position: relative;
 
-  .uq-alert__message > *:first-child {
-    margin-top: 0;
-  }
-
-  .uq-alert__message > h1:first-child,
-  .uq-alert__message > h2:first-child,
-  .uq-alert__message > h3:first-child,
-  .uq-alert__message > h4:first-child,
-  .uq-alert__message > h5:first-child,
-  .uq-alert__message > h6:first-child {
-    line-height: 24px;
-  }
-
   &__title {
-    font-size: core.$font-size-l;
-    font-weight: core.$font-weight-medium;
-    line-height: core.$line-height-h;
-    color: core.$grey-900;
     margin: core.$space-none core.$space-none core.$space-s;
+  }
+
+  h5.uq-alert__title,
+  h6.uq-alert__title {
+    margin-top: 0.2rem;
   }
 
   &__message {
@@ -149,11 +136,13 @@
     color: core.$white;
 
     // container overrides to match content width
-    .uq-alert__message {
-      padding-left: core.$space-uul;
+    @media #{core.$screen-xl-up} {
+      .uq-alert__message {
+        padding-left: core.$space-uul;
 
-      &::before {
-        left: core.$space-xl;
+        &::before {
+          left: core.$space-xl;
+        }
       }
     }
 

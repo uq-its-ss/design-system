@@ -3,6 +3,40 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.1.3-alpha.5](https://github.com/uq-its-ss/design-system/compare/storybook-html@8.1.3-alpha.4...storybook-html@8.1.3-alpha.5) (2026-03-18)
+
+**Note:** Version bump only for package storybook-html
+
+## [8.1.3-alpha.4](https://github.com/uq-its-ss/design-system/compare/storybook-html@8.1.3-alpha.3...storybook-html@8.1.3-alpha.4) (2026-03-17)
+
+**Note:** Version bump only for package storybook-html
+
+## [8.1.3-alpha.3](https://github.com/uq-its-ss/design-system/compare/storybook-html@8.1.3-alpha.2...storybook-html@8.1.3-alpha.3) (2026-03-17)
+
+**Note:** Version bump only for package storybook-html
+
+## [8.1.3-alpha.2](https://github.com/uq-its-ss/design-system/compare/storybook-html@8.1.3-alpha.1...storybook-html@8.1.3-alpha.2) (2026-03-16)
+
+**Note:** Version bump only for package storybook-html
+
+## [8.1.3-alpha.1](https://github.com/uq-its-ss/design-system/compare/storybook-html@8.1.3-alpha.0...storybook-html@8.1.3-alpha.1) (2026-03-13)
+
+### Bug Fixes
+
+- add heading back to basic page ([c224afe](https://github.com/uq-its-ss/design-system/commit/c224afe8c89d308370a8c58b8841e5a382a33220))
+- deprecated grid, added new grid to Layout ([e281dc6](https://github.com/uq-its-ss/design-system/commit/e281dc609dd7260f8ad81e5f522b353417d5f308))
+- grid ([a70ff67](https://github.com/uq-its-ss/design-system/commit/a70ff6710c5b64f1161002946be347fcc6f4fe63))
+- grid scss reference update ([644dc3a](https://github.com/uq-its-ss/design-system/commit/644dc3a60972d56167724f519ca64dc101f55838))
+- removed old grid reference ([fcba683](https://github.com/uq-its-ss/design-system/commit/fcba6836e0965c3865bf7dac994b385082526f8f))
+- set profile title to H3 by default ([8f82acc](https://github.com/uq-its-ss/design-system/commit/8f82acc65e447a0b436d0f1a825c6dc3c3944bb9))
+- settign up profile grid examples ([e80b019](https://github.com/uq-its-ss/design-system/commit/e80b0190eb56aa1d6e3345ed4f95eabea8e04760))
+- Updated Avatar sizing in Grids and sidebar ([fe7869b](https://github.com/uq-its-ss/design-system/commit/fe7869b58d99fc3088af3e96694e0d454a424a23))
+- updated examples removing old grid ([db0912d](https://github.com/uq-its-ss/design-system/commit/db0912d9311c75353475c2d368dae35f91587806))
+
+## [8.1.3-alpha.0](https://github.com/uq-its-ss/design-system/compare/storybook-html@8.1.2...storybook-html@8.1.3-alpha.0) (2026-03-10)
+
+**Note:** Version bump only for package storybook-html
+
 ## [8.1.2](https://github.com/uq-its-ss/design-system/compare/storybook-html@8.1.2-alpha.0...storybook-html@8.1.2) (2026-02-25)
 
 **Note:** Version bump only for package storybook-html
@@ -651,7 +685,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-- closing div for uq-contianer in wrong location ([#514](https://github.com/uq-its-ss/design-system/issues/514)) ([d246301](https://github.com/uq-its-ss/design-system/commit/d246301f1dea1e80ce7bd9f941f59639912cb202))
+- closing div for uq-container in wrong location ([#514](https://github.com/uq-its-ss/design-system/issues/514)) ([d246301](https://github.com/uq-its-ss/design-system/commit/d246301f1dea1e80ce7bd9f941f59639912cb202))
 
 # [1.0.0-alpha.18](https://github.com/uq-its-ss/design-system/compare/storybook-html@1.0.0-alpha.17...storybook-html@1.0.0-alpha.18) (2024-04-11)
 

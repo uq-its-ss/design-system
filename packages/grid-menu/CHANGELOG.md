@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.4](https://github.com/uq-its-ss/design-system/compare/@uqds/grid-menu@4.0.4-alpha.0...@uqds/grid-menu@4.0.4) (2026-03-18)
+
+**Note:** Version bump only for package @uqds/grid-menu
+
 ## [4.0.4-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/grid-menu@4.0.3...@uqds/grid-menu@4.0.4-alpha.0) (2026-03-13)
 
 **Note:** Version bump only for package @uqds/grid-menu

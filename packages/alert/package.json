@@ -1,6 +1,6 @@
 {
   "name": "@uqds/alert",
-  "version": "7.0.7-alpha.1",
+  "version": "7.0.7",
   "description": "Alert component",
   "keywords": [
     "uqds",
@@ -52,8 +52,8 @@
     "url": "https://github.com/uq-its-ss/design-system/issues"
   },
   "dependencies": {
-    "@uqds/core": "^5.0.1-alpha.0",
-    "@uqds/icon": "^4.0.4-alpha.0"
+    "@uqds/core": "^5.0.1",
+    "@uqds/icon": "^4.0.4"
   },
   "devDependencies": {
     "@testing-library/dom": "^10.4.0",

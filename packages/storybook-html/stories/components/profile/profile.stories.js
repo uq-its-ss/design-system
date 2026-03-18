@@ -39,7 +39,7 @@ export default {
         category: "Contact & Links", // Groups the field
       },
     },
-    Phone: {
+    phone: {
       control: "text",
       if: { arg: "hasContact" },
       table: {

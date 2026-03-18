@@ -19,7 +19,6 @@ import "@uqds/tabs/src/scss/main.scss";
 import "@uqds/image/src/scss/main.scss";
 
 import "./preview.scss";
-import { profile } from "../stories/components/profile/profile.stories";
 
 /** @type { import('@storybook/html-vite').Preview } */
 const preview = {
@@ -71,15 +70,7 @@ const preview = {
           "Layout",
           ["Container", "Page layouts", "Card grid"],
           "Components",
-          [
-            "Body",
-            ["Body", "Elements", "Utilities"],
-            "Navigation",
-            "Section",
-            "*",
-            "Profile",
-            ["*", "Using Layout Grids"],
-          ],
+          ["Body", ["Body", "Elements", "Utilities"], "Navigation", "Section"],
           "Patterns",
           ["Kitchen sink", "Basic page"],
           "Templates",

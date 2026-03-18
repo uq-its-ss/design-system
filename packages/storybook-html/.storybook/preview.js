@@ -70,12 +70,7 @@ const preview = {
           "Layout",
           ["Container", "Page layouts", "Card grid"],
           "Components",
-          [
-            "Body",
-            ["Body", "Elements", "Utilities"],
-            "Navigation",
-            "Section",
-          ],
+          ["Body", ["Body", "Elements", "Utilities"], "Navigation", "Section"],
           "Patterns",
           ["Kitchen sink", "Basic page"],
           "Templates",

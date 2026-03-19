@@ -73,7 +73,7 @@ export const Home = {
           </div>
         </div>
       `,
-  })}
+    })}
     ${Section({
       title: "",
       description: "",

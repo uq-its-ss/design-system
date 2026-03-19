@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.0.1](https://github.com/uq-its-ss/design-system/compare/@uqds/hero@7.0.1-alpha.0...@uqds/hero@7.0.1) (2026-03-18)
+
+**Note:** Version bump only for package @uqds/hero
+
+## [7.0.1-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/hero@7.0.0...@uqds/hero@7.0.1-alpha.0) (2026-03-13)
+
+### Bug Fixes
+
+- removed grid ([e33206d](https://github.com/uq-its-ss/design-system/commit/e33206d08f838f4ebea21e284bca65953c1e9541))
+- removed old grid reference ([fcba683](https://github.com/uq-its-ss/design-system/commit/fcba6836e0965c3865bf7dac994b385082526f8f))
+
 # [7.0.0](https://github.com/uq-its-ss/design-system/compare/@uqds/hero@7.0.0-alpha.0...@uqds/hero@7.0.0) (2025-07-21)
 
 **Note:** Version bump only for package @uqds/hero

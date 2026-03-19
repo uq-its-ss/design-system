@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.0.1](https://github.com/uq-its-ss/design-system/compare/@uqds/core@5.0.1-alpha.0...@uqds/core@5.0.1) (2026-03-18)
+
+**Note:** Version bump only for package @uqds/core
+
+## [5.0.1-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/core@5.0.0...@uqds/core@5.0.1-alpha.0) (2026-03-13)
+
+### Bug Fixes
+
+- added CSS variables for grid ([a270f25](https://github.com/uq-its-ss/design-system/commit/a270f254c5d759c599882f4baef01d76ac19c68a))
+- style reference ([6de4488](https://github.com/uq-its-ss/design-system/commit/6de448838b69b2ef1e7b7d49e06b726cb5485e4d))
+
 # [5.0.0](https://github.com/uq-its-ss/design-system/compare/@uqds/core@5.0.0-alpha.0...@uqds/core@5.0.0) (2025-07-21)
 
 **Note:** Version bump only for package @uqds/core

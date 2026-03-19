@@ -5,41 +5,53 @@ const { Item, Ellipsis, Previous, Next } = storyRenderer(PaginationItemStories);
 
 export default {
   title: "Components/Pagination/Pagination",
+  argTypes: {
+    element: {
+      options: ["a", "button"],
+      control: "select",
+    },
+  },
+  args: {
+    element: "a",
+  },
 };
 
 export const Pagination = {
-  render: () => {
+  render: ({ element }) => {
     return `<nav class="uq-pagination" aria-label="Pagination">
   <ul class="uq-pagination__list">
-    ${Previous()}
-    ${Item({ number: 1 })}
-    ${Ellipsis({ number: 2 })}
-    ${Item({ number: 4 })}
-    ${Item({ number: 5, current: true })}
-    ${Item({ number: 6 })}
-    ${Ellipsis({ number: 8 })}
-    ${Item({ number: 13 })}
-    ${Next()}
+    ${Previous({ As: element })}
+    ${Item({ As: element, number: 1 })}
+    ${Ellipsis({ As: element, number: 2 })}
+    ${Item({ As: element, number: 4 })}
+    ${Item({ As: element, number: 5, current: true })}
+    ${Item({ As: element, number: 6 })}
+    ${Ellipsis({ As: element, number: 8 })}
+    ${Item({ As: element, number: 13 })}
+    ${Next({ As: element })}
   </ul>
 </nav>`;
   },
 };
 
 export const AsButtons = {
-  render: () => {
+  render: ({ element }) => {
     return `<nav class="uq-pagination" aria-label="Pagination">
   <ul class="uq-pagination__list">
-    ${Previous({ As: "button", href: null })}
-    ${Item({ As: "button", href: null, number: 1 })}
-    ${Ellipsis({ As: "button", href: null, number: 2 })}
-    ${Item({ As: "button", href: null, number: 4 })}
-    ${Item({ As: "button", href: null, number: 5, current: true })}
-    ${Item({ As: "button", href: null, number: 6 })}
-    ${Ellipsis({ As: "button", href: null, number: 8 })}
-    ${Item({ As: "button", href: null, number: 13 })}
-    ${Next({ As: "button", href: null })}
+    ${Previous({ As: element, href: null })}
+    ${Item({ As: element, href: null, number: 1 })}
+    ${Ellipsis({ As: element, href: null, number: 2 })}
+    ${Item({ As: element, href: null, number: 4 })}
+    ${Item({ As: element, href: null, number: 5, current: true })}
+    ${Item({ As: element, href: null, number: 6 })}
+    ${Ellipsis({ As: element, href: null, number: 8 })}
+    ${Item({ As: element, href: null, number: 13 })}
+    ${Next({ As: element, href: null })}
   </ul>
 </nav>`;
+  },
+  args: {
+    element: "button",
   },
 };
 

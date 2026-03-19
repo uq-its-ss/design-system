@@ -1,4 +1,3 @@
-import TocDocs from "./custom/components/TocDocs";
 import DocsHeader from "./custom/components/DocsHeader";
 import DocsPage from "./custom/components/DocsPage";
 
@@ -15,6 +14,9 @@ import "@uqds/form/src/scss/main.scss";
 import "@uqds/table/src/scss/main.scss";
 import "@uqds/social/src/scss/main.scss";
 import "@uqds/pagination/src/scss/main.scss";
+import "@uqds/breadcrumb/src/scss/main.scss";
+import "@uqds/tabs/src/scss/main.scss";
+import "@uqds/image/src/scss/main.scss";
 
 import "./preview.scss";
 
@@ -23,9 +25,16 @@ const preview = {
   parameters: {
     docs: {
       components: { h1: DocsHeader },
-      container: TocDocs,
       page: DocsPage,
-      toc: true, // 👈 Enables the table of contents
+      toc: {
+        contentsSelector: ".sbdocs-content",
+        headingSelector: "h2, h3",
+        ignoreSelector: ".sbdocs-preview h2, .sbdocs-preview h3",
+        disable: false,
+        unsafeTocbotOptions: {
+          orderedList: false,
+        },
+      },
     },
     controls: {
       matchers: {

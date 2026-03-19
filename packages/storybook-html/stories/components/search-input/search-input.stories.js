@@ -1,12 +1,15 @@
 import classNames from "classnames";
 import { searchInput } from "@uqds/form/src/js/search-input";
+import { initJs } from "../../../lib/initJs";
 
 export default {
   title: "Components/Form/SearchInput",
-  play: async ({ canvasElement }) => {
-    const component = canvasElement.querySelector(".uq-search-input");
-    searchInput(component);
-  },
+  decorators: [
+    (storyFn) =>
+      initJs(storyFn, (component) => {
+        searchInput(component);
+      }),
+  ],
   argTypes: {
     label: "text",
     placeholder: "text",

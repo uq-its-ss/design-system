@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.0.5](https://github.com/uq-its-ss/design-system/compare/@uqds/site-header@7.0.5-alpha.0...@uqds/site-header@7.0.5) (2026-03-18)
+
+**Note:** Version bump only for package @uqds/site-header
+
+## [7.0.5-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/site-header@7.0.4...@uqds/site-header@7.0.5-alpha.0) (2026-03-13)
+
+### Bug Fixes
+
+- removed grid ([e33206d](https://github.com/uq-its-ss/design-system/commit/e33206d08f838f4ebea21e284bca65953c1e9541))
+- updated examples removing old grid ([db0912d](https://github.com/uq-its-ss/design-system/commit/db0912d9311c75353475c2d368dae35f91587806))
+
+## [7.0.4](https://github.com/uq-its-ss/design-system/compare/@uqds/site-header@7.0.4-alpha.0...@uqds/site-header@7.0.4) (2026-02-02)
+
+**Note:** Version bump only for package @uqds/site-header
+
+## [7.0.4-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/site-header@7.0.3...@uqds/site-header@7.0.4-alpha.0) (2025-12-04)
+
+**Note:** Version bump only for package @uqds/site-header
+
 ## [7.0.3](https://github.com/uq-its-ss/design-system/compare/@uqds/site-header@7.0.3-alpha.0...@uqds/site-header@7.0.3) (2025-11-06)
 
 **Note:** Version bump only for package @uqds/site-header

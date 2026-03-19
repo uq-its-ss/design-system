@@ -29,48 +29,53 @@ export default {
 
 export const Level1 = {
   render: ({ showGrid }) => `
-<div class="${classNames({ "uqds-layout-demo-bg": showGrid })}">
+<div class="${classNames({ "uqds-layout-preview": showGrid })}">
+  <a href="#uq-header" class="visually-hidden focusable">Skip to header</a>
+  <a href="#uq-main" class="visually-hidden focusable">Skip to content</a>
+  <a href="#uq-footer" class="visually-hidden focusable">Skip to footer</a>  
   ${Header()}
-  ${Breadcrumb({ showLevels: 0, currentPage: "Level 1" })}
-  ${Hero()}
-  <div class="uq-container">
-      <div class="uq-section">
-      <div class="uqds-layout-demo-el"></div>
-      </div>
-      <div class="uq-section">
-      <div class="uq-card-grid uq-card-grid--target-1x">
-        <div class="uqds-layout-demo-card"></div>
-        <div class="uqds-layout-demo-card"></div>
-      </div>
-      </div>
-      <div class="uq-section">
-      <div class="uq-card-grid uq-card-grid--target-2x">
-        <div class="uqds-layout-demo-card"></div>
-        <div class="uqds-layout-demo-card"></div>
-      </div>
-      </div>
-      <div class="uq-section">
-      <div class="uqds-layout-demo-el"></div>
-      </div>
-      <div class="uq-section">
-      <div class="uq-card-grid uq-card-grid--target-3x">
-        <div class="uqds-layout-demo-card"></div>
-        <div class="uqds-layout-demo-card"></div>
-        <div class="uqds-layout-demo-card"></div>
-      </div>
-      </div>
-      <div class="uq-section">
-      <div class="uqds-layout-demo-el"></div> 
-      </div>
-      <div class="uq-section">
-      <div class="uq-card-grid uq-card-grid--target-4x">
-        <div class="uqds-layout-demo-card"></div>
-        <div class="uqds-layout-demo-card"></div>
-        <div class="uqds-layout-demo-card"></div>
-        <div class="uqds-layout-demo-card"></div>
+  <main id="uq-main">
+    ${Breadcrumb({ showLevels: 0, currentPage: "Level 1" })}
+    ${Hero()}
+    <div class="uq-container">
+        <div class="uq-section">
+        <div class="uqds-layout-demo-el"></div>
+        </div>
+        <div class="uq-section">
+        <div class="uq-card-grid uq-card-grid--target-1x">
+          <div class="uqds-layout-demo-card"></div>
+          <div class="uqds-layout-demo-card"></div>
+        </div>
+        </div>
+        <div class="uq-section">
+        <div class="uq-card-grid uq-card-grid--target-2x">
+          <div class="uqds-layout-demo-card"></div>
+          <div class="uqds-layout-demo-card"></div>
+        </div>
+        </div>
+        <div class="uq-section">
+        <div class="uqds-layout-demo-el"></div>
+        </div>
+        <div class="uq-section">
+        <div class="uq-card-grid uq-card-grid--target-3x">
+          <div class="uqds-layout-demo-card"></div>
+          <div class="uqds-layout-demo-card"></div>
+          <div class="uqds-layout-demo-card"></div>
+        </div>
+        </div>
+        <div class="uq-section">
+        <div class="uqds-layout-demo-el"></div> 
+        </div>
+        <div class="uq-section">
+        <div class="uq-card-grid uq-card-grid--target-4x">
+          <div class="uqds-layout-demo-card"></div>
+          <div class="uqds-layout-demo-card"></div>
+          <div class="uqds-layout-demo-card"></div>
+          <div class="uqds-layout-demo-card"></div>
+        </div>
       </div>
     </div>
-  </div>
+  </main>
   ${footer()}
 </div>`,
 };

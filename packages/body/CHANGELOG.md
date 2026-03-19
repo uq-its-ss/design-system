@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.3](https://github.com/uq-its-ss/design-system/compare/@uqds/body@4.0.3-alpha.0...@uqds/body@4.0.3) (2026-03-18)
+
+**Note:** Version bump only for package @uqds/body
+
+## [4.0.3-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/body@4.0.2...@uqds/body@4.0.3-alpha.0) (2026-03-13)
+
+### Bug Fixes
+
+- removed grid css ([6a81ec8](https://github.com/uq-its-ss/design-system/commit/6a81ec8dfe91c806dd5315e6ffc29159df4d1f2e))
+
+## [4.0.2](https://github.com/uq-its-ss/design-system/compare/@uqds/body@4.0.2-alpha.1...@uqds/body@4.0.2) (2026-02-02)
+
+**Note:** Version bump only for package @uqds/body
+
+## [4.0.2-alpha.1](https://github.com/uq-its-ss/design-system/compare/@uqds/body@4.0.2-alpha.0...@uqds/body@4.0.2-alpha.1) (2026-01-29)
+
+**Note:** Version bump only for package @uqds/body
+
+## [4.0.2-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/body@4.0.1...@uqds/body@4.0.2-alpha.0) (2025-12-12)
+
+### Bug Fixes
+
+- add uq- prefix to padding and margin utility classes. update doco to reflect. ([#719](https://github.com/uq-its-ss/design-system/issues/719)) ([258cfbf](https://github.com/uq-its-ss/design-system/commit/258cfbf7fea6fa0ff16222aa180150695a07ff43))
+
 ## [4.0.1](https://github.com/uq-its-ss/design-system/compare/@uqds/body@4.0.1-alpha.0...@uqds/body@4.0.1) (2025-12-02)
 
 **Note:** Version bump only for package @uqds/body

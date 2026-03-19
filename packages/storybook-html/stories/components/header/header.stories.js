@@ -198,7 +198,7 @@ export default {
 
 /**
  * RENDERER: Main Header Template
- * This function generates the final HTML string. 
+ * This function generates the final HTML string.
  */
 const headerRenderer = ({
   siteName,

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.0.2-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/image@6.0.1...@uqds/image@6.0.2-alpha.0) (2026-03-20)
+
+### Bug Fixes
+
+- **image:** Image and Image Carousel Styling ([#750](https://github.com/uq-its-ss/design-system/issues/750)) ([0c1a701](https://github.com/uq-its-ss/design-system/commit/0c1a7015e725e5f154dd358f2335e1207a37bf17))
+
 ## [6.0.1](https://github.com/uq-its-ss/design-system/compare/@uqds/image@6.0.1-alpha.0...@uqds/image@6.0.1) (2026-03-18)
 
 **Note:** Version bump only for package @uqds/image

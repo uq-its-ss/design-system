@@ -17,7 +17,7 @@ export default {
   args: {
     image: "images/example-1.jpg",
     alt: "Alt text",
-    caption: "<p>Dr Wenger diving in Queensland.</p>",
+    caption: "Dr Wenger diving in Queensland.",
     credit: "Jane Smith",
   },
   render: ({ image, alt, caption, credit }) => {
@@ -29,7 +29,7 @@ export default {
   ${
     caption || credit
       ? `<figcaption class="uq-image__caption">
-    ${caption}
+    ${caption ? `<p>${caption}</p>` : ""}
     ${credit ? `<p>(Photo credit: ${credit})</p>` : ""}
   </figcaption>`
       : ""

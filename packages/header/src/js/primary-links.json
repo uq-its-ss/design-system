@@ -227,7 +227,7 @@
             "heading": "Industry partnerships",
             "children": [
               {
-                "title": "Research partnerships​",
+                "title": "Research partnerships",
                 "href": "https://research.uq.edu.au/partner"
               },
               {
@@ -235,7 +235,7 @@
                 "href": "https://global-partnerships.uq.edu.au/partnerships"
               },
               {
-                "title": "Student work placements and internships​",
+                "title": "Student work placements and internships",
                 "href": "https://employability.uq.edu.au/work-experience"
               },
               {
@@ -249,10 +249,10 @@
       {
         "groups": [
           {
-            "heading": "Community engagement​",
+            "heading": "Community engagement",
             "children": [
               {
-                "title": "Alumni​",
+                "title": "Alumni",
                 "href": "https://alumni.uq.edu.au"
               },
               {
@@ -260,7 +260,7 @@
                 "href": "https://alumni.uq.edu.au/giving"
               },
               {
-                "title": "Volunteering​",
+                "title": "Volunteering",
                 "href": "https://alumni.uq.edu.au/volunteer"
               },
               {
@@ -268,16 +268,16 @@
                 "href": "https://study.uq.edu.au/information-resources/teachers-guidance-counsellors"
               },
               {
-                "title": "Indigenous engagement​",
+                "title": "Indigenous engagement",
                 "href": "https://indigenous-engagement.uq.edu.au"
               },
               {
-                "title": "Sponsorships and brand partnerships​",
+                "title": "Sponsorships and brand partnerships",
                 "href": "https://partners-community.uq.edu.au/sponsorships"
               },
               {
                 "title": "The Queensland Commitment",
-                "href": "https://about.uq.edu.au/initiatives/queensland-commitment"
+                "href": "https://partners-community.uq.edu.au/queensland-commitment"
               }
             ]
           }
@@ -289,23 +289,23 @@
             "heading": "Our facilities",
             "children": [
               {
-                "title": "Arts and culture​",
+                "title": "Arts and culture",
                 "href": "https://partners-community.uq.edu.au/arts"
               },
               {
-                "title": "Explore our campuses​",
+                "title": "Explore our campuses",
                 "href": "https://campuses.uq.edu.au"
               },
               {
-                "title": "Services and shops​",
+                "title": "Services and shops",
                 "href": "https://campuses.uq.edu.au/information-and-services/shops"
               },
               {
-                "title": "Sport and recreation facilities​",
+                "title": "Sport and recreation facilities",
                 "href": "https://about.uq.edu.au/sport-recreation-precinct"
               },
               {
-                "title": "Venue hire and event spaces​​",
+                "title": "Venue hire and event spaces",
                 "href": "https://about.uq.edu.au/venues"
               }
             ]
@@ -377,7 +377,7 @@
                 "href": "https://campuses.uq.edu.au/information-and-services/shops"
               },
               {
-                "title": "Venue hire and event spaces​",
+                "title": "Venue hire and event spaces",
                 "href": "https://about.uq.edu.au/venues"
               }
             ]

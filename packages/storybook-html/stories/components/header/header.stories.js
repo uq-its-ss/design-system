@@ -8,7 +8,11 @@
 import "./header.scss";
 
 // import scripts
-import { localLinks, primaryLinks, secondaryLinks } from "./menuData.js"; // Import the menu data
+import {
+  localLinks,
+  primaryLinks,
+  secondaryLinks,
+} from "@uqds/header/src/js/menuData"; // Import the menu data
 import { header } from "@uqds/header/src/js/main"; // Import 'header' for UQ header JS functionality
 import { initJs } from "../../../lib/initJs";
 

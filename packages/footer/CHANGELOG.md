@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.0.7-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/footer@7.0.6...@uqds/footer@7.0.7-alpha.0) (2026-03-23)
+
+**Note:** Version bump only for package @uqds/footer
+
 ## [7.0.6](https://github.com/uq-its-ss/design-system/compare/@uqds/footer@7.0.6-alpha.0...@uqds/footer@7.0.6) (2026-03-18)
 
 **Note:** Version bump only for package @uqds/footer

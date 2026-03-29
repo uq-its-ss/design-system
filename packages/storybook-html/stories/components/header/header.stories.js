@@ -28,7 +28,7 @@ const renderMegaMenu = (columns, parentTitle) => {
       ${column.groups
         .map(
           (group) => `
-        <div class="megamenu__heading">${group.heading}</div>
+        <h3 class="megamenu__heading">${group.heading}</h3>
         <div class="megamenu__menu">
           <ul>
             ${group.children
@@ -245,7 +245,7 @@ const headerRenderer = ({
                 <!-- Mega Menu (Desktop Only) -->
                 <div class="uq-header__megamenu">
                   <div class="uq-header__megamenu-container">
-                    <a href="${link.href}" class="megamenu__overview-link" data-gtm-label="${link.title} > ${link.title} overview"><span class="megamenu__overview-label">${link.title} overview</span></a>
+                    <h2><a href="${link.href}" class="megamenu__overview-link" data-gtm-label="${link.title} > ${link.title} overview"><span class="megamenu__overview-label">${link.title} overview</span></a></h2>
                     <div class="megamenu__row">
                       ${renderMegaMenu(link.columns, link.title)}
                     </div>
@@ -264,7 +264,7 @@ const headerRenderer = ({
 
     <!-- SEARCH TOGGLE -->
     <div class="uq-header__search-toggle" data-gtm-category="Search">
-      <button class="nav-primary__toggle nav-primary__search-toggle" data-gtm-action="Toggle">
+      <button class="nav-primary__toggle nav-primary__search-toggle" data-gtm-action="Toggle" aria-label="Search">
         <div class="search-toggle__label">Search</div>
       </button>
     </div>

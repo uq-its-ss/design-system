@@ -215,10 +215,11 @@ const headerRenderer = ({
   primaryLinks,
   secondaryLinks,
 }) => `
+<!-- HEADER WRAPPER --> 
 <header class="uq-header" data-gtm-category="Header">
   <div class="uq-header__container">
 
-    <!-- MENU TOGGLE -->
+    <!-- TOGGLE MENU (Mobile) -->
     <div class="uq-header__menu-toggle" data-target="global-mobile-nav" data-gtm-category="Primary header">
       <button type="button" class="nav-primary__toggle nav-primary__menu-toggle slide-menu__control" data-target="global-mobile-nav" data-arg=".is-active" data-action="smartToggle" data-gtm-trigger="click" data-gtm-action="Toggle">Menu</button>
     </div>
@@ -230,19 +231,20 @@ const headerRenderer = ({
       </a>
     </div>
 
-   <!-- DESKTOP NAV (Primary) -->
+   <!-- NAVIGATION PRIMARY (Desktop) -->
     <div class="uq-header__nav-primary" data-gtm-category="Primary header">
       <nav class="uq-header__nav-primary-container" aria-label="primary navigation">
         <ul class="uq-header__nav-primary-list">
           ${primaryLinks
             .map(
               (link) => `
+            <!-- NAVIGATION PRIMARY ITEM (Desktop) -->
             <li class="uq-header__nav-primary-item">
               <a class="uq-header__nav-primary-link ${showGlobalHeader ? "nav-primary-link--has-dropdown" : ""}" href="${link.href}" data-gtm-label="${link.title}">${link.title}</a>
               ${
                 showGlobalHeader
                   ? `
-                <!-- Mega Menu (Desktop Only) -->
+                <!-- Mega Menu (Desktop) -->
                 <div class="uq-header__megamenu">
                   <div class="uq-header__megamenu-container">
                     <a href="${link.href}" class="megamenu__overview-link" data-gtm-label="${link.title} > ${link.title} overview"><span class="megamenu__overview-label">${link.title} overview</span></a>
@@ -262,20 +264,21 @@ const headerRenderer = ({
       </nav>
     </div>
 
-    <!-- SEARCH TOGGLE -->
+    <!-- TOGGLE SEARCH -->
     <div class="uq-header__search-toggle" data-gtm-category="Search">
       <button class="nav-primary__toggle nav-primary__search-toggle" data-gtm-action="Toggle">
         <div class="search-toggle__label">Search</div>
       </button>
     </div>
+
   </div>
   
-  <!-- MOBILE NAVIGATION (Slide Menu) -->
+  <!-- NAVIGATION (Mobile) (Slide menu) -->
   <!-- "uq-header__nav-mobile-local" class is added if showing local site menu -->
   <nav class="slide-menu uq-header__nav-mobile ${showLocalMobile ? "uq-header__nav-mobile-local" : ""}" id="global-mobile-nav" aria-label="primary navigation mobile">
     <ul class="uq-header__nav-mobile-list">
 
-    <!-- SCENARIO A: Local Site Navigation -->
+    <!-- SCENARIO A: NAVIGATION LOCAL (Mobile)  -->
     ${
       showLocalMobile
         ? `
@@ -291,15 +294,14 @@ const headerRenderer = ({
         : ""
     }
     
-    <!-- SCENARIO 2: Global Mobile Navigation (e.g., Homepage or Fallback) -->
+    <!-- SCENARIO 2: NAVIGATION PRIMARY (mobile) (e.g., Homepage or Fallback) -->
     ${
       !showLocalMobile
         ? `
-          <li class="uq-header__nav-mobile-item" data-gtm-category="Secondary header">
-            <a class="uq-header__nav-mobile-primary" href="https://uq.edu.au">UQ home <span class="slide-menu__decorator"> </span></a>
-          </li>
-
-          <!-- Global Primary Links (Flattened for Mobile) -->
+              <!-- NAVIGATION PRIMARY (Mobile) -->
+              <li class="uq-header__nav-mobile-item" data-gtm-category="Secondary header">
+                <a class="uq-header__nav-mobile-primary" href="https://uq.edu.au">UQ home <span class="slide-menu__decorator"> </span></a>
+              </li>
           ${primaryLinks
             .map(
               (link) => `
@@ -309,7 +311,7 @@ const headerRenderer = ({
             )
             .join("")}
 
-          <!-- Global Secondary Links -->
+              <!-- NAVIGATION SECONDARY (Mobile) -->
           ${secondaryLinks
             .map(
               (link) => `
@@ -343,7 +345,7 @@ const headerRenderer = ({
     </div>
     </div>
 
-    <!-- Desktop Secondary Navigation -->
+    <!-- NAVIGATION SECONDARY (Desktop) -->
     <div class="uq-header__nav-secondary">
         <nav class="uq-header__nav-secondary-container">
         <ul class="uq-header__nav-secondary-list">

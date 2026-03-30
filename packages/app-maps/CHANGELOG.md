@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.4](https://github.com/uq-its-ss/design-system/compare/@uqds/app-maps@4.0.4-alpha.0...@uqds/app-maps@4.0.4) (2026-03-30)
+
+**Note:** Version bump only for package @uqds/app-maps
+
 ## [4.0.4-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/app-maps@4.0.3...@uqds/app-maps@4.0.4-alpha.0) (2026-03-23)
 
 **Note:** Version bump only for package @uqds/app-maps

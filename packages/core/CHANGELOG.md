@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.0.2-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/core@5.0.1...@uqds/core@5.0.2-alpha.0) (2026-03-23)
+
+### Bug Fixes
+
+- initial css var setup. typography updates to reference css var ([#742](https://github.com/uq-its-ss/design-system/issues/742)) ([05d0338](https://github.com/uq-its-ss/design-system/commit/05d03388ef4d07c5e1eb7d7526f4270d4c853d23))
+
 ## [5.0.1](https://github.com/uq-its-ss/design-system/compare/@uqds/core@5.0.1-alpha.0...@uqds/core@5.0.1) (2026-03-18)
 
 **Note:** Version bump only for package @uqds/core

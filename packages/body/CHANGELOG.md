@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.4-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/body@4.0.3...@uqds/body@4.0.4-alpha.0) (2026-03-23)
+
+### Bug Fixes
+
+- initial css var setup. typography updates to reference css var ([#742](https://github.com/uq-its-ss/design-system/issues/742)) ([05d0338](https://github.com/uq-its-ss/design-system/commit/05d03388ef4d07c5e1eb7d7526f4270d4c853d23))
+
 ## [4.0.3](https://github.com/uq-its-ss/design-system/compare/@uqds/body@4.0.3-alpha.0...@uqds/body@4.0.3) (2026-03-18)
 
 **Note:** Version bump only for package @uqds/body

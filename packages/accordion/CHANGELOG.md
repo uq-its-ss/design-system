@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.0.5](https://github.com/uq-its-ss/design-system/compare/@uqds/accordion@7.0.5-alpha.0...@uqds/accordion@7.0.5) (2026-03-30)
+
+**Note:** Version bump only for package @uqds/accordion
+
 ## [7.0.5-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/accordion@7.0.4...@uqds/accordion@7.0.5-alpha.0) (2026-03-23)
 
 **Note:** Version bump only for package @uqds/accordion

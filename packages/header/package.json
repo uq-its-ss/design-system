@@ -1,6 +1,6 @@
 {
   "name": "@uqds/header",
-  "version": "7.0.7-alpha.0",
+  "version": "7.0.7",
   "description": "The POC UQ Header component package",
   "keywords": [
     "uqds",
@@ -48,9 +48,9 @@
     "url": "https://github.com/uq-its-ss/design-system/issues"
   },
   "dependencies": {
-    "@uqds/core": "^5.0.2-alpha.0",
-    "@uqds/form": "^4.0.5-alpha.0",
-    "@uqds/icon": "^4.0.5-alpha.0"
+    "@uqds/core": "^5.0.2",
+    "@uqds/form": "^4.0.5",
+    "@uqds/icon": "^4.0.5"
   },
   "devDependencies": {
     "gulp": "^5.0.0"

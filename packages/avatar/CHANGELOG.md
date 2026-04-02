@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.3](https://github.com/uq-its-ss/design-system/compare/@uqds/avatar@1.0.3-alpha.0...@uqds/avatar@1.0.3) (2026-03-30)
+
+**Note:** Version bump only for package @uqds/avatar
+
 ## [1.0.3-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/avatar@1.0.2...@uqds/avatar@1.0.3-alpha.0) (2026-03-23)
 
 **Note:** Version bump only for package @uqds/avatar

@@ -1,5 +1,7 @@
 import classNames from "classnames";
 import { storyRenderer } from "../../../lib/storyRenderer";
+import { initializeHeader } from "../../components/header/headingDecorator";
+import { initializeFooter } from "../../components/footer/footerDecorator";
 import * as HeaderStories from "../../components/header/header.stories";
 import * as BreadcrumbStories from "../../components/breadcrumb/breadcrumb.stories";
 import * as HeroStories from "../../components/hero/hero.stories";
@@ -11,7 +13,7 @@ import { searchInput } from "@uqds/form/src/js/main";
 import * as FooterStories from "../../components/footer/footer.stories";
 import { initJs } from "../../../lib/initJs";
 
-const { Header } = storyRenderer(HeaderStories);
+const { Default: Header } = storyRenderer(HeaderStories);
 const { Breadcrumb } = storyRenderer(BreadcrumbStories);
 const { footer } = storyRenderer(FooterStories);
 const { Level2: Level2Hero } = storyRenderer(HeroStories);
@@ -41,7 +43,14 @@ export const Home = {
   decorators: [
     (storyFn) =>
       initJs(storyFn, (component) => {
+        // Initialize header
+        initializeHeader(component);
+
+        // Initialize search input
         searchInput(component.querySelector(".uq-search-input"));
+
+        // Initialize footer
+        initializeFooter(component);
       }),
   ],
   render: ({ showGrid }) => `

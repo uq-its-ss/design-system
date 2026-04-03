@@ -1,5 +1,8 @@
 import classNames from "classnames";
 import { storyRenderer } from "../../lib/storyRenderer";
+import { initializeHeader } from "../components/header/headingDecorator";
+import { initializeFooter } from "../components/footer/footerDecorator";
+import { initJs } from "../../lib/initJs";
 import * as HeaderStories from "../components/header/header.stories";
 import * as FooterStories from "../components/footer/footer.stories";
 import * as HeroStories from "../components/hero/hero.stories";
@@ -7,7 +10,7 @@ import * as SectionStories from "../components/section/section.stories";
 import * as CardStories from "../components/card/card.stories";
 import * as StoryCardStories from "../components/story-card/story-card.stories";
 
-const { Header } = storyRenderer(HeaderStories);
+const { Default: Header } = storyRenderer(HeaderStories);
 const { footer } = storyRenderer(FooterStories);
 const { Home: Hero } = storyRenderer(HeroStories);
 const { Container: Section } = storyRenderer(SectionStories);
@@ -21,6 +24,13 @@ export default {
     layout: "fullscreen",
     options: { showPanel: false },
   },
+  decorators: [
+    (storyFn) =>
+      initJs(storyFn, (component) => {
+        initializeHeader(component);
+        initializeFooter(component);
+      }),
+  ],
   argTypes: {
     showGrid: {
       control: "boolean",

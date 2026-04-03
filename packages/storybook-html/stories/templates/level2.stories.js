@@ -43,4 +43,12 @@ export const Level2 = {
   </main>
   ${footer()}
 </div>`,
+  // 2. Add the play function
+  play: ({ canvasElement }) => {
+    // 3. Initialize the Header
+    const headerElem = canvasElement.querySelector(".uq-header");
+    if (headerElem) new header(headerElem);
+    // Note: If the components rendered by Level2Hero and LocalNavExample also require JS,
+    // their initialization functions would need to be imported and called here as well.
+  },
 };

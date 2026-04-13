@@ -1,7 +1,7 @@
 @use "@uqds/core/src/scss/global" as core;
 
 .uq-image {
-  margin: 0 0 core.$space-l;
+  margin: 0 0 core.$space-xl;
   container-type: inline-size;
 
   & img {
@@ -29,10 +29,11 @@
 }
 
 .uq-image__caption {
+  font-size: core.$font-size-s;
   margin-top: core.$space-m;
 
   & p {
-    margin-bottom: core.$space-s;
+    margin-bottom: core.$space-xs;
 
     &:last-of-type {
       margin-bottom: 0;

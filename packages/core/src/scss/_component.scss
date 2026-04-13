@@ -2,6 +2,7 @@
 @use "_partials/css-variables"; // Injects :root variables into the CSS output
 @use "_partials/colour-constants";
 @use "_partials/text-constants";
+@use "_partials/media-constants";
 
 html {
   font-size: 100%; /* 16px in most browsers */

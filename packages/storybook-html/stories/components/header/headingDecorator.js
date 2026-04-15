@@ -30,7 +30,7 @@ export const initializeHeader = (component) => {
 
   // Check if this is a full header with interactive elements
   const hasInteractiveElements = headerElem.querySelector(
-    ".nav-primary__menu-toggle",
+    ".uq-header__toggle-menu-button",
   );
 
   // Only initialize interactive features if the elements exist
@@ -46,7 +46,7 @@ export const initializeHeader = (component) => {
       });
 
       const searchToggle = headerElem.querySelector(
-        ".nav-primary__search-toggle",
+        ".uq-header__toggle-search-button",
       );
       if (searchToggle) {
         searchToggle.addEventListener("click", () => {
@@ -71,10 +71,10 @@ export const initializeHeader = (component) => {
           menuLeft.close(true);
           //reset the menu toggle after closing.
           const mainNavToggle = headerElem.querySelector(
-            ".nav-primary__toggle",
+            ".uq-header__toggle",
           );
           if (mainNavToggle) {
-            mainNavToggle.classList.remove("nav-primary__menu-toggle--is-open");
+            mainNavToggle.classList.remove("uq-header__toggle-menu-button--is-open");
           }
           const body = document.querySelector("body");
           body.classList.remove("no-scroll");

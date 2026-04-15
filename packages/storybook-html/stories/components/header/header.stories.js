@@ -24,17 +24,17 @@ const renderMegaMenu = (columns, parentTitle) => {
   return columns
     .map(
       (column) => `
-    <div class="megamenu__column">
+    <div class="uq-header__megamenu-column">
       ${column.groups
         .map(
           (group) => `
-        <h3 class="megamenu__heading">${group.heading}</h3>
-        <div class="megamenu__menu">
-          <ul>
+        <h3 class="uq-header__megamenu-heading">${group.heading}</h3>
+        <div class="uq-header__megamenu-menu">
+          <ul class="uq-header__megamenu-list">
             ${group.children
               .map(
                 (child) => `
-              <li data-gtm-category="Main navigation"><a href="${child.href}" data-gtm-label="${parentTitle} > ${child.title}">${child.title}</a></li>
+              <li class="uq-header__megamenu-item" data-gtm-category="Main navigation"><a class="uq-header__megamenu-link" href="${child.href}" data-gtm-label="${parentTitle} > ${child.title}">${child.title}</a></li>
             `,
               )
               .join("")}
@@ -220,55 +220,60 @@ const headerRenderer = ({
   <div class="uq-header__container">
 
     <!-- TOGGLE MENU (Mobile) -->
-    <div class="uq-header__menu-toggle" data-target="global-mobile-nav" data-gtm-category="Primary header">
-      <button type="button" class="nav-primary__toggle nav-primary__menu-toggle slide-menu__control" data-target="global-mobile-nav" data-arg=".is-active" data-action="smartToggle" data-gtm-trigger="click" data-gtm-action="Toggle">Menu</button>
+    <div class="uq-header__toggle-menu" data-target="global-mobile-nav" data-gtm-category="Primary header">
+      <button type="button" class="uq-header__toggle-menu-button slide-menu__control" data-target="global-mobile-nav" data-arg=".is-active" data-action="smartToggle" data-gtm-trigger="click" data-gtm-action="Toggle">Menu</button>
     </div>
 
     <!-- LOGO -->
-    <div class="uq-header__logo" data-gtm-category="Primary header">
-      <a class="logo--large" href="https://uq.edu.au" data-gtm-label="UQ Logo">
-        <img alt="The University of Queensland" src="https://static.uq.net.au/v11/logos/corporate/uq-logo--reversed.svg">
-      </a>
-    </div>
+    <div class="uq-header__logo" data-gtm-category="Primary header"><a class="uq-header__logo-link" href="https://uq.edu.au" data-gtm-label="UQ Logo"><img class="uq-header__logo-image" alt="The University of Queensland" src="https://static.uq.net.au/v11/logos/corporate/uq-logo--reversed.svg"></a></div>
 
    <!-- NAVIGATION PRIMARY (Desktop) -->
-    <div class="uq-header__nav-primary" data-gtm-category="Primary header">
-      <nav class="uq-header__nav-primary-container" aria-label="primary navigation">
-        <ul class="uq-header__nav-primary-list">
-          ${primaryLinks
-            .map(
-              (link) => `
-            <!-- NAVIGATION PRIMARY ITEM (Desktop) -->
-            <li class="uq-header__nav-primary-item">
-              <a class="uq-header__nav-primary-link ${showGlobalHeader ? "nav-primary-link--has-dropdown" : ""}" href="${link.href}" data-gtm-label="${link.title}">${link.title}</a>
-              ${
-                showGlobalHeader
-                  ? `
-                <!-- MEGA MENU (Desktop) -->
-                <div class="uq-header__megamenu">
-                  <div class="uq-header__megamenu-container">
-                    <h2><a href="${link.href}" class="megamenu__overview-link" data-gtm-label="${link.title} > ${link.title} overview"><span class="megamenu__overview-label">${link.title} overview</span></a></h2>
-                    <div class="megamenu__row">
-                      ${renderMegaMenu(link.columns, link.title)}
-                    </div>
-                  </div>
+    <nav class="uq-header__nav-primary" aria-label="primary navigation" data-gtm-category="Primary header">
+      <ul class="uq-header__nav-primary-list">
+        ${primaryLinks
+          .map(
+            (link) => `
+          <!-- NAVIGATION PRIMARY ITEM (Desktop) -->
+          <li class="uq-header__nav-primary-item">
+            <a class="uq-header__nav-primary-link ${showGlobalHeader ? "uq-header__nav-primary--has-dropdown" : ""}" href="${link.href}" data-gtm-label="${link.title}">${link.title}</a>
+            ${
+              showGlobalHeader
+                ? `
+              <!-- MEGA MENU (Desktop) -->
+              <div class="uq-header__megamenu">
+                <div class="uq-header__megamenu-container">
+                  <h2 class="uq-header__megamenu-overview-label"><a href="${link.href}" class="uq-header__megamenu-link" data-gtm-label="${link.title} > ${link.title}">${link.title}</a></h2>
+                    ${renderMegaMenu(link.columns, link.title)}
                 </div>
-              `
-                  : ""
-              }
-            </li>
-          `,
-            )
-            .join("")}
-        </ul>
-      </nav>
-    </div>
+              </div>
+            `
+                : ""
+            }
+          </li>
+        `,
+          )
+          .join("")}
+      </ul>
+    </nav>
 
     <!-- TOGGLE SEARCH -->
-    <div class="uq-header__search-toggle" data-gtm-category="Search">
-      <button class="nav-primary__toggle nav-primary__search-toggle" data-gtm-action="Toggle" aria-label="Search">
-        <div class="search-toggle__label">Search</div>
+    <div class="uq-header__toggle-search" data-gtm-category="Search">
+      <button class="uq-header__toggle-search-button" data-gtm-action="Toggle" aria-label="Search">
+        <div class="uq-header__toggle-search-label">Search</div>
       </button>
+          <!-- SEARCH FORM -->
+          <div class="uq-header__search" data-gtm-category="Search">
+            <div class="uq-header__search-container">
+              <form class="uq-header__search-form" action="https://search.uq.edu.au/" method="get" data-gtm-action="Text search" data-gtm-form-action="">
+                <fieldset class="uq-header__search-fieldset">
+                    <label class="uq-header__search-label" for="edit-q">Search term</label>
+                    <input class="uq-header__search-input" type="text" id="edit-q" name="q" value="" maxlength="128" placeholder="Search by keyword" autocomplete="off" data-gtm-form-search="">
+                    <input type="hidden" value="${siteDomain}" name="as_sitesearch" id="edit-as_sitesearch-on"> 
+                    <button class="uq-header__search-button" type="submit" name="op" value="Search" data-gtm-trigger="click"><span class="uq-header__search-button-label">Search</span></button>          
+                </fieldset>
+              </form>
+            </div>
+          </div>
     </div>
 
   </div>
@@ -327,24 +332,6 @@ const headerRenderer = ({
     }
     </ul>
   </nav>
-
-    <!-- SEARCH FORM -->
-    <div class="uq-header__search" data-gtm-category="Search">
-    <div class="uq-header__search-container">
-        <form action="https://search.uq.edu.au/" method="get" data-gtm-action="Text search" data-gtm-form-action="">
-        <fieldset>
-            <div class="uq-header__search-query">
-            <label for="edit-q" class="visually-hidden uq-header__search-query-label">Search term</label>
-            <input type="text" id="edit-q" name="q" value="" maxlength="128" placeholder="Search by keyword" autocomplete="off" class="uq-header__search-query-input" data-gtm-form-search="">
-            <span class="uq-header__search-query-button">
-                <input type="submit" name="op" value="Search" class="uq-header__search-query-submit" data-gtm-trigger="click">
-            </span>
-            <input type="hidden" value="${siteDomain}" name="as_sitesearch" id="edit-as_sitesearch-on">           
-            </div>
-        </fieldset>
-        </form>
-    </div>
-    </div>
 
     <!-- NAVIGATION SECONDARY (Desktop) -->
     <div class="uq-header__nav-secondary">
@@ -405,8 +392,8 @@ export const basicHeader = {
     <header id="uq-header" class="uq-header" data-gtm-category="Header">
       <div class="uq-header__container">
         <div class="uq-header__logo" data-gtm-category="Primary header">
-          <a class="logo--large" href="https://uq.edu.au" data-gtm-label="UQ Logo">
-            <img alt="The University of Queensland" src="https://static.uq.net.au/v15/logos/corporate/uq-logo--reversed.svg">
+          <a class="uq-header__logo-link" href="https://uq.edu.au" data-gtm-label="UQ Logo">
+            <img class="uq-header__logo-image" alt="The University of Queensland" src="https://static.uq.net.au/v15/logos/corporate/uq-logo--reversed.svg">
           </a>
         </div>        
       </div>

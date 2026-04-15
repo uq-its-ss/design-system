@@ -68,7 +68,7 @@ export const basicPage = {
         backLinkBefore: " ",
       });
 
-      this.searchToggle = document.querySelector(".nav-primary__search-toggle");
+      this.searchToggle = document.querySelector(".uq-header__toggle-search-button");
 
       this.searchToggle.addEventListener("click", () => {
         menuLeft.close();
@@ -90,9 +90,9 @@ export const basicPage = {
         if (window.innerWidth > 1024) {
           menuLeft.close(true);
           //reset the menu toggle after closing.
-          this.mainNavToggle = document.querySelector(".nav-primary__toggle");
+          this.mainNavToggle = document.querySelector(".uq-header__toggle-menu-button");
           this.mainNavToggle.classList.remove(
-            "nav-primary__menu-toggle--is-open",
+            "uq-header__toggle-menu-button--is-open",
           );
           this.body = document.querySelector("body");
           this.body.classList.remove("no-scroll");

@@ -12,16 +12,16 @@ var uq = (function (exports) {
       this.init(el);
     }
     init(el) {
-      this.menuToggle = el.querySelector(".nav-primary__menu-toggle");
-      this.searchToggle = el.querySelector(".nav-primary__search-toggle");
+      this.menuToggle = el.querySelector(".uq-header__toggle-menu-button");
+      this.searchToggle = el.querySelector(".uq-header__toggle-search-button");
       this.searchLabel = el.querySelector(".search-toggle__label");
       this.searchBlock = el.querySelector(".uq-header__search");
       this.searchInput = el.querySelector(".uq-header__search-query-input");
       this.menuToggle.addEventListener("click", () => {
         document.body.classList.toggle("no-scroll");
-        this.menuToggle.classList.toggle("nav-primary__menu-toggle--is-open");
+        this.menuToggle.classList.toggle("uq-header__toggle-menu-button--is-open");
         this.searchToggle.classList.remove(
-          "nav-primary__search-toggle--is-open",
+          "uq-header__toggle-search-button--is-open",
         );
         this.searchBlock.classList.remove("uq-header__search--is-open");
         this.searchLabel.innerHTML = "Search";
@@ -29,10 +29,10 @@ var uq = (function (exports) {
       this.searchToggle.addEventListener("click", (e) => {
         document.body.classList.remove("no-scroll");
         this.searchToggle.classList.toggle(
-          "nav-primary__search-toggle--is-open",
+          "uq-header__toggle-search-button--is-open",
         );
         this.searchBlock.classList.toggle("uq-header__search--is-open");
-        this.menuToggle.classList.remove("nav-primary__menu-toggle--is-open");
+        this.menuToggle.classList.remove("uq-header__toggle-menu-button--is-open");
         if (this.searchBlock.classList.contains("uq-header__search--is-open")) {
           this.searchInput.focus();
         } else {

@@ -19,7 +19,9 @@ var uq = (function (exports) {
       this.searchInput = el.querySelector(".uq-header__search-query-input");
       this.menuToggle.addEventListener("click", () => {
         document.body.classList.toggle("no-scroll");
-        this.menuToggle.classList.toggle("uq-header__toggle-menu-button--is-open");
+        this.menuToggle.classList.toggle(
+          "uq-header__toggle-menu-button--is-open",
+        );
         this.searchToggle.classList.remove(
           "uq-header__toggle-search-button--is-open",
         );
@@ -32,7 +34,9 @@ var uq = (function (exports) {
           "uq-header__toggle-search-button--is-open",
         );
         this.searchBlock.classList.toggle("uq-header__search--is-open");
-        this.menuToggle.classList.remove("uq-header__toggle-menu-button--is-open");
+        this.menuToggle.classList.remove(
+          "uq-header__toggle-menu-button--is-open",
+        );
         if (this.searchBlock.classList.contains("uq-header__search--is-open")) {
           this.searchInput.focus();
         } else {

@@ -70,11 +70,11 @@ export const initializeHeader = (component) => {
         if (window.innerWidth > 1024) {
           menuLeft.close(true);
           //reset the menu toggle after closing.
-          const mainNavToggle = headerElem.querySelector(
-            ".uq-header__toggle",
-          );
+          const mainNavToggle = headerElem.querySelector(".uq-header__toggle");
           if (mainNavToggle) {
-            mainNavToggle.classList.remove("uq-header__toggle-menu-button--is-open");
+            mainNavToggle.classList.remove(
+              "uq-header__toggle-menu-button--is-open",
+            );
           }
           const body = document.querySelector("body");
           body.classList.remove("no-scroll");

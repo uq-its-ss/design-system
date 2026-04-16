@@ -322,17 +322,17 @@
         position: relative;
 
         &::after {
-        content: "";
-        background-image: url(icon-constants.get-icon(
-          "standard--arrow-right",
-          core.$purple-500
-        ));
-        background-repeat: no-repeat;
-        width: core.$space-l;
-        height: core.$space-l;
-        position: absolute;
-        top: 2.5px;
-        right: -36px;
+          content: "";
+          background-image: url(icon-constants.get-icon(
+            "standard--arrow-right",
+            core.$purple-500
+          ));
+          background-repeat: no-repeat;
+          width: core.$space-l;
+          height: core.$space-l;
+          position: absolute;
+          top: 2.5px;
+          right: -36px;
         }
       }
     }

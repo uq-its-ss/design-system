@@ -12,9 +12,15 @@ class Header {
   }
 
   init() {
-    this.menuToggle = this.header.querySelector(".uq-header__toggle-menu-button");
-    this.searchToggle = this.header.querySelector(".uq-header__toggle-search-button");
-    this.searchLabel = this.header.querySelector(".uq-header__toggle-search-label");
+    this.menuToggle = this.header.querySelector(
+      ".uq-header__toggle-menu-button",
+    );
+    this.searchToggle = this.header.querySelector(
+      ".uq-header__toggle-search-button",
+    );
+    this.searchLabel = this.header.querySelector(
+      ".uq-header__toggle-search-label",
+    );
     this.searchBlock = this.header.querySelector(".uq-header__search");
     this.searchInput = this.header.querySelector(".uq-header__search-input");
 
@@ -51,7 +57,7 @@ class Header {
     });
 
     // megamenu + accessibility logic
-      this.megaMenuTriggers = this.header.querySelectorAll(
+    this.megaMenuTriggers = this.header.querySelectorAll(
       ".uq-header__nav-primary--has-dropdown",
     );
     this.megaMenuTriggers.forEach((trigger) => {

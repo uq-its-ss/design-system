@@ -235,12 +235,12 @@ const headerRenderer = ({
             (link) => `
           <!-- NAVIGATION PRIMARY ITEM (Desktop) -->
           <li class="uq-header__nav-primary-item">
-            <a class="uq-header__nav-primary-link ${showGlobalHeader ? "uq-header__nav-primary--has-dropdown" : ""}" href="${link.href}" data-gtm-label="${link.title}">${link.title}</a>
+            <a class="uq-header__nav-primary-link ${showGlobalHeader ? "uq-header__nav-primary--has-dropdown" : ""}" href="${link.href}" data-gtm-label="${link.title}" ${showGlobalHeader ? `id="${link.title.toLowerCase().replace(/\s+/g, '-')}-menu-button" role="button" aria-haspopup="true" aria-expanded="false" aria-controls="${link.title.toLowerCase().replace(/\s+/g, '-')}-megamenu"` : ""}>${link.title}</a>
             ${
               showGlobalHeader
                 ? `
               <!-- MEGA MENU (Desktop) -->
-              <div class="uq-header__megamenu">
+              <div ${showGlobalHeader ? `id="${link.title.toLowerCase().replace(/\s+/g, '-')}-megamenu"` : ""} class="uq-header__megamenu">
                 <div class="uq-header__megamenu-container">
                   <h2 class="uq-header__megamenu-overview-label"><a href="${link.href}" class="uq-header__megamenu-link" data-gtm-label="${link.title} > ${link.title}">${link.title}</a></h2>
                     ${renderMegaMenu(link.columns, link.title)}

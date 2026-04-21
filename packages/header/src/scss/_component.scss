@@ -397,35 +397,35 @@
     z-index: 30;
     box-shadow: 0 0.75rem core.$space-l rgb(24 24 24 / 20%);
 
-  /* 1. Setup the hidden state properly */
-  transform: translateY(-1rem);
-  max-height: 0;
-  opacity: 0;
-  visibility: hidden;
-  overflow: hidden; /* Crucial for max-height animations */
-  pointer-events: none; /* Prevents clicks while hidden */
+    /* 1. Setup the hidden state properly */
+    transform: translateY(-1rem);
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden; /* Crucial for max-height animations */
+    pointer-events: none; /* Prevents clicks while hidden */
 
-  /* 2. Transition all animated properties */
-  transition:
-    max-height 0.2s ease-in-out,
-    transform 0.2s ease-in-out,
-    opacity 0.2s ease-in-out,
-    visibility 0s linear 0.2s; /* Delays hiding visibility until opacity finishes */
-
-  &--is-open {
-    /* 3. The open state */
-    transform: translateY(0);
-    max-height: 50vh; 
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-    
-    /* Make visibility instant when opening */
+    /* 2. Transition all animated properties */
     transition:
       max-height 0.2s ease-in-out,
       transform 0.2s ease-in-out,
       opacity 0.2s ease-in-out,
-      visibility 0s linear 0s;
+      visibility 0s linear 0.2s; /* Delays hiding visibility until opacity finishes */
+
+    &--is-open {
+      /* 3. The open state */
+      transform: translateY(0);
+      max-height: 50vh;
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+
+      /* Make visibility instant when opening */
+      transition:
+        max-height 0.2s ease-in-out,
+        transform 0.2s ease-in-out,
+        opacity 0.2s ease-in-out,
+        visibility 0s linear 0s;
     }
 
     &-container {
@@ -655,7 +655,6 @@ body.no-scroll {
 
   /* Back to previous menu section */
   &__backlink {
-
     &.uq-header__nav-mobile-link {
       font-weight: core.$font-weight-medium;
     }

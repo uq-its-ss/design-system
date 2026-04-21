@@ -394,38 +394,30 @@
     width: 100%;
     top: auto;
     left: 0;
-    z-index: 30;
+    z-index: -1;
     box-shadow: 0 0.75rem core.$space-l rgb(24 24 24 / 20%);
 
-    /* 1. Setup the hidden state properly */
-    transform: translateY(-1rem);
-    max-height: 0;
-    opacity: 0;
+    /* 1. Setup the hidden state properly using only transform */
+    transform: translateY(-100%); /* Slides it up completely out of view */
     visibility: hidden;
-    overflow: hidden; /* Crucial for max-height animations */
-    pointer-events: none; /* Prevents clicks while hidden */
+    pointer-events: none;
+    will-change: transform; /* Tells the browser to hardware-accelerate this */
 
-    /* 2. Transition all animated properties */
+    /* 2. Transition ONLY transform (and delay visibility so it doesn't snap invisible) */
     transition:
-      max-height 0.2s ease-in-out,
-      transform 0.2s ease-in-out,
-      opacity 0.2s ease-in-out,
-      visibility 0s linear 0.2s; /* Delays hiding visibility until opacity finishes */
+      transform 0.3s ease-in-out,
+      visibility 0s linear 0.3s;
 
     &--is-open {
       /* 3. The open state */
-      transform: translateY(0);
-      max-height: 50vh;
-      opacity: 1;
+      transform: translateY(0); /* Slides it down into place */
       visibility: visible;
       pointer-events: auto;
 
-      /* Make visibility instant when opening */
+      /* Make visibility instant when opening, but keep the smooth slide */
       transition:
-        max-height 0.2s ease-in-out,
-        transform 0.2s ease-in-out,
-        opacity 0.2s ease-in-out,
-        visibility 0s linear 0s;
+        transform 0.3s ease-in-out,
+        visibility 0s linear;
     }
 
     &-container {

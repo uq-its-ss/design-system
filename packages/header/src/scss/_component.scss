@@ -298,7 +298,7 @@
     visibility: hidden;
 
     &-container {
-      max-width: 71.25rem;
+      max-width: 77.25rem;
       margin-left: auto;
       margin-right: auto;
       padding: core.$space-xl core.$space-xxxl;
@@ -351,7 +351,7 @@
       font-weight: 500;
       color: core.$black;
       padding-top: core.$space-xs;
-      padding-bottom: core.$space-xs;
+      padding-bottom: core.$space-m;
       margin: core.$space-none;
 
       &:nth-of-type(2) {
@@ -567,7 +567,7 @@ body.no-scroll {
   will-change: transform;
   z-index: 1000;
   position: fixed;
-  top: 4.3rem;
+  top: 4.5rem;
   right: 0;
   overflow-y: auto;
   overflow-x: hidden;
@@ -636,7 +636,10 @@ body.no-scroll {
 
   /* Back to previous menu section */
   &__backlink {
-    font-weight: core.$font-weight-medium;
+
+    &.uq-header__nav-mobile-link {
+      font-weight: core.$font-weight-medium;
+    }
 
     &::before {
       content: "";

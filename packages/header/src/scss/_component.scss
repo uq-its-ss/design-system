@@ -11,14 +11,17 @@
   grid-template-areas: "headercontainer" "navigationsecondary";
 
   //relative and z-index needed so they sit in front of the background layer.
-  position: relative; 
+  position: relative;
   z-index: 50; /* Keeps the whole header above page content */
 
   // required to so that search can sit behind the header but above page content.
   &::before {
     content: "";
     position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background: core.$purple-500;
     pointer-events: none; // Ensures it doesn't block clicks
   }
@@ -71,7 +74,6 @@
     padding: 2.625rem 1.5rem 17px 1.5rem;
     width: core.$space-uuul;
     height: core.$space-uul;
-    
 
     display: flex;
     justify-content: center;
@@ -226,7 +228,7 @@
   &__nav-primary {
     grid-area: navigationprimary;
     display: none;
-    
+
     //relative and z-index needed so they sit in front of the background layer.
     position: relative;
     z-index: 99;

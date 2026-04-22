@@ -813,3 +813,18 @@ body.no-scroll {
 .uq-site-header__navigation-toggle {
   display: none;
 }
+
+// Neutralize all hover effects on touch devices to prevent "Sticky Hover"
+// and stop global purple styles from leaking in.
+@media (hover: none) {
+  .uq-slide-menu__nav-link,
+  .uq-slide-menu__back {
+    &:hover, 
+    &:active {
+      // Match these to your link's default non-hover state
+      background-color: transparent !important; 
+      color: core.$text !important; // Use the variable for your default text color
+      text-decoration: none !important;
+    }
+  }
+}

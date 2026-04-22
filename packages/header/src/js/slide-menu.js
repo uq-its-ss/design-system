@@ -966,11 +966,7 @@
           t.addEventListener("click", (t) => {
             const e = t.target,
               n = e.matches("a") ? e : s(e, "a");
-            if (n) {
-              this.navigate(r.Forward, n);
-              // Remove focus/hover state to prevent sticky hover on touch devices
-              n.blur();
-            }
+            n && this.navigate(r.Forward, n);
           }),
         ),
           this.menuElem.addEventListener(

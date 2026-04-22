@@ -819,10 +819,10 @@ body.no-scroll {
 @media (hover: none) {
   .uq-slide-menu__nav-link,
   .uq-slide-menu__back {
-    &:hover, 
+    &:hover,
     &:active {
       // Match these to your link's default non-hover state
-      background-color: transparent !important; 
+      background-color: transparent !important;
       color: core.$text !important; // Use the variable for your default text color
       text-decoration: none !important;
     }

@@ -240,7 +240,7 @@ const headerRenderer = ({
               showGlobalHeader
                 ? `
               <!-- MEGA MENU (Desktop) -->
-              <div ${showGlobalHeader ? `id="${link.title.toLowerCase().replace(/\s+/g, "-")}-megamenu"` : ""} class="uq-header__megamenu">
+              <div id="${link.title.toLowerCase().replace(/\s+/g, "-")}-megamenu" class="uq-header__megamenu">
                 <div class="uq-header__megamenu-container">
                   <h2 class="uq-header__megamenu-overview-label"><a href="${link.href}" class="uq-header__megamenu-link" data-gtm-label="${link.title} > ${link.title}">${link.title}</a></h2>
                     ${renderMegaMenu(link.columns, link.title)}

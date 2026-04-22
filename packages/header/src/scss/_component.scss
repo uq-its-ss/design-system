@@ -823,7 +823,7 @@ body.no-scroll {
     &:active {
       // Match these to your link's default non-hover state
       background-color: transparent !important;
-      color: core.$text !important; // Use the variable for your default text color
+      color: core.$black !important; // Use the variable for your default text color
       text-decoration: none !important;
     }
   }

@@ -1,142 +1,85 @@
 "use strict";
 
-/**
- * Header module
- * @file Handles interaction behaviour for the Header.
- */
+import { MobileMenuModule } from './modules/mobile-menu.js';
+import { SearchModule } from './modules/search.js';
+import { MegaMenuModule } from './modules/megamenu.js';
+import { ResponsiveModule } from './modules/responsive.js';
 
+/**
+ * Header Class
+ * @file Main orchestrator that coordinates all header modules
+ * Handles menu toggle and delegates specific behaviors to focused modules
+ */
 class Header {
+  /**
+   * Creates a new Header instance
+   * @param {HTMLElement} el - The header element
+   */
   constructor(el) {
     this.header = el;
+    this.menuToggle = null;
+    this.modules = {};
     this.init();
   }
 
+  /**
+   * Initialize the header and all modules
+   * Sets up menu toggle and delegates specialized behaviors to modules
+   */
   init() {
-    this.menuToggle = this.header.querySelector(
-      ".uq-header__toggle-menu-button",
-    );
-    this.searchToggle = this.header.querySelector(
-      ".uq-header__toggle-search-button",
-    );
-    this.searchLabel = this.header.querySelector(
-      ".uq-header__toggle-search-label",
-    );
-    this.searchBlock = this.header.querySelector(".uq-header__search");
-    this.searchInput = this.header.querySelector(".uq-header__search-input");
+    // Get menu toggle element (used by multiple modules)
+    this.menuToggle = this.header.querySelector('.uq-header__toggle-menu-button');
 
-    this.menuToggle.addEventListener("click", () => {
-      document.body.classList.toggle("no-scroll");
-      this.menuToggle.classList.toggle(
-        "uq-header__toggle-menu-button--is-open",
-      );
-      this.searchToggle.classList.remove(
-        "uq-header__toggle-search-button--is-open",
-      );
-      this.searchBlock.classList.remove("uq-header__search--is-open");
-      this.searchLabel.innerHTML = "Search";
-    });
+    // Initialize menu toggle if it exists
+    this.initMenuToggle();
+    
+    // Initialize specialized modules
+    this.initModules();
+  }
 
-    this.searchToggle.addEventListener("click", (e) => {
-      e.preventDefault();
-      document.body.classList.remove("no-scroll");
-      this.searchToggle.classList.toggle(
-        "uq-header__toggle-search-button--is-open",
-      );
-      this.searchBlock.classList.toggle("uq-header__search--is-open");
-      this.menuToggle.classList.remove(
-        "uq-header__toggle-menu-button--is-open",
-      );
-      if (this.searchBlock.classList.contains("uq-header__search--is-open")) {
-        this.searchInput.focus();
-      } else {
-        this.searchInput.blur();
-        this.searchToggle.blur();
-      }
-      this.searchLabel.innerHTML =
-        this.searchLabel.innerHTML === "Search" ? "Close" : "Search";
-    });
+  /**
+   * Initialize menu toggle button
+   * Handles mobile menu open/close and coordinates with search module
+   * @private
+   */
+  initMenuToggle() {
+    if (!this.menuToggle) return;
 
-    // megamenu + accessibility logic
-    this.megaMenuTriggers = this.header.querySelectorAll(
-      ".uq-header__nav-primary--has-dropdown",
-    );
-    this.megaMenuTriggers.forEach((trigger) => {
-      // Toggle menu on click
-      trigger.addEventListener("click", (e) => {
-        // Prevent link navigation when opening/closing the menu
-        e.preventDefault();
-        this.toggleMenu(trigger);
-      });
-
-      // Handle keyboard events
-      trigger.addEventListener("keydown", (e) => {
-        if (e.key === "Enter" || e.key === " ") {
-          e.preventDefault();
-          this.toggleMenu(trigger);
-        }
-        if (e.key === "Escape") {
-          this.closeMenu(trigger);
-          trigger.focus(); // Return focus to the button
-        }
-      });
-    });
-
-    // Close menus when clicking outside
-    document.addEventListener("click", (e) => {
-      if (!this.header.contains(e.target)) {
-        this.closeAllMenus();
+    this.menuToggle.addEventListener('click', () => {
+      // Toggle scroll lock on body
+      document.body.classList.toggle('no-scroll');
+      
+      // Toggle menu button state
+      this.menuToggle.classList.toggle('uq-header__toggle-menu-button--is-open');
+      
+      // Close search when menu is toggled
+      if (this.modules.search) {
+        this.modules.search.close();
       }
     });
   }
 
   /**
-   * Toggles a megamenu's visibility.
-   * @param {HTMLElement} currentTrigger - The button/link that was clicked.
+   * Initialize all header modules
+   * Creates instances of specialized modules and stores references
+   * @private
    */
-  toggleMenu(currentTrigger) {
-    const isExpanded = currentTrigger.getAttribute("aria-expanded") === "true";
+  initModules() {
+    // Initialize mobile menu module (handles SlideMenu integration)
+    this.modules.mobileMenu = new MobileMenuModule(this.header);
 
-    // First, close all other menus
-    this.closeAllMenus(currentTrigger);
+    // Initialize search module (needs reference to mobile menu)
+    this.modules.search = new SearchModule(this.header, this.modules.mobileMenu);
 
-    // Now, toggle the current menu
-    if (isExpanded) {
-      this.closeMenu(currentTrigger);
-    } else {
-      this.openMenu(currentTrigger);
-    }
-  }
+    // Initialize mega menu module (desktop dropdowns)
+    this.modules.megaMenu = new MegaMenuModule(this.header);
 
-  /**
-   * Opens a specific megamenu.
-   * @param {HTMLElement} trigger - The button/link for the menu to open.
-   */
-  openMenu(trigger) {
-    trigger.setAttribute("aria-expanded", "true");
-    trigger.parentElement.classList.add("uq-header__nav-primary-item--is-open");
-  }
-
-  /**
-   * Closes a specific megamenu.
-   * @param {HTMLElement} trigger - The button/link for the menu to close.
-   */
-  closeMenu(trigger) {
-    trigger.setAttribute("aria-expanded", "false");
-    trigger.parentElement.classList.remove(
-      "uq-header__nav-primary-item--is-open",
+    // Initialize responsive module (needs references to mobile menu and toggle)
+    this.modules.responsive = new ResponsiveModule(
+      this.header, 
+      this.modules.mobileMenu, 
+      this.menuToggle
     );
-  }
-
-  /**
-   * Closes all open megamenus.
-   * @param {HTMLElement} [except] - An optional trigger element to ignore.
-   */
-  closeAllMenus(except = null) {
-    this.megaMenuTriggers.forEach((trigger) => {
-      if (trigger !== except) {
-        this.closeMenu(trigger);
-      }
-    });
   }
 }
 

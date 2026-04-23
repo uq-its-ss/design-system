@@ -1,8 +1,7 @@
 /**
  * @file headingDecorator.js
- * Shared initialization logic for header JavaScript functionality.
- * This can be used in header.stories.js and any template stories
- * that embed the header component.
+ * Simplified header initialization for Storybook stories.
+ * All interactive logic now lives in the @uqds/header package modules.
  */
 
 import { initJs } from "../../../lib/initJs";
@@ -10,11 +9,12 @@ import { header } from "@uqds/header/src/js/main";
 
 /**
  * initializeHeader
- * Initializes the header component with all interactive features:
- * - Header class initialization
- * - SlideMenu for mobile navigation
- * - Search toggle functionality
- * - Responsive behavior
+ * Initializes the header component with all interactive features.
+ * The Header class now manages all behavior through internal modules:
+ * - MobileMenuModule: SlideMenu integration and mobile navigation
+ * - SearchModule: Search toggle functionality
+ * - MegaMenuModule: Desktop mega menus and accessibility
+ * - ResponsiveModule: Responsive breakpoint behavior
  *
  * @param {HTMLElement} component - The component containing the header
  */
@@ -28,62 +28,8 @@ export const initializeHeader = (component) => {
 
   if (!headerElem) return;
 
-  // Check if this is a full header with interactive elements
-  const hasInteractiveElements = headerElem.querySelector(
-    ".uq-header__toggle-menu-button",
-  );
-
-  // Only initialize interactive features if the elements exist
-  if (hasInteractiveElements) {
-    new header(headerElem);
-
-    const menuLeftElem = headerElem.querySelector("#global-mobile-nav");
-    if (menuLeftElem) {
-      const menuLeft = new SlideMenu(menuLeftElem, {
-        position: "left",
-        submenuLinkAfter: " ",
-        backLinkBefore: " ",
-      });
-
-      const searchToggle = headerElem.querySelector(
-        ".uq-header__toggle-search-button",
-      );
-      if (searchToggle) {
-        searchToggle.addEventListener("click", () => {
-          menuLeft.close();
-        });
-      }
-
-      var slideMenuBackButtons = headerElem.querySelectorAll(
-        ".slide-menu__backlink, .global-mobile-nav__audience-link",
-      );
-
-      Array.prototype.forEach.call(slideMenuBackButtons, function (el, i) {
-        el.addEventListener("click", () => {
-          menuLeftElem.scrollTop = 0;
-        });
-      });
-
-      // Responsive Resize Close menu and update toggles
-      window.addEventListener("resize", (event) => {
-        // Target Resize of LG ($screen-lg, 64rem, 1024px).
-        if (window.innerWidth > 1024) {
-          menuLeft.close(true);
-          //reset the menu toggle after closing.
-          const mainNavToggle = headerElem.querySelector(
-            ".uq-header__toggle-menu-button",
-          );
-          if (mainNavToggle) {
-            mainNavToggle.classList.remove(
-              "uq-header__toggle-menu-button--is-open",
-            );
-          }
-          const body = document.querySelector("body");
-          body.classList.remove("no-scroll");
-        }
-      });
-    }
-  }
+  // Initialize the Header class - it handles everything else
+  new header(headerElem);
 };
 
 /**

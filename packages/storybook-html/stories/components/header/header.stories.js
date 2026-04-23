@@ -291,7 +291,7 @@ const headerRenderer = ({
           <a class="uq-header__nav-mobile-home" href="https://uq.edu.au">UQ home</a>
         </li>
         <li class="uq-header__nav-mobile-item">
-            <a class="uq-header__nav-mobile-link is-active" href="/study">Study</a>
+            <a class="uq-header__nav-mobile-link is-active" href="${siteDomain}">${siteName}</a>
         </li>
         <!-- Hook for the recursive menu file above -->
         ${renderMobileNav(localLinks)}

@@ -229,10 +229,6 @@
     grid-area: navigationprimary;
     display: none;
 
-    //relative and z-index needed so they sit in front of the background layer.
-    position: relative;
-    z-index: 99;
-
     @media #{core.$screen-lg-up} {
       display: block;
     }

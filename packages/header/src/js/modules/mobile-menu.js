@@ -23,10 +23,10 @@ export class MobileMenuModule {
    * Checks for SlideMenu availability and element existence
    */
   init() {
-    this.menuElement = document.getElementById('global-mobile-nav');
-    
+    this.menuElement = document.getElementById("global-mobile-nav");
+
     // Exit early if SlideMenu library not available or element doesn't exist
-    if (!this.menuElement || typeof SlideMenu === 'undefined') {
+    if (!this.menuElement || typeof SlideMenu === "undefined") {
       return;
     }
 
@@ -40,9 +40,9 @@ export class MobileMenuModule {
    */
   initSlideMenu() {
     this.slideMenu = new SlideMenu(this.menuElement, {
-      position: 'left',
-      submenuLinkAfter: ' ',
-      backLinkBefore: ' ',
+      position: "left",
+      submenuLinkAfter: " ",
+      backLinkBefore: " ",
     });
   }
 
@@ -53,11 +53,11 @@ export class MobileMenuModule {
    */
   initScrollReset() {
     const backButtons = this.header.querySelectorAll(
-      '.slide-menu__backlink, .global-mobile-nav__audience-link'
+      ".slide-menu__backlink, .global-mobile-nav__audience-link",
     );
-    
-    backButtons.forEach(btn => {
-      btn.addEventListener('click', () => {
+
+    backButtons.forEach((btn) => {
+      btn.addEventListener("click", () => {
         if (this.menuElement) {
           this.menuElement.scrollTop = 0;
         }

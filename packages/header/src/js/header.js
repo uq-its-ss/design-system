@@ -1,9 +1,9 @@
 "use strict";
 
-import { MobileMenuModule } from './modules/mobile-menu.js';
-import { SearchModule } from './modules/search.js';
-import { MegaMenuModule } from './modules/megamenu.js';
-import { ResponsiveModule } from './modules/responsive.js';
+import { MobileMenuModule } from "./modules/mobile-menu.js";
+import { SearchModule } from "./modules/search.js";
+import { MegaMenuModule } from "./modules/megamenu.js";
+import { ResponsiveModule } from "./modules/responsive.js";
 
 /**
  * Header Class
@@ -28,11 +28,13 @@ class Header {
    */
   init() {
     // Get menu toggle element (used by multiple modules)
-    this.menuToggle = this.header.querySelector('.uq-header__toggle-menu-button');
+    this.menuToggle = this.header.querySelector(
+      ".uq-header__toggle-menu-button",
+    );
 
     // Initialize menu toggle if it exists
     this.initMenuToggle();
-    
+
     // Initialize specialized modules
     this.initModules();
   }
@@ -45,13 +47,15 @@ class Header {
   initMenuToggle() {
     if (!this.menuToggle) return;
 
-    this.menuToggle.addEventListener('click', () => {
+    this.menuToggle.addEventListener("click", () => {
       // Toggle scroll lock on body
-      document.body.classList.toggle('no-scroll');
-      
+      document.body.classList.toggle("no-scroll");
+
       // Toggle menu button state
-      this.menuToggle.classList.toggle('uq-header__toggle-menu-button--is-open');
-      
+      this.menuToggle.classList.toggle(
+        "uq-header__toggle-menu-button--is-open",
+      );
+
       // Close search when menu is toggled
       if (this.modules.search) {
         this.modules.search.close();
@@ -69,16 +73,19 @@ class Header {
     this.modules.mobileMenu = new MobileMenuModule(this.header);
 
     // Initialize search module (needs reference to mobile menu)
-    this.modules.search = new SearchModule(this.header, this.modules.mobileMenu);
+    this.modules.search = new SearchModule(
+      this.header,
+      this.modules.mobileMenu,
+    );
 
     // Initialize mega menu module (desktop dropdowns)
     this.modules.megaMenu = new MegaMenuModule(this.header);
 
     // Initialize responsive module (needs references to mobile menu and toggle)
     this.modules.responsive = new ResponsiveModule(
-      this.header, 
-      this.modules.mobileMenu, 
-      this.menuToggle
+      this.header,
+      this.modules.mobileMenu,
+      this.menuToggle,
     );
   }
 }

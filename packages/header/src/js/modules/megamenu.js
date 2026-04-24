@@ -22,7 +22,7 @@ export class MegaMenuModule {
    */
   init() {
     this.triggers = Array.from(
-      this.header.querySelectorAll('.uq-header__nav-primary--has-dropdown')
+      this.header.querySelectorAll(".uq-header__nav-primary--has-dropdown"),
     );
 
     if (this.triggers.length === 0) {
@@ -39,20 +39,20 @@ export class MegaMenuModule {
    * @private
    */
   initTriggers() {
-    this.triggers.forEach(trigger => {
+    this.triggers.forEach((trigger) => {
       // Click handler
-      trigger.addEventListener('click', (e) => {
+      trigger.addEventListener("click", (e) => {
         e.preventDefault();
         this.toggleMenu(trigger);
       });
 
       // Keyboard handler for accessibility
-      trigger.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
+      trigger.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
           e.preventDefault();
           this.toggleMenu(trigger);
         }
-        if (e.key === 'Escape') {
+        if (e.key === "Escape") {
           this.closeMenu(trigger);
           trigger.focus(); // Return focus to trigger
         }
@@ -65,7 +65,7 @@ export class MegaMenuModule {
    * @private
    */
   initClickOutside() {
-    document.addEventListener('click', (e) => {
+    document.addEventListener("click", (e) => {
       if (!this.header.contains(e.target)) {
         this.closeAllMenus();
       }
@@ -78,11 +78,11 @@ export class MegaMenuModule {
    * @param {HTMLElement} trigger - The menu trigger element
    */
   toggleMenu(trigger) {
-    const isExpanded = trigger.getAttribute('aria-expanded') === 'true';
-    
+    const isExpanded = trigger.getAttribute("aria-expanded") === "true";
+
     // Close all other menus
     this.closeAllMenus(trigger);
-    
+
     // Toggle current menu
     if (isExpanded) {
       this.closeMenu(trigger);
@@ -97,8 +97,8 @@ export class MegaMenuModule {
    * @param {HTMLElement} trigger - The menu trigger element
    */
   openMenu(trigger) {
-    trigger.setAttribute('aria-expanded', 'true');
-    trigger.parentElement.classList.add('uq-header__nav-primary-item--is-open');
+    trigger.setAttribute("aria-expanded", "true");
+    trigger.parentElement.classList.add("uq-header__nav-primary-item--is-open");
   }
 
   /**
@@ -107,8 +107,10 @@ export class MegaMenuModule {
    * @param {HTMLElement} trigger - The menu trigger element
    */
   closeMenu(trigger) {
-    trigger.setAttribute('aria-expanded', 'false');
-    trigger.parentElement.classList.remove('uq-header__nav-primary-item--is-open');
+    trigger.setAttribute("aria-expanded", "false");
+    trigger.parentElement.classList.remove(
+      "uq-header__nav-primary-item--is-open",
+    );
   }
 
   /**
@@ -116,7 +118,7 @@ export class MegaMenuModule {
    * @param {HTMLElement} [except] - Optional trigger element to exclude from closing
    */
   closeAllMenus(except = null) {
-    this.triggers.forEach(trigger => {
+    this.triggers.forEach((trigger) => {
       if (trigger !== except) {
         this.closeMenu(trigger);
       }

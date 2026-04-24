@@ -26,10 +26,14 @@ export class SearchModule {
    * Queries DOM for search elements and sets up event listeners
    */
   init() {
-    this.searchToggle = this.header.querySelector('.uq-header__toggle-search-button');
-    this.searchLabel = this.header.querySelector('.uq-header__toggle-search-label');
-    this.searchBlock = this.header.querySelector('.uq-header__search');
-    this.searchInput = this.header.querySelector('.uq-header__search-input');
+    this.searchToggle = this.header.querySelector(
+      ".uq-header__toggle-search-button",
+    );
+    this.searchLabel = this.header.querySelector(
+      ".uq-header__toggle-search-label",
+    );
+    this.searchBlock = this.header.querySelector(".uq-header__search");
+    this.searchInput = this.header.querySelector(".uq-header__search-input");
 
     if (!this.searchToggle || !this.searchBlock) {
       return; // Search elements don't exist
@@ -43,17 +47,17 @@ export class SearchModule {
    * @private
    */
   initToggle() {
-    this.searchToggle.addEventListener('click', (e) => {
+    this.searchToggle.addEventListener("click", (e) => {
       e.preventDefault();
-      
+
       // Close mobile menu if open
       if (this.mobileMenu) {
         this.mobileMenu.close();
       }
 
       // Remove scroll lock from mobile menu
-      document.body.classList.remove('no-scroll');
-      
+      document.body.classList.remove("no-scroll");
+
       // Toggle search
       this.toggle();
     });
@@ -63,8 +67,10 @@ export class SearchModule {
    * Toggle the search panel open/closed
    */
   toggle() {
-    this.searchToggle.classList.toggle('uq-header__toggle-search-button--is-open');
-    this.searchBlock.classList.toggle('uq-header__search--is-open');
+    this.searchToggle.classList.toggle(
+      "uq-header__toggle-search-button--is-open",
+    );
+    this.searchBlock.classList.toggle("uq-header__search--is-open");
 
     if (this.isOpen()) {
       this.open();
@@ -82,7 +88,7 @@ export class SearchModule {
       this.searchInput.focus();
     }
     if (this.searchLabel) {
-      this.searchLabel.innerHTML = 'Close';
+      this.searchLabel.innerHTML = "Close";
     }
   }
 
@@ -97,11 +103,13 @@ export class SearchModule {
       this.searchToggle.blur();
     }
     if (this.searchLabel) {
-      this.searchLabel.innerHTML = 'Search';
+      this.searchLabel.innerHTML = "Search";
     }
-    
-    this.searchToggle.classList.remove('uq-header__toggle-search-button--is-open');
-    this.searchBlock.classList.remove('uq-header__search--is-open');
+
+    this.searchToggle.classList.remove(
+      "uq-header__toggle-search-button--is-open",
+    );
+    this.searchBlock.classList.remove("uq-header__search--is-open");
   }
 
   /**
@@ -109,7 +117,9 @@ export class SearchModule {
    * @returns {boolean} True if search is open
    */
   isOpen() {
-    return this.searchBlock && 
-           this.searchBlock.classList.contains('uq-header__search--is-open');
+    return (
+      this.searchBlock &&
+      this.searchBlock.classList.contains("uq-header__search--is-open")
+    );
   }
 }

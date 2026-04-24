@@ -9,7 +9,7 @@ import "./header.scss";
 
 // import scripts
 import {
-  localLinks,
+  localLinksExample,
   primaryLinks,
   secondaryLinks,
 } from "@uqds/header/src/js/menuData"; // Import the menu data
@@ -368,7 +368,7 @@ export const Default = {
     showLocalMobile: true,
     siteDomain: "https://uq.edu.au",
     siteName: "Your Site Name",
-    localLinks: localLinks, // Use imported data
+    localLinks: localLinksExample, // Use example navigation data
     primaryLinks: primaryLinks, // Use imported data
     secondaryLinks: secondaryLinks, // Use imported data
   },

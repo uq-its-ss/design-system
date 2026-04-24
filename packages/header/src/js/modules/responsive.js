@@ -27,8 +27,8 @@ export class ResponsiveModule {
   init() {
     // Use matchMedia for better performance than resize events
     // Matches the $screen-lg breakpoint (64rem = 1024px)
-    const desktopQuery = window.matchMedia('(min-width: 1024px)');
-    
+    const desktopQuery = window.matchMedia("(min-width: 1024px)");
+
     const handleBreakpoint = (e) => {
       if (e.matches) {
         this.onDesktopBreakpoint();
@@ -37,7 +37,7 @@ export class ResponsiveModule {
 
     // Modern browsers (addEventListener)
     if (desktopQuery.addEventListener) {
-      desktopQuery.addEventListener('change', handleBreakpoint);
+      desktopQuery.addEventListener("change", handleBreakpoint);
     } else {
       // Fallback for older browsers (addListener)
       desktopQuery.addListener(handleBreakpoint);
@@ -54,13 +54,15 @@ export class ResponsiveModule {
     if (this.mobileMenu) {
       this.mobileMenu.close(true);
     }
-    
+
     // Reset menu toggle state
     if (this.menuToggle) {
-      this.menuToggle.classList.remove('uq-header__toggle-menu-button--is-open');
+      this.menuToggle.classList.remove(
+        "uq-header__toggle-menu-button--is-open",
+      );
     }
-    
+
     // Remove scroll lock from body
-    document.body.classList.remove('no-scroll');
+    document.body.classList.remove("no-scroll");
   }
 }

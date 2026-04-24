@@ -1,7 +1,7 @@
 /**
  * @file menuData.js
  * Navigation menu data API for the UQ Header component.
- * 
+ *
  * This module provides UQ organizational navigation defaults that are consumed by:
  * - **Drupal**: Twig templates import and render navigation structure
  * - **React**: Components import for JSX rendering (future implementation)
@@ -12,20 +12,20 @@
  * - `primary-links.json`: UQ primary navigation (Study, Research, Partners, About)
  * - `secondary-links.json`: UQ secondary navigation (News, Events, Give, Contact)
  * - `local-links.example.json`: Example structure for site-specific local navigation
- * 
+ *
  * @example
  * // Import in React component
  * import { primaryLinks, secondaryLinks } from '@uqds/header/src/js/menuData';
- * 
+ *
  * function HeaderNav() {
  *   return <nav>{primaryLinks.map(link => <MegaMenu key={link.title} data={link} />)}</nav>;
  * }
- * 
- * @example  
+ *
+ * @example
  * // Import in Drupal Twig preprocessor
  * const { primaryLinks, secondaryLinks } = require('@uqds/header/src/js/menuData');
  * // Sites provide their own localLinks data
- * 
+ *
  * @example
  * // Import in Storybook story
  * import { primaryLinks, secondaryLinks, localLinksExample } from '@uqds/header/src/js/menuData';

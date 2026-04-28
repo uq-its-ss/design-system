@@ -15,6 +15,29 @@ import {
 } from "@uqds/header/src/js/menuData"; // Import the menu data
 import { HeaderDecorator } from "./headingDecorator";
 
+// Helper to extract all leaf hrefs from localLinks
+function extractLeafHrefs(links) {
+  let hrefs = [];
+  if (!Array.isArray(links)) return hrefs;
+  for (const link of links) {
+    if (link.columns) {
+      for (const column of link.columns) {
+        for (const group of column.groups) {
+          hrefs = hrefs.concat(extractLeafHrefs(group.children));
+        }
+      }
+    } else if (link.children) {
+      hrefs = hrefs.concat(extractLeafHrefs(link.children));
+    } else if (link.href) {
+      hrefs.push(link.href);
+    }
+  }
+  return hrefs;
+}
+
+// Build options for the dropdown (include siteDomain as first option)
+const activeHrefOptions = ["https://uq.edu.au", ...extractLeafHrefs(localLinksExample)];
+
 /**
  * HELPER: Mega Menu Renderer (Desktop)
  * Renders the multi-column dropdowns seen on large screens.
@@ -53,20 +76,19 @@ const renderMegaMenu = (columns, parentTitle) => {
  * HELPER: Recursive Nested Link Renderer (Mobile)
  * It handles the deep hierarchy of the mobile slide-out menu.
  */
-const renderNestedLinks = (children, isRoot = false) => {
+const renderNestedLinks = (children, activeHref, isRoot = false) => {
   if (!children || children.length === 0) {
     return "";
   }
 
   return children
     .map((child) => {
-      // Check if the current child itself has nested children (e.g., third level)
-      // If an item has children, it becomes a toggle for the next menu level
       const hasGrandchildren = child.children && child.children.length > 0;
-
+      // Only leaf links (no grandchildren) can be active
+      const isActive = !hasGrandchildren && child.href === activeHref;
       let linkContent = `
         <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
-          <a href="${child.href}" class="${hasGrandchildren ? "uq-header__nav-mobile-audience-link slide-menu__control" : "uq-header__nav-mobile-link"}">${child.title}</a>
+          <a href="${child.href}" class="${hasGrandchildren ? "uq-header__nav-mobile-audience-link slide-menu__control" : `uq-header__nav-mobile-link${isActive ? ' is-active' : ''}`}">${child.title}</a>
           ${
             hasGrandchildren
               ? `
@@ -74,14 +96,13 @@ const renderNestedLinks = (children, isRoot = false) => {
               <li class="uq-header__nav-mobile-item">
                 <a class="uq-header__nav-mobile-audience-link" href="${child.href}">${child.title}</a>
               </li>
-              ${renderNestedLinks(child.children)}
+              ${renderNestedLinks(child.children, activeHref)}
             </ul>
             `
               : ""
           }
         </li>
       `;
-
       return linkContent;
     })
     .join("");
@@ -91,14 +112,18 @@ const renderNestedLinks = (children, isRoot = false) => {
  * HELPER: Mobile Navigation Root
  * Entry point for building the mobile menu structure.
  */
-const renderMobileNav = (links) => {
+const renderMobileNav = (links, activeHref) => {
   return links
     .map(
-      (link) => `
+      (link) => {
+        const hasColumns = !!link.columns;
+        // Only leaf links (no columns) can be active
+        const isActive = !hasColumns && link.href === activeHref;
+        return `
       <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
-        <a href="${link.href}" class="${link.columns ? "uq-header__nav-mobile-audience-link slide-menu__control" : "uq-header__nav-mobile-link"}">${link.title}</a>
+        <a href="${link.href}" class="${hasColumns ? "uq-header__nav-mobile-audience-link slide-menu__control" : `uq-header__nav-mobile-link${isActive ? ' is-active' : ''}`}">${link.title}</a>
         ${
-          link.columns
+          hasColumns
             ? `
           <ul class="uq-header__nav-mobile-list">
             <li class="uq-header__nav-mobile-item">
@@ -108,11 +133,8 @@ const renderMobileNav = (links) => {
               .map((column) =>
                 column.groups
                   .map(
-                    (
-                      group, // Iterate over groups in the column
-                    ) =>
-                      // Use the recursive helper to render all nested children
-                      renderNestedLinks(group.children),
+                    (group) =>
+                      renderNestedLinks(group.children, activeHref),
                   )
                   .join(""),
               )
@@ -122,7 +144,8 @@ const renderMobileNav = (links) => {
             : ""
         }
       </li>
-    `,
+    `;
+      }
     )
     .join("");
 };
@@ -144,16 +167,31 @@ export default {
   // ArgTypes define the controls for your component's properties (args)
   argTypes: {
     siteName: {
-      name: "Site Name (for mobile)",
+      name: "Site Name",
       control: "text",
       description:
-        "The title displayed in the mobile menu when not on the global homepage.",
+        "The title displayed for the current site link in NAVIGATION LOCAL (Mobile) .",
+      table: {
+        category: "Demo Controls",
+      },
     },
     siteDomain: {
-      name: "Site Domain (for search)",
+      name: "Site Domain",
       control: "text",
       description:
-        "The domain used for site search when not on the global homepage.",
+        "The href for current site link in NAVIGATION LOCAL (Mobile) and sets the SEARCH input scope.",
+      table: {
+        category: "Demo Controls",
+      },
+    },
+    activeHref: {
+      name: "Active Link (mobile)",
+      control: { type: "select" },
+      options: activeHrefOptions,
+      description: "The href of the NAVIGATION LOCAL (Mobile) link to highlight as active (leaf links only).",
+      table: {
+        category: "Demo Controls",
+      },
     },
     showGlobalHeader: {
       name: "Show Global Header (Mega Menu)",
@@ -174,6 +212,7 @@ export default {
         "JSON object for the main navigation items and their mega menu structure.",
       table: {
         category: "navigation Links",
+        disable: true,
       },
     },
     primaryLinks: {
@@ -183,6 +222,7 @@ export default {
         "JSON object for the main navigation items and their mega menu structure.",
       table: {
         category: "navigation Links",
+        disable: true,
       },
     },
     secondaryLinks: {
@@ -191,6 +231,7 @@ export default {
       description: "JSON object for the secondary header links.",
       table: {
         category: "navigation Links",
+        disable: true,
       },
     },
   },
@@ -214,6 +255,7 @@ const headerRenderer = ({
   localLinks,
   primaryLinks,
   secondaryLinks,
+  activeHref,
 }) => `
 <!-- HEADER WRAPPER -->
 <header class="uq-header" data-gtm-category="Header">
@@ -291,10 +333,10 @@ const headerRenderer = ({
           <a class="uq-header__nav-mobile-home" href="https://uq.edu.au">UQ home</a>
         </li>
         <li class="uq-header__nav-mobile-item">
-            <a class="uq-header__nav-mobile-link is-active" href="${siteDomain}">${siteName}</a>
+            <a class="uq-header__nav-mobile-link${siteDomain === activeHref ? ' is-active' : ''}" href="${siteDomain}">${siteName}</a>
         </li>
         <!-- Hook for the recursive menu file above -->
-        ${renderMobileNav(localLinks)}
+        ${renderMobileNav(localLinks, activeHref)}
         `
         : ""
     }
@@ -359,18 +401,16 @@ const headerRenderer = ({
 // CSF 3.0 Stories: Exported Objects
 
 export const Default = {
-  // The 'render' property replaces the Template.bind({}); pattern
   render: headerRenderer,
-
-  // The 'args' property replaces Default.args = { ... }
   args: {
     showGlobalHeader: true,
     showLocalMobile: true,
     siteDomain: "https://uq.edu.au",
     siteName: "Your Site Name",
-    localLinks: localLinksExample, // Use example navigation data
-    primaryLinks: primaryLinks, // Use imported data
-    secondaryLinks: secondaryLinks, // Use imported data
+    localLinks: localLinksExample,
+    primaryLinks: primaryLinks,
+    secondaryLinks: secondaryLinks,
+    activeHref: "https://uq.edu.au", // Default active link
   },
 };
 

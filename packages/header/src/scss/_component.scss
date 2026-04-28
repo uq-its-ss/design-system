@@ -782,12 +782,12 @@ body.no-scroll {
   /* Active state Calc function needs a global variable to allow targeting of active subitems */
   .is-active {
     border-left: 6px solid core.$purple-500;
-    padding-left: calc(core.$space-l - 6px);
+    padding-left: calc(core.$space-xxl - 6px);
     background-color: core.$grey-50;
   }
 
   ul ul .is-active {
-    padding-left: calc(2.25rem - 6px);
+    padding-left: calc(core.$space-xxl - 6px);
   }
 
   .uq-header__nav-mobile-audience-link {

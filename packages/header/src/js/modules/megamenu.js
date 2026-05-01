@@ -13,6 +13,7 @@ export class MegaMenuModule {
   constructor(header) {
     this.header = header;
     this.triggers = [];
+    this.lastInteractionType = null; // Track if last interaction was mouse or keyboard
     this.init();
   }
 
@@ -43,6 +44,7 @@ export class MegaMenuModule {
       // Click handler
       trigger.addEventListener("click", (e) => {
         e.preventDefault();
+        this.lastInteractionType = "mouse";
         this.toggleMenu(trigger);
       });
 
@@ -50,9 +52,11 @@ export class MegaMenuModule {
       trigger.addEventListener("keydown", (e) => {
         if (e.key === "Enter" || e.key === " ") {
           e.preventDefault();
+          this.lastInteractionType = "keyboard";
           this.toggleMenu(trigger);
         }
         if (e.key === "Escape") {
+          this.lastInteractionType = "keyboard";
           this.closeMenu(trigger);
           trigger.focus(); // Return focus to trigger
         }
@@ -67,6 +71,7 @@ export class MegaMenuModule {
   initClickOutside() {
     document.addEventListener("click", (e) => {
       if (!this.header.contains(e.target)) {
+        this.lastInteractionType = "mouse";
         this.closeAllMenus();
       }
     });
@@ -104,6 +109,7 @@ export class MegaMenuModule {
   /**
    * Close a specific mega menu
    * Updates ARIA attributes and removes open class
+   * Removes focus if interaction was via mouse
    * @param {HTMLElement} trigger - The menu trigger element
    */
   closeMenu(trigger) {
@@ -111,6 +117,12 @@ export class MegaMenuModule {
     trigger.parentElement.classList.remove(
       "uq-header__nav-primary-item--is-open",
     );
+
+    // Remove focus from trigger if last interaction was via mouse
+    // This prevents the focus/hover state from persisting after closing
+    if (this.lastInteractionType === "mouse") {
+      trigger.blur();
+    }
   }
 
   /**

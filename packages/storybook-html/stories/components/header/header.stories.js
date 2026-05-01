@@ -268,6 +268,61 @@ const headerRenderer = ({
     <!-- TOGGLE MENU (Mobile) -->
     <div class="uq-header__toggle-menu" data-target="global-mobile-nav" data-gtm-category="Primary header">
       <button type="button" class="uq-header__toggle-menu-button slide-menu__control" data-target="global-mobile-nav" data-arg=".is-active" data-action="smartToggle" data-gtm-trigger="click" data-gtm-action="Toggle">Menu</button>
+
+        <!-- NAVIGATION (Mobile) (Slide menu) -->
+        <!-- "uq-header__nav-mobile-local" class is added if showing local site menu -->
+        <nav class="slide-menu uq-header__nav-mobile ${showLocalMobile ? "uq-header__nav-mobile-local" : ""}" id="global-mobile-nav" aria-label="primary navigation mobile">
+          <ul class="uq-header__nav-mobile-list">
+
+              <!-- SCENARIO A: NAVIGATION LOCAL (Mobile) --> 
+          ${
+            showLocalMobile
+              ? `
+              <li class="uq-header__nav-mobile-item">
+                <a class="uq-header__nav-mobile-home" href="https://uq.edu.au">UQ home</a>
+              </li>
+              <li class="uq-header__nav-mobile-item">
+                  <a class="uq-header__nav-mobile-link${siteDomain === activeHref ? " is-active" : ""}" href="${siteDomain}">${siteName}</a>
+              </li>
+              <!-- Hook for the recursive menu file above -->
+              ${renderMobileNav(localLinks, activeHref)}
+              `
+              : ""
+          }
+          
+              <!-- SCENARIO B: NAVIGATION PRIMARY (mobile) (e.g., Homepage or Fallback) -->
+          ${
+            !showLocalMobile
+              ? `
+              <li class="uq-header__nav-mobile-item" data-gtm-category="Secondary header">
+                <a class="uq-header__nav-mobile-primary" href="https://uq.edu.au">UQ home <span class="slide-menu__decorator"> </span></a>
+              </li>
+
+                  <!-- NAVIGATION PRIMARY (Mobile) -->
+              ${primaryLinks
+                .map(
+                  (link) => `
+                  <li class="uq-header__nav-mobile-item" data-gtm-category="Primary header">
+                      <a class="uq-header__nav-mobile-primary" href="${link.href}">${link.title} <span class="slide-menu__decorator"> </span></a>
+                  </li>`,
+                )
+                .join("")}
+
+                  <!-- NAVIGATION SECONDARY (Mobile) -->
+              ${secondaryLinks
+                .map(
+                  (link) => `
+                  <li class="uq-header__nav-mobile-secondary-item" data-gtm-category="Secondary header">
+                      <a class="uq-header__nav-mobile-secondary" href="${link.href}">${link.title}</a>
+                  </li>
+              `,
+                )
+                .join("")}
+              `
+              : ""
+          }
+          </ul>
+        </nav>
     </div>
 
     <!-- LOGO -->
@@ -323,61 +378,6 @@ const headerRenderer = ({
     </div>
 
   </div>
-  
-  <!-- NAVIGATION (Mobile) (Slide menu) -->
-  <!-- "uq-header__nav-mobile-local" class is added if showing local site menu -->
-  <nav class="slide-menu uq-header__nav-mobile ${showLocalMobile ? "uq-header__nav-mobile-local" : ""}" id="global-mobile-nav" aria-label="primary navigation mobile">
-    <ul class="uq-header__nav-mobile-list">
-
-        <!-- SCENARIO A: NAVIGATION LOCAL (Mobile) --> 
-    ${
-      showLocalMobile
-        ? `
-        <li class="uq-header__nav-mobile-item">
-          <a class="uq-header__nav-mobile-home" href="https://uq.edu.au">UQ home</a>
-        </li>
-        <li class="uq-header__nav-mobile-item">
-            <a class="uq-header__nav-mobile-link${siteDomain === activeHref ? " is-active" : ""}" href="${siteDomain}">${siteName}</a>
-        </li>
-        <!-- Hook for the recursive menu file above -->
-        ${renderMobileNav(localLinks, activeHref)}
-        `
-        : ""
-    }
-    
-        <!-- SCENARIO B: NAVIGATION PRIMARY (mobile) (e.g., Homepage or Fallback) -->
-    ${
-      !showLocalMobile
-        ? `
-        <li class="uq-header__nav-mobile-item" data-gtm-category="Secondary header">
-          <a class="uq-header__nav-mobile-primary" href="https://uq.edu.au">UQ home <span class="slide-menu__decorator"> </span></a>
-        </li>
-
-            <!-- NAVIGATION PRIMARY (Mobile) -->
-        ${primaryLinks
-          .map(
-            (link) => `
-            <li class="uq-header__nav-mobile-item" data-gtm-category="Primary header">
-                <a class="uq-header__nav-mobile-primary" href="${link.href}">${link.title} <span class="slide-menu__decorator"> </span></a>
-            </li>`,
-          )
-          .join("")}
-
-            <!-- NAVIGATION SECONDARY (Mobile) -->
-        ${secondaryLinks
-          .map(
-            (link) => `
-            <li class="uq-header__nav-mobile-secondary-item" data-gtm-category="Secondary header">
-                <a class="uq-header__nav-mobile-secondary" href="${link.href}">${link.title}</a>
-            </li>
-        `,
-          )
-          .join("")}
-        `
-        : ""
-    }
-    </ul>
-  </nav>
 
     <!-- NAVIGATION SECONDARY (Desktop) -->
     <div class="uq-header__nav-secondary">

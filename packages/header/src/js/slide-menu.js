@@ -1043,13 +1043,12 @@
           switch (this.options.position) {
             case o.Left:
               Object.assign(this.menuElem.style, {
-                left: 0,
                 right: "auto",
                 transform: "translateX(-100%)",
               });
               break;
             default:
-              Object.assign(this.menuElem.style, { left: "auto", right: 0 });
+              Object.assign(this.menuElem.style, { right: 0 });
           }
           this.menuElem.style.display = "block";
         });

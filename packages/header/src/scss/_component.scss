@@ -608,7 +608,7 @@ body.no-scroll {
   will-change: transform;
   z-index: 1000;
   position: fixed;
-  top: 4.5rem;
+  // top: 4.5rem; removed to pin header to toggle. 
   right: 0;
   overflow-y: auto;
   overflow-x: hidden;

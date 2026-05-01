@@ -36,7 +36,10 @@ function extractLeafHrefs(links) {
 }
 
 // Build options for the dropdown (include siteDomain as first option)
-const activeHrefOptions = ["https://uq.edu.au", ...extractLeafHrefs(localLinksExample)];
+const activeHrefOptions = [
+  "https://uq.edu.au",
+  ...extractLeafHrefs(localLinksExample),
+];
 
 /**
  * HELPER: Mega Menu Renderer (Desktop)
@@ -76,7 +79,7 @@ const renderMegaMenu = (columns, parentTitle) => {
  * HELPER: Recursive Nested Link Renderer (Mobile)
  * It handles the deep hierarchy of the mobile slide-out menu.
  */
-const renderNestedLinks = (children, activeHref, parentPath = '') => {
+const renderNestedLinks = (children, activeHref, parentPath = "") => {
   if (!children || children.length === 0) {
     return "";
   }
@@ -86,10 +89,12 @@ const renderNestedLinks = (children, activeHref, parentPath = '') => {
       const hasGrandchildren = child.children && child.children.length > 0;
       // Only leaf links (no grandchildren) can be active
       const isActive = !hasGrandchildren && child.href === activeHref;
-      const currentPath = parentPath ? `${parentPath} > ${child.title}` : child.title;
+      const currentPath = parentPath
+        ? `${parentPath} > ${child.title}`
+        : child.title;
       let linkContent = `
         <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
-          <a href="${child.href}" class="${hasGrandchildren ? "uq-header__nav-mobile-audience-link slide-menu__control" : `uq-header__nav-mobile-link${isActive ? ' is-active' : ''}`}"${hasGrandchildren ? '' : ` data-gtm-label="${currentPath}"`}>${child.title}</a>
+          <a href="${child.href}" class="${hasGrandchildren ? "uq-header__nav-mobile-audience-link slide-menu__control" : `uq-header__nav-mobile-link${isActive ? " is-active" : ""}`}"${hasGrandchildren ? "" : ` data-gtm-label="${currentPath}"`}>${child.title}</a>
           ${
             hasGrandchildren
               ? `
@@ -115,14 +120,13 @@ const renderNestedLinks = (children, activeHref, parentPath = '') => {
  */
 const renderMobileNav = (links, activeHref) => {
   return links
-    .map(
-      (link) => {
-        const hasColumns = !!link.columns;
-        // Only leaf links (no columns) can be active
-        const isActive = !hasColumns && link.href === activeHref;
-        return `
+    .map((link) => {
+      const hasColumns = !!link.columns;
+      // Only leaf links (no columns) can be active
+      const isActive = !hasColumns && link.href === activeHref;
+      return `
       <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
-        <a href="${link.href}" class="${hasColumns ? "uq-header__nav-mobile-audience-link slide-menu__control" : `uq-header__nav-mobile-link${isActive ? ' is-active' : ''}`}"${hasColumns ? '' : ` data-gtm-label="${link.title}"`}>${link.title}</a>
+        <a href="${link.href}" class="${hasColumns ? "uq-header__nav-mobile-audience-link slide-menu__control" : `uq-header__nav-mobile-link${isActive ? " is-active" : ""}`}"${hasColumns ? "" : ` data-gtm-label="${link.title}"`}>${link.title}</a>
         ${
           hasColumns
             ? `
@@ -133,9 +137,8 @@ const renderMobileNav = (links, activeHref) => {
             ${link.columns // Iterate over columns
               .map((column) =>
                 column.groups
-                  .map(
-                    (group) =>
-                      renderNestedLinks(group.children, activeHref, link.title),
+                  .map((group) =>
+                    renderNestedLinks(group.children, activeHref, link.title),
                   )
                   .join(""),
               )
@@ -146,8 +149,7 @@ const renderMobileNav = (links, activeHref) => {
         }
       </li>
     `;
-      }
-    )
+    })
     .join("");
 };
 
@@ -189,7 +191,8 @@ export default {
       name: "Active Link (mobile)",
       control: { type: "select" },
       options: activeHrefOptions,
-      description: "The href of the NAVIGATION LOCAL (Mobile) link to highlight as active (leaf links only).",
+      description:
+        "The href of the NAVIGATION LOCAL (Mobile) link to highlight as active (leaf links only).",
       table: {
         category: "Demo Controls",
       },
@@ -334,7 +337,7 @@ const headerRenderer = ({
           <a class="uq-header__nav-mobile-home" href="https://uq.edu.au">UQ home</a>
         </li>
         <li class="uq-header__nav-mobile-item">
-            <a class="uq-header__nav-mobile-link${siteDomain === activeHref ? ' is-active' : ''}" href="${siteDomain}">${siteName}</a>
+            <a class="uq-header__nav-mobile-link${siteDomain === activeHref ? " is-active" : ""}" href="${siteDomain}">${siteName}</a>
         </li>
         <!-- Hook for the recursive menu file above -->
         ${renderMobileNav(localLinks, activeHref)}

@@ -76,7 +76,7 @@ const renderMegaMenu = (columns, parentTitle) => {
  * HELPER: Recursive Nested Link Renderer (Mobile)
  * It handles the deep hierarchy of the mobile slide-out menu.
  */
-const renderNestedLinks = (children, activeHref, isRoot = false) => {
+const renderNestedLinks = (children, activeHref, parentPath = '') => {
   if (!children || children.length === 0) {
     return "";
   }
@@ -86,17 +86,18 @@ const renderNestedLinks = (children, activeHref, isRoot = false) => {
       const hasGrandchildren = child.children && child.children.length > 0;
       // Only leaf links (no grandchildren) can be active
       const isActive = !hasGrandchildren && child.href === activeHref;
+      const currentPath = parentPath ? `${parentPath} > ${child.title}` : child.title;
       let linkContent = `
         <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
-          <a href="${child.href}" class="${hasGrandchildren ? "uq-header__nav-mobile-audience-link slide-menu__control" : `uq-header__nav-mobile-link${isActive ? ' is-active' : ''}`}">${child.title}</a>
+          <a href="${child.href}" class="${hasGrandchildren ? "uq-header__nav-mobile-audience-link slide-menu__control" : `uq-header__nav-mobile-link${isActive ? ' is-active' : ''}`}"${hasGrandchildren ? '' : ` data-gtm-label="${currentPath}"`}>${child.title}</a>
           ${
             hasGrandchildren
               ? `
             <ul class="uq-header__nav-mobile-list">
               <li class="uq-header__nav-mobile-item">
-                <a class="uq-header__nav-mobile-audience-link" href="${child.href}">${child.title}</a>
+                <a class="uq-header__nav-mobile-audience-link" href="${child.href}" data-gtm-label="${currentPath}">${child.title}</a>
               </li>
-              ${renderNestedLinks(child.children, activeHref)}
+              ${renderNestedLinks(child.children, activeHref, currentPath)}
             </ul>
             `
               : ""
@@ -121,20 +122,20 @@ const renderMobileNav = (links, activeHref) => {
         const isActive = !hasColumns && link.href === activeHref;
         return `
       <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
-        <a href="${link.href}" class="${hasColumns ? "uq-header__nav-mobile-audience-link slide-menu__control" : `uq-header__nav-mobile-link${isActive ? ' is-active' : ''}`}">${link.title}</a>
+        <a href="${link.href}" class="${hasColumns ? "uq-header__nav-mobile-audience-link slide-menu__control" : `uq-header__nav-mobile-link${isActive ? ' is-active' : ''}`}"${hasColumns ? '' : ` data-gtm-label="${link.title}"`}>${link.title}</a>
         ${
           hasColumns
             ? `
           <ul class="uq-header__nav-mobile-list">
             <li class="uq-header__nav-mobile-item">
-              <a class="uq-header__nav-mobile-link" href="${link.href}">${link.title}</a>
+              <a class="uq-header__nav-mobile-link" href="${link.href}" data-gtm-label="${link.title}">${link.title}</a>
             </li>
             ${link.columns // Iterate over columns
               .map((column) =>
                 column.groups
                   .map(
                     (group) =>
-                      renderNestedLinks(group.children, activeHref),
+                      renderNestedLinks(group.children, activeHref, link.title),
                   )
                   .join(""),
               )
@@ -380,7 +381,7 @@ const headerRenderer = ({
         <nav class="uq-header__nav-secondary-container">
         <ul class="uq-header__nav-secondary-list">
             <li class="uq-header__nav-secondary-item" data-gtm-category="Secondary header">
-              <a class="uq-header__nav-secondary-link gtm-processed" href="https://www.uq.edu.au">UQ home</a>
+              <a class="uq-header__nav-secondary-link" href="https://www.uq.edu.au">UQ home</a>
             </li>
             ${secondaryLinks
               .map(

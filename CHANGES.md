@@ -9,18 +9,22 @@ This document outlines the comprehensive changes made to the UQ Header component
 ## 🎯 Mega Menu Focus State Fix (1 May 2026)
 
 ### Issue
+
 When clicking a mega menu button to close the dropdown, the button element remained in hover/focus state even after the mouse moved away. While this behavior was correct for keyboard navigation (maintaining focus for accessibility), it was incorrect for mouse interactions where the visual hover state should clear when the mouse leaves the element.
 
 ### Solution
+
 Added interaction type tracking to differentiate between mouse and keyboard interactions in `megamenu.js`:
 
 #### Changes Made
 
 1. **Added Interaction Type Tracking**
+
    - New property `lastInteractionType` to track whether user is navigating via `"mouse"` or `"keyboard"`
    - Set on click events, keyboard events, and click-outside events
 
 2. **Smart Focus Management**
+
    - **Mouse interactions**: Call `.blur()` on trigger element when closing menu (removes persistent focus/hover state)
    - **Keyboard interactions**: Maintain focus on trigger element (preserves focus indicator for accessibility)
    - **Escape key**: Explicitly maintains focus for keyboard users
@@ -32,9 +36,11 @@ Added interaction type tracking to differentiate between mouse and keyboard inte
    - `closeMenu()`: Conditionally blur element based on interaction type
 
 ### Files Modified
+
 - `packages/header/src/js/modules/megamenu.js`
 
 ### Impact
+
 ✅ **Improved UX** - Mouse users no longer see persistent hover state after closing menus  
 ✅ **Maintains Accessibility** - Keyboard navigation still shows proper focus indicators (WCAG 2.1 compliant)  
 ✅ **Better User Perception** - Visual feedback now matches user's interaction method

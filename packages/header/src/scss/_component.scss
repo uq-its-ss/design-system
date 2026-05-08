@@ -628,7 +628,7 @@ body.no-scroll {
     will-change: transform;
   }
 
-  ul {
+  & .uq-header__nav-mobile-list {
     position: relative;
     width: 100%;
     margin: 0;
@@ -637,7 +637,7 @@ body.no-scroll {
     background-color: core.$white;
 
     /* positions the submenus */
-    ul {
+    & .uq-header__nav-mobile-list {
       position: absolute;
       top: 0;
       left: 100%;
@@ -645,12 +645,17 @@ body.no-scroll {
     }
   }
 
-  li {
+  
+  & .uq-header__nav-mobile-item, & .uq-header__nav-mobile-secondary-item {
     margin-bottom: 0;
   }
 
   /* Menu links */
-  a {
+  & .uq-header__nav-mobile-home,
+  & .uq-header__nav-mobile-primary, 
+  & .uq-header__nav-mobile-secondary,
+  & .uq-header__nav-mobile-audience-link,
+  & .uq-header__nav-mobile-link {
     display: block;
     cursor: pointer;
     padding: core.$space-m core.$space-xxl;
@@ -667,7 +672,7 @@ body.no-scroll {
   }
 
   /* returns the padding for Parent page link */
-  ul li:nth-of-type(2) a {
+  & .uq-header__nav-mobile-list .uq-header__nav-mobile-item:nth-of-type(2) a {
     padding-left: core.$space-l;
 
     &.is-active {

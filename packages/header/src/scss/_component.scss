@@ -645,14 +645,14 @@ body.no-scroll {
     }
   }
 
-  
-  & .uq-header__nav-mobile-item, & .uq-header__nav-mobile-secondary-item {
+  & .uq-header__nav-mobile-item,
+  & .uq-header__nav-mobile-secondary-item {
     margin-bottom: 0;
   }
 
   /* Menu links */
   & .uq-header__nav-mobile-home,
-  & .uq-header__nav-mobile-primary, 
+  & .uq-header__nav-mobile-primary,
   & .uq-header__nav-mobile-secondary,
   & .uq-header__nav-mobile-audience-link,
   & .uq-header__nav-mobile-link {

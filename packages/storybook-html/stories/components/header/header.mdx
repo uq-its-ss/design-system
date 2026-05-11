@@ -110,6 +110,69 @@ When full header implementation is not possible, use the simplified header with 
 
 <Canvas of={HeaderStories.basicHeader} />
 
+## Analytics overview
+
+The header component implements comprehensive Google Tag Manager (GTM) tracking across all interactive elements. Analytics attributes follow a hierarchical structure where child elements inherit the category from their parent container.
+
+**Global tracking:**
+
+**Header container (`data-gtm-category`: "Header"):**
+
+<table>
+  <thead>
+    <tr>
+      <th>Property / DOM Target</th>
+      <th>Type</th>
+      <th>Value</th>
+      <th>Description & Logic</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>`data-gtm-category` on `<header class="uq-header">`</td>
+      <td>String</td>
+      <td>`"Header"`</td>
+      <td>Defines the top-level tracking category for the entire header component.</td>
+    </tr>
+  </tbody>
+</table>
+
+**Logo (`data-gtm-category`: "Primary header"):**
+
+<table>
+  <thead>
+    <tr>
+      <th>Property / DOM Target</th>
+      <th>Type</th>
+      <th>Value</th>
+      <th>Description & Logic</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>`data-gtm-category` on `<div class="uq-header__logo">`</td>
+      <td>String</td>
+      <td>`"Primary header"`</td>
+      <td>Defines the tracking category for the logo section.</td>
+    </tr>
+    <tr>
+      <td>`data-gtm-label` on `<a class="uq-header__logo-link">`</td>
+      <td>String</td>
+      <td>`"UQ Logo"`</td>
+      <td>Identifies the logo link click. Inherits category from parent container.</td>
+    </tr>
+  </tbody>
+</table>
+
+**Implementation notes:**
+
+- When a parent container has `data-gtm-category`, child interactive elements inherit this category unless they specify their own
+- Only leaf elements (actual links/buttons) receive `data-gtm-label` attributes
+- Parent list items (`<li>`) carry the category, child links (`<a>`) carry the label
+- Hierarchical paths use `>` separator: `"Parent > Child"` (e.g., `"Study > Find a course"`)
+
+_Specific analytics tracking for each component is documented in the relevant sections below._
+
 ## Key parts
 
 ### Mega menu
@@ -140,6 +203,64 @@ Displays comprehensive sub-navigation options in an organized, multi-column layo
 - `role="button"` on menu triggers for proper semantics
 - Keyboard navigation follows logical, sequential focus order
 - Screen readers announce menu states and hierarchical relationships
+
+**Analytics tracking:**
+
+The mega menu implements hierarchical analytics tracking with the following attributes:
+
+**Primary navigation trigger (`data-gtm-category`: "Primary header"):**
+
+<table>
+  <thead>
+    <tr>
+      <th>Property / DOM Target</th>
+      <th>Type</th>
+      <th>Value</th>
+      <th>Description & Logic</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>`data-gtm-category` on `<nav class="uq-header__nav-primary">`</td>
+      <td>String</td>
+      <td>`"Primary header"`</td>
+      <td>Defines the tracking category for the entire primary navigation section.</td>
+    </tr>
+    <tr>
+      <td>`data-gtm-label` on `<a class="uq-header__nav-primary-link">`</td>
+      <td>String</td>
+      <td>Dynamic: Top-level link title (Example: `"Study"`, `"Research"`, `"Partners and community"`, `"About"`)</td>
+      <td>Identifies the primary navigation link clicked. Inherits category from parent.</td>
+    </tr>
+  </tbody>
+</table>
+
+**Mega menu dropdown links (`data-gtm-category`: "Main navigation"):**
+
+<table>
+  <thead>
+    <tr>
+      <th>Property / DOM Target</th>
+      <th>Type</th>
+      <th>Value</th>
+      <th>Description & Logic</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>`data-gtm-category` on `<li class="uq-header__megamenu-item">`</td>
+      <td>String</td>
+      <td>`"Main navigation"`</td>
+      <td>Defines the tracking category for mega menu items. Applied to parent `<li>` elements.</td>
+    </tr>
+    <tr>
+      <td>`data-gtm-label` on `<a class="uq-header__megamenu-link">`</td>
+      <td>String</td>
+      <td>Dynamic: `[Parent Menu] > [Link Title]` (Example: `"Study > Find a course or program"`, `"Study > Study"` for overview links)</td>
+      <td>Identifies the specific mega menu link clicked. Inherits category from parent. Shows hierarchical path from parent menu.</td>
+    </tr>
+  </tbody>
+</table>
 
 ### Mobile menu
 
@@ -178,6 +299,70 @@ Delivers an intuitive, hierarchical navigation experience on mobile devices with
 - Sticky hover states are neutralized using `@media (hover: none)`
 - Prevents visual artifacts when tapping menu items
 
+**Analytics tracking:**
+
+The mobile menu supports multiple tracking scenarios based on navigation type:
+
+**Mobile menu toggle (`data-gtm-category`: "Primary header"):**
+
+<table>
+  <thead>
+    <tr>
+      <th>Property / DOM Target</th>
+      <th>Type</th>
+      <th>Value</th>
+      <th>Description & Logic</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>`data-gtm-category` on `<div class="uq-header__toggle-menu">`</td>
+      <td>String</td>
+      <td>`"Primary header"`</td>
+      <td>Defines the tracking category for the mobile menu toggle container.</td>
+    </tr>
+    <tr>
+      <td>`data-gtm-trigger` on `<button class="uq-header__toggle-menu-button">`</td>
+      <td>String</td>
+      <td>`"click"`</td>
+      <td>Specifies the event type that triggers tracking.</td>
+    </tr>
+    <tr>
+      <td>`data-gtm-action` on `<button class="uq-header__toggle-menu-button">`</td>
+      <td>String</td>
+      <td>`"Toggle"`</td>
+      <td>Describes the action performed when the button is clicked.</td>
+    </tr>
+  </tbody>
+</table>
+
+**Mobile navigation items (`data-gtm-category`: varies by scenario):**
+
+<table>
+  <thead>
+    <tr>
+      <th>Property / DOM Target</th>
+      <th>Type</th>
+      <th>Value</th>
+      <th>Description & Logic</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>`data-gtm-category` on `<li class="uq-header__nav-mobile-item">`</td>
+      <td>String</td>
+      <td>`"Main navigation"`, `"Primary header"`, or `"Secondary header"`</td>
+      <td>Defines the tracking category for each navigation item. Applied to parent `<li>` elements. Value varies by scenario: `"Main navigation"` for local nav, `"Primary header"` for primary nav, `"Secondary header"` for secondary nav.</td>
+    </tr>
+    <tr>
+      <td>`data-gtm-label` on child `<a>`</td>
+      <td>String</td>
+      <td>Dynamic: `[Parent Menu] > [Child Link]` (Example: `"Study > Browse study areas"` for nested links, or `"Study"` for top-level links)</td>
+      <td>Identifies the specific link clicked. Inherits category from parent. Follows hierarchical structure for nested links.</td>
+    </tr>
+  </tbody>
+</table>
+
 ### Search
 
 The search component provides access to UQ-wide search functionality.
@@ -202,6 +387,65 @@ Allows users to search across UQ websites using [UQ Search](https://search.uq.ed
 - Closed: Search panel hidden above the header
 - Open: Search panel slides into view below the header navigation
 
+**Analytics tracking:**
+
+The search component tracks both toggle interactions and search submissions:
+
+<table>
+  <thead>
+    <tr>
+      <th>Property / DOM Target</th>
+      <th>Type</th>
+      <th>Value</th>
+      <th>Description & Logic</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>`data-gtm-category` on `<div class="uq-header__toggle-search">`</td>
+      <td>String</td>
+      <td>`"Search"`</td>
+      <td>Defines the tracking category for the search toggle container.</td>
+    </tr>
+    <tr>
+      <td>`data-gtm-action` on `<button class="uq-header__toggle-search-button">`</td>
+      <td>String</td>
+      <td>`"Toggle"`</td>
+      <td>Describes the action performed when the search toggle is clicked.</td>
+    </tr>
+    <tr>
+      <td>`data-gtm-category` on `<div class="uq-header__search">`</td>
+      <td>String</td>
+      <td>`"Search"`</td>
+      <td>Defines the tracking category for the search form container.</td>
+    </tr>
+    <tr>
+      <td>`data-gtm-action` on `<form class="uq-header__search-form">`</td>
+      <td>String</td>
+      <td>`"Text search"`</td>
+      <td>Describes the search action type.</td>
+    </tr>
+    <tr>
+      <td>`data-gtm-form-action` on `<form class="uq-header__search-form">`</td>
+      <td>String</td>
+      <td>`""` (empty string)</td>
+      <td>Indicates this is a form submission event (value is empty string, presence is what matters).</td>
+    </tr>
+    <tr>
+      <td>`data-gtm-form-search` on `<input class="uq-header__search-input">`</td>
+      <td>String</td>
+      <td>`""` (empty string - attribute presence is what matters)</td>
+      <td>Marks the search input field for tracking search queries. Attribute presence indicates this input should be tracked.</td>
+    </tr>
+    <tr>
+      <td>`data-gtm-trigger` on `<button class="uq-header__search-button">`</td>
+      <td>String</td>
+      <td>`"click"`</td>
+      <td>Specifies the event type that triggers search tracking.</td>
+    </tr>
+  </tbody>
+</table>
+
 ### Secondary navigation
 
 The secondary section provides quick access to important UQ-wide resources.
@@ -222,18 +466,32 @@ Offers consistent access to high-priority UQ links across all sites.
 - Visible on desktop (1024px and above)
 - Integrated into the mobile slide menu on mobile devices
 
-## Analytics
+**Analytics tracking:**
 
-The header includes data attributes for analytics tracking:
-
-- `data-gtm="header-logo"` — UQ logo link
-- `data-gtm="header-primary-nav"` — Primary navigation items
-- `data-gtm="header-secondary-nav"` — Secondary navigation items
-- `data-gtm="header-search-toggle"` — Search toggle button
-- `data-gtm="header-menu-toggle"` — Mobile menu toggle button
-- `data-gtm="header-megamenu"` — Mega menu interactions
-
-_Note: Specific analytics implementation may vary by site. Consult your analytics team for tracking requirements._
+<table>
+  <thead>
+    <tr>
+      <th>Property / DOM Target</th>
+      <th>Type</th>
+      <th>Value</th>
+      <th>Description & Logic</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>`data-gtm-category` on `<li class="uq-header__nav-secondary-item">`</td>
+      <td>String</td>
+      <td>`"Secondary header"`</td>
+      <td>Defines the tracking category for secondary navigation items. Applied to parent `<li>` elements.</td>
+    </tr>
+    <tr>
+      <td>`data-gtm-label` on `<a class="uq-header__nav-secondary-link">`</td>
+      <td>String</td>
+      <td>Dynamic: Link title (Example: `"News"`, `"Events"`, `"Give"`, `"Contact"`)</td>
+      <td>Identifies the secondary navigation link clicked. Inherits category from parent.</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Accessibility
 
@@ -312,13 +570,3 @@ The header adapts to different screen sizes with a breakpoint at **1024px**.
 - **Efficient event handling** — Uses `matchMedia` API instead of resize events for breakpoint detection
 - **Modular architecture** — Clean separation of concerns for better maintainability
 - **Lazy initialization** — Components only initialize when elements are present
-
-## Browser support
-
-The header is tested and supported in:
-
-- Modern browsers (Chrome, Firefox, Safari, Edge — latest 2 versions)
-- Mobile Safari (iOS 13+)
-- Chrome for Android (latest)
-
-Progressive enhancement ensures basic navigation remains functional in older browsers.

@@ -16,6 +16,11 @@ const scssPaths = ["../../node_modules", "node_modules", "node_modules/@uqds"];
 
 // Build and export SCSS
 function compileSCSS() {
+  if (!fs.existsSync(`${process.cwd()}/src/scss/main.scss`)) {
+    return new Promise((resolve) => {
+      resolve();
+    });
+  }
   return src("./src/scss/**/*.scss")
     .pipe(
       sass({

@@ -6,6 +6,7 @@ import { UqPane } from "./components/UqPane/UqPane";
 import { UqStoryCard } from "./components/UqStoryCard/UqStoryCard";
 import { UqPagination } from "./components/UqPagination/UqPagination";
 import { UqPaginationItem } from "./components/UqPagination/UqPaginationItem";
+import "./global.scss";
 
 export {
   UqContainer,

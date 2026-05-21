@@ -9,6 +9,10 @@ module.exports = {
     "at-rule-no-unknown": null,
     "scss/at-rule-no-unknown": true,
 
+    "selector-pseudo-class-no-unknown": [
+      true,
+      { ignorePseudoClasses: ["global", "local"] },
+    ],
     "selector-class-pattern": null,
     "no-descending-specificity": null,
     "shorthand-property-no-redundant-values": null,

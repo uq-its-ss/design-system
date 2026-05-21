@@ -3,6 +3,32 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.11](https://github.com/uq-its-ss/design-system/compare/uqds-builder@4.0.11-alpha.1...uqds-builder@4.0.11) (2026-03-30)
+
+**Note:** Version bump only for package uqds-builder
+
+## [4.0.11-alpha.1](https://github.com/uq-its-ss/design-system/compare/uqds-builder@4.0.11-alpha.0...uqds-builder@4.0.11-alpha.1) (2026-03-23)
+
+**Note:** Version bump only for package uqds-builder
+
+## [4.0.11-alpha.0](https://github.com/uq-its-ss/design-system/compare/uqds-builder@4.0.10...uqds-builder@4.0.11-alpha.0) (2026-03-20)
+
+**Note:** Version bump only for package uqds-builder
+
+## [4.0.10](https://github.com/uq-its-ss/design-system/compare/uqds-builder@4.0.10-alpha.1...uqds-builder@4.0.10) (2026-03-18)
+
+**Note:** Version bump only for package uqds-builder
+
+## [4.0.10-alpha.1](https://github.com/uq-its-ss/design-system/compare/uqds-builder@4.0.10-alpha.0...uqds-builder@4.0.10-alpha.1) (2026-03-13)
+
+### Bug Fixes
+
+- removed old grid reference ([fcba683](https://github.com/uq-its-ss/design-system/commit/fcba6836e0965c3865bf7dac994b385082526f8f))
+
+## [4.0.10-alpha.0](https://github.com/uq-its-ss/design-system/compare/uqds-builder@4.0.9...uqds-builder@4.0.10-alpha.0) (2026-03-10)
+
+**Note:** Version bump only for package uqds-builder
+
 ## [4.0.9](https://github.com/uq-its-ss/design-system/compare/uqds-builder@4.0.9-alpha.0...uqds-builder@4.0.9) (2026-02-25)
 
 **Note:** Version bump only for package uqds-builder

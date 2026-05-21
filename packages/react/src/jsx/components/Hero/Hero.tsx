@@ -40,7 +40,9 @@ export const Hero: FC<HeroProps> = ({
         <div className={styles["uq-hero-basic__content"]}>
           <h1 className={styles["uq-hero-basic__title"]}>
             {eyebrow && (
-              <span className={styles["uq-hero-basic__eyebrow"]}>{eyebrow}</span>
+              <span className={styles["uq-hero-basic__eyebrow"]}>
+                {eyebrow}
+              </span>
             )}
             {title}
           </h1>

@@ -27,7 +27,9 @@ export const UqPane: FC<UqPaneProps> = ({
     <div className={styles["uq-pane__content"]}>
       {icon && <div className={styles["uq-pane__icon"]}>{icon}</div>}
       <h3 className={styles["uq-pane__title"]}>{title}</h3>
-      {description && <div className={styles["uq-pane__description"]}>{description}</div>}
+      {description && (
+        <div className={styles["uq-pane__description"]}>{description}</div>
+      )}
       {links && <div className={styles["uq-pane__actions"]}>{links}</div>}
     </div>
   </div>

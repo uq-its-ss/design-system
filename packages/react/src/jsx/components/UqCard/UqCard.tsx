@@ -25,7 +25,9 @@ export const UqCard: FC<UqCardProps> = ({
     <div className={styles["uq-card__content"]}>
       {icon && <div className={styles["uq-card__icon"]}>{icon}</div>}
       <h3 className={styles["uq-card__title"]}>{title}</h3>
-      {description && <div className={styles["uq-card__description"]}>{description}</div>}
+      {description && (
+        <div className={styles["uq-card__description"]}>{description}</div>
+      )}
     </div>
   </div>
 );

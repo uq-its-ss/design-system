@@ -35,7 +35,7 @@ For modern React apps with bundlers that support CSS Modules (Vite, Webpack, etc
 1. Import the CSS in a top-level file, such as `App.tsx`:
 
    ```tsx
-   import '@uqds/react/css';
+   import "@uqds/react/css";
    ```
 
 2. Import and use components:
@@ -54,15 +54,15 @@ For environments that require global CSS class names (e.g., Drupal with mixed Re
 1. Import the plain CSS:
 
    ```tsx
-   import '@uqds/react/plain/css';
+   import "@uqds/react/plain/css";
    ```
 
 2. Import components from the plain build:
 
    ```tsx
-   import { UqCard, UqPane } from '@uqds/react/plain';
+   import { UqCard, UqPane } from "@uqds/react/plain";
 
-   <UqCard title="Example" variant="default" />
+   <UqCard title="Example" variant="default" />;
    ```
 
 **Note:** Both builds compile from the same Style Package SCSS sources (`@uqds/button`, `@uqds/card`, etc.) to ensure visual consistency.

@@ -1,7 +1,7 @@
 import classNames from "classnames";
 import iconCatalog from "@uqds/icon";
+import { initJs } from "../../../lib/initJs";
 import { accordion } from "@uqds/accordion/src/js/main";
-import "@uqds/accordion/src/scss/main.scss";
 
 export default {
   title: "Components/Accordion",
@@ -48,6 +48,12 @@ export default {
     isManual: false,
     accordionCount: 1,
   },
+  decorators: [
+    (storyFn) =>
+      initJs(storyFn, (component) => {
+        new accordion();
+      }),
+  ],
   render: ({
     title,
     titleElement,
@@ -79,9 +85,6 @@ export default {
   ${accordions}
 </${accordionElement !== "div" ? `ul` : `div`}>
 `;
-  },
-  play: () => {
-    new accordion();
   },
 };
 

@@ -2,7 +2,7 @@
 import "./previous-next.scss";
 
 // import HTML template strings
-import previousNextHTML from "./previous-next.html";
+import previousNextHTML from "./previous-next.html?raw";
 
 export default {
   title: "Components/Previous next",

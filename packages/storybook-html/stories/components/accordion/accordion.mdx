@@ -1,4 +1,4 @@
-import { Meta, Source, Canvas } from "@storybook/blocks";
+import { Meta, Canvas, Controls } from "@storybook/addon-docs/blocks";
 import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
 import * as AccordionStories from "./accordion.stories";
 
@@ -6,37 +6,21 @@ import * as AccordionStories from "./accordion.stories";
 
 # Accordion
 
-<StatusBadge.Stable />
-
-<StatusBadge.StableDoc />
-
-<a href="https://github.com/uq-its-ss/design-system/issues" target="_blank">
-  Check for open issues
-</a>
+<StatusBadge.Stable /> <StatusBadge.StableDoc /> [Check for open
+issues](https://github.com/uq-its-ss/design-system/issues)
 
 ## Overview
 
 An accordion is a vertically stacked group of titles that can expand to show, or collapse to hide associated content.
-
-### How-to
-
-Follow the markup example below, and then initialise all accordions on the page using:
-
-```js
-new uq.accordion();
-```
 
 <Canvas
   of={AccordionStories.Accordion}
   story={{
     autoplay: true,
   }}
-  sourceState="none"
 />
 
-<Source of={AccordionStories.Accordion} />
-
-## Variants
+<Controls of={AccordionStories.Accordion} />
 
 ### Subtitle
 
@@ -47,11 +31,7 @@ The subtitle allows for a secondary context. Typically the primary title should 
   story={{
     autoplay: true,
   }}
-  withToolbar={true}
-  sourceState="none"
 />
-
-<Source of={AccordionStories.HasSubtitle} />
 
 ### Using lists
 
@@ -63,11 +43,7 @@ Use lists if there is less content and when the semantics of a list serves bette
   story={{
     autoplay: true,
   }}
-  withToolbar={true}
-  sourceState="none"
 />
-
-<Source of={AccordionStories.UsingLists} />
 
 ### Using heading tags
 
@@ -78,11 +54,7 @@ The title can be wrapped in a `h2`, `h3`, `h4` or `h5` tag when semantics requir
   story={{
     autoplay: true,
   }}
-  withToolbar={true}
-  sourceState="none"
 />
-
-<Source of={AccordionStories.WithHeadings} />
 
 ### With icon
 
@@ -93,11 +65,7 @@ The accordion button can include an icon within the `.uq-accordion__icon` elemen
   story={{
     autoplay: true,
   }}
-  withToolbar={true}
-  sourceState="none"
 />
-
-<Source of={AccordionStories.WithIcon} />
 
 ### Compact
 
@@ -108,11 +76,17 @@ A smaller more compact version. Used as a support class for more complex interfa
   story={{
     autoplay: true,
   }}
-  withToolbar={true}
-  sourceState="none"
 />
 
-<Source of={AccordionStories.Compact} />
+## How and when to use
+
+Follow the markup examples above, and then initialise all accordions on the page using:
+
+```js
+new uq.accordion();
+```
+
+Accordions are suitable when users only need to view a few key pieces of content on a page. By hiding most of the content, users can focus on the few topics that are relevant to them.
 
 ## Behaviour
 
@@ -120,7 +94,7 @@ The accordion expand and collpase behaviour can either be automatic or manual.
 
 ### Automatic behaviour
 
-By default, users can expand and collapse one accordion at a time. When a user expands one accordion then clicks on another, the previously expanded accordion collapses automatically. This is useful if users only need to view the contents of one accordion at a time. Examples of this default behaviour are shown in the accordions above using `<div>` or `<ul>`.
+By default, users can expand and collapse one accordion at a time. When a user expands one accordion then clicks on another, the previously expanded accordion collapses automatically. This is useful if users only need to view the contents of one accordion at a time. Examples of this default behaviour are shown in the accordions above using `<ul>`.
 
 ### Manual Behaviour
 
@@ -131,15 +105,7 @@ Alternate behaviour is to allow users to expand and collapse any number of accor
   story={{
     autoplay: true,
   }}
-  withToolbar={true}
-  sourceState="none"
 />
-
-<Source of={AccordionStories.Manual} />
-
-## How and when to use
-
-Accordions are suitable when users only need to view a few key pieces of content on a page. By hiding most of the content, users can focus on the few topics that are relevant to them.
 
 ## Accessibility
 

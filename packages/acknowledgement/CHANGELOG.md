@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.4](https://github.com/uq-its-ss/design-system/compare/@uqds/acknowledgement@0.1.4-alpha.0...@uqds/acknowledgement@0.1.4) (2026-03-30)
+
+**Note:** Version bump only for package @uqds/acknowledgement
+
+## [0.1.4-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/acknowledgement@0.1.3...@uqds/acknowledgement@0.1.4-alpha.0) (2026-03-23)
+
+**Note:** Version bump only for package @uqds/acknowledgement
+
+## [0.1.3](https://github.com/uq-its-ss/design-system/compare/@uqds/acknowledgement@0.1.3-alpha.0...@uqds/acknowledgement@0.1.3) (2026-03-18)
+
+**Note:** Version bump only for package @uqds/acknowledgement
+
+## [0.1.3-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/acknowledgement@0.1.2...@uqds/acknowledgement@0.1.3-alpha.0) (2026-03-13)
+
+**Note:** Version bump only for package @uqds/acknowledgement
+
+## [0.1.2](https://github.com/uq-its-ss/design-system/compare/@uqds/acknowledgement@0.1.2-alpha.0...@uqds/acknowledgement@0.1.2) (2025-11-06)
+
+**Note:** Version bump only for package @uqds/acknowledgement
+
 ## [0.1.2-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/acknowledgement@0.1.1...@uqds/acknowledgement@0.1.2-alpha.0) (2025-10-31)
 
 **Note:** Version bump only for package @uqds/acknowledgement

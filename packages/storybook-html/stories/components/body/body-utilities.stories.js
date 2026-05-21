@@ -182,7 +182,7 @@ export const backgroundColourUtils = {
 };
 
 export const visibilityUtils = {
-  render: () => `
+  render: () => ` 
     <div class="text--xl">
       <div>.hidden <span class="hidden">🕺</span></div>
       <div>.hidden--mobile-only <span class="hidden--mobile-only">🕺</span></div>
@@ -193,4 +193,23 @@ export const visibilityUtils = {
   `,
 
   name: "Visibility",
+};
+
+export const skipLinks = {
+  name: "Skip links",
+  parameters: {
+    docs: {
+      source: {
+        code: `<a href="#uq-header" class="visually-hidden focusable">Skip to header</a>
+    <a href="#uq-main" class="visually-hidden focusable">Skip to content</a>
+    <a href="#uq-footer" class="visually-hidden focusable">Skip to footer</a>`,
+      },
+    },
+  },
+  render: () => ` 
+    <a href="#uq-header" class="visually-hidden focusable">Skip to header</a>
+    <a href="#uq-main" class="visually-hidden focusable">Skip to content</a>
+    <a href="#uq-footer" class="visually-hidden focusable">Skip to footer</a>
+    <div>Tab to skip links to make them visible</div>
+  `,
 };

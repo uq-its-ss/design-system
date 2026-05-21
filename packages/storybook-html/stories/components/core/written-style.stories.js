@@ -1,5 +1,5 @@
 // import HTML template strings
-import WrittenStyleHTML from "./written-style.html";
+import WrittenStyleHTML from "./written-style.html?raw";
 
 export default {
   title: "Core/Standards/Written style guide",

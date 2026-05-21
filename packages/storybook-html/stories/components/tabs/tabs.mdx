@@ -1,4 +1,4 @@
-import { Meta, Story, Canvas } from "@storybook/blocks";
+import { Meta, Canvas, Controls } from "@storybook/addon-docs/blocks";
 import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
 import * as TabsStories from "./tabs.stories";
 
@@ -6,185 +6,81 @@ import * as TabsStories from "./tabs.stories";
 
 # Tabs
 
-<StatusBadge.Review /> <StatusBadge.ReviewDoc /> [Check for open
-issues](https://github.com/uq-its-ss/design-system/issues)
+<StatusBadge.Stable />
+<StatusBadge.StableDoc />
+<a href="https://github.com/uq-its-ss/design-system/issues" target="_blank">
+  Check for open issues
+</a>
 
 ## Overview
 
 Tabs component are tabs that are aligned together which on interaction allow navigation between groups of content that are related and at the same
 hierarchical level.
 
-## Default example
-
-### Default / Outline
+### Outline
 
 <Canvas
-  of={TabsStories.tabsOutline}
+  of={TabsStories.Outline}
   story={{
     autoplay: true,
   }}
 />
 
-```html
-<div id="tabsDefaultExample" class="uq-tabs uq-tabs--outline">
-  <div class="uq-tabs__tab-list-wrapper">
-    <div class="uq-tabs__tab-list" role="tablist" aria-label="Tab List">
-      <button
-        class="uq-tabs__tab uq-tabs__tab--active"
-        role="tab"
-        aria-selected="true"
-        aria-controls="tab1-panel"
-        id="tab1"
-      >
-        Tab 1
-      </button>
-      <button
-        class="uq-tabs__tab"
-        role="tab"
-        aria-selected="false"
-        aria-controls="tab2-panel"
-        id="tab2"
-        tabindex="-1"
-      >
-        Tab 2
-      </button>
-      <button
-        class="uq-tabs__tab"
-        role="tab"
-        aria-selected="false"
-        aria-controls="tab3-panel"
-        id="tab3"
-        tabindex="-1"
-      >
-        Tab 3
-      </button>
-      <a class="uq-tabs__link" href="#">Tab link</a>
-    </div>
-  </div>
-  <div
-    class="uq-tabs__tab-panel uq-tabs__tab-panel--active"
-    role="tabpanel"
-    id="tab1-panel"
-    aria-labelledby="tab1"
-    tabindex="0"
-  >
-    <p>Tab1 panel text</p>
-  </div>
-  <div
-    class="uq-tabs__tab-panel"
-    role="tabpanel"
-    id="tab2-panel"
-    aria-labelledby="tab2"
-    tabindex="0"
-    hidden=""
-  >
-    <p>Tab2 panel text</p>
-  </div>
-  <div
-    class="uq-tabs__tab-panel"
-    role="tabpanel"
-    id="tab3-panel"
-    aria-labelledby="tab3"
-    tabindex="0"
-    hidden=""
-  >
-    <p>Tab3 panel text</p>
-  </div>
-</div>
-```
-
-## Variant examples
+<Controls of={TabsStories.Outline} />
 
 ### Minimal
 
 <Canvas
-  of={TabsStories.tabsMinimal}
+  of={TabsStories.Minimal}
   story={{
     autoplay: true,
   }}
 />
-
-```html
-<div class="uq-tabs">...</div>
-```
 
 ### Lined
 
 <Canvas
-  of={TabsStories.tabsLined}
+  of={TabsStories.Lined}
   story={{
     autoplay: true,
   }}
 />
-
-```html
-<div class="uq-tabs uq-tabs--lined">...</div>
-```
 
 ### With icon
 
 <Canvas
-  of={TabsStories.tabsWithIcon}
+  of={TabsStories.WithIcon}
   story={{
     autoplay: true,
   }}
 />
-
-```html
-<div class="uq-tabs uq-tabs--outline">
-  <div class="uq-tabs__tab-list" role="tablist" aria-label="Tab List">
-    <button
-      class="uq-tabs__tab uq-tabs__tab--active"
-      role="tab"
-      aria-selected="true"
-      aria-controls="tab1-panel"
-      id="tab1"
-    >
-      <span class="uq-icon uq-icon--common--search"></span> Tab 1
-    </button>
-    ...
-  </div>
-</div>
-```
 
 ### Full width
 
 <Canvas
-  of={TabsStories.tabsFullWidth}
+  of={TabsStories.FullWidth}
   story={{
     autoplay: true,
   }}
 />
-
-```html
-<div class="uq-tabs uq-tabs--outline uq-tabs--full-width">...</div>
-```
 
 ### Small
 
 <Canvas
-  of={TabsStories.tabsSmall}
+  of={TabsStories.Small}
   story={{
     autoplay: true,
   }}
 />
-
-```html
-<div class="uq-tabs uq-tabs--outline uq-tabs--small">...</div>
-```
 
 ### Reversed
 
 <Canvas
-  of={TabsStories.tabsReversed}
+  of={TabsStories.Reversed}
   story={{
     autoplay: true,
   }}
 />
-
-```html
-<div class="uq-tabs uq-tabs--outline uq-tabs--reversed">...</div>
-```
 
 ## How and when to use
 
@@ -197,7 +93,6 @@ hierarchical level.
 - Although label text can wrap to a second line, scrollable tabs confine text to a single row.
 - Don’t resize text labels to fit them onto a single line.
 - Don’t truncate labels unless required.
-  <br />
 
 ## Accessibility
 
@@ -208,7 +103,6 @@ hierarchical level.
 - Tab panel active state: `tabindex = "0"`, classname ` uq-tabs__tab-panel--active` is added, `hidden` is removed.
 - Tab panel inactive state: `tabindex = "0"`, classname ` uq-tabs__tab-panel--active` is removed, `hidden` is added.
 - Colour contrast test for the tabs showed a WCAG AA Pass.
-  <br />
 
 ## JavaScript reference
 

@@ -2,7 +2,7 @@
 import "./progression.scss";
 
 // import HTML template strings
-import progressionHTML from "./progression.html";
+import progressionHTML from "./progression.html?raw";
 
 export default {
   title: "Components/Progression",

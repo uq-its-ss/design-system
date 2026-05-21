@@ -1,4 +1,10 @@
-import { Meta, Story, Canvas } from "@storybook/blocks";
+import {
+  Meta,
+  Story,
+  Canvas,
+  Controls,
+  Source,
+} from "@storybook/addon-docs/blocks";
 import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
 import * as AlertStories from "./alert.stories";
 
@@ -13,252 +19,31 @@ issues](https://github.com/uq-its-ss/design-system/issues)
 
 The alert components are used to notify users of important information or changes on a page attracting the user's attention without interrupting the user's task. The alerts are mainly categorised as page alerts and global alerts.
 
-## Page alerts
+### Page vs Global alerts
 
-Page alerts are light variants of alerts that are used locally on pages along with components or on its own to notify users of important information or changes on a page.
+- Page alerts are light variants of alerts that are used locally on pages along with components or on its own to notify users of important information or changes on a page.
+- Global alerts are darker variants of alerts that are used to convey a globally important information that appears in the top area of the webpage.
 
-### Info (Default example)
+<Canvas of={AlertStories.alert} />
+<Controls of={AlertStories.alert} />
 
-<Canvas of={AlertStories.alertInfo} />
+## Examples
 
-```html
-<div class="uq-alert uq-alert--info" role="alert">
-  <div class="uq-alert__message">
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua.
-    </p>
-  </div>
-</div>
-```
+### Page
 
-### Success
+{" "}
 
-<Canvas of={AlertStories.alertSuccess} />
+<Canvas of={AlertStories.alertPageInfo} />
+<Canvas of={AlertStories.alertPageSuccess} />
+<Canvas of={AlertStories.alertPageWarning} />
+<Canvas of={AlertStories.alertPageError} />
 
-```html
-<div class="uq-alert uq-alert--success" role="alert">
-  <div class="uq-alert__message">
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua.
-    </p>
-  </div>
-</div>
-```
+### Global
 
-### Warning
+{" "}
 
-<Canvas of={AlertStories.alertWarning} />
-
-```html
-<div class="uq-alert uq-alert--warning" role="alert">
-  <div class="uq-alert__message">
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua.
-    </p>
-  </div>
-</div>
-```
-
-### Error
-
-<Canvas of={AlertStories.alertError} />
-
-```html
-<div class="uq-alert uq-alert--error" role="alert">
-  <div class="uq-alert__message">
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua.
-    </p>
-  </div>
-</div>
-```
-
-### with Link
-
-<Canvas of={AlertStories.alertWithLink} />
-
-```html
-<div class="uq-alert" role="alert">
-  <div class="uq-alert__message">
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua.
-    </p>
-    <a href="#" title="Link" class="uq-button--text uq-button--inline">Link</a>
-  </div>
-</div>
-```
-
-### with Button
-
-<Canvas of={AlertStories.alertWithButton} />
-
-```html
-<div class="uq-alert" role="alert">
-  <div class="uq-alert__message">
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua.
-    </p>
-    <a href="#" title="Button" class="uq-button">Button</a>
-  </div>
-</div>
-```
-
-### with Title
-
-<Canvas of={AlertStories.alertWithTitle} />
-
-```html
-<div class="uq-alert" role="alert">
-  <div class="uq-alert__message">
-    <h3 class="uq-alert__title">Title goes here</h3>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua.
-    </p>
-    <a href="#" title="Button" class="uq-button">Button</a>
-  </div>
-</div>
-```
-
-## Global alerts
-
-Global alerts are darker variants of alerts that are used to convey a globally important information that appears in the top area of the webpage.
-
-### Info global
-
-<Canvas of={AlertStories.infoGlobal} />
-
-```html
-<div
-  class="uq-alert uq-alert--info uq-alert--dark uq-alert--global"
-  role="alert"
->
-  <div class="uq-alert__container">
-    <div class="uq-alert__message">
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua.
-      </p>
-      <a href="#" title="Link" class="uq-button--inline">Link</a>
-    </div>
-    <a href="javascript:void(0)" class="uq-alert__close">Close</a>
-  </div>
-</div>
-```
-
-### Success global
-
-<Canvas of={AlertStories.successGlobal} />
-
-```html
-<div
-  class="uq-alert uq-alert--success uq-alert--dark uq-alert--global"
-  role="alert"
->
-  <div class="uq-alert__container">
-    <div class="uq-alert__message">
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua.
-      </p>
-      <a href="#" title="Link" class="uq-button--inline">Link</a>
-    </div>
-    <a href="javascript:void(0)" class="uq-alert__close">Close</a>
-  </div>
-</div>
-```
-
-### Warning global
-
-<Canvas of={AlertStories.warningGlobal} />
-
-```html
-<div
-  class="uq-alert uq-alert--warning uq-alert--dark uq-alert--global"
-  role="alert"
->
-  <div class="uq-alert__container">
-    <div class="uq-alert__message">
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua.
-      </p>
-      <a href="#" title="Link" class="uq-button--inline">Link</a>
-    </div>
-  </div>
-</div>
-```
-
-### Error global
-
-<Canvas of={AlertStories.errorGlobal} />
-
-```html
-<div
-  class="uq-alert uq-alert--error uq-alert--dark uq-alert--global"
-  role="alert"
->
-  <div class="uq-alert__container">
-    <div class="uq-alert__message">
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua.
-      </p>
-      <a href="#" title="Link" class="uq-button--inline">Link</a>
-    </div>
-  </div>
-</div>
-```
-
-### Info global (no title, no dismiss)
-
-<Canvas of={AlertStories.infoGlobalNoTitleOrDismiss} />
-
-```html
-<div
-  class="uq-alert uq-alert--info uq-alert--dark uq-alert--global"
-  role="alert"
->
-  <div class="uq-alert__container">
-    <div class="uq-alert__message">
-      <h3 class="uq-alert__title visually-hidden">Title goes here</h3>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua.
-        <a href="#" title="Link" class="uq-button--inline">Link</a>
-      </p>
-    </div>
-  </div>
-</div>
-```
-
-### Warning global (no title, no dismiss)
-
-<Canvas of={AlertStories.warningGlobalNoTitleOrDismiss} />
-
-```html
-<div
-  class="uq-alert uq-alert--warning uq-alert--dark uq-alert--global"
-  role="alert"
->
-  <div class="uq-alert__container">
-    <div class="uq-alert__message">
-      <h3 class="uq-alert__title visually-hidden">Title goes here</h3>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua.
-        <a href="#" title="Link" class="uq-button--inline">Link</a>
-      </p>
-    </div>
-  </div>
-</div>
-```
+<Canvas of={AlertStories.alertGlobalInfo} />
+<Canvas of={AlertStories.alertGlobalWarning} />
 
 ### Loaded from an external API
 

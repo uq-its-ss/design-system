@@ -12,6 +12,7 @@ const { IconShaded: PaneIconShaded, Text: PaneText } =
 
 export default {
   title: "Introduction/Overview",
+  tags: ["!autodocs"],
   parameters: {
     layout: "fullscreen",
     options: { showPanel: false },

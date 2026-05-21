@@ -1,4 +1,5 @@
 import { socialShare } from "@uqds/social/src/js/main";
+import { initJs } from "../../../lib/initJs";
 
 export default {
   title: "Components/Social Share",
@@ -10,10 +11,12 @@ export default {
     url: "https://news.uq.edu.au/article/2024/12/biodiversity-risk-most-rainforests",
     title: "Biodiversity at risk in most rainforests",
   },
-  play: ({ canvasElement }) => {
-    const links = canvasElement.querySelector(".uq-social-share");
-    socialShare(links);
-  },
+  decorators: [
+    (storyFn) =>
+      initJs(storyFn, (component) => {
+        socialShare(component);
+      }),
+  ],
   render: ({ url, title }) => {
     return `<div class="uq-social-share">
   <div class="uq-social-share__title">Share</div>

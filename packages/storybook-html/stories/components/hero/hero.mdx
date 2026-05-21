@@ -1,4 +1,4 @@
-import { Meta, Story, Source, Canvas } from "@storybook/blocks";
+import { Meta, Controls, Canvas } from "@storybook/addon-docs/blocks";
 import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
 import * as HeroStories from "./hero.stories";
 
@@ -6,9 +6,8 @@ import * as HeroStories from "./hero.stories";
 
 # Hero
 
-<StatusBadge.Development />
-
-<StatusBadge.DraftDoc />
+<StatusBadge.Stable /> <StatusBadge.StableDoc /> [Check for open
+issues](https://github.com/uq-its-ss/design-system/issues)
 
 ## Overview
 
@@ -30,7 +29,7 @@ There are 2 color variations - purple (default) and white (use the `.uq-hero--li
 
 <Canvas of={HeroStories.Hero} sourceState="hidden" />
 
-<Source of={HeroStories.Hero} />
+<Controls of={HeroStories.Hero} />
 
 ## Examples
 

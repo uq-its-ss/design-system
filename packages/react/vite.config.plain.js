@@ -36,8 +36,8 @@ export default defineConfig({
   },
   css: {
     modules: {
-      // Disable CSS Modules - use plain class names
-      localsConvention: "camelCaseOnly",
+      // Keep both naming conventions available
+      localsConvention: "dashes",
       generateScopedName: "[local]",
     },
   },

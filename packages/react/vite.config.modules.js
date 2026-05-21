@@ -33,9 +33,9 @@ export default defineConfig({
   },
   css: {
     modules: {
-      // Enable CSS Modules with scoped naming
-      localsConvention: "camelCaseOnly",
-      generateScopedName: "[name]__[local]___[hash:base64:5]",
+      // Keep both naming conventions available
+      localsConvention: "dashes",
+      generateScopedName: "[local]___[hash:base64:5]",
     },
   },
 });

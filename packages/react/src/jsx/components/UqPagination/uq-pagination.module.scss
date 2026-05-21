@@ -1,1 +1,9 @@
 @use "@uqds/pagination/src/scss/main" as pagination;
+
+// Cross-component style override for nested UqIcon
+// The Style Package has .uq-pagination__item .uq-icon::before { margin: 0 },
+// but with CSS Modules the class names are scoped which breaks nested selectors.
+// We target any nested element with class starting with uq-icon.
+.uq-pagination__item :global([class*="uq-icon"])::before {
+  margin: 0;
+}

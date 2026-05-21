@@ -23,7 +23,7 @@ export const LoadingSpinner: FC<LoadingSpinnerProps> = ({
   return (
     <div
       className={classNames({
-        [styles["visually-hidden"]]: visible === false,
+        "visually-hidden": visible === false,
         [styles["uq-loading-spinner"]]: true,
         [styles["uq-loading-spinner--light"]]: variant === "light",
         [styles["uq-loading-spinner--small"]]: size === "small",

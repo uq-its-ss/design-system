@@ -139,12 +139,12 @@ export const TextInput: FC<TextInputProps> = ({
                   [styles["uq-icon--standard--search"]]: true,
                 })}
               ></span>
-              <span className={styles["visually-hidden"]}>Submit</span>
+              <span className="visually-hidden">Submit</span>
             </button>
             <button
               className={classNames({
                 [styles["uq-search-input__clear"]]: true,
-                [styles["visually-hidden"]]: value === "", // Hide clear button if no text
+                "visually-hidden": value === "", // Hide clear button if no text
               })}
               onClick={onClear}
             >
@@ -154,7 +154,7 @@ export const TextInput: FC<TextInputProps> = ({
                   [styles["uq-icon--standard--x"]]: true,
                 })}
               ></span>
-              <span className={styles["visually-hidden"]}>Clear</span>
+              <span className="visually-hidden">Clear</span>
             </button>
           </>
         )}

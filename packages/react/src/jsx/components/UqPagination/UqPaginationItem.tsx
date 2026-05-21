@@ -32,7 +32,7 @@ export const UqPaginationItem: FC<UqPaginationItemProps> = ({
         href={href}
         value={value}
       >
-        <span className={styles["visually-hidden"]}>
+        <span className="visually-hidden">
           {!type && "Page"}
           {type === UqPaginationItemType.Previous && "Previous page"}
           {type === UqPaginationItemType.Next && "Previous page"}

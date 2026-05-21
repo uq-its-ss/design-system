@@ -37,7 +37,7 @@ export const Alert: FC<AlertProps> = ({
   return (
     <div
       className={classNames({
-        [styles["visually-hidden"]]: visible === false,
+        "visually-hidden": visible === false,
         [styles["uq-alert"]]: true,
         [styles["uq-alert--info"]]: variant === "info",
         [styles["uq-alert--warning"]]: variant === "warning",

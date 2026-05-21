@@ -1,6 +1,6 @@
 import type { FC } from "react";
 import classNames from "classnames";
-import css from "../index.module.scss";
+import styles from "./icon.module.scss";
 import { type IconCode } from "@uqds/icon";
 
 export interface IconProps {
@@ -18,10 +18,10 @@ export const Icon: FC<IconProps> = ({ name, variant }) => {
   return (
     <span
       className={classNames({
-        [css["uq-icon"]]: true,
-        [css[`uq-icon--${name}`]]: true,
-        [css[`uq-icon--light`]]: variant === "light",
-        [css[`uq-icon--text`]]: variant === "text",
+        [styles["uq-icon"]]: true,
+        [styles[`uq-icon--${name}`]]: true,
+        [styles[`uq-icon--light`]]: variant === "light",
+        [styles[`uq-icon--text`]]: variant === "text",
       })}
     ></span>
   );

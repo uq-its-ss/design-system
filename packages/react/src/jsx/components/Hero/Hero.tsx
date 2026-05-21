@@ -1,6 +1,6 @@
 import type { ComponentPropsWithoutRef, FC, ReactNode } from "react";
 import classNames from "classnames";
-import css from "../index.module.scss";
+import styles from "./hero.module.scss";
 
 export interface HeroProps {
   /** Small text to appear above the main title. */
@@ -35,27 +35,27 @@ export const Hero: FC<HeroProps> = ({
   backComponentProps = {},
 }) => {
   return (
-    <div className={css["uq-hero-basic"]}>
-      <div className={css["uq-container"]}>
-        <div className={css["uq-hero-basic__content"]}>
-          <h1 className={css["uq-hero-basic__title"]}>
+    <div className={styles["uq-hero-basic"]}>
+      <div className={styles["uq-container"]}>
+        <div className={styles["uq-hero-basic__content"]}>
+          <h1 className={styles["uq-hero-basic__title"]}>
             {eyebrow && (
-              <span className={css["uq-hero-basic__eyebrow"]}>{eyebrow}</span>
+              <span className={styles["uq-hero-basic__eyebrow"]}>{eyebrow}</span>
             )}
             {title}
           </h1>
 
           {backText && (
-            <div className={css["uq-hero-basic__back"]}>
+            <div className={styles["uq-hero-basic__back"]}>
               <BackComponent {...backComponentProps}>
                 <span
                   className={classNames({
-                    [css["uq-icon"]]: true,
-                    [css["uq-icon--common--chevron-left"]]: true,
-                    [css["uq-icon--light"]]: true,
+                    [styles["uq-icon"]]: true,
+                    [styles["uq-icon--common--chevron-left"]]: true,
+                    [styles["uq-icon--light"]]: true,
                   })}
                 ></span>
-                <span className={css["uq-hero-basic__back-text"]}>
+                <span className={styles["uq-hero-basic__back-text"]}>
                   {backText}
                 </span>
               </BackComponent>

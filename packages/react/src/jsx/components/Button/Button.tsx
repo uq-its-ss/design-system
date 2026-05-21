@@ -1,6 +1,6 @@
 import type { FC } from "react";
 import classNames from "classnames";
-import css from "../index.module.scss";
+import styles from "./button.module.scss";
 import { Icon } from "../Icon/Icon";
 import { type IconCode } from "@uqds/icon";
 
@@ -38,10 +38,10 @@ export const Button: FC<ButtonProps> = ({
   return (
     <button
       className={classNames({
-        [css["uq-button"]]: true,
-        [css[`uq-button--${style}`]]: !!style,
-        [css[`uq-button--${size}`]]: !!size,
-        [css["uq-button--expand"]]: expand,
+        [styles["uq-button"]]: true,
+        [styles[`uq-button--${style}`]]: !!style,
+        [styles[`uq-button--${size}`]]: !!size,
+        [styles["uq-button--expand"]]: expand,
       })}
       onClick={onClick}
       disabled={disabled}
@@ -50,9 +50,9 @@ export const Button: FC<ButtonProps> = ({
         (spinner ? (
           <span
             className={classNames({
-              [css["uq-loading-spinner"]]: true,
-              [css["uq-loading-spinner--small"]]: true,
-              [css["uq-loading-spinner--light"]]: [
+              [styles["uq-loading-spinner"]]: true,
+              [styles["uq-loading-spinner--small"]]: true,
+              [styles["uq-loading-spinner--light"]]: [
                 // Use a light spinner for these dark button styles.
                 "",
                 "primary",

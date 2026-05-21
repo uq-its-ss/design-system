@@ -26,12 +26,9 @@ export default defineConfig({
       formats: ["es"],
     },
     outDir: resolve(import.meta.dirname, "./dist/modules"),
-    cssCodeSplit: false,
+    cssCodeSplit: true,
     rollupOptions: {
       external: ["react", "react/jsx-runtime"],
-      output: {
-        assetFileNames: "index.css",
-      },
     },
   },
   css: {

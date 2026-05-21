@@ -1,6 +1,6 @@
 import { type FC, useId } from "react";
 import classNames from "classnames";
-import css from "../index.module.scss";
+import styles from "./text-input.module.scss";
 
 export interface TextInputProps {
   /** Type of control. */
@@ -72,23 +72,23 @@ export const TextInput: FC<TextInputProps> = ({
     <div className="uq-input-container">
       <div
         className={classNames({
-          [css["uq-input-withlabel"]]: true,
-          [css["uq-input-withlabel--inline"]]: labelPlacement === "inline",
-          [css["uq-search-input"]]: type === "search",
-          [css["uq-search-input--expand"]]: type === "search" && expand,
+          [styles["uq-input-withlabel"]]: true,
+          [styles["uq-input-withlabel--inline"]]: labelPlacement === "inline",
+          [styles["uq-search-input"]]: type === "search",
+          [styles["uq-search-input--expand"]]: type === "search" && expand,
         })}
       >
         {label && (
           <label
             htmlFor={id}
             className={classNames({
-              [css["uq-label"]]: true,
-              [css["uq-label--inline"]]: labelPlacement === "inline",
+              [styles["uq-label"]]: true,
+              [styles["uq-label--inline"]]: labelPlacement === "inline",
             })}
           >
-            <span className={css["uq-label__text"]}>{label}</span>
+            <span className={styles["uq-label__text"]}>{label}</span>
             {required && (
-              <span className={css["uq-label__required"]} title="Required">
+              <span className={styles["uq-label__required"]} title="Required">
                 {" "}
                 *
               </span>
@@ -100,10 +100,10 @@ export const TextInput: FC<TextInputProps> = ({
           id={id}
           name={name}
           className={classNames({
-            [css["uq-input"]]: true,
-            [css["uq-input--large"]]: expand,
-            [css["uq-input--success"]]: feedbackState === "success",
-            [css["uq-input--error"]]: feedbackState === "error",
+            [styles["uq-input"]]: true,
+            [styles["uq-input--large"]]: expand,
+            [styles["uq-input--success"]]: feedbackState === "success",
+            [styles["uq-input--error"]]: feedbackState === "error",
           })}
           aria-describedby={id + "-feedback"}
           aria-invalid={feedbackState === "error"}
@@ -130,31 +130,31 @@ export const TextInput: FC<TextInputProps> = ({
           <>
             <button
               type="submit"
-              className={css["uq-search-input__submit"]}
+              className={styles["uq-search-input__submit"]}
               onClick={onSubmit}
             >
               <span
                 className={classNames({
-                  [css["uq-icon"]]: true,
-                  [css["uq-icon--standard--search"]]: true,
+                  [styles["uq-icon"]]: true,
+                  [styles["uq-icon--standard--search"]]: true,
                 })}
               ></span>
-              <span className={css["visually-hidden"]}>Submit</span>
+              <span className={styles["visually-hidden"]}>Submit</span>
             </button>
             <button
               className={classNames({
-                [css["uq-search-input__clear"]]: true,
-                [css["visually-hidden"]]: value === "", // Hide clear button if no text
+                [styles["uq-search-input__clear"]]: true,
+                [styles["visually-hidden"]]: value === "", // Hide clear button if no text
               })}
               onClick={onClear}
             >
               <span
                 className={classNames({
-                  [css["uq-icon"]]: true,
-                  [css["uq-icon--standard--x"]]: true,
+                  [styles["uq-icon"]]: true,
+                  [styles["uq-icon--standard--x"]]: true,
                 })}
               ></span>
-              <span className={css["visually-hidden"]}>Clear</span>
+              <span className={styles["visually-hidden"]}>Clear</span>
             </button>
           </>
         )}
@@ -164,8 +164,8 @@ export const TextInput: FC<TextInputProps> = ({
           id={id + "-feedback"}
           aria-live="polite"
           className={classNames({
-            [css["uq-error-message"]]: feedbackState === "error",
-            [css["uq-success-message"]]: feedbackState === "success",
+            [styles["uq-error-message"]]: feedbackState === "error",
+            [styles["uq-success-message"]]: feedbackState === "success",
           })}
         >
           {feedback}

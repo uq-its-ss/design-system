@@ -1,6 +1,6 @@
 import type { FC } from "react";
 import classNames from "classnames";
-import css from "../index.module.scss";
+import styles from "./loading-spinner.module.scss";
 
 export interface LoadingSpinnerProps {
   /** Default is dark. */
@@ -23,10 +23,10 @@ export const LoadingSpinner: FC<LoadingSpinnerProps> = ({
   return (
     <div
       className={classNames({
-        [css["visually-hidden"]]: visible === false,
-        [css["uq-loading-spinner"]]: true,
-        [css["uq-loading-spinner--light"]]: variant === "light",
-        [css["uq-loading-spinner--small"]]: size === "small",
+        [styles["visually-hidden"]]: visible === false,
+        [styles["uq-loading-spinner"]]: true,
+        [styles["uq-loading-spinner--light"]]: variant === "light",
+        [styles["uq-loading-spinner--small"]]: size === "small",
       })}
       role="alert"
       aria-live="assertive"

@@ -1,5 +1,5 @@
 import type { FC, ReactNode } from "react";
-import css from "../index.module.scss";
+import styles from "./table.module.scss";
 
 export interface TableProps {
   /** Normal table content - thead, tr, td, td, etc. */
@@ -8,7 +8,7 @@ export interface TableProps {
 
 /** A normal HTML table with UQDS styles applied. */
 export const Table: FC<TableProps> = ({ children }) => (
-  <div className={css["uq-table__wrapper"]}>
-    <table className={css["uq-table"]}>{children}</table>
+  <div className={styles["uq-table__wrapper"]}>
+    <table className={styles["uq-table"]}>{children}</table>
   </div>
 );

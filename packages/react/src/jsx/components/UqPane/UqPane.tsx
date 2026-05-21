@@ -1,5 +1,5 @@
 import type { FC, ReactNode } from "react";
-import classNames from "classnames";
+import styles from "./uq-pane.module.scss";
 import { UqPaneVariant } from "../../enum";
 
 export interface UqPaneProps {
@@ -21,14 +21,14 @@ export const UqPane: FC<UqPaneProps> = ({
   links,
   video,
 }) => (
-  <div className={classNames("uq-pane", `uq-pane--${variant}`)}>
-    {image && <div className="uq-pane__image">{image}</div>}
-    {video && <div className="uq-pane__video">{video}</div>}
-    <div className="uq-pane__content">
-      {icon && <div className="uq-pane__icon">{icon}</div>}
-      <h3 className="uq-pane__title">{title}</h3>
-      {description && <div className="uq-pane__description">{description}</div>}
-      {links && <div className="uq-pane__actions">{links}</div>}
+  <div className={`${styles["uq-pane"]} ${styles[`uq-pane--${variant}`]}`}>
+    {image && <div className={styles["uq-pane__image"]}>{image}</div>}
+    {video && <div className={styles["uq-pane__video"]}>{video}</div>}
+    <div className={styles["uq-pane__content"]}>
+      {icon && <div className={styles["uq-pane__icon"]}>{icon}</div>}
+      <h3 className={styles["uq-pane__title"]}>{title}</h3>
+      {description && <div className={styles["uq-pane__description"]}>{description}</div>}
+      {links && <div className={styles["uq-pane__actions"]}>{links}</div>}
     </div>
   </div>
 );

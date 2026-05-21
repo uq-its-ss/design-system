@@ -1,6 +1,6 @@
 import type { FC, ReactNode } from "react";
 import classNames from "classnames";
-import css from "../index.module.scss";
+import styles from "./alert.module.scss";
 
 export interface AlertProps {
   /** Small text to appear above the main title. */
@@ -37,19 +37,19 @@ export const Alert: FC<AlertProps> = ({
   return (
     <div
       className={classNames({
-        [css["visually-hidden"]]: visible === false,
-        [css["uq-alert"]]: true,
-        [css["uq-alert--info"]]: variant === "info",
-        [css["uq-alert--warning"]]: variant === "warning",
-        [css["uq-alert--error"]]: variant === "error",
-        [css["uq-alert--success"]]: variant === "success",
-        [css["uq-alert--dark"]]: !!global,
-        [css["uq-alert--global"]]: !!global,
+        [styles["visually-hidden"]]: visible === false,
+        [styles["uq-alert"]]: true,
+        [styles["uq-alert--info"]]: variant === "info",
+        [styles["uq-alert--warning"]]: variant === "warning",
+        [styles["uq-alert--error"]]: variant === "error",
+        [styles["uq-alert--success"]]: variant === "success",
+        [styles["uq-alert--dark"]]: !!global,
+        [styles["uq-alert--global"]]: !!global,
       })}
       role="alert"
     >
-      <div className={css["uq-alert__message"]}>
-        {title && <h3 className={css["uq-alert__title"]}>{title}</h3>}
+      <div className={styles["uq-alert__message"]}>
+        {title && <h3 className={styles["uq-alert__title"]}>{title}</h3>}
         <p>{children}</p>
         {suffix}
       </div>

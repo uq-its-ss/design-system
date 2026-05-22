@@ -70,11 +70,7 @@ export default {
     topLabel,
     bottomLabel,
   }) => {
-    const title = titleHref ? (
-      <a href={titleHref}>{titleText}</a>
-    ) : (
-      titleText
-    );
+    const title = titleHref ? <a href={titleHref}>{titleText}</a> : titleText;
     const description = descriptionText || undefined;
     const image = imageSrc ? <img src={imageSrc} alt={imageAlt} /> : undefined;
 

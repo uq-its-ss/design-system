@@ -93,12 +93,7 @@ export default {
     const links =
       linkText && linkHref ? <a href={linkHref}>{linkText}</a> : undefined;
     const video = videoUrl ? (
-      <iframe
-        width="560"
-        height="315"
-        src={videoUrl}
-        allowFullScreen
-      ></iframe>
+      <iframe width="560" height="315" src={videoUrl} allowFullScreen></iframe>
     ) : undefined;
 
     return (

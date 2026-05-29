@@ -141,8 +141,6 @@ $story-card-font-size-small: 22px;
 }
 
 .uq-story-card--feature {
-  .uq-story-card__title {
-  }
 
   & .uq-story-card__description {
     display: -webkit-box;
@@ -166,9 +164,6 @@ $story-card-font-size-small: 22px;
 
   & .uq-story-card__content {
     padding: 0;
-  }
-
-  & .uq-story-card__title {
   }
 
   & .uq-story-card__image {

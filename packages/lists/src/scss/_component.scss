@@ -21,9 +21,6 @@
   margin-bottom: core.$space-m;
   padding: core.$space-none;
 
-  &__title {
-  }
-
   &__item {
     list-style: none;
     padding: core.$space-s core.$space-none; // .75rem 0rem
@@ -85,9 +82,6 @@
   list-style-type: none;
   padding: core.$space-none;
   margin-bottom: core.$space-m;
-
-  &__title {
-  }
 
   &__item {
     float: left;

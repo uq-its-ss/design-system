@@ -98,7 +98,7 @@ export default {
     hasImage,
     image,
   }) => {
-    return `<article class="uq-profile">
+    return `<article class="uq-profile" data-gtm-category="Profile">
     <div class="uq-profile__content">
       <header class="uq-profile__header">
       <${titleElement} class="uq-profile__title">${honorificPrefix} ${name}</${titleElement}>

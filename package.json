@@ -62,11 +62,11 @@
     "lerna": "^8.1.9",
     "msw": "^2.6.0",
     "prettier": "3.3.3",
-    "puppeteer": "^23.7.0",
-    "reg-keygen-git-hash-plugin": "^0.14.3",
-    "reg-notify-github-with-api-plugin": "^0.14.4",
+    "puppeteer": "^25.1.0",
+    "reg-keygen-git-hash-plugin": "^0.14.5",
+    "reg-notify-github-with-api-plugin": "^0.14.6",
     "reg-publish-s3-plugin": "^0.14.4",
-    "reg-suit": "^0.14.4",
+    "reg-suit": "^0.14.5",
     "rollup": "^4.24.4",
     "sass": "^1.80.6",
     "stylelint": "^16.10.0",
@@ -102,7 +102,7 @@
     "test:watch": "vitest"
   },
   "engines": {
-    "node": ">=20",
+    "node": ">=24",
     "npm": ">=10"
   },
   "browserslist": [

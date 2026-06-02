@@ -16,17 +16,17 @@ jobs:
 
     steps:
       - name: "⬇️ Checkout repo"
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           # Checkout the PR's head branch instead of the temporary merge commit
           ref: ${{ github.head_ref }}
           # Important to fetch all history for Lerna to determine the version
           fetch-depth: 0
 
-      - name: "⎔ Setup node 20"
-        uses: actions/setup-node@v3
+      - name: "⎔ Setup node 24"
+        uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
 
       - name: "📦️ Install dependencies"
         run: npm ci

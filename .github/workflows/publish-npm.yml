@@ -13,13 +13,13 @@ jobs:
     if: ${{ ! startsWith(github.event.head_commit.message, 'chore(release):Publish') }}
     steps:
       - name: "⬇️ Checkout repo"
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0 # Important to fetch all history and tags
           token: ${{ secrets.UQDS_PERSONAL_ACCESS_TOKEN }} # Use PAT to allow pushing tags/commits later
 
       - name: "⎔ Setup node 24"
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: 24
 

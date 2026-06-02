@@ -5,9 +5,9 @@ import dts from "vite-plugin-dts";
 import commonjs from "vite-plugin-commonjs";
 
 /**
- * Default Vite config (CSS Modules build)
- * This is maintained for backwards compatibility.
- * The actual builds use vite.config.modules.js and vite.config.plain.js
+ * Vite config for Plain CSS build
+ * Outputs to dist/plain/ with regular unscoped CSS class names
+ * For apps that compile SCSS locally and need standard class names
  */
 export default defineConfig({
   plugins: [
@@ -16,16 +16,16 @@ export default defineConfig({
     dts({
       rollupTypes: true,
       tsconfigPath: "./tsconfig.json",
-      outDir: "./dist/modules",
+      outDir: "./dist/plain",
     }),
   ],
   build: {
     lib: {
-      entry: resolve(import.meta.dirname, "src/jsx/index.ts"),
+      entry: resolve(import.meta.dirname, "src/jsx/index.plain.ts"),
       fileName: "index",
       formats: ["es"],
     },
-    outDir: resolve(import.meta.dirname, "./dist/modules"),
+    outDir: resolve(import.meta.dirname, "./dist/plain"),
     cssCodeSplit: false,
     rollupOptions: {
       external: ["react", "react/jsx-runtime"],
@@ -36,9 +36,9 @@ export default defineConfig({
   },
   css: {
     modules: {
-      // Use consistent naming format for CSS classes
+      // Disable CSS Modules - use plain class names
       localsConvention: "camelCaseOnly",
-      generateScopedName: "[name]__[local]___[hash:base64:5]",
+      generateScopedName: "[local]",
     },
   },
 });

@@ -5,9 +5,9 @@ import dts from "vite-plugin-dts";
 import commonjs from "vite-plugin-commonjs";
 
 /**
- * Default Vite config (CSS Modules build)
- * This is maintained for backwards compatibility.
- * The actual builds use vite.config.modules.js and vite.config.plain.js
+ * Vite config for CSS Modules build
+ * Outputs to dist/modules/ with scoped CSS class names
+ * For third-party apps that need CSS isolation
  */
 export default defineConfig({
   plugins: [
@@ -36,7 +36,7 @@ export default defineConfig({
   },
   css: {
     modules: {
-      // Use consistent naming format for CSS classes
+      // Enable CSS Modules with scoped naming
       localsConvention: "camelCaseOnly",
       generateScopedName: "[name]__[local]___[hash:base64:5]",
     },

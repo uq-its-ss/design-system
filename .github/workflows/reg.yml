@@ -17,14 +17,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "⬇️ Checkout repo"
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0 # Needed for reg-suit history comparison
           # Checkout the merge commit on PRs for accurate testing, otherwise checkout the branch head
           ref: ${{ github.event.pull_request.head.ref || github.ref}}
 
       - name: "⎔ Setup node 24"
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: 24
           cache: 'npm' # Add caching for faster installs

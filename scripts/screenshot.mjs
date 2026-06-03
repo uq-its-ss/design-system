@@ -1,5 +1,9 @@
-const puppeteer = require("puppeteer");
-const cliProgress = require("cli-progress");
+import puppeteer from "puppeteer";
+import cliProgress from "cli-progress";
+import { createRequire } from "module";
+
+// JSON imports need special handling in ESM
+const require = createRequire(import.meta.url);
 const config = require("./screenshot.config.json");
 
 // Remove these selectors in all scenarios.

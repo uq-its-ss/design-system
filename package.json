@@ -86,7 +86,7 @@
     "storybook:email": "cd packages/storybook-email && npm run storybook",
     "storybook:react": "cd packages/storybook-react && npm run storybook",
     "storybook:html": "cd packages/storybook-html && npm run storybook",
-    "update-screenshots": "node scripts/screenshot.js",
+    "update-screenshots": "node scripts/screenshot.mjs",
     "reg-suit": "reg-suit run",
     "format": "prettier --write \"**/*.{css,scss,js,jsx,json,md,mdx,tsx}\"",
     "check:format": "prettier --check \"**/*.{css,scss,js,jsx,json,md,mdx,tsx}\"",

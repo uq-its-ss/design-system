@@ -1,0 +1,29 @@
+/**
+ * Header component styles
+ * Imports base header SCSS and wraps it in CSS Modules
+ */
+
+@use "@uqds/header/src/scss/component";
+
+// Ensure slide-menu classes are available globally for the slide-menu.js integration
+:global {
+  .slide-menu {
+    // Slide menu styles from external library
+  }
+
+  .slide-menu__control {
+    // Slide menu control styles
+  }
+
+  .slide-menu__decorator {
+    // Slide menu decorator styles
+  }
+
+  .no-scroll {
+    overflow: hidden;
+  }
+
+  .is-active {
+    // Active link state (used by mobile menu)
+  }
+}

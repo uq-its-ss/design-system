@@ -9,6 +9,7 @@ export { UqStoryCard } from "./components/UqStoryCard/UqStoryCard";
 
 export { Alert } from "./components/Alert/Alert";
 export { Button } from "./components/Button/Button";
+export { Header } from "./components/Header/Header";
 export { Hero } from "./components/Hero/Hero";
 export { Icon } from "./components/Icon/Icon";
 export { LoadingSpinner } from "./components/LoadingSpinner/LoadingSpinner";
@@ -16,3 +17,4 @@ export { Table } from "./components/Table/Table";
 export { TextInput } from "./components/TextInput/TextInput";
 
 export * from "./enum/index";
+export type { HeaderProps, MenuLink, MenuColumn, MenuGroup } from "./components/Header/types";

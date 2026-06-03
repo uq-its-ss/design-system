@@ -16,7 +16,7 @@ Our visual regression testing is integrated into the GitHub Actions workflow. Wh
 
 1.  **Builds Storybook instances:** It compiles both the HTML and React Storybooks into static bundles.
 2.  **Generates Test Configuration:** A script automatically discovers all active stories from the built Storybooks and generates a `screenshot.config.json` file. This file includes the specific `localhost` URLs for each story (based on their respective Storybook ports) and defined viewport settings.
-3.  **Runs Regression Tests:** `reg-suit` visual regression testing tool (driven by `screenshot.js`) consumes the generated `screenshot.config.json` to navigate to each Storybook story at specified viewports, capture screenshots, and compare them against a baseline.
+3.  **Runs Regression Tests:** `reg-suit` visual regression testing tool (driven by `screenshot.mjs`) consumes the generated `screenshot.config.json` to navigate to each Storybook story at specified viewports, capture screenshots, and compare them against a baseline.
 4.  **Reports Results:** The results, including any detected visual differences, are reported back in the GitHub Action run and posted as a comment in the `pull request`.
 
 This automation ensures that every new component or story is automatically included in the regression test suite, removing the need for manual configuration updates and guaranteeing comprehensive coverage.
@@ -51,9 +51,9 @@ Understanding these files is essential for both using and maintaining the system
       }
     }
     ```
-- **`scripts/screenshot.js`**:
+- **`scripts/screenshot.mjs`**:
   - **Role:** This script acts as the runner for your chosen visual regression testing tool. It reads the `uris` and `viewports` from the `screenshot.config.json` and executes the screenshot comparison logic.
-  - **Location:** `scripts/screenshot.js`
+  - **Location:** `scripts/screenshot.mjs`
 - **`package.json`**:
   - **Role:** Defines the `npm` scripts used in the GitHub Action, such as `npm run build-storybook`, and any other commands necessary for the setup (e.g., `http-server`).
   - **Location:** `package.json` (at the repository root)
@@ -83,8 +83,8 @@ When the `reg.yml` workflow is triggered:
       - `http://localhost:6007/iframe.html?id=<storyId>` for React stories.
       - `http://localhost:6006/iframe.html?id=<storyId>` for HTML stories.
     - Writes the final `uris` (with correct base URLs) and `viewports` to `scripts/screenshot.config.json`.
-7.  **Run Regression Tests:** `node scripts/screenshot.js` is executed. This script then uses the newly generated `screenshot.config.json` to instruct your visual regression tool to:
-    - Spin up local web servers for `packages/storybook-html/storybook-static` on port `6006` and `packages/storybook-react/storybook-static` on port `6007` (or connect to pre-existing ones if your `screenshot.js` handles that).
+7.  **Run Regression Tests:** `node scripts/screenshot.mjs` is executed. This script then uses the newly generated `screenshot.config.json` to instruct your visual regression tool to:
+    - Spin up local web servers for `packages/storybook-html/storybook-static` on port `6006` and `packages/storybook-react/storybook-static` on port `6007` (or connect to pre-existing ones if your `screenshot.mjs` handles that).
     - Visit each URL listed in `uris`.
     - Capture screenshots at the specified `viewports`.
     - Compare them against baseline images.
@@ -168,7 +168,7 @@ The run summary will indicate whether the `Visual Regression Testing` job passed
     - Inspect the difference images/reports (if available as artifacts) to understand the change.
     - If the change is intentional and desired, update your visual regression baseline images. (The method for updating baselines depends on your specific visual regression tool, e.g., running with an `--update` or `--diff` flag).
     - If unintentional, debug the component or style changes that caused the regression.
-- **`localhost` server issues (relevant if `screenshot.js` directly serves):**
+- **`localhost` server issues (relevant if `screenshot.mjs` directly serves):**
   - **Cause:** The Storybook static servers are not starting correctly, or are not accessible on the specified ports (`6006`, `6007`).
   - **Solution:** Check the logs for the `Serve Storybook HTMLfor VRT` and `Serve Storybook REACT for VRT` steps in `reg.yml`. Ensure `npx http-server` (or your chosen server) is running and accessible on the correct ports. Verify firewall settings or container network configurations if running in complex environments.
 

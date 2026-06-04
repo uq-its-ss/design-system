@@ -1,4 +1,3 @@
-const puppeteer = require("puppeteer");
 const cliProgress = require("cli-progress");
 const config = require("./screenshot.config.json");
 
@@ -126,7 +125,7 @@ const screenshot = async (browser, viewportName, pageName) => {
   await page.close();
 };
 
-const main = async () => {
+const main = async (puppeteer) => {
   const bar = new cliProgress.SingleBar({}, cliProgress.Presets.shades_classic);
 
   const jobs = [];
@@ -182,4 +181,12 @@ const main = async () => {
   bar.stop();
 };
 
-main();
+async function run() {
+  // Dynamically import puppeteer as an ES Module
+  const puppeteer = await import("puppeteer");
+  
+  // puppeteer.default contains the actual puppeteer object when using dynamic import
+  await main(puppeteer.default);
+}
+
+run().catch((err) => console.error(err));

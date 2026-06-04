@@ -184,7 +184,7 @@ const main = async (puppeteer) => {
 async function run() {
   // Dynamically import puppeteer as an ES Module
   const puppeteer = await import("puppeteer");
-  
+
   // puppeteer.default contains the actual puppeteer object when using dynamic import
   await main(puppeteer.default);
 }

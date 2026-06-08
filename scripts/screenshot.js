@@ -182,14 +182,14 @@ const main = async (puppeteer) => {
 };
 
 async function run() {
-     // Dynamically import puppeteer (ESM/CJS-compatible) and normalize to the API object.
-   const puppeteerModule = await import("puppeteer");
-   const puppeteer = puppeteerModule.default ?? puppeteerModule;
+  // Dynamically import puppeteer (ESM/CJS-compatible) and normalize to the API object.
+  const puppeteerModule = await import("puppeteer");
+  const puppeteer = puppeteerModule.default ?? puppeteerModule;
 
   await main(puppeteer);
 }
 
- run().catch((err) => {
-   console.error(err);
-   process.exitCode = 1;
- });
+run().catch((err) => {
+  console.error(err);
+  process.exitCode = 1;
+});

@@ -37,7 +37,8 @@
       "require": "./dist/js/uqds.js"
     },
     "./src/js/*": "./src/js/*.js",
-    "./src/scss/*": "./src/scss/*"
+    "./src/scss/*": "./src/scss/*",
+    "./css": "./dist/css/main.css"
   },
   "style": "dist/css/main.css",
   "scripts": {

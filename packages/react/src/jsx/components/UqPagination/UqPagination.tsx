@@ -1,4 +1,5 @@
 import { type FC, type MouseEventHandler, useMemo } from "react";
+import styles from "./uq-pagination.module.scss";
 import { UqPaginationItem } from "./UqPaginationItem";
 import { UqPaginationItemType } from "../../enum";
 
@@ -112,8 +113,8 @@ export const UqPagination: FC<UqPaginationProps> = ({
   );
 
   return (
-    <nav className="uq-pagination" aria-label="Pagination">
-      <ul className="uq-pagination__list">
+    <nav className={styles["uq-pagination"]} aria-label="Pagination">
+      <ul className={styles["uq-pagination__list"]}>
         {currentPage !== 1 && (
           <UqPaginationItem
             As={As}

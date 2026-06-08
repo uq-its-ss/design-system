@@ -104,7 +104,9 @@ export const HeaderMegaMenu: FC<HeaderMegaMenuProps> = ({
                   style={{ display: isExpanded ? "block" : "none" }}
                 >
                   <div className={styles["uq-header__megamenu-container"]}>
-                    <h2 className={styles["uq-header__megamenu-overview-label"]}>
+                    <h2
+                      className={styles["uq-header__megamenu-overview-label"]}
+                    >
                       <a
                         href={link.href}
                         className={styles["uq-header__megamenu-link"]}

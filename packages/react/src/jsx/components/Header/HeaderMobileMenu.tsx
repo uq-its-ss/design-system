@@ -113,11 +113,9 @@ const renderMobileNav = (
             </li>
             {link.columns!.map((column) =>
               column.groups.map((group) =>
-                renderNestedLinks(
-                  group.children,
-                  isLinkActive,
-                  link.title,
-                ).map((child) => <>{child}</>),
+                renderNestedLinks(group.children, isLinkActive, link.title).map(
+                  (child) => <>{child}</>,
+                ),
               ),
             )}
           </ul>

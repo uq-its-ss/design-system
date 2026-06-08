@@ -16,7 +16,10 @@ export const HeaderSearch: FC<HeaderSearchProps> = ({
   onToggle,
 }) => {
   return (
-    <div className={styles["uq-header__toggle-search"]} data-gtm-category="Search">
+    <div
+      className={styles["uq-header__toggle-search"]}
+      data-gtm-category="Search"
+    >
       <button
         className={styles["uq-header__toggle-search-button"]}
         data-gtm-action="Toggle"

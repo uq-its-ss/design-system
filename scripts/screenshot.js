@@ -182,11 +182,14 @@ const main = async (puppeteer) => {
 };
 
 async function run() {
-  // Dynamically import puppeteer as an ES Module
-  const puppeteer = await import("puppeteer");
+     // Dynamically import puppeteer (ESM/CJS-compatible) and normalize to the API object.
+   const puppeteerModule = await import("puppeteer");
+   const puppeteer = puppeteerModule.default ?? puppeteerModule;
 
-  // puppeteer.default contains the actual puppeteer object when using dynamic import
-  await main(puppeteer.default);
+  await main(puppeteer);
 }
 
-run().catch((err) => console.error(err));
+ run().catch((err) => {
+   console.error(err);
+   process.exitCode = 1;
+ });

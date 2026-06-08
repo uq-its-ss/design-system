@@ -41,6 +41,7 @@
   // title
   &__title {
     color: core.$purple-500;
+    font-size: $title-font-size;
     font-weight: $title-font-weight;
     margin: core.$space-none;
     text-decoration: none;

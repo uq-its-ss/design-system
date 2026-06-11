@@ -448,7 +448,7 @@ $use-encapsulation: false !default;
         font-weight: core.$font-weight-normal;
         &:hover,
         &:focus {
-          color: core.$error-600;
+          color: core.$white;
         }
       }
     }

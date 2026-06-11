@@ -49,6 +49,7 @@
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-jest-dom": "^5.4.0",
     "eslint-plugin-react": "^7.37.4",
+    "eslint-plugin-storybook": "^10.4.3",
     "eslint-plugin-testing-library": "^6.4.0",
     "eslint-plugin-unused-imports": "^4.1.4",
     "globals": "^15.12.0",

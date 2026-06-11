@@ -169,10 +169,20 @@ export default {
   decorators: [HeaderDecorator],
   // ArgTypes define the controls for your component's properties (args)
   argTypes: {
+    siteName: {
+      name: "Site Name",
+      control: "text",
+      description:
+        "The title displayed for the current site link in NAVIGATION LOCAL (Mobile).",
+      table: {
+        category: "Demo Controls",
+      },
+    },
     siteDomain: {
       name: "Site Domain",
       control: "text",
-      description: "Sets the SEARCH input scope (as_sitesearch parameter).",
+      description:
+        "The href for current site link in NAVIGATION LOCAL (Mobile) and sets the SEARCH input scope.",
       table: {
         category: "Demo Controls",
       },
@@ -242,6 +252,7 @@ export default {
  * This function generates the final HTML string.
  */
 const headerRenderer = ({
+  siteName,
   siteDomain,
   showGlobalHeader,
   showLocalMobile,
@@ -269,6 +280,9 @@ const headerRenderer = ({
               ? `
               <li class="uq-header__nav-mobile-item">
                 <a class="uq-header__nav-mobile-home" href="https://uq.edu.au">UQ home</a>
+              </li>
+              <li class="uq-header__nav-mobile-item">
+                  <a class="uq-header__nav-mobile-link${siteDomain === activeHref ? " is-active" : ""}" href="${siteDomain}">${siteName}</a>
               </li>
               <!-- Hook for the recursive menu file above -->
               ${renderMobileNav(localLinks, activeHref)}
@@ -396,6 +410,7 @@ export const Default = {
     showGlobalHeader: true,
     showLocalMobile: true,
     siteDomain: "https://uq.edu.au",
+    siteName: "Your Site Name",
     localLinks: localLinksExample,
     primaryLinks: primaryLinks,
     secondaryLinks: secondaryLinks,

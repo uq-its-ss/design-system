@@ -24,7 +24,7 @@
     "packages/*"
   ],
   "overrides": {
-    "axios": "1.13.6"
+    "axios": "1.17.0"
   },
   "devDependencies": {
     "@babel/core": "^7.26.0",

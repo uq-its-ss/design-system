@@ -267,8 +267,18 @@
       padding: core.$space-xl core.$space-l;
       transition: background-color 0.2s;
       font-weight: core.$font-weight-normal;
+      line-height: core.$line-height;
       position: relative;
       z-index: 99;
+
+      // Button reset styles for when used as <button>
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: inherit;
+      text-align: left;
+      width: auto;
 
       &:hover,
       &:focus {

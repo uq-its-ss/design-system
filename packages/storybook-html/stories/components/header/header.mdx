@@ -200,7 +200,7 @@ Displays comprehensive sub-navigation options in an organized, multi-column layo
 **Accessibility features:**
 
 - ARIA attributes (`aria-expanded`, `aria-haspopup`, `aria-controls`) announce menu states
-- `role="button"` on menu triggers for proper semantics
+- Proper `<button>` elements for menu triggers (semantic HTML)
 - Keyboard navigation follows logical, sequential focus order
 - Screen readers announce menu states and hierarchical relationships
 
@@ -227,10 +227,10 @@ The mega menu implements hierarchical analytics tracking with the following attr
       <td>Defines the tracking category for the entire primary navigation section.</td>
     </tr>
     <tr>
-      <td>`data-gtm-label` on `<a class="uq-header__nav-primary-link">`</td>
+      <td>`data-gtm-label` on `<button class="uq-header__nav-primary-link">` (for mega menu) or `<a class="uq-header__nav-primary-link">` (for direct links)</td>
       <td>String</td>
       <td>Dynamic: Top-level link title (Example: `"Study"`, `"Research"`, `"Partners and community"`, `"About"`)</td>
-      <td>Identifies the primary navigation link clicked. Inherits category from parent.</td>
+      <td>Identifies the primary navigation link clicked. Inherits category from parent. Mega menu items use `<button>` elements, while direct links use `<a>` elements.</td>
     </tr>
   </tbody>
 </table>
@@ -519,7 +519,7 @@ The header component is built to meet WCAG 2.1 AA accessibility standards.
 - `aria-expanded` — Indicates whether mega menus are open or closed
 - `aria-haspopup="true"` — Indicates elements have dropdown menus
 - `aria-controls` — Associates triggers with their corresponding menu panels
-- `role="button"` — Identifies clickable navigation triggers
+- Semantic `<button>` elements for interactive controls without href destinations
 
 **Semantic structure:**
 

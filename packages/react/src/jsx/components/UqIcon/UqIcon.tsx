@@ -1,5 +1,5 @@
 import type { FC } from "react";
-import classNames from "classnames";
+import styles from "./uq-icon.module.scss";
 import { UqIconVariant } from "../../enum";
 
 export interface UqIconProps {
@@ -9,8 +9,6 @@ export interface UqIconProps {
 
 export const UqIcon: FC<UqIconProps> = ({ name, variant }) => (
   <span
-    className={classNames("uq-icon", `uq-icon--${name}`, {
-      [`uq-icon--${variant}`]: variant,
-    })}
+    className={`${styles["uq-icon"]} ${styles[`uq-icon--${name}`]} ${variant ? styles[`uq-icon--${variant}`] : ""}`}
   ></span>
 );

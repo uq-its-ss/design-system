@@ -1,5 +1,5 @@
 import type { FC, PropsWithChildren } from "react";
-import classNames from "classnames";
+import styles from "./uq-card-grid.module.scss";
 import { UqCardGridTarget } from "../../enum";
 
 export interface UqCardGridProps extends PropsWithChildren {
@@ -8,9 +8,7 @@ export interface UqCardGridProps extends PropsWithChildren {
 
 export const UqCardGrid: FC<UqCardGridProps> = ({ children, target }) => (
   <div
-    className={classNames("uq-card-grid", {
-      [`uq-card-grid--target-${target}`]: target,
-    })}
+    className={`${styles["uq-card-grid"]} ${target ? styles[`uq-card-grid--target-${target}`] : ""}`}
   >
     {children}
   </div>

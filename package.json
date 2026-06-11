@@ -74,6 +74,7 @@
     "stylelint-config-standard": "^36.0.1",
     "stylelint-config-standard-scss": "^13.1.0",
     "stylelint-scss": "^6.8.1",
+    "typescript": "^5.9.3",
     "typescript-eslint": "^8.13.0",
     "vinyl-buffer": "^1.0.1",
     "vinyl-source-stream": "^2.0.0",

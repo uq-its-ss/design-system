@@ -59,7 +59,7 @@
     "gulp-uglify": "^3.0.2",
     "http-server": "^14.1.1",
     "jsdom": "^25.0.1",
-    "lerna": "^8.1.9",
+    "lerna": "^9.0.7",
     "msw": "^2.6.0",
     "prettier": "3.3.3",
     "puppeteer": "^25.1.0",

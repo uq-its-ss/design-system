@@ -2,90 +2,86 @@
 @use "@uqds/icon/src/scss/global" as icon-constants;
 @use "global" as *;
 
+/* HEADER WRAPPER */
 .uq-header {
   background: core.$purple-500; // linear-gradient(90deg, $uq-purple 0%, 87%, #962A8B 100%);
   display: grid;
-  align-items: center;
-  grid-template-columns: auto;
-  grid-template-areas:
-    "mainheader"
-    "secondarynav";
+  //align-items: center;
+  //grid-template-columns: auto;
+  grid-template-areas: "headercontainer" "navigationsecondary";
+
+  //relative and z-index needed so they sit in front of the background layer.
   position: relative;
+  z-index: 50; /* Keeps the whole header above page content */
+
+  // required to so that search can sit behind the header but above page content.
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: core.$purple-500;
+    pointer-events: none; // Ensures it doesn't block clicks
+  }
 
   @media #{core.$screen-lg-up} {
-    grid-template-areas:
-      "secondarynav"
-      "mainheader";
+    grid-template-areas: "navigationsecondary" "headercontainer";
   }
 
   &__container {
     display: grid;
     align-items: center;
     grid-template-columns: 1fr 15fr 1fr;
-    grid-area: mainheader;
-    grid-template-areas:
-      "menutoggle logo searchtoggle"
-      "mainnav-mobile mainnav-mobile mainnav-mobile";
+    grid-area: headercontainer;
+    grid-template-areas: "togglemenu logo togglesearch";
 
     @media #{core.$screen-lg-up} {
-      max-width: 73.25rem;
-      margin-left: auto;
-      margin-right: auto;
-      grid-template-areas: "logo mainnav searchtoggle";
-      padding-left: core.$space-m;
-      padding-right: core.$space-m;
+      max-width: 75.25rem; //updated 73.25rem
+      //margin-left: auto;
+      //margin-right: auto;
+      justify-self: center; // added
+      grid-template-areas: "logo navigationprimary togglesearch";
+      //padding-left: core.$space-m;
+      //padding-right: core.$space-m;
     }
   }
 
-  &__menu-toggle {
-    grid-area: menutoggle;
+  /* TOGGLE MENU (Mobile) */
+  &__toggle-menu {
+    grid-area: togglemenu;
+
+    //relative and z-index needed so they sit in front of the background layer.
+    position: relative;
+    z-index: 2;
 
     @media #{core.$screen-lg-up} {
       display: none;
     }
   }
 
-  &__search-toggle {
-    grid-area: searchtoggle;
-    height: 100%;
-    text-align: right;
-    color: core.$white;
-
-    @media #{core.$screen-lg-up} {
-      height: auto;
-    }
-
-    .search-toggle__label {
-      display: none;
-
-      @media #{core.$screen-lg-up} {
-        display: block;
-        font-family: core.$roboto;
-        font-size: core.$font-size-m;
-        text-align: center;
-        width: 3.2rem;
-      }
-    }
-  }
-
-  & .nav-primary__toggle {
-    background: none;
-    border: none;
-    padding: 1.75rem core.$space-xl;
-    height: 100%;
-
-    @media #{core.$screen-lg-up} {
-      padding: 2.171rem 0 2.171rem 1.5rem;
-      height: auto;
-    }
-  }
-
-  & .nav-primary__menu-toggle {
+  &__toggle-menu-button {
     cursor: pointer;
     color: core.$white;
     position: relative;
-    text-indent: -9999px;
+    // text-indent: -9999px;
+    font-size: core.$font-size-xs;
     white-space: nowrap;
+    background: none;
+    border: none;
+    padding: 1.75rem core.$space-xl;
+    padding: 2.625rem 1.5rem 17px 1.5rem;
+    width: core.$space-uuul;
+    height: core.$space-uul;
+
+    display: flex;
+    justify-content: center;
+
+    /*    @media #{core.$screen-lg-up} {
+      padding: 2.171rem 0 2.171rem core.$space-l;
+      height: auto;
+    }*/
 
     &::before {
       content: "";
@@ -94,12 +90,12 @@
         core.$white
       ));
       background-repeat: no-repeat;
-      width: 1.5rem;
-      height: 1.5rem;
-      transform: translate(50%, 50%);
+      width: core.$space-l;
+      height: core.$space-l;
+      //transform: translate(50%, 50%);
       position: absolute;
-      top: 0.625rem;
-      right: core.$space-xl;
+      top: core.$space-m;
+      left: 28px;
     }
 
     &--is-open {
@@ -112,462 +108,314 @@
     }
   }
 
-  & .nav-primary__search-toggle {
-    cursor: pointer;
-    color: core.$white;
-    position: relative;
-
-    &::before {
-      content: "";
-      background-image: url(icon-constants.get-icon(
-        "standard--search",
-        core.$white
-      ));
-      background-repeat: no-repeat;
-      width: 1.5rem;
-      height: 1.5rem;
-      transform: translate(50%, 50%);
-      position: absolute;
-      top: 0.625rem;
-      right: core.$space-xl;
-
-      @media #{core.$screen-lg-up} {
-        top: 1.25rem;
-        left: -1rem;
-      }
-    }
-
-    @media #{core.$screen-lg-up} {
-      &:hover,
-      &:focus {
-        .search-toggle__label {
-          background-color: core.$white;
-          color: core.$purple-500;
-          text-decoration: underline;
-        }
-      }
-    }
-
-    &--is-open {
-      text-align: center;
-      &::before {
-        background-image: url(icon-constants.get-icon(
-          "standard--x",
-          core.$white
-        ));
-      }
-    }
-  }
-
+  /* LOGO */
   &__logo {
     grid-area: logo;
 
-    & a {
-      display: grid;
-      padding: 1rem 0;
+    //relative and z-index needed so they sit in front of the background layer.
+    position: relative;
+    z-index: 2;
+
+    &-link {
+      display: inline-flex; // allows for centering of image and cancel expansion of click area, addresses link tag issue that adds decender space below image
+      padding: 20px 0; // non standard padding is intentional.
+
+      @media #{core.$screen-lg-up} {
+        padding: 1.5rem 2rem;
+      }
     }
 
-    & img {
+    &-image {
       height: 32px;
 
       @media #{core.$screen-lg-up} {
+        display: block;
         height: 40px;
+        max-width: unset; // override Drupal (img, picture max-width: 100%)
       }
     }
   }
 
-  // __nav-primary
-
-  &__nav-primary {
-    grid-area: mainnav;
-    display: none;
-    width: 100%;
-    z-index: 99;
+  /* TOGGLE SEARCH */
+  &__toggle-search {
+    grid-area: togglesearch;
+    justify-self: end;
 
     @media #{core.$screen-lg-up} {
-      display: block;
-    }
-  }
-
-  &__nav-primary-container {
-    @media #{core.$screen-lg-up} {
-      padding: 0 0 0 core.$space-l;
-    }
-  }
-
-  &__nav-primary-list {
-    list-style-type: none;
-    margin: 0;
-    padding-left: 0;
-    display: flex;
-    justify-content: flex-start;
-    align-items: stretch;
-    flex-direction: column;
-
-    @media #{core.$screen-lg-up} {
-      align-items: center;
-      flex-direction: row;
-    }
-  }
-
-  &__nav-primary-item {
-    margin: 0;
-
-    &--is-open {
-      .uq-header__nav-primary-link {
-        background-color: core.$white;
-        color: core.$purple-500;
-        text-decoration: underline;
-      }
-
-      & > .uq-header__megamenu {
-        height: auto;
-        visibility: visible;
-      }
-    }
-  }
-
-  &__nav-primary-link {
-    display: block;
-    color: core.$white; //core.$purple-500;
-    text-decoration: none;
-    padding: core.$space-m core.$space-xl;
-    transition: background-color 0.25s;
-    font-weight: core.$font-weight-normal;
-    position: relative;
-
-    &:hover,
-    &:focus {
-      color: core.$purple-500;
-      background-color: core.$white;
-      text-decoration: underline;
+      height: auto;
     }
 
-    @media #{core.$screen-lg-up} {
-      padding: core.$space-xl core.$space-l;
-    }
-  }
+    &-button {
+      cursor: pointer;
+      color: core.$white;
+      position: relative;
+      background: none;
+      border: none;
 
-  .nav-primary-link--has-dropdown {
-    padding: core.$space-xl core.$space-xxl core.$space-xl core.$space-l;
+      padding: 1.5rem;
+      width: core.$space-uul;
+      height: core.$space-uul;
 
-    &::after {
-      content: "";
-      background-image: url(icon-constants.get-icon(
-        "standard--chevron-down-sml",
-        core.$white
-      ));
-      background-repeat: no-repeat;
-      width: core.$space-m;
-      height: core.$space-m;
-      transform: translateY(50%);
-      position: absolute;
-      top: 1.7rem;
-      right: 1.75rem;
+      //relative and z-index needed so they sit in front of the background layer.
+      position: relative;
+      z-index: 2;
 
       @media #{core.$screen-lg-up} {
-        right: 1.25rem;
+        padding: core.$space-xl core.$space-xl core.$space-xl core.$space-ul;
+        position: relative;
+        height: auto;
+        width: auto;
       }
-    }
-  }
 
-  .nav-primary-link--has-dropdown:hover,
-  .nav-primary-link--has-dropdown:focus,
-  .uq-header__nav-primary-item--is-open > .nav-primary-link--has-dropdown {
-    &::after {
-      background-image: url(icon-constants.get-icon(
-        "standard--chevron-down-sml",
-        core.$purple-500
-      ));
-    }
-  }
+      &::before {
+        content: "";
+        background-image: url(icon-constants.get-icon(
+          "standard--search",
+          core.$white
+        ));
+        background-repeat: no-repeat;
+        width: core.$space-l;
+        height: core.$space-l;
+        position: absolute;
+        top: core.$space-l;
+        right: core.$space-l;
 
-  .mega-menu {
-    display: none;
-    background-color: core.$white;
-    list-style-type: none;
-    margin: 0;
-    padding-left: 0;
-
-    & li {
-      & a {
-        padding-left: core.$space-xxxl;
-        color: core.$purple-500;
-        text-decoration: none;
-
-        &:hover {
-          text-decoration: underline;
+        @media #{core.$screen-lg-up} {
+          top: core.$space-xl;
+          left: core.$space-xl;
         }
       }
-    }
 
-    & ul {
-      list-style-type: none;
-      margin: 0;
-      padding-left: 0;
-
-      & li {
-        & a {
-          padding-left: core.$space-uul;
-          text-decoration: none;
-          &:hover {
+      @media #{core.$screen-lg-up} {
+        &:hover,
+        &:focus {
+          .uq-header__toggle-search-label {
+            background-color: core.$white;
+            color: core.$purple-500;
             text-decoration: underline;
           }
         }
       }
+
+      &--is-open {
+        text-align: center;
+
+        &::before {
+          background-image: url(icon-constants.get-icon(
+            "standard--x",
+            core.$white
+          ));
+        }
+      }
+    }
+
+    &-label {
+      visibility: hidden;
+
+      @media #{core.$screen-lg-up} {
+        visibility: visible;
+        font-family: core.$roboto;
+        font-size: core.$font-size-m;
+        text-align: center;
+        line-height: core.$line-height; //core.$space-l
+        height: auto;
+        width: 3.2rem;
+      }
     }
   }
 
-  &__nav-secondary {
-    background-color: #48206c;
-    grid-area: secondarynav;
-  }
+  /* NAVIGATION PRIMARY (Desktop) */
+  &__nav-primary {
+    grid-area: navigationprimary;
+    display: none;
 
-  &__nav-secondary-container {
     @media #{core.$screen-lg-up} {
-      text-align: right;
-      max-width: 73.25rem;
-      margin-left: auto;
-      margin-right: auto;
+      display: block;
     }
-  }
 
-  &__nav-secondary-list {
-    list-style-type: none;
-    margin: 0;
-    padding-left: 0;
-    display: flex;
-    justify-content: flex-start;
-    align-items: stretch;
-    flex-direction: column;
-
-    @media #{core.$screen-lg-up} {
-      justify-content: flex-end;
+    &-list {
+      list-style-type: none;
+      margin: 0;
+      padding-left: 0;
+      display: flex;
+      justify-content: flex-start;
       align-items: center;
       flex-direction: row;
     }
-  }
 
-  &__nav-secondary-item {
-    margin: 0;
+    &-item {
+      margin: 0;
 
-    @media #{core.$screen-lg-up} {
-      padding: 0.625rem core.$space-m;
-      font-size: core.$font-size-s;
-    }
-  }
+      &--is-open {
+        .uq-header__nav-primary-link {
+          background-color: core.$white;
+          color: core.$purple-500;
+          text-decoration: underline;
+        }
 
-  &__nav-secondary-link {
-    display: block;
-    color: white;
-    text-decoration: none;
-    font-weight: core.$font-weight-normal;
-
-    &:hover,
-    &:focus {
-      color: core.$purple-500;
-      text-decoration: underline;
-      background-color: core.$white;
-    }
-  }
-
-  &__search {
-    background: core.$purple-500;
-    position: absolute;
-    width: 100%;
-    top: 3.95rem;
-    z-index: 20;
-    box-shadow: 0 0.75rem core.$space-l rgb(24 24 24 / 20%);
-    transition:
-      max-height 0.2s ease-in-out,
-      transform 0.2s ease-in-out; //, visibility .2s ease;
-    transform: translateY(-1rem);
-    max-height: 0;
-    overflow: hidden;
-    visibility: hidden;
-
-    @media #{core.$screen-lg-up} {
-      top: 8.05rem;
+        & > .uq-header__megamenu {
+          height: auto;
+          visibility: visible;
+        }
+      }
     }
 
-    &--is-open {
-      transform: translateY(0);
-      max-height: 50vh;
-      visibility: visible;
-    }
-  }
-
-  &__search-container {
-    padding: 0 core.$space-l;
-
-    @media #{core.$screen-lg-up} {
-      padding-left: core.$space-m;
-      padding-right: core.$space-m;
-      max-width: 73.25rem;
-      margin-left: auto;
-      margin-right: auto;
-      padding-top: 0;
-      padding-bottom: 1rem;
-    }
-  }
-
-  &__search-query {
-    position: relative;
-    display: inline-block;
-    max-width: 100%;
-    min-width: 100%;
-    border-radius: 5px;
-    background-position: core.$space-m;
-    padding-top: core.$space-m;
-    padding-bottom: core.$space-m;
-  }
-
-  &__search-query-label {
-    color: core.$white;
-  }
-
-  &__search-query-input {
-    margin: 0 !important;
-    padding: 0.75rem core.$space-m !important;
-  }
-
-  &__search-query-button {
-    background-clip: padding-box;
-    background-color: core.$white;
-    border-radius: 5px;
-    border: 2px solid transparent;
-    color: core.$purple-500;
-    display: inline-block;
-    font-size: core.$font-size-m;
-    height: 2.75rem;
-    line-height: 1.5;
-    margin-bottom: 0;
-    margin-right: 0;
-    overflow: hidden;
-    position: absolute;
-    right: core.$space-s;
-    text-decoration: none;
-    text-indent: 0;
-    top: calc(50% - 1.375rem);
-    transition:
-      color 0.2s,
-      background-color 0.2s,
-      border-color 0.2s;
-    width: 2.75rem;
-
-    &::before {
-      content: "";
-      position: absolute;
+    &-link {
       display: block;
-      width: core.$space-l;
-      height: core.$space-l;
-      top: core.$space-s;
-      left: core.$space-s;
-      background-size: 100%;
+      color: core.$white; //core.$purple-500;
+      text-decoration: none;
+      padding: core.$space-xl core.$space-l;
+      transition: background-color 0.2s;
+      font-weight: core.$font-weight-normal;
+      line-height: core.$line-height;
+      position: relative;
+      z-index: 99;
+
+      // Button reset styles for when used as <button>
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: inherit;
+      text-align: left;
+      width: auto;
+
+      &:hover,
+      &:focus {
+        color: core.$purple-500;
+        background-color: core.$white;
+        text-decoration: underline;
+      }
+    }
+
+    &--has-dropdown {
+      padding-right: core.$space-xxl;
+
+      &::after {
+        content: "";
+        background-image: url(icon-constants.get-icon(
+          "standard--chevron-down-sml",
+          core.$white
+        ));
+        background-repeat: no-repeat;
+        width: core.$space-m;
+        height: core.$space-m;
+        transform: translateY(50%);
+        position: absolute;
+        top: 1.7rem;
+        right: 1.75rem;
+
+        @media #{core.$screen-lg-up} {
+          right: 1.25rem;
+        }
+      }
+    }
+  }
+
+  .uq-header__nav-primary--has-dropdown:hover,
+  .uq-header__nav-primary--has-dropdown:focus,
+  .uq-header__nav-primary-item--is-open
+    > .uq-header__nav-primary--has-dropdown {
+    &::after {
       background-image: url(icon-constants.get-icon(
-        "standard--search",
+        "standard--chevron-down-sml",
         core.$purple-500
       ));
     }
   }
 
-  &__search-query-submit {
-    color: transparent;
-    position: relative;
-    display: block;
-    width: 100%;
-    height: 100%;
-    margin: core.$space-none;
-    border: core.$space-none;
-    background-color: transparent;
-    z-index: 3;
-    cursor: pointer;
-    outline-offset: -2px;
-    font-size: core.$font-size-m;
-  }
-
-  &__search-range {
-    display: inline-block;
-
-    & label {
-      color: core.$white;
-    }
-  }
-
-  .uq-header__search-radio {
-    &:checked {
-      border-color: core.$white;
-
-      &:focus {
-        border-color: core.$white;
-      }
-
-      &::after {
-        background-color: core.$white;
-      }
-    }
-  }
-
-  &__search-label {
-    font-size: 0.8rem !important;
-    line-height: 1.7 !important;
-
-    @media #{core.$screen-lg-up} {
-      font-size: core.$font-size-m !important;
-      line-height: 1.4 !important;
-    }
-  }
-
-  &__nav-primary,
-  &__nav-secondary {
-    @media #{core.$screen-lg-down} {
-      display: none;
-    }
-  }
-
+  /* Mega Menu (Desktop) */
   &__megamenu {
     position: absolute;
-    top: 8.05rem;
     left: 0;
     width: 100%;
     z-index: 30;
-    height: 0;
+    /* display: none;  Hidden by default, shown on hover or focus */
     visibility: hidden;
-  }
 
-  &__megamenu-container {
-    max-width: 73.25rem;
-    margin-left: auto;
-    margin-right: auto;
-
-    padding: core.$space-m core.$space-xxxl core.$space-xxl core.$space-xxxl;
-    background: core.$white;
-    //box-shadow: 0 0.75rem core.$space-l rgb(24 24 24 / 20%);
-    border-radius: 0 0 0.25rem 0.25rem;
-
-    @media #{core.$screen-xl-up} {
+    &-container {
       max-width: 77.25rem;
+      margin-left: auto;
+      margin-right: auto;
+      padding: core.$space-xl core.$space-xxxl;
+      background: core.$white;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* Defines a 3-column grid */
+      gap: core.$space-xl;
+      box-shadow: 0 0.75rem core.$space-l rgba(24, 24, 24, 0.2);
+      //box-shadow: 0 0.75rem core.$space-l rgb(24 24 24 / 20%);
+      border-radius: 0 0 core.$space-xs core.$space-xs;
     }
-  }
 
-  .megamenu__row {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  }
+    &-overview-label {
+      grid-column: 1 / span 3; /* Span the full width of the grid */
+      margin: 0;
 
-  .megamenu__overview-link {
-    display: block;
-    padding: core.$space-m core.$space-none;
-    color: core.$purple-500;
-    font-weight: core.$font-weight-normal;
-    text-decoration: none;
+      & .uq-header__megamenu-link {
+        font-size: core.$font-size-xxl;
+        font-weight: core.$font-weight-medium;
+        margin-right: core.$space-xl;
+        position: relative;
 
-    &:hover,
-    &:focus {
-      background-color: transparent;
-      color: transparent;
+        &::after {
+          content: "";
+          background-image: url(icon-constants.get-icon(
+            "standard--arrow-right",
+            core.$purple-500
+          ));
+          background-repeat: no-repeat;
+          width: core.$space-l;
+          height: core.$space-l;
+          position: absolute;
+          top: 2.5px;
+          right: -36px;
+        }
+      }
+    }
 
-      .megamenu__overview-label {
+    &-overview-link {
+      display: block;
+      padding: core.$space-m core.$space-none;
+      color: core.$black;
+      font-size: core.$font-size-l;
+      font-weight: core.$font-weight-medium;
+      text-decoration: none;
+    }
+
+    &-heading {
+      font-size: core.$font-size-l;
+      font-weight: 500;
+      color: core.$black;
+      padding-top: core.$space-xs;
+      padding-bottom: core.$space-m;
+      margin: core.$space-none;
+
+      &:nth-of-type(2) {
+        padding-top: core.$space-xxl;
+      }
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      list-style-type: none;
+      margin: core.$space-none;
+      padding-left: core.$space-none;
+    }
+
+    &-item {
+      margin: core.$space-none;
+    }
+
+    &-link {
+      display: inline-block;
+      color: core.$grey-900;
+      text-decoration: none;
+      font-weight: core.$font-weight-normal;
+
+      &:hover,
+      &:focus {
         background-color: core.$purple-500;
         color: core.$white;
         text-decoration: underline;
@@ -575,45 +423,177 @@
     }
   }
 
-  .megamenu__heading {
-    color: core.$purple-500;
-    font-weight: core.$font-weight-medium;
-    padding-top: core.$space-xs;
-    padding-bottom: core.$space-xs;
+  /* SEARCH */
+  &__search {
+    background: core.$purple-500;
+    position: absolute;
+    width: 100%;
+    top: auto;
+    left: 0;
+    z-index: -1;
+    box-shadow: 0 0.75rem core.$space-l rgb(24 24 24 / 20%);
 
-    &:nth-of-type(2) {
-      padding-top: core.$space-xxl;
+    /* 1. Setup the hidden state properly using only transform */
+    transform: translateY(-100%); /* Slides it up completely out of view */
+    visibility: hidden;
+    pointer-events: none;
+    will-change: transform; /* Tells the browser to hardware-accelerate this */
+
+    /* 2. Transition ONLY transform (and delay visibility so it doesn't snap invisible) */
+    transition:
+      transform 0.3s ease-in-out,
+      visibility 0s linear 0.3s;
+
+    &--is-open {
+      /* 3. The open state */
+      transform: translateY(0); /* Slides it down into place */
+      visibility: visible;
+      pointer-events: auto;
+
+      /* Make visibility instant when opening, but keep the smooth slide */
+      transition:
+        transform 0.3s ease-in-out,
+        visibility 0s linear;
+    }
+
+    &-container {
+      max-width: 75.25rem;
+      margin-left: auto;
+      margin-right: auto;
+      padding: core.$space-s core.$space-l core.$space-m;
+
+      @media #{core.$screen-lg-up} {
+        padding: core.$space-l core.$space-xl core.$space-xxl;
+      }
+    }
+
+    &-query {
+      position: relative;
+      display: inline-block;
+      max-width: 100%;
+      min-width: 100%;
+      border-radius: 5px;
+      background-position: core.$space-m;
+      padding-top: core.$space-m;
+      padding-bottom: core.$space-m;
+    }
+
+    &-form {
+      border: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    &-fieldset {
+      position: relative;
+      border: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    &-label {
+      color: core.$white;
+      display: none;
+    }
+
+    &-input {
+      margin: 0 !important;
+      padding: 0.875rem 3.125rem 0.875rem 1rem !important;
+      font-size: 1rem;
+      line-height: 1;
+      width: 100%;
+    }
+
+    &-button {
+      background: none;
+      border: none;
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: core.$space-xxxl;
+      width: core.$space-xxxxl;
+      padding: 0.75rem core.$space-m !important;
+      cursor: pointer;
+      white-space: nowrap;
+
+      &::before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: core.$space-l;
+        height: core.$space-l;
+        top: 0.75rem;
+        left: core.$space-m;
+        background-size: 100%;
+        background-image: url(icon-constants.get-icon(
+          "standard--search",
+          core.$purple-500
+        ));
+      }
+
+      &-label {
+        display: none;
+      }
     }
   }
 
-  .megamenu__menu {
-    & ul {
+  /* NAVIGATION SECONDARY (Desktop) */
+  &__nav-secondary {
+    display: none;
+    background-color: core.$purple-600;
+    grid-area: navigationsecondary;
+
+    //relative and z-index needed so they sit in front of the background layer.
+    position: relative;
+    z-index: 2;
+
+    @media #{core.$screen-lg-up} {
+      display: block;
+    }
+
+    &-container {
+      @media #{core.$screen-lg-up} {
+        text-align: right;
+        max-width: 75.25rem;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    &-list {
       list-style-type: none;
-      margin: core.$space-none;
-      padding-left: core.$space-none;
+      margin: 0;
+      padding: 0.625rem core.$space-xl;
+      display: flex;
+      justify-content: flex-end;
+      gap: core.$space-l;
+      align-items: center;
+      flex-direction: row;
+    }
 
-      & li {
-        margin: core.$space-none;
+    &-item {
+      margin: 0;
+      padding: 0;
+    }
 
-        & a {
-          display: inline-block;
-          margin-top: core.$space-s;
-          color: core.$purple-500;
-          text-decoration: none;
-          font-weight: core.$font-weight-normal;
+    &-link {
+      display: block;
+      color: white;
+      text-decoration: none;
+      font-size: core.$font-size-s;
+      font-weight: core.$font-weight-normal;
 
-          &:hover,
-          &:focus {
-            background-color: core.$purple-500;
-            color: core.$white;
-            text-decoration: underline;
-          }
-        }
+      &:hover,
+      &:focus {
+        color: core.$purple-500;
+        text-decoration: underline;
+        background-color: core.$white;
       }
     }
   }
 }
 
+/* NAVIGATION (Mobile) (Slide menu) */
 :root {
   --app-height: 100%;
 }
@@ -626,12 +606,10 @@ body.no-scroll {
   }
 }
 
-// Slide mobile menu
-
 .slide-menu {
   width: 100%;
   max-width: 100%;
-  background-color: #ffffff;
+  background-color: core.$purple-600; // Keeping as literal as this is a darker purple than core.$purple-500
   height: calc(var(--app-height) - 4.3rem);
   display: none;
   box-sizing: border-box;
@@ -639,168 +617,154 @@ body.no-scroll {
   transform: translateX(100%);
   will-change: transform;
   z-index: 1000;
-  grid-area: mainnav-mobile;
   position: fixed;
-  top: 4.3rem;
-  right: core.$space-none;
+  // top: 4.5rem; removed to pin header to toggle.
+  right: 0;
   overflow-y: auto;
   overflow-x: hidden;
-  font-size: core.$font-size-m;
-  color: core.$purple-500;
+  font-size: core.$space-m;
+  line-height: 1.6;
+  color: core.$purple-500; // Keeping as literal as this is a darker purple than core.$purple-500
 
   @media #{core.$screen-lg-up} {
     display: none !important;
   }
 
-  .slide-menu__slider {
+  /* inserted by JS, allows back to work */
+  &__slider {
     width: 100%;
     transform: translateX(0);
     transition: transform 0.3s ease-in-out;
     will-change: transform;
   }
 
-  ul {
+  & .uq-header__nav-mobile-list {
     position: relative;
     width: 100%;
-    margin: core.$space-none;
-    padding-left: core.$space-none;
+    margin: 0;
+    padding-left: 0;
     list-style: none;
     background-color: core.$white;
 
-    ul {
+    /* positions the submenus */
+    & .uq-header__nav-mobile-list {
       position: absolute;
-      top: core.$space-none;
+      top: 0;
       left: 100%;
       display: none;
-
-      a {
-        padding: 0.75rem core.$space-l 0.75rem core.$space-xxxl;
-      }
-    }
-
-    a {
-      display: block;
     }
   }
 
-  li {
-    margin-bottom: core.$space-none;
-
-    &:hover {
-      background-color: #f1f1f1;
-    }
+  & .uq-header__nav-mobile-item,
+  & .uq-header__nav-mobile-secondary-item {
+    margin-bottom: 0;
   }
 
-  .slide-menu__control {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    font-weight: core.$font-weight-medium;
-  }
-
-  a {
+  /* Menu links */
+  & .uq-header__nav-mobile-home,
+  & .uq-header__nav-mobile-primary,
+  & .uq-header__nav-mobile-secondary,
+  & .uq-header__nav-mobile-audience-link,
+  & .uq-header__nav-mobile-link {
+    display: block;
     cursor: pointer;
-    padding: 0.75rem core.$space-l;
+    padding: core.$space-m core.$space-xxl;
     text-decoration: none;
-    font-size: core.$font-size-m;
-    color: core.$purple-500;
+    font-size: core.$space-m;
+    color: core.$black;
     position: relative;
-    font-weight: core.$font-weight-normal;
+    font-weight: 400;
 
     &:hover {
-      color: core.$purple-500;
-      background-color: #f1f1f1;
+      color: core.$black;
+      background-color: core.$grey-50;
     }
   }
 
-  & .slide-menu__backlink {
+  /* returns the padding for Parent page link */
+  & .uq-header__nav-mobile-list .uq-header__nav-mobile-item:nth-of-type(2) a {
+    padding-left: core.$space-l;
+
+    &.is-active {
+      padding-left: calc(core.$space-l - 6px);
+    }
+  }
+
+  /* Back to previous menu section */
+  &__backlink {
+    &.uq-header__nav-mobile-link {
+      font-weight: core.$font-weight-medium;
+    }
+
+    &::before {
+      content: "";
+      background-image: url("data:image/svg+xml,%3csvg viewBox=%270 0 24 24%27 fill=%27none%27 xmlns=%27http://www.w3.org/2000/svg%27%3e%3cpath d=%27m15 5-7 7 7 7%27 stroke=%27%23000%27 stroke-width=%271.5%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3e%3c/path%3e%3c/svg%3e");
+      background-repeat: no-repeat;
+      width: core.$space-l;
+      height: core.$space-l;
+      transform: translateY(50%);
+      position: absolute;
+      left: core.$space-m;
+      top: core.$space-xs;
+    }
+  }
+
+  /* Child menu item */
+  &__decorator::before {
+    content: "";
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m10 17 5-5-5-5' stroke='%2319151C' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3e%3c/path%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    width: core.$space-l;
+    height: core.$space-l;
+    transform: translateY(50%);
+    position: absolute;
+    right: core.$space-l;
+    top: core.$space-xs;
+  }
+
+  /* UQ Home back link */
+  .uq-header__nav-mobile-home {
+    padding-left: calc(core.$space-xxxl - 4px);
     font-weight: core.$font-weight-medium;
-    padding-left: core.$space-xxxl;
 
     &::before {
       content: "";
-      background-image: url(icon-constants.get-icon(
-        "standard--chevron-left-sml",
-        core.$purple-500
-      ));
+      background: url("data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M20%2012L5%2012%22%20stroke%3D%22%2351247a%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3Cpath%20d%3D%22M10%206L4%2012L10%2018%22%20stroke%3D%22%2351247a%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E");
       background-repeat: no-repeat;
-      width: 1.5rem;
-      height: 1.5rem;
+      width: core.$space-l;
+      height: core.$space-l;
       transform: translateY(50%);
       position: absolute;
-      left: 1.25rem;
+      left: core.$space-m;
       top: core.$space-xs;
     }
   }
 
-  &__decorator {
-    &::before {
-      content: "";
-      background-image: url(icon-constants.get-icon(
-        "standard--chevron-right-sml",
-        core.$purple-500
-      ));
-      background-repeat: no-repeat;
-      width: 1.5rem;
-      height: 1.5rem;
-      transform: translateY(50%);
-      position: absolute;
-      right: 1.5rem;
-      top: core.$space-xs;
-    }
-  }
-
-  /* Controls */
-  .controls {
-    display: flex;
-    margin-bottom: core.$space-m;
-  }
-
-  .btn {
-    padding: 0.75rem core.$space-l;
-    flex: 1 0 auto;
-    font-size: 90%;
-    color: core.$purple-500;
-    background-color: core.$white;
-    text-transform: uppercase;
-
-    border: none;
-    cursor: pointer;
-    font-family: inherit;
-    line-height: 1;
-
-    &:first-of-type {
-      text-align: left;
-
-      &:before {
-        content: "⮜ this";
-        margin-right: 0.5rem;
-      }
-    }
-
-    &:last-of-type {
-      text-align: right;
-
-      &:before {
-        content: "✕";
-        margin-right: 0.5rem;
-      }
-    }
-  }
-
-  .uq-header__nav-secondary-item {
-    background-color: #48206c;
+  .uq-header__nav-mobile-secondary-item {
+    background-color: core.$purple-600;
 
     &:hover {
-      background-color: #48206c;
+      background-color: core.$purple-600;
     }
   }
 
-  .uq-header__nav-secondary-link {
+  .uq-header__nav-mobile-secondary {
     color: core.$white;
+    padding: core.$space-s core.$space-l;
 
     &:hover {
-      color: core.$white;
-      background-color: #48206c;
+      color: core.$purple-600;
+      background-color: core.$white;
+    }
+  }
+
+  /* convoluted way to target the first Secondary item and add space above, refine when better classes added */
+  ul > li.uq-header__nav-mobile-secondary-item {
+    padding-top: core.$space-m;
+
+    /* convoluted way to target the first Secondary item and add space above, refine when better classes added */
+    ~ li.uq-header__nav-mobile-secondary-item {
+      padding-top: 0rem;
     }
   }
 
@@ -808,177 +772,69 @@ body.no-scroll {
     font-weight: core.$font-weight-medium;
   }
 
-  .uq-header__newglobal-nav-item {
-    background-color: core.$purple-500;
-  }
-
-  .uq-header__newglobal-nav-link {
+  .uq-header__nav-mobile-primary {
     color: core.$white;
+    padding: core.$space-m core.$space-l;
     background-color: core.$purple-500;
+    font-weight: core.$font-weight-medium;
 
     &:hover {
-      color: core.$white;
-      background-color: core.$purple-500;
+      color: core.$purple-500;
+      background-color: core.$white;
+
+      .slide-menu__decorator::before {
+        content: "";
+        background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M4%2012L19%2012%22%20stroke%3D%22%2351247a%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3Cpath%20d%3D%22M14%2018L20%2012L14%206%22%20stroke%3D%22%2351247a%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E");
+      }
+    }
+
+    .slide-menu__decorator::before {
+      content: "";
+      background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M4%2012L19%2012%22%20stroke%3D%22%23fff%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3Cpath%20d%3D%22M14%2018L20%2012L14%206%22%20stroke%3D%22%23fff%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E");
     }
   }
 
-  .uq-header__newglobal-nav-link .slide-menu__decorator::before {
-    content: "";
-    background-image: url(icon-constants.get-icon(
-      "standard--chevron-right-sml",
-      core.$white
-    ));
+  /* Active state Calc function needs a global variable to allow targeting of active subitems */
+  .is-active {
+    border-left: 6px solid core.$purple-500;
+    padding-left: calc(core.$space-xxl - 6px);
+    background-color: core.$grey-50;
+  }
+
+  ul ul .is-active {
+    padding-left: calc(core.$space-xxl - 6px);
+  }
+
+  .uq-header__nav-mobile-audience-link {
+    padding-right: core.$space-xxxl;
   }
 }
 
-/* LOCAL SITE NAVIGATION MODIFIERS */
+.uq-header__nav-mobile-link,
+.uq-header__nav-mobile-audience-link,
+.uq-header__nav-mobile-home,
+.slide-menu__backlink {
+  border-bottom: 1px solid core.$grey-100; // Keeping as literal
+}
 
-.global-mobile-nav {
-  .uq-site-header__title-container {
-    margin: 0;
-    padding: 1rem 1.5rem;
-  }
-
-  .uq-site-header__title {
-    padding: 0;
-    font-size: 1rem;
-    font-weight: 500;
-    display: block;
-
-    &:hover {
-      background: none;
-    }
-  }
-
-  &__audience-link {
-    font-weight: core.$font-weight-medium;
-  }
+.uq-header__nav-mobile-local {
+  background-color: core.$white;
 }
 
 .uq-site-header__navigation-toggle {
   display: none;
 }
 
-/* D7 overrides and hacks */
-
-.admin-menu {
-  .slide-menu {
-    top: 7.5rem;
-
-    @media #{core.$screen-md-up} {
-      top: 6.15rem;
+// Neutralize all hover effects on touch devices to prevent "Sticky Hover"
+// and stop global purple styles from leaking in.
+@media (hover: none) {
+  .slide-menu a,
+  .uq-slide-menu__back {
+    &:hover,
+    &:active {
+      background-color: transparent !important;
+      color: core.$black !important; // Use the variable for your default text color
+      text-decoration: none !important;
     }
   }
-}
-.uq-header {
-  line-height: 1.5;
-  font-family: core.$roboto;
-}
-.uq-header__logo img {
-  max-width: unset;
-}
-
-.uq-header__search-query-submit {
-  background-color: unset !important;
-}
-
-.uq-header__search-range .uq-header__search-label {
-  max-width: unset;
-}
-
-.uq-header__nav-primary-list li {
-  margin: 0;
-}
-
-.uq-header__nav-primary-link {
-  display: block;
-  color: #fff;
-  text-decoration: none;
-  transition:
-    background-color 0.25s,
-    border-color 0.25s;
-  font-weight: core.$font-weight-normal;
-  position: relative;
-}
-
-.uq-header__search-container {
-  form,
-  fieldset {
-    border: unset;
-    padding: 0;
-    margin: 0;
-  }
-}
-
-.uq-header__search-query-input {
-  height: 45px !important;
-}
-
-.uq-header .nav-primary__search-toggle {
-  margin-bottom: 0;
-}
-
-.uq-header .nav-primary__menu-toggle {
-  margin-bottom: 0 !important;
-  font: initial;
-  font-size: 0.833rem;
-  line-height: normal;
-}
-
-/* D7 and D9 search fixes */
-.uq-header__search-range {
-  display: inline-block;
-}
-
-.uq-header__search-range input[type="radio"] {
-  height: 20px;
-  width: 20px;
-  vertical-align: top;
-  display: inline-block;
-  border-radius: 50%;
-  background-color: transparent;
-  margin: 3px 3px 0 5px;
-  position: absolute;
-
-  /* Missing form component styles */
-  appearance: none;
-  -webkit-appearance: none;
-  border: 1px solid #e7e3e0;
-  cursor: pointer;
-}
-.uq-header__search-range input[type="radio"] + label {
-  margin-bottom: 1rem;
-  margin-left: 0.5rem;
-  margin-right: 1rem;
-  padding-top: 0.125rem;
-  padding-left: 1.5rem;
-}
-
-.uq-header__search-range label {
-  color: core.$white;
-  font-weight: core.$font-weight-normal;
-  display: inline-block;
-  vertical-align: top;
-}
-
-input[type="radio"].uq-header__search-radio:checked {
-  border-color: core.$white;
-  border-width: 2px;
-}
-
-input[type="radio"].uq-header__search-radio:focus {
-  border-color: core.$white;
-}
-
-input[type="radio"].uq-header__search-radio:checked::after {
-  content: "";
-  background-color: core.$white;
-  border-radius: 50%;
-  content: "";
-  display: block;
-  position: absolute;
-  top: 3px;
-  left: 3px;
-  height: 10px;
-  width: 10px;
 }

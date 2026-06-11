@@ -141,14 +141,6 @@ $story-card-font-size-small: 22px;
 }
 
 .uq-story-card--feature {
-  .uq-story-card__title {
-    font-size: core.$font-size-xxxl;
-
-    @media #{core.$screen-md-down} {
-      font-size: var(--card-title-font-size);
-    }
-  }
-
   & .uq-story-card__description {
     display: -webkit-box;
   }
@@ -171,12 +163,6 @@ $story-card-font-size-small: 22px;
 
   & .uq-story-card__content {
     padding: 0;
-  }
-
-  & .uq-story-card__title {
-    @container (width < #{$story-card-small-container}) {
-      font-size: $story-card-font-size-small;
-    }
   }
 
   & .uq-story-card__image {

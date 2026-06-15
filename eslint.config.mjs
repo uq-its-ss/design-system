@@ -92,6 +92,4 @@ export default [
   },
   eslintConfigPrettier,
   ...storybook.configs["flat/recommended"],
-  ...storybook.configs["flat/recommended"],
-  ...storybook.configs["flat/recommended"]
 ];

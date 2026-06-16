@@ -1,4 +1,3 @@
-const puppeteer = require("puppeteer");
 const cliProgress = require("cli-progress");
 const config = require("./screenshot.config.json");
 
@@ -126,7 +125,7 @@ const screenshot = async (browser, viewportName, pageName) => {
   await page.close();
 };
 
-const main = async () => {
+const main = async (puppeteer) => {
   const bar = new cliProgress.SingleBar({}, cliProgress.Presets.shades_classic);
 
   const jobs = [];
@@ -182,4 +181,15 @@ const main = async () => {
   bar.stop();
 };
 
-main();
+async function run() {
+  // Dynamically import puppeteer (ESM/CJS-compatible) and normalize to the API object.
+  const puppeteerModule = await import("puppeteer");
+  const puppeteer = puppeteerModule.default ?? puppeteerModule;
+
+  await main(puppeteer);
+}
+
+run().catch((err) => {
+  console.error(err);
+  process.exitCode = 1;
+});

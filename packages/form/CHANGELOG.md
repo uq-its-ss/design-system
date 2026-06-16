@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.6-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/form@4.0.5...@uqds/form@4.0.6-alpha.0) (2026-06-12)
+
+### Bug Fixes
+
+- error-summary link hover color ([#770](https://github.com/uq-its-ss/design-system/issues/770)) ([ccbf5f4](https://github.com/uq-its-ss/design-system/commit/ccbf5f4d5cc848b06631f88c9b20e6d44bebcbfa))
+
 ## [4.0.5](https://github.com/uq-its-ss/design-system/compare/@uqds/form@4.0.5-alpha.0...@uqds/form@4.0.5) (2026-03-30)
 
 **Note:** Version bump only for package @uqds/form

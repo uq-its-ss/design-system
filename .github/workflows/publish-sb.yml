@@ -88,6 +88,14 @@ jobs:
         run: |
           aws s3 sync packages/storybook-html/storybook-static s3://${{ secrets.AWS_S3_BUCKET_STAGING }}/storybook-html/ --delete --follow-symlinks
 
+      # --- Invalidate CloudFront Cache for Staging ---
+      - name: "Invalidate CloudFront cache for staging"
+        if: ${{ github.ref_name == 'master' }}
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID_STAGING }} \
+            --paths "/*"
+
       # --- Deploy to Production S3 ---
       - name: Configure AWS Credentials for Production
         if: ${{ github.ref_name == 'releases' }}
@@ -116,4 +124,12 @@ jobs:
         if: ${{ github.ref_name == 'releases' }}
         run: |
           aws s3 sync packages/storybook-html/storybook-static s3://${{ secrets.AWS_S3_BUCKET_PRODUCTION }}/storybook-html/ --delete --follow-symlinks
+
+      # --- Invalidate CloudFront Cache for Production ---
+      - name: "Invalidate CloudFront cache for production"
+        if: ${{ github.ref_name == 'releases' }}
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID_PRODUCTION }} \
+            --paths "/*"
 

@@ -1,4 +1,3 @@
-/* Pagination */
 @use "@uqds/core/src/scss/global" as core;
 @use "@uqds/icon/src/scss/global" as icon-constants;
 @use "global" as *;
@@ -99,5 +98,3 @@
     font-weight: core.$font-weight-normal;
   }
 }
-
-/* comment to force version bump */

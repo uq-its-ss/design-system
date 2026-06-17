@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.6-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/previous-next@4.0.5...@uqds/previous-next@4.0.6-alpha.0) (2026-06-17)
+
+### Bug Fixes
+
+- comment to force version bump ([6d25275](https://github.com/uq-its-ss/design-system/commit/6d252752170f954e7af1663db54dac53c2ea0e51))
+
 ## [4.0.5](https://github.com/uq-its-ss/design-system/compare/@uqds/previous-next@4.0.5-alpha.0...@uqds/previous-next@4.0.5) (2026-03-30)
 
 **Note:** Version bump only for package @uqds/previous-next

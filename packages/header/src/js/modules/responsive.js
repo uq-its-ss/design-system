@@ -11,12 +11,10 @@ export class ResponsiveModule {
    * Creates a new ResponsiveModule instance
    * @param {HTMLElement} header - The header element
    * @param {MobileMenuModule} mobileMenu - Reference to mobile menu module
-   * @param {HTMLElement} menuToggle - The menu toggle button element
    */
-  constructor(header, mobileMenu, menuToggle) {
+  constructor(header, mobileMenu) {
     this.header = header;
     this.mobileMenu = mobileMenu;
-    this.menuToggle = menuToggle;
     this.init();
   }
 
@@ -47,22 +45,13 @@ export class ResponsiveModule {
   /**
    * Handle transition to desktop breakpoint
    * Closes mobile menu and resets UI state
+   * MobileMenuModule.close() handles toggle state and scroll lock
    * @private
    */
   onDesktopBreakpoint() {
-    // Close mobile menu
+    // Close mobile menu (handles toggle button state and scroll lock internally)
     if (this.mobileMenu) {
       this.mobileMenu.close(true);
     }
-
-    // Reset menu toggle state
-    if (this.menuToggle) {
-      this.menuToggle.classList.remove(
-        "uq-header__toggle-menu-button--is-open",
-      );
-    }
-
-    // Remove scroll lock from body
-    document.body.classList.remove("no-scroll");
   }
 }

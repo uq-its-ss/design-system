@@ -10,11 +10,14 @@ export class MobileMenuModule {
   /**
    * Creates a new MobileMenuModule instance
    * @param {HTMLElement} header - The header element
+   * @param {Function} onOpening - Callback to notify coordinator when opening
    */
-  constructor(header) {
+  constructor(header, onOpening) {
     this.header = header;
+    this.onOpening = onOpening;
     this.slideMenu = null;
     this.menuElement = null;
+    this.menuToggle = null;
     this.init();
   }
 
@@ -24,6 +27,9 @@ export class MobileMenuModule {
    */
   init() {
     this.menuElement = document.getElementById("global-mobile-nav");
+    this.menuToggle = this.header.querySelector(
+      ".uq-header__toggle-menu-button",
+    );
 
     // Exit early if SlideMenu library not available or element doesn't exist
     if (!this.menuElement || typeof SlideMenu === "undefined") {
@@ -32,6 +38,7 @@ export class MobileMenuModule {
 
     this.initSlideMenu();
     this.initScrollReset();
+    this.initToggleButton();
   }
 
   /**
@@ -66,12 +73,51 @@ export class MobileMenuModule {
   }
 
   /**
+   * Initialize toggle button click handler
+   * @private
+   */
+  initToggleButton() {
+    if (!this.menuToggle) return;
+
+    this.menuToggle.addEventListener("click", () => {
+      const willOpen = !this.isOpen();
+
+      // Notify coordinator to close other exclusive toggles before opening
+      if (willOpen && this.onOpening) {
+        this.onOpening("mobileMenu");
+      }
+
+      // Toggle menu button state
+      this.menuToggle.classList.toggle(
+        "uq-header__toggle-menu-button--is-open",
+      );
+
+      // Toggle scroll lock
+      if (willOpen) {
+        document.body.classList.add("no-scroll");
+      } else {
+        document.body.classList.remove("no-scroll");
+      }
+    });
+  }
+
+  /**
    * Close the mobile menu
    * @param {boolean} immediately - If true, close without animation
    */
   close(immediately = false) {
     if (this.slideMenu) {
       this.slideMenu.close(immediately);
+    }
+
+    // Remove scroll lock when closing
+    document.body.classList.remove("no-scroll");
+
+    // Update toggle button state
+    if (this.menuToggle) {
+      this.menuToggle.classList.remove(
+        "uq-header__toggle-menu-button--is-open",
+      );
     }
   }
 

@@ -17,7 +17,6 @@ class Header {
    */
   constructor(el) {
     this.header = el;
-    this.menuToggle = null;
     this.modules = {};
     this.init();
   }
@@ -27,65 +26,50 @@ class Header {
    * Sets up menu toggle and delegates specialized behaviors to modules
    */
   init() {
-    // Get menu toggle element (used by multiple modules)
-    this.menuToggle = this.header.querySelector(
-      ".uq-header__toggle-menu-button",
-    );
-
-    // Initialize menu toggle if it exists
-    this.initMenuToggle();
-
-    // Initialize specialized modules
+    // Initialize specialized modules with mutual exclusion coordination
     this.initModules();
   }
 
   /**
-   * Initialize menu toggle button
-   * Handles mobile menu open/close and coordinates with search module
-   * @private
+   * Close all exclusive toggles except the specified one
+   * Implements mutual exclusion coordination
+   * @param {string} except - The toggle name to keep open ('search', 'mobileMenu', 'megaMenu')
    */
-  initMenuToggle() {
-    if (!this.menuToggle) return;
-
-    this.menuToggle.addEventListener("click", () => {
-      // Toggle scroll lock on body
-      document.body.classList.toggle("no-scroll");
-
-      // Toggle menu button state
-      this.menuToggle.classList.toggle(
-        "uq-header__toggle-menu-button--is-open",
-      );
-
-      // Close search when menu is toggled
-      if (this.modules.search) {
-        this.modules.search.close();
-      }
-    });
+  closeAllExcept(except) {
+    if (this.modules.search && except !== "search") {
+      this.modules.search.close();
+    }
+    if (this.modules.mobileMenu && except !== "mobileMenu") {
+      this.modules.mobileMenu.close();
+    }
+    if (this.modules.megaMenu && except !== "megaMenu") {
+      this.modules.megaMenu.close();
+    }
   }
 
   /**
    * Initialize all header modules
    * Creates instances of specialized modules and stores references
+   * Passes mutual exclusion coordinator callback to each module
    * @private
    */
   initModules() {
-    // Initialize mobile menu module (handles SlideMenu integration)
-    this.modules.mobileMenu = new MobileMenuModule(this.header);
+    // Create coordinator callback
+    const onOpening = (toggleName) => this.closeAllExcept(toggleName);
 
-    // Initialize search module (needs reference to mobile menu)
-    this.modules.search = new SearchModule(
-      this.header,
-      this.modules.mobileMenu,
-    );
+    // Initialize mobile menu module (handles SlideMenu integration and toggle button)
+    this.modules.mobileMenu = new MobileMenuModule(this.header, onOpening);
+
+    // Initialize search module
+    this.modules.search = new SearchModule(this.header, onOpening);
 
     // Initialize mega menu module (desktop dropdowns)
-    this.modules.megaMenu = new MegaMenuModule(this.header);
+    this.modules.megaMenu = new MegaMenuModule(this.header, onOpening);
 
-    // Initialize responsive module (needs references to mobile menu and toggle)
+    // Initialize responsive module (needs reference to mobile menu)
     this.modules.responsive = new ResponsiveModule(
       this.header,
       this.modules.mobileMenu,
-      this.menuToggle,
     );
   }
 }

@@ -9,9 +9,11 @@ export class MegaMenuModule {
   /**
    * Creates a new MegaMenuModule instance
    * @param {HTMLElement} header - The header element
+   * @param {Function} onOpening - Callback to notify coordinator when opening
    */
-  constructor(header) {
+  constructor(header, onOpening) {
     this.header = header;
+    this.onOpening = onOpening;
     this.triggers = [];
     this.lastInteractionType = null; // Track if last interaction was mouse or keyboard
     this.init();
@@ -92,6 +94,10 @@ export class MegaMenuModule {
     if (isExpanded) {
       this.closeMenu(trigger);
     } else {
+      // Notify coordinator to close other exclusive toggles before opening
+      if (this.onOpening) {
+        this.onOpening("megaMenu");
+      }
       this.openMenu(trigger);
     }
   }
@@ -135,5 +141,24 @@ export class MegaMenuModule {
         this.closeMenu(trigger);
       }
     });
+  }
+
+  /**
+   * Close the mega menu system (all dropdowns)
+   * Part of exclusive toggle interface
+   */
+  close() {
+    this.closeAllMenus();
+  }
+
+  /**
+   * Check if any mega menu dropdown is currently open
+   * Part of exclusive toggle interface
+   * @returns {boolean} True if any mega menu is open
+   */
+  isOpen() {
+    return this.triggers.some(
+      (trigger) => trigger.getAttribute("aria-expanded") === "true",
+    );
   }
 }

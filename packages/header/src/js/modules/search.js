@@ -9,11 +9,11 @@ export class SearchModule {
   /**
    * Creates a new SearchModule instance
    * @param {HTMLElement} header - The header element
-   * @param {MobileMenuModule} mobileMenu - Reference to mobile menu module
+   * @param {Function} onOpening - Callback to notify coordinator when opening
    */
-  constructor(header, mobileMenu) {
+  constructor(header, onOpening) {
     this.header = header;
-    this.mobileMenu = mobileMenu;
+    this.onOpening = onOpening;
     this.searchToggle = null;
     this.searchLabel = null;
     this.searchBlock = null;
@@ -49,16 +49,6 @@ export class SearchModule {
   initToggle() {
     this.searchToggle.addEventListener("click", (e) => {
       e.preventDefault();
-
-      // Close mobile menu if open
-      if (this.mobileMenu) {
-        this.mobileMenu.close();
-      }
-
-      // Remove scroll lock from mobile menu
-      document.body.classList.remove("no-scroll");
-
-      // Toggle search
       this.toggle();
     });
   }
@@ -67,6 +57,13 @@ export class SearchModule {
    * Toggle the search panel open/closed
    */
   toggle() {
+    const willOpen = !this.isOpen();
+
+    // Notify coordinator to close other exclusive toggles before opening
+    if (willOpen && this.onOpening) {
+      this.onOpening("search");
+    }
+
     this.searchToggle.classList.toggle(
       "uq-header__toggle-search-button--is-open",
     );

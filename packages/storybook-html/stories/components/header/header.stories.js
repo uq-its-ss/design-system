@@ -60,7 +60,7 @@ const renderMegaMenu = (columns, parentTitle) => {
             ${group.children
               .map(
                 (child) => `
-              <li class="uq-header__megamenu-item" data-gtm-category="Main navigation"><a class="uq-header__megamenu-link" href="${child.href}" data-gtm-label="${parentTitle} > ${child.title}">${child.title}</a></li>
+              <li class="uq-header__megamenu-item" data-gtm-category="Main navigation"><a class="uq-header__megamenu-link" href="${child.href}" data-gtm-label="${parentTitle} > ${group.heading} > ${child.title}">${child.title}</a></li>
             `,
               )
               .join("")}

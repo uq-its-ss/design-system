@@ -80,14 +80,16 @@ export class MobileMenuModule {
     if (!this.menuToggle) return;
 
     this.menuToggle.addEventListener("click", () => {
-      const willOpen = !this.isOpen();
+      const willOpen = !this.menuToggle.classList.contains(
+        "uq-header__toggle-menu-button--is-open",
+      );
 
       // Notify coordinator to close other exclusive toggles before opening
       if (willOpen && this.onOpening) {
         this.onOpening("mobileMenu");
       }
 
-      // Toggle menu button state
+      // Toggle menu button icon state
       this.menuToggle.classList.toggle(
         "uq-header__toggle-menu-button--is-open",
       );

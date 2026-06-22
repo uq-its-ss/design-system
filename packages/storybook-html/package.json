@@ -70,7 +70,7 @@
     "mermaid": "^11.4.0",
     "sass": "^1.89.2",
     "sass-loader": "^16.0.3",
-    "storybook": "^10.4.3",
+    "storybook": "^10.4.6",
     "tocbot": "^4.31.0",
     "ts-loader": "^9.5.1",
     "typescript": "^5.6.3",

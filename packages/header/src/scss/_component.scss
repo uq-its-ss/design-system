@@ -437,7 +437,7 @@
     transform: translateY(-100%); /* Slides it up completely out of view */
     visibility: hidden;
     pointer-events: none;
-    will-change: transform; /* Tells the browser to hardware-accelerate this */
+    will-change: transform, opacity; /* Tells the browser to hardware-accelerate this */
 
     /* 2. Transition ONLY transform (and delay visibility so it doesn't snap invisible) */
     transition:
@@ -615,7 +615,7 @@ body.no-scroll {
   box-sizing: border-box;
   transition: transform 0.3s ease-in-out;
   transform: translateX(100%);
-  will-change: transform;
+  will-change: transform, opacity; /* Tells the browser to hardware-accelerate this */
   z-index: 1000;
   position: fixed;
   // top: 4.5rem; removed to pin header to toggle.
@@ -635,7 +635,7 @@ body.no-scroll {
     width: 100%;
     transform: translateX(0);
     transition: transform 0.3s ease-in-out;
-    will-change: transform;
+    will-change: transform, opacity; /* Tells the browser to hardware-accelerate this */
   }
 
   & .uq-header__nav-mobile-list {

@@ -1,83 +1,77 @@
 "use strict";
 
+import { MobileMenuModule } from "./modules/mobile-menu.js";
+import { SearchModule } from "./modules/search.js";
+import { MegaMenuModule } from "./modules/megamenu.js";
+import { ResponsiveModule } from "./modules/responsive.js";
+
 /**
- * NewHeader module
- * @file Handles interaction behaviour for the Header. Does not output any
- * HTML elements.
- * TODO: make this class configurable
+ * Header Class
+ * @file Main orchestrator that coordinates all header modules
+ * Handles menu toggle and delegates specific behaviors to focused modules
  */
-
-class NewHeader {
+class Header {
+  /**
+   * Creates a new Header instance
+   * @param {HTMLElement} el - The header element
+   */
   constructor(el) {
-    this.init(el);
+    this.header = el;
+    this.modules = {};
+    this.init();
   }
 
-  init(el) {
-    this.menuToggle = el.querySelector(".nav-primary__menu-toggle");
-    this.searchToggle = el.querySelector(".nav-primary__search-toggle");
-    this.searchLabel = el.querySelector(".search-toggle__label");
-    this.searchBlock = el.querySelector(".uq-header__search");
-    this.searchInput = el.querySelector(".uq-header__search-query-input");
-
-    this.menuToggle.addEventListener("click", () => {
-      document.body.classList.toggle("no-scroll");
-      this.menuToggle.classList.toggle("nav-primary__menu-toggle--is-open");
-      this.searchToggle.classList.remove("nav-primary__search-toggle--is-open");
-      this.searchBlock.classList.remove("uq-header__search--is-open");
-      this.searchLabel.innerHTML = "Search";
-    });
-
-    this.searchToggle.addEventListener("click", (e) => {
-      document.body.classList.remove("no-scroll");
-      this.searchToggle.classList.toggle("nav-primary__search-toggle--is-open");
-      this.searchBlock.classList.toggle("uq-header__search--is-open");
-      this.menuToggle.classList.remove("nav-primary__menu-toggle--is-open");
-      if (this.searchBlock.classList.contains("uq-header__search--is-open")) {
-        this.searchInput.focus();
-      } else {
-        this.searchInput.blur();
-        this.searchToggle.blur();
-      }
-      if (this.searchLabel.innerHTML === "Search") {
-        this.searchLabel.innerHTML = "Close";
-      } else {
-        this.searchLabel.innerHTML = "Search";
-      }
-      e.preventDefault();
-    });
-
-    // megamenu
-    const megaMenuItem = document.querySelectorAll(
-      ".uq-header__nav-primary-item",
-    );
-    megaMenuItem.forEach((item) => {
-      item.addEventListener("mouseenter", this.handleToggle);
-      item.addEventListener("mouseleave", this.handleToggle);
-    });
+  /**
+   * Initialize the header and all modules
+   * Sets up menu toggle and delegates specialized behaviors to modules
+   */
+  init() {
+    // Initialize specialized modules with mutual exclusion coordination
+    this.initModules();
   }
 
-  handleToggle(event) {
-    let menuItem = event.target;
-    if (menuItem.tagName !== "LI") {
-      menuItem = menuItem.parentElement;
+  /**
+   * Close all exclusive toggles except the specified one
+   * Implements mutual exclusion coordination
+   * @param {string} except - The toggle name to keep open ('search', 'mobileMenu', 'megaMenu')
+   */
+  closeAllExcept(except) {
+    if (this.modules.search && except !== "search") {
+      this.modules.search.close();
     }
-    menuItem.eventType = event.type;
+    if (this.modules.mobileMenu && except !== "mobileMenu") {
+      this.modules.mobileMenu.close();
+    }
+    if (this.modules.megaMenu && except !== "megaMenu") {
+      this.modules.megaMenu.close();
+    }
+  }
 
-    window.setTimeout(function () {
-      if (
-        (event.type === "mouseenter" || event.type === "mouseleave") &&
-        window.matchMedia("(max-width: 1024px)").matches
-      ) {
-        return;
-      }
+  /**
+   * Initialize all header modules
+   * Creates instances of specialized modules and stores references
+   * Passes mutual exclusion coordinator callback to each module
+   * @private
+   */
+  initModules() {
+    // Create coordinator callback
+    const onOpening = (toggleName) => this.closeAllExcept(toggleName);
 
-      if (menuItem.eventType === "mouseenter") {
-        menuItem.classList.add("uq-header__nav-primary-item--is-open");
-      } else {
-        menuItem.classList.remove("uq-header__nav-primary-item--is-open");
-      }
-    }, 250);
+    // Initialize mobile menu module (handles SlideMenu integration and toggle button)
+    this.modules.mobileMenu = new MobileMenuModule(this.header, onOpening);
+
+    // Initialize search module
+    this.modules.search = new SearchModule(this.header, onOpening);
+
+    // Initialize mega menu module (desktop dropdowns)
+    this.modules.megaMenu = new MegaMenuModule(this.header, onOpening);
+
+    // Initialize responsive module (needs reference to mobile menu)
+    this.modules.responsive = new ResponsiveModule(
+      this.header,
+      this.modules.mobileMenu,
+    );
   }
 }
 
-export default NewHeader;
+export default Header;

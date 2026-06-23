@@ -10,218 +10,814 @@
   </head>
   <body>
 
-    <header class="uq-header" data-gtm-category="Header">
-      <div class="uq-header__container">
-        <div class="uq-header__menu-toggle" data-target="global-mobile-nav" data-gtm-category="Primary header">
-          <button type="button" class="nav-primary__toggle nav-primary__menu-toggle slide-menu__control" data-target="global-mobile-nav" data-action="toggle" data-gtm-action="Toggle">Menu</button>
-        </div>
-        <div class="uq-header__logo" data-gtm-category="Primary header">
-          <a class="logo--large" href="https://uq.edu.au" data-gtm-label="UQ Logo">
-            <img alt="The University of Queensland" src="https://static.uq.net.au/v15/logos/corporate/uq-logo--reversed.svg">
-          </a>
-        </div>        
-        <div class="uq-header__nav-primary"  data-gtm-category="Primary header">
-          <nav class="uq-header__nav-primary-container" aria-label="primary navigation">
-            <ul class="uq-header__nav-primary-list">
-              <li class="uq-header__nav-primary-item"><a class="uq-header__nav-primary-link" href="https://study.uq.edu.au">Study</a></li>
-              <li class="uq-header__nav-primary-item"><a class="uq-header__nav-primary-link" href="https://research.uq.edu.au">Research</a></li>
-              <li class="uq-header__nav-primary-item"><a class="uq-header__nav-primary-link" href="https://partners-community.uq.edu.au">Partners and community</a></li>
-              <li class="uq-header__nav-primary-item"><a class="uq-header__nav-primary-link" href="https://about.uq.edu.au">About</a></li>
-            </ul>
-          </nav>
-        </div>
-        <div class="uq-header__search-toggle" data-gtm-category="Search">
-          <button class="nav-primary__toggle nav-primary__search-toggle" data-gtm-action="Toggle">
-            <div class="search-toggle__label">Search</div>
-          </button>
-        </div>
+  <!-- HEADER WRAPPER -->
+  <header class="uq-header" data-gtm-category="Header">
+    <div class="uq-header__container">
+
+      <!-- TOGGLE MENU (Mobile) -->
+      <div class="uq-header__toggle-menu" data-target="global-mobile-nav" data-gtm-category="Primary header">
+        <button type="button" class="uq-header__toggle-menu-button slide-menu__control" data-target="global-mobile-nav" data-arg=".is-active" data-action="smartToggle" data-gtm-trigger="click" data-gtm-action="Toggle">Menu</button>
       </div>
-      <nav class="slide-menu global-mobile-nav" id="global-mobile-nav" aria-label="primary navigation mobile">
-        <div class="uq-site-header__title-container">
-          <div class="uq-site-header__title-container__left">
-            <a href="" class="uq-site-header__title">Site title</a>
-          </div>
-        </div>
-        <ul>
-          <li data-gtm-category="Main navigation">
-            <a class="global-mobile-nav__audience-link slide-menu__control" href="#" data-gtm-label="Study">Study</a>
-            <ul>
-              <li>
-                <a href="/study" data-gtm-label="Study > Study">Study</a>
-              </li>
-              <li>
-                <a href="/study/programs" data-gtm-label="Study > Find a program">Find a program</a>
-              </li>
-              <li>
-                <a href="/study/agriculture-environment" data-gtm-label="Study > Agriculture and Environment">Agriculture and Environment</a>
-              </li>
-              <li>
-                <a href="/study/architecture-planning" data-gtm-label="Study > Architecture and Planning">Architecture and Planning</a>
-              </li>
-              <li>
-                <a href="/study/arts-humanities-social-sciences" data-gtm-label="Study > Arts, Humanities and Social Sciences">Arts, Humanities and Social Sciences</a>
-              </li>
-              <li>
-                <a href="/study/business-economics" data-gtm-label="Study > Business and Economics">Business and Economics</a>
-              </li>
-              <li>
-                <a href="/study/education" data-gtm-label="Study > Education">Education</a>
-              </li>
-              <li>
-                <a href="/study/engineering-computing" data-gtm-label="Study > Engineering and Computing">Engineering and Computing</a>
-              </li>
-              <li>
-                <a href="/study/health-behavioural-sciences" data-gtm-label="Study > Health and Behavioural Sciences">Health and Behavioural Sciences</a>
-              </li>
-              <li>
-                <a href="/study/law" data-gtm-label="Study > Law">Law</a>
-              </li>
-              <li>
-                <a href="/study/medicine" data-gtm-label="Study > Medicine">Medicine</a>
-              </li>
-              <li>
-                <a href="/study/science-mathematics" data-gtm-label="Study > Science and Mathematics">Science and Mathematics</a>
-              </li>
-              <li>
-                <a href="/study/micromasters-uqx" data-gtm-label="Study > MicroMasters and UQx">MicroMasters and UQx</a>
-              </li>
-            </ul>
-          </li>
-          <li data-gtm-category="Main navigation">
-            <a class="global-mobile-nav__audience-link slide-menu__control" href="/admissions" aria-haspopup="true" aria-expanded="false" data-gtm-label="Admissions">Admissions</a>
-            <ul>
-              <li>
-                <a href="/admissions" data-gtm-label="Admissions > Admissions">Admissions</a>
-              </li>
-              <li>
-                <a href="/admissions/undergraduate" data-gtm-label="Admissions > Undergraduate">Undergraduate</a>
-              </li>
-              <li>
-                <a href="/admissions/honours" data-gtm-label="Admissions > Honours">Honours</a>
-              </li>
-              <li>
-                <a href="/admissions/postgraduate-coursework" data-gtm-label="Admissions > Postgraduate coursework">Postgraduate coursework</a>
-              </li>
-              <li>
-                <a href="/admissions/higher-degree-research" data-gtm-label="Admissions > Higher degree by research">Higher degree by research</a>
-              </li>
-              <li>
-                <a href="/admissions/cross-institutional-study" data-gtm-label="Admissions > Cross-institutional study">Cross-institutional study</a>
-              </li>
-              <li>
-                <a href="/admissions/non-award-study" data-gtm-label="Admissions > Non-award study">Non-award study</a>
-              </li>
-              <li>
-                <a href="/admissions/doctor-medicine" data-gtm-label="Admissions > Doctor of Medicine">Doctor of Medicine</a>
-              </li>
-              <li>
-                <a href="https://uq.edu.au/studyabroad/how-to-apply" data-gtm-label="Admissions > Study abroad and incoming exchange">Study abroad and incoming exchange</a>
-              </li>
-            </ul>
-          </li>
-          <li data-gtm-category="Main navigation">
-            <a class="global-mobile-nav__audience-link slide-menu__control" href="/university-life" aria-haspopup="true" aria-expanded="false" data-gtm-label="University life">University life</a>
-            <ul>
-              <li>
-                <a href="/university-life" data-gtm-label="University life > University life">University life</a>
-              </li>
-              <li>
-                <a href="/university-life/living-in-brisbane" data-gtm-label="University life > Living in Brisbane">Living in Brisbane</a>
-              </li>
-              <li>
-                <a href="/university-life/getting-prepared-to-come-to-australia" data-gtm-label="University life > Getting prepared to come to Australia">Getting prepared to come to Australia</a>
-              </li>
-              <li>
-                <a href="/university-life/campuses-research-sites" data-gtm-label="University life > Campuses and research sites">Campuses and research sites</a>
-              </li>
-              <li>
-                <a href="/university-life/campus-tours" data-gtm-label="University life > Campus tours">Campus tours</a>
-              </li>
-            </ul>
-          </li>
-          <li data-gtm-category="Main navigation">
-            <a href="/events">Events</a>
-          </li>
-          <li data-gtm-category="Main navigation">
-            <a href="/stories">Stories</a>
-          </li>
-          <li data-gtm-category="Main navigation">
-            <a href="/contact-us">Contact</a>
-          </li>
-          <li  class="uq-header__newglobal-nav-item" data-gtm-category="Primary header">
-            <a  class="uq-header__newglobal-nav-link" href="https://study.uq.edu.au">Study</a>
-          </li>
-          <li  class="uq-header__newglobal-nav-item" data-gtm-category="Primary header">
-            <a  class="uq-header__newglobal-nav-link" href="https://research.uq.edu.au">Research</a>
-          </li>
-          <li  class="uq-header__newglobal-nav-item" data-gtm-category="Primary header">
-            <a  class="uq-header__newglobal-nav-link" href="https://partners-community.uq.edu.au">Partners and community</a>
-          </li>
-          <li class="uq-header__newglobal-nav-item" data-gtm-category="Primary header">
-            <a class="uq-header__newglobal-nav-link" href="https://about.uq.edu.au">About</a>
-          </li>
-          <li  class="uq-header__nav-secondary-item" data-gtm-category="Secondary header">
-            <a class="uq-header__nav-secondary-link" href="https://uq.edu.au">UQ home</a>
-          </li>
-          <li  class="uq-header__nav-secondary-item" data-gtm-category="Secondary header">
-            <a class="uq-header__nav-secondary-link" href="https://news.uq.edu.au">News</a>
-          </li>
-          <li  class="uq-header__nav-secondary-item" data-gtm-category="Secondary header">
-            <a class="uq-header__nav-secondary-link" href="https://uq.edu.au/uq-events">Events</a>
-          </li>
-          <li  class="uq-header__nav-secondary-item" data-gtm-category="Secondary header">
-            <a class="uq-header__nav-secondary-link" href="https://alumni.uq.edu.au/giving">Give</a>
-          </li>
-          <li  class="uq-header__nav-secondary-item" data-gtm-category="Secondary header">
-            <a class="uq-header__nav-secondary-link" href="https://contacts.uq.edu.au/contacts">Contact</a>
-          </li>  
+
+      <!-- LOGO -->
+      <div class="uq-header__logo" data-gtm-category="Primary header"><a class="uq-header__logo-link" href="https://uq.edu.au" data-gtm-label="UQ Logo"><img class="uq-header__logo-image" alt="The University of Queensland" src="https://static.uq.net.au/v11/logos/corporate/uq-logo--reversed.svg"></a></div>
+
+    <!-- NAVIGATION PRIMARY (Desktop) -->
+      <nav class="uq-header__nav-primary" aria-label="primary navigation" data-gtm-category="Primary header">
+        <ul class="uq-header__nav-primary-list">
+          
+            <!-- NAVIGATION PRIMARY ITEM (Desktop) -->
+            <li class="uq-header__nav-primary-item">
+              <a class="uq-header__nav-primary-link " href="https://study.uq.edu.au" data-gtm-label="Study" >Study</a>
+              
+            </li>
+          
+            <!-- NAVIGATION PRIMARY ITEM (Desktop) -->
+            <li class="uq-header__nav-primary-item">
+              <a class="uq-header__nav-primary-link " href="https://research.uq.edu.au" data-gtm-label="Research" >Research</a>
+              
+            </li>
+          
+            <!-- NAVIGATION PRIMARY ITEM (Desktop) -->
+            <li class="uq-header__nav-primary-item">
+              <a class="uq-header__nav-primary-link " href="https://partners-community.uq.edu.au" data-gtm-label="Partners and community" >Partners and community</a>
+              
+            </li>
+          
+            <!-- NAVIGATION PRIMARY ITEM (Desktop) -->
+            <li class="uq-header__nav-primary-item">
+              <a class="uq-header__nav-primary-link " href="https://about.uq.edu.au" data-gtm-label="About" >About</a>
+              
+            </li>
+          
         </ul>
       </nav>
-      <div class="uq-header__search" data-gtm-category="Search">
-        <div class="uq-header__search-container">
-          <form action="https://search.uq.edu.au/" method="get" data-gtm-action="Text search" data-gtm-form-action>
-            <fieldset>
-              <div class="uq-header__search-query">
-                <label for="edit-q" class="visually-hidden uq-header__search-query-label">Search term</label>
-                <input type="text" id="edit-q" name="q" value="" maxlength="128" placeholder="Search by keyword" autocomplete="off" class="uq-header__search-query-input" data-gtm-trigger="change" data-gtm-form-search>
-                <span class="uq-header__search-query-button">
-                  <input type="submit" value="Search" class="uq-header__search-query-submit" data-gtm-trigger="click">
-                </span>
+
+      <!-- TOGGLE SEARCH -->
+      <div class="uq-header__toggle-search" data-gtm-category="Search">
+        <button class="uq-header__toggle-search-button" data-gtm-action="Toggle" aria-label="Search">
+          <div class="uq-header__toggle-search-label">Search</div>
+        </button>
+            <!-- SEARCH FORM -->
+            <div class="uq-header__search" data-gtm-category="Search">
+              <div class="uq-header__search-container">
+                <form class="uq-header__search-form" action="https://search.uq.edu.au/" method="get" data-gtm-action="Text search" data-gtm-form-action="">
+                  <fieldset class="uq-header__search-fieldset">
+                      <label class="uq-header__search-label" for="edit-q">Search term</label>
+                      <input class="uq-header__search-input" type="text" id="edit-q" name="q" value="" maxlength="128" placeholder="Search by keyword" autocomplete="off" data-gtm-form-search="">
+                      <input type="hidden" value="https://uq.edu.au" name="as_sitesearch" id="edit-as_sitesearch-on"> 
+                      <button class="uq-header__search-button" type="submit" name="op" value="Search" data-gtm-trigger="click"><span class="uq-header__search-button-label">Search</span></button>          
+                  </fieldset>
+                </form>
               </div>
-              <div class="uq-header__search-range">
-                <input type="radio" id="edit-as_sitesearch-off" name="as_sitesearch" value="" class="form-radio uq-header__search-radio">
-                <label for="edit-as_sitesearch-off" class="option uq-header__search-label">Search all UQ websites</label>
-              </div>
-              <div class="uq-header__search-range">
-                <input type="radio" id="edit-as_sitesearch-on" name="as_sitesearch" value="https://future-students.uq.edu.au" checked="checked" class="form-radio uq-header__search-radio">
-                <label for="edit-as_sitesearch-on" class="option uq-header__search-label">Search this website (future-students.uq.edu.au)</label>
-              </div>
-            </fieldset>
-          </form>
-        </div>
+            </div>
       </div>
+
+    </div>
+    
+    <!-- NAVIGATION (Mobile) (Slide menu) -->
+    <!-- "uq-header__nav-mobile-local" class is added if showing local site menu -->
+    <nav class="slide-menu uq-header__nav-mobile uq-header__nav-mobile-local" id="global-mobile-nav" aria-label="primary navigation mobile">
+      <ul class="uq-header__nav-mobile-list">
+
+          <!-- SCENARIO A: NAVIGATION LOCAL (Mobile) --> 
+      
+          <li class="uq-header__nav-mobile-item">
+            <a class="uq-header__nav-mobile-home" href="https://uq.edu.au">UQ home</a>
+          </li>
+          <li class="uq-header__nav-mobile-item">
+              <a class="uq-header__nav-mobile-link is-active" href="https://uq.edu.au">The University of Queensland</a>
+          </li>
+          <!-- Hook for the recursive menu file above -->
+          
+        <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+          <a href="/study-options" class="uq-header__nav-mobile-audience-link slide-menu__control">Study options</a>
+          
+            <ul class="uq-header__nav-mobile-list">
+              <li class="uq-header__nav-mobile-item">
+                <a class="uq-header__nav-mobile-link" href="/study-options">Study options</a>
+              </li>
+              
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/study-options/programs" class="uq-header__nav-mobile-link">Find a program</a>
+            
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/study-options/browse-study-areas" class="uq-header__nav-mobile-link">Browse study areas</a>
+            
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/study-options/undergraduate" class="uq-header__nav-mobile-link">Undergraduate</a>
+            
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/study-options/postgraduate" class="uq-header__nav-mobile-link">Postgraduate</a>
+            
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/study-options/phd-mphil-professional-doctorate" class="uq-header__nav-mobile-audience-link slide-menu__control">PhD, MPhil and professional doctorate</a>
+            
+              <ul class="uq-header__nav-mobile-list">
+                <li class="uq-header__nav-mobile-item">
+                  <a class="uq-header__nav-mobile-audience-link" href="/study-options/phd-mphil-professional-doctorate">PhD, MPhil and professional doctorate</a>
+                </li>
+                
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/study-options/phd-mphil-professional-doctorate/why-research" class="uq-header__nav-mobile-link">Why research with us</a>
+            
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/study-options/phd-mphil-professional-doctorate/projects" class="uq-header__nav-mobile-link">Find a graduate research project with a scholarship</a>
+            
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/study-options/phd-mphil-professional-doctorate/how-choose-supervisor" class="uq-header__nav-mobile-link">How to choose a supervisor</a>
+            
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="https://study.uq.edu.au/admissions/phd-mphil-professional-doctorate" class="uq-header__nav-mobile-link">How to apply for higher degree by research study</a>
+            
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/study-options/phd-mphil-professional-doctorate/aboriginal-torres-strait-islander" class="uq-header__nav-mobile-link">Aboriginal and/or Torres Strait Islander HDR applicants</a>
+            
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/study-options/phd-mphil-professional-doctorate/mobility" class="uq-header__nav-mobile-audience-link slide-menu__control">Research mobility opportunities</a>
+            
+              <ul class="uq-header__nav-mobile-list">
+                <li class="uq-header__nav-mobile-item">
+                  <a class="uq-header__nav-mobile-audience-link" href="/study-options/phd-mphil-professional-doctorate/mobility">Research mobility opportunities</a>
+                </li>
+                
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/study-options/phd-mphil-professional-doctorate/mobility/study-abroad-phds" class="uq-header__nav-mobile-link">Research study abroad for PhD candidates</a>
+            
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/study-options/phd-mphil-professional-doctorate/mobility/exchange-phds" class="uq-header__nav-mobile-link">Research exchange programs for PhD candidates</a>
+            
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/study-options/phd-mphil-professional-doctorate/mobility/collaborative-joint-supervision-phds" class="uq-header__nav-mobile-link">Collaborative / joint supervision opportunities for PhD candidates</a>
+            
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/study-options/phd-mphil-professional-doctorate/mobility/joint-dual-cotutelle-phds" class="uq-header__nav-mobile-link">Joint programs for PhD candidates</a>
+            
+          </li>
+        
+              </ul>
+              
+          </li>
+        
+              </ul>
+              
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/study-options/dual-degrees" class="uq-header__nav-mobile-link">Dual degrees</a>
+            
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/short-courses" class="uq-header__nav-mobile-audience-link slide-menu__control">Short courses</a>
+            
+              <ul class="uq-header__nav-mobile-list">
+                <li class="uq-header__nav-mobile-item">
+                  <a class="uq-header__nav-mobile-audience-link" href="/short-courses">Short courses</a>
+                </li>
+                
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/short-courses/search" class="uq-header__nav-mobile-link">Find a short course</a>
+            
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/short-courses/custom-courses" class="uq-header__nav-mobile-link">Custom courses</a>
+            
+          </li>
+        
+              </ul>
+              
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/study-options/study-abroad" class="uq-header__nav-mobile-audience-link slide-menu__control">Study abroad and exchange</a>
+            
+              <ul class="uq-header__nav-mobile-list">
+                <li class="uq-header__nav-mobile-item">
+                  <a class="uq-header__nav-mobile-audience-link" href="/study-options/study-abroad">Study abroad and exchange</a>
+                </li>
+                
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/study-options/study-abroad" class="uq-header__nav-mobile-link">Study abroad and exchange</a>
+            
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/study-options/study-abroad/study-options" class="uq-header__nav-mobile-audience-link slide-menu__control">Study options</a>
+            
+              <ul class="uq-header__nav-mobile-list">
+                <li class="uq-header__nav-mobile-item">
+                  <a class="uq-header__nav-mobile-audience-link" href="/study-options/study-abroad/study-options">Study options</a>
+                </li>
+                
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/study-options/study-abroad/study-options/indigenous-australia" class="uq-header__nav-mobile-link">Indigenous Australia</a>
+            
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/study-options/study-abroad/study-options/australian-environments" class="uq-header__nav-mobile-link">Australian environments and sustainability </a>
+            
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/study-options/study-abroad/study-options/pre-med-health" class="uq-header__nav-mobile-link">Pre-med and health</a>
+            
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/study-options/study-abroad/study-options/psychology" class="uq-header__nav-mobile-link">Psychology</a>
+            
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/study-options/study-abroad/study-options/design-computing" class="uq-header__nav-mobile-link">Design and design computing</a>
+            
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/study-options/study-abroad/study-options/entrepreneurship-innovation" class="uq-header__nav-mobile-link">Entrepreneurship and innovation </a>
+            
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/study-options/study-abroad/study-options/media-communication" class="uq-header__nav-mobile-link">Media and communication</a>
+            
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/study-options/study-abroad/study-options/improve-your-english" class="uq-header__nav-mobile-link">Improve your English</a>
+            
+          </li>
+        
+              </ul>
+              
+          </li>
+        
+              </ul>
+              
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="https://scholarships.uq.edu.au/" class="uq-header__nav-mobile-link">Scholarships</a>
+            
+          </li>
+        
+            </ul>
+            
+        </li>
+      
+        <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+          <a href="/admissions" class="uq-header__nav-mobile-audience-link slide-menu__control">Admissions</a>
+          
+            <ul class="uq-header__nav-mobile-list">
+              <li class="uq-header__nav-mobile-item">
+                <a class="uq-header__nav-mobile-link" href="/admissions">Admissions</a>
+              </li>
+              
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/admissions" class="uq-header__nav-mobile-link">Admissions</a>
+            
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/admissions/undergraduate" class="uq-header__nav-mobile-audience-link slide-menu__control">Undergraduate</a>
+            
+              <ul class="uq-header__nav-mobile-list">
+                <li class="uq-header__nav-mobile-item">
+                  <a class="uq-header__nav-mobile-audience-link" href="/admissions/undergraduate">Undergraduate</a>
+                </li>
+                
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/admissions/undergraduate/choose-your-program" class="uq-header__nav-mobile-link">Choose your program</a>
+            
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/admissions/undergraduate/review-entry-requirements" class="uq-header__nav-mobile-audience-link slide-menu__control">Review entry requirements</a>
+            
+              <ul class="uq-header__nav-mobile-list">
+                <li class="uq-header__nav-mobile-item">
+                  <a class="uq-header__nav-mobile-audience-link" href="/admissions/undergraduate/review-entry-requirements">Review entry requirements</a>
+                </li>
+                
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/admissions/undergraduate/review-entry-requirements/guaranteed-atar" class="uq-header__nav-mobile-link">ATAR guarantee</a>
+            
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/admissions/undergraduate/review-entry-requirements/subject-prerequisite-equivalents" class="uq-header__nav-mobile-link">Subject prerequisite equivalents</a>
+            
+          </li>
+        
+              </ul>
+              
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/admissions/undergraduate/review-admission-schemes" class="uq-header__nav-mobile-audience-link slide-menu__control">Review admission schemes</a>
+            
+              <ul class="uq-header__nav-mobile-list">
+                <li class="uq-header__nav-mobile-item">
+                  <a class="uq-header__nav-mobile-audience-link" href="/admissions/undergraduate/review-admission-schemes">Review admission schemes</a>
+                </li>
+                
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/admissions/undergraduate/review-admission-schemes/school-opportunity-scheme" class="uq-header__nav-mobile-link">School Opportunity Scheme</a>
+            
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/admissions/undergraduate/review-admission-schemes/rural-access-scheme" class="uq-header__nav-mobile-link">Rural Access Scheme</a>
+            
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/admissions/undergraduate/review-admission-schemes/aboriginal-and-torres-strait-islander-admission-scheme" class="uq-header__nav-mobile-link">Aboriginal and Torres Strait Islander Admission Scheme</a>
+            
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/admissions/undergraduate/review-admission-schemes/undergraduate-law-admission-scheme" class="uq-header__nav-mobile-link">Undergraduate Law Admission Scheme</a>
+            
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/admissions/undergraduate/review-admission-schemes/subject-incentive-scheme" class="uq-header__nav-mobile-link">Subject Incentive Scheme</a>
+            
+          </li>
+        
+              </ul>
+              
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/admissions/undergraduate/consider-your-pathway-options" class="uq-header__nav-mobile-link">Consider your pathway options</a>
+            
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/admissions/undergraduate/review-fees-and-financial-support" class="uq-header__nav-mobile-link">Review fees and financial support</a>
+            
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/admissions/undergraduate/check-credit-eligibility" class="uq-header__nav-mobile-link">Check credit eligibility</a>
+            
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/admissions/undergraduate/submit-your-application" class="uq-header__nav-mobile-link">Submit your application</a>
+            
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/admissions/undergraduate/respond-your-offer" class="uq-header__nav-mobile-link">Respond to your offer</a>
+            
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/admissions/undergraduate/get-ready-uq" class="uq-header__nav-mobile-link">Get ready for UQ</a>
+            
+          </li>
+        
+              </ul>
+              
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/admissions/honours" class="uq-header__nav-mobile-audience-link slide-menu__control">Honours</a>
+            
+              <ul class="uq-header__nav-mobile-list">
+                <li class="uq-header__nav-mobile-item">
+                  <a class="uq-header__nav-mobile-audience-link" href="/admissions/honours">Honours</a>
+                </li>
+                
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/admissions/honours/choose-your-program" class="uq-header__nav-mobile-link">Choose your program</a>
+            
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/admissions/honours/review-entry-requirements" class="uq-header__nav-mobile-link">Review entry requirements</a>
+            
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/admissions/honours/review-fees-and-financial-support" class="uq-header__nav-mobile-link">Review fees and financial support</a>
+            
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/admissions/honours/submit-your-application" class="uq-header__nav-mobile-link">Submit your application</a>
+            
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/admissions/honours/respond-your-offer" class="uq-header__nav-mobile-link">Respond to your offer</a>
+            
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/admissions/honours/get-ready-uq" class="uq-header__nav-mobile-link">Get ready for UQ</a>
+            
+          </li>
+        
+              </ul>
+              
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/admissions/postgraduate-coursework" class="uq-header__nav-mobile-audience-link slide-menu__control">Postgraduate coursework</a>
+            
+              <ul class="uq-header__nav-mobile-list">
+                <li class="uq-header__nav-mobile-item">
+                  <a class="uq-header__nav-mobile-audience-link" href="/admissions/postgraduate-coursework">Postgraduate coursework</a>
+                </li>
+                
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/admissions/postgraduate-coursework/choose-your-program" class="uq-header__nav-mobile-link">Choose your program</a>
+            
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/admissions/postgraduate-coursework/review-entry-requirements" class="uq-header__nav-mobile-link">Review entry requirements</a>
+            
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/admissions/postgraduate-coursework/consider-your-pathway-options" class="uq-header__nav-mobile-link">Consider your pathway options</a>
+            
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/admissions/postgraduate-coursework/review-fees-and-financial-support" class="uq-header__nav-mobile-link">Review fees and financial support</a>
+            
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/admissions/postgraduate-coursework/check-credit-eligibility" class="uq-header__nav-mobile-link">Check credit eligibility</a>
+            
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/admissions/postgraduate-coursework/submit-your-application" class="uq-header__nav-mobile-link">Submit your application</a>
+            
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/admissions/postgraduate-coursework/respond-your-offer" class="uq-header__nav-mobile-link">Respond to your offer</a>
+            
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/admissions/postgraduate-coursework/get-ready-uq" class="uq-header__nav-mobile-link">Get ready for UQ</a>
+            
+          </li>
+        
+              </ul>
+              
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/admissions/phd-mphil-professional-doctorate" class="uq-header__nav-mobile-audience-link slide-menu__control">PhD, MPhil and professional doctorate</a>
+            
+              <ul class="uq-header__nav-mobile-list">
+                <li class="uq-header__nav-mobile-item">
+                  <a class="uq-header__nav-mobile-audience-link" href="/admissions/phd-mphil-professional-doctorate">PhD, MPhil and professional doctorate</a>
+                </li>
+                
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/admissions/phd-mphil-professional-doctorate/before-you-apply" class="uq-header__nav-mobile-link">Before you apply</a>
+            
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/admissions/phd-mphil-professional-doctorate/application-dates" class="uq-header__nav-mobile-link">Application dates</a>
+            
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/admissions/phd-mphil-professional-doctorate/submit-your-expression-interest" class="uq-header__nav-mobile-link">Submit your expression of interest</a>
+            
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/admissions/phd-mphil-professional-doctorate/receiving-your-offer-and-commencement" class="uq-header__nav-mobile-link">Receiving your offer and commencement</a>
+            
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/admissions/phd-mphil-professional-doctorate/get-ready-for-uq" class="uq-header__nav-mobile-link">Get ready for UQ</a>
+            
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/admissions/phd-mphil-professional-doctorate/research-quarters" class="uq-header__nav-mobile-link">Research quarters</a>
+            
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/admissions/phd-mphil-professional-doctorate/intellectual-property" class="uq-header__nav-mobile-link">Intellectual property</a>
+            
+          </li>
+        
+              </ul>
+              
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/admissions/doctor-medicine" class="uq-header__nav-mobile-audience-link slide-menu__control">Doctor of Medicine</a>
+            
+              <ul class="uq-header__nav-mobile-list">
+                <li class="uq-header__nav-mobile-item">
+                  <a class="uq-header__nav-mobile-audience-link" href="/admissions/doctor-medicine">Doctor of Medicine</a>
+                </li>
+                
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/admissions/doctor-medicine/provisional-entry" class="uq-header__nav-mobile-link">Provisional entry pathway</a>
+            
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/admissions/doctor-medicine/prerequisites-and-recommended-programs-entry" class="uq-header__nav-mobile-link">Prerequisites and recommended programs for entry</a>
+            
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/admissions/doctor-medicine/entry-interviews" class="uq-header__nav-mobile-link">Entry interviews</a>
+            
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/admissions/doctor-medicine/rural-background-sub-quota" class="uq-header__nav-mobile-link">Rural Background Sub-quota</a>
+            
+          </li>
+        
+              </ul>
+              
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/admissions/non-award-study" class="uq-header__nav-mobile-audience-link slide-menu__control">Non-award study</a>
+            
+              <ul class="uq-header__nav-mobile-list">
+                <li class="uq-header__nav-mobile-item">
+                  <a class="uq-header__nav-mobile-audience-link" href="/admissions/non-award-study">Non-award study</a>
+                </li>
+                
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/admissions/non-award-study/choose-your-courses" class="uq-header__nav-mobile-link">Choose your courses</a>
+            
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/admissions/non-award-study/review-entry-requirements" class="uq-header__nav-mobile-link">Review entry requirements</a>
+            
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/admissions/non-award-study/review-fees-and-financial-support" class="uq-header__nav-mobile-link">Review fees and financial support</a>
+            
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/admissions/non-award-study/submit-your-application" class="uq-header__nav-mobile-link">Submit your application</a>
+            
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/admissions/non-award-study/respond-your-offer" class="uq-header__nav-mobile-link">Respond to your offer</a>
+            
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/admissions/non-award-study/get-ready-uq" class="uq-header__nav-mobile-link">Get ready for UQ</a>
+            
+          </li>
+        
+              </ul>
+              
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/admissions/study-abroad" class="uq-header__nav-mobile-audience-link slide-menu__control">Study abroad and exchange</a>
+            
+              <ul class="uq-header__nav-mobile-list">
+                <li class="uq-header__nav-mobile-item">
+                  <a class="uq-header__nav-mobile-audience-link" href="/admissions/study-abroad">Study abroad and exchange</a>
+                </li>
+                
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/admissions/study-abroad/review-entry-requirements" class="uq-header__nav-mobile-audience-link slide-menu__control">Review entry requirements</a>
+            
+              <ul class="uq-header__nav-mobile-list">
+                <li class="uq-header__nav-mobile-item">
+                  <a class="uq-header__nav-mobile-audience-link" href="/admissions/study-abroad/review-entry-requirements">Review entry requirements</a>
+                </li>
+                
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/admissions/study-abroad/review-entry-requirements/exchange-partners" class="uq-header__nav-mobile-link">Exchange partners</a>
+            
+          </li>
+        
+              </ul>
+              
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/admissions/study-abroad/select-your-program" class="uq-header__nav-mobile-link">Select your program</a>
+            
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/admissions/study-abroad/choose-your-courses" class="uq-header__nav-mobile-link">Choose your courses</a>
+            
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/admissions/study-abroad/review-fees-and-costs" class="uq-header__nav-mobile-link">Review fees and costs</a>
+            
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/admissions/study-abroad/submit-your-application" class="uq-header__nav-mobile-link">Submit your application</a>
+            
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/admissions/study-abroad/respond-your-offer" class="uq-header__nav-mobile-link">Respond to your offer</a>
+            
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/admissions/study-abroad/get-ready-uq" class="uq-header__nav-mobile-link">Get ready for UQ</a>
+            
+          </li>
+        
+              </ul>
+              
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/admissions/cross-institutional-study" class="uq-header__nav-mobile-audience-link slide-menu__control">Cross-institutional study</a>
+            
+              <ul class="uq-header__nav-mobile-list">
+                <li class="uq-header__nav-mobile-item">
+                  <a class="uq-header__nav-mobile-audience-link" href="/admissions/cross-institutional-study">Cross-institutional study</a>
+                </li>
+                
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/admissions/cross-institutional-study/choose-your-courses" class="uq-header__nav-mobile-link">Choose your courses</a>
+            
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/admissions/cross-institutional-study/review-entry-requirements" class="uq-header__nav-mobile-link">Review entry requirements</a>
+            
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/admissions/cross-institutional-study/review-fees-and-financial-support" class="uq-header__nav-mobile-link">Review fees and financial support</a>
+            
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/admissions/cross-institutional-study/submit-your-application" class="uq-header__nav-mobile-link">Submit your application</a>
+            
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/admissions/cross-institutional-study/respond-your-offer" class="uq-header__nav-mobile-link">Respond to your offer</a>
+            
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/admissions/cross-institutional-study/get-ready-uq" class="uq-header__nav-mobile-link">Get ready for UQ</a>
+            
+          </li>
+        
+              </ul>
+              
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/admissions/inherent-requirements" class="uq-header__nav-mobile-audience-link slide-menu__control">Inherent requirements</a>
+            
+              <ul class="uq-header__nav-mobile-list">
+                <li class="uq-header__nav-mobile-item">
+                  <a class="uq-header__nav-mobile-audience-link" href="/admissions/inherent-requirements">Inherent requirements</a>
+                </li>
+                
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/admissions/inherent-requirements/inherent-requirements-architecture-program" class="uq-header__nav-mobile-link">Architecture</a>
+            
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/admissions/inherent-requirements/inherent-requirements-clinical-exercise-physiology-programs" class="uq-header__nav-mobile-link">Clinical exercise physiology</a>
+            
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/admissions/inherent-requirements/inherent-requirements-education-programs" class="uq-header__nav-mobile-link">Education</a>
+            
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/admissions/inherent-requirements/inherent-requirements-midwifery-programs" class="uq-header__nav-mobile-link">Midwifery</a>
+            
+          </li>
+        
+          <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+            <a href="/admissions/inherent-requirements/inherent-requirements-nursing-programs" class="uq-header__nav-mobile-link">Nursing</a>
+            
+          </li>
+        
+              </ul>
+              
+          </li>
+        
+            </ul>
+            
+        </li>
+      
+        <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+          <a href="/events" class="uq-header__nav-mobile-link">Events</a>
+          
+        </li>
+      
+        <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+          <a href="/stories" class="uq-header__nav-mobile-link">Stories</a>
+          
+        </li>
+      
+        <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
+          <a href="/contact-us" class="uq-header__nav-mobile-link">Contact</a>
+          
+        </li>
+      
+          
+      
+          <!-- SCENARIO B: NAVIGATION PRIMARY (mobile) (e.g., Homepage or Fallback) -->
+      
+      </ul>
+    </nav>
+
+      <!-- NAVIGATION SECONDARY (Desktop) -->
       <div class="uq-header__nav-secondary">
-        <nav class="uq-header__nav-secondary-container">
+          <nav class="uq-header__nav-secondary-container">
           <ul class="uq-header__nav-secondary-list">
-              <li class="uq-header__nav-secondary-item">
-                 <a href="https://uq.edu.au" rel="external" class="uq-header__nav-secondary-link">UQ home</a>
+              <li class="uq-header__nav-secondary-item" data-gtm-category="Secondary header">
+                <a class="uq-header__nav-secondary-link" href="https://www.uq.edu.au">UQ home</a>
               </li>
-              <li class="uq-header__nav-secondary-item">
-                  <a href="https://news.uq.edu.au" rel="external" class="uq-header__nav-secondary-link">News</a>
+              
+              <li class="uq-header__nav-secondary-item" data-gtm-category="Secondary header">
+                  <a href="https://news.uq.edu.au" class="uq-header__nav-secondary-link" data-gtm-label="News">News</a>
               </li>
-              <li class="uq-header__nav-secondary-item">
-                  <a href="https://uq.edu.au/uq-events" rel="external" class="uq-header__nav-secondary-link">Events</a>
+              
+              <li class="uq-header__nav-secondary-item" data-gtm-category="Secondary header">
+                  <a href="https://uq.edu.au/uq-events" class="uq-header__nav-secondary-link" data-gtm-label="Events">Events</a>
               </li>
-              <li class="uq-header__nav-secondary-item">
-                  <a href="https://alumni.uq.edu.au/giving" rel="external" class="uq-header__nav-secondary-link">Give</a>
+              
+              <li class="uq-header__nav-secondary-item" data-gtm-category="Secondary header">
+                  <a href="https://alumni.uq.edu.au/giving" class="uq-header__nav-secondary-link" data-gtm-label="Give">Give</a>
               </li>
-              <li class="uq-header__nav-secondary-item">
-                <a href="https://contacts.uq.edu.au/contacts" rel="external" class="uq-header__nav-secondary-link">Contact</a>
+              
+              <li class="uq-header__nav-secondary-item" data-gtm-category="Secondary header">
+                  <a href="https://contacts.uq.edu.au/contacts" class="uq-header__nav-secondary-link" data-gtm-label="Contact">Contact</a>
               </li>
+              
           </ul>
-        </nav>
+          </nav>
       </div>
-    </header>
+  </header>
 
     <!-- Alert -->
     <div class="uq-alert uq-alert--info uq-alert--dark uq-alert--global uq-alert" role="alert">
@@ -619,14 +1215,22 @@
 
     <script type="text/javascript" src="js/uqds.min.js"></script>
     <script type="text/javascript">
-      // Initialise header
+      // Initialise header - all behavior handled by Header class and its modules
       const headerElem = document.querySelector('.uq-header');
-      new uq.header(headerElem);
-      // Initialise Main Navigation
-      const navElem = document.getElementById("jsNav"); if (navElem) { new uq.siteHeaderNavigation(navElem, "uq-site-header__navigation"); }
+      if (headerElem) {
+        new uq.header(headerElem);
+      }
+
+      // Initialise site navigation (local to this page)
+      const navElem = document.getElementById("jsNav");
+      if (navElem) {
+        new uq.siteHeaderNavigation(navElem, "uq-site-header__navigation");
+      }
+
       // Initialise accordions
       new uq.accordion();
 
+      // App height helper for mobile viewports
       const appHeight = () => {
         const doc = document.documentElement
         doc.style.setProperty('--app-height', `${window.innerHeight}px`)
@@ -634,31 +1238,6 @@
       window.addEventListener('resize', appHeight)
       appHeight()
     </script>
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const menuLeftElem = document.getElementById('global-mobile-nav');
-
-        const menuLeft = new SlideMenu(menuLeftElem, {
-          position: 'left',
-          submenuLinkAfter: ' ',
-          backLinkBefore: ' ',
-        });
-
-        this.searchToggle = document.querySelector('.nav-primary__search-toggle');
-
-        this.searchToggle.addEventListener('click', () => {
-          menuLeft.close();
-        });
-
-        var slideMenuBackButtons = document.querySelectorAll('.slide-menu__backlink, .global-mobile-nav__audience-link');
-                
-        Array.prototype.forEach.call(slideMenuBackButtons, function(el, i){
-            el.addEventListener('click', () => {
-              document.querySelector('.global-mobile-nav').scrollTop = 0;
-            });
-        });
-      });
-    </script>
-    <script type="text/javascript" src="js/slide-menu.js"></script>
+    
   </body>
 </html>

@@ -22,7 +22,7 @@
     "url": "https://github.com/uq-its-ss/design-system/issues"
   },
   "engines": {
-    "node": ">=13.2.0"
+    "node": ">=24"
   },
   "engineStrict": true,
   "devDependencies": {

@@ -86,7 +86,7 @@ jobs:
       - name: "Add links to Storybook previews in PR comment"
         uses: marocchino/sticky-pull-request-comment@v3
         with:
-          GITHUB_TOKEN: ${{ secrets.UQDS_PERSONAL_ACCESS_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           header: preview
           message: |
             Design System Previews for Run `${{ github.run_id }}`:

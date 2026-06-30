@@ -74,7 +74,7 @@ jobs:
 
       - name: "Run visual regression (HTML and REACT)"
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          UQDS_PERSONAL_ACCESS_TOKEN: ${{ secrets.UQDS_PERSONAL_ACCESS_TOKEN }}
           AWS_REGION: 'ap-southeast-2'
         run: |
           npm run reg-suit run --update-screenshots

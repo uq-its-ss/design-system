@@ -11,6 +11,9 @@ jobs:
     runs-on: ubuntu-latest
     # This condition prevents the workflow running FOR the Lerna publish commit itself
     if: ${{ ! startsWith(github.event.head_commit.message, 'chore(release):Publish') }}
+    permissions:
+      id-token: write   # Required for OIDC authentication with NPM
+      contents: write   # Required for git operations (tags, commits)
     steps:
       - name: "⬇️ Checkout repo"
         uses: actions/checkout@v6
@@ -19,19 +22,14 @@ jobs:
           token: ${{ secrets.UQDS_PERSONAL_ACCESS_TOKEN }} # Use PAT to allow pushing tags/commits later
 
       - name: "⎔ Setup node 24"
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
-          node-version: 24
+          node-version: '24'
+          registry-url: 'https://registry.npmjs.org'
+          package-manager-cache: false  # never use caching in release builds
 
       - name: "📦️ Install dependencies"
         run: npm ci
-
-      - name: "🔐 Authenticate to NPM"
-        run: |
-          echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
-          npm whoami
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       # --- Steps for 'releases' branch ---
       
@@ -39,7 +37,6 @@ jobs:
         if: ${{ github.ref_name == 'releases' }}
         env:
           GH_TOKEN: ${{ secrets.UQDS_PERSONAL_ACCESS_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
           git config user.name "${{ github.actor }}"
           git config user.email "${{ github.actor}}@users.noreply.github.com"
@@ -65,7 +62,6 @@ jobs:
         if: ${{ github.ref_name == 'releases' }}
         env:
           GH_TOKEN: ${{ secrets.UQDS_PERSONAL_ACCESS_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
           # Ensure clean state before publish, especially after dry run
           git reset --hard HEAD
@@ -81,7 +77,6 @@ jobs:
         if: ${{ github.ref_name == 'master' }}
         env:
           GH_TOKEN: ${{ secrets.UQDS_PERSONAL_ACCESS_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
           git config user.name "${{ github.actor }}"
           git config user.email "${{ github.actor}}@users.noreply.github.com"

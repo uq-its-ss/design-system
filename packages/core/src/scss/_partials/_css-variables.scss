@@ -1,30 +1,207 @@
+@use "_colour-constants" as colour;
 @use "_space-constants" as space;
 @use "_text-constants" as text;
+@use "_media-constants" as media;
 
 /* CSS Variables */
 :root {
-  /* Default font size variables */
-  --uq-font-size-ul: #{text.$font-size-ul};
-  --uq-font-size-xxxxl: #{text.$font-size-xxxxl-mobile};
-  --uq-font-size-xxxl: #{text.$font-size-xxxl-mobile};
-  --uq-font-size-xxl: #{text.$font-size-xxl-mobile};
-  --uq-font-size-xl: #{text.$font-size-xl};
-  --uq-font-size-l: #{text.$font-size-l};
-  --uq-font-size-m: #{text.$font-size-m};
-  --uq-font-size-s: #{text.$font-size-s};
-  --uq-font-size-xs: #{text.$font-size-xs};
+
+  // UQ Brand colours
+
+  // Base
+  --uq-black: #{colour.$black};
+  --uq-white: #{colour.$white};
+
+  // Purple
+  --uq-purple-50: #{colour.$purple-50};
+  --uq-purple-100: #{colour.$purple-100};
+  --uq-purple-200: #{colour.$purple-200};
+  --uq-purple-300: #{colour.$purple-300};
+  --uq-purple-400: #{colour.$purple-400};
+  --uq-purple-500: #{colour.$purple-500};
+  --uq-purple-600: #{colour.$purple-600};
+  --uq-purple-650: #{colour.$purple-650};
+  --uq-purple-700: #{colour.$purple-700};
+  --uq-purple-800: #{colour.$purple-800};
+  --uq-purple-900: #{colour.$purple-900};
+  --uq-purple-light: #{colour.$purple-light};
+
+  // UQ Purple gradient
+  --uq-purple-gradient: #{colour.$purple-gradient};
+
+  // Grey
+  --uq-grey-25: #{colour.$grey-25};
+  --uq-grey-50: #{colour.$grey-50};
+  --uq-grey-100: #{colour.$grey-100};
+  --uq-grey-200: #{colour.$grey-200};
+  --uq-grey-300: #{colour.$grey-300};
+  --uq-grey-400: #{colour.$grey-400};
+  --uq-grey-500: #{colour.$grey-500};
+  --uq-grey-600: #{colour.$grey-600};
+  --uq-grey-700: #{colour.$grey-700};
+  --uq-grey-800: #{colour.$grey-800};
+  --uq-grey-900: #{colour.$grey-900};
+  --uq-grey-925: #{colour.$grey-925};
+
+  // Error
+  --uq-error-50: #{colour.$error-50};
+  --uq-error-100: #{colour.$error-100};
+  --uq-error-200: #{colour.$error-200};
+  --uq-error-300: #{colour.$error-300};
+  --uq-error-400: #{colour.$error-400};
+  --uq-error-500: #{colour.$error-500};
+  --uq-error-600: #{colour.$error-600};
+  --uq-error-700: #{colour.$error-700};
+  --uq-error-800: #{colour.$error-800};
+  --uq-error-900: #{colour.$error-900};
+
+  // Success
+  --uq-success-50: #{colour.$success-50};
+  --uq-success-100: #{colour.$success-100};
+  --uq-success-200: #{colour.$success-200};
+  --uq-success-300: #{colour.$success-300};
+  --uq-success-400: #{colour.$success-400};
+  --uq-success-500: #{colour.$success-500};
+  --uq-success-600: #{colour.$success-600};
+  --uq-success-700: #{colour.$success-700};
+  --uq-success-800: #{colour.$success-800};
+  --uq-success-900: #{colour.$success-900};
+
+  // Warning
+  --uq-warning-50: #{colour.$warning-50};
+  --uq-warning-100: #{colour.$warning-100};
+  --uq-warning-200: #{colour.$warning-200};
+  --uq-warning-300: #{colour.$warning-300};
+  --uq-warning-400: #{colour.$warning-400};
+  --uq-warning-500: #{colour.$warning-500};
+  --uq-warning-600: #{colour.$warning-600};
+  --uq-warning-700: #{colour.$warning-700};
+  --uq-warning-800: #{colour.$warning-800};
+  --uq-warning-900: #{colour.$warning-900};
+
+  // Utility
+  --uq-utility-50: #{colour.$utility-50};
+  --uq-utility-100: #{colour.$utility-100};
+  --uq-utility-200: #{colour.$utility-200};
+  --uq-utility-300: #{colour.$utility-300};
+  --uq-utility-400: #{colour.$utility-400};
+  --uq-utility-500: #{colour.$utility-500};
+  --uq-utility-600: #{colour.$utility-600};
+  --uq-utility-700: #{colour.$utility-700};
+  --uq-utility-800: #{colour.$utility-800};
+  --uq-utility-900: #{colour.$utility-900};
+
+  // Typography
+
+  // font family
+  --uq-roboto: #{text.$roboto};
+  --uq-montserrat: #{text.$montserrat};
+  --uq-courier: #{text.$courier};
+
+  --uq-font: #{text.$font-body};
+  --uq-font-title: #{text.$font-title};
+  --uq-font-accent: #{text.$font-accent};
+  --uq-font-monospace: #{text.$font-monospace};
+
+  // font sizes
   --uq-font-size-xxs: #{text.$font-size-xxs};
-  /* Default grid gap */
+  --uq-font-size-xs: #{text.$font-size-xs};
+  --uq-font-size-s: #{text.$font-size-s};
+  --uq-font-size-m: #{text.$font-size-m};
+  --uq-font-size-l: #{text.$font-size-l}; 
+  --uq-font-size-xl: #{text.$font-size-xl};
+  --uq-font-size-xxl: #{text.$font-size-xxl-mobile};
+  --uq-font-size-xxxl: #{text.$font-size-xxxl-mobile};
+  --uq-font-size-xxxxl: #{text.$font-size-xxxxl-mobile};
+  --uq-font-size-ul: #{text.$font-size-ul};
+
+  // font weights
+  --uq-font-weight-light: #{text.$font-weight-light};
+  --uq-font-weight-normal: #{text.$font-weight-normal};
+  --uq-font-weight-medium: #{text.$font-weight-medium};
+  --uq-font-weight-bold: #{text.$font-weight-bold};
+
+  // line heights
+  --uq-line-height-single: #{text.$line-height-ui};
+  --uq-line-height-short: #{text.$line-height-h};
+  --uq-line-height-long: #{text.$line-height};
+
+  // 1% letter spacing
+  --uq-letter-spacing: #{text.$letter-spacing};
+
+  //Space
+
+  // Standard spacing values
+  --uq-space-auto: #{space.$space-auto};
+  --uq-space-none: #{space.$space-none};
+
+  /* 1px (0.0625rem) */
+  /* 2px (0.125rem) */
+  --uq-space-xxs: #{space.$space-xxs};
+  --uq-space-xs: #{space.$space-xs};
+  --uq-space-s: #{space.$space-s};
+  --uq-space-m: #{space.$space-m};
+  --uq-space-l: #{space.$space-l};
+  --uq-space-xl: #{space.$space-xl};
+  --uq-space-xxl: #{space.$space-xxl};
+  --uq-space-xxxl: #{space.$space-xxxl};
+  --uq-space-xxxxl: #{space.$space-xxxxl};
+  --uq-space-ul: #{space.$space-ul};
+  --uq-space-uul: #{space.$space-uul};
+  --uq-space-uuul: #{space.$space-uuul};
+  --uq-space-uuuul: #{space.$space-uuuul};
+  --uq-space-uuuuul: #{space.$space-uuuuul};
+
+  // Layout and Container spacing values
+
+  // Containers
+  --uq-container: #{space.$container}; // 1172px
+
+  // Grid gap
   --uq-grid-gap: #{space.$space-l};
+
+  // Breakpoints
+
+  --uq-screen-xs: #{media.$screen-xs};
+  --uq-screen-sm: #{media.$screen-sm};
+  --uq-screen-md: #{media.$screen-md};
+  --uq-screen-lg: #{media.$screen-lg};
+  --uq-screen-xl: #{media.$screen-xl};
+
+  // Media query strings
+
+  --uq-screen-xs-up: #{media.$screen-xs-up};
+  --uq-screen-xs-down: #{media.$screen-xs-down};
+  --uq-screen-xs-sm: #{media.$screen-xs-sm};
+
+  --uq-screen-sm-up: #{media.$screen-sm-up};
+  --uq-screen-sm-down: #{media.$screen-sm-down};
+  --uq-screen-sm-md: #{media.$screen-sm-md};
+
+  --uq-screen-md-up: #{media.$screen-md-up};
+  --uq-screen-md-down: #{media.$screen-md-down};
+  --uq-screen-md-lg: #{media.$screen-md-lg};
+
+  --uq-screen-lg-up: #{media.$screen-lg-up};
+  --uq-screen-lg-down: #{media.$screen-lg-down};
+  --uq-screen-lg-xl: #{media.$screen-lg-xl};
+
+  --uq-screen-xl-up: #{media.$screen-xl-up};
+  --uq-screen-xl-down: #{media.$screen-xl-down};
+  
 }
 
+// Desktop CSS Variables
 @media (min-width: 1024px) {
   :root {
-    /* Desktop font size variables */
-    --uq-font-size-xxxxl: #{text.$font-size-xxxxl};
-    --uq-font-size-xxxl: #{text.$font-size-xxxl};
+    // Typography
+
+    // font sizes
     --uq-font-size-xxl: #{text.$font-size-xxl};
-    /* Desktop grid gap */
+    --uq-font-size-xxxl: #{text.$font-size-xxxl};
+    --uq-font-size-xxxxl: #{text.$font-size-xxxxl};
+
+    // Grid gap
     --uq-grid-gap: #{space.$space-xl};
   }
 }

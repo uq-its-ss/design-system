@@ -23,7 +23,7 @@
   background: core.$white;
   border: 1px solid core.$grey-200;
   border-radius: 2px;
-  margin-bottom: core.$space-s;
+  margin-bottom: core.$space-xs;
 }
 
 .uq-accordion__toggle {
@@ -37,7 +37,7 @@
   cursor: pointer;
   display: flex;
   align-items: center;
-  gap: core.$space-s core.$space-m;
+  gap: core.$space-xs core.$space-m;
   font-family: core.$font-body;
   font-size: core.$font-size-xl;
   font-weight: core.$font-weight-medium;
@@ -186,7 +186,7 @@
 .uq-accordion--compact {
   & .uq-accordion__toggle {
     font-size: core.$font-size-m;
-    padding: core.$space-s core.$space-xxxxl core.$space-s core.$space-m;
+    padding: core.$space-xs core.$space-xxxxl core.$space-xs core.$space-m;
   }
 
   & .uq-accordion__toggle::before {

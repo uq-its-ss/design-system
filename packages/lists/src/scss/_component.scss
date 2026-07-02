@@ -27,7 +27,7 @@
 
   &__item {
     list-style: none;
-    padding: core.$space-s core.$space-none; // .75rem 0rem
+    padding: core.$space-xs core.$space-none; // .75rem 0rem
   }
 
   &--large-spacing {
@@ -67,7 +67,7 @@
   &--shaded {
     .vertical-list__item {
       background: core.$grey-50;
-      margin-bottom: core.$space-s;
+      margin-bottom: core.$space-xs;
       padding: core.$space-l;
 
       &__date {

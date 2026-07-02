@@ -84,7 +84,7 @@ table,
 
     td,
     .uq-table__cell {
-      padding: core.$space-s core.$space-m;
+      padding: core.$space-xs core.$space-m;
 
       &::before {
         content: attr(data-title);

@@ -5,13 +5,13 @@
 .uq-button {
   background-color: core.$purple-500;
   border: 2px solid core.$purple-500;
-  border-radius: core.$space-xs;
+  border-radius: core.$space-xxs;
   box-sizing: border-box;
   color: core.$white;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
-  gap: core.$space-s;
+  gap: core.$space-xs;
   font-family: core.$roboto;
   font-size: core.$font-size-m;
   font-weight: core.$font-weight-medium;
@@ -135,12 +135,12 @@
 
 .uq-button--tiny {
   font-size: core.$font-size-xs;
-  padding: core.$space-xs core.$space-s;
+  padding: core.$space-xxs core.$space-xs;
 }
 
 .uq-button--small {
   font-size: core.$font-size-s;
-  padding: core.$space-s core.$space-m;
+  padding: core.$space-xs core.$space-m;
 }
 
 .uq-button--large {
@@ -149,8 +149,8 @@
 }
 
 .uq-button--expand {
-  padding-left: core.$space-s;
-  padding-right: core.$space-s;
+  padding-left: core.$space-xs;
+  padding-right: core.$space-xs;
   width: 100%;
   justify-content: center;
 }

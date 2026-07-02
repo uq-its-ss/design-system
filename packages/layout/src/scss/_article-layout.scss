@@ -34,14 +34,14 @@
 .uq-article-layout__meta {
   display: flex;
   flex-wrap: wrap;
-  gap: core.$space-s;
+  gap: core.$space-xs;
 }
 
 .uq-article-layout__meta-item:not(:last-child) {
   &::after {
     content: "";
     background: core.$grey-300;
-    margin-left: core.$space-s;
+    margin-left: core.$space-xs;
     width: 6px;
     height: 6px;
     border-radius: 50%;

@@ -101,12 +101,12 @@
   display: table-row;
 }
 @mixin table-cell {
-  padding: core.$space-s core.$space-m;
+  padding: core.$space-xs core.$space-m;
   border: 1px solid core.$grey-200;
   text-align: left;
 }
 @mixin table-header {
-  padding: core.$space-s core.$space-m;
+  padding: core.$space-xs core.$space-m;
   color: core.$purple-500;
   text-align: left;
   border: 1px solid core.$grey-200;

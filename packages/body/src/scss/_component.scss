@@ -111,7 +111,7 @@ $use-encapsulation: false !default;
   h6,
   .h6 {
     margin-top: core.$space-l;
-    margin-bottom: core.$space-s;
+    margin-bottom: core.$space-xs;
     font-size: var(--uq-font-size-m);
   }
 
@@ -386,8 +386,8 @@ $spacing-sizes: (
   xl: core.$space-xl,
   l: core.$space-l,
   m: core.$space-m,
-  s: core.$space-s,
-  xs: core.$space-xs,
+  s: core.$space-xs,
+  xs: core.$space-xxs,
 );
 
 @each $size, $value in $spacing-sizes {

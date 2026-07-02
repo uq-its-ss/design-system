@@ -119,7 +119,7 @@
       @media #{core.$screen-lg-up} {
         background-color: transparent;
         border: none;
-        padding: core.$space-s core.$space-none core.$space-none;
+        padding: core.$space-xs core.$space-none core.$space-none;
 
         &:first-of-type {
           padding: core.$space-m core.$space-none core.$space-none;
@@ -151,7 +151,7 @@
     height: core.$space-l;
     transform: translateY(50%);
     position: absolute;
-    top: core.$space-xs;
+    top: core.$space-xxs;
     right: core.$space-l;
 
     @media #{core.$screen-lg-up} {

@@ -30,7 +30,7 @@ $story-card-font-size-small: 22px;
 }
 
 .uq-story-card__top-label {
-  margin-bottom: core.$space-xs;
+  margin-bottom: core.$space-xxs;
   color: core.$grey-700;
   font-weight: core.$font-weight-medium;
 }
@@ -86,7 +86,7 @@ $story-card-font-size-small: 22px;
       }
 
       & .uq-story-card__bottom-label {
-        padding-top: core.$space-s;
+        padding-top: core.$space-xs;
       }
     }
   }
@@ -212,6 +212,6 @@ $story-card-font-size-small: 22px;
   }
 
   & .uq-story-card__bottom-label {
-    padding-top: core.$space-s;
+    padding-top: core.$space-xs;
   }
 }

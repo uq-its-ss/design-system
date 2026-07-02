@@ -42,12 +42,12 @@
     position: relative;
     flex: 0 1 auto;
     padding: core.$space-m core.$space-l;
-    margin-right: core.$space-xs;
+    margin-right: core.$space-xxs;
     font-size: core.$font-size-m;
     font-weight: core.$font-weight-normal;
     color: core.$grey-900;
     background-color: core.$white;
-    border-radius: core.$space-xs core.$space-xs core.$space-none
+    border-radius: core.$space-xxs core.$space-xxs core.$space-none
       core.$space-none;
     border: none;
     text-align: center;
@@ -57,7 +57,7 @@
 
     @media #{core.$screen-md-up} {
       padding: core.$space-l core.$space-xl;
-      margin-right: core.$space-xs;
+      margin-right: core.$space-xxs;
       font-size: core.$font-size-l;
     }
 
@@ -90,12 +90,12 @@
 
     > span.uq-icon {
       display: block;
-      margin: 0 auto core.$space-s;
+      margin: 0 auto core.$space-xs;
       font-size: core.$font-size-xs;
 
       @media #{core.$screen-md-up} {
         display: inline-block;
-        margin: 0 core.$space-xs 0 auto;
+        margin: 0 core.$space-xxs 0 auto;
       }
     }
   }
@@ -179,14 +179,14 @@
   // Small variant
   &.uq-tabs--small {
     .uq-tabs__tab {
-      padding: core.$space-s core.$space-m;
+      padding: core.$space-xs core.$space-m;
 
       @media #{core.$screen-md-up} {
         padding: core.$space-m core.$space-l;
       }
     }
     .uq-tabs__tab-panel {
-      padding: core.$space-s core.$space-m;
+      padding: core.$space-xs core.$space-m;
 
       @media #{core.$screen-md-up} {
         padding: core.$space-m core.$space-l;
@@ -212,11 +212,11 @@
     // Tab
     .uq-tabs__tab {
       margin-right: core.$space-none;
-      margin-left: core.$space-xs;
+      margin-left: core.$space-xxs;
 
       &:last-child {
         margin-right: core.$space-none;
-        margin-left: core.$space-xs;
+        margin-left: core.$space-xxs;
       }
     }
   }

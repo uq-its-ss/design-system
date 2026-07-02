@@ -6,7 +6,7 @@
   background-color: transparent;
   border-radius: 50%;
   height: core.$space-xxxl;
-  padding: core.$space-xs;
+  padding: core.$space-xxs;
   overflow: hidden;
   width: core.$space-xxxl;
   -webkit-mask-image: linear-gradient(transparent 50%, #000 0),
@@ -20,14 +20,14 @@
 
   &::before {
     background-color: transparent;
-    border: core.$space-xs solid transparent;
+    border: core.$space-xxs solid transparent;
     border-top-color: core.$purple-500;
     border-radius: 50%;
     box-sizing: border-box;
     content: "";
     display: block;
     height: 100%;
-    margin-bottom: core.$space-xs;
+    margin-bottom: core.$space-xxs;
     width: 100%;
     -webkit-animation: pure-material-progress-circular-pseudo 0.75s linear
       infinite alternate;

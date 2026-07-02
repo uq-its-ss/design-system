@@ -445,7 +445,7 @@
     margin-right: 0;
     overflow: hidden;
     position: absolute;
-    right: core.$space-s;
+    right: core.$space-xs;
     text-decoration: none;
     text-indent: 0;
     top: calc(50% - 1.375rem);
@@ -461,8 +461,8 @@
       display: block;
       width: core.$space-l;
       height: core.$space-l;
-      top: core.$space-s;
-      left: core.$space-s;
+      top: core.$space-xs;
+      left: core.$space-xs;
       background-size: 100%;
       background-image: url(icon-constants.get-icon(
         "standard--search",
@@ -578,8 +578,8 @@
   .megamenu__heading {
     color: core.$purple-500;
     font-weight: core.$font-weight-medium;
-    padding-top: core.$space-xs;
-    padding-bottom: core.$space-xs;
+    padding-top: core.$space-xxs;
+    padding-bottom: core.$space-xxs;
 
     &:nth-of-type(2) {
       padding-top: core.$space-xxl;
@@ -597,7 +597,7 @@
 
         & a {
           display: inline-block;
-          margin-top: core.$space-s;
+          margin-top: core.$space-xs;
           color: core.$purple-500;
           text-decoration: none;
           font-weight: core.$font-weight-normal;
@@ -728,7 +728,7 @@ body.no-scroll {
       transform: translateY(50%);
       position: absolute;
       left: 1.25rem;
-      top: core.$space-xs;
+      top: core.$space-xxs;
     }
   }
 
@@ -745,7 +745,7 @@ body.no-scroll {
       transform: translateY(50%);
       position: absolute;
       right: 1.5rem;
-      top: core.$space-xs;
+      top: core.$space-xxs;
     }
   }
 

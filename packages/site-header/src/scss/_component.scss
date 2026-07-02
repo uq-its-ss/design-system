@@ -312,7 +312,7 @@
       @media #{core.$screen-md-up} {
         width: core.$space-xl;
         padding: core.$space-compressed-xxxl core.$space-l
-          core.$space-compressed-xxxl core.$space-s;
+          core.$space-compressed-xxxl core.$space-xs;
       }
 
       @media #{core.$screen-lg-up} {

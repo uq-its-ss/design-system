@@ -10,7 +10,7 @@
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  gap: core.$space-s;
+  gap: core.$space-xs;
 
   :first-child {
     margin-top: core.$space-none;

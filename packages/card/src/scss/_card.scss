@@ -84,7 +84,7 @@
 
 .uq-card__description,
 %uq-card__description {
-  margin-top: core.$space-s;
+  margin-top: core.$space-xs;
 }
 
 .uq-card__image,
@@ -104,7 +104,7 @@
 }
 
 .uq-card__icon {
-  margin-bottom: core.$space-s;
+  margin-bottom: core.$space-xs;
 
   & .uq-icon::before {
     height: 56px;

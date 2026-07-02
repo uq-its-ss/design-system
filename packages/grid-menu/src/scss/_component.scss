@@ -105,12 +105,12 @@
     font-size: 0.8rem;
     font-weight: core.$font-weight-normal;
     line-height: normal;
-    margin-top: core.$space-xs;
+    margin-top: core.$space-xxs;
   }
 
   &__icon {
     margin-top: -0.3rem;
-    margin-right: core.$space-s;
+    margin-right: core.$space-xs;
     transition: filter 0.2s;
   }
 

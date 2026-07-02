@@ -120,7 +120,7 @@ $use-encapsulation: false !default;
     + input:not([type="checkbox"]):not([type="radio"]),
     + select,
     + textarea {
-      margin-top: core.$space-s;
+      margin-top: core.$space-xs;
     }
 
     input[type="radio"],
@@ -131,9 +131,9 @@ $use-encapsulation: false !default;
         font-weight: core.$font-weight-normal;
         line-height: $form-checkbox-size;
         margin-bottom: core.$space-m;
-        margin-left: core.$space-s;
+        margin-left: core.$space-xs;
         margin-right: $form-spacing;
-        padding-top: core.$space-xs;
+        padding-top: core.$space-xxs;
         padding-left: core.$space-l;
         vertical-align: top;
       }
@@ -213,7 +213,7 @@ $use-encapsulation: false !default;
 
     &.uq-input--large {
       padding: 1.15625rem core.$space-l;
-      border-radius: core.$space-xs;
+      border-radius: core.$space-xxs;
     }
 
     + .uq-error-message,
@@ -231,7 +231,7 @@ $use-encapsulation: false !default;
       core.$purple-500
     ));
     background-repeat: no-repeat;
-    background-position: right core.$space-xs center;
+    background-position: right core.$space-xxs center;
     padding-right: 2.5rem;
     cursor: pointer;
     line-height: 1.2;
@@ -289,7 +289,7 @@ $use-encapsulation: false !default;
       font-weight: core.$font-weight-normal;
       line-height: core.$line-height-h;
       margin-bottom: core.$space-m;
-      margin-left: core.$space-s;
+      margin-left: core.$space-xs;
       margin-right: $form-spacing;
       padding-top: core.$space-compressed-xs;
       padding-left: core.$space-l;
@@ -415,7 +415,7 @@ $use-encapsulation: false !default;
   .uq-error-summary {
     background-color: white;
     border: 1px solid core.$error-500;
-    border-left-width: core.$space-xs;
+    border-left-width: core.$space-xxs;
     padding: core.$space-m;
     margin-bottom: core.$space-l;
 
@@ -439,7 +439,7 @@ $use-encapsulation: false !default;
       padding-left: core.$space-l;
 
       &__item {
-        margin-bottom: core.$space-xs;
+        margin-bottom: core.$space-xxs;
         line-height: core.$line-height;
       }
 
@@ -464,7 +464,7 @@ $use-encapsulation: false !default;
     font-weight: core.$font-weight-normal;
     line-height: core.$line-height;
     margin-bottom: core.$space-l;
-    padding: calc(#{core.$space-s} - 1px) core.$space-m core.$space-s
+    padding: calc(#{core.$space-xs} - 1px) core.$space-m core.$space-xs
       core.$space-xxxl;
     position: relative;
 
@@ -476,7 +476,7 @@ $use-encapsulation: false !default;
       background-size: contain;
       height: core.$space-compressed-xl;
       left: core.$space-m;
-      margin-right: core.$space-s;
+      margin-right: core.$space-xs;
       margin-top: calc(#{- (core.$space-compressed-xl) * 0.5} - 1px);
       position: absolute;
       top: 50%;

@@ -4,7 +4,7 @@
 
 .uq-side-nav {
   color: core.$grey-900;
-  border-top: core.$space-xs solid core.$purple-500;
+  border-top: core.$space-xxs solid core.$purple-500;
   box-sizing: border-box;
   font-family: core.$font-body;
   font-size: core.$font-size-m;
@@ -50,7 +50,7 @@
       left: 0;
       width: 100%;
       opacity: 0;
-      transform: translateY(-(core.$space-s));
+      transform: translateY(-(core.$space-xs));
 
       .uq-side-nav__list-item {
         &:last-child {

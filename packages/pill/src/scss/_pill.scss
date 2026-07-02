@@ -43,7 +43,7 @@
 }
 
 .uq-pill:has(input[type="checkbox"]:checked) {
-  padding-right: core.$space-s;
+  padding-right: core.$space-xs;
 
   &::after {
     content: "";
@@ -55,6 +55,6 @@
       core.$purple-500
     ));
     margin-block: -6px;
-    margin-left: core.$space-xs;
+    margin-left: core.$space-xxs;
   }
 }

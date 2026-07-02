@@ -48,7 +48,7 @@
 
       a.toc-link {
         display: inline-block;
-        margin: core.$space-xs core.$space-none;
+        margin: core.$space-xxs core.$space-none;
         padding-left: core.$space-m;
         padding-right: core.$space-m;
         text-decoration: none;
@@ -56,7 +56,7 @@
         color: core.$grey-900;
 
         &::before {
-          width: core.$space-xs;
+          width: core.$space-xxs;
         }
 
         &:hover,

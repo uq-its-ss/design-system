@@ -20,14 +20,14 @@
 }
 
 .uq-pane__description {
-  margin-top: core.$space-s;
+  margin-top: core.$space-xs;
 
   & :last-child {
     margin-bottom: 0;
   }
 
   & li {
-    margin-bottom: core.$space-s;
+    margin-bottom: core.$space-xs;
   }
 }
 
@@ -63,7 +63,7 @@
 }
 
 .uq-pane__icon {
-  margin-bottom: core.$space-s;
+  margin-bottom: core.$space-xs;
 
   & .uq-icon::before {
     height: 56px;

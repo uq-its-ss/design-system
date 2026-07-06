@@ -33,6 +33,14 @@
     "src/scss/*",
     "src/ts/_build/*"
   ],
+  "exports": {
+    ".": {
+      "import": "./dist/mjs/index.js",
+      "require": "./dist/js/uqds.js"
+    },
+    "./src/js/*": "./src/js/*.js",
+    "./src/scss/*": "./src/scss/*"
+  },
   "style": "dist/css/main.css",
   "types": "src/ts/index.d.ts",
   "repository": {

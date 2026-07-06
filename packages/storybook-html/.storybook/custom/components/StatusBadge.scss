@@ -4,55 +4,55 @@
   box-sizing: border-box;
   border-radius: 9999px;
   border: 2px solid transparent;
-  color: core.$grey-900;
+  color: var(--uq-grey-900);
   cursor: help;
   display: inline-block;
-  font-size: core.$font-size-s;
-  line-height: core.$line-height-ui;
-  margin-left: -(core.$space-xxs);
-  margin-right: core.$space-m;
-  padding: core.$space-xs core.$space-m;
+  font-size: var(--uq-font-size-s);
+  line-height: var(--uq-line-height-single);
+  margin-left: -(var(--uq-space-xxs));
+  margin-right: var(--uq-space-m);
+  padding: var(--uq-space-xs) var(--uq-space-m);
   vertical-align: baseline;
 
   // Status tags for Documentation
   &--draftDoc {
-    border: 2px solid core.$error-50;
+    border: 2px solid var(--uq-error-50);
     background-color: transparent;
   }
   &--reviewDoc {
-    border: 2px solid core.$warning-50;
+    border: 2px solid var(--uq-warning-50);
     background-color: transparent;
   }
   &--stableDoc {
-    border: 2px solid core.$success-50;
+    border: 2px solid var(--uq-success-50);
     background-color: transparent;
   }
 
   // Status tags for components
   &--stable {
-    background-color: core.$success-50;
+    background-color: var(--uq-success-50);
   }
 
   &--development,
   &--experiment {
-    background-color: core.$error-50;
+    background-color: var(--uq-error-50);
   }
 
   &--review {
-    background-color: core.$warning-50;
+    background-color: var(--uq-warning-50);
   }
 
   &--deprecated {
-    color: core.$white;
-    background-color: core.$error-700;
+    color: var(--uq-white);
+    background-color: var(--uq-error-700);
   }
 
   &-addendum {
     display: inline-block;
-    font-size: core.$font-size-s;
-    line-height: core.$line-height-ui;
-    margin-bottom: core.$space-l;
-    margin-right: core.$space-l;
+    font-size: var(--uq-font-size-s);
+    line-height: var(--uq-line-height-single);
+    margin-bottom: var(--uq-space-l);
+    margin-right: var(--uq-space-l);
     white-space: nowrap;
     vertical-align: baseline;
   }

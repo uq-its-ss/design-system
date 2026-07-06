@@ -24,17 +24,17 @@
   justify-content: center;
   appearance: none;
   border: 1px solid transparent;
-  background-color: core.$white;
+  background-color: var(--uq-white);
   width: var(--pagination-size);
   height: var(--pagination-size);
   border-radius: 50%;
   text-decoration: none;
-  color: core.$grey-900;
+  color: var(--uq-grey-900);
   padding: 0;
   margin: 0;
-  font-size: core.$font-size-m;
-  font-weight: core.$font-weight-medium;
-  font-family: core.$roboto;
+  font-size: var(--uq-font-size-m);
+  font-weight: var(--uq-font-weight-medium);
+  font-family: var(--uq-roboto);
   cursor: pointer;
 
   .uq-icon {
@@ -46,9 +46,9 @@
   }
 
   &:not(.uq-pagination__current, .uq-pagination__ellipsis):hover {
-    background-color: core.$grey-50;
+    background-color: var(--uq-grey-50);
     text-decoration: underline;
-    color: core.$grey-900;
+    color: var(--uq-grey-900);
   }
 
   &:focus-visible {
@@ -64,7 +64,7 @@
   &:hover {
     background-color: transparent;
     text-decoration: underline;
-    color: core.$grey-900;
+    color: var(--uq-grey-900);
   }
 
   &span {
@@ -74,7 +74,7 @@
 
 .uq-pagination__previous,
 .uq-pagination__next {
-  border-color: core.$purple-500;
+  border-color: var(--uq-purple-500);
 }
 
 .uq-pagination__previous {
@@ -86,6 +86,6 @@
 }
 
 .uq-pagination__current {
-  background-color: core.$purple-500;
-  color: core.$white;
+  background-color: var(--uq-purple-500);
+  color: var(--uq-white);
 }

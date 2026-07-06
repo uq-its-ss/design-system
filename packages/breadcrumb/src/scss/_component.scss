@@ -19,13 +19,13 @@
 .uq-breadcrumb__item {
   background-image: url(icon.get-icon(
     "standard--chevron-left-sml",
-    core.$grey-700
+    var(--uq-grey-700)
   ));
   background-position: left 0.2rem center;
   padding: 0 0 0 1.5rem;
   margin: 0;
-  font-size: core.$font-size-s;
-  color: core.$grey-700;
+  font-size: var(--uq-font-size-s);
+  color: var(--uq-grey-700);
   background-repeat: no-repeat;
   background-size: 1rem;
   display: none;
@@ -40,7 +40,7 @@
     min-width: auto;
     background-image: url(icon.get-icon(
       "standard--chevron-right-sml",
-      core.$grey-700
+      var(--uq-grey-700)
     ));
 
     &:first-of-type {
@@ -55,7 +55,7 @@
 
         &:hover {
           background-color: transparent;
-          color: core.$grey-700;
+          color: var(--uq-grey-700);
         }
       }
     }
@@ -72,12 +72,12 @@
 
 .uq-breadcrumb__link {
   text-decoration: underline;
-  color: core.$grey-700;
+  color: var(--uq-grey-700);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: none;
-  font-weight: core.$font-weight-normal;
+  font-weight: var(--uq-font-weight-normal);
 
   @media #{core.$screen-md-up} {
     max-width: 9rem;

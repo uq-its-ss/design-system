@@ -2,13 +2,13 @@
 @use "global" as *;
 
 .uq-loading-spinner {
-  color: core.$purple-500;
+  color: var(--uq-purple-500);
   background-color: transparent;
   border-radius: 50%;
-  height: core.$space-xxxl;
-  padding: core.$space-xxs;
+  height: var(--uq-space-xxxl);
+  padding: var(--uq-space-xxs);
   overflow: hidden;
-  width: core.$space-xxxl;
+  width: var(--uq-space-xxxl);
   -webkit-mask-image: linear-gradient(transparent 50%, #000 0),
     linear-gradient(90deg, transparent 50%, #000 0);
   mask-image: linear-gradient(transparent 50%, #000 0),
@@ -20,14 +20,14 @@
 
   &::before {
     background-color: transparent;
-    border: core.$space-xxs solid transparent;
-    border-top-color: core.$purple-500;
+    border: var(--uq-space-xxs) solid transparent;
+    border-top-color: var(--uq-purple-500);
     border-radius: 50%;
     box-sizing: border-box;
     content: "";
     display: block;
     height: 100%;
-    margin-bottom: core.$space-xxs;
+    margin-bottom: var(--uq-space-xxs);
     width: 100%;
     -webkit-animation: pure-material-progress-circular-pseudo 0.75s linear
       infinite alternate;
@@ -36,16 +36,16 @@
   }
 
   &--light {
-    color: core.$white;
+    color: var(--uq-white);
 
     &::before {
-      border-top-color: core.$white;
+      border-top-color: var(--uq-white);
     }
   }
 
   &--small {
-    height: core.$space-l;
-    width: core.$space-l;
+    height: var(--uq-space-l);
+    width: var(--uq-space-l);
     padding: core.$space-compressed-xs;
 
     &::before {

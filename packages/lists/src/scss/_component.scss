@@ -13,26 +13,26 @@
 
 %vertical-list,
 .vertical-list {
-  font-family: core.$font-body;
-  font-size: core.$font-size-m;
-  font-weight: core.$font-weight-normal;
-  line-height: core.$line-height;
+  font-family: var(--uq-font);
+  font-size: var(--uq-font-size-m);
+  font-weight: var(--uq-font-weight-normal);
+  line-height: var(--uq-line-height-long);
   list-style-type: none;
-  margin-bottom: core.$space-m;
-  padding: core.$space-none;
+  margin-bottom: var(--uq-space-m);
+  padding: var(--uq-space-none);
 
   &__title {
-    font-size: core.$font-size-xxl;
+    font-size: var(--uq-font-size-xxl);
   }
 
   &__item {
     list-style: none;
-    padding: core.$space-xs core.$space-none; // .75rem 0rem
+    padding: var(--uq-space-xs) var(--uq-space-none); // .75rem 0rem
   }
 
   &--large-spacing {
     .vertical-list__item {
-      padding: core.$space-xl core.$space-none;
+      padding: var(--uq-space-xl) var(--uq-space-none);
 
       &__date {
         font-size: 90%;
@@ -42,21 +42,21 @@
 
   &--ruled {
     .vertical-list__title {
-      border-top: 2px solid core.$grey-200;
-      padding-top: core.$space-xl;
+      border-top: 2px solid var(--uq-grey-200);
+      padding-top: var(--uq-space-xl);
     }
 
     .vertical-list__item {
-      border-bottom: 1px solid core.$grey-200;
-      padding-top: core.$space-m; //.75rem
+      border-bottom: 1px solid var(--uq-grey-200);
+      padding-top: var(--uq-space-m); //.75rem
 
       &:first-child {
-        padding-top: core.$space-none;
+        padding-top: var(--uq-space-none);
       }
 
       &--first {
-        border-top: 1px solid core.$grey-200;
-        padding-top: core.$space-m; // .75rem
+        border-top: 1px solid var(--uq-grey-200);
+        padding-top: var(--uq-space-m); // .75rem
       }
 
       &__date {
@@ -66,9 +66,9 @@
   }
   &--shaded {
     .vertical-list__item {
-      background: core.$grey-50;
-      margin-bottom: core.$space-xs;
-      padding: core.$space-l;
+      background: var(--uq-grey-50);
+      margin-bottom: var(--uq-space-xs);
+      padding: var(--uq-space-l);
 
       &__date {
         font-size: 90%;
@@ -79,34 +79,35 @@
 
 .horizontal-list {
   display: inline-block;
-  font-family: core.$font-body;
-  font-size: core.$font-size-m;
-  font-weight: core.$font-weight-normal;
-  line-height: core.$line-height;
+  font-family: var(--uq-font);
+  font-size: var(--uq-font-size-m);
+  font-weight: var(--uq-font-weight-normal);
+  line-height: var(--uq-line-height-long);
   list-style-type: none;
-  padding: core.$space-none;
-  margin-bottom: core.$space-m;
+  padding: var(--uq-space-none);
+  margin-bottom: var(--uq-space-m);
 
   &__title {
-    font-size: core.$font-size-xxl;
+    font-size: var(--uq-font-size-xxl);
   }
 
   &__item {
     float: left;
     list-style: none;
-    padding: core.$space-none core.$space-m; // 0 .75rem;
-    margin: core.$space-none core.$space-none core.$space-m core.$space-none; // 0 0 .75rem 0
+    padding: var(--uq-space-none) var(--uq-space-m); // 0 .75rem;
+    margin: var(--uq-space-none) var(--uq-space-none) var(--uq-space-m)
+      var(--uq-space-none); // 0 0 .75rem 0
   }
 
   &--ruled {
     .horizontal-list__title {
-      border-top: 2px solid core.$grey-200;
-      padding-top: core.$space-xl;
+      border-top: 2px solid var(--uq-grey-200);
+      padding-top: var(--uq-space-xl);
     }
 
     .horizontal-list__item {
-      border-right: 1px solid core.$grey-200;
-      padding-right: core.$space-m; // .75rem;
+      border-right: 1px solid var(--uq-grey-200);
+      padding-right: var(--uq-space-m); // .75rem;
 
       &:last-child {
         border: 0;

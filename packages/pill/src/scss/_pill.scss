@@ -38,12 +38,12 @@
 
 .uq-pill--active,
 .uq-pill:has(:checked) {
-  --pill-background: #{core.$purple-50};
+  --pill-background: #{var(--uq-purple-50)};
   border-color: transparent;
 }
 
 .uq-pill:has(input[type="checkbox"]:checked) {
-  padding-right: core.$space-xs;
+  padding-right: var(--uq-space-xs);
 
   &::after {
     content: "";
@@ -52,9 +52,9 @@
     display: inline-block;
     background-image: url(icon-constants.get-icon(
       "standard--x-sml",
-      core.$purple-500
+      var(--uq-purple-500)
     ));
     margin-block: -6px;
-    margin-left: core.$space-xxs;
+    margin-left: var(--uq-space-xxs);
   }
 }

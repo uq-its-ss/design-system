@@ -14,7 +14,7 @@ $story-card-font-size-small: 22px;
   flex: 1;
   display: flex;
   flex-direction: column;
-  padding: core.$space-l;
+  padding: var(--uq-space-l);
 }
 
 .uq-story-card__title {
@@ -30,13 +30,13 @@ $story-card-font-size-small: 22px;
 }
 
 .uq-story-card__top-label {
-  margin-bottom: core.$space-xxs;
-  color: core.$grey-700;
-  font-weight: core.$font-weight-medium;
+  margin-bottom: var(--uq-space-xxs);
+  color: var(--uq-grey-700);
+  font-weight: var(--uq-font-weight-medium);
 }
 
 .uq-story-card__bottom-label {
-  padding-top: core.$space-l;
+  padding-top: var(--uq-space-l);
   margin-top: auto;
 }
 
@@ -57,8 +57,8 @@ $story-card-font-size-small: 22px;
       display: flex;
       flex-direction: row-reverse;
       align-items: start;
-      gap: core.$space-m;
-      padding-bottom: core.$space-m;
+      gap: var(--uq-space-m);
+      padding-bottom: var(--uq-space-m);
       background-color: transparent;
 
       &:has(a:hover) {
@@ -86,7 +86,7 @@ $story-card-font-size-small: 22px;
       }
 
       & .uq-story-card__bottom-label {
-        padding-top: core.$space-xs;
+        padding-top: var(--uq-space-xs);
       }
     }
   }
@@ -117,7 +117,7 @@ $story-card-font-size-small: 22px;
 
       & .uq-story-card__content {
         width: 50%;
-        padding-inline: core.$space-l 0;
+        padding-inline: var(--uq-space-l) 0;
       }
     }
   }
@@ -129,7 +129,7 @@ $story-card-font-size-small: 22px;
 
 .uq-story-card--event {
   & .uq-story-card__top-label {
-    color: core.$purple-500;
+    color: var(--uq-purple-500);
   }
 }
 
@@ -142,7 +142,7 @@ $story-card-font-size-small: 22px;
 
 .uq-story-card--feature {
   .uq-story-card__title {
-    font-size: core.$font-size-xxxl;
+    font-size: var(--uq-font-size-xxxl);
 
     @media #{core.$screen-md-down} {
       font-size: var(--card-title-font-size);
@@ -161,8 +161,8 @@ $story-card-font-size-small: 22px;
   display: flex;
   flex-direction: row-reverse;
   align-items: start;
-  gap: core.$space-m;
-  padding-bottom: core.$space-m;
+  gap: var(--uq-space-m);
+  padding-bottom: var(--uq-space-m);
   background-color: transparent;
 
   &:has(a:hover) {
@@ -192,10 +192,10 @@ $story-card-font-size-small: 22px;
     }
 
     &:not(:has(img)) {
-      background-color: core.$grey-100;
+      background-color: var(--uq-grey-100);
       background-image: url(icon-constants.get-icon(
         "how-youll-learn--book-open-text",
-        core.$grey-600
+        var(--uq-grey-600)
       ));
       background-size: 88px;
       background-position: center;
@@ -212,6 +212,6 @@ $story-card-font-size-small: 22px;
   }
 
   & .uq-story-card__bottom-label {
-    padding-top: core.$space-xs;
+    padding-top: var(--uq-space-xs);
   }
 }

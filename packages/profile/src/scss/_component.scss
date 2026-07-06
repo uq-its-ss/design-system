@@ -4,23 +4,23 @@
 .uq-profile {
   display: flex;
   flex-direction: row;
-  gap: core.$space-l;
+  gap: var(--uq-space-l);
 }
 .uq-profile__content {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  gap: core.$space-xs;
+  gap: var(--uq-space-xs);
 
   :first-child {
-    margin-top: core.$space-none;
+    margin-top: var(--uq-space-none);
   }
   :last-child {
-    margin-bottom: core.$space-none;
+    margin-bottom: var(--uq-space-none);
   }
 }
 .uq-profile__title {
-  margin: core.$space-none;
+  margin: var(--uq-space-none);
 }
 .uq-profile__image {
   order: -1;
@@ -43,11 +43,11 @@
   grid-template-columns: repeat(auto-fit, minmax(317px, 1fr));
 
   /* Optional: Add spacing between grid items */
-  gap: core.$space-l;
+  gap: var(--uq-space-l);
 }
 @media #{core.$screen-lg-up} {
   .generic-grid {
-    gap: core.$space-xl;
+    gap: var(--uq-space-xl);
   }
 }
 .generic-grid--2x {

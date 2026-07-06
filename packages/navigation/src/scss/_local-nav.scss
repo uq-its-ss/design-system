@@ -9,20 +9,20 @@
 
 .uq-local-nav__link {
   display: block;
-  color: core.$black;
-  padding-block: core.$space-m;
-  padding-inline-start: core.$space-xl;
-  border-bottom: 1px solid core.$grey-500;
+  color: var(--uq-black);
+  padding-block: var(--uq-space-m);
+  padding-inline-start: var(--uq-space-xl);
+  border-bottom: 1px solid var(--uq-grey-500);
   text-decoration: none;
-  font-weight: core.$font-weight-normal;
+  font-weight: var(--uq-font-weight-normal);
 
   &:hover {
-    color: core.$black;
-    background-color: core.$grey-100;
+    color: var(--uq-black);
+    background-color: var(--uq-grey-100);
   }
 
   &:focus-visible {
-    outline: 4px solid core.$utility-500;
+    outline: 4px solid var(--uq-utility-500);
     outline-offset: -3px;
   }
 }
@@ -32,20 +32,20 @@
   & .uq-local-nav__link {
     background-image: url(icon.get-icon(
       "standard--chevron-left",
-      core.$purple-500
+      var(--uq-purple-500)
     ));
     background-repeat: no-repeat;
     background-size: 24px;
     background-position: left center;
     border-width: 2px;
-    border-color: core.$black;
-    font-weight: core.$font-weight-medium;
+    border-color: var(--uq-black);
+    font-weight: var(--uq-font-weight-medium);
   }
 }
 
 .uq-local-nav__grandparent {
   & .uq-local-nav__link {
-    border-bottom: 2px solid core.$grey-900;
+    border-bottom: 2px solid var(--uq-grey-900);
   }
 }
 
@@ -63,43 +63,43 @@
 
 .uq-local-nav__grandchild {
   & .uq-local-nav__link {
-    padding-inline: core.$space-xxxl;
+    padding-inline: var(--uq-space-xxxl);
   }
 }
 
 .uq-local-nav--current-child {
-  border-left: 4px solid core.$purple-500;
+  border-left: 4px solid var(--uq-purple-500);
   margin-top: -1px;
 
   & > .uq-local-nav__link {
-    border-bottom: 1px solid core.$grey-200;
-    padding-inline: calc(#{core.$space-xl} - 4px) 0;
+    border-bottom: 1px solid var(--uq-grey-200);
+    padding-inline: calc(#{var(--uq-space-xl)} - 4px) 0;
   }
 
   .uq-local-nav__grandchild {
-    background-color: core.$grey-50;
+    background-color: var(--uq-grey-50);
 
     & > .uq-local-nav__link {
-      border-bottom: 1px solid core.$grey-200;
+      border-bottom: 1px solid var(--uq-grey-200);
     }
   }
 }
 
 .uq-local-nav--active-link {
-  background-color: core.$grey-200;
-  font-weight: core.$font-weight-medium;
+  background-color: var(--uq-grey-200);
+  font-weight: var(--uq-font-weight-medium);
 }
 
 .uq-local-nav--has-children {
   & > .uq-local-nav__link {
     background-image: url(icon.get-icon(
       "standard--chevron-down-sml",
-      core.$black
+      var(--uq-black)
     ));
     background-repeat: no-repeat;
     background-size: 24px;
     background-position: right center;
-    padding-inline-end: core.$space-l;
+    padding-inline-end: var(--uq-space-l);
   }
 
   & > .uq-local-nav--active-link {

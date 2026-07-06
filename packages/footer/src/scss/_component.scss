@@ -3,20 +3,20 @@
 @use "global" as *;
 
 .uq-footer {
-  background: core.$purple-500;
+  background: var(--uq-purple-500);
   box-sizing: border-box;
-  font-family: core.$font-body;
-  font-size: core.$font-size-m;
-  font-weight: core.$font-weight-normal;
-  line-height: core.$line-height;
+  font-family: var(--uq-font);
+  font-size: var(--uq-font-size-m);
+  font-weight: var(--uq-font-weight-normal);
+  line-height: var(--uq-line-height-long);
   color: #d4c8de;
 
   &__link {
     text-decoration: none;
     font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-style: normal;
-    font-weight: core.$font-weight-normal;
-    color: core.$white;
+    font-weight: var(--uq-font-weight-normal);
+    color: var(--uq-white);
 
     &:hover {
       text-decoration: underline;
@@ -40,16 +40,16 @@
   &__navigation-list {
     display: block;
     list-style-type: none;
-    margin: core.$space-none;
-    padding: core.$space-none;
+    margin: var(--uq-space-none);
+    padding: var(--uq-space-none);
   }
 
   &__navigation-item {
     /* border-top: 1px solid #d4c8de; */
     background-color: transparent;
     display: block;
-    margin: core.$space-none;
-    padding: core.$space-none;
+    margin: var(--uq-space-none);
+    padding: var(--uq-space-none);
     position: relative;
 
     @media #{core.$screen-lg-up} {
@@ -59,16 +59,16 @@
 
   &__navigation-title {
     color: #d4c8de;
-    font-size: core.$font-size-m;
-    font-weight: core.$font-weight-medium;
-    margin: core.$space-none;
+    font-size: var(--uq-font-size-m);
+    font-weight: var(--uq-font-weight-medium);
+    margin: var(--uq-space-none);
   }
 
   &__navigation-link {
     text-decoration: none;
     display: block;
-    padding: core.$space-m core.$space-l;
-    color: core.$white;
+    padding: var(--uq-space-m) var(--uq-space-l);
+    color: var(--uq-white);
 
     &:hover {
       color: #d4c8de;
@@ -76,8 +76,8 @@
     }
 
     @media #{core.$screen-lg-up} {
-      padding: core.$space-m core.$space-none core.$space-none;
-      font-weight: core.$font-weight-medium;
+      padding: var(--uq-space-m) var(--uq-space-none) var(--uq-space-none);
+      font-weight: var(--uq-font-weight-medium);
     }
   }
   &__navigation-toggle {
@@ -96,16 +96,16 @@
 
     @media #{core.$screen-lg-up} {
       grid-template-columns: repeat(5, 1fr);
-      grid-gap: core.$space-m;
+      grid-gap: var(--uq-space-m);
     }
 
     @media #{core.$screen-xl-up} {
-      padding: core.$space-none;
+      padding: var(--uq-space-none);
     }
   }
 
   &__navigation-level-2 {
-    height: core.$space-none;
+    height: var(--uq-space-none);
     overflow: hidden;
     background-color: #48206c;
 
@@ -119,18 +119,18 @@
       @media #{core.$screen-lg-up} {
         background-color: transparent;
         border: none;
-        padding: core.$space-xs core.$space-none core.$space-none;
+        padding: var(--uq-space-xs) var(--uq-space-none) var(--uq-space-none);
 
         &:first-of-type {
-          padding: core.$space-m core.$space-none core.$space-none;
+          padding: var(--uq-space-m) var(--uq-space-none) var(--uq-space-none);
         }
       }
     }
 
     .uq-footer__navigation-link {
       @media #{core.$screen-lg-up} {
-        color: core.$white;
-        padding: core.$space-none;
+        color: var(--uq-white);
+        padding: var(--uq-space-none);
         font-weight: normal;
 
         &:hover {
@@ -144,15 +144,15 @@
     content: "";
     background-image: url(icon-constants.get-icon(
       "standard--chevron-down-sml",
-      core.$white
+      var(--uq-white)
     )) !important;
     background-repeat: no-repeat;
-    width: core.$space-l;
-    height: core.$space-l;
+    width: var(--uq-space-l);
+    height: var(--uq-space-l);
     transform: translateY(50%);
     position: absolute;
-    top: core.$space-xxs;
-    right: core.$space-l;
+    top: var(--uq-space-xxs);
+    right: var(--uq-space-l);
 
     @media #{core.$screen-lg-up} {
       background-image: none;
@@ -162,7 +162,7 @@
   .uq-accordion__toggle--active::before {
     background-image: url(icon-constants.get-icon(
       "standard--chevron-up-sml",
-      core.$white
+      var(--uq-white)
     )) !important;
   }
 
@@ -176,33 +176,33 @@
     flex-wrap: wrap;
     flex-direction: column;
     list-style-type: none;
-    margin: core.$space-none;
-    padding: core.$space-none;
-    font-size: core.$font-size-s;
+    margin: var(--uq-space-none);
+    padding: var(--uq-space-none);
+    font-size: var(--uq-font-size-s);
 
     @media #{core.$screen-lg-up} {
       display: flex;
       flex-wrap: wrap;
       justify-content: flex-start;
       flex-direction: row;
-      margin: core.$space-none;
-      padding: core.$space-none;
+      margin: var(--uq-space-none);
+      padding: var(--uq-space-none);
 
       .uq-footer__footer-item {
-        margin-bottom: core.$space-none;
+        margin-bottom: var(--uq-space-none);
       }
     }
   }
 
   &__footer-item {
-    padding-right: core.$space-m;
-    margin-bottom: core.$space-m;
+    padding-right: var(--uq-space-m);
+    margin-bottom: var(--uq-space-m);
   }
 
   /* CONTACT */
 
   &__contact {
-    font-size: core.$font-size-s;
+    font-size: var(--uq-font-size-s);
     grid-area: FooterSocial;
 
     @media #{core.$screen-lg-up} {
@@ -211,15 +211,15 @@
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
-      margin: core.$space-none;
+      margin: var(--uq-space-none);
     }
   }
   &__contact-login {
-    margin-top: core.$space-xxl;
-    font-size: core.$font-size-s;
+    margin-top: var(--uq-space-xxl);
+    font-size: var(--uq-font-size-s);
 
     @media #{core.$screen-lg-up} {
-      margin-top: core.$space-none;
+      margin-top: var(--uq-space-none);
     }
   }
 
@@ -227,25 +227,25 @@
     flex-direction: row;
 
     .uq-footer__footer-item {
-      margin-bottom: core.$space-none;
+      margin-bottom: var(--uq-space-none);
     }
   }
 
   /* META */
 
   &__meta {
-    font-size: core.$font-size-s;
+    font-size: var(--uq-font-size-s);
     grid-area: FooterOrg;
   }
 
   &__meta-icons {
-    font-size: core.$font-size-xxl;
+    font-size: var(--uq-font-size-xxl);
 
     &::before {
       content: "";
       display: inline-block;
-      height: core.$space-xl;
-      width: core.$space-xl;
+      height: var(--uq-space-xl);
+      width: var(--uq-space-xl);
       background-repeat: no-repeat;
       background-position: center;
       background-size: 100%;
@@ -256,7 +256,7 @@
     &--facebook::before {
       background-image: url(icon-constants.get-icon(
         "social--social-facebook-circle",
-        core.$white
+        var(--uq-white)
       ));
     }
     &--facebook:hover::before {
@@ -270,7 +270,7 @@
     &--linkedin::before {
       background-image: url(icon-constants.get-icon(
         "social--social-linkedin-circle",
-        core.$white
+        var(--uq-white)
       ));
     }
     &--linkedin:hover::before {
@@ -284,7 +284,7 @@
     &--twitter::before {
       background-image: url(icon-constants.get-icon(
         "social--social-x-twitter-circle",
-        core.$white
+        var(--uq-white)
       ));
     }
     &--twitter:hover::before {
@@ -298,7 +298,7 @@
     &--youtube::before {
       background-image: url(icon-constants.get-icon(
         "social--social-you-tube-circle",
-        core.$white
+        var(--uq-white)
       ));
     }
     &--youtube:hover::before {
@@ -312,7 +312,7 @@
     &--instagram::before {
       background-image: url(icon-constants.get-icon(
         "social--social-instagram2-circle",
-        core.$white
+        var(--uq-white)
       ));
     }
     &--instagram:hover::before {
@@ -326,7 +326,7 @@
     &--tiktok::before {
       background-image: url(icon-constants.get-icon(
         "social--social-tiktok-circle",
-        core.$white
+        var(--uq-white)
       ));
     }
     &--tiktok:hover::before {
@@ -347,7 +347,7 @@
 
   &--mobile {
     display: block;
-    min-width: calc(100% + core.$space-xxxl);
+    min-width: calc(100% + var(--uq-space-xxxl));
     margin-left: -1.5rem;
     margin-right: -1.5rem;
 
@@ -356,19 +356,19 @@
     }
 
     .uq-accordion {
-      padding: core.$space-none;
+      padding: var(--uq-space-none);
 
       &__item {
         color: #d4c8de;
         border: none;
-        padding-left: core.$space-none;
+        padding-left: var(--uq-space-none);
       }
 
       &__toggle {
-        background-color: core.$purple-500;
-        color: core.$white;
-        font-size: core.$font-size-m;
-        padding-left: core.$space-l;
+        background-color: var(--uq-purple-500);
+        color: var(--uq-white);
+        font-size: var(--uq-font-size-m);
+        padding-left: var(--uq-space-l);
 
         &:hover {
           color: #d4c8de;
@@ -381,7 +381,7 @@
       }
 
       &__content-wrapper {
-        padding: core.$space-none;
+        padding: var(--uq-space-none);
       }
     }
   }
@@ -393,8 +393,8 @@
       "FooterSocial"
       "FooterOrg"
       "FooterTerms";
-    row-gap: core.$space-xxl;
-    padding: core.$space-none core.$space-l core.$space-xxl;
+    row-gap: var(--uq-space-xxl);
+    padding: var(--uq-space-none) var(--uq-space-l) var(--uq-space-xxl);
 
     max-width: 73.25rem;
     width: 100%; /* may not be needed but forces it to take up space when empty */
@@ -402,8 +402,8 @@
     margin-right: auto;
 
     @media #{core.$screen-lg-up} {
-      row-gap: core.$space-xl;
-      padding-top: core.$space-xl;
+      row-gap: var(--uq-space-xl);
+      padding-top: var(--uq-space-xl);
     }
     @media #{core.$screen-xl-up} {
       grid-template-areas:
@@ -411,8 +411,8 @@
         "FooterSocial"
         "FooterOrg"
         "FooterTerms";
-      row-gap: core.$space-xl;
-      padding: core.$space-xl core.$space-m core.$space-xxl;
+      row-gap: var(--uq-space-xl);
+      padding: var(--uq-space-xl) var(--uq-space-m) var(--uq-space-xxl);
     }
   }
 }

@@ -5,7 +5,6 @@
 
 /* CSS Variables */
 :root {
-
   // UQ Brand colours
 
   // Base
@@ -108,7 +107,7 @@
   --uq-font-size-xs: #{text.$font-size-xs};
   --uq-font-size-s: #{text.$font-size-s};
   --uq-font-size-m: #{text.$font-size-m};
-  --uq-font-size-l: #{text.$font-size-l}; 
+  --uq-font-size-l: #{text.$font-size-l};
   --uq-font-size-xl: #{text.$font-size-xl};
   --uq-font-size-xxl: #{text.$font-size-xxl-mobile};
   --uq-font-size-xxxl: #{text.$font-size-xxxl-mobile};
@@ -188,7 +187,6 @@
 
   --uq-screen-xl-up: #{media.$screen-xl-up};
   --uq-screen-xl-down: #{media.$screen-xl-down};
-  
 }
 
 // Desktop CSS Variables

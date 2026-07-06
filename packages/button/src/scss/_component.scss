@@ -3,20 +3,20 @@
 @use "global" as *;
 
 .uq-button {
-  background-color: core.$purple-500;
-  border: 2px solid core.$purple-500;
-  border-radius: core.$space-xxs;
+  background-color: var(--uq-purple-500);
+  border: 2px solid var(--uq-purple-500);
+  border-radius: var(--uq-space-xxs);
   box-sizing: border-box;
-  color: core.$white;
+  color: var(--uq-white);
   cursor: pointer;
   display: inline-flex;
   align-items: center;
-  gap: core.$space-xs;
-  font-family: core.$roboto;
-  font-size: core.$font-size-m;
-  font-weight: core.$font-weight-medium;
-  line-height: core.$line-height-ui;
-  padding: core.$space-m core.$space-l;
+  gap: var(--uq-space-xs);
+  font-family: var(--uq-roboto);
+  font-size: var(--uq-font-size-m);
+  font-weight: var(--uq-font-weight-medium);
+  line-height: var(--uq-line-height-single);
+  padding: var(--uq-space-m) var(--uq-space-l);
   position: relative;
   text-align: center;
   text-decoration: none;
@@ -45,9 +45,9 @@
   }
 
   &:hover {
-    background-color: core.$white;
-    border-color: core.$purple-500;
-    color: core.$purple-500;
+    background-color: var(--uq-white);
+    border-color: var(--uq-purple-500);
+    color: var(--uq-purple-500);
     text-decoration: underline;
 
     & .uq-icon::before {
@@ -56,14 +56,14 @@
   }
 
   &:focus {
-    outline: 2px solid core.$utility-500;
+    outline: 2px solid var(--uq-utility-500);
     outline-offset: 0;
   }
 
   &.uq-button--reverse {
-    background-color: core.$white;
-    border-color: core.$white;
-    color: core.$purple-500;
+    background-color: var(--uq-white);
+    border-color: var(--uq-white);
+    color: var(--uq-purple-500);
 
     & .uq-icon::before {
       filter: icon.$icon-primary-filter;
@@ -71,7 +71,7 @@
 
     &:hover {
       background-color: transparent;
-      color: core.$white;
+      color: var(--uq-white);
 
       & .uq-icon::before {
         filter: icon.$icon-light-filter;
@@ -83,17 +83,17 @@
 .uq-button--secondary,
 .uq-button--tertiary {
   background-color: transparent;
-  border-color: core.$purple-500;
-  color: core.$purple-500;
+  border-color: var(--uq-purple-500);
+  color: var(--uq-purple-500);
 
   & .uq-icon::before {
     filter: icon.$icon-primary-filter;
   }
 
   &:hover {
-    background-color: core.$purple-500;
-    border-color: core.$purple-500;
-    color: core.$white;
+    background-color: var(--uq-purple-500);
+    border-color: var(--uq-purple-500);
+    color: var(--uq-white);
 
     & .uq-icon::before {
       filter: icon.$icon-light-filter;
@@ -102,16 +102,16 @@
 
   &.uq-button--reverse {
     background-color: transparent;
-    border-color: core.$white;
-    color: core.$white;
+    border-color: var(--uq-white);
+    color: var(--uq-white);
 
     & .uq-icon::before {
       filter: icon.$icon-light-filter;
     }
 
     &:hover {
-      background-color: core.$white;
-      color: core.$purple-500;
+      background-color: var(--uq-white);
+      color: var(--uq-purple-500);
 
       & .uq-icon::before {
         filter: icon.$icon-primary-filter;
@@ -128,29 +128,29 @@
     border-color: transparent;
 
     &:hover {
-      border-color: core.$white;
+      border-color: var(--uq-white);
     }
   }
 }
 
 .uq-button--tiny {
-  font-size: core.$font-size-xs;
-  padding: core.$space-xxs core.$space-xs;
+  font-size: var(--uq-font-size-xs);
+  padding: var(--uq-space-xxs) var(--uq-space-xs);
 }
 
 .uq-button--small {
-  font-size: core.$font-size-s;
-  padding: core.$space-xs core.$space-m;
+  font-size: var(--uq-font-size-s);
+  padding: var(--uq-space-xs) var(--uq-space-m);
 }
 
 .uq-button--large {
-  font-size: core.$font-size-l;
-  padding: core.$space-m core.$space-xxl;
+  font-size: var(--uq-font-size-l);
+  padding: var(--uq-space-m) var(--uq-space-xxl);
 }
 
 .uq-button--expand {
-  padding-left: core.$space-xs;
-  padding-right: core.$space-xs;
+  padding-left: var(--uq-space-xs);
+  padding-right: var(--uq-space-xs);
   width: 100%;
   justify-content: center;
 }

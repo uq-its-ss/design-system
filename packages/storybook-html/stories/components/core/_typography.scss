@@ -2,11 +2,11 @@
 
 .uqds-font {
   &--roboto {
-    font-family: core.$roboto;
+    font-family: var(--uq-roboto);
   }
 
   &--montserrat {
-    font-family: core.$montserrat;
+    font-family: var(--uq-montserrat);
   }
 
   &--arial {
@@ -22,7 +22,7 @@
   }
 
   &--500 {
-    font-weight: core.$font-weight-medium;
+    font-weight: var(--uq-font-weight-medium);
   }
 
   &--lead {

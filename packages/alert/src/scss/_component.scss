@@ -35,7 +35,7 @@
       content: "";
       background-image: url(icon.get-icon(
         "standard--information-circle",
-        var(--uq-grey-900)
+        core.$grey-900
       ));
       background-repeat: no-repeat;
       background-size: 1.5rem;
@@ -89,7 +89,7 @@
       &::before {
         background-image: url(icon.get-icon(
           "standard--information-circle",
-          var(--uq-grey-900)
+          core.$grey-900
         ));
       }
     }
@@ -101,7 +101,7 @@
       &::before {
         background-image: url(icon.get-icon(
           "standard--check-circle",
-          var(--uq-grey-900)
+          core.$grey-900
         ));
       }
     }
@@ -113,7 +113,7 @@
       &::before {
         background-image: url(icon.get-icon(
           "standard--exclamation-triangle",
-          var(--uq-grey-900)
+          core.$grey-900
         ));
       }
     }
@@ -125,7 +125,7 @@
       &::before {
         background-image: url(icon.get-icon(
           "standard--x-circle",
-          var(--uq-grey-900)
+          core.$grey-900
         ));
       }
     }
@@ -192,7 +192,7 @@
         &::before {
           background-image: url(icon.get-icon(
             "standard--information-circle",
-            var(--uq-white)
+            core.$white
           ));
         }
       }
@@ -205,7 +205,7 @@
         &::before {
           background-image: url(icon.get-icon(
             "standard--check-circle",
-            var(--uq-white)
+            core.$white
           ));
         }
       }
@@ -226,7 +226,7 @@
         &:focus {
           background-image: url(icon.get-icon(
             "standard--x",
-            var(--uq-grey-900)
+            core.$grey-900
           ));
         }
       }
@@ -239,7 +239,7 @@
         &::before {
           background-image: url(icon.get-icon(
             "standard--x-circle",
-            var(--uq-white)
+            core.$white
           ));
         }
       }

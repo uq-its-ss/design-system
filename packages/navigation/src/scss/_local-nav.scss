@@ -32,7 +32,7 @@
   & .uq-local-nav__link {
     background-image: url(icon.get-icon(
       "standard--chevron-left",
-      var(--uq-purple-500)
+      core.$purple-500
     ));
     background-repeat: no-repeat;
     background-size: 24px;
@@ -94,7 +94,7 @@
   & > .uq-local-nav__link {
     background-image: url(icon.get-icon(
       "standard--chevron-down-sml",
-      var(--uq-black)
+      core.$black
     ));
     background-repeat: no-repeat;
     background-size: 24px;

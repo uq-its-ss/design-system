@@ -195,7 +195,7 @@ $story-card-font-size-small: 22px;
       background-color: var(--uq-grey-100);
       background-image: url(icon-constants.get-icon(
         "how-youll-learn--book-open-text",
-        var(--uq-grey-600)
+        core.$grey-600
       ));
       background-size: 88px;
       background-position: center;

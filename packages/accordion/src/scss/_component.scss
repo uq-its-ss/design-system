@@ -68,7 +68,7 @@
     content: "";
     background-image: url(icon-constants.get-icon(
       "standard--chevron-down",
-      var(--uq-black)
+      core.$black
     ));
     background-repeat: no-repeat;
     width: var(--uq-space-l);
@@ -102,7 +102,7 @@
   &::before {
     background-image: url(icon-constants.get-icon(
       "standard--chevron-up",
-      var(--uq-black)
+      core.$black
     ));
   }
 

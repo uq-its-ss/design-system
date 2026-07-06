@@ -228,7 +228,7 @@ $use-encapsulation: false !default;
     -webkit-appearance: none;
     background-image: url(icon.get-icon(
       "standard--chevron-down-sml",
-      var(--uq-purple-500)
+      core.$purple-500
     ));
     background-repeat: no-repeat;
     background-position: right var(--uq-space-xxs) center;
@@ -240,7 +240,7 @@ $use-encapsulation: false !default;
     &:focus {
       background-image: url(icon.get-icon(
         "standard--chevron-down-sml",
-        var(--uq-utility-500)
+        core.$utility-500
       ));
     }
 
@@ -256,7 +256,7 @@ $use-encapsulation: false !default;
     &[disabled] {
       background-image: url(icon.get-icon(
         "standard--chevron-down-sml",
-        var(--uq-grey-500)
+        core.$grey-500
       ));
     }
   }
@@ -359,7 +359,7 @@ $use-encapsulation: false !default;
       &::after {
         background-image: url(icon.get-icon(
           "standard--check",
-          var(--uq-white)
+          core.$white
         ));
         padding: 0px;
       }
@@ -494,7 +494,7 @@ $use-encapsulation: false !default;
     &::before {
       background-image: url(icon.get-icon(
         "standard--exclamation-triangle",
-        var(--uq-white)
+        core.$white
       ));
     }
   }
@@ -505,7 +505,7 @@ $use-encapsulation: false !default;
     &::before {
       background-image: url(icon.get-icon(
         "standard--check-circle",
-        var(--uq-white)
+        core.$white
       ));
     }
   }

@@ -401,7 +401,7 @@ $-result-icon-spacing: $-icon-spacing;
     &__decoration {
       background-image: url(get-icon(
         "ui--wayfinding-deco",
-        var(--uq-success-500)
+        core.$success-500
       ));
       background-repeat: no-repeat;
       background-position: center var(--uq-space-m);
@@ -559,7 +559,7 @@ $-result-icon-spacing: $-icon-spacing;
             margin-top: -($-result-icon-height * 0.5);
             background-image: url(get-icon(
               "ui--map-pin",
-              var(--uq-purple-500)
+              core.$purple-500
             ));
             background-position: center;
             background-repeat: no-repeat;
@@ -583,7 +583,7 @@ $-result-icon-spacing: $-icon-spacing;
             margin-top: -($height * 0.5);
             background-image: url(get-icon(
               "ui--chevron-right",
-              var(--uq-grey-500)
+              core.$grey-500
             ));
             background-position: center;
             background-repeat: no-repeat;
@@ -597,7 +597,7 @@ $-result-icon-spacing: $-icon-spacing;
             &::after {
               background-image: url(get-icon(
                 "ui--chevron-right",
-                var(--uq-grey-500)
+                core.$grey-500
               ));
             }
           }
@@ -606,7 +606,7 @@ $-result-icon-spacing: $-icon-spacing;
             &::after {
               background-image: url(get-icon(
                 "ui--chevron-right",
-                var(--uq-utility-500)
+                core.$utility-500
               ));
             }
           }

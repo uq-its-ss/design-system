@@ -118,7 +118,7 @@
         text-indent: -100vw;
         background-image: url(icon-constants.get-icon(
           "standard--arrow-down-1",
-          var(--uq-purple-500)
+          core.$purple-500
         ));
         background-size: 1.2rem;
         background-position: center center;
@@ -131,7 +131,7 @@
         .uq-side-nav__list-item__sub-toggle {
           background-image: url(icon-constants.get-icon(
             "standard--arrow-up-1",
-            var(--uq-purple-500)
+            core.$purple-500
           ));
         }
 

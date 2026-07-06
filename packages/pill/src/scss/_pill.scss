@@ -52,7 +52,7 @@
     display: inline-block;
     background-image: url(icon-constants.get-icon(
       "standard--x-sml",
-      var(--uq-purple-500)
+      core.$purple-500
     ));
     margin-block: -6px;
     margin-left: var(--uq-space-xxs);

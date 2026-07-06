@@ -73,7 +73,7 @@
         content: "";
         background-image: url(icon-constants.get-icon(
           "standard--arrow-right-1",
-          var(--uq-white)
+          core.$white
         ));
         background-repeat: no-repeat;
         background-size: 1.4rem 1.4rem;

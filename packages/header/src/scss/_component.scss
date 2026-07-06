@@ -93,7 +93,7 @@
       content: "";
       background-image: url(icon-constants.get-icon(
         "standard--navigation-menu",
-        var(--uq-white)
+        core.$white
       ));
       background-repeat: no-repeat;
       width: 1.5rem;
@@ -108,7 +108,7 @@
       &::before {
         background-image: url(icon-constants.get-icon(
           "standard--x",
-          var(--uq-white)
+          core.$white
         ));
       }
     }
@@ -123,7 +123,7 @@
       content: "";
       background-image: url(icon-constants.get-icon(
         "standard--search",
-        var(--uq-white)
+        core.$white
       ));
       background-repeat: no-repeat;
       width: 1.5rem;
@@ -155,7 +155,7 @@
       &::before {
         background-image: url(icon-constants.get-icon(
           "standard--x",
-          var(--uq-white)
+          core.$white
         ));
       }
     }
@@ -258,7 +258,7 @@
       content: "";
       background-image: url(icon-constants.get-icon(
         "standard--chevron-down-sml",
-        var(--uq-white)
+        core.$white
       ));
       background-repeat: no-repeat;
       width: var(--uq-space-m);
@@ -280,7 +280,7 @@
     &::after {
       background-image: url(icon-constants.get-icon(
         "standard--chevron-down-sml",
-        var(--uq-purple-500)
+        core.$purple-500
       ));
     }
   }
@@ -469,7 +469,7 @@
       background-size: 100%;
       background-image: url(icon-constants.get-icon(
         "standard--search",
-        var(--uq-purple-500)
+        core.$purple-500
       ));
     }
   }
@@ -724,7 +724,7 @@ body.no-scroll {
       content: "";
       background-image: url(icon-constants.get-icon(
         "standard--chevron-left-sml",
-        var(--uq-purple-500)
+        core.$purple-500
       ));
       background-repeat: no-repeat;
       width: 1.5rem;
@@ -741,7 +741,7 @@ body.no-scroll {
       content: "";
       background-image: url(icon-constants.get-icon(
         "standard--chevron-right-sml",
-        var(--uq-purple-500)
+        core.$purple-500
       ));
       background-repeat: no-repeat;
       width: 1.5rem;
@@ -830,7 +830,7 @@ body.no-scroll {
     content: "";
     background-image: url(icon-constants.get-icon(
       "standard--chevron-right-sml",
-      var(--uq-white)
+      core.$white
     ));
   }
 }

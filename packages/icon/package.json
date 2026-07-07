@@ -28,12 +28,20 @@
   },
   "files": [
     "index.js",
-    "dist/*",
-    "src/js/*",
+    "dist/css/*",
+    "dist/images/*",
+    "src/js/_build/*",
     "src/scss/*",
     "src/ts/_build/*"
   ],
   "exports": {
+    ".": {
+      "types": "./src/ts/_build/_icons.d.ts",
+      "import": "./index.js",
+      "require": "./index.js",
+      "default": "./index.js"
+    },
+    "./dist/css/main.css": "./dist/css/main.css",
     "./src/js/*": "./src/js/*.js",
     "./src/scss/*": "./src/scss/*"
   },

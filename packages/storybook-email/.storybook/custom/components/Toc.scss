@@ -30,7 +30,8 @@
   }
 }
 
-@media only screen and (min-width: calc(var(--uq-screen-md) + 16.5rem)) {
+// TOC breakpoint: $screen-md (37.5rem / 600px) + 16.5rem = 54rem (864px)
+@media only screen and (min-width: #{core.$screen-md + 16.5rem}) {
   .uqds-toc {
     width: 12.5rem;
     position: fixed;

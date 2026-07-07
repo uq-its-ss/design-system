@@ -357,10 +357,7 @@ $use-encapsulation: false !default;
       background-color: var(--uq-utility-500);
 
       &::after {
-        background-image: url(icon.get-icon(
-          "standard--check",
-          core.$white
-        ));
+        background-image: url(icon.get-icon("standard--check", core.$white));
         padding: 0px;
       }
     }

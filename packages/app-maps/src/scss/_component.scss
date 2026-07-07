@@ -399,10 +399,7 @@ $-result-icon-spacing: $-icon-spacing;
     }
 
     &__decoration {
-      background-image: url(get-icon(
-        "ui--wayfinding-deco",
-        core.$success-500
-      ));
+      background-image: url(get-icon("ui--wayfinding-deco", core.$success-500));
       background-repeat: no-repeat;
       background-position: center var(--uq-space-m);
       background-size: auto 50%;
@@ -472,7 +469,8 @@ $-result-icon-spacing: $-icon-spacing;
       font-weight: var(--uq-font-weight-bold);
       text-transform: uppercase;
       display: inline-block;
-      margin: var(--uq-space-m) var(--uq-space-l) 0 calc(var(--uq-space-l) + #{-$-icon-spacing});
+      margin: var(--uq-space-m) var(--uq-space-l) 0
+        calc(var(--uq-space-l) + #{-$-icon-spacing});
 
       &::before {
         background-image: url(get-icon("ui--nav-right", core.$purple-500));
@@ -517,7 +515,11 @@ $-result-icon-spacing: $-icon-spacing;
         }
 
         &__text {
-          margin: 0 0 0 calc(#{-$-icon-spacing * 2} + #{-$-result-icon-height} + var(--uq-space-xs));
+          margin: 0 0 0
+            calc(
+              #{-$-icon-spacing * 2} + #{-$-result-icon-height} +
+                var(--uq-space-xs)
+            );
           flex-grow: 1;
 
           > span,
@@ -555,10 +557,7 @@ $-result-icon-spacing: $-icon-spacing;
             left: calc(var(--uq-space-l) + #{-$-result-icon-spacing});
             top: 50%;
             margin-top: -($-result-icon-height * 0.5);
-            background-image: url(get-icon(
-              "ui--map-pin",
-              core.$purple-500
-            ));
+            background-image: url(get-icon("ui--map-pin", core.$purple-500));
             background-position: center;
             background-repeat: no-repeat;
             background-size: $-result-icon-height $-result-icon-width;
@@ -576,7 +575,9 @@ $-result-icon-spacing: $-icon-spacing;
             $height: $width;
 
             position: absolute;
-            right: calc(var(--uq-space-l) + (#{-$-icon-button-width} - #{-$width}) * 0.5);
+            right: calc(
+              var(--uq-space-l) + (#{-$-icon-button-width} - #{-$width}) * 0.5
+            );
             top: 50%;
             margin-top: -($height * 0.5);
             background-image: url(get-icon(
@@ -759,7 +760,14 @@ $-result-icon-spacing: $-icon-spacing;
         100% 1rem,
         100% 1rem;
       background-attachment: local, local, scroll, scroll;
-      height: calc(100% - (#{$actions-allowance} + #{-$-icon-button-height} + var(--uq-space-l) * 2));
+      height: calc(
+        100% -
+          (
+            #{$actions-allowance} + #{-$-icon-button-height} + var(
+                --uq-space-l
+              ) * 2
+          )
+      );
       margin-bottom: var(--uq-space-l);
       overflow-y: auto;
       overflow-x: hidden;

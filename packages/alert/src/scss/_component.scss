@@ -224,10 +224,7 @@
 
         &:hover,
         &:focus {
-          background-image: url(icon.get-icon(
-            "standard--x",
-            core.$grey-900
-          ));
+          background-image: url(icon.get-icon("standard--x", core.$grey-900));
         }
       }
     }

@@ -218,7 +218,7 @@ $use-encapsulation: false !default;
 
     + .uq-error-message,
     + .uq-success-message {
-      margin-top: -(var(--uq-space-l));
+      margin-top: calc(-1 * var(--uq-space-l));
       border-radius: 0 0 $form-border-radius $form-border-radius;
     }
   }

@@ -41,7 +41,7 @@
     height: 100%;
 
     &__toc {
-      margin-left: -(var(--uq-space-m));
+      margin-left: calc(-1 * var(--uq-space-m));
 
       .toc-list {
         padding-left: var(--uq-space-m);

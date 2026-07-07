@@ -27,16 +27,14 @@
     bottom: 0;
     left: 0;
     text-indent: -1000%;
-    box-shadow: 0 var(--uq-space-xxs) var(--uq-space-xxs)
-      rgba(var(--uq-grey-900), 0.05);
+    box-shadow: 0 var(--uq-space-xxs) var(--uq-space-xxs) color-mix(in srgb, var(--uq-grey-900) 5%, transparent);
     transition: all ease 0.25s;
     z-index: 10;
 
     &:hover,
     &:focus {
       background-color: transparent;
-      box-shadow: 0 var(--uq-space-xs) var(--uq-space-m)
-        rgba(var(--uq-grey-900), 0.15);
+      box-shadow: 0 var(--uq-space-xs) var(--uq-space-m) color-mix(in srgb, var(--uq-grey-900) 15%, transparent);
     }
   }
 

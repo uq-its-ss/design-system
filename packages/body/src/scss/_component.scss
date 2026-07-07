@@ -281,7 +281,7 @@ $use-encapsulation: false !default;
     }
 
     &--shadow {
-      text-shadow: 0 4px 4px rgba(var(--uq-black), 0.4);
+      text-shadow: 0 4px 4px color-mix(in srgb, var(--uq-black) 40%, transparent);
     }
   }
 

@@ -50,7 +50,7 @@
       left: 0;
       width: 100%;
       opacity: 0;
-      transform: translateY(-(var(--uq-space-xs)));
+      transform: translateY(calc(-1 * var(--uq-space-xs)));
 
       .uq-side-nav__list-item {
         &:last-child {

@@ -104,7 +104,7 @@ $-result-icon-spacing: $-icon-spacing;
     @extend %uq-maps__box-sizing;
     @extend %uq-maps__primary-text;
 
-    $-input-height: $-icon-button-height + var(--uq-space-xs);
+    $-input-height: calc(#{$-icon-button-height} + var(--uq-space-xs));
 
     align-items: center;
     background-color: var(--uq-white);
@@ -128,8 +128,7 @@ $-result-icon-spacing: $-icon-spacing;
 
       appearance: none;
       background-image: url(get-icon("ui--search"));
-      background-position: var(--uq-space-xs) +
-        ($-icon-button-width - $-icon-button-icon-width) * 0.5 center;
+      background-position: calc(var(--uq-space-xs) + #{($-icon-button-width - $-icon-button-icon-width) * 0.5}) center;
       background-color: transparent;
       background-repeat: no-repeat;
       background-size: $-icon-button-icon-height $-icon-button-icon-width;
@@ -141,7 +140,7 @@ $-result-icon-spacing: $-icon-spacing;
       max-width: none;
       min-width: 0;
       outline: 0 none;
-      padding: 0 var(--uq-space-m) 0 var(--uq-space-m) + $-icon-button-width;
+      padding: 0 var(--uq-space-m) 0 calc(var(--uq-space-m) + #{$-icon-button-width});
 
       &:focus {
         box-shadow: none;
@@ -306,7 +305,7 @@ $-result-icon-spacing: $-icon-spacing;
       }
 
       &--placeholder {
-        color: rgba(var(--uq-grey-900), 0.72);
+        color: color-mix(in srgb, var(--uq-grey-900) 72%, transparent);
       }
     }
 
@@ -736,17 +735,17 @@ $-result-icon-spacing: $-icon-spacing;
 
     &__main {
       background-image: linear-gradient(
-          to bottom,
-          var(--uq-white),
-          rgba(var(--uq-white), 0)
-        ),
-        linear-gradient(to top, var(--uq-white), rgba(var(--uq-white), 0)),
-        linear-gradient(
-          to bottom,
-          var(--uq-grey-50),
-          rgba(var(--uq-grey-50), 0)
-        ),
-        linear-gradient(to top, var(--uq-grey-50), rgba(var(--uq-grey-50), 0));
+    to bottom,
+    var(--uq-white),
+    transparent
+  ),
+  linear-gradient(to top, var(--uq-white), transparent),
+  linear-gradient(
+    to bottom,
+    var(--uq-grey-50),
+    transparent
+  ),
+  linear-gradient(to top, var(--uq-grey-50), transparent);
       background-position:
         0 0,
         0 100%,

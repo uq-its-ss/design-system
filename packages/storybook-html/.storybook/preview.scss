@@ -230,7 +230,7 @@ body {
   );
 
   & .uq-container {
-    background: rgba(var(--uq-error-700), 20%);
+    background: color-mix(in srgb, var(--uq-error-700) 20%, transparent);
   }
 
   & .uq-card-grid {

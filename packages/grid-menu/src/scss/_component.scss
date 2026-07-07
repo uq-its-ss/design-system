@@ -178,7 +178,7 @@
 .section--background-image {
   .uq-grid-menu {
     &__link {
-      border-color: rgba(var(--uq-white), 0.4);
+      border-color: color-mix(in srgb, var(--uq-white) 40%, transparent);
     }
   }
 }

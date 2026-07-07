@@ -9,7 +9,7 @@
   display: inline-block;
   font-size: var(--uq-font-size-s);
   line-height: var(--uq-line-height-single);
-  margin-left: -(var(--uq-space-xxs));
+  margin-left: calc(-1 * var(--uq-space-xxs));
   margin-right: var(--uq-space-m);
   padding: var(--uq-space-xs) var(--uq-space-m);
   vertical-align: baseline;

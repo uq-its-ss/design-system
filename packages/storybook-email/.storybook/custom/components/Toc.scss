@@ -30,7 +30,7 @@
   }
 }
 
-@media only screen and (min-width: #{var(--uq-screen-md) + 16.5rem}) {
+@media only screen and (min-width: calc(var(--uq-screen-md) + 16.5rem)) {
   .uqds-toc {
     width: 12.5rem;
     position: fixed;

@@ -6,8 +6,8 @@
     45deg,
     var(--uq-grey-500),
     var(--uq-grey-500) 10px,
-    var(--uq-grey-500) 10px,
-    var(--uq-grey-500) 20px
+    var(--uq-grey-700) 10px,
+    var(--uq-grey-700) 20px
   );
 
   & .uq-container {
@@ -19,8 +19,8 @@
       45deg,
       color-mix(in srgb, var(--uq-success-500), white 30%),
       color-mix(in srgb, var(--uq-success-500), white 30%) 10px,
-      color-mix(in srgb, var(--uq-success-500), white 35%) 10px,
-      color-mix(in srgb, var(--uq-success-500), white 35%) 20px
+      color-mix(in srgb, var(--uq-success-700), white 35%) 10px,
+      color-mix(in srgb, var(--uq-success-700), white 35%) 20px
     );
   }
 }

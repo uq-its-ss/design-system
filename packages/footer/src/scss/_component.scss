@@ -239,7 +239,7 @@
   }
 
   &__meta-icons {
-    font-size: var(--uq-font-size-xxl);
+    font-size: var(--uq-space-l); //Using space variable instead of font-size as the icons are svg and not text. This is to ensure the icons do not shift margins.
 
     &::before {
       content: "";

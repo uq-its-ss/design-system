@@ -262,7 +262,7 @@ $use-encapsulation: false !default;
   }
 
   textarea {
-    height: 4 * $form-element-height;
+    height: calc(4 * #{var(--form-element-height)});
   }
 
   input[type="radio"],

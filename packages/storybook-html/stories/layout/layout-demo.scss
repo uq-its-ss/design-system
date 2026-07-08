@@ -11,7 +11,7 @@
   );
 
   & .uq-container {
-    background: rgba(core.$uq-red, 20%);
+    background: color-mix(in srgb, var(--uq-uq-red) 20%, transparent);
   }
 
   & .uq-card-grid {

@@ -30,11 +30,11 @@
       padding-bottom: 1rem;
       border: none;
       border-bottom: 1px solid core.$grey-200;
-      box-shadow: 0 core.$space-xxs core.$space-xxs rgba(core.$grey-900, 0);
+      box-shadow: 0 core.$space-xxs core.$space-xxs color-mix(in srgb, var(--uq-grey-900) 0%, transparent);
 
       &:hover,
       &:focus {
-        box-shadow: 0 core.$space-xs core.$space-xs rgba(core.$grey-900, 0.1);
+        box-shadow: 0 core.$space-xs core.$space-xs color-mix(in srgb, var(--uq-grey-900) 10%, transparent);
       }
 
       .uq-card__image__wrapper {

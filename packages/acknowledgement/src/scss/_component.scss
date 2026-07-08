@@ -25,7 +25,7 @@
 
   &__content {
     max-width: 73.25rem;
-    padding: core.$space-compressed-m var(--uq-space-l);
+    padding: var(--uq-space-s) var(--uq-space-l);
     color: var(--uq-white);
     font-weight: var(--uq-font-weight-normal);
     font-size: var(--uq-font-size-m);
@@ -33,7 +33,7 @@
     margin: auto;
 
     @media #{core.$screen-xl-up} {
-      padding: core.$space-compressed-m var(--uq-space-m);
+      padding: var(--uq-space-s) var(--uq-space-m);
     }
   }
 

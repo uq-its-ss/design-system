@@ -29,12 +29,12 @@
       flex-direction: row;
       padding-bottom: 1rem;
       border: none;
-      border-bottom: 1px solid core.$grey-200;
-      box-shadow: 0 core.$space-xxs core.$space-xxs color-mix(in srgb, var(--uq-grey-900) 0%, transparent);
+      border-bottom: 1px solid var(--uq-grey-200);
+      box-shadow: 0 var(--uq-space-xxs) var(--uq-space-xxs) color-mix(in srgb, var(--uq-grey-900) 0%, transparent);
 
       &:hover,
       &:focus {
-        box-shadow: 0 core.$space-xs core.$space-xs color-mix(in srgb, var(--uq-grey-900) 10%, transparent);
+        box-shadow: 0 var(--uq-space-xs) var(--uq-space-xs) color-mix(in srgb, var(--uq-grey-900) 10%, transparent);
       }
 
       .uq-card__image__wrapper {
@@ -49,16 +49,16 @@
         min-width: 50%;
       }
       .uq-card__content {
-        padding: core.$space-none core.$space-m;
+        padding: var(--uq-space-none) var(--uq-space-m);
       }
       .uq-card__title {
-        margin: core.$space-none core.$space-none core.$space-xs;
+        margin: var(--uq-space-none) var(--uq-space-none) var(--uq-space-xs);
       }
       .uq-card__body {
         display: none;
       }
       .uq-card__actions {
-        padding: core.$space-none core.$space-m core.$space-none;
+        padding: var(--uq-space-none) var(--uq-space-m) var(--uq-space-none);
       }
     }
   }

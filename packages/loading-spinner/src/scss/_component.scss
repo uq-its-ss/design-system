@@ -46,11 +46,11 @@
   &--small {
     height: var(--uq-space-l);
     width: var(--uq-space-l);
-    padding: core.$space-compressed-xs;
+    padding: 2px;
 
     &::before {
-      border: core.$space-compressed-xs solid transparent;
-      margin-bottom: core.$space-compressed-xs;
+      border: 2px solid transparent;
+      margin-bottom: 2px;
     }
   }
 }

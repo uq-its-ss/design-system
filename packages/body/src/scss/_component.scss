@@ -133,7 +133,7 @@ $use-encapsulation: false !default;
     margin: var(--uq-space-none) var(--uq-space-none) var(--uq-space-l);
     padding-left: var(--uq-space-l);
     border-left: 6px solid var(--uq-grey-900);
-    font-family: core.$font-accent;
+    font-family: var(--uq-font);
     font-style: italic;
     font-size: var(--uq-font-size-xl);
   }
@@ -275,7 +275,7 @@ $use-encapsulation: false !default;
     }
 
     &--accent {
-      font-family: core.$font-accent;
+      font-family: var(--uq-font);
       font-weight: var(--uq-font-weight-normal);
       font-style: italic;
     }

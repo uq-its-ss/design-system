@@ -291,7 +291,7 @@ $use-encapsulation: false !default;
       margin-bottom: var(--uq-space-m);
       margin-left: var(--uq-space-xs);
       margin-right: $form-spacing;
-      padding-top: core.$space-compressed-xs;
+      padding-top: 2px;
       padding-left: var(--uq-space-l);
       vertical-align: top;
     }
@@ -475,13 +475,13 @@ $use-encapsulation: false !default;
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain;
-      height: core.$space-compressed-xl;
+      height: 20px;
       left: var(--uq-space-m);
       margin-right: var(--uq-space-xs);
-      margin-top: calc(#{- (core.$space-compressed-xl) * 0.5} - 1px);
+      margin-top: calc(20px * -0.5 - 1px);
       position: absolute;
       top: 50%;
-      width: core.$space-compressed-xl;
+      width: 20px;
     }
   }
 

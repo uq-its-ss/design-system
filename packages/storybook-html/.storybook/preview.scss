@@ -235,18 +235,18 @@ body {
 
   & .uq-card-grid {
     background: repeating-linear-gradient(
-      45deg,
-      color.adjust(core.$success-500, $lightness: 30%),
-      color.adjust(core.$success-500, $lightness: 30%) 10px,
-      color.adjust(core.$success-500, $lightness: 35%) 10px,
-      color.adjust(core.$success-500, $lightness: 35%) 20px
-    );
+  45deg,
+  color-mix(in srgb, var(--uq-success-500), white 30%),
+  color-mix(in srgb, var(--uq-success-500), white 30%) 10px,
+  color-mix(in srgb, var(--uq-success-500), white 35%) 10px,
+  color-mix(in srgb, var(--uq-success-500), white 35%) 20px
+);
   }
 }
 
 .uqds-layout-demo-card,
 .uqds-layout-demo-el {
-  background-color: color.adjust(core.$utility-500, $lightness: 40%);
+  background-color: color-mix(in srgb, var(--uq-utility-500), white 40%);
   border: 1px solid var(--uq-utility-500);
   height: 220px;
 }

@@ -349,7 +349,7 @@ $-result-icon-spacing: $-icon-spacing;
       display: flex;
       align-items: center;
       font-size: 0;
-      margin-left: calc(#{-$-icon-button-width} + var(--uq-space-m));
+      margin-left: calc(#{$-icon-button-width} + var(--uq-space-m));
       padding: var(--uq-space-xs) 0;
       white-space: nowrap;
 
@@ -475,7 +475,7 @@ $-result-icon-spacing: $-icon-spacing;
       text-transform: uppercase;
       display: inline-block;
       margin: var(--uq-space-m) var(--uq-space-l) 0
-        calc(var(--uq-space-l) + #{-$-icon-spacing});
+        calc(var(--uq-space-l) + #{$-icon-spacing});
 
       &::before {
         background-image: url(get-icon("ui--nav-right", core.$purple-500));
@@ -522,7 +522,7 @@ $-result-icon-spacing: $-icon-spacing;
         &__text {
           margin: 0 0 0
             calc(
-              #{-$-icon-spacing * 2} + #{-$-result-icon-height} +
+              #{$-icon-spacing * 2} + #{$-result-icon-height} +
                 var(--uq-space-xs)
             );
           flex-grow: 1;
@@ -559,7 +559,7 @@ $-result-icon-spacing: $-icon-spacing;
 
           &::before {
             position: absolute;
-            left: calc(var(--uq-space-l) + #{-$-result-icon-spacing});
+            left: calc(var(--uq-space-l) + #{$-result-icon-spacing});
             top: 50%;
             margin-top: -($-result-icon-height * 0.5);
             background-image: url(get-icon("ui--map-pin", core.$purple-500));
@@ -581,7 +581,7 @@ $-result-icon-spacing: $-icon-spacing;
 
             position: absolute;
             right: calc(
-              var(--uq-space-l) + (#{-$-icon-button-width} - #{-$width}) * 0.5
+              var(--uq-space-l) + (#{$-icon-button-width} - #{$width}) * 0.5
             );
             top: 50%;
             margin-top: -($height * 0.5);
@@ -760,7 +760,7 @@ $-result-icon-spacing: $-icon-spacing;
       height: calc(
         100% -
           (
-            #{$actions-allowance} + #{-$-icon-button-height} + var(
+            #{$actions-allowance} + #{$-icon-button-height} + var(
                 --uq-space-l
               ) * 2
           )

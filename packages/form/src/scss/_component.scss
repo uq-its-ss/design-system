@@ -430,12 +430,12 @@ $use-encapsulation: false !default;
 
     &_body {
       color: var(--uq-grey-900);
-      font-size: var(--uq-space-m);
+      font-size: var(--uq-font-size-m);
     }
 
     &__list {
       color: var(--uq-grey-900);
-      font-size: var(--uq-space-m);
+      font-size: var(--uq-font-size-m);
       margin: var(--uq-space-none);
       padding-left: var(--uq-space-l);
 

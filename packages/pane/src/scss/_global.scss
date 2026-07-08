@@ -35,7 +35,8 @@
 
   .uq-pane {
     &__content {
-      padding: var(--uq-space-l) var(--uq-space-l) var(--uq-space-m) var(--uq-space-l); //1.8rem 1.8rem 1rem 1.8rem
+      padding: var(--uq-space-l) var(--uq-space-l) var(--uq-space-m)
+        var(--uq-space-l); //1.8rem 1.8rem 1rem 1.8rem
     }
 
     &__footer {

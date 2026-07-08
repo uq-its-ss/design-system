@@ -4,29 +4,43 @@
   width: 100%;
   overflow-x: auto;
   background-color: var(--uq-white);
-  
+
   /* Modern CSS Scroll Shadows */
-  background-image: 
-    linear-gradient(to right, var(--uq-white), color-mix(in srgb, var(--uq-white) 0%, transparent)),
-    linear-gradient(to left, var(--uq-white), color-mix(in srgb, var(--uq-white) 0%, transparent)),
-    linear-gradient(to right, var(--uq-grey-300), color-mix(in srgb, var(--uq-grey-300) 0%, transparent)),
-    linear-gradient(to left, var(--uq-grey-300), color-mix(in srgb, var(--uq-grey-300) 0%, transparent));
-  
+  background-image: linear-gradient(
+      to right,
+      var(--uq-white),
+      color-mix(in srgb, var(--uq-white) 0%, transparent)
+    ),
+    linear-gradient(
+      to left,
+      var(--uq-white),
+      color-mix(in srgb, var(--uq-white) 0%, transparent)
+    ),
+    linear-gradient(
+      to right,
+      var(--uq-grey-300),
+      color-mix(in srgb, var(--uq-grey-300) 0%, transparent)
+    ),
+    linear-gradient(
+      to left,
+      var(--uq-grey-300),
+      color-mix(in srgb, var(--uq-grey-300) 0%, transparent)
+    );
+
   background-position:
     0 0,
     100% 0,
     0 0,
     100% 0;
-  
+
   background-size:
     4em 100%,
     4em 100%,
     1em 100%,
     1em 100%;
-    
+
   background-repeat: no-repeat;
   background-attachment: local, local, scroll, scroll;
-}
 
   &::-webkit-scrollbar {
     -webkit-appearance: none;

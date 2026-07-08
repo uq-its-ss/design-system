@@ -294,7 +294,7 @@
       right: 0;
       display: block;
       width: var(--uq-space-xxxl);
-      padding: 28pxvar(--uq-space-l);
+      padding: 28pxvar (--uq-space-l);
       border: 0;
       border-left: 1px solid var(--uq-grey-200);
       text-indent: -100vw;
@@ -311,8 +311,7 @@
 
       @media #{core.$screen-md-up} {
         width: var(--uq-space-xl);
-        padding: 28px var(--uq-space-l)
-          28px var(--uq-space-xs);
+        padding: 28px var(--uq-space-l) 28px var(--uq-space-xs);
       }
 
       @media #{core.$screen-lg-up} {

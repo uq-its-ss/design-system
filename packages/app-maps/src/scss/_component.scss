@@ -760,9 +760,8 @@ $-result-icon-spacing: $-icon-spacing;
       height: calc(
         100% -
           (
-            #{$actions-allowance} + #{$-icon-button-height} + var(
-                --uq-space-l
-              ) * 2
+            #{$actions-allowance} + #{$-icon-button-height} + var(--uq-space-l) *
+              2
           )
       );
       margin-bottom: var(--uq-space-l);

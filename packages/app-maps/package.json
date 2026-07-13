@@ -50,7 +50,7 @@
     "@svgdotjs/svg.js": "^3.0.16",
     "chalk": "^4.1.0",
     "glob": "^7.1.6",
-    "js-yaml": "^3.14.1",
+    "js-yaml": "^3.15.0",
     "mini-svg-data-uri": "^1.2.3",
     "sass": "^1.30.0",
     "svgdom": "0.1.14",

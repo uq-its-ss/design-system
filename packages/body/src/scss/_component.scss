@@ -185,6 +185,14 @@ $use-encapsulation: false !default;
       color: core.$white;
       background-color: core.$purple-500;
     }
+
+    &.uq-icon {
+      &:hover {
+        &::before {
+          filter: core.$filter-white;
+        }
+      }
+    }
   }
 
   :focus {

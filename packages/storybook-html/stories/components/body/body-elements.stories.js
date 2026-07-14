@@ -114,3 +114,14 @@ export const horizontalRule = {
 
   name: "Horizontal rule",
 };
+
+export const links = {
+  render: () => {
+    return `
+      <p><a href="#">This is a link</a></p>
+      <p><a href="#" class="uq-icon uq-icon--standard--arrow-up">Top of page</a></p>
+    `;
+  },
+
+  name: "Links",
+};

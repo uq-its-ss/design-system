@@ -60,7 +60,7 @@ const renderMegaMenu = (columns, parentTitle) => {
             ${group.children
               .map(
                 (child) => `
-              <li class="uq-header__megamenu-item" data-gtm-category="Main navigation"><a class="uq-header__megamenu-link" href="${child.href}" data-gtm-label="${parentTitle} > ${group.heading} > ${child.title}">${child.title}</a></li>
+              <li class="uq-header__megamenu-item"><a class="uq-header__megamenu-link" href="${child.href}" data-gtm-path="${parentTitle} > ${group.heading}">${child.title}</a></li>
             `,
               )
               .join("")}
@@ -93,14 +93,14 @@ const renderNestedLinks = (children, activeHref, parentPath = "") => {
         ? `${parentPath} > ${child.title}`
         : child.title;
       let linkContent = `
-        <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
-          <a href="${child.href}" class="${hasGrandchildren ? "uq-header__nav-mobile-audience-link slide-menu__control" : `uq-header__nav-mobile-link${isActive ? " is-active" : ""}`}"${hasGrandchildren ? "" : ` data-gtm-label="${currentPath}"`}>${child.title}</a>
+        <li class="uq-header__nav-mobile-item">
+          <a href="${child.href}" class="${hasGrandchildren ? "uq-header__nav-mobile-audience-link slide-menu__control" : `uq-header__nav-mobile-link${isActive ? " is-active" : ""}`}"${hasGrandchildren ? "" : ` data-gtm-path="${parentPath}"`}>${child.title}</a>
           ${
             hasGrandchildren
               ? `
             <ul class="uq-header__nav-mobile-list">
               <li class="uq-header__nav-mobile-item">
-                <a class="uq-header__nav-mobile-audience-link" href="${child.href}" data-gtm-label="${currentPath}">${child.title}</a>
+                <a class="uq-header__nav-mobile-audience-link" href="${child.href}" data-gtm-path="${parentPath}">${child.title}</a>
               </li>
               ${renderNestedLinks(child.children, activeHref, currentPath)}
             </ul>
@@ -125,14 +125,14 @@ const renderMobileNav = (links, activeHref) => {
       // Only leaf links (no columns) can be active
       const isActive = !hasColumns && link.href === activeHref;
       return `
-      <li class="uq-header__nav-mobile-item" data-gtm-category="Main navigation">
-        <a href="${link.href}" class="${hasColumns ? "uq-header__nav-mobile-audience-link slide-menu__control" : `uq-header__nav-mobile-link${isActive ? " is-active" : ""}`}"${hasColumns ? "" : ` data-gtm-label="${link.title}"`}>${link.title}</a>
+      <li class="uq-header__nav-mobile-item">
+        <a href="${link.href}" class="${hasColumns ? "uq-header__nav-mobile-audience-link slide-menu__control" : `uq-header__nav-mobile-link${isActive ? " is-active" : ""}`}"${hasColumns ? "" : ` data-gtm-path=""`}>${link.title}</a>
         ${
           hasColumns
             ? `
           <ul class="uq-header__nav-mobile-list">
             <li class="uq-header__nav-mobile-item">
-              <a class="uq-header__nav-mobile-link" href="${link.href}" data-gtm-label="${link.title}">${link.title}</a>
+              <a class="uq-header__nav-mobile-link" href="${link.href}" data-gtm-path="${link.title}">${link.title}</a>
             </li>
             ${link.columns // Iterate over columns
               .map((column) =>
@@ -262,12 +262,12 @@ const headerRenderer = ({
   activeHref,
 }) => `
 <!-- HEADER WRAPPER -->
-<header class="uq-header" data-gtm-category="Header">
+<header class="uq-header">
   <div class="uq-header__container">
 
     <!-- TOGGLE MENU (Mobile) -->
-    <div class="uq-header__toggle-menu" data-target="global-mobile-nav" data-gtm-category="Primary header">
-      <button type="button" class="uq-header__toggle-menu-button slide-menu__control" data-target="global-mobile-nav" data-arg=".is-active" data-action="smartToggle" data-gtm-trigger="click" data-gtm-action="Toggle">Menu</button>
+    <div class="uq-header__toggle-menu" data-target="global-mobile-nav">
+      <button type="button" class="uq-header__toggle-menu-button slide-menu__control" data-target="global-mobile-nav" data-arg=".is-active" data-action="smartToggle">Menu</button>
 
         <!-- NAVIGATION (Mobile) (Slide menu) -->
         <!-- "uq-header__nav-mobile-local" class is added if showing local site menu -->
@@ -294,7 +294,7 @@ const headerRenderer = ({
           ${
             !showLocalMobile
               ? `
-              <li class="uq-header__nav-mobile-item" data-gtm-category="Secondary header">
+              <li class="uq-header__nav-mobile-item">
                 <a class="uq-header__nav-mobile-primary" href="https://uq.edu.au">UQ home <span class="slide-menu__decorator"> </span></a>
               </li>
 
@@ -302,7 +302,7 @@ const headerRenderer = ({
               ${primaryLinks
                 .map(
                   (link) => `
-                  <li class="uq-header__nav-mobile-item" data-gtm-category="Primary header">
+                  <li class="uq-header__nav-mobile-item">
                       <a class="uq-header__nav-mobile-primary" href="${link.href}">${link.title} <span class="slide-menu__decorator"> </span></a>
                   </li>`,
                 )
@@ -312,7 +312,7 @@ const headerRenderer = ({
               ${secondaryLinks
                 .map(
                   (link) => `
-                  <li class="uq-header__nav-mobile-secondary-item" data-gtm-category="Secondary header">
+                  <li class="uq-header__nav-mobile-secondary-item">
                       <a class="uq-header__nav-mobile-secondary" href="${link.href}">${link.title}</a>
                   </li>
               `,
@@ -326,24 +326,24 @@ const headerRenderer = ({
     </div>
 
     <!-- LOGO -->
-    <div class="uq-header__logo" data-gtm-category="Primary header"><a class="uq-header__logo-link" href="https://uq.edu.au" data-gtm-label="UQ Logo"><img class="uq-header__logo-image" alt="The University of Queensland" src="https://static.uq.net.au/v11/logos/corporate/uq-logo--reversed.svg"></a></div>
+    <div class="uq-header__logo"><a class="uq-header__logo-link" href="https://uq.edu.au"><img class="uq-header__logo-image" alt="The University of Queensland" src="https://static.uq.net.au/v11/logos/corporate/uq-logo--reversed.svg"></a></div>
 
    <!-- NAVIGATION PRIMARY (Desktop) -->
-    <nav class="uq-header__nav-primary" aria-label="primary navigation" data-gtm-category="Primary header">
+    <nav class="uq-header__nav-primary" aria-label="primary navigation">
       <ul class="uq-header__nav-primary-list">
         ${primaryLinks
           .map(
             (link) => `
           <!-- NAVIGATION PRIMARY ITEM (Desktop) -->
           <li class="uq-header__nav-primary-item">
-            ${showGlobalHeader ? `<button class="uq-header__nav-primary-link uq-header__nav-primary--has-dropdown" id="${link.title.toLowerCase().replace(/\s+/g, "-")}-menu-button" aria-haspopup="true" aria-expanded="false" aria-controls="${link.title.toLowerCase().replace(/\s+/g, "-")}-megamenu" data-gtm-label="${link.title}">${link.title}</button>` : `<a class="uq-header__nav-primary-link" href="${link.href}" data-gtm-label="${link.title}">${link.title}</a>`}
+            ${showGlobalHeader ? `<button class="uq-header__nav-primary-link uq-header__nav-primary--has-dropdown" id="${link.title.toLowerCase().replace(/\s+/g, "-")}-menu-button" aria-haspopup="true" aria-expanded="false" aria-controls="${link.title.toLowerCase().replace(/\s+/g, "-")}-megamenu">${link.title}</button>` : `<a class="uq-header__nav-primary-link" href="${link.href}">${link.title}</a>`}
             ${
               showGlobalHeader
                 ? `
               <!-- MEGA MENU (Desktop) -->
               <div id="${link.title.toLowerCase().replace(/\s+/g, "-")}-megamenu" class="uq-header__megamenu">
                 <div class="uq-header__megamenu-container">
-                  <h2 class="uq-header__megamenu-overview-label"><a href="${link.href}" class="uq-header__megamenu-link" data-gtm-label="${link.title} > ${link.title}">${link.title}</a></h2>
+                  <h2 class="uq-header__megamenu-overview-label"><a href="${link.href}" class="uq-header__megamenu-link" data-gtm-path="${link.title}">${link.title}</a></h2>
                     ${renderMegaMenu(link.columns, link.title)}
                 </div>
               </div>
@@ -358,19 +358,19 @@ const headerRenderer = ({
     </nav>
 
     <!-- TOGGLE SEARCH -->
-    <div class="uq-header__toggle-search" data-gtm-category="Search">
-      <button class="uq-header__toggle-search-button" data-gtm-action="Toggle" aria-label="Search">
+    <div class="uq-header__toggle-search">
+      <button class="uq-header__toggle-search-button" aria-label="Search">
         <div class="uq-header__toggle-search-label">Search</div>
       </button>
           <!-- SEARCH FORM -->
-          <div class="uq-header__search" data-gtm-category="Search">
+          <div class="uq-header__search">
             <div class="uq-header__search-container">
-              <form class="uq-header__search-form" action="https://search.uq.edu.au/" method="get" data-gtm-action="Text search" data-gtm-form-action="">
+              <form class="uq-header__search-form" action="https://search.uq.edu.au/" method="get">
                 <fieldset class="uq-header__search-fieldset">
                     <label class="uq-header__search-label" for="edit-q">Search term</label>
-                    <input class="uq-header__search-input" type="text" id="edit-q" name="q" value="" maxlength="128" placeholder="Search by keyword" autocomplete="off" data-gtm-form-search="">
+                    <input class="uq-header__search-input" type="text" id="edit-q" name="q" value="" maxlength="128" placeholder="Search by keyword" autocomplete="off">
                     <input type="hidden" value="${siteDomain}" name="as_sitesearch" id="edit-as_sitesearch-on"> 
-                    <button class="uq-header__search-button" type="submit" name="op" value="Search" data-gtm-trigger="click"><span class="uq-header__search-button-label">Search</span></button>          
+                    <button class="uq-header__search-button" type="submit" name="op" value="Search"><span class="uq-header__search-button-label">Search</span></button>          
                 </fieldset>
               </form>
             </div>
@@ -383,14 +383,14 @@ const headerRenderer = ({
     <div class="uq-header__nav-secondary">
         <nav class="uq-header__nav-secondary-container">
         <ul class="uq-header__nav-secondary-list">
-            <li class="uq-header__nav-secondary-item" data-gtm-category="Secondary header">
+            <li class="uq-header__nav-secondary-item">
               <a class="uq-header__nav-secondary-link" href="https://www.uq.edu.au">UQ home</a>
             </li>
             ${secondaryLinks
               .map(
                 (link) => `
-            <li class="uq-header__nav-secondary-item" data-gtm-category="Secondary header">
-                <a href="${link.href}" class="uq-header__nav-secondary-link" data-gtm-label="${link.title}">${link.title}</a>
+            <li class="uq-header__nav-secondary-item">
+                <a href="${link.href}" class="uq-header__nav-secondary-link">${link.title}</a>
             </li>
             `,
               )
@@ -433,10 +433,10 @@ export const WithoutMegaMenu = {
 export const basicHeader = {
   render: () => {
     return `
-    <header id="uq-header" class="uq-header" data-gtm-category="Header">
+    <header id="uq-header" class="uq-header">
       <div class="uq-header__container">
-        <div class="uq-header__logo" data-gtm-category="Primary header">
-          <a class="uq-header__logo-link" href="https://uq.edu.au" data-gtm-label="UQ Logo">
+        <div class="uq-header__logo">
+          <a class="uq-header__logo-link" href="https://uq.edu.au">
             <img class="uq-header__logo-image" alt="The University of Queensland" src="https://static.uq.net.au/v15/logos/corporate/uq-logo--reversed.svg">
           </a>
         </div>        

@@ -105,11 +105,35 @@ export class MegaMenuModule {
   /**
    * Open a specific mega menu
    * Updates ARIA attributes and adds open class
+   * Emits analytics event for tracking
    * @param {HTMLElement} trigger - The menu trigger element
    */
   openMenu(trigger) {
     trigger.setAttribute("aria-expanded", "true");
     trigger.parentElement.classList.add("uq-header__nav-primary-item--is-open");
+
+    // Emit analytics event
+    try {
+      const menuId = trigger.getAttribute("aria-controls");
+      const menuElement = menuId ? document.getElementById(menuId) : null;
+
+      this.header.dispatchEvent(
+        new CustomEvent("uqds:header:megamenu-toggle", {
+          bubbles: true,
+          detail: {
+            action: "expand",
+            trigger: trigger,
+            menu: menuElement,
+            label: trigger.textContent.trim(),
+          },
+        }),
+      );
+    } catch (e) {
+      // Fail gracefully if event dispatch fails
+      if (console && console.warn) {
+        console.warn("Failed to emit megamenu-toggle event:", e);
+      }
+    }
   }
 
   /**

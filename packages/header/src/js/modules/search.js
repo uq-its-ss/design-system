@@ -40,6 +40,7 @@ export class SearchModule {
     }
 
     this.initToggle();
+    this.initFormSubmit();
   }
 
   /**
@@ -55,6 +56,7 @@ export class SearchModule {
 
   /**
    * Toggle the search panel open/closed
+   * Emits analytics event for tracking
    */
   toggle() {
     const willOpen = !this.isOpen();
@@ -68,6 +70,25 @@ export class SearchModule {
       "uq-header__toggle-search-button--is-open",
     );
     this.searchBlock.classList.toggle("uq-header__search--is-open");
+
+    // Emit analytics event
+    try {
+      this.header.dispatchEvent(
+        new CustomEvent("uqds:header:search-toggle", {
+          bubbles: true,
+          detail: {
+            action: willOpen ? "open" : "close",
+            trigger: this.searchToggle,
+            input: this.searchInput,
+          },
+        }),
+      );
+    } catch (e) {
+      // Fail gracefully if event dispatch fails
+      if (console && console.warn) {
+        console.warn("Failed to emit search-toggle event:", e);
+      }
+    }
 
     if (this.isOpen()) {
       this.open();
@@ -118,5 +139,38 @@ export class SearchModule {
       this.searchBlock &&
       this.searchBlock.classList.contains("uq-header__search--is-open")
     );
+  }
+
+  /**
+   * Initialize form submit tracking
+   * Emits analytics event when search is submitted
+   * @private
+   */
+  initFormSubmit() {
+    const searchForm = this.header.querySelector(".uq-header__search-form");
+    if (!searchForm) return;
+
+    searchForm.addEventListener("submit", () => {
+      const searchTerm = this.searchInput?.value || "";
+      const isSiteSearch =
+        searchForm.querySelector("#edit-as_sitesearch-on") !== null;
+
+      try {
+        this.header.dispatchEvent(
+          new CustomEvent("uqds:header:search-submit", {
+            bubbles: true,
+            detail: {
+              searchTerm: searchTerm,
+              searchScope: isSiteSearch ? "site" : "all-uq",
+            },
+          }),
+        );
+      } catch (e) {
+        // Fail gracefully if event dispatch fails
+        if (console && console.warn) {
+          console.warn("Failed to emit search-submit event:", e);
+        }
+      }
+    });
   }
 }

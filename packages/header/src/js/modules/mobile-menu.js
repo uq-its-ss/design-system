@@ -39,6 +39,7 @@ export class MobileMenuModule {
     this.initSlideMenu();
     this.initScrollReset();
     this.initToggleButton();
+    this.enhanceBackButtons();
   }
 
   /**
@@ -74,6 +75,7 @@ export class MobileMenuModule {
 
   /**
    * Initialize toggle button click handler
+   * Emits analytics events for open/close actions
    * @private
    */
   initToggleButton() {
@@ -87,6 +89,26 @@ export class MobileMenuModule {
       // Notify coordinator to close other exclusive toggles before opening
       if (willOpen && this.onOpening) {
         this.onOpening("mobileMenu");
+      }
+
+      // Emit analytics event
+      try {
+        this.header.dispatchEvent(
+          new CustomEvent("uqds:header:mobile-menu-toggle", {
+            bubbles: true,
+            detail: {
+              action: willOpen ? "open" : "close",
+              trigger: this.menuToggle,
+              menu: this.menuElement,
+              label: this.menuToggle.textContent.trim(),
+            },
+          }),
+        );
+      } catch (e) {
+        // Fail gracefully if event dispatch fails
+        if (console && console.warn) {
+          console.warn("Failed to emit mobile-menu-toggle event:", e);
+        }
       }
 
       // Toggle menu button icon state
@@ -129,5 +151,63 @@ export class MobileMenuModule {
    */
   isOpen() {
     return this.slideMenu && this.slideMenu.isOpen && this.slideMenu.isOpen();
+  }
+
+  /**
+   * Enhance back buttons with data-gtm-path attributes for analytics
+   * Called after SlideMenu initialization to add hierarchy context to dynamically generated back links
+   * @private
+   */
+  enhanceBackButtons() {
+    if (!this.menuElement) return;
+
+    const backButtons = this.menuElement.querySelectorAll(
+      ".slide-menu__backlink",
+    );
+    backButtons.forEach((backBtn) => {
+      try {
+        const path = this.buildPathFromDom(backBtn);
+        if (path) {
+          backBtn.setAttribute("data-gtm-path", path);
+        }
+      } catch (e) {
+        // Fail gracefully if path building fails
+        if (console && console.warn) {
+          console.warn("Failed to enhance back button:", e);
+        }
+      }
+    });
+  }
+
+  /**
+   * Build hierarchical path from DOM structure for back button
+   * Traverses up the menu tree to construct parent hierarchy
+   * @param {HTMLElement} backBtn - The back button element
+   * @returns {string} Hierarchical path (e.g., "Study > Study options")
+   * @private
+   */
+  buildPathFromDom(backBtn) {
+    const pathParts = [];
+    let currentList = backBtn.closest(".uq-header__nav-mobile-list");
+
+    while (currentList) {
+      // Find parent item's link to get the label
+      const parentItem = currentList.closest(".uq-header__nav-mobile-item");
+      if (parentItem) {
+        const parentLink = parentItem.querySelector(
+          ".uq-header__nav-mobile-link, .uq-header__nav-mobile-audience-link",
+        );
+        if (parentLink) {
+          pathParts.unshift(parentLink.textContent.trim());
+        }
+      }
+
+      // Move up to next level
+      currentList = currentList.parentElement?.closest(
+        ".uq-header__nav-mobile-list",
+      );
+    }
+
+    return pathParts.join(" > ");
   }
 }

@@ -6,6 +6,7 @@ import * as footerStandardStories from "../components/general-components/o-foote
 import * as footerBlockStories from "../components/general-components/footer-block.stories.js";
 import * as footerContactStories from "../components/general-components/footer-contact.stories.js";
 import * as typographyStories from "../components/general-components/typography.stories.js";
+import * as vision6ContactStories from "../components/vision6-components/vision6-contact.stories.js";
 
 <Meta title="Design guidelines/Vision 6 guidelines" />
 
@@ -330,13 +331,6 @@ If the button label exceeds 14 characters, increase the button width by 20px to 
 3. Scroll down to **width** field
 4. Increase width by 20px
 
-**To re-add a deleted button:**
-
-1. Go back to the original template
-2. Highlight the button section you want to use
-3. Select **copy**
-4. Go back to email message and paste the button
-
 ### Images
 
 Use the following recommended image sizes to ensure the email layout displays correctly.
@@ -380,13 +374,6 @@ Large and small hero image options are available – choose the size that best f
   </tbody>
 </table>
 
-**To re-add a deleted hero image:**
-
-1. Go back to the original template
-2. Highlight the hero image section you want to use
-3. Select **copy**
-4. Go back to email message and paste the image section
-
 #### In-content images
 
 Large and small in-content image options available – choose the size that best fits your content.
@@ -429,13 +416,6 @@ Large and small in-content image options available – choose the size that best
 - Provide descriptive alt text for accessibility
 - Avoid text within images (screen readers can't interpret embedded text)
 
-**To re-add a deleted in-content image:**
-
-1. Go back to the original template
-2. Highlight the image section you want to use
-3. Select **copy**
-4. Go back to email message and paste the image section
-
 ### Content sections
 
 Content sections help organize multiple stories or topics in E-newsletters, creating clear visual separation between different content areas.
@@ -459,12 +439,6 @@ Use section headings to help group related content and make it easier to scan. O
 
 **Important:** Use only the colours specified to maintain brand consistency across all communications and ensure sufficient colour contrast for accessibility compliance.
 
-**To re-add a deleted content section:**
-
-1. Go back to the original template
-2. Highlight the content section you want to use
-3. Select **copy**
-4. Go back to email message and paste the content section
 
 ## Component-Specific Instructions
 
@@ -476,12 +450,6 @@ Used across all UQ emails. Includes the UQ logo, linking to the UQ homepage, and
 
 See [Email Guidelines](?path=/docs/design-guidelines-email-template-guidelines--docs#uq-header) for UQ header component.
 
-**To re-add a deleted UQ header:**
-
-1. Go back to the original template
-2. Highlight the UQ header section
-3. Select **copy**
-4. Go back to email message and paste the header
 
 ### Sender header
 
@@ -499,12 +467,6 @@ The sender name should reflect the area responsible for responding to enquiries 
 
 <Canvas of={senderHeaderStories.senderHeader} sourceState="none" />
 
-**To re-add a deleted sender header:**
-
-1. Go back to the original template
-2. Highlight the sender header section
-3. Select **copy**
-4. Go back to email message and paste the header
 
 ### E-Newsletter header block
 
@@ -514,75 +476,9 @@ E-Newsletter header block appears below the hero image. Includes newsletter name
 
 **Newsletter subtitle:** Optional supporting description of newsletter purpose.
 
-**To re-add a deleted e-newsletter header:**
-
-1. Go back to the original template
-2. Highlight the e-newsletter header section
-3. Select **copy**
-4. Go back to email message and paste the header
-
-### Standard footer
-
-Used across all UQ emails.
-
-Includes:
-
-- Acknowledgement of Country
-- CRICOS
-- TEQSA
-- UQ's Privacy Policy
-
-<Canvas of={footerStandardStories.footerStandard} sourceState="none" />
-
-See [Email Guidelines](?path=/docs/design-guidelines-email-template-guidelines--docs#standard-footer) for standard footer component.
-
-**To re-add a deleted standard footer:**
-
-1. Go back to the original template
-2. Highlight the standard footer section
-3. Select **copy**
-4. Go back to email message and paste the footer
-
-### Block footer
-
-Used in emails without a contact footer to clearly separate the main content from the footer section.
-
-<Canvas of={footerBlockStories.blockFooter} sourceState="none" />
-
-**To re-add a deleted block footer:**
-
-1. Go back to the original template
-2. Highlight the block footer section
-3. Select **copy**
-4. Go back to email message and paste the footer
-
 ### Contact footer
 
-Includes the sender's contact details to clearly identify the source of the email.
-
-**Minimum requirements:**
-
-- Contact name
-- Email address or link to an enquiry form
-
-The contact details must be included at the bottom of the email, after the main body of the email.
-
-#### Area contact footer
-
-<Canvas of={footerContactStories.contactArea} sourceState="none" />
-
-#### Individual contact footer (USET or C-suite)
-
-<Canvas of={footerContactStories.contact} sourceState="none" />
-
-See [Email Guidelines](?path=/docs/design-guidelines-email-template-guidelines--docs#contact-footer) for contact footer component.
-
-**To re-add a deleted contact footer:**
-
-1. Go back to the original template
-2. Highlight the contact footer section
-3. Select **copy**
-4. Go back to email message and paste the footer
+See [Email Guidelines](?path=/docs/design-guidelines-email-template-guidelines--docs#standard-footer) for standard footer component.
 
 ### Social contact footer
 
@@ -643,12 +539,7 @@ The social contact footer should include contact details for the relevant team r
   </tbody>
 </table>
 
-**To re-add a deleted social contact footer:**
-
-1. Go back to the original template
-2. Highlight the social contact footer section
-3. Select **copy**
-4. Go back to email message and paste the footer
+<Canvas of={vision6ContactStories.contact} sourceState="none" />
 
 ### Social icons
 

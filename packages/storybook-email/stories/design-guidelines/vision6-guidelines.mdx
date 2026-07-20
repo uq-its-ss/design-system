@@ -1,0 +1,647 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
+import * as buttonStories from "../components/general-components/buttons.stories.js";
+import * as headerStories from "../components/general-components/o-header.stories.js";
+import * as senderHeaderStories from "../components/general-components/o-sender-header.stories.js";
+import * as footerStandardStories from "../components/general-components/o-footer.stories.js";
+import * as footerBlockStories from "../components/general-components/footer-block.stories.js";
+import * as footerContactStories from "../components/general-components/footer-contact.stories.js";
+import * as typographyStories from "../components/general-components/typography.stories.js";
+
+<Meta title="Design guidelines/Vision 6 guidelines" />
+
+# Vision 6 template guidance
+
+These guidelines for Vision 6 are designed to support staff in creating effective, on-brand emails. By using the templates, you're helping maintain brand consistency and compliance while creating a seamless experience for all audiences.
+
+## Getting Started
+
+### How to access templates
+
+1. Navigate to **Messages** > **New message**
+2. Select **Shared** from the email template dropdown
+3. Select:
+   - **Single message email**
+     - Standard
+     - Event
+     - Alert
+   - **E-Newsletter**
+4. Click **Open template**
+
+## Template Types & Rules
+
+### Single-message email
+
+A text-based standalone email is a simple, single-purpose email designed to communicate one key message. This format uses minimal design elements and focuses on clear, direct content with a single primary call-to-action, if required.
+
+Use this template for standard email communications when you have a single topic or message such as an important alert, promoting an event or deadline, or sending a simple reminder.
+
+#### Standard email
+
+Use for routine communications and general announcements.
+
+**Guidelines:**
+- Max one primary call to action
+- Max 3 hyperlinks in text
+- Do not use hero images
+- Do not use in-content images
+- Do not use content sections
+- Contact footer required
+- Remove social icons
+
+**Component usage:**
+- ✅ **Required:** UQ header, Sender header, Contact footer
+- ⛔ **Do not use:** E-newsletter header, Hero image, In-content images, Content sections, Social contact footer
+
+#### Event email
+
+Use for event invitations and promotions.
+
+**Guidelines:**
+- Max one primary call to action
+- Max 3 hyperlinks in text
+- Hero image recommended for engagement
+- Use in-content images if needed
+- Use content sections if needed
+- Social contact footer required
+- Do not use standard contact footer
+
+**Component usage:**
+- ✅ **Required:** UQ header, Sender header, Social contact footer
+- ⭐ **Recommended:** Hero image
+- ⚪ **Use if needed:** In-content images, Content sections
+- ⛔ **Do not use:** E-newsletter header, Contact footer
+
+#### Alert email
+
+Use for important alerts and emergencies.
+
+**Guidelines:**
+- Max one primary call to action
+- Max 3 hyperlinks in text
+- Do not use hero images
+- Do not use in-content images
+- Do not use content sections
+- Contact footer required
+- Remove social icons for important alerts or emergencies
+
+**Component usage:**
+- ✅ **Required:** UQ header, Sender header, Contact footer
+- ⛔ **Do not use:** E-newsletter header, Hero image, In-content images, Content sections, Social contact footer
+
+### E-Newsletter
+
+An e-newsletter is a structured email template designed to share multiple updates, stories, or opportunities within a single communication. This format typically includes multiple sections, headings, images, and several calls-to-action.
+
+Use this template for newsletter email communications, such as when you are sharing multiple announcements, providing a recurring update, or showcasing a range of events or opportunities.
+
+**Guidelines:**
+- Max one primary call to action and one related link per story
+- Hero image required
+- In-content images recommended
+- Content sections recommended for grouping stories
+- E-newsletter header required
+- Social contact footer required
+- Do not use standard contact footer
+
+**Component usage:**
+- ✅ **Required:** UQ header, Sender header, E-newsletter header, Hero image, Social contact footer
+- ⭐ **Recommended:** In-content images, Content sections
+- ⛔ **Do not use:** Contact footer
+
+### Component usage comparison
+
+<table width="100%">
+  <thead>
+    <tr>
+      <th>Component</th>
+      <th>Standard</th>
+      <th>Event</th>
+      <th>Alert</th>
+      <th>E-Newsletter</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>UQ header</td>
+      <td style={{backgroundColor: '#e8f5e9'}}>✅ Required</td>
+      <td style={{backgroundColor: '#e8f5e9'}}>✅ Required</td>
+      <td style={{backgroundColor: '#e8f5e9'}}>✅ Required</td>
+      <td style={{backgroundColor: '#e8f5e9'}}>✅ Required</td>
+    </tr>
+    <tr>
+      <td>Sender header</td>
+      <td style={{backgroundColor: '#e8f5e9'}}>✅ Required</td>
+      <td style={{backgroundColor: '#e8f5e9'}}>✅ Required</td>
+      <td style={{backgroundColor: '#e8f5e9'}}>✅ Required</td>
+      <td style={{backgroundColor: '#e8f5e9'}}>✅ Required</td>
+    </tr>
+    <tr>
+      <td>E-newsletter header</td>
+      <td style={{backgroundColor: '#ffebee'}}>⛔ Do not use</td>
+      <td style={{backgroundColor: '#ffebee'}}>⛔ Do not use</td>
+      <td style={{backgroundColor: '#ffebee'}}>⛔ Do not use</td>
+      <td style={{backgroundColor: '#e8f5e9'}}>✅ Required</td>
+    </tr>
+    <tr>
+      <td>Hero image</td>
+      <td style={{backgroundColor: '#ffebee'}}>⛔ Do not use</td>
+      <td style={{backgroundColor: '#fff3cd'}}>⭐ Recommended</td>
+      <td style={{backgroundColor: '#ffebee'}}>⛔ Do not use</td>
+      <td style={{backgroundColor: '#e8f5e9'}}>✅ Required</td>
+    </tr>
+    <tr>
+      <td>In-content images</td>
+      <td style={{backgroundColor: '#ffebee'}}>⛔ Do not use</td>
+      <td style={{backgroundColor: '#e3f2fd'}}>⚪ Use if needed</td>
+      <td style={{backgroundColor: '#ffebee'}}>⛔ Do not use</td>
+      <td style={{backgroundColor: '#fff3cd'}}>⭐ Recommended</td>
+    </tr>
+    <tr>
+      <td>Content sections</td>
+      <td style={{backgroundColor: '#ffebee'}}>⛔ Do not use</td>
+      <td style={{backgroundColor: '#e3f2fd'}}>⚪ Use if needed</td>
+      <td style={{backgroundColor: '#ffebee'}}>⛔ Do not use</td>
+      <td style={{backgroundColor: '#fff3cd'}}>⭐ Recommended</td>
+    </tr>
+    <tr>
+      <td>Contact footer</td>
+      <td style={{backgroundColor: '#e8f5e9'}}>✅ Required</td>
+      <td style={{backgroundColor: '#ffebee'}}>⛔ Do not use</td>
+      <td style={{backgroundColor: '#e8f5e9'}}>✅ Required</td>
+      <td style={{backgroundColor: '#ffebee'}}>⛔ Do not use</td>
+    </tr>
+    <tr>
+      <td>Social contact footer</td>
+      <td style={{backgroundColor: '#ffebee'}}>⛔ Do not use</td>
+      <td style={{backgroundColor: '#e8f5e9'}}>✅ Required</td>
+      <td style={{backgroundColor: '#ffebee'}}>⛔ Do not use</td>
+      <td style={{backgroundColor: '#e8f5e9'}}>✅ Required</td>
+    </tr>
+  </tbody>
+</table>
+
+## Working in Vision 6
+
+### Adding text into email messages
+
+To avoid unintended formatting being carried into your email, type content directly where possible. If copying content, use a plain text source (such as Notepad) to strip formatting.
+
+### Links
+
+When adding links ensure that **'Open in a new window'** is selected.
+
+**Link best practices:**
+- **Purpose-driven links:** Include hyperlinks that directly align with the email's main goal
+- **Descriptive call to actions:** "Download the guide" or "Access the course materials" rather than "Click here"
+- **Diversity of links:** Avoid repeating the same URL multiple times, unless required and it's your primary CTA
+
+## Quick Reference
+
+### Typography
+
+Using these styles ensures consistency across emails. Select these styles from the WYSIWYG editor toolbar rather than manually formatting text.
+
+<table width="100%">
+  <thead>
+    <tr>
+      <th>Element</th>
+      <th>Font</th>
+      <th>Weight</th>
+      <th>Size</th>
+      <th>Line height</th>
+      <th>Colour</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Heading 1</td>
+      <td>Roboto</td>
+      <td>Bold</td>
+      <td>32px</td>
+      <td>38px</td>
+      <td class="uqds-colour--black">
+        <span class="uqds-colour--white">#19151c</span>
+      </td>
+      <td>
+        <Story name="headingOne" of={typographyStories.heading1} />
+      </td>
+    </tr>
+    <tr>
+      <td>Heading 2</td>
+      <td>Roboto</td>
+      <td>Bold</td>
+      <td>24px</td>
+      <td>29px</td>
+      <td class="uqds-colour--black">
+        <span class="uqds-colour--white">#19151c</span>
+      </td>
+      <td>
+        <Story name="headingTwo" of={typographyStories.heading2} />
+      </td>
+    </tr>
+    <tr>
+      <td>Heading 3</td>
+      <td>Roboto</td>
+      <td>Bold</td>
+      <td>18px</td>
+      <td>22px</td>
+      <td class="uqds-colour--black">
+        <span class="uqds-colour--white">#19151c</span>
+      </td>
+      <td>
+        <Story name="headingThree" of={typographyStories.heading3} />
+      </td>
+    </tr>
+    <tr>
+      <td>Body</td>
+      <td>Roboto</td>
+      <td>Regular</td>
+      <td>16px</td>
+      <td>26px</td>
+      <td class="uqds-colour--grey-900">
+        <span class="uqds-colour--white">#3B383E</span>
+      </td>
+      <td>
+        <Story name="Body text" of={typographyStories.bodyText} />
+      </td>
+    </tr>
+    <tr>
+      <td>Link</td>
+      <td>Roboto</td>
+      <td>Regular</td>
+      <td>16px</td>
+      <td>26px</td>
+      <td class="uqds-colour--purple-500">
+        <span class="uqds-colour--white">#51274A</span>
+      </td>
+      <td>
+        <Story name="Link" of={typographyStories.bodyLink} />
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+### Buttons
+
+Buttons must be styled manually using the settings below.
+
+#### Primary button
+
+Use the primary button to highlight the most important call to action within the email, ideally limiting it to a single instance to maintain visual hierarchy and emphasis.
+
+<Canvas of={buttonStories.primaryButton} sourceState="none" />
+
+**Settings:**
+- Background: `#51247A` (UQ Purple)
+- Font colour: `#FFFFFF` (White)
+- Border: `#51247A` (Purple), 2px
+
+#### Secondary button
+
+Use the secondary button for actions that are important, but not the primary call to action. It has less visual emphasis than the primary button, helping maintain a clear hierarchy. Secondary buttons can be used multiple times within an email. If all actions are of equal importance, all buttons can be styled as secondary.
+
+<Canvas of={buttonStories.secondaryButton} sourceState="none" />
+
+**Settings:**
+- Background: `#FFFFFF` (White)
+- Font colour: `#51247A` (Purple)
+- Border: `#51247A` (Purple), 2px
+
+#### Button widths
+
+If the button label exceeds 14 characters, increase the button width by 20px to ensure adequate padding on both sides of the text.
+
+**To adjust button width:**
+1. Navigate to content section
+2. Open **Call to action** panel
+3. Scroll down to **width** field
+4. Increase width by 20px
+
+**To re-add a deleted button:**
+1. Go back to the original template
+2. Highlight the button section you want to use
+3. Select **copy**
+4. Go back to email message and paste the button
+
+### Images
+
+Use the following recommended image sizes to ensure the email layout displays correctly.
+
+**Downloading images from the Digital Asset Management (DAM) system:**
+
+These images are correctly sized and cropped for most imagery.
+
+1. Search and select image
+2. Navigate to download icon
+3. Select **custom**
+4. Select **'Medium'** (Hero) or **'small'** (in-content images)
+
+#### Hero images
+
+Large and small hero image options are available – choose the size that best fits your content. Recommended use for E-newsletter and event emails only.
+
+<table width="100%">
+  <thead>
+    <tr>
+      <th>Hero size</th>
+      <th>Image size (image uploaded)</th>
+      <th>Container size</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Large hero</td>
+      <td>1024W × 683H px</td>
+      <td>640W × 426H px</td>
+    </tr>
+    <tr>
+      <td>Small hero</td>
+      <td>1024W × 426H px OR<br/>1024W × 683H px (Crop in Vision 6 image editor to 426H)</td>
+      <td>640W × 213H px</td>
+    </tr>
+  </tbody>
+</table>
+
+**To re-add a deleted hero image:**
+1. Go back to the original template
+2. Highlight the hero image section you want to use
+3. Select **copy**
+4. Go back to email message and paste the image section
+
+#### In-content images
+
+Large and small in-content image options available – choose the size that best fits your content.
+
+<table width="100%">
+  <thead>
+    <tr>
+      <th>Image size</th>
+      <th>Image size (image uploaded)</th>
+      <th>Container size</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Large image (landscape)</td>
+      <td>512W × 341H px</td>
+      <td>300W × 200H px</td>
+    </tr>
+    <tr>
+      <td>Large image (portrait)</td>
+      <td>450W × 600H px</td>
+      <td>225W × 300H px</td>
+    </tr>
+    <tr>
+      <td>Small image (landscape)</td>
+      <td>400W × 266H px</td>
+      <td>200W × 133H px</td>
+    </tr>
+    <tr>
+      <td>Small image (portrait)</td>
+      <td>300W × 400H px</td>
+      <td>150W × 200H px</td>
+    </tr>
+  </tbody>
+</table>
+
+**Image best practices:**
+
+- Recommend resizing images in the [DAM](#downloading-images-from-the-digital-asset-management-dam-system), Photoshop or another image editing tool to the specified image size dimensions to ensure consistent display and correct aspect ratio
+- Provide descriptive alt text for accessibility
+- Avoid text within images (screen readers can't interpret embedded text)
+
+**To re-add a deleted in-content image:**
+1. Go back to the original template
+2. Highlight the image section you want to use
+3. Select **copy**
+4. Go back to email message and paste the image section
+
+### Content sections
+
+Content sections help organize multiple stories or topics in E-newsletters, creating clear visual separation between different content areas.
+
+**When to use content sections:**
+
+Use section headings to help group related content and make it easier to scan. Only add section headings when grouping related content - if everything flows well without them, it's fine to leave them out.
+
+**Guidelines:**
+- Use section headings to help group related content, not for individual story headlines
+- Aim for no more than four sections
+- Use subheadings within sections if needed
+- Content sections should be set up with separate section headers instead of using the 'title' component
+- Alternate between grey and white background colours to help create clear visual separation between content sections
+
+**Colours:**
+- Section background colour: `#F3F3F4` (Grey) or `#FFFFFF` (White)
+- Section header colour: `#962A8B` (Light purple)
+
+**Important:** Use only the colours specified to maintain brand consistency across all communications and ensure sufficient colour contrast for accessibility compliance.
+
+**To re-add a deleted content section:**
+1. Go back to the original template
+2. Highlight the content section you want to use
+3. Select **copy**
+4. Go back to email message and paste the content section
+
+## Component-Specific Instructions
+
+### UQ Header
+
+Used across all UQ emails. Includes the UQ logo, linking to the UQ homepage, and a 'View in browser' link that opens the email in the user's browser for easier viewing.
+
+<Canvas of={headerStories.header} sourceState="none" />
+
+See [Email Guidelines](?path=/docs/design-guidelines-email-template-guidelines--docs#uq-header) for UQ header component.
+
+**To re-add a deleted UQ header:**
+1. Go back to the original template
+2. Highlight the UQ header section
+3. Select **copy**
+4. Go back to email message and paste the header
+
+### Sender header
+
+To help recipients recognise and trust UQ email communications, always use the full name of the area, faculty, school, or office in the sender name, with the acronym in brackets where relevant. This ensures students can quickly identify the source of the message, particularly when communications come from a faculty, school, division, or central office.
+
+The sender name should reflect the area responsible for responding to enquiries related to the email.
+
+**Examples:**
+- Faculty of Engineering, Architecture and Information Technology (EAIT)
+- Faculty of Health, Medicine and Behavioural Sciences (HABS)
+- Business School
+- From the Deputy Vice-Chancellor (Academic)
+- Institute for Teaching and Learning Innovation (ITaLI)
+
+<Canvas of={senderHeaderStories.senderHeader} sourceState="none" />
+
+**To re-add a deleted sender header:**
+1. Go back to the original template
+2. Highlight the sender header section
+3. Select **copy**
+4. Go back to email message and paste the header
+
+### E-Newsletter header block
+
+E-Newsletter header block appears below the hero image. Includes newsletter name/headline and optional subtitle. Component story coming soon.
+
+**Newsletter header:** A short heading displayed below the main image that introduces the newsletter name (if applicable) or a headline that highlights the primary theme of the newsletter.
+
+**Newsletter subtitle:** Optional supporting description of newsletter purpose.
+
+**To re-add a deleted e-newsletter header:**
+1. Go back to the original template
+2. Highlight the e-newsletter header section
+3. Select **copy**
+4. Go back to email message and paste the header
+
+### Standard footer
+
+Used across all UQ emails.
+
+Includes:
+- Acknowledgement of Country
+- CRICOS
+- TEQSA
+- UQ's Privacy Policy
+
+<Canvas of={footerStandardStories.footerStandard} sourceState="none" />
+
+See [Email Guidelines](?path=/docs/design-guidelines-email-template-guidelines--docs#standard-footer) for standard footer component.
+
+**To re-add a deleted standard footer:**
+1. Go back to the original template
+2. Highlight the standard footer section
+3. Select **copy**
+4. Go back to email message and paste the footer
+
+### Block footer
+
+Used in emails without a contact footer to clearly separate the main content from the footer section.
+
+<Canvas of={footerBlockStories.blockFooter} sourceState="none" />
+
+**To re-add a deleted block footer:**
+1. Go back to the original template
+2. Highlight the block footer section
+3. Select **copy**
+4. Go back to email message and paste the footer
+
+### Contact footer
+
+Includes the sender's contact details to clearly identify the source of the email.
+
+**Minimum requirements:**
+- Contact name
+- Email address or link to an enquiry form
+
+The contact details must be included at the bottom of the email, after the main body of the email.
+
+#### Area contact footer
+
+<Canvas of={footerContactStories.contactArea} sourceState="none" />
+
+#### Individual contact footer (USET or C-suite)
+
+<Canvas of={footerContactStories.contact} sourceState="none" />
+
+See [Email Guidelines](?path=/docs/design-guidelines-email-template-guidelines--docs#contact-footer) for contact footer component.
+
+**To re-add a deleted contact footer:**
+1. Go back to the original template
+2. Highlight the contact footer section
+3. Select **copy**
+4. Go back to email message and paste the footer
+
+### Social contact footer
+
+The social contact footer should include contact details for the relevant team replying to the enquiries.
+
+<table width="100%">
+  <thead>
+    <tr>
+      <th>Item (*mandatory item)</th>
+      <th>Example</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>*Contact {'{area/faculty name}'}</td>
+      <td>Contact EAIT Faculty</td>
+      <td>Use acronym if mentioned in sender header</td>
+    </tr>
+    <tr>
+      <td>*Email address or link to enquiry form</td>
+      <td>enquiries@eait.uq.edu.au</td>
+      <td>Use mailto: format when adding email links</td>
+    </tr>
+    <tr>
+      <td>Phone number</td>
+      <td>+61 7 3365 4666</td>
+      <td>Use tel: format when adding phone numbers</td>
+    </tr>
+    <tr>
+      <td>Website</td>
+      <td>Visit EAIT Faculty website</td>
+      <td>Use descriptive link text, for example:<br/>✓ Visit EAIT Faculty website<br/>✗ https://www.eait.uq.edu.au/</td>
+    </tr>
+    <tr>
+      <td>Hours of operation</td>
+      <td>Monday to Friday 8:30am – 4:30pm AEST</td>
+      <td>Follow format example</td>
+    </tr>
+    <tr>
+      <td>Address</td>
+      <td>Level 2, Hawken Engineering Building 50, St Lucia Campus</td>
+      <td>Link to <a href="https://maps.uq.edu.au/" target="_blank" rel="noopener noreferrer">UQ maps</a></td>
+    </tr>
+  </tbody>
+</table>
+
+**To re-add a deleted social contact footer:**
+1. Go back to the original template
+2. Highlight the social contact footer section
+3. Select **copy**
+4. Go back to email message and paste the footer
+
+### Social icons
+
+The template includes default UQ social media links. Update these to reflect your area's official channels. Remove any links that are not relevant, and ensure only one link is shown per platform.
+
+#### To remove a social icon link
+
+1. Select the social icon in the footer
+2. Hit **backspace/delete** key
+
+#### To update a social icon link
+
+1. Select the social icon in the footer
+2. Select the **Link** option in the WYSIWYG editor toolbar
+3. Update the URL
+4. Click **Insert link**
+
+#### To add an additional social icon
+
+1. Open the original template
+2. Navigate to the contact footer
+3. Select and copy the social icon
+4. Return to your email message
+5. Navigate to the contact footer
+6. Press **space twice** to create spacing
+7. Paste the icon into the footer
+
+## Resources & Further Reading
+
+### Related documentation
+
+- [Email Guidelines](?path=/docs/design-guidelines-email-template-guidelines--docs) — General email design guidelines
+- [General components](?path=/docs/components-general-components--docs) — Reusable component examples
+
+### External resources
+
+- [Digital Asset Management (DAM) system](https://dam.uq.edu.au/) — Download images at correct sizes
+- [UQ Maps](https://maps.uq.edu.au/) — Link building addresses in contact footers
+- [Writing effective email communications (Workday modules)](https://wd3.myworkday.com/uq/learning/course/03754d08acfb1000da689b451a150000?type=9882927d138b100019b928e75843018d&record=91348ef70804100082cc384e3a320000&metadataEntryPoint=%2Fuq%2Flearning) — Email communication training
+- [UQ written style guide](https://marketing-communication.uq.edu.au/written-style-guide) — Writing standards
+- [Accessibility author checklist](https://staff.uq.edu.au/information-and-services/information-technology/web-and-intranet-sites/web-writing-guide/edit-website-content/web-accessibility/accessibility-author-checklist) — Accessibility compliance

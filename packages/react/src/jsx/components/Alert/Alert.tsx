@@ -3,7 +3,7 @@ import classNames from "classnames";
 import styles from "./alert.module.scss";
 
 export interface AlertProps {
-  /** Small text to appear above the main title. */
+  /** Visual style/intent of the alert. */
   variant: "info" | "warning" | "error" | "success";
 
   /** Global alerts are darker variants of alerts that are used to convey a

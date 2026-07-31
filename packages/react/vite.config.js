@@ -37,8 +37,8 @@ export default defineConfig({
   css: {
     modules: {
       // Use consistent naming format for CSS classes
-      localsConvention: "camelCaseOnly",
-      generateScopedName: "[name]__[local]___[hash:base64:5]",
+      localsConvention: "dashes",
+      generateScopedName: "[local]___[hash:base64:5]",
     },
   },
 });

@@ -29,6 +29,9 @@ export default defineConfig({
     cssCodeSplit: true,
     rollupOptions: {
       external: ["react", "react/jsx-runtime"],
+      output: {
+        assetFileNames: "index.css",
+      },
     },
   },
   css: {

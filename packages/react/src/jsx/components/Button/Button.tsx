@@ -49,15 +49,15 @@ export const Button: FC<ButtonProps> = ({
       {icon &&
         (spinner ? (
           <span
-            className={classNames({
-              [styles["uq-loading-spinner"]]: true,
-              [styles["uq-loading-spinner--small"]]: true,
-              [styles["uq-loading-spinner--light"]]: [
+            className={classNames(
+              styles["uq-loading-spinner"],
+              styles["uq-loading-spinner--small"],
+              [
                 // Use a light spinner for these dark button styles.
-                "",
+                styles["uq-loading-spinner--light"],
                 "primary",
-              ].includes(style ?? ""),
-            })}
+              ].includes(style ?? "") && styles["uq-loading-spinner--light"],
+            )}
           ></span>
         ) : (
           // Show the icon if present, if the spinner is not in use.

@@ -69,7 +69,7 @@ export const TextInput: FC<TextInputProps> = ({
   const id = useId();
 
   return (
-    <div className="uq-input-container">
+    <div>
       <div
         className={classNames({
           [styles["uq-input-withlabel"]]: true,
@@ -110,7 +110,6 @@ export const TextInput: FC<TextInputProps> = ({
           placeholder={placeholder}
           disabled={disabled}
           required={required}
-          onSubmit={onSubmit}
           onChange={onChange && ((ev) => onChange(ev.target.value))}
           value={value}
           onKeyDown={(ev) => {
@@ -159,7 +158,7 @@ export const TextInput: FC<TextInputProps> = ({
           </>
         )}
       </div>
-      {(feedback || feedbackState !== undefined) && (
+      {(feedback !== "" || feedbackState !== "hidden") && (
         <span
           id={id + "-feedback"}
           aria-live="polite"

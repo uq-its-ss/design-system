@@ -8,12 +8,11 @@ export interface IconProps {
    * Storybook for the Icon component for a graphical list of options. */
   name: IconCode;
 
-  /** Small text to appear above the main title. */
+  /** Visual style variant for the icon. */
   variant?: "default" | "light" | "text";
 }
 
-/** A box used to notify users of important information or changes on a page
- * needing their attention, without interrupting their task. */
+/** Displays a predefined icon using the selected visual variant. */
 export const Icon: FC<IconProps> = ({ name, variant }) => {
   return (
     <span

@@ -1,1 +1,9 @@
 @use "@uqds/card/src/scss/main" as card;
+
+.uq-card__icon {
+  :global(.uq-icon)::before,
+  :global([class^="uq-icon"])::before,
+  :global([class*=" uq-icon"])::before {
+    font-size: inherit;
+  }
+}

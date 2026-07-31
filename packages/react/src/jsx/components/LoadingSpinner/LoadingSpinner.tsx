@@ -14,7 +14,7 @@ export interface LoadingSpinnerProps {
   visible?: boolean;
 }
 
-/** A button the user can click on to perform an action. */
+/** A loading spinner indicator. */
 export const LoadingSpinner: FC<LoadingSpinnerProps> = ({
   variant = "dark",
   size = "default",

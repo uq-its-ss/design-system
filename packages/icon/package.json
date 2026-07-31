@@ -28,13 +28,25 @@
   },
   "files": [
     "index.js",
-    "dist/*",
-    "src/js/*",
+    "dist/css/*",
+    "dist/images/*",
+    "src/js/_build/*",
     "src/scss/*",
     "src/ts/_build/*"
   ],
+  "exports": {
+    ".": {
+      "types": "./src/ts/_build/_icons.d.ts",
+      "import": "./index.js",
+      "require": "./index.js",
+      "default": "./index.js"
+    },
+    "./dist/css/main.css": "./dist/css/main.css",
+    "./src/js/_build/*": "./src/js/_build/*.js",
+    "./src/scss/*": "./src/scss/*"
+  },
   "style": "dist/css/main.css",
-  "types": "src/ts/index.d.ts",
+  "types": "src/ts/_build/_icons.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/uq-its-ss/design-system.git"

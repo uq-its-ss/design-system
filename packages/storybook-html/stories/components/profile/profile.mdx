@@ -66,3 +66,36 @@ Examples of contextual usage of the profile component.
 #### Expert profile
 
 <Canvas of={profileStories.ExpertProfile} />
+
+## Analytics
+
+**Profile container**
+
+<table>
+  <thead>
+    <tr>
+      <th>Property / DOM Target</th>
+      <th>Type</th>
+      <th>Value</th>
+      <th>Description & Logic</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>`data-gtm-category` on `<article class="uq-profile">`</td>
+      <td>String</td>
+      <td>`"Profile"`</td>
+      <td>Defines the top-level tracking category for the entire profile component. All links and interactive elements within the profile component (email links, phone links, and profile view links) automatically inherit the "Profile" category from the parent container.</td>
+    </tr>
+  </tbody>
+</table>
+
+```
+dataLayer.push({
+    'event' : 'Custom click',
+    'click_category': 'Profile',
+    'click_action': 'link click',
+    'click_label': '{{click text}}', // ’View Professor Jane Doe's profile'
+    'click_url' : '{{href url}}', // 'https://about.uq.edu.au/experts/1371'
+});
+```

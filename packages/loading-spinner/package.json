@@ -29,6 +29,7 @@
     "src/*",
     "dist/*"
   ],
+<<<<<<< HEAD
   "main": "dist/js/uqds.js",
   "module": "dist/mjs/index.js",
   "exports": {
@@ -39,6 +40,11 @@
     "./src/js/*": "./src/js/*.js",
     "./src/scss/*": "./src/scss/*",
     "./css": "./dist/css/main.css"
+=======
+  "exports": {
+    "./dist/css/main.css": "./dist/css/main.css",
+    "./src/scss/*": "./src/scss/*"
+>>>>>>> 590020a7ecac8d37010d2acfdab5bb6b329ad7b9
   },
   "style": "dist/css/main.css",
   "scripts": {

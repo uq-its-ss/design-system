@@ -86,11 +86,18 @@
   },
   "devDependencies": {
     "@types/react": "^18.3.18",
+<<<<<<< HEAD
     "@vitejs/plugin-react": "^4.6.0",
     "typescript": "^5.8.3",
     "vite": "^6.3.5",
     "vite-plugin-commonjs": "^0.10.4",
     "vite-plugin-dts": "^4.5.4"
+=======
+    "@vitejs/plugin-react": "^6.0.2",
+    "typescript": "^5.7.3",
+    "vite": "^8.0.16",
+    "vite-plugin-dts": "^4.5.0"
+>>>>>>> 590020a7ecac8d37010d2acfdab5bb6b329ad7b9
   },
   "peerDependencies": {
     "react": "^18.3.1"

@@ -17,15 +17,74 @@ export default {
 export const previousNextInitial = {
   render: () => {
     return `
-      <div class="uq-previous-next">
-        <div class="uq-previous-next__item uq-previous-next__item--hidden">
-          <a href="#" class="uq-previous-next__link-previous">Enrolment basics <span class="uq-previous-next__description">Previous</span></a>
+
+      <h2>Previous next with link</h2>
+
+
+      <p>Don't choose just any path – choose your future. Discover study options to match your interests, passions and career goals. </p>
+      <nav class="uq-previous-next" aria-label="someName">
+        <div class="uq-previous-next__item">
+          <a class="uq-icon  uq-icon uq-icon--standard--arrow-right" href="#">Next</a>
+        </div>
+      </nav>
+ 
+      <hr>
+      <p>Don't choose just any path – choose your future. Discover study options to match your interests, passions and career goals. </p>
+      <nav class="uq-previous-next" aria-label="someName">
+        <div class="uq-previous-next__item">
+          <a class="uq-icon  uq-icon uq-icon--standard--arrow-right" href="#">Next</a>
         </div>
 
         <div class="uq-previous-next__item">
-          <a href="#" class="uq-previous-next__link-next">How to enrol <span class="uq-previous-next__description">Next</span></a>
+          <a class="uq-icon  uq-icon uq-icon--standard--arrow-left" href="#">Previous</a>
         </div>
-      </div>
+      </nav>
+
+      <hr>
+      <p>Don't choose just any path – choose your future. Discover study options to match your interests, passions and career goals. </p>
+      <nav class="uq-previous-next" aria-label="someName">
+        <div class="uq-previous-next__item">
+          <a class="uq-icon  uq-icon uq-icon--standard--arrow-left" href="#">Previous</a>
+        </div>
+      </nav>
+
+      <h2>Previous next with button</h2>
+
+      <p>Don't choose just any path – choose your future. Discover study options to match your interests, passions and career goals. </p>
+      
+      <nav class="uq-previous-next" aria-label="someName">
+        <div class="uq-previous-next__item">
+          <button class="uq-button uq-button--tertiary">
+            <span class="uq-icon uq-icon--standard--arrow-left"></span>Next
+          </button>
+        </div>
+      </nav>
+ 
+      <hr>
+      <p>Don't choose just any path – choose your future. Discover study options to match your interests, passions and career goals. </p>
+      <nav class="uq-previous-next" aria-label="someName">
+        <div class="uq-previous-next__item">
+          <button class="uq-button uq-button--tertiary">
+            <span class="uq-icon uq-icon--standard--arrow-left"></span>Next
+          </button>
+        </div>
+
+        <div class="uq-previous-next__item">
+          <button class="uq-button uq-button--tertiary">
+            <span class="uq-icon uq-icon--standard--arrow-right"></span> Previous
+          </button>
+        </div>
+      </nav>
+
+      <hr>
+      <p>Don't choose just any path – choose your future. Discover study options to match your interests, passions and career goals. </p>
+      <nav class="uq-previous-next" aria-label="someName">
+        <div class="uq-previous-next__item">
+          <button class="uq-button uq-button--tertiary">
+            <span class="uq-icon uq-icon--standard--arrow-right"></span> Previous
+          </button>
+        </div>
+      </nav>
     `;
   },
 

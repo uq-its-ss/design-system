@@ -6,18 +6,23 @@ export default {
   render: ({ style, label, size, expand, icon, iconPosition }) => {
     // Check if style is "Link" (maps to "uq-button--link")
     const isLink = style === "uq-button--link";
-    
+
     // If link type with icon, apply icon classes to button instead of span
-    const iconClasses = (isLink && icon) ? `uq-icon uq-icon--${icon}${iconPosition === "right" ? " uq-icon--right" : ""}` : "";
-    
+    const iconClasses =
+      isLink && icon
+        ? `uq-icon uq-icon--${icon}${iconPosition === "right" ? " uq-icon--right" : ""}`
+        : "";
+
     // Icon span element (only for non-link buttons)
-    const iconSpan = (icon && !isLink) ? `<span class="uq-icon uq-icon--${icon}"></span>` : "";
-    
+    const iconSpan =
+      icon && !isLink ? `<span class="uq-icon uq-icon--${icon}"></span>` : "";
+
     // Position icon based on iconPosition arg
-    const content = iconPosition === "right" 
-      ? `${label} ${iconSpan}`
-      : `${iconSpan} ${label}`;
-    
+    const content =
+      iconPosition === "right"
+        ? `${label} ${iconSpan}`
+        : `${iconSpan} ${label}`;
+
     return `<button class="${classNames("uq-button", style, size, { "uq-button--expand": expand }, iconClasses)}">
     ${content}
     </button>`;

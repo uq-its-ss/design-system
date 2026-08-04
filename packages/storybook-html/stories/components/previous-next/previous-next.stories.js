@@ -23,7 +23,8 @@ export default {
     state: {
       control: "select",
       options: ["initial", "middle", "final"],
-      description: "Navigation state: initial (next only), middle (both), final (previous only)",
+      description:
+        "Navigation state: initial (next only), middle (both), final (previous only)",
     },
     ariaLabel: {
       control: "text",
@@ -66,7 +67,15 @@ export default {
     },
   },
 
-  render: ({ state, ariaLabel, nextHref, nextLabel, previousHref, previousLabel, useButton }) => {
+  render: ({
+    state,
+    ariaLabel,
+    nextHref,
+    nextLabel,
+    previousHref,
+    previousLabel,
+    useButton,
+  }) => {
     const nextElement = useButton
       ? `<button class="uq-button uq-button--link uq-icon uq-icon--standard--arrow-right">${nextLabel}</button>`
       : `<a class="uq-icon uq-icon--standard--arrow-right" href="${nextHref}">${nextLabel}</a>`;

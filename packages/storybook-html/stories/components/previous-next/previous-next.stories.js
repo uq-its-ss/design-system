@@ -55,7 +55,7 @@ export const previousNextInitial = {
       <nav class="uq-previous-next" aria-label="someName">
         <div class="uq-previous-next__item">
           <button class="uq-button uq-button--tertiary">
-            <span class="uq-icon uq-icon--standard--arrow-left"></span>Next
+            <span class="uq-icon uq-icon--standard--arrow-right"></span>Next
           </button>
         </div>
       </nav>
@@ -65,13 +65,13 @@ export const previousNextInitial = {
       <nav class="uq-previous-next" aria-label="someName">
         <div class="uq-previous-next__item">
           <button class="uq-button uq-button--tertiary">
-            <span class="uq-icon uq-icon--standard--arrow-left"></span>Next
+            <span class="uq-icon uq-icon--standard--arrow-right"></span>Next
           </button>
         </div>
 
         <div class="uq-previous-next__item">
           <button class="uq-button uq-button--tertiary">
-            <span class="uq-icon uq-icon--standard--arrow-right"></span> Previous
+            <span class="uq-icon uq-icon--standard--arrow-left"></span> Previous
           </button>
         </div>
       </nav>
@@ -81,7 +81,7 @@ export const previousNextInitial = {
       <nav class="uq-previous-next" aria-label="someName">
         <div class="uq-previous-next__item">
           <button class="uq-button uq-button--tertiary">
-            <span class="uq-icon uq-icon--standard--arrow-right"></span> Previous
+            <span class="uq-icon uq-icon--standard--arrow-left"></span> Previous
           </button>
         </div>
       </nav>

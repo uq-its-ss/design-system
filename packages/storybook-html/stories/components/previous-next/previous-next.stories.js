@@ -10,15 +10,21 @@ export default {
     },
   },
   args: {
+    state: "middle",
     ariaLabel: "Page navigation",
-    nextHref: "#",
     nextLabel: "Next",
-    previousHref: "#",
+    nextHref: "#",
     previousLabel: "Previous",
+    previousHref: "#",
     useButton: false,
   },
 
   argTypes: {
+    state: {
+      control: "select",
+      options: ["initial", "middle", "final"],
+      description: "Navigation state: initial (next only), middle (both), final (previous only)",
+    },
     ariaLabel: {
       control: "text",
       description: "Accessible label for the navigation",
@@ -26,26 +32,41 @@ export default {
     nextHref: {
       control: "text",
       description: "URL for the next link",
+      table: {
+        category: "Next", // Groups the field
+      },
     },
     nextLabel: {
       control: "text",
       description: "Label for the next link",
+      table: {
+        category: "Next", // Groups the field
+      },
     },
     previousHref: {
       control: "text",
       description: "URL for the previous link",
+      table: {
+        category: "Previous", // Groups the field
+      },
     },
     previousLabel: {
       control: "text",
       description: "Label for the previous link",
+      table: {
+        category: "Previous", // Groups the field
+      },
     },
     useButton: {
       control: "boolean",
       description: "Use button instead of anchor tag",
+      table: {
+        category: "Link or Button", // Groups the field
+      },
     },
   },
 
-  render: ({ ariaLabel, nextHref, nextLabel, previousHref, previousLabel, useButton }) => {
+  render: ({ state, ariaLabel, nextHref, nextLabel, previousHref, previousLabel, useButton }) => {
     const nextElement = useButton
       ? `<button class="uq-button uq-button--link uq-icon uq-icon--standard--arrow-right">${nextLabel}</button>`
       : `<a class="uq-icon uq-icon--standard--arrow-right" href="${nextHref}">${nextLabel}</a>`;
@@ -54,20 +75,46 @@ export default {
       ? `<button class="uq-button uq-button--link uq-icon uq-icon--standard--arrow-left">${previousLabel}</button>`
       : `<a class="uq-icon uq-icon--standard--arrow-left" href="${previousHref}">${previousLabel}</a>`;
 
+    // Determine which elements to show based on state
+    const showNext = state === "initial" || state === "middle";
+    const showPrevious = state === "middle" || state === "final";
+
     return `
       <nav class="uq-previous-next" aria-label="${ariaLabel}">
-        <div class="uq-previous-next__item">
-          ${nextElement}
-        </div>
-
-        <div class="uq-previous-next__item">
-          ${previousElement}
-        </div>
+        ${showNext ? `<div class="uq-previous-next__item">${nextElement}</div>` : ""}
+        ${showPrevious ? `<div class="uq-previous-next__item">${previousElement}</div>` : ""}
       </nav>
     `;
   },
 
-  name: "Both previous and next",
+  name: "Previous next navigation",
 };
 
-export const PreviousNext = {};
+export const Initial = {
+  args: {
+    state: "initial",
+  },
+  name: "Initial state (Next only)",
+};
+
+export const Middle = {
+  args: {
+    state: "middle",
+  },
+  name: "Middle state (Both)",
+};
+
+export const Final = {
+  args: {
+    state: "final",
+  },
+  name: "Final state (Previous only)",
+};
+
+export const WithButtons = {
+  args: {
+    state: "middle",
+    useButton: true,
+  },
+  name: "With buttons (Middle state)",
+};

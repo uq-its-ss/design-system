@@ -1,4 +1,4 @@
-import { Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
+import { Meta, Canvas, Controls } from "@storybook/addon-docs/blocks";
 import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
 import * as PreviousNextStories from "./previous-next.stories";
 
@@ -21,7 +21,9 @@ issues](https://github.com/uq-its-ss/design-system/issues)
 
 An instance when only the next button is visible
 
-<Canvas of={PreviousNextStories.previousNextInitial} />
+<Canvas of={PreviousNextStories.PreviousNext} />
+
+<Controls of={PreviousNextStories.PreviousNext} />
 
 ```html
 <div class="uq-previous-next">
@@ -44,7 +46,6 @@ An instance when only the next button is visible
 
 An instance when both the previous and next buttons are visible
 
-<Canvas of={PreviousNextStories.previousNextMiddle} />
 
 ```html
 <!-- Previous and Next buttons are visible -->
@@ -68,7 +69,7 @@ An instance when both the previous and next buttons are visible
 
 An instance when only the previous button is visible
 
-<Canvas of={PreviousNextStories.previousNextFinal} />
+
 
 ```html
 <div class="uq-previous-next">

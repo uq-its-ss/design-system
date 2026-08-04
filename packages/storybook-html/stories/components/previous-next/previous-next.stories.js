@@ -1,9 +1,6 @@
 // import styles
 import "./previous-next.scss";
 
-// import HTML template strings
-import previousNextHTML from "./previous-next.html?raw";
-
 export default {
   title: "Components/Previous next",
   parameters: {
@@ -12,107 +9,65 @@ export default {
       canvas: { hidden: false },
     },
   },
-};
+  args: {
+    ariaLabel: "Page navigation",
+    nextHref: "#",
+    nextLabel: "Next",
+    previousHref: "#",
+    previousLabel: "Previous",
+    useButton: false,
+  },
 
-export const previousNextInitial = {
-  render: () => {
+  argTypes: {
+    ariaLabel: {
+      control: "text",
+      description: "Accessible label for the navigation",
+    },
+    nextHref: {
+      control: "text",
+      description: "URL for the next link",
+    },
+    nextLabel: {
+      control: "text",
+      description: "Label for the next link",
+    },
+    previousHref: {
+      control: "text",
+      description: "URL for the previous link",
+    },
+    previousLabel: {
+      control: "text",
+      description: "Label for the previous link",
+    },
+    useButton: {
+      control: "boolean",
+      description: "Use button instead of anchor tag",
+    },
+  },
+
+  render: ({ ariaLabel, nextHref, nextLabel, previousHref, previousLabel, useButton }) => {
+    const nextElement = useButton
+      ? `<button class="uq-button uq-button--link uq-icon uq-icon--standard--arrow-right">${nextLabel}</button>`
+      : `<a class="uq-icon uq-icon--standard--arrow-right" href="${nextHref}">${nextLabel}</a>`;
+
+    const previousElement = useButton
+      ? `<button class="uq-button uq-button--link uq-icon uq-icon--standard--arrow-left">${previousLabel}</button>`
+      : `<a class="uq-icon uq-icon--standard--arrow-left" href="${previousHref}">${previousLabel}</a>`;
+
     return `
-
-      <h2>Previous next with link</h2>
-
-
-      <p>Don't choose just any path – choose your future. Discover study options to match your interests, passions and career goals. </p>
-      <nav class="uq-previous-next" aria-label="someName">
+      <nav class="uq-previous-next" aria-label="${ariaLabel}">
         <div class="uq-previous-next__item">
-          <a class="uq-icon  uq-icon uq-icon--standard--arrow-right" href="#">Next</a>
-        </div>
-      </nav>
- 
-      <hr>
-      <p>Don't choose just any path – choose your future. Discover study options to match your interests, passions and career goals. </p>
-      <nav class="uq-previous-next" aria-label="someName">
-        <div class="uq-previous-next__item">
-          <a class="uq-icon  uq-icon uq-icon--standard--arrow-right" href="#">Next</a>
+          ${nextElement}
         </div>
 
         <div class="uq-previous-next__item">
-          <a class="uq-icon  uq-icon uq-icon--standard--arrow-left" href="#">Previous</a>
-        </div>
-      </nav>
-
-      <hr>
-      <p>Don't choose just any path – choose your future. Discover study options to match your interests, passions and career goals. </p>
-      <nav class="uq-previous-next" aria-label="someName">
-        <div class="uq-previous-next__item">
-          <a class="uq-icon  uq-icon uq-icon--standard--arrow-left" href="#">Previous</a>
-        </div>
-      </nav>
-
-      <h2>Previous next with button</h2>
-
-      <p>Don't choose just any path – choose your future. Discover study options to match your interests, passions and career goals. </p>
-      
-      <nav class="uq-previous-next" aria-label="someName">
-        <div class="uq-previous-next__item">
-          <button class="uq-button uq-button--tertiary">
-            <span class="uq-icon uq-icon--standard--arrow-right"></span>Next
-          </button>
-        </div>
-      </nav>
- 
-      <hr>
-      <p>Don't choose just any path – choose your future. Discover study options to match your interests, passions and career goals. </p>
-      <nav class="uq-previous-next" aria-label="someName">
-        <div class="uq-previous-next__item">
-          <button class="uq-button uq-button--tertiary">
-            <span class="uq-icon uq-icon--standard--arrow-right"></span>Next
-          </button>
-        </div>
-
-        <div class="uq-previous-next__item">
-          <button class="uq-button uq-button--tertiary">
-            <span class="uq-icon uq-icon--standard--arrow-left"></span> Previous
-          </button>
-        </div>
-      </nav>
-
-      <hr>
-      <p>Don't choose just any path – choose your future. Discover study options to match your interests, passions and career goals. </p>
-      <nav class="uq-previous-next" aria-label="someName">
-        <div class="uq-previous-next__item">
-          <button class="uq-button uq-button--tertiary">
-            <span class="uq-icon uq-icon--standard--arrow-left"></span> Previous
-          </button>
+          ${previousElement}
         </div>
       </nav>
     `;
   },
 
-  name: "Previous next initial",
+  name: "Both previous and next",
 };
 
-export const previousNextMiddle = {
-  render: () => {
-    return previousNextHTML;
-  },
-
-  name: "Previous next middle",
-};
-
-export const previousNextFinal = {
-  render: () => {
-    return `
-      <div class="uq-previous-next">
-        <div class="uq-previous-next__item">
-          <a href="#" class="uq-previous-next__link-previous">Enrolment basics <span class="uq-previous-next__description">Previous</span></a>
-        </div>
-
-        <div class="uq-previous-next__item uq-previous-next__item--hidden">
-          <a href="#" class="uq-previous-next__link-next">How to enrol <span class="uq-previous-next__description">Next</span></a>
-        </div>
-      </div>
-    `;
-  },
-
-  name: "Previous next final",
-};
+export const PreviousNext = {};

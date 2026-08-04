@@ -133,6 +133,59 @@
   }
 }
 
+
+.uq-button--link {
+  background-color: transparent;
+  border-color: transparent;
+  color: core.$purple-500;
+  font-weight: core.$font-weight-medium;
+  text-decoration: underline;
+  transition:
+    color 200ms ease-out,
+    text-decoration 200ms ease-out,
+    background-color 200ms ease-out;
+  display: inline-block;
+  cursor: pointer;
+  // Remove default button styles
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  line-height: core.$line-height;
+
+  & .uq-icon::before {
+    filter: icon.$icon-primary-filter;
+  }
+
+  &:hover {
+    border-color: transparent;
+    color: core.$white;
+    background-color: core.$purple-500;
+
+    & .uq-icon::before {
+      filter: icon.$icon-primary-filter;
+    }
+  }
+
+  &.uq-button--reverse {
+    background-color: transparent;
+    border-color: transparent;
+    color: core.$white;
+
+    & .uq-icon::before {
+      filter: icon.$icon-light-filter;
+    }
+
+    &:hover {
+      background-color: transparent;
+      color: core.$white;
+
+      & .uq-icon::before {
+        filter: icon.$icon-light-filter;
+      }
+    }
+  }
+}
+
 .uq-button--tiny {
   font-size: core.$font-size-xs;
   padding: core.$space-xs core.$space-s;

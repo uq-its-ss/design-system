@@ -1,0 +1,9 @@
+@use "@uqds/core/src/scss/global" as core;
+@use "global" as *;
+
+.uq-collapsible-text {
+  // Add your component styles here
+  font-family: core.$roboto;
+  font-size: core.$font-size-m;
+  line-height: core.$line-height;
+}

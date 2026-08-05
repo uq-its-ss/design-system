@@ -1,0 +1,21 @@
+import { Meta, Canvas, Controls } from "@storybook/addon-docs/blocks";
+import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
+import * as CollapsibleTextStories from "./collapsible-text.stories";
+
+<Meta of={CollapsibleTextStories} />
+
+# Collapsible text
+
+<StatusBadge.Stable /> <StatusBadge.StableDoc /> [Check for open
+issues](https://github.com/uq-its-ss/design-system/issues)
+
+## Overview
+
+collapsible-text
+
+<Canvas
+  of={CollapsibleTextStories.Default}
+  story={{
+    autoplay: true,
+  }}
+/>

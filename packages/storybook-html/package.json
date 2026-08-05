@@ -37,6 +37,7 @@
     "@uqds/breadcrumb": "^8.0.6",
     "@uqds/button": "^4.0.2",
     "@uqds/card": "^4.0.5",
+    "@uqds/collapsible-text": "^1.0.0",
     "@uqds/core": "^5.0.2",
     "@uqds/footer": "^7.0.7",
     "@uqds/form": "^4.0.6",

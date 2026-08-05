@@ -9,7 +9,7 @@
             "heading": "Study with us",
             "children": [
               {
-                "title": "Find a course or program",
+                "title": "Find a program or degree",
                 "href": "https://study.uq.edu.au/study-options/programs"
               },
               {
@@ -21,16 +21,16 @@
                 "href": "https://study.uq.edu.au/study-options"
               },
               {
-                "title": "Short courses",
-                "href": "https://study.uq.edu.au/short-courses"
-              },
-              {
                 "title": "How to apply",
                 "href": "https://study.uq.edu.au/admissions"
               },
               {
                 "title": "Scholarships",
                 "href": "https://scholarships.uq.edu.au"
+              },
+              {
+                "title": "Short courses",
+                "href": "https://study.uq.edu.au/short-courses"
               },
               {
                 "title": "Starting at UQ",
@@ -54,16 +54,16 @@
                 "href": "https://study.uq.edu.au/why-choose-uq"
               },
               {
-                "title": "Enhance your employability",
-                "href": "https://study.uq.edu.au/enhance-your-employability"
-              },
-              {
                 "title": "Life at UQ and accommodation",
                 "href": "https://study.uq.edu.au/university-life"
               },
               {
-                "title": "Campuses, maps and transport",
-                "href": "https://campuses.uq.edu.au"
+                "title": "Campuses and facilities",
+                "href": "https://about.uq.edu.au/campuses-facilities"
+              },
+              {
+                "title": "Enhance your employability",
+                "href": "https://study.uq.edu.au/enhance-your-employability"
               },
               {
                 "title": "Events for prospective students",
@@ -76,7 +76,7 @@
       {
         "groups": [
           {
-            "heading": "Information for",
+            "heading": "Information for you",
             "children": [
               {
                 "title": "International students",
@@ -87,12 +87,16 @@
                 "href": "https://study.uq.edu.au/information-resources/high-school-students"
               },
               {
+                "title": "PhD and research degrees",
+                "href": "https://study.uq.edu.au/study-options/phd-mphil-professional-doctorate"
+              },
+              {
                 "title": "Non-school leavers",
                 "href": "https://study.uq.edu.au/information-resources/non-school-leavers"
               },
               {
-                "title": "PhD, MPhil and professional doctorate students",
-                "href": "https://study.uq.edu.au/study-options/phd-mphil-professional-doctorate"
+                "title": "Students from under-represented groups",
+                "href": "https://study.uq.edu.au/information-resources/students-under-represented-groups"
               },
               {
                 "title": "Aboriginal and Torres Strait Islander students",
@@ -105,10 +109,6 @@
               {
                 "title": "Teachers and guidance counsellors",
                 "href": "https://study.uq.edu.au/information-resources/teachers-guidance-counsellors"
-              },
-              {
-                "title": "Parents and guardians",
-                "href": "https://study.uq.edu.au/information-resources/parents-guardians"
               },
               {
                 "title": "Current students",
@@ -135,7 +135,7 @@
               },
               {
                 "title": "Research capabilities",
-                "href": "https://research.uq.edu.au/research-capabilities"
+                "href": "https://research.uq.edu.au/capabilities"
               },
               {
                 "title": "Facilities and infrastructure",
@@ -151,7 +151,7 @@
               },
               {
                 "title": "News",
-                "href": "https://uq.edu.au/research/news"
+                "href": "https://news.uq.edu.au"
               },
               {
                 "title": "Find an expert",
@@ -171,7 +171,7 @@
             "heading": "Graduate research",
             "children": [
               {
-                "title": "About Graduate School",
+                "title": "About Graduate Research School",
                 "href": "https://research.uq.edu.au/graduate-research"
               },
               {
@@ -210,6 +210,10 @@
               {
                 "title": "Ways to partner",
                 "href": "https://research.uq.edu.au/partner/ways-to-partner"
+              },
+              {
+                "title": "Government partnerships",
+                "href": "https://research.uq.edu.au/partner/government-partnerships"
               }
             ]
           }
@@ -236,11 +240,11 @@
               },
               {
                 "title": "Student work placements and internships",
-                "href": "https://employability.uq.edu.au/work-experience"
+                "href": "https://employability.uq.edu.au/internships"
               },
               {
                 "title": "Office of 2032 Games Engagement",
-                "href": "https://about.uq.edu.au/initiatives/2032-games"
+                "href": "https://about.uq.edu.au/strategy-values/2032-games"
               }
             ]
           }
@@ -294,15 +298,15 @@
               },
               {
                 "title": "Explore our campuses",
-                "href": "https://campuses.uq.edu.au"
+                "href": "https://about.uq.edu.au/campuses-facilities"
               },
               {
                 "title": "Services and shops",
-                "href": "https://campuses.uq.edu.au/information-and-services/shops"
+                "href": "https://about.uq.edu.au/campuses-facilities/services-and-shops"
               },
               {
                 "title": "Sport and recreation facilities",
-                "href": "https://about.uq.edu.au/sport-recreation-precinct"
+                "href": "https://about.uq.edu.au/campuses-facilities/sport-recreation-precinct"
               },
               {
                 "title": "Venue hire and event spaces",
@@ -345,7 +349,7 @@
               },
               {
                 "title": "Safety and security",
-                "href": "https://campuses.uq.edu.au/information-and-services/security"
+                "href": "https://about.uq.edu.au/safety-and-security"
               },
               {
                 "title": "Find an expert",
@@ -366,15 +370,19 @@
             "children": [
               {
                 "title": "Our campuses",
-                "href": "https://campuses.uq.edu.au"
+                "href": "https://about.uq.edu.au/campuses-facilities"
               },
               {
-                "title": "Parking and transport",
-                "href": "https://campuses.uq.edu.au/information-and-services/parking-transport"
+                "title": "Services and shops",
+                "href": "https://about.uq.edu.au/campuses-facilities/services-and-shops"
               },
               {
-                "title": "Facilities and services",
-                "href": "https://campuses.uq.edu.au/information-and-services/shops"
+                "title": "Parking, transport and maps",
+                "href": "https://about.uq.edu.au/campuses-facilities/parking-transport-and-maps"
+              },
+              {
+                "title": "Museums and galleries",
+                "href": "https://about.uq.edu.au/campuses-facilities/museums-galleries"
               },
               {
                 "title": "Venue hire and event spaces",

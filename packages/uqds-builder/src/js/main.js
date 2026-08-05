@@ -1,4 +1,4 @@
-import header from "@uqds/header/src/js/header";
+import { header } from "@uqds/header/src/js/main";
 import siteHeaderNavigation from "@uqds/site-header/src/js/site-header-navigation";
 import { accordion } from "@uqds/accordion/src/js/main";
 import { Alerts } from "@uqds/alert/src/js/main";

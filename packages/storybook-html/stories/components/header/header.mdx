@@ -1,4 +1,4 @@
-import { Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
+import { Meta, Story, Canvas, Controls } from "@storybook/addon-docs/blocks";
 import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
 import * as HeaderStories from "./header.stories";
 import { background } from "storybook/theming";
@@ -9,57 +9,35 @@ import { background } from "storybook/theming";
 
 <StatusBadge.Stable />
 
-<StatusBadge.Stable />
-
 ## Overview
 
-The headers purpose is to introduce branding and make the site instantly recognizable to those who are already familiar with UQ.
-It also provides a consistent information architecture (navigation structure) for our websites.
+The UQ Global Header provides consistent branding and navigation across all UQ websites. It introduces UQ branding to make sites instantly recognizable and provides a standardized information architecture for navigation.
+
+The header has been rebuilt with improved accessibility, modern interaction patterns, and a modular architecture to ensure reliable performance across all devices.
 
 ## Default example
 
-### Header interim
-
-The interim header is suitable for a broad range of sites and applications, it includes the following sections:
-
-- The primary section includes the UQ logo, Primary navigation (Study, Research, Partners and community, about) and search using [_UQ Search_](https://search.uq.edu.au).
-- The secondary section provides navigation to UQ home, News, Events, Give and contact.
-- An optional third navigation section is available on mobile when paired with the [Site header component](?path=/docs/components-site-header--site-header-with-subnav), which provides site title and local navigation options. This combines to provide a stacked mobile menu of all three sections (Local, primary and secondary navigation).
-
 <Canvas
-  of={HeaderStories.HeaderInterim}
+  of={HeaderStories.Default}
   story={{
     autoplay: true,
     height: "200px",
   }}
-  withToolbar={true}
 />
+<Controls of={HeaderStories.Default} />
 
-### Header with mega menu
+## How to initialize
 
-Currently reserved for the UQ Homepage and level one landing pages for Study, Research, Partners & community and about.
-
-- The primary section includes the UQ logo, Primary navigation (Study, Research, Partners and community, about) with an extended drop down information architecture (mega menu) and search using [_UQ Search_](https://search.uq.edu.au).
-- The secondary section provides navigation to UQ home, News, Events, Give and contact.
-
-<Canvas
-  of={HeaderStories.Header}
-  story={{
-    autoplay: true,
-    height: "200px",
-  }}
-  withToolbar={true}
-/>
-
-### Usage
-
-Use JavaScript to initialize the component to ensure it will work as expected.
+Use JavaScript to initialize the header component. This ensures all interactive features (mega menu, mobile menu, search) work correctly.
 
 ```js
-// Initialise header
+// Initialize the header
 const headerElem = document.querySelector(".uq-header");
-new uq.header(headerElem);
+if (headerElem) {
+  new uq.header(headerElem);
+}
 
+// Optional: Set CSS custom property for mobile viewport height
 const appHeight = () => {
   const doc = document.documentElement;
   doc.style.setProperty("--app-height", `${window.innerHeight}px`);
@@ -68,79 +46,527 @@ window.addEventListener("resize", appHeight);
 appHeight();
 ```
 
+The header initialization automatically sets up:
+
+- **Mega menu** interactions (click/keyboard activation)
+- **Mobile slide menu** with nested navigation support
+- **Search toggle** functionality
+- **Responsive behavior** at the 1024px breakpoint
+
 ## Variant examples
+
+### Header with mega menu
+
+The full-featured header with mega menu dropdowns is reserved for the UQ Homepage and level one landing pages (Study, Research, Partners & community, and About).
+
+**Primary section:**
+
+- UQ logo (links to UQ homepage)
+- Primary navigation (Study, Research, Partners and community, About) with extended dropdown information architecture (mega menu)
+- Search toggle using [_UQ Search_](https://search.uq.edu.au)
+
+**Secondary section:**
+
+- Quick links to UQ home, News, Events, Give, and Contact
+
+<Canvas
+  of={HeaderStories.Default}
+  story={{
+    autoplay: true,
+    height: "200px",
+  }}
+/>
+
+### Header interim
+
+The interim header is suitable for a broad range of sites and applications. It provides the same navigation structure as the mega menu variant but without the expanded dropdown menus.
+
+**Primary section:**
+
+- UQ logo (links to UQ homepage)
+- Primary navigation links (Study, Research, Partners and community, About)
+- Search toggle using [_UQ Search_](https://search.uq.edu.au)
+
+**Secondary section:**
+
+- Quick links to UQ home, News, Events, Give, and Contact
+
+**Mobile integration:**
+
+- When paired with the [Site header component](?path=/docs/components-site-header--site-header-with-subnav), an optional third navigation section becomes available on mobile
+- The mobile menu combines all three sections: local navigation, primary navigation, and secondary navigation in a unified stacked menu
+
+<Canvas
+  of={HeaderStories.WithoutMegaMenu}
+  story={{
+    autoplay: true,
+    height: "200px",
+  }}
+/>
 
 ### Header simplified
 
-When implementation of the full header is not possible, a simplified approach using basic elements may be appropriate.
-UQ purple background combined with the UQ logo make up the most important elements of the header.
+When full header implementation is not possible, use the simplified header with basic elements. At minimum, combine the UQ purple background with the UQ logo—these are the most important branding elements.
 
-<Story of={HeaderStories.basicHeader} />
+<Canvas of={HeaderStories.basicHeader} />
 
-### Default search
+## Analytics overview
 
-The default option is a global search of all UQ. The search feature sends users to results on [_UQ Search_](https://search.uq.edu.au).
+The header component implements comprehensive Google Tag Manager (GTM) tracking across all interactive elements. Analytics attributes follow a hierarchical structure where child elements inherit the category from their parent container.
 
-> Don't reappropriate the search function for special integrated search
-> functionality within your application e.g. searching for a location on a map,
-> searching for books or articles in a library database.
+**Global tracking:**
 
-<Story of={HeaderStories.searchGlobal} />
+**Header container (`data-gtm-category`: "Header"):**
 
-### Global and local search
+<table>
+  <thead>
+    <tr>
+      <th>Property / DOM Target</th>
+      <th>Type</th>
+      <th>Value</th>
+      <th>Description & Logic</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>`data-gtm-category` on `<header class="uq-header">`</td>
+      <td>String</td>
+      <td>`"Header"`</td>
+      <td>Defines the top-level tracking category for the entire header component.</td>
+    </tr>
+  </tbody>
+</table>
 
-You can optionally provide two radio fields, allowing users to choose to search all UQ sites or just the content on your site.
+**Logo (`data-gtm-category`: "Primary header"):**
 
-> \*If your application/website isn't indexed by UQ Search, it may impact what results are provided by a restricted search.
+<table>
+  <thead>
+    <tr>
+      <th>Property / DOM Target</th>
+      <th>Type</th>
+      <th>Value</th>
+      <th>Description & Logic</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>`data-gtm-category` on `<div class="uq-header__logo">`</td>
+      <td>String</td>
+      <td>`"Primary header"`</td>
+      <td>Defines the tracking category for the logo section.</td>
+    </tr>
+    <tr>
+      <td>`data-gtm-label` on `<a class="uq-header__logo-link">`</td>
+      <td>String</td>
+      <td>`"UQ Logo"`</td>
+      <td>Identifies the logo link click. Inherits category from parent container.</td>
+    </tr>
+  </tbody>
+</table>
 
-<Story of={HeaderStories.searchLocal} />
+**Implementation notes:**
 
-```html
-<div class="uq-header__search-range">
-  <input
-    type="radio"
-    id="edit-as_sitesearch-off"
-    name="as_sitesearch"
-    value=""
-    class="form-radio uq-header__search-radio"
-  />
-  <label for="edit-as_sitesearch-off" class="option uq-header__search-label"
-    >Search all UQ websites</label
-  >
-</div>
-<div class="uq-header__search-range">
-  <input
-    type="radio"
-    id="edit-as_sitesearch-on"
-    name="as_sitesearch"
-    value="https://future-students.uq.edu.au"
-    checked="checked"
-    class="form-radio uq-header__search-radio"
-  />
-  <label for="edit-as_sitesearch-on" class="option uq-header__search-label"
-    >Search this website (future-students.uq.edu.au)</label
-  >
-</div>
-```
+- When a parent container has `data-gtm-category`, child interactive elements inherit this category unless they specify their own
+- Only leaf elements (actual links/buttons) receive `data-gtm-label` attributes
+- Parent list items (`<li>`) carry the category, child links (`<a>`) carry the label
+- Hierarchical paths use `>` separator: `"Parent > Child"` (e.g., `"Study > Find a course"`)
 
-## When and how to use
+_Specific analytics tracking for each component is documented in the relevant sections below._
 
-It is highly desireable that all websites of the University maintain a consistent digital presence.
-Whenever possible the complete header should be implemented.
-Optionally pair with the [Site header component](?path=/docs/components-site-header--site-header-with-subnav) to provide a site title and local navigation.
+## Key parts
 
-Software as a service (SaaS) applications and templates supplied by third party solutions may make implementation of the header difficult.
+### Mega menu
 
-We recommend simplifying the header to basic elements [_Header simplified_](?path=/docs/components-header--basic-header).
+The mega menu provides extended navigation for top-level UQ sections.
+
+**Purpose:**  
+Displays comprehensive sub-navigation options in an organized, multi-column layout for high-traffic sections of the UQ website.
+
+**Interaction model:**
+
+- **Desktop (1024px and above):** Click or press Enter/Space on primary navigation items to toggle mega menus
+- **Keyboard navigation:**
+  - `Enter` or `Space` — Open/close mega menu
+  - `Escape` — Close mega menu and return focus to trigger button
+  - `Tab` — Navigate through menu items
+- **Auto-close:** Opening one mega menu automatically closes others
+- **Click outside:** Clicking outside the header closes all open mega menus
+
+**States:**
+
+- Default (closed): `aria-expanded="false"`
+- Open: `aria-expanded="true"` with `.uq-header__nav-primary-item--is-open` class
+
+**Accessibility features:**
+
+- ARIA attributes (`aria-expanded`, `aria-haspopup`, `aria-controls`) announce menu states
+- Proper `<button>` elements for menu triggers (semantic HTML)
+- Keyboard navigation follows logical, sequential focus order
+- Screen readers announce menu states and hierarchical relationships
+
+**Analytics tracking:**
+
+The mega menu implements hierarchical analytics tracking with the following attributes:
+
+**Primary navigation trigger (`data-gtm-category`: "Primary header"):**
+
+<table>
+  <thead>
+    <tr>
+      <th>Property / DOM Target</th>
+      <th>Type</th>
+      <th>Value</th>
+      <th>Description & Logic</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>`data-gtm-category` on `<nav class="uq-header__nav-primary">`</td>
+      <td>String</td>
+      <td>`"Primary header"`</td>
+      <td>Defines the tracking category for the entire primary navigation section.</td>
+    </tr>
+    <tr>
+      <td>`data-gtm-label` on `<button class="uq-header__nav-primary-link">` (for mega menu) or `<a class="uq-header__nav-primary-link">` (for direct links)</td>
+      <td>String</td>
+      <td>Dynamic: Top-level link title (Example: `"Study"`, `"Research"`, `"Partners and community"`, `"About"`)</td>
+      <td>Identifies the primary navigation link clicked. Inherits category from parent. Mega menu items use `<button>` elements, while direct links use `<a>` elements.</td>
+    </tr>
+  </tbody>
+</table>
+
+**Mega menu dropdown links (`data-gtm-category`: "Main navigation"):**
+
+<table>
+  <thead>
+    <tr>
+      <th>Property / DOM Target</th>
+      <th>Type</th>
+      <th>Value</th>
+      <th>Description & Logic</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>`data-gtm-category` on `<li class="uq-header__megamenu-item">`</td>
+      <td>String</td>
+      <td>`"Main navigation"`</td>
+      <td>Defines the tracking category for mega menu items. Applied to parent `<li>` elements.</td>
+    </tr>
+    <tr>
+      <td>`data-gtm-label` on `<a class="uq-header__megamenu-link">`</td>
+      <td>String</td>
+      <td>Dynamic: `[Parent Menu] > [Link Title]` (Example: `"Study > Find a course or program"`, `"Study > Study"` for overview links)</td>
+      <td>Identifies the specific mega menu link clicked. Inherits category from parent. Shows hierarchical path from parent menu.</td>
+    </tr>
+  </tbody>
+</table>
+
+### Mobile menu
+
+The mobile navigation provides a slide-out menu system optimized for touch devices.
+
+**Purpose:**  
+Delivers an intuitive, hierarchical navigation experience on mobile devices with support for deep nested menu structures.
+
+**Display:**
+
+- **Mobile:** Viewports 1023px and below
+- **Desktop:** Hidden at 1024px and above
+
+**Interaction:**
+
+- Tap the menu toggle button to open/close the mobile menu
+- Tap items with chevrons to navigate deeper into menu levels
+- Tap the back arrow to return to the previous menu level
+- Menu always opens to the section containing the active page
+- Scroll position resets to top when navigating between menu levels
+
+**States:**
+
+- The mobile menu highlights the current active page
+- When opened, the menu defaults to the active section
+- Closing and reopening resets to the active section
+
+**Visual design:**
+
+- Background: UQ purple (`core.$purple-600`)
+- Inline SVG icons for back arrows and forward chevrons
+- Standardized spacing using design tokens
+
+**Touch device optimization:**
+
+- Sticky hover states are neutralized using `@media (hover: none)`
+- Prevents visual artifacts when tapping menu items
+
+**Analytics tracking:**
+
+The mobile menu supports multiple tracking scenarios based on navigation type:
+
+**Mobile menu toggle (`data-gtm-category`: "Primary header"):**
+
+<table>
+  <thead>
+    <tr>
+      <th>Property / DOM Target</th>
+      <th>Type</th>
+      <th>Value</th>
+      <th>Description & Logic</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>`data-gtm-category` on `<div class="uq-header__toggle-menu">`</td>
+      <td>String</td>
+      <td>`"Primary header"`</td>
+      <td>Defines the tracking category for the mobile menu toggle container.</td>
+    </tr>
+    <tr>
+      <td>`data-gtm-trigger` on `<button class="uq-header__toggle-menu-button">`</td>
+      <td>String</td>
+      <td>`"click"`</td>
+      <td>Specifies the event type that triggers tracking.</td>
+    </tr>
+    <tr>
+      <td>`data-gtm-action` on `<button class="uq-header__toggle-menu-button">`</td>
+      <td>String</td>
+      <td>`"Toggle"`</td>
+      <td>Describes the action performed when the button is clicked.</td>
+    </tr>
+  </tbody>
+</table>
+
+**Mobile navigation items (`data-gtm-category`: varies by scenario):**
+
+<table>
+  <thead>
+    <tr>
+      <th>Property / DOM Target</th>
+      <th>Type</th>
+      <th>Value</th>
+      <th>Description & Logic</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>`data-gtm-category` on `<li class="uq-header__nav-mobile-item">`</td>
+      <td>String</td>
+      <td>`"Main navigation"`, `"Primary header"`, or `"Secondary header"`</td>
+      <td>Defines the tracking category for each navigation item. Applied to parent `<li>` elements. Value varies by scenario: `"Main navigation"` for local nav, `"Primary header"` for primary nav, `"Secondary header"` for secondary nav.</td>
+    </tr>
+    <tr>
+      <td>`data-gtm-label` on child `<a>`</td>
+      <td>String</td>
+      <td>Dynamic: `[Parent Menu] > [Child Link]` (Example: `"Study > Browse study areas"` for nested links, or `"Study"` for top-level links)</td>
+      <td>Identifies the specific link clicked. Inherits category from parent. Follows hierarchical structure for nested links.</td>
+    </tr>
+  </tbody>
+</table>
+
+### Search
+
+The search component provides access to UQ-wide search functionality.
+
+**Purpose:**  
+Allows users to search across UQ websites using [UQ Search](https://search.uq.edu.au).
+
+**Interaction:**
+
+- Click/tap the search icon to toggle the search panel
+- Search panel slides down from the header
+- Panel closes when clicking outside or toggling the search button again
+
+**Animation:**
+
+- GPU-accelerated transform animations for smooth performance
+- Uses `translateY()` instead of `opacity` for better rendering
+- Hardware acceleration via `will-change: transform`
+
+**States:**
+
+- Closed: Search panel hidden above the header
+- Open: Search panel slides into view below the header navigation
+
+**Analytics tracking:**
+
+The search component tracks both toggle interactions and search submissions:
+
+<table>
+  <thead>
+    <tr>
+      <th>Property / DOM Target</th>
+      <th>Type</th>
+      <th>Value</th>
+      <th>Description & Logic</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>`data-gtm-category` on `<div class="uq-header__toggle-search">`</td>
+      <td>String</td>
+      <td>`"Search"`</td>
+      <td>Defines the tracking category for the search toggle container.</td>
+    </tr>
+    <tr>
+      <td>`data-gtm-action` on `<button class="uq-header__toggle-search-button">`</td>
+      <td>String</td>
+      <td>`"Toggle"`</td>
+      <td>Describes the action performed when the search toggle is clicked.</td>
+    </tr>
+    <tr>
+      <td>`data-gtm-category` on `<div class="uq-header__search">`</td>
+      <td>String</td>
+      <td>`"Search"`</td>
+      <td>Defines the tracking category for the search form container.</td>
+    </tr>
+    <tr>
+      <td>`data-gtm-action` on `<form class="uq-header__search-form">`</td>
+      <td>String</td>
+      <td>`"Text search"`</td>
+      <td>Describes the search action type.</td>
+    </tr>
+    <tr>
+      <td>`data-gtm-form-action` on `<form class="uq-header__search-form">`</td>
+      <td>String</td>
+      <td>`""` (empty string)</td>
+      <td>Indicates this is a form submission event (value is empty string, presence is what matters).</td>
+    </tr>
+    <tr>
+      <td>`data-gtm-form-search` on `<input class="uq-header__search-input">`</td>
+      <td>String</td>
+      <td>`""` (empty string - attribute presence is what matters)</td>
+      <td>Marks the search input field for tracking search queries. Attribute presence indicates this input should be tracked.</td>
+    </tr>
+    <tr>
+      <td>`data-gtm-trigger` on `<button class="uq-header__search-button">`</td>
+      <td>String</td>
+      <td>`"click"`</td>
+      <td>Specifies the event type that triggers search tracking.</td>
+    </tr>
+  </tbody>
+</table>
+
+### Secondary navigation
+
+The secondary section provides quick access to important UQ-wide resources.
+
+**Purpose:**  
+Offers consistent access to high-priority UQ links across all sites.
+
+**Links:**
+
+- UQ home
+- News
+- Events
+- Give
+- Contact
+
+**Display:**
+
+- Visible on desktop (1024px and above)
+- Integrated into the mobile slide menu on mobile devices
+
+**Analytics tracking:**
+
+<table>
+  <thead>
+    <tr>
+      <th>Property / DOM Target</th>
+      <th>Type</th>
+      <th>Value</th>
+      <th>Description & Logic</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>`data-gtm-category` on `<li class="uq-header__nav-secondary-item">`</td>
+      <td>String</td>
+      <td>`"Secondary header"`</td>
+      <td>Defines the tracking category for secondary navigation items. Applied to parent `<li>` elements.</td>
+    </tr>
+    <tr>
+      <td>`data-gtm-label` on `<a class="uq-header__nav-secondary-link">`</td>
+      <td>String</td>
+      <td>Dynamic: Link title (Example: `"News"`, `"Events"`, `"Give"`, `"Contact"`)</td>
+      <td>Identifies the secondary navigation link clicked. Inherits category from parent.</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Accessibility
 
-Every navigation `<nav>` includes an aria label, for example:
+The header component is built to meet WCAG 2.1 AA accessibility standards.
 
-```html
-<nav aria-label="primary navigation"></nav>
-```
+### Keyboard navigation
 
-## Related
+**Mega menu controls:**
 
-- [Site header](?path=/docs/components-site-header--site-header-with-subnav)
+- `Tab` — Move through navigation items
+- `Enter` or `Space` — Open/close mega menu
+- `Escape` — Close open mega menu and return focus to trigger
+- Arrow keys — Navigate through mega menu items
+
+**Focus management:**
+
+- Visible focus indicators on all interactive elements
+- Focus is properly managed when opening/closing menus
+- Focus is not trapped — users can always exit menus
+
+### Screen reader support
+
+**ARIA attributes:**
+
+- `aria-expanded` — Indicates whether mega menus are open or closed
+- `aria-haspopup="true"` — Indicates elements have dropdown menus
+- `aria-controls` — Associates triggers with their corresponding menu panels
+- Semantic `<button>` elements for interactive controls without href destinations
+
+**Semantic structure:**
+
+- Proper heading hierarchy
+- Semantic HTML elements (`<nav>`, `<ul>`, `<li>`)
+- Meaningful link text
+- Unique IDs for all menu panels and triggers
+
+### Mobile accessibility
+
+- Touch targets meet minimum size requirements (44×44px)
+- Mobile menu supports swipe gestures
+- Content remains accessible when zoomed to 200%
+- Color contrast meets AA standards (4.5:1 for text)
+
+### Testing
+
+The header has been validated for:
+
+- ✅ Screen reader compatibility (NVDA, JAWS, VoiceOver)
+- ✅ Keyboard-only navigation
+- ✅ Touch device interaction
+- ✅ High contrast mode support
+- ✅ Zoom and text scaling
+
+## Responsive behavior
+
+The header adapts to different screen sizes with a breakpoint at **1024px**.
+
+### Desktop (1024px and above)
+
+- Displays horizontal primary navigation with mega menu dropdowns
+- Secondary navigation visible in header
+- Search panel slides down from navigation bar
+- Hover states active (on devices with hover capability)
+
+### Mobile (1023px and below)
+
+- Primary and secondary navigation hidden
+- Mobile menu toggle button displayed
+- Slide-out menu panel activated
+- Search integrated into mobile menu experience
+- Optimized for touch interaction
+
+### Performance
+
+- **GPU-accelerated animations** — Transform-based transitions for smooth 60fps animations
+- **Efficient event handling** — Uses `matchMedia` API instead of resize events for breakpoint detection
+- **Modular architecture** — Clean separation of concerns for better maintainability
+- **Lazy initialization** — Components only initialize when elements are present

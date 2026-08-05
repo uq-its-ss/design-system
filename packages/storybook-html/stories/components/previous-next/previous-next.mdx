@@ -1,4 +1,4 @@
-import { Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
+import { Meta, Canvas, Controls } from "@storybook/addon-docs/blocks";
 import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
 import * as PreviousNextStories from "./previous-next.stories";
 
@@ -17,75 +17,27 @@ issues](https://github.com/uq-its-ss/design-system/issues)
 
 ## Default example
 
-### a. Initial instance
+<Canvas of={PreviousNextStories.Middle} />
+
+<Controls of={PreviousNextStories.Middle} />
+
+### a. Initial state
 
 An instance when only the next button is visible
 
-<Canvas of={PreviousNextStories.previousNextInitial} />
+<Canvas of={PreviousNextStories.Initial} />
 
-```html
-<div class="uq-previous-next">
-  <div class="uq-previous-next__item uq-previous-next__item--hidden">
-    <a href="#" class="uq-previous-next__link-previous"
-      >Enrolment basics
-      <span class="uq-previous-next__description">Previous</span></a
-    >
-  </div>
-
-  <div class="uq-previous-next__item">
-    <a href="#" class="uq-previous-next__link-next"
-      >How to enrol <span class="uq-previous-next__description">Next</span></a
-    >
-  </div>
-</div>
-```
-
-### b. Middle instance
+### b. Middle state
 
 An instance when both the previous and next buttons are visible
 
-<Canvas of={PreviousNextStories.previousNextMiddle} />
+<Canvas of={PreviousNextStories.Middle} />
 
-```html
-<!-- Previous and Next buttons are visible -->
-<div class="uq-previous-next">
-  <div class="uq-previous-next__item">
-    <a href="#" class="uq-previous-next__link-previous"
-      >Enrolment basics
-      <span class="uq-previous-next__description">Previous</span></a
-    >
-  </div>
-
-  <div class="uq-previous-next__item">
-    <a href="#" class="uq-previous-next__link-next"
-      >How to enrol <span class="uq-previous-next__description">Next</span></a
-    >
-  </div>
-</div>
-```
-
-### c. Final instance
+### c. Final state
 
 An instance when only the previous button is visible
 
-<Canvas of={PreviousNextStories.previousNextFinal} />
-
-```html
-<div class="uq-previous-next">
-  <div class="uq-previous-next__item">
-    <a href="#" class="uq-previous-next__link-previous"
-      >Enrolment basics
-      <span class="uq-previous-next__description">Previous</span></a
-    >
-  </div>
-
-  <div class="uq-previous-next__item uq-previous-next__item--hidden">
-    <a href="#" class="uq-previous-next__link-next"
-      >How to enrol <span class="uq-previous-next__description">Next</span></a
-    >
-  </div>
-</div>
-```
+<Canvas of={PreviousNextStories.Final} />
 
 ## How and when to use
 

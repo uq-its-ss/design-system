@@ -8,19 +8,19 @@
   height: 100%;
 }
 .uqds-colour--purple-500 {
-  background-color: core.$purple-500;
-  color: core.$white;
+  background-color: var(--uq-purple-500);
+  color: var(--uq-white);
 }
 .uqds-colour--black {
-  background-color: core.$black;
-  color: core.$white;
+  background-color: var(--uq-black);
+  color: var(--uq-white);
 }
 .uqds-colour--grey-900 {
-  background-color: core.$grey-900;
-  color: core.$white;
+  background-color: var(--uq-grey-900);
+  color: var(--uq-white);
 }
 .uqds-colour--white {
-  color: core.$white;
+  color: var(--uq-white);
 }
 
 /* Email Fonts */
@@ -31,5 +31,5 @@ h4,
 h5,
 h6,
 p {
-  font-family: core.$font-body;
+  font-family: var(--uq-font);
 }

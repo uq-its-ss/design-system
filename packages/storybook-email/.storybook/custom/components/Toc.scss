@@ -20,56 +20,57 @@
 
     .toc-list-item.is-active-li {
       &::before {
-        border-left: solid 2px core.$purple-500;
+        border-left: solid 2px var(--uq-purple-500);
       }
 
       & > a {
-        color: core.$purple-500;
+        color: var(--uq-purple-500);
       }
     }
   }
 }
 
+// TOC breakpoint: $screen-md (37.5rem / 600px) + 16.5rem = 54rem (864px)
 @media only screen and (min-width: #{core.$screen-md + 16.5rem}) {
   .uqds-toc {
     width: 12.5rem;
     position: fixed;
     top: 0;
     right: 0;
-    padding-top: core.$space-uul;
+    padding-top: var(--uq-space-uul);
     height: 100%;
 
     &__toc {
-      margin-left: -(core.$space-m);
+      margin-left: calc(-1 * var(--uq-space-m));
 
       .toc-list {
-        padding-left: core.$space-m;
+        padding-left: var(--uq-space-m);
       }
 
       a.toc-link {
         display: inline-block;
-        margin: core.$space-xs core.$space-none;
-        padding-left: core.$space-m;
-        padding-right: core.$space-m;
+        margin: var(--uq-space-xxs) var(--uq-space-none);
+        padding-left: var(--uq-space-m);
+        padding-right: var(--uq-space-m);
         text-decoration: none;
         transition: all 0.125s ease-in;
-        color: core.$grey-900;
+        color: var(--uq-grey-900);
 
         &::before {
-          width: core.$space-xs;
+          width: var(--uq-space-xxs);
         }
 
         &:hover,
         &:focus {
-          color: core.$grey-900;
+          color: var(--uq-grey-900);
         }
       }
 
       .is-active-link {
-        font-weight: core.$font-weight-bold;
+        font-weight: var(--uq-font-weight-bold);
 
         &::before {
-          background-color: core.$purple-500;
+          background-color: var(--uq-purple-500);
         }
       }
     }

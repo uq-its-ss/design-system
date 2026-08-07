@@ -12,13 +12,11 @@
   line-height: core.$line-height;
   position: relative;
 
-  &__title,
-  .uq-alert__message > :is(h1, h2, h3, h4, h5, h6):first-child {
+  .uq-alert__message > :is(h1, h2, h3, h4):first-child {
     margin: core.$space-none core.$space-none core.$space-s;
   }
 
-  h5.uq-alert__title,
-  h6.uq-alert__title {
+  .uq-alert__message > :is(h5, h6):first-child {
     margin-top: 0.2rem;
   }
 

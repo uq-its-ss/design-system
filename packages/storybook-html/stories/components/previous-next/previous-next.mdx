@@ -45,8 +45,9 @@ An instance when only the previous button is visible
 
 ### Labels
 
-Make sure labels are clear and descriptive. 
-- labels should reflect the content, title of the page or step that will be navigated to. 
+Make sure labels are clear and descriptive.
+
+- labels should reflect the content, title of the page or step that will be navigated to.
 - Avoid using generic labels like "Next" or "Previous".
 
 <Canvas of={PreviousNextStories.Labels} />
@@ -56,11 +57,13 @@ Make sure labels are clear and descriptive.
 Choosing between links and buttons ensures proper semantic HTML, keyboard accessibility, and screen reader behavior.
 
 #### Use Links When:
+
 - Navigating between distinct URLs / static web pages (e.g., blog posts, documentation chapters, search pagination).
 - Users can right-click to open the next/previous page in a new tab.
 - The state of the current page does not depend on form data or client-side application state.
 
 #### Use Buttons When:
+
 - Submitting data or triggering an action that changes application state (e.g., saving current step inputs before moving forward).
 - Navigating through a modal wizard, multi-step checkout, or single-page app (SPA) step flow where URLs may not change.
 

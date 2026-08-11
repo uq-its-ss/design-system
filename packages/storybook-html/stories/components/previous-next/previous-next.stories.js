@@ -12,10 +12,10 @@ export default {
   args: {
     state: "middle",
     ariaLabel: "Page navigation",
-    nextLabel: "Next",
-    nextHref: "#",
     previousLabel: "Previous",
     previousHref: "#",
+    nextLabel: "Next",
+    nextHref: "#",
     useButton: false,
   },
 
@@ -29,20 +29,6 @@ export default {
     ariaLabel: {
       control: "text",
       description: "Accessible label for the navigation",
-    },
-    nextHref: {
-      control: "text",
-      description: "URL for the next link",
-      table: {
-        category: "Next", // Groups the field
-      },
-    },
-    nextLabel: {
-      control: "text",
-      description: "Label for the next link",
-      table: {
-        category: "Next", // Groups the field
-      },
     },
     previousHref: {
       control: "text",
@@ -58,6 +44,20 @@ export default {
         category: "Previous", // Groups the field
       },
     },
+    nextHref: {
+      control: "text",
+      description: "URL for the next link",
+      table: {
+        category: "Next", // Groups the field
+      },
+    },
+    nextLabel: {
+      control: "text",
+      description: "Label for the next link",
+      table: {
+        category: "Next", // Groups the field
+      },
+    },
     useButton: {
       control: "boolean",
       description: "Use button instead of anchor tag",
@@ -70,19 +70,19 @@ export default {
   render: ({
     state,
     ariaLabel,
-    nextHref,
-    nextLabel,
     previousHref,
     previousLabel,
+    nextHref,
+    nextLabel,
     useButton,
   }) => {
-    const nextElement = useButton
-      ? `<button class="uq-button uq-button--link uq-icon uq-icon--standard--arrow-right">${nextLabel}</button>`
-      : `<a class="uq-icon uq-icon--standard--arrow-right" href="${nextHref}">${nextLabel}</a>`;
-
     const previousElement = useButton
       ? `<button class="uq-button uq-button--link uq-icon uq-icon--standard--arrow-left">${previousLabel}</button>`
       : `<a class="uq-icon uq-icon--standard--arrow-left" href="${previousHref}">${previousLabel}</a>`;
+
+    const nextElement = useButton
+      ? `<button class="uq-button uq-button--link uq-icon uq-icon--standard--arrow-right">${nextLabel}</button>`
+      : `<a class="uq-icon uq-icon--standard--arrow-right" href="${nextHref}">${nextLabel}</a>`;
 
     // Determine which elements to show based on state
     const showNext = state === "initial" || state === "middle";
@@ -90,8 +90,8 @@ export default {
 
     return `
       <nav class="uq-previous-next" aria-label="${ariaLabel}">
-        ${showNext ? `<div class="uq-previous-next__item">${nextElement}</div>` : ""}
         ${showPrevious ? `<div class="uq-previous-next__item">${previousElement}</div>` : ""}
+        ${showNext ? `<div class="uq-previous-next__item">${nextElement}</div>` : ""}
       </nav>
     `;
   },
@@ -102,6 +102,7 @@ export default {
 export const Initial = {
   args: {
     state: "initial",
+    nextLabel: "Next",
   },
   name: "Initial state (Next only)",
 };
@@ -126,4 +127,14 @@ export const WithButtons = {
     useButton: true,
   },
   name: "With buttons (Middle state)",
+};
+
+export const Labels = {
+  args: {
+    state: "middle",
+    useButton: true,
+    nextLabel: "Assessment",
+    previousLabel: "Course overview",
+  },
+  name: "Labels (Middle state with custom labels)",
 };

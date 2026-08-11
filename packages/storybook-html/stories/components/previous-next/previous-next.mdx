@@ -1,4 +1,4 @@
-import { Meta, Canvas, Controls } from "@storybook/addon-docs/blocks";
+import { Meta, Canvas, Story, Controls } from "@storybook/addon-docs/blocks";
 import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
 import * as PreviousNextStories from "./previous-next.stories";
 
@@ -10,6 +10,8 @@ import * as PreviousNextStories from "./previous-next.stories";
 issues](https://github.com/uq-its-ss/design-system/issues)
 
 ## Overview
+
+The **Previous / Next** component provides consistent navigation across sequential pages, steps, or multi-page flows. It can be rendered as either **links** (for non-linear page navigation) or **buttons** (for stateful step-by-step processes).
 
 - The Previous-next component is also a form of pagination.
 - It provides previous and next buttons (links) to navigate between pages or between tab contents on the same page.
@@ -41,12 +43,31 @@ An instance when only the previous button is visible
 
 ## How and when to use
 
-- The Previous-next component can be used with or without the progression component.
+### Labels
+
+Make sure labels are clear and descriptive. 
+- labels should reflect the content, title of the page or step that will be navigated to. 
+- Avoid using generic labels like "Next" or "Previous".
+
+<Canvas of={PreviousNextStories.Labels} />
+
+### When to Use Links vs. Buttons
+
+Choosing between links and buttons ensures proper semantic HTML, keyboard accessibility, and screen reader behavior.
+
+#### Use Links When:
+- Navigating between distinct URLs / static web pages (e.g., blog posts, documentation chapters, search pagination).
+- Users can right-click to open the next/previous page in a new tab.
+- The state of the current page does not depend on form data or client-side application state.
+
+#### Use Buttons When:
+- Submitting data or triggering an action that changes application state (e.g., saving current step inputs before moving forward).
+- Navigating through a modal wizard, multi-step checkout, or single-page app (SPA) step flow where URLs may not change.
 
 ### Breakpoints
 
 - The previous and next buttons collapses at viewport widths less than 640px.
 
-## Related
+### Accessibility
 
-- Progression component could be used in conjunction with the Previous-next component.
+For disabled states in initial or final steps, prefer hiding the inactive action or using clear aria-disabled / disabled HTML attributes so screen readers communicate that the end of the sequence has been reached.

@@ -884,7 +884,7 @@
           this.close();
         } else {
           this.open();
-          // If a selector is provided (e.g. ".is-active")
+          // If a selector is provided (e.g. ".in-active-trail" or ".is-active")
           if (selector) {
             // search strictly inside the menu for the target to ensure we don't grab elements elsewhere on the page
             const target = this.menuElem.querySelector(selector);

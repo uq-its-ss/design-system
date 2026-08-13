@@ -794,7 +794,16 @@ body.no-scroll {
     }
   }
 
-  /* Active state Calc function needs a global variable to allow targeting of active subitems */
+  /* Navigation classes for mobile menu auto-open behavior:
+   * 
+   * .in-active-trail - Applied to items in the navigation path (including current page)
+   *                    Used by data-arg selector for menu auto-open in CMS implementations
+   *                    No visual styling - semantic class for navigation structure only
+   * 
+   * .is-active - Applied only to the exact current page for visual distinction
+   *              Provides purple border and background highlight
+   *              Can be used as data-arg selector for simple static implementations
+   */
   .is-active {
     border-left: 6px solid core.$purple-500;
     padding-left: calc(core.$space-xxl - 6px);

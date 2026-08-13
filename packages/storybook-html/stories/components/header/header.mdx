@@ -372,20 +372,27 @@ The mobile menu button utilizes the `data-arg` attribute to specify which CSS se
 The default implementation uses `.in-active-trail` to support page hierarchies where the current page may not exist in the menu structure.
 
 ```html
-<button type="button" class="uq-header__toggle-menu-button slide-menu__control" 
-        data-target="global-mobile-nav" 
-        data-arg=".in-active-trail" 
-        data-action="smartToggle">Menu</button>
+<button
+  type="button"
+  class="uq-header__toggle-menu-button slide-menu__control"
+  data-target="global-mobile-nav"
+  data-arg=".in-active-trail"
+  data-action="smartToggle"
+>
+  Menu
+</button>
 ```
 
 **When to use:** Content management systems (Drupal, WordPress) where pages can exist outside the menu hierarchy.
 
 **Implementation requirements:**
+
 - Apply `.in-active-trail` to all items in the navigation path (including the current page)
 - Apply `.is-active` only to the exact current page for visual styling
 - The menu will auto-open to the `.in-active-trail` item, which may be a parent when viewing orphan pages
 
 **Example:**
+
 ```html
 <!-- Current page in menu -->
 <a class="uq-header__nav-mobile-link in-active-trail is-active">About Us</a>
@@ -400,19 +407,26 @@ The default implementation uses `.in-active-trail` to support page hierarchies w
 For static sites without page hierarchies, you may simplify by using `.is-active` only.
 
 ```html
-<button type="button" class="uq-header__toggle-menu-button slide-menu__control" 
-        data-target="global-mobile-nav" 
-        data-arg=".is-active" 
-        data-action="smartToggle">Menu</button>
+<button
+  type="button"
+  class="uq-header__toggle-menu-button slide-menu__control"
+  data-target="global-mobile-nav"
+  data-arg=".is-active"
+  data-action="smartToggle"
+>
+  Menu
+</button>
 ```
 
 **When to use:** Static HTML sites where all pages in the menu structure are explicitly defined.
 
 **Implementation requirements:**
+
 - Apply only `.is-active` to the current page
 - The menu will auto-open to the `.is-active` item
 
 **Example:**
+
 ```html
 <!-- Current page -->
 <a class="uq-header__nav-mobile-link is-active">About Us</a>

@@ -79,7 +79,12 @@ const renderMegaMenu = (columns, parentTitle) => {
  * HELPER: Recursive Nested Link Renderer (Mobile)
  * It handles the deep hierarchy of the mobile slide-out menu.
  */
-const renderNestedLinks = (children, activeHref, orphanParentHref = null, parentPath = "") => {
+const renderNestedLinks = (
+  children,
+  activeHref,
+  orphanParentHref = null,
+  parentPath = "",
+) => {
   if (!children || children.length === 0) {
     return "";
   }
@@ -91,18 +96,20 @@ const renderNestedLinks = (children, activeHref, orphanParentHref = null, parent
     .map((child) => {
       const hasGrandchildren = child.children && child.children.length > 0;
       // Only leaf links (no grandchildren) can be active
-      const isActive = !isOrphanMode && !hasGrandchildren && child.href === activeHref;
+      const isActive =
+        !isOrphanMode && !hasGrandchildren && child.href === activeHref;
       // In orphan mode, check if this is the designated parent
-      const isOrphanParent = isOrphanMode && orphanParentHref && child.href === orphanParentHref;
+      const isOrphanParent =
+        isOrphanMode && orphanParentHref && child.href === orphanParentHref;
       const currentPath = parentPath
         ? `${parentPath} > ${child.title}`
         : child.title;
-      
+
       // Build class list
-      let classes = hasGrandchildren 
+      let classes = hasGrandchildren
         ? "uq-header__nav-mobile-audience-link slide-menu__control"
         : "uq-header__nav-mobile-link";
-      
+
       // Add both classes to active items (CMS pattern)
       if (isActive) {
         classes += " in-active-trail is-active";
@@ -111,7 +118,7 @@ const renderNestedLinks = (children, activeHref, orphanParentHref = null, parent
       if (isOrphanParent) {
         classes += " in-active-trail";
       }
-      
+
       let linkContent = `
         <li class="uq-header__nav-mobile-item">
           <a href="${child.href}" class="${classes}"${hasGrandchildren ? "" : ` data-gtm-path="${parentPath}"`}>${child.title}</a>
@@ -141,20 +148,21 @@ const renderNestedLinks = (children, activeHref, orphanParentHref = null, parent
 const renderMobileNav = (links, activeHref, orphanParentHref = null) => {
   // Check if we're in orphan mode
   const isOrphanMode = activeHref && activeHref.includes("(Orphan Example)");
-  
+
   return links
     .map((link) => {
       const hasColumns = !!link.columns;
       // Only leaf links (no columns) can be active
       const isActive = !isOrphanMode && !hasColumns && link.href === activeHref;
       // In orphan mode, check if this is the designated parent
-      const isOrphanParent = isOrphanMode && orphanParentHref && link.href === orphanParentHref;
-      
+      const isOrphanParent =
+        isOrphanMode && orphanParentHref && link.href === orphanParentHref;
+
       // Build class list
-      let classes = hasColumns 
+      let classes = hasColumns
         ? "uq-header__nav-mobile-audience-link slide-menu__control"
         : "uq-header__nav-mobile-link";
-      
+
       // Add both classes to active items (CMS pattern)
       if (isActive) {
         classes += " in-active-trail is-active";
@@ -163,7 +171,7 @@ const renderMobileNav = (links, activeHref, orphanParentHref = null) => {
       if (isOrphanParent) {
         classes += " in-active-trail";
       }
-      
+
       return `
       <li class="uq-header__nav-mobile-item">
         <a href="${link.href}" class="${classes}"${hasColumns ? "" : ` data-gtm-path=""`}>${link.title}</a>
@@ -178,7 +186,12 @@ const renderMobileNav = (links, activeHref, orphanParentHref = null) => {
               .map((column) =>
                 column.groups
                   .map((group) =>
-                    renderNestedLinks(group.children, activeHref, orphanParentHref, link.title),
+                    renderNestedLinks(
+                      group.children,
+                      activeHref,
+                      orphanParentHref,
+                      link.title,
+                    ),
                   )
                   .join(""),
               )
@@ -267,7 +280,7 @@ export default {
       table: {
         category: "Demo Controls",
       },
-      if: { arg: 'showOrphanExample', eq: true },
+      if: { arg: "showOrphanExample", eq: true },
     },
     localLinks: {
       name: "Local Navigation Links",
@@ -324,8 +337,10 @@ const headerRenderer = ({
   orphanParentHref,
 }) => {
   // Determine active href - use orphan example text if enabled
-  const displayActiveHref = showOrphanExample ? `${orphanParentHref} (Orphan Example)` : activeHref;
-  
+  const displayActiveHref = showOrphanExample
+    ? `${orphanParentHref} (Orphan Example)`
+    : activeHref;
+
   return `
 <!-- HEADER WRAPPER -->
 <header class="uq-header">

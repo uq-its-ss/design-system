@@ -156,6 +156,38 @@ export const MultipleInstances = {
             laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi 
             architecto beatae vitae dicta sunt explicabo.
           </p>
+          <p>
+            Each collapsible component operates independently. Expanding one doesn't affect the others.
+            This is perfect for FAQs, article previews, or any content that needs progressive disclosure.
+            
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+            fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa 
+            qui officia deserunt mollit anim id est laborum.
+          </p>
+          <p>
+            Each collapsible component operates independently. Expanding one doesn't affect the others.
+            This is perfect for FAQs, article previews, or any content that needs progressive disclosure.
+            
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+            fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa 
+            qui officia deserunt mollit anim id est laborum.
+          </p>
+          <p>
+            Each collapsible component operates independently. Expanding one doesn't affect the others.
+            This is perfect for FAQs, article previews, or any content that needs progressive disclosure.
+            
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+            fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa 
+            qui officia deserunt mollit anim id est laborum.
+          </p>
+          <p>
+            Each collapsible component operates independently. Expanding one doesn't affect the others.
+            This is perfect for FAQs, article previews, or any content that needs progressive disclosure.
+            
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+            fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa 
+            qui officia deserunt mollit anim id est laborum.
+          </p>
         </div>
         
         <button class="uq-collapsible-text__button" aria-expanded="false">Read more</button>
@@ -188,8 +220,8 @@ export const CustomThreshold = {
 
       <div style="margin-bottom: 3rem;">
         <h3>Low Threshold (5rem)</h3>
-        <p style="margin-bottom: 1rem;"><em>data-collapse-threshold="5" - Button appears if content exceeds 5rem</em></p>
-        <div class="uq-collapsible-text" data-collapse-threshold="5">
+        <p style="margin-bottom: 1rem;"><em>data-collapse-threshold="10" - Button appears if content exceeds 5rem</em></p>
+        <div class="uq-collapsible-text" data-collapse-threshold="10">
           <div class="uq-collapsible-text__content">
             <p>
               This component has a low threshold of 5rem. Even this short paragraph should trigger 
@@ -286,7 +318,7 @@ export const CustomThreshold = {
 
       <div>
         <h3>High Threshold (25rem)</h3>
-        <p style="margin-bottom: 1rem;"><em>data-collapse-threshold="925" - Button appears if content exceeds 25rem</em></p>
+        <p style="margin-bottom: 1rem;"><em>data-collapse-threshold="25" - Button appears if content exceeds 25rem</em></p>
         <div class="uq-collapsible-text" data-collapse-threshold="25">
           <div class="uq-collapsible-text__content">
             <p>
@@ -381,6 +413,38 @@ export const CustomCollapsedHeight = {
               Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
               fugiat nulla pariatur.
             </p>
+            <p>
+            Each collapsible component operates independently. Expanding one doesn't affect the others.
+            This is perfect for FAQs, article previews, or any content that needs progressive disclosure.
+            
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+            fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa 
+            qui officia deserunt mollit anim id est laborum.
+          </p>
+          <p>
+            Each collapsible component operates independently. Expanding one doesn't affect the others.
+            This is perfect for FAQs, article previews, or any content that needs progressive disclosure.
+            
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+            fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa 
+            qui officia deserunt mollit anim id est laborum.
+          </p>
+          <p>
+            Each collapsible component operates independently. Expanding one doesn't affect the others.
+            This is perfect for FAQs, article previews, or any content that needs progressive disclosure.
+            
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+            fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa 
+            qui officia deserunt mollit anim id est laborum.
+          </p>
+          <p>
+            Each collapsible component operates independently. Expanding one doesn't affect the others.
+            This is perfect for FAQs, article previews, or any content that needs progressive disclosure.
+            
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+            fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa 
+            qui officia deserunt mollit anim id est laborum.
+          </p>
           </div>
           <button class="uq-collapsible-text__button" aria-expanded="false">Read more</button>
         </div>
@@ -406,6 +470,38 @@ export const CustomCollapsedHeight = {
               Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque 
               laudantium, totam rem aperiam.
             </p>
+            <p>
+            Each collapsible component operates independently. Expanding one doesn't affect the others.
+            This is perfect for FAQs, article previews, or any content that needs progressive disclosure.
+            
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+            fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa 
+            qui officia deserunt mollit anim id est laborum.
+          </p>
+          <p>
+            Each collapsible component operates independently. Expanding one doesn't affect the others.
+            This is perfect for FAQs, article previews, or any content that needs progressive disclosure.
+            
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+            fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa 
+            qui officia deserunt mollit anim id est laborum.
+          </p>
+          <p>
+            Each collapsible component operates independently. Expanding one doesn't affect the others.
+            This is perfect for FAQs, article previews, or any content that needs progressive disclosure.
+            
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+            fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa 
+            qui officia deserunt mollit anim id est laborum.
+          </p>
+          <p>
+            Each collapsible component operates independently. Expanding one doesn't affect the others.
+            This is perfect for FAQs, article previews, or any content that needs progressive disclosure.
+            
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+            fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa 
+            qui officia deserunt mollit anim id est laborum.
+          </p>
           </div>
           <button class="uq-collapsible-text__button" aria-expanded="false">Read more</button>
         </div>

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.0.7-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/navigation@7.0.6...@uqds/navigation@7.0.7-alpha.0) (2026-08-05)
+
+### Bug Fixes
+
+- add export and style fields to all component package.json files ([#788](https://github.com/uq-its-ss/design-system/issues/788)) ([590020a](https://github.com/uq-its-ss/design-system/commit/590020a7ecac8d37010d2acfdab5bb6b329ad7b9))
+
 ## [7.0.6](https://github.com/uq-its-ss/design-system/compare/@uqds/navigation@7.0.6-alpha.0...@uqds/navigation@7.0.6) (2026-03-30)
 
 **Note:** Version bump only for package @uqds/navigation

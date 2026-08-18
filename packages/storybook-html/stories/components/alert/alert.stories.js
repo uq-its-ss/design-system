@@ -73,7 +73,7 @@ export default {
         )}"
         role="alert">
         <div class="uq-alert__message">
-          ${title ? `<${titleElement} class="uq-alert__title">${title}</${titleElement}>` : ""}
+          ${title ? `<${titleElement}>${title}</${titleElement}>` : ""}
           ${message}
           ${button ? `<p><a href="#" title="Button" class="uq-button">${button}</a></p>` : ""}
           ${link ? `<p><a href="#" title="Link" class="uq-button--inline">${link}</a></p>` : ""}

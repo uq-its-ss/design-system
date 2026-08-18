@@ -180,6 +180,7 @@ $use-encapsulation: false !default;
       text-decoration 200ms ease-out,
       background-color 200ms ease-out;
     display: inline-block;
+    cursor: pointer;
 
     &:hover {
       color: core.$white;

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.6-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/side-nav@4.0.5...@uqds/side-nav@4.0.6-alpha.0) (2026-08-05)
+
+### Bug Fixes
+
+- add export and style fields to all component package.json files ([#788](https://github.com/uq-its-ss/design-system/issues/788)) ([590020a](https://github.com/uq-its-ss/design-system/commit/590020a7ecac8d37010d2acfdab5bb6b329ad7b9))
+
 ## [4.0.5](https://github.com/uq-its-ss/design-system/compare/@uqds/side-nav@4.0.5-alpha.0...@uqds/side-nav@4.0.5) (2026-03-30)
 
 **Note:** Version bump only for package @uqds/side-nav

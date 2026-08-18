@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.6](https://github.com/uq-its-ss/design-system/compare/@uqds/side-nav@4.0.6-alpha.0...@uqds/side-nav@4.0.6) (2026-08-18)
+
+**Note:** Version bump only for package @uqds/side-nav
+
 ## [4.0.6-alpha.0](https://github.com/uq-its-ss/design-system/compare/@uqds/side-nav@4.0.5...@uqds/side-nav@4.0.6-alpha.0) (2026-08-05)
 
 ### Bug Fixes

@@ -19,22 +19,32 @@ import { HeaderDecorator } from "./headingDecorator";
 function extractLeafHrefs(links) {
   let hrefs = [];
   if (!Array.isArray(links)) return hrefs;
+  
   for (const link of links) {
     // Always add the link's href if it exists (both parent and leaf links)
     if (link.href) {
       hrefs.push(link.href);
     }
     
-    if (link.columns) {
+    // Handle mega menu structure (columns -> groups -> children)
+    if (link.columns && Array.isArray(link.columns)) {
       for (const column of link.columns) {
-        for (const group of column.groups) {
-          hrefs = hrefs.concat(extractLeafHrefs(group.children));
+        if (column.groups && Array.isArray(column.groups)) {
+          for (const group of column.groups) {
+            if (group.children && Array.isArray(group.children)) {
+              hrefs = hrefs.concat(extractLeafHrefs(group.children));
+            }
+          }
         }
       }
-    } else if (link.children) {
+    }
+    
+    // Handle direct children (nested navigation)
+    if (link.children && Array.isArray(link.children)) {
       hrefs = hrefs.concat(extractLeafHrefs(link.children));
     }
   }
+  
   return hrefs;
 }
 

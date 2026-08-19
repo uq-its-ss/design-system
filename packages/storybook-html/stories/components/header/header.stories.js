@@ -19,13 +19,13 @@ import { HeaderDecorator } from "./headingDecorator";
 function extractLeafHrefs(links) {
   let hrefs = [];
   if (!Array.isArray(links)) return hrefs;
-  
+
   for (const link of links) {
     // Always add the link's href if it exists (both parent and leaf links)
     if (link.href) {
       hrefs.push(link.href);
     }
-    
+
     // Handle mega menu structure (columns -> groups -> children)
     if (link.columns && Array.isArray(link.columns)) {
       for (const column of link.columns) {
@@ -38,13 +38,13 @@ function extractLeafHrefs(links) {
         }
       }
     }
-    
+
     // Handle direct children (nested navigation)
     if (link.children && Array.isArray(link.children)) {
       hrefs = hrefs.concat(extractLeafHrefs(link.children));
     }
   }
-  
+
   return hrefs;
 }
 
@@ -95,7 +95,7 @@ const hasActiveDescendant = (item, activeHref) => {
   if (!item.children) return false;
   return item.children.some(
     (child) =>
-      child.href === activeHref || hasActiveDescendant(child, activeHref)
+      child.href === activeHref || hasActiveDescendant(child, activeHref),
   );
 };
 

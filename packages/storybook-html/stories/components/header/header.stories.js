@@ -89,6 +89,17 @@ const renderMegaMenu = (columns, parentTitle) => {
 };
 
 /**
+ * HELPER: Check if any descendant of an item is the active page
+ */
+const hasActiveDescendant = (item, activeHref) => {
+  if (!item.children) return false;
+  return item.children.some(
+    (child) =>
+      child.href === activeHref || hasActiveDescendant(child, activeHref)
+  );
+};
+
+/**
  * HELPER: Recursive Nested Link Renderer (Mobile)
  * It handles the deep hierarchy of the mobile slide-out menu.
  */
@@ -108,28 +119,36 @@ const renderNestedLinks = (
   return children
     .map((child) => {
       const hasGrandchildren = child.children && child.children.length > 0;
-      // Only leaf links (no grandchildren) can be active
-      const isActive =
-        !isOrphanMode && !hasGrandchildren && child.href === activeHref;
+      // Check if this exact page is active (parent or leaf)
+      const isActive = !isOrphanMode && child.href === activeHref;
+      // Check if this item is in the active trail (has an active descendant)
+      const hasActiveChild = hasActiveDescendant(child, activeHref);
       // In orphan mode, check if this is the designated parent
       const isOrphanParent =
         isOrphanMode && orphanParentHref && child.href === orphanParentHref;
+      // Item is in active trail if it's active, has active descendant, or is orphan parent
+      const isInActiveTrail = isActive || hasActiveChild || isOrphanParent;
       const currentPath = parentPath
         ? `${parentPath} > ${child.title}`
         : child.title;
 
-      // Build class list
+      // Build class list for control/link
       let classes = hasGrandchildren
         ? "uq-header__nav-mobile-audience-link slide-menu__control"
         : "uq-header__nav-mobile-link";
 
-      // Add both classes to active items (CMS pattern)
-      if (isActive) {
-        classes += " in-active-trail is-active";
-      }
-      // In orphan mode, parent gets only .in-active-trail (no visual styling)
-      if (isOrphanParent) {
-        classes += " in-active-trail";
+      // Control gets .in-active-trail when in trail (never .is-active)
+      // Leaf links get both when active
+      if (hasGrandchildren) {
+        // Control: only .in-active-trail
+        if (isInActiveTrail) {
+          classes += " in-active-trail";
+        }
+      } else {
+        // Leaf link: both classes when active
+        if (isActive) {
+          classes += " in-active-trail is-active";
+        }
       }
 
       let linkContent = `
@@ -140,7 +159,7 @@ const renderNestedLinks = (
               ? `
             <ul class="uq-header__nav-mobile-list">
               <li class="uq-header__nav-mobile-item">
-                <a class="uq-header__nav-mobile-audience-link${isOrphanParent ? " in-active-trail" : ""}" href="${child.href}" data-gtm-path="${parentPath}">${child.title}</a>
+                <a class="uq-header__nav-mobile-audience-link${isInActiveTrail ? " in-active-trail" : ""}${isActive ? " is-active" : ""}" href="${child.href}" data-gtm-path="${parentPath}">${child.title}</a>
               </li>
               ${renderNestedLinks(child.children, activeHref, orphanParentHref, currentPath)}
             </ul>

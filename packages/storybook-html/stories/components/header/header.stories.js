@@ -15,11 +15,16 @@ import {
 } from "@uqds/header/src/js/menuData"; // Import the menu data
 import { HeaderDecorator } from "./headingDecorator";
 
-// Helper to extract all leaf hrefs from localLinks
+// Helper to extract all hrefs from localLinks (both leaf and parent links)
 function extractLeafHrefs(links) {
   let hrefs = [];
   if (!Array.isArray(links)) return hrefs;
   for (const link of links) {
+    // Always add the link's href if it exists (both parent and leaf links)
+    if (link.href) {
+      hrefs.push(link.href);
+    }
+    
     if (link.columns) {
       for (const column of link.columns) {
         for (const group of column.groups) {
@@ -28,8 +33,6 @@ function extractLeafHrefs(links) {
       }
     } else if (link.children) {
       hrefs = hrefs.concat(extractLeafHrefs(link.children));
-    } else if (link.href) {
-      hrefs.push(link.href);
     }
   }
   return hrefs;

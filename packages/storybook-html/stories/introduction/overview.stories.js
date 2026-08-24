@@ -32,7 +32,7 @@ export const Overview = {
     title: "Overview",
     description: `
 <p>The Design System is a guide to how user interfaces should look, feel, and behave at UQ. The system provides styles, layouts, components, patterns, and examples of common user interfaces at UQ. It aims to help designers and developers build projects more easily and supports the application of the <a href="https://marketing-communication.uq.edu.au/one-brand">UQ Brand Guidelines</a> to ensure user interfaces across UQ are consistent.</p>
-<p>Follow our <a href="/design-system/packages/storybook-html/public?path=/docs/introduction-get-started--page">Get started</a> guide to see how you can use the Design System in your project. If your project has unique needs, you may need to adapt and extend what is provided in the system. If you want to share your work, contct <a href="https://about.uq.edu.au/web-feedback?r=https://design-system.uq.edu.au"> ADS UI team</a> to become a contributor.</p>`,
+<p>Follow our <a href="/design-system/packages/storybook-html/public?path=/docs/introduction-get-started--page">Get started</a> guide to see how you can use the Design System in your project. If your project has unique needs, you may need to adapt and extend what is provided in the system. If you want to share your work, contactt <a href="https://about.uq.edu.au/web-feedback?r=https://design-system.uq.edu.au"> ADS UI team</a> to become a contributor.</p>`,
   })}
   ${Section({
     title: "Community",

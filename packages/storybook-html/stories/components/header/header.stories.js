@@ -15,23 +15,36 @@ import {
 } from "@uqds/header/src/js/menuData"; // Import the menu data
 import { HeaderDecorator } from "./headingDecorator";
 
-// Helper to extract all leaf hrefs from localLinks
+// Helper to extract all hrefs from localLinks (both leaf and parent links)
 function extractLeafHrefs(links) {
   let hrefs = [];
   if (!Array.isArray(links)) return hrefs;
+
   for (const link of links) {
-    if (link.columns) {
-      for (const column of link.columns) {
-        for (const group of column.groups) {
-          hrefs = hrefs.concat(extractLeafHrefs(group.children));
-        }
-      }
-    } else if (link.children) {
-      hrefs = hrefs.concat(extractLeafHrefs(link.children));
-    } else if (link.href) {
+    // Always add the link's href if it exists (both parent and leaf links)
+    if (link.href) {
       hrefs.push(link.href);
     }
+
+    // Handle mega menu structure (columns -> groups -> children)
+    if (link.columns && Array.isArray(link.columns)) {
+      for (const column of link.columns) {
+        if (column.groups && Array.isArray(column.groups)) {
+          for (const group of column.groups) {
+            if (group.children && Array.isArray(group.children)) {
+              hrefs = hrefs.concat(extractLeafHrefs(group.children));
+            }
+          }
+        }
+      }
+    }
+
+    // Handle direct children (nested navigation)
+    if (link.children && Array.isArray(link.children)) {
+      hrefs = hrefs.concat(extractLeafHrefs(link.children));
+    }
   }
+
   return hrefs;
 }
 
@@ -76,33 +89,79 @@ const renderMegaMenu = (columns, parentTitle) => {
 };
 
 /**
+ * HELPER: Check if any descendant of an item is the active page
+ */
+const hasActiveDescendant = (item, activeHref) => {
+  if (!item.children) return false;
+  return item.children.some(
+    (child) =>
+      child.href === activeHref || hasActiveDescendant(child, activeHref),
+  );
+};
+
+/**
  * HELPER: Recursive Nested Link Renderer (Mobile)
  * It handles the deep hierarchy of the mobile slide-out menu.
  */
-const renderNestedLinks = (children, activeHref, parentPath = "") => {
+const renderNestedLinks = (
+  children,
+  activeHref,
+  orphanParentHref = null,
+  parentPath = "",
+) => {
   if (!children || children.length === 0) {
     return "";
   }
 
+  // Check if we're in orphan mode
+  const isOrphanMode = activeHref && activeHref.includes("(Orphan Example)");
+
   return children
     .map((child) => {
       const hasGrandchildren = child.children && child.children.length > 0;
-      // Only leaf links (no grandchildren) can be active
-      const isActive = !hasGrandchildren && child.href === activeHref;
+      // Check if this exact page is active (parent or leaf)
+      const isActive = !isOrphanMode && child.href === activeHref;
+      // Check if this item is in the active trail (has an active descendant)
+      const hasActiveChild = hasActiveDescendant(child, activeHref);
+      // In orphan mode, check if this is the designated parent
+      const isOrphanParent =
+        isOrphanMode && orphanParentHref && child.href === orphanParentHref;
+      // Item is in active trail if it's active, has active descendant, or is orphan parent
+      const isInActiveTrail = isActive || hasActiveChild || isOrphanParent;
       const currentPath = parentPath
         ? `${parentPath} > ${child.title}`
         : child.title;
+
+      // Build class list for control/link
+      let classes = hasGrandchildren
+        ? "uq-header__nav-mobile-audience-link slide-menu__control"
+        : "uq-header__nav-mobile-link";
+
+      // Control gets .in-active-trail when in trail (never .is-active)
+      // Leaf links get both when active
+      if (hasGrandchildren) {
+        // Control: only .in-active-trail
+        if (isInActiveTrail) {
+          classes += " in-active-trail";
+        }
+      } else {
+        // Leaf link: both classes when active
+        if (isActive) {
+          classes += " in-active-trail is-active";
+        }
+      }
+
       let linkContent = `
         <li class="uq-header__nav-mobile-item">
-          <a href="${child.href}" class="${hasGrandchildren ? "uq-header__nav-mobile-audience-link slide-menu__control" : `uq-header__nav-mobile-link${isActive ? " is-active" : ""}`}"${hasGrandchildren ? "" : ` data-gtm-path="${parentPath}"`}>${child.title}</a>
+          <a href="${child.href}" class="${classes}"${hasGrandchildren ? "" : ` data-gtm-path="${parentPath}"`}>${child.title}</a>
           ${
             hasGrandchildren
               ? `
             <ul class="uq-header__nav-mobile-list">
               <li class="uq-header__nav-mobile-item">
-                <a class="uq-header__nav-mobile-audience-link" href="${child.href}" data-gtm-path="${parentPath}">${child.title}</a>
+                <a class="uq-header__nav-mobile-audience-link${isInActiveTrail ? " in-active-trail" : ""}${isActive ? " is-active" : ""}" href="${child.href}" data-gtm-path="${parentPath}">${child.title}</a>
               </li>
-              ${renderNestedLinks(child.children, activeHref, currentPath)}
+              ${renderNestedLinks(child.children, activeHref, orphanParentHref, currentPath)}
             </ul>
             `
               : ""
@@ -118,27 +177,53 @@ const renderNestedLinks = (children, activeHref, parentPath = "") => {
  * HELPER: Mobile Navigation Root
  * Entry point for building the mobile menu structure.
  */
-const renderMobileNav = (links, activeHref) => {
+const renderMobileNav = (links, activeHref, orphanParentHref = null) => {
+  // Check if we're in orphan mode
+  const isOrphanMode = activeHref && activeHref.includes("(Orphan Example)");
+
   return links
     .map((link) => {
       const hasColumns = !!link.columns;
       // Only leaf links (no columns) can be active
-      const isActive = !hasColumns && link.href === activeHref;
+      const isActive = !isOrphanMode && !hasColumns && link.href === activeHref;
+      // In orphan mode, check if this is the designated parent
+      const isOrphanParent =
+        isOrphanMode && orphanParentHref && link.href === orphanParentHref;
+
+      // Build class list
+      let classes = hasColumns
+        ? "uq-header__nav-mobile-audience-link slide-menu__control"
+        : "uq-header__nav-mobile-link";
+
+      // Add both classes to active items (CMS pattern)
+      if (isActive) {
+        classes += " in-active-trail is-active";
+      }
+      // In orphan mode, parent gets only .in-active-trail (no visual styling)
+      if (isOrphanParent) {
+        classes += " in-active-trail";
+      }
+
       return `
       <li class="uq-header__nav-mobile-item">
-        <a href="${link.href}" class="${hasColumns ? "uq-header__nav-mobile-audience-link slide-menu__control" : `uq-header__nav-mobile-link${isActive ? " is-active" : ""}`}"${hasColumns ? "" : ` data-gtm-path=""`}>${link.title}</a>
+        <a href="${link.href}" class="${classes}"${hasColumns ? "" : ` data-gtm-path=""`}>${link.title}</a>
         ${
           hasColumns
             ? `
           <ul class="uq-header__nav-mobile-list">
             <li class="uq-header__nav-mobile-item">
-              <a class="uq-header__nav-mobile-link" href="${link.href}" data-gtm-path="${link.title}">${link.title}</a>
+              <a class="uq-header__nav-mobile-link${isOrphanParent ? " in-active-trail" : ""}" href="${link.href}" data-gtm-path="${link.title}">${link.title}</a>
             </li>
             ${link.columns // Iterate over columns
               .map((column) =>
                 column.groups
                   .map((group) =>
-                    renderNestedLinks(group.children, activeHref, link.title),
+                    renderNestedLinks(
+                      group.children,
+                      activeHref,
+                      orphanParentHref,
+                      link.title,
+                    ),
                   )
                   .join(""),
               )
@@ -209,6 +294,26 @@ export default {
       description:
         "Controls the visibility of the local mobile nav menu, replacing the global primary nav on mobile.",
     },
+    showOrphanExample: {
+      name: "Show Orphan Link Pattern",
+      control: "boolean",
+      description:
+        "Demonstrates orphan page behavior where current page is not in menu. Parent gets .in-active-trail (no styling), no link gets .is-active.",
+      table: {
+        category: "Demo Controls",
+      },
+    },
+    orphanParentHref: {
+      name: "Orphan Parent Link",
+      control: { type: "select" },
+      options: extractLeafHrefs(localLinksExample),
+      description:
+        "When orphan example is enabled, this link receives .in-active-trail class (menu auto-opens here).",
+      table: {
+        category: "Demo Controls",
+      },
+      if: { arg: "showOrphanExample", eq: true },
+    },
     localLinks: {
       name: "Local Navigation Links",
       control: "object",
@@ -260,14 +365,22 @@ const headerRenderer = ({
   primaryLinks,
   secondaryLinks,
   activeHref,
-}) => `
+  showOrphanExample,
+  orphanParentHref,
+}) => {
+  // Determine active href - use orphan example text if enabled
+  const displayActiveHref = showOrphanExample
+    ? `${orphanParentHref} (Orphan Example)`
+    : activeHref;
+
+  return `
 <!-- HEADER WRAPPER -->
 <header class="uq-header">
   <div class="uq-header__container">
 
     <!-- TOGGLE MENU (Mobile) -->
     <div class="uq-header__toggle-menu" data-target="global-mobile-nav">
-      <button type="button" class="uq-header__toggle-menu-button slide-menu__control" data-target="global-mobile-nav" data-arg=".is-active" data-action="smartToggle">Menu</button>
+      <button type="button" class="uq-header__toggle-menu-button slide-menu__control" data-target="global-mobile-nav" data-arg=".in-active-trail" data-action="smartToggle">Menu</button>
 
         <!-- NAVIGATION (Mobile) (Slide menu) -->
         <!-- "uq-header__nav-mobile-local" class is added if showing local site menu -->
@@ -282,10 +395,10 @@ const headerRenderer = ({
                 <a class="uq-header__nav-mobile-home" href="https://uq.edu.au">UQ home</a>
               </li>
               <li class="uq-header__nav-mobile-item">
-                  <a class="uq-header__nav-mobile-link${siteDomain === activeHref ? " is-active" : ""}" href="${siteDomain}">${siteName}</a>
+                  <a class="uq-header__nav-mobile-link${siteDomain === displayActiveHref && !showOrphanExample ? " in-active-trail is-active" : ""}" href="${siteDomain}">${siteName}</a>
               </li>
               <!-- Hook for the recursive menu file above -->
-              ${renderMobileNav(localLinks, activeHref)}
+              ${renderMobileNav(localLinks, displayActiveHref, showOrphanExample ? orphanParentHref : null)}
               `
               : ""
           }
@@ -400,6 +513,7 @@ const headerRenderer = ({
     </div>
 </header>
 `;
+};
 
 // -------------------------------------------------------------
 // CSF 3.0 Stories: Exported Objects
@@ -415,6 +529,8 @@ export const Default = {
     primaryLinks: primaryLinks,
     secondaryLinks: secondaryLinks,
     activeHref: "https://uq.edu.au", // Default active link
+    showOrphanExample: false,
+    orphanParentHref: extractLeafHrefs(localLinksExample)[0],
   },
 };
 

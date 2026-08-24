@@ -884,11 +884,14 @@
           this.close();
         } else {
           this.open();
-          // If a selector is provided (e.g. ".is-active")
+          // If a selector is provided (e.g. ".in-active-trail" or ".is-active")
           if (selector) {
-            // search strictly inside the menu for the target to ensure we don't grab elements elsewhere on the page
-            const target = this.menuElem.querySelector(selector);
-            if (target) {
+            // Search strictly inside the menu for all matching targets
+            // Use querySelectorAll to find all matches, then pick the last (deepest) one
+            // This ensures we navigate to the deepest item in the active trail
+            const targets = this.menuElem.querySelectorAll(selector);
+            if (targets.length > 0) {
+              const target = targets[targets.length - 1];
               this.navigateTo(target);
             }
           }

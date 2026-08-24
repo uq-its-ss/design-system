@@ -32,12 +32,12 @@ export const Overview = {
     title: "Overview",
     description: `
 <p>The Design System is a guide to how user interfaces should look, feel, and behave at UQ. The system provides styles, layouts, components, patterns, and examples of common user interfaces at UQ. It aims to help designers and developers build projects more easily and supports the application of the <a href="https://marketing-communication.uq.edu.au/one-brand">UQ Brand Guidelines</a> to ensure user interfaces across UQ are consistent.</p>
-<p>Follow our <a href="/design-system/packages/storybook-html/public?path=/docs/introduction-get-started--page">Get started</a> guide to see how you can use the Design System in your project. If your project has unique needs, you may need to adapt and extend what is provided in the system. If you want to share your work, contactt <a href="https://about.uq.edu.au/web-feedback?r=https://design-system.uq.edu.au"> ADS UI team</a> to become a contributor.</p>`,
+<p>Follow our <a href="/design-system/packages/storybook-html/public?path=/docs/introduction-get-started--page">Get started</a> guide to see how you can use the Design System in your project. If your project has unique needs, you may need to adapt and extend what is provided in the system. If you want to share your work, contactt <a href="https://about.uq.edu.au/web-feedback?r=https://design-system.uq.edu.au">ADS UI team</a> to become a contributor.</p>`,
   })}
   ${Section({
     title: "Community",
     description: `
-<p>The Design System is managed and supported by the User Interface Design and Development team in ITS Application Development and Support (ADS-UI for short). Join the Design System community on <a class="text--link" href="https://www.yammer.com/uq.edu.au/#/threads/inGroup?type=in_group&feedId=35286523904">UQ Yammer</a> for updates and discussion or contact <a href="https://about.uq.edu.au/web-feedback?r=https://design-system.uq.edu.au"> ADS UI team</a>  with questions and feedback.</p>
+<p>The Design System is managed and supported by the User Interface Design and Development team in ITS Application Development and Support (ADS-UI for short). Join the Design System community on <a class="text--link" href="https://www.yammer.com/uq.edu.au/#/threads/inGroup?type=in_group&feedId=35286523904">UQ Yammer</a> for updates and discussion or contact the <a href="https://about.uq.edu.au/web-feedback?r=https://design-system.uq.edu.au">ADS UI team</a>  with questions and feedback.</p>
 <p>We'd love to come talk to your team about the design system and answer any questions you have.</p>`,
     content: `
 <div class="uq-card-grid uq-card-grid--target-3x">
@@ -68,7 +68,7 @@ export const Overview = {
     description: `
 <p>If UQ development teams work together, we can save time and build better.</p>
 <p>Our <a href="https://github.com/uq-its-ss/design-system">GitHub repository</a> contains all the code and content which make up the design system.</p>
-<p>Contact <a href="https://about.uq.edu.au/web-feedback?r=https://design-system.uq.edu.au"> ADS UI team</a>  if you'd like to contribute to the design system.</p>`,
+<p>contact <a href="https://about.uq.edu.au/web-feedback?r=https://design-system.uq.edu.au">ADS UI team</a>  if you'd like to contribute to the design system.</p>`,
   })}
   ${Section({
     title: "Why have a design system?",

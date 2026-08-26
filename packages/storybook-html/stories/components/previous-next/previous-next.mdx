@@ -11,11 +11,12 @@ issues](https://github.com/uq-its-ss/design-system/issues)
 
 ## Overview
 
-The **Previous / Next** component provides consistent navigation across sequential pages, steps, or multi-page flows. It can be rendered as either **links** (for non-linear page navigation) or **buttons** (for stateful step-by-step processes).
+The **Previous / Next** component provides consistent navigation across sequential pages or steps.
 
-- The Previous-next component is also a form of pagination.
+- It can be rendered as either **links** (for page to page navigation) or **buttons** (for content changes on the same page).
+
+- The Previous-next component is a form of pagination.
 - It provides previous and next buttons (links) to navigate between pages or between tab contents on the same page.
-- They are aligned to the sides of the page or in some instances to the sides of the tab contents.
 
 ## Default example
 
@@ -65,11 +66,7 @@ Choosing between links and buttons ensures proper semantic HTML, keyboard access
 #### Use Buttons When:
 
 - Submitting data or triggering an action that changes application state (e.g., saving current step inputs before moving forward).
-- Navigating through a modal wizard, multi-step checkout, or single-page app (SPA) step flow where URLs may not change.
-
-### Breakpoints
-
-- The previous and next buttons collapses at viewport widths less than 640px.
+- Navigating through tabbed content orsingle-page app (SPA) step flow where URLs may not change.
 
 ### Accessibility
 

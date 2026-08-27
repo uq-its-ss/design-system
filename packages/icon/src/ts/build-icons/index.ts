@@ -4,7 +4,7 @@ import { optimize } from "svgo";
 import glob from "glob";
 import { promises as FS } from "fs";
 import svgConverter from "mini-svg-data-uri";
-import { svgoOptions } from "./svgoOptions";
+import { svgoConfig } from "./svgoOptions";
 
 // Placeholder string using URL safe strings that are unreserved.
 // Must match the value in scss/_util.scss.
@@ -17,11 +17,11 @@ const colourPlaceholder = "~~COLOR~~";
  * @throws Will throw an error if optimisation fails for any reason
  */
 const optimiseSVG = (svgInput: string): string => {
-    const result = optimize(svgInput, svgoOptions);
-    if (result.error) {
+    const result = optimize(svgInput, svgoConfig);
+    if ("error" in result) {
         throw new Error(`Error occurred while optimising SVG: ${result.error}`);
     }
-    return (result as any).data;
+    return result.data;
 };
 
 /** Takes an SVG's filepath and parses out the category and filename.
@@ -167,7 +167,7 @@ const createAdditionalOutputs = async (
     // Accumulating string for emitting icons using Sass mixins
     const iconsMixins = results.reduce((acc, { name, category }) => {
         return `${acc}@include icon("${category}--${name}");\n`;
-    }, "@use \"../global\" as *;\n\n");
+    }, '@use "../global" as *;\n\n');
     try {
         await FS.writeFile(sassMixins, `${iconsMixins}`);
     } catch (e: any) {

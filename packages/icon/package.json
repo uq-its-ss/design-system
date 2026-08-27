@@ -41,6 +41,11 @@
       "require": "./index.js",
       "default": "./index.js"
     },
+    "./build-utils": {
+      "types": "./src/ts/build-utils/index.ts",
+      "import": "./src/ts/build-utils/index.ts",
+      "default": "./src/ts/build-utils/index.ts"
+    },
     "./dist/css/main.css": "./dist/css/main.css",
     "./src/js/_build/*": "./src/js/_build/*.js",
     "./src/scss/*": "./src/scss/*"

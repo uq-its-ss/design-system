@@ -7,7 +7,7 @@ sass.render(
     includePaths: [
       "./node_modules",
       "../../node_modules", // Root node_modules for workspace dependencies
-      "./node_modules/@uqds/core/node_modules"
+      "./node_modules/@uqds/core/node_modules",
     ],
   },
   (err, result) => {

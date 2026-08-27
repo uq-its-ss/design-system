@@ -33,9 +33,9 @@
     "url": "git+https://github.com/uq-its-ss/design-system.git"
   },
   "scripts": {
-    "build-icons": "node scripts/build-icons.js",
+    "build-icons": "tsx scripts/build-icons.ts",
     "build-css": "node scripts/build-css.js",
-    "build": "node scripts/build-icons.js && node scripts/build-css.js",
+    "build": "tsx scripts/build-icons.ts && node scripts/build-css.js",
     "prepare": "gulp -f ../../gulpfile.js --cwd=. prepare"
   },
   "bugs": {
@@ -44,7 +44,8 @@
   "dependencies": {
     "@material/circular-progress": "^14.0.0",
     "@uqds/body": "^4.0.5",
-    "@uqds/core": "^5.0.2"
+    "@uqds/core": "^5.0.2",
+    "@uqds/icon": "^4.0.6"
   },
   "devDependencies": {
     "@svgdotjs/svg.js": "^3.0.16",
@@ -54,6 +55,8 @@
     "mini-svg-data-uri": "^1.2.3",
     "sass": "^1.30.0",
     "svgdom": "0.1.14",
-    "svgo": "^4.0.1"
+    "svgo": "^4.1.0",
+    "tsx": "^4.20.3",
+    "typescript": "^5.0.0"
   }
 }

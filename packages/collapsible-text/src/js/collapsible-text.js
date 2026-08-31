@@ -6,11 +6,11 @@
 class collapsibleText {
   /**
    * @constructor
-   * @param {String} [className] - Class name of collapsible text wrappers (optional;
-   * default: "uq-collapsible-text").
+   * @param {String} [selector] - Data attribute selector for collapsible text wrappers (optional;
+   * default: "[data-component='collapsible-text']").
    */
-  constructor(className) {
-    this.className = className || "uq-collapsible-text";
+  constructor(selector) {
+    this.selector = selector || "[data-component='collapsible-text']";
     this.components = [];
     this.init();
   }
@@ -19,14 +19,14 @@ class collapsibleText {
    * Initialize all collapsible text components
    */
   init() {
-    const elements = document.querySelectorAll(`.${this.className}`);
+    const elements = document.querySelectorAll(this.selector);
 
     elements.forEach((element) => {
       this.setupComponent(element);
     });
 
     console.log(
-      `${this.className}: ${elements.length} component(s) initialized`,
+      `collapsible-text: ${elements.length} component(s) initialized`,
     );
   }
 
@@ -35,8 +35,8 @@ class collapsibleText {
    * @param {HTMLElement} element - The collapsible text container
    */
   setupComponent(element) {
-    const content = element.querySelector(`.${this.className}__content`);
-    const button = element.querySelector(`.${this.className}__button`);
+    const content = element.querySelector("[data-collapsible-content]");
+    const button = element.querySelector("[data-collapsible-button]");
 
     if (!content || !button) {
       console.warn("Collapsible text component missing required elements");
@@ -56,13 +56,13 @@ class collapsibleText {
       // Content is short enough - no collapsing needed
       content.style.maxHeight = "none";
       button.style.display = "none";
-      element.classList.add(`${this.className}--no-collapse`);
+      element.setAttribute("data-collapsed", "false");
       return; // Don't add to components array or set up listeners
     }
 
     // Content exceeds threshold - set up collapsible behavior
     content.style.maxHeight = collapsedHeight;
-    element.classList.add(`${this.className}--collapsed`);
+    element.setAttribute("data-state", "collapsed");
 
     // Set ARIA attributes
     button.setAttribute("aria-expanded", "false");
@@ -169,17 +169,23 @@ class collapsibleText {
     if (componentData.isExpanded) {
       // Expanding
       content.style.maxHeight = fullHeight;
-      element.classList.remove(`${this.className}--collapsed`);
-      element.classList.add(`${this.className}--expanded`);
+      element.setAttribute("data-state", "expanded");
       button.setAttribute("aria-expanded", "true");
       button.textContent = "Read less";
+      
+      // Toggle icon classes
+      button.classList.remove("uq-icon--standard--chevron-down-sml");
+      button.classList.add("uq-icon--standard--chevron-up-sml");
     } else {
       // Collapsing
       content.style.maxHeight = collapsedHeight;
-      element.classList.remove(`${this.className}--expanded`);
-      element.classList.add(`${this.className}--collapsed`);
+      element.setAttribute("data-state", "collapsed");
       button.setAttribute("aria-expanded", "false");
       button.textContent = "Read more";
+      
+      // Toggle icon classes
+      button.classList.remove("uq-icon--standard--chevron-up-sml");
+      button.classList.add("uq-icon--standard--chevron-down-sml");
     }
   }
 

@@ -52,16 +52,16 @@ See [`JS-ENHANCEMENT.md`](./JS-ENHANCEMENT.md) for details.
 ### Basic HTML Structure
 
 ```html
-<div class="uq-collapsible-text">
+<div class="uq-collapsible-text" data-component="collapsible-text">
   <h3>Your Title</h3>
 
   <!-- Content with fade effect -->
-  <div class="uq-collapsible-text__content">
+  <div class="uq-collapsible-text__content" data-collapsible-content>
     <p>Your content goes here...</p>
   </div>
 
   <!-- Button to toggle expanded/collapsed state -->
-  <button class="uq-collapsible-text__button" aria-expanded="false">
+  <button class="uq-collapsible-text__button" data-collapsible-button aria-expanded="false">
     Read more
   </button>
 </div>
@@ -75,21 +75,21 @@ By default, the button only appears if content height exceeds **16rem**. You can
 
 ```html
 <!-- Button appears if content exceeds 20rem -->
-<div class="uq-collapsible-text" data-collapse-threshold="20">
-  <div class="uq-collapsible-text__content">
+<div class="uq-collapsible-text" data-component="collapsible-text" data-collapse-threshold="20">
+  <div class="uq-collapsible-text__content" data-collapsible-content>
     <p>Your content...</p>
   </div>
-  <button class="uq-collapsible-text__button" aria-expanded="false">
+  <button class="uq-collapsible-text__button" data-collapsible-button aria-expanded="false">
     Read more
   </button>
 </div>
 
 <!-- Button appears if content exceeds 10rem -->
-<div class="uq-collapsible-text" data-collapse-threshold="10">
-  <div class="uq-collapsible-text__content">
+<div class="uq-collapsible-text" data-component="collapsible-text" data-collapse-threshold="10">
+  <div class="uq-collapsible-text__content" data-collapsible-content>
     <p>Your content...</p>
   </div>
-  <button class="uq-collapsible-text__button" aria-expanded="false">
+  <button class="uq-collapsible-text__button" data-collapsible-button aria-expanded="false">
     Read more
   </button>
 </div>
@@ -101,21 +101,21 @@ You can customize the collapsed height per instance using the `data-collapsed-he
 
 ```html
 <!-- Custom collapsed height of 8rem -->
-<div class="uq-collapsible-text" data-collapsed-height="8rem">
-  <div class="uq-collapsible-text__content">
+<div class="uq-collapsible-text" data-component="collapsible-text" data-collapsed-height="8rem">
+  <div class="uq-collapsible-text__content" data-collapsible-content>
     <p>Your content...</p>
   </div>
-  <button class="uq-collapsible-text__button" aria-expanded="false">
+  <button class="uq-collapsible-text__button" data-collapsible-button aria-expanded="false">
     Read more
   </button>
 </div>
 
 <!-- Custom collapsed height of 12rem -->
-<div class="uq-collapsible-text" data-collapsed-height="12rem">
-  <div class="uq-collapsible-text__content">
+<div class="uq-collapsible-text" data-component="collapsible-text" data-collapsed-height="12rem">
+  <div class="uq-collapsible-text__content" data-collapsible-content>
     <p>Your content...</p>
   </div>
-  <button class="uq-collapsible-text__button" aria-expanded="false">
+  <button class="uq-collapsible-text__button" data-collapsible-button aria-expanded="false">
     Read more
   </button>
 </div>
@@ -128,13 +128,27 @@ The `data-collapsed-height` attribute accepts any CSS height value (e.g., `8rem`
 **Compact** (4rem collapsed height):
 
 ```html
-<div class="uq-collapsible-text uq-collapsible-text--compact">...</div>
+<div class="uq-collapsible-text uq-collapsible-text--compact" data-component="collapsible-text">
+  <div class="uq-collapsible-text__content" data-collapsible-content>
+    <p>Your content...</p>
+  </div>
+  <button class="uq-collapsible-text__button" data-collapsible-button aria-expanded="false">
+    Read more
+  </button>
+</div>
 ```
 
 **Tall** (10rem collapsed height):
 
 ```html
-<div class="uq-collapsible-text uq-collapsible-text--tall">...</div>
+<div class="uq-collapsible-text uq-collapsible-text--tall" data-component="collapsible-text">
+  <div class="uq-collapsible-text__content" data-collapsible-content>
+    <p>Your content...</p>
+  </div>
+  <button class="uq-collapsible-text__button" data-collapsible-button aria-expanded="false">
+    Read more
+  </button>
+</div>
 ```
 
 ### Customization with CSS Variables
@@ -142,13 +156,19 @@ The `data-collapsed-height` attribute accepts any CSS height value (e.g., `8rem`
 ```html
 <div
   class="uq-collapsible-text"
+  data-component="collapsible-text"
   style="
   --collapsible-collapsed-height: 8rem;
   --collapsible-button-bg: #de5454;
   --collapsible-button-bg-hover: #e67f7f;
 "
 >
-  ...
+  <div class="uq-collapsible-text__content" data-collapsible-content>
+    <p>Your content...</p>
+  </div>
+  <button class="uq-collapsible-text__button" data-collapsible-button aria-expanded="false">
+    Read more
+  </button>
 </div>
 ```
 

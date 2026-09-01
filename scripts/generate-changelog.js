@@ -43,7 +43,15 @@ function fetchFromGitHub(url) {
 
         res.on("end", () => {
           if (res.statusCode === 200) {
-            resolve(JSON.parse(data));
+            try {
+              resolve(JSON.parse(data));
+            } catch (err) {
+              reject(
+                new Error(
+                  `Failed to parse GitHub API response as JSON: ${err.message}`,
+                ),
+              );
+            }
           } else {
             reject(new Error(`GitHub API returned ${res.statusCode}: ${data}`));
           }

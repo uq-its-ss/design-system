@@ -15,7 +15,7 @@ Thank you for contributing to the UQ Design System! This guide will help you und
 
 ### Prerequisites
 
-- Node.js 20+ (use [nvm](https://github.com/nvm-sh/nvm))
+- Node.js 24+ (use [nvm](https://github.com/nvm-sh/nvm))
 - npm 10+
 
 ### Installation

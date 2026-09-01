@@ -47,24 +47,35 @@ jobs:
           
           // Get commits since last release
           try {
-            const commits = execSync('git log --pretty=format:"%H|%s|%b" $(git describe --tags --abbrev=0 2>/dev/null || git rev-list --max-parents=0 HEAD)..HEAD', { encoding: 'utf8' });
+            const recordSep = '\x1e';
+            const fieldSep = '\x1f';
+            const commitsRaw = execSync(
+              'git log --pretty=format:"%H%x1f%s%x1f%b%x1e" $(git describe --tags --abbrev=0 2>/dev/null || git rev-list --max-parents=0 HEAD)..HEAD',
+              { encoding: 'utf8' }
+            );
             
             const features = [];
             const fixes = [];
             const breaking = [];
             
-            commits.split('\n').filter(Boolean).forEach(line => {
-              const [hash, subject, body] = line.split('|');
-              const shortHash = hash.substring(0, 7);
-              
-              if (subject.startsWith('feat!:') || subject.startsWith('feat(') && subject.includes('!:') || body?.includes('BREAKING CHANGE')) {
-                breaking.push(`- ${subject.replace(/^feat!?(\([^)]+\))?:\s*/, '**$1**: ')} (${shortHash})`);
-              } else if (subject.startsWith('feat')) {
-                features.push(`- ${subject.replace(/^feat(\([^)]+\))?:\s*/, '**$1**: ')} (${shortHash})`);
-              } else if (subject.startsWith('fix')) {
-                fixes.push(`- ${subject.replace(/^fix(\([^)]+\))?:\s*/, '**$1**: ')} (${shortHash})`);
-              }
-            });
+            commitsRaw
+              .split(recordSep)
+              .filter(Boolean)
+              .forEach((record) => {
+                const cleanRecord = record.trim();
+                if (!cleanRecord) return;
+
+                const [hash, subject, body = ''] = cleanRecord.split(fieldSep);
+                const shortHash = hash.substring(0, 7);
+                
+                if (subject.startsWith('feat!:') || (subject.startsWith('feat(') && subject.includes('!:')) || body.includes('BREAKING CHANGE')) {
+                  breaking.push(`- ${subject.replace(/^feat!?(\([^)]+\))?:\s*/, '**$1**: ')} (${shortHash})`);
+                } else if (subject.startsWith('feat')) {
+                  features.push(`- ${subject.replace(/^feat(\([^)]+\))?:\s*/, '**$1**: ')} (${shortHash})`);
+                } else if (subject.startsWith('fix')) {
+                  fixes.push(`- ${subject.replace(/^fix(\([^)]+\))?:\s*/, '**$1**: ')} (${shortHash})`);
+                }
+              });
             
             let changelog = '<!-- Add your manual summary here -->\n\n';
             changelog += '**This release includes updates to the following packages:**\n\n';
@@ -192,7 +203,7 @@ jobs:
         run: |
           git config user.name "${{ github.actor }}"
           git config user.email "${{ github.actor}}@users.noreply.github.com"
-          # Dry run for version bump ONLY, no tag/push yet       
+          # Dry run for version bump ONLY, no tag/push yet        
           npx lerna version --conventional-commits --conventional-graduate --yes --no-git-tag-version --no-push || true
 
       - name: "📅 Prepare release info"

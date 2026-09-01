@@ -294,7 +294,7 @@ Your commits directly affect:
 ## Additional Resources
 
 - [Conventional Commits Specification](https://conventionalcommits.org/)
-- [CONTRIBUTING.md](../CONTRIBUTING.md) — Full contribution guide
+- [CONTRIBUTING.md](./CONTRIBUTING.md) — Full contribution guide
 - [Release Documentation Strategy](./adr/0001-release-documentation-strategy.md) — ADR explaining our approach
 
 ---

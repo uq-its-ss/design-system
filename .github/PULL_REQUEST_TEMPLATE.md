@@ -1,14 +1,17 @@
 ## Description
+
 <!-- Brief description of what this PR changes and why -->
 
-
-
 ## Related Issue
+
 <!-- JIRA ticket or GitHub issue -->
+
 JIRA: ITSADSSD-XXXXX
 
 ## Type of Change
+
 <!-- Check the relevant box -->
+
 - [ ] 🚀 New feature (feat)
 - [ ] 🐛 Bug fix (fix)
 - [ ] 💥 Breaking change (feat! or fix!)
@@ -19,7 +22,9 @@ JIRA: ITSADSSD-XXXXX
 - [ ] 🔧 Chore/maintenance (chore)
 
 ## Packages Changed
+
 <!-- List affected packages -->
+
 - [ ] @uqds/package-name
 - [ ] @uqds/another-package
 
@@ -28,6 +33,7 @@ JIRA: ITSADSSD-XXXXX
 **⚠️ Important:** All commits must use [Conventional Commits](https://conventionalcommits.org/) format.
 
 **Examples:**
+
 ```bash
 ✅ feat(button): add disabled state variant
 ✅ fix(header): correct keyboard navigation
@@ -36,6 +42,7 @@ JIRA: ITSADSSD-XXXXX
 ```
 
 **Multi-package commits:**
+
 - Different change types → use separate commits
 - Same change type → use most-affected package as scope
 - 3+ packages → use generic scope (core, components, etc.)
@@ -43,7 +50,9 @@ JIRA: ITSADSSD-XXXXX
 See [CONTRIBUTING.md](../docs/CONTRIBUTING.md#commit-message-format) for details.
 
 ## Testing Checklist
+
 <!-- Check all that apply -->
+
 - [ ] Linting passes (`npm run lint`)
 - [ ] Tests pass (`npm run test`)
 - [ ] Tested in Storybook (`npm run storybook`)
@@ -54,9 +63,11 @@ See [CONTRIBUTING.md](../docs/CONTRIBUTING.md#commit-message-format) for details
 - [ ] Checked color contrast (WCAG AA minimum)
 
 ## Breaking Changes
+
 <!-- If this PR includes breaking changes, describe them and provide migration steps -->
 
 **Breaking changes:**
+
 - None
 
 **Migration guide:**
@@ -75,18 +86,17 @@ Add `id: "unique-id"` to each navigation item:
 -->
 
 ## Screenshots/Videos
+
 <!-- If UI changes, include before/after screenshots or screen recordings -->
 
-
-
 ## Additional Notes
+
 <!-- Any additional context, trade-offs, or follow-up work needed -->
-
-
 
 ---
 
 **For Reviewers:**
+
 - [ ] Commits follow conventional format
 - [ ] Breaking changes documented with migration steps
 - [ ] Storybook examples updated (if applicable)

@@ -16,6 +16,7 @@ Go to the [UQ Design System](https://design-system.uq.edu.au/) website for infor
 # Contributing
 
 See [CONTRIBUTING.md](./docs/CONTRIBUTING.md) for detailed contribution guidelines including:
+
 - Commit message format (conventional commits)
 - Pull request process
 - Multi-package change handling
@@ -40,6 +41,7 @@ Otherwise see the full [Setup instructions](./docs/setup-instructions.md).
 **Changelog:** [CHANGELOG.md](./CHANGELOG.md) (auto-generated from stable releases)
 
 **Release types:**
+
 - **Alpha releases** (master branch): Published to npm with `@alpha` tag, multiple times per week
 - **Stable releases** (releases branch): Published to npm with `@latest` tag, monthly
 
@@ -52,11 +54,13 @@ This contains information only relevent to working in the repository. Documentat
 Contents:
 
 ### Getting Started
+
 - [Contributing Guide](./docs/CONTRIBUTING.md) ⭐
 - [Setup instructions](./docs/setup-instructions.md)
 - [Commit workflow](./docs/commit-workflow.md)
 
 ### Development
+
 - [Using Storybook as a styleguide for component development](./docs/using-storybook.md)
 - [Creating a new package](./docs/create-a-package.md)
 - [Bundling](./docs/bundling.md)
@@ -64,9 +68,11 @@ Contents:
 - [Code standards and style](./docs/standards/standards.md)
 
 ### Architecture
+
 - [ADR-0001: Release Documentation Strategy](./docs/adr/0001-release-documentation-strategy.md)
 
 ### Other
+
 - [Access requests](./docs/access-request.md)
 - [Staff training](./docs/training/training.md)
 - [Accessibility requirements](./docs/accessibility.md)

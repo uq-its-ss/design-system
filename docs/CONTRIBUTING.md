@@ -79,7 +79,7 @@ feat(button)!: remove deprecated large size prop
 # Using footer
 feat(header): redesign navigation API
 
-BREAKING CHANGE: nav-items prop now requires id field. 
+BREAKING CHANGE: nav-items prop now requires id field.
 Migration: Add id: "unique-id" to each navigation item.
 ```
 
@@ -136,7 +136,7 @@ When your change affects multiple packages:
 # Commit 1
 feat(button): add disabled state variant
 
-# Commit 2  
+# Commit 2
 fix(card): correct padding to work with new button
 ```
 
@@ -155,7 +155,7 @@ Also updates card and header to use consistent disabled styling.
 feat(components): standardize disabled state across all form components
 
 - button: add disabled variant
-- input: add disabled styling  
+- input: add disabled styling
 - select: add disabled styling
 - textarea: add disabled styling
 ```
@@ -181,6 +181,7 @@ The hook is **guidance, not enforcement** — you can bypass it when needed, but
 We also run a **pre-commit hook** that executes `npm test` before each commit.
 
 **What it does:**
+
 - Runs all tests before allowing the commit
 - Catches test failures before they enter git history
 - Takes 5-30 seconds (depending on test suite size)
@@ -222,9 +223,11 @@ chmod +x .husky/pre-commit
 ### Creating a PR
 
 1. **Branch naming:** `JIRA-TICKET-brief-description`
+
    - Example: `ITSADSSD-71324-header-navigation-updates`
 
 2. **PR title:** Use conventional commit format
+
    - ✅ Good: `feat(header): add mobile navigation`
    - ✅ Good: `fix(button): correct focus indicator (ITSADSSD-71324)`
    - ❌ Bad: `ITSADSSD-71324 header updates`
@@ -238,6 +241,7 @@ chmod +x .husky/pre-commit
 We use **standard merge** (not squash merge) to preserve individual commit history for accurate per-package versioning.
 
 **Before merge:**
+
 - All commits must use conventional format
 - All CI checks must pass
 - 2 approvals required
@@ -248,25 +252,31 @@ When you create a PR, include:
 
 ```markdown
 ## Description
+
 Brief description of what this PR changes and why.
 
 ## Related Issue
+
 JIRA: ITSADSSD-XXXXX
 
 ## Changes
+
 - feat(button): add disabled state variant
 - fix(card): update padding
 
 ## Testing
+
 - [ ] Tested in Chrome, Firefox, Safari
 - [ ] Tested mobile (≤1023px) and desktop (≥1024px)
 - [ ] Tested keyboard navigation
 - [ ] Verified in Storybook
 
 ## Breaking Changes
+
 None / [Describe breaking changes and migration steps]
 
 ## Screenshots
+
 [If UI changes]
 ```
 
@@ -281,6 +291,7 @@ We publish two types of releases:
 **Trigger:** Automatic on every merge to `master`
 
 **Process:**
+
 - Fully automated (no human intervention)
 - Version: `v1.2.3-alpha.0`, `v1.2.3-alpha.1`, etc.
 - Published to npm with `@alpha` tag
@@ -288,6 +299,7 @@ We publish two types of releases:
 - No GitHub Release created
 
 **Install alpha:**
+
 ```bash
 npm install @uqds/button@alpha
 ```
@@ -297,6 +309,7 @@ npm install @uqds/button@alpha
 **Trigger:** PR merged to `releases` branch
 
 **Process:**
+
 1. Draft GitHub Release created (when PR opens)
 2. Lerna calculates version bumps (dry run)
 3. Manual approval required (GitHub issue)

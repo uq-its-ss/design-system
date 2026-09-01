@@ -22,6 +22,7 @@ git checkout -b ITSADSSD-71324-header-navigation-updates
 ### 2. Make Commits (Conventional Format)
 
 **Format:**
+
 ```
 <type>(<scope>): <description>
 
@@ -31,6 +32,7 @@ git checkout -b ITSADSSD-71324-header-navigation-updates
 ```
 
 **Example commits:**
+
 ```bash
 # Feature
 git commit -m "feat(button): add disabled state variant"
@@ -46,6 +48,7 @@ Migration: Add id to each navigation item."
 ```
 
 **The git hook will validate your commit message.** If it fails:
+
 - Fix the message format and try again
 - Emergency bypass: `git commit --no-verify` (use sparingly)
 
@@ -91,6 +94,7 @@ git commit -m "feat(components): standardize disabled state across form componen
 ### 4. Create Pull Request
 
 **Before creating PR:**
+
 ```bash
 # Run quality checks
 npm run lint    # All linting must pass
@@ -101,6 +105,7 @@ npm run storybook
 ```
 
 **PR checklist:**
+
 - ✅ All commits use conventional format
 - ✅ Assign 2 reviewers from ADS-UI
 - ✅ Fill out PR template completely
@@ -124,23 +129,24 @@ npm run storybook
 
 ### Types
 
-| Type       | Description                                  | Version Bump | Changelog |
-|------------|----------------------------------------------|--------------|-----------|
-| `feat`     | New feature                                  | MINOR        | ✅ Yes    |
-| `fix`      | Bug fix                                      | PATCH        | ✅ Yes    |
-| `feat!`    | Breaking change (or `BREAKING CHANGE:` in footer) | MAJOR | ✅ Yes    |
-| `perf`     | Performance improvement                      | PATCH        | ✅ Yes    |
-| `docs`     | Documentation only                           | None         | ❌ No     |
-| `style`    | Code formatting (no logic change)            | None         | ❌ No     |
-| `refactor` | Code restructure (no behavior change)        | None         | ❌ No     |
-| `test`     | Test updates                                 | None         | ❌ No     |
-| `chore`    | Maintenance (deps, build, etc.)              | None         | ❌ No     |
+| Type       | Description                                       | Version Bump | Changelog |
+| ---------- | ------------------------------------------------- | ------------ | --------- |
+| `feat`     | New feature                                       | MINOR        | ✅ Yes    |
+| `fix`      | Bug fix                                           | PATCH        | ✅ Yes    |
+| `feat!`    | Breaking change (or `BREAKING CHANGE:` in footer) | MAJOR        | ✅ Yes    |
+| `perf`     | Performance improvement                           | PATCH        | ✅ Yes    |
+| `docs`     | Documentation only                                | None         | ❌ No     |
+| `style`    | Code formatting (no logic change)                 | None         | ❌ No     |
+| `refactor` | Code restructure (no behavior change)             | None         | ❌ No     |
+| `test`     | Test updates                                      | None         | ❌ No     |
+| `chore`    | Maintenance (deps, build, etc.)                   | None         | ❌ No     |
 
 ### Scopes
 
 Use the package name: `button`, `header`, `footer`, `card`, `core`, etc.
 
 **Special scopes:**
+
 - `core` — @uqds/core changes
 - `components` — cross-component changes (3+ packages)
 - `deps` — dependency updates
@@ -151,11 +157,13 @@ Use the package name: `button`, `header`, `footer`, `card`, `core`, etc.
 **Two ways to mark breaking changes:**
 
 1. **Exclamation mark:**
+
    ```bash
    feat(button)!: remove deprecated large size prop
    ```
 
 2. **Footer:**
+
    ```bash
    feat(header): redesign navigation API
 
@@ -226,6 +234,7 @@ git commit -m "docs(button): update usage examples in README"
 The `commitlint` git hook validates your commit message before accepting it.
 
 **What it checks:**
+
 - ✅ Format matches `<type>(<scope>): <description>`
 - ✅ Type is valid (feat, fix, chore, etc.)
 - ✅ Scope is not empty
@@ -233,6 +242,7 @@ The `commitlint` git hook validates your commit message before accepting it.
 - ✅ Description doesn't end with period
 
 **If validation fails:**
+
 ```bash
 $ git commit -m "updated header"
 
@@ -244,11 +254,13 @@ $ git commit -m "updated header"
 ```
 
 **Fix it:**
+
 ```bash
 git commit -m "fix(header): update navigation logic"
 ```
 
 **Emergency bypass:**
+
 ```bash
 # Use sparingly - only for emergencies
 git commit --no-verify -m "your message"
@@ -261,11 +273,13 @@ git commit --no-verify -m "your message"
 Your commits directly affect:
 
 1. **Package versions** (via Lerna conventional-commits)
+
    - `feat:` → minor bump (1.0.0 → 1.1.0)
    - `fix:` → patch bump (1.0.0 → 1.0.1)
    - `feat!:` → major bump (1.0.0 → 2.0.0)
 
 2. **Changelogs** (auto-generated)
+
    - `feat:` and `fix:` → appear in changelog
    - `chore:` and `docs:` → omitted from changelog
 

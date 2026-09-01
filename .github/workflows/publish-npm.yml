@@ -5,12 +5,164 @@ on:
     branches:
       - master
       - releases
+  pull_request:
+    branches:
+      - releases
+    types: [opened, synchronize, reopened]
 
 jobs:
+  # Job 1: Create draft release when PR to releases is opened
+  create-draft-release:
+    name: Create Draft Release
+    runs-on: ubuntu-latest
+    if: ${{ github.event_name == 'pull_request' && github.base_ref == 'releases' }}
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: "⬇️ Checkout repo"
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.UQDS_PERSONAL_ACCESS_TOKEN }}
+
+      - name: "⎔ Setup node 24"
+        uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+
+      - name: "📦️ Install dependencies"
+        run: npm ci
+
+      - name: "📝 Generate draft changelog"
+        id: changelog
+        run: |
+          # Get changed packages
+          npx lerna changed --json > changed.json || echo "[]" > changed.json
+          
+          # Generate changelog from conventional commits
+          cat > generate-draft.js << 'SCRIPT'
+          const { execSync } = require('child_process');
+          const fs = require('fs');
+          
+          // Get commits since last release
+          try {
+            const commits = execSync('git log --pretty=format:"%H|%s|%b" $(git describe --tags --abbrev=0 2>/dev/null || git rev-list --max-parents=0 HEAD)..HEAD', { encoding: 'utf8' });
+            
+            const features = [];
+            const fixes = [];
+            const breaking = [];
+            
+            commits.split('\n').filter(Boolean).forEach(line => {
+              const [hash, subject, body] = line.split('|');
+              const shortHash = hash.substring(0, 7);
+              
+              if (subject.startsWith('feat!:') || subject.startsWith('feat(') && subject.includes('!:') || body?.includes('BREAKING CHANGE')) {
+                breaking.push(`- ${subject.replace(/^feat!?(\([^)]+\))?:\s*/, '**$1**: ')} (${shortHash})`);
+              } else if (subject.startsWith('feat')) {
+                features.push(`- ${subject.replace(/^feat(\([^)]+\))?:\s*/, '**$1**: ')} (${shortHash})`);
+              } else if (subject.startsWith('fix')) {
+                fixes.push(`- ${subject.replace(/^fix(\([^)]+\))?:\s*/, '**$1**: ')} (${shortHash})`);
+              }
+            });
+            
+            let changelog = '<!-- Add your manual summary here -->\n\n';
+            changelog += '**This release includes updates to the following packages:**\n\n';
+            changelog += '<!-- Package list will be added during publish -->\n\n';
+            changelog += '---\n\n';
+            
+            if (breaking.length > 0) {
+              changelog += '## 💥 Breaking Changes\n\n' + breaking.join('\n') + '\n\n';
+            }
+            if (features.length > 0) {
+              changelog += '## 🚀 Features\n\n' + features.join('\n') + '\n\n';
+            }
+            if (fixes.length > 0) {
+              changelog += '## 🐛 Bug Fixes\n\n' + fixes.join('\n') + '\n\n';
+            }
+            
+            console.log(changelog);
+          } catch (error) {
+            console.log('<!-- Add your manual summary and changelog here -->');
+          }
+          SCRIPT
+          
+          node generate-draft.js > draft-changelog.md
+          
+          # Output for next step
+          echo "DRAFT_CHANGELOG<<EOF" >> $GITHUB_OUTPUT
+          cat draft-changelog.md >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+      - name: "📅 Generate release tag"
+        id: release-tag
+        run: |
+          RELEASE_DATE=$(date +%Y-%m-%d)
+          RELEASE_TAG="release-${RELEASE_DATE}"
+          
+          # Check if tag exists, append .2, .3, etc.
+          COUNTER=2
+          ORIGINAL_TAG="$RELEASE_TAG"
+          while git rev-parse "$RELEASE_TAG" >/dev/null 2>&1; do
+            RELEASE_TAG="${ORIGINAL_TAG}.${COUNTER}"
+            COUNTER=$((COUNTER + 1))
+          done
+          
+          echo "tag=${RELEASE_TAG}" >> $GITHUB_OUTPUT
+          echo "title=Release: ${RELEASE_DATE}$([ "$RELEASE_TAG" != "$ORIGINAL_TAG" ] && echo ".$(echo $RELEASE_TAG | grep -oE '[0-9]+$')" || echo '')" >> $GITHUB_OUTPUT
+
+      - name: "🎉 Create draft release"
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.UQDS_PERSONAL_ACCESS_TOKEN }}
+          script: |
+            const tag = '${{ steps.release-tag.outputs.tag }}';
+            const title = '${{ steps.release-tag.outputs.title }}';
+            const changelog = `${{ steps.changelog.outputs.DRAFT_CHANGELOG }}`;
+            
+            // Check if draft already exists for this tag
+            const { data: releases } = await github.rest.repos.listReleases({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+            });
+            
+            const existingDraft = releases.find(r => r.tag_name === tag && r.draft);
+            
+            if (existingDraft) {
+              console.log(`Draft release already exists: ${existingDraft.html_url}`);
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                body: `📝 **Draft release already exists**\n\n[Edit draft release](${existingDraft.html_url})\n\nAdd your summary, highlights, and migration notes before approving the release.`
+              });
+            } else {
+              const { data: draft } = await github.rest.repos.createRelease({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                tag_name: tag,
+                name: title,
+                body: changelog,
+                draft: true,
+                prerelease: false
+              });
+              
+              console.log(`Draft release created: ${draft.html_url}`);
+              
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                body: `🎉 **Draft release created**\n\n[Edit draft release](${draft.html_url})\n\n**Next steps:**\n1. Edit the draft release to add:\n   - Summary of what changed\n   - Highlights\n   - Breaking changes with migration notes (if any)\n2. Save the draft (do not publish yet)\n3. Approve this PR when ready to release\n\nThe draft will be automatically published when this PR is merged.`
+              });
+            }
+
+  # Job 2: Publish packages (existing workflow)
   publish:
+    name: Publish to NPM
     runs-on: ubuntu-latest
     # This condition prevents the workflow running FOR the Lerna publish commit itself
-    if: ${{ ! startsWith(github.event.head_commit.message, 'chore(release):Publish') }}
+    if: ${{ github.event_name == 'push' && ! startsWith(github.event.head_commit.message, 'chore(release)') }}
     permissions:
       id-token: write   # Required for OIDC authentication with NPM
       contents: write   # Required for git operations (tags, commits)
@@ -43,6 +195,24 @@ jobs:
           # Dry run for version bump ONLY, no tag/push yet       
           npx lerna version --conventional-commits --conventional-graduate --yes --no-git-tag-version --no-push || true
 
+      - name: "📅 Prepare release info"
+        if: ${{ github.ref_name == 'releases' }}
+        id: release-info
+        run: |
+          RELEASE_DATE=$(date +%Y-%m-%d)
+          RELEASE_TAG="release-${RELEASE_DATE}"
+          
+          # Check if tag exists, append .2, .3, etc.
+          COUNTER=2
+          ORIGINAL_TAG="$RELEASE_TAG"
+          while git rev-parse "$RELEASE_TAG" >/dev/null 2>&1; do
+            RELEASE_TAG="${ORIGINAL_TAG}.${COUNTER}"
+            COUNTER=$((COUNTER + 1))
+          done
+          
+          echo "tag=${RELEASE_TAG}" >> $GITHUB_OUTPUT
+          echo "date=${RELEASE_DATE}" >> $GITHUB_OUTPUT
+
       - name: "⌛️ Wait for approval"
         uses: trstringer/manual-approval@v1
         if: ${{ github.ref_name == 'releases' }}
@@ -51,11 +221,17 @@ jobs:
           approvers: uqds-admin
           minimum-approvals: 1
           issue-title: 'Approve new release ✅'
-          issue-body: >
-            Please approve or deny the release of a new release.
-            [View the workflow output](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})
-            to confirm the version is as expected.
-
+          issue-body: |
+            Please approve or deny the release.
+            
+            **Release tag:** `${{ steps.release-info.outputs.tag }}`
+            
+            **Next steps after approval:**
+            1. Packages will be published to npm with `@latest` tag
+            2. Draft GitHub Release will be published
+            3. Root CHANGELOG.md will be auto-generated
+            
+            [View workflow run](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})
           exclude-workflow-initiator-as-approver: false
 
       - name: "✨ Publish stable"
@@ -70,6 +246,76 @@ jobs:
           git config user.email "${{ github.actor}}@users.noreply.github.com"
           # Publish: bumps version, creates tag vx.y.z, commits, pushes commit/tag, publishes to npm
           npx lerna publish --conventional-commits --conventional-graduate --yes
+
+      - name: "🏷️ Create release tag"
+        if: ${{ github.ref_name == 'releases' }}
+        env:
+          GH_TOKEN: ${{ secrets.UQDS_PERSONAL_ACCESS_TOKEN }}
+        run: |
+          RELEASE_TAG="${{ steps.release-info.outputs.tag }}"
+          git tag "$RELEASE_TAG"
+          git push origin "$RELEASE_TAG"
+          echo "Created and pushed tag: $RELEASE_TAG"
+
+      - name: "📝 Publish GitHub Release"
+        if: ${{ github.ref_name == 'releases' }}
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.UQDS_PERSONAL_ACCESS_TOKEN }}
+          script: |
+            const tag = '${{ steps.release-info.outputs.tag }}';
+            
+            // Find the draft release
+            const { data: releases } = await github.rest.repos.listReleases({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+            });
+            
+            const draft = releases.find(r => r.tag_name === tag && r.draft);
+            
+            if (draft) {
+              // Publish the existing draft
+              await github.rest.repos.updateRelease({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                release_id: draft.id,
+                draft: false
+              });
+              console.log(`Published draft release: ${draft.html_url}`);
+            } else {
+              console.log('No draft release found - creating new release with auto-generated changelog');
+              // Fallback: create new release if draft doesn't exist
+              const { data: newRelease } = await github.rest.repos.createRelease({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                tag_name: tag,
+                name: 'Release: ${{ steps.release-info.outputs.date }}',
+                body: '<!-- Auto-generated release - draft was not found -->\n\nSee per-package CHANGELOGs for details.',
+                draft: false,
+                prerelease: false
+              });
+              console.log(`Created new release: ${newRelease.html_url}`);
+            }
+
+      - name: "📄 Generate root CHANGELOG.md"
+        if: ${{ github.ref_name == 'releases' }}
+        env:
+          GH_TOKEN: ${{ secrets.UQDS_PERSONAL_ACCESS_TOKEN }}
+        run: |
+          # Generate CHANGELOG.md from all GitHub Releases
+          node scripts/generate-changelog.js
+          
+          # Commit and push if changed
+          git config user.name "${{ github.actor }}"
+          git config user.email "${{ github.actor}}@users.noreply.github.com"
+          git add CHANGELOG.md
+          if git diff --staged --quiet; then
+            echo "CHANGELOG.md unchanged"
+          else
+            git commit -m "docs: update CHANGELOG.md from releases"
+            git push origin releases
+            echo "CHANGELOG.md updated and pushed"
+          fi
 
       # --- Steps for 'master' branch ---
       

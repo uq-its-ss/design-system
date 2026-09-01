@@ -2,10 +2,10 @@
 
 All notable changes to the UQ Design System are documented in this file.
 
-This changelog aggregates stable releases only. For alpha releases and detailed per-package changelogs, see:
+This changelog aggregates stable releases only. For more detailed information, see:
 
-- [GitHub Releases](https://github.com/uq-its-ss/design-system/releases) (includes alpha releases)
-- Individual package CHANGELOG.md files (per-package details)
+- [GitHub Releases](https://github.com/uq-its-ss/design-system/releases) (stable releases with highlights)
+- Individual package CHANGELOG.md files (includes both stable and alpha releases, per-package details)
 
 ---
 

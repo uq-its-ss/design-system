@@ -32,6 +32,10 @@
     "src/*",
     "dist/*"
   ],
+  "exports": {
+    "./dist/css/main.css": "./dist/css/main.css",
+    "./src/scss/*": "./src/scss/*"
+  },
   "style": "dist/css/main.css",
   "repository": {
     "type": "git",

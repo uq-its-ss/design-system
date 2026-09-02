@@ -24,7 +24,7 @@
     "packages/*"
   ],
   "overrides": {
-    "axios": "1.13.6"
+    "axios": "1.17.0"
   },
   "devDependencies": {
     "@babel/core": "^7.26.0",
@@ -39,9 +39,9 @@
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/user-event": "^14.5.2",
-    "@vitest/ui": "^2.1.4",
+    "@vitest/ui": "^4.1.8",
     "cli-progress": "^3.12.0",
-    "concurrently": "^9.1.2",
+    "concurrently": "^10.0.3",
     "core-js": "^3.39.0",
     "css-loader": "^7.1.2",
     "eslint": "^8.57.1",
@@ -49,6 +49,7 @@
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-jest-dom": "^5.4.0",
     "eslint-plugin-react": "^7.37.4",
+    "eslint-plugin-storybook": "^10.4.3",
     "eslint-plugin-testing-library": "^6.4.0",
     "eslint-plugin-unused-imports": "^4.1.4",
     "globals": "^15.12.0",
@@ -59,7 +60,7 @@
     "gulp-uglify": "^3.0.2",
     "http-server": "^14.1.1",
     "jsdom": "^25.0.1",
-    "lerna": "^8.1.9",
+    "lerna": "^9.0.7",
     "msw": "^2.6.0",
     "prettier": "3.3.3",
     "puppeteer": "^25.1.0",
@@ -74,10 +75,11 @@
     "stylelint-config-standard": "^36.0.1",
     "stylelint-config-standard-scss": "^13.1.0",
     "stylelint-scss": "^6.8.1",
+    "typescript": "^5.9.3",
     "typescript-eslint": "^8.13.0",
     "vinyl-buffer": "^1.0.1",
     "vinyl-source-stream": "^2.0.0",
-    "vitest": "^2.1.4",
+    "vitest": "^4.1.8",
     "wait-on": "^8.0.2",
     "whatwg-fetch": "^3.6.20"
   },

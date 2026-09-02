@@ -3,6 +3,46 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.1.7](https://github.com/uq-its-ss/design-system/compare/storybook-html@8.1.7-alpha.2...storybook-html@8.1.7) (2026-08-18)
+
+**Note:** Version bump only for package storybook-html
+
+## [8.1.7-alpha.2](https://github.com/uq-its-ss/design-system/compare/storybook-html@8.1.7-alpha.1...storybook-html@8.1.7-alpha.2) (2026-08-17)
+
+**Note:** Version bump only for package storybook-html
+
+## [8.1.7-alpha.1](https://github.com/uq-its-ss/design-system/compare/storybook-html@8.1.7-alpha.0...storybook-html@8.1.7-alpha.1) (2026-08-14)
+
+**Note:** Version bump only for package storybook-html
+
+## [8.1.7-alpha.0](https://github.com/uq-its-ss/design-system/compare/storybook-html@8.1.6...storybook-html@8.1.7-alpha.0) (2026-08-05)
+
+### Bug Fixes
+
+- updated link icon style ([#793](https://github.com/uq-its-ss/design-system/issues/793)) ([4a949b4](https://github.com/uq-its-ss/design-system/commit/4a949b4be274ad96db1cb7a0549b1f52a8189abb))
+
+## [8.1.6](https://github.com/uq-its-ss/design-system/compare/storybook-html@8.1.6-alpha.0...storybook-html@8.1.6) (2026-06-17)
+
+**Note:** Version bump only for package storybook-html
+
+## [8.1.6-alpha.0](https://github.com/uq-its-ss/design-system/compare/storybook-html@8.1.5...storybook-html@8.1.6-alpha.0) (2026-06-17)
+
+**Note:** Version bump only for package storybook-html
+
+## [8.1.5](https://github.com/uq-its-ss/design-system/compare/storybook-html@8.1.5-alpha.1...storybook-html@8.1.5) (2026-06-16)
+
+**Note:** Version bump only for package storybook-html
+
+## [8.1.5-alpha.1](https://github.com/uq-its-ss/design-system/compare/storybook-html@8.1.5-alpha.0...storybook-html@8.1.5-alpha.1) (2026-06-15)
+
+**Note:** Version bump only for package storybook-html
+
+## [8.1.5-alpha.0](https://github.com/uq-its-ss/design-system/compare/storybook-html@8.1.4...storybook-html@8.1.5-alpha.0) (2026-06-12)
+
+### Bug Fixes
+
+- **profile:** analytics update ([7439d01](https://github.com/uq-its-ss/design-system/commit/7439d01d9f97cedfbea35d10d40235bd55532449))
+
 ## [8.1.4](https://github.com/uq-its-ss/design-system/compare/storybook-html@8.1.4-alpha.2...storybook-html@8.1.4) (2026-03-30)
 
 **Note:** Version bump only for package storybook-html

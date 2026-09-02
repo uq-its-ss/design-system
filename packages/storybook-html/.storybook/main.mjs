@@ -1,4 +1,8 @@
 import { dirname, join } from "path";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 /** @type { import('@storybook/html-vite').StorybookConfig } */
 const config = {
@@ -14,11 +18,6 @@ const config = {
   ],
 
   staticDirs: ["../public"],
-
-  features: {
-    postcss: false,
-    previewMdx2: false,
-  },
 
   framework: {
     name: getAbsolutePath("@storybook/html-vite"),
@@ -114,7 +113,7 @@ const config = {
  * It is needed in projects that use Yarn PnP or are set up within a monorepo.
  */
 function getAbsolutePath(value) {
-  return dirname(require.resolve(join(value, "package.json")));
+  return dirname(fileURLToPath(import.meta.resolve(value)));
 }
 
 export default config;

@@ -43,10 +43,6 @@ class collapsibleText {
       return;
     }
 
-    // Store the actual content height
-    const fullHeightPx = this.measureContentHeightInPixels(content);
-    const fullHeight = `${fullHeightPx}px`;
-
     // Get collapsed height from data attribute or use default
     const collapsedHeightRem = this.getCollapsedHeight(element);
     const collapsedHeight = this.remToPixels(collapsedHeightRem);
@@ -55,31 +51,22 @@ class collapsibleText {
     const thresholdRem = this.getThreshold(element);
     const threshold = this.remToPixels(thresholdRem);
 
-    if (fullHeightPx <= threshold) {
-      // Content is short enough - no collapsing needed
-      content.style.maxHeight = "none";
-      button.style.display = "none";
-      element.setAttribute("data-collapsed", "false");
-      return; // Don't add to components array or set up listeners
-    }
-
-    // Content exceeds threshold - set up collapsible behavior
-    content.style.maxHeight = `${collapsedHeight}px`;
-    element.setAttribute("data-state", "collapsed");
-
-    // Set ARIA attributes
-    button.setAttribute("aria-expanded", "false");
-    content.setAttribute("aria-hidden", "false");
-
     // Store component data
     const componentData = {
       element,
       content,
       button,
-      fullHeight,
+      fullHeight: "0px",
       collapsedHeight,
+      threshold,
       isExpanded: false,
     };
+
+    // Apply the correct initial state based on measured content height
+    this.applyThresholdState(
+      componentData,
+      this.measureContentHeightInPixels(content),
+    );
 
     this.components.push(componentData);
 
@@ -145,7 +132,7 @@ class collapsibleText {
     const cssThreshold = computedStyle
       .getPropertyValue("--collapsible-threshold")
       .trim();
-    
+
     return cssThreshold ? parseFloat(cssThreshold) : 9.5;
   }
 
@@ -186,18 +173,17 @@ class collapsibleText {
       element.setAttribute("data-state", "expanded");
       button.setAttribute("aria-expanded", "true");
       button.textContent = "Read less";
-      
+
       // Toggle icon classes
       button.classList.remove("uq-icon--standard--chevron-down-sml");
       button.classList.add("uq-icon--standard--chevron-up-sml");
-
     } else {
       // Collapsing
       content.style.maxHeight = `${collapsedHeight}px`;
       element.setAttribute("data-state", "collapsed");
       button.setAttribute("aria-expanded", "false");
       button.textContent = "Read more";
-      
+
       // Toggle icon classes
       button.classList.remove("uq-icon--standard--chevron-up-sml");
       button.classList.add("uq-icon--standard--chevron-down-sml");
@@ -205,19 +191,58 @@ class collapsibleText {
   }
 
   /**
-   * Handle window resize - recalculate content height
+   * Handle window resize - recalculate content height and re-evaluate collapse behaviour
    * @param {Object} componentData - The component data object
    */
   handleResize(componentData) {
-    const { content, isExpanded } = componentData;
+    const fullHeightPx = this.measureContentHeightInPixels(
+      componentData.content,
+    );
 
-    // Recalculate full height
-    const fullHeightPx = this.measureContentHeightInPixels(content);
+    this.applyThresholdState(componentData, fullHeightPx);
+  }
+
+  /**
+   * Enable, disable or update the collapsed/expanded state based on measured content height.
+   * Used on initial setup and again on resize, so content that grows or shrinks past the
+   * threshold gets the collapsible behaviour added or removed accordingly.
+   * @param {Object} componentData - The component data object
+   * @param {number} fullHeightPx - The measured full content height in pixels
+   */
+  applyThresholdState(componentData, fullHeightPx) {
+    const { element, content, button, collapsedHeight, threshold } =
+      componentData;
+
     componentData.fullHeight = `${fullHeightPx}px`;
 
-    // Update if currently expanded
-    if (isExpanded) {
+    if (fullHeightPx <= threshold) {
+      // Content is short enough - no collapsing needed
+      content.style.maxHeight = "none";
+      button.style.display = "none";
+      element.setAttribute("data-collapsed", "false");
+      element.removeAttribute("data-state");
+      componentData.isExpanded = false;
+      return;
+    }
+
+    // Content exceeds threshold - collapsible behaviour is required
+    button.style.display = "";
+    element.setAttribute("data-collapsed", "true");
+
+    if (componentData.isExpanded) {
       content.style.maxHeight = componentData.fullHeight;
+      element.setAttribute("data-state", "expanded");
+      button.setAttribute("aria-expanded", "true");
+      button.textContent = "Read less";
+      button.classList.remove("uq-icon--standard--chevron-down-sml");
+      button.classList.add("uq-icon--standard--chevron-up-sml");
+    } else {
+      content.style.maxHeight = `${collapsedHeight}px`;
+      element.setAttribute("data-state", "collapsed");
+      button.setAttribute("aria-expanded", "false");
+      button.textContent = "Read more";
+      button.classList.remove("uq-icon--standard--chevron-up-sml");
+      button.classList.add("uq-icon--standard--chevron-down-sml");
     }
   }
 }

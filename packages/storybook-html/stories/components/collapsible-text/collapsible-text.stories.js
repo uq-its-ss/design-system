@@ -31,22 +31,12 @@ export default {
     return `
     <div>
 <div class="uq-collapsible-text ${variantClass}" data-component="collapsible-text">
-  <h3>JavaScript-Enhanced Collapsible Text</h3>
-  
   <div class="uq-collapsible-text__content" data-collapsible-content>
-    <p>
-      This is a JavaScript-enhanced collapsible text component with smooth transitions. 
-      The content is initially collapsed with a fade-to-transparent effect at the bottom. 
-      Click the "Read more" button below to expand and view the full content.
-      
-      The JavaScript enhancement measures the actual content height and provides 
-      consistent animation timing for both opening and closing transitions. This eliminates 
-      the timing issues that occur with CSS-only max-height transitions.
-      
-      The component is fully accessible with proper ARIA attributes and keyboard navigation. 
-      You can customize the collapsed height, fade gradient, button styles, and transition 
-      duration using CSS variables.
-    </p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent rutrum diam eget magna pretium, non lacinia orci feugiat. Proin luctus volutpat quam, id varius nibh ultricies at. Mauris tempus sodales mauris quis consectetur. Aenean lorem orci, cursus ac vestibulum bibendum, efficitur ut tellus. Praesent faucibus lorem in odio convallis, eget porttitor tellus luctus. Integer dignissim sit amet nisi vitae tempus. In faucibus turpis elementum metus finibus blandit. Nam luctus mauris ac nisl iaculis tempor id quis ipsum.</p>
+    <p>Cras et orci mollis, vulputate est sed, posuere nulla. Curabitur blandit lacinia varius. Praesent tincidunt laoreet sagittis. Etiam libero lorem, dapibus ac dignissim vitae, dictum eu magna. Nunc convallis posuere nisi, id luctus tellus tristique ut. Ut vehicula posuere orci eu euismod. Nam auctor odio quis erat gravida molestie. Maecenas elementum, tortor ut dignissim vehicula, mi magna feugiat nunc, sit amet tempus neque mauris in dui. Duis tristique, tellus ut mattis pulvinar, odio tortor maximus dolor, at interdum mi ex nec felis. Sed eu pretium metus, a lacinia nisl. In urna metus, dictum vitae accumsan non, dapibus at urna.</p>
+    <p>Sed volutpat, elit at feugiat viverra, massa magna volutpat est, a pharetra nisl ante ut leo. Nunc porta vestibulum lorem sed suscipit. Duis cursus accumsan consequat. Mauris aliquet dictum sapien facilisis tempus. Nullam non sapien suscipit, porttitor nibh id, euismod mauris. Vestibulum ornare purus ante, a varius erat imperdiet in. Ut lobortis lorem a massa placerat, nec elementum sem mattis. Fusce sed interdum leo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc bibendum purus vel odio facilisis sagittis. Nam ullamcorper porttitor augue eget efficitur. In id lorem id mauris imperdiet molestie.</p>
+    <p>Phasellus non felis massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed at libero nec nulla fermentum tincidunt. Curabitur ac eros ac libero tincidunt tincidunt. Integer sit amet sapien non justo facilisis tincidunt. Donec vel sapien ut libero venenatis tincidunt. Suspendisse potenti. Aliquam erat volutpat. Proin ac libero nec nulla fermentum tincidunt. Curabitur ac eros ac libero tincidunt tincidunt.</p>
+    <p>Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Nulla porttitor accumsan tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Proin eget tortor risus. Pellentesque in ipsum id orci porta dapibus. Vivamus suscipit tortor eget felis porttitor volutpat. Nulla quis lorem ut libero malesuada feugiat. Curabitur aliquet quam id dui posuere blandit.</p>
   </div>
   
   <button class="uq-collapsible-text__button uq-button uq-button--link uq-icon uq-icon--standard--chevron-down-sml uq-icon--right" data-collapsible-button aria-expanded="false">Read more</button>
@@ -74,125 +64,65 @@ export const MultipleInstances = {
   render: () => {
     return `
     <div>
-      <div class="uq-collapsible-text" data-component="collapsible-text" style="margin-bottom: 2rem;">
-        <h3>First Instance</h3>
-        
-        <div class="uq-collapsible-text__content" data-collapsible-content>
-          <div>
-            This example demonstrates multiple independent collapsible text components on the same page. 
-            Each instance operates independently without requiring unique IDs.
-            
+      <div class="uq-pane" style="border-bottom: 1px solid #e8e8e8; padding: 1.5rem; ">
+        <div class="uq-collapsible-text" data-component="collapsible-text">
+          <div class="uq-collapsible-text__content" data-collapsible-content>
+            <p>
+              This doesnt have enough content to trigger the collapsible behavior. Each collapsible component operates independently. Expanding one doesn't affect the others.
+              This is perfect for FAQs, article previews, or any content that needs progressive disclosure.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            </p>
           </div>
-          <div>
-            This example demonstrates multiple independent collapsible text 
-            </div>
-            <div>
-            This example demonstrates multiple independent collapsible text  sd asdf asdf asdf
-            </div>
-             <div>
-            This example demonstrates multiple independent collapsible text 
-            </div>
-            <div>
-            This example demonstrates multiple independent collapsible text  sd asdf asdf asdf
-            </div>
-
-          
+          <button class="uq-collapsible-text__button uq-button uq-button--link uq-icon uq-icon--standard--chevron-down-sml uq-icon--right" data-collapsible-button aria-expanded="false">Read more</button>
         </div>
-        
-        <button class="uq-collapsible-text__button uq-button uq-button--link uq-icon uq-icon--standard--chevron-down-sml uq-icon--right" data-collapsible-button aria-expanded="false">Read more</button>
       </div>
-
-      <div class="uq-collapsible-text" data-component="collapsible-text" style="margin-bottom: 2rem;">
-        <h3>Second Instance</h3>
-        
-        <div class="uq-collapsible-text__content" data-collapsible-content>
-          <p>
-            Each collapsible component operates independently. Expanding one doesn't affect the others.
-            This is perfect for FAQs, article previews, or any content that needs progressive disclosure.
-            
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
-            fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa 
-            qui officia deserunt mollit anim id est laborum.
-          </p>
-          <p>
-            Each collapsible component operates independently. Expanding one doesn't affect the others.
-            This is perfect for FAQs, article previews, or any content that needs progressive disclosure.
-            
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
-            fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa 
-            qui officia deserunt mollit anim id est laborum.
-          </p>
-          <p>
-            Each collapsible component operates independently. Expanding one doesn't affect the others.
-            This is perfect for FAQs, article previews, or any content that needs progressive disclosure.
-            
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
-            fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa 
-            qui officia deserunt mollit anim id est laborum.
-          </p>
-          <p>
-            Each collapsible component operates independently. Expanding one doesn't affect the others.
-            This is perfect for FAQs, article previews, or any content that needs progressive disclosure.
-            
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
-            fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa 
-            qui officia deserunt mollit anim id est laborum.
-          </p>
-
+      <div class="uq-pane" style="border-bottom: 1px solid #e8e8e8; padding: 1.5rem;">
+        <div class="uq-collapsible-text" data-component="collapsible-text">
+          <div class="uq-collapsible-text__content" data-collapsible-content>
+            <p>
+              Each collapsible component operates independently. Expanding one doesn't affect the others.
+              This is perfect for FAQs, article previews, or any content that needs progressive disclosure.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+              fugiat nulla pariatur. Excepteur luptate velit esse cint occaecat cupidatat non proident, sunt in culpa 
+              qui officia deserunt mollit anim id est laborum sint occaecat cupidatat non proident.
+            </p>
+            <p>
+              Each collapsible component operates independently. Expanding one doesn't affect the others.
+              This is perfect for FAQs, article previews, or any content that needs progressive disclosure.
+              
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+              fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa 
+              qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+          <button class="uq-collapsible-text__button uq-button uq-button--link uq-icon uq-icon--standard--chevron-down-sml uq-icon--right" data-collapsible-button aria-expanded="false">Read more</button>
         </div>
-        
-        <button class="uq-collapsible-text__button uq-button uq-button--link uq-icon uq-icon--standard--chevron-down-sml uq-icon--right" data-collapsible-button aria-expanded="false">Read more</button>
       </div>
-
-      <div class="uq-collapsible-text" data-component="collapsible-text">
-        <h3>Third Instance</h3>
-        
-        <div class="uq-collapsible-text__content" data-collapsible-content>
-          <p>
-            The JavaScript enhancement ensures excellent performance even with many instances on the page. 
-            Height measurements are cached and transitions are smooth and consistent.
-            
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque 
-            laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi 
-            architecto beatae vitae dicta sunt explicabo.
-          </p>
-          <p>
-            Each collapsible component operates independently. Expanding one doesn't affect the others.
-            This is perfect for FAQs, article previews, or any content that needs progressive disclosure.
-            
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
-            fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa 
-            qui officia deserunt mollit anim id est laborum.
-          </p>
-          <p>
-            Each collapsible component operates independently. Expanding one doesn't affect the others.
-            This is perfect for FAQs, article previews, or any content that needs progressive disclosure.
-            
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
-            fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa 
-            qui officia deserunt mollit anim id est laborum.
-          </p>
-          <p>
-            Each collapsible component operates independently. Expanding one doesn't affect the others.
-            This is perfect for FAQs, article previews, or any content that needs progressive disclosure.
-            
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
-            fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa 
-            qui officia deserunt mollit anim id est laborum.
-          </p>
-          <p>
-            Each collapsible component operates independently. Expanding one doesn't affect the others.
-            This is perfect for FAQs, article previews, or any content that needs progressive disclosure.
-            
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
-            fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa 
-            qui officia deserunt mollit anim id est laborum.
-          </p>
+      <div class="uq-pane" style="border-bottom: 1px solid #e8e8e8; padding: 1.5rem;">
+        <div class="uq-collapsible-text" data-component="collapsible-text">
+          <div class="uq-collapsible-text__content" data-collapsible-content>
+            <p>
+              Each collapsible component operates independently. Expanding one doesn't affect the others.
+              This is perfect for FAQs, article previews, or any content that needs progressive disclosure.
+              
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+              fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa 
+              qui officia deserunt mollit anim id est laborum.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+              Each collapsible component operates independently. Expanding one doesn't affect the others.
+              This is perfect for FAQs, article previews, or any content that needs progressive disclosure.
+              
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+              fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa 
+              qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+          <button class="uq-collapsible-text__button uq-button uq-button--link uq-icon uq-icon--standard--chevron-down-sml uq-icon--right" data-collapsible-button aria-expanded="false">Read more</button>
         </div>
-        
-        <button class="uq-collapsible-text__button uq-button uq-button--link uq-icon uq-icon--standard--chevron-down-sml uq-icon--right" data-collapsible-button aria-expanded="false">Read more</button>
       </div>
-    </div>
 `;
   },
 };
@@ -360,9 +290,6 @@ export const CustomThreshold = {
               fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa 
               qui officia deserunt mollit anim id est laborum.
             </p>
-
-
-
           </div>
           <button class="uq-collapsible-text__button uq-button uq-button--link uq-icon uq-icon--standard--chevron-down-sml uq-icon--right" data-collapsible-button aria-expanded="false">Read more</button>
         </div>
@@ -399,8 +326,8 @@ export const CustomCollapsedHeight = {
 
       <div style="margin-bottom: 3rem;">
         <h3>Collapsed Height: 3rem</h3>
-        <p style="margin-bottom: 1rem;"><em>data-collapsed-height="3rem" - Shows less content when collapsed</em></p>
-        <div class="uq-collapsible-text" data-component="collapsible-text" data-collapsed-height="3rem" data-collapse-threshold="5">
+        <p style="margin-bottom: 1rem;"><em>data-collapsed-height="3" - Shows less content when collapsed</em></p>
+        <div class="uq-collapsible-text" data-component="collapsible-text" data-collapsed-height="3" data-collapse-threshold="5">
           <div class="uq-collapsible-text__content" data-collapsible-content>
             <p>
               This component has a collapsed height of 3rem, showing less content in the teaser.
@@ -452,23 +379,19 @@ export const CustomCollapsedHeight = {
 
       <div style="margin-bottom: 3rem;">
         <h3>Collapsed Height: 10rem</h3>
-        <p style="margin-bottom: 1rem;"><em>data-collapsed-height="10rem" - Shows more content when collapsed</em></p>
-        <div class="uq-collapsible-text" data-component="collapsible-text" data-collapsed-height="10rem" data-collapse-threshold="12">
+        <p style="margin-bottom: 1rem;"><em>data-collapsed-height="10" - Shows less content when collapsed</em></p>
+        <div class="uq-collapsible-text" data-component="collapsible-text" data-collapsed-height="10" data-collapse-threshold="5">
           <div class="uq-collapsible-text__content" data-collapsible-content>
             <p>
-              This component has a collapsed height of 10rem, showing more content in the teaser.
-              This is useful when you want to give readers more context before they decide to expand.
+              This component has a collapsed height of 10rem, showing less content in the teaser.
+              Perfect for shorter previews or tight layouts.
               
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor 
               incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
               exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
               
               Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
-              fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa 
-              qui officia deserunt mollit anim id est laborum.
-              
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque 
-              laudantium, totam rem aperiam.
+              fugiat nulla pariatur.
             </p>
             <p>
             Each collapsible component operates independently. Expanding one doesn't affect the others.
@@ -502,32 +425,11 @@ export const CustomCollapsedHeight = {
             fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa 
             qui officia deserunt mollit anim id est laborum.
           </p>
-          </div>
-          <button class="uq-collapsible-text__button uq-button uq-button--link uq-icon uq-icon--standard--chevron-down-sml uq-icon--right" aria-expanded="false">Read more</button>
-        </div>
-      </div>
-
-      <div>
-        <h3>Collapsed Height: 200px</h3>
-        <p style="margin-bottom: 1rem;"><em>data-collapsed-height="200px" - You can use any CSS height unit</em></p>
-        <div class="uq-collapsible-text" data-component="collapsible-text" data-collapsed-height="200px" data-collapse-threshold="5">
-          <div class="uq-collapsible-text__content" data-collapsible-content>
-            <p>
-              This component demonstrates that you can use any CSS height unit for the 
-              data-collapsed-height attribute, not just rem. Here we're using pixels (200px).
-              
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor 
-              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-              exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              
-              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
-              fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa 
-              qui officia deserunt mollit anim id est laborum.
-            </p>
           </div>
           <button class="uq-collapsible-text__button uq-button uq-button--link uq-icon uq-icon--standard--chevron-down-sml uq-icon--right" data-collapsible-button aria-expanded="false">Read more</button>
         </div>
       </div>
+      
     </div>
 `;
   },

@@ -46,7 +46,10 @@ class collapsibleText {
     // Store the actual content height
     const fullHeightPx = this.measureContentHeightInPixels(content);
     const fullHeight = `${fullHeightPx}px`;
-    const collapsedHeight = this.getCollapsedHeight(element);
+
+    // Get collapsed height from data attribute or use default
+    const collapsedHeightRem = this.getCollapsedHeight(element);
+    const collapsedHeight = this.remToPixels(collapsedHeightRem);
 
     // Get threshold from data attribute or use default
     const thresholdRem = this.getThreshold(element);
@@ -61,7 +64,7 @@ class collapsibleText {
     }
 
     // Content exceeds threshold - set up collapsible behavior
-    content.style.maxHeight = collapsedHeight;
+    content.style.maxHeight = `${collapsedHeight}px`;
     element.setAttribute("data-state", "collapsed");
 
     // Set ARIA attributes
@@ -126,13 +129,24 @@ class collapsibleText {
     return rem * fontSize;
   }
 
-  /**   * Get the threshold from data attribute
+  /**   * Get the threshold from data attribute or CSS variable
    * @param {HTMLElement} element - The component container
-   * @returns {number} The threshold in rem (default: 8)
+   * @returns {number} The threshold in rem (default: 9.5)
    */
   getThreshold(element) {
-    const threshold = element.getAttribute("data-collapse-threshold");
-    return threshold ? parseFloat(threshold) : 8;
+    // Check for data attribute first
+    const dataThreshold = element.getAttribute("data-collapse-threshold");
+    if (dataThreshold) {
+      return parseFloat(dataThreshold);
+    }
+
+    // Fall back to CSS variable
+    const computedStyle = getComputedStyle(element);
+    const cssThreshold = computedStyle
+      .getPropertyValue("--collapsible-threshold")
+      .trim();
+    
+    return cssThreshold ? parseFloat(cssThreshold) : 9.5;
   }
 
   /**
@@ -144,7 +158,7 @@ class collapsibleText {
     // Check for data attribute first
     const dataHeight = element.getAttribute("data-collapsed-height");
     if (dataHeight) {
-      return dataHeight;
+      return parseFloat(dataHeight);
     }
 
     // Fall back to CSS variable
@@ -152,7 +166,7 @@ class collapsibleText {
     const collapsedHeight = computedStyle
       .getPropertyValue("--collapsible-collapsed-height")
       .trim();
-    return collapsedHeight || "6rem";
+    return collapsedHeight ? parseFloat(collapsedHeight) : 7;
   }
 
   /**
@@ -176,9 +190,10 @@ class collapsibleText {
       // Toggle icon classes
       button.classList.remove("uq-icon--standard--chevron-down-sml");
       button.classList.add("uq-icon--standard--chevron-up-sml");
+
     } else {
       // Collapsing
-      content.style.maxHeight = collapsedHeight;
+      content.style.maxHeight = `${collapsedHeight}px`;
       element.setAttribute("data-state", "collapsed");
       button.setAttribute("aria-expanded", "false");
       button.textContent = "Read more";

@@ -9,9 +9,16 @@ import * as CollapsibleTextStories from "./collapsible-text.stories";
 <StatusBadge.Stable /> <StatusBadge.StableDoc /> [Check for open
 issues](https://github.com/uq-its-ss/design-system/issues)
 
-## Overview
+## Default
 
-collapsible-text
+<Canvas
+  of={CollapsibleTextStories.Default}
+  story={{
+    autoplay: true,
+  }}
+/>
+
+## Multiple Instances
 
 <Canvas
   of={CollapsibleTextStories.MultipleInstances}
@@ -20,4 +27,10 @@ collapsible-text
   }}
 />
 
-collapsible-text--compact
+
+<Canvas
+  of={CollapsibleTextStories.Tall}
+  story={{
+    autoplay: true,
+  }}
+/>

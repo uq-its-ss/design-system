@@ -5,12 +5,10 @@
   position: relative;
 
   // CSS Custom Properties for easy customization
-  --collapsible-collapsed-height: 6rem;
+  --collapsible-collapsed-height: 7rem;
+  --collapsible-threshold: 9.5rem;
   --collapsible-fade-height: 3rem;
   --collapsible-transition-duration: 0.3s;
-  --collapsible-button-bg: #{core.$purple-500};
-  --collapsible-button-bg-hover: #{core.$purple-600};
-  --collapsible-button-color: #{core.$white};
   --collapsible-fade-from: rgba(255, 255, 255, 0);
   --collapsible-fade-to: rgba(255, 255, 255, 1);
 
@@ -54,32 +52,6 @@
     }
   }
 
-  // // Button styles
-  // &__button {
-  //   display: inline-block;
-  //   margin-top: 1rem;
-  //   padding: 0.5rem 1.5rem;
-  //   background-color: var(--collapsible-button-bg);
-  //   color: var(--collapsible-button-color);
-  //   border: none;
-  //   border-radius: 0.25rem;
-  //   cursor: pointer;
-  //   font-size: 1rem;
-  //   font-weight: 500;
-  //   text-align: center;
-  //   transition: background-color 0.2s ease-in-out;
-  //   user-select: none;
-  //   font-family: inherit;
-
-  //   &:hover {
-  //     background-color: var(--collapsible-button-bg-hover);
-  //   }
-
-  //   &:focus {
-  //     outline: 2px solid var(--collapsible-button-bg);
-  //     outline-offset: 2px;
-  //   }
-  // }
 
   // Compact variant with smaller collapsed height
   &--compact {
@@ -89,7 +61,7 @@
 
   // Tall variant with larger collapsed height
   &--tall {
-    --collapsible-collapsed-height: 10rem;
+    --collapsible-collapsed-height: 16rem;
     --collapsible-fade-height: 4rem;
   }
 }

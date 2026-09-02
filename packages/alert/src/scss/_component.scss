@@ -13,7 +13,7 @@
   position: relative;
 
   .uq-alert__message > :is(h1, h2, h3, h4):first-child {
-    margin: core.$space-none core.$space-none core.$space-s;
+    margin: var(--uq-space-none) var(--uq-space-none) var(--uq-space-xs);
   }
 
   .uq-alert__message > :is(h5, h6):first-child {

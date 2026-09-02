@@ -2,6 +2,6 @@
 
 .uqds {
   &-table__wrapper {
-    margin: core.$space-m core.$space-none;
+    margin: var(--uq-space-m) var(--uq-space-none);
   }
 }

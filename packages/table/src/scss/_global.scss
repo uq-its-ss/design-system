@@ -3,48 +3,43 @@
 @mixin table-wrapper {
   width: 100%;
   overflow-x: auto;
-  background-image:
-    -webkit-gradient(
-      linear,
-      0% 50%,
-      100% 50%,
-      color-stop(0%, core.$white),
-      color-stop(100%, rgba(255, 255, 255, 0))
+  background-color: var(--uq-white);
+
+  /* Modern CSS Scroll Shadows */
+  background-image: linear-gradient(
+      to right,
+      var(--uq-white),
+      color-mix(in srgb, var(--uq-white) 0%, transparent)
     ),
-    -webkit-gradient(linear, 100% 50%, 0% 50%, color-stop(0%, core.$white), color-stop(100%, rgba(255, 255, 255, 0))),
-    -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, core.$grey-500), color-stop(100%, rgba(195, 195, 197, 0))),
-    -webkit-gradient(linear, 100% 50%, 0% 50%, color-stop(0%, core.$grey-500), color-stop(100%, rgba(195, 195, 197, 0)));
-  background-image:
-    -webkit-linear-gradient(left, core.$white, rgba(255, 255, 255, 0)),
-    -webkit-linear-gradient(right, core.$white, rgba(255, 255, 255, 0)),
-    -webkit-linear-gradient(left, core.$grey-300 rgba(195, 195, 197, 0)),
-    -webkit-linear-gradient(right, core.$grey-300 rgba(195, 195, 197, 0));
-  background-image:
-    -moz-linear-gradient(left, core.$white, rgba(255, 255, 255, 0)),
-    -moz-linear-gradient(right, core.$white, rgba(255, 255, 255, 0)),
-    -moz-linear-gradient(left, core.$grey-300 rgba(195, 195, 197, 0)),
-    -moz-linear-gradient(right, core.$grey-300 rgba(195, 195, 197, 0));
-  background-image:
-    -o-linear-gradient(left, core.$white, rgba(255, 255, 255, 0)),
-    -o-linear-gradient(right, core.$white, rgba(255, 255, 255, 0)),
-    -o-linear-gradient(left, core.$grey-300 rgba(195, 195, 197, 0)),
-    -o-linear-gradient(right, core.$grey-300 rgba(195, 195, 197, 0));
-  background-image: linear-gradient(left, core.$white, rgba(255, 255, 255, 0)),
-    linear-gradient(to left, core.$white, rgba(255, 255, 255, 0)),
-    linear-gradient(to right, core.$grey-300 rgba(195, 195, 197, 0)),
-    linear-gradient(to left, core.$grey-300 rgba(195, 195, 197, 0));
+    linear-gradient(
+      to left,
+      var(--uq-white),
+      color-mix(in srgb, var(--uq-white) 0%, transparent)
+    ),
+    linear-gradient(
+      to right,
+      var(--uq-grey-300),
+      color-mix(in srgb, var(--uq-grey-300) 0%, transparent)
+    ),
+    linear-gradient(
+      to left,
+      var(--uq-grey-300),
+      color-mix(in srgb, var(--uq-grey-300) 0%, transparent)
+    );
+
   background-position:
     0 0,
     100% 0,
     0 0,
     100% 0;
-  background-repeat: no-repeat;
-  background-color: core.$white;
+
   background-size:
     4em 100%,
     4em 100%,
     1em 100%,
     1em 100%;
+
+  background-repeat: no-repeat;
   background-attachment: local, local, scroll, scroll;
 
   &::-webkit-scrollbar {
@@ -55,23 +50,23 @@
 
   &::-webkit-scrollbar-thumb {
     border-radius: 0.5rem;
-    border: 1px solid core.$white;
-    background-color: core.$grey-500;
+    border: 1px solid var(--uq-white);
+    background-color: var(--uq-grey-500);
   }
 }
 @mixin table {
   width: 100%;
   min-width: 100%;
-  margin: core.$space-none;
-  padding: core.$space-none;
+  margin: var(--uq-space-none);
+  padding: var(--uq-space-none);
   border-collapse: collapse;
   border-spacing: 0;
   box-sizing: border-box;
-  font-family: core.$font-body;
-  font-size: core.$font-size-m;
-  font-weight: core.$font-weight-normal;
-  line-height: core.$line-height;
-  color: core.$grey-900;
+  font-family: var(--uq-font);
+  font-size: var(--uq-font-size-m);
+  font-weight: var(--uq-font-weight-normal);
+  line-height: var(--uq-line-height-long);
+  color: var(--uq-grey-900);
   list-style: none;
 
   *,
@@ -82,12 +77,12 @@
 }
 @mixin table-caption {
   font-size: 1.25rem;
-  line-height: core.$line-height;
-  font-weight: core.$font-weight-bold;
+  line-height: var(--uq-line-height-long);
+  font-weight: var(--uq-font-weight-bold);
   text-align: left;
   display: table-caption;
-  padding-bottom: core.$space-m;
-  background-color: core.$white;
+  padding-bottom: var(--uq-space-m);
+  background-color: var(--uq-white);
 }
 @mixin table-head {
   display: table-header-group;
@@ -101,15 +96,15 @@
   display: table-row;
 }
 @mixin table-cell {
-  padding: core.$space-s core.$space-m;
-  border: 1px solid core.$grey-200;
+  padding: var(--uq-space-xs) var(--uq-space-m);
+  border: 1px solid var(--uq-grey-200);
   text-align: left;
 }
 @mixin table-header {
-  padding: core.$space-s core.$space-m;
-  color: core.$purple-500;
+  padding: var(--uq-space-xs) var(--uq-space-m);
+  color: var(--uq-purple-500);
   text-align: left;
-  border: 1px solid core.$grey-200;
-  font-weight: core.$font-weight-bold;
-  background-color: core.$grey-50;
+  border: 1px solid var(--uq-grey-200);
+  font-weight: var(--uq-font-weight-bold);
+  background-color: var(--uq-grey-50);
 }

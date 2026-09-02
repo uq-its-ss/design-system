@@ -4,16 +4,16 @@
 @use "global" as *;
 
 .uq-alert {
-  background-color: core.$utility-50;
-  color: core.$grey-900;
-  font-family: core.$font-body;
-  font-size: core.$font-size-m;
-  font-weight: core.$font-weight-normal;
-  line-height: core.$line-height;
+  background-color: var(--uq-utility-50);
+  color: var(--uq-grey-900);
+  font-family: var(--uq-font);
+  font-size: var(--uq-font-size-m);
+  font-weight: var(--uq-font-weight-normal);
+  line-height: var(--uq-line-height-long);
   position: relative;
 
   .uq-alert__message > :is(h1, h2, h3, h4):first-child {
-    margin: core.$space-none core.$space-none core.$space-s;
+    margin: var(--uq-space-none) var(--uq-space-none) var(--uq-space-xs);
   }
 
   .uq-alert__message > :is(h5, h6):first-child {
@@ -22,7 +22,8 @@
 
   &__message {
     position: relative;
-    padding: core.$space-l core.$space-xxxxl core.$space-l core.$space-ul;
+    padding: var(--uq-space-l) var(--uq-space-xxxxl) var(--uq-space-l)
+      var(--uq-space-ul);
     width: 100%;
     max-width: 1204px;
     margin-left: auto;
@@ -37,19 +38,19 @@
       ));
       background-repeat: no-repeat;
       background-size: 1.5rem;
-      width: core.$space-l;
-      height: core.$space-l;
+      width: var(--uq-space-l);
+      height: var(--uq-space-l);
       position: absolute;
       top: 25px;
-      left: core.$space-l;
+      left: var(--uq-space-l);
     }
 
     p {
-      margin-bottom: core.$space-m;
-      margin-top: core.$space-none;
+      margin-bottom: var(--uq-space-m);
+      margin-top: var(--uq-space-none);
 
       &:last-of-type {
-        margin-bottom: core.$space-none;
+        margin-bottom: var(--uq-space-none);
       }
     }
   }
@@ -58,16 +59,16 @@
     margin: 0;
     padding: 0;
     position: absolute;
-    top: core.$space-none;
-    right: core.$space-m;
+    top: var(--uq-space-none);
+    right: var(--uq-space-m);
     background-image: url(icon.get-icon("standard--x", core.$grey-900));
     background-repeat: no-repeat;
     background-size: 1rem;
     background-position: center;
     background-color: transparent;
     border: none;
-    width: core.$space-xxl;
-    height: core.$space-uul;
+    width: var(--uq-space-xxl);
+    height: var(--uq-space-uul);
     text-indent: 999px;
     overflow: hidden;
     cursor: pointer;
@@ -81,7 +82,7 @@
   }
 
   &--info {
-    background-color: core.$utility-50;
+    background-color: var(--uq-utility-50);
 
     .uq-alert__message {
       &::before {
@@ -93,7 +94,7 @@
     }
   }
   &--success {
-    background-color: core.$success-50;
+    background-color: var(--uq-success-50);
 
     .uq-alert__message {
       &::before {
@@ -105,7 +106,7 @@
     }
   }
   &--warning {
-    background-color: core.$warning-50;
+    background-color: var(--uq-warning-50);
 
     .uq-alert__message {
       &::before {
@@ -117,7 +118,7 @@
     }
   }
   &--error {
-    background-color: core.$error-50;
+    background-color: var(--uq-error-50);
 
     .uq-alert__message {
       &::before {
@@ -131,16 +132,16 @@
 
   // Global variant
   &--global {
-    background-color: core.$utility-500;
-    color: core.$white;
+    background-color: var(--uq-utility-500);
+    color: var(--uq-white);
 
     // container overrides to match content width
     @media #{core.$screen-xl-up} {
       .uq-alert__message {
-        padding-left: core.$space-uul;
+        padding-left: var(--uq-space-uul);
 
         &::before {
-          left: core.$space-xl;
+          left: var(--uq-space-xl);
         }
       }
     }
@@ -152,27 +153,27 @@
 
       &:hover,
       &:focus {
-        background-color: core.$white;
-        color: core.$purple-500;
+        background-color: var(--uq-white);
+        color: var(--uq-purple-500);
       }
     }
 
     // button overrides for dark variant
     a.uq-button {
-      background-color: core.$white;
-      color: core.$purple-500;
+      background-color: var(--uq-white);
+      color: var(--uq-purple-500);
       text-decoration: none;
 
       &:hover,
       &:focus {
-        background-color: core.$purple-500;
-        color: core.$white;
+        background-color: var(--uq-purple-500);
+        color: var(--uq-white);
         text-decoration: underline;
       }
     }
 
     .uq-alert__title {
-      color: core.$white;
+      color: var(--uq-white);
     }
 
     .uq-alert__close {
@@ -197,7 +198,7 @@
     }
 
     &.uq-alert--success {
-      background-color: core.$success-500;
+      background-color: var(--uq-success-500);
 
       .uq-alert__message {
         &::before {
@@ -210,11 +211,11 @@
     }
 
     &.uq-alert--warning {
-      background-color: core.$warning-500;
-      color: core.$grey-900;
+      background-color: var(--uq-warning-500);
+      color: var(--uq-grey-900);
 
       .uq-alert__title {
-        color: core.$grey-900;
+        color: var(--uq-grey-900);
       }
 
       .uq-alert__close {
@@ -228,7 +229,7 @@
     }
 
     &.uq-alert--error {
-      background-color: core.$error-500;
+      background-color: var(--uq-error-500);
 
       .uq-alert__message {
         &::before {

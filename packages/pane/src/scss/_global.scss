@@ -1,29 +1,29 @@
 @use "@uqds/core/src/scss/_global" as core;
 
 @mixin pane-shaded {
-  background: core.$grey-50;
+  background: var(--uq-grey-50);
 }
 
 @mixin pane-white {
-  background: core.$white;
+  background: var(--uq-white);
 }
 
 @mixin pane-outline {
-  border: 2px solid core.$grey-200;
+  border: 2px solid var(--uq-grey-200);
 }
 
 @mixin pane-ruled {
-  border-bottom: 2px solid core.$grey-200;
-  border-top: 2px solid core.$grey-200;
+  border-bottom: 2px solid var(--uq-grey-200);
+  border-top: 2px solid var(--uq-grey-200);
 }
 
 @mixin pane-vertical-spacing {
-  margin: core.$space-xl core.$space-none;
+  margin: var(--uq-space-xl) var(--uq-space-none);
 }
 
 @mixin pane-dark-tint {
   @extend %light-palette;
-  background-color: core.$grey-800;
+  background-color: var(--uq-grey-800);
 
   .uq-pane__title {
     @extend %light-palette;
@@ -31,16 +31,17 @@
 }
 
 @mixin pane-has-footer {
-  padding: core.$space-none;
+  padding: var(--uq-space-none);
 
   .uq-pane {
     &__content {
-      padding: core.$space-l core.$space-l core.$space-m core.$space-l; //1.8rem 1.8rem 1rem 1.8rem
+      padding: var(--uq-space-l) var(--uq-space-l) var(--uq-space-m)
+        var(--uq-space-l); //1.8rem 1.8rem 1rem 1.8rem
     }
 
     &__footer {
-      background-color: core.$grey-50;
-      padding: core.$space-l; //1.8rem;
+      background-color: var(--uq-grey-50);
+      padding: var(--uq-space-l); //1.8rem;
     }
   }
 }

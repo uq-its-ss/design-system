@@ -1,12 +1,12 @@
 @use "@uqds/core/src/scss/global" as core;
 
 :root {
-  --hero-font-size-ul: #{core.$font-size-ul};
-  --hero-font-size-xxxxl: #{core.$font-size-xxxxl};
+  --hero-font-size-ul: #{var(--uq-font-size-ul)};
+  --hero-font-size-xxxxl: #{var(--uq-font-size-xxxxl)};
 
-  --hero-gap: #{core.$space-ul};
-  --hero-spacing: #{core.$space-ul};
-  --hero-basic-spacing: #{core.$space-uuul};
+  --hero-gap: #{var(--uq-space-ul)};
+  --hero-spacing: #{var(--uq-space-ul)};
+  --hero-basic-spacing: #{var(--uq-space-uuul)};
 
   --hero-aspect-ratio: 2.35 / 1;
   --hero-large-aspect-ratio: 3 / 2;
@@ -25,6 +25,6 @@
     --hero-font-size-ul: 30px;
     --hero-font-size-xxxxl: 30px;
 
-    --hero-basic-spacing: #{core.$space-xl};
+    --hero-basic-spacing: #{var(--uq-space-xl)};
   }
 }

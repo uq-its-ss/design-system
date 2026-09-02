@@ -8,16 +8,16 @@
   display: flex;
   flex-direction: column;
   border-radius: 4px;
-  border: 1px solid #{core.$grey-200};
-  background: core.$white;
+  border: 1px solid #{var(--uq-grey-200)};
+  background: var(--uq-white);
 
   &:has(a:focus-visible) {
-    outline: 4px solid core.$utility-500;
+    outline: 4px solid var(--uq-utility-500);
     outline-offset: -1px;
   }
 
   &:has(a:hover) {
-    background: core.$grey-50;
+    background: var(--uq-grey-50);
 
     & .uq-card__content::after {
       left: 8px;
@@ -29,11 +29,11 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  padding: core.$space-l;
+  padding: var(--uq-space-l);
 
   &::after {
     content: "";
-    height: calc(24px + core.$space-l);
+    height: calc(24px + var(--uq-space-l));
     width: 24px;
     margin-top: auto;
     position: relative;
@@ -52,11 +52,11 @@
 .uq-card__title,
 %uq-card__title {
   margin: 0;
-  color: core.$black;
+  color: var(--uq-black);
   font-size: var(--card-title-font-size);
 
   & a {
-    color: core.$black;
+    color: var(--uq-black);
     text-decoration: none;
     display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -75,7 +75,7 @@
     }
 
     &:hover {
-      color: core.$black;
+      color: var(--uq-black);
       text-decoration: underline;
       background-color: transparent;
     }
@@ -84,7 +84,7 @@
 
 .uq-card__description,
 %uq-card__description {
-  margin-top: core.$space-s;
+  margin-top: var(--uq-space-xs);
 }
 
 .uq-card__image,
@@ -104,7 +104,7 @@
 }
 
 .uq-card__icon {
-  margin-bottom: core.$space-s;
+  margin-bottom: var(--uq-space-xs);
 
   & .uq-icon::before {
     height: 56px;
@@ -141,10 +141,10 @@
 
       &::after {
         height: 24px;
-        width: calc(24px + #{core.$space-m});
+        width: calc(24px + #{var(--uq-space-m)});
         margin-top: 0;
         margin-left: auto;
-        padding-left: core.$space-m;
+        padding-left: var(--uq-space-m);
         flex-shrink: 0;
       }
     }
@@ -154,7 +154,7 @@
     }
 
     & .uq-card__icon {
-      margin: 0 core.$space-m 0 0;
+      margin: 0 var(--uq-space-m) 0 0;
     }
 
     .uq-card__icon .uq-icon::before {
@@ -179,7 +179,7 @@
 
     & .uq-card__content {
       width: 50%;
-      padding-inline: core.$space-l 0;
+      padding-inline: var(--uq-space-l) 0;
     }
   }
 }

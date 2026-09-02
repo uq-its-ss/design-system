@@ -4,10 +4,10 @@
 
 .uq-progression {
   display: flex;
-  font-family: core.$font-body;
-  font-size: core.$font-size-m;
-  font-weight: core.$font-weight-normal;
-  line-height: core.$line-height;
+  font-family: var(--uq-font);
+  font-size: var(--uq-font-size-m);
+  font-weight: var(--uq-font-weight-normal);
+  line-height: var(--uq-line-height-long);
   list-style: none;
   margin: 0 1.5rem;
   padding: 0 0 2rem;
@@ -25,7 +25,7 @@
 
     .uq-progression__link {
       &:hover {
-        background-color: core.$grey-500;
+        background-color: var(--uq-grey-500);
         text-decoration: none;
       }
     }
@@ -49,15 +49,15 @@
     }
     &:hover {
       .uq-progression__step-number {
-        background-color: core.$grey-500;
+        background-color: var(--uq-grey-500);
         text-decoration: none;
       }
     }
   }
   &__step-number {
-    background-color: core.$grey-600;
+    background-color: var(--uq-grey-600);
     border-radius: 50%;
-    color: core.$white;
+    color: var(--uq-white);
     display: block;
     height: 1.875rem;
     line-height: 1.875rem;
@@ -73,7 +73,7 @@
   &__step-label {
     display: none;
     @media (min-width: 640px) {
-      color: core.$grey-900;
+      color: var(--uq-grey-900);
       display: block;
       line-height: 1.2;
       position: absolute;
@@ -87,9 +87,9 @@
   }
 
   &__bar {
-    background-color: core.$grey-500;
-    border-right: 1px solid core.$white;
-    border-left: 1px solid core.$white;
+    background-color: var(--uq-grey-500);
+    border-right: 1px solid var(--uq-white);
+    border-left: 1px solid var(--uq-white);
     display: flex;
     flex: 1;
     height: 10px;
@@ -102,7 +102,7 @@
     }
 
     & .uq-progression__bar {
-      background-color: core.$grey-500;
+      background-color: var(--uq-grey-500);
       margin: 0;
     }
   }
@@ -123,24 +123,24 @@
   .uq-progression__step-number,
   .uq-progression__link .uq-progression__step-number,
   .uq-progression__bar {
-    background-color: core.$success-500;
-    color: core.$white;
+    background-color: var(--uq-success-500);
+    color: var(--uq-white);
   }
 
   .uq-progression__step .uq-progression__link:hover,
   .uq-progression__link:hover .uq-progression__step-number {
-    background-color: core.$success-700;
+    background-color: var(--uq-success-700);
     text-decoration: none;
   }
 }
 
 .uq-progression__bar {
   .uq-progression__bar {
-    background-color: core.$grey-300;
-    color: core.$white;
+    background-color: var(--uq-grey-300);
+    color: var(--uq-white);
   }
   .is-complete {
-    background-color: core.$success-500 !important;
-    color: core.$white;
+    background-color: var(--uq-success-500) !important;
+    color: var(--uq-white);
   }
 }

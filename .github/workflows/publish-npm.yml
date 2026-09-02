@@ -243,6 +243,8 @@ jobs:
             3. Root CHANGELOG.md will be auto-generated
             
             [View workflow run](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})
+            to confirm the version is as expected.
+            
           exclude-workflow-initiator-as-approver: false
 
       - name: "✨ Publish stable"

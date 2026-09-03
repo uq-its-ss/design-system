@@ -15,6 +15,7 @@
 
 .uq-pill-list__title {
   margin: 0;
+  font-size: core.$font-size-l;
 
   @media #{core.$screen-sm-up} {
     margin-top: core.$space-s;

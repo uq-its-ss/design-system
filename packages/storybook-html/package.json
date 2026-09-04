@@ -1,14 +1,13 @@
 {
   "name": "storybook-html",
-  "version": "8.1.7",
+  "version": "8.1.8-alpha.0",
   "description": "Storybook for HTML instance for uqds component development",
   "private": true,
   "main": "index.js",
   "keywords": [],
   "author": {
     "name": "University of Queensland",
-    "email": "webservices@uq.edu.au",
-    "url": "https://uq.edu.au"
+    "url": "https://about.uq.edu.au/web-feedback?r=https://design-system.uq.edu.au"
   },
   "license": "ISC",
   "scripts": {

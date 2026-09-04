@@ -1,12 +1,11 @@
 {
   "name": "uqds-builder",
-  "version": "4.0.14",
+  "version": "4.0.15-alpha.0",
   "description": "Render style kits for UQ clients",
   "private": true,
   "author": {
     "name": "University of Queensland",
-    "email": "webservices@uq.edu.au",
-    "url": "https://uq.edu.au"
+    "url": "https://about.uq.edu.au/web-feedback?r=https://design-system.uq.edu.au"
   },
   "homepage": "https://github.com/uq-its-ss/design-system#readme",
   "license": "ISC",

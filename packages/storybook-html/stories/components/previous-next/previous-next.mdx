@@ -1,4 +1,4 @@
-import { Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
+import { Meta, Canvas, Story, Controls } from "@storybook/addon-docs/blocks";
 import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
 import * as PreviousNextStories from "./previous-next.stories";
 
@@ -11,90 +11,62 @@ issues](https://github.com/uq-its-ss/design-system/issues)
 
 ## Overview
 
-- The Previous-next component is also a form of pagination.
+The **Previous / Next** component provides consistent navigation across sequential pages or steps.
+
+- It can be rendered as either **links** (for page to page navigation) or **buttons** (for content changes on the same page).
+
+- The Previous-next component is a form of pagination.
 - It provides previous and next buttons (links) to navigate between pages or between tab contents on the same page.
-- They are aligned to the sides of the page or in some instances to the sides of the tab contents.
 
 ## Default example
 
-### a. Initial instance
+<Canvas of={PreviousNextStories.Middle} />
+
+<Controls of={PreviousNextStories.Middle} />
+
+### a. Initial state
 
 An instance when only the next button is visible
 
-<Canvas of={PreviousNextStories.previousNextInitial} />
+<Canvas of={PreviousNextStories.Initial} />
 
-```html
-<div class="uq-previous-next">
-  <div class="uq-previous-next__item uq-previous-next__item--hidden">
-    <a href="#" class="uq-previous-next__link-previous"
-      >Enrolment basics
-      <span class="uq-previous-next__description">Previous</span></a
-    >
-  </div>
-
-  <div class="uq-previous-next__item">
-    <a href="#" class="uq-previous-next__link-next"
-      >How to enrol <span class="uq-previous-next__description">Next</span></a
-    >
-  </div>
-</div>
-```
-
-### b. Middle instance
+### b. Middle state
 
 An instance when both the previous and next buttons are visible
 
-<Canvas of={PreviousNextStories.previousNextMiddle} />
+<Canvas of={PreviousNextStories.Middle} />
 
-```html
-<!-- Previous and Next buttons are visible -->
-<div class="uq-previous-next">
-  <div class="uq-previous-next__item">
-    <a href="#" class="uq-previous-next__link-previous"
-      >Enrolment basics
-      <span class="uq-previous-next__description">Previous</span></a
-    >
-  </div>
-
-  <div class="uq-previous-next__item">
-    <a href="#" class="uq-previous-next__link-next"
-      >How to enrol <span class="uq-previous-next__description">Next</span></a
-    >
-  </div>
-</div>
-```
-
-### c. Final instance
+### c. Final state
 
 An instance when only the previous button is visible
 
-<Canvas of={PreviousNextStories.previousNextFinal} />
-
-```html
-<div class="uq-previous-next">
-  <div class="uq-previous-next__item">
-    <a href="#" class="uq-previous-next__link-previous"
-      >Enrolment basics
-      <span class="uq-previous-next__description">Previous</span></a
-    >
-  </div>
-
-  <div class="uq-previous-next__item uq-previous-next__item--hidden">
-    <a href="#" class="uq-previous-next__link-next"
-      >How to enrol <span class="uq-previous-next__description">Next</span></a
-    >
-  </div>
-</div>
-```
+<Canvas of={PreviousNextStories.Final} />
 
 ## How and when to use
 
-- The Previous-next component can be used with or without the progression component.
+### Labels
 
-### Breakpoints
+Make sure labels are clear and descriptive.
 
-- The previous and next buttons collapses at viewport widths less than 640px.
+- labels should reflect the content, title of the page or step that will be navigated to.
+- Avoid using generic labels like "Next" or "Previous".
 
-## Related
+<Canvas of={PreviousNextStories.Labels} />
 
-- Progression component could be used in conjunction with the Previous-next component.
+### When to Use Links vs. Buttons
+
+Choosing between links and buttons ensures proper semantic HTML, keyboard accessibility, and screen reader behavior.
+
+#### Use Links When:
+
+- Navigating between distinct URLs / static web pages (e.g., blog posts, documentation chapters, search pagination).
+- Users can right-click to open the next/previous page in a new tab.
+- The state of the current page does not depend on form data or client-side application state.
+
+#### Use Buttons When:
+
+- Navigating through tabbed content or single-page app (SPA) step flow where URLs may not change.
+
+### Accessibility
+
+For disabled states in initial or final steps, prefer hiding the inactive action or using clear aria-disabled / disabled HTML attributes so screen readers communicate that the end of the sequence has been reached.

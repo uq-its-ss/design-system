@@ -38,8 +38,7 @@ Access is managed through teams linked to the repo.
 
 ## Requests for access
 
-Requests for access are sent to its.softwareservices@uq.edu.au
-(Email currently goes to **team Aqua** (Tod or Adam))
+Submit Requests for access to [UQ Support](https://my.uq.edu.au/information-and-services/information-technology/student-staff-it-support)
 
 **Email Template**
 

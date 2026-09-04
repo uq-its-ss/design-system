@@ -1,0 +1,66 @@
+@use "@uqds/core/src/scss/global" as core;
+@use "global" as *;
+
+.uq-collapsible-text {
+  position: relative;
+
+  // CSS Custom Properties for easy customization
+  --collapsible-collapsed-height: 7rem;
+  --collapsible-threshold: 9.5rem;
+  --collapsible-fade-height: 3rem;
+  --collapsible-transition-duration: 0.3s;
+  --collapsible-fade-from: rgba(255, 255, 255, 0);
+  --collapsible-fade-to: rgba(255, 255, 255, 1);
+
+  // Content wrapper
+  &__content {
+    position: relative;
+    overflow: hidden;
+    max-height: var(--collapsible-collapsed-height);
+    // JS will set exact height, so consistent transition in both directions
+    transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    // Fade effect at the bottom
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: var(--collapsible-fade-height);
+      background: linear-gradient(
+        to bottom,
+        var(--collapsible-fade-from),
+        var(--collapsible-fade-to)
+      );
+      pointer-events: none;
+      transition: opacity 0.2s ease-in-out;
+    }
+  }
+
+  // Expanded state (JS sets data-state="expanded")
+  &[data-state="expanded"] &__content {
+    &::after {
+      opacity: 0;
+    }
+  }
+
+  // No collapse needed (content is short)
+  &[data-collapsed="false"] &__content {
+    &::after {
+      display: none;
+    }
+  }
+
+  // Compact variant with smaller collapsed height
+  &--compact {
+    --collapsible-collapsed-height: 4rem;
+    --collapsible-fade-height: 2rem;
+  }
+
+  // Tall variant with larger collapsed height
+  &--tall {
+    --collapsible-collapsed-height: 16rem;
+    --collapsible-fade-height: 4rem;
+  }
+}

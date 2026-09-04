@@ -77,6 +77,7 @@ export default {
           ${message}
           ${button ? `<p><a href="#" title="Button" class="uq-button">${button}</a></p>` : ""}
           ${link ? `<p><a href="#" title="Link" class="uq-button--inline">${link}</a></p>` : ""}
+          
         </div>
       </div>
     `;

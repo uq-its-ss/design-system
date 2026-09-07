@@ -10,6 +10,13 @@ on:
       - releases
     types: [opened, synchronize, reopened]
 
+concurrency:
+  # Ensures only one publish for a given branch runs at a time. A second push
+  # queues behind the current run rather than cancelling it, since cancelling
+  # a `lerna publish` mid-flight can leave git and npm in an inconsistent state.
+  group: publish-${{ github.ref_name }}
+  cancel-in-progress: false
+
 jobs:
   # Job 1: Create draft release when PR to releases is opened
   create-draft-release:
@@ -198,13 +205,34 @@ jobs:
       
       - name: "🧐 Version dry run"
         if: ${{ github.ref_name == 'releases' }}
+        id: dry-run
         env:
           GH_TOKEN: ${{ secrets.UQDS_PERSONAL_ACCESS_TOKEN }}
         run: |
           git config user.name "${{ github.actor }}"
           git config user.email "${{ github.actor}}@users.noreply.github.com"
-          # Dry run for version bump ONLY, no tag/push yet        
-          npx lerna version --conventional-commits --conventional-graduate --yes --no-git-tag-version --no-push || true
+          # Dry run for version bump ONLY, no tag/push yet.
+          # Failure is captured (not hidden) and surfaced prominently in the
+          # approval issue below, so a human sees it and can deny the release
+          # rather than approving against stale/blank version info.
+          set +e
+          npx lerna version --conventional-commits --conventional-graduate --yes --no-git-tag-version --no-push > dry-run-output.log 2>&1
+          DRY_RUN_EXIT=$?
+          set -e
+
+          cat dry-run-output.log
+
+          if [ $DRY_RUN_EXIT -eq 0 ]; then
+            echo "status=✅ Success" >> $GITHUB_OUTPUT
+            echo "failed=false" >> $GITHUB_OUTPUT
+          else
+            echo "status=❌ FAILED (exit code $DRY_RUN_EXIT)" >> $GITHUB_OUTPUT
+            echo "failed=true" >> $GITHUB_OUTPUT
+          fi
+
+          echo "output<<DRYRUN_EOF" >> $GITHUB_OUTPUT
+          cat dry-run-output.log >> $GITHUB_OUTPUT
+          echo "DRYRUN_EOF" >> $GITHUB_OUTPUT
 
       - name: "📅 Prepare release info"
         if: ${{ github.ref_name == 'releases' }}
@@ -231,11 +259,25 @@ jobs:
           secret: ${{ secrets.UQDS_PERSONAL_ACCESS_TOKEN }}
           approvers: uqds-admin
           minimum-approvals: 1
-          issue-title: 'Approve new release ✅'
+          issue-title: >-
+            ${{ steps.dry-run.outputs.failed == 'true' && '⚠️ DRY RUN FAILED — Approve new release ✅' || 'Approve new release ✅' }}
           issue-body: |
             Please approve or deny the release.
             
             **Release tag:** `${{ steps.release-info.outputs.tag }}`
+            
+            **Dry run status:** ${{ steps.dry-run.outputs.status }}
+            
+            ${{ steps.dry-run.outputs.failed == 'true' && '**⚠️ WARNING: The version dry run failed. Do not approve until this is investigated — the version/changelog info below may be incomplete or wrong.**' || '' }}
+            
+            <details>
+            <summary>Dry run output</summary>
+            
+            ```
+            ${{ steps.dry-run.outputs.output }}
+            ```
+            
+            </details>
             
             **Next steps after approval:**
             1. Packages will be published to npm with `@latest` tag

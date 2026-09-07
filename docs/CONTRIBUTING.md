@@ -335,6 +335,22 @@ Since we use conventional commits for automated versioning:
 
 **Why this matters:** Bad commit messages = incorrect versions + missing changelog entries
 
+### Troubleshooting a Failed Publish
+
+`lerna publish` bumps versions, commits, tags, and pushes to git **before** it publishes to npm. If the npm publish step fails partway (auth, network, registry issue), the git commit/tag/push has already landed on the branch with no corresponding npm package.
+
+**Recovery:** run the following to publish the already-tagged versions without re-bumping:
+
+```bash
+npx lerna publish from-git --yes
+```
+
+See [ADR-0002](./adr/0002-publish-failure-recovery.md) for why this is a manual step rather than an automated retry.
+
+### npm Version Requirement (OIDC Trusted Publishing)
+
+Publishing uses npm's [Trusted Publishing](https://docs.npmjs.com/generating-provenance-statements) (OIDC), which requires **npm ≥ 11.5.1**. The workflow does not pin an npm version — it relies on whatever ships bundled with the `node-version: '24'` runner image. If a future Node 24.x patch ships an older npm, or if the workflow filename changes (npm's Trusted Publisher config is scoped to the exact repo + workflow path), publishing will fail with an OIDC/auth error rather than an obvious version-mismatch message. If publish fails with an unexplained auth error, check `npm --version` in the workflow logs first.
+
 ---
 
 ## Additional Resources

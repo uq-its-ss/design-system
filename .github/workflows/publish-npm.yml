@@ -91,10 +91,6 @@ jobs:
               });
             
             let changelog = '<!-- Add your manual summary here -->\n\n';
-            changelog += '**This release includes updates to the following packages:**\n\n';
-            changelog += '<!-- PACKAGE_VERSIONS_START -->\n';
-            changelog += fs.readFileSync('package-versions.md', 'utf8').trim() + '\n';
-            changelog += '<!-- PACKAGE_VERSIONS_END -->\n\n';
             changelog += '---\n\n';
             
             if (breaking.length > 0) {
@@ -106,6 +102,11 @@ jobs:
             if (fixes.length > 0) {
               changelog += '## 🐛 Bug Fixes\n\n' + fixes.join('\n') + '\n\n';
             }
+            
+            changelog += '**This release includes updates to the following packages:**\n\n';
+            changelog += '<!-- PACKAGE_VERSIONS_START -->\n';
+            changelog += fs.readFileSync('package-versions.md', 'utf8').trim() + '\n';
+            changelog += '<!-- PACKAGE_VERSIONS_END -->\n\n';
             
             console.log(changelog);
           } catch (error) {

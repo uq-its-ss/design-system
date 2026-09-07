@@ -9,7 +9,7 @@
 🎨 **Customizable** - CSS variables and data attributes for easy styling  
 ♿ **Accessible** - Keyboard navigation and semantic HTML  
 📱 **Responsive** - Works on all screen sizes  
-🎭 **Variants** - Compact and tall options
+🎭 **Variants** - Tall and custom options
 
 ## Usage
 
@@ -41,19 +41,16 @@ new collapsibleText();
 The JavaScript enhancement:
 
 - ✅ Measures actual content height for precise animations
-- ✅ Only shows button if content exceeds threshold height (default: **16rem**)
-- ✅ Configurable threshold via `data-collapse-threshold` attribute
+- ✅ Only shows button if content exceeds threshold height (default: **9rem**)
+- ✅ Custom collaspe height via `data-collapsed-height` attribute
 - ✅ Provides consistent timing for opening and closing
 - ✅ Automatically recalculates on window resize
 - ✅ Hides button and fade effect for short content
-
-See [`JS-ENHANCEMENT.md`](./JS-ENHANCEMENT.md) for details.
 
 ### Basic HTML Structure
 
 ```html
 <div class="uq-collapsible-text" data-component="collapsible-text">
-  <h3>Your Title</h3>
 
   <!-- Content with fade effect -->
   <div class="uq-collapsible-text__content" data-collapsible-content>
@@ -62,7 +59,7 @@ See [`JS-ENHANCEMENT.md`](./JS-ENHANCEMENT.md) for details.
 
   <!-- Button to toggle expanded/collapsed state -->
   <button
-    class="uq-collapsible-text__button"
+    class="uq-collapsible-text__button uq-button uq-button--link uq-icon uq-icon--standard--chevron-down-sml uq-icon--right"
     data-collapsible-button
     aria-expanded="false"
   >
@@ -73,47 +70,6 @@ See [`JS-ENHANCEMENT.md`](./JS-ENHANCEMENT.md) for details.
 
 **Note:** The JavaScript will automatically update the button text and ARIA attributes.
 
-### Custom Threshold
-
-By default, the button only appears if content height exceeds **16rem**. You can customize this per instance:
-
-```html
-<!-- Button appears if content exceeds 20rem -->
-<div
-  class="uq-collapsible-text"
-  data-component="collapsible-text"
-  data-collapse-threshold="20"
->
-  <div class="uq-collapsible-text__content" data-collapsible-content>
-    <p>Your content...</p>
-  </div>
-  <button
-    class="uq-collapsible-text__button"
-    data-collapsible-button
-    aria-expanded="false"
-  >
-    Read more
-  </button>
-</div>
-
-<!-- Button appears if content exceeds 10rem -->
-<div
-  class="uq-collapsible-text"
-  data-component="collapsible-text"
-  data-collapse-threshold="10"
->
-  <div class="uq-collapsible-text__content" data-collapsible-content>
-    <p>Your content...</p>
-  </div>
-  <button
-    class="uq-collapsible-text__button"
-    data-collapsible-button
-    aria-expanded="false"
-  >
-    Read more
-  </button>
-</div>
-```
 
 ### Custom Collapsed Height
 
@@ -124,31 +80,13 @@ You can customize the collapsed height per instance using the `data-collapsed-he
 <div
   class="uq-collapsible-text"
   data-component="collapsible-text"
-  data-collapsed-height="8rem"
+  data-collapsed-height="8"
 >
   <div class="uq-collapsible-text__content" data-collapsible-content>
     <p>Your content...</p>
   </div>
-  <button
-    class="uq-collapsible-text__button"
-    data-collapsible-button
-    aria-expanded="false"
-  >
-    Read more
-  </button>
-</div>
-
-<!-- Custom collapsed height of 12rem -->
-<div
-  class="uq-collapsible-text"
-  data-component="collapsible-text"
-  data-collapsed-height="12rem"
->
-  <div class="uq-collapsible-text__content" data-collapsible-content>
-    <p>Your content...</p>
-  </div>
-  <button
-    class="uq-collapsible-text__button"
+ <button
+    class="uq-collapsible-text__button uq-button uq-button--link uq-icon uq-icon--standard--chevron-down-sml uq-icon--right"
     data-collapsible-button
     aria-expanded="false"
   >
@@ -157,31 +95,11 @@ You can customize the collapsed height per instance using the `data-collapsed-he
 </div>
 ```
 
-The `data-collapsed-height` attribute accepts any CSS height value (e.g., `8rem`, `200px`, `10em`).
+The `data-collapsed-height` attribute accepts a number value in rems
 
 ### Variants
 
-**Compact** (4rem collapsed height):
-
-```html
-<div
-  class="uq-collapsible-text uq-collapsible-text--compact"
-  data-component="collapsible-text"
->
-  <div class="uq-collapsible-text__content" data-collapsible-content>
-    <p>Your content...</p>
-  </div>
-  <button
-    class="uq-collapsible-text__button"
-    data-collapsible-button
-    aria-expanded="false"
-  >
-    Read more
-  </button>
-</div>
-```
-
-**Tall** (10rem collapsed height):
+**Tall** (16rem collapsed height):
 
 ```html
 <div
@@ -209,8 +127,6 @@ The `data-collapsed-height` attribute accepts any CSS height value (e.g., `8rem`
   data-component="collapsible-text"
   style="
   --collapsible-collapsed-height: 8rem;
-  --collapsible-button-bg: #de5454;
-  --collapsible-button-bg-hover: #e67f7f;
 "
 >
   <div class="uq-collapsible-text__content" data-collapsible-content>
@@ -231,9 +147,6 @@ Available CSS variables:
 - `--collapsible-collapsed-height`: Height when collapsed (default: 6rem)
 - `--collapsible-fade-height`: Height of fade gradient (default: 3rem)
 - `--collapsible-transition-duration`: Animation speed (default: 0.3s)
-- `--collapsible-button-bg`: Button background color
-- `--collapsible-button-bg-hover`: Button hover color
-- `--collapsible-button-color`: Button text color
 - `--collapsible-fade-from`: Start color of gradient
 - `--collapsible-fade-to`: End color of gradient
 
@@ -250,7 +163,6 @@ See the [`JS-ENHANCEMENT.md`](./JS-ENHANCEMENT.md) for JavaScript details.
 The component uses JavaScript to provide smooth, consistent transitions:
 
 1. On initialization, JavaScript measures the actual content height
-2. Reads `data-collapse-threshold` to determine when to show the button
 3. Reads `data-collapsed-height` to set the initial collapsed height
 4. A button element controls the expanded/collapsed state
 5. Click events toggle between states with exact height values

@@ -1,7 +1,51 @@
 # Change Log
 
 All notable changes to this project will be documented in this file.
-See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+## [5.0.0] - 2026-08-27
+
+### Added
+
+- **Build utilities export** - New `./build-utils` export path provides `buildIcons()` function for external consumers
+- TypeScript interfaces: `BuildIconsConfig` and `ProcessedIcon` for type-safe configuration
+- Shared SVGO configuration via exported `svgoConfig`
+
+### Changed
+
+- **BREAKING**: Upgraded SVGO from 2.8.0 to 4.1.0
+- **BREAKING**: SVG markup output has changed (visually identical, but different code structure)
+- Migrated to SVGO 4.x `preset-default` with minimal overrides
+- Refactored internal build process to use new `buildIcons()` utility
+- Updated TypeScript types (removed `@types/svgo`, now uses built-in types)
+
+### Fixed
+
+- SVGO plugin configuration now uses SVGO 4.x API (`Config` type, preset-default)
+- Error handling in `optimize()` function updated for SVGO 4.x response format
+
+### Migration Guide
+
+**For consumers of the icon package:**
+
+The SVG markup has changed internally but renders identically. If you:
+
+- Simply import and use icons → No changes needed
+- Post-process SVG markup → Review visual regression tests
+- Depend on exact SVG code structure → Validate your integration
+
+**For consumers who want to use build utilities:**
+
+```typescript
+import { buildIcons } from "@uqds/icon/build-utils";
+
+await buildIcons({
+  inputDir: "./icons/",
+  outputDir: "./dist/",
+  outputs: { sass: "./output.scss" },
+});
+```
+
+See `docs/adr/0001-unified-svg-build-infrastructure.md` for details.See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 ## [4.0.6](https://github.com/uq-its-ss/design-system/compare/@uqds/icon@4.0.6-alpha.0...@uqds/icon@4.0.6) (2026-08-18)
 

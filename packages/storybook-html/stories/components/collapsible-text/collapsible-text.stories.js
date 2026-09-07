@@ -14,19 +14,17 @@ export default {
     },
     collapsedHeight: {
       control: { type: "number", min: 0 },
-      description: "Override default with a custom rem value for the collapsed height",
+      description:
+        "Override default with a custom rem value for the collapsed height",
       if: { arg: "variant", eq: "custom" },
-    }
+    },
   },
   args: {
     variant: "default",
     collapsedHeight: null,
-
   },
   decorators: [
     (storyFn) => {
-
-
       return initJs(storyFn, (component) => {
         // Initialize JavaScript enhancement
         new collapsibleText();
@@ -53,7 +51,7 @@ export default {
 };
 
 export const Default = {};
- 
+
 export const Tall = {
   args: {
     variant: "tall",
@@ -126,4 +124,3 @@ export const MultipleInstances = {
 `;
   },
 };
-

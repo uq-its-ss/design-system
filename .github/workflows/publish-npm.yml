@@ -41,6 +41,12 @@ jobs:
       - name: "📦️ Install dependencies"
         run: npm ci
 
+      - name: "🔢 Calculate package version bumps"
+        run: |
+          git config user.name "${{ github.actor }}"
+          git config user.email "${{ github.actor}}@users.noreply.github.com"
+          node scripts/build-package-version-table.js > package-versions.md
+
       - name: "📝 Generate draft changelog"
         id: changelog
         run: |
@@ -86,7 +92,9 @@ jobs:
             
             let changelog = '<!-- Add your manual summary here -->\n\n';
             changelog += '**This release includes updates to the following packages:**\n\n';
-            changelog += '<!-- Package list will be added during publish -->\n\n';
+            changelog += '<!-- PACKAGE_VERSIONS_START -->\n';
+            changelog += fs.readFileSync('package-versions.md', 'utf8').trim() + '\n';
+            changelog += '<!-- PACKAGE_VERSIONS_END -->\n\n';
             changelog += '---\n\n';
             
             if (breaking.length > 0) {
@@ -251,6 +259,60 @@ jobs:
           
           echo "tag=${RELEASE_TAG}" >> $GITHUB_OUTPUT
           echo "date=${RELEASE_DATE}" >> $GITHUB_OUTPUT
+
+      - name: "🔢 Refresh package versions in draft release"
+        if: ${{ github.ref_name == 'releases' }}
+        id: package-versions
+        run: |
+          git config user.name "${{ github.actor }}"
+          git config user.email "${{ github.actor}}@users.noreply.github.com"
+          node scripts/build-package-version-table.js > package-versions.md
+          echo "PACKAGE_VERSIONS<<EOF" >> $GITHUB_OUTPUT
+          cat package-versions.md >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+      - name: "📝 Update draft release with final versions"
+        if: ${{ github.ref_name == 'releases' }}
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.UQDS_PERSONAL_ACCESS_TOKEN }}
+          script: |
+            const tag = '${{ steps.release-info.outputs.tag }}';
+            const packageVersions = `${{ steps.package-versions.outputs.PACKAGE_VERSIONS }}`;
+
+            const { data: releases } = await github.rest.repos.listReleases({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+            });
+
+            const draft = releases.find(r => r.tag_name === tag && r.draft);
+
+            if (!draft) {
+              console.log(`No draft release found for tag ${tag} - skipping version refresh. It will be created with auto-generated notes at publish time.`);
+              return;
+            }
+
+            const startMarker = '<!-- PACKAGE_VERSIONS_START -->';
+            const endMarker = '<!-- PACKAGE_VERSIONS_END -->';
+            const markerBlock = `${startMarker}\n${packageVersions}\n${endMarker}`;
+
+            let body = draft.body || '';
+            if (body.includes(startMarker) && body.includes(endMarker)) {
+              const pattern = new RegExp(`${startMarker}[\\s\\S]*?${endMarker}`);
+              body = body.replace(pattern, markerBlock);
+            } else {
+              console.log('Draft release body is missing version markers (may have been edited away) - appending version list instead.');
+              body = `${body}\n\n**Package versions:**\n\n${markerBlock}`;
+            }
+
+            await github.rest.repos.updateRelease({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              release_id: draft.id,
+              body,
+            });
+
+            console.log(`Updated draft release ${draft.html_url} with final package versions.`);
 
       - name: "⌛️ Wait for approval"
         uses: trstringer/manual-approval@v1

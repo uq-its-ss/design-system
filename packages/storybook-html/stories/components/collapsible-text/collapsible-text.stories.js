@@ -10,7 +10,7 @@ export default {
   argTypes: {
     variant: {
       control: { type: "select" },
-      options: ["default", "compact", "tall"],
+      options: ["default", "tall"],
       description: "Choose a variant of the collapsible text",
     },
   },
@@ -32,11 +32,9 @@ export default {
     <div>
 <div class="uq-collapsible-text ${variantClass}" data-component="collapsible-text">
   <div class="uq-collapsible-text__content" data-collapsible-content>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent rutrum diam eget magna pretium, non lacinia orci feugiat. Proin luctus volutpat quam, id varius nibh ultricies at. Mauris tempus sodales mauris quis consectetur. Aenean lorem orci, cursus ac vestibulum bibendum, efficitur ut tellus. Praesent faucibus lorem in odio convallis, eget porttitor tellus luctus. Integer dignissim sit amet nisi vitae tempus. In faucibus turpis elementum metus finibus blandit. Nam luctus mauris ac nisl iaculis tempor id quis ipsum.</p>
-    <p>Cras et orci mollis, vulputate est sed, posuere nulla. Curabitur blandit lacinia varius. Praesent tincidunt laoreet sagittis. Etiam libero lorem, dapibus ac dignissim vitae, dictum eu magna. Nunc convallis posuere nisi, id luctus tellus tristique ut. Ut vehicula posuere orci eu euismod. Nam auctor odio quis erat gravida molestie. Maecenas elementum, tortor ut dignissim vehicula, mi magna feugiat nunc, sit amet tempus neque mauris in dui. Duis tristique, tellus ut mattis pulvinar, odio tortor maximus dolor, at interdum mi ex nec felis. Sed eu pretium metus, a lacinia nisl. In urna metus, dictum vitae accumsan non, dapibus at urna.</p>
-    <p>Sed volutpat, elit at feugiat viverra, massa magna volutpat est, a pharetra nisl ante ut leo. Nunc porta vestibulum lorem sed suscipit. Duis cursus accumsan consequat. Mauris aliquet dictum sapien facilisis tempus. Nullam non sapien suscipit, porttitor nibh id, euismod mauris. Vestibulum ornare purus ante, a varius erat imperdiet in. Ut lobortis lorem a massa placerat, nec elementum sem mattis. Fusce sed interdum leo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc bibendum purus vel odio facilisis sagittis. Nam ullamcorper porttitor augue eget efficitur. In id lorem id mauris imperdiet molestie.</p>
-    <p>Phasellus non felis massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed at libero nec nulla fermentum tincidunt. Curabitur ac eros ac libero tincidunt tincidunt. Integer sit amet sapien non justo facilisis tincidunt. Donec vel sapien ut libero venenatis tincidunt. Suspendisse potenti. Aliquam erat volutpat. Proin ac libero nec nulla fermentum tincidunt. Curabitur ac eros ac libero tincidunt tincidunt.</p>
-    <p>Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Nulla porttitor accumsan tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Proin eget tortor risus. Pellentesque in ipsum id orci porta dapibus. Vivamus suscipit tortor eget felis porttitor volutpat. Nulla quis lorem ut libero malesuada feugiat. Curabitur aliquet quam id dui posuere blandit.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent  diam eget magna pretium, non lacinia orci feugiat. Proin luctus volutpat quam, id varius nibh ultricies at. Mauris tempus sodales mauris quis consectetur. Aenean lorem orci, cursus ac vestibulum bibendum, efficitur ut tellus. Praesent faucibus lorem in odio convallis, eget porttitor tellus luctus. Integer dignissim sit amet nisi vitae tempus. In faucibus turpis elementum metus finibus blandit. Nam luctus mauris ac nisl iaculis tempor id quis ipsum.</p>
+    
+    
   </div>
   
   <button class="uq-collapsible-text__button uq-button uq-button--link uq-icon uq-icon--standard--chevron-down-sml uq-icon--right" data-collapsible-button aria-expanded="false">Read more</button>
@@ -47,13 +45,7 @@ export default {
 };
 
 export const Default = {};
-
-export const Compact = {
-  args: {
-    variant: "compact",
-  },
-};
-
+ 
 export const Tall = {
   args: {
     variant: "tall",

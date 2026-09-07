@@ -5,7 +5,7 @@
   position: relative;
 
   // CSS Custom Properties for easy customization
-  --collapsible-collapsed-height: 7rem;
+  --collapsible-collapsed-height: 6.5rem;
   --collapsible-threshold: 9.5rem;
   --collapsible-fade-height: 3rem;
   --collapsible-transition-duration: 0.3s;
@@ -24,7 +24,7 @@
     &::after {
       content: "";
       position: absolute;
-      bottom: 0;
+      bottom: -2px;
       left: 0;
       right: 0;
       height: var(--collapsible-fade-height);
@@ -52,15 +52,10 @@
     }
   }
 
-  // Compact variant with smaller collapsed height
-  &--compact {
-    --collapsible-collapsed-height: 4rem;
-    --collapsible-fade-height: 2rem;
-  }
-
   // Tall variant with larger collapsed height
   &--tall {
     --collapsible-collapsed-height: 16rem;
+    --collapsible-threshold: 18.5rem;
     --collapsible-fade-height: 4rem;
   }
 }

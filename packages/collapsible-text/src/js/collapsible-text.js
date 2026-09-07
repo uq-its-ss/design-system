@@ -46,10 +46,7 @@ class collapsibleText {
     // Get collapsed height from data attribute or use default
     const collapsedHeightRem = this.getCollapsedHeight(element);
     const collapsedHeight = this.remToPixels(collapsedHeightRem);
-
-    // Get threshold from data attribute or use default
-    const thresholdRem = this.getThreshold(element);
-    const threshold = this.remToPixels(thresholdRem);
+    const threshold = collapsedHeight + this.remToPixels(2.5);
 
     // Store component data
     const componentData = {
@@ -114,26 +111,6 @@ class collapsibleText {
       getComputedStyle(document.documentElement).fontSize,
     );
     return rem * fontSize;
-  }
-
-  /**   * Get the threshold from data attribute or CSS variable
-   * @param {HTMLElement} element - The component container
-   * @returns {number} The threshold in rem (default: 9.5)
-   */
-  getThreshold(element) {
-    // Check for data attribute first
-    const dataThreshold = element.getAttribute("data-collapse-threshold");
-    if (dataThreshold) {
-      return parseFloat(dataThreshold);
-    }
-
-    // Fall back to CSS variable
-    const computedStyle = getComputedStyle(element);
-    const cssThreshold = computedStyle
-      .getPropertyValue("--collapsible-threshold")
-      .trim();
-
-    return cssThreshold ? parseFloat(cssThreshold) : 9.5;
   }
 
   /**

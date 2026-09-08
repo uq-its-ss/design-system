@@ -48,15 +48,15 @@
     "@uqds/icon": "^5.0.1-alpha.0"
   },
   "devDependencies": {
-    "@svgdotjs/svg.js": "^3.0.16",
-    "chalk": "^4.1.0",
-    "glob": "^7.1.6",
-    "js-yaml": "^3.15.1",
-    "mini-svg-data-uri": "^1.2.3",
-    "sass": "^1.30.0",
-    "svgdom": "0.1.14",
+    "@svgdotjs/svg.js": "^3.2.8",
+    "chalk": "^4.1.2",
+    "glob": "^7.2.3",
+    "js-yaml": "^3.15.2",
+    "mini-svg-data-uri": "^1.4.4",
+    "sass": "^1.104.0",
+    "svgdom": "0.1.28",
     "svgo": "^4.1.0",
-    "tsx": "^4.20.3",
-    "typescript": "^5.0.0"
+    "tsx": "^4.23.13",
+    "typescript": "^5.9.3"
   }
 }

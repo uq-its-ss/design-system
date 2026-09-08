@@ -20,20 +20,20 @@
     flex-flow: row nowrap;
     justify-content: flex-start;
     overflow: visible;
-    padding: core.$space-none;
-    margin: core.$space-none;
+    padding: var(--uq-space-none);
+    margin: var(--uq-space-none);
   }
 
   // Tab Link
   &__link {
     display: inline;
     margin-left: auto;
-    padding: core.$space-none core.$space-l;
+    padding: var(--uq-space-none) var(--uq-space-l);
     align-self: center;
     white-space: nowrap;
 
     @media #{core.$screen-md-up} {
-      padding: core.$space-none core.$space-xl;
+      padding: var(--uq-space-none) var(--uq-space-xl);
     }
   }
 
@@ -41,14 +41,14 @@
   &__tab {
     position: relative;
     flex: 0 1 auto;
-    padding: core.$space-m core.$space-l;
-    margin-right: core.$space-xs;
-    font-size: core.$font-size-m;
-    font-weight: core.$font-weight-normal;
-    color: core.$grey-900;
-    background-color: core.$white;
-    border-radius: core.$space-xs core.$space-xs core.$space-none
-      core.$space-none;
+    padding: var(--uq-space-m) var(--uq-space-l);
+    margin-right: var(--uq-space-xxs);
+    font-size: var(--uq-font-size-m);
+    font-weight: var(--uq-font-weight-normal);
+    color: var(--uq-grey-900);
+    background-color: var(--uq-white);
+    border-radius: var(--uq-space-xxs) var(--uq-space-xxs) var(--uq-space-none)
+      var(--uq-space-none);
     border: none;
     text-align: center;
     white-space: nowrap;
@@ -56,25 +56,25 @@
     text-decoration: none;
 
     @media #{core.$screen-md-up} {
-      padding: core.$space-l core.$space-xl;
-      margin-right: core.$space-xs;
-      font-size: core.$font-size-l;
+      padding: var(--uq-space-l) var(--uq-space-xl);
+      margin-right: var(--uq-space-xxs);
+      font-size: var(--uq-font-size-l);
     }
 
     &:hover {
-      color: core.$grey-900;
-      background-color: core.$white;
+      color: var(--uq-grey-900);
+      background-color: var(--uq-white);
       text-decoration: underline;
     }
 
     &:last-child {
-      margin-right: core.$space-none;
+      margin-right: var(--uq-space-none);
     }
 
     &--active {
-      color: core.$purple-500;
-      background-color: core.$white;
-      font-weight: core.$font-weight-bold;
+      color: var(--uq-purple-500);
+      background-color: var(--uq-white);
+      font-weight: var(--uq-font-weight-bold);
 
       &::before {
         position: absolute;
@@ -82,7 +82,7 @@
         left: 0;
         width: 100%;
         height: 2px;
-        background-color: core.$white;
+        background-color: var(--uq-white);
         content: "";
         display: none;
       }
@@ -90,52 +90,52 @@
 
     > span.uq-icon {
       display: block;
-      margin: 0 auto core.$space-s;
-      font-size: core.$font-size-xs;
+      margin: 0 auto var(--uq-space-xs);
+      font-size: var(--uq-font-size-xs);
 
       @media #{core.$screen-md-up} {
         display: inline-block;
-        margin: 0 core.$space-xs 0 auto;
+        margin: 0 var(--uq-space-xxs) 0 auto;
       }
     }
   }
 
   // tab panel
   &__tab-panel {
-    padding: core.$space-m core.$space-l;
-    font-size: core.$font-size-m;
-    color: core.$grey-900;
-    background-color: core.$white;
+    padding: var(--uq-space-m) var(--uq-space-l);
+    font-size: var(--uq-font-size-m);
+    color: var(--uq-grey-900);
+    background-color: var(--uq-white);
 
     @media #{core.$screen-md-up} {
-      padding: core.$space-l core.$space-xl;
+      padding: var(--uq-space-l) var(--uq-space-xl);
     }
   }
 
   // Default / Outline variant
   &.uq-tabs--outline {
     .uq-tabs__tab-list {
-      border-bottom: 1px solid core.$grey-200;
+      border-bottom: 1px solid var(--uq-grey-200);
     }
 
     .uq-tabs__tab {
-      background-color: core.$white;
-      border: 1px solid core.$grey-200;
+      background-color: var(--uq-white);
+      border: 1px solid var(--uq-grey-200);
       margin-bottom: -1px;
 
       &:hover,
       &:focus,
       &:active {
-        background-color: core.$white;
+        background-color: var(--uq-white);
       }
 
       &--active {
-        background-color: core.$white;
+        background-color: var(--uq-white);
 
         &:hover,
         &:focus,
         &:active {
-          background-color: core.$white;
+          background-color: var(--uq-white);
         }
 
         &::before {
@@ -148,21 +148,21 @@
   // Lined variant
   &.uq-tabs--lined {
     .uq-tabs__tab-list {
-      border-bottom: 1px solid core.$grey-200;
+      border-bottom: 1px solid var(--uq-grey-200);
     }
 
     .uq-tabs__tab {
       &--active {
-        background-color: core.$white;
+        background-color: var(--uq-white);
 
         &:hover,
         &:focus,
         &:active {
-          background-color: core.$white;
+          background-color: var(--uq-white);
         }
 
         &::before {
-          background-color: core.$purple-500;
+          background-color: var(--uq-purple-500);
           display: block;
         }
       }
@@ -179,17 +179,17 @@
   // Small variant
   &.uq-tabs--small {
     .uq-tabs__tab {
-      padding: core.$space-s core.$space-m;
+      padding: var(--uq-space-xs) var(--uq-space-m);
 
       @media #{core.$screen-md-up} {
-        padding: core.$space-m core.$space-l;
+        padding: var(--uq-space-m) var(--uq-space-l);
       }
     }
     .uq-tabs__tab-panel {
-      padding: core.$space-s core.$space-m;
+      padding: var(--uq-space-xs) var(--uq-space-m);
 
       @media #{core.$screen-md-up} {
-        padding: core.$space-m core.$space-l;
+        padding: var(--uq-space-m) var(--uq-space-l);
       }
     }
   }
@@ -211,12 +211,12 @@
 
     // Tab
     .uq-tabs__tab {
-      margin-right: core.$space-none;
-      margin-left: core.$space-xs;
+      margin-right: var(--uq-space-none);
+      margin-left: var(--uq-space-xxs);
 
       &:last-child {
-        margin-right: core.$space-none;
-        margin-left: core.$space-xs;
+        margin-right: var(--uq-space-none);
+        margin-left: var(--uq-space-xxs);
       }
     }
   }

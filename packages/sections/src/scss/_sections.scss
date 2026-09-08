@@ -6,11 +6,11 @@
 }
 
 .uq-section__header {
-  margin-bottom: core.$space-l;
+  margin-bottom: var(--uq-space-l);
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: core.$space-m core.$space-l;
+  gap: var(--uq-space-m) var(--uq-space-l);
 
   &:only-child {
     margin-bottom: 0;
@@ -19,7 +19,7 @@
 
 .uq-section__title {
   margin: 0;
-  color: core.$black;
+  color: var(--uq-black);
   font-size: var(--section-font-size-xxxl);
 
   @media #{core.$screen-md-up} {
@@ -54,6 +54,6 @@
 }
 
 .uq-section--shaded {
-  background: core.$grey-50;
+  background: var(--uq-grey-50);
   padding: var(--section-padding);
 }

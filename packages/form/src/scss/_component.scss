@@ -17,7 +17,7 @@ $use-encapsulation: false !default;
   .uq-success-message,
   .uq-inline-help {
     box-sizing: border-box;
-    font-family: core.$font-body;
+    font-family: var(--uq-font);
   }
 
   fieldset,
@@ -43,37 +43,37 @@ $use-encapsulation: false !default;
 
   label,
   legend {
-    color: core.$grey-900;
+    color: var(--uq-grey-900);
     display: block;
     font-size: $form-label-size;
-    font-weight: core.$font-weight-bold;
+    font-weight: var(--uq-font-weight-bold);
   }
 
   legend {
     margin-bottom: $form-spacing;
-    line-height: core.$line-height-h;
+    line-height: var(--uq-line-height-short);
     padding: 0;
 
     &.uq-legend--error {
-      color: core.$error-500;
+      color: var(--uq-error-500);
     }
 
     .uq-legend__required {
-      color: core.$error-500;
+      color: var(--uq-error-500);
     }
   }
 
   label {
     cursor: pointer;
-    line-height: core.$line-height-ui;
+    line-height: var(--uq-line-height-single);
 
     &.uq-label {
       &--inline {
         align-items: center;
         display: inline-flex;
-        font-size: core.$font-size-m;
-        line-height: core.$line-height;
-        margin-bottom: core.$space-l;
+        font-size: var(--uq-font-size-m);
+        line-height: var(--uq-line-height-long);
+        margin-bottom: var(--uq-space-l);
 
         input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]),
         select,
@@ -83,8 +83,8 @@ $use-encapsulation: false !default;
         + textarea {
           max-width: none;
           min-width: 200px;
-          margin-left: core.$space-m;
-          margin-right: core.$space-l;
+          margin-left: var(--uq-space-m);
+          margin-right: var(--uq-space-l);
           width: auto;
         }
 
@@ -92,13 +92,13 @@ $use-encapsulation: false !default;
         select,
         textarea {
           margin-top: 0;
-          margin-bottom: core.$space-none;
+          margin-bottom: var(--uq-space-none);
         }
       }
 
       &--disabled,
       &--readonly {
-        color: core.$grey-300;
+        color: var(--uq-grey-300);
       }
 
       &--disabled {
@@ -106,11 +106,11 @@ $use-encapsulation: false !default;
       }
 
       &--error {
-        color: core.$error-500;
+        color: var(--uq-error-500);
       }
 
       &--success {
-        color: core.$success-500;
+        color: var(--uq-success-500);
       }
     }
 
@@ -120,33 +120,33 @@ $use-encapsulation: false !default;
     + input:not([type="checkbox"]):not([type="radio"]),
     + select,
     + textarea {
-      margin-top: core.$space-s;
+      margin-top: var(--uq-space-xs);
     }
 
     input[type="radio"],
     input[type="checkbox"] {
       + *:not(input):not(select):not(textarea) {
         display: inline-block;
-        font-size: core.$font-size-m;
-        font-weight: core.$font-weight-normal;
-        line-height: $form-checkbox-size;
-        margin-bottom: core.$space-m;
-        margin-left: core.$space-s;
+        font-size: var(--uq-font-size-m);
+        font-weight: var(--uq-font-weight-normal);
+        line-height: var(--uq-line-height-short);
+        margin-bottom: var(--uq-space-m);
+        margin-left: var(--uq-space-xs);
         margin-right: $form-spacing;
-        padding-top: core.$space-xs;
-        padding-left: core.$space-l;
+        padding-top: var(--uq-space-xxs);
+        padding-left: var(--uq-space-l);
         vertical-align: top;
       }
 
       &[disabled] {
         + *:not(input):not(select):not(textarea) {
-          color: core.$grey-300;
+          color: var(--uq-grey-300);
         }
       }
     }
 
     .uq-label__required {
-      color: core.$error-500;
+      color: var(--uq-error-500);
     }
   }
 
@@ -162,31 +162,31 @@ $use-encapsulation: false !default;
   input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]),
   select,
   textarea {
-    background-color: core.$white;
+    background-color: var(--uq-white);
     max-width: 100%;
     min-width: 100%;
     padding: 12px $form-spacing;
-    border: $form-border-width solid core.$grey-600;
+    border: $form-border-width solid var(--uq-grey-600);
     border-radius: $form-border-radius;
     font-size: $form-text-size;
-    color: core.$grey-900;
+    color: var(--uq-grey-900);
     line-height: 1;
     height: 48px;
-    margin-bottom: core.$space-l;
+    margin-bottom: var(--uq-space-l);
 
     &[disabled] {
-      color: core.$grey-300;
+      color: var(--uq-grey-300);
     }
 
     &[readonly] {
       &:focus {
-        border-color: core.$grey-300;
-        box-shadow: 0 0 0 1px core.$grey-300 inset;
+        border-color: var(--uq-grey-300);
+        box-shadow: 0 0 0 1px var(--uq-grey-300) inset;
       }
     }
 
     &::placeholder {
-      color: core.$grey-500;
+      color: var(--uq-grey-500);
     }
 
     &.uq-input--error,
@@ -194,31 +194,31 @@ $use-encapsulation: false !default;
       border-radius: $form-border-radius;
 
       &:focus {
-        border-color: core.$utility-500;
+        border-color: var(--uq-utility-500);
         box-shadow:
-          0 2px 0 0 core.$utility-500,
-          0 0 0 1px core.$utility-500 inset;
+          0 2px 0 0 var(--uq-utility-500),
+          0 0 0 1px var(--uq-utility-500) inset;
       }
     }
 
     &.uq-input--error {
-      border-color: core.$error-500;
-      box-shadow: 0 2px 0 0 core.$error-500;
+      border-color: var(--uq-error-500);
+      box-shadow: 0 2px 0 0 var(--uq-error-500);
     }
 
     &.uq-input--success {
-      border-color: core.$success-500;
-      box-shadow: 0 2px 0 0 core.$success-500;
+      border-color: var(--uq-success-500);
+      box-shadow: 0 2px 0 0 var(--uq-success-500);
     }
 
     &.uq-input--large {
-      padding: 1.15625rem core.$space-l;
-      border-radius: core.$space-xs;
+      padding: 1.15625rem var(--uq-space-l);
+      border-radius: var(--uq-space-xxs);
     }
 
     + .uq-error-message,
     + .uq-success-message {
-      margin-top: -(core.$space-l);
+      margin-top: calc(-1 * var(--uq-space-l));
       border-radius: 0 0 $form-border-radius $form-border-radius;
     }
   }
@@ -231,7 +231,7 @@ $use-encapsulation: false !default;
       core.$purple-500
     ));
     background-repeat: no-repeat;
-    background-position: right core.$space-xs center;
+    background-position: right var(--uq-space-xxs) center;
     padding-right: 2.5rem;
     cursor: pointer;
     line-height: 1.2;
@@ -262,7 +262,7 @@ $use-encapsulation: false !default;
   }
 
   textarea {
-    height: 4 * $form-element-height;
+    height: calc(4 * var(--uq-space-xxl));
   }
 
   input[type="radio"],
@@ -270,7 +270,7 @@ $use-encapsulation: false !default;
     appearance: none;
     -webkit-appearance: none;
     display: inline-block;
-    border: $form-checkbox-border-width solid core.$grey-300;
+    border: $form-checkbox-border-width solid var(--uq-grey-300);
     cursor: pointer;
     height: $form-checkbox-size;
     width: $form-checkbox-size;
@@ -278,62 +278,62 @@ $use-encapsulation: false !default;
     position: absolute;
 
     &:focus {
-      border-color: core.$utility-500;
-      box-shadow: 0 0 0 1px core.$utility-500;
+      border-color: var(--uq-utility-500);
+      box-shadow: 0 0 0 1px var(--uq-utility-500);
       outline: none;
     }
 
     + label {
       display: inline-block;
-      font-size: core.$font-size-m;
-      font-weight: core.$font-weight-normal;
-      line-height: core.$line-height-h;
-      margin-bottom: core.$space-m;
-      margin-left: core.$space-s;
+      font-size: var(--uq-font-size-m);
+      font-weight: var(--uq-font-weight-normal);
+      line-height: var(--uq-line-height-short);
+      margin-bottom: var(--uq-space-m);
+      margin-left: var(--uq-space-xs);
       margin-right: $form-spacing;
-      padding-top: core.$space-compressed-xs;
-      padding-left: core.$space-l;
+      padding-top: 2px;
+      padding-left: var(--uq-space-l);
       vertical-align: top;
     }
 
     &:checked {
-      border-color: core.$utility-500;
+      border-color: var(--uq-utility-500);
 
       &:focus {
-        border-color: core.$utility-500;
-        box-shadow: 0 0 0 1px core.$utility-500;
+        border-color: var(--uq-utility-500);
+        box-shadow: 0 0 0 1px var(--uq-utility-500);
       }
     }
 
     &.uq-input--error {
-      border-color: core.$error-500;
+      border-color: var(--uq-error-500);
 
       &:focus {
-        border-color: core.$utility-500;
-        box-shadow: 0 0 0 1px core.$utility-500;
+        border-color: var(--uq-utility-500);
+        box-shadow: 0 0 0 1px var(--uq-utility-500);
       }
 
       &:checked {
-        border-color: core.$error-500;
+        border-color: var(--uq-error-500);
 
         &:focus {
-          border-color: core.$utility-500;
-          box-shadow: 0 0 0 1px core.$utility-500;
+          border-color: var(--uq-utility-500);
+          box-shadow: 0 0 0 1px var(--uq-utility-500);
         }
       }
     }
 
     &[disabled] {
       cursor: not-allowed;
-      border-color: core.$grey-300;
-      background-color: core.$grey-50;
+      border-color: var(--uq-grey-300);
+      background-color: var(--uq-grey-50);
 
       + label {
-        color: core.$grey-300;
+        color: var(--uq-grey-300);
       }
 
       &:checked {
-        background-color: core.$grey-300;
+        background-color: var(--uq-grey-300);
       }
     }
   }
@@ -354,7 +354,7 @@ $use-encapsulation: false !default;
     }
 
     &:checked {
-      background-color: core.$utility-500;
+      background-color: var(--uq-utility-500);
 
       &::after {
         background-image: url(icon.get-icon("standard--check", core.$white));
@@ -364,7 +364,7 @@ $use-encapsulation: false !default;
 
     &.uq-input--error {
       &:checked {
-        background-color: core.$error-500;
+        background-color: var(--uq-error-500);
       }
     }
   }
@@ -377,7 +377,7 @@ $use-encapsulation: false !default;
 
       &::after {
         border-radius: 50%;
-        background-color: core.$utility-500;
+        background-color: var(--uq-utility-500);
         content: "";
         display: block;
         position: absolute;
@@ -390,19 +390,19 @@ $use-encapsulation: false !default;
 
     &[disabled] {
       &:checked {
-        background-color: core.$grey-50;
+        background-color: var(--uq-grey-50);
         &::after {
-          background-color: core.$grey-300;
+          background-color: var(--uq-grey-300);
         }
       }
     }
 
     &.uq-input--error {
       &:checked {
-        border-color: core.$error-500;
+        border-color: var(--uq-error-500);
 
         &::after {
-          background-color: core.$error-500;
+          background-color: var(--uq-error-500);
         }
       }
     }
@@ -414,42 +414,43 @@ $use-encapsulation: false !default;
 
   .uq-error-summary {
     background-color: white;
-    border: 1px solid core.$error-500;
-    border-left-width: core.$space-xs;
-    padding: core.$space-m;
-    margin-bottom: core.$space-l;
+    border: 1px solid var(--uq-error-500);
+    border-left-width: var(--uq-space-xxs);
+    padding: var(--uq-space-m);
+    margin-bottom: var(--uq-space-l);
 
     &__title {
-      color: core.$grey-900;
-      font-size: core.$font-size-l;
-      font-weight: core.$font-weight-bold;
-      line-height: core.$line-height-h;
-      margin: core.$space-none core.$space-none core.$space-m core.$space-none;
+      color: var(--uq-grey-900);
+      font-size: var(--uq-font-size-l);
+      font-weight: var(--uq-font-weight-bold);
+      line-height: var(--uq-line-height-short);
+      margin: var(--uq-space-none) var(--uq-space-none) var(--uq-space-m)
+        var(--uq-space-none);
     }
 
     &_body {
-      color: core.$grey-900;
-      font-size: core.$space-m;
+      color: var(--uq-grey-900);
+      font-size: var(--uq-font-size-m);
     }
 
     &__list {
-      color: core.$grey-900;
-      font-size: core.$space-m;
-      margin: core.$space-none;
-      padding-left: core.$space-l;
+      color: var(--uq-grey-900);
+      font-size: var(--uq-font-size-m);
+      margin: var(--uq-space-none);
+      padding-left: var(--uq-space-l);
 
       &__item {
-        margin-bottom: core.$space-xs;
-        line-height: core.$line-height;
+        margin-bottom: var(--uq-space-xxs);
+        line-height: var(--uq-line-height-long);
       }
 
       a {
-        color: core.$error-500;
+        color: var(--uq-error-500);
         text-decoration: underline;
-        font-weight: core.$font-weight-normal;
+        font-weight: var(--uq-font-weight-normal);
         &:hover,
         &:focus {
-          color: core.$white;
+          color: var(--uq-white);
         }
       }
     }
@@ -457,15 +458,15 @@ $use-encapsulation: false !default;
 
   .uq-error-message,
   .uq-success-message {
-    color: core.$white;
+    color: var(--uq-white);
     display: block;
-    font-size: core.$font-size-m;
+    font-size: var(--uq-font-size-m);
     font-style: normal;
-    font-weight: core.$font-weight-normal;
-    line-height: core.$line-height;
-    margin-bottom: core.$space-l;
-    padding: calc(#{core.$space-s} - 1px) core.$space-m core.$space-s
-      core.$space-xxxl;
+    font-weight: var(--uq-font-weight-normal);
+    line-height: var(--uq-line-height-long);
+    margin-bottom: var(--uq-space-l);
+    padding: calc(#{var(--uq-space-xs)} - 1px) var(--uq-space-m)
+      var(--uq-space-xs) var(--uq-space-xxxl);
     position: relative;
 
     &::before {
@@ -474,18 +475,18 @@ $use-encapsulation: false !default;
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain;
-      height: core.$space-compressed-xl;
-      left: core.$space-m;
-      margin-right: core.$space-s;
-      margin-top: calc(#{- (core.$space-compressed-xl) * 0.5} - 1px);
+      height: 20px;
+      left: var(--uq-space-m);
+      margin-right: var(--uq-space-xs);
+      margin-top: calc(20px * -0.5 - 1px);
       position: absolute;
       top: 50%;
-      width: core.$space-compressed-xl;
+      width: 20px;
     }
   }
 
   .uq-error-message {
-    background-color: core.$error-500;
+    background-color: var(--uq-error-500);
 
     &::before {
       background-image: url(icon.get-icon(
@@ -496,7 +497,7 @@ $use-encapsulation: false !default;
   }
 
   .uq-success-message {
-    background-color: core.$success-500;
+    background-color: var(--uq-success-500);
 
     &::before {
       background-image: url(icon.get-icon(

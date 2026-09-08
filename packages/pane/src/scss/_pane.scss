@@ -15,26 +15,26 @@
 
 .uq-pane__title {
   margin: 0;
-  color: core.$black;
+  color: var(--uq-black);
   font-size: 24px;
 }
 
 .uq-pane__description {
-  margin-top: core.$space-s;
+  margin-top: var(--uq-space-xs);
 
   & :last-child {
     margin-bottom: 0;
   }
 
   & li {
-    margin-bottom: core.$space-s;
+    margin-bottom: var(--uq-space-xs);
   }
 }
 
 .uq-pane__image {
   flex-shrink: 0;
   aspect-ratio: 1.5 / 1;
-  margin-bottom: core.$space-l;
+  margin-bottom: var(--uq-space-l);
   position: relative;
 
   & img,
@@ -50,7 +50,7 @@
 .uq-pane__video {
   flex-shrink: 0;
   aspect-ratio: 16 / 9;
-  margin-bottom: core.$space-l;
+  margin-bottom: var(--uq-space-l);
   position: relative;
 
   & iframe {
@@ -63,7 +63,7 @@
 }
 
 .uq-pane__icon {
-  margin-bottom: core.$space-s;
+  margin-bottom: var(--uq-space-xs);
 
   & .uq-icon::before {
     height: 56px;
@@ -72,12 +72,12 @@
 }
 
 .uq-pane__actions {
-  padding-top: core.$space-l;
+  padding-top: var(--uq-space-l);
   margin-top: auto;
   display: flex;
   flex-direction: column;
   align-items: start;
-  gap: core.$space-m;
+  gap: var(--uq-space-m);
 }
 
 .uq-pane--text,
@@ -117,11 +117,11 @@
     width: 128px;
     height: 128px;
     border-radius: 50%;
-    background: core.$grey-50;
+    background: var(--uq-grey-50);
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: core.$space-m;
+    margin-bottom: var(--uq-space-m);
 
     & .uq-icon::before {
       width: 72px;
@@ -132,11 +132,11 @@
 
 .uq-pane--text-shaded,
 .uq-pane--icon-shaded {
-  background: core.$grey-50;
+  background: var(--uq-grey-50);
   border-radius: 4px;
 
   & .uq-pane__content {
-    padding: core.$space-l;
+    padding: var(--uq-space-l);
   }
 }
 

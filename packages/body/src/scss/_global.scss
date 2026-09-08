@@ -12,6 +12,6 @@
 }
 
 @mixin focus-styles {
-  outline: 4px solid core.$utility-500;
+  outline: 4px solid var(--uq-utility-500);
   outline-offset: -1px;
 }

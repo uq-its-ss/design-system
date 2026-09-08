@@ -66,9 +66,7 @@ export const MultipleInstances = {
         <div class="uq-collapsible-text" data-component="collapsible-text">
           <div class="uq-collapsible-text__content" data-collapsible-content>
             <p>
-              This doesnt have enough content to trigger the collapsible behavior. Each collapsible component operates independently. Expanding one doesn't affect the others.
-              This is perfect for FAQs, article previews, or any content that needs progressive disclosure.
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+              Depending on window size, this may not have enough content to trigger the collapsible behavior - resize window to see this behaviour. Each collapsible component operates independently. Expanding one doesn't affect the others.
             </p>
           </div>
           <button class="uq-collapsible-text__button uq-button uq-button--link uq-icon uq-icon--standard--chevron-down-sml uq-icon--right" data-collapsible-button aria-expanded="false">Read more</button>

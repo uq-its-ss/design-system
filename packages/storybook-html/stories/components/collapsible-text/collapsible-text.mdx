@@ -6,10 +6,12 @@ import * as CollapsibleTextStories from "./collapsible-text.stories";
 
 # Collapsible text
 
-<StatusBadge.Stable /> <StatusBadge.StableDoc /> [Check for open
+<StatusBadge.Review /> <StatusBadge.ReviewDoc /> [Check for open
 issues](https://github.com/uq-its-ss/design-system/issues)
 
 ## Overview
+
+Provides a compact preview of content, with the option to expand and view the complete information.
 
 <Canvas
   of={CollapsibleTextStories.Default}
@@ -19,7 +21,12 @@ issues](https://github.com/uq-its-ss/design-system/issues)
 />
 <Controls of={CollapsibleTextStories.Default} />
 
-## Multiple Instances
+## Features
++ **Smart Behavior** - Button only appears if content exceeds threshold  
++ **Smooth Transitions** - JavaScript measures exact heights for consistent timing  
++ **Responsive** - Responds to window resize and adjusts accordingly
++ **Customizable** - CSS variables and data attributes for easy styling
++ **Accessible** - Keyboard navigation and semantic HTML  
 
 <Canvas
   of={CollapsibleTextStories.MultipleInstances}

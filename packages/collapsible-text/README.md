@@ -4,11 +4,12 @@
 
 ## Features
 
-✨ **Smart Behavior** - Button only appears if content exceeds configurable threshold  
+✨ **Smart Behavior** - Button only appears if content exceeds threshold  
 🎯 **Smooth Transitions** - JavaScript measures exact heights for consistent timing  
+📱 **Responsive** - Responds to window resize and adjusts accordingly 
 🎨 **Customizable** - CSS variables and data attributes for easy styling  
 ♿ **Accessible** - Keyboard navigation and semantic HTML  
-📱 **Responsive** - Works on all screen sizes  
+
 🎭 **Variants** - Tall and custom options
 
 ## Usage

@@ -6,9 +6,9 @@
 
 ✨ **Smart Behavior** - Button only appears if content exceeds threshold  
 🎯 **Smooth Transitions** - JavaScript measures exact heights for consistent timing  
-📱 **Responsive** - Responds to window resize and adjusts accordingly 
+📱 **Responsive** - Responds to window resize and adjusts accordingly
 🎨 **Customizable** - CSS variables and data attributes for easy styling  
-♿ **Accessible** - Keyboard navigation and semantic HTML  
+♿ **Accessible** - Keyboard navigation and semantic HTML
 
 🎭 **Variants** - Tall and custom options
 
@@ -52,7 +52,6 @@ The JavaScript enhancement:
 
 ```html
 <div class="uq-collapsible-text" data-component="collapsible-text">
-
   <!-- Content with fade effect -->
   <div class="uq-collapsible-text__content" data-collapsible-content>
     <p>Your content goes here...</p>
@@ -71,7 +70,6 @@ The JavaScript enhancement:
 
 **Note:** The JavaScript will automatically update the button text and ARIA attributes.
 
-
 ### Custom Collapsed Height
 
 You can customize the collapsed height per instance using the `data-collapsed-height` attribute:
@@ -86,7 +84,7 @@ You can customize the collapsed height per instance using the `data-collapsed-he
   <div class="uq-collapsible-text__content" data-collapsible-content>
     <p>Your content...</p>
   </div>
- <button
+  <button
     class="uq-collapsible-text__button uq-button uq-button--link uq-icon uq-icon--standard--chevron-down-sml uq-icon--right"
     data-collapsible-button
     aria-expanded="false"
@@ -164,10 +162,10 @@ See the [`JS-ENHANCEMENT.md`](./JS-ENHANCEMENT.md) for JavaScript details.
 The component uses JavaScript to provide smooth, consistent transitions:
 
 1. On initialization, JavaScript measures the actual content height
-3. Reads `data-collapsed-height` to set the initial collapsed height
-4. A button element controls the expanded/collapsed state
-5. Click events toggle between states with exact height values
-6. ARIA attributes provide accessibility information
+2. Reads `data-collapsed-height` to set the initial collapsed height
+3. A button element controls the expanded/collapsed state
+4. Click events toggle between states with exact height values
+5. ARIA attributes provide accessibility information
 
 ### CSS Styling
 

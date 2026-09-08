@@ -1,0 +1,26 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
+import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
+import * as FormStories from "./form.stories";
+
+<Meta of={FormStories} />
+
+# Form
+
+<StatusBadge.Development />
+
+<StatusBadge.DraftDoc />
+
+## Overview
+
+Forms...
+
+<Canvas
+  of={FormStories.Default}
+  story={{
+    autoplay: true,
+  }}
+/>
+
+---
+
+

@@ -96,7 +96,7 @@ export class Tabs {
     var delay = 0;
 
     if (hasDelay) {
-      var delayValue = tablist.getAttribute("data-delay");
+      var delayValue = this.tablist.getAttribute("data-delay");
       if (delayValue) {
         delay = delayValue;
       } else {

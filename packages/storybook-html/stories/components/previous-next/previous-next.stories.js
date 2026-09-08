@@ -14,7 +14,7 @@ export default {
   },
 };
 
-export const previousNextInitial = {
+export const PreviousNextInitial = {
   render: () => {
     return `
       <div class="uq-previous-next">
@@ -32,7 +32,7 @@ export const previousNextInitial = {
   name: "Previous next initial",
 };
 
-export const previousNextMiddle = {
+export const PreviousNextMiddle = {
   render: () => {
     return previousNextHTML;
   },
@@ -40,7 +40,7 @@ export const previousNextMiddle = {
   name: "Previous next middle",
 };
 
-export const previousNextFinal = {
+export const PreviousNextFinal = {
   render: () => {
     return `
       <div class="uq-previous-next">

@@ -58,26 +58,33 @@ const StatusBadge = ({ variant, showRoadmapLink }) => {
 StatusBadge.Development = ({ variant, ...props }) => (
   <StatusBadge variant="development" {...props} />
 );
+StatusBadge.Development.displayName = "StatusBadge.Development";
 StatusBadge.Stable = ({ variant, ...props }) => (
   <StatusBadge variant="stable" {...props} />
 );
+StatusBadge.Stable.displayName = "StatusBadge.Stable";
 StatusBadge.Review = ({ variant, ...props }) => (
   <StatusBadge variant="review" {...props} />
 );
+StatusBadge.Review.displayName = "StatusBadge.Review";
 StatusBadge.Deprecated = ({ variant, ...props }) => (
   <StatusBadge variant="deprecated" {...props} />
 );
+StatusBadge.Deprecated.displayName = "StatusBadge.Deprecated";
 
 // Status tags for the component documentation
 StatusBadge.DraftDoc = ({ variant, ...props }) => (
   <StatusBadge variant="draftDoc" {...props} />
 );
+StatusBadge.DraftDoc.displayName = "StatusBadge.DraftDoc";
 StatusBadge.ReviewDoc = ({ variant, ...props }) => (
   <StatusBadge variant="reviewDoc" {...props} />
 );
+StatusBadge.ReviewDoc.displayName = "StatusBadge.ReviewDoc";
 StatusBadge.StableDoc = ({ variant, ...props }) => (
   <StatusBadge variant="stableDoc" {...props} />
 );
+StatusBadge.StableDoc.displayName = "StatusBadge.StableDoc";
 
 StatusBadge.displayName = "StatusBadge";
 

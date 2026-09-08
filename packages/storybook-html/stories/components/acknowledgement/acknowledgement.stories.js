@@ -31,14 +31,14 @@ export default {
   },
 };
 
-export const culturalAdvice = {
+export const CulturalAdvice = {
   args: {
     content: `The Library is custodian of culturally sensitive <a href="https://web.library.uq.edu.au/collections/culturally-sensitive-collections" class="uq-acknowledgement__link">Aboriginal and Torres Strait Islander materials</a>`,
     size: "Default",
   },
 };
 
-export const reconciliationStatement = {
+export const ReconciliationStatement = {
   args: {
     content: `UQ acknowledges the Traditional Owners and their custodianship of the lands on which UQ is situated. <a href="https://about.uq.edu.au/strategy-values/reconciliation" class="uq-acknowledgement__link">Reconciliation at UQ</a>`,
     size: "Large",

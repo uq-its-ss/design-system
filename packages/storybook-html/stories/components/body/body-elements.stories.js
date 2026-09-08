@@ -11,17 +11,15 @@ export default {
   },
 };
 
-export const title = {
+export const Title = {
   render: () => {
     return `
         <h1>Heading level 1 (h1)</h1>
     `;
   },
-
-  name: "Title",
 };
 
-export const header = {
+export const Header = {
   render: () => {
     return `
       <h2>Heading level 2 (h2)</h2>
@@ -31,11 +29,9 @@ export const header = {
       <h6>Heading level 6 (h6)</h6>
   `;
   },
-
-  name: "Header",
 };
 
-export const textBlock = {
+export const TextBlock = {
   render: () => {
     return `
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse interdum nulla vitae consectetur interdum. Quisque sed nibh in lorem malesuada egestas. Integer varius orci in ligula mollis sodales. Sed dapibus rutrum finibus. Vestibulum tellus velit, dictum eu cursus at, luctus condimentum leo. Vestibulum malesuada consectetur sem, nec fermentum nibh molestie at. Pellentesque posuere enim leo, in blandit sem interdum ut. Duis lobortis lectus vitae mi pellentesque sagittis. Fusce eget eros sit amet enim placerat commodo quis id nisl.</p>
@@ -46,7 +42,7 @@ export const textBlock = {
   name: "Text block",
 };
 
-export const unorderedList = {
+export const UnorderedList = {
   render: () => {
     return `
         <ul>
@@ -63,7 +59,7 @@ export const unorderedList = {
   name: "Unordered list",
 };
 
-export const orderedList = {
+export const OrderedList = {
   render: () => {
     return `
         <ol>
@@ -80,7 +76,7 @@ export const orderedList = {
   name: "Ordered list",
 };
 
-export const definitionList = {
+export const DefinitionList = {
   render: () => {
     return `
         <dl>
@@ -103,7 +99,7 @@ export const definitionList = {
   name: "Definition list",
 };
 
-export const horizontalRule = {
+export const HorizontalRule = {
   render: () => {
     return `
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse interdum nulla vitae consectetur interdum. Quisque sed nibh in lorem malesuada egestas. Integer varius orci in ligula mollis sodales. Sed dapibus rutrum finibus. Vestibulum tellus velit, dictum eu cursus at, luctus condimentum leo. Vestibulum malesuada consectetur sem, nec fermentum nibh molestie at. Pellentesque posuere enim leo, in blandit sem interdum ut. Duis lobortis lectus vitae mi pellentesque sagittis. Fusce eget eros sit amet enim placerat commodo quis id nisl.</p>

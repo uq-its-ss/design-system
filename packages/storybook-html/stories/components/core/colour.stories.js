@@ -11,7 +11,7 @@ export default {
   },
 };
 
-export const brand = {
+export const Brand = {
   render: () => {
     return `
         <table class="uqds-table uqds-table--card uqds-table--colour">
@@ -54,10 +54,9 @@ export const brand = {
         </table>
     `;
   },
-  name: "Brand",
 };
 
-export const text = {
+export const Text = {
   render: () => {
     return `
         <table class="uqds-table uqds-table--card uqds-table--colour">
@@ -100,10 +99,9 @@ export const text = {
         </table>
       `;
   },
-  name: "Text",
 };
 
-export const link = {
+export const Link = {
   render: () => {
     return `
 <table class="uqds-table uqds-table--card uqds-table--colour">
@@ -146,10 +144,9 @@ export const link = {
         </table>
       `;
   },
-  name: "Link",
 };
 
-export const neutral = {
+export const Neutral = {
   render: () => {
     return `
         <table class="uqds-table uqds-table--card uqds-table--colour">
@@ -234,10 +231,9 @@ export const neutral = {
         </table>
       `;
   },
-  name: "Neutral",
 };
 
-export const status = {
+export const Status = {
   render: () => {
     return `
         <table class="uqds-table uqds-table--card uqds-table--colour">
@@ -364,10 +360,9 @@ export const status = {
         </table>
       `;
   },
-  name: "Status",
 };
 
-export const purple = {
+export const Purple = {
   render: () => {
     return `
         <div class="uqds-colour__swatches">
@@ -385,10 +380,9 @@ export const purple = {
         </div>
       `;
   },
-  name: "Purple",
 };
 
-export const grey = {
+export const Grey = {
   render: () => {
     return `
         <div class="uqds-colour__swatches">
@@ -406,10 +400,9 @@ export const grey = {
         </div>
       `;
   },
-  name: "Grey",
 };
 
-export const blackandwhite = {
+export const Blackandwhite = {
   render: () => {
     return `
         <div class="uqds-colour__swatches">
@@ -421,7 +414,7 @@ export const blackandwhite = {
   name: "Black and white",
 };
 
-export const utility = {
+export const Utility = {
   render: () => {
     return `
         <div class="uqds-colour__swatches">
@@ -438,10 +431,9 @@ export const utility = {
         </div>
       `;
   },
-  name: "Utility",
 };
 
-export const error = {
+export const Error = {
   render: () => {
     return `
         <div class="uqds-colour__swatches">
@@ -458,10 +450,9 @@ export const error = {
         </div>
       `;
   },
-  name: "Error",
 };
 
-export const warning = {
+export const Warning = {
   render: () => {
     return `
         <div class="uqds-colour__swatches">
@@ -478,10 +469,9 @@ export const warning = {
         </div>
       `;
   },
-  name: "Warning",
 };
 
-export const success = {
+export const Success = {
   render: () => {
     return `
         <div class="uqds-colour__swatches">

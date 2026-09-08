@@ -13,6 +13,6 @@ export default {
   },
 };
 
-export const all = () => {
+export const All = () => {
   return listsHTML;
 };

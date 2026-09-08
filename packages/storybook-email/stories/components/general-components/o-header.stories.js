@@ -3,7 +3,7 @@ export default {
   tags: ["autodocs"],
 };
 
-export const header = {
+export const Header = {
   render: () => `
 <!-- UQ Header -->
 <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%;">

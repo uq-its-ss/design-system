@@ -3,7 +3,16 @@ module.exports = {
   rules: {
     "function-no-unknown": [
       true,
-      { ignoreFunctions: ["/token/", "/svg-load/"] },
+      {
+        ignoreFunctions: [
+          "/token/",
+          "/svg-load/",
+          "-str-replace",
+          // stylelint's function-no-unknown doesn't recognise Sass module
+          // functions accessed via @use namespaces (e.g. color.adjust()).
+          "adjust",
+        ],
+      },
     ],
     "custom-property-empty-line-before": null,
     "at-rule-no-unknown": null,
@@ -12,7 +21,6 @@ module.exports = {
     "selector-class-pattern": null,
     "no-descending-specificity": null,
     "shorthand-property-no-redundant-values": null,
-    "function-no-unknown": null,
     "scss/no-global-function-names": null,
     "scss/at-import-no-partial-leading-underscore": null,
     "scss/dollar-variable-empty-line-before": null,
@@ -46,7 +54,6 @@ module.exports = {
     "scss/at-mixin-argumentless-call-parentheses": null,
     "scss/at-extend-no-missing-placeholder": null,
     "font-family-name-quotes": null,
-    "selector-pseudo-element-colon-notation": null,
     "no-empty-source": null,
     "media-feature-range-notation": null,
     "scss/load-no-partial-leading-underscore": null,

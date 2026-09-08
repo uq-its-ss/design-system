@@ -145,7 +145,7 @@ $story-card-font-size-small: 22px;
     font-size: core.$font-size-xxxl;
 
     @media #{core.$screen-md-down} {
-      font-size: var(--card-title-font-size);
+      font-size: core.$font-size-xxl-mobile;
     }
   }
 

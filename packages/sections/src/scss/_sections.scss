@@ -20,7 +20,6 @@
 .uq-section__title {
   margin: 0;
   color: core.$black;
-  font-size: var(--section-font-size-xxxl);
 
   @media #{core.$screen-md-up} {
     order: 1;

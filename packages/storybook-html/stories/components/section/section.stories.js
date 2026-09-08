@@ -26,7 +26,7 @@ export default {
 export const Section = {
   args: {
     title: "Title",
-    headingElement: "h3",
+    headingElement: "h2",
     link: `<a href="#">See more</a>`,
     description: "Description",
     content: "",

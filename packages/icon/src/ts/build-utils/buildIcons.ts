@@ -40,7 +40,7 @@ function parseFilePath(filePath: string): [string, string] {
  */
 async function getSVGFiles(inputDir: string): Promise<string[]> {
     try {
-        return await glob(`${inputDir}/**/*.svg`);
+        return (await glob(`${inputDir}/**/*.svg`)).sort();
     } catch (err) {
         const message = err instanceof Error ? err.message : String(err);
         throw new Error(`Failed to find SVG files in "${inputDir}": ${message}`);

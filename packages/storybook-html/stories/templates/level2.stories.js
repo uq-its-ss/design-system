@@ -10,7 +10,7 @@ const { Header } = storyRenderer(HeaderStories);
 const { Breadcrumb } = storyRenderer(BreadcrumbStories);
 const { Level2: Level2Hero } = storyRenderer(HeroStories);
 const { LocalNavExample } = storyRenderer(SidebarStories);
-const { footer } = storyRenderer(FooterStories);
+const { Footer: footer } = storyRenderer(FooterStories);
 
 export default {
   title: "Templates/Level 2",

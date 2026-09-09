@@ -35,7 +35,7 @@ export default {
   },
 };
 
-export const searchField = {
+export const SearchField = {
   render: () => {
     return `
       <div class="uq-maps__search-field">
@@ -50,7 +50,7 @@ export const searchField = {
   name: "2A Search field (initial)",
 };
 
-export const searchFieldFocused = {
+export const SearchFieldFocused = {
   render: () => {
     return `
       <div class="uq-maps__search-field uq-maps__search-field--is-focused">
@@ -71,7 +71,7 @@ export const searchFieldFocused = {
   name: "2B Search field on focus or selecting origin/destination",
 };
 
-export const searchFieldSearching = {
+export const SearchFieldSearching = {
   render: () => {
     return `
       <div class="uq-maps__search-field uq-maps__search-field--is-searching">
@@ -86,7 +86,7 @@ export const searchFieldSearching = {
   name: "2C Search field with search value",
 };
 
-export const searchFieldWorking = {
+export const SearchFieldWorking = {
   render: () => {
     return `
       <div class="uq-maps__search-field uq-maps__search-field--is-working">

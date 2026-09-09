@@ -30,15 +30,14 @@ var passwordResetValidation = (function () {
       "passwordStrengthMeter",
     );
 
-    if (passwordStrengthMeter) {
+    if (this.passwordStrengthMeter) {
       this.indicators = this.passwordStrengthMeter.getElementsByTagName("span");
     }
 
     this.passwordRegex =
-      /^(?=.*[a-zA-Z])(?=.*[\d#$%'()*+,\-\/:;<=>\[\]^_`{|}~])(?!.*[&?!"@\\\s]).{8,40}$/;
+      /^(?=.*[a-zA-Z])(?=.*[\d#$%'()*+,\-/:;<=>[\]^_`{|}~])(?!.*[&?!"@\\\s]).{8,40}$/;
     this.invertedAlphaRegex = /^(?!.*[a-zA-Z]).{1,}$/;
-    this.invertedNonAlphaRegex =
-      /^(?!.*[\d#$%'()*+,\-\/:;<=>\[\]^_`{|}~]).{1,}$/;
+    this.invertedNonAlphaRegex = /^(?!.*[\d#$%'()*+,\-/:;<=>[\]^_`{|}~]).{1,}$/;
     this.invertedForbidden = /^(?=.*[&?!"@\\\s]).{1,}$/;
     this.strengthTerms = [
       "too guessable",
@@ -379,7 +378,7 @@ var passwordResetValidation = (function () {
       errorElem.classList.add("uq-error-message");
 
       if (_.isArray(error)) {
-        var error = error.join(",<br/>");
+        error = error.join(",<br/>");
       }
 
       errorElem.innerHTML = error;
@@ -432,8 +431,8 @@ var passwordResetValidation = (function () {
       // render
       errorSummaryBody.appendChild(errorSummaryHeading);
       errorSummaryBody.appendChild(errorSummaryList);
-      errorSummary.appendChild(errorSummaryBody);
-      errorSummary.classList.add("uq-error-summary");
+      this.errorSummary.appendChild(errorSummaryBody);
+      this.errorSummary.classList.add("uq-error-summary");
     };
 
   passwordResetValidation.prototype.renderAllInlineChoosePasswordErrors =

@@ -8,7 +8,7 @@ import * as CardStories from "../components/card/card.stories";
 import * as StoryCardStories from "../components/story-card/story-card.stories";
 
 const { Header } = storyRenderer(HeaderStories);
-const { footer } = storyRenderer(FooterStories);
+const { Footer: footer } = storyRenderer(FooterStories);
 const { Home: Hero } = storyRenderer(HeroStories);
 const { Container: Section } = storyRenderer(SectionStories);
 const { IconNav: CardIconNav, Image: CardImage } = storyRenderer(CardStories);

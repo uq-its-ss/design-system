@@ -13,7 +13,7 @@ sass.render(
   (err, result) => {
     if (err) {
       // @todo eslint solution needs to be reviewed
-      // eslint-disable-next-line no-console
+
       console.error(err);
       process.exit(1);
     }
@@ -21,7 +21,7 @@ sass.render(
     fs.mkdir("./dist/css/", { recursive: true }, function (mkdirErr) {
       if (mkdirErr) {
         // @todo eslint solution needs to be reviewed
-        // eslint-disable-next-line no-console
+
         console.error("Error creating dist/css directory:", mkdirErr);
         process.exit(1);
       }
@@ -29,11 +29,11 @@ sass.render(
       fs.writeFile("./dist/css/app-maps.css", result.css, function (writeErr) {
         if (writeErr) {
           // @todo eslint solution needs to be reviewed
-          // eslint-disable-next-line no-console
+
           console.error("Error writing CSS file:", writeErr);
           process.exit(1);
         }
-        // eslint-disable-next-line no-console
+
         console.log("✓ CSS built successfully");
       });
     });

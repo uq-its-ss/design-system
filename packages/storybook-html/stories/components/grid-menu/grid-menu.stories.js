@@ -14,7 +14,7 @@ export default {
   },
 };
 
-export const gridMenuDefault = {
+export const GridMenuDefault = {
   render: () => {
     return gridMenuHTML;
   },
@@ -22,7 +22,7 @@ export const gridMenuDefault = {
   name: "Default",
 };
 
-export const gridMenuDescription = {
+export const GridMenuDescription = {
   render: () => {
     return `
     <ul class="uq-grid-menu">
@@ -78,7 +78,7 @@ export const gridMenuDescription = {
   name: "With description",
 };
 
-export const gridMenuDarkText = {
+export const GridMenuDarkText = {
   render: () => {
     return `
     <ul class="uq-grid-menu uq-grid-menu--dark-text">
@@ -134,7 +134,7 @@ export const gridMenuDarkText = {
   name: "With dark text",
 };
 
-export const gridMenuIcons = {
+export const GridMenuIcons = {
   render: () => {
     return `
     <ul class="uq-grid-menu">
@@ -151,7 +151,7 @@ export const gridMenuIcons = {
   name: "With icons",
 };
 
-export const gridMenu2Column = {
+export const GridMenu2Column = {
   render: () => {
     return `
     <ul class="uq-grid-menu uq-grid-menu--2-column">
@@ -168,7 +168,7 @@ export const gridMenu2Column = {
   name: "2 Column",
 };
 
-export const gridMenu4Column = {
+export const GridMenu4Column = {
   render: () => {
     return `
     <ul class="uq-grid-menu uq-grid-menu--4-column">
@@ -185,7 +185,7 @@ export const gridMenu4Column = {
   name: "4 Column",
 };
 
-export const gridMenuEqualisedHeight = {
+export const GridMenuEqualisedHeight = {
   render: () => {
     return `
     <ul class="uq-grid-menu">

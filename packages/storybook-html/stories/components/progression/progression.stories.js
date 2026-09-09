@@ -13,7 +13,7 @@ export default {
   },
 };
 
-export const progressionInitial = {
+export const ProgressionInitial = {
   render: () => {
     return progressionHTML;
   },
@@ -21,7 +21,7 @@ export const progressionInitial = {
   name: "Progression initial",
 };
 
-export const progressionMiddle = {
+export const ProgressionMiddle = {
   render: () => {
     return `
       <div class="uqds-progression-wrapper">
@@ -84,7 +84,7 @@ export const progressionMiddle = {
   name: "Progression middle",
 };
 
-export const progressionFinal = {
+export const ProgressionFinal = {
   render: () => {
     return `
       <div class="uqds-progression-wrapper">

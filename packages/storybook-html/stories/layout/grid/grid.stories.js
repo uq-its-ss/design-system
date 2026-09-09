@@ -4,7 +4,7 @@ import { storyRenderer } from "../../../lib/storyRenderer";
 import * as ProfileStories from "../../components/profile/profile.stories";
 import "@uqds/layout/src/scss/main.scss";
 
-const { profile: ProfileCard } = storyRenderer(ProfileStories);
+const { Profile: ProfileCard } = storyRenderer(ProfileStories);
 
 export default {
   title: "Layout/Grid",

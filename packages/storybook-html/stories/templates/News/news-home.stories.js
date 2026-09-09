@@ -6,9 +6,9 @@ import * as HeroStories from "../../components/hero/hero.stories";
 import * as SidebarRightStories from "../../layout/page-layouts/sidebar-right/sidebar-right.stories";
 import * as CardStories from "../../components/card/card.stories";
 import * as PillListStories from "../../components/pill/list/pill-list.stories";
-// TODO: Uncomment the following line when the SearchInputStories module is ready
+// TODO: Uncomment the following lines when the SearchInputStories module is ready
 // import * as SearchInputStories from "../../components/search-input/search-input.stories";
-import { searchInput } from "@uqds/form/src/js/main";
+//import { searchInput } from "@uqds/form/src/js/main";
 import * as FooterStories from "../../components/footer/footer.stories";
 import { initJs } from "../../../lib/initJs";
 

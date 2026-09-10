@@ -4,7 +4,7 @@
 
 .uq-form {
   // UQ Form styles
-  
+
   .uq-form__fieldset,
   fieldset {
     border: 0;
@@ -63,12 +63,10 @@
     appearance: none;
     -webkit-appearance: none; /* Safari and Chrome */
     -moz-appearance: none;
-    background: url(icon.get-icon(
-      "standard--chevron-down",
-      core.$black
-    )) no-repeat right core.$space-m center;
+    background: url(icon.get-icon("standard--chevron-down", core.$black))
+      no-repeat right core.$space-m center;
     background-size: core.$space-l auto;
-    cursor: pointer; 
+    cursor: pointer;
   }
 
   .uq-form__input-group {
@@ -99,6 +97,4 @@
       border-radius: 0 2px 2px 0;
     }
   }
-
-
 }

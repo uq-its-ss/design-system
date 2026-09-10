@@ -415,20 +415,20 @@ $spacing-sizes: (
 }
 
 //Screen reader utility classes
-.sr-only-focusable:not(:focus):not(:focus-within):not(caption), 
+.sr-only-focusable:not(:focus):not(:focus-within):not(caption),
 .sr-only:not(caption) {
   position: absolute !important;
 }
-.sr-only, 
+.sr-only,
 .sr-only-focusable:not(:focus):not(:focus-within) {
-    height: 1px !important;
-    margin: -1px !important;
-    overflow: hidden !important;
-    padding: 0 !important;
-    width: 1px !important;
-    clip: rect(0, 0, 0, 0) !important;
-    border: 0 !important;
-    white-space: nowrap !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  width: 1px !important;
+  clip: rect(0, 0, 0, 0) !important;
+  border: 0 !important;
+  white-space: nowrap !important;
 }
 
 // Print styles

@@ -31,6 +31,7 @@ export default {
               <input class="uq-form__input" id="email-address" type="email" name="email-address">
             </div>
           </fieldset>
+
           <fieldset class="uq-form__fieldset">
             <legend class="uq-form__legend">
               <h3>Select Inputs</h3>
@@ -45,7 +46,6 @@ export default {
                 <option value="bachelor-of-science">Bachelor of Science</option>
               </select>
             </div>
-
             <div class="uq-form__group uq-form__group--inline">
               <label class="uq-form__label" for="course">In-line select</label>
               <select class="uq-form__select" id="course" name="course">
@@ -66,6 +66,22 @@ export default {
                 <label class="sr-only" for="search">Search</label>
                 <input id="search" type="text" name="search">
                 <button type="submit" class="uq-button">Search</button>
+              </div>
+            </div>
+
+            <div class="uq-form__group">
+              <div class="uq-form__input-group">
+                <label class="sr-only" for="search">Search</label>
+                <input id="search" type="text" name="search">
+                <button type="submit" class="uq-button"><span class="uq-icon uq-icon--standard--search"></span> <span class="sr-only">Search</span></button>
+              </div>
+            </div>
+
+            <div class="uq-form__group">
+              <div class="uq-form__input-group">
+                <label class="sr-only" for="search">Search</label>
+                <input id="search" type="text" name="search">
+                <button type="submit" class="uq-button uq-button--tertiary"><span class="uq-icon uq-icon--standard--search"></span> <span class="sr-only">Search</span></button>
               </div>
             </div>
 

@@ -13,7 +13,7 @@
   }
 
   .uq-form__group {
-    margin-bottom: core.$space-m;
+    margin-bottom: core.$space-l;
 
     &--inline {
       display: flex;
@@ -43,6 +43,7 @@
     font-size: core.$font-size-m;
     text-wrap: pretty;
     color: core.$grey-900;
+    margin-bottom: core.$space-s;
   }
 
   .uq-form__input,
@@ -52,7 +53,7 @@
     padding: core.$space-m;
     width: 100%;
     border: 2px solid core.$grey-600;
-    border-radius: 2px;
+    border-radius: 5px;
     font-size: core.$font-size-m;
     color: core.$black;
     font-family: core.$font-body;
@@ -72,9 +73,27 @@
   .uq-form__input-group {
     display: flex;
 
-    // input {
-    //   border-radius: 0;
-    // }
+    > .uq-form-input__prefix + input {
+      border-left: 0;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    > input:has(+ .uq-form-input__suffix),
+    > input:has(+ .uq-button) {
+      border-right: 0;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    > .uq-form-input__prefix + input:has(+ .uq-form-input__suffix) {
+      border-left: 0;
+      border-right: 0;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
 
     .uq-form-input__prefix,
     .uq-form-input__suffix {
@@ -89,12 +108,21 @@
 
     .uq-form-input__prefix {
       border-right: 0;
-      border-radius: 2px 0 0 2px;
+      border-radius: 5px 0 0 5px;
     }
 
     .uq-form-input__suffix {
       border-left: 0;
-      border-radius: 0 2px 2px 0;
+      border-radius: 0 5px 5px 0;
+    }
+
+    .uq-button {
+      border-radius: 0 5px 5px 0;
+      display: flex;
+      justify-content: center;
+      border: 2px solid core.$grey-600;
+      border-left: 0;
+      padding: core.$space-m;
     }
   }
 }

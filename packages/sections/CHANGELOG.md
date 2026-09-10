@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.4-alpha.0](https://github.com/uq-its-ss/design-system/compare/%40uqds%2Fsections%404.0.3...%40uqds%2Fsections%404.0.4-alpha.0) (2026-09-08)
+
+### Bug Fixes
+
+- add export and style fields to all component package.json files ([#788](https://github.com/uq-its-ss/design-system/issues/788)) ([590020a](https://github.com/uq-its-ss/design-system/commit/590020a7ecac8d37010d2acfdab5bb6b329ad7b9))
+
 ## [4.0.3](https://github.com/uq-its-ss/design-system/compare/@uqds/sections@4.0.3-alpha.0...@uqds/sections@4.0.3) (2026-03-30)
 
 **Note:** Version bump only for package @uqds/sections

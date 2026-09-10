@@ -1,6 +1,6 @@
 {
   "name": "@uqds/side-nav",
-  "version": "4.0.6",
+  "version": "4.0.7-alpha.0",
   "description": "Side nav (title, side navigation)",
   "keywords": [
     "uqds",
@@ -17,8 +17,7 @@
   },
   "author": {
     "name": "University of Queensland",
-    "email": "webservices@uq.edu.au",
-    "url": "https://uq.edu.au"
+    "url": "https://about.uq.edu.au/web-feedback?r=https://design-system.uq.edu.au"
   },
   "homepage": "https://github.com/uq-its-ss/design-system#readme",
   "license": "ISC",

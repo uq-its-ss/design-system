@@ -3,18 +3,18 @@
   function n(r) {
     if (e[r]) return e[r].exports;
     var o = (e[r] = { i: r, l: !1, exports: {} });
-    return (t[r].call(o.exports, o, o.exports, n), (o.l = !0), o.exports);
+    return t[r].call(o.exports, o, o.exports, n), (o.l = !0), o.exports;
   }
-  ((n.m = t),
+  (n.m = t),
     (n.c = e),
     (n.d = function (t, e, r) {
       n.o(t, e) || Object.defineProperty(t, e, { enumerable: !0, get: r });
     }),
     (n.r = function (t) {
-      ("undefined" != typeof Symbol &&
+      "undefined" != typeof Symbol &&
         Symbol.toStringTag &&
         Object.defineProperty(t, Symbol.toStringTag, { value: "Module" }),
-        Object.defineProperty(t, "__esModule", { value: !0 }));
+        Object.defineProperty(t, "__esModule", { value: !0 });
     }),
     (n.t = function (t, e) {
       if ((1 & e && (t = n(t)), 8 & e)) return t;
@@ -44,13 +44,13 @@
           : function () {
               return t;
             };
-      return (n.d(e, "a", e), e);
+      return n.d(e, "a", e), e;
     }),
     (n.o = function (t, e) {
       return Object.prototype.hasOwnProperty.call(t, e);
     }),
     (n.p = ""),
-    n((n.s = 59)));
+    n((n.s = 59));
 })([
   function (t, e, n) {
     (function (e) {
@@ -107,7 +107,7 @@
           return o.f(t, e, i(1, n));
         }
       : function (t, e, n) {
-          return ((t[e] = n), t);
+          return (t[e] = n), t;
         };
   },
   function (t, e, n) {
@@ -169,7 +169,7 @@
             if (typeof p == typeof f) continue;
             a(p, f);
           }
-          ((t.sham || (f && f.sham)) && i(p, "sham", !0), c(n, l, p, t));
+          (t.sham || (f && f.sham)) && i(p, "sham", !0), c(n, l, p, t);
         }
     };
   },
@@ -277,7 +277,7 @@
             } catch (t) {}
           if ("get" in n || "set" in n)
             throw TypeError("Accessors not supported");
-          return ("value" in n && (t[e] = n.value), t);
+          return "value" in n && (t[e] = n.value), t;
         };
   },
   function (t, e, n) {
@@ -294,7 +294,7 @@
       var a = !!s && !!s.unsafe,
         u = !!s && !!s.enumerable,
         p = !!s && !!s.noTargetGet;
-      ("function" == typeof n &&
+      "function" == typeof n &&
         ("string" != typeof e || i(n, "name") || o(n, "name", e),
         (l(n).source = f.join("string" == typeof e ? e : ""))),
         t !== r
@@ -302,7 +302,7 @@
             u ? (t[e] = n) : o(t, e, n))
           : u
             ? (t[e] = n)
-            : c(e, n));
+            : c(e, n);
     })(Function.prototype, "toString", function () {
       return ("function" == typeof this && u(this).source) || s(this);
     });
@@ -310,11 +310,11 @@
   function (t, e, n) {
     var r = n(21),
       o = Function.toString;
-    ("function" != typeof r.inspectSource &&
+    "function" != typeof r.inspectSource &&
       (r.inspectSource = function (t) {
         return o.call(t);
       }),
-      (t.exports = r.inspectSource));
+      (t.exports = r.inspectSource);
   },
   function (t, e, n) {
     var r = n(0),
@@ -359,7 +359,7 @@
         a = 0,
         u = [];
       for (n in s) !r(c, n) && r(s, n) && u.push(n);
-      for (; e.length > a;) r(s, (n = e[a++])) && (~i(u, n) || u.push(n));
+      for (; e.length > a; ) r(s, (n = e[a++])) && (~i(u, n) || u.push(n));
       return u;
     };
   },
@@ -455,27 +455,27 @@
         d = m.get,
         v = m.has,
         g = m.set;
-      ((r = function (t, e) {
-        return (g.call(m, t, e), e);
+      (r = function (t, e) {
+        return g.call(m, t, e), e;
       }),
         (o = function (t) {
           return d.call(m, t) || {};
         }),
         (i = function (t) {
           return v.call(m, t);
-        }));
+        });
     } else {
       var E = f("state");
-      ((p[E] = !0),
+      (p[E] = !0),
         (r = function (t, e) {
-          return (u(t, E, e), e);
+          return u(t, E, e), e;
         }),
         (o = function (t) {
           return l(t, E) ? t[E] : {};
         }),
         (i = function (t) {
           return l(t, E);
-        }));
+        });
     }
     t.exports = {
       set: r,
@@ -572,7 +572,7 @@
             u = o(a.length),
             l = i(c, u);
           if (t && n != n) {
-            for (; u > l;) if ((s = a[l++]) != s) return !0;
+            for (; u > l; ) if ((s = a[l++]) != s) return !0;
           } else
             for (; u > l; l++)
               if ((t || l in a) && a[l] === n) return t || l || 0;
@@ -658,6 +658,7 @@
             for (
               var n = a(t), o = arguments.length, l = 1, f = c.f, p = s.f;
               o > l;
+
             )
               for (
                 var h,
@@ -666,8 +667,9 @@
                   v = d.length,
                   g = 0;
                 v > g;
+
               )
-                ((h = d[g++]), (r && !p.call(m, h)) || (n[h] = m[h]));
+                (h = d[g++]), (r && !p.call(m, h)) || (n[h] = m[h]);
             return n;
           }
         : l;
@@ -784,7 +786,7 @@
         "/./"[t](e);
       } catch (n) {
         try {
-          return ((e[r] = !1), "/./"[t](e));
+          return (e[r] = !1), "/./"[t](e);
         } catch (t) {}
       }
       return !1;
@@ -796,31 +798,31 @@
     "use strict";
     n.r(e);
     var r, o, i;
-    (n(31), n(50), n(52), n(57));
+    n(31), n(50), n(52), n(57);
     function c(t, e, n) {
       const r = [];
-      for (; t && null !== t.parentElement && (void 0 === n || r.length < n);)
-        (t instanceof HTMLElement && t.matches(e) && r.push(t),
-          (t = t.parentElement));
+      for (; t && null !== t.parentElement && (void 0 === n || r.length < n); )
+        t instanceof HTMLElement && t.matches(e) && r.push(t),
+          (t = t.parentElement);
       return r;
     }
     function s(t, e) {
       const n = c(t, e, 1);
       return n.length ? n[0] : null;
     }
-    (!(function (t) {
-      ((t[(t.Backward = -1)] = "Backward"), (t[(t.Forward = 1)] = "Forward"));
+    !(function (t) {
+      (t[(t.Backward = -1)] = "Backward"), (t[(t.Forward = 1)] = "Forward");
     })(r || (r = {})),
       (function (t) {
-        ((t.Left = "left"), (t.Right = "right"));
+        (t.Left = "left"), (t.Right = "right");
       })(o || (o = {})),
       (function (t) {
-        ((t.Back = "back"),
+        (t.Back = "back"),
           (t.Close = "close"),
           (t.Forward = "forward"),
           (t.Navigate = "navigate"),
-          (t.Open = "open"));
-      })(i || (i = {})));
+          (t.Open = "open");
+      })(i || (i = {}));
     const a = {
       backLinkAfter: "",
       backLinkBefore: "",
@@ -841,21 +843,21 @@
           null === t)
         )
           throw new Error("Argument `elem` must be a valid HTML node");
-        ((this.options = Object.assign({}, a, e)),
+        (this.options = Object.assign({}, a, e)),
           (this.menuElem = t),
           (this.wrapperElem = document.createElement("div")),
-          this.wrapperElem.classList.add(u.CLASS_NAMES.wrapper));
+          this.wrapperElem.classList.add(u.CLASS_NAMES.wrapper);
         const n = this.menuElem.querySelector("ul");
-        (n &&
+        n &&
           (function (t, e) {
             if (null === t.parentElement)
               throw Error("`elem` has no parentElement");
-            (t.parentElement.insertBefore(e, t), e.appendChild(t));
+            t.parentElement.insertBefore(e, t), e.appendChild(t);
           })(n, this.wrapperElem),
           this.initMenu(),
           this.initSubmenus(),
           this.initEventHandlers(),
-          (this.menuElem._slideMenu = this));
+          (this.menuElem._slideMenu = this);
       }
       toggle(t, e = !0) {
         let n;
@@ -872,10 +874,10 @@
         }
       }
       open(t = !0) {
-        (this.triggerEvent(i.Open), this.toggle(!0, t));
+        this.triggerEvent(i.Open), this.toggle(!0, t);
       }
       close(t = !0) {
-        (this.triggerEvent(i.Close), this.toggle(!1, t));
+        this.triggerEvent(i.Close), this.toggle(!1, t);
       }
       back() {
         this.navigate(r.Backward);
@@ -905,17 +907,17 @@
             e && e.parentElement && e.parentElement.removeChild(e);
           });
         }
-        (!(function (t) {
+        !(function (t) {
           const e = t.parentElement;
           if (null === e) throw Error("`elem` has no parentElement");
-          for (; t.firstChild;) e.insertBefore(t.firstChild, t);
+          for (; t.firstChild; ) e.insertBefore(t.firstChild, t);
           e.removeChild(t);
         })(this.wrapperElem),
           (this.menuElem.style.cssText = ""),
           this.menuElem
             .querySelectorAll("ul")
             .forEach((t) => (t.style.cssText = "")),
-          delete this.menuElem._slideMenu);
+          delete this.menuElem._slideMenu;
       }
       navigateTo(t) {
         if ((this.triggerEvent(i.Navigate), "string" == typeof t)) {
@@ -929,22 +931,20 @@
         Array.from(
           this.wrapperElem.querySelectorAll(".".concat(u.CLASS_NAMES.active)),
         ).forEach((t) => {
-          ((t.style.display = "none"),
-            t.classList.remove(u.CLASS_NAMES.active));
+          (t.style.display = "none"), t.classList.remove(u.CLASS_NAMES.active);
         });
         const e = c(t, "ul"),
           n = e.length - 1;
-        (n >= 0 &&
+        n >= 0 &&
           n !== this.level &&
           ((this.level = n),
           this.moveSlider(this.wrapperElem, 100 * -this.level)),
           e.forEach((t) => {
-            ((t.style.display = "block"),
-              t.classList.add(u.CLASS_NAMES.active));
-          }));
+            (t.style.display = "block"), t.classList.add(u.CLASS_NAMES.active);
+          });
       }
       initEventHandlers() {
-        (Array.from(this.menuElem.querySelectorAll("a")).forEach((t) =>
+        Array.from(this.menuElem.querySelectorAll("a")).forEach((t) =>
           t.addEventListener("click", (t) => {
             const e = t.target,
               n = e.matches("a") ? e : s(e, "a");
@@ -960,7 +960,7 @@
             this.onTransitionEnd.bind(this),
           ),
           this.initKeybindings(),
-          this.initSubmenuVisibility());
+          this.initSubmenuVisibility();
       }
       onTransitionEnd(t) {
         (t.target !== this.menuElem && t.target !== this.wrapperElem) ||
@@ -1006,17 +1006,17 @@
         if (e && null !== e.parentElement && t === r.Forward) {
           const t = e.parentElement.querySelector("ul");
           if (!t) return;
-          (t.classList.add(u.CLASS_NAMES.active), (t.style.display = "block"));
+          t.classList.add(u.CLASS_NAMES.active), (t.style.display = "block");
         }
         const o = t === r.Forward ? i.Forward : i.Back;
-        (this.triggerEvent(o),
+        this.triggerEvent(o),
           (this.level = this.level + t),
-          this.moveSlider(this.wrapperElem, n));
+          this.moveSlider(this.wrapperElem, n);
       }
       moveSlider(t, e) {
-        (e.toString().includes("%") || (e += "%"),
+        e.toString().includes("%") || (e += "%"),
           (t.style.transform = "translateX(".concat(e, ")")),
-          (this.isAnimating = !0));
+          (this.isAnimating = !0);
       }
       initMenu() {
         this.runWithoutAnimation(() => {
@@ -1036,11 +1036,11 @@
       }
       runWithoutAnimation(t) {
         const e = [this.menuElem, this.wrapperElem];
-        (e.forEach((t) => (t.style.transition = "none")),
+        e.forEach((t) => (t.style.transition = "none")),
           t(),
           this.menuElem.offsetHeight,
           e.forEach((t) => t.style.removeProperty("transition")),
-          (this.isAnimating = !1));
+          (this.isAnimating = !1);
       }
       initSubmenus() {
         this.menuElem.querySelectorAll("a").forEach((t) => {
@@ -1054,11 +1054,11 @@
           if ((this.addLinkDecorators(t), this.options.showBackLink)) {
             const { backLinkBefore: t, backLinkAfter: r } = this.options,
               o = document.createElement("a");
-            ((o.innerHTML = t + n + r),
+            (o.innerHTML = t + n + r),
               o.classList.add(u.CLASS_NAMES.backlink, u.CLASS_NAMES.control),
-              o.setAttribute("data-action", i.Back));
+              o.setAttribute("data-action", i.Back);
             const c = document.createElement("li");
-            (c.appendChild(o), e.insertBefore(c, e.firstChild));
+            c.appendChild(o), e.insertBefore(c, e.firstChild);
           }
         });
       }
@@ -1066,20 +1066,20 @@
         const { submenuLinkBefore: e, submenuLinkAfter: n } = this.options;
         if (e) {
           const n = document.createElement("span");
-          (n.classList.add(u.CLASS_NAMES.decorator),
+          n.classList.add(u.CLASS_NAMES.decorator),
             (n.innerHTML = e),
-            t.insertBefore(n, t.firstChild));
+            t.insertBefore(n, t.firstChild);
         }
         if (n) {
           const e = document.createElement("span");
-          (e.classList.add(u.CLASS_NAMES.decorator),
+          e.classList.add(u.CLASS_NAMES.decorator),
             (e.innerHTML = n),
-            t.appendChild(e));
+            t.appendChild(e);
         }
         return t;
       }
     }
-    ((u.NAMESPACE = "slide-menu"),
+    (u.NAMESPACE = "slide-menu"),
       (u.CLASS_NAMES = {
         active: "".concat(u.NAMESPACE, "__submenu--active"),
         backlink: "".concat(u.NAMESPACE, "__backlink"),
@@ -1104,6 +1104,6 @@
           c = e.getAttribute("data-arg");
         o && i && "function" == typeof o[i] && (c ? o[i](c) : o[i]());
       }),
-      (window.SlideMenu = u));
+      (window.SlideMenu = u);
   },
 ]);

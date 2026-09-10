@@ -1,0 +1,16 @@
+import { Meta, Story, Canvas, Controls } from "@storybook/addon-docs/blocks";
+import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
+import * as CheckboxStories from "./checkbox.stories";
+
+<Meta of={CheckboxStories} />
+
+# Checkbox
+
+<StatusBadge.Development />
+
+<StatusBadge.DraftDoc />
+
+## Overview
+
+<Canvas of={CheckboxStories.Default} />
+<Controls of={CheckboxStories.Default} />

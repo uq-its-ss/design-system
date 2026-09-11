@@ -3,20 +3,40 @@ import iconCatalog from "@uqds/icon";
 
 export default {
   title: "Components/Button",
-  render: ({ style, label, size, expand, icon }) => {
-    return `<button class="${classNames("uq-button", style, size, { "uq-button--expand": expand })}">
-  ${icon ? `<span class="uq-icon uq-icon--${icon}"></span>` : ""} ${label}
-</button>`;
+  render: ({ style, label, size, expand, icon, iconPosition }) => {
+    // Check if style is "Link" (maps to "uq-button--link")
+    const isLink = style === "uq-button--link";
+
+    // If link type with icon, apply icon classes to button instead of span
+    const iconClasses =
+      isLink && icon
+        ? `uq-icon uq-icon--${icon}${iconPosition === "right" ? " uq-icon--right" : ""}`
+        : "";
+
+    // Icon span element (only for non-link buttons)
+    const iconSpan =
+      icon && !isLink ? `<span class="uq-icon uq-icon--${icon}"></span>` : "";
+
+    // Position icon based on iconPosition arg
+    const content =
+      iconPosition === "right"
+        ? `${label} ${iconSpan}`
+        : `${iconSpan} ${label}`;
+
+    return `<button class="${classNames("uq-button", style, size, { "uq-button--expand": expand }, iconClasses)}">
+    ${content}
+    </button>`;
   },
   argTypes: {
     label: "text",
     style: {
       control: "select",
-      options: ["Primary", "Secondary", "Tertiary"],
+      options: ["Primary", "Secondary", "Tertiary", "Link"],
       mapping: {
         Primary: "",
         Secondary: "uq-button--secondary",
         Tertiary: "uq-button--tertiary",
+        Link: "uq-button--link",
       },
     },
     size: {
@@ -33,13 +53,25 @@ export default {
     icon: {
       options: iconCatalog.map((icon) => `${icon.category}--${icon.name}`),
       control: "select",
+      table: {
+        category: "Icon", // Groups the toggle switch
+      },
+    },
+    iconPosition: {
+      control: "select",
+      options: ["left", "right"],
+      description: "Position of the icon relative to the label",
+      table: {
+        category: "Icon", // Groups the toggle switch
+      },
     },
   },
   args: {
     style: "Primary",
     size: "Default",
-    expand: false,
     label: "Button",
+    expand: false,
+    iconPosition: "left",
   },
 };
 

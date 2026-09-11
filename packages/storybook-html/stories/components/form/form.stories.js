@@ -68,6 +68,23 @@ export default {
                 <button type="submit" class="uq-button">Search</button>
               </div>
             </div>
+
+            <div class="uq-form__group">
+              <div class="uq-form__input-group">
+                <label class="sr-only" for="search">Search</label>
+                <input id="search" type="text" name="search">
+                <button type="submit" class="uq-button"><span class="uq-icon uq-icon--standard--search"></span> <span class="sr-only">Search</span></button>
+              </div>
+            </div>
+
+            <div class="uq-form__group">
+              <div class="uq-form__input-group">
+                <label class="sr-only" for="search">Search</label>
+                <input id="search" type="text" name="search">
+                <button type="submit" class="uq-button uq-button--tertiary"><span class="uq-icon uq-icon--standard--search"></span> <span class="sr-only">Search</span></button>
+              </div>
+            </div>
+
  
             <div class="uq-form__group">
               <div class="uq-form__input-group">
@@ -102,6 +119,9 @@ export default {
               <textarea class="uq-form__input" id="message" name="message" rows="4" placeholder="Tell us about your enquiry"></textarea>
             </div>
           </fieldset>
+
+        </form>
+      </div>
  
         </form>
       </div>

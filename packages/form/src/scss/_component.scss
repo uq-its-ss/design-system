@@ -1,5 +1,128 @@
+@use "@uqds/core/src/scss/global" as core;
+@use "@uqds/icon/src/scss/global" as icon;
 @use "global" as *;
 
 .uq-form {
   // UQ Form styles
+
+  .uq-form__fieldset,
+  fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  .uq-form__group {
+    margin-bottom: core.$space-l;
+
+    &--inline {
+      display: flex;
+      align-items: center;
+      gap: core.$space-m;
+
+      .uq-form__label {
+        flex: 1 0 auto;
+      }
+    }
+  }
+
+  .uq-form__label,
+  label {
+    display: block;
+    font-size: core.$font-size-l;
+    font-weight: core.$font-weight-medium;
+    color: core.$black;
+  }
+
+  .uq-form__label--inline {
+    display: inline-block;
+  }
+
+  .uq-form__helper {
+    display: block;
+    font-size: core.$font-size-m;
+    text-wrap: pretty;
+    color: core.$grey-900;
+    margin-bottom: core.$space-s;
+  }
+
+  .uq-form__input,
+  .uq-form__select,
+  input,
+  select {
+    padding: core.$space-m;
+    width: 100%;
+    border: 2px solid core.$grey-600;
+    border-radius: 5px;
+    font-size: core.$font-size-m;
+    color: core.$black;
+    font-family: core.$font-body;
+  }
+
+  .uq-form__select,
+  select {
+    appearance: none;
+    -webkit-appearance: none; /* Safari and Chrome */
+    -moz-appearance: none;
+    background: url(icon.get-icon("standard--chevron-down", core.$black))
+      no-repeat right core.$space-m center;
+    background-size: core.$space-l auto;
+    cursor: pointer;
+  }
+
+  .uq-form__input-group {
+    display: flex;
+
+    > .uq-form-input__prefix + input {
+      border-left: 0;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    > input:has(+ .uq-form-input__suffix),
+    > input:has(+ .uq-button) {
+      border-right: 0;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    > .uq-form-input__prefix + input:has(+ .uq-form-input__suffix) {
+      border-left: 0;
+      border-right: 0;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    .uq-form-input__prefix,
+    .uq-form-input__suffix {
+      display: flex;
+      flex: 0 0 auto;
+      align-items: center;
+      justify-content: center;
+      padding: core.$space-m;
+      background: core.$grey-200;
+      border: 2px solid core.$grey-600;
+    }
+
+    .uq-form-input__prefix {
+      border-right: 0;
+      border-radius: 5px 0 0 5px;
+    }
+
+    .uq-form-input__suffix {
+      border-left: 0;
+      border-radius: 0 5px 5px 0;
+    }
+
+    .uq-button {
+      border-radius: 0 5px 5px 0;
+      display: flex;
+      justify-content: center;
+      border: 2px solid core.$grey-600;
+      border-left: 0;
+      padding: core.$space-m;
+    }
+  }
 }

@@ -24,10 +24,6 @@ class collapsibleText {
     elements.forEach((element) => {
       this.setupComponent(element);
     });
-
-    console.log(
-      `collapsible-text: ${elements.length} component(s) initialized`,
-    );
   }
 
   /**
@@ -39,7 +35,6 @@ class collapsibleText {
     const button = element.querySelector("[data-collapsible-button]");
 
     if (!content || !button) {
-      console.warn("Collapsible text component missing required elements");
       return;
     }
 

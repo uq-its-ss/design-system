@@ -9,9 +9,11 @@
   padding: core.$space-xs;
   overflow: hidden;
   width: core.$space-xxxl;
-  -webkit-mask-image: linear-gradient(transparent 50%, #000 0),
+  -webkit-mask-image:
+    linear-gradient(transparent 50%, #000 0),
     linear-gradient(90deg, transparent 50%, #000 0);
-  mask-image: linear-gradient(transparent 50%, #000 0),
+  mask-image:
+    linear-gradient(transparent 50%, #000 0),
     linear-gradient(90deg, transparent 50%, #000 0);
   -webkit-animation: pure-material-progress-circular 6s
     cubic-bezier(0.3, 0.6, 1, 1) infinite;

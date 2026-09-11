@@ -98,9 +98,7 @@ export default {
 
   name: "Previous next navigation",
 };
-export const Default = {
-
-};
+export const Default = {};
 
 export const Initial = {
   args: {

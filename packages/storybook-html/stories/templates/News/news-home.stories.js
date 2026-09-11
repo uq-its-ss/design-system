@@ -6,8 +6,9 @@ import * as HeroStories from "../../components/hero/hero.stories";
 import * as SidebarRightStories from "../../layout/page-layouts/sidebar-right/sidebar-right.stories";
 import * as CardStories from "../../components/card/card.stories";
 import * as PillListStories from "../../components/pill/list/pill-list.stories";
-import * as SearchInputStories from "../../components/search-input/search-input.stories";
-import { searchInput } from "@uqds/form/src/js/main";
+// TODO: Uncomment the following lines when the SearchInputStories module is ready
+// import * as SearchInputStories from "../../components/search-input/search-input.stories";
+//import { searchInput } from "@uqds/form/src/js/main";
 import * as FooterStories from "../../components/footer/footer.stories";
 import { initJs } from "../../../lib/initJs";
 
@@ -18,7 +19,7 @@ const { Level2: Level2Hero } = storyRenderer(HeroStories);
 const { NewsExample } = storyRenderer(SidebarRightStories);
 const { Text: Card } = storyRenderer(CardStories);
 const { List: PillList } = storyRenderer(PillListStories);
-const { SearchInput } = storyRenderer(SearchInputStories);
+// const { SearchInput } = storyRenderer(SearchInputStories);
 
 export default {
   title: "Templates/News/Home",
@@ -41,7 +42,7 @@ export const Home = {
   decorators: [
     (storyFn) =>
       initJs(storyFn, (component) => {
-        searchInput(component.querySelector(".uq-search-input"));
+        // searchInput(component.querySelector(".uq-search-input"));
       }),
   ],
   render: ({ showGrid }) => `
@@ -60,7 +61,7 @@ export const Home = {
           <h2 class="uq-section__title">Looking for specific news?</h2>
         </div>
         <h3>Search by keyword</h3>
-        ${SearchInput()}
+        <!-- ${SearchInput()} -->
         <h3>Browse by topic</h3>
         ${PillList()}
       </div>

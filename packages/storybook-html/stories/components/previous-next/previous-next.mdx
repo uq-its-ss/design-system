@@ -25,7 +25,8 @@ The **Previous / Next** component provides consistent navigation across sequenti
 
 ### a. Initial state
 
-An instance when only the next button is visible
+An instance when only the next button is visible.
+When on the first page/step we should only see the Next button.
 
 <Canvas of={PreviousNextStories.Initial} />
 
@@ -37,7 +38,8 @@ An instance when both the previous and next buttons are visible
 
 ### c. Final state
 
-An instance when only the previous button is visible
+An instance when only the previous button is visible.
+When on the last page/step we should only see the Previous Button.
 
 <Canvas of={PreviousNextStories.Final} />
 
@@ -68,4 +70,5 @@ Choosing between links and buttons ensures proper semantic HTML, keyboard access
 
 ### Accessibility
 
-For disabled states in initial or final steps, prefer hiding the inactive action or using clear aria-disabled / disabled HTML attributes so screen readers communicate that the end of the sequence has been reached.
+- For disabled states in initial or final steps, prefer hiding the inactive action or using clear aria-disabled / disabled HTML attributes so screen readers communicate that the end of the sequence has been reached.
+- Multiple `<nav>` elements on a page: You must provide a unique accessible name to each landmark (e.g., using `aria-label` or `aria-labelledby`) to ensure screen readers can distinguish between them.

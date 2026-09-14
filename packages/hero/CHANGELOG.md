@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.0.3-alpha.1](https://github.com/uq-its-ss/design-system/compare/%40uqds%2Fhero%407.0.3-alpha.0...%40uqds%2Fhero%407.0.3-alpha.1) (2026-09-14)
+
+**Note:** Version bump only for package @uqds/hero
+
 ## [7.0.3-alpha.0](https://github.com/uq-its-ss/design-system/compare/%40uqds%2Fhero%407.0.2...%40uqds%2Fhero%407.0.3-alpha.0) (2026-09-08)
 
 ### Bug Fixes

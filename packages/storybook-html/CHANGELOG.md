@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.1.8-alpha.5](https://github.com/uq-its-ss/design-system/compare/storybook-html%408.1.8-alpha.4...storybook-html%408.1.8-alpha.5) (2026-09-14)
+
+- **deps:** bump ESLint to 9.39.5 and fix pre-existing lint config bugs ([e2fefb5](https://github.com/uq-its-ss/design-system/commit/e2fefb5985f3a05acda96f315d92584f38026058))
+- **deps:** bump minor/patch dependencies to latest across workspaces ([c7e5faf](https://github.com/uq-its-ss/design-system/commit/c7e5fafd0b622f38cdbdbe149813992825fce7d9))
+
+### 🐛 Bug Fixes
+
+- **storybook-html:** update MDX docs to reference renamed PascalCase story exports ([2feb72b](https://github.com/uq-its-ss/design-system/commit/2feb72b32d2b3d5570bf59b1fdf77fbef1b842dc))
+
 ## [8.1.8-alpha.4](https://github.com/uq-its-ss/design-system/compare/storybook-html%408.1.8-alpha.3...storybook-html%408.1.8-alpha.4) (2026-09-14)
 
 - **docs:** updated content ([2522463](https://github.com/uq-its-ss/design-system/commit/2522463e648dd4b1dcc4182b161272c7aab62e39))

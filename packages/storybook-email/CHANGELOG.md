@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.6-alpha.0](https://github.com/uq-its-ss/design-system/compare/storybook-email%401.1.5...storybook-email%401.1.6-alpha.0) (2026-09-14)
+
+- **deps:** bump ESLint to 9.39.5 and fix pre-existing lint config bugs ([e2fefb5](https://github.com/uq-its-ss/design-system/commit/e2fefb5985f3a05acda96f315d92584f38026058))
+- **deps:** bump minor/patch dependencies to latest across workspaces ([c7e5faf](https://github.com/uq-its-ss/design-system/commit/c7e5fafd0b622f38cdbdbe149813992825fce7d9))
+- removing email address from website ([#814](https://github.com/uq-its-ss/design-system/issues/814)) ([e7d7a12](https://github.com/uq-its-ss/design-system/commit/e7d7a129267bd6f3618ccaec2180f766193af0fc))
+
+### 🐛 Bug Fixes
+
+- **storybook-email:** update remaining MDX docs referencing renamed story exports ([864d464](https://github.com/uq-its-ss/design-system/commit/864d464b0497d57074048ab2ddd712a3f4e42dde))
+
 ## [1.1.5](https://github.com/uq-its-ss/design-system/compare/storybook-email@1.1.5-alpha.0...storybook-email@1.1.5) (2026-08-18)
 
 **Note:** Version bump only for package storybook-email

@@ -3,6 +3,11 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.7-alpha.0](https://github.com/uq-its-ss/design-system/compare/%40uqds%2Floading-spinner%404.0.6...%40uqds%2Floading-spinner%404.0.7-alpha.0) (2026-09-14)
+
+- **deps:** bump minor/patch dependencies to latest across workspaces ([c7e5faf](https://github.com/uq-its-ss/design-system/commit/c7e5fafd0b622f38cdbdbe149813992825fce7d9))
+- removing email address from website ([#814](https://github.com/uq-its-ss/design-system/issues/814)) ([e7d7a12](https://github.com/uq-its-ss/design-system/commit/e7d7a129267bd6f3618ccaec2180f766193af0fc))
+
 ## [4.0.6](https://github.com/uq-its-ss/design-system/compare/@uqds/loading-spinner@4.0.6-alpha.0...@uqds/loading-spinner@4.0.6) (2026-08-18)
 
 **Note:** Version bump only for package @uqds/loading-spinner

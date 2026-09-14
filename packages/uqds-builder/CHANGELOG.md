@@ -3,6 +3,11 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.15-alpha.4](https://github.com/uq-its-ss/design-system/compare/uqds-builder%404.0.15-alpha.3...uqds-builder%404.0.15-alpha.4) (2026-09-14)
+
+- **deps:** bump ESLint to 9.39.5 and fix pre-existing lint config bugs ([e2fefb5](https://github.com/uq-its-ss/design-system/commit/e2fefb5985f3a05acda96f315d92584f38026058))
+- **deps:** bump minor/patch dependencies to latest across workspaces ([c7e5faf](https://github.com/uq-its-ss/design-system/commit/c7e5fafd0b622f38cdbdbe149813992825fce7d9))
+
 ## [4.0.15-alpha.3](https://github.com/uq-its-ss/design-system/compare/uqds-builder%404.0.15-alpha.2...uqds-builder%404.0.15-alpha.3) (2026-09-14)
 
 **Note:** Version bump only for package uqds-builder

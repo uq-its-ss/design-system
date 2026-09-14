@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.1.8-alpha.4](https://github.com/uq-its-ss/design-system/compare/storybook-html%408.1.8-alpha.3...storybook-html%408.1.8-alpha.4) (2026-09-14)
+
+- **docs:** updated content ([2522463](https://github.com/uq-its-ss/design-system/commit/2522463e648dd4b1dcc4182b161272c7aab62e39))
+- **docs:** updated documentation ([a04d149](https://github.com/uq-its-ss/design-system/commit/a04d1493bc433433b840b2bc8a921828b35da6f8))
+- linting ([a0ff787](https://github.com/uq-its-ss/design-system/commit/a0ff787de5e5f4df313abb0931c5c07c470f0b51))
+- **linting:** linted files ([6c6438a](https://github.com/uq-its-ss/design-system/commit/6c6438a7ae7c7f5212738200ac8af0abad1f0dce))
+- **linting:** linting ([bacace1](https://github.com/uq-its-ss/design-system/commit/bacace1be143b95aa830ff0de135bc92ffb9989c))
+- **linting:** Linting ([d13b959](https://github.com/uq-its-ss/design-system/commit/d13b959924074d788f8637f219fd9d8f4f817510))
+
+### 🐛 Bug Fixes
+
+- **button:** added link and additonal icon options ([4dee349](https://github.com/uq-its-ss/design-system/commit/4dee349648d7fc3f73d994354ebf1ff9e419126f))
+- modifying previous next component ([92d91ae](https://github.com/uq-its-ss/design-system/commit/92d91aef2f054386298832c7d006c444a373e148))
+- **previous-next:** updated sotrybook and docs ([9ef13e6](https://github.com/uq-its-ss/design-system/commit/9ef13e69aa41d9dfaa4cfb2834114e8811357c38))
+- **previousnext:** content and guide update ([eae9af0](https://github.com/uq-its-ss/design-system/commit/eae9af0df2b8f4c40351be521bb175e05593195a))
+- updated link icon style ([4a23a12](https://github.com/uq-its-ss/design-system/commit/4a23a123c7ff10c1897abb54c5fb05c1bb817eb9))
+
 ## [8.1.8-alpha.3](https://github.com/uq-its-ss/design-system/compare/storybook-html%408.1.8-alpha.2...storybook-html%408.1.8-alpha.3) (2026-09-08)
 
 **Note:** Version bump only for package storybook-html

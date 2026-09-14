@@ -56,6 +56,7 @@
     "gulp-sass": "^5.1.0",
     "gulp-uglify": "^3.0.2",
     "http-server": "^14.1.1",
+    "husky": "^9.1.7",
     "jsdom": "^25.0.1",
     "lerna": "^10.0.1",
     "msw": "^2.15.0",
@@ -98,7 +99,8 @@
     "fix": "npm run format && npm run fix:es && npm run fix:style",
     "test": "vitest run",
     "test:ui": "vitest --ui",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "prepare": "husky"
   },
   "engines": {
     "node": ">=24",

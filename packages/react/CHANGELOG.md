@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.9-alpha.0](https://github.com/uq-its-ss/design-system/compare/%40uqds%2Freact%402.0.8...%40uqds%2Freact%402.0.9-alpha.0) (2026-09-08)
+
+**Note:** Version bump only for package @uqds/react
+
 ## [2.0.8](https://github.com/uq-its-ss/design-system/compare/@uqds/react@2.0.8-alpha.0...@uqds/react@2.0.8) (2026-08-18)
 
 **Note:** Version bump only for package @uqds/react

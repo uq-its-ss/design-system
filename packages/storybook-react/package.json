@@ -1,13 +1,12 @@
 {
   "name": "storybook-react",
-  "version": "2.1.5",
+  "version": "2.1.6-alpha.0",
   "description": "Storybook for REACT instance for uqds component development",
   "private": true,
   "keywords": [],
   "author": {
     "name": "University of Queensland",
-    "email": "webservices@uq.edu.au",
-    "url": "https://uq.edu.au"
+    "url": "https://about.uq.edu.au/web-feedback?r=https://design-system.uq.edu.au"
   },
   "license": "ISC",
   "scripts": {
@@ -18,7 +17,7 @@
   },
   "dependencies": {
     "@uqds/icon": "^4.0.6",
-    "@uqds/react": "^2.0.8"
+    "@uqds/react": "^2.0.9-alpha.0"
   },
   "devDependencies": {
     "@storybook/addon-a11y": "^10.4.3",

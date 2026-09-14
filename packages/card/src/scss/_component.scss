@@ -101,13 +101,8 @@
   }
 
   &__title {
-    font-size: core.$font-size-xl;
     color: core.$grey-900;
     margin: core.$space-none core.$space-none core.$space-s;
-
-    @media #{core.$screen-md-up} {
-      font-size: core.$font-size-xxl;
-    }
 
     &-super {
       font-size: core.$font-size-s;

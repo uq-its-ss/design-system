@@ -297,5 +297,4 @@ export type IconCode =
     | "student-services--study-desk"
     | "student-services--transportation-ticket-bus-transfer-1"
     | "transport--road-sign-turn-right-1"
-    | "transport--stop-sign"
-;
+    | "transport--stop-sign";

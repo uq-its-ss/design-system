@@ -44,6 +44,7 @@
     "@vitest/ui": "^4.1.8",
     "cli-progress": "^3.12.0",
     "concurrently": "^10.0.3",
+    "conventional-changelog-conventionalcommits": "10.3.0",
     "core-js": "^3.39.0",
     "css-loader": "^7.1.2",
     "eslint": "^8.57.1",

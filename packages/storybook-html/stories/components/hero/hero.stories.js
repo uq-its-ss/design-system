@@ -39,7 +39,6 @@ export default {
 };
 
 export const Hero = {
-  name: "Hero",
   args: {
     light: true,
     large: true,
@@ -83,7 +82,6 @@ ${
 
 export const Home = {
   ...Hero,
-  name: "Home",
   args: {
     light: true,
     large: true,
@@ -97,7 +95,6 @@ export const Home = {
 
 export const Level1 = {
   ...Hero,
-  name: "Level 1",
   args: {
     light: true,
     large: false,
@@ -111,7 +108,6 @@ export const Level1 = {
 
 export const Level2 = {
   ...Hero,
-  name: "Level 2",
   args: {
     light: false,
     large: false,

@@ -43,7 +43,7 @@ try {
     "npx lerna version --conventional-commits --conventional-graduate --yes --no-git-tag-version --no-push",
     { stdio: "pipe" },
   );
-} catch (error) {
+} catch {
   // Lerna exits non-zero when there is nothing to release; treat as "no changes".
 }
 

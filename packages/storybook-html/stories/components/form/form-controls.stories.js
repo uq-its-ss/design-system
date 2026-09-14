@@ -32,7 +32,7 @@ const layout = (states = ["N/A", "N/A", "N/A"]) => `
   </div>
 `;
 
-export const inputText = {
+export const InputText = {
   render: () =>
     layout([
       `<label for="text1">First name</label>
@@ -46,7 +46,7 @@ export const inputText = {
   name: "Text input",
 };
 
-export const inputTextAlt = {
+export const InputTextAlt = {
   render: () =>
     layout([
       `<label>Label <input type="text" /></label>`,
@@ -57,7 +57,7 @@ export const inputTextAlt = {
   name: "Text input (nested)",
 };
 
-export const inputTextInline = {
+export const InputTextInline = {
   render: () => `
     <div style="display: inline-block"><label class="uq-label--inline">Keyword</label><input type="text" /></div>
     <div style="display: inline-block"><label class="uq-label--inline">Author</label><input type="text" /></div>
@@ -66,7 +66,7 @@ export const inputTextInline = {
   name: "Text input (inline)",
 };
 
-export const inputTextInlineAlt = {
+export const InputTextInlineAlt = {
   render: () => `
     <label class="uq-label--inline">Keyword <input type="text" /></label>
     <label class="uq-label--inline">Author <input type="text" /></label>
@@ -75,7 +75,7 @@ export const inputTextInlineAlt = {
   name: "Text input (inline & nested)",
 };
 
-export const inputTextLarge = {
+export const InputTextLarge = {
   render: () => `
     <input type="text" class="uq-input--large" placeholder="Optional placeholder" />
   `,
@@ -83,7 +83,7 @@ export const inputTextLarge = {
   name: "Text input (large)",
 };
 
-export const inputTextError = {
+export const InputTextError = {
   render: () => `
     <label class="uq-label--error" for="textError1">First name</label>
     <input type="text" id="textError1" class="uq-input--error" aria-describedby="textError1Error" aria-invalid="true" />
@@ -93,7 +93,7 @@ export const inputTextError = {
   name: "Text input (error)",
 };
 
-export const inputTextSuccess = {
+export const InputTextSuccess = {
   render: () => `
     <label class="uq-label--success" for="textSuccess1">Mobile number</label>
     <input type="text" id="textSuccess1" value="0421 234 456" class="uq-input--success" aria-describedby="textSuccess1Feedback" />
@@ -103,7 +103,7 @@ export const inputTextSuccess = {
   name: "Text input (success)",
 };
 
-export const select = () =>
+export const Select = () =>
   layout([
     `<label for="select1">Begin study in</label>
   <select id="select1">
@@ -120,7 +120,7 @@ export const select = () =>
     `N/A`,
   ]);
 
-export const selectAlt = {
+export const SelectAlt = {
   render: () =>
     layout([
       `
@@ -144,7 +144,7 @@ export const selectAlt = {
   name: "Select (nested)",
 };
 
-export const selectError = {
+export const SelectError = {
   render: () => `
     <label for="selectError1" class="uq-label--error">Begin study in</label>
     <select id="selectError1" class="uq-input--error" aria-describedby="selectError1Error" aria-invalid="true">
@@ -158,7 +158,7 @@ export const selectError = {
   name: "Select (error)",
 };
 
-export const selectErrorAlt = {
+export const SelectErrorAlt = {
   render: () => `
     <label class="uq-label--error">Begin study in
       <select class="uq-input--error" aria-describedby="selectError2Error" aria-invalid="true">
@@ -173,7 +173,7 @@ export const selectErrorAlt = {
   name: "Select (nested & error)",
 };
 
-export const selectInline = {
+export const SelectInline = {
   render: () => `
     <div style="display: inline-block">
       <label class="uq-label--inline">Begin study in</label>
@@ -187,7 +187,7 @@ export const selectInline = {
   name: "Select (inline)",
 };
 
-export const selectInlineAlt = {
+export const SelectInlineAlt = {
   render: () => `
     <label class="uq-label--inline">Begin study in
       <select>
@@ -200,7 +200,7 @@ export const selectInlineAlt = {
   name: "Select (inline & nested)",
 };
 
-export const checkbox = () =>
+export const Checkbox = () =>
   layout([
     `
     <input id="singleCheckbox1" type="checkbox" />
@@ -217,7 +217,7 @@ export const checkbox = () =>
     "N/A",
   ]);
 
-export const checkboxAlt = {
+export const CheckboxAlt = {
   render: () =>
     layout([
       `
@@ -246,7 +246,7 @@ export const checkboxAlt = {
   name: "Checkbox (nested)",
 };
 
-export const checkboxError = {
+export const CheckboxError = {
   render: () => `
     <input id="singleCheckboxError1" type="checkbox" class="uq-input--error" aria-describedby="singleCheckboxError1Feedback" aria-invalid="true" />
     <label for="singleCheckboxError1" class="uq-label--error">I declare that the information I've provided is correct and true</label>
@@ -256,7 +256,7 @@ export const checkboxError = {
   name: "Checkbox (error)",
 };
 
-export const checkboxErrorAlt = {
+export const CheckboxErrorAlt = {
   render: () => `
     <label class="uq-label--error">
       <input type="checkbox" class="uq-input--error" aria-describedby="singleCheckboxError2Feedback" aria-invalid="true" />
@@ -268,7 +268,7 @@ export const checkboxErrorAlt = {
   name: "Checkbox (nested & error)",
 };
 
-export const radio = {
+export const Radio = {
   render: () =>
     layout([
       `
@@ -299,7 +299,7 @@ export const radio = {
   name: "Radio buttons",
 };
 
-export const radioAlt = {
+export const RadioAlt = {
   render: () =>
     layout([
       `
@@ -342,7 +342,7 @@ export const radioAlt = {
   name: "Radio buttons (nested)",
 };
 
-export const radioError = {
+export const RadioError = {
   render: () => `
     <fieldset>
       <legend class="uq-legend--error">What semester will you start?</legend>
@@ -357,7 +357,7 @@ export const radioError = {
   name: "Radio buttons (error)",
 };
 
-export const radioErrorAlt = {
+export const RadioErrorAlt = {
   render: () => `
     <fieldset>
       <legend class="uq-legend--error">What semester will you start?</legend>
@@ -376,7 +376,7 @@ export const radioErrorAlt = {
   name: "Radio buttons (nested & error)",
 };
 
-export const textArea = {
+export const TextArea = {
   render: () =>
     layout([
       `<label>Label</label><textarea placeholder="Placeholder text"></textarea>`,
@@ -387,7 +387,7 @@ export const textArea = {
   name: "Textarea",
 };
 
-export const inputNumber = {
+export const InputNumber = {
   render: () =>
     layout([
       `<label>Label</label><input type="number" />`,
@@ -398,7 +398,7 @@ export const inputNumber = {
   name: "Number input",
 };
 
-export const inputPassword = {
+export const InputPassword = {
   render: () =>
     layout([`<label>Label</label><input type="password" />`, "N/A", "N/A"]),
 

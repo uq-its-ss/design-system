@@ -83,17 +83,17 @@ export default {
   },
 };
 
-export const alert = {};
+export const Alert = {};
 
 // Examples
-export const alertPageInfo = {
+export const AlertPageInfo = {
   args: {
     status: "info",
     message: `<p>A info page alert</p>`,
   },
 };
 
-export const alertPageSuccess = {
+export const AlertPageSuccess = {
   args: {
     status: "success",
     title: "Success!",
@@ -101,14 +101,14 @@ export const alertPageSuccess = {
   },
 };
 
-export const alertPageWarning = {
+export const AlertPageWarning = {
   args: {
     status: "warning",
     message: `<p>A warning page alert including link. <a href='#'>Call to action</a></p>`,
   },
 };
 
-export const alertPageError = {
+export const AlertPageError = {
   args: {
     status: "error",
     title: "A problem",
@@ -117,7 +117,7 @@ export const alertPageError = {
   },
 };
 
-export const alertGlobalInfo = {
+export const AlertGlobalInfo = {
   args: {
     status: "info",
     isGlobal: true,
@@ -125,7 +125,7 @@ export const alertGlobalInfo = {
   },
 };
 
-export const alertGlobalWarning = {
+export const AlertGlobalWarning = {
   args: {
     status: "warning",
     isGlobal: true,
@@ -133,7 +133,7 @@ export const alertGlobalWarning = {
   },
 };
 
-export const loadedFromExternalUri = {
+export const LoadedFromExternalUri = {
   render: () => `
     <div id="global-alerts-container" data-uri="/api/v1/alerts.json">
     </div>

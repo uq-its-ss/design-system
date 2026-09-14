@@ -25,7 +25,7 @@
   },
   "engineStrict": true,
   "devDependencies": {
-    "gulp": "^5.0.0"
+    "gulp": "^5.0.1"
   },
   "dependencies": {
     "@uqds/accordion": "^7.0.6",

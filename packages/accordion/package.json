@@ -48,7 +48,7 @@
     "@uqds/icon": "^4.0.6"
   },
   "devDependencies": {
-    "@testing-library/dom": "^10.4.0",
-    "gulp": "^5.0.0"
+    "@testing-library/dom": "^10.4.1",
+    "gulp": "^5.0.1"
   }
 }

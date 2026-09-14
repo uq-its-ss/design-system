@@ -1,0 +1,157 @@
+<html> 
+    <head>
+        <style>
+/* 1. Align the checkbox and label text */
+* {
+  cursor: pointer;
+  font-family: roboto, sans-serif;
+}
+label {
+  font-size: 16px;
+  line-height: 1.6;
+  
+  /* Label position */
+  display: inline-flex; /* Makes the label a flex container but keeps it inline */
+  align-items: center;  /* Centers the checkbox and text vertically */
+  gap: 0.5rem;
+
+}
+
+/* 2. Strip default styles and create the custom box */
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none; /* For older Safari */
+  
+  /* Sizing and borders */
+  width: 2rem;
+  height: 2rem;
+  border: 2px solid #8c8a8d;
+  border-radius: 6px;
+  background-color: white;
+  margin: 0;
+  
+  /* Centering the checkmark we'll add later */
+  display: inline-grid;
+  place-content: center;
+  vertical-align: middle;
+  
+  /* Smooth color transition */
+  transition: all 0.2s ease-in-out;
+}
+
+/* 4. Style the checked state */
+input[type="checkbox"]:checked {
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M5 13.3 8.9 18 19 6' stroke='%23FFF' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3c/path%3e%3c/svg%3e");
+  background-color: #51247a;
+  border-color: #51247a;
+}
+
+input[type="checkbox"]:disabled {
+  background-color: #d1d0d2;
+  border-color: #8c8a8d;
+}
+
+input[type="checkbox"]:checked:disabled {
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M5 13.3 8.9 18 19 6' stroke='%23FFF' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3c/path%3e%3c/svg%3e");
+  background-color: #d1d0d2;
+  border-color: #d1d0d2;
+}
+
+/* 6. Crucial for accessibility: The Focus State */
+input[type="checkbox"]:focus-visible {
+  outline: 4px solid #0d6dcd;
+  /* outline-offset: 2px; */
+}
+
+/* error state */
+input[type="checkbox"][aria-invalid="true"], input[type="checkbox"][aria-invalid="true"]:checked {
+border-color: #d62929;
+}
+
+input[type="checkbox"].error {
+  border-color: #d62929;
+}
+input[type="checkbox"].error:checked {
+  border-color: #d62929;
+}
+
+        </style>
+    </head>
+    <body>
+        <p>
+<input type="checkbox" name="terms1" />
+<input type="checkbox" checked name="terms2" />  
+<input type="checkbox" disabled name="terms3" />
+<input type="checkbox" checked disabled name="terms4" />
+<input type="checkbox" aria-invalid="true" name="terms4" />
+<input type="checkbox" checked aria-invalid="true" name="terms4" />
+<input type="checkbox" checked disabled aria-invalid="true" name="terms4" />
+</p>
+
+        <label class="custom-checkbox">
+  <input type="checkbox" name="terms" />
+  Accept Terms and Conditions
+</label>
+<label class="custom-checkbox">
+  <input type="checkbox" name="terms" />
+  Accept Terms and Conditions
+</label>
+
+<h2>Wrapper div around these checkboxes.</h2>
+
+<fieldset>
+  <legend>Choose your monster's features:</legend>
+
+  <div>
+    <label for="scales">
+    <input type="checkbox" id="scales" name="scales" checked="">
+    Scales</label>
+  </div>
+
+  <div>
+    <label for="horns">
+    <input type="checkbox" id="horns" name="horns">
+    Horns</label>
+  </div>
+</fieldset>
+
+
+<fieldset>
+  <legend>Choose your monster's features:</legend>
+
+  <div>
+    <input type="checkbox" id="scales" name="scales" checked="">
+    <label for="scales">Scales</label>
+  </div>
+
+  <div>
+    <input type="checkbox" id="horns" name="horns">
+    <label for="horns">Horns</label>
+  </div>
+</fieldset>
+
+<h2>No wrapper div around these checkboxes.</h2>
+
+<fieldset>
+  <legend>Choose your monster's features:</legend>
+
+    <label for="scales">
+    <input type="checkbox" id="scales" name="scales" checked="">
+    Scales</label>
+    <label for="horns">
+    <input type="checkbox" id="horns" name="horns">
+    Horns</label>
+
+</fieldset>
+<fieldset>
+  <legend>Choose your monster's features:</legend>
+
+    <input type="checkbox" id="scales" name="scales" checked="">
+    <label for="scales">Scales</label>
+
+    <input type="checkbox" id="horns" name="horns">
+    <label for="horns">Horns</label>
+
+</fieldset>
+    </body>
+</html>

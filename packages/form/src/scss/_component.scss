@@ -25,15 +25,12 @@
         flex: 1 0 auto;
 
         & .uq-form__input,
-        & .uq-form__select,
-         {
+        & .uq-form__select {
           width: auto;
           flex: 1 0 auto;
-        } 
+        }
       }
     }
-
-    &--in
 
     &--error {
       border-left: 6px solid core.$error-500;
@@ -63,8 +60,6 @@
     }
   }
 
-  
-
   .uq-form__helper {
     display: block;
     font-size: core.$font-size-m;
@@ -72,7 +67,7 @@
     text-wrap: pretty;
     color: core.$grey-900;
     cursor: help;
-    
+
     &:has(~ input:disabled, ~ select:disabled, ~ textarea:disabled),
     &:has(input:disabled, select:disabled, textarea:disabled) {
       color: core.$grey-400;
@@ -118,7 +113,6 @@
         no-repeat right core.$space-m center / core.$space-l auto;
     }
   }
-
 
   //Input groups
   .uq-form__input-group {

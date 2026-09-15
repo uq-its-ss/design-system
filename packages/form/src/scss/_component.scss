@@ -15,13 +15,32 @@
   .uq-form__group {
     margin-bottom: core.$space-l;
 
-    &--inline {
+    &--inline,
+    &--inline label {
       display: flex;
       align-items: center;
       gap: core.$space-m;
 
       .uq-form__label {
         flex: 1 0 auto;
+
+        & .uq-form__input,
+        & .uq-form__select,
+         {
+          width: auto;
+          flex: 1 0 auto;
+        } 
+      }
+    }
+
+    &--in
+
+    &--error {
+      border-left: 6px solid core.$error-500;
+      padding-left: core.$space-l;
+
+      .uq-form__helper {
+        color: core.$error-500;
       }
     }
   }
@@ -33,22 +52,32 @@
     font-weight: core.$font-weight-medium;
     color: core.$black;
 
-    &:has(+ input:disabled),
-    &:has(input:disabled) {
+    &--inline {
+      display: inline-block;
+    }
+
+    &:has(~ input:disabled, ~ select:disabled, ~ textarea:disabled),
+    &:has(input:disabled, select:disabled, textarea:disabled) {
       color: core.$grey-400;
+      cursor: not-allowed;
     }
   }
 
-  .uq-form__label--inline {
-    display: inline-block;
-  }
+  
 
   .uq-form__helper {
     display: block;
     font-size: core.$font-size-m;
+    font-weight: core.$font-weight-normal;
     text-wrap: pretty;
     color: core.$grey-900;
-    margin-bottom: core.$space-s;
+    cursor: help;
+    
+    &:has(~ input:disabled, ~ select:disabled, ~ textarea:disabled),
+    &:has(input:disabled, select:disabled, textarea:disabled) {
+      color: core.$grey-400;
+      cursor: not-allowed;
+    }
   }
 
   .uq-form__input,
@@ -69,7 +98,9 @@
     }
 
     &:disabled {
+      color: core.$grey-400;
       border-color: core.$grey-400;
+      cursor: not-allowed;
     }
   }
 
@@ -79,8 +110,33 @@
     -webkit-appearance: none; /* Safari and Chrome */
     -moz-appearance: none;
     background: url(icon.get-icon("standard--chevron-down", core.$black))
-      no-repeat right core.$space-m center;
-    background-size: core.$space-l auto;
+      no-repeat right core.$space-m center / core.$space-l auto;
     cursor: pointer;
+
+    &:disabled {
+      background: url(icon.get-icon("standard--chevron-down", core.$grey-400))
+        no-repeat right core.$space-m center / core.$space-l auto;
+    }
+  }
+
+
+  //Input groups
+  .uq-form__input-group {
+    display: flex;
+
+    > input:has(+ .uq-button) {
+      border-right: 0;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    .uq-button {
+      border-radius: 0 5px 5px 0;
+      display: flex;
+      justify-content: center;
+      border: 2px solid core.$grey-600;
+      border-left: 0;
+      padding: core.$space-m;
+    }
   }
 }

@@ -13,7 +13,7 @@ export default {
         <form class="uq-form">
           <fieldset class="uq-form__fieldset">
             <legend class="uq-form__legend">
-              <h3>Text Inputs</h3>
+              <h5>Text Inputs</h5>
             </legend>
             <div class="uq-form__group">
               <label class="uq-form__label" for="text-input">Text input</label>
@@ -23,7 +23,7 @@ export default {
  
             <div class="uq-form__group uq-form__group--inline">
               <label class="uq-form__label" for="email-address">In-line text input</label>
-              <input class="uq-form__input" id="email-address" type="email" name="email-address">
+              <input class="uq-form__input" id="email-address" type="email" pattern=".+@example\.com" name="email-address">
             </div>
  
             <div class="uq-form__group uq-form__group--inline">
@@ -56,58 +56,6 @@ export default {
               </select>
             </div>
           </fieldset>
-         
-          <fieldset class="uq-form__fieldset">
-            <legend class="uq-form__legend">
-              <h3>Input groups</h3>
-            </legend>
-            <div class="uq-form__group">
-              <div class="uq-form__input-group">
-                <label class="sr-only" for="search">Search</label>
-                <input id="search" type="text" name="search">
-                <button type="submit" class="uq-button">Search</button>
-              </div>
-            </div>
-
-            <div class="uq-form__group">
-              <div class="uq-form__input-group">
-                <label class="sr-only" for="search">Search</label>
-                <input id="search" type="text" name="search">
-                <button type="submit" class="uq-button"><span class="uq-icon uq-icon--standard--search"></span> <span class="sr-only">Search</span></button>
-              </div>
-            </div>
-
-            <div class="uq-form__group">
-              <div class="uq-form__input-group">
-                <label class="sr-only" for="search">Search</label>
-                <input id="search" type="text" name="search">
-                <button type="submit" class="uq-button uq-button--tertiary"><span class="uq-icon uq-icon--standard--search"></span> <span class="sr-only">Search</span></button>
-              </div>
-            </div>
-
- 
-            <div class="uq-form__group">
-              <div class="uq-form__input-group">
-                <input id="email" type="text" name="email">
-                <div class="uq-form-input__suffix" aria-hidden="true">@uq.edu.au</div>
-              </div>
-            </div>
- 
-            <div class="uq-form__group">
-              <div class="uq-form__input-group">
-                <div class="uq-form-input__prefix" aria-hidden="true">uq.edu.au/</div>
-                <input id="url" type="text" name="url">
-              </div>
-            </div>
- 
-            <div class="uq-form__group">
-              <div class="uq-form__input-group">
-                <div class="uq-form-input__prefix" aria-hidden="true">$</div>
-                <input id="price" type="text" name="price">
-                <div class="uq-form-input__suffix" aria-hidden="true">.00</div>
-              </div>
-            </div>
-          </fieldset>
  
           <fieldset class="uq-form__fieldset">
             <legend class="uq-form__legend">
@@ -130,7 +78,7 @@ export default {
 <h2>Kitchen sink form</h2>
 
        <!-- Form content goes here -->
-         <form action="#" method="POST" novalidate>
+         <form action="#" method="POST" novalidate class="uq-form">
 
   <!-- ==========================================
        TEXT-BASED INPUTS (Labels, Help & Errors)

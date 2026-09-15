@@ -32,6 +32,11 @@
     font-size: core.$font-size-l;
     font-weight: core.$font-weight-medium;
     color: core.$black;
+
+    &:has(+ input:disabled),
+    &:has(input:disabled) {
+      color: core.$grey-400;
+    }
   }
 
   .uq-form__label--inline {
@@ -49,7 +54,8 @@
   .uq-form__input,
   .uq-form__select,
   input,
-  select {
+  select,
+  textarea {
     padding: core.$space-m;
     width: 100%;
     border: 2px solid core.$grey-600;
@@ -57,6 +63,14 @@
     font-size: core.$font-size-m;
     color: core.$black;
     font-family: core.$font-body;
+
+    &:focus {
+      outline: 4px solid core.$utility-500;
+    }
+
+    &:disabled {
+      border-color: core.$grey-400;
+    }
   }
 
   .uq-form__select,

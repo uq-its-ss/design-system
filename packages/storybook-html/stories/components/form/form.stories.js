@@ -28,7 +28,7 @@ export default {
  
             <div class="uq-form__group uq-form__group--inline">
               <label class="uq-form__label" for="email-address">Email</label>
-              <input class="uq-form__input" id="email-address" type="email" name="email-address">
+              <input disabled class="uq-form__input" id="email-address" type="email" name="email-address">
             </div>
           </fieldset>
           <fieldset class="uq-form__fieldset">

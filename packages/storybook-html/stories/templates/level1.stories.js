@@ -8,7 +8,7 @@ import * as HeroStories from "../components/hero/hero.stories";
 const { Header } = storyRenderer(HeaderStories);
 const { Breadcrumb } = storyRenderer(BreadcrumbStories);
 const { Hero } = storyRenderer(HeroStories);
-const { footer } = storyRenderer(FooterStories);
+const { Footer: footer } = storyRenderer(FooterStories);
 
 export default {
   title: "Templates/Level 1",

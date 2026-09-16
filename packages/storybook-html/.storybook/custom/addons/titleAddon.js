@@ -9,7 +9,9 @@ addons.register("TitleAddon", (api) => {
     let storyData = null;
     try {
       storyData = api.getCurrentStoryData(); // Some time get error
-    } catch (e) {}
+    } catch {
+      // Ignore errors reading current story data (e.g. before Storybook has fully initialised).
+    }
     let title;
     if (!storyData) {
       title = customTitle;
@@ -23,7 +25,7 @@ addons.register("TitleAddon", (api) => {
     interval = setTimeout(setTitle, 100);
   };
   setTitle();
-  api.on(STORY_RENDERED, (story) => {
+  api.on(STORY_RENDERED, () => {
     setTitle();
   });
 });

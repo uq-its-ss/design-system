@@ -57,14 +57,14 @@ export const HeaderInterim = {
           ".slide-menu__backlink, .global-mobile-nav__audience-link",
         );
 
-        Array.prototype.forEach.call(slideMenuBackButtons, function (el, i) {
+        Array.prototype.forEach.call(slideMenuBackButtons, function (el) {
           el.addEventListener("click", () => {
             menuLeftElem.scrollTop = 0;
           });
         });
 
         // Responsive Resize Close menu and update toggles
-        window.addEventListener("resize", (event) => {
+        window.addEventListener("resize", () => {
           // Target Resize of LG ($screen-lg, 64rem, 1024px).
           if (window.innerWidth > 1024) {
             menuLeft.close(true);
@@ -109,14 +109,14 @@ export const Header = {
           ".slide-menu__backlink, .global-mobile-nav__audience-link",
         );
 
-        Array.prototype.forEach.call(slideMenuBackButtons, function (el, i) {
+        Array.prototype.forEach.call(slideMenuBackButtons, function (el) {
           el.addEventListener("click", () => {
             menuLeftElem.scrollTop = 0;
           });
         });
 
         // Responsive Resize Close menu and update toggles
-        window.addEventListener("resize", (event) => {
+        window.addEventListener("resize", () => {
           // Target Resize of LG ($screen-lg, 64rem, 1024px).
           if (window.innerWidth > 1024) {
             menuLeft.close(true);
@@ -135,7 +135,7 @@ export const Header = {
   name: "Header with mega menu",
 };
 
-export const basicHeader = {
+export const BasicHeader = {
   render: () => {
     return `
     <header id="uq-header" class="uq-header" data-gtm-category="Header">
@@ -153,7 +153,7 @@ export const basicHeader = {
   name: "Header simplified",
 };
 
-export const searchGlobal = {
+export const SearchGlobal = {
   render: () => {
     return `
       <div class="uq-header__search-container">
@@ -181,7 +181,7 @@ export const searchGlobal = {
   },
 };
 
-export const searchLocal = {
+export const SearchLocal = {
   render: () => {
     return `
     <div class="uq-header__search-container">

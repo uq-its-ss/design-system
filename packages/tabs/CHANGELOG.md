@@ -3,6 +3,11 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.3-alpha.0](https://github.com/uq-its-ss/design-system/compare/%40uqds%2Ftabs%404.0.2...%40uqds%2Ftabs%404.0.3-alpha.0) (2026-09-14)
+
+- **deps:** bump ESLint to 9.39.5 and fix pre-existing lint config bugs ([e2fefb5](https://github.com/uq-its-ss/design-system/commit/e2fefb5985f3a05acda96f315d92584f38026058))
+- removing email address from website ([#814](https://github.com/uq-its-ss/design-system/issues/814)) ([e7d7a12](https://github.com/uq-its-ss/design-system/commit/e7d7a129267bd6f3618ccaec2180f766193af0fc))
+
 ## [4.0.2](https://github.com/uq-its-ss/design-system/compare/@uqds/tabs@4.0.2-alpha.0...@uqds/tabs@4.0.2) (2026-03-30)
 
 **Note:** Version bump only for package @uqds/tabs

@@ -1,6 +1,6 @@
 {
   "name": "@uqds/card",
-  "version": "4.0.6",
+  "version": "4.0.7-alpha.0",
   "description": "Card components",
   "keywords": [
     "uqds",
@@ -17,8 +17,7 @@
   },
   "author": {
     "name": "University of Queensland",
-    "email": "webservices@uq.edu.au",
-    "url": "https://uq.edu.au"
+    "url": "https://about.uq.edu.au/web-feedback?r=https://design-system.uq.edu.au"
   },
   "homepage": "https://github.com/uq-its-ss/design-system#readme",
   "license": "ISC",
@@ -47,6 +46,6 @@
   "dependencies": {
     "@uqds/core": "^5.0.2",
     "@uqds/icon": "^4.0.6",
-    "@uqds/layout": "^7.0.2"
+    "@uqds/layout": "^7.0.3-alpha.0"
   }
 }

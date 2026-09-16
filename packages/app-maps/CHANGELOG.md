@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.6-alpha.2](https://github.com/uq-its-ss/design-system/compare/%40uqds%2Fapp-maps%404.0.6-alpha.1...%40uqds%2Fapp-maps%404.0.6-alpha.2) (2026-09-14)
+
+- **deps:** bump ESLint to 9.39.5 and fix pre-existing lint config bugs ([e2fefb5](https://github.com/uq-its-ss/design-system/commit/e2fefb5985f3a05acda96f315d92584f38026058))
+- **deps:** bump minor/patch dependencies to latest across workspaces ([c7e5faf](https://github.com/uq-its-ss/design-system/commit/c7e5fafd0b622f38cdbdbe149813992825fce7d9))
+
+## [4.0.6-alpha.1](https://github.com/uq-its-ss/design-system/compare/%40uqds%2Fapp-maps%404.0.6-alpha.0...%40uqds%2Fapp-maps%404.0.6-alpha.1) (2026-09-14)
+
+**Note:** Version bump only for package @uqds/app-maps
+
+## [4.0.6-alpha.0](https://github.com/uq-its-ss/design-system/compare/%40uqds%2Fapp-maps%404.0.5...%40uqds%2Fapp-maps%404.0.6-alpha.0) (2026-09-07)
+
+**Note:** Version bump only for package @uqds/app-maps
+
 ## [4.0.5](https://github.com/uq-its-ss/design-system/compare/@uqds/app-maps@4.0.5-alpha.0...@uqds/app-maps@4.0.5) (2026-08-18)
 
 **Note:** Version bump only for package @uqds/app-maps

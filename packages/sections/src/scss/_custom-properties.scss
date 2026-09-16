@@ -1,15 +1,8 @@
 @use "@uqds/core/src/scss/global" as core;
 
 :root {
-  --section-font-size-xxxl: #{var(--uq-font-size-xxxl)};
   --section-spacing: 6rem;
   --section-padding: #{var(--uq-space-xl)};
-}
-
-@media #{core.$screen-md-down} {
-  :root {
-    --section-font-size-xxxl: #{var(--uq-font-size-xxl)};
-  }
 }
 
 @media #{core.$screen-lg-down} {

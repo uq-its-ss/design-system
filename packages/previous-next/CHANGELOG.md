@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.8-alpha.0](https://github.com/uq-its-ss/design-system/compare/%40uqds%2Fprevious-next%404.0.7...%40uqds%2Fprevious-next%404.0.8-alpha.0) (2026-09-14)
+
+- **linting:** Linting ([d13b959](https://github.com/uq-its-ss/design-system/commit/d13b959924074d788f8637f219fd9d8f4f817510))
+- removing email address from website ([#814](https://github.com/uq-its-ss/design-system/issues/814)) ([e7d7a12](https://github.com/uq-its-ss/design-system/commit/e7d7a129267bd6f3618ccaec2180f766193af0fc))
+
+### 🐛 Bug Fixes
+
+- modifying previous next component ([92d91ae](https://github.com/uq-its-ss/design-system/commit/92d91aef2f054386298832c7d006c444a373e148))
+- **previous-next:** added button dependencies ([92a9ae5](https://github.com/uq-its-ss/design-system/commit/92a9ae53eb3973b2c8dec1b790d7c185c2686aee))
+- **previousnext:** updated package.json ([f473ac1](https://github.com/uq-its-ss/design-system/commit/f473ac13f8a77cbd175810e72d0b9ada9d6e07a5))
+
 ## [4.0.7](https://github.com/uq-its-ss/design-system/compare/@uqds/previous-next@4.0.7-alpha.0...@uqds/previous-next@4.0.7) (2026-08-18)
 
 **Note:** Version bump only for package @uqds/previous-next

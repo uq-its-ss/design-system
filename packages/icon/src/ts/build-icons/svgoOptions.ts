@@ -1,63 +1,31 @@
-import { OptimizeOptions } from "svgo";
+import { Config } from "svgo";
 
-export const svgoOptions: OptimizeOptions = {
-    // multipass: true,
-    // full: true,
-
+/**
+ * SVGO 4.x configuration for icon optimization.
+ *
+ * Uses preset-default with minimal overrides:
+ * - sortAttrs: disabled (explicitly disabled in original config)
+ *
+ * Additional plugins not in preset-default:
+ * - convertStyleToAttrs: converts style attributes to presentation attributes
+ * - removeDimensions: removes width/height attributes for flexibility
+ */
+export const svgoConfig: Config = {
     plugins: [
-        "removeDoctype",
-        "removeXMLProcInst",
-        "removeComments",
-        "removeMetadata",
-        // "removeXMLNS",
-        "removeEditorsNSData",
-        "cleanupAttrs",
-        "inlineStyles",
-        "minifyStyles",
+        {
+            name: "preset-default",
+            params: {
+                overrides: {
+                    // Disable sortAttrs (was explicitly disabled in original config)
+                    sortAttrs: false
+                }
+            }
+        },
+        // Additional plugins not included in preset-default
         "convertStyleToAttrs",
-        "cleanupIDs",
-        // "prefixIds",
-        // "removeRasterImages",
-        "removeUselessDefs",
-        "cleanupNumericValues",
-        // "cleanupListOfValues",
-        "convertColors",
-        "removeUnknownsAndDefaults",
-        "removeNonInheritableGroupAttrs",
-        "removeUselessStrokeAndFill",
-        // "removeViewBox",
-        "cleanupEnableBackground",
-        "removeHiddenElems",
-        "removeEmptyText",
-        "convertShapeToPath",
-        "convertEllipseToCircle",
-        "moveElemsAttrsToGroup",
-        "moveGroupAttrsToElems",
-        "collapseGroups",
-        "convertPathData",
-        "convertTransform",
-        "removeEmptyAttrs",
-        "removeEmptyContainers",
-        "mergePaths",
-        "removeUnusedNS",
-        // "sortAttrs",
-        "sortDefsChildren",
-        // "removeTitle",
-        "removeDesc",
         "removeDimensions"
-        // "removeAttrs",
-        // "removeAttributesBySelector",
-        // "removeElementsByAttr",
-        // "addClassesToSVGElement",
-        // "removeStyleElement",
-        // "removeScriptElement",
-        // "addAttributesToSVGElement",
-        // "removeOffCanvasPaths",
-        // "reusePaths",
-    ],
-
-    // js2svg: {
-    //     pretty: true,
-    //     indent: 4
-    // }
+    ]
 };
+
+// Legacy export for backward compatibility during migration
+export const svgoOptions = svgoConfig;

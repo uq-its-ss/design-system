@@ -21,10 +21,6 @@
   margin-bottom: var(--uq-space-m);
   padding: var(--uq-space-none);
 
-  &__title {
-    font-size: var(--uq-font-size-xxl);
-  }
-
   &__item {
     list-style: none;
     padding: var(--uq-space-xs) var(--uq-space-none); // .75rem 0rem
@@ -86,10 +82,6 @@
   list-style-type: none;
   padding: var(--uq-space-none);
   margin-bottom: var(--uq-space-m);
-
-  &__title {
-    font-size: var(--uq-font-size-xxl);
-  }
 
   &__item {
     float: left;

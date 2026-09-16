@@ -22,11 +22,11 @@ import { breadcrumb } from "@uqds/breadcrumb/src/js/main";
 
 const { Header } = storyRenderer(HeaderStories);
 const { Breadcrumb } = storyRenderer(BreadcrumbStories);
-const { footer } = storyRenderer(FooterStories);
+const { Footer: footer } = storyRenderer(FooterStories);
 const { Text: TextCard } = storyRenderer(CardStories);
 const { NewsCard } = storyRenderer(StoryCardStories);
-const { TextShaded: ShadedPane, Text: Pane } = storyRenderer(PaneStories);
-const { alertPageWarning: Alert } = storyRenderer(AlertStories);
+const { TextShaded: ShadedPane } = storyRenderer(PaneStories);
+const { AlertPageWarning: Alert } = storyRenderer(AlertStories);
 const { Blockquote } = storyRenderer(BlockquoteStories);
 const { Image: ImageWithCaption } = storyRenderer(ImageStories);
 const { Title: PillList } = storyRenderer(PillListStories);

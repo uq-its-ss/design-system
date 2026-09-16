@@ -1,13 +1,12 @@
 {
   "name": "storybook-react",
-  "version": "2.1.5",
+  "version": "2.1.6-alpha.1",
   "description": "Storybook for REACT instance for uqds component development",
   "private": true,
   "keywords": [],
   "author": {
     "name": "University of Queensland",
-    "email": "webservices@uq.edu.au",
-    "url": "https://uq.edu.au"
+    "url": "https://about.uq.edu.au/web-feedback?r=https://design-system.uq.edu.au"
   },
   "license": "ISC",
   "scripts": {
@@ -18,16 +17,18 @@
   },
   "dependencies": {
     "@uqds/icon": "^4.0.6",
-    "@uqds/react": "^2.0.8"
+    "@uqds/react": "^2.0.9-alpha.1"
   },
   "devDependencies": {
-    "@storybook/addon-a11y": "^10.4.3",
-    "@storybook/addon-docs": "^10.4.3",
-    "@storybook/addon-links": "^10.4.3",
-    "@storybook/react-vite": "^10.4.3",
-    "@vitejs/plugin-react": "^6.0.2",
-    "eslint-plugin-storybook": "^10.4.3",
-    "storybook": "^10.4.6",
-    "vite": "^8.0.16"
+    "@storybook/addon-a11y": "^10.6.0",
+    "@storybook/addon-docs": "^10.6.0",
+    "@storybook/addon-links": "^10.6.0",
+    "@storybook/react-vite": "^10.6.0",
+    "@vitejs/plugin-react": "^6.1.1",
+    "eslint-plugin-storybook": "^10.6.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "storybook": "^10.6.0",
+    "vite": "^8.2.2"
   }
 }

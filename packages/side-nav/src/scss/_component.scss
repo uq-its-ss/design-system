@@ -22,8 +22,7 @@
     padding: var(--uq-space-m) var(--uq-space-l);
 
     &-link {
-      font-size: var(--uq-font-size-xl);
-      color: var(--uq-purple-500);
+      color: core.$purple-500;
       text-decoration: none;
 
       &:hover,

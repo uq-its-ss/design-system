@@ -1,6 +1,6 @@
 {
   "name": "@uqds/alert",
-  "version": "7.0.9",
+  "version": "7.0.10-alpha.0",
   "description": "Alert component",
   "keywords": [
     "uqds",
@@ -17,8 +17,7 @@
   },
   "author": {
     "name": "University of Queensland",
-    "email": "webservices@uq.edu.au",
-    "url": "https://uq.edu.au"
+    "url": "https://about.uq.edu.au/web-feedback?r=https://design-system.uq.edu.au"
   },
   "homepage": "https://github.com/uq-its-ss/design-system#readme",
   "license": "ISC",
@@ -56,7 +55,7 @@
     "@uqds/icon": "^4.0.6"
   },
   "devDependencies": {
-    "@testing-library/dom": "^10.4.0",
-    "gulp": "^5.0.0"
+    "@testing-library/dom": "^10.4.1",
+    "gulp": "^5.0.1"
   }
 }

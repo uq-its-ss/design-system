@@ -33,7 +33,7 @@ export default {
   },
 };
 
-export const closed = {
+export const Closed = {
   render: () => `
     <!-- Demo height of 400px -->
     <div style="height:400px; position:relative">
@@ -47,7 +47,7 @@ export const closed = {
   name: "6A Closed",
 };
 
-export const open = {
+export const Open = {
   render: () => `
     <!-- Demo height of 400px -->
     <div style="height:400px">

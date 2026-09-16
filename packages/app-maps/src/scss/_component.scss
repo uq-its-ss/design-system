@@ -129,9 +129,8 @@ $-result-icon-spacing: $-icon-spacing;
       appearance: none;
       background-image: url(get-icon("ui--search"));
       background-position: calc(
-          var(--uq-space-xs) + #{(
-              $-icon-button-width - $-icon-button-icon-width
-            ) * 0.5}
+          var(--uq-space-xs) +
+            #{($-icon-button-width - $-icon-button-icon-width) * 0.5}
         )
         center;
       background-color: transparent;
@@ -740,7 +739,8 @@ $-result-icon-spacing: $-icon-spacing;
     }
 
     &__main {
-      background-image: linear-gradient(to bottom, var(--uq-white), transparent),
+      background-image:
+        linear-gradient(to bottom, var(--uq-white), transparent),
         linear-gradient(to top, var(--uq-white), transparent),
         linear-gradient(to bottom, var(--uq-grey-50), transparent),
         linear-gradient(to top, var(--uq-grey-50), transparent);
@@ -760,8 +760,8 @@ $-result-icon-spacing: $-icon-spacing;
       height: calc(
         100% -
           (
-            #{$actions-allowance} + #{$-icon-button-height} + var(--uq-space-l) *
-              2
+            #{$actions-allowance} + #{$-icon-button-height} +
+              var(--uq-space-l) * 2
           )
       );
       margin-bottom: var(--uq-space-l);

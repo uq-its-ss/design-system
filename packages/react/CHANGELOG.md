@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.9-alpha.1](https://github.com/uq-its-ss/design-system/compare/%40uqds%2Freact%402.0.9-alpha.0...%40uqds%2Freact%402.0.9-alpha.1) (2026-09-14)
+
+- **deps:** bump ESLint to 9.39.5 and fix pre-existing lint config bugs ([e2fefb5](https://github.com/uq-its-ss/design-system/commit/e2fefb5985f3a05acda96f315d92584f38026058))
+- **deps:** bump minor/patch dependencies to latest across workspaces ([c7e5faf](https://github.com/uq-its-ss/design-system/commit/c7e5fafd0b622f38cdbdbe149813992825fce7d9))
+
+## [2.0.9-alpha.0](https://github.com/uq-its-ss/design-system/compare/%40uqds%2Freact%402.0.8...%40uqds%2Freact%402.0.9-alpha.0) (2026-09-08)
+
+**Note:** Version bump only for package @uqds/react
+
 ## [2.0.8](https://github.com/uq-its-ss/design-system/compare/@uqds/react@2.0.8-alpha.0...@uqds/react@2.0.8) (2026-08-18)
 
 **Note:** Version bump only for package @uqds/react

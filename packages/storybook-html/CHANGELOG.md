@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.1.8-alpha.7](https://github.com/uq-its-ss/design-system/compare/storybook-html%408.1.8-alpha.6...storybook-html%408.1.8-alpha.7) (2026-09-16)
+
+### 🐛 Bug Fixes
+
+- **header:** navigation update ([80abe6b](https://github.com/uq-its-ss/design-system/commit/80abe6b98466c6ea9cf0531c7f5494ddada7a540))
+
 ## [8.1.8-alpha.6](https://github.com/uq-its-ss/design-system/compare/storybook-html%408.1.8-alpha.5...storybook-html%408.1.8-alpha.6) (2026-09-16)
 
 **Note:** Version bump only for package storybook-html

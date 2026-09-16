@@ -14,8 +14,8 @@ export default {
         <form class="uq-form">
           <fieldset class="uq-form__fieldset">
             <legend class="uq-form__legend">
-              <h3>Text Inputs</h3>
-              <span class="text--xs uq-icon uq-icon--standard--exclamation-circle">Explicit</span>
+              <h3>Text Inputs <span class="text--xs uq-icon uq-icon--standard--exclamation-circle">Explicit</span></h3>
+              
             </legend>
             <h4>Default</h4>
             <div class="uq-form__group">
@@ -146,8 +146,7 @@ export default {
         <form class="uq-form">
           <fieldset class="uq-form__fieldset">
             <legend class="uq-form__legend">
-              <h3>Text Inputs</h3>
-              <span class="text--xs uq-icon uq-icon--standard--information-circle">Implicit</span>
+              <h3>Text Inputs <span class="text--xs uq-icon uq-icon--standard--information-circle">Implicit</span></h3>
             </legend>
 
             <h4>Default</h4>

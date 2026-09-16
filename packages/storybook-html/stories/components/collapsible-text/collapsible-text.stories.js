@@ -25,7 +25,7 @@ export default {
   },
   decorators: [
     (storyFn) => {
-      return initJs(storyFn, (component) => {
+      return initJs(storyFn, () => {
         // Initialize JavaScript enhancement
         new collapsibleText();
       });

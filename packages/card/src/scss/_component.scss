@@ -102,8 +102,8 @@
   }
 
   &__title {
-    color: core.$grey-900;
-    margin: core.$space-none core.$space-none core.$space-s;
+    color: var(--uq-grey-900);
+    margin: var(--uq-space-none) var(--uq-space-none) var(--uq-space-s);
 
     &-super {
       font-size: var(--uq-font-size-s);

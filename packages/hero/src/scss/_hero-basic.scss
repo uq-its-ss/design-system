@@ -45,7 +45,7 @@
 }
 
 .uq-hero-basic__title {
-  color: core.$white;
+  color: var(--uq-white);
   margin: 0;
   max-width: var(--hero-title-max-line-length);
 }

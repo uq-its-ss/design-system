@@ -420,10 +420,11 @@ $use-encapsulation: false !default;
     margin-bottom: var(--uq-space-l);
 
     &__title {
-      color: core.$grey-900;
-      font-weight: core.$font-weight-bold;
-      line-height: core.$line-height-h;
-      margin: core.$space-none core.$space-none core.$space-m core.$space-none;
+      color: var(--uq-grey-900);
+      font-weight: var(--uq-font-weight-bold);
+      line-height: var(--uq-line-height-short);
+      margin: var(--uq-space-none) var(--uq-space-none) var(--uq-space-m)
+        var(--uq-space-none);
     }
 
     &_body {

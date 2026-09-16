@@ -96,7 +96,7 @@
   }
 
   &__title {
-    font-weight: core.$font-weight-normal;
+    font-weight: var(--uq-font-weight-normal);
   }
 
   &__description {

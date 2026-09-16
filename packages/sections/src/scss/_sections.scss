@@ -19,7 +19,7 @@
 
 .uq-section__title {
   margin: 0;
-  color: core.$black;
+  color: var(--uq-black);
 
   @media #{core.$screen-md-up} {
     order: 1;

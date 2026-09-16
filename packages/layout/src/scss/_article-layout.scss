@@ -17,11 +17,11 @@
 }
 
 .uq-article-layout__title {
-  margin: 0 0 core.$space-m;
-  font-weight: core.$font-weight-medium;
-  color: core.$black;
-  line-height: core.$line-height-h;
-  letter-spacing: core.$letter-spacing;
+  margin: 0 0 var(--uq-space-m);
+  font-weight: var(--uq-font-weight-medium);
+  color: var(--uq-black);
+  line-height: var(--uq-line-height-short);
+  letter-spacing: var(--uq-letter-spacing);
 }
 
 .uq-article-layout__label {

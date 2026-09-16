@@ -1,0 +1,59 @@
+@use "@uqds/core/src/scss/global" as core;
+
+/* 2. Strip default styles and create the custom box */
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none; /* For older Safari */
+  
+  /* Sizing and borders */
+  width: 2rem;
+  height: 2rem;
+  border: 2px solid #8c8a8d;
+  border-radius: 6px;
+  background-color: white;
+  margin: 0;
+  
+  /* Centering the checkmark we'll add later */
+  display: inline-grid;
+  place-content: center;
+  vertical-align: middle;
+  
+  /* Smooth color transition */
+  transition: all 0.2s ease-in-out;
+}
+
+/* 4. Style the checked state */
+input[type="checkbox"]:checked {
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M5 13.3 8.9 18 19 6' stroke='%23FFF' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3c/path%3e%3c/svg%3e");
+  background-color: core.$purple-500;
+  border-color: core.$purple-500;
+}
+
+input[type="checkbox"]:disabled {
+  background-color: core.$white;
+  border-color: core.$grey-400;
+}
+
+input[type="checkbox"]:checked:disabled {
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M5 13.3 8.9 18 19 6' stroke='%23FFF' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3c/path%3e%3c/svg%3e");
+  background-color: core.$grey-400;
+  border-color: core.$grey-400;
+}
+
+/* 6. Crucial for accessibility: The Focus State */
+input[type="checkbox"]:focus-visible {
+  outline: 4px solid core.$utility-500;
+  /* outline-offset: 2px; */
+}
+
+/* error state */
+input[type="checkbox"][aria-invalid="true"], input[type="checkbox"][aria-invalid="true"]:checked {
+border-color: core.$error-500;
+}
+
+input[type="checkbox"].error {
+  border-color: core.$error-500;
+}
+input[type="checkbox"].error:checked {
+  border-color: core.$error-500;
+}

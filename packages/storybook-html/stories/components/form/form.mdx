@@ -22,3 +22,14 @@ Forms...
 />
 
 ---
+
+
+
+## Accessibility 
+
+### Required vs aria-required
+
+The core difference is that `required` is a native HTML5 attribute that enforces functionality, while `aria-required` is an accessibility attribute that only communicates intent.
+
+- Use `required` for Native Semantic HTML, Always default to the native HTML attribute whenever you are using standard form fields. Modern browsers and screen readers automatically support it, meaning you get validation, accessibility, and styling hooks for free without any custom JavaScript.
+- Use `aria-required="true"` for Custom JavaScript Widgets If you are building custom form controls out of non-semantic tags (like a dropdown list styled out of `<div>` tags with `role="listbox"`), the browser will ignore the native `required` attribute. You must use `aria-required="true"` to explicitly tell the accessibility tree that the field is mandatory, and then handle the submission block manually with JavaScript.

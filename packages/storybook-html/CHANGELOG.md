@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.1.8-alpha.6](https://github.com/uq-its-ss/design-system/compare/storybook-html%408.1.8-alpha.5...storybook-html%408.1.8-alpha.6) (2026-09-16)
+
+**Note:** Version bump only for package storybook-html
+
 ## [8.1.8-alpha.5](https://github.com/uq-its-ss/design-system/compare/storybook-html%408.1.8-alpha.4...storybook-html%408.1.8-alpha.5) (2026-09-14)
 
 - **deps:** bump ESLint to 9.39.5 and fix pre-existing lint config bugs ([e2fefb5](https://github.com/uq-its-ss/design-system/commit/e2fefb5985f3a05acda96f315d92584f38026058))

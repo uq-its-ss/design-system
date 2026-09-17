@@ -4,7 +4,7 @@
 
 .uq-image-carousel {
   container-type: inline-size;
-  margin: 0 0 core.$space-xl;
+  margin: 0 0 var(--uq-space-xl);
 
   & .uq-image {
     margin: 0;
@@ -12,8 +12,8 @@
 }
 
 .uq-image-carousel__slide-counter {
-  font-size: core.$font-size-m;
-  font-weight: core.$font-weight-medium;
+  font-size: var(--uq-font-size-m);
+  font-weight: var(--uq-font-weight-medium);
 }
 
 .uq-image-carousel__controls {
@@ -60,7 +60,7 @@
 
   &.swiper-button-disabled {
     background: transparent;
-    border-color: core.$white;
+    border-color: var(--uq-white);
 
     & .uq-icon {
       &::before {
@@ -71,16 +71,16 @@
 }
 
 .uq-image-carousel__previous {
-  left: core.$space-m;
+  left: var(--uq-space-m);
 }
 
 .uq-image-carousel__next {
-  right: core.$space-m;
+  right: var(--uq-space-m);
 }
 
 .uq-image-carousel__pagination {
   position: absolute;
-  bottom: core.$space-m;
+  bottom: var(--uq-space-m);
   left: 0;
   z-index: 2;
   display: flex;
@@ -98,6 +98,6 @@
   border-radius: 50%;
 
   &.is-active {
-    background: core.$purple-500;
+    background: var(--uq-purple-500);
   }
 }

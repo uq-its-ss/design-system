@@ -10,40 +10,41 @@
 // .uq-accordion--no-bottom-spacing - Removes margin from below accordions for use in menus (see compendium).
 
 .uq-accordion {
-  font-family: core.$font-body;
-  font-size: core.$font-size-m;
-  font-weight: core.$font-weight-normal;
-  line-height: core.$line-height;
+  font-family: var(--uq-font);
+  font-size: var(--uq-font-size-m);
+  font-weight: var(--uq-font-weight-normal);
+  line-height: var(--uq-line-height-long);
   list-style: none;
-  margin-bottom: core.$space-l;
-  padding: core.$space-none;
+  margin-bottom: var(--uq-space-l);
+  padding: var(--uq-space-none);
 }
 
 .uq-accordion__item {
-  background: core.$white;
-  border: 1px solid core.$grey-200;
+  background: var(--uq-white);
+  border: 1px solid var(--uq-grey-200);
   border-radius: 2px;
-  margin-bottom: core.$space-s;
+  margin-bottom: var(--uq-space-xs);
 }
 
 .uq-accordion__toggle {
   -moz-appearance: none;
   -webkit-appearance: none;
-  background: core.$white;
+  background: var(--uq-white);
   border-radius: 0;
   border-style: solid;
   border-width: 0;
-  color: core.$grey-900;
+  color: var(--uq-grey-900);
   cursor: pointer;
   display: flex;
   align-items: center;
-  gap: core.$space-s core.$space-m;
-  font-family: core.$font-body;
-  font-size: core.$font-size-xl;
-  font-weight: core.$font-weight-medium;
-  line-height: core.$line-height-h;
-  margin: core.$space-none;
-  padding: core.$space-m core.$space-xxxxl core.$space-m core.$space-m;
+  gap: var(--uq-space-xs) var(--uq-space-m);
+  font-family: var(--uq-font);
+  font-size: var(--uq-font-size-xl);
+  font-weight: var(--uq-font-weight-medium);
+  line-height: var(--uq-line-height-short);
+  margin: var(--uq-space-none);
+  padding: var(--uq-space-m) var(--uq-space-xxxxl) var(--uq-space-m)
+    var(--uq-space-m);
   position: relative;
   text-align: left;
   text-decoration: none;
@@ -52,13 +53,14 @@
 
   & > * {
     margin: 0;
-    color: core.$grey-900;
-    font-size: core.$font-size-xl;
-    font-weight: core.$font-weight-medium;
+    color: var(--uq-grey-900);
+    font-size: var(--uq-font-size-xl);
+    font-weight: var(--uq-font-weight-medium);
   }
 
   @media #{core.$screen-md-up} {
-    padding: core.$space-m core.$space-uul core.$space-m core.$space-l;
+    padding: var(--uq-space-m) var(--uq-space-uul) var(--uq-space-m)
+      var(--uq-space-l);
   }
 
   // Closed state.
@@ -69,19 +71,19 @@
       core.$black
     ));
     background-repeat: no-repeat;
-    width: core.$space-l;
-    height: core.$space-l;
+    width: var(--uq-space-l);
+    height: var(--uq-space-l);
     position: absolute;
-    right: core.$space-m;
+    right: var(--uq-space-m);
 
     @media #{core.$screen-md-up} {
-      right: core.$space-l;
+      right: var(--uq-space-l);
     }
   }
 
   &:hover,
   &:focus {
-    color: core.$grey-900;
+    color: var(--uq-grey-900);
   }
 
   &:focus {
@@ -94,7 +96,7 @@
 }
 
 .uq-accordion__toggle--active {
-  background: core.$white;
+  background: var(--uq-white);
 
   // Open state.
   &::before {
@@ -106,7 +108,7 @@
 
   &:hover,
   &:focus {
-    background-color: core.$white;
+    background-color: var(--uq-white);
   }
 }
 
@@ -126,8 +128,8 @@
 
 .uq-accordion__subtitle {
   width: 100%;
-  font-size: core.$font-size-s;
-  font-weight: core.$font-weight-normal;
+  font-size: var(--uq-font-size-s);
+  font-weight: var(--uq-font-weight-normal);
   color: #6f6f6f;
   line-height: 1.4;
   // required to Truncate text and add ellipsis
@@ -147,34 +149,34 @@
   }
 
   p:first-of-type {
-    margin-top: core.$space-none;
+    margin-top: var(--uq-space-none);
   }
 
   :last-child {
-    margin-bottom: core.$space-none;
+    margin-bottom: var(--uq-space-none);
   }
 
   & .uq-alert {
-    margin-block: core.$space-l;
+    margin-block: var(--uq-space-l);
   }
 
   & img {
-    margin-block: core.$space-m;
+    margin-block: var(--uq-space-m);
     display: block;
   }
 }
 
 .uq-accordion__content-wrapper {
-  padding: core.$space-none core.$space-m core.$space-m;
+  padding: var(--uq-space-none) var(--uq-space-m) var(--uq-space-m);
 
   @media #{core.$screen-md-up} {
-    padding: core.$space-none core.$space-l core.$space-l;
+    padding: var(--uq-space-none) var(--uq-space-l) var(--uq-space-l);
   }
 }
 
 // No bottom spacing variant.
 .uq-accordion--no-bottom-spacing {
-  margin-bottom: core.$space-none;
+  margin-bottom: var(--uq-space-none);
 }
 
 // Contextual link region cog position fix.
@@ -185,25 +187,26 @@
 // Compact Modifier, reduces size for use in mixed components.
 .uq-accordion--compact {
   & .uq-accordion__toggle {
-    font-size: core.$font-size-m;
-    padding: core.$space-s core.$space-xxxxl core.$space-s core.$space-m;
+    font-size: var(--uq-font-size-m);
+    padding: var(--uq-space-xs) var(--uq-space-xxxxl) var(--uq-space-xs)
+      var(--uq-space-m);
   }
 
   & .uq-accordion__toggle::before {
-    width: core.$space-m;
-    height: core.$space-m;
-    right: core.$space-m;
+    width: var(--uq-space-m);
+    height: var(--uq-space-m);
+    right: var(--uq-space-m);
   }
 
   & .uq-accordion__toggle--active::before {
-    width: core.$space-m;
-    height: core.$space-m;
-    right: core.$space-m;
+    width: var(--uq-space-m);
+    height: var(--uq-space-m);
+    right: var(--uq-space-m);
   }
 
   & .uq-accordion__content-wrapper {
     @media #{core.$screen-md-up} {
-      padding: core.$space-none core.$space-m core.$space-m;
+      padding: var(--uq-space-none) var(--uq-space-m) var(--uq-space-m);
     }
   }
 }
@@ -211,7 +214,7 @@
 // Overrides for when displayed within wysiwyg fields. (Drupal?)
 .cke_editable {
   .uq-accordion__content {
-    border: 1px dashed core.$utility-500;
+    border: 1px dashed var(--uq-utility-500);
     display: block !important;
   }
 }

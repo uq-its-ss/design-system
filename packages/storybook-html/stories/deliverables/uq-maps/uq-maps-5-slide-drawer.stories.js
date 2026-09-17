@@ -19,7 +19,7 @@ export default {
   },
 };
 
-export const expanded = {
+export const Expanded = {
   render: () => `
     <!-- Demo height of 600px -->
     <div style="height:600px">

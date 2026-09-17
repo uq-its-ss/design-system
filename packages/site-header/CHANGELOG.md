@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.0.8-alpha.1](https://github.com/uq-its-ss/design-system/compare/%40uqds%2Fsite-header%407.0.8-alpha.0...%40uqds%2Fsite-header%407.0.8-alpha.1) (2026-09-17)
+
+- linting ([56012de](https://github.com/uq-its-ss/design-system/commit/56012de8e7a5c871624b17f9795c7fb5e2d70676))
+
+### 🐛 Bug Fixes
+
+- minor updates ([923c8b1](https://github.com/uq-its-ss/design-system/commit/923c8b1a01dec41fd92591ccc362ed4227371703))
+- small typo ([4ed5252](https://github.com/uq-its-ss/design-system/commit/4ed5252f9f4b08897b08a574b98d90fe55865f52))
+- updated rgba patterns and updated values ([3d1b7da](https://github.com/uq-its-ss/design-system/commit/3d1b7da9b708f7ea3a3f003c39f9c3b98cd90349))
+- updated SCSS variables for constants to include $font-accent variable ([1d8a2cc](https://github.com/uq-its-ss/design-system/commit/1d8a2cca811628565ca89aaeeccee08627732fd6))
+- updating core values, text, space, colour and media ([5e70764](https://github.com/uq-its-ss/design-system/commit/5e70764f57151c561f74b4c175de28ce75942513))
+
+## [7.0.8-alpha.0](https://github.com/uq-its-ss/design-system/compare/%40uqds%2Fsite-header%407.0.7...%40uqds%2Fsite-header%407.0.8-alpha.0) (2026-09-14)
+
+- **deps:** bump ESLint to 9.39.5 and fix pre-existing lint config bugs ([e2fefb5](https://github.com/uq-its-ss/design-system/commit/e2fefb5985f3a05acda96f315d92584f38026058))
+- **deps:** bump minor/patch dependencies to latest across workspaces ([c7e5faf](https://github.com/uq-its-ss/design-system/commit/c7e5fafd0b622f38cdbdbe149813992825fce7d9))
+- removing email address from website ([#814](https://github.com/uq-its-ss/design-system/issues/814)) ([e7d7a12](https://github.com/uq-its-ss/design-system/commit/e7d7a129267bd6f3618ccaec2180f766193af0fc))
+
 ## [7.0.7](https://github.com/uq-its-ss/design-system/compare/@uqds/site-header@7.0.7-alpha.0...@uqds/site-header@7.0.7) (2026-08-18)
 
 **Note:** Version bump only for package @uqds/site-header

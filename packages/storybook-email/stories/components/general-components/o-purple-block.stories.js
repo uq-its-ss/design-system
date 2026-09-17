@@ -3,7 +3,7 @@ export default {
   tags: ["autodocs"],
 };
 
-export const purpleBlock = {
+export const PurpleBlock = {
   render: () => `
 <!-- Purple block -->
 <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="width: 100% !important; min-width: 100% !important;">

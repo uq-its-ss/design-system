@@ -5,6 +5,6 @@
 .uq-previous-next {
   display: flex;
   flex-direction: column;
-  padding: 0.5rem 0;
-  gap: 2rem;
+  padding: var(--uq-space-xs) 0;
+  gap: var(--uq-space-xl);
 }

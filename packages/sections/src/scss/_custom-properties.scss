@@ -2,12 +2,12 @@
 
 :root {
   --section-spacing: 6rem;
-  --section-padding: #{core.$space-xl};
+  --section-padding: #{var(--uq-space-xl)};
 }
 
 @media #{core.$screen-lg-down} {
   :root {
-    --section-spacing: #{core.$space-uul};
-    --section-padding: #{core.$space-l};
+    --section-spacing: #{var(--uq-space-uul)};
+    --section-padding: #{var(--uq-space-l)};
   }
 }

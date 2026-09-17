@@ -1,7 +1,7 @@
 import { createSVGWindow } from "svgdom";
 import { registerWindow, SVG as createSVGElement } from "@svgdotjs/svg.js";
 import { optimize } from "svgo";
-import glob from "glob";
+import { glob } from "glob";
 import { promises as FS } from "fs";
 import svgConverter from "mini-svg-data-uri";
 import { svgoConfig as defaultSvgoConfig } from "../build-icons/svgoOptions";
@@ -39,15 +39,12 @@ function parseFilePath(filePath: string): [string, string] {
  * Gets all SVG file paths from the input directory.
  */
 async function getSVGFiles(inputDir: string): Promise<string[]> {
-    return new Promise((resolve, reject) => {
-        glob(`${inputDir}/**/*.svg`, (err, files) => {
-            if (err) {
-                reject(new Error(`Failed to find SVG files in "${inputDir}": ${err.message}`));
-            } else {
-                resolve(files);
-            }
-        });
-    });
+    try {
+        return (await glob(`${inputDir}/**/*.svg`)).sort();
+    } catch (err) {
+        const message = err instanceof Error ? err.message : String(err);
+        throw new Error(`Failed to find SVG files in "${inputDir}": ${message}`);
+    }
 }
 
 /**

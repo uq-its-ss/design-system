@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.0.8-alpha.0](https://github.com/uq-its-ss/design-system/compare/%40uqds%2Fbreadcrumb%408.0.7...%40uqds%2Fbreadcrumb%408.0.8-alpha.0) (2026-09-17)
+
+- removing email address from website ([#814](https://github.com/uq-its-ss/design-system/issues/814)) ([e7d7a12](https://github.com/uq-its-ss/design-system/commit/e7d7a129267bd6f3618ccaec2180f766193af0fc))
+
+### 🐛 Bug Fixes
+
+- reveret icon css cariable updates ([1ad100a](https://github.com/uq-its-ss/design-system/commit/1ad100a1b1adff018acc45a67daed982a8eb045f))
+- updated rgba patterns and updated values ([3d1b7da](https://github.com/uq-its-ss/design-system/commit/3d1b7da9b708f7ea3a3f003c39f9c3b98cd90349))
+- updated SCSS variables for constants to include $font-accent variable ([1d8a2cc](https://github.com/uq-its-ss/design-system/commit/1d8a2cca811628565ca89aaeeccee08627732fd6))
+
 ## [8.0.7](https://github.com/uq-its-ss/design-system/compare/@uqds/breadcrumb@8.0.7-alpha.0...@uqds/breadcrumb@8.0.7) (2026-08-18)
 
 **Note:** Version bump only for package @uqds/breadcrumb

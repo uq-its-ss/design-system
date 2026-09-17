@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.3-alpha.1](https://github.com/uq-its-ss/design-system/compare/%40uqds%2Fbutton%404.0.3-alpha.0...%40uqds%2Fbutton%404.0.3-alpha.1) (2026-09-17)
+
+### 🐛 Bug Fixes
+
+- **core:** updated scss vars to css vars ([0799ebf](https://github.com/uq-its-ss/design-system/commit/0799ebfb05f64340b79b62792a7883b890960c95))
+- updated SCSS variables for constants to include $font-accent variable ([1d8a2cc](https://github.com/uq-its-ss/design-system/commit/1d8a2cca811628565ca89aaeeccee08627732fd6))
+- updating core values, text, space, colour and media ([5e70764](https://github.com/uq-its-ss/design-system/commit/5e70764f57151c561f74b4c175de28ce75942513))
+
+## [4.0.3-alpha.0](https://github.com/uq-its-ss/design-system/compare/%40uqds%2Fbutton%404.0.2...%40uqds%2Fbutton%404.0.3-alpha.0) (2026-09-14)
+
+- **linting:** Linting ([d13b959](https://github.com/uq-its-ss/design-system/commit/d13b959924074d788f8637f219fd9d8f4f817510))
+- removing email address from website ([#814](https://github.com/uq-its-ss/design-system/issues/814)) ([e7d7a12](https://github.com/uq-its-ss/design-system/commit/e7d7a129267bd6f3618ccaec2180f766193af0fc))
+
+### 🐛 Bug Fixes
+
+- **button:** added link and additonal icon options ([4dee349](https://github.com/uq-its-ss/design-system/commit/4dee349648d7fc3f73d994354ebf1ff9e419126f))
+- **button:** updated border css ([bdfc75a](https://github.com/uq-its-ss/design-system/commit/bdfc75af432a85bb4a765affd067ec1bc5815bbf))
+- **button:** updated broder style ([a0b9186](https://github.com/uq-its-ss/design-system/commit/a0b91869b65825066cb8a29593a970bb4a8e07e1))
+
 ## [4.0.2](https://github.com/uq-its-ss/design-system/compare/@uqds/button@4.0.2-alpha.0...@uqds/button@4.0.2) (2026-03-30)
 
 **Note:** Version bump only for package @uqds/button

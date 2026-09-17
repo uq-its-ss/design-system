@@ -14,7 +14,7 @@ import { initJs } from "../../../lib/initJs";
 
 const { Header } = storyRenderer(HeaderStories);
 const { Breadcrumb } = storyRenderer(BreadcrumbStories);
-const { footer } = storyRenderer(FooterStories);
+const { Footer: footer } = storyRenderer(FooterStories);
 const { Level2: Level2Hero } = storyRenderer(HeroStories);
 const { NewsExample } = storyRenderer(SidebarRightStories);
 const { Text: Card } = storyRenderer(CardStories);
@@ -41,7 +41,7 @@ export default {
 export const Home = {
   decorators: [
     (storyFn) =>
-      initJs(storyFn, (component) => {
+      initJs(storyFn, () => {
         // searchInput(component.querySelector(".uq-search-input"));
       }),
   ],
@@ -61,7 +61,7 @@ export const Home = {
           <h2 class="uq-section__title">Looking for specific news?</h2>
         </div>
         <h3>Search by keyword</h3>
-        <!-- ${SearchInput()} -->
+        <!-- {SearchInput()} -->
         <h3>Browse by topic</h3>
         ${PillList()}
       </div>

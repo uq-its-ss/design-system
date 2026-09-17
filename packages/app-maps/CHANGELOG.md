@@ -3,6 +3,32 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.6-alpha.3](https://github.com/uq-its-ss/design-system/compare/%40uqds%2Fapp-maps%404.0.6-alpha.2...%40uqds%2Fapp-maps%404.0.6-alpha.3) (2026-09-17)
+
+- **deps-dev:** bump js-yaml from 5.4.1 to 5.4.2 ([47f5f3d](https://github.com/uq-its-ss/design-system/commit/47f5f3d0d4bb14a0345493799c34d14a93a5922b))
+- linting ([56012de](https://github.com/uq-its-ss/design-system/commit/56012de8e7a5c871624b17f9795c7fb5e2d70676))
+- linting ([5534abd](https://github.com/uq-its-ss/design-system/commit/5534abd32ae4ce2cf13eaaf5493788616d5c757f))
+- linting ([c24bf92](https://github.com/uq-its-ss/design-system/commit/c24bf92f7b9e203166a51d00ce54be5c1ade6414))
+
+### 🐛 Bug Fixes
+
+- correcting format of some css variables ([ae7a757](https://github.com/uq-its-ss/design-system/commit/ae7a7572b8748650b4c7566d03f3403c485405c7))
+- reveret icon css cariable updates ([1ad100a](https://github.com/uq-its-ss/design-system/commit/1ad100a1b1adff018acc45a67daed982a8eb045f))
+- transparency fixes ([e93c281](https://github.com/uq-its-ss/design-system/commit/e93c2814fef03fdfa6fba2e81642d6d0eac59bc3))
+- updated outstanding calc functions ([00cd420](https://github.com/uq-its-ss/design-system/commit/00cd4202fba0c041a0a9796c93a61665bbe3a3cd))
+- updated rgba patterns and updated values ([3d1b7da](https://github.com/uq-its-ss/design-system/commit/3d1b7da9b708f7ea3a3f003c39f9c3b98cd90349))
+- updated SCSS variables for constants to include $font-accent variable ([1d8a2cc](https://github.com/uq-its-ss/design-system/commit/1d8a2cca811628565ca89aaeeccee08627732fd6))
+- updating core values, text, space, colour and media ([5e70764](https://github.com/uq-its-ss/design-system/commit/5e70764f57151c561f74b4c175de28ce75942513))
+
+## [4.0.6-alpha.2](https://github.com/uq-its-ss/design-system/compare/%40uqds%2Fapp-maps%404.0.6-alpha.1...%40uqds%2Fapp-maps%404.0.6-alpha.2) (2026-09-14)
+
+- **deps:** bump ESLint to 9.39.5 and fix pre-existing lint config bugs ([e2fefb5](https://github.com/uq-its-ss/design-system/commit/e2fefb5985f3a05acda96f315d92584f38026058))
+- **deps:** bump minor/patch dependencies to latest across workspaces ([c7e5faf](https://github.com/uq-its-ss/design-system/commit/c7e5fafd0b622f38cdbdbe149813992825fce7d9))
+
+## [4.0.6-alpha.1](https://github.com/uq-its-ss/design-system/compare/%40uqds%2Fapp-maps%404.0.6-alpha.0...%40uqds%2Fapp-maps%404.0.6-alpha.1) (2026-09-14)
+
+**Note:** Version bump only for package @uqds/app-maps
+
 ## [4.0.6-alpha.0](https://github.com/uq-its-ss/design-system/compare/%40uqds%2Fapp-maps%404.0.5...%40uqds%2Fapp-maps%404.0.6-alpha.0) (2026-09-07)
 
 **Note:** Version bump only for package @uqds/app-maps

@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.5-alpha.1](https://github.com/uq-its-ss/design-system/compare/%40uqds%2Facknowledgement%400.1.5-alpha.0...%40uqds%2Facknowledgement%400.1.5-alpha.1) (2026-09-17)
+
+### 🐛 Bug Fixes
+
+- updated rgba patterns and updated values ([3d1b7da](https://github.com/uq-its-ss/design-system/commit/3d1b7da9b708f7ea3a3f003c39f9c3b98cd90349))
+- updated SCSS variables for constants to include $font-accent variable ([1d8a2cc](https://github.com/uq-its-ss/design-system/commit/1d8a2cca811628565ca89aaeeccee08627732fd6))
+
+## [0.1.5-alpha.0](https://github.com/uq-its-ss/design-system/compare/%40uqds%2Facknowledgement%400.1.4...%40uqds%2Facknowledgement%400.1.5-alpha.0) (2026-09-14)
+
+- **deps:** bump minor/patch dependencies to latest across workspaces ([c7e5faf](https://github.com/uq-its-ss/design-system/commit/c7e5fafd0b622f38cdbdbe149813992825fce7d9))
+- removing email address from website ([#814](https://github.com/uq-its-ss/design-system/issues/814)) ([e7d7a12](https://github.com/uq-its-ss/design-system/commit/e7d7a129267bd6f3618ccaec2180f766193af0fc))
+
 ## [0.1.4](https://github.com/uq-its-ss/design-system/compare/@uqds/acknowledgement@0.1.4-alpha.0...@uqds/acknowledgement@0.1.4) (2026-03-30)
 
 **Note:** Version bump only for package @uqds/acknowledgement

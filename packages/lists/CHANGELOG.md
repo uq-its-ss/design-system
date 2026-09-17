@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.3-alpha.1](https://github.com/uq-its-ss/design-system/compare/%40uqds%2Flists%404.0.3-alpha.0...%40uqds%2Flists%404.0.3-alpha.1) (2026-09-17)
+
+### 🐛 Bug Fixes
+
+- updated SCSS variables for constants to include $font-accent variable ([1d8a2cc](https://github.com/uq-its-ss/design-system/commit/1d8a2cca811628565ca89aaeeccee08627732fd6))
+- updating core values, text, space, colour and media ([5e70764](https://github.com/uq-its-ss/design-system/commit/5e70764f57151c561f74b4c175de28ce75942513))
+
 ## [4.0.3-alpha.0](https://github.com/uq-its-ss/design-system/compare/%40uqds%2Flists%404.0.2...%40uqds%2Flists%404.0.3-alpha.0) (2026-09-08)
 
 ### Bug Fixes

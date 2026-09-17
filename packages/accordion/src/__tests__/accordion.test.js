@@ -51,7 +51,7 @@ describe("Accordion behaviour", () => {
       })
       .closest(".uq-accordion__content");
     expect(accordion2).toHaveAttribute("aria-hidden", "true");
-    await fireEvent.click(screen.getByRole("button", { name: "Title 2" }));
+    fireEvent.click(screen.getByRole("button", { name: "Title 2" }));
     await waitFor(() => {
       expect(accordion1).toHaveAttribute("aria-hidden", "true");
     });

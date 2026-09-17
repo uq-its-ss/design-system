@@ -6,9 +6,9 @@ import { breadcrumb } from "@uqds/breadcrumb/src/js/main";
 
 // import HTML template strings
 import { HeaderInterim } from "../../components/header/header.stories";
-import { siteHeaderWithSubnav } from "../../components/site-header/site-header.stories";
+import { SiteHeaderWithSubnav as siteHeaderWithSubnav } from "../../components/site-header/site-header.stories";
 import BreadcrumbStories from "../../components/breadcrumb/breadcrumb.stories";
-import { footer } from "../../components/footer/footer.stories";
+import { Footer as footer } from "../../components/footer/footer.stories";
 
 export default {
   title: "Patterns/Basic page",
@@ -20,7 +20,7 @@ export default {
   },
 };
 
-export const basicPage = {
+export const BasicPage = {
   render: () => {
     return `
     ${HeaderInterim.render()}
@@ -78,14 +78,14 @@ export const basicPage = {
         ".slide-menu__backlink, .global-mobile-nav__audience-link",
       );
 
-      Array.prototype.forEach.call(slideMenuBackButtons, function (el, i) {
+      Array.prototype.forEach.call(slideMenuBackButtons, function (el) {
         el.addEventListener("click", () => {
           document.querySelector(".global-mobile-nav").scrollTop = 0;
         });
       });
 
       // Responsive Resize Close menu and update toggles
-      window.addEventListener("resize", (event) => {
+      window.addEventListener("resize", () => {
         // Target Resize of LG ($screen-lg, 64rem, 1024px).
         if (window.innerWidth > 1024) {
           menuLeft.close(true);

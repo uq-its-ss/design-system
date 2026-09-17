@@ -15,10 +15,9 @@ import * as CheckboxStories from "./checkbox.stories";
 <Canvas of={CheckboxStories.Default} />
 <Controls of={CheckboxStories.Default} />
 
-
-
 ## Accessibility
 
 ### When to use aria-invalid on Checkboxes
+
 - You should only inject `aria-invalid="true"` attribute dynamically using JavaScript after validation fails. This ensures that the checkbox is only marked as invalid when necessary, improving accessibility for users relying on assistive technologies.
 - Pair with Descriptions: When `aria-invalid="true"` is active, ensure you programmatically link the field to a visible error message using `aria-describedby="error-message-id"`. This guarantees that screen readers announce exactly why the field is invalid (e.g., "You must accept the terms to continue").

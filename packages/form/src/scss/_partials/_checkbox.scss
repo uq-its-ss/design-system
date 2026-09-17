@@ -4,7 +4,7 @@
 input[type="checkbox"] {
   appearance: none;
   -webkit-appearance: none; /* For older Safari */
-  
+
   /* Sizing and borders */
   width: 2rem;
   height: 2rem;
@@ -12,12 +12,12 @@ input[type="checkbox"] {
   border-radius: 6px;
   background-color: white;
   margin: 0;
-  
+
   /* Centering the checkmark we'll add later */
   display: inline-grid;
   place-content: center;
   vertical-align: middle;
-  
+
   /* Smooth color transition */
   transition: all 0.2s ease-in-out;
 }
@@ -47,8 +47,9 @@ input[type="checkbox"]:focus-visible {
 }
 
 /* error state */
-input[type="checkbox"][aria-invalid="true"], input[type="checkbox"][aria-invalid="true"]:checked {
-border-color: core.$error-500;
+input[type="checkbox"][aria-invalid="true"],
+input[type="checkbox"][aria-invalid="true"]:checked {
+  border-color: core.$error-500;
 }
 
 input[type="checkbox"].error {

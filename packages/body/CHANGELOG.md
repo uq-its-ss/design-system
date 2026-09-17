@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.6-alpha.0](https://github.com/uq-its-ss/design-system/compare/%40uqds%2Fbody%404.0.5...%40uqds%2Fbody%404.0.6-alpha.0) (2026-09-17)
+
+- linting ([5534abd](https://github.com/uq-its-ss/design-system/commit/5534abd32ae4ce2cf13eaaf5493788616d5c757f))
+- removing email address from website ([#814](https://github.com/uq-its-ss/design-system/issues/814)) ([e7d7a12](https://github.com/uq-its-ss/design-system/commit/e7d7a129267bd6f3618ccaec2180f766193af0fc))
+
+### 🐛 Bug Fixes
+
+- transparency fixes ([e93c281](https://github.com/uq-its-ss/design-system/commit/e93c2814fef03fdfa6fba2e81642d6d0eac59bc3))
+- updated rgba patterns and updated values ([3d1b7da](https://github.com/uq-its-ss/design-system/commit/3d1b7da9b708f7ea3a3f003c39f9c3b98cd90349))
+- updated SCSS variables for constants to include $font-accent variable ([1d8a2cc](https://github.com/uq-its-ss/design-system/commit/1d8a2cca811628565ca89aaeeccee08627732fd6))
+- updating core values, text, space, colour and media ([5e70764](https://github.com/uq-its-ss/design-system/commit/5e70764f57151c561f74b4c175de28ce75942513))
+
 ## [4.0.5](https://github.com/uq-its-ss/design-system/compare/@uqds/body@4.0.5-alpha.0...@uqds/body@4.0.5) (2026-08-18)
 
 **Note:** Version bump only for package @uqds/body

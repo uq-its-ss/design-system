@@ -46,7 +46,7 @@ table,
   tr,
   .uq-table__row {
     &:nth-child(even) {
-      background: core.$grey-50;
+      background: var(--uq-grey-50);
     }
   }
 }
@@ -63,7 +63,7 @@ table,
   td,
   .table__header,
   .table__cell {
-    margin: core.$space-none -1px -1px core.$space-none;
+    margin: var(--uq-space-none) -1px -1px var(--uq-space-none);
     word-break: break-word;
   }
 
@@ -79,17 +79,17 @@ table,
     .uq-table__row {
       grid: auto-flow / 1fr;
       align-items: stretch;
-      margin-bottom: core.$space-l;
+      margin-bottom: var(--uq-space-l);
     }
 
     td,
     .uq-table__cell {
-      padding: core.$space-s core.$space-m;
+      padding: var(--uq-space-xs) var(--uq-space-m);
 
       &::before {
         content: attr(data-title);
-        color: core.$purple-500;
-        font-weight: core.$font-weight-bold;
+        color: var(--uq-purple-500);
+        font-weight: var(--uq-font-weight-bold);
         display: block;
       }
     }

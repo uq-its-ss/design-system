@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.0.3-alpha.0](https://github.com/uq-its-ss/design-system/compare/%40uqds%2Fpill%406.0.2...%40uqds%2Fpill%406.0.3-alpha.0) (2026-09-17)
+
+- removing email address from website ([#814](https://github.com/uq-its-ss/design-system/issues/814)) ([e7d7a12](https://github.com/uq-its-ss/design-system/commit/e7d7a129267bd6f3618ccaec2180f766193af0fc))
+
+### 🐛 Bug Fixes
+
+- add export and style fields to all component package.json files ([#788](https://github.com/uq-its-ss/design-system/issues/788)) ([590020a](https://github.com/uq-its-ss/design-system/commit/590020a7ecac8d37010d2acfdab5bb6b329ad7b9))
+- reveret icon css cariable updates ([1ad100a](https://github.com/uq-its-ss/design-system/commit/1ad100a1b1adff018acc45a67daed982a8eb045f))
+- updated SCSS variables for constants to include $font-accent variable ([1d8a2cc](https://github.com/uq-its-ss/design-system/commit/1d8a2cca811628565ca89aaeeccee08627732fd6))
+- updating core values, text, space, colour and media ([5e70764](https://github.com/uq-its-ss/design-system/commit/5e70764f57151c561f74b4c175de28ce75942513))
+
 ## [6.0.2](https://github.com/uq-its-ss/design-system/compare/@uqds/pill@6.0.2-alpha.0...@uqds/pill@6.0.2) (2026-03-30)
 
 **Note:** Version bump only for package @uqds/pill

@@ -16,7 +16,8 @@ export default {
     forIdentifier: {
       name: "forIdentifier",
       control: "text",
-      description: "Properties used to identify the field in the DOM or during form submission",
+      description:
+        "Properties used to identify the field in the DOM or during form submission",
       table: {
         category: "Identification", // Groups the toggle switch
       },
@@ -26,10 +27,7 @@ export default {
     textLabel: "Label Text",
     forIdentifier: "label-for",
   },
-  render: ({
-    textLabel,
-    forIdentifier,
-  }) => {
+  render: ({ textLabel, forIdentifier }) => {
     return `
       <label for="${forIdentifier}">${textLabel}</label>
     `;

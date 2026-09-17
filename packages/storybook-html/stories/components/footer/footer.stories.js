@@ -25,13 +25,11 @@ export default {
   },
 };
 
-export const footer = {
+export const Footer = {
   render: () => {
     return footerHTML;
   },
   play: () => {
     new accordion();
   },
-
-  name: "Footer",
 };

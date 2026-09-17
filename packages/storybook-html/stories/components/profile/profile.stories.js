@@ -1,5 +1,5 @@
 import "@uqds/profile/src/scss/main.scss";
-import avatar from "../avatar/avatar.stories";
+import avatarMeta from "../avatar/avatar.stories";
 
 export default {
   title: "Components/Profile",
@@ -115,8 +115,8 @@ export default {
         hasContact && (email || phone)
           ? `
       <section class="uq-profile__contact">
-      ${email ? `<div><a href=\"mailto:${email}\">${email}</a></div>` : ""}
-      ${phone ? `<div><a href=\"tel:${phone}\">${phone}</a></div>` : ""}
+      ${email ? `<div><a href="mailto:${email}">${email}</a></div>` : ""}
+      ${phone ? `<div><a href="tel:${phone}">${phone}</a></div>` : ""}
       </section>`
           : ""
       }
@@ -134,7 +134,7 @@ export default {
       hasImage
         ? `
     <div class="uq-profile__image">
-      ${avatar.render({ userName: honorificPrefix + " " + name, userAvatar: image })}
+      ${avatarMeta.render({ userName: honorificPrefix + " " + name, userAvatar: image })}
     </div>
       `
         : ""
@@ -143,7 +143,7 @@ export default {
   },
 };
 
-export const profile = {};
+export const Profile = {};
 
 export const NoImage = {
   args: {
@@ -173,7 +173,7 @@ export const BioProfile = {
   },
 };
 
-export const contactProfile = {
+export const ContactProfile = {
   args: {
     position: "Head of School",
     image: "images/profile/profile.png",

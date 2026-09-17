@@ -120,9 +120,9 @@
   --uq-font-weight-bold: #{text.$font-weight-bold};
 
   // line heights
-  --uq-line-height-single: #{text.$line-height-ui};
-  --uq-line-height-short: #{text.$line-height-h};
-  --uq-line-height-long: #{text.$line-height};
+  --uq-line-height-single: #{text.$line-height-single};
+  --uq-line-height-short: #{text.$line-height-short};
+  --uq-line-height-long: #{text.$line-height-long};
 
   // 1% letter spacing
   --uq-letter-spacing: #{text.$letter-spacing};

@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.6-alpha.1](https://github.com/uq-its-ss/design-system/compare/storybook-email%401.1.6-alpha.0...storybook-email%401.1.6-alpha.1) (2026-09-17)
+
+### 🐛 Bug Fixes
+
+- minor media query changes ([960dc72](https://github.com/uq-its-ss/design-system/commit/960dc72e50792dbe4d90579c2c18f59c9a659eab))
+- transparency fixes ([e93c281](https://github.com/uq-its-ss/design-system/commit/e93c2814fef03fdfa6fba2e81642d6d0eac59bc3))
+- updated [@media](https://github.com/media) ([090d474](https://github.com/uq-its-ss/design-system/commit/090d4742348ecfb65b380a18d2a75eca8773a95f))
+- updated SCSS variables for constants to include $font-accent variable ([1d8a2cc](https://github.com/uq-its-ss/design-system/commit/1d8a2cca811628565ca89aaeeccee08627732fd6))
+- updating core values, text, space, colour and media ([5e70764](https://github.com/uq-its-ss/design-system/commit/5e70764f57151c561f74b4c175de28ce75942513))
+
 ## [1.1.6-alpha.0](https://github.com/uq-its-ss/design-system/compare/storybook-email%401.1.5...storybook-email%401.1.6-alpha.0) (2026-09-14)
 
 - **deps:** bump ESLint to 9.39.5 and fix pre-existing lint config bugs ([e2fefb5](https://github.com/uq-its-ss/design-system/commit/e2fefb5985f3a05acda96f315d92584f38026058))

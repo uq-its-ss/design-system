@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.0.9-alpha.1](https://github.com/uq-its-ss/design-system/compare/%40uqds%2Ffooter%407.0.9-alpha.0...%40uqds%2Ffooter%407.0.9-alpha.1) (2026-09-17)
+
+- linting ([be67231](https://github.com/uq-its-ss/design-system/commit/be67231a91d764f144d62689cb0d7301a9c81f7c))
+
+### 🐛 Bug Fixes
+
+- css variables caused some regression changes ([b3c5d9b](https://github.com/uq-its-ss/design-system/commit/b3c5d9b4eeaf202ed23a4790ddf58472d0163916))
+- reveret icon css cariable updates ([1ad100a](https://github.com/uq-its-ss/design-system/commit/1ad100a1b1adff018acc45a67daed982a8eb045f))
+- updated SCSS variables for constants to include $font-accent variable ([1d8a2cc](https://github.com/uq-its-ss/design-system/commit/1d8a2cca811628565ca89aaeeccee08627732fd6))
+- updating core values, text, space, colour and media ([5e70764](https://github.com/uq-its-ss/design-system/commit/5e70764f57151c561f74b4c175de28ce75942513))
+
 ## [7.0.9-alpha.0](https://github.com/uq-its-ss/design-system/compare/%40uqds%2Ffooter%407.0.8...%40uqds%2Ffooter%407.0.9-alpha.0) (2026-09-14)
 
 - **deps:** bump minor/patch dependencies to latest across workspaces ([c7e5faf](https://github.com/uq-its-ss/design-system/commit/c7e5fafd0b622f38cdbdbe149813992825fce7d9))

@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.1.8-alpha.8](https://github.com/uq-its-ss/design-system/compare/storybook-html%408.1.8-alpha.7...storybook-html%408.1.8-alpha.8) (2026-09-17)
+
+- **docs:** typos ([ff6bf6d](https://github.com/uq-its-ss/design-system/commit/ff6bf6d49a9809b70344fa38732bb90768f4c47a))
+- linting ([56012de](https://github.com/uq-its-ss/design-system/commit/56012de8e7a5c871624b17f9795c7fb5e2d70676))
+
+### 🐛 Bug Fixes
+
+- colour change ([9bb942d](https://github.com/uq-its-ss/design-system/commit/9bb942dcab45e69d854c7230ff310acaab7c8156))
+- minor media query changes ([960dc72](https://github.com/uq-its-ss/design-system/commit/960dc72e50792dbe4d90579c2c18f59c9a659eab))
+- minor updates ([923c8b1](https://github.com/uq-its-ss/design-system/commit/923c8b1a01dec41fd92591ccc362ed4227371703))
+- reveret icon css cariable updates ([1ad100a](https://github.com/uq-its-ss/design-system/commit/1ad100a1b1adff018acc45a67daed982a8eb045f))
+- transparency fixes ([e93c281](https://github.com/uq-its-ss/design-system/commit/e93c2814fef03fdfa6fba2e81642d6d0eac59bc3))
+- updated [@media](https://github.com/media) ([090d474](https://github.com/uq-its-ss/design-system/commit/090d4742348ecfb65b380a18d2a75eca8773a95f))
+- updated outstanding calc functions ([00cd420](https://github.com/uq-its-ss/design-system/commit/00cd4202fba0c041a0a9796c93a61665bbe3a3cd))
+- updated rgba patterns ([f380f68](https://github.com/uq-its-ss/design-system/commit/f380f68e90a7f136b188b3f5a0947c866a59a762))
+- updated rgba patterns and updated values ([3d1b7da](https://github.com/uq-its-ss/design-system/commit/3d1b7da9b708f7ea3a3f003c39f9c3b98cd90349))
+- updated SCSS variables for constants to include $font-accent variable ([1d8a2cc](https://github.com/uq-its-ss/design-system/commit/1d8a2cca811628565ca89aaeeccee08627732fd6))
+- updating core values, text, space, colour and media ([5e70764](https://github.com/uq-its-ss/design-system/commit/5e70764f57151c561f74b4c175de28ce75942513))
+
 ## [8.1.8-alpha.7](https://github.com/uq-its-ss/design-system/compare/storybook-html%408.1.8-alpha.6...storybook-html%408.1.8-alpha.7) (2026-09-16)
 
 ### 🐛 Bug Fixes

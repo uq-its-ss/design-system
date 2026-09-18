@@ -44,11 +44,29 @@ export default {
         category: "Validation & Accessibility", // Groups the toggle switch
       },
     },
+    id: {
+      name: "id",
+      control: "text",
+      description:
+        "Specifies a unique identifier for the input element, useful for associating labels.",
+      table: {
+        category: "Identification", // Groups the toggle switch
+      },
+    },
     nameIdentifier: {
       name: "nameIdentifier",
       control: "text",
       description:
         "Properties used to identify the field in the DOM or during form submission",
+      table: {
+        category: "Identification", // Groups the toggle switch
+      },
+    },
+    value: {
+      name: "value",
+      control: "text",
+      description:
+        "The value submitted for this checkbox when checked. Required to distinguish individual checkboxes that share the same name in a group.",
       table: {
         category: "Identification", // Groups the toggle switch
       },
@@ -59,11 +77,21 @@ export default {
     disabled: false,
     required: false,
     ariaInvalid: false,
+    id: "checkbox-id",
     nameIdentifier: "checkbox-name",
+    value: "",
   },
-  render: ({ checked, disabled, required, ariaInvalid, nameIdentifier }) => {
+  render: ({
+    checked,
+    disabled,
+    required,
+    ariaInvalid,
+    nameIdentifier,
+    id,
+    value,
+  }) => {
     return `
-      <input type="checkbox" ${checked ? "checked" : ""} ${disabled ? "disabled" : ""} ${required ? "required" : ""} ${ariaInvalid ? 'aria-invalid="true"' : ""} name="${nameIdentifier}" />
+      <input type="checkbox" ${id ? `id="${id}"` : ""} ${checked ? "checked" : ""} ${disabled ? "disabled" : ""} ${required ? "required" : ""} ${ariaInvalid ? 'aria-invalid="true"' : ""} name="${nameIdentifier}" ${value ? `value="${value}"` : ""} />
     `;
   },
 };

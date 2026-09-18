@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.8-alpha.1](https://github.com/uq-its-ss/design-system/compare/%40uqds%2Fform%404.0.8-alpha.0...%40uqds%2Fform%404.0.8-alpha.1) (2026-09-17)
+
+- linting ([c24bf92](https://github.com/uq-its-ss/design-system/commit/c24bf92f7b9e203166a51d00ce54be5c1ade6414))
+- **maintenance:** merge updates ([210a1e8](https://github.com/uq-its-ss/design-system/commit/210a1e812a48481905ad225bf7c70b7314cdd47e))
+
+### 🐛 Bug Fixes
+
+- correcting format of some css variables ([ae7a757](https://github.com/uq-its-ss/design-system/commit/ae7a7572b8748650b4c7566d03f3403c485405c7))
+- css variables caused some regression changes ([b3c5d9b](https://github.com/uq-its-ss/design-system/commit/b3c5d9b4eeaf202ed23a4790ddf58472d0163916))
+- form scss to css var ([4256e08](https://github.com/uq-its-ss/design-system/commit/4256e08dc788c6e91441088ed7c4117f1fe13dcb))
+- minor updates ([923c8b1](https://github.com/uq-its-ss/design-system/commit/923c8b1a01dec41fd92591ccc362ed4227371703))
+- reveret icon css cariable updates ([1ad100a](https://github.com/uq-its-ss/design-system/commit/1ad100a1b1adff018acc45a67daed982a8eb045f))
+- transparency fixes ([e93c281](https://github.com/uq-its-ss/design-system/commit/e93c2814fef03fdfa6fba2e81642d6d0eac59bc3))
+- updated rgba patterns and updated values ([3d1b7da](https://github.com/uq-its-ss/design-system/commit/3d1b7da9b708f7ea3a3f003c39f9c3b98cd90349))
+- updated SCSS variables for constants to include $font-accent variable ([1d8a2cc](https://github.com/uq-its-ss/design-system/commit/1d8a2cca811628565ca89aaeeccee08627732fd6))
+- updating core values, text, space, colour and media ([5e70764](https://github.com/uq-its-ss/design-system/commit/5e70764f57151c561f74b4c175de28ce75942513))
+
+## [4.0.8-alpha.0](https://github.com/uq-its-ss/design-system/compare/%40uqds%2Fform%404.0.7...%40uqds%2Fform%404.0.8-alpha.0) (2026-09-08)
+
+**Note:** Version bump only for package @uqds/form
+
 ## [4.0.7](https://github.com/uq-its-ss/design-system/compare/@uqds/form@4.0.7-alpha.0...@uqds/form@4.0.7) (2026-08-18)
 
 **Note:** Version bump only for package @uqds/form

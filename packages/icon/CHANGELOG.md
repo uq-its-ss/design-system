@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.0.1-alpha.3](https://github.com/uq-its-ss/design-system/compare/%40uqds%2Ficon%405.0.1-alpha.2...%40uqds%2Ficon%405.0.1-alpha.3) (2026-09-17)
+
+**Note:** Version bump only for package @uqds/icon
+
+## [5.0.1-alpha.2](https://github.com/uq-its-ss/design-system/compare/%40uqds%2Ficon%405.0.1-alpha.1...%40uqds%2Ficon%405.0.1-alpha.2) (2026-09-14)
+
+- **deps:** bump ESLint to 9.39.5 and fix pre-existing lint config bugs ([e2fefb5](https://github.com/uq-its-ss/design-system/commit/e2fefb5985f3a05acda96f315d92584f38026058))
+- **deps:** bump minor/patch dependencies to latest across workspaces ([c7e5faf](https://github.com/uq-its-ss/design-system/commit/c7e5fafd0b622f38cdbdbe149813992825fce7d9))
+
+## [5.0.1-alpha.1](https://github.com/uq-its-ss/design-system/compare/%40uqds%2Ficon%405.0.1-alpha.0...%40uqds%2Ficon%405.0.1-alpha.1) (2026-09-14)
+
+- linting ([e7278a6](https://github.com/uq-its-ss/design-system/commit/e7278a6a6b7e4210b2943dea9da72c3e7237b637))
+- **linting:** Linting ([d13b959](https://github.com/uq-its-ss/design-system/commit/d13b959924074d788f8637f219fd9d8f4f817510))
+
+### 🐛 Bug Fixes
+
+- **icon:** added button icon options ([ad4deab](https://github.com/uq-its-ss/design-system/commit/ad4deabf8b7ddcb3e13ab29bc4c283ee359dcbaa))
+- updated link icon style ([4a23a12](https://github.com/uq-its-ss/design-system/commit/4a23a123c7ff10c1897abb54c5fb05c1bb817eb9))
+
+## [5.0.1-alpha.0](https://github.com/uq-its-ss/design-system/compare/%40uqds%2Ficon%404.0.6...%40uqds%2Ficon%405.0.1-alpha.0) (2026-09-07)
+
+**Note:** Version bump only for package @uqds/icon
+
 ## [4.0.6](https://github.com/uq-its-ss/design-system/compare/@uqds/icon@4.0.6-alpha.0...@uqds/icon@4.0.6) (2026-08-18)
 
 **Note:** Version bump only for package @uqds/icon

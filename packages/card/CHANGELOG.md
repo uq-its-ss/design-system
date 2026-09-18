@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.7-alpha.1](https://github.com/uq-its-ss/design-system/compare/%40uqds%2Fcard%404.0.7-alpha.0...%40uqds%2Fcard%404.0.7-alpha.1) (2026-09-17)
+
+- linting ([56012de](https://github.com/uq-its-ss/design-system/commit/56012de8e7a5c871624b17f9795c7fb5e2d70676))
+- linting ([5534abd](https://github.com/uq-its-ss/design-system/commit/5534abd32ae4ce2cf13eaaf5493788616d5c757f))
+- **maintenance:** merge updates ([210a1e8](https://github.com/uq-its-ss/design-system/commit/210a1e812a48481905ad225bf7c70b7314cdd47e))
+
+### 🐛 Bug Fixes
+
+- **card:** removed duplicate style ([dc8e043](https://github.com/uq-its-ss/design-system/commit/dc8e043dd0c8624caf3cc92b4f1f642544b962de))
+- correcting format of some css variables ([ae7a757](https://github.com/uq-its-ss/design-system/commit/ae7a7572b8748650b4c7566d03f3403c485405c7))
+- reveret icon css cariable updates ([1ad100a](https://github.com/uq-its-ss/design-system/commit/1ad100a1b1adff018acc45a67daed982a8eb045f))
+- transparency fixes ([e93c281](https://github.com/uq-its-ss/design-system/commit/e93c2814fef03fdfa6fba2e81642d6d0eac59bc3))
+- updated rgba patterns ([f380f68](https://github.com/uq-its-ss/design-system/commit/f380f68e90a7f136b188b3f5a0947c866a59a762))
+- updated rgba patterns and updated values ([3d1b7da](https://github.com/uq-its-ss/design-system/commit/3d1b7da9b708f7ea3a3f003c39f9c3b98cd90349))
+- updated SCSS variables for constants to include $font-accent variable ([1d8a2cc](https://github.com/uq-its-ss/design-system/commit/1d8a2cca811628565ca89aaeeccee08627732fd6))
+- updating core values, text, space, colour and media ([5e70764](https://github.com/uq-its-ss/design-system/commit/5e70764f57151c561f74b4c175de28ce75942513))
+
+## [4.0.7-alpha.0](https://github.com/uq-its-ss/design-system/compare/%40uqds%2Fcard%404.0.6...%40uqds%2Fcard%404.0.7-alpha.0) (2026-09-08)
+
+**Note:** Version bump only for package @uqds/card
+
 ## [4.0.6](https://github.com/uq-its-ss/design-system/compare/@uqds/card@4.0.6-alpha.0...@uqds/card@4.0.6) (2026-08-18)
 
 **Note:** Version bump only for package @uqds/card

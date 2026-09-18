@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.0.10-alpha.1](https://github.com/uq-its-ss/design-system/compare/%40uqds%2Fheader%407.0.10-alpha.0...%40uqds%2Fheader%407.0.10-alpha.1) (2026-09-17)
+
+- **deps:** bump minor/patch dependencies to latest across workspaces ([c7e5faf](https://github.com/uq-its-ss/design-system/commit/c7e5fafd0b622f38cdbdbe149813992825fce7d9))
+
+### 🐛 Bug Fixes
+
+- reveret icon css cariable updates ([1ad100a](https://github.com/uq-its-ss/design-system/commit/1ad100a1b1adff018acc45a67daed982a8eb045f))
+- updated SCSS variables for constants to include $font-accent variable ([1d8a2cc](https://github.com/uq-its-ss/design-system/commit/1d8a2cca811628565ca89aaeeccee08627732fd6))
+- updating core values, text, space, colour and media ([5e70764](https://github.com/uq-its-ss/design-system/commit/5e70764f57151c561f74b4c175de28ce75942513))
+
+## [7.0.10-alpha.0](https://github.com/uq-its-ss/design-system/compare/%40uqds%2Fheader%407.0.9...%40uqds%2Fheader%407.0.10-alpha.0) (2026-09-08)
+
+**Note:** Version bump only for package @uqds/header
+
 ## [7.0.9](https://github.com/uq-its-ss/design-system/compare/@uqds/header@7.0.9-alpha.0...@uqds/header@7.0.9) (2026-08-18)
 
 **Note:** Version bump only for package @uqds/header

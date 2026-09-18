@@ -8,6 +8,7 @@ body {
 }
 
 .sbdocs.sbdocs-wrapper {
+  // TOC breakpoint: $screen-md (37.5rem / 600px) + 16.5rem = 54rem (864px)
   @media only screen and (min-width: #{core.$screen-md + 16.5rem}) {
     padding-right: 14rem;
   }
@@ -21,30 +22,30 @@ body {
 .sbdocs {
   > h1,
   &-title {
-    font-family: core.$montserrat !important;
-    font-size: core.$font-size-xxxxl !important;
-    margin: 0 0 core.$space-s !important;
-    font-weight: core.$font-weight-bold !important;
+    font-family: var(--uq-montserrat) !important;
+    font-size: var(--uq-font-size-xxxxl) !important;
+    margin: 0 0 var(--uq-space-xs) !important;
+    font-weight: var(--uq-font-weight-bold) !important;
   }
 
   > h2 {
-    font-size: core.$font-size-xxxl !important;
+    font-size: var(--uq-font-size-xxxl) !important;
   }
 
   > h3 {
-    font-size: core.$font-size-xxl !important;
+    font-size: var(--uq-font-size-xxl) !important;
   }
 
   > h4 {
-    font-size: core.$font-size-xl !important;
+    font-size: var(--uq-font-size-xl) !important;
   }
 
   > h5 {
-    font-size: core.$font-size-l !important;
+    font-size: var(--uq-font-size-l) !important;
   }
 
   > h6 {
-    font-size: core.$font-size-m !important;
+    font-size: var(--uq-font-size-m) !important;
   }
 
   > h2,
@@ -52,11 +53,11 @@ body {
   > h4,
   > h5,
   > h6 {
-    margin: core.$space-xxxl 0 0 !important;
-    font-weight: core.$font-weight-medium !important;
+    margin: var(--uq-space-xxxl) 0 0 !important;
+    font-weight: var(--uq-font-weight-medium) !important;
     padding-bottom: 0 !important;
     border-bottom: 0 !important;
-    font-family: core.$roboto;
+    font-family: var(--uq-roboto);
   }
 
   > h2 + :not(p),
@@ -73,22 +74,22 @@ body {
   > ol,
   > li,
   > span {
-    font-family: core.$roboto;
+    font-family: var(--uq-roboto);
   }
 
   > a {
-    color: core.$purple-500;
+    color: var(--uq-purple-500);
     text-decoration: underline;
 
     &:hover,
     &:focus {
-      color: core.$white;
+      color: var(--uq-white);
     }
   }
 
   code,
   pre * {
-    font-family: core.$font-monospace !important;
+    font-family: var(--uq-font-monospace) !important;
   }
 }
 
@@ -106,14 +107,16 @@ body {
 
 /* Getting started alert */
 .uqds-alert {
-  margin-left: core.$space-xl !important; /* override storybook default on div */
+  margin-left: var(
+    --uq-space-xl
+  ) !important; /* override storybook default on div */
 
   .uq-alert__title {
     /* restore original alert title styles overridden by heading styles above */
-    color: core.$grey-900 !important;
-    font-weight: core.$font-weight-medium !important;
-    font-size: core.$font-size-m !important;
-    margin: 0 0 core.$space-s !important;
+    color: var(--uq-grey-900) !important;
+    font-weight: var(--uq-font-weight-medium) !important;
+    font-size: var(--uq-font-size-m) !important;
+    margin: 0 0 var(--uq-space-xs) !important;
   }
 }
 
@@ -131,7 +134,7 @@ body {
 }
 
 .uqds-table .uqds-table__heading {
-  font-weight: core.$font-weight-medium;
+  font-weight: var(--uq-font-weight-medium);
   text-align: left;
   color: #51247a;
   background-color: #f1f1f1;
@@ -220,36 +223,36 @@ body {
 .uqds-layout-preview {
   background: repeating-linear-gradient(
     45deg,
-    core.$grey-100,
-    core.$grey-100 10px,
-    core.$grey-50 10px,
-    core.$grey-50 20px
+    var(--uq-grey-100),
+    var(--uq-grey-100) 10px,
+    var(--uq-grey-50) 10px,
+    var(--uq-grey-50) 20px
   );
 
   & .uq-container {
-    background: rgba(core.$error-700, 20%);
+    background: color-mix(in srgb, var(--uq-error-700) 20%, transparent);
   }
 
   & .uq-card-grid {
     background: repeating-linear-gradient(
       45deg,
-      color.adjust(core.$success-500, $lightness: 30%),
-      color.adjust(core.$success-500, $lightness: 30%) 10px,
-      color.adjust(core.$success-500, $lightness: 35%) 10px,
-      color.adjust(core.$success-500, $lightness: 35%) 20px
+      color-mix(in srgb, var(--uq-success-500), white 30%),
+      color-mix(in srgb, var(--uq-success-500), white 30%) 10px,
+      color-mix(in srgb, var(--uq-success-500), white 35%) 10px,
+      color-mix(in srgb, var(--uq-success-500), white 35%) 20px
     );
   }
 }
 
 .uqds-layout-demo-card,
 .uqds-layout-demo-el {
-  background-color: color.adjust(core.$utility-500, $lightness: 40%);
-  border: 1px solid core.$utility-500;
+  background-color: color-mix(in srgb, var(--uq-utility-300), white 40%);
+  border: 1px solid var(--uq-utility-500);
   height: 220px;
 }
 
 .sb-purple-background {
-  background-color: core.$purple-500 !important;
+  background-color: var(--uq-purple-500) !important;
 }
 
 .sbdocs-preview,

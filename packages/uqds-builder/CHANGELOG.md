@@ -3,6 +3,43 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.15-alpha.6](https://github.com/uq-its-ss/design-system/compare/uqds-builder%404.0.15-alpha.5...uqds-builder%404.0.15-alpha.6) (2026-09-17)
+
+**Note:** Version bump only for package uqds-builder
+
+## [4.0.15-alpha.5](https://github.com/uq-its-ss/design-system/compare/uqds-builder%404.0.15-alpha.4...uqds-builder%404.0.15-alpha.5) (2026-09-16)
+
+### 🐛 Bug Fixes
+
+- **header:** navigation update ([80abe6b](https://github.com/uq-its-ss/design-system/commit/80abe6b98466c6ea9cf0531c7f5494ddada7a540))
+
+## [4.0.15-alpha.4](https://github.com/uq-its-ss/design-system/compare/uqds-builder%404.0.15-alpha.3...uqds-builder%404.0.15-alpha.4) (2026-09-14)
+
+- **deps:** bump ESLint to 9.39.5 and fix pre-existing lint config bugs ([e2fefb5](https://github.com/uq-its-ss/design-system/commit/e2fefb5985f3a05acda96f315d92584f38026058))
+- **deps:** bump minor/patch dependencies to latest across workspaces ([c7e5faf](https://github.com/uq-its-ss/design-system/commit/c7e5fafd0b622f38cdbdbe149813992825fce7d9))
+
+## [4.0.15-alpha.3](https://github.com/uq-its-ss/design-system/compare/uqds-builder%404.0.15-alpha.2...uqds-builder%404.0.15-alpha.3) (2026-09-14)
+
+**Note:** Version bump only for package uqds-builder
+
+## [4.0.15-alpha.2](https://github.com/uq-its-ss/design-system/compare/uqds-builder%404.0.15-alpha.1...uqds-builder%404.0.15-alpha.2) (2026-09-08)
+
+**Note:** Version bump only for package uqds-builder
+
+## [4.0.15-alpha.1](https://github.com/uq-its-ss/design-system/compare/uqds-builder%404.0.15-alpha.0...uqds-builder%404.0.15-alpha.1) (2026-09-07)
+
+### Bug Fixes
+
+- **header:** navigation text change ([#819](https://github.com/uq-its-ss/design-system/issues/819)) ([6257588](https://github.com/uq-its-ss/design-system/commit/6257588f7a3e362619b436af4583ebcb1e6f1118))
+
+### Reverts
+
+- Revert "chore(release):Publish" ([e03c22c](https://github.com/uq-its-ss/design-system/commit/e03c22c3aca89a23723b522339b5e8628fc30dcd))
+
+## [4.0.15-alpha.0](https://github.com/uq-its-ss/design-system/compare/uqds-builder@4.0.14...uqds-builder@4.0.15-alpha.0) (2026-09-04)
+
+**Note:** Version bump only for package uqds-builder
+
 ## [4.0.14](https://github.com/uq-its-ss/design-system/compare/uqds-builder@4.0.14-alpha.2...uqds-builder@4.0.14) (2026-08-18)
 
 **Note:** Version bump only for package uqds-builder

@@ -35,7 +35,7 @@ export default {
   },
 };
 
-export const wayfindingControl = {
+export const WayfindingControl = {
   render: () => `
     <div class="uq-maps__wayfinding-controls">
       <div class="uq-maps__wayfinding-controls__main">
@@ -59,7 +59,7 @@ export const wayfindingControl = {
   name: "3A Wayfinding controls",
 };
 
-export const wayfindingControlWorking = {
+export const WayfindingControlWorking = {
   render: () => {
     return `
       <div class="uq-maps__wayfinding-controls uq-maps__wayfinding-controls--is-working">

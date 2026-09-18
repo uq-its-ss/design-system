@@ -33,7 +33,7 @@ export default {
   },
 };
 
-export const initial = {
+export const Initial = {
   render: () => `
     <div class="uq-maps__search">
 
@@ -50,7 +50,7 @@ export const initial = {
   name: "4A Initial",
 };
 
-export const focused = {
+export const Focused = {
   render: () => `
     <div class="uq-maps__search uq-maps__search--is-focused">
 
@@ -203,7 +203,7 @@ export const focused = {
   name: "4B On focus or selecting origin/destination",
 };
 
-export const searching = {
+export const Searching = {
   render: () => `
     <div class="uq-maps__search uq-maps__search--is-searching">
 
@@ -347,7 +347,7 @@ export const searching = {
   name: "4C With search value",
 };
 
-export const searchingNoResults = {
+export const SearchingNoResults = {
   render: () => `
     <div class="uq-maps__search uq-maps__search--is-searching">
       <!-- START search field component -->
@@ -365,7 +365,7 @@ export const searchingNoResults = {
   name: "4D With search value but no results",
 };
 
-export const searchingError = {
+export const SearchingError = {
   render: () => `
     <div class="uq-maps__search uq-maps__search--is-searching">
       <!-- START search field component -->
@@ -383,7 +383,7 @@ export const searchingError = {
   name: "4E With search value but with error",
 };
 
-export const searchingInCategory = {
+export const SearchingInCategory = {
   render: () => `
     <div class="uq-maps__search uq-maps__search--is-searching">
 

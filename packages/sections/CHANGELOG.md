@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.4-alpha.1](https://github.com/uq-its-ss/design-system/compare/%40uqds%2Fsections%404.0.4-alpha.0...%40uqds%2Fsections%404.0.4-alpha.1) (2026-09-17)
+
+- **maintenance:** merge updates ([210a1e8](https://github.com/uq-its-ss/design-system/commit/210a1e812a48481905ad225bf7c70b7314cdd47e))
+
+### 🐛 Bug Fixes
+
+- updated SCSS variables for constants to include $font-accent variable ([1d8a2cc](https://github.com/uq-its-ss/design-system/commit/1d8a2cca811628565ca89aaeeccee08627732fd6))
+
+## [4.0.4-alpha.0](https://github.com/uq-its-ss/design-system/compare/%40uqds%2Fsections%404.0.3...%40uqds%2Fsections%404.0.4-alpha.0) (2026-09-08)
+
+### Bug Fixes
+
+- add export and style fields to all component package.json files ([#788](https://github.com/uq-its-ss/design-system/issues/788)) ([590020a](https://github.com/uq-its-ss/design-system/commit/590020a7ecac8d37010d2acfdab5bb6b329ad7b9))
+
 ## [4.0.3](https://github.com/uq-its-ss/design-system/compare/@uqds/sections@4.0.3-alpha.0...@uqds/sections@4.0.3) (2026-03-30)
 
 **Note:** Version bump only for package @uqds/sections

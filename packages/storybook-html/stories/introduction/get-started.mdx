@@ -19,7 +19,7 @@ import { Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
 
       If you have access, please refer to the <a href="https://confluence.its.uq.edu.au/confluence/x/0DwDCw"> environment setup instructions</a>.
 
-      If you do not have access, <a href="mailto:webservices@uq.edu.au"> contact us</a> and we can package up styles and components for you to use in your project.
+      If you do not have access, contact the <a href="https://about.uq.edu.au/web-feedback?r=https://design-system.uq.edu.au">ADS UI team</a>  and we can package up styles and components for you to use in your project.
     </p>
 
   </div>
@@ -82,11 +82,11 @@ your Sass files. For example,
 // With a namespace (recommended)
 @use "@uqds/core/src/scss/global" as core;
 
-// Without a namespace (no recommended)
+// Without a namespace (not recommended)
 @use "@uqds/core/src/scss/global" as *;
 
 .example-class {
-  font-size: core.$font-size-xxl;
+  font-size: var(--uq-font-size-xxl);
 }
 ```
 

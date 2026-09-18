@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.7](https://github.com/uq-its-ss/design-system/compare/%40uqds%2Floading-spinner%404.0.7-alpha.1...%40uqds%2Floading-spinner%404.0.7) (2026-09-18)
+
+**Note:** Version bump only for package @uqds/loading-spinner
+
 ## [4.0.7-alpha.1](https://github.com/uq-its-ss/design-system/compare/%40uqds%2Floading-spinner%404.0.7-alpha.0...%40uqds%2Floading-spinner%404.0.7-alpha.1) (2026-09-17)
 
 ### 🐛 Bug Fixes

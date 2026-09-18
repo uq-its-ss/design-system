@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.0.10](https://github.com/uq-its-ss/design-system/compare/%40uqds%2Fheader%407.0.10-alpha.1...%40uqds%2Fheader%407.0.10) (2026-09-18)
+
+**Note:** Version bump only for package @uqds/header
+
 ## [7.0.10-alpha.1](https://github.com/uq-its-ss/design-system/compare/%40uqds%2Fheader%407.0.10-alpha.0...%40uqds%2Fheader%407.0.10-alpha.1) (2026-09-17)
 
 - **deps:** bump minor/patch dependencies to latest across workspaces ([c7e5faf](https://github.com/uq-its-ss/design-system/commit/c7e5fafd0b622f38cdbdbe149813992825fce7d9))

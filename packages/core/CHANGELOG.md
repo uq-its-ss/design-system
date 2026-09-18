@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.0.3](https://github.com/uq-its-ss/design-system/compare/%40uqds%2Fcore%405.0.3-alpha.0...%40uqds%2Fcore%405.0.3) (2026-09-18)
+
+**Note:** Version bump only for package @uqds/core
+
 ## [5.0.3-alpha.0](https://github.com/uq-its-ss/design-system/compare/%40uqds%2Fcore%405.0.2...%40uqds%2Fcore%405.0.3-alpha.0) (2026-09-17)
 
 - **docs:** typos ([ff6bf6d](https://github.com/uq-its-ss/design-system/commit/ff6bf6d49a9809b70344fa38732bb90768f4c47a))

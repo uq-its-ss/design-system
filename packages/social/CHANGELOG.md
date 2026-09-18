@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.0.3](https://github.com/uq-its-ss/design-system/compare/%40uqds%2Fsocial%406.0.3-alpha.0...%40uqds%2Fsocial%406.0.3) (2026-09-18)
+
+**Note:** Version bump only for package @uqds/social
+
 ## [6.0.3-alpha.0](https://github.com/uq-its-ss/design-system/compare/%40uqds%2Fsocial%406.0.2...%40uqds%2Fsocial%406.0.3-alpha.0) (2026-09-17)
 
 - **deps:** bump ESLint to 9.39.5 and fix pre-existing lint config bugs ([e2fefb5](https://github.com/uq-its-ss/design-system/commit/e2fefb5985f3a05acda96f315d92584f38026058))

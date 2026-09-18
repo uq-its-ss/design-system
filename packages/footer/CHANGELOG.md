@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.0.9](https://github.com/uq-its-ss/design-system/compare/%40uqds%2Ffooter%407.0.9-alpha.1...%40uqds%2Ffooter%407.0.9) (2026-09-18)
+
+**Note:** Version bump only for package @uqds/footer
+
 ## [7.0.9-alpha.1](https://github.com/uq-its-ss/design-system/compare/%40uqds%2Ffooter%407.0.9-alpha.0...%40uqds%2Ffooter%407.0.9-alpha.1) (2026-09-17)
 
 - linting ([be67231](https://github.com/uq-its-ss/design-system/commit/be67231a91d764f144d62689cb0d7301a9c81f7c))

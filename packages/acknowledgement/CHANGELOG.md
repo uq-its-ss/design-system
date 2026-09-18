@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.5](https://github.com/uq-its-ss/design-system/compare/%40uqds%2Facknowledgement%400.1.5-alpha.1...%40uqds%2Facknowledgement%400.1.5) (2026-09-18)
+
+**Note:** Version bump only for package @uqds/acknowledgement
+
 ## [0.1.5-alpha.1](https://github.com/uq-its-ss/design-system/compare/%40uqds%2Facknowledgement%400.1.5-alpha.0...%40uqds%2Facknowledgement%400.1.5-alpha.1) (2026-09-17)
 
 ### 🐛 Bug Fixes

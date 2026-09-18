@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.0.10](https://github.com/uq-its-ss/design-system/compare/%40uqds%2Falert%407.0.10-alpha.1...%40uqds%2Falert%407.0.10) (2026-09-18)
+
+**Note:** Version bump only for package @uqds/alert
+
 ## [7.0.10-alpha.1](https://github.com/uq-its-ss/design-system/compare/%40uqds%2Falert%407.0.10-alpha.0...%40uqds%2Falert%407.0.10-alpha.1) (2026-09-17)
 
 - linting ([c24bf92](https://github.com/uq-its-ss/design-system/commit/c24bf92f7b9e203166a51d00ce54be5c1ade6414))

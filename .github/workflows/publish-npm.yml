@@ -49,10 +49,29 @@ jobs:
 
       - name: "📝 Generate draft changelog"
         id: changelog
+        env:
+          PR_BASE_SHA: ${{ github.event.pull_request.base.sha }}
         run: |
           # Get changed packages
           npx lerna changed --json > changed.json || echo "[]" > changed.json
-          
+
+          # Anchor the changelog range to the most recent dedicated release tag
+          # (created by this workflow), NOT `git describe --tags`. This repo tags
+          # every package version independently, and the release commit itself
+          # carries dozens of those tags - so `git describe --tags --abbrev=0`
+          # can resolve to a tag pointing at HEAD, producing an empty (and
+          # therefore silently useless) commit range. Falling back to the PR's
+          # base commit on `releases` handles the first-ever run, when no
+          # `release-*` tag exists yet.
+          BASE_REF="$(git tag --list 'release-*' --sort=-creatordate | head -1)"
+          if [ -z "$BASE_REF" ]; then
+            BASE_REF="$PR_BASE_SHA"
+            echo "No release-* tag found (first release) - using PR base commit $BASE_REF as changelog anchor"
+          else
+            echo "Using most recent release tag as changelog anchor: $BASE_REF"
+          fi
+          export BASE_REF
+
           # Generate changelog from conventional commits
           cat > generate-draft.js << 'SCRIPT'
           const { execSync } = require('child_process');
@@ -62,8 +81,9 @@ jobs:
           try {
             const recordSep = '\x1e';
             const fieldSep = '\x1f';
+            const baseRef = process.env.BASE_REF;
             const commitsRaw = execSync(
-              'git log --pretty=format:"%H%x1f%s%x1f%b%x1e" $(git describe --tags --abbrev=0 2>/dev/null || git rev-list --max-parents=0 HEAD)..HEAD',
+              `git log --pretty=format:"%H%x1f%s%x1f%b%x1e" ${baseRef}..HEAD`,
               { encoding: 'utf8' }
             );
             

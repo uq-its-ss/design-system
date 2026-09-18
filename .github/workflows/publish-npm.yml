@@ -165,16 +165,24 @@ jobs:
           script: |
             const tag = '${{ steps.release-tag.outputs.tag }}';
             const title = '${{ steps.release-tag.outputs.title }}';
-            const changelog = `${{ steps.changelog.outputs.DRAFT_CHANGELOG }}`;
-            
-            // Check if draft already exists for this tag
+            const prNumber = context.issue.number;
+            // Identify "the draft for this PR" via a stable marker in the body,
+            // NOT by tag_name. The tag is date-based and gets recomputed on every
+            // trigger (opened/synchronize/reopened) and again independently at
+            // publish time - if the PR spans a day boundary, or two synchronize
+            // events race, tag-based matching can miss the existing draft and
+            // silently create a duplicate. The PR number never changes.
+            const marker = `<!-- RELEASE_DRAFT_PR: ${prNumber} -->`;
+            const changelog = `${marker}\n${{ steps.changelog.outputs.DRAFT_CHANGELOG }}`;
+
+            // Check if a draft already exists for this PR
             const { data: releases } = await github.rest.repos.listReleases({
               owner: context.repo.owner,
               repo: context.repo.repo,
             });
-            
-            const existingDraft = releases.find(r => r.tag_name === tag && r.draft);
-            
+
+            const existingDraft = releases.find(r => r.draft && r.body && r.body.includes(marker));
+
             if (existingDraft) {
               console.log(`Draft release already exists: ${existingDraft.html_url}`);
               await github.rest.issues.createComment({
@@ -231,7 +239,51 @@ jobs:
         run: npm ci
 
       # --- Steps for 'releases' branch ---
-      
+
+      - name: "🔎 Locate draft release for this merge"
+        if: ${{ github.ref_name == 'releases' }}
+        id: find-draft
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.UQDS_PERSONAL_ACCESS_TOKEN }}
+          script: |
+            // Identify the draft created for the merged PR by the PR-number
+            // marker in its body (see "🎉 Create draft release"), not by a
+            // recomputed date-based tag - the tag can differ if the PR spanned
+            // a day boundary, and can be ambiguous if a race ever produced more
+            // than one draft. Extract the PR number from the merge commit
+            // message, supporting both merge commits ("Merge pull request #N")
+            // and squash commits ("... (#N)").
+            const commitMessage = ${{ toJSON(github.event.head_commit.message) }};
+            const match = commitMessage.match(/Merge pull request #(\d+)/) || commitMessage.match(/\(#(\d+)\)/);
+
+            if (!match) {
+              core.warning(`Could not determine PR number from merge commit message: "${commitMessage}". Falling back to creating a fresh release at publish time.`);
+              core.setOutput('found', 'false');
+              return;
+            }
+
+            const prNumber = match[1];
+            const marker = `<!-- RELEASE_DRAFT_PR: ${prNumber} -->`;
+
+            const { data: releases } = await github.rest.repos.listReleases({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+            });
+
+            const draft = releases.find(r => r.draft && r.body && r.body.includes(marker));
+
+            if (!draft) {
+              core.warning(`No draft release found with marker for PR #${prNumber}. Falling back to creating a fresh release at publish time.`);
+              core.setOutput('found', 'false');
+              return;
+            }
+
+            core.setOutput('found', 'true');
+            core.setOutput('draft_id', String(draft.id));
+            core.setOutput('draft_tag', draft.tag_name);
+            console.log(`Located draft release for PR #${prNumber}: ${draft.html_url} (tag: ${draft.tag_name}, id: ${draft.id})`);
+
       - name: "🧐 Version dry run"
         if: ${{ github.ref_name == 'releases' }}
         id: dry-run
@@ -268,15 +320,25 @@ jobs:
         id: release-info
         run: |
           RELEASE_DATE=$(date +%Y-%m-%d)
-          RELEASE_TAG="release-${RELEASE_DATE}"
-          
-          # Check if tag exists, append .2, .3, etc.
-          COUNTER=2
-          ORIGINAL_TAG="$RELEASE_TAG"
-          while git rev-parse "$RELEASE_TAG" >/dev/null 2>&1; do
-            RELEASE_TAG="${ORIGINAL_TAG}.${COUNTER}"
-            COUNTER=$((COUNTER + 1))
-          done
+
+          if [ "${{ steps.find-draft.outputs.found }}" = "true" ]; then
+            # Reuse the exact tag the draft was created with, so the git tag we
+            # push and the release we publish always refer to the same object -
+            # never recompute this independently at publish time.
+            RELEASE_TAG="${{ steps.find-draft.outputs.draft_tag }}"
+            echo "Using tag from located draft release: $RELEASE_TAG"
+          else
+            RELEASE_TAG="release-${RELEASE_DATE}"
+
+            # Check if tag exists, append .2, .3, etc.
+            COUNTER=2
+            ORIGINAL_TAG="$RELEASE_TAG"
+            while git rev-parse "$RELEASE_TAG" >/dev/null 2>&1; do
+              RELEASE_TAG="${ORIGINAL_TAG}.${COUNTER}"
+              COUNTER=$((COUNTER + 1))
+            done
+            echo "No draft release located - generated a new tag: $RELEASE_TAG"
+          fi
           
           echo "tag=${RELEASE_TAG}" >> $GITHUB_OUTPUT
           echo "date=${RELEASE_DATE}" >> $GITHUB_OUTPUT
@@ -293,25 +355,19 @@ jobs:
           echo "EOF" >> $GITHUB_OUTPUT
 
       - name: "📝 Update draft release with final versions"
-        if: ${{ github.ref_name == 'releases' }}
+        if: ${{ github.ref_name == 'releases' && steps.find-draft.outputs.found == 'true' }}
         uses: actions/github-script@v7
         with:
           github-token: ${{ secrets.UQDS_PERSONAL_ACCESS_TOKEN }}
           script: |
-            const tag = '${{ steps.release-info.outputs.tag }}';
+            const draftId = '${{ steps.find-draft.outputs.draft_id }}';
             const packageVersions = `${{ steps.package-versions.outputs.PACKAGE_VERSIONS }}`;
 
-            const { data: releases } = await github.rest.repos.listReleases({
+            const { data: draft } = await github.rest.repos.getRelease({
               owner: context.repo.owner,
               repo: context.repo.repo,
+              release_id: draftId,
             });
-
-            const draft = releases.find(r => r.tag_name === tag && r.draft);
-
-            if (!draft) {
-              console.log(`No draft release found for tag ${tag} - skipping version refresh. It will be created with auto-generated notes at publish time.`);
-              return;
-            }
 
             const startMarker = '<!-- PACKAGE_VERSIONS_START -->';
             const endMarker = '<!-- PACKAGE_VERSIONS_END -->';
@@ -329,7 +385,7 @@ jobs:
             await github.rest.repos.updateRelease({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              release_id: draft.id,
+              release_id: draftId,
               body,
             });
 
@@ -401,32 +457,26 @@ jobs:
         with:
           github-token: ${{ secrets.UQDS_PERSONAL_ACCESS_TOKEN }}
           script: |
-            const tag = '${{ steps.release-info.outputs.tag }}';
-            
-            // Find the draft release
-            const { data: releases } = await github.rest.repos.listReleases({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-            });
-            
-            const draft = releases.find(r => r.tag_name === tag && r.draft);
-            
-            if (draft) {
-              // Publish the existing draft
-              await github.rest.repos.updateRelease({
+            const found = '${{ steps.find-draft.outputs.found }}' === 'true';
+            const draftId = '${{ steps.find-draft.outputs.draft_id }}';
+
+            if (found) {
+              // Publish the existing draft located earlier in this job - avoids
+              // re-searching by tag_name, which is what previously went wrong.
+              const { data: published } = await github.rest.repos.updateRelease({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
-                release_id: draft.id,
+                release_id: draftId,
                 draft: false
               });
-              console.log(`Published draft release: ${draft.html_url}`);
+              console.log(`Published draft release: ${published.html_url}`);
             } else {
-              console.log('No draft release found - creating new release with auto-generated changelog');
+              console.log('No draft release located earlier in this job - creating new release with auto-generated changelog');
               // Fallback: create new release if draft doesn't exist
               const { data: newRelease } = await github.rest.repos.createRelease({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
-                tag_name: tag,
+                tag_name: '${{ steps.release-info.outputs.tag }}',
                 name: 'Release: ${{ steps.release-info.outputs.date }}',
                 body: '<!-- Auto-generated release - draft was not found -->\n\nSee per-package CHANGELOGs for details.',
                 draft: false,

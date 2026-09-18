@@ -61,19 +61,45 @@ function fetchFromGitHub(url) {
   });
 }
 
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
 /**
  * Fetch all stable releases from GitHub
+ *
+ * This runs immediately after a release is created/published in the same
+ * workflow job, and the GitHub REST API can briefly lag behind that write
+ * (a list call moments later can still return the pre-publish state). Retry
+ * a couple of times with a short delay before accepting a zero-release
+ * result, rather than silently skipping CHANGELOG.md generation.
  */
 async function fetchReleases() {
   const url = `https://api.github.com/repos/${GITHUB_REPO}/releases?per_page=100`;
-  console.log("Fetching releases from GitHub...");
 
-  const releases = await fetchFromGitHub(url);
+  let stableReleases = [];
+  const maxAttempts = 3;
 
-  // Filter to stable releases only (not pre-releases, not drafts)
-  const stableReleases = releases.filter(
-    (release) => !release.prerelease && !release.draft,
-  );
+  for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+    console.log(
+      `Fetching releases from GitHub... (attempt ${attempt}/${maxAttempts})`,
+    );
+    const releases = await fetchFromGitHub(url);
+
+    // Filter to stable releases only (not pre-releases, not drafts)
+    stableReleases = releases.filter(
+      (release) => !release.prerelease && !release.draft,
+    );
+
+    if (stableReleases.length > 0 || attempt === maxAttempts) {
+      break;
+    }
+
+    console.log(
+      "No stable releases returned yet - retrying after a short delay in case of API read-after-write lag...",
+    );
+    await sleep(3000);
+  }
 
   console.log(`Found ${stableReleases.length} stable releases`);
   return stableReleases;

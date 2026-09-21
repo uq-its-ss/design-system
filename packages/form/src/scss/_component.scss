@@ -118,6 +118,15 @@
   .uq-form__input-group {
     display: flex;
 
+    &:focus-within {
+      outline: 4px solid core.$utility-500;
+      border-radius: 5px;
+    }
+
+    > input:focus {
+      outline: none;
+    }
+
     > input:has(+ .uq-button) {
       border-right: 0;
       border-top-right-radius: 0;

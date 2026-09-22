@@ -151,8 +151,8 @@ export default {
               <label class="uq-form__checkbox-label" for="uq-checkbox-ex1">Checkbox label</label>
               <input type="checkbox" class="uq-form__checkbox-input" id="uq-checkbox-ex2" name="uq-checkbox-ex2">  
               <label class="uq-form__checkbox-label" for="uq-checkbox-ex2">Checkbox label</label>
-              <input type="checkbox" class="uq-form__checkbox-input" id="uq-checkbox-ex3" name="uq-checkbox-ex3">  
-              <label class="uq-form__checkbox-label" for="uq-checkbox-ex3">Checkbox label</label>
+              <input disabled type="checkbox" class="uq-form__checkbox-input" id="uq-checkbox-ex3" name="uq-checkbox-ex3">  
+              <label class="uq-form__checkbox-label" for="uq-checkbox-ex3">Checkbox disabled</label>
             </div>
           </fieldset>
         </form>
@@ -310,8 +310,8 @@ export default {
                 Checkbox label
               </label>
               <label class="uq-form__checkbox-label" for="uq-checkbox-im3">
-                <input type="checkbox" class="uq-form__checkbox-input" id="uq-checkbox-im3" name="uq-checkbox-im3">  
-                Checkbox label
+                <input disabled type="checkbox" class="uq-form__checkbox-input" id="uq-checkbox-im3" name="uq-checkbox-im3">  
+                Checkbox disabled
               </label>
             </div>
           </fieldset>

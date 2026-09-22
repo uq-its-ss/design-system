@@ -54,6 +54,7 @@
     font-size: core.$font-size-l;
     font-weight: core.$font-weight-medium;
     color: core.$black;
+    cursor: pointer;
 
     &--inline {
       display: inline-block;
@@ -83,7 +84,7 @@
 
   .uq-form__input,
   .uq-form__select,
-  input,
+  input:not([type="checkbox"]):not([type="radio"]),
   select,
   textarea {
     padding: core.$space-m;

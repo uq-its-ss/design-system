@@ -141,6 +141,20 @@ export default {
               </div>
             </div>
           </fieldset>
+
+          <fieldset class="uq-form__fieldset">
+            <legend class="uq-form__legend">
+              <h3>Checkboxes</h3>
+            </legend>
+            <div class="uq-form__group">
+              <input type="checkbox" class="uq-form__checkbox" id="uq-checkbox-ex1" name="uq-checkbox-ex1">  
+              <label class="uq-form__label" for="uq-checkbox-ex1">Checkbox label</label>
+              <input type="checkbox" class="uq-form__checkbox" id="uq-checkbox-ex2" name="uq-checkbox-ex2">  
+              <label class="uq-form__label" for="uq-checkbox-ex2">Checkbox label</label>
+              <input type="checkbox" class="uq-form__checkbox" id="uq-checkbox-ex3" name="uq-checkbox-ex3">  
+              <label class="uq-form__label" for="uq-checkbox-ex3">Checkbox label</label>
+            </div>
+          </fieldset>
         </form>
 
         <form class="uq-form">
@@ -280,7 +294,26 @@ export default {
                 <button type="submit" class="uq-button uq-button--tertiary"><span class="uq-icon uq-icon--standard--search"></span> <span class="sr-only">Search</span></button>
               </div>
             </div>
+          </fieldset>
 
+          <fieldset class="uq-form__fieldset">
+            <legend class="uq-form__legend">
+              <h3>Checkboxes</h3>
+            </legend>
+            <div class="uq-form__group">
+              <label class="uq-form__label" for="uq-checkbox-im1">
+                <input type="checkbox" class="uq-form__checkbox" id="uq-checkbox-im1" name="uq-checkbox-im1">  
+                Checkbox label
+              </label>
+              <label class="uq-form__label" for="uq-checkbox-im2">
+                <input type="checkbox" class="uq-form__checkbox" id="uq-checkbox-im2" name="uq-checkbox-im2">  
+                Checkbox label
+              </label>
+              <label class="uq-form__label" for="uq-checkbox-im3">
+                <input type="checkbox" class="uq-form__checkbox" id="uq-checkbox-im3" name="uq-checkbox-im3">  
+                Checkbox label
+              </label>
+            </div>
           </fieldset>
 
         </form>

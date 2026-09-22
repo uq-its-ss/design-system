@@ -2,6 +2,12 @@
 @use "@uqds/icon/src/scss/global" as icon;
 @use "global" as *;
 
+@use "_partials/search-input";
+
+// TODO: Do we need to import core.global again when its getting imported from _global
+// TODO: Define global vs componoent
+// TODO: Do we want to nest form styles under .uq-form?
+
 .uq-form {
   // UQ Form styles
 

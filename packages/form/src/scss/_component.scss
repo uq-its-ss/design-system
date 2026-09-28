@@ -201,8 +201,15 @@
       width: 2rem;
       height: 2rem;
       border: 2px solid core.$grey-600;
-      border-radius: 4px;
+      border-radius: 6px;
       transition: all 0.2s ease-in-out;
+    }
+  }
+
+  input[type="checkbox"]:focus-visible + .uq-form__checkbox-label,
+  .uq-form__checkbox-label:has(input[type="checkbox"]:focus-visible) {
+    &::before {
+      outline: 4px solid core.$utility-500;
     }
   }
 

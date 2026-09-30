@@ -59,6 +59,7 @@
     font-weight: core.$font-weight-medium;
     color: core.$black;
     cursor: pointer;
+    margin: 0;
 
     &--inline {
       display: inline-flex;
@@ -74,6 +75,7 @@
 
   .uq-form__helper {
     display: block;
+    padding-bottom: core.$space-xxs;
     font-size: core.$font-size-m;
     font-weight: core.$font-weight-normal;
     text-wrap: pretty;
@@ -176,6 +178,8 @@
   .uq-form__checkbox-input {
     opacity: 0;
     position: absolute;
+    height: 0;
+    width: 0;
   }
 
   input[type="checkbox"] + .uq-form__checkbox-label,
@@ -187,7 +191,7 @@
     font-size: core.$font-size-m;
     font-weight: core.$font-weight-normal;
     position: relative;
-    margin: 1rem 0 0;
+    margin: 0.5rem 0;
     padding-left: 2.75rem;
     min-height: 2rem;
     line-height: 1.2;
@@ -203,6 +207,13 @@
       border: 2px solid core.$grey-600;
       border-radius: 6px;
       transition: all 0.2s ease-in-out;
+    }
+  }
+
+  input[type="checkbox"] + .uq-form__checkbox-label--error,
+  .uq-form__checkbox-label--error:has(input[type="checkbox"]) {
+    &::before {
+      border-color: core.$error-500;
     }
   }
 

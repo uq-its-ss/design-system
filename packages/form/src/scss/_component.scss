@@ -1,5 +1,252 @@
+@use "@uqds/core/src/scss/global" as core;
+@use "@uqds/icon/src/scss/global" as icon;
 @use "global" as *;
+
+@use "_partials/search-input";
+
+// TODO: Do we need to import core.global again when its getting imported from _global
+// TODO: Define global vs componoent
+// TODO: Do we want to nest form styles under .uq-form?
 
 .uq-form {
   // UQ Form styles
+
+  .uq-form__fieldset,
+  fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  .uq-form__group {
+    margin-bottom: core.$space-l;
+
+    &--inline,
+    &--inline label {
+      display: flex;
+      align-items: center;
+      gap: core.$space-m;
+
+      .uq-form__label {
+        flex: 1 0 auto;
+
+        & .uq-form__input,
+        & .uq-form__select {
+          width: auto;
+          flex: 1 0 auto;
+        }
+      }
+    }
+
+    &--error {
+      border-left: 6px solid core.$error-500;
+      padding-left: core.$space-l;
+
+      .uq-form__helper {
+        color: core.$error-500;
+      }
+
+      .uq-form__input {
+        border-color: core.$error-500;
+      }
+    }
+  }
+
+  .uq-form__label,
+  label {
+    display: block;
+    font-size: core.$font-size-l;
+    font-weight: core.$font-weight-medium;
+    color: core.$black;
+    cursor: pointer;
+    margin: 0;
+
+    &--inline {
+      display: inline-flex;
+      align-items: center;
+    }
+
+    &:has(~ input:disabled, ~ select:disabled, ~ textarea:disabled),
+    &:has(input:disabled, select:disabled, textarea:disabled) {
+      color: core.$grey-400;
+      cursor: not-allowed;
+    }
+  }
+
+  .uq-form__helper {
+    display: block;
+    padding-bottom: core.$space-xxs;
+    font-size: core.$font-size-m;
+    font-weight: core.$font-weight-normal;
+    text-wrap: pretty;
+    color: core.$grey-900;
+    cursor: help;
+
+    &:has(~ input:disabled, ~ select:disabled, ~ textarea:disabled),
+    &:has(input:disabled, select:disabled, textarea:disabled) {
+      color: core.$grey-400;
+      cursor: not-allowed;
+    }
+  }
+
+  .uq-form__input,
+  .uq-form__select,
+  input,
+  select,
+  textarea {
+    padding: core.$space-m;
+    width: 100%;
+    border: 2px solid core.$grey-600;
+    border-radius: 5px;
+    font-size: core.$font-size-m;
+    color: core.$black;
+    font-family: core.$font-body;
+
+    &:focus {
+      outline: 4px solid core.$utility-500;
+    }
+
+    &:disabled {
+      color: core.$grey-400;
+      border-color: core.$grey-400;
+      cursor: not-allowed;
+    }
+  }
+
+  .uq-form__select,
+  select {
+    appearance: none;
+    -webkit-appearance: none; /* Safari and Chrome */
+    -moz-appearance: none;
+    background: url(icon.get-icon("standard--chevron-down", core.$black))
+      no-repeat right core.$space-m center / core.$space-l auto;
+    cursor: pointer;
+
+    &:disabled {
+      background: url(icon.get-icon("standard--chevron-down", core.$grey-400))
+        no-repeat right core.$space-m center / core.$space-l auto;
+    }
+  }
+
+  //Input groups
+  .uq-form__input-group {
+    display: flex;
+
+    &:focus-within {
+      outline: 4px solid core.$utility-500;
+      border-radius: 5px;
+    }
+
+    > input:focus {
+      outline: none;
+    }
+
+    > input:has(+ .uq-button) {
+      border-right: 0;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    .uq-button {
+      border-radius: 0 5px 5px 0;
+      display: flex;
+      justify-content: center;
+      border: 2px solid core.$grey-600;
+      border-left: 0;
+      padding: core.$space-m;
+    }
+
+    > input:disabled + .uq-button {
+      border-color: core.$grey-400;
+      background-color: core.$grey-400;
+      color: core.$grey-800;
+      cursor: not-allowed;
+
+      &:hover {
+        text-decoration: none;
+      }
+
+      &::before,
+      .uq-icon::before {
+        filter: invert(100%) sepia(0%) saturate(1%) hue-rotate(122deg)
+          brightness(85%) contrast(102%);
+      }
+    }
+  }
+
+  // Checkbox
+  .uq-form__checkbox-input {
+    opacity: 0;
+    position: absolute;
+    height: 0;
+    width: 0;
+  }
+
+  input[type="checkbox"] + .uq-form__checkbox-label,
+  .uq-form__checkbox-label:has(input[type="checkbox"]) {
+    cursor: pointer;
+    color: core.$black;
+    display: flex;
+    align-items: center;
+    font-size: core.$font-size-m;
+    font-weight: core.$font-weight-normal;
+    position: relative;
+    margin: 0.5rem 0;
+    padding-left: 2.75rem;
+    min-height: 2rem;
+    line-height: 1.2;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 2rem;
+      height: 2rem;
+      border: 2px solid core.$grey-600;
+      border-radius: 6px;
+      transition: all 0.2s ease-in-out;
+    }
+  }
+
+  input[type="checkbox"] + .uq-form__checkbox-label--error,
+  .uq-form__checkbox-label--error:has(input[type="checkbox"]) {
+    &::before {
+      border-color: core.$error-500;
+    }
+  }
+
+  input[type="checkbox"]:focus-visible + .uq-form__checkbox-label,
+  .uq-form__checkbox-label:has(input[type="checkbox"]:focus-visible) {
+    &::before {
+      outline: 4px solid core.$utility-500;
+    }
+  }
+
+  input[type="checkbox"]:checked + .uq-form__checkbox-label,
+  .uq-form__checkbox-label:has(input[type="checkbox"]:checked) {
+    &::before {
+      background-color: core.$purple-500;
+      border-color: core.$purple-500;
+      background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M5 13.3 8.9 18 19 6' stroke='%23FFF' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3c/path%3e%3c/svg%3e");
+    }
+  }
+
+  input[type="checkbox"]:disabled ~ .uq-form__checkbox-label,
+  .uq-form__checkbox-label:has(input[type="checkbox"]:disabled) {
+    color: core.$grey-400;
+    cursor: not-allowed;
+
+    &::before {
+      border-color: core.$grey-400;
+    }
+  }
+
+  input[type="checkbox"]:checked:disabled ~ .uq-form__checkbox-label,
+  .uq-form__checkbox-label:has(input[type="checkbox"]:checked:disabled) {
+    &::before {
+      background-color: core.$grey-400;
+    }
+  }
 }

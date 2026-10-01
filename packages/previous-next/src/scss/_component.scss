@@ -5,12 +5,25 @@
 .uq-previous-next {
   display: flex;
   flex-direction: column;
-  padding-top: var(--uq-space-xxl);
-  padding-bottom: var(--uq-space-xxxl);
+  margin-top: var(--uq-space-xxl);
+  margin-bottom: var(--uq-space-xxxl);
   gap: var(--uq-space-xl);
+  position: relative;
+
+  &__item a {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      min-width: calc(100% + 3.5rem);
+      min-height: 44px;
+    }
+  }
 
   @media #{core.$screen-md-up} {
-    padding-top: var(--uq-space-xxxl);
-    padding-bottom: var(--uq-space-xxxxl);
+    margin-top: var(--uq-space-xxxl);
+    margin-bottom: var(--uq-space-xxxxl);
   }
 }

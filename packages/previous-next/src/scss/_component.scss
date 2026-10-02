@@ -10,15 +10,24 @@
   gap: var(--uq-space-xl);
   position: relative;
 
-  &__item a {
-    &::after {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      min-width: calc(100% + 3.5rem);
-      min-height: 44px;
+  &__item {
+    & a {
+      & span {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        overflow: hidden;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        min-width: calc(100% + 3.5rem);
+        min-height: calc(100% + 2rem);
+      }
     }
   }
 

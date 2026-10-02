@@ -78,11 +78,11 @@ export default {
   }) => {
     const previousElement = useButton
       ? `<button class="uq-button uq-button--link uq-icon uq-icon--standard--arrow-left">${previousLabel}</button>`
-      : `<a class="uq-icon uq-icon--standard--arrow-left" href="${previousHref}">${previousLabel}</a>`;
+      : `<a class="uq-icon uq-icon--standard--arrow-left" href="${previousHref}"><span>${previousLabel}</span></a>`;
 
     const nextElement = useButton
       ? `<button class="uq-button uq-button--link uq-icon uq-icon--standard--arrow-right">${nextLabel}</button>`
-      : `<a class="uq-icon uq-icon--standard--arrow-right" href="${nextHref}">${nextLabel}</a>`;
+      : `<a class="uq-icon uq-icon--standard--arrow-right" href="${nextHref}"><span>${nextLabel}</span></a>`;
 
     // Determine which elements to show based on state
     const showNext = state === "initial" || state === "middle";

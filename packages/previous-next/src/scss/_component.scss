@@ -7,8 +7,13 @@
   flex-direction: column;
   margin-top: var(--uq-space-xxl);
   margin-bottom: var(--uq-space-xxxl);
-  gap: var(--uq-space-xl);
+  gap: var(--uq-space-l);
   position: relative;
+
+  @media #{core.$screen-md-up} {
+    margin-top: var(--uq-space-xxxl);
+    margin-bottom: var(--uq-space-xxxxl);
+  }
 
   &__item {
     & a {
@@ -29,10 +34,5 @@
         min-height: calc(100% + 2rem);
       }
     }
-  }
-
-  @media #{core.$screen-md-up} {
-    margin-top: var(--uq-space-xxxl);
-    margin-bottom: var(--uq-space-xxxxl);
   }
 }

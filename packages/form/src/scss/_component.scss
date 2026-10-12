@@ -18,6 +18,17 @@
     padding: 0;
   }
 
+  legend {
+    display: block;
+    float: left;
+    width: 100%;
+    padding: 0;
+
+    & + * {
+      clear: both;
+    }
+  }
+
   .uq-form__group {
     margin-bottom: core.$space-l;
 
@@ -42,7 +53,10 @@
       border-left: 6px solid core.$error-500;
       padding-left: core.$space-l;
 
-      .uq-form__input {
+      .uq-form__input,
+      .uq-form__select,
+      input,
+      select {
         border-color: core.$error-500;
       }
 

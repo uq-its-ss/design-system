@@ -42,12 +42,15 @@
       border-left: 6px solid core.$error-500;
       padding-left: core.$space-l;
 
-      .uq-form__helper {
-        color: core.$error-500;
-      }
-
       .uq-form__input {
         border-color: core.$error-500;
+      }
+
+      input[type="checkbox"] + .uq-form__checkbox-label,
+      .uq-form__checkbox-label:has(input[type="checkbox"]) {
+        &::before {
+          border-color: core.$error-500 !important;
+        }
       }
     }
   }
@@ -87,6 +90,13 @@
       color: core.$grey-400;
       cursor: not-allowed;
     }
+  }
+
+  .uq-form__error {
+    display: block;
+    color: core.$error-500;
+    font-weight: core.$font-weight-bold;
+    font-size: core.$font-size-m;
   }
 
   .uq-form__input,
@@ -207,13 +217,6 @@
       border: 2px solid core.$grey-600;
       border-radius: 6px;
       transition: all 0.2s ease-in-out;
-    }
-  }
-
-  input[type="checkbox"] + .uq-form__checkbox-label--error,
-  .uq-form__checkbox-label--error:has(input[type="checkbox"]) {
-    &::before {
-      border-color: core.$error-500;
     }
   }
 

@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.6](https://github.com/uq-its-ss/design-system/compare/%40uqds%2Fbody%404.0.6-alpha.0...%40uqds%2Fbody%404.0.6) (2026-09-18)
+
+**Note:** Version bump only for package @uqds/body
+
 ## [4.0.6-alpha.0](https://github.com/uq-its-ss/design-system/compare/%40uqds%2Fbody%404.0.5...%40uqds%2Fbody%404.0.6-alpha.0) (2026-09-17)
 
 - linting ([5534abd](https://github.com/uq-its-ss/design-system/commit/5534abd32ae4ce2cf13eaaf5493788616d5c757f))

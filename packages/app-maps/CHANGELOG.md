@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.6](https://github.com/uq-its-ss/design-system/compare/%40uqds%2Fapp-maps%404.0.6-alpha.3...%40uqds%2Fapp-maps%404.0.6) (2026-09-18)
+
+**Note:** Version bump only for package @uqds/app-maps
+
 ## [4.0.6-alpha.3](https://github.com/uq-its-ss/design-system/compare/%40uqds%2Fapp-maps%404.0.6-alpha.2...%40uqds%2Fapp-maps%404.0.6-alpha.3) (2026-09-17)
 
 - **deps-dev:** bump js-yaml from 5.4.1 to 5.4.2 ([47f5f3d](https://github.com/uq-its-ss/design-system/commit/47f5f3d0d4bb14a0345493799c34d14a93a5922b))

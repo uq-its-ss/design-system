@@ -5,34 +5,37 @@
 .uq-previous-next {
   display: flex;
   flex-direction: column;
-  margin-top: var(--uq-space-xxl);
-  margin-bottom: var(--uq-space-xxxl);
   gap: var(--uq-space-l);
   position: relative;
 
-  @media #{core.$screen-md-up} {
-    margin-top: var(--uq-space-xxxl);
-    margin-bottom: var(--uq-space-xxxxl);
+  &__margin {
+    margin-top: var(--uq-space-xxl);
+    margin-bottom: var(--uq-space-xxxl);
+
+    @media #{core.$screen-md-up} {
+      margin-top: var(--uq-space-xxxl);
+      margin-bottom: var(--uq-space-xxxxl);
+    }
   }
-
-  &__item {
-    & a {
-      & span {
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 3;
-        overflow: hidden;
-      }
-
-      &::after {
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        min-width: calc(100% + 3.5rem);
-        min-height: calc(100% + 2rem);
-      }
+  // Required as a seperate element to not hide the directional arrow icon.
+  &__truncate {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    /* Modern standard property for future compatibility */
+    line-clamp: 3;
+  }
+  & a {
+    // Used to expand the clickable/touchable area of the link without changing its visual size
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      min-width: calc(100% + 3.5rem);
+      min-height: calc(100% + 2rem);
     }
   }
 }

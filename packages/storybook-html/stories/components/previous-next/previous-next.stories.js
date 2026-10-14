@@ -12,6 +12,7 @@ export default {
   args: {
     state: "middle",
     ariaLabel: "Page navigation",
+    addMargin: false,
     previousLabel: "Previous",
     previousHref: "#",
     nextLabel: "Next",
@@ -29,6 +30,10 @@ export default {
     ariaLabel: {
       control: "text",
       description: "Accessible label for the navigation",
+    },
+    addMargin: {
+      control: "boolean",
+      description: "Add margin around the previous-next component",
     },
     previousHref: {
       control: "text",
@@ -75,21 +80,22 @@ export default {
     nextHref,
     nextLabel,
     useButton,
+    addMargin,
   }) => {
     const previousElement = useButton
-      ? `<button class="uq-button uq-button--link uq-icon uq-icon--standard--arrow-left">${previousLabel}</button>`
-      : `<a class="uq-icon uq-icon--standard--arrow-left" href="${previousHref}">${previousLabel}</a>`;
+      ? `<button class="uq-button uq-button--link uq-icon uq-icon--standard--arrow-left"><span class="uq-previous-next__truncate">${previousLabel}</span></button>`
+      : `<a class="uq-icon uq-icon--standard--arrow-left" href="${previousHref}"><span class="uq-previous-next__truncate">${previousLabel}</span></a>`;
 
     const nextElement = useButton
-      ? `<button class="uq-button uq-button--link uq-icon uq-icon--standard--arrow-right">${nextLabel}</button>`
-      : `<a class="uq-icon uq-icon--standard--arrow-right" href="${nextHref}">${nextLabel}</a>`;
+      ? `<button class="uq-button uq-button--link uq-icon uq-icon--standard--arrow-right"><span class="uq-previous-next__truncate">${nextLabel}</span></button>`
+      : `<a class="uq-icon uq-icon--standard--arrow-right" href="${nextHref}"><span class="uq-previous-next__truncate">${nextLabel}</span></a>`;
 
     // Determine which elements to show based on state
     const showNext = state === "initial" || state === "middle";
     const showPrevious = state === "middle" || state === "final";
 
     return `
-      <nav class="uq-previous-next" aria-label="${ariaLabel}">
+      <nav class="uq-previous-next ${addMargin ? "uq-previous-next__margin" : ""}" aria-label="${ariaLabel}">
         ${showPrevious ? `<div class="uq-previous-next__item">${previousElement}</div>` : ""}
         ${showNext ? `<div class="uq-previous-next__item">${nextElement}</div>` : ""}
       </nav>

@@ -10,7 +10,7 @@ export default {
   },
 };
 
-export const liveDataIndicator = {
+export const LiveDataIndicator = {
   render: () => {
     return `
       <div>
@@ -28,7 +28,7 @@ export const liveDataIndicator = {
   name: "Default",
 };
 
-export const liveDataIndicatorVariants = {
+export const LiveDataIndicatorVariants = {
   render: () => {
     return `
       <div>

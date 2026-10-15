@@ -19,6 +19,8 @@ describe("Alert close behaviour", () => {
       alerts = screen.getAllByRole("alert");
       expect(alerts).toHaveLength(2);
     });
+    // Scoped to a specific alert element, not the render result; screen.getByRole would search the whole document.
+    // eslint-disable-next-line testing-library/prefer-screen-queries
     fireEvent.click(getByRole(alerts[0], "button", { name: "Close" }));
     await waitFor(() => {
       expect(alerts[0]).not.toBeInTheDocument();
@@ -86,6 +88,8 @@ describe("Alert default behaviour", () => {
     expect(alerts[0]).toHaveTextContent(
       "You're doing a great job. Keep it up!",
     );
+    // Scoped to a specific alert element, not the render result; screen.getByRole would search the whole document.
+    // eslint-disable-next-line testing-library/prefer-screen-queries
     fireEvent.click(getByRole(alerts[0], "button", { name: "Close" }));
     await waitFor(() => {
       expect(alerts[0]).not.toBeInTheDocument();

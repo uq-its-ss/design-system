@@ -26,4 +26,4 @@ export default {
   },
 };
 
-export const avatar = {};
+export const Avatar = {};

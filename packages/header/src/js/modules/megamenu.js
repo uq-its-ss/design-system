@@ -130,7 +130,9 @@ export class MegaMenuModule {
       );
     } catch (e) {
       // Fail gracefully if event dispatch fails
+      // eslint-disable-next-line no-console
       if (console && console.warn) {
+        // eslint-disable-next-line no-console
         console.warn("Failed to emit megamenu-toggle event:", e);
       }
     }

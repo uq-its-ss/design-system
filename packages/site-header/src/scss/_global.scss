@@ -1,6 +1,6 @@
 @use "@uqds/core/src/scss/global" as core;
 
-$title-font-size: core.$font-size-xl;
-$title-font-weight: core.$font-weight-bold;
+$title-font-size: var(--uq-font-size-xl);
+$title-font-weight: var(--uq-font-weight-bold);
 $nav-dropdown-width: 400px;
-$nav-dropdown-animation-distance: core.$space-s;
+$nav-dropdown-animation-distance: var(--uq-space-xs);

@@ -546,7 +546,7 @@ export const WithoutMegaMenu = {
   },
 };
 
-export const basicHeader = {
+export const BasicHeader = {
   render: () => {
     return `
     <header id="uq-header" class="uq-header">

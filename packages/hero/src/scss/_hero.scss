@@ -1,7 +1,7 @@
 @use "@uqds/core/src/scss/global" as core;
 
 .uq-hero {
-  background: core.$purple-600;
+  background: var(--uq-purple-600);
   margin-bottom: var(--hero-gap);
 
   @media #{core.$screen-lg-up} {
@@ -39,7 +39,7 @@
   &::before {
     @media #{core.$screen-lg-up} {
       content: "";
-      width: calc(50% - #{core.$space-xxxl});
+      width: calc(50% - #{var(--uq-space-xxxl)});
       flex-shrink: 1;
     }
   }
@@ -67,7 +67,7 @@
 
 .uq-hero__content {
   position: relative;
-  background: core.$purple-500;
+  background: var(--uq-purple-500);
   box-shadow: 0 3px 24px 0 rgba(#181818, 0.1);
   padding: var(--layout-gap);
   margin-bottom: 8px;
@@ -89,44 +89,44 @@
     height: 8px;
     width: 100%;
     border-radius: 0 0 4px 4px;
-    background: core.$purple-650;
+    background: var(--uq-purple-650);
   }
 }
 
 .uq-hero__title {
-  color: core.$white;
+  color: var(--uq-white);
   font-size: var(--hero-font-size-xxxxl);
 }
 
 .uq-hero__description {
-  margin-top: core.$space-m;
-  font-size: core.$font-size-l;
-  color: core.$white;
+  margin-top: var(--uq-space-m);
+  font-size: var(--uq-font-size-l);
+  color: var(--uq-white);
 }
 
 .uq-hero__description,
 .uq-hero__description * {
-  color: core.$white;
-  font-size: core.$font-size-l;
+  color: var(--uq-white);
+  font-size: var(--uq-font-size-l);
 }
 
 .uq-hero__button {
-  margin-top: core.$space-l;
+  margin-top: var(--uq-space-l);
 }
 
 .uq-hero--light {
   background: unset;
 
   & .uq-hero__content {
-    background: core.$white;
+    background: var(--uq-white);
 
     &::after {
-      background: core.$purple-gradient;
+      background: var(--uq-purple-gradient);
     }
   }
 
   & .uq-hero__title {
-    color: core.$purple-500;
+    color: var(--uq-purple-500);
   }
 
   & .uq-hero__description,

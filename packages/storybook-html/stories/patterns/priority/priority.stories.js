@@ -11,7 +11,7 @@ export default {
   },
 };
 
-export const scaleMonochrome = {
+export const ScaleMonochrome = {
   render: () => {
     return `
           <div class="uqds-colour__swatches">
@@ -27,7 +27,7 @@ export const scaleMonochrome = {
   name: "Monochrome scale",
 };
 
-export const scaleRisk = {
+export const ScaleRisk = {
   render: () => {
     return `
           <div class="uqds-colour__swatches">
@@ -43,7 +43,7 @@ export const scaleRisk = {
   name: "Risk scale",
 };
 
-export const scaleOutcome = {
+export const ScaleOutcome = {
   render: () => {
     return `
           <div class="uqds-colour__swatches">
@@ -59,7 +59,7 @@ export const scaleOutcome = {
   name: "Outcome scale",
 };
 
-export const auditFinding = {
+export const AuditFinding = {
   render: () => {
     return `
     <table class="uqds-table uqds-table--card uqds-table--colour">
@@ -139,7 +139,7 @@ export const auditFinding = {
   name: "Audit finding",
 };
 
-export const actionPriority = {
+export const ActionPriority = {
   render: () => {
     return `
 <table class="uqds-table uqds-table--card uqds-table--colour">
@@ -234,7 +234,7 @@ export const actionPriority = {
   name: "Action priority",
 };
 
-export const reportingRating = {
+export const ReportingRating = {
   render: () => {
     return `
         <table class="uqds-table uqds-table--card uqds-table--colour">
@@ -341,5 +341,4 @@ export const reportingRating = {
         </table>
         `;
   },
-  name: "Reporting Rating",
 };

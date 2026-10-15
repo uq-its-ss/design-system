@@ -104,7 +104,6 @@ export const HeroBasic = {
 
 export const Basic = {
   ...HeroBasic,
-  name: "Basic",
   args: {
     eyebrow: "Step 1 of 8",
     title: "Choose your program",
@@ -116,7 +115,6 @@ export const Basic = {
 
 export const Program = {
   ...HeroBasic,
-  name: "Program",
   args: {
     eyebrow: "Bachelors of",
     title: "Agribusiness / Agricultural Science",
@@ -128,7 +126,6 @@ export const Program = {
 
 export const Plan = {
   ...HeroBasic,
-  name: "Plan",
   args: {
     eyebrow: "Major",
     title: "Medical Biotechnology",

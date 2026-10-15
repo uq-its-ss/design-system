@@ -25,7 +25,7 @@ export default {
   },
 };
 
-export const footer = {
+export const Footer = {
   render: () => {
     return footerHTML;
   },

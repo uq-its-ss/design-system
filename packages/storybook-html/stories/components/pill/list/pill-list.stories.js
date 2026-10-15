@@ -1,7 +1,6 @@
 import { storyRenderer } from "../../../../lib/storyRenderer";
 import * as PillStories from "../pill/pill.stories";
 import "@uqds/pill/src/scss/main.scss";
-import { title } from "../../body/body-elements.stories";
 
 const { Link: Pill } = storyRenderer(PillStories);
 

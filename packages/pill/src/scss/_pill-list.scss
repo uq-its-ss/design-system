@@ -5,25 +5,25 @@
 .uq-pill-list {
   display: flex;
   flex-direction: column;
-  gap: core.$space-m;
+  gap: var(--uq-space-m);
 
   @media #{core.$screen-sm-up} {
     flex-direction: row;
-    gap: core.$space-l;
+    gap: var(--uq-space-l);
   }
 }
 
 .uq-pill-list__title {
   margin: 0;
-  font-size: core.$font-size-l;
+  font-size: var(--uq-font-size-l);
 
   @media #{core.$screen-sm-up} {
-    margin-top: core.$space-s;
+    margin-top: var(--uq-space-xs);
   }
 }
 
 .uq-pill-list__content {
   display: flex;
   flex-wrap: wrap;
-  gap: core.$space-m;
+  gap: var(--uq-space-m);
 }

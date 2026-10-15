@@ -1,5 +1,7 @@
 "use strict";
 
+/* global SlideMenu */
+
 /**
  * Mobile Menu Module
  * @file Handles SlideMenu integration and mobile navigation behavior
@@ -106,7 +108,9 @@ export class MobileMenuModule {
         );
       } catch (e) {
         // Fail gracefully if event dispatch fails
+        // eslint-disable-next-line no-console
         if (console && console.warn) {
+          // eslint-disable-next-line no-console
           console.warn("Failed to emit mobile-menu-toggle event:", e);
         }
       }
@@ -172,7 +176,9 @@ export class MobileMenuModule {
         }
       } catch (e) {
         // Fail gracefully if path building fails
+        // eslint-disable-next-line no-console
         if (console && console.warn) {
+          // eslint-disable-next-line no-console
           console.warn("Failed to enhance back button:", e);
         }
       }

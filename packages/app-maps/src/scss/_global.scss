@@ -1,0 +1,91 @@
+@use "sass:map";
+@use "sass:string";
+@use "sass:meta";
+@use "@uqds/core/src/scss/global" as core;
+@use "icons" as *;
+
+$colour-placeholder: "~~COLOR~~";
+
+$icon-primary-filter: core.$filter-primary;
+$icon-light-filter: core.$filter-white;
+$icon-text-filter: core.$filter-text;
+
+/**
+ * String replacement helper function.
+ */
+@function -str-replace($string, $search, $replace: "") {
+  $index: string.index($string, $search);
+
+  @if $index {
+    @return string.slice($string, 1, $index - 1) + $replace +
+      -str-replace(
+        string.slice($string, $index + string.length($search)),
+        $search,
+        $replace
+      );
+  }
+
+  @return $string;
+}
+
+/**
+ * Get an icon data URI with optional color replacement.
+ * 
+ * @param {String} $icon - Icon name (e.g., "ui--search")
+ * @param {Color} $color - Fill color (default: #51247a / UQ purple)
+ * @return {String} Data URI with color applied
+ */
+@function get-icon($icon, $color: #51247a) {
+  @if meta.type-of($color) != "color" and $color != "none" {
+    @warn 'The requested color - "' + $color + '" - was not recognized as a Sass color value.';
+    @return null;
+  }
+
+  @if map.has-key($icons, $icon) {
+    $icon: map.get($icons, $icon);
+    $data-uri: -str-replace($icon, $colour-placeholder, $color);
+
+    @return -str-replace($data-uri, "#", "%23");
+  }
+
+  @warn 'The requested icon - "' + $icon + '" - is not defined in the $icons map.';
+  @return null;
+}
+
+@mixin icon-base() {
+  .uq-icon {
+    &::before {
+      content: "";
+      display: inline-block;
+      margin-right: 0.3em;
+      height: 1.5em;
+      width: 1.5em;
+      filter: $icon-primary-filter;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 100%;
+      vertical-align: text-bottom;
+    }
+
+    // Colour variants
+    &--light {
+      &::before {
+        filter: $icon-light-filter;
+      }
+    }
+
+    &--text {
+      &::before {
+        filter: $icon-text-filter;
+      }
+    }
+  }
+}
+
+@mixin icon($name) {
+  .uq-icon--#{$name} {
+    &::before {
+      background-image: url(get-icon("#{$name}"));
+    }
+  }
+}

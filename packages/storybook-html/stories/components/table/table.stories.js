@@ -19,7 +19,7 @@ export default {
   },
 };
 
-export const table = {
+export const Table = {
   render: () => {
     return tableHTML;
   },
@@ -27,7 +27,7 @@ export const table = {
   name: "Table scroll with minimal classes",
 };
 
-export const tableClasses = {
+export const TableClasses = {
   render: () => {
     return tableClassesHTML;
   },
@@ -35,7 +35,7 @@ export const tableClasses = {
   name: "Table scroll with classes",
 };
 
-export const tableMultipleHeaders = {
+export const TableMultipleHeaders = {
   render: () => {
     return tableMultipleHeadersHTML;
   },
@@ -43,7 +43,7 @@ export const tableMultipleHeaders = {
   name: "Table scroll with multiple headers",
 };
 
-export const tableIrregularHeaders = {
+export const TableIrregularHeaders = {
   render: () => {
     return tableIrregularHeadersHTML;
   },
@@ -51,7 +51,7 @@ export const tableIrregularHeaders = {
   name: "Table scroll with irregular headers",
 };
 
-export const tableMultiLevelHeaders = {
+export const TableMultiLevelHeaders = {
   render: () => {
     return tableMultiLevelHeadersHTML;
   },
@@ -59,7 +59,7 @@ export const tableMultiLevelHeaders = {
   name: "Table scroll with multi-level headers",
 };
 
-export const tableCard = {
+export const TableCard = {
   render: () => {
     return tableCardHTML;
   },

@@ -40,7 +40,7 @@ export default {
   },
 };
 
-export const icon = () => {
+export const Icon = () => {
   return iconsByCat.categories.reduce((acc, category) => {
     return (
       acc +
@@ -65,7 +65,7 @@ export const icon = () => {
   }, "");
 };
 
-export const linkIcon = {
+export const LinkIcon = {
   render: () => {
     return `<p><a class="uq-icon uq-icon--agriculture-and-environment--agriculture-machine-tractor">This is a link</a></p>
     <p><a class="uq-icon  uq-icon uq-icon--standard--arrow-left">This is a link</a></p>

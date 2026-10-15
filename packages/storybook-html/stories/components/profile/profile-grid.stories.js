@@ -1,12 +1,11 @@
 import classNames from "classnames";
-import { layoutDecorator } from "../../../lib/decorators";
 import { storyRenderer } from "../../../lib/storyRenderer";
 import * as ProfileStories from "./profile.stories";
 import * as LocalNavStories from "../navigation/local-nav/local-nav.stories";
 import "@uqds/layout/src/scss/main.scss";
 
 // Initialize our renderers
-const { profile: ProfileCard } = storyRenderer(ProfileStories);
+const { Profile: ProfileCard } = storyRenderer(ProfileStories);
 const { LocalNav } = storyRenderer(LocalNavStories);
 
 export default {
@@ -79,4 +78,4 @@ export default {
 };
 
 // Single export that handles all states via Controls
-export const usingGrid = {};
+export const UsingGrid = {};

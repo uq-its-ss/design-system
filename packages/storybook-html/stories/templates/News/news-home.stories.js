@@ -15,7 +15,7 @@ import { initJs } from "../../../lib/initJs";
 
 const { Default: Header } = storyRenderer(HeaderStories);
 const { Breadcrumb } = storyRenderer(BreadcrumbStories);
-const { footer } = storyRenderer(FooterStories);
+const { Footer: footer } = storyRenderer(FooterStories);
 const { Level2: Level2Hero } = storyRenderer(HeroStories);
 const { NewsExample } = storyRenderer(SidebarRightStories);
 const { Text: Card } = storyRenderer(CardStories);

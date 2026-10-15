@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { DocsContainer } from "@storybook/addon-docs/blocks";
-import tocbot from "tocbot";
+import { init as tocbotInit, destroy as tocbotDestroy } from "tocbot";
 
 const tocConfiguration = {
   tocSelector: ".toc-wrapper",
@@ -11,7 +11,7 @@ const tocConfiguration = {
 const TocDocs = (props) => {
   useEffect(() => {
     // Set up toc bot
-    tocbot.init({
+    tocbotInit({
       ...tocConfiguration,
       onClick: (event) => {
         event.preventDefault();
@@ -26,7 +26,7 @@ const TocDocs = (props) => {
     });
 
     return () => {
-      tocbot.destroy();
+      tocbotDestroy();
     };
   });
 

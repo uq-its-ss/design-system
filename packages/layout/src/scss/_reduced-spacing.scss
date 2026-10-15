@@ -6,10 +6,10 @@
 
 .uq-reduced-spacing {
   & .uq-section:not(.uq-section--no-margin) {
-    margin-bottom: core.$space-uul;
+    margin-bottom: var(--uq-space-uul);
   }
 
   & .uq-card-grid {
-    gap: core.$space-l;
+    gap: var(--uq-space-l);
   }
 }

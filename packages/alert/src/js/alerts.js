@@ -21,7 +21,7 @@ class Alerts {
           if (alert.dismissible) {
             const close = alertEl.querySelector(".uq-alert__close");
             if (close) {
-              close.addEventListener("click", (el) => {
+              close.addEventListener("click", () => {
                 window.localStorage.setItem(
                   `alert-dismissed-${alert.uuid}`,
                   String(Math.round(new Date().getTime() / 1000)),

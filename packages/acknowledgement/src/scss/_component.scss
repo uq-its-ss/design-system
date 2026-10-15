@@ -3,8 +3,9 @@
 @use "global" as *;
 
 .uq-acknowledgement {
-  background: core.$black;
-  background-image: linear-gradient(
+  background: var(--uq-black);
+  background-image:
+    linear-gradient(
       0deg,
       #40205d 45.31%,
       rgba(64, 32, 93, 0.55) 85.94%,
@@ -14,7 +15,8 @@
 
   @media (min-width: 40rem) {
     /* 640px */
-    background-image: linear-gradient(
+    background-image:
+      linear-gradient(
         90deg,
         #40205d 60%,
         rgba(64, 32, 93, 0.65) 70%,
@@ -25,15 +27,15 @@
 
   &__content {
     max-width: 73.25rem;
-    padding: core.$space-compressed-m core.$space-l;
-    color: core.$white;
-    font-weight: core.$font-weight-normal;
-    font-size: core.$font-size-m;
+    padding: var(--uq-space-s) var(--uq-space-l);
+    color: var(--uq-white);
+    font-weight: var(--uq-font-weight-normal);
+    font-size: var(--uq-font-size-m);
     line-height: 1.5;
     margin: auto;
 
     @media #{core.$screen-xl-up} {
-      padding: core.$space-compressed-m core.$space-m;
+      padding: var(--uq-space-s) var(--uq-space-m);
     }
   }
 
@@ -48,25 +50,25 @@
   &__link {
     font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-style: normal;
-    font-weight: core.$font-weight-medium;
-    color: core.$white;
+    font-weight: var(--uq-font-weight-medium);
+    color: var(--uq-white);
 
     &:hover {
       text-decoration: underline;
-      background-color: core.$white;
-      color: core.$purple-500;
+      background-color: var(--uq-white);
+      color: var(--uq-purple-500);
     }
   }
   // large
   &--large &__content {
-    padding: core.$space-xxl core.$space-l core.$space-l;
+    padding: var(--uq-space-xxl) var(--uq-space-l) var(--uq-space-l);
     @media (min-width: 40rem) {
       /* 640px */
-      font-size: core.$font-size-xl;
-      padding: core.$space-xxl core.$space-l;
+      font-size: var(--uq-font-size-xl);
+      padding: var(--uq-space-xxl) var(--uq-space-l);
     }
     @media #{core.$screen-xl-up} {
-      padding: core.$space-xxl core.$space-m;
+      padding: var(--uq-space-xxl) var(--uq-space-m);
     }
   }
 }

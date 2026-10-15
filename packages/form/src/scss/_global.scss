@@ -2,11 +2,11 @@
 
 $form-border-radius: 2px;
 $form-border-width: 1px;
-$form-description-size: core.$font-size-xs;
-$form-element-height: core.$space-xxl;
-$form-label-size: core.$font-size-s;
-$form-spacing: core.$space-m;
-$form-text-size: core.$font-size-m;
+$form-description-size: var(--uq-font-size-xs);
+$form-element-height: var(--uq-space-xxl);
+$form-label-size: var(--uq-font-size-s);
+$form-spacing: var(--uq-space-m);
+$form-text-size: var(--uq-font-size-m);
 
 // Checkbox/Radio buttons
 $form-checkbox-border-radius: 4px;

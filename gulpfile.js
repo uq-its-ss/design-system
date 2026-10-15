@@ -9,7 +9,6 @@ const cjs = require("@rollup/plugin-commonjs");
 const source = require("vinyl-source-stream");
 const buffer = require("vinyl-buffer");
 const fs = require("fs");
-const path = require("path");
 
 // SCSS include paths
 const scssPaths = ["../../node_modules", "node_modules", "node_modules/@uqds"];

@@ -18,7 +18,7 @@ export default {
   },
 };
 
-export const siteHeaderWithSubnav = {
+export const SiteHeaderWithSubnav = {
   render: () => {
     return siteHeaderWithSubnavHTML;
   },
@@ -31,7 +31,7 @@ export const siteHeaderWithSubnav = {
   name: "With sub-navigation",
 };
 
-export const siteHeaderWithoutSubnav = {
+export const SiteHeaderWithoutSubnav = {
   render: () => {
     return siteHeaderWithoutSubnavHTML;
   },

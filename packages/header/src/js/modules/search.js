@@ -85,7 +85,9 @@ export class SearchModule {
       );
     } catch (e) {
       // Fail gracefully if event dispatch fails
+      // eslint-disable-next-line no-console
       if (console && console.warn) {
+        // eslint-disable-next-line no-console
         console.warn("Failed to emit search-toggle event:", e);
       }
     }
@@ -167,7 +169,9 @@ export class SearchModule {
         );
       } catch (e) {
         // Fail gracefully if event dispatch fails
+        // eslint-disable-next-line no-console
         if (console && console.warn) {
+          // eslint-disable-next-line no-console
           console.warn("Failed to emit search-submit event:", e);
         }
       }

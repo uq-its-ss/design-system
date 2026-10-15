@@ -16,15 +16,15 @@
     padding: 0 !important;
 
     a.toc-link {
-      font-family: core.$roboto;
-      font-weight: core.$font-weight-normal;
+      font-family: var(--uq-roboto);
+      font-weight: var(--uq-font-weight-normal);
       padding: 0.3rem 0 0.3rem 0.6rem;
       border-left: 2px solid transparent;
 
       &:hover,
       &:focus {
-        font-weight: core.$font-weight-medium;
-        color: core.$purple-500;
+        font-weight: var(--uq-font-weight-medium);
+        color: var(--uq-purple-500);
         background-color: transparent;
         text-decoration: underline;
       }
@@ -32,7 +32,7 @@
 
     a.toc-link.is-active-link,
     .toc-list.is-collapsible a.toc-link.is-active-link {
-      border-left: 2px solid core.$purple-500;
+      border-left: 2px solid var(--uq-purple-500);
     }
 
     .toc-list {
@@ -44,7 +44,7 @@
 
   .toc-list-item:has(ul.is-collapsible:not(.is-collapsed)) {
     > a {
-      font-weight: core.$font-weight-medium;
+      font-weight: var(--uq-font-weight-medium);
     }
 
     a.toc-link {
@@ -53,7 +53,7 @@
   }
 
   .toc-list-item.is-active-li > a {
-    color: core.$purple-500 !important;
-    font-weight: core.$font-weight-bold !important;
+    color: var(--uq-purple-500) !important;
+    font-weight: var(--uq-font-weight-bold) !important;
   }
 }

@@ -3,7 +3,7 @@ export default {
   tags: ["autodocs"],
 };
 
-export const contactArea = {
+export const ContactArea = {
   render: () => `
 
 <!-- Contact Banner -->
@@ -20,7 +20,7 @@ Monday to Friday 8am&mdash;8pm AEST<br>
   name: "Contact footer - area",
 };
 
-export const contact = {
+export const Contact = {
   render: () => `
 
 <!-- Contact Banner -->

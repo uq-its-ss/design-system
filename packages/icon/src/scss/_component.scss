@@ -2,3 +2,32 @@
 @use "global" as *;
 
 @include icon-base;
+
+a.uq-icon::before,
+button.uq-icon::before {
+  height: 1.5em; /* Fallback for legacy browsers */
+  width: 1.5em; /* Fallback for legacy browsers */
+  height: 1lh;
+  width: 1.2lh;
+  background-position: left bottom;
+  background-size: contain;
+  position: absolute;
+  margin-right: unset;
+  left: -1.2lh;
+}
+a.uq-icon,
+button.uq-icon {
+  margin-left: 1.2lh;
+  position: relative;
+}
+a.uq-icon.uq-icon--right,
+button.uq-icon.uq-icon--right {
+  margin-left: unset;
+  margin-right: 1.2lh;
+}
+a.uq-icon.uq-icon--right::before,
+button.uq-icon.uq-icon--right::before {
+  left: unset;
+  right: -1.2lh;
+  background-position: right bottom;
+}

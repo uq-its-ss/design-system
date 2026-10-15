@@ -23,12 +23,12 @@
 .uqds-colour__palette {
   width: 100%;
   border-radius: 0.25rem;
-  padding: core.$space-m;
-  font-size: core.$font-size-xs !important;
+  padding: var(--uq-space-m);
+  font-size: var(--uq-font-size-xs) !important;
 }
 
 .uqds-colour__palette--large {
-  // padding: core.$space-xl;
+  // padding: var(--uq-space-xl);
 }
 
 /* Colour table custom sizing */
@@ -67,377 +67,377 @@
 
 /* UQ Purple palette */
 .uqds-colour--purple-50 {
-  background-color: core.$purple-50;
+  background-color: var(--uq-purple-50);
 }
 
 .uqds-colour--purple-100 {
-  background-color: core.$purple-100;
+  background-color: var(--uq-purple-100);
 }
 
 .uqds-colour--purple-200 {
-  background-color: core.$purple-200;
+  background-color: var(--uq-purple-200);
 }
 
 .uqds-colour--purple-300 {
-  background-color: core.$purple-300;
-  color: core.$white;
+  background-color: var(--uq-purple-300);
+  color: var(--uq-white);
 }
 
 .uqds-colour--purple-400 {
-  background-color: core.$purple-400;
-  color: core.$white;
+  background-color: var(--uq-purple-400);
+  color: var(--uq-white);
 }
 
 .uqds-colour--purple-500,
 .uqds-colour--purple {
-  background-color: core.$purple-500;
-  color: core.$white;
+  background-color: var(--uq-purple-500);
+  color: var(--uq-white);
 }
 
 .uqds-colour--purple-600 {
-  background-color: core.$purple-600;
-  color: core.$white;
+  background-color: var(--uq-purple-600);
+  color: var(--uq-white);
 }
 
 .uqds-colour--purple-650 {
-  background-color: core.$purple-650;
-  color: core.$white;
+  background-color: var(--uq-purple-650);
+  color: var(--uq-white);
 }
 
 .uqds-colour--purple-700 {
-  background-color: core.$purple-700;
-  color: core.$white;
+  background-color: var(--uq-purple-700);
+  color: var(--uq-white);
 }
 
 .uqds-colour--purple-800 {
-  background-color: core.$purple-800;
-  color: core.$white;
+  background-color: var(--uq-purple-800);
+  color: var(--uq-white);
 }
 
 .uqds-colour--purple-900 {
-  background-color: core.$purple-900;
-  color: core.$white;
+  background-color: var(--uq-purple-900);
+  color: var(--uq-white);
 }
 
 .uqds-text-color--purple {
-  color: core.$purple-500;
+  color: var(--uq-purple-500);
 }
 
 /* Black */
 .uqds-colour--black {
-  background-color: core.$black;
+  background-color: var(--uq-black);
   color: white;
 }
 
 /* White */
 .uqds-colour--white {
-  background-color: core.$white;
+  background-color: var(--uq-white);
   border: 1px solid #eeeeee;
 }
 
 /* Grey */
 .uqds-colour--grey-50 {
-  background-color: core.$grey-50;
+  background-color: var(--uq-grey-50);
 }
 
 .uqds-colour--grey-100 {
-  background-color: core.$grey-100;
+  background-color: var(--uq-grey-100);
 }
 
 .uqds-colour--grey-200 {
-  background-color: core.$grey-200;
+  background-color: var(--uq-grey-200);
 }
 
 .uqds-colour--grey-300 {
-  background-color: core.$grey-300;
+  background-color: var(--uq-grey-300);
 }
 
 .uqds-colour--grey-400 {
-  background-color: core.$grey-400;
+  background-color: var(--uq-grey-400);
 }
 
 .uqds-colour--grey-500 {
-  background-color: core.$grey-500;
+  background-color: var(--uq-grey-500);
 }
 
 .uqds-colour--grey-600 {
-  background-color: core.$grey-600;
-  color: core.$white;
+  background-color: var(--uq-grey-600);
+  color: var(--uq-white);
 }
 
 .uqds-colour--grey-700 {
-  background-color: core.$grey-700;
-  color: core.$white;
+  background-color: var(--uq-grey-700);
+  color: var(--uq-white);
 }
 
 .uqds-colour--grey-800 {
-  background-color: core.$grey-800;
-  color: core.$white;
+  background-color: var(--uq-grey-800);
+  color: var(--uq-white);
 }
 
 .uqds-colour--grey-900 {
-  background-color: core.$grey-900;
-  color: core.$white;
+  background-color: var(--uq-grey-900);
+  color: var(--uq-white);
 }
 
 .uqds-colour--grey-925 {
-  background-color: core.$grey-925;
-  color: core.$white;
+  background-color: var(--uq-grey-925);
+  color: var(--uq-white);
 }
 
 /* Error */
 .uqds-colour--error-50 {
-  background-color: core.$error-50;
+  background-color: var(--uq-error-50);
 }
 
 .uqds-colour--error-100 {
-  background-color: core.$error-100;
+  background-color: var(--uq-error-100);
 }
 
 .uqds-colour--error-200 {
-  background-color: core.$error-200;
+  background-color: var(--uq-error-200);
 }
 
 .uqds-colour--error-300 {
-  background-color: core.$error-300;
+  background-color: var(--uq-error-300);
 }
 
 .uqds-colour--error-400 {
-  background-color: core.$error-400;
+  background-color: var(--uq-error-400);
 }
 
 .uqds-colour--error-500 {
-  background-color: core.$error-500;
-  color: core.$white;
+  background-color: var(--uq-error-500);
+  color: var(--uq-white);
 }
 
 .uqds-colour--error-600 {
-  background-color: core.$error-600;
-  color: core.$white;
+  background-color: var(--uq-error-600);
+  color: var(--uq-white);
 }
 
 .uqds-colour--error-700 {
-  background-color: core.$error-700;
-  color: core.$white;
+  background-color: var(--uq-error-700);
+  color: var(--uq-white);
 }
 
 .uqds-colour--error-800 {
-  background-color: core.$error-800;
-  color: core.$white;
+  background-color: var(--uq-error-800);
+  color: var(--uq-white);
 }
 
 .uqds-colour--error-900 {
-  background-color: core.$error-900;
-  color: core.$white;
+  background-color: var(--uq-error-900);
+  color: var(--uq-white);
 }
 
 /* Success */
 .uqds-colour--success-50 {
-  background-color: core.$success-50;
+  background-color: var(--uq-success-50);
 }
 
 .uqds-colour--success-100 {
-  background-color: core.$success-100;
+  background-color: var(--uq-success-100);
 }
 
 .uqds-colour--success-200 {
-  background-color: core.$success-200;
+  background-color: var(--uq-success-200);
 }
 
 .uqds-colour--success-300 {
-  background-color: core.$success-300;
+  background-color: var(--uq-success-300);
 }
 
 .uqds-colour--success-400 {
-  background-color: core.$success-400;
+  background-color: var(--uq-success-400);
 }
 
 .uqds-colour--success-500 {
-  background-color: core.$success-500;
-  color: core.$white;
+  background-color: var(--uq-success-500);
+  color: var(--uq-white);
 }
 
 .uqds-colour--success-600 {
-  background-color: core.$success-600;
-  color: core.$white;
+  background-color: var(--uq-success-600);
+  color: var(--uq-white);
 }
 
 .uqds-colour--success-700 {
-  background-color: core.$success-700;
-  color: core.$white;
+  background-color: var(--uq-success-700);
+  color: var(--uq-white);
 }
 
 .uqds-colour--success-800 {
-  background-color: core.$success-800;
-  color: core.$white;
+  background-color: var(--uq-success-800);
+  color: var(--uq-white);
 }
 
 .uqds-colour--success-900 {
-  background-color: core.$success-900;
-  color: core.$white;
+  background-color: var(--uq-success-900);
+  color: var(--uq-white);
 }
 
 /* Warning */
 .uqds-colour--warning-50 {
-  background-color: core.$warning-50;
+  background-color: var(--uq-warning-50);
 }
 
 .uqds-colour--warning-100 {
-  background-color: core.$warning-100;
+  background-color: var(--uq-warning-100);
 }
 
 .uqds-colour--warning-200 {
-  background-color: core.$warning-200;
+  background-color: var(--uq-warning-200);
 }
 
 .uqds-colour--warning-300 {
-  background-color: core.$warning-300;
+  background-color: var(--uq-warning-300);
 }
 
 .uqds-colour--warning-400 {
-  background-color: core.$warning-400;
+  background-color: var(--uq-warning-400);
 }
 
 .uqds-colour--warning-500 {
-  background-color: core.$warning-500;
-  color: core.$white;
+  background-color: var(--uq-warning-500);
+  color: var(--uq-white);
 }
 
 .uqds-colour--warning-600 {
-  background-color: core.$warning-600;
-  color: core.$white;
+  background-color: var(--uq-warning-600);
+  color: var(--uq-white);
 }
 
 .uqds-colour--warning-700 {
-  background-color: core.$warning-700;
-  color: core.$white;
+  background-color: var(--uq-warning-700);
+  color: var(--uq-white);
 }
 
 .uqds-colour--warning-800 {
-  background-color: core.$warning-800;
-  color: core.$white;
+  background-color: var(--uq-warning-800);
+  color: var(--uq-white);
 }
 
 .uqds-colour--warning-900 {
-  background-color: core.$warning-900;
-  color: core.$white;
+  background-color: var(--uq-warning-900);
+  color: var(--uq-white);
 }
 
 /* Utility */
 .uqds-colour--utility-50 {
-  background-color: core.$utility-50;
+  background-color: var(--uq-utility-50);
 }
 
 .uqds-colour--utility-100 {
-  background-color: core.$utility-100;
+  background-color: var(--uq-utility-100);
 }
 
 .uqds-colour--utility-200 {
-  background-color: core.$utility-200;
+  background-color: var(--uq-utility-200);
 }
 
 .uqds-colour--utility-300 {
-  background-color: core.$utility-300;
+  background-color: var(--uq-utility-300);
 }
 
 .uqds-colour--utility-400 {
-  background-color: core.$utility-400;
+  background-color: var(--uq-utility-400);
 }
 
 .uqds-colour--utility-500 {
-  background-color: core.$utility-500;
-  color: core.$white;
+  background-color: var(--uq-utility-500);
+  color: var(--uq-white);
 }
 
 .uqds-colour--utility-600 {
-  background-color: core.$utility-600;
-  color: core.$white;
+  background-color: var(--uq-utility-600);
+  color: var(--uq-white);
 }
 
 .uqds-colour--utility-700 {
-  background-color: core.$utility-700;
-  color: core.$white;
+  background-color: var(--uq-utility-700);
+  color: var(--uq-white);
 }
 
 .uqds-colour--utility-800 {
-  background-color: core.$utility-800;
-  color: core.$white;
+  background-color: var(--uq-utility-800);
+  color: var(--uq-white);
 }
 
 .uqds-colour--utility-900 {
-  background-color: core.$utility-900;
-  color: core.$white;
+  background-color: var(--uq-utility-900);
+  color: var(--uq-white);
 }
 
 .uqds-text-color--white {
-  color: core.$white;
+  color: var(--uq-white);
 }
 
 /* UQ secondary palette */
 .uqds-colour--purple-light {
-  background-color: core.$purple-light;
+  background-color: var(--uq-purple-light);
 }
 
 .uqds-colour--red {
-  background-color: core.$error-500;
+  background-color: var(--uq-error-500);
 }
 
 .uqds-colour--yellow {
-  background-color: core.$warning-500;
+  background-color: var(--uq-warning-500);
 }
 
 .uqds-colour--blue {
-  background-color: core.$utility-500;
+  background-color: var(--uq-utility-500);
 }
 
 .uqds-colour--green {
-  background-color: core.$success-500;
+  background-color: var(--uq-success-500);
 }
 
 /* UQ purple gradient */
 .uqds-purple-gradient {
-  background: core.$purple-gradient;
+  background: var(--uq-purple-gradient);
   color: white;
 }
 
 /* Text */
 .uqds-text-bgcolor {
-  background-color: core.$grey-900;
+  background-color: var(--uq-grey-900);
 }
 
 .uqds-text-color {
-  color: core.$grey-900;
+  color: var(--uq-grey-900);
 }
 
 /* Alerts */
 .uqds-colour--info {
-  background-color: core.$utility-50;
+  background-color: var(--uq-utility-50);
 }
 
 .uqds-colour--success {
-  background-color: core.$success-50;
+  background-color: var(--uq-success-50);
 }
 
 .uqds-colour--warning {
-  background-color: core.$warning-50;
+  background-color: var(--uq-warning-50);
 }
 
 .uqds-colour--alert {
-  background-color: core.$error-50;
+  background-color: var(--uq-error-50);
 }
 
 .uqds-colour--info-dark {
-  background-color: core.$utility-500;
+  background-color: var(--uq-utility-500);
 }
 
 .uqds-colour--success-dark {
-  background-color: core.$success-500;
+  background-color: var(--uq-success-500);
 }
 
 .uqds-colour--warning-dark {
-  background-color: core.$warning-500;
+  background-color: var(--uq-warning-500);
 }
 
 .uqds-colour--alert-dark {
-  background-color: core.$error-500;
+  background-color: var(--uq-error-500);
 }

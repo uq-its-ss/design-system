@@ -7,7 +7,7 @@ export default {
   },
 };
 
-export const standardTemplate = {
+export const StandardTemplate = {
   render: () => `
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:rn="http://schemas.rightnow.com/crm/document" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" lang="en" xml:lang="en">

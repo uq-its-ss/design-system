@@ -50,7 +50,7 @@ export default {
   },
   decorators: [
     (storyFn) =>
-      initJs(storyFn, (component) => {
+      initJs(storyFn, () => {
         new accordion();
       }),
   ],

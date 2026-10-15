@@ -175,7 +175,7 @@ class MainNavigation {
       // If we shift tab past the first child, toggle this level.
       if (event.key === "Tab" && event.shiftKey === true) {
         if (nav.classList.contains(this.level2Class)) {
-          this.closeLevel(nav, nav.parentNode, subNav);
+          this.closeLevel(nav, nav.parentNode);
           nav.parentNode.classList.remove(this.levelOpenModifier);
         } else {
           this.closeNav(nav);

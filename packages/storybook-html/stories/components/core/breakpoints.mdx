@@ -37,22 +37,22 @@ example:
 
 .example-class {
   // Target the zero (mobile) breakpoint & up
-  font-size: core.$font-size-s;
-  padding: core.$space-m;
+  font-size: var(--uq-font-size-s);
+  padding: var(--uq-space-m);
   text-align: center;
 }
 
 @media #{core.$screen-md-up} {
   .example-class {
     // Target the MD (tablet) breakpoint & up
-    font-size: core.$font-size-m;
+    font-size: var(--uq-font-size-m);
   }
 }
 
 @media #{core.$screen-xl-up} {
   .example-class {
     // Target the XL (desktop) breakpoint & up
-    font-size: core.$font-size-l;
+    font-size: var(--uq-font-size-l);
   }
 }
 ```

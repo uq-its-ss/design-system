@@ -8,7 +8,7 @@ export default {
   },
 };
 
-export const textColorUtils = {
+export const TextColorUtils = {
   render: () => {
     return `
 <table>
@@ -43,7 +43,7 @@ export const textColorUtils = {
   name: "Text colours",
 };
 
-export const textSizeUtils = {
+export const TextSizeUtils = {
   render: () => {
     return `
   <table>
@@ -103,7 +103,7 @@ export const textSizeUtils = {
   name: "Text size",
 };
 
-export const textWeightUtils = {
+export const TextWeightUtils = {
   render: () => {
     return `
   <table>
@@ -138,7 +138,7 @@ export const textWeightUtils = {
   name: "Text weight",
 };
 
-export const textAlignUtils = {
+export const TextAlignUtils = {
   render: () => {
     return `
       <div class="uqds-body__text-utility__container uqds-body__text-utility__container--flex-left">
@@ -152,7 +152,7 @@ export const textAlignUtils = {
   name: "Text alignment",
 };
 
-export const textPrettyUtils = {
+export const TextPrettyUtils = {
   render: () => {
     return `
       <div class="uqds-body__text-utility__container text--xl">
@@ -166,7 +166,7 @@ export const textPrettyUtils = {
   name: "Text prettiers",
 };
 
-export const backgroundColourUtils = {
+export const BackgroundColourUtils = {
   render: () => {
     return `
       <div class="uqds-body__bg-color-utility__container">
@@ -181,7 +181,7 @@ export const backgroundColourUtils = {
   name: "Background colour",
 };
 
-export const visibilityUtils = {
+export const VisibilityUtils = {
   render: () => ` 
     <div class="text--xl">
       <div>.hidden <span class="hidden">🕺</span></div>
@@ -195,7 +195,7 @@ export const visibilityUtils = {
   name: "Visibility",
 };
 
-export const skipLinks = {
+export const SkipLinks = {
   name: "Skip links",
   parameters: {
     docs: {

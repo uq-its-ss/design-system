@@ -16,7 +16,7 @@ export default {
   },
 };
 
-export const loadingSpinner = {
+export const LoadingSpinner = {
   render: () => {
     return loadingSpinnerHTML;
   },
@@ -24,7 +24,7 @@ export const loadingSpinner = {
   name: "Default",
 };
 
-export const loadingSpinnerLight = {
+export const LoadingSpinnerLight = {
   render: () => {
     return loadingSpinnerLightHTML;
   },
@@ -52,7 +52,7 @@ export const loadingSpinnerLight = {
   },
 };
 
-export const loadingSpinnerSmall = {
+export const LoadingSpinnerSmall = {
   render: () => {
     return loadingSpinnerSmallHTML;
   },

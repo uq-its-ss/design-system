@@ -24,7 +24,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: core.$purple-500;
+    background: var(--uq-purple-500);
     pointer-events: none; // Ensures it doesn't block clicks
   }
 
@@ -68,14 +68,14 @@
     color: var(--uq-white);
     position: relative;
     // text-indent: -9999px;
-    font-size: core.$font-size-xs;
+    font-size: var(--uq-font-size-xs);
     white-space: nowrap;
     background: none;
     border: none;
-    padding: 1.75rem core.$space-xl;
+    padding: 1.75rem var(--uq-space-xl);
     padding: 2.625rem 1.5rem 17px 1.5rem;
-    width: core.$space-uuul;
-    height: core.$space-uul;
+    width: var(--uq-space-uuul);
+    height: var(--uq-space-uul);
 
     display: flex;
     justify-content: center;
@@ -92,11 +92,11 @@
         core.$white
       ));
       background-repeat: no-repeat;
-      width: core.$space-l;
-      height: core.$space-l;
+      width: var(--uq-space-l);
+      height: var(--uq-space-l);
       //transform: translate(50%, 50%);
       position: absolute;
-      top: core.$space-m;
+      top: var(--uq-space-m);
       left: 28px;
     }
 
@@ -149,21 +149,22 @@
 
     &-button {
       cursor: pointer;
-      color: core.$white;
+      color: var(--uq-white);
       position: relative;
       background: none;
       border: none;
 
       padding: 1.5rem;
-      width: core.$space-uul;
-      height: core.$space-uul;
+      width: var(--uq-space-uul);
+      height: var(--uq-space-uul);
 
       //relative and z-index needed so they sit in front of the background layer.
       position: relative;
       z-index: 2;
 
       @media #{core.$screen-lg-up} {
-        padding: core.$space-xl core.$space-xl core.$space-xl core.$space-ul;
+        padding: var(--uq-space-xl) var(--uq-space-xl) var(--uq-space-xl)
+          var(--uq-space-ul);
         position: relative;
         height: auto;
         width: auto;
@@ -176,15 +177,15 @@
           core.$white
         ));
         background-repeat: no-repeat;
-        width: core.$space-l;
-        height: core.$space-l;
+        width: var(--uq-space-l);
+        height: var(--uq-space-l);
         position: absolute;
-        top: core.$space-l;
-        right: core.$space-l;
+        top: var(--uq-space-l);
+        right: var(--uq-space-l);
 
         @media #{core.$screen-lg-up} {
-          top: core.$space-xl;
-          left: core.$space-xl;
+          top: var(--uq-space-xl);
+          left: var(--uq-space-xl);
         }
       }
 
@@ -192,8 +193,8 @@
         &:hover,
         &:focus {
           .uq-header__toggle-search-label {
-            background-color: core.$white;
-            color: core.$purple-500;
+            background-color: var(--uq-white);
+            color: var(--uq-purple-500);
             text-decoration: underline;
           }
         }
@@ -216,10 +217,10 @@
 
       @media #{core.$screen-lg-up} {
         visibility: visible;
-        font-family: core.$roboto;
-        font-size: core.$font-size-m;
+        font-family: var(--uq-font-family-roboto);
+        font-size: var(--uq-font-size-m);
         text-align: center;
-        line-height: core.$line-height; //core.$space-l
+        line-height: var(--uq-line-height-long); //core.$space-l
         height: auto;
         width: 3.2rem;
       }
@@ -250,8 +251,8 @@
 
       &--is-open {
         .uq-header__nav-primary-link {
-          background-color: core.$white;
-          color: core.$purple-500;
+          background-color: var(--uq-white);
+          color: var(--uq-purple-500);
           text-decoration: underline;
         }
 
@@ -264,12 +265,12 @@
 
     &-link {
       display: block;
-      color: core.$white; //core.$purple-500;
+      color: var(--uq-white); //var(--uq-purple-500);
       text-decoration: none;
-      padding: core.$space-xl core.$space-l;
+      padding: var(--uq-space-xl) var(--uq-space-l);
       transition: background-color 0.2s;
-      font-weight: core.$font-weight-normal;
-      line-height: core.$line-height;
+      font-weight: var(--uq-font-weight-normal);
+      line-height: var(--uq-line-height-long);
       position: relative;
       z-index: 99;
 
@@ -284,14 +285,14 @@
 
       &:hover,
       &:focus {
-        color: core.$purple-500;
-        background-color: core.$white;
+        color: var(--uq-purple-500);
+        background-color: var(--uq-white);
         text-decoration: underline;
       }
     }
 
     &--has-dropdown {
-      padding-right: core.$space-xxl;
+      padding-right: var(--uq-space-xxl);
 
       &::after {
         content: "";
@@ -300,8 +301,8 @@
           core.$white
         ));
         background-repeat: no-repeat;
-        width: core.$space-m;
-        height: core.$space-m;
+        width: var(--uq-space-m);
+        height: var(--uq-space-m);
         transform: translateY(50%);
         position: absolute;
         top: 1.7rem;
@@ -339,14 +340,14 @@
       max-width: 77.25rem;
       margin-left: auto;
       margin-right: auto;
-      padding: core.$space-xl core.$space-xxxl;
-      background: core.$white;
+      padding: var(--uq-space-xl) var(--uq-space-xxxl);
+      background: var(--uq-white);
       display: grid;
       grid-template-columns: repeat(3, 1fr); /* Defines a 3-column grid */
-      gap: core.$space-xl;
-      box-shadow: 0 0.75rem core.$space-l rgba(24, 24, 24, 0.2);
-      //box-shadow: 0 0.75rem core.$space-l rgb(24 24 24 / 20%);
-      border-radius: 0 0 core.$space-xs core.$space-xs;
+      gap: var(--uq-space-xl);
+      box-shadow: 0 0.75rem var(--uq-space-l) rgba(24, 24, 24, 0.2);
+      //box-shadow: 0 0.75rem var(--uq-space-l) rgb(24 24 24 / 20%);
+      border-radius: 0 0 var(--uq-space-xxs) var(--uq-space-xxs);
     }
 
     &-overview-label {
@@ -354,9 +355,9 @@
       margin: 0;
 
       & .uq-header__megamenu-link {
-        font-size: core.$font-size-xxl;
-        font-weight: core.$font-weight-medium;
-        margin-right: core.$space-xl;
+        font-size: var(--uq-font-size-xxl);
+        font-weight: var(--uq-font-weight-medium);
+        margin-right: var(--uq-space-xl);
         position: relative;
 
         &::after {
@@ -366,8 +367,8 @@
             core.$purple-500
           ));
           background-repeat: no-repeat;
-          width: core.$space-l;
-          height: core.$space-l;
+          width: var(--uq-space-l);
+          height: var(--uq-space-l);
           position: absolute;
           top: 2.5px;
           right: -36px;
@@ -377,23 +378,23 @@
 
     &-overview-link {
       display: block;
-      padding: core.$space-m core.$space-none;
-      color: core.$black;
-      font-size: core.$font-size-l;
-      font-weight: core.$font-weight-medium;
+      padding: var(--uq-space-m) var(--uq-space-none);
+      color: var(--uq-black);
+      font-size: var(--uq-font-size-l);
+      font-weight: var(--uq-font-weight-medium);
       text-decoration: none;
     }
 
     &-heading {
-      font-size: core.$font-size-l;
+      font-size: var(--uq-font-size-l);
       font-weight: 500;
-      color: core.$black;
-      padding-top: core.$space-xs;
-      padding-bottom: core.$space-m;
-      margin: core.$space-none;
+      color: var(--uq-black);
+      padding-top: var(--uq-space-xxs);
+      padding-bottom: var(--uq-space-m);
+      margin: var(--uq-space-none);
 
       &:nth-of-type(2) {
-        padding-top: core.$space-xxl;
+        padding-top: var(--uq-space-xxl);
       }
     }
 
@@ -402,24 +403,24 @@
       flex-direction: column;
       gap: 4px;
       list-style-type: none;
-      margin: core.$space-none;
-      padding-left: core.$space-none;
+      margin: var(--uq-space-none);
+      padding-left: var(--uq-space-none);
     }
 
     &-item {
-      margin: core.$space-none;
+      margin: var(--uq-space-none);
     }
 
     &-link {
       display: inline-block;
-      color: core.$grey-900;
+      color: var(--uq-grey-900);
       text-decoration: none;
-      font-weight: core.$font-weight-normal;
+      font-weight: var(--uq-font-weight-normal);
 
       &:hover,
       &:focus {
-        background-color: core.$purple-500;
-        color: core.$white;
+        background-color: var(--uq-purple-500);
+        color: var(--uq-white);
         text-decoration: underline;
       }
     }
@@ -427,13 +428,13 @@
 
   /* SEARCH */
   &__search {
-    background: core.$purple-500;
+    background: var(--uq-purple-500);
     position: absolute;
     width: 100%;
     top: auto;
     left: 0;
     z-index: -1;
-    box-shadow: 0 0.75rem core.$space-l rgb(24 24 24 / 20%);
+    box-shadow: 0 0.75rem var(--uq-space-l) rgb(24 24 24 / 20%);
 
     /* 1. Setup the hidden state properly using only transform */
     transform: translateY(-100%); /* Slides it up completely out of view */
@@ -463,10 +464,10 @@
       max-width: 75.25rem;
       margin-left: auto;
       margin-right: auto;
-      padding: core.$space-s core.$space-l core.$space-m;
+      padding: var(--uq-space-xs) var(--uq-space-l) var(--uq-space-m);
 
       @media #{core.$screen-lg-up} {
-        padding: core.$space-l core.$space-xl core.$space-xxl;
+        padding: var(--uq-space-l) var(--uq-space-xl) var(--uq-space-xxl);
       }
     }
 
@@ -476,9 +477,9 @@
       max-width: 100%;
       min-width: 100%;
       border-radius: 5px;
-      background-position: core.$space-m;
-      padding-top: core.$space-m;
-      padding-bottom: core.$space-m;
+      background-position: var(--uq-space-m);
+      padding-top: var(--uq-space-m);
+      padding-bottom: var(--uq-space-m);
     }
 
     &-form {
@@ -495,7 +496,7 @@
     }
 
     &-label {
-      color: core.$white;
+      color: var(--uq-white);
       display: none;
     }
 
@@ -513,9 +514,9 @@
       position: absolute;
       top: 0;
       right: 0;
-      height: core.$space-xxxl;
-      width: core.$space-xxxxl;
-      padding: 0.75rem core.$space-m !important;
+      height: var(--uq-space-xxxl);
+      width: var(--uq-space-xxxxl);
+      padding: 0.75rem var(--uq-space-m) !important;
       cursor: pointer;
       white-space: nowrap;
 
@@ -523,10 +524,10 @@
         content: "";
         position: absolute;
         display: block;
-        width: core.$space-l;
-        height: core.$space-l;
+        width: var(--uq-space-l);
+        height: var(--uq-space-l);
         top: 0.75rem;
-        left: core.$space-m;
+        left: var(--uq-space-m);
         background-size: 100%;
         background-image: url(icon-constants.get-icon(
           "standard--search",
@@ -543,7 +544,7 @@
   /* NAVIGATION SECONDARY (Desktop) */
   &__nav-secondary {
     display: none;
-    background-color: core.$purple-600;
+    background-color: var(--uq-purple-600);
     grid-area: navigationsecondary;
 
     //relative and z-index needed so they sit in front of the background layer.
@@ -566,10 +567,10 @@
     &-list {
       list-style-type: none;
       margin: 0;
-      padding: 0.625rem core.$space-xl;
+      padding: 0.625rem var(--uq-space-xl);
       display: flex;
       justify-content: flex-end;
-      gap: core.$space-l;
+      gap: var(--uq-space-l);
       align-items: center;
       flex-direction: row;
     }
@@ -581,16 +582,16 @@
 
     &-link {
       display: block;
-      color: white;
+      color: var(--uq-white);
       text-decoration: none;
-      font-size: core.$font-size-s;
-      font-weight: core.$font-weight-normal;
+      font-size: var(--uq-font-size-s);
+      font-weight: var(--uq-font-weight-normal);
 
       &:hover,
       &:focus {
-        color: core.$purple-500;
+        color: var(--uq-purple-500);
         text-decoration: underline;
-        background-color: core.$white;
+        background-color: var(--uq-white);
       }
     }
   }
@@ -612,7 +613,9 @@ body.no-scroll {
 .slide-menu {
   width: 100%;
   max-width: 100%;
-  background-color: core.$purple-600; // Keeping as literal as this is a darker purple than core.$purple-500
+  background-color: var(
+    --uq-purple-600
+  ); // Keeping as literal as this is a darker purple than core.$purple-500
   height: calc(var(--app-height) - 4.3rem);
   display: none;
   box-sizing: border-box;
@@ -626,9 +629,11 @@ body.no-scroll {
   right: 0;
   overflow-y: auto;
   overflow-x: hidden;
-  font-size: core.$space-m;
+  font-size: var(--uq-space-m);
   line-height: 1.6;
-  color: core.$purple-500; // Keeping as literal as this is a darker purple than core.$purple-500
+  color: var(
+    --uq-purple-500
+  ); // Keeping as literal as this is a darker purple than var(--uq-purple-500)
 
   @media #{core.$screen-lg-up} {
     display: none !important;
@@ -673,44 +678,44 @@ body.no-scroll {
   & .uq-header__nav-mobile-link {
     display: block;
     cursor: pointer;
-    padding: core.$space-m core.$space-xxl;
+    padding: var(--uq-space-m) var(--uq-space-xxl);
     text-decoration: none;
-    font-size: core.$space-m;
-    color: core.$black;
+    font-size: var(--uq-space-m);
+    color: var(--uq-black);
     position: relative;
     font-weight: 400;
 
     &:hover {
-      color: core.$black;
-      background-color: core.$grey-50;
+      color: var(--uq-black);
+      background-color: var(--uq-grey-50);
     }
   }
 
   /* returns the padding for Parent page link */
   & .uq-header__nav-mobile-list .uq-header__nav-mobile-item:nth-of-type(2) a {
-    padding-left: core.$space-l;
+    padding-left: var(--uq-space-l);
 
     &.is-active {
-      padding-left: calc(core.$space-l - 6px);
+      padding-left: calc(var(--uq-space-l) - 6px);
     }
   }
 
   /* Back to previous menu section */
   &__backlink {
     &.uq-header__nav-mobile-link {
-      font-weight: core.$font-weight-medium;
+      font-weight: var(--uq-font-weight-medium);
     }
 
     &::before {
       content: "";
       background-image: url("data:image/svg+xml,%3csvg viewBox=%270 0 24 24%27 fill=%27none%27 xmlns=%27http://www.w3.org/2000/svg%27%3e%3cpath d=%27m15 5-7 7 7 7%27 stroke=%27%23000%27 stroke-width=%271.5%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3e%3c/path%3e%3c/svg%3e");
       background-repeat: no-repeat;
-      width: core.$space-l;
-      height: core.$space-l;
+      width: var(--uq-space-l);
+      height: var(--uq-space-l);
       transform: translateY(50%);
       position: absolute;
-      left: core.$space-m;
-      top: core.$space-xs;
+      left: var(--uq-space-m);
+      top: var(--uq-space-xxs);
     }
   }
 
@@ -719,53 +724,53 @@ body.no-scroll {
     content: "";
     background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m10 17 5-5-5-5' stroke='%2319151C' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3e%3c/path%3e%3c/svg%3e");
     background-repeat: no-repeat;
-    width: core.$space-l;
-    height: core.$space-l;
+    width: var(--uq-space-l);
+    height: var(--uq-space-l);
     transform: translateY(50%);
     position: absolute;
-    right: core.$space-l;
-    top: core.$space-xs;
+    right: var(--uq-space-l);
+    top: var(--uq-space-xxs);
   }
 
   /* UQ Home back link */
   .uq-header__nav-mobile-home {
-    padding-left: calc(core.$space-xxxl - 4px);
-    font-weight: core.$font-weight-medium;
+    padding-left: calc(var(--uq-space-xxxl) - 4px);
+    font-weight: var(--uq-font-weight-medium);
 
     &::before {
       content: "";
       background: url("data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M20%2012L5%2012%22%20stroke%3D%22%2351247a%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3Cpath%20d%3D%22M10%206L4%2012L10%2018%22%20stroke%3D%22%2351247a%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E");
       background-repeat: no-repeat;
-      width: core.$space-l;
-      height: core.$space-l;
+      width: var(--uq-space-l);
+      height: var(--uq-space-l);
       transform: translateY(50%);
       position: absolute;
-      left: core.$space-m;
-      top: core.$space-xs;
+      left: var(--uq-space-m);
+      top: var(--uq-space-xxs);
     }
   }
 
   .uq-header__nav-mobile-secondary-item {
-    background-color: core.$purple-600;
+    background-color: var(--uq-purple-600);
 
     &:hover {
-      background-color: core.$purple-600;
+      background-color: var(--uq-purple-600);
     }
   }
 
   .uq-header__nav-mobile-secondary {
-    color: core.$white;
-    padding: core.$space-s core.$space-l;
+    color: var(--uq-white);
+    padding: var(--uq-space-xs) var(--uq-space-l);
 
     &:hover {
-      color: core.$purple-600;
-      background-color: core.$white;
+      color: var(--uq-purple-600);
+      background-color: var(--uq-white);
     }
   }
 
   /* convoluted way to target the first Secondary item and add space above, refine when better classes added */
   ul > li.uq-header__nav-mobile-secondary-item {
-    padding-top: core.$space-m;
+    padding-top: var(--uq-space-m);
 
     /* convoluted way to target the first Secondary item and add space above, refine when better classes added */
     ~ li.uq-header__nav-mobile-secondary-item {
@@ -778,14 +783,14 @@ body.no-scroll {
   }
 
   .uq-header__nav-mobile-primary {
-    color: core.$white;
-    padding: core.$space-m core.$space-l;
-    background-color: core.$purple-500;
-    font-weight: core.$font-weight-medium;
+    color: var(--uq-white);
+    padding: var(--uq-space-m) var(--uq-space-l);
+    background-color: var(--uq-purple-500);
+    font-weight: var(--uq-font-weight-medium);
 
     &:hover {
-      color: core.$purple-500;
-      background-color: core.$white;
+      color: var(--uq-purple-500);
+      background-color: var(--uq-white);
 
       .slide-menu__decorator::before {
         content: "";
@@ -810,17 +815,17 @@ body.no-scroll {
    *              Can be used as data-arg selector for simple static implementations
    */
   .is-active {
-    border-left: 6px solid core.$purple-500;
-    padding-left: calc(core.$space-xxl - 6px);
-    background-color: core.$grey-50;
+    border-left: 6px solid var(--uq-purple-500);
+    padding-left: calc(var(--uq-space-xxl) - 6px);
+    background-color: var(--uq-grey-50);
   }
 
   ul ul .is-active {
-    padding-left: calc(core.$space-xxl - 6px);
+    padding-left: calc(var(--uq-space-xxl) - 6px);
   }
 
   .uq-header__nav-mobile-audience-link {
-    padding-right: core.$space-xxxl;
+    padding-right: var(--uq-space-xxxl);
   }
 }
 
@@ -828,11 +833,11 @@ body.no-scroll {
 .uq-header__nav-mobile-audience-link,
 .uq-header__nav-mobile-home,
 .slide-menu__backlink {
-  border-bottom: 1px solid core.$grey-100; // Keeping as literal
+  border-bottom: 1px solid var(--uq-grey-100); // Keeping as literal
 }
 
 .uq-header__nav-mobile-local {
-  background-color: core.$white;
+  background-color: var(--uq-white);
 }
 
 .uq-site-header__navigation-toggle {
@@ -847,7 +852,9 @@ body.no-scroll {
     &:hover,
     &:active {
       background-color: transparent !important;
-      color: core.$black !important; // Use the variable for your default text color
+      color: var(
+        --uq-black
+      ) !important; // Use the variable for your default text color
       text-decoration: none !important;
     }
   }

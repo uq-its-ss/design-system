@@ -83,6 +83,7 @@ export default [
             "packages/**/stories/**/*.stories.{js,jsx,ts,tsx}",
             "packages/storybook-html/stories/**/*.stories.js",
             "packages/storybook-html/stories/**/examples/*.js",
+            "packages/storybook-html/stories/**/*Decorator.js",
             "packages/**/.storybook/**",
             "packages/**/gulpfile.js",
             "packages/**/build-icons.js",
@@ -123,6 +124,8 @@ export default [
       "packages/icon/src/ts/**",
       // Vendored/bundled third-party build output, not authored source
       "packages/uqds-builder/src/js/slide-menu.js",
+      "packages/header/src/js/slide-menu.js",
+      "packages/uqds-builder/src/js/uqds.js",
       "packages/storybook-html/stories/components/header/slide-menu.js",
     ]
   },

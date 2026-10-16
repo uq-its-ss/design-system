@@ -1,9 +1,10 @@
 import classNames from "classnames";
 import { storyRenderer } from "../../../lib/storyRenderer";
+import { initializeHeader } from "../../components/header/headingDecorator";
+import { initializeFooter } from "../../components/footer/footerDecorator";
 import * as CardStories from "../../components/card/card.stories";
 import * as PaneStories from "../../components/pane/pane.stories";
 import * as AlertStories from "../../components/alert/alert.stories";
-import { accordion } from "@uqds/accordion/src/js/main";
 import * as BlockquoteStories from "../../components/blockquote/blockquote.stories";
 import * as ImageStories from "../../components/image/image.stories";
 import * as PillListStories from "../../components/pill/list/pill-list.stories";
@@ -20,7 +21,7 @@ import * as FooterStories from "../../components/footer/footer.stories";
 import { initJs } from "../../../lib/initJs";
 import { breadcrumb } from "@uqds/breadcrumb/src/js/main";
 
-const { Header } = storyRenderer(HeaderStories);
+const { Default: Header } = storyRenderer(HeaderStories);
 const { Breadcrumb } = storyRenderer(BreadcrumbStories);
 const { Footer: footer } = storyRenderer(FooterStories);
 const { Text: TextCard } = storyRenderer(CardStories);
@@ -55,12 +56,18 @@ export const Article = {
   decorators: [
     (storyFn) =>
       initJs(storyFn, (component) => {
+        // Initialize header
+        initializeHeader(component);
+
+        // Initialize other components
         new breadcrumb(component.querySelector(".uq-breadcrumb"));
         const button = component.querySelector(".uq-copy-button");
         copyButton(button, button.dataset.copy);
         imageCarousel(component.querySelector(".uq-image-carousel"));
         socialShare(component.querySelector(".uq-social-share"));
-        new accordion();
+
+        // Initialize footer
+        initializeFooter(component);
       }),
   ],
   render: ({ showGrid }) => `

@@ -26,6 +26,7 @@ The relationship between exclusive toggles where only one can be active at a tim
 ### Coordinator
 
 The Header class acts as the central coordinator for mutual exclusion. Each module receives an `onOpening` callback at construction that triggers the coordinator to close all other toggles before the module opens itself.
+
 # SVGO Icon Build System
 
 Build infrastructure for optimizing SVG icons and generating consumable outputs (Sass modules, JavaScript/TypeScript APIs) from source SVG files organized in category folders.

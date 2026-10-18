@@ -63,7 +63,7 @@ export default {
               <h3>Select Inputs</h3>
             </legend>
 
-            <div class="uq-form__group">
+            <fieldset class="uq-form__group">
               <label class="uq-form__label" for="course">Select</label>
               <span class="uq-form__helper">Help text or description under label</span>
               <select class="uq-form__select" id="course" name="course">
@@ -72,7 +72,7 @@ export default {
                 <option value="bachelor-of-engineering">Bachelor of Engineering</option>
                 <option value="bachelor-of-science">Bachelor of Science</option>
               </select>
-            </div>
+            </fieldset>
 
             <div class="uq-form__group uq-form__group--inline">
               <label class="uq-form__label" for="course">In-line select</label>

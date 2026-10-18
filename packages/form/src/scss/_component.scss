@@ -60,8 +60,8 @@
         border-color: core.$error-500;
       }
 
-      input[type="checkbox"] + .uq-form__checkbox-label,
-      .uq-form__checkbox-label:has(input[type="checkbox"]) {
+      input[type="checkbox"]:not(:disabled) + .uq-form__checkbox-label,
+      .uq-form__checkbox-label:has(input[type="checkbox"]:not(:disabled)) {
         &::before {
           border-color: core.$error-500 !important;
         }

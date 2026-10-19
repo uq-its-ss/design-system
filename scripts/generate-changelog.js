@@ -68,17 +68,24 @@ function sleep(ms) {
 /**
  * Fetch all stable releases from GitHub
  *
- * This runs immediately after a release is created/published in the same
- * workflow job, and the GitHub REST API can briefly lag behind that write
- * (a list call moments later can still return the pre-publish state). Retry
- * a couple of times with a short delay before accepting a zero-release
- * result, rather than silently skipping CHANGELOG.md generation.
+ * This runs immediately after a release is published in the same workflow
+ * job, and the GitHub REST API can briefly lag behind that write - a list
+ * call moments later can still return a stale, pre-publish snapshot. That
+ * snapshot is **not** empty in general (it's the full history of prior
+ * stable releases), so merely checking "did we get any releases back" isn't
+ * enough: it stops retrying on the very first stale response and silently
+ * regenerates CHANGELOG.md without the release that was just published.
+ *
+ * Instead, when `expectedTag` is provided, keep retrying until that exact
+ * release appears among the stable releases returned, and throw (rather
+ * than silently proceeding) once attempts are exhausted - callers must treat
+ * that as a hard failure, not a reason to skip/regenerate from stale data.
  */
-async function fetchReleases() {
+async function fetchReleases(expectedTag) {
   const url = `https://api.github.com/repos/${GITHUB_REPO}/releases?per_page=100`;
 
   let stableReleases = [];
-  const maxAttempts = 3;
+  const maxAttempts = 5;
 
   for (let attempt = 1; attempt <= maxAttempts; attempt++) {
     console.log(
@@ -91,12 +98,23 @@ async function fetchReleases() {
       (release) => !release.prerelease && !release.draft,
     );
 
-    if (stableReleases.length > 0 || attempt === maxAttempts) {
+    const hasExpectedRelease =
+      !expectedTag ||
+      stableReleases.some((release) => release.tag_name === expectedTag);
+
+    if (hasExpectedRelease) {
       break;
     }
 
+    if (attempt === maxAttempts) {
+      throw new Error(
+        `GitHub API still did not return release "${expectedTag}" among stable releases after ${maxAttempts} attempts. ` +
+          "Refusing to generate CHANGELOG.md from what may be a stale/incomplete release list.",
+      );
+    }
+
     console.log(
-      "No stable releases returned yet - retrying after a short delay in case of API read-after-write lag...",
+      `Expected release "${expectedTag}" not yet present (got ${stableReleases.length} stable releases) - retrying after a short delay in case of API read-after-write lag...`,
     );
     await sleep(3000);
   }
@@ -169,8 +187,18 @@ function generateChangelog(releases) {
  */
 async function main() {
   try {
+    // The workflow passes the tag of the release it just published, so this
+    // script can confirm the API has caught up rather than trusting whatever
+    // (possibly stale) list it happens to get back first.
+    const expectedTag = process.env.EXPECTED_RELEASE_TAG;
+    if (!expectedTag) {
+      console.warn(
+        "EXPECTED_RELEASE_TAG was not set - skipping the read-after-write check and using whatever stable releases the API returns on the first attempt.",
+      );
+    }
+
     // Fetch releases from GitHub
-    const releases = await fetchReleases();
+    const releases = await fetchReleases(expectedTag);
 
     if (releases.length === 0) {
       console.log(

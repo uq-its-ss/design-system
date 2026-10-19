@@ -79,6 +79,24 @@ Use **standard merge** for PRs to master branch (preserve all commits).
 - Auto-generated categorized changelog below (grouped by change type: Features, Bug Fixes, etc.)
 - Per-package CHANGELOGs continue to be maintained by Lerna (for npm package consumers)
 
+**Tracking the draft release across its lifecycle:**
+
+Because the release body is a field humans are explicitly expected to edit
+(the "Human adds summary" step above), the automation does **not** use the
+release body — or a tag name recomputed at each step — to identify "the
+draft belonging to this PR" when the PR is later merged. Both are liable to
+change: the tag is date-based and gets recalculated independently when the
+draft is created and again when it's published, and any hidden marker left
+in the body can be stripped during curation.
+
+Instead, the workflow records the draft release's numeric ID in a dedicated,
+machine-readable PR comment (`<!-- RELEASE_DRAFT_ID: {id} -->`) that is never
+part of the documented human-editing workflow. At merge time, the workflow
+extracts the PR number from the merge/squash commit message, reads that
+comment, and resolves the draft via the GitHub Releases API by ID. If the
+comment or the release it points to is missing, the workflow falls back to
+creating a new release rather than failing the publish outright (see Risks).
+
 ### Commit Message Guidance
 
 **Tools:** Commitlint + Husky (local git hook) + PR template + CONTRIBUTING.md
@@ -144,6 +162,8 @@ Use **standard merge** for PRs to master branch (preserve all commits).
 - Team might forget to edit draft release before approval → release published with only auto-generated changelog (graceful degradation, can edit after publishing)
 - Developers might bypass commit hook frequently → inconsistent commit messages (monitor via PR reviews)
 - Root CHANGELOG.md gets out of sync if GitHub Release API changes or automation breaks (recoverable: regenerate from API)
+- Someone deletes/edits the PR's `RELEASE_DRAFT_ID` tracking comment → merge-time lookup can't find the existing draft and creates a new, near-empty release instead; the original draft is left orphaned (mitigated by keeping this comment separate from the human-editable summary workflow, so it's not touched during normal curation)
+- GitHub's Releases API can briefly lag behind a just-published release (read-after-write lag) → root CHANGELOG.md generation retries (up to 5 attempts, 3s apart) until the just-published release's tag is present in the API response, and fails the step rather than silently regenerating from a stale list
 
 ## Status
 

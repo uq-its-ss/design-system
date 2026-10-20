@@ -208,8 +208,8 @@
     border-radius: 6px;
     background-color: white;
     margin: 0;
-    vertical-align: middle;
     transition: all 0.2s ease-in-out;
+    cursor: pointer;
   }
 
   // Checkbox label
@@ -227,7 +227,7 @@
     padding: core.$space-xxs 0;
 
     input[type="checkbox"] {
-      margin-right: core.$space-xs;
+      margin-right: core.$space-s;
     }
   }
 
@@ -241,6 +241,7 @@
   input[type="checkbox"]:disabled {
     background-color: core.$white;
     border-color: core.$grey-400;
+    cursor: not-allowed;
   }
 
   input[type="checkbox"]:checked:disabled {

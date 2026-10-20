@@ -190,37 +190,55 @@ export default {
 
           <h3>Checkboxes</h3>
 
-
-          <fieldset class="uq-form__group">
-            <legend>
-              <h4 class="uq-form__label">Checkbox fieldset with legend and error</h4>
-              <span class="uq-form__helper">Helper text for the message</span>
-            </legend>
-            <input type="checkbox" class="uq-form__checkbox-input" id="uq-checkbox-ex1" name="uq-checkbox-ex1">  
-            <label class="uq-form__checkbox-label" for="uq-checkbox-ex1">Checkbox </label>
-            <input checked type="checkbox" class="uq-form__checkbox-input" id="uq-checkbox-ex2" name="uq-checkbox-ex2">  
-            <label class="uq-form__checkbox-label" for="uq-checkbox-ex2">Checkbox :checked</label>
-            <input disabled type="checkbox" class="uq-form__checkbox-input" id="uq-checkbox-ex4" name="uq-checkbox-ex4">  
-            <label class="uq-form__checkbox-label" for="uq-checkbox-ex4">Checkbox :disabled</label>
-            <input checked disabled type="checkbox" class="uq-form__checkbox-input" id="uq-checkbox-ex5" name="uq-checkbox-ex5">  
-            <label class="uq-form__checkbox-label" for="uq-checkbox-ex5">Checkbox :checked :disabled</label>
-          </fieldset>
-          <fieldset class="uq-form__group uq-form__group--error">
-            <legend>
-              <h4 class="uq-form__label">Checkbox fieldset with legend and error</h4>
-              <span class="uq-form__helper">Helper text for the message</span>
-              <span class="uq-form__error">Error text goes here</span>
-            </legend>
-            <input type="checkbox" class="uq-form__checkbox-input" id="uq-checkbox-ex1-error" name="uq-checkbox-ex1-error">  
-            <label class="uq-form__checkbox-label" for="uq-checkbox-ex1-error">Checkbox </label>
-            <input checked type="checkbox" class="uq-form__checkbox-input" id="uq-checkbox-ex2-error" name="uq-checkbox-ex2-error">  
-            <label class="uq-form__checkbox-label" for="uq-checkbox-ex2-error">Checkbox :checked</label>
-            <input disabled type="checkbox" class="uq-form__checkbox-input" id="uq-checkbox-ex4" name="uq-checkbox-ex4-error">  
-            <label class="uq-form__checkbox-label" for="uq-checkbox-ex4-error">Checkbox :disabled</label>
-            <input checked disabled type="checkbox" class="uq-form__checkbox-input" id="uq-checkbox-ex5-error" name="uq-checkbox-ex5-error">  
-            <label class="uq-form__checkbox-label" for="uq-checkbox-ex5-error">Checkbox :checked :disabled</label>
-          </fieldset>
-
+          <div class="uq-form__group">
+            <fieldset>
+              <legend>
+                <h4 class="uq-form__label">Checkbox fieldset with legend and error</h4>
+                <span class="uq-form__helper">Helper text for the message</span>
+              </legend>
+              <div class="uq-form__checkbox">
+                <input type="checkbox" class="uq-form__checkbox-input" id="uq-checkbox-ex1" name="uq-checkbox-ex1">  
+                <label class="uq-form__checkbox-label" for="uq-checkbox-ex1">Checkbox </label>
+              </div>
+              <div class="uq-form__checkbox">
+                <input checked type="checkbox" class="uq-form__checkbox-input" id="uq-checkbox-ex2" name="uq-checkbox-ex2">  
+                <label class="uq-form__checkbox-label" for="uq-checkbox-ex2">Checkbox :checked</label>
+              </div>
+              <div class="uq-form__checkbox">
+                <input disabled type="checkbox" class="uq-form__checkbox-input" id="uq-checkbox-ex4" name="uq-checkbox-ex4">  
+                <label class="uq-form__checkbox-label" for="uq-checkbox-ex4">Checkbox :disabled</label>
+              </div>
+              <div class="uq-form__checkbox">
+                <input checked disabled type="checkbox" class="uq-form__checkbox-input" id="uq-checkbox-ex5" name="uq-checkbox-ex5">  
+                <label class="uq-form__checkbox-label" for="uq-checkbox-ex5">Checkbox :checked :disabled</label>
+              </div>
+            </fieldset>
+          </div>
+          <div class="uq-form__group uq-form__group--error">
+            <fieldset>
+              <legend>
+                <h4 class="uq-form__label">Checkbox fieldset with legend and error</h4>
+                <span class="uq-form__helper">Helper text for the message</span>
+                <span class="uq-form__error">Error text goes here</span>
+              </legend>
+              <div class="uq-form__checkbox">
+                <input type="checkbox" class="uq-form__checkbox-input" id="uq-checkbox-ex1-error" name="uq-checkbox-ex1-error">  
+                <label class="uq-form__checkbox-label" for="uq-checkbox-ex1-error">Checkbox </label>
+              </div>
+              <div class="uq-form__checkbox">
+                <input checked type="checkbox" class="uq-form__checkbox-input" id="uq-checkbox-ex2-error" name="uq-checkbox-ex2-error">  
+                <label class="uq-form__checkbox-label" for="uq-checkbox-ex2-error">Checkbox :checked</label>
+              </div>
+              <div class="uq-form__checkbox">
+                <input disabled type="checkbox" class="uq-form__checkbox-input" id="uq-checkbox-ex4" name="uq-checkbox-ex4-error">  
+                <label class="uq-form__checkbox-label" for="uq-checkbox-ex4-error">Checkbox :disabled</label>
+              </div>
+              <div class="uq-form__checkbox">
+                <input checked disabled type="checkbox" class="uq-form__checkbox-input" id="uq-checkbox-ex5-error" name="uq-checkbox-ex5-error">  
+                <label class="uq-form__checkbox-label" for="uq-checkbox-ex5-error">Checkbox :checked :disabled</label>
+              </div>
+            </fieldset>
+          </div>
           
         </form>
         <!-- 

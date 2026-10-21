@@ -49,7 +49,7 @@
   "dependencies": {
     "@uqds/core": "^5.0.3",
     "@uqds/form": "^4.0.8",
-    "@uqds/icon": "^4.0.6"
+    "@uqds/icon": "^5.0.1"
   },
   "devDependencies": {
     "gulp": "^5.0.1"

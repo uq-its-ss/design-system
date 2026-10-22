@@ -43,7 +43,7 @@
     "@uqds/accordion": "^7.0.7",
     "@uqds/acknowledgement": "^0.1.5",
     "@uqds/core": "^5.0.3",
-    "@uqds/icon": "^4.0.6"
+    "@uqds/icon": "^5.0.1"
   },
   "devDependencies": {
     "gulp": "^5.0.1"

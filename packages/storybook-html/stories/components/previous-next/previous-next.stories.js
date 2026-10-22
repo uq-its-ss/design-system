@@ -95,7 +95,7 @@ export default {
     const showPrevious = state === "middle" || state === "final";
 
     return `
-      <nav class="uq-previous-next ${addMargin ? "uq-previous-next__margin" : ""}" aria-label="${ariaLabel}">
+      <nav class="uq-previous-next ${addMargin ? "uq-previous-next--margin" : ""}" aria-label="${ariaLabel}">
         ${showPrevious ? `<div class="uq-previous-next__item">${previousElement}</div>` : ""}
         ${showNext ? `<div class="uq-previous-next__item">${nextElement}</div>` : ""}
       </nav>

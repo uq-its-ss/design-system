@@ -24,7 +24,7 @@
   }
 
   // Required as a seperate element to not hide the directional arrow icon.
-  &__truncate {
+  &__text {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;

@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.0.9-alpha.0](https://github.com/uq-its-ss/design-system/compare/%40uqds%2Fsite-header%407.0.8...%40uqds%2Fsite-header%407.0.9-alpha.0) (2026-10-22)
+
+**Note:** Version bump only for package @uqds/site-header
+
 ## [7.0.8](https://github.com/uq-its-ss/design-system/compare/%40uqds%2Fsite-header%407.0.8-alpha.1...%40uqds%2Fsite-header%407.0.8) (2026-09-18)
 
 **Note:** Version bump only for package @uqds/site-header

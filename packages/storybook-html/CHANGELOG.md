@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.1.9-alpha.0](https://github.com/uq-its-ss/design-system/compare/storybook-html%408.1.8...storybook-html%408.1.9-alpha.0) (2026-10-22)
+
+- **deps-dev:** bump vite from 8.2.2 to 8.3.4 ([be11352](https://github.com/uq-its-ss/design-system/commit/be1135233ceebddd39425561601502a2a3834e95))
+
 ## [8.1.8](https://github.com/uq-its-ss/design-system/compare/storybook-html%408.1.8-alpha.8...storybook-html%408.1.8) (2026-09-18)
 
 **Note:** Version bump only for package storybook-html

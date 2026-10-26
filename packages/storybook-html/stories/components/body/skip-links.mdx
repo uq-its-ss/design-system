@@ -1,0 +1,54 @@
+import { Meta, Story, Canvas, Source } from "@storybook/addon-docs/blocks";
+import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
+import * as SkipLinksStories from "./skip-links.stories";
+
+<Meta of={SkipLinksStories} />
+
+# Skip links
+
+<StatusBadge.Review />
+
+<StatusBadge.DraftDoc />
+
+## Overview
+
+Skip links are internal page navigation links that allow users to bypass repetitive content block groups—most commonly the main header navigation—and jump directly to the primary content area of a webpage or application.
+Here is a summary of how skip links function within a design system and their structural relationship to the digital layout.
+
+They are typically hidden by default using CSS (not display: none, but visually off-screen) and become visible on focus when a user presses the Tab key immediately after the page loads.
+
+<Canvas of={SkipLinksStories.SkipLinks} />
+
+### Usage
+
+Skip links must be the first focusable element in the DOM (Document Object Model), positioned at the very top of the `<body>` tag.
+
+They are built as an anchor tag `<a>` that targets the ID of specific content containers (e.g., `<a href="#uq-main">Skip to content</a>`).
+
+The skip link directly relies on the structural layout having clearly defined containers with matching IDs.
+
+- For the content container, this is usually the `<main id="uq-main">...</main>` element.
+- For the footer container, this is usually the `<footer id="uq-footer">...</footer>` element.
+
+### Complex layouts
+
+In complex layouts with multiple content sections, skip links can be used to navigate directly to each major section. Each section should have a unique ID that corresponds to the skip link's `href` attribute.
+
+Example:
+
+```html
+<a href="#uq-main" class="visually-hidden focusable">Skip to main content</a>
+<a href="#uq-sidebar" class="visually-hidden focusable">Skip to sidebar</a>
+<main id="uq-main">...</main>
+<aside id="uq-sidebar">...</aside>
+```
+
+#### Accessibility
+
+Skip links are hidden hyperlinks that let users jump straight to a webpage's main content or footer, bypassing navigation menus, headers, sidebars, and search bars.
+
+the Header and main navigation is positioned immediately after the skip links in keyboard focus order.
+A `skip header` link does not provide a meaningful keyboard shortcut and may unnecessarily suggest that navigation content would otherwise need to be
+bypassed.
+
+Example header skip link: `<a href="#uq-header" class="visually-hidden focusable">Skip to header</a>`

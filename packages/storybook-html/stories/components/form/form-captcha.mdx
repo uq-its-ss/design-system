@@ -1,0 +1,201 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
+import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
+import * as FormCaptchaStories from "./form-captcha.stories";
+
+<Meta of={FormCaptchaStories} />
+
+# Captcha
+
+<StatusBadge.Development />
+
+<StatusBadge.DraftDoc />
+
+## Overview
+
+The purpose of CAPTCHAs is to prevent bots from using services intended for human use, prevent distortion of collected usage information, prevent automated entry of false information, and prevent data scraping.
+
+### Key Principle
+
+> Captcha should be used to protect public, anonymous, and abuse-prone interactions. It should not be applied universally to all forms. Where trust already exists through authentication or alternative security controls, those mechanisms should be preferred over CAPTCHA.
+
+## Preferred Captcha Approach
+
+The Design System offers a licensed reusable [Friendly Captcha](https://friendlycaptcha.com) implementation
+
+<Canvas of={FormCaptchaStories.captcha} />
+
+### What is Friendly Captcha?
+
+**Friendly Captcha** is preferred because it balances security with user experience, providing effective bot protection without imposing significant friction on legitimate users. It also aligns with privacy and accessibility standards, making it suitable for a wide range of public-facing forms and applications.
+
+Friendly Captcha is a solution that enables product teams to:
+
+- Consistently protect public submission endpoints
+- Reduce bot-generated spam and abuse
+- Meet privacy and accessibility requirements
+- Avoid implementing bespoke CAPTCHA solutions
+- Align with University security patterns
+
+### How to Implement Friendly Captcha
+
+Follow the [Getting started guide](https://developer.friendlycaptcha.com/docs/v2/getting-started/setup) for implementation instructions.
+
+You will need to contact [ADS UI team](https://about.uq.edu.au/web-feedback?r=https://design-system.uq.edu.au), either for account access or to generate a `sitekey`.
+
+- Option A: Html Scripts and Widget
+- Option B: Programmatically (Javascript SDK)
+
+- [Migrating from reCAPTCHA](https://developer.friendlycaptcha.com/docs/v2/guides/migrating-from-recaptcha)
+
+## Captcha guidelines
+
+#### Alternative Controls
+
+Friendly Captcha is not always the right solution.
+
+Consider whether the following controls already address the risk:
+
+<table>
+  <tr>
+    <th>Control</th>
+    <th>Suitable For</th>
+  </tr>
+  <tr>
+    <td>Authentication</td>
+    <td>Logged-in users</td>
+  </tr>
+  <tr>
+    <td>Rate Limiting</td>
+    <td>API protection</td>
+  </tr>
+  <tr>
+    <td>WAF Rules</td>
+    <td>Automated attack prevention</td>
+  </tr>
+  <tr>
+    <td>Session Validation</td>
+    <td>Authenticated systems</td>
+  </tr>
+  <tr>
+    <td>Email Verification</td>
+    <td>Account creation</td>
+  </tr>
+</table>
+
+In many cases a combination of these controls provides better protection than CAPTCHA alone.
+
+### When to Use Captcha
+
+When a user can submit data, trigger actions, or access resources without being authenticated.
+
+<table>
+  <thead>
+    <tr>
+      <th>Scenario</th>
+      <th>Why</th>
+      <th>Examples</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Public forms</td>
+      <td>Forms susceptible to spam, abuse, or data manipulation.</td>
+      <td>Contact us, General enquiries, Support requests, Feedback forms</td>
+    </tr>
+    <tr>
+      <td>Public application forms</td>
+      <td>
+        Submission endpoints can be abused through automated form completion.
+      </td>
+      <td>
+        Event registrations, Scholarship enquiries, Program interest forms,
+        Outreach initiatives
+      </td>
+    </tr>
+    <tr>
+      <td>Public service requests</td>
+      <td>Protects backend services from automated traffic.</td>
+      <td>Request information, Download requests, Resource access requests</td>
+    </tr>
+    <tr>
+      <td>Anonymous user actions</td>
+      <td>No authenticated identity exists to establish trust.</td>
+      <td>
+        Report an issue, Submit feedback, Lodge a complaint, Submit content
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+### When not to use Captcha
+
+CAPTCHA component should not become a default requirement on every form.
+
+<table>
+  <thead>
+    <tr>
+      <th>Scenario</th>
+      <th>Why</th>
+      <th>Examples</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Authenticated experiences</td>
+      <td>
+        Do not use Friendly Captcha where users are already authenticated
+        through trusted identity providers.
+      </td>
+      <td>
+        Student Portal, Staff Services, CMS Administration, Learning Platforms
+      </td>
+    </tr>
+    <tr>
+      <td>Low-risk transactions</td>
+      <td>
+        Adding CAPTCHA creates unnecessary friction without significant security
+        benefit.
+      </td>
+      <td>
+        Updating profile information, Managing preferences, Internal workflows
+      </td>
+    </tr>
+    <tr>
+      <td>Internal applications</td>
+      <td>Authentication already provides stronger protection.</td>
+      <td>
+        Staff-only systems, Faculty administration applications, Back-office
+        tools
+      </td>
+    </tr>
+    <tr>
+      <td>Multi-step forms</td>
+      <td>
+        Adding CAPTCHA to each step of a multi-step form can create unnecessary
+        friction and reduce form completion rates.
+      </td>
+      <td>
+        Multi-page registration forms, Multi-step application processes,
+        Sequential survey forms
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+## Accessibility
+
+When implementing CAPTCHAs, it is important to ensure that they are accessible to all users, including those with disabilities. CAPTCHA introduces additional cognitive and technical requirements. Before implementing, consider the following accessibility guidelines:
+
+### Before implementing Friendly Captcha, confirm:
+
+- The form genuinely requires abuse protection
+- Other controls cannot sufficiently mitigate risk
+- CAPTCHA adds measurable security value
+
+### User Experience Principles
+
+- Security controls should appear only when needed.
+- Users should not be forced through unnecessary verification.
+- CAPTCHA should never become a barrier to completing core tasks.
+
+More information on [Friendly Captcha accessibility](https://friendlycaptcha.com/accessibility/) can be found in the official documentation.

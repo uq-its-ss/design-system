@@ -160,48 +160,93 @@ jobs:
 
       - name: "🎉 Create draft release"
         uses: actions/github-script@v7
+        env:
+          RELEASE_TAG: ${{ steps.release-tag.outputs.tag }}
+          RELEASE_TITLE: ${{ steps.release-tag.outputs.title }}
+          DRAFT_CHANGELOG: ${{ steps.changelog.outputs.DRAFT_CHANGELOG }}
         with:
           github-token: ${{ secrets.UQDS_PERSONAL_ACCESS_TOKEN }}
           script: |
-            const tag = '${{ steps.release-tag.outputs.tag }}';
-            const title = '${{ steps.release-tag.outputs.title }}';
-            const changelog = `${{ steps.changelog.outputs.DRAFT_CHANGELOG }}`;
-            
-            // Check if draft already exists for this tag
-            const { data: releases } = await github.rest.repos.listReleases({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
+            // Read via process.env rather than interpolating ${{ ... }} directly
+            // into this script. The changelog is built from commit subjects/
+            // bodies, which are attacker-controlled; interpolating it straight
+            // into the script source would let a backtick or ${...} in a commit
+            // message break out of the string and execute arbitrary JS with
+            // this step's GITHUB_TOKEN (UQDS_PERSONAL_ACCESS_TOKEN).
+            const tag = process.env.RELEASE_TAG;
+            const title = process.env.RELEASE_TITLE;
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const prNumber = context.issue.number;
+            const changelog = process.env.DRAFT_CHANGELOG;
+
+            // The draft release's identity (its numeric ID) is tracked in a
+            // dedicated PR comment, NOT in the release body or via a
+            // recomputed tag_name. The release body is explicitly a
+            // human-editable field (see ADR 0002 "Human adds summary") where
+            // reviewers add highlights/migration notes during curation - a
+            // hidden marker placed there can be stripped, causing the merge
+            // lookup below to miss the real draft and create a near-empty
+            // duplicate. A PR comment is never part of that editing workflow,
+            // so it's a safe place to persist this association.
+            const idMarkerPrefix = '<!-- RELEASE_DRAFT_ID: ';
+            const buildMarker = (id) => `${idMarkerPrefix}${id} -->`;
+
+            const { data: comments } = await github.rest.issues.listComments({
+              owner,
+              repo,
+              issue_number: prNumber,
             });
-            
-            const existingDraft = releases.find(r => r.tag_name === tag && r.draft);
-            
+            const trackingComment = comments.find(c => c.body && c.body.includes(idMarkerPrefix));
+
+            let existingDraft = null;
+            if (trackingComment) {
+              const idMatch = trackingComment.body.match(/<!-- RELEASE_DRAFT_ID: (\d+) -->/);
+              if (idMatch) {
+                try {
+                  const { data: release } = await github.rest.repos.getRelease({
+                    owner,
+                    repo,
+                    release_id: Number(idMatch[1]),
+                  });
+                  if (release.draft) {
+                    existingDraft = release;
+                  } else {
+                    console.log(`Release ${idMatch[1]} referenced by the tracking comment is no longer a draft - treating as not found.`);
+                  }
+                } catch (error) {
+                  console.log(`Tracking comment references release ${idMatch[1]}, but it could not be found (${error.message}). A new draft will be created.`);
+                }
+              }
+            }
+
             if (existingDraft) {
               console.log(`Draft release already exists: ${existingDraft.html_url}`);
-              await github.rest.issues.createComment({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                issue_number: context.issue.number,
-                body: `📝 **Draft release already exists**\n\n[Edit draft release](${existingDraft.html_url})\n\nAdd your summary, highlights, and migration notes before approving the release.`
-              });
+              const body = `📝 **Draft release already exists**\n\n[Edit draft release](${existingDraft.html_url})\n\nAdd your summary, highlights, and migration notes before approving the release.\n\n${buildMarker(existingDraft.id)}`;
+              if (trackingComment) {
+                await github.rest.issues.updateComment({ owner, repo, comment_id: trackingComment.id, body });
+              } else {
+                await github.rest.issues.createComment({ owner, repo, issue_number: prNumber, body });
+              }
             } else {
               const { data: draft } = await github.rest.repos.createRelease({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
+                owner,
+                repo,
                 tag_name: tag,
                 name: title,
                 body: changelog,
                 draft: true,
                 prerelease: false
               });
-              
+
               console.log(`Draft release created: ${draft.html_url}`);
-              
-              await github.rest.issues.createComment({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                issue_number: context.issue.number,
-                body: `🎉 **Draft release created**\n\n[Edit draft release](${draft.html_url})\n\n**Next steps:**\n1. Edit the draft release to add:\n   - Summary of what changed\n   - Highlights\n   - Breaking changes with migration notes (if any)\n2. Save the draft (do not publish yet)\n3. Approve this PR when ready to release\n\nThe draft will be automatically published when this PR is merged.`
-              });
+
+              const body = `🎉 **Draft release created**\n\n[Edit draft release](${draft.html_url})\n\n**Next steps:**\n1. Edit the draft release to add:\n   - Summary of what changed\n   - Highlights\n   - Breaking changes with migration notes (if any)\n2. Save the draft (do not publish yet)\n3. Approve this PR when ready to release\n\nThe draft will be automatically published when this PR is merged.\n\n${buildMarker(draft.id)}`;
+              if (trackingComment) {
+                await github.rest.issues.updateComment({ owner, repo, comment_id: trackingComment.id, body });
+              } else {
+                await github.rest.issues.createComment({ owner, repo, issue_number: prNumber, body });
+              }
             }
 
   # Job 2: Publish packages (existing workflow)
@@ -211,8 +256,9 @@ jobs:
     # This condition prevents the workflow running FOR the Lerna publish commit itself
     if: ${{ github.event_name == 'push' && ! startsWith(github.event.head_commit.message, 'chore(release)') }}
     permissions:
-      id-token: write   # Required for OIDC authentication with NPM
-      contents: write   # Required for git operations (tags, commits)
+      id-token: write       # Required for OIDC authentication with NPM
+      contents: write       # Required for git operations (tags, commits)
+      pull-requests: read   # Required to read the PR comment tracking the draft release ID
     steps:
       - name: "⬇️ Checkout repo"
         uses: actions/checkout@v6
@@ -231,7 +277,86 @@ jobs:
         run: npm ci
 
       # --- Steps for 'releases' branch ---
-      
+
+      - name: "🔎 Locate draft release for this merge"
+        if: ${{ github.ref_name == 'releases' }}
+        id: find-draft
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.UQDS_PERSONAL_ACCESS_TOKEN }}
+          script: |
+            // Identify the draft created for the merged PR via the tracking
+            // PR comment left by "🎉 Create draft release", not by a
+            // recomputed date-based tag or a marker in the release body. The
+            // release body is explicitly a human-editable field (ADR 0002:
+            // "Human adds summary") that curators rewrite before approval, so
+            // a marker placed there could be stripped and cause this lookup
+            // to miss the real draft and create a near-empty duplicate on
+            // publish. The tracking comment is never part of that editing
+            // workflow, so its hidden release-ID marker is a stable anchor.
+            // Extract the PR number from the merge commit message, supporting
+            // both merge commits ("Merge pull request #N") and squash commits
+            // ("... (#N)").
+            const commitMessage = ${{ toJSON(github.event.head_commit.message) }};
+            const match = commitMessage.match(/Merge pull request #(\d+)/) || commitMessage.match(/\(#(\d+)\)/);
+
+            if (!match) {
+              core.warning(`Could not determine PR number from merge commit message: "${commitMessage}". Falling back to creating a fresh release at publish time.`);
+              core.setOutput('found', 'false');
+              return;
+            }
+
+            const prNumber = Number(match[1]);
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+
+            const { data: comments } = await github.rest.issues.listComments({
+              owner,
+              repo,
+              issue_number: prNumber,
+            });
+
+            const idMarkerPrefix = '<!-- RELEASE_DRAFT_ID: ';
+            const trackingComment = comments.find(c => c.body && c.body.includes(idMarkerPrefix));
+
+            if (!trackingComment) {
+              core.warning(`No tracking comment with a draft release ID found on PR #${prNumber}. Falling back to creating a fresh release at publish time.`);
+              core.setOutput('found', 'false');
+              return;
+            }
+
+            const idMatch = trackingComment.body.match(/<!-- RELEASE_DRAFT_ID: (\d+) -->/);
+            if (!idMatch) {
+              core.warning(`Tracking comment on PR #${prNumber} did not contain a parseable release ID. Falling back to creating a fresh release at publish time.`);
+              core.setOutput('found', 'false');
+              return;
+            }
+
+            let draft;
+            try {
+              const { data } = await github.rest.repos.getRelease({
+                owner,
+                repo,
+                release_id: Number(idMatch[1]),
+              });
+              draft = data;
+            } catch (error) {
+              core.warning(`Tracking comment on PR #${prNumber} references release ${idMatch[1]}, which could not be found (${error.message}). Falling back to creating a fresh release at publish time.`);
+              core.setOutput('found', 'false');
+              return;
+            }
+
+            if (!draft.draft) {
+              core.warning(`Release ${draft.id} referenced by PR #${prNumber}'s tracking comment is no longer a draft (may already be published). Falling back to creating a fresh release at publish time.`);
+              core.setOutput('found', 'false');
+              return;
+            }
+
+            core.setOutput('found', 'true');
+            core.setOutput('draft_id', String(draft.id));
+            core.setOutput('draft_tag', draft.tag_name);
+            console.log(`Located draft release for PR #${prNumber}: ${draft.html_url} (tag: ${draft.tag_name}, id: ${draft.id})`);
+
       - name: "🧐 Version dry run"
         if: ${{ github.ref_name == 'releases' }}
         id: dry-run
@@ -268,15 +393,25 @@ jobs:
         id: release-info
         run: |
           RELEASE_DATE=$(date +%Y-%m-%d)
-          RELEASE_TAG="release-${RELEASE_DATE}"
-          
-          # Check if tag exists, append .2, .3, etc.
-          COUNTER=2
-          ORIGINAL_TAG="$RELEASE_TAG"
-          while git rev-parse "$RELEASE_TAG" >/dev/null 2>&1; do
-            RELEASE_TAG="${ORIGINAL_TAG}.${COUNTER}"
-            COUNTER=$((COUNTER + 1))
-          done
+
+          if [ "${{ steps.find-draft.outputs.found }}" = "true" ]; then
+            # Reuse the exact tag the draft was created with, so the git tag we
+            # push and the release we publish always refer to the same object -
+            # never recompute this independently at publish time.
+            RELEASE_TAG="${{ steps.find-draft.outputs.draft_tag }}"
+            echo "Using tag from located draft release: $RELEASE_TAG"
+          else
+            RELEASE_TAG="release-${RELEASE_DATE}"
+
+            # Check if tag exists, append .2, .3, etc.
+            COUNTER=2
+            ORIGINAL_TAG="$RELEASE_TAG"
+            while git rev-parse "$RELEASE_TAG" >/dev/null 2>&1; do
+              RELEASE_TAG="${ORIGINAL_TAG}.${COUNTER}"
+              COUNTER=$((COUNTER + 1))
+            done
+            echo "No draft release located - generated a new tag: $RELEASE_TAG"
+          fi
           
           echo "tag=${RELEASE_TAG}" >> $GITHUB_OUTPUT
           echo "date=${RELEASE_DATE}" >> $GITHUB_OUTPUT
@@ -293,25 +428,28 @@ jobs:
           echo "EOF" >> $GITHUB_OUTPUT
 
       - name: "📝 Update draft release with final versions"
-        if: ${{ github.ref_name == 'releases' }}
+        if: ${{ github.ref_name == 'releases' && steps.find-draft.outputs.found == 'true' }}
         uses: actions/github-script@v7
+        env:
+          DRAFT_ID: ${{ steps.find-draft.outputs.draft_id }}
+          PACKAGE_VERSIONS: ${{ steps.package-versions.outputs.PACKAGE_VERSIONS }}
         with:
           github-token: ${{ secrets.UQDS_PERSONAL_ACCESS_TOKEN }}
           script: |
-            const tag = '${{ steps.release-info.outputs.tag }}';
-            const packageVersions = `${{ steps.package-versions.outputs.PACKAGE_VERSIONS }}`;
+            // Read via process.env rather than interpolating ${{ ... }} directly
+            // into this script. PACKAGE_VERSIONS is derived from published
+            // package names/versions, which could contain backticks or
+            // ${...} sequences; interpolating it straight into the script
+            // source would let that break out and execute arbitrary JS with
+            // this step's GITHUB_TOKEN (UQDS_PERSONAL_ACCESS_TOKEN).
+            const draftId = process.env.DRAFT_ID;
+            const packageVersions = process.env.PACKAGE_VERSIONS;
 
-            const { data: releases } = await github.rest.repos.listReleases({
+            const { data: draft } = await github.rest.repos.getRelease({
               owner: context.repo.owner,
               repo: context.repo.repo,
+              release_id: draftId,
             });
-
-            const draft = releases.find(r => r.tag_name === tag && r.draft);
-
-            if (!draft) {
-              console.log(`No draft release found for tag ${tag} - skipping version refresh. It will be created with auto-generated notes at publish time.`);
-              return;
-            }
 
             const startMarker = '<!-- PACKAGE_VERSIONS_START -->';
             const endMarker = '<!-- PACKAGE_VERSIONS_END -->';
@@ -329,7 +467,7 @@ jobs:
             await github.rest.repos.updateRelease({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              release_id: draft.id,
+              release_id: draftId,
               body,
             });
 
@@ -401,32 +539,26 @@ jobs:
         with:
           github-token: ${{ secrets.UQDS_PERSONAL_ACCESS_TOKEN }}
           script: |
-            const tag = '${{ steps.release-info.outputs.tag }}';
-            
-            // Find the draft release
-            const { data: releases } = await github.rest.repos.listReleases({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-            });
-            
-            const draft = releases.find(r => r.tag_name === tag && r.draft);
-            
-            if (draft) {
-              // Publish the existing draft
-              await github.rest.repos.updateRelease({
+            const found = '${{ steps.find-draft.outputs.found }}' === 'true';
+            const draftId = '${{ steps.find-draft.outputs.draft_id }}';
+
+            if (found) {
+              // Publish the existing draft located earlier in this job - avoids
+              // re-searching by tag_name, which is what previously went wrong.
+              const { data: published } = await github.rest.repos.updateRelease({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
-                release_id: draft.id,
+                release_id: draftId,
                 draft: false
               });
-              console.log(`Published draft release: ${draft.html_url}`);
+              console.log(`Published draft release: ${published.html_url}`);
             } else {
-              console.log('No draft release found - creating new release with auto-generated changelog');
+              console.log('No draft release located earlier in this job - creating new release with auto-generated changelog');
               // Fallback: create new release if draft doesn't exist
               const { data: newRelease } = await github.rest.repos.createRelease({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
-                tag_name: tag,
+                tag_name: '${{ steps.release-info.outputs.tag }}',
                 name: 'Release: ${{ steps.release-info.outputs.date }}',
                 body: '<!-- Auto-generated release - draft was not found -->\n\nSee per-package CHANGELOGs for details.',
                 draft: false,
@@ -439,8 +571,13 @@ jobs:
         if: ${{ github.ref_name == 'releases' }}
         env:
           GH_TOKEN: ${{ secrets.UQDS_PERSONAL_ACCESS_TOKEN }}
+          EXPECTED_RELEASE_TAG: ${{ steps.release-info.outputs.tag }}
         run: |
-          # Generate CHANGELOG.md from all GitHub Releases
+          # Generate CHANGELOG.md from all GitHub Releases. EXPECTED_RELEASE_TAG
+          # tells the script which release it must see before trusting the API
+          # response - the release/tag we just published above - so it retries
+          # past any read-after-write lag instead of silently regenerating
+          # CHANGELOG.md from a stale list that's missing this release.
           node scripts/generate-changelog.js
           
           # Commit and push if changed

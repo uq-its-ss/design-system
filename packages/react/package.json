@@ -1,6 +1,6 @@
 {
   "name": "@uqds/react",
-  "version": "2.0.9",
+  "version": "2.0.10-alpha.0",
   "description": "React components",
   "keywords": [
     "uqds",
@@ -46,10 +46,10 @@
   },
   "dependencies": {
     "@uqds/body": "^4.0.6",
-    "@uqds/card": "^4.0.7",
+    "@uqds/card": "^4.0.8-alpha.0",
     "@uqds/core": "^5.0.3",
-    "@uqds/icon": "^4.0.6",
-    "@uqds/layout": "6.0.0-alpha.0",
+    "@uqds/icon": "^5.0.2-alpha.0",
+    "@uqds/layout": "^7.0.3",
     "@uqds/pagination": "^4.0.4",
     "@uqds/pane": "^4.0.3",
     "classnames": "^2.5.1"
@@ -58,7 +58,7 @@
     "@types/react": "^18.3.31",
     "@vitejs/plugin-react": "^6.1.1",
     "typescript": "^5.9.3",
-    "vite": "^8.2.2",
+    "vite": "^8.3.4",
     "vite-plugin-dts": "^4.5.4"
   },
   "peerDependencies": {

@@ -1,5 +1,6 @@
 import classNames from "classnames";
 import { storyRenderer } from "../../lib/storyRenderer";
+import * as SkipLinksStories from "../components/body/skip-links.stories";
 import * as HeaderStories from "../components/header/header.stories";
 import * as FooterStories from "../components/footer/footer.stories";
 import * as HeroStories from "../components/hero/hero.stories";
@@ -7,6 +8,7 @@ import * as SectionStories from "../components/section/section.stories";
 import * as CardStories from "../components/card/card.stories";
 import * as StoryCardStories from "../components/story-card/story-card.stories";
 
+const { SkipLinks } = storyRenderer(SkipLinksStories);
 const { Header } = storyRenderer(HeaderStories);
 const { Footer: footer } = storyRenderer(FooterStories);
 const { Home: Hero } = storyRenderer(HeroStories);
@@ -34,9 +36,7 @@ export default {
 export const Home = {
   render: ({ showGrid }) => `
 <div class="${classNames({ "uqds-layout-preview": showGrid })}">
-  <a href="#uq-header" class="visually-hidden focusable">Skip to header</a>
-    <a href="#uq-main" class="visually-hidden focusable">Skip to content</a>
-    <a href="#uq-footer" class="visually-hidden focusable">Skip to footer</a>
+  ${SkipLinks()}
   ${Header()}
   <main id="uq-main">
     ${Hero()}

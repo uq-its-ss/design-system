@@ -5,6 +5,7 @@ import siteHeaderNavigation from "@uqds/site-header/src/js/site-header-navigatio
 import { breadcrumb } from "@uqds/breadcrumb/src/js/main";
 
 // import HTML template strings
+import { SkipLinks } from "../../components/body/skip-links.stories";
 import { HeaderInterim } from "../../components/header/header.stories";
 import { SiteHeaderWithSubnav as siteHeaderWithSubnav } from "../../components/site-header/site-header.stories";
 import BreadcrumbStories from "../../components/breadcrumb/breadcrumb.stories";
@@ -23,6 +24,7 @@ export default {
 export const BasicPage = {
   render: () => {
     return `
+    ${SkipLinks.render()}
     ${HeaderInterim.render()}
       ${siteHeaderWithSubnav.render()}
       ${BreadcrumbStories.render(BreadcrumbStories.args || {})}

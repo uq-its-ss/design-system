@@ -167,7 +167,7 @@ jobs:
         with:
           github-token: ${{ secrets.UQDS_PERSONAL_ACCESS_TOKEN }}
           script: |
-            // Read via process.env rather than interpolating ${{ ... }} directly
+            // Read via process.env rather than interpolating GitHub expressions directly
             // into this script. The changelog is built from commit subjects/
             // bodies, which are attacker-controlled; interpolating it straight
             // into the script source would let a backtick or ${...} in a commit
@@ -436,10 +436,10 @@ jobs:
         with:
           github-token: ${{ secrets.UQDS_PERSONAL_ACCESS_TOKEN }}
           script: |
-            // Read via process.env rather than interpolating ${{ ... }} directly
+            // Read via process.env rather than interpolating GitHub expressions directly
             // into this script. PACKAGE_VERSIONS is derived from published
             // package names/versions, which could contain backticks or
-            // ${...} sequences; interpolating it straight into the script
+            // template-literal placeholders; interpolating it straight into the script
             // source would let that break out and execute arbitrary JS with
             // this step's GITHUB_TOKEN (UQDS_PERSONAL_ACCESS_TOKEN).
             const draftId = process.env.DRAFT_ID;

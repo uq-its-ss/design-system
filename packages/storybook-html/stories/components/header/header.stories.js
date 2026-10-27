@@ -439,7 +439,7 @@ const headerRenderer = ({
     </div>
 
     <!-- LOGO -->
-    <div class="uq-header__logo"><a class="uq-header__logo-link" href="https://uq.edu.au"><img class="uq-header__logo-image" alt="The University of Queensland" src="https://static.uq.net.au/v11/logos/corporate/uq-logo--reversed.svg"></a></div>
+    <div class="uq-header__logo"><a class="uq-header__logo-link" href="https://uq.edu.au"><img class="uq-header__logo-image" alt="The University of Queensland Australia logo - Home" src="https://static.uq.net.au/v11/logos/corporate/uq-logo--reversed.svg"></a></div>
 
    <!-- NAVIGATION PRIMARY (Desktop) -->
     <nav class="uq-header__nav-primary" aria-label="primary navigation">
@@ -553,7 +553,7 @@ export const BasicHeader = {
       <div class="uq-header__container">
         <div class="uq-header__logo">
           <a class="uq-header__logo-link" href="https://uq.edu.au">
-            <img class="uq-header__logo-image" alt="The University of Queensland" src="https://static.uq.net.au/v15/logos/corporate/uq-logo--reversed.svg">
+            <img class="uq-header__logo-image" alt="The University of Queensland Australia logo - Home" src="https://static.uq.net.au/v15/logos/corporate/uq-logo--reversed.svg">
           </a>
         </div>        
       </div>

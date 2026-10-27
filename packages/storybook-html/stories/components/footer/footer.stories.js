@@ -1,5 +1,5 @@
 // import scripts
-import { accordion } from "@uqds/accordion/src/js/main";
+import { FooterDecorator } from "./footerDecorator";
 
 // import styles
 import "./footer.scss";
@@ -9,7 +9,7 @@ import footerHTML from "./footer.html?raw";
 
 export default {
   title: "Components/Footer",
-
+  decorators: [FooterDecorator],
   parameters: {
     layout: "fullscreen",
 
@@ -29,7 +29,6 @@ export const Footer = {
   render: () => {
     return footerHTML;
   },
-  play: () => {
-    new accordion();
-  },
+
+  name: "Footer",
 };

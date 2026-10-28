@@ -11,24 +11,6 @@
 .uq-form {
   // UQ Form styles
 
-  .uq-form__fieldset,
-  fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
-  }
-
-  legend {
-    display: block;
-    float: left;
-    width: 100%;
-    padding: 0;
-
-    & + * {
-      clear: both;
-    }
-  }
-
   .uq-form__group {
     margin-bottom: core.$space-l;
 
@@ -60,12 +42,27 @@
         border-color: core.$error-500;
       }
 
-      input[type="checkbox"]:not(:disabled) + .uq-form__checkbox-label,
-      .uq-form__checkbox-label:has(input[type="checkbox"]:not(:disabled)) {
-        &::before {
-          border-color: core.$error-500 !important;
-        }
+      input[type="checkbox"]:not(:disabled) {
+        border-color: core.$error-500;
       }
+    }
+  }
+
+  .uq-form__fieldset,
+  fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  legend {
+    display: block;
+    float: left;
+    width: 100%;
+    padding: 0;
+
+    & + * {
+      clear: both;
     }
   }
 
@@ -111,6 +108,7 @@
     color: core.$error-500;
     font-weight: core.$font-weight-bold;
     font-size: core.$font-size-m;
+    padding-bottom: core.$space-xs;
   }
 
   .uq-form__input,
@@ -199,71 +197,70 @@
   }
 
   // Checkbox
-  .uq-form__checkbox-input {
-    opacity: 0;
-    position: absolute;
-    height: 0;
-    width: 0;
+
+  // Checkbox input
+  input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none; /* For older Safari */
+    width: 2rem;
+    height: 2rem;
+    border: 2px solid #8c8a8d;
+    border-radius: 6px;
+    background-color: white;
+    margin: 0;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
   }
 
-  input[type="checkbox"] + .uq-form__checkbox-label,
-  .uq-form__checkbox-label:has(input[type="checkbox"]) {
-    cursor: pointer;
-    color: core.$black;
+  // Checkbox label
+  input[type="checkbox"] + label,
+  label:has(input[type="checkbox"]) {
+    font-weight: core.$font-weight-normal;
+    font-size: core.$font-size-m;
+  }
+
+  // Explicit and implicit
+  &__checkbox,
+  label:has(input[type="checkbox"]) {
     display: flex;
     align-items: center;
-    font-size: core.$font-size-m;
-    font-weight: core.$font-weight-normal;
-    position: relative;
-    margin: 0.5rem 0;
-    padding-left: 2.75rem;
-    min-height: 2rem;
-    line-height: 1.2;
+    padding: core.$space-xxs 0;
 
-    &::before {
-      content: "";
-      display: inline-block;
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 2rem;
-      height: 2rem;
-      border: 2px solid core.$grey-600;
-      border-radius: 6px;
-      transition: all 0.2s ease-in-out;
+    input[type="checkbox"] {
+      margin-right: core.$space-s;
     }
   }
 
-  input[type="checkbox"]:focus-visible + .uq-form__checkbox-label,
-  .uq-form__checkbox-label:has(input[type="checkbox"]:focus-visible) {
-    &::before {
-      outline: 4px solid core.$utility-500;
-    }
+  /* 4. Style the checked state */
+  input[type="checkbox"]:checked {
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M5 13.3 8.9 18 19 6' stroke='%23FFF' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3c/path%3e%3c/svg%3e");
+    background-color: core.$purple-500;
+    border-color: core.$purple-500;
   }
 
-  input[type="checkbox"]:checked + .uq-form__checkbox-label,
-  .uq-form__checkbox-label:has(input[type="checkbox"]:checked) {
-    &::before {
-      background-color: core.$purple-500;
-      border-color: core.$purple-500;
-      background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M5 13.3 8.9 18 19 6' stroke='%23FFF' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3c/path%3e%3c/svg%3e");
-    }
+  input[type="checkbox"]:disabled {
+    background-color: core.$white;
+    border-color: core.$grey-400;
+    cursor: not-allowed;
+  }
+
+  input[type="checkbox"]:checked:disabled {
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M5 13.3 8.9 18 19 6' stroke='%23FFF' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3c/path%3e%3c/svg%3e");
+    background-color: core.$grey-400;
+    border-color: core.$grey-400;
+  }
+
+  input[type="checkbox"]:focus-visible {
+    outline: 4px solid core.$utility-500;
+  }
+
+  input[type="checkbox"].error:checked {
+    border-color: core.$error-500;
   }
 
   input[type="checkbox"]:disabled ~ .uq-form__checkbox-label,
   .uq-form__checkbox-label:has(input[type="checkbox"]:disabled) {
     color: core.$grey-400;
     cursor: not-allowed;
-
-    &::before {
-      border-color: core.$grey-400;
-    }
-  }
-
-  input[type="checkbox"]:checked:disabled ~ .uq-form__checkbox-label,
-  .uq-form__checkbox-label:has(input[type="checkbox"]:checked:disabled) {
-    &::before {
-      background-color: core.$grey-400;
-    }
   }
 }

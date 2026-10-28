@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.0.11](https://github.com/uq-its-ss/design-system/compare/%40uqds%2Falert%407.0.11-alpha.0...%40uqds%2Falert%407.0.11) (2026-10-27)
+
+**Note:** Version bump only for package @uqds/alert
+
 ## [7.0.11-alpha.0](https://github.com/uq-its-ss/design-system/compare/%40uqds%2Falert%407.0.10...%40uqds%2Falert%407.0.11-alpha.0) (2026-10-22)
 
 **Note:** Version bump only for package @uqds/alert

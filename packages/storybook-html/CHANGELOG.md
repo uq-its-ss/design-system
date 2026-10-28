@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.1.9](https://github.com/uq-its-ss/design-system/compare/storybook-html%408.1.9-alpha.1...storybook-html%408.1.9) (2026-10-27)
+
+**Note:** Version bump only for package storybook-html
+
+## [8.1.9-alpha.1](https://github.com/uq-its-ss/design-system/compare/storybook-html%408.1.9-alpha.0...storybook-html%408.1.9-alpha.1) (2026-10-27)
+
+- **deps-dev:** bump storybook from 10.6.0 to 10.6.2 ([423ff76](https://github.com/uq-its-ss/design-system/commit/423ff76f6e402315c1e9936d663a707698073296))
+
+### 🐛 Bug Fixes
+
+- **body:** typo ([fdcc96d](https://github.com/uq-its-ss/design-system/commit/fdcc96d258d1d9984bf8e9049c4695b1dd68b65b))
+- **skip-links:** updated skip links ([237e6e1](https://github.com/uq-its-ss/design-system/commit/237e6e1d0c50be45482250779fd50aff1a16080e))
+
 ## [8.1.9-alpha.0](https://github.com/uq-its-ss/design-system/compare/storybook-html%408.1.8...storybook-html%408.1.9-alpha.0) (2026-10-22)
 
 - **deps-dev:** bump vite from 8.2.2 to 8.3.4 ([be11352](https://github.com/uq-its-ss/design-system/commit/be1135233ceebddd39425561601502a2a3834e95))

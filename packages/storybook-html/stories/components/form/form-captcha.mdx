@@ -14,15 +14,50 @@ import * as FormCaptchaStories from "./form-captcha.stories";
 
 The purpose of CAPTCHAs is to prevent bots from using services intended for human use, prevent distortion of collected usage information, prevent automated entry of false information, and prevent data scraping.
 
-### Key Principle
+## Default CAPTCHA
 
-> Captcha should be used to protect public, anonymous, and abuse-prone interactions. It should not be applied universally to all forms. Where trust already exists through authentication or alternative security controls, those mechanisms should be preferred over CAPTCHA.
+<Canvas of={FormCaptchaStories.Captcha} sourceState="none" />
 
-## Preferred Captcha Approach
+## Installation Guide
 
-The Design System offers a licensed reusable [Friendly Captcha](https://friendlycaptcha.com) implementation
+UQ has a licensed version of [Friendly Captcha](https://friendlycaptcha.com) that covers all of `uq.edu.au`, including subdomains.
 
-<Canvas of={FormCaptchaStories.captcha} />
+### Data Sitekey
+
+The **data-sitekey** in Friendly Captcha is a public identifier placed in your HTML code that links the CAPTCHA widget on your webpage to your specific account and application in the Friendly Captcha dashboard
+
+```TEXT
+FCMGETO5UETK6BA9
+```
+
+**Note:** It is safe to expose in your website's public HTML markup or client-side JavaScript code.
+
+### Option 1: Programmatically - Javascript SDK (Recommended)
+
+The `@friendlycaptcha/sdk` package is included in `@uqds/form`, so installing `@uqds/form` will also install the Friendly Captcha SDK.
+
+#### Install the library
+
+```bash
+# using @uqds/form
+npm install @uqds/form
+```
+
+#### Create widgets from your code
+
+```javascript
+import { FriendlyCaptcha } from "@friendlycaptcha/sdk";
+
+const widget = new FriendlyCaptcha({
+  sitekey: "FCMGETO5UETK6BA9",
+});
+
+widget.render();
+```
+
+Alternatively, you can directly use the `@friendlycaptcha/sdk` package. Follow the instruction directly from the [Friendly Captcha documentation](https://developer.friendlycaptcha.com/docs/v2/getting-started/install).
+
+### Option 2: HTML Scripts and Widget
 
 ### What is Friendly Captcha?
 
@@ -49,7 +84,11 @@ You will need to contact [ADS UI team](https://about.uq.edu.au/web-feedback?r=ht
 
 ## Captcha guidelines
 
-#### Alternative Controls
+### Key Principle
+
+> Captcha should be used to protect public, anonymous, and abuse-prone interactions. It should not be applied universally to all forms. Where trust already exists through authentication or alternative security controls, those mechanisms should be preferred over CAPTCHA.
+
+### Alternative Controls
 
 Friendly Captcha is not always the right solution.
 

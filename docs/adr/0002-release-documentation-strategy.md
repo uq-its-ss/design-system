@@ -47,6 +47,12 @@ Use **standard merge** for PRs to master branch (preserve all commits).
 
 **Requirement:** All commits in PR must use conventional commit format before merge.
 
+**Note:** This is enforced by convention only (documentation); there is no CI commitlint check or repo-level restriction. A squash-merged PR (e.g. #845) is skipped by the draft changelog generator, which only reads commit subjects - those changes must be added to the draft release manually.
+
+### Publishing the Draft: Explicit Tag
+
+The draft is created before the git release tag exists, so GitHub assigns it an `untagged-<hash>` tag. When publishing, the workflow passes `tag_name` and `target_commitish` (the SHA of the tagged release commit) to `updateRelease`; otherwise the release stays on the untagged tag and `scripts/generate-changelog.js` never finds `release-YYYY-MM-DD`.
+
 ### Documentation Architecture
 
 **Primary source of truth:** GitHub Releases (stable releases only)

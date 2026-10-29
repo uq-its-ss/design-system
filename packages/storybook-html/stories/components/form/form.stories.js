@@ -193,7 +193,7 @@ export default {
           <div class="uq-form__group">
             <fieldset>
               <legend>
-                <h4 class="uq-form__label">Checkbox fieldset with legend and error</h4>
+                <h4 class="uq-form__label">Checkbox fieldset with legend</h4>
                 <span class="uq-form__helper">Helper text for the message</span>
               </legend>
               <div class="uq-form__checkbox">
@@ -236,6 +236,58 @@ export default {
               <div class="uq-form__checkbox">
                 <input checked disabled type="checkbox" class="uq-form__checkbox-input" id="uq-checkbox-ex5-error" name="uq-checkbox-ex5-error">  
                 <label class="uq-form__checkbox-label" for="uq-checkbox-ex5-error">Checkbox :checked :disabled</label>
+              </div>
+            </fieldset>
+          </div>
+
+          <h3>Radio</h3>
+
+          <div class="uq-form__group">
+            <fieldset>
+              <legend>
+                <h4 class="uq-form__label">Radio fieldset with legend</h4>
+                <span class="uq-form__helper">Helper text for the message</span>
+              </legend>
+              <div class="uq-form__radio">
+                <input type="radio" class="uq-form__radio-input" id="uq-radio-ex1" name="uq-radio-ex">  
+                <label class="uq-form__radio-label" for="uq-radio-ex1">Radio </label>
+              </div>
+              <div class="uq-form__radio">
+                <input checked type="radio" class="uq-form__radio-input" id="uq-radio-ex2" name="uq-radio-ex">  
+                <label class="uq-form__radio-label" for="uq-radio-ex2">Radio :checked</label>
+              </div>
+              <div class="uq-form__radio">
+                <input disabled type="radio" class="uq-form__radio-input" id="uq-radio-ex3" name="uq-radio-ex">  
+                <label class="uq-form__radio-label" for="uq-radio-ex3">Radio :disabled</label>
+              </div>
+              <div class="uq-form__radio">
+                <input checked disabled type="radio" class="uq-form__radio-input" id="uq-radio-ex4" name="uq-radio-ex">  
+                <label class="uq-form__radio-label" for="uq-radio-ex4">Radio :checked :disabled</label>
+              </div>
+            </fieldset>
+          </div>
+          <div class="uq-form__group uq-form__group--error">
+            <fieldset>
+              <legend>
+                <h4 class="uq-form__label">Radio fieldset with legend and error</h4>
+                <span class="uq-form__helper">Helper text for the message</span>
+                <span class="uq-form__error">Error text goes here</span>
+              </legend>
+              <div class="uq-form__radio">
+                <input type="radio" class="uq-form__radio-input" id="uq-radio-ex1-error" name="uq-radio-ex-error">  
+                <label class="uq-form__radio-label" for="uq-radio-ex1-error">Radio </label>
+              </div>
+              <div class="uq-form__radio">
+                <input checked type="radio" class="uq-form__radio-input" id="uq-radio-ex2-error" name="uq-radio-ex-error">  
+                <label class="uq-form__radio-label" for="uq-radio-ex2-error">Radio :checked</label>
+              </div>
+              <div class="uq-form__radio">
+                <input disabled type="radio" class="uq-form__radio-input" id="uq-radio-ex4-error" name="uq-radio-ex-error">  
+                <label class="uq-form__radio-label" for="uq-radio-ex4-error">Radio :disabled</label>
+              </div>
+              <div class="uq-form__radio">
+                <input checked disabled type="radio" class="uq-form__radio-input" id="uq-radio-ex5-error" name="uq-radio-ex-error">  
+                <label class="uq-form__radio-label" for="uq-radio-ex5-error">Radio :checked :disabled</label>
               </div>
             </fieldset>
           </div>
@@ -478,6 +530,56 @@ export default {
             <label class="uq-form__checkbox-label" for="uq-checkbox-im4">
               <input checked disabled type="checkbox" class="uq-form__checkbox-input" id="uq-checkbox-im4" name="uq-checkbox-im4">  
               Checkbox :checked :disabled
+            </label>
+          </fieldset>
+
+          <h3>Radio</h3>
+
+          <fieldset class="uq-form__group">
+            <legend>
+              <h3 class="uq-form__label" for="message">Radio group</h3>
+              <span class="uq-form__helper">Helper text for the message</span>
+            </legend>
+
+            <label class="uq-form__radio-label" for="uq-radio-im1">
+              <input type="radio" class="uq-form__radio-input" id="uq-radio-im1" name="uq-radio-im">  
+              Radio
+            </label>
+            <label class="uq-form__radio-label" for="uq-radio-im2">
+              <input checked type="radio" class="uq-form__radio-input" id="uq-radio-im2" name="uq-radio-im">  
+              Radio :checked
+            </label>
+            <label class="uq-form__radio-label" for="uq-radio-im3">
+              <input disabled type="radio" class="uq-form__radio-input" id="uq-radio-im3" name="uq-radio-im">  
+              Radio :disabled
+            </label>
+            <label class="uq-form__radio-label" for="uq-radio-im4">
+              <input checked disabled type="radio" class="uq-form__radio-input" id="uq-radio-im4" name="uq-radio-im">  
+              Radio :checked :disabled
+            </label>
+          </fieldset>
+
+          <fieldset class="uq-form__group uq-form__group--error">
+            <legend>
+              <h3 class="uq-form__label" for="message">Radio group with error</h3>
+              <span class="uq-form__helper">Helper text for the message</span>
+              <span class="uq-form__error">Error text goes here</span>
+            </legend>
+            <label class="uq-form__radio-label" for="uq-radio-im1-error">
+              <input type="radio" class="uq-form__radio-input" id="uq-radio-im1-error" name="uq-radio-im-error">  
+              Radio
+            </label>
+            <label class="uq-form__radio-label" for="uq-radio-im2-error">
+              <input checked type="radio" class="uq-form__radio-input" id="uq-radio-im2-error" name="uq-radio-im-error">  
+              Radio :checked
+            </label>
+            <label class="uq-form__radio-label" for="uq-radio-im3-error">
+              <input disabled type="radio" class="uq-form__radio-input" id="uq-radio-im3-error" name="uq-radio-im-error">  
+              Radio :disabled
+            </label>
+            <label class="uq-form__radio-label" for="uq-radio-im4-error">
+              <input checked disabled type="radio" class="uq-form__radio-input" id="uq-radio-im4-error" name="uq-radio-im-error">  
+              Radio :checked :disabled
             </label>
           </fieldset>
 

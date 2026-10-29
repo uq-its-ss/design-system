@@ -125,7 +125,7 @@
     color: core.$black;
     font-family: core.$font-body;
 
-    &:focus {
+    &:focus-visible {
       outline: 4px solid core.$utility-500;
     }
 

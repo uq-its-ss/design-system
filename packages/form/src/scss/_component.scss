@@ -129,6 +129,10 @@
       outline: 4px solid core.$utility-500;
     }
 
+    &::placeholder {
+      color: core.$black;
+    }
+
     &:disabled {
       color: core.$grey-400;
       border-color: core.$grey-400;
@@ -174,9 +178,17 @@
       border-radius: 0 5px 5px 0;
       display: flex;
       justify-content: center;
-      border: 2px solid core.$grey-600;
-      border-left: 0;
       padding: core.$space-m;
+
+      &--tertiary,
+      &--secondary {
+        border: 2px solid core.$grey-600;
+        border-left: 0;
+
+        &:hover {
+          border: 2px solid core.$purple-500;
+        }
+      }
     }
 
     > input:disabled + .uq-button {

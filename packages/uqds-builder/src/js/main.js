@@ -3,6 +3,7 @@ import siteHeaderNavigation from "@uqds/site-header/src/js/site-header-navigatio
 import { accordion } from "@uqds/accordion/src/js/main";
 import { Alerts } from "@uqds/alert/src/js/main";
 import { breadcrumb } from "@uqds/breadcrumb/src/js/main";
+import { captcha } from "@uqds/captcha/src/js/main";
 import { copyButton } from "@uqds/button/src/js/copy-button";
 import { imageCarousel } from "@uqds/image/src/js/main";
 import { socialShare } from "@uqds/social/src/js/main";
@@ -14,6 +15,7 @@ export {
   accordion,
   Alerts,
   breadcrumb,
+  captcha,
   copyButton,
   imageCarousel,
   socialShare,

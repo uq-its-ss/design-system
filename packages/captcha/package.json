@@ -1,0 +1,57 @@
+{
+  "name": "@uqds/captcha",
+  "version": "1.1.0-alpha.0",
+  "description": "Captcha element style rules",
+  "keywords": [
+    "uqds",
+    "uq",
+    "University of Queensland",
+    "design system",
+    "scss",
+    "sass",
+    "css",
+    "captcha",
+    "friendly captcha"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": {
+    "name": "University of Queensland",
+    "url": "https://about.uq.edu.au/web-feedback?r=https://design-system.uq.edu.au"
+  },
+  "homepage": "https://github.com/uq-its-ss/design-system#readme",
+  "license": "ISC",
+  "directories": {
+    "lib": "src"
+  },
+  "files": [
+    "dist/*",
+    "src/*"
+  ],
+  "main": "dist/js/uqds.js",
+  "module": "dist/mjs/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/mjs/index.js",
+      "require": "./dist/js/uqds.js"
+    },
+    "./src/js/*": "./src/js/*.js",
+    "./src/scss/*": "./src/scss/*"
+  },
+  "style": "dist/css/main.css",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uq-its-ss/design-system.git"
+  },
+  "scripts": {
+    "prepare": "gulp -f ../../gulpfile.js --cwd=. prepare"
+  },
+  "bugs": {
+    "url": "https://github.com/uq-its-ss/design-system/issues"
+  },
+  "dependencies": {
+    "@friendlycaptcha/sdk": "^1.0.2",
+    "@uqds/core": "^5.0.3"
+  }
+}

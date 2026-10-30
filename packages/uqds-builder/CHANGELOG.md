@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.1.0-alpha.0](https://github.com/uq-its-ss/design-system/compare/uqds-builder%404.0.16...uqds-builder%404.1.0-alpha.0) (2026-10-30)
+
+### 🚀 Features
+
+- **captcha:** updated documentation and implementation ([7d242e3](https://github.com/uq-its-ss/design-system/commit/7d242e334e987fe0915c2d0b557a274199363d5a))
+
 ## [4.0.16](https://github.com/uq-its-ss/design-system/compare/uqds-builder%404.0.16-alpha.1...uqds-builder%404.0.16) (2026-10-27)
 
 **Note:** Version bump only for package uqds-builder

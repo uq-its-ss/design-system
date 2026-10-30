@@ -111,6 +111,16 @@ Add the widget element where the captcha should appear, typically inside your fo
 </form>
 ```
 
+## Server-side verification (required)
+
+Both installation options require backend verification; rendering the widget alone does not protect your submission endpoint. Request API Key from [ADS UI team](https://about.uq.edu.au/web-feedback?r=https://design-system.uq.edu.au)
+
+- Mount the widget inside the `<form>` so the `frc-captcha-response` field is submitted with the form data. If you submit via JavaScript, send the value returned by `widget.getResponse()` instead.
+- Verify that response using [Friendly Captcha's server-side verification API](https://developer.friendlycaptcha.com/docs/v2/getting-started/verify). Keep the API key on the server, never in client-side code.
+- Reject missing or invalid responses before performing the protected action, and provide a way for the user to retry verification.
+
+The examples on this page only render the widget. They do not verify responses.
+
 ## Captcha guidelines
 
 ### Key Principle

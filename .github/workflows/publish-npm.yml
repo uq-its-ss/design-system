@@ -525,12 +525,14 @@ jobs:
 
       - name: "🏷️ Create release tag"
         if: ${{ github.ref_name == 'releases' }}
+        id: create-tag
         env:
           GH_TOKEN: ${{ secrets.UQDS_PERSONAL_ACCESS_TOKEN }}
         run: |
           RELEASE_TAG="${{ steps.release-info.outputs.tag }}"
           git tag "$RELEASE_TAG"
           git push origin "$RELEASE_TAG"
+          echo "sha=$(git rev-parse HEAD)" >> $GITHUB_OUTPUT
           echo "Created and pushed tag: $RELEASE_TAG"
 
       - name: "📝 Publish GitHub Release"
@@ -545,10 +547,16 @@ jobs:
             if (found) {
               // Publish the existing draft located earlier in this job - avoids
               // re-searching by tag_name, which is what previously went wrong.
+              // tag_name/target_commitish must be sent explicitly: the draft was
+              // created before the git tag existed, so without them GitHub keeps
+              // the release on an `untagged-<hash>` tag instead of attaching it
+              // to the release tag pushed above.
               const { data: published } = await github.rest.repos.updateRelease({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
                 release_id: draftId,
+                tag_name: '${{ steps.release-info.outputs.tag }}',
+                target_commitish: '${{ steps.create-tag.outputs.sha }}',
                 draft: false
               });
               console.log(`Published draft release: ${published.html_url}`);

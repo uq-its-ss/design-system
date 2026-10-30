@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.2.0](https://github.com/uq-its-ss/design-system/compare/storybook-html%408.2.0-alpha.0...storybook-html%408.2.0) (2026-10-30)
+
+**Note:** Version bump only for package storybook-html
+
 ## [8.2.0-alpha.0](https://github.com/uq-its-ss/design-system/compare/storybook-html%408.1.9...storybook-html%408.2.0-alpha.0) (2026-10-30)
 
 - **captcha:** updated example docs ([21573f6](https://github.com/uq-its-ss/design-system/commit/21573f68a57f5d792ef917521e69b79185cd0f76))

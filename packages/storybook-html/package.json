@@ -47,6 +47,7 @@
     "@uqds/icon": "^5.0.2",
     "@uqds/image": "^6.0.3",
     "@uqds/layout": "^7.0.3",
+    "@uqds/link-grid": "^0.0.1",
     "@uqds/lists": "^4.0.3",
     "@uqds/loading-spinner": "^4.0.8",
     "@uqds/navigation": "^7.0.9",

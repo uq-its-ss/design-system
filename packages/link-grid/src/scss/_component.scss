@@ -1,3 +1,49 @@
 @use "@uqds/core/src/scss/global" as core;
 @use "@uqds/icon/src/scss/global" as icon;
 @use "global" as *;
+
+.uq-link-grid {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  column-gap: var(--layout-gap);
+  // 1 column by default, growing to 2 then 3 as the grid itself widens (max 3)
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(max(20rem, calc((100% - 2 * var(--uq-space-xl)) / 3)), 1fr)
+  );
+
+  &__item {
+    list-style: none;
+    margin: 0;
+    border-bottom: 1px solid var(--uq-grey-300);
+
+    &:hover {
+      background-color: var(--uq-grey-50);
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: var(--uq-space-l);
+    padding-right: var(--uq-space-ul);
+
+    &:hover {
+      color: var(--uq-purple-500);
+      background-color: transparent;
+    }
+    &:focus {
+      outline: 6px solid var(--uq-utility-500);
+      border-radius: 2px;
+      outline-offset: 0;
+    }
+  }
+}
+
+// Styles to override icon positioning for right-aligned icons within link grid items
+.uq-link-grid__link.uq-icon.uq-icon--right {
+  margin-right: 0;
+}
+.uq-link-grid__link.uq-icon.uq-icon--right::before {
+  right: var(--uq-space-l);
+}

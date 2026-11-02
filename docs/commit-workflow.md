@@ -295,10 +295,10 @@ Your commits directly affect:
 
 - [Conventional Commits Specification](https://conventionalcommits.org/)
 - [CONTRIBUTING.md](./CONTRIBUTING.md) — Full contribution guide
-- [Release Documentation Strategy](./adr/0001-release-documentation-strategy.md) — ADR explaining our approach
+- [Release Documentation Strategy](./adr/0002-release-documentation-strategy.md) — ADR explaining our approach
 
 ---
 
 ## Questions?
 
-Contact the ADS-UI team or see [CONTRIBUTING.md](../CONTRIBUTING.md).
+Contact the ADS-UI team or see [CONTRIBUTING.md](./CONTRIBUTING.md).

@@ -67,10 +67,6 @@ Contents:
 - [Code Quality and Testing Guide](./docs/testing/testing-linting.md)
 - [Code standards and style](./docs/standards/standards.md)
 
-### Architecture
-
-- [ADR-0001: Release Documentation Strategy](./docs/adr/0001-release-documentation-strategy.md)
-
 ### Other
 
 - [Access requests](./docs/access-request.md)

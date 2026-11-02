@@ -28,7 +28,7 @@ npm install
 npm run storybook
 ```
 
-See [Setup Instructions](./docs/setup-instructions.md) for detailed setup.
+See [Setup Instructions](./setup-instructions.md) for detailed setup.
 
 ---
 
@@ -345,7 +345,7 @@ Since we use conventional commits for automated versioning:
 npx lerna publish from-git --yes
 ```
 
-See [ADR-0002](./adr/0002-publish-failure-recovery.md) for why this is a manual step rather than an automated retry.
+See [ADR-0003](./adr/0003-publish-failure-recovery.md) for why this is a manual step rather than an automated retry.
 
 ### npm Version Requirement (OIDC Trusted Publishing)
 
@@ -355,11 +355,11 @@ Publishing uses npm's [Trusted Publishing](https://docs.npmjs.com/generating-pro
 
 ## Additional Resources
 
-- [Code Standards](./docs/standards/standards.md)
-- [Testing Guide](./docs/testing/testing-linting.md)
-- [Creating a Package](./docs/create-a-package.md)
-- [Using Storybook](./docs/using-storybook.md)
-- [Release Documentation Strategy](./docs/adr/0001-release-documentation-strategy.md)
+- [Code Standards](./standards/standards.md)
+- [Testing Guide](./testing/testing-linting.md)
+- [Creating a Package](./create-a-package.md)
+- [Using Storybook](./using-storybook.md)
+- [Release Documentation Strategy](./adr/0002-release-documentation-strategy.md)
 
 ---
 

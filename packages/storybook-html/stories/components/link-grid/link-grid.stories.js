@@ -1,6 +1,3 @@
-import classNames from "classnames";
-import iconCatalog from "@uqds/icon";
-
 export default {
   title: "Components/Link Grid",
   render: ({ label, count }) => {

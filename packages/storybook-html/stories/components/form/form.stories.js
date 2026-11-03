@@ -138,7 +138,7 @@ export default {
 
           <fieldset class="uq-form__fieldset">
             <legend class="uq-form__legend">
-              <h3>Input groups</h3>
+              <h3 id="input-groups">Input groups</h3>
             </legend>
             <div class="uq-form__group">
               <div class="uq-form__input-group">
@@ -161,6 +161,18 @@ export default {
                 <button type="submit" class="uq-button uq-button--tertiary"><span class="uq-icon uq-icon--standard--search"></span> <span class="sr-only">Search</span></button>
               </div>
             </div>
+            <div class="uq-form__group">
+              <div class="uq-form__input-group">
+                <label class="sr-only" for="search">Search</label>
+                <select id="search-scope" name="search-scope">
+                  <option value="1">about.uq.edu.au</option>
+                  <option value="2">uq.edu.au</option>
+                </select>
+                <input id="search" type="text" name="search" placeholder="Search by keyword">
+                <button type="submit" class="uq-button">Search</button>
+              </div>
+            </div>
+            <p><em>Disabled</em></p>
             <div class="uq-form__group">
               <div class="uq-form__input-group">
                 <label class="sr-only" for="search">Search</label>
@@ -434,46 +446,56 @@ export default {
               <h3>Input groups</h3>
             </legend>
             <div class="uq-form__group">
-              <div class="uq-form__input-group">
+            <div class="uq-form__input-group">
                 <label class="sr-only" for="search">Search</label>
-                <input id="search" type="text" name="search">
+                <input id="search" type="text" name="search" placeholder="Search by keyword">
                 <button type="submit" class="uq-button">Search</button>
               </div>
             </div>
             <div class="uq-form__group">
               <div class="uq-form__input-group">
                 <label class="sr-only" for="search">Search</label>
-                <input disabled id="search" type="text" name="search">
-                <button type="submit" class="uq-button">Search</button>
-              </div>
-            </div>
-
-            <div class="uq-form__group">
-              <div class="uq-form__input-group">
-                <label class="sr-only" for="search">Search</label>
-                <input id="search" type="text" name="search">
+                <input id="search" type="text" name="search" placeholder="Search by keyword">
                 <button type="submit" class="uq-button"><span class="uq-icon uq-icon--standard--search"></span> <span class="sr-only">Search</span></button>
               </div>
             </div>
             <div class="uq-form__group">
               <div class="uq-form__input-group">
                 <label class="sr-only" for="search">Search</label>
-                <input disabled id="search" type="text" name="search">
-                <button type="submit" class="uq-button"><span class="uq-icon uq-icon--standard--search"></span> <span class="sr-only">Search</span></button>
-              </div>
-            </div>
-
-            <div class="uq-form__group">
-              <div class="uq-form__input-group">
-                <label class="sr-only" for="search">Search</label>
-                <input id="search" type="text" name="search">
+                <input id="search" type="text" name="search" placeholder="Search by keyword">
                 <button type="submit" class="uq-button uq-button--tertiary"><span class="uq-icon uq-icon--standard--search"></span> <span class="sr-only">Search</span></button>
               </div>
             </div>
             <div class="uq-form__group">
               <div class="uq-form__input-group">
                 <label class="sr-only" for="search">Search</label>
-                <input disabled id="search" type="text" name="search">
+                <select id="search-scope" name="search-scope">
+                  <option value="1">about.uq.edu.au</option>
+                  <option value="2">All of UQ</option>
+                </select>
+                <input id="search" type="text" name="search" placeholder="Search by keyword">
+                <button type="submit" class="uq-button">Search</button>
+              </div>
+            </div>
+            <p><em>Disabled</em></p>
+            <div class="uq-form__group">
+              <div class="uq-form__input-group">
+                <label class="sr-only" for="search">Search</label>
+                <input disabled id="search" type="text" name="search" placeholder="Search by keyword">
+                <button type="submit" class="uq-button">Search</button>
+              </div>
+            </div>
+            <div class="uq-form__group">
+              <div class="uq-form__input-group">
+                <label class="sr-only" for="search">Search</label>
+                <input disabled id="search" type="text" name="search" placeholder="Search by keyword">
+                <button type="submit" class="uq-button"><span class="uq-icon uq-icon--standard--search"></span> <span class="sr-only">Search</span></button>
+              </div>
+            </div>
+            <div class="uq-form__group">
+              <div class="uq-form__input-group">
+                <label class="sr-only" for="search">Search</label>
+                <input disabled id="search" type="text" name="search" placeholder="Search by keyword">
                 <button type="submit" class="uq-button uq-button--tertiary"><span class="uq-icon uq-icon--standard--search"></span> <span class="sr-only">Search</span></button>
               </div>
             </div>

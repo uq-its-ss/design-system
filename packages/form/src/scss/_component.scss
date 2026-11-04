@@ -172,8 +172,11 @@
       border-radius: 4px;
     }
 
-    > input:focus {
-      outline: none;
+    > input {
+      &:focus,
+      &:focus-visible {
+        outline: none !important;
+      }
     }
 
     > input:has(+ .uq-button) {
@@ -200,13 +203,14 @@
       justify-content: center;
 
       &:has(span.uq-icon) {
-        padding-left: core.$space-m;
-        padding-right: core.$space-m;
+        padding-left: core.$space-s;
+        padding-right: core.$space-s;
       }
 
       span.uq-icon::before {
         width: core.$space-xl;
         height: core.$space-xl;
+        margin: -0.25rem;
       }
     }
 

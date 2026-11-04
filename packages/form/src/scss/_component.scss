@@ -240,6 +240,10 @@
       > select
         + input:not([type="checkbox"]):not([type="radio"]):has(+ .uq-button) {
         border-left: 2px solid core.$purple-500;
+
+        &:disabled {
+          border-left-color: core.$grey-400;
+        }
       }
 
       .uq-button {

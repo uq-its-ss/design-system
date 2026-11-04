@@ -172,10 +172,11 @@
       border-radius: 4px;
     }
 
-    > input {
+    input:not([type="checkbox"]):not([type="radio"]),
+    select {
       &:focus,
       &:focus-visible {
-        outline: none !important;
+        outline: none;
       }
     }
 
@@ -231,9 +232,14 @@
     }
 
     &--on-purple {
-      input,
+      input:not([type="checkbox"]):not([type="radio"]),
       select {
-        border-color: core.$white !important;
+        border: 0;
+      }
+
+      > select
+        + input:not([type="checkbox"]):not([type="radio"]):has(+ .uq-button) {
+        border-left: 2px solid core.$purple-500;
       }
 
       .uq-button {

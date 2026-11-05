@@ -1,3 +1,1 @@
-import { searchInput } from "./search-input";
-
-export { searchInput };
+// Entry point for the UQ Form JavaScript module

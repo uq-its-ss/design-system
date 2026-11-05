@@ -65,6 +65,50 @@ export const CardsExample = {
       </div>
     </div>
 
+  <h2>less cards than column count</h2>
+   <p>Custom gird (auto fill)</p> 
+   <ul class="uq-link-grid uq-link-grid--target-3x">
+      <li class="uq-link-grid__item">
+        <a href="#" class="uq-link-grid__link uq-icon uq-icon--right uq-icon--standard--arrow-right">
+        Custom Grid Item 1
+        </a>
+      </li>
+      <li class="uq-link-grid__item">
+        <a href="#" class="uq-link-grid__link uq-icon uq-icon--right uq-icon--standard--arrow-right">
+        Custom Grid Item 2
+        </a>
+      </li>
+    </ul>
+  <p>global grid (auto fit)</p>
+  <ul class="uq-link-grid uq-grid uq-grid--3-column">
+      <li class="uq-link-grid__item">
+        <a href="#" class="uq-link-grid__link uq-icon uq-icon--right uq-icon--standard--arrow-right">
+          Card Grid Item 1
+        </a>
+      </li>
+      <li class="uq-link-grid__item">
+        <a href="#" class="uq-link-grid__link uq-icon uq-icon--right uq-icon--standard--arrow-right">
+          Card Grid Item 2
+        </a>
+      </li>
+    </ul>
+  <p>card grid (auto fill)</p>
+    <div>
+    <ul class="uq-link-grid uq-card-grid uq-card-grid--target-3x">
+      <li class="uq-link-grid__item">
+        <a href="#" class="uq-link-grid__link uq-icon uq-icon--right uq-icon--standard--arrow-right">
+          Card Grid Item 1
+        </a>
+      </li>
+      <li class="uq-link-grid__item">
+        <a href="#" class="uq-link-grid__link uq-icon uq-icon--right uq-icon--standard--arrow-right">
+          Card Grid Item 2
+        </a>
+      </li>
+    </ul>
+  </div>
+
+
   <h2>General Cards grid</h2>
   <div class="uq-section">
     <div class="uq-card-grid uq-card-grid--target-1x">

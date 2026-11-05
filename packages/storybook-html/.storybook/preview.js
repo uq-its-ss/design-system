@@ -8,6 +8,7 @@ import "@uqds/card/src/scss/main.scss";
 import "@uqds/pane/src/scss/main.scss";
 import "@uqds/button/src/scss/main.scss";
 import "@uqds/icon/src/scss/main.scss";
+import "@uqds/link-grid/src/scss/main.scss";
 import "@uqds/alert/src/scss/main.scss";
 import "@uqds/accordion/src/scss/main.scss";
 import "@uqds/form/src/scss/main.scss";

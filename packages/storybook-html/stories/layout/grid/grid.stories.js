@@ -80,3 +80,57 @@ export const ProfileExample = {
     NumberOfItems: "Default",
   },
 };
+
+export const LayoutGridAuto = {
+  render: () => `
+  <div>
+    <ul class="uq-link-grid uq-grid-auto">
+      <li class="uq-link-grid__item">
+        <a href="#" class="uq-link-grid__link uq-icon uq-icon--right uq-icon--standard--arrow-right">
+          Card Grid Item 1
+        </a>
+      </li>
+      <li class="uq-link-grid__item">
+        <a href="#" class="uq-link-grid__link uq-icon uq-icon--right uq-icon--standard--arrow-right">
+          Card Grid Item 2
+        </a>
+      </li>
+      <li class="uq-link-grid__item">
+        <a href="#" class="uq-link-grid__link uq-icon uq-icon--right uq-icon--standard--arrow-right">
+          Card Grid Item 3
+        </a>
+      </li>
+      <li class="uq-link-grid__item">
+        <a href="#" class="uq-link-grid__link uq-icon uq-icon--right uq-icon--standard--arrow-right">
+          Card Grid Item 4
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div>
+    <ul class="uq-link-grid uq-grid uq-grid--3-column">
+      <li class="uq-link-grid__item">
+        <a href="#" class="uq-link-grid__link uq-icon uq-icon--right uq-icon--standard--arrow-right">
+          Card Grid Item 1
+        </a>
+      </li>
+      <li class="uq-link-grid__item">
+        <a href="#" class="uq-link-grid__link uq-icon uq-icon--right uq-icon--standard--arrow-right">
+          Card Grid Item 2
+        </a>
+      </li>
+      <li class="uq-link-grid__item">
+        <a href="#" class="uq-link-grid__link uq-icon uq-icon--right uq-icon--standard--arrow-right">
+          Card Grid Item 3
+        </a>
+      </li>
+      <li class="uq-link-grid__item">
+        <a href="#" class="uq-link-grid__link uq-icon uq-icon--right uq-icon--standard--arrow-right">
+          Card Grid Item 4
+        </a>
+      </li>
+    </ul>
+  </div>
+  `,
+};

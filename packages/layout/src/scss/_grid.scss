@@ -1,31 +1,83 @@
 @use "global" as *;
 
 .uq-grid {
+  /* Default values */
+  --uq-grid-min: 16.313rem; /* Default Minimum column width (261px) */
+  --uq-grid-max-cols: 1;
+
+  display: grid;
+  gap: var(--uq-grid-gap);
+
+  /* mobile overflow protection: Ensure that the minimum value never exceeds the width of the screen bywrapping expression inside a min(100%, ...) function */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(
+      min(
+        100%,
+        max(
+          var(--uq-grid-min),
+          /* Calculate the ideal column width based on the maximum number of columns and the gap */
+          calc(
+              (100% - (var(--uq-grid-max-cols) - 1) * var(--uq-grid-gap)) /
+                var(--uq-grid-max-cols)
+            )
+        )
+      ),
+      1fr
+    )
+  );
+}
+
+/* Automatically adjust if components of certain types are detected inside */
+.uq-grid:has(> .uq-profile) {
+  --uq-grid-min: 19.813rem;
+}
+.uq-grid:has(> .uq-card) {
+  --uq-grid-min: 16.313rem;
+}
+
+/* --- Width Modifiers --- */
+.uq-grid--sm {
+  --uq-grid-min: 16rem;
+}
+.uq-grid--md {
+  --uq-grid-min: 20rem;
+}
+.uq-grid--lg {
+  --uq-grid-min: 28rem;
+}
+
+/* --- Column Count Modifiers --- */
+.uq-grid--1-column {
+  --uq-grid-max-cols: 1;
+}
+.uq-grid--2-column {
+  --uq-grid-max-cols: 2;
+}
+.uq-grid--3-column {
+  --uq-grid-max-cols: 3;
+}
+.uq-grid--4-column {
+  --uq-grid-max-cols: 4;
+}
+
+/* experimental auto grid (TO BE REMOVED) */
+
+.uq-grid-auto {
+  /* Default values */
+  --uq-grid-min: 20rem;
+  --uq-grid-max-cols: 3;
+
   display: grid;
   gap: var(--uq-grid-gap);
   grid-template-columns: auto;
-}
 
-/* MODIFIER CLASSES: These set the IDEAL column count when there is enough space */
-
-.uq-grid--1-column {
-  grid-template-columns: auto;
-}
-.uq-grid--2-column {
+  /* mobile overflow protection: Ensure that the minimum value never exceeds the width of the screen bywrapping expression inside a min(100%, ...) function */
   grid-template-columns: repeat(
     auto-fit,
-    minmax(max(317px, calc(50% - (var(--uq-grid-gap) / 2))), 1fr)
-  );
-}
-.uq-grid--3-column {
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(max(317px, calc(33.333% - (var(--uq-grid-gap) * 2 / 3))), 1fr)
-  );
-}
-.uq-grid--4-column {
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(max(317px, calc(25% - (var(--uq-grid-gap) * 3 / 4))), 1fr)
+    minmax(
+      min(100%, max(317px, calc(33.333% - (var(--uq-grid-gap) * 2 / 3)))),
+      1fr
+    )
   );
 }

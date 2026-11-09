@@ -12,7 +12,7 @@ export default {
     ).join("");
 
     return `
-    <ul class="uq-link-grid uq-link-grid--target-3x">${items}
+    <ul class="uq-link-grid uq-grid uq-grid--3-column">${items}
     </ul>
     `;
   },

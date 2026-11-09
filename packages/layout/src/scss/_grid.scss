@@ -4,9 +4,11 @@
   /* Default values */
   --uq-grid-min: 16.313rem; /* Default Minimum column width (261px) */
   --uq-grid-max-cols: 1;
+  --uq-grid-row-gap: var(--uq-grid-gap);
+  --uq-grid-col-gap: var(--uq-grid-gap);
 
   display: grid;
-  gap: var(--uq-grid-gap);
+  gap: var(--uq-grid-row-gap) var(--uq-grid-col-gap);
 
   /* mobile overflow protection: Ensure that the minimum value never exceeds the width of the screen bywrapping expression inside a min(100%, ...) function */
   grid-template-columns: repeat(
@@ -18,7 +20,7 @@
           var(--uq-grid-min),
           /* Calculate the ideal column width based on the maximum number of columns and the gap */
           calc(
-              (100% - (var(--uq-grid-max-cols) - 1) * var(--uq-grid-gap)) /
+              (100% - (var(--uq-grid-max-cols) - 1) * var(--uq-grid-col-gap)) /
                 var(--uq-grid-max-cols)
             )
         )
@@ -34,6 +36,11 @@
 }
 .uq-grid:has(> .uq-card) {
   --uq-grid-min: 16.313rem;
+}
+
+.uq-grid:has(> .uq-link-grid__item) {
+  --uq-grid-min: 16.313rem;
+  --uq-grid-row-gap: 0;
 }
 
 /* --- Width Modifiers --- */
@@ -61,23 +68,15 @@
   --uq-grid-max-cols: 4;
 }
 
-/* experimental auto grid (TO BE REMOVED) */
-
-.uq-grid-auto {
-  /* Default values */
-  --uq-grid-min: 20rem;
-  --uq-grid-max-cols: 3;
-
-  display: grid;
-  gap: var(--uq-grid-gap);
-  grid-template-columns: auto;
-
-  /* mobile overflow protection: Ensure that the minimum value never exceeds the width of the screen bywrapping expression inside a min(100%, ...) function */
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(
-      min(100%, max(317px, calc(33.333% - (var(--uq-grid-gap) * 2 / 3)))),
-      1fr
-    )
-  );
+/* cover usage on unordered lists */
+ul.uq-grid:has(> li) {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* required to remove existing li styling */
+ul.uq-grid:has(> li) {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }

@@ -1,0 +1,40 @@
+import { Meta, Story, Canvas, Controls } from "@storybook/addon-docs/blocks";
+import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
+import * as LinkgridStories from "./link-grid.stories";
+
+<Meta of={LinkgridStories} />
+
+# Link Grid
+
+<StatusBadge.Stable />
+
+<StatusBadge.StableDoc />
+
+<a href="https://github.com/uq-its-ss/design-system/issues" target="_blank">
+  Check for open issues
+</a>
+
+## Overview
+
+The link grid component is used to display a collection of links in a grid layout.
+
+### Default
+
+The default link grid layout used to display a collection of links.
+
+<Canvas of={LinkgridStories.Primary} />
+
+<Controls of={LinkgridStories.Primary} />
+
+### States
+
+Default - Link text is not underlined. <br />
+Hover - Link text is underlined. The background and text color may change depending on the variant.
+
+### Breakpoints
+
+Breakpoints have no effect on the link grid component and visually remains the same.
+
+## Accessibility
+
+Colour contrast test for all links showed a WCAG AA Pass.

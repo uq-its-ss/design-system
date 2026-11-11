@@ -323,7 +323,7 @@
   label:has(input[type="radio"]) {
     display: flex;
     align-items: center;
-    padding: core.$space-xs 0;
+    padding-bottom: 0.75rem;
 
     input[type="checkbox"],
     input[type="radio"] {

@@ -2,9 +2,11 @@ import classNames from "classnames";
 import { layoutDecorator } from "../../../lib/decorators";
 import { storyRenderer } from "../../../lib/storyRenderer";
 import * as ProfileStories from "../../components/profile/profile.stories";
+import * as CardStories from "../../components/card/card.stories";
 import "@uqds/layout/src/scss/main.scss";
 
-const { Profile: ProfileCard } = storyRenderer(ProfileStories);
+const { Profile: ProfileItem } = storyRenderer(ProfileStories);
+const { Card: CardItem } = storyRenderer(CardStories);
 
 export default {
   title: "Layout/Grid",
@@ -27,7 +29,7 @@ export default {
     },
     ItemType: {
       name: "Item Type",
-      options: ["Demo item", "Profile Card"],
+      options: ["Demo item", "Profile", "Card"],
       control: "select",
       table: {
         category: "Item options", // Groups the field
@@ -50,10 +52,13 @@ export default {
       numItems = parseInt(NumberOfItems);
     }
 
-    const cardContent =
-      ItemType === "Profile Card"
-        ? ProfileCard()
-        : '<div class="uqds-layout-demo-card"></div>';
+    const itemRenderers = {
+      Profile: ProfileItem,
+      Card: CardItem,
+    };
+    const cardContent = itemRenderers[ItemType]
+      ? itemRenderers[ItemType]()
+      : '<div class="uqds-layout-demo-card"></div>';
 
     const items = Array(numItems).fill(cardContent).join("\n      ");
 
@@ -76,7 +81,15 @@ export const GridDemo = {
 export const ProfileExample = {
   args: {
     Columns: "Default",
-    ItemType: "Profile Card",
+    ItemType: "Profile",
+    NumberOfItems: "Default",
+  },
+};
+
+export const CardExample = {
+  args: {
+    Columns: "Default",
+    ItemType: "Card",
     NumberOfItems: "Default",
   },
 };

@@ -34,7 +34,8 @@
 .uq-grid:has(> .uq-profile) {
   --uq-grid-min: 19.813rem;
 }
-.uq-grid:has(> .uq-card) {
+.uq-grid:has(> .uq-card),
+.uq-grid:has(> .uq-pane) {
   --uq-grid-min: 16.313rem;
 }
 

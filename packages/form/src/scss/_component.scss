@@ -114,7 +114,7 @@
 
   .uq-form__input,
   .uq-form__select,
-  input:not([type="checkbox"]):not([type="radio"]),
+  input:where(:not([type="checkbox"], [type="radio"])),
   select,
   textarea {
     padding: 14px core.$space-m;
@@ -160,113 +160,6 @@
       background: core.$white
         url(icon.get-icon("standard--chevron-down", core.$grey-400)) no-repeat
         right core.$space-m center / core.$space-l auto;
-    }
-  }
-
-  //Input groups
-  .uq-form__input-group {
-    display: flex;
-
-    &:focus-within {
-      outline: 4px solid core.$utility-500;
-      border-radius: 4px;
-    }
-
-    input:not([type="checkbox"]):not([type="radio"]),
-    select {
-      &:focus,
-      &:focus-visible {
-        outline: none;
-      }
-    }
-
-    > input:has(+ .uq-button) {
-      border-right: 0;
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0;
-    }
-
-    > select:has(+ input) {
-      flex-shrink: 2;
-      border-right: 0;
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0;
-    }
-
-    > select + input:has(+ .uq-button) {
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
-    }
-
-    .uq-button {
-      border-radius: 0 4px 4px 0;
-      display: flex;
-      justify-content: center;
-
-      &:has(span.uq-icon) {
-        padding-left: core.$space-s;
-        padding-right: core.$space-s;
-      }
-
-      span.uq-icon::before {
-        width: core.$space-xl;
-        height: core.$space-xl;
-        margin: -0.25rem;
-      }
-    }
-
-    & input:disabled + .uq-button {
-      border-color: core.$grey-400;
-      background-color: core.$grey-400;
-      color: core.$white;
-      cursor: not-allowed;
-
-      &:hover {
-        text-decoration: none;
-      }
-
-      &::before,
-      .uq-icon::before {
-        filter: core.$filter-white;
-      }
-    }
-
-    &--on-purple {
-      input:not([type="checkbox"]):not([type="radio"]),
-      select {
-        border: 0;
-      }
-
-      > select
-        + input:not([type="checkbox"]):not([type="radio"]):has(+ .uq-button) {
-        border-left: 2px solid core.$purple-500;
-
-        &:disabled {
-          border-left-color: core.$grey-400;
-        }
-      }
-
-      .uq-button {
-        background-color: core.$purple-50;
-        border-color: core.$purple-50;
-        color: core.$purple-500;
-
-        &::before,
-        .uq-icon::before {
-          filter: core.$filter-primary;
-        }
-
-        &:hover {
-          background-color: core.$purple-500;
-          border-color: core.$white;
-          color: core.$white;
-
-          &::before,
-          .uq-icon::before {
-            filter: core.$filter-white;
-          }
-        }
-      }
     }
   }
 
@@ -380,5 +273,121 @@
   .uq-form__radio-label:has(input[type="radio"]:disabled) {
     color: core.$grey-400;
     cursor: not-allowed;
+  }
+
+  .uq-search-form {
+    @media #{core.$screen-md-up} {
+      display: flex;
+      flex-direction: row-reverse;
+
+      .uq-search-form__scope {
+        padding-top: 0;
+      }
+    }
+
+    &__input {
+      display: flex;
+      flex: 1;
+    }
+
+    &__scope {
+      padding-top: core.$space-xxs;
+    }
+
+    &:focus-within {
+      outline: 4px solid core.$utility-500;
+      border-radius: 4px;
+    }
+
+    input:where(:not([type="checkbox"], [type="radio"])),
+    select {
+      &:focus,
+      &:focus-visible {
+        outline: none;
+      }
+    }
+
+    // > input[type="text"] {
+    //   border-right: 0;
+    //   border-top-right-radius: 0;
+    //   border-bottom-right-radius: 0;
+    // }
+
+    // > select:has(+ input) {
+    //   flex-shrink: 2;
+    //   border-right: 0;
+    //   border-top-right-radius: 0;
+    //   border-bottom-right-radius: 0;
+    // }
+
+    // > select + input:has(+ .uq-button) {
+    //   border-top-left-radius: 0;
+    //   border-bottom-left-radius: 0;
+    // }
+
+    .uq-button {
+      border-radius: 0 4px 4px 0;
+
+      &:has(span.uq-icon) {
+        padding-left: core.$space-s;
+        padding-right: core.$space-s;
+      }
+
+      span.uq-icon::before {
+        width: core.$space-xl;
+        height: core.$space-xl;
+        margin: -0.25rem;
+      }
+    }
+
+    // & input:disabled + .uq-button {
+    //   border-color: core.$grey-400;
+    //   background-color: core.$grey-400;
+    //   color: core.$white;
+    //   cursor: not-allowed;
+
+    //   &:hover {
+    //     text-decoration: none;
+    //   }
+
+    //   &::before,
+    //   .uq-icon::before {
+    //     filter: core.$filter-white;
+    //   }
+    // }
+
+    // &--on-purple {
+    //   input:not([type="checkbox"], [type="radio"]),
+    //   select {
+    //     border: 0;
+    //   }
+
+    //   > select
+    //     + input:not([type="checkbox"], [type="radio"]):has(+ .uq-button) {
+    //     border-left: 4px solid core.$purple-500;
+    //   }
+
+    //   .uq-button {
+    //     background-color: core.$purple-50;
+    //     border-color: core.$purple-50;
+    //     color: core.$purple-500;
+
+    //     &::before,
+    //     .uq-icon::before {
+    //       filter: core.$filter-primary;
+    //     }
+
+    //     &:hover {
+    //       background-color: core.$purple-500;
+    //       border-color: core.$white;
+    //       color: core.$white;
+
+    //       &::before,
+    //       .uq-icon::before {
+    //         filter: core.$filter-white;
+    //       }
+    //     }
+    //   }
+    // }
   }
 }

@@ -1,6 +1,6 @@
 import DocsHeader from "./custom/components/DocsHeader";
 import DocsPage from "./custom/components/DocsPage";
-import { printGlobalTypes, withPrintMedia } from "./custom/printPreview";
+import { withPrintMedia } from "./custom/printPreview";
 
 import "@uqds/layout/src/scss/main.scss";
 import "@uqds/sections/src/scss/main.scss";
@@ -24,8 +24,6 @@ import "./preview.scss";
 
 /** @type { import('@storybook/html-vite').Preview } */
 const preview = {
-  globalTypes: printGlobalTypes,
-  initialGlobals: { media: "screen" },
   decorators: [withPrintMedia],
   parameters: {
     docs: {

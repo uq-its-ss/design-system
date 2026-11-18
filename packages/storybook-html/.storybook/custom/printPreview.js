@@ -1,9 +1,10 @@
 import { useEffect } from "storybook/preview-api";
+import printStyles from "@uqds/print/src/scss/main.scss?inline";
 
 // Storybook renders in a screen context, so @media print rules never match.
-// This rewrites media queries in the live CSSOM (source CSS is untouched):
+// For stories with `printMedia: true`, this rewrites media queries in the live CSSOM (source CSS is untouched):
 // `print` rules apply, `screen` rules are switched off. @page is not
-// emulated; use browser print preview or emulateMedia('print') for that.
+// emulated; use the browser print preview for that.
 const originals = new Map();
 
 const rewrite = (rules) => {
@@ -39,23 +40,9 @@ const restore = () => {
   originals.clear();
 };
 
-export const printGlobalTypes = {
-  media: {
-    description: "Emulate CSS media type",
-    toolbar: {
-      title: "Media",
-      icon: "document",
-      items: [
-        { value: "screen", title: "Screen" },
-        { value: "print", title: "Print preview" },
-      ],
-      dynamicTitle: true,
-    },
-  },
-};
-
+// Opt in per story with `parameters: { printMedia: true }`.
 export const withPrintMedia = (Story, context) => {
-  const isPrint = context.globals.media === "print";
+  const isPrint = Boolean(context.parameters.printMedia);
 
   useEffect(() => {
     if (!isPrint) return undefined;
@@ -71,4 +58,18 @@ export const withPrintMedia = (Story, context) => {
   }, [isPrint, context.id]);
 
   return Story();
+};
+
+// Injects the print stylesheet as a decorator so it stays out of the code
+// view (pair with `docs.source.excludeDecorators: true`).
+export const withPrintStyles = (Story) => {
+  const content = Story();
+  const style = `<style>${printStyles}</style>`;
+  if (typeof content === "string") return style + content;
+  const fragment = document.createDocumentFragment();
+  fragment.append(
+    document.createRange().createContextualFragment(style),
+    content,
+  );
+  return fragment;
 };

@@ -9,7 +9,7 @@ import * as PrintStories from "./print.stories";
 
 The print stylesheet optimises pages for printing. It applies only inside `@media print`, so it has no effect on screen.
 
-To preview it in Storybook, switch the **Media** toolbar item to **Print preview**. This applies the `@media print` rules in the browser; it does not emulate `@page` margins or page breaks, so use your browser's print preview (or DevTools **Emulate CSS media type: print**) for a final check.
+The stories on this page always render with the `@media print` rules applied, so you can see the print styles on screen. This doesn't emulate `@page` margins or page breaks, so use your browser's print preview (or DevTools **Emulate CSS media type: print**) for a final check.
 
 <Canvas of={PrintStories.Print} />
 

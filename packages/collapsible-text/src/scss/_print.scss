@@ -1,10 +1,12 @@
-// Print: hide interactive/navigation UI that has no use on paper.
+@media print {
+  // Print: hide interactive/navigation UI that has no use on paper.
 
-.uq-collapsible-text__content {
-  max-height: none !important;
-  overflow: visible;
+  .uq-collapsible-text__content {
+    max-height: none !important;
+    overflow: visible;
 
-  &::after {
-    display: none;
+    &::after {
+      display: none;
+    }
   }
 }

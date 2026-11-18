@@ -1,4 +1,4 @@
-import printStyles from "@uqds/print/src/scss/main.scss?inline";
+import { withPrintStyles } from "../../../.storybook/custom/printPreview";
 import { storyRenderer } from "../../../lib/storyRenderer";
 
 // Every component story file except the print story itself and the core
@@ -27,7 +27,10 @@ const renderComponent = ([path, module]) => {
 export default {
   title: "Components/Print/Print Example",
   tags: ["!autodocs"],
+  decorators: [withPrintStyles],
   parameters: {
+    printMedia: true,
+    docs: { source: { excludeDecorators: true } },
     layout: "padded",
     options: { showPanel: false },
   },
@@ -35,7 +38,6 @@ export default {
 
 export const PrintExample = {
   render: () => `
-<style>${printStyles}</style>
 <main id="uq-main">
   <h1>Design system components</h1>
   <p>

@@ -1,5 +1,7 @@
-// Print: hide interactive/navigation UI that has no use on paper.
+@media print {
+  // Print: hide interactive/navigation UI that has no use on paper.
 
-.uq-previous-next {
-  display: none !important;
+  .uq-previous-next {
+    display: none !important;
+  }
 }

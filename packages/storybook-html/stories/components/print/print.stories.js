@@ -1,9 +1,16 @@
-import printStyles from "@uqds/print/src/scss/main.scss?inline";
+import { withPrintStyles } from "../../../.storybook/custom/printPreview";
 
 export default {
   title: "Components/Print",
+  decorators: [withPrintStyles],
+  parameters: {
+    printMedia: true,
+    docs: {
+      source: { excludeDecorators: true },
+      story: { inline: false, height: "200px" },
+    },
+  },
   render: () => `
-<style>${printStyles}</style>
 <article>
   <h2>Print stylesheet example</h2>
   <p>

@@ -41,10 +41,6 @@ const screenshot = async (browser, viewportName, pageName) => {
   const viewport = config.viewports[viewportName];
   const uri = config.uris[pageName];
   await page.setViewport(viewport);
-  // Set SCREENSHOT_MEDIA=print to capture pages with @media print applied.
-  if (process.env.SCREENSHOT_MEDIA === "print") {
-    await page.emulateMediaType("print");
-  }
 
   // Use networkidle2 instead of networkidle0 to better handle persistent connections/trackers.
   // networkidle0 waits for the network to be completely idle, which can hang on pages with long-polling requests or trackers.

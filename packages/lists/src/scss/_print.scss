@@ -1,6 +1,8 @@
-// Print: hide interactive/navigation UI that has no use on paper.
+@media print {
+  // Print: hide interactive/navigation UI that has no use on paper.
 
-.horizontal-list,
-.vertical-list {
-  break-inside: avoid;
+  .horizontal-list,
+  .vertical-list {
+    break-inside: avoid;
+  }
 }

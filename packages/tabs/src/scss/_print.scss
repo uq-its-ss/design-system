@@ -1,10 +1,12 @@
-// Print: hide interactive/navigation UI that has no use on paper.
+@media print {
+  // Print: hide interactive/navigation UI that has no use on paper.
 
-.uq-tabs__tab-list {
-  display: none !important;
-}
+  .uq-tabs__tab-list {
+    display: none !important;
+  }
 
-.uq-tabs__tab-panel {
-  display: block !important;
-  break-inside: avoid;
+  .uq-tabs__tab-panel {
+    display: block !important;
+    break-inside: avoid;
+  }
 }

@@ -1,12 +1,14 @@
-// Print: hide interactive/navigation UI that has no use on paper.
+@media print {
+  // Print: hide interactive/navigation UI that has no use on paper.
 
-.uq-acknowledgement {
-  background: none !important;
-  border-radius: 0;
-  break-inside: avoid;
-}
+  .uq-acknowledgement {
+    background: none !important;
+    border-radius: 0;
+    break-inside: avoid;
+  }
 
-.uq-acknowledgement__content {
-  padding: 0;
-  margin: 0;
+  .uq-acknowledgement__content {
+    padding: 0;
+    margin: 0;
+  }
 }

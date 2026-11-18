@@ -1,0 +1,17 @@
+// Print: hide interactive/navigation UI that has no use on paper.
+
+.uq-image-carousel__controls,
+.uq-image-carousel__pagination {
+  display: none !important;
+}
+
+.uq-image {
+  background: none !important;
+  border-radius: 0;
+  break-inside: avoid;
+}
+
+.uq-image-carousel {
+  height: auto;
+  overflow: visible;
+}

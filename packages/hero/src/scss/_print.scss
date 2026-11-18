@@ -1,0 +1,12 @@
+// Print: hide interactive/navigation UI that has no use on paper.
+
+.uq-hero__button {
+  display: none !important;
+}
+
+.uq-hero,
+.uq-hero-basic {
+  background: none !important;
+  border-radius: 0;
+  break-inside: avoid;
+}

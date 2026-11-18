@@ -1,0 +1,6 @@
+// Print: hide interactive/navigation UI that has no use on paper.
+
+.uq-avatar {
+  border-radius: 0;
+  break-inside: avoid;
+}

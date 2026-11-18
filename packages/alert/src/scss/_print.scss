@@ -1,0 +1,16 @@
+// Print: hide interactive/navigation UI that has no use on paper.
+
+.uq-alert__close {
+  display: none !important;
+}
+
+.uq-alert {
+  background: none !important;
+  border-radius: 0;
+  break-inside: avoid;
+}
+
+.uq-alert__message {
+  padding: 0;
+  margin: 0;
+}

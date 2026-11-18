@@ -1,0 +1,10 @@
+// Print: hide interactive/navigation UI that has no use on paper.
+
+.uq-article-layout,
+.uq-container,
+.uq-grid,
+.uq-card-grid {
+  background: none !important;
+  border-radius: 0;
+  break-inside: avoid;
+}

@@ -1,0 +1,12 @@
+// Print: hide interactive/navigation UI that has no use on paper.
+
+.uq-search-input {
+  display: none !important;
+}
+
+.uq-input,
+.uq-error-summary {
+  background: none !important;
+  border-radius: 0;
+  break-inside: avoid;
+}

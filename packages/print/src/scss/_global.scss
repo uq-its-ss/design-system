@@ -1,3 +1,241 @@
 // Variables, functions, and mixins
 
 @use "@uqds/core/src/scss/global" as core;
+
+/* ==========================================================================
+   CSS PRINT STYLESHEET
+   ========================================================================== */
+
+/* 1. Page Setup & Margins
+   -------------------------------------------------------------------------- */
+@page {
+  size: A4 portrait; /* Switch to 'letter' for US standard, or 'landscape' if needed */
+  margin: 2cm;
+}
+
+/* Optional: Extra top margin on the first page for a document title/header */
+@page :first {
+  margin-top: 2.5cm;
+}
+
+/* 2. Global Reset & Color Optimization
+   -------------------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  background: transparent !important;
+  color: #000 !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+
+html,
+body {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: #fff !important;
+}
+
+/* 3. Hide Non-Print UI Elements
+   -------------------------------------------------------------------------- */
+header,
+footer,
+nav,
+aside,
+form,
+button,
+input,
+select,
+textarea,
+video,
+audio,
+iframe,
+.sidebar,
+.navbar,
+.breadcrumbs,
+.search-bar,
+.social-share,
+.ads,
+.no-print {
+  display: none !important;
+}
+
+/* Reveal optional print-only branding/notices */
+.print-only {
+  display: block !important;
+}
+
+/* 4. Typography & Readability
+   -------------------------------------------------------------------------- */
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 11pt;
+  line-height: 1.45;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-top: 1.4em;
+  margin-bottom: 0.4em;
+}
+
+h1 {
+  font-size: 20pt;
+  margin-top: 0;
+}
+h2 {
+  font-size: 16pt;
+}
+h3 {
+  font-size: 13pt;
+}
+h4,
+h5,
+h6 {
+  font-size: 11pt;
+}
+
+/* 5. Layout Reset
+   -------------------------------------------------------------------------- */
+main,
+article,
+section,
+.container,
+.wrapper,
+.content {
+  display: block !important;
+  float: none !important;
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: visible !important;
+}
+
+/* 6. Pagination & Page Breaks
+   -------------------------------------------------------------------------- */
+p,
+li {
+  orphans: 3;
+  widows: 3;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  break-after: avoid;
+  page-break-after: avoid;
+}
+
+img,
+svg,
+figure,
+table,
+pre,
+blockquote,
+.avoid-break {
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+/* Utility class to force a fresh page before major sections */
+.page-break {
+  break-before: page;
+  page-break-before: page;
+}
+
+/* 7. Links & External References
+   -------------------------------------------------------------------------- */
+a,
+a:visited {
+  display: inline;
+  text-decoration: underline;
+}
+
+/* Expand external HTTP/HTTPS URLs */
+a[href^="http"]::after {
+  content: " (" attr(href) ")";
+  font-size: 11pt;
+  font-weight: normal;
+  word-break: break-all;
+}
+
+/* Do not expand internal anchors, JS links, or links wrapping images */
+a[href^="#"]::after,
+a[href^="javascript:"]::after,
+a:has(img)::after {
+  content: "";
+}
+
+/* 8. Images, Tables & Code Blocks
+   -------------------------------------------------------------------------- */
+img,
+svg {
+  max-width: 100% !important;
+  height: auto !important;
+}
+/*
+img {
+  display: none !important;
+}
+
+img[alt]:not([alt=""]) {
+  display: block !important;
+  max-width: 100% !important;
+  height: auto !important;
+  break-inside: avoid;
+}
+*/
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1em 0;
+}
+
+thead {
+  display: table-header-group; /* Repeats table headers across page breaks */
+}
+
+th,
+td {
+  border: 1pt solid #ccc;
+  padding: 6pt 8pt;
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  font-weight: bold;
+  border-bottom: 1.5pt solid #000;
+}
+
+blockquote {
+  border-left: 2pt solid #666;
+  margin: 1em 0;
+  padding-left: 1em;
+  font-style: italic;
+}
+
+pre,
+code {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 9.5pt;
+}
+
+pre {
+  border: 1pt solid #ccc;
+  padding: 8pt;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}

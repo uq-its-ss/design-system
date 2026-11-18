@@ -1,0 +1,12 @@
+// Print: hide interactive/navigation UI that has no use on paper.
+
+.uq-card__actions {
+  display: none !important;
+}
+
+.uq-card,
+.uq-story-card {
+  background: none !important;
+  border-radius: 0;
+  break-inside: avoid;
+}

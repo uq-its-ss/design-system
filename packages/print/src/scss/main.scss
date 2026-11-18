@@ -1,1 +1,6 @@
-@use "component";
+@use "sass:meta";
+
+// All print rules are scoped to @media print so they never affect screen.
+@media print {
+  @include meta.load-css("component");
+}

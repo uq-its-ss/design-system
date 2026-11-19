@@ -23,7 +23,8 @@
   *,
   *::before,
   *::after {
-    background: transparent !important;
+    /* background: transparent !important; (reset to colour only as it breaks icons)*/
+    background-color: transparent !important;
     color: #000 !important;
     box-shadow: none !important;
     text-shadow: none !important;
@@ -80,7 +81,7 @@
   h4,
   h5,
   h6 {
-    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-family: Georgia, "Times New Roman", Times, serif;
     font-weight: bold;
     line-height: 1.2;
     margin-top: 1.4em;
@@ -126,6 +127,8 @@
   li {
     orphans: 3;
     widows: 3;
+    /* break-inside: avoid;
+    page-break-inside: avoid; */
   }
 
   h1,
@@ -135,7 +138,9 @@
   h5,
   h6 {
     break-after: avoid;
-    page-break-after: avoid;
+    page-break-after: avoid; /* Legacy fallback */
+    /* break-inside: avoid;
+    page-break-inside: avoid; */
   }
 
   img,
@@ -182,6 +187,7 @@
    -------------------------------------------------------------------------- */
   img,
   svg {
+    width: 300px !important; /* images were blowing out the layout width , this needs to be resolved. */
     max-width: 100% !important;
     height: auto !important;
   }

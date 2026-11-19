@@ -12,7 +12,10 @@
   }
 
   .uq-alert__message {
-    padding: 0;
-    margin: 0;
+    border: 1pt solid #000 !important;
+
+    /* Forces browsers to print the background image */
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
   }
 }

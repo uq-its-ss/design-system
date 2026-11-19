@@ -2,7 +2,11 @@
   // Print: hide interactive/navigation UI that has no use on paper.
 
   .uq-avatar {
-    border-radius: 0;
+    background-color: var(--uq-grey-200) !important;
     break-inside: avoid;
+
+    /* Forces browsers to print the background image */
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
   }
 }

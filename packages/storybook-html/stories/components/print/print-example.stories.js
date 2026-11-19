@@ -14,10 +14,13 @@ const renderComponent = ([path, module]) => {
     const stories = storyRenderer(module);
     const [name] = Object.keys(stories);
     const title = module.default.title.replace(/^Components\//, "");
+    const output = stories[name]();
+    // Some stories return DOM nodes rather than HTML strings.
+    const html = output instanceof Element ? output.outerHTML : output;
     return `
 <section class="uqds-print-component" data-source="${path}">
   <h2>${title}</h2>
-  ${stories[name]()}
+  ${html}
 </section>`;
   } catch (error) {
     return `<section><h2>${path}</h2><p>Unable to render: ${error.message}</p></section>`;

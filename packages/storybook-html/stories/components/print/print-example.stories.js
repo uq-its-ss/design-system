@@ -8,19 +8,31 @@ const modules = import.meta.glob(
   { eager: true },
 );
 
-// Renders the first story exported by each component story file.
+// Renders every story exported by each component story file.
 const renderComponent = ([path, module]) => {
   try {
     const stories = storyRenderer(module);
-    const [name] = Object.keys(stories);
     const title = module.default.title.replace(/^Components\//, "");
-    const output = stories[name]();
-    // Some stories return DOM nodes rather than HTML strings.
-    const html = output instanceof Element ? output.outerHTML : output;
+    const entries = Object.entries(stories).filter(
+      ([n]) => !["default", "__namedExportsOrder"].includes(n),
+    );
+    const body = entries
+      .map(([name, render]) => {
+        try {
+          const output = render();
+          // Some stories return DOM nodes rather than HTML strings.
+          const html = output instanceof Element ? output.outerHTML : output;
+          const heading = entries.length > 1 ? `<h3>${name}</h3>` : "";
+          return `${heading}${html}`;
+        } catch (error) {
+          return `<p>Unable to render ${name}: ${error.message}</p>`;
+        }
+      })
+      .join("");
     return `
 <section class="uqds-print-component" data-source="${path}">
   <h2>${title}</h2>
-  ${html}
+  ${body}
 </section>`;
   } catch (error) {
     return `<section><h2>${path}</h2><p>Unable to render: ${error.message}</p></section>`;

@@ -29,6 +29,11 @@
           flex: 1 0 auto;
         }
       }
+
+      input,
+      select {
+        margin-top: 0;
+      }
     }
 
     &--error {
@@ -90,7 +95,6 @@
 
   .uq-form__helper {
     display: block;
-    padding-bottom: core.$space-xxs;
     font-size: core.$font-size-m;
     font-weight: core.$font-weight-normal;
     text-wrap: pretty;
@@ -124,6 +128,7 @@
     font-size: core.$font-size-m;
     color: core.$black;
     font-family: core.$font-body;
+    margin-top: core.$space-xxs;
 
     &:focus-visible {
       outline: 4px solid core.$utility-500;
@@ -287,20 +292,13 @@
       }
     }
 
-    &__input {
+    &__search {
       display: flex;
       flex: 1;
 
-      height: 3.25rem;
-
-      > input[type="text"] {
-        border-right: 0;
-        border-top-right-radius: 0;
-        border-bottom-right-radius: 0;
-      }
-
       .uq-button {
         border-radius: 0 4px 4px 0;
+        height: 3.25rem;
 
         &:has(span.uq-icon) {
           padding-left: core.$space-s;
@@ -315,10 +313,44 @@
       }
     }
 
+    &__input {
+      position: relative;
+      flex: 1;
+
+      > input[type="search"] {
+        margin-top: 0;
+        border-right: 0;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        height: 3.25rem;
+
+        &::-webkit-search-cancel-button,
+        &::-webkit-search-decoration {
+          -webkit-appearance: none;
+          appearance: none;
+        }
+
+        &:not(:placeholder-shown) + .uq-search-form__clear {
+          display: block;
+        }
+      }
+    }
+
+    &__clear {
+      position: absolute;
+      top: 0.75rem;
+      right: 0;
+      background: none;
+      border: none;
+      cursor: pointer;
+      display: none; /* Hidden by default */
+    }
+
     &__scope {
       padding-top: core.$space-xxs;
 
       > select {
+        margin-top: 0;
         border-top-left-radius: 0;
         border-top-right-radius: 0;
         height: 3.25rem;
@@ -389,55 +421,5 @@
         }
       }
     }
-
-    // & input:disabled + .uq-button {
-    //   border-color: core.$grey-400;
-    //   background-color: core.$grey-400;
-    //   color: core.$white;
-    //   cursor: not-allowed;
-
-    //   &:hover {
-    //     text-decoration: none;
-    //   }
-
-    //   &::before,
-    //   .uq-icon::before {
-    //     filter: core.$filter-white;
-    //   }
-    // }
-
-    // &--on-purple {
-    //   input:not([type="checkbox"], [type="radio"]),
-    //   select {
-    //     border: 0;
-    //   }
-
-    //   > select
-    //     + input:not([type="checkbox"], [type="radio"]):has(+ .uq-button) {
-    //     border-left: 4px solid core.$purple-500;
-    //   }
-
-    //   .uq-button {
-    //     background-color: core.$purple-50;
-    //     border-color: core.$purple-50;
-    //     color: core.$purple-500;
-
-    //     &::before,
-    //     .uq-icon::before {
-    //       filter: core.$filter-primary;
-    //     }
-
-    //     &:hover {
-    //       background-color: core.$purple-500;
-    //       border-color: core.$white;
-    //       color: core.$white;
-
-    //       &::before,
-    //       .uq-icon::before {
-    //         filter: core.$filter-white;
-    //       }
-    //     }
-    //   }
-    // }
   }
 }

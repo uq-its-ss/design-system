@@ -497,7 +497,7 @@ SEARCH
       <div class="uq-search-form">
         <div class="uq-search-form__input">
           <label class="sr-only" for="search">Search</label>
-          <input id="search" type="text" name="search" placeholder="Search by keyword">
+          <input id="search" type="search" name="search" placeholder="Search by keyword">
           <button type="submit" class="uq-button">Search</button>
         </div>
       </div>
@@ -505,7 +505,7 @@ SEARCH
       <div class="uq-search-form">
         <div class="uq-search-form__input">
           <label class="sr-only" for="search">Search</label>
-          <input id="search" type="text" name="search" placeholder="Search by keyword">
+          <input id="search" type="search" name="search" placeholder="Search by keyword">
           <button type="submit" class="uq-button"><span class="uq-icon uq-icon--standard--search"></span> <span class="sr-only">Search</span></button>
         </div>
       </div>
@@ -513,7 +513,7 @@ SEARCH
       <div class="uq-search-form">
         <div class="uq-search-form__input">
           <label class="sr-only" for="search">Search</label>
-          <input id="search" type="text" name="search" placeholder="Search by keyword">
+          <input id="search" type="search" name="search" placeholder="Search by keyword">
           <button type="submit" class="uq-button"><span class="uq-icon uq-icon--standard--search"></span> <span class="sr-only">Search</span></button>
         </div>
         <div class="uq-search-form__scope">
@@ -530,7 +530,7 @@ SEARCH
       <div class="uq-search-form uq-search-form--on-purple">
         <div class="uq-search-form__input">
           <label class="sr-only" for="search">Search</label>
-          <input id="search" type="text" name="search" placeholder="Search by keyword">
+          <input id="search" type="search" name="search" placeholder="Search by keyword">
           <button type="submit" class="uq-button">Search</button>
         </div>
       </div>
@@ -538,7 +538,7 @@ SEARCH
       <div class="uq-search-form uq-search-form--on-purple">
         <div class="uq-search-form__input">
           <label class="sr-only" for="search">Search</label>
-          <input id="search" type="text" name="search" placeholder="Search by keyword">
+          <input id="search" type="search" name="search" placeholder="Search by keyword">
           <button type="submit" class="uq-button"><span class="uq-icon uq-icon--standard--search"></span> <span class="sr-only">Search</span></button>
         </div>
       </div>
@@ -546,7 +546,7 @@ SEARCH
       <div class="uq-search-form uq-search-form--on-purple">
         <div class="uq-search-form__input">
           <label class="sr-only" for="search">Search</label>
-          <input id="search" type="text" name="search" placeholder="Search by keyword">
+          <input id="search" type="search" name="search" placeholder="Search by keyword">
           <button type="submit" class="uq-button"><span class="uq-icon uq-icon--standard--search"></span> <span class="sr-only">Search</span></button>
         </div>
         <div class="uq-search-form__scope">

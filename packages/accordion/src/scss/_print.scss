@@ -1,0 +1,35 @@
+@media print {
+  // Print: reset accordion styles and show all content, collapsed or not.
+
+  .uq-accordion__item {
+    background: none;
+    border: 0;
+    border-radius: 0;
+    break-inside: avoid;
+  }
+
+  .uq-accordion__toggle {
+    background: none;
+    display: block !important;
+    padding: 0;
+    transition: none;
+    width: auto;
+
+    &::before {
+      content: none;
+      display: none;
+    }
+  }
+
+  .uq-accordion__content,
+  .uq-accordion__content:not(.uq-accordion__content--active) {
+    display: block !important;
+    height: auto !important;
+    overflow: visible;
+    transition: none;
+  }
+
+  .uq-accordion__content-wrapper {
+    padding: 0;
+  }
+}

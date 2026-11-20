@@ -1,0 +1,14 @@
+@media print {
+  // Print: hide interactive/navigation UI that has no use on paper.
+
+  .uq-pane__actions,
+  .uq-pane__video {
+    display: none !important;
+  }
+
+  .uq-pane {
+    background: none !important;
+    border-radius: 0;
+    break-inside: avoid;
+  }
+}

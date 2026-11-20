@@ -1,0 +1,10 @@
+@media print {
+  // Print: hide interactive/navigation UI that has no use on paper.
+
+  .uq-pill,
+  .uq-pill-list {
+    background: none !important;
+    border-radius: 0;
+    break-inside: avoid;
+  }
+}

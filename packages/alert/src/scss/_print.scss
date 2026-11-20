@@ -1,0 +1,21 @@
+@media print {
+  // Print: hide interactive/navigation UI that has no use on paper.
+
+  .uq-alert__close {
+    display: none !important;
+  }
+
+  .uq-alert {
+    background: none !important;
+    border-radius: 0;
+    break-inside: avoid;
+  }
+
+  .uq-alert__message {
+    border: 1pt solid #000 !important;
+
+    /* Forces browsers to print the background image */
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}

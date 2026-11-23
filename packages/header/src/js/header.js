@@ -71,6 +71,27 @@ class Header {
       this.header,
       this.modules.mobileMenu,
     );
+
+    this.initEscapeKey();
+  }
+
+  /**
+   * Collapse any open expandable menu (search, mega menu, mobile menu) on Escape
+   * and return focus to the control that opened it
+   * @private
+   */
+  initEscapeKey() {
+    this.header.ownerDocument.addEventListener("keydown", (e) => {
+      if (e.key !== "Escape" || e.defaultPrevented) return;
+
+      const { search, megaMenu, mobileMenu } = this.modules;
+
+      [search, megaMenu, mobileMenu].forEach((module) => {
+        if (module && module.isOpen()) {
+          module.closeAndRestoreFocus();
+        }
+      });
+    });
   }
 }
 

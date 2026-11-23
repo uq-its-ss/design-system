@@ -57,13 +57,23 @@ export class MegaMenuModule {
           this.lastInteractionType = "keyboard";
           this.toggleMenu(trigger);
         }
-        if (e.key === "Escape") {
-          this.lastInteractionType = "keyboard";
-          this.closeMenu(trigger);
-          trigger.focus(); // Return focus to trigger
-        }
       });
     });
+  }
+
+  /**
+   * Close the open mega menu and return focus to its trigger
+   * Used for keyboard dismissal (Escape)
+   */
+  closeAndRestoreFocus() {
+    const trigger = this.triggers.find(
+      (t) => t.getAttribute("aria-expanded") === "true",
+    );
+    this.lastInteractionType = "keyboard";
+    this.closeAllMenus();
+    if (trigger) {
+      trigger.focus();
+    }
   }
 
   /**

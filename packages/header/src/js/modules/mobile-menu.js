@@ -155,11 +155,22 @@ export class MobileMenuModule {
   }
 
   /**
+   * Close the mobile menu and return focus to its toggle
+   * Used for keyboard dismissal (Escape)
+   */
+  closeAndRestoreFocus() {
+    this.close();
+    if (this.menuToggle) {
+      this.menuToggle.focus();
+    }
+  }
+
+  /**
    * Check if the mobile menu is currently open
    * @returns {boolean} True if menu is open
    */
   isOpen() {
-    return this.slideMenu && this.slideMenu.isOpen && this.slideMenu.isOpen();
+    return Boolean(this.slideMenu && this.slideMenu.isOpen);
   }
 
   /**

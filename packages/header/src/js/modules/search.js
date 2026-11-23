@@ -139,6 +139,15 @@ export class SearchModule {
   }
 
   /**
+   * Close the search panel and return focus to its toggle
+   * Used for keyboard dismissal (Escape)
+   */
+  closeAndRestoreFocus() {
+    this.close();
+    this.searchToggle.focus();
+  }
+
+  /**
    * Check if search panel is currently open
    * @returns {boolean} True if search is open
    */

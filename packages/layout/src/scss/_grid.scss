@@ -2,7 +2,7 @@
 
 .uq-grid {
   /* Default values */
-  --uq-grid-min: 16.313rem; /* Default Minimum column width (261px) */
+  --uq-grid-min: 15.063rem; /* Default Minimum column width (16.313rem / 241px) (16.313rem / 261px) */
   --uq-grid-max-cols: 1;
   --uq-grid-row-gap: var(--uq-grid-gap);
   --uq-grid-col-gap: var(--uq-grid-gap);
@@ -36,11 +36,11 @@
 }
 .uq-grid:has(> .uq-card),
 .uq-grid:has(> .uq-pane) {
-  --uq-grid-min: 16.313rem;
+  --uq-grid-min: 15.063rem;
 }
 
 .uq-grid:has(> .uq-link-grid__item) {
-  --uq-grid-min: 16.313rem;
+  --uq-grid-min: 15.063rem;
   --uq-grid-row-gap: 0;
 }
 

@@ -39,6 +39,8 @@ export class SearchModule {
       return; // Search elements don't exist
     }
 
+    this.searchToggle.setAttribute("aria-expanded", "false");
+    this.searchToggle.setAttribute("aria-label", "Open search");
     this.initToggle();
     this.initFormSubmit();
   }
@@ -110,6 +112,8 @@ export class SearchModule {
     if (this.searchLabel) {
       this.searchLabel.innerHTML = "Close";
     }
+    this.searchToggle.setAttribute("aria-expanded", "true");
+    this.searchToggle.setAttribute("aria-label", "Close search");
   }
 
   /**
@@ -126,6 +130,8 @@ export class SearchModule {
       this.searchLabel.innerHTML = "Search";
     }
 
+    this.searchToggle.setAttribute("aria-expanded", "false");
+    this.searchToggle.setAttribute("aria-label", "Open search");
     this.searchToggle.classList.remove(
       "uq-header__toggle-search-button--is-open",
     );

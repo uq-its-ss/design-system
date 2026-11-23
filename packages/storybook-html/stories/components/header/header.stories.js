@@ -380,7 +380,7 @@ const headerRenderer = ({
 
     <!-- TOGGLE MENU (Mobile) -->
     <div class="uq-header__toggle-menu" data-target="global-mobile-nav">
-      <button type="button" class="uq-header__toggle-menu-button slide-menu__control" data-target="global-mobile-nav" data-arg=".in-active-trail" data-action="smartToggle">Menu</button>
+      <button type="button" class="uq-header__toggle-menu-button slide-menu__control" data-target="global-mobile-nav" data-arg=".in-active-trail" data-action="smartToggle" aria-expanded="false" aria-controls="global-mobile-nav">Menu</button>
 
         <!-- NAVIGATION (Mobile) (Slide menu) -->
         <!-- "uq-header__nav-mobile-local" class is added if showing local site menu -->
@@ -472,11 +472,11 @@ const headerRenderer = ({
 
     <!-- TOGGLE SEARCH -->
     <div class="uq-header__toggle-search">
-      <button class="uq-header__toggle-search-button" aria-label="Search">
+      <button class="uq-header__toggle-search-button" aria-label="Open search" aria-expanded="false" aria-controls="uq-header__search">
         <div class="uq-header__toggle-search-label">Search</div>
       </button>
           <!-- SEARCH FORM -->
-          <div class="uq-header__search">
+          <div class="uq-header__search" id="uq-header__search">
             <div class="uq-header__search-container">
               <form class="uq-header__search-form" action="https://search.uq.edu.au/" method="get">
                 <fieldset class="uq-header__search-fieldset">

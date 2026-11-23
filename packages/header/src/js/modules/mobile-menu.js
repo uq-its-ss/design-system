@@ -83,6 +83,8 @@ export class MobileMenuModule {
   initToggleButton() {
     if (!this.menuToggle) return;
 
+    this.menuToggle.setAttribute("aria-expanded", "false");
+
     this.menuToggle.addEventListener("click", () => {
       const willOpen = !this.menuToggle.classList.contains(
         "uq-header__toggle-menu-button--is-open",
@@ -120,6 +122,8 @@ export class MobileMenuModule {
         "uq-header__toggle-menu-button--is-open",
       );
 
+      this.menuToggle.setAttribute("aria-expanded", String(willOpen));
+
       // Toggle scroll lock
       if (willOpen) {
         document.body.classList.add("no-scroll");
@@ -146,6 +150,7 @@ export class MobileMenuModule {
       this.menuToggle.classList.remove(
         "uq-header__toggle-menu-button--is-open",
       );
+      this.menuToggle.setAttribute("aria-expanded", "false");
     }
   }
 

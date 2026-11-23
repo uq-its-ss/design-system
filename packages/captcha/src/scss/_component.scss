@@ -1,0 +1,6 @@
+@use "global" as *;
+
+.uq-captcha,
+.frc-captcha {
+  margin-block: $captcha-spacing;
+}

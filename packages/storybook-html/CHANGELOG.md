@@ -3,6 +3,40 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.2.0](https://github.com/uq-its-ss/design-system/compare/storybook-html%408.2.0-alpha.0...storybook-html%408.2.0) (2026-10-30)
+
+**Note:** Version bump only for package storybook-html
+
+## [8.2.0-alpha.0](https://github.com/uq-its-ss/design-system/compare/storybook-html%408.1.9...storybook-html%408.2.0-alpha.0) (2026-10-30)
+
+- **captcha:** updated example docs ([21573f6](https://github.com/uq-its-ss/design-system/commit/21573f68a57f5d792ef917521e69b79185cd0f76))
+
+### 🚀 Features
+
+- **captcha:** updated documentation and implementation ([7d242e3](https://github.com/uq-its-ss/design-system/commit/7d242e334e987fe0915c2d0b557a274199363d5a))
+- **form:** added example of a friendly captcha ([16f855e](https://github.com/uq-its-ss/design-system/commit/16f855e18ec1b2f91b78a9d9c50504a196737d97))
+
+### 🐛 Bug Fixes
+
+- **captcha:** added server verification doc ([24ac1e2](https://github.com/uq-its-ss/design-system/commit/24ac1e2d6d07b17a8378b6516b6f67275e1f9116))
+
+## [8.1.9](https://github.com/uq-its-ss/design-system/compare/storybook-html%408.1.9-alpha.1...storybook-html%408.1.9) (2026-10-27)
+
+**Note:** Version bump only for package storybook-html
+
+## [8.1.9-alpha.1](https://github.com/uq-its-ss/design-system/compare/storybook-html%408.1.9-alpha.0...storybook-html%408.1.9-alpha.1) (2026-10-27)
+
+- **deps-dev:** bump storybook from 10.6.0 to 10.6.2 ([423ff76](https://github.com/uq-its-ss/design-system/commit/423ff76f6e402315c1e9936d663a707698073296))
+
+### 🐛 Bug Fixes
+
+- **body:** typo ([fdcc96d](https://github.com/uq-its-ss/design-system/commit/fdcc96d258d1d9984bf8e9049c4695b1dd68b65b))
+- **skip-links:** updated skip links ([237e6e1](https://github.com/uq-its-ss/design-system/commit/237e6e1d0c50be45482250779fd50aff1a16080e))
+
+## [8.1.9-alpha.0](https://github.com/uq-its-ss/design-system/compare/storybook-html%408.1.8...storybook-html%408.1.9-alpha.0) (2026-10-22)
+
+- **deps-dev:** bump vite from 8.2.2 to 8.3.4 ([be11352](https://github.com/uq-its-ss/design-system/commit/be1135233ceebddd39425561601502a2a3834e95))
+
 ## [8.1.8](https://github.com/uq-its-ss/design-system/compare/storybook-html%408.1.8-alpha.8...storybook-html%408.1.8) (2026-09-18)
 
 **Note:** Version bump only for package storybook-html

@@ -1,0 +1,312 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
+import StatusBadge from "../../../.storybook/custom/components/StatusBadge";
+import * as CaptchaStories from "./captcha.stories";
+
+<Meta of={CaptchaStories} />
+
+# Captcha
+
+<StatusBadge.Development />
+
+<StatusBadge.DraftDoc />
+
+## Overview
+
+The purpose of CAPTCHAs is to prevent bots from using services intended for human use, prevent distortion of collected usage information, prevent automated entry of false information, and prevent data scraping.
+
+- Use Friendly Captcha for public anonymous submissions.
+- Do not use CAPTCHA for authenticated experiences.
+- Assess alternative controls before implementation.
+- Follow the UQ Design System implementation pattern.
+- Contact ADS UI team for onboarding and sitekey management.
+
+## Default CAPTCHA (JavaScript SDK)
+
+<Canvas of={CaptchaStories.Captcha} sourceState="none" />
+
+The captcha is a standalone component and can be used inside a form or on its own.
+
+## Installation Guide
+
+UQ has a licensed version of [Friendly Captcha](https://friendlycaptcha.com) that covers all of `uq.edu.au`, including subdomains.
+
+### Data Sitekey
+
+The **data-sitekey** in Friendly Captcha is a public identifier placed in your HTML code that links the CAPTCHA widget on your webpage to your specific account and application in the Friendly Captcha dashboard
+
+```TEXT
+FCMGETO5UETK6BA9
+```
+
+- It is safe to expose in your website's public HTML markup or client-side JavaScript code.
+- Sitekey is restricted to `uq.edu.au` domain and `subdomains`.
+- unique domains must be registered in the Friendly Captcha dashboard.
+- request additional domain registrations from the [ADS UI team](https://about.uq.edu.au/web-feedback?r=https://design-system.uq.edu.au) if needed, including for development environments.
+
+### Option 1: Programmatically - Javascript SDK (Recommended)
+
+<Canvas of={CaptchaStories.Captcha} sourceState="none" />
+
+The `@friendlycaptcha/sdk` package is included in `@uqds/captcha`, so installing `@uqds/captcha` will also install the Friendly Captcha SDK.
+
+#### Install the library
+
+```bash
+# using @uqds/captcha
+npm install @uqds/captcha
+```
+
+#### Add the mount element
+
+Add an element with the `uq-captcha` class where the captcha should appear, typically inside your form.
+
+```html
+<div id="uq-captcha" class="uq-captcha"></div>
+```
+
+#### Create widgets from your code
+
+```javascript
+import { captcha } from "@uqds/captcha/src/js/main";
+
+// HTML element that you want to mount the widget to.
+const mount = document.querySelector("#uq-captcha");
+
+// Create the widget (the SDK instance is shared between widgets)
+const widget = captcha(mount, "FCMGETO5UETK6BA9");
+```
+
+Alternatively, you can directly use the `@friendlycaptcha/sdk` package. Follow the instruction directly from the [Friendly Captcha documentation](https://developer.friendlycaptcha.com/docs/v2/getting-started/install).
+
+### Option 2: HTML Scripts and Widget
+
+<Canvas of={CaptchaStories.CaptchaHtmlScripts} sourceState="none" />
+
+#### Add the scripts
+
+Add these scripts to your page, usually in the `<head>` or before the closing `</body>` tag.
+
+```html
+<script
+  type="module"
+  src="https://cdn.jsdelivr.net/npm/@friendlycaptcha/sdk@1.0.2/site.min.js"
+  async
+  defer
+></script>
+<script
+  nomodule
+  src="https://cdn.jsdelivr.net/npm/@friendlycaptcha/sdk@1.0.2/site.compat.min.js"
+  async
+  defer
+></script>
+```
+
+#### Add the widget
+
+Add the widget element where the captcha should appear, typically inside your form.
+
+```html
+<form class="uq-form">
+  <div class="uq-captcha frc-captcha" data-sitekey="FCMGETO5UETK6BA9"></div>
+</form>
+```
+
+## Server-side verification (required)
+
+Both installation options require backend verification; rendering the widget alone does not protect your submission endpoint. Request API Key from [ADS UI team](https://about.uq.edu.au/web-feedback?r=https://design-system.uq.edu.au)
+
+- Mount the widget inside the `<form>` so the `frc-captcha-response` field is submitted with the form data. If you submit via JavaScript, send the value returned by `widget.getResponse()` instead.
+- Verify that response using [Friendly Captcha's server-side verification API](https://developer.friendlycaptcha.com/docs/v2/getting-started/verify). Keep the API key on the server, never in client-side code.
+- Reject missing or invalid responses before performing the protected action, and provide a way for the user to retry verification.
+
+The examples on this page only render the widget. They do not verify responses.
+
+## Captcha guidelines
+
+### Key Principle
+
+> Captcha should be used to protect public, anonymous, and abuse-prone interactions. It should not be applied universally to all forms. Where trust already exists through authentication or alternative security controls, those mechanisms should be preferred over CAPTCHA.
+
+### Alternative Controls
+
+Friendly Captcha is not always the right solution.
+
+Consider whether the following controls already address the risk:
+
+<table>
+  <tr>
+    <th>Control</th>
+    <th>Suitable For</th>
+  </tr>
+  <tr>
+    <td>Authentication</td>
+    <td>Logged-in users</td>
+  </tr>
+  <tr>
+    <td>Rate Limiting</td>
+    <td>API protection</td>
+  </tr>
+  <tr>
+    <td>WAF Rules</td>
+    <td>Automated attack prevention</td>
+  </tr>
+  <tr>
+    <td>Session Validation</td>
+    <td>Authenticated systems</td>
+  </tr>
+  <tr>
+    <td>Email Verification</td>
+    <td>Account creation</td>
+  </tr>
+</table>
+
+In many cases a combination of these controls provides better protection than CAPTCHA alone.
+
+### When to Use Captcha
+
+When a user can submit data, trigger actions, or access resources without being authenticated.
+
+<table>
+  <thead>
+    <tr>
+      <th>Scenario</th>
+      <th>Why</th>
+      <th>Examples</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Public forms</td>
+      <td>Forms susceptible to spam, abuse, or data manipulation.</td>
+      <td>Contact us, General enquiries, Support requests, Feedback forms</td>
+    </tr>
+    <tr>
+      <td>Public application forms</td>
+      <td>
+        Submission endpoints can be abused through automated form completion.
+      </td>
+      <td>
+        Event registrations, Scholarship enquiries, Program interest forms,
+        Outreach initiatives
+      </td>
+    </tr>
+    <tr>
+      <td>Public service requests</td>
+      <td>Protects backend services from automated traffic.</td>
+      <td>Request information, Download requests, Resource access requests</td>
+    </tr>
+    <tr>
+      <td>Anonymous user actions</td>
+      <td>No authenticated identity exists to establish trust.</td>
+      <td>
+        Report an issue, Submit feedback, Lodge a complaint, Submit content
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+### When not to use Captcha
+
+CAPTCHA component should not become a default requirement on every form.
+
+<table>
+  <thead>
+    <tr>
+      <th>Scenario</th>
+      <th>Why</th>
+      <th>Examples</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Authenticated experiences</td>
+      <td>
+        Do not use Friendly Captcha where users are already authenticated
+        through trusted identity providers.
+      </td>
+      <td>
+        Student Portal, Staff Services, CMS Administration, Learning Platforms
+      </td>
+    </tr>
+    <tr>
+      <td>Low-risk transactions</td>
+      <td>
+        Adding CAPTCHA creates unnecessary friction without significant security
+        benefit.
+      </td>
+      <td>
+        Updating profile information, Managing preferences, Internal workflows
+      </td>
+    </tr>
+    <tr>
+      <td>Internal applications</td>
+      <td>Authentication already provides stronger protection.</td>
+      <td>
+        Staff-only systems, Faculty administration applications, Back-office
+        tools
+      </td>
+    </tr>
+    <tr>
+      <td>Multi-step forms</td>
+      <td>
+        Adding CAPTCHA to each step of a multi-step form can create unnecessary
+        friction and reduce form completion rates.
+      </td>
+      <td>
+        Multi-page registration forms, Multi-step application processes,
+        Sequential survey forms
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+### Placement
+
+- Position CAPTCHA immediately before the submit action.
+- Avoid placing CAPTCHA above lengthy forms where it may expire.
+- Only include one CAPTCHA per form.
+- Do not repeat CAPTCHA on every step of a multi-step process.
+
+## Accessibility
+
+When implementing CAPTCHAs, it is important to ensure that they are accessible to all users, including those with disabilities. CAPTCHA introduces additional cognitive and technical requirements. Before implementing, consider the following accessibility guidelines:
+
+### Before implementing Friendly Captcha, confirm:
+
+- The form genuinely requires abuse protection
+- Other controls cannot sufficiently mitigate risk
+- CAPTCHA adds measurable security value
+
+### User Experience Principles
+
+- Security controls should appear only when needed.
+- Users should not be forced through unnecessary verification.
+- CAPTCHA should never become a barrier to completing core tasks.
+- Ensure CAPTCHA status messages are announced to screen readers.
+- Do not rely solely on visual indicators.
+- Ensure keyboard-only users can complete verification.
+- Provide clear error and recovery messaging.
+- Avoid presenting multiple CAPTCHA challenges.
+- Test with assistive technologies before release.
+
+More information on [Friendly Captcha accessibility](https://friendlycaptcha.com/accessibility/) can be found in the official documentation.
+
+## What is Friendly Captcha?
+
+**Friendly Captcha** is preferred because it balances security with user experience, providing effective bot protection without imposing significant friction on legitimate users. It also aligns with privacy and accessibility standards, making it suitable for a wide range of public-facing forms and applications.
+
+Friendly Captcha is a solution that enables product teams to:
+
+- Consistently protect public submission endpoints
+- Reduce bot-generated spam and abuse
+- Meet privacy and accessibility requirements
+- Avoid implementing bespoke CAPTCHA solutions
+- Align with University security patterns
+
+Traditional CAPTCHA can force users to solve image grids or distorted text loops if flagged as suspicious. Friendly Captcha never presents image recognition, audio, or text puzzles to the visitor
+
+CAPTCHA fallback challenges frequently create barriers for users with visual or cognitive disabilities. Friendly Captcha is fully WCAG compliant and accessible by design because it requires no human interaction.
+
+CAPTCHA relies on behavioral tracking and risk analysis or interactive visual/audio challenges. Friendly Captcha uses an invisible, client-side cryptographic Proof-of-Work puzzle solved automatically in the user's browser.
+
+Fiendly Captcha has a [Getting started guide](https://developer.friendlycaptcha.com/docs/v2/getting-started/setup) for implementation instructions.

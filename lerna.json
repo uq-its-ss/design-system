@@ -30,7 +30,7 @@
       "ignoreChanges": ["**/*.md", "**/package.json", "**/package-lock.json"],
       "conventionalCommits": true,
       "allowBranch": ["master", "releases"],
-      "message": "chore(release): publish %s",
+      "message": "chore(release): publish",
       "changelogPreset": {
         "name": "conventionalcommits",
         "types": [

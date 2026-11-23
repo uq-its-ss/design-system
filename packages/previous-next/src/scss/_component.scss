@@ -5,6 +5,42 @@
 .uq-previous-next {
   display: flex;
   flex-direction: column;
-  padding: var(--uq-space-xs) 0;
-  gap: var(--uq-space-xl);
+  gap: var(--uq-space-l);
+
+  &--margin {
+    margin-top: var(--uq-space-xxl);
+    margin-bottom: var(--uq-space-xxxl);
+
+    @media #{core.$screen-md-up} {
+      margin-top: var(--uq-space-xxxl);
+      margin-bottom: var(--uq-space-xxxxl);
+    }
+  }
+
+  // Align previous and next items
+  &__item {
+    display: flex;
+    align-items: center;
+  }
+
+  // Required as a seperate element to not hide the directional arrow icon.
+  &__text {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    /* Modern standard property for future compatibility */
+    line-clamp: 3;
+  }
+  & a {
+    // Used to expand the clickable/touchable area of the link without changing its visual size
+    &::after {
+      content: "";
+      position: absolute;
+      top: -0.75rem;
+      bottom: -0.75rem;
+      right: -1rem; // Reduce right side to counteract negative icon margin and avoid horizontal overflow
+      left: -2rem;
+    }
+  }
 }

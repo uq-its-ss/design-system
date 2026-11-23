@@ -3,21 +3,15 @@
 @use "global" as *;
 
 .uq-link-grid {
-  display: grid;
+  list-style: none;
   margin: 0;
   padding: 0;
 
-  &--target-3x {
-    column-gap: var(--layout-gap);
-    // 1 column by default, growing to 2 then 3 as the grid itself widens (max 3)
-    grid-template-columns: repeat(
-      auto-fill,
-      minmax(max(12.813rem, calc((100% - 2 * var(--layout-gap)) / 3)), 1fr)
-    );
-  }
   &__item {
-    list-style: none;
+    /* required to remove existing li styling */
     margin: 0;
+    padding: 0;
+
     border-bottom: 1px solid var(--uq-grey-300);
 
     &:hover {

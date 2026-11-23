@@ -344,6 +344,10 @@
       border: none;
       cursor: pointer;
       display: none; /* Hidden by default */
+
+      &::before {
+        content: "×";
+      }
     }
 
     &__scope {

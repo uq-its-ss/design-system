@@ -29,6 +29,4 @@ export const Footer = {
   render: () => {
     return footerHTML;
   },
-
-  name: "Footer",
 };

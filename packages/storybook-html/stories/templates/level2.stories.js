@@ -2,6 +2,7 @@ import classNames from "classnames";
 import { initializeHeader } from "../components/header/headingDecorator";
 import { initializeFooter } from "../components/footer/footerDecorator";
 import { initJs } from "../../lib/initJs";
+import * as SkipLinksStories from "../components/body/skip-links.stories";
 import * as HeaderStories from "../components/header/header.stories";
 import * as FooterStories from "../components/footer/footer.stories";
 import * as BreadcrumbStories from "../components/breadcrumb/breadcrumb.stories";
@@ -10,6 +11,7 @@ import * as SidebarStories from "../layout/page-layouts/sidebar/sidebar.stories"
 import { storyRenderer } from "../../lib/storyRenderer";
 
 const { Default: Header } = storyRenderer(HeaderStories);
+const { SkipLinks } = storyRenderer(SkipLinksStories);
 const { Breadcrumb } = storyRenderer(BreadcrumbStories);
 const { Level2: Level2Hero } = storyRenderer(HeroStories);
 const { LocalNavExample } = storyRenderer(SidebarStories);

@@ -3,11 +3,13 @@ import { storyRenderer } from "../../lib/storyRenderer";
 import { initializeHeader } from "../components/header/headingDecorator";
 import { initializeFooter } from "../components/footer/footerDecorator";
 import { initJs } from "../../lib/initJs";
+import * as SkipLinksStories from "../components/body/skip-links.stories";
 import * as HeaderStories from "../components/header/header.stories";
 import * as FooterStories from "../components/footer/footer.stories";
 import * as BreadcrumbStories from "../components/breadcrumb/breadcrumb.stories";
 import * as HeroStories from "../components/hero/hero.stories";
 
+const { SkipLinks } = storyRenderer(SkipLinksStories);
 const { Default: Header } = storyRenderer(HeaderStories);
 const { Breadcrumb } = storyRenderer(BreadcrumbStories);
 const { Hero } = storyRenderer(HeroStories);

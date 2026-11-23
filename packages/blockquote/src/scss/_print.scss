@@ -1,9 +1,17 @@
 @media print {
-  // Print: hide interactive/navigation UI that has no use on paper.
+  // Print: revert blockquote styling to browser defaults.
+  blockquote,
+  blockquote > p,
+  blockquote a,
+  blockquote cite,
+  cite,
+  .blockquote--light,
+  .blockquote--light a {
+    all: revert;
+  }
 
+  blockquote,
   .blockquote--light {
-    background: none !important;
-    border-radius: 0;
     break-inside: avoid;
   }
 }

@@ -315,6 +315,7 @@
 
     &__input {
       position: relative;
+      display: inline-flex;
       flex: 1;
 
       > input[type="search"] {
@@ -329,25 +330,19 @@
           -webkit-appearance: none;
           appearance: none;
         }
-
-        &:not(:placeholder-shown) + .uq-search-form__clear {
-          display: block;
-        }
       }
     }
 
     &__clear {
       position: absolute;
-      top: 0.75rem;
+      top: 0;
       right: 0;
+      height: 3.25rem;
+      width: 3.25rem;
       background: none;
       border: none;
       cursor: pointer;
       display: none; /* Hidden by default */
-
-      &::before {
-        content: "×";
-      }
     }
 
     &__scope {

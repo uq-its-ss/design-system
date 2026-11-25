@@ -1,0 +1,17 @@
+@media print {
+  // Print: revert blockquote styling to browser defaults.
+  blockquote,
+  blockquote > p,
+  blockquote a,
+  blockquote cite,
+  cite,
+  .blockquote--light,
+  .blockquote--light a {
+    all: revert;
+  }
+
+  blockquote,
+  .blockquote--light {
+    break-inside: avoid;
+  }
+}

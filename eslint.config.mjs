@@ -188,9 +188,9 @@ export default [
           // eslint-import-resolver-node can't follow package.json "exports"
           // maps, so these otherwise-valid, subpath-exported packages read as
           // unresolved. Vite's `?raw`/`?url` query-suffixed imports aren't
-          // real file paths either.
+          // real file paths either (`?inline` likewise).
           ignore: [
-            "\\?(raw|url)$",
+            "\\?(raw|url|inline)$",
             "^storybook(/|$)",
             "^@storybook/",
             "^vite$",

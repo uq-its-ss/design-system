@@ -1,0 +1,38 @@
+import { Meta, Canvas } from "@storybook/addon-docs/blocks";
+import * as PrintStories from "./print.stories";
+
+<Meta of={PrintStories} />
+
+# Print
+
+## Overview
+
+The print stylesheet optimises pages for printing. It applies only inside `@media print`, so it has no effect on screen.
+
+The stories on this page always render with the `@media print` rules applied, so you can see the print styles on screen. This doesn't emulate `@page` margins or page breaks, so use your browser's print preview (or DevTools **Emulate CSS media type: print**) for a final check.
+
+<Canvas of={PrintStories.Print} />
+
+## What it does
+
+- Renders text in black on a transparent background and removes shadows.
+- Underlines links and appends the URL of external links.
+- Appends the `title` of abbreviations.
+- Avoids page breaks inside blockquotes, images, preformatted text and table rows, and directly after headings.
+- Repeats table headers on each printed page.
+
+## Key Utility Classes Included
+
+- `.uq-print--hide`: Add to any element you want hidden exclusively during printing.
+
+- `.uq-print--only`: Add to hidden elements (like a letterhead or copyright footer) that should only appear on paper.
+
+- `.uq-print--page-break`: Forces a new page before that element.
+
+- `.uq-print--avoid-break`: Prevents a custom card or callout box from being split across two pages.
+
+## How to use
+
+Import `@uqds/print/src/scss/main.scss` after your other styles so the print rules take precedence.
+
+You can link it in your HTML `<head>` using `<link rel="stylesheet" href="print.css" media="print">` or paste the contents directly inside an `@media print { ... }` block at the bottom of your main stylesheet.

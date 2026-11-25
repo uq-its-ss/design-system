@@ -1,5 +1,6 @@
 import DocsHeader from "./custom/components/DocsHeader";
 import DocsPage from "./custom/components/DocsPage";
+import { withPrintMedia } from "./custom/printPreview";
 
 import "@uqds/layout/src/scss/main.scss";
 import "@uqds/sections/src/scss/main.scss";
@@ -23,6 +24,7 @@ import "./preview.scss";
 
 /** @type { import('@storybook/html-vite').Preview } */
 const preview = {
+  decorators: [withPrintMedia],
   parameters: {
     docs: {
       components: { h1: DocsHeader },

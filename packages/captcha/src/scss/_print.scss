@@ -1,0 +1,8 @@
+@media print {
+  // Print: hide interactive/navigation UI that has no use on paper.
+
+  .uq-captcha,
+  .frc-captcha {
+    display: none !important;
+  }
+}

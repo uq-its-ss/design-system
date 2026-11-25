@@ -499,7 +499,7 @@ SEARCH
             <div class="uq-search-form__input">
               <label class="sr-only" for="search">Search</label>
               <input id="search" type="search" name="search" placeholder="Search by keyword">
-              <button class="uq-search-form__clear"><span class="uq-icon uq-icon--standard--close"></span> <span class="sr-only">Clear</span></button>
+              <button class="uq-search-form__clear hidden"><span class="uq-icon uq-icon--standard--close"></span> <span class="sr-only">Clear</span></button>
             </div>
             <button type="submit" class="uq-button">Search</button>
           </div>
@@ -516,18 +516,21 @@ SEARCH
           </div>
         </div>
         <br>
+
+        <h3 class="uq-search-form__label">    
+          <label for="search-scoped-2">Search</label>
+        </h3>
         <div class="uq-search-form">
           <div class="uq-search-form__search">
             <div class="uq-search-form__input">
-              <label class="sr-only" for="search">Search</label>
-              <input id="search" type="search" name="search" placeholder="Search by keyword">
+              <input id="search-scoped-2" type="search" name="search-scoped-2" placeholder="Search by keyword">
               <button class="uq-search-form__clear hidden"><span class="uq-icon uq-icon--standard--close"></span> <span class="sr-only">Clear</span></button>
             </div>
             <button type="submit" class="uq-button"><span class="uq-icon uq-icon--standard--search"></span> <span class="sr-only">Search</span></button>
           </div>
           <div class="uq-search-form__scope">
             <select id="search-scope" name="search-scope">
-              <option value="1">https://www.about.uq.edu.au</option>
+              <option value="1">about.uq.edu.au</option>
               <option value="2">uq.edu.au</option>
             </select>
           </div>

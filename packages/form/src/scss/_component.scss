@@ -113,7 +113,7 @@
     color: core.$error-500;
     font-weight: core.$font-weight-bold;
     font-size: core.$font-size-m;
-    padding-bottom: core.$space-xs;
+    padding-top: core.$space-xxs;
   }
 
   .uq-form__input,
@@ -222,7 +222,7 @@
   label:has(input[type="radio"]) {
     display: flex;
     align-items: center;
-    padding-bottom: 0.75rem;
+    padding-top: 0.75rem;
 
     input[type="checkbox"],
     input[type="radio"] {
@@ -343,6 +343,10 @@
       border: none;
       cursor: pointer;
       display: none; /* Hidden by default */
+
+      &:not(.hidden) {
+        display: block;
+      }
     }
 
     &__scope {

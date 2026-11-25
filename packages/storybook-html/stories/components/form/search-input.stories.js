@@ -29,7 +29,7 @@ export default {
             <div class="uq-search-form__input">
               <label class="sr-only" for="search">Search</label>
               <input id="search" type="search" name="search" placeholder="Search by keyword">
-              <button class="uq-search-form__clear"><span class="uq-icon uq-icon--standard--close"></span> <span class="sr-only">Clear</span></button>
+              <button class="uq-search-form__clear hidden"><span class="uq-icon uq-icon--standard--close"></span> <span class="sr-only">Clear</span></button>
             </div>
             <button type="submit" class="uq-button">Search</button>
           </div>

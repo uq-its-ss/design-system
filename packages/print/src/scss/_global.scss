@@ -38,7 +38,7 @@
     background: #fff !important;
   }
 
-  /* 3. Hide Non-Print UI Elements
+  /* 3. Hide Non-Print UI Elements (UQ DS components)
    -------------------------------------------------------------------------- */
   header,
   footer,
@@ -52,18 +52,24 @@
   video,
   audio,
   iframe,
-  .sidebar,
-  .navbar,
-  .breadcrumbs,
-  .search-bar,
-  .social-share,
-  .ads,
-  .no-print {
+  .uq-header,
+  .uq-site-header__navigation,
+  .uq-footer,
+  .uq-side-nav,
+  .uq-local-nav,
+  .uq-sidebar-layout__sidebar,
+  .uq-sidebar-right-layout__sidebar,
+  .uq-breadcrumbs,
+  .uq-search-input,
+  .uq-social-share,
+  .uq-pagination,
+  .uq-previous-next,
+  .uq-print--hide {
     display: none !important;
   }
 
   /* Reveal optional print-only branding/notices */
-  .print-only {
+  .uq-print--only {
     display: block !important;
   }
 
@@ -109,9 +115,9 @@
   main,
   article,
   section,
-  .container,
-  .wrapper,
-  .content {
+  .uq-container,
+  .uq-sidebar-layout__main,
+  .uq-sidebar-right-layout__main {
     display: block !important;
     float: none !important;
     width: 100% !important;
@@ -149,13 +155,13 @@
   table,
   pre,
   blockquote,
-  .avoid-break {
+  .uq-print--avoid-break {
     break-inside: avoid;
     page-break-inside: avoid;
   }
 
   /* Utility class to force a fresh page before major sections */
-  .page-break {
+  .uq-print--page-break {
     break-before: page;
     page-break-before: page;
   }
